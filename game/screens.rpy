@@ -1168,6 +1168,15 @@ screen preferences(): #!
                     style_group "pref"
                     has vbox
 
+                    label _("Language")
+                    textbutton _("English") action Language(None)
+                    textbutton _("中文") action Language("chinese")
+                    textbutton _("简体中文") action Language("chinese_simplified")
+
+                frame:
+                    style_group "pref"
+                    has vbox
+
                     label _("Music Volume")
                     bar value Preference("music volume")
 

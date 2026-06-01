@@ -27,6 +27,24 @@ init -10 python:
         """
         persistent._bk_language = lang
         renpy.change_language(lang)
+        
+        # Auto-switch fonts for CJK languages if CJK fonts are configured
+        if lang in ("chinese", "chinese_simplified"):
+            try:
+                if hasattr(gui, 'text_font_cjk'):
+                    gui.text_font = gui.text_font_cjk
+                if hasattr(gui, 'name_text_font_cjk'):
+                    gui.name_text_font = gui.name_text_font_cjk
+                if hasattr(gui, 'interface_text_font_cjk'):
+                    gui.interface_text_font = gui.interface_text_font_cjk
+            except:
+                pass
+        else:
+            # Restore default fonts
+            gui.text_font = "Lato-Regular.TTF"
+            gui.name_text_font = "Lato-Regular.TTF"
+            gui.interface_text_font = "Lato-Regular.TTF"
+        
         # Force a reload of styles that might depend on language
         renpy.restart_interaction()
 

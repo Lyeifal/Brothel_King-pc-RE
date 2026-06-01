@@ -102,6 +102,12 @@ define gui.name_text_font = "Lato-Regular.TTF"
 ## The font used for out-of-game text.
 define gui.interface_text_font = "Lato-Regular.TTF"
 
+## CJK fonts - set these after adding a CJK font file to the game/ folder
+## Example: Noto Sans CJK SC from https://github.com/notofonts/noto-cjk
+# define gui.text_font_cjk = "NotoSansCJKsc-Regular.otf"
+# define gui.name_text_font_cjk = "NotoSansCJKsc-Regular.otf"
+# define gui.interface_text_font_cjk = "NotoSansCJKsc-Regular.otf"
+
 ## The size of normal dialogue text.
 define gui.text_size = res_font(22)
 
