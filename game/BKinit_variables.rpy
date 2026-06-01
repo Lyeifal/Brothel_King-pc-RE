@@ -159,42 +159,42 @@ init -3 python:
 
     diff_list = ["very easy", "easy", "normal", "hard", "insane"] # A list is needed to show the values in order
 
-    diff_name = {"very easy" : "Gigolo", "easy" : "Hustler", "normal" : "Whorelord", "hard" : "Brothel Prince", "insane" : "Brothel King{#1}"}
+    diff_name = {"very easy" : __("Gigolo"), "easy" : __("Hustler"), "normal" : __("Whorelord"), "hard" : __("Brothel Prince"), "insane" : __("Brothel King{#1}")}
 
-    diff_description = {"very easy" : "No challenge at all. You're either here for the story, or the pretty pictures. {i}All achievements are locked.{/i}", "easy" : "A basic challenge for new players.", "normal" : "The classic experience.", "hard" : "Want more challenge? Hard has got you covered.", "insane" : "The ultimate challenge."}
+    diff_description = {"very easy" : __("No challenge at all. You're either here for the story, or the pretty pictures. {i}All achievements are locked.{/i}"), "easy" : __("A basic challenge for new players."), "normal" : __("The classic experience."), "hard" : __("Want more challenge? Hard has got you covered."), "insane" : __("The ultimate challenge.")}
 
     diff_settings = ["stats", "xp", "jp", "pref", "rep", "gold", "budget", "rewards", "resources", "prestige", "tax rate", "satisfaction", "security"] # A list is needed to show the values in order
 
     diff_setting_name = {
-                        "gold" : "Income",
-                        "budget" : "Customer budget",
-                        "rewards" : "Rewards",
-                        "resources" : "Resources",
-                        "stats" : "Girl skills",
-                        "pref" : "Preferences",
-                        "xp" : "XP",
-                        "jp" : "JP",
-                        "rep" : "Girl reputation",
-                        "prestige" : "Prestige",
-                        "tax rate" : "Guild Fee Offset",
-                        "satisfaction" : "Customer satisfaction",
-                        "security" : "Security grace period",
+                        "gold" : __("Income"),
+                        "budget" : __("Customer budget"),
+                        "rewards" : __("Rewards"),
+                        "resources" : __("Resources"),
+                        "stats" : __("Girl skills"),
+                        "pref" : __("Preferences"),
+                        "xp" : __("XP"),
+                        "jp" : __("JP"),
+                        "rep" : __("Girl reputation"),
+                        "prestige" : __("Prestige"),
+                        "tax rate" : __("Guild Fee Offset"),
+                        "satisfaction" : __("Customer satisfaction"),
+                        "security" : __("Security grace period"),
                         }
 
     diff_setting_description = {
-                        "gold" : "Affects your {b}Brothel Income{/b}.",
-                        "budget" : "Changes cap on customers' individual {b}budget{/b}.",
-                        "rewards" : "Affects {b}Rewards{/b} from quests, classes and monthly contracts.",
-                        "resources" : "Affects the amount of {b}Resources{/b} you get from collecting and trading.",
-                        "stats" : "Affects the progression of your girls' {b}Skills{/b}.",
-                        "pref" : "Affects the progression of your girls' {b}Sexual Preferences{/b}.",
-                        "xp" : "Affects the progression of your girls' {b}XP{/b}.",
-                        "jp" : "Affects the progression of your girls' {b}JP{/b}.",
-                        "rep" : "Affects the progression of your girls' {b}REP{/b}.",
-                        "prestige" : "Affects the progression of your Main Character's {b}Prestige{/b}.",
-                        "tax rate" : "Increases or decreases the Slave Guild's {b}fee{/b}.",
-                        "satisfaction" : "Changes customer {b}satisfaction{/b} bonus.",
-                        "security" : "Delays threat buildup by this number of days after each event.",
+                        "gold" : __("Affects your {b}Brothel Income{/b}."),
+                        "budget" : __("Changes cap on customers' individual {b}budget{/b}."),
+                        "rewards" : __("Affects {b}Rewards{/b} from quests, classes and monthly contracts."),
+                        "resources" : __("Affects the amount of {b}Resources{/b} you get from collecting and trading."),
+                        "stats" : __("Affects the progression of your girls' {b}Skills{/b}."),
+                        "pref" : __("Affects the progression of your girls' {b}Sexual Preferences{/b}."),
+                        "xp" : __("Affects the progression of your girls' {b}XP{/b}."),
+                        "jp" : __("Affects the progression of your girls' {b}JP{/b}."),
+                        "rep" : __("Affects the progression of your girls' {b}REP{/b}."),
+                        "prestige" : __("Affects the progression of your Main Character's {b}Prestige{/b}."),
+                        "tax rate" : __("Increases or decreases the Slave Guild's {b}fee{/b}."),
+                        "satisfaction" : __("Changes customer {b}satisfaction{/b} bonus."),
+                        "security" : __("Delays threat buildup by this number of days after each event."),
                         }
 
     diff_settings_range = {
@@ -321,105 +321,105 @@ init -3 python:
 #### RANDOM TIPS ####
 
     random_tips = [
-                    "Zan is an exciting place... Make sure to explore the city regularly!",
-                    "Did you know the brothel has many shortcuts? You need to find the right key...",
-                    "Beautiful girls make the best masseuses.",
-                    "Masseuses should be {b}beautiful{/b} and {b}sensitive{/b}. A good {b}body{/b} and {b}refinement{/b} are also important.",
-                    "A girl with a good Body makes a great dancer.",
-                    "Dancers should have a good {b}body{/b} and high {b}libido{/b}. {b}Refinement{/b} and {b}charm{/b} also help.",
-                    "Charming girls will do better as waitresses.",
-                    "Waitresses need {b}charm{/b} and {b}constitution{/b}. It cannot hurt if they are {b}beautiful{/b}, and have a good {b}body{/b} as well.",
-                    "Geishas should be refined girls to achieve the best results.",
-                    "Geishas should be {b}refined{/b} and {b}obedient{/b}. {b}Beauty{/b} and {b}charm{/b} also help make a perfect geisha.",
-                    "Higher-class customers are harder to satisfy, but they tip better.",
-                    "Don't forget to pay for the brothel's security. Things can escalate quickly.",
-                    "Your brothel gets dirty every time girls interact with customers. Your maintenance team should keep up, otherwise you'll end up spending a lot more to repair the damage later.",
-                    "Advertising girls are good if you want to bring more customers to the brothel. Don't bring more than you can handle, however: unsatisfied customers will lower your reputation.",
-                    "Disobedient girls are less likely to accept working or training.",
-                    "Girls with high Libido are more likely to agree to and enjoy sex, and can serve multiple customers too.",
-                    "Sensitive girls are good at making customers happy, regardless of the act.",
-                    "Constitution determines how much energy a girl has, and how many customers she can serve.",
-                    "Charm and Sensitivity make your girls better at handjobs, blowjobs and other service sex acts.",
-                    "A good {b}service{/b} skill is required to perform Service, of course, as well as {b}sensitivity{/b}. {b}Charm{/b} and the {b}fetish{/b} skill also help.",
-                    "Beauty and Libido are important for regular Sex acts.",
-                    "For regular Sex, high {b}sex{/b} and {b}libido{/b} skills give the best results. {b}Beauty{/b} and {b}service{/b} also boost sex.",
-                    "Girls with a good Body and Constitution can handle Anal sex well.",
-                    "Anal sex requires a high {b}anal{/b} skill and a good {b}constitution{/b}. {b}Body{/b} and {b}sex{/b} skills also help.",
-                    "Refinement and Obedience are good for Fetish sex acts.",
-                    "A girl needs a good {b}fetish{/b} and {b}obedience{/b} skills for Fetish sex acts. {b}Refinement{/b} and {b}anal{/b} skills also factor.",
-                    "The brothel report has lots of useful information about the brothel. If you want information about a given girl, check out her statistics in the girl tab.",
-                    "When working, girls receive both XP and JP. XP allow a girl to level up their stats and earn perks, JP allow a girl to get better at a given job or sex act. Both max out depending on her rank.",
-                    "Customers' tastes are different in the kind of entertainment and sex acts they like. Variety is key to keep all customers satisfied.",
-                    "Every satisfied customer increases your reputation. But unhappy customers will diss your brothel and your girls, so watch out.",
-                    "Overall, customer satisfaction stems from two factors: the quality of entertainment they receive, and the quality of your whores.",
-                    "Girls may become Bisexual, allowing two of them to service the same customer.",
-                    "Girls may learn how to have Group sex, allowing them to serve two or three customers at the same time.",
-                    "Bisexual and Group sex are always satisfying for the customers.",
-                    "Upkeep is important to keep your girls in the mood. Although happy girls may work for you for little upkeep, their mood will drop dramatically if their upkeep gets too low.",
-                    "Although your security will take care of most problems, your girls will need some personal defense if a crazy customer targets them directly. Beware, though, any weapon you give them could be used against you...",
-                    "The most effective way to train your girls for sex acts is to do it yourself, but it's time-consuming. Maybe you can find someone who will train them for you?",
-                    "Some of the people you meet can become trainers for your girls. Make sure to pick the one with the best ability for your management style.",
-                    "In Zan, a reputation for good or evil can make a lot of difference. Every good or bad deed has consequences. Of course, not everything is black and white. Some people like to walk the line between both...",
-                    "I hear there are girls with very loose morals hanging out in the various districts of the city. You wouldn't happen to know anything about that, would you?",
-                    "The girl from the shop is always acting flirtatious and bitchy,... I don't like her. I wish we could find other places to shop in town.",
-                    "You can buy girls that have already been trained at the slave market. This can save you some time, although you can never be 100% sure about the quality of the training they received.",
-                    "By talking with your girls, you can get to know them, and they might even tell you their personal stories.",
-                    "Girls will love you if you act kindly towards them and let them do what they like.",
-                    "Girls will fear you if you act harshly towards them or force them to do things they don't want.",
-                    "When all else fails, you can lecture your girls in order to start their training. Being Charismatic helps.",
-                    "Your Strength determines how good you are in a fight, or at pulling off various physical feats.",
-                    "Your Spirit determines how good you are with using, detecting and resisting magic.",
-                    "Charisma is important for all kinds of interactions, both with your girls and in the outside world.",
-                    "Your Speed determines how many actions you can take every day. It is rarely used for anything else.",
-                    "Unhappy girls may run away from you. If you cannot afford to hire bounty hunters, your last chance to get them back will be to explore the city on your own.",
-                    "Don't forget to upgrade the brothel bedrooms. Girls and customers alike will see their mood deteriorate if the bedrooms are below par, especially at higher ranks.",
-                    "Common rooms can host a limited number of customers. Make sure you have enough room to entertain everyone.",
-                    "When a girl joins your brothel, you must have a room ready for her. Otherwise, you might have to wait until you expand to receive her.",
-                    "Some people sell curious things around in the city, even monsters or animals. I'm not sure what you'd need them for.",
-                    "Sex skills cannot be improved by levelling. One needs first-hand experience to learn them.",
-                    "Classes are useful to improve a girl's inferior skills more quickly.",
-                    "Every girl has her own reputation, separate from your brothel's. Reputation is key for a girl to reach higher ranks.",
-                    "The best way to improve a girl's reputation is for her to succeed in Quests.",
-                    "Sex slaves receive ranks from the Slavers guild. Ranks determines many things, including max level and max skills.",
-                    "At the lowest rank, a girl's Skills are limited to 50. Every additional Rank improves the Skill maximum by 50 more.",
-                    "When a girl levels up, she receives Skill points, depending on her current Rank. Also, she receives a perk point every level.",
-                    "Every five levels, a girl will receive an extra perk point.",
-                    "No matter what, a girl cannot go above level 25.",
-                    "I've heard a rumor about a secret Rank at the Slaver guild, higher even than Rank 'S'.",
-                    "Please, Master, never ever let your money fall under zero denars! I've heard some people will try to tempt you with shady deals if you're in debt, but they just mean even more trouble.",
-                    "Never trust an Elf. Don't come here saying I didn't warn you.",
-                    "At higher ranks, integrating new girls can be tough. Make sure to use Classes, Items, Perks and other bonuses to help the new girl get ahead.",
-                    "When you feel like you've seen it all, you can disable some night events in the Game Settings menu.",
-                    "Don't like the random name generation? You can disable it in the Game Settings menu.",
-                    "Not into some of the more hardcore acts? Disable them in the Game Settings menu.",
-                    "Hit 'Ctrl' to skip night events, or any dialog you've already seen.",
-                    "A right click will take you back one step. Right-clicking on the main menu will bring out the Options menu.",
-                    "During the day, come back to the Home screen at any time with the 'H' key.",
-                    "Press 'E' to end the day and move on the the night's events.",
-                    "Spells can be auto-cast, using any leftover mana points you have left at the end of the day.",
-                    "Pressing the 'Esc' key will bring out the game menu",
-                    "You can come back to the latest visited location simply by using the 'L' key.",
-                    "Prestige is earned whenever you or your girls have sex. Earning prestige will allow you to level up.",
-                    "Your skills cannot naturally go over 10, but Items and Magic can help.",
-                    "Virgin girls receive a new trait after they are deflowered, depending on the conditions under which it happened.",
-                    "If your girls are in a bad mood, make sure you pay them enough, and that their accommodations are comfortable enough.",
-                    "Advertising increases the maximum amount of money per customer. Make sure they bring a fat purse!",
-                    "Classes may cause a girl's skills to exceed their level cap. Handy if you have the cash for them.",
-                    "After a while, higher skills become harder to increase for experienced girls. Classes can help you get around that.",
-                    "Although jobs and sex acts rely on a couple of major skills, having other high skills can often give a little boost to a girl's results.",
-                    "Even though recognizing a naked girl should be easy, people can never agree on what 'nudity' is, exactly! Can you believe it?",
-                    "Public acts are confusing. Is it public because it's outside, or because other people can see you? I can never tell.",
-                    "You can quick-save with F5 and quick-load with F9 (when shortcuts are active). What does it mean? I have no idea!",
-                    "Be careful not to let your girls fall sick or hurt! Hurt girls will recover energy half as fast as other girls.",
-                    "Are notifications flying by too fast for you? You can review the latest notifications by clicking on the '?' button.",
-                    "Game settings give you various options to tweak the game's content and UI to your liking.",
-                    "Brokipedia in the '?' menu will help you grasp some finer details about the game. It doesn't hold everything yet, but will be improved over time.",
-                    "Mind the special effects from this month's moon. They may give extra rewards for some specific activities you wouldn't normally do.",
-                    "If you put fear in your girls' heart, Evil powers may become accessible from the Farm. I shiver to think about what you could do with these.",
-                    "Evil brothel owners use up slave girls until their sanity is gone, then throw them out on the street. You wouldn't do that, would you?",
-                    "I heard that if you summon a magical pet 15 times, something special happens... How cute.",
-                    "Tired of the story? Reach the end of the game at least once to unlock 'No story' mode.",
-                    "I've heard of something called 'NewGame+' if you reach the end of the game. Whatever could that mean?",
+                    __("Zan is an exciting place... Make sure to explore the city regularly!"),
+                    __("Did you know the brothel has many shortcuts? You need to find the right key..."),
+                    __("Beautiful girls make the best masseuses."),
+                    __("Masseuses should be {b}beautiful{/b} and {b}sensitive{/b}. A good {b}body{/b} and {b}refinement{/b} are also important."),
+                    __("A girl with a good Body makes a great dancer."),
+                    __("Dancers should have a good {b}body{/b} and high {b}libido{/b}. {b}Refinement{/b} and {b}charm{/b} also help."),
+                    __("Charming girls will do better as waitresses."),
+                    __("Waitresses need {b}charm{/b} and {b}constitution{/b}. It cannot hurt if they are {b}beautiful{/b}, and have a good {b}body{/b} as well."),
+                    __("Geishas should be refined girls to achieve the best results."),
+                    __("Geishas should be {b}refined{/b} and {b}obedient{/b}. {b}Beauty{/b} and {b}charm{/b} also help make a perfect geisha."),
+                    __("Higher-class customers are harder to satisfy, but they tip better."),
+                    __("Don't forget to pay for the brothel's security. Things can escalate quickly."),
+                    __("Your brothel gets dirty every time girls interact with customers. Your maintenance team should keep up, otherwise you'll end up spending a lot more to repair the damage later."),
+                    __("Advertising girls are good if you want to bring more customers to the brothel. Don't bring more than you can handle, however: unsatisfied customers will lower your reputation."),
+                    __("Disobedient girls are less likely to accept working or training."),
+                    __("Girls with high Libido are more likely to agree to and enjoy sex, and can serve multiple customers too."),
+                    __("Sensitive girls are good at making customers happy, regardless of the act."),
+                    __("Constitution determines how much energy a girl has, and how many customers she can serve."),
+                    __("Charm and Sensitivity make your girls better at handjobs, blowjobs and other service sex acts."),
+                    __("A good {b}service{/b} skill is required to perform Service, of course, as well as {b}sensitivity{/b}. {b}Charm{/b} and the {b}fetish{/b} skill also help."),
+                    __("Beauty and Libido are important for regular Sex acts."),
+                    __("For regular Sex, high {b}sex{/b} and {b}libido{/b} skills give the best results. {b}Beauty{/b} and {b}service{/b} also boost sex."),
+                    __("Girls with a good Body and Constitution can handle Anal sex well."),
+                    __("Anal sex requires a high {b}anal{/b} skill and a good {b}constitution{/b}. {b}Body{/b} and {b}sex{/b} skills also help."),
+                    __("Refinement and Obedience are good for Fetish sex acts."),
+                    __("A girl needs a good {b}fetish{/b} and {b}obedience{/b} skills for Fetish sex acts. {b}Refinement{/b} and {b}anal{/b} skills also factor."),
+                    __("The brothel report has lots of useful information about the brothel. If you want information about a given girl, check out her statistics in the girl tab."),
+                    __("When working, girls receive both XP and JP. XP allow a girl to level up their stats and earn perks, JP allow a girl to get better at a given job or sex act. Both max out depending on her rank."),
+                    __("Customers' tastes are different in the kind of entertainment and sex acts they like. Variety is key to keep all customers satisfied."),
+                    __("Every satisfied customer increases your reputation. But unhappy customers will diss your brothel and your girls, so watch out."),
+                    __("Overall, customer satisfaction stems from two factors: the quality of entertainment they receive, and the quality of your whores."),
+                    __("Girls may become Bisexual, allowing two of them to service the same customer."),
+                    __("Girls may learn how to have Group sex, allowing them to serve two or three customers at the same time."),
+                    __("Bisexual and Group sex are always satisfying for the customers."),
+                    __("Upkeep is important to keep your girls in the mood. Although happy girls may work for you for little upkeep, their mood will drop dramatically if their upkeep gets too low."),
+                    __("Although your security will take care of most problems, your girls will need some personal defense if a crazy customer targets them directly. Beware, though, any weapon you give them could be used against you..."),
+                    __("The most effective way to train your girls for sex acts is to do it yourself, but it's time-consuming. Maybe you can find someone who will train them for you?"),
+                    __("Some of the people you meet can become trainers for your girls. Make sure to pick the one with the best ability for your management style."),
+                    __("In Zan, a reputation for good or evil can make a lot of difference. Every good or bad deed has consequences. Of course, not everything is black and white. Some people like to walk the line between both..."),
+                    __("I hear there are girls with very loose morals hanging out in the various districts of the city. You wouldn't happen to know anything about that, would you?"),
+                    __("The girl from the shop is always acting flirtatious and bitchy,... I don't like her. I wish we could find other places to shop in town."),
+                    __("You can buy girls that have already been trained at the slave market. This can save you some time, although you can never be 100% sure about the quality of the training they received."),
+                    __("By talking with your girls, you can get to know them, and they might even tell you their personal stories."),
+                    __("Girls will love you if you act kindly towards them and let them do what they like."),
+                    __("Girls will fear you if you act harshly towards them or force them to do things they don't want."),
+                    __("When all else fails, you can lecture your girls in order to start their training. Being Charismatic helps."),
+                    __("Your Strength determines how good you are in a fight, or at pulling off various physical feats."),
+                    __("Your Spirit determines how good you are with using, detecting and resisting magic."),
+                    __("Charisma is important for all kinds of interactions, both with your girls and in the outside world."),
+                    __("Your Speed determines how many actions you can take every day. It is rarely used for anything else."),
+                    __("Unhappy girls may run away from you. If you cannot afford to hire bounty hunters, your last chance to get them back will be to explore the city on your own."),
+                    __("Don't forget to upgrade the brothel bedrooms. Girls and customers alike will see their mood deteriorate if the bedrooms are below par, especially at higher ranks."),
+                    __("Common rooms can host a limited number of customers. Make sure you have enough room to entertain everyone."),
+                    __("When a girl joins your brothel, you must have a room ready for her. Otherwise, you might have to wait until you expand to receive her."),
+                    __("Some people sell curious things around in the city, even monsters or animals. I'm not sure what you'd need them for."),
+                    __("Sex skills cannot be improved by levelling. One needs first-hand experience to learn them."),
+                    __("Classes are useful to improve a girl's inferior skills more quickly."),
+                    __("Every girl has her own reputation, separate from your brothel's. Reputation is key for a girl to reach higher ranks."),
+                    __("The best way to improve a girl's reputation is for her to succeed in Quests."),
+                    __("Sex slaves receive ranks from the Slavers guild. Ranks determines many things, including max level and max skills."),
+                    __("At the lowest rank, a girl's Skills are limited to 50. Every additional Rank improves the Skill maximum by 50 more."),
+                    __("When a girl levels up, she receives Skill points, depending on her current Rank. Also, she receives a perk point every level."),
+                    __("Every five levels, a girl will receive an extra perk point."),
+                    __("No matter what, a girl cannot go above level 25."),
+                    __("I've heard a rumor about a secret Rank at the Slaver guild, higher even than Rank 'S'."),
+                    __("Please, Master, never ever let your money fall under zero denars! I've heard some people will try to tempt you with shady deals if you're in debt, but they just mean even more trouble."),
+                    __("Never trust an Elf. Don't come here saying I didn't warn you."),
+                    __("At higher ranks, integrating new girls can be tough. Make sure to use Classes, Items, Perks and other bonuses to help the new girl get ahead."),
+                    __("When you feel like you've seen it all, you can disable some night events in the Game Settings menu."),
+                    __("Don't like the random name generation? You can disable it in the Game Settings menu."),
+                    __("Not into some of the more hardcore acts? Disable them in the Game Settings menu."),
+                    __("Hit 'Ctrl' to skip night events, or any dialog you've already seen."),
+                    __("A right click will take you back one step. Right-clicking on the main menu will bring out the Options menu."),
+                    __("During the day, come back to the Home screen at any time with the 'H' key."),
+                    __("Press 'E' to end the day and move on the the night's events."),
+                    __("Spells can be auto-cast, using any leftover mana points you have left at the end of the day."),
+                    __("Pressing the 'Esc' key will bring out the game menu"),
+                    __("You can come back to the latest visited location simply by using the 'L' key."),
+                    __("Prestige is earned whenever you or your girls have sex. Earning prestige will allow you to level up."),
+                    __("Your skills cannot naturally go over 10, but Items and Magic can help."),
+                    __("Virgin girls receive a new trait after they are deflowered, depending on the conditions under which it happened."),
+                    __("If your girls are in a bad mood, make sure you pay them enough, and that their accommodations are comfortable enough."),
+                    __("Advertising increases the maximum amount of money per customer. Make sure they bring a fat purse!"),
+                    __("Classes may cause a girl's skills to exceed their level cap. Handy if you have the cash for them."),
+                    __("After a while, higher skills become harder to increase for experienced girls. Classes can help you get around that."),
+                    __("Although jobs and sex acts rely on a couple of major skills, having other high skills can often give a little boost to a girl's results."),
+                    __("Even though recognizing a naked girl should be easy, people can never agree on what 'nudity' is, exactly! Can you believe it?"),
+                    __("Public acts are confusing. Is it public because it's outside, or because other people can see you? I can never tell."),
+                    __("You can quick-save with F5 and quick-load with F9 (when shortcuts are active). What does it mean? I have no idea!"),
+                    __("Be careful not to let your girls fall sick or hurt! Hurt girls will recover energy half as fast as other girls."),
+                    __("Are notifications flying by too fast for you? You can review the latest notifications by clicking on the '?' button."),
+                    __("Game settings give you various options to tweak the game's content and UI to your liking."),
+                    __("Brokipedia in the '?' menu will help you grasp some finer details about the game. It doesn't hold everything yet, but will be improved over time."),
+                    __("Mind the special effects from this month's moon. They may give extra rewards for some specific activities you wouldn't normally do."),
+                    __("If you put fear in your girls' heart, Evil powers may become accessible from the Farm. I shiver to think about what you could do with these."),
+                    __("Evil brothel owners use up slave girls until their sanity is gone, then throw them out on the street. You wouldn't do that, would you?"),
+                    __("I heard that if you summon a magical pet 15 times, something special happens... How cute."),
+                    __("Tired of the story? Reach the end of the game at least once to unlock 'No story' mode."),
+                    __("I've heard of something called 'NewGame+' if you reach the end of the game. Whatever could that mean?"),
                 ]
 
 
@@ -428,28 +428,28 @@ init -3 python:
     all_MC_stats = ["strength", "spirit", "charisma", "speed"]
 
     MC_playerclass_description = {
-                                "Warrior" : "You are a Warrior. You might be young, but you have seen more than your share of bloody battles. You are stronger in fights and for protecting the brothel.",
-                                "Wizard" : "You are a Wizard. People bend to your will, and your magic. You have access to the most spells.",
-                                "Trader" : "You are a Rogue Trader. You've been hustling since you were a young street rat. You can make better deals and fetch the best prices."
+                                "Warrior" : __("You are a Warrior. You might be young, but you have seen more than your share of bloody battles. You are stronger in fights and for protecting the brothel."),
+                                "Wizard" : __("You are a Wizard. People bend to your will, and your magic. You have access to the most spells."),
+                                "Trader" : __("You are a Rogue Trader. You've been hustling since you were a young street rat. You can make better deals and fetch the best prices.")
                             }
 
     MC_stat_description = {
-                            "strength" : "This is the current strength of your character. Improves security and helps in individual fights.",
-                            "spirit" : "This is your magic fortitude. Spirit is the source of your mana, and improves spell results during events.",
-                            "charisma" : "This covers your character personality, looks and oratory skills. Improves results during interactions.",
-                            "speed" : "This is your character's level of energy. Increases the number of actions you can perform."
+                            "strength" : __("This is the current strength of your character. Improves security and helps in individual fights."),
+                            "spirit" : __("This is your magic fortitude. Spirit is the source of your mana, and improves spell results during events."),
+                            "charisma" : __("This covers your character personality, looks and oratory skills. Improves results during interactions."),
+                            "speed" : __("This is your character's level of energy. Increases the number of actions you can perform.")
                         }
 
     god_description = {
-                        "Arios" : "You worship Arios, god of Light and lord of the Angels. +1 to Strength.",
-                        "Shalia" : "You worship Shalia, goddess of Shadows and ruler of the Night. +1 to Spirit.",
-                        None : "You do not worship any god, and delight instead in the wonders of the natural world. +1 to Charisma."
+                        "Arios" : __("You worship Arios, god of Light and lord of the Angels. +1 to Strength."),
+                        "Shalia" : __("You worship Shalia, goddess of Shadows and ruler of the Night. +1 to Spirit."),
+                        None : __("You do not worship any god, and delight instead in the wonders of the natural world. +1 to Charisma.")
                         }
 
     alignment_description = {
-                            "good" : "Your actions have shown you to be a {b}good{/b} person. Love-based interactions with your girls are more successful than fear-based ones.",
-                            "evil" : "You are an {b}evil{/b} man, and revel in your own cruelty. Fear-based interactions with your girls are more successful than love-based ones.",
-                            "neutral" : "You are {b}neutral{/b}, and would rather maintain balance between your own interests and those of others. Love and fear-based interactions are equally successful."
+                            "good" : __("Your actions have shown you to be a {b}good{/b} person. Love-based interactions with your girls are more successful than fear-based ones."),
+                            "evil" : __("You are an {b}evil{/b} man, and revel in your own cruelty. Fear-based interactions with your girls are more successful than love-based ones."),
+                            "neutral" : __("You are {b}neutral{/b}, and would rather maintain balance between your own interests and those of others. Love and fear-based interactions are equally successful.")
                             }
 
 
@@ -576,7 +576,7 @@ init python:
 
     for room in common_room_dict:
         for dirt_state in ("clean enough", "dusty", "dirty", "disgusting", "fire"):
-            path = "brothels/rooms/" + room + {"clean enough" : "", "dusty" : "_dusty", "dirty" : "_dirty", "disgusting" : "_verydirty", "fire" : "_verydirty"}[dirt_state] + ".webp"
+            path = "brothels/rooms/" + room + {"clean enough" : "", "dusty" : __("_dusty"), "dirty" : __("_dirty"), "disgusting" : __("_verydirty"), "fire" : __("_verydirty")}[dirt_state] + ".webp"
             renpy.image(room + " " + dirt_state, ProportionalScale(path, config.screen_width, config.screen_height))
 
     master_bedrooms = {
@@ -591,11 +591,11 @@ init python:
 
 #    all_common_rooms = [tavern, club, onsen, okiya]
     all_common_rooms = ["tavern", "strip club", "onsen", "okiya"]
-    job_room_dict = {"waitress" : "tavern",
-                    "dancer" : "strip club",
-                    "masseuse" : "onsen",
-                    "geisha" : "okiya",
-                    "whore" : "bedroom"
+    job_room_dict = {"waitress" : __("tavern"),
+                    "dancer" : __("strip club"),
+                    "masseuse" : __("onsen"),
+                    "geisha" : __("okiya"),
+                    "whore" : __("bedroom")
                     }
 
     room_capacity_dict = {0 : 4, 1 : 4, 2 : 6, 3 : 8, 4 : 10, 5 : 12, 6 : 14, 7 : 16}
@@ -633,7 +633,7 @@ init -4 python:
                 }
 
     suzume_hints_active = False
-    papa_location = {"The Docks" : "Seafront", "The Warehouse" : "Gallows"}
+    papa_location = {"The Docks" : __("Seafront"), "The Warehouse" : __("Gallows")}
 
     ## FARM
 
@@ -663,10 +663,10 @@ init -4 python:
                     5: 750
                 }
 
-    minion_description = {"stallion" : "Stallions are male sex slaves from the Blood Islands, magically brainwashed and bred selectively for their abnormally large dicks....",
-                        "beast" : "Beasts are all sorts of animals that Gizel keeps around at the farm. More like a zoo, really.",
-                        "monster" : "Monsters are unnatural fiends crawling inside the darkest caves of Xeros. They come in many forms, but the ones with tentacles are the most sought after.",
-                        "machine" : "Machines or artefacts have many uses, but in Gizel's workshop, they really only seem to be designed for one thing: sex."
+    minion_description = {"stallion" : __("Stallions are male sex slaves from the Blood Islands, magically brainwashed and bred selectively for their abnormally large dicks...."),
+                        "beast" : __("Beasts are all sorts of animals that Gizel keeps around at the farm. More like a zoo, really."),
+                        "monster" : __("Monsters are unnatural fiends crawling inside the darkest caves of Xeros. They come in many forms, but the ones with tentacles are the most sought after."),
+                        "machine" : __("Machines or artefacts have many uses, but in Gizel's workshop, they really only seem to be designed for one thing: sex.")
                         }
 
     all_minion_types = ["stallion", "beast", "monster", "machine"]
@@ -679,100 +679,100 @@ init -4 python:
                 }
 
     farm_holding_dict = {
-                        "libido" : "Tending to minions (Lib)",
-                        "sensitivity" : "Tending to Gizel (Sen)",
-                        "obedience" : "Cleaning up the farm (Ob)",
-                        "constitution" : "Working outside (Con)",
-                        "rest": "Resting",
+                        "libido" : __("Tending to minions (Lib)"),
+                        "sensitivity" : __("Tending to Gizel (Sen)"),
+                        "obedience" : __("Cleaning up the farm (Ob)"),
+                        "constitution" : __("Working outside (Con)"),
+                        "rest": __("Resting"),
                         }
 
     farm_ttip =         {
-                        "libido" : "She will tend to the farm creatures (boosts libido, costs energy).",
-                        "sensitivity" : "She will tend to Gizel personally (boosts sensitivity, costs energy).",
-                        "obedience" : "She will clean up the farm (boosts obedience, costs energy).",
-                        "constitution" : "She will work-out in the backyard (boosts constitution, costs energy).",
-                        "rest": "She will be resting in her cell.",
-                        "gentle": "In {b}gentle{/b} mode, she won't be forced to do something she doesn't want to. This training will not generate fear.",
-                        "tough": "In {b}tough{/b} mode, Gizel will overcome moderate resistance on her part. This training will generate fear.",
-                        "hardcore": "In {b}hardcore{/b} mode, Gizel will ignore all red lines and force her to do anything. This training will generate massive fear.",
+                        "libido" : __("She will tend to the farm creatures (boosts libido, costs energy)."),
+                        "sensitivity" : __("She will tend to Gizel personally (boosts sensitivity, costs energy)."),
+                        "obedience" : __("She will clean up the farm (boosts obedience, costs energy)."),
+                        "constitution" : __("She will work-out in the backyard (boosts constitution, costs energy)."),
+                        "rest": __("She will be resting in her cell."),
+                        "gentle": __("In {b}gentle{/b} mode, she won't be forced to do something she doesn't want to. This training will not generate fear."),
+                        "tough": __("In {b}tough{/b} mode, Gizel will overcome moderate resistance on her part. This training will generate fear."),
+                        "hardcore": __("In {b}hardcore{/b} mode, Gizel will ignore all red lines and force her to do anything. This training will generate massive fear."),
                         }
 
-    farm_description = {"stallion intro" : "%s spent the night in the stables with a well-hung stallion.",
-                        "beast intro" : "%s spent the night in the pig stalls with a horny, filthy animal.",
-                        "monster intro" : "%s spent the night in the monster den with a lewd, disgusting creature.",
-                        "machine intro" : "%s spent the night in the workshop attached to a large and strange machine.",
-                        "stallion intro plural" : "%s spent the night in the stables with %s well-hung stallions.",
-                        "beast intro plural" : "%s spent the night in the pig stalls with %s drooling, horny beasts.",
-                        "monster intro plural" : "%s spent the night in the monster den, harassed by %s lewd and disgusting creatures.",
-                        "machine intro plural" : "%s spent the night in the workshop strapped to an array of %s arcane machines.",
-                        "naked intro" : "Gizel paraded %s naked in front of %s.",
-                        "service intro" : "Gizel pushed %s to her knees and made her service %s.",
-                        "sex intro" : "Gizel told %s to fuck %s.",
-                        "anal intro" : "Gizel told %s to let %s fuck her ass.",
-                        "fetish intro" : "Gizel showed %s the chains on the wall and told her she'd watch %s have its way with her.",
-                        "bisexual intro" : "Gizel decided to join %s for a little fun with a %s.",
-                        "group intro" : "Gizel told %s to get ready to have sex with a group of %ss.",
+    farm_description = {"stallion intro" : __("%s spent the night in the stables with a well-hung stallion."),
+                        "beast intro" : __("%s spent the night in the pig stalls with a horny, filthy animal."),
+                        "monster intro" : __("%s spent the night in the monster den with a lewd, disgusting creature."),
+                        "machine intro" : __("%s spent the night in the workshop attached to a large and strange machine."),
+                        "stallion intro plural" : __("%s spent the night in the stables with %s well-hung stallions."),
+                        "beast intro plural" : __("%s spent the night in the pig stalls with %s drooling, horny beasts."),
+                        "monster intro plural" : __("%s spent the night in the monster den, harassed by %s lewd and disgusting creatures."),
+                        "machine intro plural" : __("%s spent the night in the workshop strapped to an array of %s arcane machines."),
+                        "naked intro" : __("Gizel paraded %s naked in front of %s."),
+                        "service intro" : __("Gizel pushed %s to her knees and made her service %s."),
+                        "sex intro" : __("Gizel told %s to fuck %s."),
+                        "anal intro" : __("Gizel told %s to let %s fuck her ass."),
+                        "fetish intro" : __("Gizel showed %s the chains on the wall and told her she'd watch %s have its way with her."),
+                        "bisexual intro" : __("Gizel decided to join %s for a little fun with a %s."),
+                        "group intro" : __("Gizel told %s to get ready to have sex with a group of %ss."),
 
-                        "stallion good" : " %s couldn't take her eyes off the stallion's rock-hard cock. {color=[c_green]}Her training went well.{/color}",
-                        "stallion average" : " %s was impressed and a little worried upon seeing the size of the stallion's hard cock. {color=[c_white]}Her training went normally.{/color}",
-                        "stallion bad" : " The stallion's large dick scared %s and she recoiled fearfully. {color=[c_red]}Her training went poorly.{/color}",
-                        "beast good" : " %s was curious and aroused by the weird shape and smell of the beast's genitals. {color=[c_green]}Her training went well.{/color}",
-                        "beast average" : " %s felt uncomfortable around the animals and their weird bodies. {color=[c_white]}Her training went normally.{/color}",
-                        "beast bad" : " %s couldn't believe she was being treated like a farm animal and stood as far as she could from the beasts. {color=[c_red]}Her training went poorly.{/color}",
-                        "monster good" : " %s felt incredibly aroused by the pheromones emanating from the monster. {color=[c_green]}Her training went well.{/color}",
-                        "monster average" : " %s felt weakened and confused by the monster's strange musk. {color=[c_white]}Her training went normally.{/color}",
-                        "monster bad" : " %s felt disgusted and nauseated because of the monster's icky smell. {color=[c_red]}Her training went poorly.{/color}",
-                        "machine good" : " The cold touch of metal and the elastic feel of rubber against her skin sent %s over the top. {color=[c_green]}Her training went well.{/color}",
-                        "machine average" : " %s felt very odd attached to a strange, vibrating artefact in the middle of a workshop full of bizarre sex toys. {color=[c_white]}Her training went normally.{/color}",
-                        "machine bad" : " %s was scared by the spiky, threatening look of the machine and couldn't relax. {color=[c_red]}Her training went poorly.{/color}",
+                        "stallion good" : __(" %s couldn't take her eyes off the stallion's rock-hard cock. {color=[c_green]}Her training went well.{/color}"),
+                        "stallion average" : __(" %s was impressed and a little worried upon seeing the size of the stallion's hard cock. {color=[c_white]}Her training went normally.{/color}"),
+                        "stallion bad" : __(" The stallion's large dick scared %s and she recoiled fearfully. {color=[c_red]}Her training went poorly.{/color}"),
+                        "beast good" : __(" %s was curious and aroused by the weird shape and smell of the beast's genitals. {color=[c_green]}Her training went well.{/color}"),
+                        "beast average" : __(" %s felt uncomfortable around the animals and their weird bodies. {color=[c_white]}Her training went normally.{/color}"),
+                        "beast bad" : __(" %s couldn't believe she was being treated like a farm animal and stood as far as she could from the beasts. {color=[c_red]}Her training went poorly.{/color}"),
+                        "monster good" : __(" %s felt incredibly aroused by the pheromones emanating from the monster. {color=[c_green]}Her training went well.{/color}"),
+                        "monster average" : __(" %s felt weakened and confused by the monster's strange musk. {color=[c_white]}Her training went normally.{/color}"),
+                        "monster bad" : __(" %s felt disgusted and nauseated because of the monster's icky smell. {color=[c_red]}Her training went poorly.{/color}"),
+                        "machine good" : __(" The cold touch of metal and the elastic feel of rubber against her skin sent %s over the top. {color=[c_green]}Her training went well.{/color}"),
+                        "machine average" : __(" %s felt very odd attached to a strange, vibrating artefact in the middle of a workshop full of bizarre sex toys. {color=[c_white]}Her training went normally.{/color}"),
+                        "machine bad" : __(" %s was scared by the spiky, threatening look of the machine and couldn't relax. {color=[c_red]}Her training went poorly.{/color}"),
 
-#                        "naked result good" : "{color=[c_green]}%s was aroused by having her body on display before the %s, her nipples becoming visibly erect.{/color} Gizel pinched them hard, teasing her mercilessly.",
-#                        "naked result average" : "{color=[c_white]}%s felt confused and ashamed, standing naked and exposed.{/color} She blushed as Gizel made her display every part of her body to the %s.",
-#                        "naked result bad" : "{color=[c_lightred]}%s cowered and cried as she was made to stand naked in front of the %s.{/color}.Gizel commented harshly on her poor performance.",
-#                        "service result good" : "{color=[c_green]}%s kneeled and starting working on the %s. She did her best to frown and hide her enjoyment, but Gizel could see she was getting wet.{/color}",
-#                        "service result average" : "{color=[c_white]}%s did what she was asked, polishing the %s's strange dick with her lips and tongue.{/color}",
-#                        "service result bad" : "{color=[c_lightred]}Tears ran down %s's cheeks as the %s forcefully fucked her throat.{/color}",
-#                        "sex result good" : "{color=[c_green]}%s could hardly hide her sighs and screams of pleasure as the %s started fucking her mercilessly.{/color}",
-#                        "sex result average" : "{color=[c_white]}%s shivered and moaned as the %s pumped its large, strange dick back and forth inside her tight pussy.{/color}",
-#                        "sex result bad" : "{color=[c_lightred]}%s screamed in pain and fought weakly as the %s violently fucked her.{/color}",
-#                        "anal result good" : "{color=[c_green]}%s yelled with pleasure as her ass got ravaged by the %s's large cock.{/color}",
-#                        "anal result average" : "{color=[c_white]}%s moaned with a mix of pain and shameful pleasure as the %s violated her asshole.{/color}",
-#                        "anal result bad" : "{color=[c_lightred]}%s screamed in pain and cried bitterly as the %s forced its large cock inside her tight asshole.{/color}",
-#                        "fetish result good" : "{color=[c_green]}%s squirmed with confusion and pleasure, and quickly reached climax as the %s relentlessly violated her bound body.{/color}",
-#                        "fetish result average" : "{color=[c_white]}%s screamed and moaned as the %s inflicted a strange mix of pain and pleasure on her weak body.{/color}",
-#                        "fetish result bad" : "{color=[c_lightred]}%s shrieked with pain as the %s ruthlessly defiled her defenseless body.{/color}",
-#                        "bisexual result good" : "{color=[c_green]}%s and Gizel strated licking and fingering each other's pussy, and soon forgot the %s as they passionately brought each other to climax.{/color} Gizel was very satisfied.",
-#                        "bisexual result average" : "{color=[c_white]}Gizel forced %s to service both her and the %s.{/color} They both came forcefully on the poor girl's face. She was left confused by the whole ordeal.",
-#                        "bisexual result bad" : "{color=[c_lightred]}%s was disgusted and tried to let out muffled screams as Gizel forcefully buried her pussy into her face, nearly choking her, while the %s tended to her other holes.{/color}",
-#                        "group result good" : "{color=[c_green]}As %s and the %ss fucked in a variety of positions, she started enjoying herself and taking the lead, showing the minions which holes to use invitingly.{/color}",
-#                        "group result average" : "{color=[c_white]}Grumbling, %s followed orders and used all of her holes to pleasure the %ss. However, she didn't seem to hate it as much as she was pretending to.{/color}",
-#                        "group result bad" : "{color=[c_lightred]}%s cried and screamed as the %ss took turns violating her body.{/color} Gizel kept tauting her during the whole ordeal as she sobbed silently.",
-                        "pen obedience": "%s reflected on her unfortunate circumstances and misdeeds that brought her to the farm. {color=[c_green]}She thinks that perhaps, if she was more obedient, she wouldn't get in trouble.{/color}",
-                        "pen constitution": "Even though she was locked in, %s was determined to stay in shape. {color=[c_green]}She did some abs crunches and push ups and has become fitter.{/color}",
-                        "pen sensitivity": "%s was bored and started thinking about the weird creatures in the farm and their more 'unusual' features. {color=[c_green]}Soon, she was feeling flushed and strangely aroused.{/color}",
-                        "pen libido": "%s was feeling bored and horny, so she decided to masturbate a little, listening to the strange noises of the farm. {color=[c_green]}She enjoyed herself.{/color}",
+#                        "naked result good" : __("{color=[c_green]}%s was aroused by having her body on display before the %s, her nipples becoming visibly erect.{/color} Gizel pinched them hard, teasing her mercilessly."),
+#                        "naked result average" : __("{color=[c_white]}%s felt confused and ashamed, standing naked and exposed.{/color} She blushed as Gizel made her display every part of her body to the %s."),
+#                        "naked result bad" : __("{color=[c_lightred]}%s cowered and cried as she was made to stand naked in front of the %s.{/color}.Gizel commented harshly on her poor performance."),
+#                        "service result good" : __("{color=[c_green]}%s kneeled and starting working on the %s. She did her best to frown and hide her enjoyment, but Gizel could see she was getting wet.{/color}"),
+#                        "service result average" : __("{color=[c_white]}%s did what she was asked, polishing the %s's strange dick with her lips and tongue.{/color}"),
+#                        "service result bad" : __("{color=[c_lightred]}Tears ran down %s's cheeks as the %s forcefully fucked her throat.{/color}"),
+#                        "sex result good" : __("{color=[c_green]}%s could hardly hide her sighs and screams of pleasure as the %s started fucking her mercilessly.{/color}"),
+#                        "sex result average" : __("{color=[c_white]}%s shivered and moaned as the %s pumped its large, strange dick back and forth inside her tight pussy.{/color}"),
+#                        "sex result bad" : __("{color=[c_lightred]}%s screamed in pain and fought weakly as the %s violently fucked her.{/color}"),
+#                        "anal result good" : __("{color=[c_green]}%s yelled with pleasure as her ass got ravaged by the %s's large cock.{/color}"),
+#                        "anal result average" : __("{color=[c_white]}%s moaned with a mix of pain and shameful pleasure as the %s violated her asshole.{/color}"),
+#                        "anal result bad" : __("{color=[c_lightred]}%s screamed in pain and cried bitterly as the %s forced its large cock inside her tight asshole.{/color}"),
+#                        "fetish result good" : __("{color=[c_green]}%s squirmed with confusion and pleasure, and quickly reached climax as the %s relentlessly violated her bound body.{/color}"),
+#                        "fetish result average" : __("{color=[c_white]}%s screamed and moaned as the %s inflicted a strange mix of pain and pleasure on her weak body.{/color}"),
+#                        "fetish result bad" : __("{color=[c_lightred]}%s shrieked with pain as the %s ruthlessly defiled her defenseless body.{/color}"),
+#                        "bisexual result good" : __("{color=[c_green]}%s and Gizel strated licking and fingering each other's pussy, and soon forgot the %s as they passionately brought each other to climax.{/color} Gizel was very satisfied."),
+#                        "bisexual result average" : __("{color=[c_white]}Gizel forced %s to service both her and the %s.{/color} They both came forcefully on the poor girl's face. She was left confused by the whole ordeal."),
+#                        "bisexual result bad" : __("{color=[c_lightred]}%s was disgusted and tried to let out muffled screams as Gizel forcefully buried her pussy into her face, nearly choking her, while the %s tended to her other holes.{/color}"),
+#                        "group result good" : __("{color=[c_green]}As %s and the %ss fucked in a variety of positions, she started enjoying herself and taking the lead, showing the minions which holes to use invitingly.{/color}"),
+#                        "group result average" : __("{color=[c_white]}Grumbling, %s followed orders and used all of her holes to pleasure the %ss. However, she didn't seem to hate it as much as she was pretending to.{/color}"),
+#                        "group result bad" : __("{color=[c_lightred]}%s cried and screamed as the %ss took turns violating her body.{/color} Gizel kept tauting her during the whole ordeal as she sobbed silently."),
+                        "pen obedience": __("%s reflected on her unfortunate circumstances and misdeeds that brought her to the farm. {color=[c_green]}She thinks that perhaps, if she was more obedient, she wouldn't get in trouble.{/color}"),
+                        "pen constitution": __("Even though she was locked in, %s was determined to stay in shape. {color=[c_green]}She did some abs crunches and push ups and has become fitter.{/color}"),
+                        "pen sensitivity": __("%s was bored and started thinking about the weird creatures in the farm and their more 'unusual' features. {color=[c_green]}Soon, she was feeling flushed and strangely aroused.{/color}"),
+                        "pen libido": __("%s was feeling bored and horny, so she decided to masturbate a little, listening to the strange noises of the farm. {color=[c_green]}She enjoyed herself.{/color}"),
 
-                        "holding gentle obedience" : "Gizel sent %s to clean up the farm, telling her to scrub every corner of the barn and wash the multiple stains on the floor. %s sighed and got to work.",
-                        "holding gentle constitution" : "Gizel made %s run laps around the back on the horsetrack, stopping and yelling at %s to go faster from time to time to keep her on edge.",
-                        "holding gentle sensitivity" : "Gizel used %s as her personal servant to pursue her perverted fantasies with a variety of strange toys. Gizel didn't push %s too much, but she still discovered new things.",
-                        "holding gentle libido" : "Gizel asked %s to tend to the minions: feeding them, cleaning them, and helping them 'release their stress'. %s learnt a good deal about the minions' peculiar anatomy as she worked.",
-                        "holding tough obedience" : "Gizel sent %s to clean up the farm, telling her to scrub every corner of the barn and wash the multiple stains on the floor. %s did what she was asked, rather than face the threat of Gizel's magical lash.",
-                        "holding tough constitution" : "Gizel made %s run laps around the back on the horsetrack, giving %s vicious swats with a riding crop whenever she caught her slowing down.",
-                        "holding tough sensitivity" : "Gizel used %s as her personal servant to pursue her perverted fantasies, forcing her to lick her body and use various toys on her hungry holes. It was tough, but %s learnt new things.",
-                        "holding tough libido" : "Gizel asked %s to tend to the minions: feeding them, cleaning them, and helping them 'release their stress'. Gizel forced her to touch parts of their anatomy she wasn't comfortable around, arousing some strange feelings in %s.",
-                        "holding hardcore obedience" : "Gizel sent %s to clean up the farm, telling her to scrub every corner of the barn and wash the multiple stains on the floor. %s got a taste of her whip mercilessly if any dirt was left.",
-                        "holding hardcore constitution" : "Gizel made %s run laps around the back on the horsetrack, wearing various punishment instruments like a wooden collar, shackles or nipple clamps. %s had to suffer through it to get stronger.",
-                        "holding hardcore sensitivity" : "Gizel used %s as her personal servant to pursue her perverted fantasies, forcing her to lick her body and use various toys on her hungry holes. She made sure %s helped with {i}everything{/i}, especially what she was most uncomfortable with.",
-                        "holding hardcore libido" : "Gizel asked %s to tend to the minions: feeding them, cleaning them, and helping them 'release their stress'. Gizel told %s she was not allowed to use her hands unless she would get a beating, forcing her to get creative.",
+                        "holding gentle obedience" : __("Gizel sent %s to clean up the farm, telling her to scrub every corner of the barn and wash the multiple stains on the floor. %s sighed and got to work."),
+                        "holding gentle constitution" : __("Gizel made %s run laps around the back on the horsetrack, stopping and yelling at %s to go faster from time to time to keep her on edge."),
+                        "holding gentle sensitivity" : __("Gizel used %s as her personal servant to pursue her perverted fantasies with a variety of strange toys. Gizel didn't push %s too much, but she still discovered new things."),
+                        "holding gentle libido" : __("Gizel asked %s to tend to the minions: feeding them, cleaning them, and helping them 'release their stress'. %s learnt a good deal about the minions' peculiar anatomy as she worked."),
+                        "holding tough obedience" : __("Gizel sent %s to clean up the farm, telling her to scrub every corner of the barn and wash the multiple stains on the floor. %s did what she was asked, rather than face the threat of Gizel's magical lash."),
+                        "holding tough constitution" : __("Gizel made %s run laps around the back on the horsetrack, giving %s vicious swats with a riding crop whenever she caught her slowing down."),
+                        "holding tough sensitivity" : __("Gizel used %s as her personal servant to pursue her perverted fantasies, forcing her to lick her body and use various toys on her hungry holes. It was tough, but %s learnt new things."),
+                        "holding tough libido" : __("Gizel asked %s to tend to the minions: feeding them, cleaning them, and helping them 'release their stress'. Gizel forced her to touch parts of their anatomy she wasn't comfortable around, arousing some strange feelings in %s."),
+                        "holding hardcore obedience" : __("Gizel sent %s to clean up the farm, telling her to scrub every corner of the barn and wash the multiple stains on the floor. %s got a taste of her whip mercilessly if any dirt was left."),
+                        "holding hardcore constitution" : __("Gizel made %s run laps around the back on the horsetrack, wearing various punishment instruments like a wooden collar, shackles or nipple clamps. %s had to suffer through it to get stronger."),
+                        "holding hardcore sensitivity" : __("Gizel used %s as her personal servant to pursue her perverted fantasies, forcing her to lick her body and use various toys on her hungry holes. She made sure %s helped with {i}everything{/i}, especially what she was most uncomfortable with."),
+                        "holding hardcore libido" : __("Gizel asked %s to tend to the minions: feeding them, cleaning them, and helping them 'release their stress'. Gizel told %s she was not allowed to use her hands unless she would get a beating, forcing her to get creative."),
 
-                        "holding obedience good": " As an added challenge, Gizel made %s wear tight ropes bound across her body as she went on with her work. {color=[c_green]}The rough ropes rubbed against her body in a way both uncomfortable and oddly arousing.{/color}",
-                        "holding obedience bad": " {color=[c_lightred]}%s was disgusted by all the filth and bodily fluids left over by Gizel's minions.{/color}",
-                        "holding constitution good": " Gizel thought it would drive %s wilder to roam outside free of clothes, so she made her run naked alongside the horses. {color=[c_green]}Being naked outdoors with the animals made her more comfortable with her body.{/color}",
-                        "holding constitution bad": " {color=[c_lightred]}As %s completed her laps in record timing, she gave Gizel a contemptuous and defiant look.{/color}",
-                        "holding sensitivity good": " %s gives Gizel a wonderful orgasm as she licks her erect clit with a skillful tongue. {color=[c_green]}She is now more familiar with ways to pleasure a woman.{/color}",
-                        "holding sensitivity bad": " Gizel worked %s too hard, leaving her exhausted and panting on the floor. {color=[c_lightred]}Her constitution has suffered.{/color}",
-                        "holding libido good": " {color=[c_green]}Several hours spent working with the minions have allowed %s to increase her technique.{/color}",
-                        "holding libido bad": " {color=[c_lightred]}As a result of spending too many hours jerking off minions, %s's technique has become more mechanical.{/color}",
+                        "holding obedience good": __(" As an added challenge, Gizel made %s wear tight ropes bound across her body as she went on with her work. {color=[c_green]}The rough ropes rubbed against her body in a way both uncomfortable and oddly arousing.{/color}"),
+                        "holding obedience bad": __(" {color=[c_lightred]}%s was disgusted by all the filth and bodily fluids left over by Gizel's minions.{/color}"),
+                        "holding constitution good": __(" Gizel thought it would drive %s wilder to roam outside free of clothes, so she made her run naked alongside the horses. {color=[c_green]}Being naked outdoors with the animals made her more comfortable with her body.{/color}"),
+                        "holding constitution bad": __(" {color=[c_lightred]}As %s completed her laps in record timing, she gave Gizel a contemptuous and defiant look.{/color}"),
+                        "holding sensitivity good": __(" %s gives Gizel a wonderful orgasm as she licks her erect clit with a skillful tongue. {color=[c_green]}She is now more familiar with ways to pleasure a woman.{/color}"),
+                        "holding sensitivity bad": __(" Gizel worked %s too hard, leaving her exhausted and panting on the floor. {color=[c_lightred]}Her constitution has suffered.{/color}"),
+                        "holding libido good": __(" {color=[c_green]}Several hours spent working with the minions have allowed %s to increase her technique.{/color}"),
+                        "holding libido bad": __(" {color=[c_lightred]}As a result of spending too many hours jerking off minions, %s's technique has become more mechanical.{/color}"),
                         }
 
     farm_holding_stats = {"constitution" : ("naked", "obedience"), "obedience" : ("fetish", "libido"), "sensitivity" : ("bisexual", "constitution"), "libido" : ("service", "sensitivity")}
@@ -780,24 +780,24 @@ init -4 python:
     farm_holding_tags = {"constitution" : ["run", "constitution"], "obedience" : ["obedience", "maid"], "sensitivity" : ["sensitivity"], "libido" : ["libido"]}
 
     pref_response = {
-                    "modest refuses" : "Me, %s? NO!!! Don't!!! Don't do that to me! *horrified*",
-                    "modest very reluctant" : "Wait, %s? This is outrageous! It's disgusting, it's dirty... Please stop! *scared*",
-                    "modest reluctant": "No, don't look at me... It's not right, %s... I feel so ashamed... *embarrassed*",
-                    "modest a little reluctant" : "I don't really want to do this, %s... It's wrong... Aaah! *shy*",
-                    "modest indifferent" : "Oh, making me do this, %s again... You're such a pervert... *blush*",
-                    "modest a little interested" : "Mmmh, it's like I'm getting used to %s... Wait, I didn't mean that! *panic*",
-                    "modest interested" : "Ah, %s... It's not so bad... Mmmh... *flushed*",
-                    "modest very interested" : "Oh, I think I love %s... I feel like a slut... *moan*",
-                    "modest fascinated" : "I can't believe it, %s feels so good... Look at me! I've become a dirty, dirty bitch! *cumming*",
-                    "lewd refuses": "NO, not %s!!! Don't touch me, I HATE it!!! *horrified*",
-                    "lewd very reluctant": "I told you I hate %s... Why do I have to keep doing this? Ah!!! *ashamed*",
-                    "lewd reluctant": "You know I don't like %s... Don't look at me... Ahaa! *embarrassed*",
-                    "lewd a little reluctant": "You're doing perverted things to me again, %s... It makes me feel strange... *shy*",
-                    "lewd indifferent": "Mmmh, %s... *blush*",
-                    "lewd a little interested": "Oh, %s, that's good... *licks her lips*",
-                    "lewd interested": "Mmmh, %s... I feel wet already... *flushed*",
-                    "lewd very interested": "Oh, %s, it makes me so horny... I get so wet when being watched... Aaaah!!! *moan*",
-                    "lewd fascinated": "Oh... I'm about to come already! Ahaaa, %s is the best!!! *cumming*",
+                    "modest refuses" : __("Me, %s? NO!!! Don't!!! Don't do that to me! *horrified*"),
+                    "modest very reluctant" : __("Wait, %s? This is outrageous! It's disgusting, it's dirty... Please stop! *scared*"),
+                    "modest reluctant": __("No, don't look at me... It's not right, %s... I feel so ashamed... *embarrassed*"),
+                    "modest a little reluctant" : __("I don't really want to do this, %s... It's wrong... Aaah! *shy*"),
+                    "modest indifferent" : __("Oh, making me do this, %s again... You're such a pervert... *blush*"),
+                    "modest a little interested" : __("Mmmh, it's like I'm getting used to %s... Wait, I didn't mean that! *panic*"),
+                    "modest interested" : __("Ah, %s... It's not so bad... Mmmh... *flushed*"),
+                    "modest very interested" : __("Oh, I think I love %s... I feel like a slut... *moan*"),
+                    "modest fascinated" : __("I can't believe it, %s feels so good... Look at me! I've become a dirty, dirty bitch! *cumming*"),
+                    "lewd refuses": __("NO, not %s!!! Don't touch me, I HATE it!!! *horrified*"),
+                    "lewd very reluctant": __("I told you I hate %s... Why do I have to keep doing this? Ah!!! *ashamed*"),
+                    "lewd reluctant": __("You know I don't like %s... Don't look at me... Ahaa! *embarrassed*"),
+                    "lewd a little reluctant": __("You're doing perverted things to me again, %s... It makes me feel strange... *shy*"),
+                    "lewd indifferent": __("Mmmh, %s... *blush*"),
+                    "lewd a little interested": __("Oh, %s, that's good... *licks her lips*"),
+                    "lewd interested": __("Mmmh, %s... I feel wet already... *flushed*"),
+                    "lewd very interested": __("Oh, %s, it makes me so horny... I get so wet when being watched... Aaaah!!! *moan*"),
+                    "lewd fascinated": __("Oh... I'm about to come already! Ahaaa, %s is the best!!! *cumming*"),
                     }
 
     minion_adjectives = {
@@ -823,7 +823,7 @@ init -4 python:
 
     farm_type_list = ["machine", "beast", "monster", "stallion"]
     farm_inst_list = ["stables", "pig stall", "monster den", "workshop"]
-    farm_installations_dict = {"machine" : "workshop", "beast" : "pig stall", "monster" : "monster den", "stallion" : "stables"}
+    farm_installations_dict = {"machine" : __("workshop"), "beast" : __("pig stall"), "monster" : __("monster den"), "stallion" : __("stables")}
 
     ## FEAR POWERS AND MOJO
 
@@ -846,68 +846,68 @@ init -4 python:
 
     ## CITY MERCHANTS
 
-    merchant_dict = {"Stella" : "stallion", "Goldie" : "beast", "Willow" : "monster", "Gina" : "machine"}
+    merchant_dict = {"Stella" : __("stallion"), "Goldie" : __("beast"), "Willow" : __("monster"), "Gina" : __("machine")}
 
     merchant_title = {
-                    "Stella" : "Headmaster", "Goldie" : "Rancher", "Willow" : "Monster catcher", "Gina" : "Weird scientist",
-                    "Riche" : "Florist", "Ramias" : "Weapon dealer", "Gurigura" : "Supply merchant", "Katryn" : "Trinket merchant", "Gift Shop Girl" : "Exotic emporium", "Today" : "Tailor", "shop" : "Items",
+                    "Stella" : __("Headmaster"), "Goldie" : __("Rancher"), "Willow" : __("Monster catcher"), "Gina" : __("Weird scientist"),
+                    "Riche" : __("Florist"), "Ramias" : __("Weapon dealer"), "Gurigura" : __("Supply merchant"), "Katryn" : __("Trinket merchant"), "Gift Shop Girl" : __("Exotic emporium"), "Today" : __("Tailor"), "shop" : __("Items"),
                     }
 
     merchant_greetings = {
-                        "shop greeting" : "Hi, handsome! Please take a look at my wares... *wink*",
-                        "shop caravan" : "A caravan has arrived, and we have new items. Check it out!",
-                        "shop bought something" : "You just bought the {b}%s{/b}. I'm sure you will put it to good use.",
-                        "shop no money" : "I'm sorry, but you don't have enough gold...",
+                        "shop greeting" : __("Hi, handsome! Please take a look at my wares... *wink*"),
+                        "shop caravan" : __("A caravan has arrived, and we have new items. Check it out!"),
+                        "shop bought something" : __("You just bought the {b}%s{/b}. I'm sure you will put it to good use."),
+                        "shop no money" : __("I'm sorry, but you don't have enough gold..."),
 
-                        "Stella greeting" : "Hmpf, look who's come here. I hope you're not going to waste my time.",
-                        "Stella bought something" : "Fine, give me the gold, and the {b}%s{/b} is yours.",
-                        "Stella no money" : "You ain't got the coin, pal. Get out of here.",
+                        "Stella greeting" : __("Hmpf, look who's come here. I hope you're not going to waste my time."),
+                        "Stella bought something" : __("Fine, give me the gold, and the {b}%s{/b} is yours."),
+                        "Stella no money" : __("You ain't got the coin, pal. Get out of here."),
 
-                        "Goldie greeting" : "How can I help you?",
-                        "Goldie bought something" : "Thank you! Please treat this {b}%s{/b} with care.",
-                        "Goldie no money" : "I'm sorry, but you don't seem to have enough money right now.",
+                        "Goldie greeting" : __("How can I help you?"),
+                        "Goldie bought something" : __("Thank you! Please treat this {b}%s{/b} with care."),
+                        "Goldie no money" : __("I'm sorry, but you don't seem to have enough money right now."),
 
-                        "Willow greeting" : "Hey, if it isn't my friendly neighbor! You'll be amazed to see what I just caught.",
-                        "Willow bought something" : "Deal, just take the {b}%s{/b}... You're gonna have fun!",
-                        "Willow no money" : "Aw, you meanie, are you trying to take advantage of me? Your pouch is empty!",
+                        "Willow greeting" : __("Hey, if it isn't my friendly neighbor! You'll be amazed to see what I just caught."),
+                        "Willow bought something" : __("Deal, just take the {b}%s{/b}... You're gonna have fun!"),
+                        "Willow no money" : __("Aw, you meanie, are you trying to take advantage of me? Your pouch is empty!"),
 
-                        "Gina greeting" : "Mmh, what if I adjusted this button... No, that's not it... Sorry. How can I help you?",
-                        "Gina bought something" : "Sure, I didn't need this {b}%s{/b} anyway...",
-                        "Gina no money" : "Sorry, but this is expensive equipment. Don't touch it unless you have the coin to buy it.",
+                        "Gina greeting" : __("Mmh, what if I adjusted this button... No, that's not it... Sorry. How can I help you?"),
+                        "Gina bought something" : __("Sure, I didn't need this {b}%s{/b} anyway..."),
+                        "Gina no money" : __("Sorry, but this is expensive equipment. Don't touch it unless you have the coin to buy it."),
 
-                        "Riche greeting" : "Oh, hello. *smile*",
-                        "Riche bought something" : "Thank you for buying {b}%ss{/b}! Come again soon!",
-                        "Riche no money" : "Oh, sorry... But you haven't got the gold.",
+                        "Riche greeting" : __("Oh, hello. *smile*"),
+                        "Riche bought something" : __("Thank you for buying {b}%ss{/b}! Come again soon!"),
+                        "Riche no money" : __("Oh, sorry... But you haven't got the gold."),
 
-                        "Ramias greeting" : "Oh, it's you... Greetings.",
-                        "Ramias bought something" : "Thank you. This {b}%s{/b} will not disappoint you.",
-                        "Ramias no money" : "Hmm... It doesn't look like you have enough gold.",
+                        "Ramias greeting" : __("Oh, it's you... Greetings."),
+                        "Ramias bought something" : __("Thank you. This {b}%s{/b} will not disappoint you."),
+                        "Ramias no money" : __("Hmm... It doesn't look like you have enough gold."),
 
-                        "Gurigura greeting" : "Hiii!!! *smile*",
-                        "Gurigura bought something" : "{b}%s{/b}, coming right up! Thaaank yooou! Teehee.",
-                        "Gurigura no money" : "Hey, wait a minute... You don't have enough gold, mister!",
+                        "Gurigura greeting" : __("Hiii!!! *smile*"),
+                        "Gurigura bought something" : __("{b}%s{/b}, coming right up! Thaaank yooou! Teehee."),
+                        "Gurigura no money" : __("Hey, wait a minute... You don't have enough gold, mister!"),
 
-                        "Katryn greeting" : "Oh, hi. I hope you're not going to waste my time.",
-                        "Katryn bought something" : "Give me the money first, and you'll get the {b}%s{/b}. Good.",
-                        "Katryn no money" : "What the... You haven't got the gold, stupid!",
+                        "Katryn greeting" : __("Oh, hi. I hope you're not going to waste my time."),
+                        "Katryn bought something" : __("Give me the money first, and you'll get the {b}%s{/b}. Good."),
+                        "Katryn no money" : __("What the... You haven't got the gold, stupid!"),
 
-                        "Gift Shop Girl greeting" : "Oh, hello. *smile*",
-                        "Gift Shop Girl bought something" : "Thank you for buying the {b}%s{/b}, dear sir.",
-                        "Gift Shop Girl no money" : "Sorry sir... But you haven't got the gold.",
+                        "Gift Shop Girl greeting" : __("Oh, hello. *smile*"),
+                        "Gift Shop Girl bought something" : __("Thank you for buying the {b}%s{/b}, dear sir."),
+                        "Gift Shop Girl no money" : __("Sorry sir... But you haven't got the gold."),
 
-                        "Today greeting" : "Hi there, big bro! What can we help you with? *smile*",
-                        "Yesterday greeting" : "Ah... Hello... *blush*",
-                        "Today bought something" : "Thank you for buying the {b}%s{/b}, big bro! *wink*",
-                        "Yesterday bought something" : "Thanks.",
-                        "Today no money" : "Hold it, bro. You don't have the gold to pay for this.",
+                        "Today greeting" : __("Hi there, big bro! What can we help you with? *smile*"),
+                        "Yesterday greeting" : __("Ah... Hello... *blush*"),
+                        "Today bought something" : __("Thank you for buying the {b}%s{/b}, big bro! *wink*"),
+                        "Yesterday bought something" : __("Thanks."),
+                        "Today no money" : __("Hold it, bro. You don't have the gold to pay for this."),
                         }
 
 
     shopgirl_comment = {
-                        "wood" : "New shelf, perfect!", "leather" : "Great! This leather basket will fit nicely in the entrance.",
-                        "dye" : "Nice! This freshly painted display looks sweet.", "marble" : "Ooh, a marble counter! That's going to make all the other shopkeepers jealous, yay!",
-                        "ore" : "Copper-plated counter shelves are sure to draw some attention. Very nice.", "silk" : "Ah, finally, some soft, smooth silk to hold the fragile items... And rub my face into!",
-                        "diamond" : "A girl's best friends... You've got style, handsome! And so does my new diamond-encrusted display... [emo_heart]"
+                        "wood" : __("New shelf, perfect!"), "leather" : __("Great! This leather basket will fit nicely in the entrance."),
+                        "dye" : __("Nice! This freshly painted display looks sweet."), "marble" : __("Ooh, a marble counter! That's going to make all the other shopkeepers jealous, yay!"),
+                        "ore" : __("Copper-plated counter shelves are sure to draw some attention. Very nice."), "silk" : __("Ah, finally, some soft, smooth silk to hold the fragile items... And rub my face into!"),
+                        "diamond" : __("A girl's best friends... You've got style, handsome! And so does my new diamond-encrusted display... [emo_heart]")
                         }
 
 
@@ -953,7 +953,7 @@ init -4 python:
                         5 : 1000,
                         }
 
-    attract_pop_dict = {0 : "      ", 1 : "A few ", 2: "Some  ", 3 : "Many  ", 4 : "A lot ", 5 : "Loads "}
+    attract_pop_dict = {0 : "      ", 1 : __("A few "), 2: __("Some  "), 3 : __("Many  "), 4 : __("A lot "), 5 : __("Loads ")}
 
     # Encounters are tuples with label (used with prefix "city_") and probability. Tuples can be used with multiple labels
 
@@ -961,11 +961,11 @@ init -4 python:
 
     encounter_pics = {
                     "rape" : ("monster1.webp", "monster2.webp", "monster3.webp", "monster4.webp", "monster5.webp", "monster6.webp", "monster7.webp", "monster8.webp", "monster9.webp", "monster10.webp"),
-                    "impress" : "impress0.webp",
+                    "impress" : __("impress0.webp"),
                     "impress1" : ("impress1_1.webp", "impress1_2.webp", "impress1_3.webp", "impress1_4.webp", "impress1_5.webp", "impress1_6.webp", "impress1_7.webp", "impress1_8.webp", "impress1_9.webp", "impress1_10.webp"),
                     "impress2" : ("impress2_1.webp", "impress2_2.webp"),
                     "impress3" : ("impress3_1.webp", "impress3_2.webp", "impress3_3.webp"),
-                    "impress4" : "impress4.webp",
+                    "impress4" : __("impress4.webp"),
                     "slave" : ("slave1.webp", "slave2.webp", "slave3.webp", "slave4.webp", "slave5.webp", "slave6.webp", "slave7.webp", "slave8.webp", "slave9.webp", "slave10.webp"),
                     "slave_service" : (("slave service1.webp","slave service2.webp", "slave service3.webp", "slave service4.webp"), ("slave service5.webp","slave service6.webp", "slave service7.webp", "slave service8.webp")),
                     "slave_sex" : (("slave sex1.webp","slave sex2.webp", "slave sex3.webp", "slave sex4.webp"), ("slave sex5.webp","slave sex6.webp", "slave sex7.webp", "slave sex8.webp")),
@@ -993,7 +993,7 @@ init -4 python:
     ## WEEK DAYS ##
 
     weekdays = ("Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday")
-    workshift_dict = {0: "Rest", 50: "Half Shift", 100: "Full Shift"}
+    workshift_dict = {0: __("Rest"), 50: __("Half Shift"), 100: __("Full Shift")}
     workshift_color = {0: c_emerald, 50: c_prune, 100: c_orange}
 
     ## MC picture index
@@ -1034,21 +1034,21 @@ init -4 python:
 
 
     gstats_main = [
-        "Charm",
-        "Beauty",
-        "Body",
-        "Refinement",
-        "Sensitivity",
-        "Libido",
-        "Constitution",
-        "Obedience",
+        __("Charm"),
+        __("Beauty"),
+        __("Body"),
+        __("Refinement"),
+        __("Sensitivity"),
+        __("Libido"),
+        __("Constitution"),
+        __("Obedience"),
         ]
 
     gstats_sex = [
-        "Service",
-        "Sex",
-        "Anal",
-        "Fetish"
+        __("Service"),
+        __("Sex"),
+        __("Anal"),
+        __("Fetish")
         ]
 
     all_skills = [s.lower() for s in gstats_main + gstats_sex]
@@ -1057,55 +1057,55 @@ init -4 python:
     ## STAT DESCRIPTION ##
 
     gstats_dict = {
-                    "Beauty" : "How beautiful she looks. Affects work as a {b}masseuse{/b} and regular {b}sex{/b}. Current masseuse capacity: {b}%s{/b} customer%s.",
-                    "Body" : "How well-shaped and firm her body is. Affects work as a {b}dancer{/b} and {b}anal{/b} sex. Current dancer capacity: {b}%s{/b} customer%s.",
-                    "Charm" : "Her personality and presence. Affects work as a {b}waitress{/b} and sexual {b}service{/b}. Current waitress capacity: {b}%s{/b} customer%s.",
-                    "Refinement" : "How intelligent and worldly she is. Affects work as a {b}geisha{/b} and {b}fetish{/b} sex acts. Current geisha capacity: {b}%s{/b} customer%s.",
-                    "Libido" : "How eager for sex she is. Affects {b}dancer{/b}, {b}sex{/b} and max {b}whoring{/b} customers. Current whore capacity: {b}%s{/b} customer%s.",
-                    "Sensitivity" : "How sensitive she is to her body and her partners. Affects {b}masseuse{/b}, {b}service{/b} and improves customer {b}satisfaction{/b}.",
-                    "Constitution" : "Her stamina. Affects {b}waitress{/b}, {b}anal{/b} sex, improves her maximum {b}energy{/b} and allows her to serve {b}more customers{/b}.",
-                    "Obedience" : "How receptive she is to orders and servitude. Affects {b}geisha{/b}, {b}fetish{/b} sexual acts and chances of accepting {b}work{/b} or {b}training{/b}.",
-                    "Service" : "How good she is with handjobs, blowjobs and other sexual services.",
-                    "Sex" : "How good she is at regular sex.",
-                    "Anal" : "How good she is at anal sex.",
-                    "Fetish" : "How good she is at BDSM and other unusual requests."
+                    "Beauty" : __("How beautiful she looks. Affects work as a {b}masseuse{/b} and regular {b}sex{/b}. Current masseuse capacity: {b}%s{/b} customer%s."),
+                    "Body" : __("How well-shaped and firm her body is. Affects work as a {b}dancer{/b} and {b}anal{/b} sex. Current dancer capacity: {b}%s{/b} customer%s."),
+                    "Charm" : __("Her personality and presence. Affects work as a {b}waitress{/b} and sexual {b}service{/b}. Current waitress capacity: {b}%s{/b} customer%s."),
+                    "Refinement" : __("How intelligent and worldly she is. Affects work as a {b}geisha{/b} and {b}fetish{/b} sex acts. Current geisha capacity: {b}%s{/b} customer%s."),
+                    "Libido" : __("How eager for sex she is. Affects {b}dancer{/b}, {b}sex{/b} and max {b}whoring{/b} customers. Current whore capacity: {b}%s{/b} customer%s."),
+                    "Sensitivity" : __("How sensitive she is to her body and her partners. Affects {b}masseuse{/b}, {b}service{/b} and improves customer {b}satisfaction{/b}."),
+                    "Constitution" : __("Her stamina. Affects {b}waitress{/b}, {b}anal{/b} sex, improves her maximum {b}energy{/b} and allows her to serve {b}more customers{/b}."),
+                    "Obedience" : __("How receptive she is to orders and servitude. Affects {b}geisha{/b}, {b}fetish{/b} sexual acts and chances of accepting {b}work{/b} or {b}training{/b}."),
+                    "Service" : __("How good she is with handjobs, blowjobs and other sexual services."),
+                    "Sex" : __("How good she is at regular sex."),
+                    "Anal" : __("How good she is at anal sex."),
+                    "Fetish" : __("How good she is at BDSM and other unusual requests.")
                 }
 
     gstats_descript = {
-                    "beauty" : "a beautiful girl",
-                    "body" : "a girl with a hot body",
-                    "charm" : "a charming girl",
-                    "refinement" : "a refined girl",
+                    "beauty" : __("a beautiful girl"),
+                    "body" : __("a girl with a hot body"),
+                    "charm" : __("a charming girl"),
+                    "refinement" : __("a refined girl"),
                     }
 
     gstat_job_skill = {
-                    "Beauty" : "masseuse",
-                    "Body" : "dancer",
-                    "Charm" : "waitress",
-                    "Refinement" : "geisha",
-                    "Libido" : "whore",
+                    "Beauty" : __("masseuse"),
+                    "Body" : __("dancer"),
+                    "Charm" : __("waitress"),
+                    "Refinement" : __("geisha"),
+                    "Libido" : __("whore"),
                     }
 
     MC_stat_color = {
-                    "strength" : "{color=[c_darkred]}%s{/color}",
-                    "defense" : "{color=[c_darkred]}%s{/color}",
-                    "spirit" : "{color=[c_darkblue]}%s{/color}",
-                    "charisma" : "{color=[c_emerald]}%s{/color}",
-                    "speed" : "{color=[c_lightblue]}%s{/color}",
+                    "strength" : __("{color=[c_darkred]}%s{/color}"),
+                    "defense" : __("{color=[c_darkred]}%s{/color}"),
+                    "spirit" : __("{color=[c_darkblue]}%s{/color}"),
+                    "charisma" : __("{color=[c_emerald]}%s{/color}"),
+                    "speed" : __("{color=[c_lightblue]}%s{/color}"),
                     }
 
     preference_color = {
-                "refuses" : "{color=#F70000}%s{/color}",
-#                 "extremely reluctant" : "{color=#FF2626}%s{/color}",
-                "very reluctant" : "{color=#FF5353}%s{/color}",
-                "reluctant" : "{color=#FF8E8E}%s{/color}",
-                "a little reluctant" : "{color=#FFB5B5}%s{/color}",
-                "indifferent" : "{color=[c_white]}%s{/color}",
-                "a little interested" : "{color=#BDF4CB}%s{/color}",
-                "interested" : "{color=#7CEB98}%s{/color}",
-                "very interested" : "{color=#1FCB4A}%s{/color}",
-                "fascinated" : "{color=[c_orange]}%s{/color}",
-                None: "%s",
+                "refuses" : __("{color=#F70000}%s{/color}"),
+#                 "extremely reluctant" : __("{color=#FF2626}%s{/color}"),
+                "very reluctant" : __("{color=#FF5353}%s{/color}"),
+                "reluctant" : __("{color=#FF8E8E}%s{/color}"),
+                "a little reluctant" : __("{color=#FFB5B5}%s{/color}"),
+                "indifferent" : __("{color=[c_white]}%s{/color}"),
+                "a little interested" : __("{color=#BDF4CB}%s{/color}"),
+                "interested" : __("{color=#7CEB98}%s{/color}"),
+                "very interested" : __("{color=#1FCB4A}%s{/color}"),
+                "fascinated" : __("{color=[c_orange]}%s{/color}"),
+                None: __("%s"),
                 }
 
 
@@ -1123,67 +1123,67 @@ init -4 python:
                     }
 
     mood_description = {
-                        "++++++" : "She feels blessed. Her mood is {b}ecstatic{/b}",
-                        "+++++" : "Her mood is {b}elated{/b}",
-                        "++++" : "She is {b}very happy{/b}",
-                        "+++" : "She is {b}happy{/b}",
-                        "++" : "She is satisfied",
-                        "+" : "She is {b}content{/b}",
-                        "0" : "Her mood is {b}neutral{/b}",
-                        "-" : "She is {b}discontent{/b}",
-                        "--" : "She is {b}unsatisfied{/b}",
-                        "---" : "She is {b}unhappy{/b}",
-                        "----" : "She is {b}very unhappy{/b}",
-                        "-----" : "Her mood is {b}miserable{/b}",
-                        "------" : "Her life is hell. Her mood is {b}abysmal{/b}",
+                        "++++++" : __("She feels blessed. Her mood is {b}ecstatic{/b}"),
+                        "+++++" : __("Her mood is {b}elated{/b}"),
+                        "++++" : __("She is {b}very happy{/b}"),
+                        "+++" : __("She is {b}happy{/b}"),
+                        "++" : __("She is satisfied"),
+                        "+" : __("She is {b}content{/b}"),
+                        "0" : __("Her mood is {b}neutral{/b}"),
+                        "-" : __("She is {b}discontent{/b}"),
+                        "--" : __("She is {b}unsatisfied{/b}"),
+                        "---" : __("She is {b}unhappy{/b}"),
+                        "----" : __("She is {b}very unhappy{/b}"),
+                        "-----" : __("Her mood is {b}miserable{/b}"),
+                        "------" : __("Her life is hell. Her mood is {b}abysmal{/b}"),
 
-                        "change +++" : " and {b}improving fast{/b}",
-                        "change ++" : " and {b}improving{/b}",
-                        "change +" : " and {b}improving a little{/b}",
-                        "no change" : " and {b}stable{/b}",
-                        "change -" : " and {b}worsening a little{/b}",
-                        "change --" : " and {b}worsening{/b}",
-                        "change ---" : " and {b}worsening fast{/b}",
+                        "change +++" : __(" and {b}improving fast{/b}"),
+                        "change ++" : __(" and {b}improving{/b}"),
+                        "change +" : __(" and {b}improving a little{/b}"),
+                        "no change" : __(" and {b}stable{/b}"),
+                        "change -" : __(" and {b}worsening a little{/b}"),
+                        "change --" : __(" and {b}worsening{/b}"),
+                        "change ---" : __(" and {b}worsening fast{/b}"),
                         }
 
     love_description = {
-                        "++++++" : "You are everything to her. She worships you.",
-                        "+++++" : "She adores you.",
-                        "++++" : "She loves you.",
-                        "+++" : "She likes you a lot.",
-                        "++" : "She is fond of you.",
-                        "+" : "She thinks you're all right.",
-                        "0" : "She isn't sure how she feels about you.",
-                        "-" : "She doesn't like you much.",
-                        "--" : "She dislikes you.",
-                        "---" : "She resents you.",
-                        "----" : "She despises you.",
-                        "-----" : "She hates you.",
-                        "------" : "She thinks you're the worst. She wants you dead.",
+                        "++++++" : __("You are everything to her. She worships you."),
+                        "+++++" : __("She adores you."),
+                        "++++" : __("She loves you."),
+                        "+++" : __("She likes you a lot."),
+                        "++" : __("She is fond of you."),
+                        "+" : __("She thinks you're all right."),
+                        "0" : __("She isn't sure how she feels about you."),
+                        "-" : __("She doesn't like you much."),
+                        "--" : __("She dislikes you."),
+                        "---" : __("She resents you."),
+                        "----" : __("She despises you."),
+                        "-----" : __("She hates you."),
+                        "------" : __("She thinks you're the worst. She wants you dead."),
                         }
 
     fear_description = {
-                        "++++++" : "She lives in a world of terror, day and night. She is dead afraid of you.",
-                        "+++++" : "You terrify her.",
-                        "++++" : "She is very scared of you.",
-                        "+++" : "She is scared of you.",
-                        "++" : "She is a little scared of you.",
-                        "+" : "She distrusts you.",
-                        "0" : "She is on her guard around you.",
-                        "-" : "She is nervous around you.",
-                        "--" : "She is starting to ease up around you.",
-                        "---" : "She is more relaxed around you. She feels confident you won't do anything bad to her.",
-                        "----" : "She feels like she can act freely.",
-                        "-----" : "She feels like she can do what she wants.",
-                        "------" : "She feels like a princess, doing whatever she likes.",
-                        "M++++++" : "Her true place is at your feet, shivering with terror and desire.",
-                        "M+++++" : "The more you hurt her, the happier she gets.",
-                        "M++++" : "It seems she likes being roughed up. She wants more.",
-                        "M+++" : "She is scared of you, but strangely attracted to you.",
-                        "M---" : "She is relaxed around you, but something feels off.",
-                        "M----" : "Shes feels safe with you, but also bored.",
-                        "M-----" : "She doesn't understand why you are being so nice to her.",
-                        "M------" : "She feels that it's all too much, she doesn't deserve this. She seems distressed",
+                        "++++++" : __("She lives in a world of terror, day and night. She is dead afraid of you."),
+                        "+++++" : __("You terrify her."),
+                        "++++" : __("She is very scared of you."),
+                        "+++" : __("She is scared of you."),
+                        "++" : __("She is a little scared of you."),
+                        "+" : __("She distrusts you."),
+                        "0" : __("She is on her guard around you."),
+                        "-" : __("She is nervous around you."),
+                        "--" : __("She is starting to ease up around you."),
+                        "---" : __("She is more relaxed around you. She feels confident you won't do anything bad to her."),
+                        "----" : __("She feels like she can act freely."),
+                        "-----" : __("She feels like she can do what she wants."),
+                        "------" : __("She feels like a princess, doing whatever she likes."),
+                        "M++++++" : __("Her true place is at your feet, shivering with terror and desire."),
+                        "M+++++" : __("The more you hurt her, the happier she gets."),
+                        "M++++" : __("It seems she likes being roughed up. She wants more."),
+                        "M+++" : __("She is scared of you, but strangely attracted to you."),
+                        "M---" : __("She is relaxed around you, but something feels off."),
+                        "M----" : __("Shes feels safe with you, but also bored."),
+                        "M-----" : __("She doesn't understand why you are being so nice to her."),
+                        "M------" : __("She feels that it's all too much, she doesn't deserve this. She seems distressed"),
                         }
 
 
@@ -1270,11 +1270,11 @@ init python:
     reserved_personality_names = gpersonalities.keys()
 
     gift_description = {
-                        "cute" : "cute things",
-                        "book" : "books",
-                        "precious" : "precious things",
-                        "erotica" : "erotic things",
-                        "drinks" : "hard liquor"
+                        "cute" : __("cute things"),
+                        "book" : __("books"),
+                        "precious" : __("precious things"),
+                        "erotica" : __("erotic things"),
+                        "drinks" : __("hard liquor")
                     }
 
 
@@ -1379,16 +1379,16 @@ init python:
                         }
 
     experienced_description = {
-                            "very experienced" : "Extensive",
-                            "experienced" : "Advanced",
-                            "average" : "Some",
-                            "inexperienced" : "Basic",
-                            "very inexperienced" : "None",
-                            "very experienced ttip" : "{size=-1}{color=[c_orange]}A sex slave for years, she has known several masters and received extensive sexual training.{/color}",
-                            "experienced ttip" : "{size=-1}{color=[c_green]}She has been a sex slave for many months now, and has received various forms of training.{/color}",
-                            "average ttip" : "{size=-1}{color=[c_yellow]}She has been a sex slave for a few months already, and has received some sexual training.{/color}",
-                            "inexperienced ttip" : "{color=[c_lightred]}She became a sex slave only recently, and still has a lot to learn.{/color}",
-                            "very inexperienced ttip" : "{color=[c_red]}Fresh off the slave caravan, she has never been trained for sex. Who knows how she will react?{/color}",
+                            "very experienced" : __("Extensive"),
+                            "experienced" : __("Advanced"),
+                            "average" : __("Some"),
+                            "inexperienced" : __("Basic"),
+                            "very inexperienced" : __("None"),
+                            "very experienced ttip" : __("{size=-1}{color=[c_orange]}A sex slave for years, she has known several masters and received extensive sexual training.{/color}"),
+                            "experienced ttip" : __("{size=-1}{color=[c_green]}She has been a sex slave for many months now, and has received various forms of training.{/color}"),
+                            "average ttip" : __("{size=-1}{color=[c_yellow]}She has been a sex slave for a few months already, and has received some sexual training.{/color}"),
+                            "inexperienced ttip" : __("{color=[c_lightred]}She became a sex slave only recently, and still has a lot to learn.{/color}"),
+                            "very inexperienced ttip" : __("{color=[c_red]}Fresh off the slave caravan, she has never been trained for sex. Who knows how she will react?{/color}"),
                         }
 
     experienced_modifiers = {
@@ -1416,20 +1416,20 @@ init python:
                         }
 
     long_act_description = {
-                            "naked" : "being naked",
-                            "service" : "giving service",
-                            "sex" : "having sex",
-                            "anal" : "anal sex",
-                            "fetish" : "kinky sex",
-                            "bisexual" : "sex with a woman",
-                            "group" : "group sex",
-                            "action naked" : "Nudity",
-                            "action service" : "Service",
-                            "action sex" : "Sex",
-                            "action anal" : "Anal sex",
-                            "action fetish" : "Fetish",
-                            "action bisexual" : "Lesbian sex",
-                            "action group" : "Group sex"
+                            "naked" : __("being naked"),
+                            "service" : __("giving service"),
+                            "sex" : __("having sex"),
+                            "anal" : __("anal sex"),
+                            "fetish" : __("kinky sex"),
+                            "bisexual" : __("sex with a woman"),
+                            "group" : __("group sex"),
+                            "action naked" : __("Nudity"),
+                            "action service" : __("Service"),
+                            "action sex" : __("Sex"),
+                            "action anal" : __("Anal sex"),
+                            "action fetish" : __("Fetish"),
+                            "action bisexual" : __("Lesbian sex"),
+                            "action group" : __("Group sex")
                         }
 
     # This filters choices for the training menu (OR clause)
@@ -1628,335 +1628,335 @@ init python:
                     }
 
     fix_description = {
-                    "public acts description" : "doing it in public.",
-                    "public acts action" : "Do it in public",
-                    "public acts intro" : "You call in everyone from the brothel: girls, helpers, passersby... You tell %s that she must do it in public.",
-                    "public acts pos_reaction" : "She blushes and you can see her nipples perking under her blouse. She is aroused by the thought of doing it in public.",
-                    "public acts neg_reaction" : "She is indignant and complains that she can't do anything when people are watching. You ignore her.",
+                    "public acts description" : __("doing it in public."),
+                    "public acts action" : __("Do it in public"),
+                    "public acts intro" : __("You call in everyone from the brothel: girls, helpers, passersby... You tell %s that she must do it in public."),
+                    "public acts pos_reaction" : __("She blushes and you can see her nipples perking under her blouse. She is aroused by the thought of doing it in public."),
+                    "public acts neg_reaction" : __("She is indignant and complains that she can't do anything when people are watching. You ignore her."),
 
-                    "cosplay description" : "wearing sexy and revealing outfits.",
-                    "cosplay action" : "Wear a sexy outfit",
-                    "cosplay intro" : "You give %s a choice of uniforms she can wear.",
-                    "cosplay pos_reaction" : "She bites her lip, looking playful. She chooses a kinky uniform with holes for her tits, pussy and asshole.",
-                    "cosplay neg_reaction" : "She chooses a rather conservative and boring uniform. She doesn't enjoy having to wear it.",
+                    "cosplay description" : __("wearing sexy and revealing outfits."),
+                    "cosplay action" : __("Wear a sexy outfit"),
+                    "cosplay intro" : __("You give %s a choice of uniforms she can wear."),
+                    "cosplay pos_reaction" : __("She bites her lip, looking playful. She chooses a kinky uniform with holes for her tits, pussy and asshole."),
+                    "cosplay neg_reaction" : __("She chooses a rather conservative and boring uniform. She doesn't enjoy having to wear it."),
 
-                    "dildos description" : "using sex toys while fucking.",
-                    "dildos action" : "Use a dildo",
-                    "dildos intro" : "You tell %s to use a dildo in her other hole while you're fucking her.",
-                    "dildos pos_reaction" : "She easily slips the dildo in place. It looks like something she is used to doing a lot.",
-                    "dildos neg_reaction" : "She hates it as she has to painfully force the dildo in. She doesn't enjoy it at all.",
+                    "dildos description" : __("using sex toys while fucking."),
+                    "dildos action" : __("Use a dildo"),
+                    "dildos intro" : __("You tell %s to use a dildo in her other hole while you're fucking her."),
+                    "dildos pos_reaction" : __("She easily slips the dildo in place. It looks like something she is used to doing a lot."),
+                    "dildos neg_reaction" : __("She hates it as she has to painfully force the dildo in. She doesn't enjoy it at all."),
 
-                    "vibrators description" : "vibrators.",
-                    "vibrators action" : "Use a vibrator",
-                    "vibrators intro" : "You tell %s to use a vibrating egg while doing it.",
-                    "vibrators pos_reaction" : "She wastes no time in using the egg on her ready clit, bringing herself to a state of heavy arousal.",
-                    "vibrators neg_reaction" : "She is sensitive and uncomfortable using the egg, and complains that it feels weird.",
+                    "vibrators description" : __("vibrators."),
+                    "vibrators action" : __("Use a vibrator"),
+                    "vibrators intro" : __("You tell %s to use a vibrating egg while doing it."),
+                    "vibrators pos_reaction" : __("She wastes no time in using the egg on her ready clit, bringing herself to a state of heavy arousal."),
+                    "vibrators neg_reaction" : __("She is sensitive and uncomfortable using the egg, and complains that it feels weird."),
 
-                    "dirty sex description" : "dirty sex",
-                    "dirty sex action" : "Get down and dirty",
-                    "dirty sex intro" : "You tell %s to get down in the dirt and get ready to be abused.",
-                    "dirty sex pos_reaction" : "She seems happy to be on the ground, like a dirty bitch she is.",
-                    "dirty sex neg_reaction" : "She hates dirt and complains that it is unhealthy.",
+                    "dirty sex description" : __("dirty sex"),
+                    "dirty sex action" : __("Get down and dirty"),
+                    "dirty sex intro" : __("You tell %s to get down in the dirt and get ready to be abused."),
+                    "dirty sex pos_reaction" : __("She seems happy to be on the ground, like a dirty bitch she is."),
+                    "dirty sex neg_reaction" : __("She hates dirt and complains that it is unhealthy."),
 
-                    "penis worship description" : "worshiping dicks, especially large ones.",
-                    "penis worship action" : "Make her rub your dick",
-                    "penis worship intro" : "You tell %s that she has to rub oil on your dick and pay it proper respect.",
-                    "penis worship pos_reaction" : "She takes a good look at your large, throbbing cock and seems happy and aroused that she can play with it. She plants a wet kiss right on the tip.",
-                    "penis worship neg_reaction" : "She looks away from your erect dick, still uncomfortable around a man's cock.",
+                    "penis worship description" : __("worshiping dicks, especially large ones."),
+                    "penis worship action" : __("Make her rub your dick"),
+                    "penis worship intro" : __("You tell %s that she has to rub oil on your dick and pay it proper respect."),
+                    "penis worship pos_reaction" : __("She takes a good look at your large, throbbing cock and seems happy and aroused that she can play with it. She plants a wet kiss right on the tip."),
+                    "penis worship neg_reaction" : __("She looks away from your erect dick, still uncomfortable around a man's cock."),
 
-                    "bondage description" : "being tied up.",
-                    "bondage action" : "Tie her up",
-                    "bondage intro" : "Using tight ropes and your expert knowledge of bondage as a slave master, you tie %s up in an uncomfortable and embarrassing position.",
-                    "bondage pos_reaction" : "She moans with pleasure as you tie her up, loving the feel of the ropes biting her skin.",
-                    "bondage neg_reaction" : "She cries and squirms as you tie her up, feeling extremely uncomfortable.",
+                    "bondage description" : __("being tied up."),
+                    "bondage action" : __("Tie her up"),
+                    "bondage intro" : __("Using tight ropes and your expert knowledge of bondage as a slave master, you tie %s up in an uncomfortable and embarrassing position."),
+                    "bondage pos_reaction" : __("She moans with pleasure as you tie her up, loving the feel of the ropes biting her skin."),
+                    "bondage neg_reaction" : __("She cries and squirms as you tie her up, feeling extremely uncomfortable."),
 
-                    "oil description" : "being oiled-up.",
-                    "oil action" : "Oil her up",
-                    "oil intro" : "You give %s a bottle of body oil, insisting that she spreads it all over her naked body.",
-                    "oil pos_reaction" : "She oils up every nook and cranny of her body for your pleasure, playfully massaging her glistening skin while you watch.",
-                    "oil neg_reaction" : "She isn't comfortable with slippery and oily stuff, complaining that it stinks and feels revolting.",
+                    "oil description" : __("being oiled-up."),
+                    "oil action" : __("Oil her up"),
+                    "oil intro" : __("You give %s a bottle of body oil, insisting that she spreads it all over her naked body."),
+                    "oil pos_reaction" : __("She oils up every nook and cranny of her body for your pleasure, playfully massaging her glistening skin while you watch."),
+                    "oil neg_reaction" : __("She isn't comfortable with slippery and oily stuff, complaining that it stinks and feels revolting."),
 
-                    "wet description" : "being wet.",
-                    "wet action" : "Get her wet",
-                    "wet intro" : "You ask Sill to fetch you a bucket of cold water, which you pour straight on %s's body.",
-                    "wet pos_reaction" : "She loves being wet and moist, moaning as she slips her hands all over her body.",
-                    "wet neg_reaction" : "She looks upset and miserable like a wet kitty. She hates water.",
+                    "wet description" : __("being wet."),
+                    "wet action" : __("Get her wet"),
+                    "wet intro" : __("You ask Sill to fetch you a bucket of cold water, which you pour straight on %s's body."),
+                    "wet pos_reaction" : __("She loves being wet and moist, moaning as she slips her hands all over her body."),
+                    "wet neg_reaction" : __("She looks upset and miserable like a wet kitty. She hates water."),
 
-                    "submission description" : "taking a humiliating pose.",
-                    "submission action" : "Humiliate her",
-                    "submission intro" : "You tell %s to get on her knees and beg for what's going to happen.",
-                    "submission pos_reaction" : "She eagerly obeys your order, taking perverse pleasure in begging for you to abuse her.",
-                    "submission neg_reaction" : "She refuses to beg and complains that it is beneath her.",
+                    "submission description" : __("taking a humiliating pose."),
+                    "submission action" : __("Humiliate her"),
+                    "submission intro" : __("You tell %s to get on her knees and beg for what's going to happen."),
+                    "submission pos_reaction" : __("She eagerly obeys your order, taking perverse pleasure in begging for you to abuse her."),
+                    "submission neg_reaction" : __("She refuses to beg and complains that it is beneath her."),
 
-                    "femdom description" : "dominating her partner.",
-                    "femdom action" : "Let her dominate",
-                    "femdom intro" : "You tell %s to take the lead and dominate this encounter.",
-                    "femdom pos_reaction" : "She is pleased to be given the leading role. She perversely enjoys giving orders and dominating her partner.",
-                    "femdom neg_reaction" : "She hesitates, then awkwardly tries to give an order in an unconvincing voice. She almost immediately reverses herself and apologises. She doesn't enjoy taking the lead at all.",
+                    "femdom description" : __("dominating her partner."),
+                    "femdom action" : __("Let her dominate"),
+                    "femdom intro" : __("You tell %s to take the lead and dominate this encounter."),
+                    "femdom pos_reaction" : __("She is pleased to be given the leading role. She perversely enjoys giving orders and dominating her partner."),
+                    "femdom neg_reaction" : __("She hesitates, then awkwardly tries to give an order in an unconvincing voice. She almost immediately reverses herself and apologises. She doesn't enjoy taking the lead at all."),
 
-                    "gags description" : "being gagged while having sex.",
-                    "gags action" : "Gag her",
-                    "gags intro" : "You order %s to wear a large ball gag, which leaves her mouth open at all times and makes it hard to talk.",
-                    "gags pos_reaction" : "She seems oddly happy and excited as she puts on the gag and gives you a sheepish look.",
-                    "gags neg_reaction" : "Unable to control her drooling and hardly able to talk, she gives you a furious look. She seems to hate it.",
+                    "gags description" : __("being gagged while having sex."),
+                    "gags action" : __("Gag her"),
+                    "gags intro" : __("You order %s to wear a large ball gag, which leaves her mouth open at all times and makes it hard to talk."),
+                    "gags pos_reaction" : __("She seems oddly happy and excited as she puts on the gag and gives you a sheepish look."),
+                    "gags neg_reaction" : __("Unable to control her drooling and hardly able to talk, she gives you a furious look. She seems to hate it."),
 
-                    "strap-ons description" : "fucking girls with a strap-on.",
-                    "strap-ons action" : "Use a strap-on",
-                    "strap-ons intro" : "You tell %s to fuck Sill using a strap-on dildo.",
-                    "strap-ons pos_reaction" : "She looks triumphant as she puts on a huge black strap-on dildo, with one end up in her pussy and the other dangling in front of her. Sill gasps.",
-                    "strap-ons neg_reaction" : "She grumbles as she puts it on, complaining that she isn't a man.",
+                    "strap-ons description" : __("fucking girls with a strap-on."),
+                    "strap-ons action" : __("Use a strap-on"),
+                    "strap-ons intro" : __("You tell %s to fuck Sill using a strap-on dildo."),
+                    "strap-ons pos_reaction" : __("She looks triumphant as she puts on a huge black strap-on dildo, with one end up in her pussy and the other dangling in front of her. Sill gasps."),
+                    "strap-ons neg_reaction" : __("She grumbles as she puts it on, complaining that she isn't a man."),
 
-                    "roleplay description" : "playing a role while fucking.",
-                    "roleplay action" : "Make her play a role",
-                    "roleplay intro" : "You tell %s that you are going to play roles: you are the city guard and she is a captured thief.",
-                    "roleplay pos_reaction" : "She enjoys the idea of role-playing and makes a great show of being a repentant horny thief.",
-                    "roleplay neg_reaction" : "She thinks it's stupid and distracting and doesn't get into it at all.",
+                    "roleplay description" : __("playing a role while fucking."),
+                    "roleplay action" : __("Make her play a role"),
+                    "roleplay intro" : __("You tell %s that you are going to play roles: you are the city guard and she is a captured thief."),
+                    "roleplay pos_reaction" : __("She enjoys the idea of role-playing and makes a great show of being a repentant horny thief."),
+                    "roleplay neg_reaction" : __("She thinks it's stupid and distracting and doesn't get into it at all."),
 
-                    "plugs description" : "wearing a plug inside her ass.",
-                    "plugs action" : "Use anal plug",
-                    "plugs intro" : "Taking out a large, glistening rubber plug, you tell %s to insert it in her ass.",
-                    "plugs pos_reaction" : "She pushes the plug deep inside her ready asshole with delight, moaning seductively.",
-                    "plugs neg_reaction" : "She inserts the plug with great difficulty, ashamed and in pain. It makes her very uncomfortable.",
+                    "plugs description" : __("wearing a plug inside her ass."),
+                    "plugs action" : __("Use anal plug"),
+                    "plugs intro" : __("Taking out a large, glistening rubber plug, you tell %s to insert it in her ass."),
+                    "plugs pos_reaction" : __("She pushes the plug deep inside her ready asshole with delight, moaning seductively."),
+                    "plugs neg_reaction" : __("She inserts the plug with great difficulty, ashamed and in pain. It makes her very uncomfortable."),
 
-                    "enemas description" : "getting an enema.",
-                    "enemas action" : "Use an enema",
-                    "enemas intro" : "You tell %s it's time to clean up.",
-                    "enemas pos_reaction" : "As you insert the enema into her asshole and start filling her up with water, she begs you to go further and further. Soon, her belly is inflated and rounded like a balloon.",
-                    "enemas neg_reaction" : "She cries with shame and horror as you fill her insides with cleansing water. She begs you to stop.",
+                    "enemas description" : __("getting an enema."),
+                    "enemas action" : __("Use an enema"),
+                    "enemas intro" : __("You tell %s it's time to clean up."),
+                    "enemas pos_reaction" : __("As you insert the enema into her asshole and start filling her up with water, she begs you to go further and further. Soon, her belly is inflated and rounded like a balloon."),
+                    "enemas neg_reaction" : __("She cries with shame and horror as you fill her insides with cleansing water. She begs you to stop."),
 
-                    "beads description" : "wearing anal beads.",
-                    "beads action" : "Use anal beads",
-                    "beads intro" : "You give %s a bead necklace and explain what she should do with it.",
-                    "beads pos_reaction" : "She pushes the beads into her asshole one by one, clearly enjoying it and moaning as you watch.",
-                    "beads neg_reaction" : "She cringes and whines as she painfully pushes one or two beads inside her ass. She tells you she hates it.",
+                    "beads description" : __("wearing anal beads."),
+                    "beads action" : __("Use anal beads"),
+                    "beads intro" : __("You give %s a bead necklace and explain what she should do with it."),
+                    "beads pos_reaction" : __("She pushes the beads into her asshole one by one, clearly enjoying it and moaning as you watch."),
+                    "beads neg_reaction" : __("She cringes and whines as she painfully pushes one or two beads inside her ass. She tells you she hates it."),
 
-                    "masturbation description" : "masturbating.",
-                    "masturbation action" : "Make her masturbate",
-                    "masturbation intro" : "You tell %s to play with herself while doing it.",
-                    "masturbation pos_reaction" : "She enthusiastically starts playing with her clit and fingering her pussy while you watch her.",
-                    "masturbation neg_reaction" : "She pretends to masturbate but isn't doing anything. She doesn't enjoy it at all.",
+                    "masturbation description" : __("masturbating."),
+                    "masturbation action" : __("Make her masturbate"),
+                    "masturbation intro" : __("You tell %s to play with herself while doing it."),
+                    "masturbation pos_reaction" : __("She enthusiastically starts playing with her clit and fingering her pussy while you watch her."),
+                    "masturbation neg_reaction" : __("She pretends to masturbate but isn't doing anything. She doesn't enjoy it at all."),
 
-                    "fingering description" : "being fingered.",
-                    "fingering action" : "Slide a finger inside her",
-                    "fingering intro" : "You tell %s you will put your fingers inside her.",
-                    "fingering pos_reaction" : "Her pussy welcomes you as you slide, one, then two, then three fingers inside her with ease. She moans with pleasure as you increase your pace, covering your fingers with her love juices.",
-                    "fingering neg_reaction" : "Her pussy contracts and resists you as you push a single finger inside with great difficulty. Tears run down her face: she isn't enjoying this at all.",
+                    "fingering description" : __("being fingered."),
+                    "fingering action" : __("Slide a finger inside her"),
+                    "fingering intro" : __("You tell %s you will put your fingers inside her."),
+                    "fingering pos_reaction" : __("Her pussy welcomes you as you slide, one, then two, then three fingers inside her with ease. She moans with pleasure as you increase your pace, covering your fingers with her love juices."),
+                    "fingering neg_reaction" : __("Her pussy contracts and resists you as you push a single finger inside with great difficulty. Tears run down her face: she isn't enjoying this at all."),
 
-                    "handjobs description" : "giving handjobs.",
-                    "handjobs action" : "Give a handjob",
-                    "handjobs intro" : "You order %s to give you a good handjob.",
-                    "handjobs pos_reaction" : "She loves rubbing her hands up and down your dick, watching your throbbing, hard cock with fascination.",
-                    "handjobs neg_reaction" : "She is mechanical and unenthusiastic. She doesn't like handjobs.",
+                    "handjobs description" : __("giving handjobs."),
+                    "handjobs action" : __("Give a handjob"),
+                    "handjobs intro" : __("You order %s to give you a good handjob."),
+                    "handjobs pos_reaction" : __("She loves rubbing her hands up and down your dick, watching your throbbing, hard cock with fascination."),
+                    "handjobs neg_reaction" : __("She is mechanical and unenthusiastic. She doesn't like handjobs."),
 
-                    "cunnilingus description" : "cunnilingus.",
-                    "cunnilingus action" : "Cunnilingus",
-                    "cunnilingus intro" : "You go down between %s's legs and spread her pussy lips.",
-                    "cunnilingus pos_reaction" : "She moans wildly as you move your tongue deep inside her. Her love juices splash out, betraying her pleasure.",
-                    "cunnilingus neg_reaction" : "She frowns and tries to close her legs, not feeling it. It seems like cunnilingus is not her thing.",
+                    "cunnilingus description" : __("cunnilingus."),
+                    "cunnilingus action" : __("Cunnilingus"),
+                    "cunnilingus intro" : __("You go down between %s's legs and spread her pussy lips."),
+                    "cunnilingus pos_reaction" : __("She moans wildly as you move your tongue deep inside her. Her love juices splash out, betraying her pleasure."),
+                    "cunnilingus neg_reaction" : __("She frowns and tries to close her legs, not feeling it. It seems like cunnilingus is not her thing."),
 
-                    "oral description" : "giving oral.",
-                    "oral action" : "Oral sex",
-                    "oral intro" : "You tell %s to use her tongue and mouth to increase the pleasure.",
-                    "oral pos_reaction" : "She loves licking and sucking her partner, and she makes sure to make eye contact with you as she does it.",
-                    "oral neg_reaction" : "She gags at the taste and looks annoyed. She doesn't like giving oral.",
+                    "oral description" : __("giving oral."),
+                    "oral action" : __("Oral sex"),
+                    "oral intro" : __("You tell %s to use her tongue and mouth to increase the pleasure."),
+                    "oral pos_reaction" : __("She loves licking and sucking her partner, and she makes sure to make eye contact with you as she does it."),
+                    "oral neg_reaction" : __("She gags at the taste and looks annoyed. She doesn't like giving oral."),
 
-                    "irrumatio description" : "irrumatio.",
-                    "irrumatio action" : "Irrumatio",
-                    "irrumatio intro" : "Ordering %s to lay flat with her head hanging from the bed, you decide to fuck her mouth hard.",
-                    "irrumatio pos_reaction" : "You shove your dick as deep and hard as you can into her mouth-pussy, and she takes it all in, seemingly enjoying having her throat raped.",
-                    "irrumatio neg_reaction" : "She gags and coughs and cries and squirms, hating it, but you force-fuck her throat anyway.",
+                    "irrumatio description" : __("irrumatio."),
+                    "irrumatio action" : __("Irrumatio"),
+                    "irrumatio intro" : __("Ordering %s to lay flat with her head hanging from the bed, you decide to fuck her mouth hard."),
+                    "irrumatio pos_reaction" : __("You shove your dick as deep and hard as you can into her mouth-pussy, and she takes it all in, seemingly enjoying having her throat raped."),
+                    "irrumatio neg_reaction" : __("She gags and coughs and cries and squirms, hating it, but you force-fuck her throat anyway."),
 
-                    "deep throat description" : "deep throat.",
-                    "deep throat action" : "Deep-throat",
-                    "deep throat intro" : "You tell %s to get ready to deep-throat you.",
-                    "deep throat pos_reaction" : "She has no gag reflexes and enjoys sucking your dick as far down her throat as she can.",
-                    "deep throat neg_reaction" : "She gags and almost throws up, begging you to stop. You ignore her.",
+                    "deep throat description" : __("deep throat."),
+                    "deep throat action" : __("Deep-throat"),
+                    "deep throat intro" : __("You tell %s to get ready to deep-throat you."),
+                    "deep throat pos_reaction" : __("She has no gag reflexes and enjoys sucking your dick as far down her throat as she can."),
+                    "deep throat neg_reaction" : __("She gags and almost throws up, begging you to stop. You ignore her."),
 
-                    "titjobs description" : "giving titjobs.",
-                    "titjobs action" : "Give a titjob",
-                    "titjobs intro" : "You order %s to use her tits to pleasure you.",
-                    "titjobs pos_reaction" : "She wraps your dick completely between her gorgeous tits, licking the tip as she slides her soft mounds up and down your cock.",
-                    "titjobs neg_reaction" : "She awkwardly tries to use her tits to rub your dick, but she is clumsy and uninterested.",
+                    "titjobs description" : __("giving titjobs."),
+                    "titjobs action" : __("Give a titjob"),
+                    "titjobs intro" : __("You order %s to use her tits to pleasure you."),
+                    "titjobs pos_reaction" : __("She wraps your dick completely between her gorgeous tits, licking the tip as she slides her soft mounds up and down your cock."),
+                    "titjobs neg_reaction" : __("She awkwardly tries to use her tits to rub your dick, but she is clumsy and uninterested."),
 
-                    "footjobs description" : "giving footjobs.",
-                    "footjobs action" : "Give a foot job",
-                    "footjobs intro" : "You order %s to use her legs and feet to rub your dick.",
-                    "footjobs pos_reaction" : "She loves playing with your dick with her feet, giving you a good upskirt view as she brings you to your limit.",
-                    "footjobs neg_reaction" : "She hates it, only managing to crush your cock with her clumsy feet. You tell her to stop.",
+                    "footjobs description" : __("giving footjobs."),
+                    "footjobs action" : __("Give a foot job"),
+                    "footjobs intro" : __("You order %s to use her legs and feet to rub your dick."),
+                    "footjobs pos_reaction" : __("She loves playing with your dick with her feet, giving you a good upskirt view as she brings you to your limit."),
+                    "footjobs neg_reaction" : __("She hates it, only managing to crush your cock with her clumsy feet. You tell her to stop."),
 
-                    "double penetration description" : "being fucked in both holes.",
-                    "double penetration action" : "Double penetration",
-                    "double penetration intro" : "You ask one of your security guys to join you and %s, telling him to fuck her ass as you take the front.",
-                    "double penetration pos_reaction" : "She screams wildly as she gets both her front and back holes raped by fat dicks. She loves it.",
-                    "double penetration neg_reaction" : "She is upset and bothered that two dicks are in her at the same time. It seems to be too much for her.",
+                    "double penetration description" : __("being fucked in both holes."),
+                    "double penetration action" : __("Double penetration"),
+                    "double penetration intro" : __("You ask one of your security guys to join you and %s, telling him to fuck her ass as you take the front."),
+                    "double penetration pos_reaction" : __("She screams wildly as she gets both her front and back holes raped by fat dicks. She loves it."),
+                    "double penetration neg_reaction" : __("She is upset and bothered that two dicks are in her at the same time. It seems to be too much for her."),
 
-                    "fisting description" : "being fisted.",
-                    "fisting action" : "Fist her",
-                    "fisting intro" : "Telling %s not to move, you decide to play around with her pussy using your bare fist.",
-                    "fisting pos_reaction" : "She squeals with pleasure as you rape her wet pussy with your fist, eventually sending her into a massive squirting orgasm.",
-                    "fisting neg_reaction" : "She screams with pain and begs you to stop as your fist bends her pussy in unnatural ways. She hates it.",
+                    "fisting description" : __("being fisted."),
+                    "fisting action" : __("Fist her"),
+                    "fisting intro" : __("Telling %s not to move, you decide to play around with her pussy using your bare fist."),
+                    "fisting pos_reaction" : __("She squeals with pleasure as you rape her wet pussy with your fist, eventually sending her into a massive squirting orgasm."),
+                    "fisting neg_reaction" : __("She screams with pain and begs you to stop as your fist bends her pussy in unnatural ways. She hates it."),
 
-                    "insults description" : "being insulted.",
-                    "insults action" : "Insult her",
-                    "insults intro" : "You call %s names as you force her to perform, using language that would make a harbor whore blush.",
-                    "insults pos_reaction" : "She seems to love being trashed and insulted, and after only a minute, you notice that she has got completely wet.",
-                    "insults neg_reaction" : "She is shocked and unnerved by your words, unable to concentrate on what she's doing. It isn't helping.",
+                    "insults description" : __("being insulted."),
+                    "insults action" : __("Insult her"),
+                    "insults intro" : __("You call %s names as you force her to perform, using language that would make a harbor whore blush."),
+                    "insults pos_reaction" : __("She seems to love being trashed and insulted, and after only a minute, you notice that she has got completely wet."),
+                    "insults neg_reaction" : __("She is shocked and unnerved by your words, unable to concentrate on what she's doing. It isn't helping."),
 
-                    "69 description" : "69.",
-                    "69 action" : "Do a 69",
-                    "69 intro" : "You tell %s to get into a 69 position.",
-                    "69 pos_reaction" : "She loves 69 and enjoys herself tremendously as she tends to her partner while her pussy gets licks.",
-                    "69 neg_reaction" : "She looks unhappy as she seems to despise that position. In the end, it isn't enjoyable for anyone.",
+                    "69 description" : __("69."),
+                    "69 action" : __("Do a 69"),
+                    "69 intro" : __("You tell %s to get into a 69 position."),
+                    "69 pos_reaction" : __("She loves 69 and enjoys herself tremendously as she tends to her partner while her pussy gets licks."),
+                    "69 neg_reaction" : __("She looks unhappy as she seems to despise that position. In the end, it isn't enjoyable for anyone."),
 
-                    "watersports description" : "watersports.",
-                    "watersports action" : "Play watersports",
-                    "watersports intro" : "You tell %s to get ready for some 'watersports'.",
-                    "watersports pos_reaction" : "She loves peeing in front of people and being peed on. She doesn't find it shameful.",
-                    "watersports neg_reaction" : "She is disgusted by bodily fluids and recoils with horror at the thought.",
+                    "watersports description" : __("watersports."),
+                    "watersports action" : __("Play watersports"),
+                    "watersports intro" : __("You tell %s to get ready for some 'watersports'."),
+                    "watersports pos_reaction" : __("She loves peeing in front of people and being peed on. She doesn't find it shameful."),
+                    "watersports neg_reaction" : __("She is disgusted by bodily fluids and recoils with horror at the thought."),
 
-                    "ass-to-mouth description" : "ass-to-mouth.",
-                    "ass-to-mouth action" : "Go ass-to-mouth",
-                    "ass-to-mouth intro" : "You decide to fuck %s in the ass before moving to her mouth.",
-                    "ass-to-mouth pos_reaction" : "She accepts your dick readily and licks it clean for you, not caring that it was in her ass a second ago.",
-                    "ass-to-mouth neg_reaction" : "She retches as you push your dick into her mouth, complaining that it is dirty and disgusting.",
+                    "ass-to-mouth description" : __("ass-to-mouth."),
+                    "ass-to-mouth action" : __("Go ass-to-mouth"),
+                    "ass-to-mouth intro" : __("You decide to fuck %s in the ass before moving to her mouth."),
+                    "ass-to-mouth pos_reaction" : __("She accepts your dick readily and licks it clean for you, not caring that it was in her ass a second ago."),
+                    "ass-to-mouth neg_reaction" : __("She retches as you push your dick into her mouth, complaining that it is dirty and disgusting."),
 
-                    "kissing description" : "kissing.",
-                    "kissing action" : "Kiss her",
-                    "kissing intro" : "You start kissing %s.",
-                    "kissing pos_reaction" : "She responds enthusiastically to your kiss, mingling her tongue with yours. She doesn't let go until the very end.",
-                    "kissing neg_reaction" : "She tries to avoid you and doesn't seem to enjoy kissing at all. She is relieved when you stop.",
+                    "kissing description" : __("kissing."),
+                    "kissing action" : __("Kiss her"),
+                    "kissing intro" : __("You start kissing %s."),
+                    "kissing pos_reaction" : __("She responds enthusiastically to your kiss, mingling her tongue with yours. She doesn't let go until the very end."),
+                    "kissing neg_reaction" : __("She tries to avoid you and doesn't seem to enjoy kissing at all. She is relieved when you stop."),
 
-                    "spanking description" : "spanking.",
-                    "spanking action" : "Spank her",
-                    "spanking intro" : "You tell %s that she's been a bad girl, and that she is going to get spanked hard.",
-                    "spanking pos_reaction" : "She screams with pain and pleasure, crying tears of happiness as you give her a thorough spanking while fucking her.",
-                    "spanking neg_reaction" : "You spank her and fuck her at the same time. She wriggles and tries to escape you, moaning in pain. She doesn't like it.",
+                    "spanking description" : __("spanking."),
+                    "spanking action" : __("Spank her"),
+                    "spanking intro" : __("You tell %s that she's been a bad girl, and that she is going to get spanked hard."),
+                    "spanking pos_reaction" : __("She screams with pain and pleasure, crying tears of happiness as you give her a thorough spanking while fucking her."),
+                    "spanking neg_reaction" : __("You spank her and fuck her at the same time. She wriggles and tries to escape you, moaning in pain. She doesn't like it."),
 
-                    "rimming description" : "rimming.",
-                    "rimming action" : "Rimming",
-                    "rimming intro" : "You tell %s to lick your asshole thoroughly.",
-                    "rimming pos_reaction" : "She is very serious about licking you clean, pushing her tongue into your ass as she gives you a frantic handjob.",
-                    "rimming neg_reaction" : "She is disgusted by the act and only timidly licks around your asshole. It tickles, but doesn't feel good in any way.",
+                    "rimming description" : __("rimming."),
+                    "rimming action" : __("Rimming"),
+                    "rimming intro" : __("You tell %s to lick your asshole thoroughly."),
+                    "rimming pos_reaction" : __("She is very serious about licking you clean, pushing her tongue into your ass as she gives you a frantic handjob."),
+                    "rimming neg_reaction" : __("She is disgusted by the act and only timidly licks around your asshole. It tickles, but doesn't feel good in any way."),
 
-                    "fondling her boobs description" : "being fondled.",
-                    "fondling her boobs action" : "Fondle her boobs",
-                    "fondling her boobs intro" : "You fondle her tits and play with her nipples as %s performs for you.",
-                    "fondling her boobs pos_reaction" : "She loves it when you squeeze her tits and moans sexily as you rub her erect nipples.",
-                    "fondling her boobs neg_reaction" : "She doesn't like to be touched there and tenses up, making the training less enjoyable.",
+                    "fondling her boobs description" : __("being fondled."),
+                    "fondling her boobs action" : __("Fondle her boobs"),
+                    "fondling her boobs intro" : __("You fondle her tits and play with her nipples as %s performs for you."),
+                    "fondling her boobs pos_reaction" : __("She loves it when you squeeze her tits and moans sexily as you rub her erect nipples."),
+                    "fondling her boobs neg_reaction" : __("She doesn't like to be touched there and tenses up, making the training less enjoyable."),
 
-                    "groping her ass description" : "being groped.",
-                    "groping her ass action" : "Grope her ass",
-                    "groping her ass intro" : "You grope her ass and start fingering her asshole as %s performs for you.",
-                    "groping her ass pos_reaction" : "She loves to be touched and groped and moans hornily as you shove two fingers up her butthole.",
-                    "groping her ass neg_reaction" : "She doesn't like to be touched there and tenses up, making the training less enjoyable.",
+                    "groping her ass description" : __("being groped."),
+                    "groping her ass action" : __("Grope her ass"),
+                    "groping her ass intro" : __("You grope her ass and start fingering her asshole as %s performs for you."),
+                    "groping her ass pos_reaction" : __("She loves to be touched and groped and moans hornily as you shove two fingers up her butthole."),
+                    "groping her ass neg_reaction" : __("She doesn't like to be touched there and tenses up, making the training less enjoyable."),
 
-                    "lactation description" : "lactation.",
-                    "lactation action" : "Milk her",
-                    "lactation intro" : "Groping %s's boobs, you take out a syringe filled with a strange liquid and plunge it into her nipple.",
-                    "lactation pos_reaction" : "She gasps with astonishment as her tits grow larger in size. Soon, she begins to lactate uncontrollably, moaning as you milk her large breasts for all they're worth.",
-                    "lactation neg_reaction" : "She yells and cries with pain as her boobs grow heavier and larger. The experience is too traumatic, however, and she fails to give you any milk.",
+                    "lactation description" : __("lactation."),
+                    "lactation action" : __("Milk her"),
+                    "lactation intro" : __("Groping %s's boobs, you take out a syringe filled with a strange liquid and plunge it into her nipple."),
+                    "lactation pos_reaction" : __("She gasps with astonishment as her tits grow larger in size. Soon, she begins to lactate uncontrollably, moaning as you milk her large breasts for all they're worth."),
+                    "lactation neg_reaction" : __("She yells and cries with pain as her boobs grow heavier and larger. The experience is too traumatic, however, and she fails to give you any milk."),
 
-                    "doggy style description" : "doggy style.",
-                    "doggy style action" : "Doggy style",
-                    "doggy style intro" : "Pushing her on all fours, you start fucking %s from behind.",
-                    "doggy style pos_reaction" : "She moans with pleasure as the length of your shaft runs along her most sensitive parts. She cannot get enough of it.",
-                    "doggy style neg_reaction" : "She grinds her teeth as she waits for you to be finished. She doesn't enjoy that position at all.",
+                    "doggy style description" : __("doggy style."),
+                    "doggy style action" : __("Doggy style"),
+                    "doggy style intro" : __("Pushing her on all fours, you start fucking %s from behind."),
+                    "doggy style pos_reaction" : __("She moans with pleasure as the length of your shaft runs along her most sensitive parts. She cannot get enough of it."),
+                    "doggy style neg_reaction" : __("She grinds her teeth as she waits for you to be finished. She doesn't enjoy that position at all."),
 
-                    "cowgirl description" : "cowgirl style.",
-                    "cowgirl action" : "Cowgirl style",
-                    "cowgirl intro" : "You make %s ride your dick.",
-                    "cowgirl pos_reaction" : "She likes to be on top and lovingly bounces on your dick until you both get close to your limit.",
-                    "cowgirl neg_reaction" : "She doesn't like to be on top and stays passive as you fuck her from below.",
+                    "cowgirl description" : __("cowgirl style."),
+                    "cowgirl action" : __("Cowgirl style"),
+                    "cowgirl intro" : __("You make %s ride your dick."),
+                    "cowgirl pos_reaction" : __("She likes to be on top and lovingly bounces on your dick until you both get close to your limit."),
+                    "cowgirl neg_reaction" : __("She doesn't like to be on top and stays passive as you fuck her from below."),
 
-                    "piledriver description" : "piledriver.",
-                    "piledriver action" : "Piledriver",
-                    "piledriver intro" : "Pushing %s on her back and lifting her legs in the air, you plunge your hard dick inside her.",
-                    "piledriver pos_reaction" : "She is overwhelmed with lust and pleasure as the blood flows to her head while you pound her mercilessly.",
-                    "piledriver neg_reaction" : "She is confused and bothered by this new position, telling you she doesn't like it at all.",
+                    "piledriver description" : __("piledriver."),
+                    "piledriver action" : __("Piledriver"),
+                    "piledriver intro" : __("Pushing %s on her back and lifting her legs in the air, you plunge your hard dick inside her."),
+                    "piledriver pos_reaction" : __("She is overwhelmed with lust and pleasure as the blood flows to her head while you pound her mercilessly."),
+                    "piledriver neg_reaction" : __("She is confused and bothered by this new position, telling you she doesn't like it at all."),
 
-                    "spooning description" : "spooning.",
-                    "spooning action" : "Spooning",
-                    "spooning intro" : "Hugging %s from behind, you slowly slide into her while caressing her body.",
-                    "spooning pos_reaction" : "She loves being cradled and fucked at the same time. She relaxes completely, moaning softly, soon ready to reach orgasm.",
-                    "spooning neg_reaction" : "She stays passive as you fuck her from behind, looking bored.",
+                    "spooning description" : __("spooning."),
+                    "spooning action" : __("Spooning"),
+                    "spooning intro" : __("Hugging %s from behind, you slowly slide into her while caressing her body."),
+                    "spooning pos_reaction" : __("She loves being cradled and fucked at the same time. She relaxes completely, moaning softly, soon ready to reach orgasm."),
+                    "spooning neg_reaction" : __("She stays passive as you fuck her from behind, looking bored."),
 
-                    "bukkake description" : "bukkake.",
-                    "bukkake action" : "Bukkake",
-                    "bukkake intro" : "Calling a group of your security guards, you let them watch as you and Sill fuck %s. They start jerking off while watching her. As you reach your limit, you pull out and cum all over her face, quickly followed by the other men.",
-                    "bukkake pos_reaction" : "She shakes with a massive orgasm as she experiences a shower of cum on her face, hair and body. She gorges up on leftover cum from everyone's dick.",
-                    "bukkake neg_reaction" : "She tries to get away and whines as everyone cums on her face and hair. She bitterly complains about the smell and taste.",
+                    "bukkake description" : __("bukkake."),
+                    "bukkake action" : __("Bukkake"),
+                    "bukkake intro" : __("Calling a group of your security guards, you let them watch as you and Sill fuck %s. They start jerking off while watching her. As you reach your limit, you pull out and cum all over her face, quickly followed by the other men."),
+                    "bukkake pos_reaction" : __("She shakes with a massive orgasm as she experiences a shower of cum on her face, hair and body. She gorges up on leftover cum from everyone's dick."),
+                    "bukkake neg_reaction" : __("She tries to get away and whines as everyone cums on her face and hair. She bitterly complains about the smell and taste."),
 
-                    "cum in mouth description" : "cum in her mouth.",
-                    "cum in mouth action" : "Cum in her mouth",
-                    "cum in mouth intro" : "You decide to use %s's mouth for a big finish.",
-                    "cum in mouth pos_reaction" : "She looks entranced as you unload a wad of semen into her ready mouth. She plays with it on her tongue, enjoying the taste and texture.",
-                    "cum in mouth neg_reaction" : "You cum a lot in her mouth, sending her into a fit of coughing. She spits it all out, complaining.",
+                    "cum in mouth description" : __("cum in her mouth."),
+                    "cum in mouth action" : __("Cum in her mouth"),
+                    "cum in mouth intro" : __("You decide to use %s's mouth for a big finish."),
+                    "cum in mouth pos_reaction" : __("She looks entranced as you unload a wad of semen into her ready mouth. She plays with it on her tongue, enjoying the taste and texture."),
+                    "cum in mouth neg_reaction" : __("You cum a lot in her mouth, sending her into a fit of coughing. She spits it all out, complaining."),
 
-                    "cum on face description" : "cumshots.",
-                    "cum on face action" : "Cum on her face",
-                    "cum on face intro" : "Popping your dick out, you shoot a load of semen all over %s's face.",
-                    "cum on face pos_reaction" : "She sighs happily as she receives load after load of your cum. She uses her hands to spread the cum all over her face, then licks her fingers.",
-                    "cum on face neg_reaction" : "She recoils with disgust as you shoot your load. She rushes to get a wet cloth and clean it up.",
+                    "cum on face description" : __("cumshots."),
+                    "cum on face action" : __("Cum on her face"),
+                    "cum on face intro" : __("Popping your dick out, you shoot a load of semen all over %s's face."),
+                    "cum on face pos_reaction" : __("She sighs happily as she receives load after load of your cum. She uses her hands to spread the cum all over her face, then licks her fingers."),
+                    "cum on face neg_reaction" : __("She recoils with disgust as you shoot your load. She rushes to get a wet cloth and clean it up."),
 
-                    "cum in hair description" : "cum in her hair.",
-                    "cum in hair action" : "Cum in her hair",
-                    "cum in hair intro" : "Popping your dick out, you decide to cum all over %s's soft, silky hair.",
-                    "cum in hair pos_reaction" : "She moans as you wrap her hair around your dick and squeeze every last drop on her scalp. She enjoys being treated like a dirty cum dump.",
-                    "cum in hair neg_reaction" : "She yells awfully as you shoot a load of semen on her hair, whining that it's gonna take ages to get it off.",
+                    "cum in hair description" : __("cum in her hair."),
+                    "cum in hair action" : __("Cum in her hair"),
+                    "cum in hair intro" : __("Popping your dick out, you decide to cum all over %s's soft, silky hair."),
+                    "cum in hair pos_reaction" : __("She moans as you wrap her hair around your dick and squeeze every last drop on her scalp. She enjoys being treated like a dirty cum dump."),
+                    "cum in hair neg_reaction" : __("She yells awfully as you shoot a load of semen on her hair, whining that it's gonna take ages to get it off."),
 
-                    "cum on body description" : "cum on her body.",
-                    "cum on body action" : "Cum on her body",
-                    "cum on body intro" : "You decide to cum all over %s's body.",
-                    "cum on body pos_reaction" : "She reaches her climax as you take out your dick and spill a load of white cum all over her soft skin.",
-                    "cum on body neg_reaction" : "She squirms as you shoot cum all over her body, complaining that it is sticky and smelly.",
+                    "cum on body description" : __("cum on her body."),
+                    "cum on body action" : __("Cum on her body"),
+                    "cum on body intro" : __("You decide to cum all over %s's body."),
+                    "cum on body pos_reaction" : __("She reaches her climax as you take out your dick and spill a load of white cum all over her soft skin."),
+                    "cum on body neg_reaction" : __("She squirms as you shoot cum all over her body, complaining that it is sticky and smelly."),
 
-                    "cum shower description" : "getting showered with cum.",
-                    "cum shower action" : "Shower her with cum",
-                    "cum shower intro" : "Popping a special pill from the spice market, your dick starts bulging, ready to burst with huge amounts of cum. You tell %s to lay down and get ready to receive your seed.",
-                    "cum shower pos_reaction" : "You cum and cum buckets, until she is covered with white, sticky semen. She is enthralled by the sensation.",
-                    "cum shower neg_reaction" : "She squeals and cowers in fear as you cum buckets all over her body, disgusted by the smell and feel.",
+                    "cum shower description" : __("getting showered with cum."),
+                    "cum shower action" : __("Shower her with cum"),
+                    "cum shower intro" : __("Popping a special pill from the spice market, your dick starts bulging, ready to burst with huge amounts of cum. You tell %s to lay down and get ready to receive your seed."),
+                    "cum shower pos_reaction" : __("You cum and cum buckets, until she is covered with white, sticky semen. She is enthralled by the sensation."),
+                    "cum shower neg_reaction" : __("She squeals and cowers in fear as you cum buckets all over her body, disgusted by the smell and feel."),
 
-                    "swallowing description" : "swallowing cum.",
-                    "swallowing action" : "Make her swallow",
-                    "swallowing intro" : "Shoving your dick deep into %s's mouth for the big finish, you shoot loads of cum deep down her throat.",
-                    "swallowing pos_reaction" : "She gulps it all down with gusto, squeezing every last drop of cum out of your throbbing dick. She licks her lips sexily when you are finished.",
-                    "swallowing neg_reaction" : "She gets tearful and gags, trying to spit it all out as you shoot load after load. She only partly succeeds, and looks unhappy at having to drink cum.",
+                    "swallowing description" : __("swallowing cum."),
+                    "swallowing action" : __("Make her swallow"),
+                    "swallowing intro" : __("Shoving your dick deep into %s's mouth for the big finish, you shoot loads of cum deep down her throat."),
+                    "swallowing pos_reaction" : __("She gulps it all down with gusto, squeezing every last drop of cum out of your throbbing dick. She licks her lips sexily when you are finished."),
+                    "swallowing neg_reaction" : __("She gets tearful and gags, trying to spit it all out as you shoot load after load. She only partly succeeds, and looks unhappy at having to drink cum."),
 
-                    "creampie description" : "receiving a creampie.",
-                    "creampie action" : "Creampie",
-                    "creampie intro" : "Taking your dick slowly out of %s, you shoot a thick load of white cum all over her ass and pussy.",
-                    "creampie pos_reaction" : "She shakes with a massive orgasm as you spurt cum all over her holes. She seems to love it.",
-                    "creampie neg_reaction" : "She covers her face and begs you to stop, saying that it's creepy and disgusting.",
+                    "creampie description" : __("receiving a creampie."),
+                    "creampie action" : __("Creampie"),
+                    "creampie intro" : __("Taking your dick slowly out of %s, you shoot a thick load of white cum all over her ass and pussy."),
+                    "creampie pos_reaction" : __("She shakes with a massive orgasm as you spurt cum all over her holes. She seems to love it."),
+                    "creampie neg_reaction" : __("She covers her face and begs you to stop, saying that it's creepy and disgusting."),
 
-                    "cum inside description" : "cum inside her.",
-                    "cum inside action" : "Cum inside",
-                    "cum inside intro" : "Not caring about the consequences, you decide to cum deep inside %s.",
-                    "cum inside pos_reaction" : "She reaches a blinding orgasm, moaning wildly as you unload a wad of cum deep inside her.",
-                    "cum inside neg_reaction" : "She screams for you to get out, but you ignore her, smearing her insides with thick, sticky cum. She cries with shame and disgust.",
+                    "cum inside description" : __("cum inside her."),
+                    "cum inside action" : __("Cum inside"),
+                    "cum inside intro" : __("Not caring about the consequences, you decide to cum deep inside %s."),
+                    "cum inside pos_reaction" : __("She reaches a blinding orgasm, moaning wildly as you unload a wad of cum deep inside her."),
+                    "cum inside neg_reaction" : __("She screams for you to get out, but you ignore her, smearing her insides with thick, sticky cum. She cries with shame and disgust."),
 
-                    "multiple orgasms description" : "having multiple orgasms.",
-                    "multiple orgasms action" : "Give her multiple orgasms",
-                    "multiple orgasms intro" : "Rubbing her clit with one hand, you keep the pace up until %s cannot but shake with a shattering orgasm. Giving her no moment to rest, you increase the build-up until she comes another time, and another time.",
-                    "multiple orgasms pos_reaction" : "She loves it and loses her mind completely over the sensations washing over her, looking nothing but an obedient, adoring slave by the time you are finished.",
-                    "multiple orgasms neg_reaction" : "She feels overtly sensitive and begs you to stop, almost in pain from excessive climaxing. She doesn't like it.",
+                    "multiple orgasms description" : __("having multiple orgasms."),
+                    "multiple orgasms action" : __("Give her multiple orgasms"),
+                    "multiple orgasms intro" : __("Rubbing her clit with one hand, you keep the pace up until %s cannot but shake with a shattering orgasm. Giving her no moment to rest, you increase the build-up until she comes another time, and another time."),
+                    "multiple orgasms pos_reaction" : __("She loves it and loses her mind completely over the sensations washing over her, looking nothing but an obedient, adoring slave by the time you are finished."),
+                    "multiple orgasms neg_reaction" : __("She feels overtly sensitive and begs you to stop, almost in pain from excessive climaxing. She doesn't like it."),
 
-                    "denied orgasm description" : "being denied orgasm.",
-                    "denied orgasm action" : "Deny her orgasm",
-                    "denied orgasm intro" : "You decide to tease %s to the limit, not letting her reach climax.",
-                    "denied orgasm pos_reaction" : "She seems to love being teased and indefinitely denied orgasm, becoming incredibly horny and sensitive over time.",
-                    "denied orgasm neg_reaction" : "She screams with frustration and begs you to let her climax. She is upset that you won't let her.",
+                    "denied orgasm description" : __("being denied orgasm."),
+                    "denied orgasm action" : __("Deny her orgasm"),
+                    "denied orgasm intro" : __("You decide to tease %s to the limit, not letting her reach climax."),
+                    "denied orgasm pos_reaction" : __("She seems to love being teased and indefinitely denied orgasm, becoming incredibly horny and sensitive over time."),
+                    "denied orgasm neg_reaction" : __("She screams with frustration and begs you to let her climax. She is upset that you won't let her."),
 
-                    "squirting description" : "squirting.",
-                    "squirting action" : "Make her squirt",
-                    "squirting intro" : "Pushing your hand inside %s's pussy, you start rubbing the walls of her pussy, looking for her sensitive G-spot. She looks overwhelmed by the sensation.",
-                    "squirting pos_reaction" : "She squirts hard, showering the room with her juice. She climaxes so hard that she can't even move afterwards.",
-                    "squirting neg_reaction" : "She feels weird and gross, and begs you to take your hand out. She isn't into it at all.",
+                    "squirting description" : __("squirting."),
+                    "squirting action" : __("Make her squirt"),
+                    "squirting intro" : __("Pushing your hand inside %s's pussy, you start rubbing the walls of her pussy, looking for her sensitive G-spot. She looks overwhelmed by the sensation."),
+                    "squirting pos_reaction" : __("She squirts hard, showering the room with her juice. She climaxes so hard that she can't even move afterwards."),
+                    "squirting neg_reaction" : __("She feels weird and gross, and begs you to take your hand out. She isn't into it at all."),
 
-                    "stripping description" : "stripping.",
-                    "stripping action" : "Make her strip",
-                    "stripping intro" : "Telling %s to remove her clothes slowly and sexily, you look on as she does what she's told.",
-                    "stripping pos_reaction" : "She moans as she feels the caress of her clothing rubbing against her soft skin. Looking straight into your eyes, she slowly removes her underwear last, inch by inch, making sure to give you a good show.",
-                    "stripping neg_reaction" : "Whining and bitching, she reluctantly takes off her clothes, hiding her private parts in embarrassment. She looks angry and shameful.",
+                    "stripping description" : __("stripping."),
+                    "stripping action" : __("Make her strip"),
+                    "stripping intro" : __("Telling %s to remove her clothes slowly and sexily, you look on as she does what she's told."),
+                    "stripping pos_reaction" : __("She moans as she feels the caress of her clothing rubbing against her soft skin. Looking straight into your eyes, she slowly removes her underwear last, inch by inch, making sure to give you a good show."),
+                    "stripping neg_reaction" : __("Whining and bitching, she reluctantly takes off her clothes, hiding her private parts in embarrassment. She looks angry and shameful."),
 
                     }
 
@@ -2026,271 +2026,271 @@ init -4 python:
     archetype_list = ["The Maid", "The Player", "The Model", "The Courtesan", "The Escort", "The Fox", "The Slut", "The Bride"]
 
     archetype_description = {
-                            "The Maid" : "Holding her head up high even in adversity, the {b}Maid{/b} succeeds through hard work and commitment. She is the patron saint of servants and menial workers.",
-                            "The Player" : "Always ready to tell a compelling story or improvise a lavish dance, the {b}Player{/b} is admired for her party skills and charisma. She is the patron saint of singers, actors and other artists, accomplished or aspiring.",
-                            "The Model" : "Blessed with perfect natural beauty and elegance, if a little vain, the {b}Model{/b} fascinates men and women alike. She is the patron saint of the young, the pretty, and the well endowed.",
-                            "The Courtesan" : "The {b}Courtesan{/b} is a master of etiquette, seduction and politics, able to make anyone give in to her every whim. She is the patron saint of noble women, politicians, and other schemers.",
+                            "The Maid" : __("Holding her head up high even in adversity, the {b}Maid{/b} succeeds through hard work and commitment. She is the patron saint of servants and menial workers."),
+                            "The Player" : __("Always ready to tell a compelling story or improvise a lavish dance, the {b}Player{/b} is admired for her party skills and charisma. She is the patron saint of singers, actors and other artists, accomplished or aspiring."),
+                            "The Model" : __("Blessed with perfect natural beauty and elegance, if a little vain, the {b}Model{/b} fascinates men and women alike. She is the patron saint of the young, the pretty, and the well endowed."),
+                            "The Courtesan" : __("The {b}Courtesan{/b} is a master of etiquette, seduction and politics, able to make anyone give in to her every whim. She is the patron saint of noble women, politicians, and other schemers."),
 
-                            "The Escort" : "Using her body and skills to great advantage, the {b}Escort{/b} is an expert at leveraging her talents for profits. She is the patron saint of fancy prostitutes, merchants, and mercenaries.",
-                            "The Fox" : "A mysterious figure which seems to always show on auspicious occasions, the {b}Fox{/b} is said to bring great luck to everyone she shares her bed with. She is the patron saint of travellers and hermits.",
-                            "The Slut" : "A much revered figure, the {b}Slut{/b} delights in experienceing sex and pleasure in all its forms, rejecting laws and morals that do not suit her. She is the patron saint of street girls, thieves, libertines, and the occasional Arios priest.",
-                            "The Bride" : "A harbinger of peace and prosperity, the {b}Bride{/b} is gentle and devoted. She is the patron saint of coming-of-age virgins, pregnant and married women, and widows."
+                            "The Escort" : __("Using her body and skills to great advantage, the {b}Escort{/b} is an expert at leveraging her talents for profits. She is the patron saint of fancy prostitutes, merchants, and mercenaries."),
+                            "The Fox" : __("A mysterious figure which seems to always show on auspicious occasions, the {b}Fox{/b} is said to bring great luck to everyone she shares her bed with. She is the patron saint of travellers and hermits."),
+                            "The Slut" : __("A much revered figure, the {b}Slut{/b} delights in experienceing sex and pleasure in all its forms, rejecting laws and morals that do not suit her. She is the patron saint of street girls, thieves, libertines, and the occasional Arios priest."),
+                            "The Bride" : __("A harbinger of peace and prosperity, the {b}Bride{/b} is gentle and devoted. She is the patron saint of coming-of-age virgins, pregnant and married women, and widows.")
                         }
 
     ## GOSSIP ##
 
     generic_gossip = [
-                        "I don't understand how the magicians can carry on their experiments in broad daylight. The church of Arios zealots hate magic-users with a passion. But they haven't moved to shut them down...",
-                        "Taxes on rice, grain, vegetables, meat... Soon they'll tax water from the puddles! What's a man to eat?",
-                        "Zan has been consumed by lust, greed and corruption for as long as I can remember, but seems these days we've reached new lows.",
-                        "Not everyone in the Guard is a flat-out jerk. I know a guy who's all right. They are few and far between, though.",
-                        "The royals sit all high and mighty far away from us people. They let the guards rob us blind but when a thief shows up, she never gets caught. Where's the justice in that?",
-                        "You'd think the thieves would leave poor folks like us alone. But no sir, if you have nothing, they'll still pry it from your cold dead hands.",
-                        "The guards steal so much from us poor folks that there's hardly anything left for the thieves.",
-                        "*lowering her tone* Heard of Shalia, the dark goddess? They say she's got a temple in the slums, in this very city. It gives me the creeps.",
-                        "There's a temple to Shalia somewhere in the city. I expect it's hard to find, though, her supporters rarely come out in the open.",
-                        "Arios damn that Shalia bitch and her secret temple! A vile goddess like her has no place in this city. We're upstanding folks of the Light, are we not?",
-                        "I heard Shalia is not at all what she's cracked up to be. You hear of sacrifices, virgin blood... That's nonsense. Her followers like secrecy, but they're into much more mundane things, such as lifting your purse.",
-                        "Shalia followers eat little children's hearts for breakfast. That's what my Ma' said.",
-                        "With all the crooked politicians and scheming thieves crawling in this city, you'd wonder why they didn't build a Cathedra to Shalia instead!",
-                        "When he was little, my brother was always lonely, brooding, plotting revenge on the kids who bullied him. We used to joke that he was our own little Shalia apostle!",
-                        "Shalia is a craven goddess, that's what she is. A proper god has his followers out in the open.",
-                        "Some say Shalia's beauty itself is a weapon she uses in her schemes...",
-                        "People are dumb enough to believe Arios is better because he is the god of light. But who wants light to be shone on all their thoughts and secrets? Shalia has just as important a role...",
-                        "Someone told me he's seen a Shalia shrine in the slums. But he wouldn't tell me where it is.",
-                        "Zan is full of dirty secrets and dark corners. One must watch their step - it's easy to anger the wrong person, and hard to gain anyone's trust.",
-                        "There are three ways to make people in Zan part with their money: pussy, spice, or a sharp knife.",
-                        "I've seen an incredible fight at the arena! Cyntia's a slave, but she's got style.",
-                        "I can't believe people enjoy watching fights to the death in the arena. If you needed further proof this place is barbaric, there, you have it.",
-                        "I don't care about the deaths in the arena. Most of the time it's just monsters and slaves. All in good fun!",
-                        "People bet heavily on the arena fights. There's some good money to be had, if you know who to support.",
-                        "Lots of adventurers try their luck in the arena. Many end up cripples or worse after just a few fights. But Cyntia's endured.",
-                        "I don't watch the fights, too gory. I just bet on them. But lately, I've been out of luck.",
-                        "Someone told me he had a trick so that he'd always win his bets in the arena. I didn't believe him at first, but he won five fights in a row!",
-                        "The gladiators of the arena in their shining gold armor, covering themselves with glory and blood! Isn't that a tremendous sight?",
-                        "The League of Freethinkers draws merchants and scoundrels alike from faraway lands. I wouldn't trust any of them, that's for sure.",
-                        "If you want a quick way to make money, you could do worse than throw your lot with the League of Freethinkers. They offer some juicy rewards for enterprising individuals, and you don't even need to stab anybody. I got paid a whole purse of gold for a piece of rock I found in the ruins!",
-                        "The League of Freethinkers prefers to advance their goals by maneuvering rather than violence, but they've been known to use both.",
-                        "There is no master of the League of Freethinkers. The intendant only deals with the paperwork, but all members are considered equals.",
-                        "How can the League of Freethinkers be leader-less? There must be someone pulling their strings from the shadows.",
-                        "I'm offended that some of those upstarts at the League of Freethinkers are getting so rich, when so many of our own true blue-blooded nobles are facing ruin.",
-                        "The League of Freethinkers is shunned by many of the nobles and courtiers because it takes commoners in, but they have started some of the most profitable enterprises in the city.",
-                        "Ever heard of the Brotherhood? They say they'll defend the common people against the nobles and high-borns. Such nonsense.",
-                        "I've heard of a secret political organization called the Brotherhood. I have no idea who they are or what they do, but they're rumored to have enormous power in the city.",
-                        "Some crazy jerk got my friend all worked up about 'sticking it to the royals', and 'taking back what's rightfully ours'. I begged my friend not to listen to such drivel, but now she's been arrested by the king's guard, and they suspect me as well...",
-                        "Brother, you should not toil and suffer so that a few high-born loafers can hold banquets and orgies all day and all night. If you joined the Brotherhood, you could put an end to this... But hush, someone's coming.",
-                        "This woman claimed the Brotherhood will rise to help the little people. But I know the truth of it: within a few months, they'd put themselves and their relatives in all the powerful positions, and they'd be no better than King Pharo.",
-                        "King Pharo is our rightful leader chosen by the gods themselves. It is heresy to question the place of our betters: let us talk no more of that so-called 'Brotherhood'.",
-                        "Magicians are vermin who deserve nothing but ruin. They spoil our beloved city with their godless experiments. I wish the King had enough sense to make them all hang.",
-                        "What's wrong with a little magic? It's not perversion, or a scam. People are afraid of things they don't understand, that's all. I dabble in magic myself, did you know? Here's an ointment you could buy for cheap...",
-                        "Magicians have long been established in Zan without too much trouble. But their conflict with the church of Arios is starting to pull at the seams.",
-                        "A priest of Arios himself told me that wizards consort with demons and plot Zan's ruin. Something must be done.",
-                        "Those magicians are just rich, spoiled brats toying with forces they don't understand. I don't like those bigots from the Cathedra, but they have a point.",
-                        "Heresy of not, the mages are contributing good money to our city's finances. If every questionable practice was banned in this city, there wouldn't be much left of Zan.",
-                        "Monsters have been spotted in Zan. I myself saw a three-headed wolf raping a young girl in a dark alley. What has this city come to?",
-                        "Sorcerers are responsible for the monsters plague in this city, who else? They should throw the lot of them in a dark cell with their pets, and throw away the key.",
-                        "I don't buy it. Wizards have enough trouble as it is with the Light priests. Why would they release monsters in the streets and make their situation worse?",
-                        "Monsters roam the streets at night. No one should stay out late these days, especially young, beautiful girls.",
-                        "An entire patrol wiped out near the Gardens? This monster problem is getting out of hand!",
-                        "The Cathedra is a nice enough looking building from outside, but you wouldn't like what goes on inside, believe me.",
-                        "The High Priestess has advocated for the complete removal of magic from the city. She'll have her way; she always does.",
-                        "I remember the times before the war, when the Grandmaster was heading the Arios cult... These were gentler days, I tell you.",
-                        "Ever since the Grandmaster left for the Holy war, the High Priestess has been consolidating her power in the city. I don't think she wants him to come back.",
-                        "Heard any news from the war in the Holy lands? They told me it's not going well. The heretics are resisting us at every step, but surely Arios won't let his flock down.",
-                        "The Arios priests want to impose their cult on the rest of the city, plain and simple. Don't be fooled by the bitch priestesses' righteous sermons.",
-                        "A friend of mine became a nun of Arios, but she had a change of heart and ran away a week ago. I don't know what happened.",
-                        "I can't stand those upright do-gooders from the Arios church. I'm sure they're hiding something.",
-                        "They say a lot of Arios priestesses used to be hookers, before they converted. I don't know why. But it's kind of turning me on.",
-                        "Arios is the god of Light and Strength. May His Light guide us towards good deeds, and His Strength support our arms when the time comes to strike down evil.",
-                        "The true teachings of Arios are a thing of beauty. Don't listen to those priests, all they know how to do is spout nonsense. Find the Light of Arios within your heart.",
-                        "They say demons roam the streets. I say it's nothing compared to what goes on at Court.",
-                        "All the court nobles do is eat, drink, fuck, and plot against one another. I wish I had that kind of life.",
-                        "This city is doomed. When the head is rotten, how can you save the body?",
-                        "My sister is a maid at court. She had a glimpse of one of the ceremonies and wouldn't shut up about it. 'The dresses!', 'The lights!', 'The jewels!', 'The gold dishes!', and so on.",
-                        "Every noble courtier has one or more courtesans in tow. That's how they call hookers there. Not that it stops them from visiting regular brothels, mind you.",
-                        "The nobles of Zan are a curious breed. They suck their estates dry trying to make it at court and impress the King, but they all despise him and think him weak. They are the ones being played for fools.",
-                        "At the beginning of his reign, 18 years ago, King Pharo was doing well enough. But his achievements have been unraveling one by one, and now the city has lost all direction.",
-                        "I don't care what happened to the princess's mother, the King should have remarried. What if something happens to the princess?",
-                        "No male heir spells disaster for any royal family. Why doesn't the King understand that?",
-                        "Because King Pharo has no male heir, power will go to the princess's son, when and if she marries. I guess she would be regent in the interim.",
-                        "Sure, King Pharo has a laissez-faire attitude to everything... But isn't that what makes Zan so great? Would you like to see a crackdown on whores, alcohol, spices, or even gambling?",
-                        "The King is always brooding, his mood dark... He sure looks grim for someone whose courtiers throw so many parties.",
-                        "The princess is a lovely thing, isn't she? All the knights and nobles are crazy in love with her.",
-                        "Her delicate features and manners make the princess the sweetheart of all Zan, nobles and commoners alike.",
-                        "The princess seems in a dark mood sometimes. Could such a blessed person have problems like all of us?",
-                        "The King's knights are all sworn to protect him and his family. Their commander looks like Arios made flesh himself. He's a very zealous and devoted man.",
-                        "I hear some big shot's been murdered a few days back in the castle. They are trying to keep the lid on it, but it seems like trouble is brewing.",
-                        "Some ancient weapons hold tremendous power. I wonder how one can get a hold on one of those?",
-                        "When people go to a whorehouse, they expect more than just a tryst... Good service is always appreciated.",
-                        "So many young girls are turning into whoring slaves these days... Some even turn themselves in voluntarily. I guess it's one way to get food and shelter in these troubled times.",
-                        "The girls are so glamorous there... I never knew being a slut was so rewarding. Makes me question my morals!",
-                        "All travelers agree on one thing: the best thing about Zan is its sex slaves... Any kind of sexual fantasy can be fulfilled here. Many slaves take great pride in fulfilling their master's desires.",
-                        "Girls in Zan are so easy. All it takes is showing up at the same place every day, chatting them up, and sooner or later they'll roll in the hay with you.",
-                        "That merchant girl is so hot, man! I'd go there and buy stuff every day if I could convince her to fool around with me.",
-                        "People who like unusual sex acts are less common, but they pay more money.",
-                        "I came by this brothel the other day, and saw a pink-haired hottie... but was disappointed to find out she wasn't one of the working staff.",
-                        "After a day's hard work, what's hotter than going to a club to be served by beautiful girls, then have one of them strip and go down on you? I understand the appeal.",
-                        "Whores are like priestesses for the sex goddess, that's what my 'pa used to say. He was usually drunk as a skunk.",
-                        "Some guy from Westmarch had trouble understanding what geishas are. He kept saying they're like regular hookers. I swear, it's impossible to educate these unrefined barbarians .",
-                        "I went to this little establishment by the harbor, asking for a good massage. And I really got a good one, down there... Isn't it wonderful?",
+                        __("I don't understand how the magicians can carry on their experiments in broad daylight. The church of Arios zealots hate magic-users with a passion. But they haven't moved to shut them down..."),
+                        __("Taxes on rice, grain, vegetables, meat... Soon they'll tax water from the puddles! What's a man to eat?"),
+                        __("Zan has been consumed by lust, greed and corruption for as long as I can remember, but seems these days we've reached new lows."),
+                        __("Not everyone in the Guard is a flat-out jerk. I know a guy who's all right. They are few and far between, though."),
+                        __("The royals sit all high and mighty far away from us people. They let the guards rob us blind but when a thief shows up, she never gets caught. Where's the justice in that?"),
+                        __("You'd think the thieves would leave poor folks like us alone. But no sir, if you have nothing, they'll still pry it from your cold dead hands."),
+                        __("The guards steal so much from us poor folks that there's hardly anything left for the thieves."),
+                        __("*lowering her tone* Heard of Shalia, the dark goddess? They say she's got a temple in the slums, in this very city. It gives me the creeps."),
+                        __("There's a temple to Shalia somewhere in the city. I expect it's hard to find, though, her supporters rarely come out in the open."),
+                        __("Arios damn that Shalia bitch and her secret temple! A vile goddess like her has no place in this city. We're upstanding folks of the Light, are we not?"),
+                        __("I heard Shalia is not at all what she's cracked up to be. You hear of sacrifices, virgin blood... That's nonsense. Her followers like secrecy, but they're into much more mundane things, such as lifting your purse."),
+                        __("Shalia followers eat little children's hearts for breakfast. That's what my Ma' said."),
+                        __("With all the crooked politicians and scheming thieves crawling in this city, you'd wonder why they didn't build a Cathedra to Shalia instead!"),
+                        __("When he was little, my brother was always lonely, brooding, plotting revenge on the kids who bullied him. We used to joke that he was our own little Shalia apostle!"),
+                        __("Shalia is a craven goddess, that's what she is. A proper god has his followers out in the open."),
+                        __("Some say Shalia's beauty itself is a weapon she uses in her schemes..."),
+                        __("People are dumb enough to believe Arios is better because he is the god of light. But who wants light to be shone on all their thoughts and secrets? Shalia has just as important a role..."),
+                        __("Someone told me he's seen a Shalia shrine in the slums. But he wouldn't tell me where it is."),
+                        __("Zan is full of dirty secrets and dark corners. One must watch their step - it's easy to anger the wrong person, and hard to gain anyone's trust."),
+                        __("There are three ways to make people in Zan part with their money: pussy, spice, or a sharp knife."),
+                        __("I've seen an incredible fight at the arena! Cyntia's a slave, but she's got style."),
+                        __("I can't believe people enjoy watching fights to the death in the arena. If you needed further proof this place is barbaric, there, you have it."),
+                        __("I don't care about the deaths in the arena. Most of the time it's just monsters and slaves. All in good fun!"),
+                        __("People bet heavily on the arena fights. There's some good money to be had, if you know who to support."),
+                        __("Lots of adventurers try their luck in the arena. Many end up cripples or worse after just a few fights. But Cyntia's endured."),
+                        __("I don't watch the fights, too gory. I just bet on them. But lately, I've been out of luck."),
+                        __("Someone told me he had a trick so that he'd always win his bets in the arena. I didn't believe him at first, but he won five fights in a row!"),
+                        __("The gladiators of the arena in their shining gold armor, covering themselves with glory and blood! Isn't that a tremendous sight?"),
+                        __("The League of Freethinkers draws merchants and scoundrels alike from faraway lands. I wouldn't trust any of them, that's for sure."),
+                        __("If you want a quick way to make money, you could do worse than throw your lot with the League of Freethinkers. They offer some juicy rewards for enterprising individuals, and you don't even need to stab anybody. I got paid a whole purse of gold for a piece of rock I found in the ruins!"),
+                        __("The League of Freethinkers prefers to advance their goals by maneuvering rather than violence, but they've been known to use both."),
+                        __("There is no master of the League of Freethinkers. The intendant only deals with the paperwork, but all members are considered equals."),
+                        __("How can the League of Freethinkers be leader-less? There must be someone pulling their strings from the shadows."),
+                        __("I'm offended that some of those upstarts at the League of Freethinkers are getting so rich, when so many of our own true blue-blooded nobles are facing ruin."),
+                        __("The League of Freethinkers is shunned by many of the nobles and courtiers because it takes commoners in, but they have started some of the most profitable enterprises in the city."),
+                        __("Ever heard of the Brotherhood? They say they'll defend the common people against the nobles and high-borns. Such nonsense."),
+                        __("I've heard of a secret political organization called the Brotherhood. I have no idea who they are or what they do, but they're rumored to have enormous power in the city."),
+                        __("Some crazy jerk got my friend all worked up about 'sticking it to the royals', and 'taking back what's rightfully ours'. I begged my friend not to listen to such drivel, but now she's been arrested by the king's guard, and they suspect me as well..."),
+                        __("Brother, you should not toil and suffer so that a few high-born loafers can hold banquets and orgies all day and all night. If you joined the Brotherhood, you could put an end to this... But hush, someone's coming."),
+                        __("This woman claimed the Brotherhood will rise to help the little people. But I know the truth of it: within a few months, they'd put themselves and their relatives in all the powerful positions, and they'd be no better than King Pharo."),
+                        __("King Pharo is our rightful leader chosen by the gods themselves. It is heresy to question the place of our betters: let us talk no more of that so-called 'Brotherhood'."),
+                        __("Magicians are vermin who deserve nothing but ruin. They spoil our beloved city with their godless experiments. I wish the King had enough sense to make them all hang."),
+                        __("What's wrong with a little magic? It's not perversion, or a scam. People are afraid of things they don't understand, that's all. I dabble in magic myself, did you know? Here's an ointment you could buy for cheap..."),
+                        __("Magicians have long been established in Zan without too much trouble. But their conflict with the church of Arios is starting to pull at the seams."),
+                        __("A priest of Arios himself told me that wizards consort with demons and plot Zan's ruin. Something must be done."),
+                        __("Those magicians are just rich, spoiled brats toying with forces they don't understand. I don't like those bigots from the Cathedra, but they have a point."),
+                        __("Heresy of not, the mages are contributing good money to our city's finances. If every questionable practice was banned in this city, there wouldn't be much left of Zan."),
+                        __("Monsters have been spotted in Zan. I myself saw a three-headed wolf raping a young girl in a dark alley. What has this city come to?"),
+                        __("Sorcerers are responsible for the monsters plague in this city, who else? They should throw the lot of them in a dark cell with their pets, and throw away the key."),
+                        __("I don't buy it. Wizards have enough trouble as it is with the Light priests. Why would they release monsters in the streets and make their situation worse?"),
+                        __("Monsters roam the streets at night. No one should stay out late these days, especially young, beautiful girls."),
+                        __("An entire patrol wiped out near the Gardens? This monster problem is getting out of hand!"),
+                        __("The Cathedra is a nice enough looking building from outside, but you wouldn't like what goes on inside, believe me."),
+                        __("The High Priestess has advocated for the complete removal of magic from the city. She'll have her way; she always does."),
+                        __("I remember the times before the war, when the Grandmaster was heading the Arios cult... These were gentler days, I tell you."),
+                        __("Ever since the Grandmaster left for the Holy war, the High Priestess has been consolidating her power in the city. I don't think she wants him to come back."),
+                        __("Heard any news from the war in the Holy lands? They told me it's not going well. The heretics are resisting us at every step, but surely Arios won't let his flock down."),
+                        __("The Arios priests want to impose their cult on the rest of the city, plain and simple. Don't be fooled by the bitch priestesses' righteous sermons."),
+                        __("A friend of mine became a nun of Arios, but she had a change of heart and ran away a week ago. I don't know what happened."),
+                        __("I can't stand those upright do-gooders from the Arios church. I'm sure they're hiding something."),
+                        __("They say a lot of Arios priestesses used to be hookers, before they converted. I don't know why. But it's kind of turning me on."),
+                        __("Arios is the god of Light and Strength. May His Light guide us towards good deeds, and His Strength support our arms when the time comes to strike down evil."),
+                        __("The true teachings of Arios are a thing of beauty. Don't listen to those priests, all they know how to do is spout nonsense. Find the Light of Arios within your heart."),
+                        __("They say demons roam the streets. I say it's nothing compared to what goes on at Court."),
+                        __("All the court nobles do is eat, drink, fuck, and plot against one another. I wish I had that kind of life."),
+                        __("This city is doomed. When the head is rotten, how can you save the body?"),
+                        __("My sister is a maid at court. She had a glimpse of one of the ceremonies and wouldn't shut up about it. 'The dresses!', 'The lights!', 'The jewels!', 'The gold dishes!', and so on."),
+                        __("Every noble courtier has one or more courtesans in tow. That's how they call hookers there. Not that it stops them from visiting regular brothels, mind you."),
+                        __("The nobles of Zan are a curious breed. They suck their estates dry trying to make it at court and impress the King, but they all despise him and think him weak. They are the ones being played for fools."),
+                        __("At the beginning of his reign, 18 years ago, King Pharo was doing well enough. But his achievements have been unraveling one by one, and now the city has lost all direction."),
+                        __("I don't care what happened to the princess's mother, the King should have remarried. What if something happens to the princess?"),
+                        __("No male heir spells disaster for any royal family. Why doesn't the King understand that?"),
+                        __("Because King Pharo has no male heir, power will go to the princess's son, when and if she marries. I guess she would be regent in the interim."),
+                        __("Sure, King Pharo has a laissez-faire attitude to everything... But isn't that what makes Zan so great? Would you like to see a crackdown on whores, alcohol, spices, or even gambling?"),
+                        __("The King is always brooding, his mood dark... He sure looks grim for someone whose courtiers throw so many parties."),
+                        __("The princess is a lovely thing, isn't she? All the knights and nobles are crazy in love with her."),
+                        __("Her delicate features and manners make the princess the sweetheart of all Zan, nobles and commoners alike."),
+                        __("The princess seems in a dark mood sometimes. Could such a blessed person have problems like all of us?"),
+                        __("The King's knights are all sworn to protect him and his family. Their commander looks like Arios made flesh himself. He's a very zealous and devoted man."),
+                        __("I hear some big shot's been murdered a few days back in the castle. They are trying to keep the lid on it, but it seems like trouble is brewing."),
+                        __("Some ancient weapons hold tremendous power. I wonder how one can get a hold on one of those?"),
+                        __("When people go to a whorehouse, they expect more than just a tryst... Good service is always appreciated."),
+                        __("So many young girls are turning into whoring slaves these days... Some even turn themselves in voluntarily. I guess it's one way to get food and shelter in these troubled times."),
+                        __("The girls are so glamorous there... I never knew being a slut was so rewarding. Makes me question my morals!"),
+                        __("All travelers agree on one thing: the best thing about Zan is its sex slaves... Any kind of sexual fantasy can be fulfilled here. Many slaves take great pride in fulfilling their master's desires."),
+                        __("Girls in Zan are so easy. All it takes is showing up at the same place every day, chatting them up, and sooner or later they'll roll in the hay with you."),
+                        __("That merchant girl is so hot, man! I'd go there and buy stuff every day if I could convince her to fool around with me."),
+                        __("People who like unusual sex acts are less common, but they pay more money."),
+                        __("I came by this brothel the other day, and saw a pink-haired hottie... but was disappointed to find out she wasn't one of the working staff."),
+                        __("After a day's hard work, what's hotter than going to a club to be served by beautiful girls, then have one of them strip and go down on you? I understand the appeal."),
+                        __("Whores are like priestesses for the sex goddess, that's what my 'pa used to say. He was usually drunk as a skunk."),
+                        __("Some guy from Westmarch had trouble understanding what geishas are. He kept saying they're like regular hookers. I swear, it's impossible to educate these unrefined barbarians ."),
+                        __("I went to this little establishment by the harbor, asking for a good massage. And I really got a good one, down there... Isn't it wonderful?"),
                     ]
 
     chapter_gossip = {
                     1 : [
-                            "Have you seen the new Guard uniforms? They adorn their armor with fine silk, while the rest of us starve..., "
-                            "I've heard some talk of a secret lair somewhere around the Slums... A haven for thieves and bandits. I shiver to think of it.",
-                            "Captain Farah is one greedy bitch. Her men came yesterday to shake one of my friends down. Everyone hates her, but they say she's got protection in high places.",
-                            "The head of the guards is Captain Farah. Best stay clear of them if you want my advice. Levies and taxes are all the guards care about. If you ask me, they just make them up as they go.",
-                            "Some say the captain of the Guard is getting too greedy, even among her own men... There are some who say they'd do better. Maybe they mean they'd be better at not getting caught.",
-                            "Thieves are getting bold these days. Or desperate. Doesn't look like the guards care to do anything about it, mind you.",
-                            "My neighbor complained about the taxes, so they took him in, and no one's heard of him since. Better suck it up and stay alive, if you want my 2 denars.",
-                            "The guards took everything from me, but what can I do? Only the King has higher authority, and he won't listen to a commoner.",
-                            "Some say the thieves operate in an organized fashion, much like a guild. I don't buy this nonsense. Ever seen a thief with anything else than spice for brains?",
-                            "People here like to blame a secret Shalia cabal for all their ills, but let me tell you: it's our good Arios-loving captain who's robbing us blind at the moment!",
-                            "I keep hearing about this new brothel outside the city. I really have to check it out.",
+                            __("Have you seen the new Guard uniforms? They adorn their armor with fine silk, while the rest of us starve..., ")
+                            __("I've heard some talk of a secret lair somewhere around the Slums... A haven for thieves and bandits. I shiver to think of it."),
+                            __("Captain Farah is one greedy bitch. Her men came yesterday to shake one of my friends down. Everyone hates her, but they say she's got protection in high places."),
+                            __("The head of the guards is Captain Farah. Best stay clear of them if you want my advice. Levies and taxes are all the guards care about. If you ask me, they just make them up as they go."),
+                            __("Some say the captain of the Guard is getting too greedy, even among her own men... There are some who say they'd do better. Maybe they mean they'd be better at not getting caught."),
+                            __("Thieves are getting bold these days. Or desperate. Doesn't look like the guards care to do anything about it, mind you."),
+                            __("My neighbor complained about the taxes, so they took him in, and no one's heard of him since. Better suck it up and stay alive, if you want my 2 denars."),
+                            __("The guards took everything from me, but what can I do? Only the King has higher authority, and he won't listen to a commoner."),
+                            __("Some say the thieves operate in an organized fashion, much like a guild. I don't buy this nonsense. Ever seen a thief with anything else than spice for brains?"),
+                            __("People here like to blame a secret Shalia cabal for all their ills, but let me tell you: it's our good Arios-loving captain who's robbing us blind at the moment!"),
+                            __("I keep hearing about this new brothel outside the city. I really have to check it out."),
                         ],
                     2 : [
-                            "There has been a wave of murders in the city lately... And not just the usual rabble: they took out some pretty big shots.",
-                            "People say the streets aren't safe at night, hired blades on the prowl... Many highborns won't go out anymore without an escort.",
-                            "Somebody's been snuffing out the blue bloods one by one... It was about time someone started fighting for justice in this city!",
-                            "A murderous killer is on the prowl... Some say he killed the high judge, and the royals could be next.",
-                            "How dare someone threaten the life of our dear Princess? I hope they catch the motherfucker, and gouge his eyes out!",
-                            "No one is safe in this city, not even the judges... Time to head for the country until things quiet down.",
-                            "Don't worry about those killers. There are only after the bigwigs, no one is paying to assassinate small fry like you and me.",
-                            "I've heard of a fearsome group of superhuman stealth warriors, on a quest for blood and revenge throughout the city... They call them {i}ninjas{/i}.",
-                            "Ninjas? What a load of bull. They only exist in children's tales.",
-                            "Ninjas are a secret society of bloodthirsty assassins that has infiltrated Zan. Or so I hear.",
-                            "Why would anyone threaten the Princess's life? She's the only one who doesn't wish us little people ill in this royal nest of vipers.",
-                            "Noble families have paid a heavy toll in the latest wave of murders... Maybe this so-called revolution is coming after all?",
+                            __("There has been a wave of murders in the city lately... And not just the usual rabble: they took out some pretty big shots."),
+                            __("People say the streets aren't safe at night, hired blades on the prowl... Many highborns won't go out anymore without an escort."),
+                            __("Somebody's been snuffing out the blue bloods one by one... It was about time someone started fighting for justice in this city!"),
+                            __("A murderous killer is on the prowl... Some say he killed the high judge, and the royals could be next."),
+                            __("How dare someone threaten the life of our dear Princess? I hope they catch the motherfucker, and gouge his eyes out!"),
+                            __("No one is safe in this city, not even the judges... Time to head for the country until things quiet down."),
+                            __("Don't worry about those killers. There are only after the bigwigs, no one is paying to assassinate small fry like you and me."),
+                            __("I've heard of a fearsome group of superhuman stealth warriors, on a quest for blood and revenge throughout the city... They call them {i}ninjas{/i}."),
+                            __("Ninjas? What a load of bull. They only exist in children's tales."),
+                            __("Ninjas are a secret society of bloodthirsty assassins that has infiltrated Zan. Or so I hear."),
+                            __("Why would anyone threaten the Princess's life? She's the only one who doesn't wish us little people ill in this royal nest of vipers."),
+                            __("Noble families have paid a heavy toll in the latest wave of murders... Maybe this so-called revolution is coming after all?"),
                         ],
                     3 : [
-                            "You won't believe what I saw the other day! A young woman was leaping across roofs, like one of these daredevil ninjas! And after her went a complete lunatic drooling like a maniac, wielding a toy hamer! I swear, sex games are getting out of hand in this city...",
-                            "There she was, a super cute girl with blue hair and a stunning pair of knockers. I was so distracted by them, I didn't realize she was stealing all the fish until she left in a puff of smoke, saying 'Meow'!",
-                            "Have you heard about the archmage that is the active Dean of the Magic University? A real piece of work, let me tell you.",
-                            "I have no talent for magic, but I was told I could enroll at Magic University for the right price. The clerk there truly doesn't give a fuck.",
-                            "I heard there's a vengeful ninja ghost roaming the city, assaulting private citizens and even sometimes giving them surprise handjobs! Don't laugh! You could be next!!!",
-                            "... I tell you, I had to duck out of the way or I would have crushed by a damn earthquake. It was summoned by a devil ninja with a yellow outfit! *make the Arios sign* Sun God protects!",
-                            "So he saw that schoolgirl the other day, cute little one, heading for Magic U. He just wanted to cop a feel, you know, brush her ass a little, nothing serious. Damn, man, the poor sod is still at the Arios hospitium! She stabbed him real good. Kids these days!",
-                            "The Princess {i}has{/i} to marry soon, before the nobles start a damned civil war, shades of Shalia! Some of them are already building private armies. this can't end well...",
-                            "Have you heard? The King is sick. If he croaks, the nobles will be at each other's throat, and Princess Kurohime is only a woman. What can she do?",
-                            "So she turned the student into a wererat, and now he haunts the sewers at night, wishing he had paid attention in class. Don't you ask again about studying magic!",
-                            "Ever heard of Stee V the Wondrous, the best bard in all of Xeros? Too bad about his eyes, though. I guess that way he can hear the music better.",
-                            "Some people claim the Avatar of Arios appears to them when the going get tough. I think the problem is not with their going, but with their drinking.",
-                            "There's an up-and-coming brothel you should know about: [brothel.name]. You really should drop by there. Some of these girls have serious talent.",
-                            "I have it on good authority: The Princess has a lover, a man called [MC.name]. He's a deadly foreign spy who works for two or three foreign powers, at least. He's got some stupid cover story about being a brothel owner, but who can believe that?",
-                            "It's such a shame what happened to poor Lord Henso. To lose a child... I don't even want to think about it.",
-                            "That stuck-up Knight Commander is getting on my nerves. Patrol this, patrol that- my lover's been on patrol all nights this week! When will I get any?",
-                            "Of course the war is going well. Do you think our mighty host has anything to fear from half-naked savages, tiny elves and talking cats?",
-                            "If the Holy Land is not purged from the heretic fairies, we will all grow fur and horns, and we will start mating with donkeys and goats! So Arios speaketh!",
+                            __("You won't believe what I saw the other day! A young woman was leaping across roofs, like one of these daredevil ninjas! And after her went a complete lunatic drooling like a maniac, wielding a toy hamer! I swear, sex games are getting out of hand in this city..."),
+                            __("There she was, a super cute girl with blue hair and a stunning pair of knockers. I was so distracted by them, I didn't realize she was stealing all the fish until she left in a puff of smoke, saying 'Meow'!"),
+                            __("Have you heard about the archmage that is the active Dean of the Magic University? A real piece of work, let me tell you."),
+                            __("I have no talent for magic, but I was told I could enroll at Magic University for the right price. The clerk there truly doesn't give a fuck."),
+                            __("I heard there's a vengeful ninja ghost roaming the city, assaulting private citizens and even sometimes giving them surprise handjobs! Don't laugh! You could be next!!!"),
+                            __("... I tell you, I had to duck out of the way or I would have crushed by a damn earthquake. It was summoned by a devil ninja with a yellow outfit! *make the Arios sign* Sun God protects!"),
+                            __("So he saw that schoolgirl the other day, cute little one, heading for Magic U. He just wanted to cop a feel, you know, brush her ass a little, nothing serious. Damn, man, the poor sod is still at the Arios hospitium! She stabbed him real good. Kids these days!"),
+                            __("The Princess {i}has{/i} to marry soon, before the nobles start a damned civil war, shades of Shalia! Some of them are already building private armies. this can't end well..."),
+                            __("Have you heard? The King is sick. If he croaks, the nobles will be at each other's throat, and Princess Kurohime is only a woman. What can she do?"),
+                            __("So she turned the student into a wererat, and now he haunts the sewers at night, wishing he had paid attention in class. Don't you ask again about studying magic!"),
+                            __("Ever heard of Stee V the Wondrous, the best bard in all of Xeros? Too bad about his eyes, though. I guess that way he can hear the music better."),
+                            __("Some people claim the Avatar of Arios appears to them when the going get tough. I think the problem is not with their going, but with their drinking."),
+                            __("There's an up-and-coming brothel you should know about: [brothel.name]. You really should drop by there. Some of these girls have serious talent."),
+                            __("I have it on good authority: The Princess has a lover, a man called [MC.name]. He's a deadly foreign spy who works for two or three foreign powers, at least. He's got some stupid cover story about being a brothel owner, but who can believe that?"),
+                            __("It's such a shame what happened to poor Lord Henso. To lose a child... I don't even want to think about it."),
+                            __("That stuck-up Knight Commander is getting on my nerves. Patrol this, patrol that- my lover's been on patrol all nights this week! When will I get any?"),
+                            __("Of course the war is going well. Do you think our mighty host has anything to fear from half-naked savages, tiny elves and talking cats?"),
+                            __("If the Holy Land is not purged from the heretic fairies, we will all grow fur and horns, and we will start mating with donkeys and goats! So Arios speaketh!"),
                     ],
                     4 : [],
                     5 : [],
                     6 : [],
                     7 : [
-                            "Have you heard of [MC.name], the legendary Brothel Master? I bet he can turn your sister into a sex-crazed goddess.",
-                            "[MC.name] is the best of the best. There was never a better Brothel Master in all of Zan, and there never will be.",
-                            "Do you know about the King? I mean, the Brothel King? It's [MC.name], the legendary owner of [brothel.name]...",
-                            "The best brothel in town? Where the hell did you come from? It's [brothel.name], of course! It's leagues ahead of every other whorehouse. The competitors just gave up.",
+                            __("Have you heard of [MC.name], the legendary Brothel Master? I bet he can turn your sister into a sex-crazed goddess."),
+                            __("[MC.name] is the best of the best. There was never a better Brothel Master in all of Zan, and there never will be."),
+                            __("Do you know about the King? I mean, the Brothel King? It's [MC.name], the legendary owner of [brothel.name]..."),
+                            __("The best brothel in town? Where the hell did you come from? It's [brothel.name], of course! It's leagues ahead of every other whorehouse. The competitors just gave up."),
                         ],
 
                     # The following are added by the story
 
                     "c1_good" : [
-                                    "Captain Maya is really a godsend. She's going to clean up the Guard's act in no time, believe me.",
-                                    "I was stopped by the guards the other day. I thought they would rob me like they usually do, but they were polite and they just let me go. Amazing.",
-                                    "Many of the old guards have been kicked out of the force recently. It seems like the new captain is serious about fighting corruption.",
-                                    "Don't ever tell him I said that, but it's obvious Roz has a crush on Maya. That big oaf doesn't stand a chance...",
+                                    __("Captain Maya is really a godsend. She's going to clean up the Guard's act in no time, believe me."),
+                                    __("I was stopped by the guards the other day. I thought they would rob me like they usually do, but they were polite and they just let me go. Amazing."),
+                                    __("Many of the old guards have been kicked out of the force recently. It seems like the new captain is serious about fighting corruption."),
+                                    __("Don't ever tell him I said that, but it's obvious Roz has a crush on Maya. That big oaf doesn't stand a chance..."),
                                 ],
                     "c1_neutral" :[
-                                    "Is the new captain any better than the old one? Things will never change around here, no matter who's in charge.",
-                                    "Captain Lydie seems just as shrewd as the old captain, but at least she keeps a low profile. Guild wars are bad for business.",
-                                    "I've heard some talk of a secret lair somewhere around the Slums... A haven for thieves and bandits. I shiver to think of it.",
-                                    "Thieves are getting bold these days. Or desperate. Doesn't look like the guards care to do anything about it, mind you.",
-                                    "Some say the thieves operate in an organized fashion, much like a guild. I don't buy this nonsense. Ever seen a thief with anything else than spice for brains?",
+                                    __("Is the new captain any better than the old one? Things will never change around here, no matter who's in charge."),
+                                    __("Captain Lydie seems just as shrewd as the old captain, but at least she keeps a low profile. Guild wars are bad for business."),
+                                    __("I've heard some talk of a secret lair somewhere around the Slums... A haven for thieves and bandits. I shiver to think of it."),
+                                    __("Thieves are getting bold these days. Or desperate. Doesn't look like the guards care to do anything about it, mind you."),
+                                    __("Some say the thieves operate in an organized fashion, much like a guild. I don't buy this nonsense. Ever seen a thief with anything else than spice for brains?"),
                                 ],
                     "c1_evil" : [
-                                    "Have you seen the new guard uniforms? They adorn their armor with fine silk, while the rest of us starve...",
-                                    "Captain Farah is one greedy bitch. Her men came yesterday to shake one of my friends down. Everyone hates her, but they say she's got protection in high places.",
-                                    "The head of the guards is Captain Farah. Best stay clear of them if you want my advice. Levies and taxes are all the guards cares about. If you ask me, they just make them up as they go.",
-                                    "Some say the captain of the Guard is getting too greedy, even among her own men... There are some who say they'd do better. Maybe they mean they'd be better at not getting caught.",
-                                    "My neighbor complained about the taxes, so they took him in, and no one's heard of him since. Better suck it up and stay alive, if you want my 2 denars.",
-                                    "The guards took everything from me, but what can I do? Only the King has higher authority, and he won't listen to a commoner.",
-                                    "People here like to blame a secret Shalia cabal for all their ills, but let me tell you: it's our good Arios-loving captain who's robbing us blind at the moment!",
-                                    "Captain Farah is stronger than ever in the slums. She's completely unopposed now, our only choice is to pay her cronies. Do you want to hang?",
-                                    "I thought things couldn't get worse with the Guard, but it did. They looted my shop and raped my wife and daughters. No one dared lift a finger...",
+                                    __("Have you seen the new guard uniforms? They adorn their armor with fine silk, while the rest of us starve..."),
+                                    __("Captain Farah is one greedy bitch. Her men came yesterday to shake one of my friends down. Everyone hates her, but they say she's got protection in high places."),
+                                    __("The head of the guards is Captain Farah. Best stay clear of them if you want my advice. Levies and taxes are all the guards cares about. If you ask me, they just make them up as they go."),
+                                    __("Some say the captain of the Guard is getting too greedy, even among her own men... There are some who say they'd do better. Maybe they mean they'd be better at not getting caught."),
+                                    __("My neighbor complained about the taxes, so they took him in, and no one's heard of him since. Better suck it up and stay alive, if you want my 2 denars."),
+                                    __("The guards took everything from me, but what can I do? Only the King has higher authority, and he won't listen to a commoner."),
+                                    __("People here like to blame a secret Shalia cabal for all their ills, but let me tell you: it's our good Arios-loving captain who's robbing us blind at the moment!"),
+                                    __("Captain Farah is stronger than ever in the slums. She's completely unopposed now, our only choice is to pay her cronies. Do you want to hang?"),
+                                    __("I thought things couldn't get worse with the Guard, but it did. They looted my shop and raped my wife and daughters. No one dared lift a finger..."),
                                 ],
 
                     "c2_kunoichi" : [
-                                    "Heard about the Kunoichi? A secret organization of female ninjas... That is so hot!",
-                                    "I wish they'd catch those women devils, the Kunoichi. I hear they consort with demons.",
-                                    "Don't believe what you hear about the Kunoichi. They're pure and noble warriors.",
-                                    "I heard some kind of female ninja clan is going after a brothel owner in the city... Poor guy, he's dead meat.",
-                                    "Female ninjas? I bet they wear very skimpy clothing... Hmm...",
-                                    "I read the tale about female ninjas that can kill using only their vagina... Crazy, I know.",
-                                    "When a baby gets abandoned, sometimes a ninja clan will adopt her... That's what I heard.",
+                                    __("Heard about the Kunoichi? A secret organization of female ninjas... That is so hot!"),
+                                    __("I wish they'd catch those women devils, the Kunoichi. I hear they consort with demons."),
+                                    __("Don't believe what you hear about the Kunoichi. They're pure and noble warriors."),
+                                    __("I heard some kind of female ninja clan is going after a brothel owner in the city... Poor guy, he's dead meat."),
+                                    __("Female ninjas? I bet they wear very skimpy clothing... Hmm..."),
+                                    __("I read the tale about female ninjas that can kill using only their vagina... Crazy, I know."),
+                                    __("When a baby gets abandoned, sometimes a ninja clan will adopt her... That's what I heard."),
                                 ],
 
                     "c2_kunoichi_hunt" : [
-                                    "The {b}Thieves' guild{/b} quarter is already a dump... And now there are ninjas there, too???",
-                                    "Ninjas in the {b}Thieves' guild{/b} quarter... The rogues ain't gonna like that.",
-                                    "I told you I saw a child in the {b}Thieves' guild{/b} quarter... I was gonna help, but then I saw she had a huge ninja star, so I thought better of it.",
-                                    "She did look like a lil' brat, but she was a ninja, I tells ya! Standin' atop the {b}Thieves' guild{/b}'s roof, no less.",
+                                    __("The {b}Thieves' guild{/b} quarter is already a dump... And now there are ninjas there, too???"),
+                                    __("Ninjas in the {b}Thieves' guild{/b} quarter... The rogues ain't gonna like that."),
+                                    __("I told you I saw a child in the {b}Thieves' guild{/b} quarter... I was gonna help, but then I saw she had a huge ninja star, so I thought better of it."),
+                                    __("She did look like a lil' brat, but she was a ninja, I tells ya! Standin' atop the {b}Thieves' guild{/b}'s roof, no less."),
 
-                                    "I was walking alongside the {b}Beach{/b} at night, when I saw a ghost! A beautiful, pale lady ghost. And she was walking over water. Like a ninja!"
-                                    "I went to the {b}Beach{/b} at night to fish for trout, and I saw a beautiful lady taking a bath by the moonlight. When I tried to approach her, she disappeared like a ghost!",
-                                    "There have been disappearances near the {b}Beach{/b}. Some blame ninjas, but that's childish nonsense.",
-                                    "So the pretty lady waved her hand, and the water around her rose and shielded her from view. We couldn't see her from the {b}Beach{/b} anymore, and none of us dared venture into the sea.",
+                                    __("I was walking alongside the {b}Beach{/b} at night, when I saw a ghost! A beautiful, pale lady ghost. And she was walking over water. Like a ninja!")
+                                    __("I went to the {b}Beach{/b} at night to fish for trout, and I saw a beautiful lady taking a bath by the moonlight. When I tried to approach her, she disappeared like a ghost!"),
+                                    __("There have been disappearances near the {b}Beach{/b}. Some blame ninjas, but that's childish nonsense."),
+                                    __("So the pretty lady waved her hand, and the water around her rose and shielded her from view. We couldn't see her from the {b}Beach{/b} anymore, and none of us dared venture into the sea."),
 
-                                    "I'm telling you, she was a ninja! Who else could climb the {b}Prison{/b} walls like that?",
-                                    "It was the most peculiar thing, the girl snapped her fingers, and it caused a tremor! The {b}Prison{/b} guards fell down on their asses.",
-                                    "Why would a ninja stalk the {b}Prison{/b} quarter? Any criminal knows to steer clear of our good King's jails!",
-                                    "Stop it, there are no such things as female ninjas flying above the {b}Prison{/b}! Now go clean up your room!",
+                                    __("I'm telling you, she was a ninja! Who else could climb the {b}Prison{/b} walls like that?"),
+                                    __("It was the most peculiar thing, the girl snapped her fingers, and it caused a tremor! The {b}Prison{/b} guards fell down on their asses."),
+                                    __("Why would a ninja stalk the {b}Prison{/b} quarter? Any criminal knows to steer clear of our good King's jails!"),
+                                    __("Stop it, there are no such things as female ninjas flying above the {b}Prison{/b}! Now go clean up your room!"),
                                 ],
 
                      }
 
     district_gossip = {
                         "The Slums" : [
-                                    "Thieves are everywhere in the slums, and guards are even worse. I can't wait to get out of this place. Other places can't possibly be this bad!",
-                                    "The worst thing about the slums is the stench. Or second worst thing. Worse is, you can get your throat slit for a denar and never smell a thing, ever again.",
-                                    "The people of Zan are wicked, depraved and degenerates, but they sure are industrious. The city grows by the day! And the slums are her underbelly.",
-                                    "I saw this strange girl in the sewers, all by herself. I told her there were monsters about, but she just smiled and said 'I know.'",
-                                    "The sewers are full of dirty critters and monsters... Some people even make a living hunting them.",
-                                    "Have you met that strange girl, Willow? She's got odd ears, I wonder if she's fully human. She's cute, though.",
-                                    "The farmland is haunted. Don't go there.",
-                                    "There are always strange things going on in the country. I even hear some girls fuck animals there.",
-                                    "Have you met Goldie at the farm? She's a sweet young woman. It's so sad, what happened to her family.",
-                                    "I usually go and buy milk from Goldie at the farm. She gets it from her cows, but I'd rather milk her instead, if you catch my drift...",
-                                    "If I wanted to buy animals, I'd go to the farm of course. But I hear some of them are behaving strangely.",
-                                    "There's a crazy girl in the junkyard, sifting through the garbage to find Arios-knows-what. I tried to talk some sense into her, but she didn't even listen to me.",
-                                    "I made a good deal last week, selling an old useless gizmo to the funny girl in the junkyard.",
-                                    "Have you met Gina, the weird scientist in the junkyard? She buys and sells some weird machines. Gives me the creeps.",
-                                    "A thieves guild, here, in the slums? Nonsense. The Guard captain would never allow it."
+                                    __("Thieves are everywhere in the slums, and guards are even worse. I can't wait to get out of this place. Other places can't possibly be this bad!"),
+                                    __("The worst thing about the slums is the stench. Or second worst thing. Worse is, you can get your throat slit for a denar and never smell a thing, ever again."),
+                                    __("The people of Zan are wicked, depraved and degenerates, but they sure are industrious. The city grows by the day! And the slums are her underbelly."),
+                                    __("I saw this strange girl in the sewers, all by herself. I told her there were monsters about, but she just smiled and said 'I know.'"),
+                                    __("The sewers are full of dirty critters and monsters... Some people even make a living hunting them."),
+                                    __("Have you met that strange girl, Willow? She's got odd ears, I wonder if she's fully human. She's cute, though."),
+                                    __("The farmland is haunted. Don't go there."),
+                                    __("There are always strange things going on in the country. I even hear some girls fuck animals there."),
+                                    __("Have you met Goldie at the farm? She's a sweet young woman. It's so sad, what happened to her family."),
+                                    __("I usually go and buy milk from Goldie at the farm. She gets it from her cows, but I'd rather milk her instead, if you catch my drift..."),
+                                    __("If I wanted to buy animals, I'd go to the farm of course. But I hear some of them are behaving strangely."),
+                                    __("There's a crazy girl in the junkyard, sifting through the garbage to find Arios-knows-what. I tried to talk some sense into her, but she didn't even listen to me."),
+                                    __("I made a good deal last week, selling an old useless gizmo to the funny girl in the junkyard."),
+                                    __("Have you met Gina, the weird scientist in the junkyard? She buys and sells some weird machines. Gives me the creeps."),
+                                    __("A thieves guild, here, in the slums? Nonsense. The Guard captain would never allow it.")
                                 ],
                         "The Docks" : [
-                                    "The league of adventurers is located somewhere near the harbor. The smell of rotting fish isn't off-putting to those rogues.",
-                                    "Why are there so many whorehouses close to the sea? Is it because it's wetter here?",
-                                    "Why are there so many whorehouses in the Docks? Is it because it sounds like 'Dicks'?",
-                                    "Where there are sailors, there are whores. That's just a fact of life.",
-                                    "There's a woman selling gifts by the seafront. She's got those huge knockers...",
-                                    "Have you seen that woman in red, selling gifts by the seafront? She's got gifts all right, a huge pair of tits...",
-                                    "They sell those strange slaves by the harbor, mindless drones with horse-like cocks... My girlfriend thinks it's cool, but I find it creepy.",
-                                    "There are slavemongers from the Blood Islands about in the harbor. They treat humans like cattle. It's awesome.",
-                                    "Fancy ladies go to the harbor to buy some very special slaves... I hear they obey every order and they have huge... *whisper*",
-                                    "Have you seen that fearsome slaver by the harbor, all clad in leather like a dominatrix? She turns me on... ",
+                                    __("The league of adventurers is located somewhere near the harbor. The smell of rotting fish isn't off-putting to those rogues."),
+                                    __("Why are there so many whorehouses close to the sea? Is it because it's wetter here?"),
+                                    __("Why are there so many whorehouses in the Docks? Is it because it sounds like 'Dicks'?"),
+                                    __("Where there are sailors, there are whores. That's just a fact of life."),
+                                    __("There's a woman selling gifts by the seafront. She's got those huge knockers..."),
+                                    __("Have you seen that woman in red, selling gifts by the seafront? She's got gifts all right, a huge pair of tits..."),
+                                    __("They sell those strange slaves by the harbor, mindless drones with horse-like cocks... My girlfriend thinks it's cool, but I find it creepy."),
+                                    __("There are slavemongers from the Blood Islands about in the harbor. They treat humans like cattle. It's awesome."),
+                                    __("Fancy ladies go to the harbor to buy some very special slaves... I hear they obey every order and they have huge... *whisper*"),
+                                    __("Have you seen that fearsome slaver by the harbor, all clad in leather like a dominatrix? She turns me on... "),
                                 ],
                         "The Warehouse" : [],
                         "The Magic Gardens" : [],
                         "The Cathedra" : [
-                                    "The Cathedra is the pride of Zan and the crown jewel of all Xeros. All rejoice in the glorious light of Arios!",
-                                    "The Cathedra was a place for silent contemplation and prayer, but with all the filthy pilgrims who pour in now, day in, day out, I don't want to go there anymore.",
-                                    "The waves of pilgrims heading to the Cathedra have been good for business, that's for sure.",
-                                    "Judging by the fervor at the Cathedra, you'd think Arios was the one and only god... Many of us in this city are not followers of Arios; they seem to forget that all too easily.",
+                                    __("The Cathedra is the pride of Zan and the crown jewel of all Xeros. All rejoice in the glorious light of Arios!"),
+                                    __("The Cathedra was a place for silent contemplation and prayer, but with all the filthy pilgrims who pour in now, day in, day out, I don't want to go there anymore."),
+                                    __("The waves of pilgrims heading to the Cathedra have been good for business, that's for sure."),
+                                    __("Judging by the fervor at the Cathedra, you'd think Arios was the one and only god... Many of us in this city are not followers of Arios; they seem to forget that all too easily."),
                                 ],
                         "The King's Hold" : [
-                                    "The knights in the palace are all good Arios-loving folks. That warms my heart.",
-                                    "I've been told of a secret swapping society in the King's Hold, where members exchange their wives and daughters in all-night orgies...",
-                                    "The nobles roam the King's Hold, like a pack of vultures hovering, waiting for their next meal. They all think they can sire the next heir, or take power by other means when the King's gone...",
+                                    __("The knights in the palace are all good Arios-loving folks. That warms my heart."),
+                                    __("I've been told of a secret swapping society in the King's Hold, where members exchange their wives and daughters in all-night orgies..."),
+                                    __("The nobles roam the King's Hold, like a pack of vultures hovering, waiting for their next meal. They all think they can sire the next heir, or take power by other means when the King's gone..."),
                                 ],
                        }
 
@@ -2302,7 +2302,7 @@ init -4 python:
     jokes = {
             "harmless" : ("What's the hardest thing about being a Guard? Telling your parents you're gay!", "My dog used to run after everyone on a horse. It got so bad, I had to take his horse away.", "What's the difference between a snowman and a snowwoman? Snowballs!", "How do you catch a bra? With a booby trap."),
             "sex" : ("Why was the luth teacher arrested? For fingering a minor...", "What do the Court and pussies have in common? One slip of the tongue, and you're in deep shit.", "Know what I do in my garden? Get down and dirty with my hoes.", "What do you call the useless part around a dick? A man!", "What's the difference between a wife and a job? After 5 years, your job will still suck."),
-            "dark" : ("How do you make a girl scream twice? First, fuck her in the ass, then wipe your dick on her curtains!", "I like my women like my wine... Locked in the cellar!", "A doctor tells his patient:'I'm sorry, but you've only got about 10 left.'\nPatient:'10 what? Months, weeks?'\nDoctor:'Nine, eight...'", "What's the best part about sex with twenty-eight-year-olds? There are 20 of them!", "How many male chauvinists does it take to refuel the lamp? None. Let her do the dishes in the dark."),
+            "dark" : ("How do you make a girl scream twice? First, fuck her in the ass, then wipe your dick on her curtains!", "I like my women like my wine... Locked in the cellar!", "A doctor tells his patient:__('I')m sorry, but you've only got about 10 left.'\nPatient:__('10 what? Months, weeks?')\nDoctor:__('Nine, eight...')", "What's the best part about sex with twenty-eight-year-olds? There are 20 of them!", "How many male chauvinists does it take to refuel the lamp? None. Let her do the dishes in the dark."),
             "mean" : ("I like you. People say I've no taste, but I like you.", "Damn, you're hot, but you'd be a lot hotter if you just shut up.", "I like my women attractive, dumb, and bitchy. You seem to fit the bill quite nicely.", "I'd hire you as a whore, but my girls have class...")
         }
 
@@ -2324,15 +2324,15 @@ init -4 python:
     origins = ["Zan", "the border with the Holy Lands", "the Blood Islands", "Karkyr", "Westmarch", "the desert of Hokoma", "Borgo, the port city", "the Goliath desolations", "the Arik mountains"]
 
 #     origin_description = {
-#                           "Zan" : "I know the old streets of Zan like the back of my hand... I used to walk to the market with my %s, wondering what the strange houses with the red lanterns were... Now I know... *blush*",
-#                           "the border with the Holy Lands" : "The Holy Lands are a place of war and suffering, always have been. Still, I remember a few peaceful moments. Walking with my %s across old battlefields, covered with red blooming flowers, watching nature reclaim its rights...",
-#                           "the Blood Islands" : "The Blood Islands are a cruel place... I remember going to the arena with my %s and me, watching slaves being shredded to pieces by monsters... It was bloody and exciting. The arena here is very tame in comparison.",
-#                           "Karkyr" : "Karkyr is a beautiful and fascinating city, ruled by the Archmage Council. Everything is magical, even the wells and the furniture can speak. It used to freak my %s out! There were also some spectacular incidents, of course, but that was part of the fun.",
-#                           "Westmarch" : "The Westmarch Principalities, where I grew up, is a very unpredictable place. One day a city is flourishing, the next it descends into anarchy, and raiders loot and rape the town. I used to think danger was exciting, but my %s didn't like it one bit.",
-#                           "the desert of Hokoma" : "The desert people are a quiet and wise sort. My %s know many secrets, and knew how to keep them. I miss the peace and quiet of nights in the desert.",
-#                           "Borgo, the port city" : "There's no describing how busy and crowded Borgo is on most days, with sailors from all over the world selling everything you can imagine, and many other things, too. I loved to sit by the pier with my %s in the early hours, listenning to the waves.",
-#                           "the Goliath desolations" : "The desolations are a cold, horrible place. Whether you are rich or poor, you have to work hard every day, just to barely survive. If I didn't have my %s to rely on, I don't know what I would have done.",
-#                           "the Arik mountains" : "They say the Arik mountains are the highest in the world. The air is pure there, not full of filth and magic like here... My %s taught me how to love and respect the mountains.",
+#                           "Zan" : __("I know the old streets of Zan like the back of my hand... I used to walk to the market with my %s, wondering what the strange houses with the red lanterns were... Now I know... *blush*"),
+#                           "the border with the Holy Lands" : __("The Holy Lands are a place of war and suffering, always have been. Still, I remember a few peaceful moments. Walking with my %s across old battlefields, covered with red blooming flowers, watching nature reclaim its rights..."),
+#                           "the Blood Islands" : __("The Blood Islands are a cruel place... I remember going to the arena with my %s and me, watching slaves being shredded to pieces by monsters... It was bloody and exciting. The arena here is very tame in comparison."),
+#                           "Karkyr" : __("Karkyr is a beautiful and fascinating city, ruled by the Archmage Council. Everything is magical, even the wells and the furniture can speak. It used to freak my %s out! There were also some spectacular incidents, of course, but that was part of the fun."),
+#                           "Westmarch" : __("The Westmarch Principalities, where I grew up, is a very unpredictable place. One day a city is flourishing, the next it descends into anarchy, and raiders loot and rape the town. I used to think danger was exciting, but my %s didn't like it one bit."),
+#                           "the desert of Hokoma" : __("The desert people are a quiet and wise sort. My %s know many secrets, and knew how to keep them. I miss the peace and quiet of nights in the desert."),
+#                           "Borgo, the port city" : __("There's no describing how busy and crowded Borgo is on most days, with sailors from all over the world selling everything you can imagine, and many other things, too. I loved to sit by the pier with my %s in the early hours, listenning to the waves."),
+#                           "the Goliath desolations" : __("The desolations are a cold, horrible place. Whether you are rich or poor, you have to work hard every day, just to barely survive. If I didn't have my %s to rely on, I don't know what I would have done."),
+#                           "the Arik mountains" : __("They say the Arik mountains are the highest in the world. The air is pure there, not full of filth and magic like here... My %s taught me how to love and respect the mountains."),
 #                           }
 
     homes = ["palace", "hovel", "mansion", "shack", "hut", "big house", "small house", "temple", "shop", "old house", "tower", "church"]
@@ -2366,10 +2366,10 @@ init -4 python:
 
     ## Results dictionaries
 
-    roll_dict = {1 : "critical failure", 2 : "failure", 3 : "neutral", 4 : "neutral", 5 : "success", 6 : "critical success"}
-    result_dict = {-999 : "very bad", 1 : "bad", 6 : "average", 9 : "good", 12 : "very good", 15 : "perfect"}
+    roll_dict = {1 : __("critical failure"), 2 : __("failure"), 3 : __("neutral"), 4 : __("neutral"), 5 : __("success"), 6 : __("critical success")}
+    result_dict = {-999 : __("very bad"), 1 : __("bad"), 6 : __("average"), 9 : __("good"), 12 : __("very good"), 15 : __("perfect")}
     result_colors = {"very bad" : c_red, "bad" : c_lightred, "average" : c_white, "good" : c_lightgreen, "very good" : c_green, "perfect" : c_orange}
-    result_star_dict = {"very bad" : "{image=img_empty_star}"*5, "bad" : "{image=img_star}"+"{image=img_empty_star}"*4, "average" : "{image=img_star}"*2+"{image=img_empty_star}"*3, "good" : "{image=img_star}"*3+"{image=img_empty_star}"*2, "very good" : "{image=img_star}"*4+"{image=img_empty_star}", "perfect" : "{image=img_star}"*5}
+    result_star_dict = {"very bad" : __("{image=img_empty_star}")*5, "bad" : __("{image=img_star}")+"{image=img_empty_star}"*4, "average" : __("{image=img_star}")*2+"{image=img_empty_star}"*3, "good" : __("{image=img_star}")*3+"{image=img_empty_star}"*2, "very good" : __("{image=img_star}")*4+"{image=img_empty_star}", "perfect" : __("{image=img_star}")*5}
 
     reversed_result_dict = {v: k for k, v in result_dict.items()}
 
@@ -2384,214 +2384,214 @@ init -4 python:
 #    roll_names = {v: k for k, v in roll_value.items()}
 
     perform_job_dict = {
-#                        "roll_critical failure" : "\n{color=[c_red]}%s wasn't trying hard today. She barely even paid attention to what she was doing.{/color}",
-#                        "roll_failure" : "\n%s wasn't really into it.",
-#                        "roll_neutral" : "\n%s went about her job as usual.",
-#                        "roll_success" : "\n%s was really motivated today.",
-#                        "roll_critical success" : "\n{color=[c_green]}%s did everything she could to please the customers.{/color}",
+#                        "roll_critical failure" : __("\n{color=[c_red]}%s wasn't trying hard today. She barely even paid attention to what she was doing.{/color}"),
+#                        "roll_failure" : __("\n%s wasn't really into it."),
+#                        "roll_neutral" : __("\n%s went about her job as usual."),
+#                        "roll_success" : __("\n%s was really motivated today."),
+#                        "roll_critical success" : __("\n{color=[c_green]}%s did everything she could to please the customers.{/color}"),
 
                         "waitress_stats" : (("charm", 6), ("constitution", 2), ("body", 1), ("beauty", 1)),
                         "waitress_changes" : ((("charm",), 100, 2), (("constitution",), 35, 1), (("obedience", "body", "beauty"), 15, 1), (("sensitivity",), 15, -1)),
 
-                        "waitress_init" : "%s served drinks to %s customers.",
+                        "waitress_init" : __("%s served drinks to %s customers."),
                         "waitress_tags" : ["waitress"],
                         "waitress_tags2" : ["maid", "geisha"],
 
                         "dancer_stats" : (("body", 6), ("libido", 2), ("refinement", 1), ("charm", 1)),
                         "dancer_changes" : ((("body",), 100, 2), (("libido",), 35, 1), (("constitution", "refinement", "charm"), 15, 1), (("obedience",), 15, -1)),
 
-                        "dancer_init" : "%s danced sexily for %s customers.",
+                        "dancer_init" : __("%s danced sexily for %s customers."),
                         "dancer_tags" : ["dancer"],
                         "dancer_tags2" : ["fight"],
 
                         "masseuse_stats" : (("beauty", 6), ("sensitivity", 2), ("refinement", 1), ("body", 1)),
                         "masseuse_changes" : ((("beauty",), 100, 2), (("sensitivity",), 35, 1), (("refinement", "body", "libido"), 15, 1), (("constitution",), 15, -1)),
 
-                        "masseuse_init" : "%s gave a hot massage to %s customers.",
+                        "masseuse_init" : __("%s gave a hot massage to %s customers."),
                         "masseuse_tags" : ["masseuse"],
                         "masseuse_tags2" : ["swim"],
 
                         "geisha_stats" : (("refinement", 6), ("obedience", 2), ("beauty", 1), ("charm", 1)),
                         "geisha_changes" : ((("refinement",), 100, 2), (("obedience",), 35, 1), (("beauty", "charm", "sensitivity"), 15, 1), (("libido",), 15, -1)),
 
-                        "geisha_init" : "%s entertained %s customers with a display of traditional arts.",
+                        "geisha_init" : __("%s entertained %s customers with a display of traditional arts."),
                         "geisha_tags" : ["geisha"],
                         "geisha_tags2" : ["maid", "waitress", "date"], # Date pictures can be used as substitutes for geisha
 
-                        "waitress_very bad" : "\n{color=[c_red]}%s spilled drinks everywhere and didn't even apologize. The customers thought the service was terrible and complained.",
-                        "waitress_bad" : "\n{color=[c_lightred]}%s was shy and clumsy. The customers grumbled that the service was bad.",
-                        "waitress_average" : "\n%s served everyone and chatted with the customers. They thought she was ok.",
-                        "waitress_good" : "\n{color=[c_lightgreen]}%s flirted with the customers as she served them drinks, making them feel welcome.",
-                        "waitress_very good" : "\n{color=[c_green]}%s traded rowdy jokes with the customers, flashing her goods while serving. Everyone loved her.",
-                        "waitress_perfect" : "\n{color=[c_orange]}%s worked without underwear today and used all of her charms to drive the customers wild. They completely fell over for her.",
+                        "waitress_very bad" : __("\n{color=[c_red]}%s spilled drinks everywhere and didn't even apologize. The customers thought the service was terrible and complained."),
+                        "waitress_bad" : __("\n{color=[c_lightred]}%s was shy and clumsy. The customers grumbled that the service was bad."),
+                        "waitress_average" : __("\n%s served everyone and chatted with the customers. They thought she was ok."),
+                        "waitress_good" : __("\n{color=[c_lightgreen]}%s flirted with the customers as she served them drinks, making them feel welcome."),
+                        "waitress_very good" : __("\n{color=[c_green]}%s traded rowdy jokes with the customers, flashing her goods while serving. Everyone loved her."),
+                        "waitress_perfect" : __("\n{color=[c_orange]}%s worked without underwear today and used all of her charms to drive the customers wild. They completely fell over for her."),
 
-                        "dancer_very bad" : "\n{color=[c_red]}%s has two left feet. Her dancing was embarrassingly bad and the customers booed and threw things at her.",
-                        "dancer_bad" : "\n{color=[c_lightred]}%s's dance was awkward and uninteresting.",
-                        "dancer_average" : "\n%s danced suggestively in front of the customers.",
-                        "dancer_good" : "\n{color=[c_lightgreen]}The club heated up as %s danced around the stage, flashing her goods.",
-                        "dancer_very good" : "\n{color=[c_green]}The crowd went wild as %s danced and stripped on stage, her skin glistening with sweat as she worked the pole.",
-                        "dancer_perfect" : "\n{color=[c_orange]}The customers couldn't take their eyes off %s as she waved to the music, slowly and sexily stripping off, until she stood there naked and wet under their perverted gaze.",
+                        "dancer_very bad" : __("\n{color=[c_red]}%s has two left feet. Her dancing was embarrassingly bad and the customers booed and threw things at her."),
+                        "dancer_bad" : __("\n{color=[c_lightred]}%s's dance was awkward and uninteresting."),
+                        "dancer_average" : __("\n%s danced suggestively in front of the customers."),
+                        "dancer_good" : __("\n{color=[c_lightgreen]}The club heated up as %s danced around the stage, flashing her goods."),
+                        "dancer_very good" : __("\n{color=[c_green]}The crowd went wild as %s danced and stripped on stage, her skin glistening with sweat as she worked the pole."),
+                        "dancer_perfect" : __("\n{color=[c_orange]}The customers couldn't take their eyes off %s as she waved to the music, slowly and sexily stripping off, until she stood there naked and wet under their perverted gaze."),
 
-                        "masseuse_very bad" : "\n{color=[c_red]}%s clumsily went around giving back rubs, hurting some of them in the process. They grumbled and told her to go away.",
-                        "masseuse_bad" : "\n{color=[c_lightred]}%s tried to give customers a relaxing rub. Her technique was lacking, and the customers were left unsatisfied.",
-                        "masseuse_average" : "\n%s gave massages to customers in the onsen, helping them relax and feel more comfortable.",
-                        "masseuse_good" : "\n{color=[c_lightgreen]}%s joined the customers in the onsen, wearing only a towel, and gave them a nice massage. The customers were visibly turned on after she was done.",
-                        "masseuse_very good" : "\n{color=[c_green]}The towels slipped off as %s gave the customers a passionate body massage. She used her hands and tongue to turn them on while they waited for their turn.",
-                        "masseuse_perfect" : "\n{color=[c_orange]}%s went naked into the onsen among the customers, rubbing her body against them until they came all over her silky skin.",
+                        "masseuse_very bad" : __("\n{color=[c_red]}%s clumsily went around giving back rubs, hurting some of them in the process. They grumbled and told her to go away."),
+                        "masseuse_bad" : __("\n{color=[c_lightred]}%s tried to give customers a relaxing rub. Her technique was lacking, and the customers were left unsatisfied."),
+                        "masseuse_average" : __("\n%s gave massages to customers in the onsen, helping them relax and feel more comfortable."),
+                        "masseuse_good" : __("\n{color=[c_lightgreen]}%s joined the customers in the onsen, wearing only a towel, and gave them a nice massage. The customers were visibly turned on after she was done."),
+                        "masseuse_very good" : __("\n{color=[c_green]}The towels slipped off as %s gave the customers a passionate body massage. She used her hands and tongue to turn them on while they waited for their turn."),
+                        "masseuse_perfect" : __("\n{color=[c_orange]}%s went naked into the onsen among the customers, rubbing her body against them until they came all over her silky skin."),
 
-                        "geisha_very bad" : "\n{color=[c_red]}%s completely lacked class and came across as clumsy and ignorant. The customers complained that she was just a street girl dressed like a geisha.",
-                        "geisha_bad" : "\n{color=[c_lightred]}%s kept trying to act like a real geisha when serving tea; it was obvious to anyone that she was not the real thing, though, and customers quickly lost interest.",
-                        "geisha_average" : "\n%s played a little shamisen and chatted with the customers, helping them relax and forget their worries...",
-                        "geisha_good" : "\n{color=[c_lightgreen]}%s held a tea ceremony with the customers, exchanging pleasantries while she nonchalantly let her kimono slide to the side, revealing some skin.",
-                        "geisha_very good" : "\n{color=[c_green]}%s was the life of the party as she greeted customers by their name and complimented them. Wearing a short, revealing kimono, she brushed against their bodies, leaving them all turned on by her scent.",
-                        "geisha_perfect" : "\n{color=[c_orange]}%s was the epitome of the geisha, being in turn sweet, gifted, witty, and sexy as hell. She wore a see-through kimono, kinkily displaying her cleavage and thighs to drive the customers wild.",
+                        "geisha_very bad" : __("\n{color=[c_red]}%s completely lacked class and came across as clumsy and ignorant. The customers complained that she was just a street girl dressed like a geisha."),
+                        "geisha_bad" : __("\n{color=[c_lightred]}%s kept trying to act like a real geisha when serving tea; it was obvious to anyone that she was not the real thing, though, and customers quickly lost interest."),
+                        "geisha_average" : __("\n%s played a little shamisen and chatted with the customers, helping them relax and forget their worries..."),
+                        "geisha_good" : __("\n{color=[c_lightgreen]}%s held a tea ceremony with the customers, exchanging pleasantries while she nonchalantly let her kimono slide to the side, revealing some skin."),
+                        "geisha_very good" : __("\n{color=[c_green]}%s was the life of the party as she greeted customers by their name and complimented them. Wearing a short, revealing kimono, she brushed against their bodies, leaving them all turned on by her scent."),
+                        "geisha_perfect" : __("\n{color=[c_orange]}%s was the epitome of the geisha, being in turn sweet, gifted, witty, and sexy as hell. She wore a see-through kimono, kinkily displaying her cleavage and thighs to drive the customers wild."),
 
-                        "flasher" : " A customer dared her to show her tits, and she proudly displayed them for everyone to see.",
-                        "temptress" : " She convinced the customer%s to try it.",
-                        "catgirl" : " She purred as she eagerly drank all the customer's cum and licked his dick clean.",
-                        "virgin" : " The customer was amazed that she was a virgin and paid extra.",
-                        "virgin_group" : " The customers were amazed that she was a virgin and paid extra.",
-                        "reroll" : " She barely avoided a catastrophe.",
+                        "flasher" : __(" A customer dared her to show her tits, and she proudly displayed them for everyone to see."),
+                        "temptress" : __(" She convinced the customer%s to try it."),
+                        "catgirl" : __(" She purred as she eagerly drank all the customer's cum and licked his dick clean."),
+                        "virgin" : __(" The customer was amazed that she was a virgin and paid extra."),
+                        "virgin_group" : __(" The customers were amazed that she was a virgin and paid extra."),
+                        "reroll" : __(" She barely avoided a catastrophe."),
                         "unlucky" : "",
                         "lucky" : "",
-                        "random item" : " The customer%s left something valuable.",
-                        "beauty bonus" : " The customer%s found her beauty stunning.",
-                        "body bonus" : " The customer%s loved her curves.",
-                        "charm bonus" : " The customer%s fell under her charm.",
-                        "refinement bonus" : " The customer%s loved how refined she was.",
-                        "libido bonus" : " The customer%s thought she was hot.",
-                        "obedience bonus" : " The customer%s liked how she took orders.",
-                        "constitution bonus" : " The customer%s thought she was fit.",
-                        "sensitivity bonus" : " The customer%s loved how sensitive she was.",
+                        "random item" : __(" The customer%s left something valuable."),
+                        "beauty bonus" : __(" The customer%s found her beauty stunning."),
+                        "body bonus" : __(" The customer%s loved her curves."),
+                        "charm bonus" : __(" The customer%s fell under her charm."),
+                        "refinement bonus" : __(" The customer%s loved how refined she was."),
+                        "libido bonus" : __(" The customer%s thought she was hot."),
+                        "obedience bonus" : __(" The customer%s liked how she took orders."),
+                        "constitution bonus" : __(" The customer%s thought she was fit."),
+                        "sensitivity bonus" : __(" The customer%s loved how sensitive she was."),
 
-                        "DT_group" : " The customers took turns sticking their dicks down her throat as deep as they could.",
-                        "DT" : " The customer was amazed that he could stick his dick so far down her throat.",
-                        "bukkake" : " She was fucked hard in her every hole, then the customers took turns coming all over her face.",
-                        "creampie" : " He came all over her pussy and belly while she moaned with pleasure.",
-                        "creampie_group" : " They took turns coming into her pussy until it dripped buckets of cum.",
-                        "anal creampie" : " He fucked her ass hard then shot a huge load in her open asshole.",
-                        "anal creampie_group" : " They took turns fucking and cumming in her ass until her belly was swollen with cum.",
-                        "cum on face" : " He moaned and came loads all over her face and hair.",
-                        "cum on face_group" : " They moaned, cumming loads all over her face and hair.",
-                        "swallow" : " She eagerly swallowed the cum as it dripped down her throat.",
+                        "DT_group" : __(" The customers took turns sticking their dicks down her throat as deep as they could."),
+                        "DT" : __(" The customer was amazed that he could stick his dick so far down her throat."),
+                        "bukkake" : __(" She was fucked hard in her every hole, then the customers took turns coming all over her face."),
+                        "creampie" : __(" He came all over her pussy and belly while she moaned with pleasure."),
+                        "creampie_group" : __(" They took turns coming into her pussy until it dripped buckets of cum."),
+                        "anal creampie" : __(" He fucked her ass hard then shot a huge load in her open asshole."),
+                        "anal creampie_group" : __(" They took turns fucking and cumming in her ass until her belly was swollen with cum."),
+                        "cum on face" : __(" He moaned and came loads all over her face and hair."),
+                        "cum on face_group" : __(" They moaned, cumming loads all over her face and hair."),
+                        "swallow" : __(" She eagerly swallowed the cum as it dripped down her throat."),
                         "irrumatio" : "",
 
-                        "not satisfied" : " :Pron: was disappointed that she wouldn't do what :pron: wanted.",
-                        "group not satisfied" : " She wouldn't do it, but they didn't mind because group %s is hot.",
-                        "bisexual not satisfied" : " In the end :pron: got %s, but :pron: was happy to let the girls have their way.",
+                        "not satisfied" : __(" :Pron: was disappointed that she wouldn't do what :pron: wanted."),
+                        "group not satisfied" : __(" She wouldn't do it, but they didn't mind because group %s is hot."),
+                        "bisexual not satisfied" : __(" In the end :pron: got %s, but :pron: was happy to let the girls have their way."),
 
-                        "roll_critical failure" : "\n{color=[c_red]}%s wasn't trying hard today. She barely even paid attention to what she was doing.{/color}",
-                        "roll_failure" : "\n%s wasn't really into it.",
-                        "roll_neutral" : "\n%s went about her job as usual.",
-                        "roll_success" : "\n%s was really motivated today.",
-                        "roll_critical success" : "\n{color=[c_green]}%s did everything she could to please.{/color}",
+                        "roll_critical failure" : __("\n{color=[c_red]}%s wasn't trying hard today. She barely even paid attention to what she was doing.{/color}"),
+                        "roll_failure" : __("\n%s wasn't really into it."),
+                        "roll_neutral" : __("\n%s went about her job as usual."),
+                        "roll_success" : __("\n%s was really motivated today."),
+                        "roll_critical success" : __("\n{color=[c_green]}%s did everything she could to please.{/color}"),
 
-                        "bisexual_roll_critical failure" : "\n{color=[c_red]}%s weren't trying hard today. They weren't paying attention to what they were doing.{/color}",
-                        "bisexual_roll_failure" : "\n%s weren't really into it.",
-                        "bisexual_roll_neutral" : "\n%s went about their job as usual.",
-                        "bisexual_roll_success" : "\n%s were really motivated and playful today.",
-                        "bisexual_roll_critical success" : "\n{color=[c_green]}%s did everything they could to please the customers and each other.{/color}",
+                        "bisexual_roll_critical failure" : __("\n{color=[c_red]}%s weren't trying hard today. They weren't paying attention to what they were doing.{/color}"),
+                        "bisexual_roll_failure" : __("\n%s weren't really into it."),
+                        "bisexual_roll_neutral" : __("\n%s went about their job as usual."),
+                        "bisexual_roll_success" : __("\n%s were really motivated and playful today."),
+                        "bisexual_roll_critical success" : __("\n{color=[c_green]}%s did everything they could to please the customers and each other.{/color}"),
 
                         "anal_stats" : (("anal", 6), ("constitution", 2), ("body", 1), ("sex",1)),
                         "anal_changes" : ((("anal",), 100, 2), (("constitution",), 70, 1), (("libido", "obedience", "body"), 25, 1), (("sensitivity",), 25, -1)),
-                        "anal_init" : " :Pron: wanted to fuck %s in the ass.",
+                        "anal_init" : __(" :Pron: wanted to fuck %s in the ass."),
                         "anal_tags" : ["anal"],
 
                         "sex_stats" : (("sex", 6), ("libido", 2), ("beauty", 1), ("service",1)),
                         "sex_changes" : ((("sex",), 100, 2), (("libido",), 70, 1), (("sensitivity", "constitution", "beauty"), 25, 1), (("obedience",), 25, -1)),
-                        "sex_init" : " :Pron: wanted to have sex with %s.",
+                        "sex_init" : __(" :Pron: wanted to have sex with %s."),
                         "sex_tags" : ["sex"],
 
                         "service_stats" : (("service", 6), ("sensitivity", 2), ("charm", 1), ("fetish",1)),
                         "service_changes" : ((("service",), 100, 2), (("sensitivity",), 70, 1), (("obedience", "libido", "charm"), 25, 1), (("constitution",), 25, -1)),
-                        "service_init" : " :Pron: wanted %s to give service.",
+                        "service_init" : __(" :Pron: wanted %s to give service."),
                         "service_tags" : ["service"],
 
                         "fetish_stats" : (("fetish", 6), ("obedience", 2), ("refinement", 1), ("anal",1)),
                         "fetish_changes" : ((("fetish",), 100, 2), (("obedience",), 70, 1), (("constitution", "sensitivity", "refinement"), 25, 1), (("libido",), 25, -1)),
-                        "fetish_init" : " :Pron: had some very special requests for %s.",
+                        "fetish_init" : __(" :Pron: had some very special requests for %s."),
                         "fetish_tags" : ["fetish"],
 
-                        "whore_init" : "%s came to your brothel and chose %s.",
+                        "whore_init" : __("%s came to your brothel and chose %s."),
                         "bisexual_tags" : ["bisexual"],
                         "group_tags" : ["group"],
 
-                        "M anal_very bad" : "\n{color=[c_red]}%s had a hard time and didn't like it one bit. The customer quickly lost interest and left grumbling.",
-                        "M anal_bad" : "\n{color=[c_lightred]}%s doesn't like it in the ass and it showed. She didn't enjoy herself and neither did the customer.",
-                        "M anal_average" : "\n%s moans as the customer gets his way with her ass. She's growing to enjoy anal sex.",
-                        "M anal_good" : "\n{color=[c_lightgreen]}%s takes it up the ass with moans of pleasure. The customer comes all over her butt with a delighted smile on his face.",
-                        "M anal_very good" : "\n{color=[c_green]}Looks like this girl was made for anal. %s uses her ass to work the customer's dick until it's hard as a rock, inviting him to cum and fill her up.",
-                        "M anal_perfect" : "\n{color=[c_orange]}%s is an anal sex goddess. She takes it up the ass with unbridled pleasure, crying out loud as the customer releases his seed deep into her belly.",
+                        "M anal_very bad" : __("\n{color=[c_red]}%s had a hard time and didn't like it one bit. The customer quickly lost interest and left grumbling."),
+                        "M anal_bad" : __("\n{color=[c_lightred]}%s doesn't like it in the ass and it showed. She didn't enjoy herself and neither did the customer."),
+                        "M anal_average" : __("\n%s moans as the customer gets his way with her ass. She's growing to enjoy anal sex."),
+                        "M anal_good" : __("\n{color=[c_lightgreen]}%s takes it up the ass with moans of pleasure. The customer comes all over her butt with a delighted smile on his face."),
+                        "M anal_very good" : __("\n{color=[c_green]}Looks like this girl was made for anal. %s uses her ass to work the customer's dick until it's hard as a rock, inviting him to cum and fill her up."),
+                        "M anal_perfect" : __("\n{color=[c_orange]}%s is an anal sex goddess. She takes it up the ass with unbridled pleasure, crying out loud as the customer releases his seed deep into her belly."),
 
-                        "M sex_very bad" : "\n{color=[c_red]}%s is a terrible lay, not enjoying it one bit as the customer violates her body. The customer thought she was awful and left complaining.",
-                        "M sex_bad" : "\n{color=[c_lightred]}%s tries her best to give the customer a good time, but her fake cries are rather obvious. The customer left relieved but disappointed.",
-                        "M sex_average" : "\n%s fucks with the customer and tries a few interesting positions. She is starting to enjoy herself and some of her moans were clearly not fake.",
-                        "M sex_good" : "\n{color=[c_lightgreen]}After a quick bout of foreplay, %s and the customer have wild sex in various positions until he cums hard all over her body.",
-                        "M sex_very good" : "\n{color=[c_green]}%s is amazing and works that dick like a succubus. She reaches orgasm and cries out as the customer pumps warm cum into her.",
-                        "M sex_perfect" : "\n{color=[c_orange]}%s cannot get enough, screaming loudly as she enjoys being fucked through multiple orgasms and being covered in the customer's sticky cum.",
+                        "M sex_very bad" : __("\n{color=[c_red]}%s is a terrible lay, not enjoying it one bit as the customer violates her body. The customer thought she was awful and left complaining."),
+                        "M sex_bad" : __("\n{color=[c_lightred]}%s tries her best to give the customer a good time, but her fake cries are rather obvious. The customer left relieved but disappointed."),
+                        "M sex_average" : __("\n%s fucks with the customer and tries a few interesting positions. She is starting to enjoy herself and some of her moans were clearly not fake."),
+                        "M sex_good" : __("\n{color=[c_lightgreen]}After a quick bout of foreplay, %s and the customer have wild sex in various positions until he cums hard all over her body."),
+                        "M sex_very good" : __("\n{color=[c_green]}%s is amazing and works that dick like a succubus. She reaches orgasm and cries out as the customer pumps warm cum into her."),
+                        "M sex_perfect" : __("\n{color=[c_orange]}%s cannot get enough, screaming loudly as she enjoys being fucked through multiple orgasms and being covered in the customer's sticky cum."),
 
-                        "M service_very bad" : "\n{color=[c_red]}The customer complains that %s doesn't know how to work a dick properly. The customer leaves, upset that she didn't even manage to finish him off.",
-                        "M service_bad" : "\n{color=[c_lightred]}%s awkwardly tries to service the customer, but her technique is clearly lacking. He ends up masturbating while she looks on with shame.",
-                        "M service_average" : "\n%s does her best to service the customer, slowly developing her own technique. After teasing the customer for a while, she smiles as he releases his load on her face.",
-                        "M service_good" : "\n{color=[c_lightgreen]}%s uses her skills to make the customer cum quickly and repeatedly, covering her face and tits with bodily fluids.",
-                        "M service_very good" : "\n{color=[c_green]}%s is already wet thinking of the customer's dick as she starts sucking and licking it. It isn't long until the customer comes hard in her mouth.",
-                        "M service_perfect" : "\n{color=[c_orange]}%s offers the customer her body to play with and makes wet sounds as she expertly sucks him off. She savours the feeling of hot, sticky cum on her face and in her mouth, begging the customer for more.",
+                        "M service_very bad" : __("\n{color=[c_red]}The customer complains that %s doesn't know how to work a dick properly. The customer leaves, upset that she didn't even manage to finish him off."),
+                        "M service_bad" : __("\n{color=[c_lightred]}%s awkwardly tries to service the customer, but her technique is clearly lacking. He ends up masturbating while she looks on with shame."),
+                        "M service_average" : __("\n%s does her best to service the customer, slowly developing her own technique. After teasing the customer for a while, she smiles as he releases his load on her face."),
+                        "M service_good" : __("\n{color=[c_lightgreen]}%s uses her skills to make the customer cum quickly and repeatedly, covering her face and tits with bodily fluids."),
+                        "M service_very good" : __("\n{color=[c_green]}%s is already wet thinking of the customer's dick as she starts sucking and licking it. It isn't long until the customer comes hard in her mouth."),
+                        "M service_perfect" : __("\n{color=[c_orange]}%s offers the customer her body to play with and makes wet sounds as she expertly sucks him off. She savours the feeling of hot, sticky cum on her face and in her mouth, begging the customer for more."),
 
-                        "M fetish_very bad" : "\n{color=[c_red]}%s is scared and tense under the customer's touch. She is not enjoying this at all and the customer leaves completely unsatisfied.",
-                        "M fetish_bad" : "\n{color=[c_lightred]}%s shivers as the customer does new, weird things to her body. The customer watches her reactions with some interest at first, but the slow pace quickly bores him.",
-                        "M fetish_average" : "\n%s moans a little as she is blindfolded and tied up. She seems more curious than scared about what's happening to her now, and the customer has fun playing with her for a while.",
-                        "M fetish_good" : "\n{color=[c_lightgreen]}%s shivers with excitement as she feels the bite of the ropes in her skin. The customer teases her body until she is completely wet, begging to be fucked.",
-                        "M fetish_very good" : "\n{color=[c_green]}%s enjoys the mix of pleasure and pain and begs submissively for more. The customer violates her as she's tied up, bringing her to climax as he cums hard all over her.",
-                        "M fetish_perfect" : "\n{color=[c_orange]}%s enjoys everything the customer does to her, suggesting new, humiliating ways to tie herself up and get punished. She screams with pain and pleasure, cumming multiple times as her various holes are violated.",
+                        "M fetish_very bad" : __("\n{color=[c_red]}%s is scared and tense under the customer's touch. She is not enjoying this at all and the customer leaves completely unsatisfied."),
+                        "M fetish_bad" : __("\n{color=[c_lightred]}%s shivers as the customer does new, weird things to her body. The customer watches her reactions with some interest at first, but the slow pace quickly bores him."),
+                        "M fetish_average" : __("\n%s moans a little as she is blindfolded and tied up. She seems more curious than scared about what's happening to her now, and the customer has fun playing with her for a while."),
+                        "M fetish_good" : __("\n{color=[c_lightgreen]}%s shivers with excitement as she feels the bite of the ropes in her skin. The customer teases her body until she is completely wet, begging to be fucked."),
+                        "M fetish_very good" : __("\n{color=[c_green]}%s enjoys the mix of pleasure and pain and begs submissively for more. The customer violates her as she's tied up, bringing her to climax as he cums hard all over her."),
+                        "M fetish_perfect" : __("\n{color=[c_orange]}%s enjoys everything the customer does to her, suggesting new, humiliating ways to tie herself up and get punished. She screams with pain and pleasure, cumming multiple times as her various holes are violated."),
 
-                        "M bisexual_very bad" : "\n{color=[c_red]}%s were clumsy and uncooperative. The customer quickly got bored and left, grumbling about a refund.",
-                        "M bisexual_bad" : "\n{color=[c_lightred]}It's obvious %s aren't really good at this and are just pretending. The customer fucks them one after the other, but there is no chemistry.",
-                        "M bisexual_average" : "\n%s slowly finger their pussies while the customer looks on with lust. He soon joins them, and they do their best to make it a memorable time.",
-                        "M bisexual_good" : "\n{color=[c_lightgreen]}%s are eagerly touching and teasing each other. They playfully try new ways to excite the customer, and he quickly cums as they play with each other's breasts and pussy.",
-                        "M bisexual_very good" : "\n{color=[c_green]}%s love cock as much as they love each other. They both work the customer's dick using their hands, mouths and bodies, making him come all over them.",
-                        "M bisexual_perfect" : "\n{color=[c_orange]}%s are perfect sex kittens, expertly licking each other's cunt while the customer fucks their every hole. They eagerly kiss and lick the cum from each other's mouth as he looks on with bliss.",
+                        "M bisexual_very bad" : __("\n{color=[c_red]}%s were clumsy and uncooperative. The customer quickly got bored and left, grumbling about a refund."),
+                        "M bisexual_bad" : __("\n{color=[c_lightred]}It's obvious %s aren't really good at this and are just pretending. The customer fucks them one after the other, but there is no chemistry."),
+                        "M bisexual_average" : __("\n%s slowly finger their pussies while the customer looks on with lust. He soon joins them, and they do their best to make it a memorable time."),
+                        "M bisexual_good" : __("\n{color=[c_lightgreen]}%s are eagerly touching and teasing each other. They playfully try new ways to excite the customer, and he quickly cums as they play with each other's breasts and pussy."),
+                        "M bisexual_very good" : __("\n{color=[c_green]}%s love cock as much as they love each other. They both work the customer's dick using their hands, mouths and bodies, making him come all over them."),
+                        "M bisexual_perfect" : __("\n{color=[c_orange]}%s are perfect sex kittens, expertly licking each other's cunt while the customer fucks their every hole. They eagerly kiss and lick the cum from each other's mouth as he looks on with bliss."),
 
-                        "group_very bad" : "\n{color=[c_red]}With too many customers to satisfy, %s seems at a loss and doesn't know what to do. The group leaves unsatisfied and complaining.",
-                        "group_bad" : "\n{color=[c_lightred]}%s is kind of shy in a group. She tries to do her job but the customers find her performance rather underwhelming.",
-                        "group_average" : "\nThe customers take turns fucking %s. She takes it all in stride.",
-                        "group_good" : "\n{color=[c_lightgreen]}%s works hard to please every customer in the group, bringing them to a grand finish using her every hole. A moment they will not soon forget.",
-                        "group_very good" : "\n{color=[c_green]}%s is fucked long and hard by the customers and it looks like she isn't ready to stop. It looks like no matter how many times they fuck her, she always wants another dick.",
-                        "group_perfect" : "\n{color=[c_orange]}%s couldn't wait to have her every hole filled by the customers, not letting them rest until they have spurted their cum over every inch of her body.",
+                        "group_very bad" : __("\n{color=[c_red]}With too many customers to satisfy, %s seems at a loss and doesn't know what to do. The group leaves unsatisfied and complaining."),
+                        "group_bad" : __("\n{color=[c_lightred]}%s is kind of shy in a group. She tries to do her job but the customers find her performance rather underwhelming."),
+                        "group_average" : __("\nThe customers take turns fucking %s. She takes it all in stride."),
+                        "group_good" : __("\n{color=[c_lightgreen]}%s works hard to please every customer in the group, bringing them to a grand finish using her every hole. A moment they will not soon forget."),
+                        "group_very good" : __("\n{color=[c_green]}%s is fucked long and hard by the customers and it looks like she isn't ready to stop. It looks like no matter how many times they fuck her, she always wants another dick."),
+                        "group_perfect" : __("\n{color=[c_orange]}%s couldn't wait to have her every hole filled by the customers, not letting them rest until they have spurted their cum over every inch of her body."),
 
-                        "F anal_very bad" : "\n{color=[c_red]}%s had a hard time and didn't like it one bit. The customer quickly lost interest and left grumbling.",
-                        "F anal_bad" : "\n{color=[c_lightred]}%s doesn't like it in the ass and it showed. She didn't enjoy herself and neither did the customer.",
-                        "F anal_average" : "\n%s moans as the customer gets her way with her ass. She's growing to enjoy anal sex.",
-                        "F anal_good" : "\n{color=[c_lightgreen]}%s takes it up the ass with moans of pleasure. The customer pounds her butt with a delighted smile on her face.",
-                        "F anal_very good" : "\n{color=[c_green]}Looks like this girl was made for anal. %s uses her ass to grind against the customer's pussy until it becomes very wet, inviting her to cum together with her.",
-                        "F anal_perfect" : "\n{color=[c_orange]}%s is an anal sex goddess. She takes it up the ass with unbridled pleasure, crying out loud as the customer reaches her own intense orgasm.",
+                        "F anal_very bad" : __("\n{color=[c_red]}%s had a hard time and didn't like it one bit. The customer quickly lost interest and left grumbling."),
+                        "F anal_bad" : __("\n{color=[c_lightred]}%s doesn't like it in the ass and it showed. She didn't enjoy herself and neither did the customer."),
+                        "F anal_average" : __("\n%s moans as the customer gets her way with her ass. She's growing to enjoy anal sex."),
+                        "F anal_good" : __("\n{color=[c_lightgreen]}%s takes it up the ass with moans of pleasure. The customer pounds her butt with a delighted smile on her face."),
+                        "F anal_very good" : __("\n{color=[c_green]}Looks like this girl was made for anal. %s uses her ass to grind against the customer's pussy until it becomes very wet, inviting her to cum together with her."),
+                        "F anal_perfect" : __("\n{color=[c_orange]}%s is an anal sex goddess. She takes it up the ass with unbridled pleasure, crying out loud as the customer reaches her own intense orgasm."),
 
-                        "F sex_very bad" : "\n{color=[c_red]}%s is a terrible lay, not enjoying it one bit as the customer violates her body. The customer thought she was awful and left complaining.",
-                        "F sex_bad" : "\n{color=[c_lightred]}%s tries her best to give the customer a good time, but her fake cries are rather obvious. The customer left relieved but disappointed.",
-                        "F sex_average" : "\n%s fucks with the customer and tries a few interesting positions. She is starting to enjoy herself and some of her moans were clearly not fake.",
-                        "F sex_good" : "\n{color=[c_lightgreen]}After a quick bout of foreplay, %s and the customer have wild sex in various positions until they both cum hard.",
-                        "F sex_very good" : "\n{color=[c_green]}%s is amazing and works that pussy like a succubus. She reaches orgasm and cries out as the customer gushes love juice all over her.",
-                        "F sex_perfect" : "\n{color=[c_orange]}%s cannot get enough, screaming loudly as she enjoys being fucked through multiple orgasms and being covered in the customer's sticky love juice.",
+                        "F sex_very bad" : __("\n{color=[c_red]}%s is a terrible lay, not enjoying it one bit as the customer violates her body. The customer thought she was awful and left complaining."),
+                        "F sex_bad" : __("\n{color=[c_lightred]}%s tries her best to give the customer a good time, but her fake cries are rather obvious. The customer left relieved but disappointed."),
+                        "F sex_average" : __("\n%s fucks with the customer and tries a few interesting positions. She is starting to enjoy herself and some of her moans were clearly not fake."),
+                        "F sex_good" : __("\n{color=[c_lightgreen]}After a quick bout of foreplay, %s and the customer have wild sex in various positions until they both cum hard."),
+                        "F sex_very good" : __("\n{color=[c_green]}%s is amazing and works that pussy like a succubus. She reaches orgasm and cries out as the customer gushes love juice all over her."),
+                        "F sex_perfect" : __("\n{color=[c_orange]}%s cannot get enough, screaming loudly as she enjoys being fucked through multiple orgasms and being covered in the customer's sticky love juice."),
 
-                        "F service_very bad" : "\n{color=[c_red]}The customer complains that %s doesn't know how to work a pussy properly. She leaves, upset that she didn't even manage to finish her off.",
-                        "F service_bad" : "\n{color=[c_lightred]}%s awkwardly tries to service the customer, but her technique is clearly lacking. The customer ends up masturbating while she looks on with shame.",
-                        "F service_average" : "\nShe does her best to service the customer, slowly developing her own technique. After teasing the customer for a while, %s smiles as she receives the customer's splashing love juices all over her face.",
-                        "F service_good" : "\n{color=[c_lightgreen]}%s uses her skills to make the customer squirt hard, covering her face and tits with bodily fluids.",
-                        "F service_very good" : "\n{color=[c_green]}%s is already wet thinking of the customer's pussy as she starts fingering and licking it. It isn't long until the customer comes hard from her tongue work.",
-                        "F service_perfect" : "\n{color=[c_orange]}%s offers the customer her body to play with and makes wet sounds as she expertly licks her out. She savours the feeling of hot, sticky love juice on her face and in her mouth, begging the customer for more.",
+                        "F service_very bad" : __("\n{color=[c_red]}The customer complains that %s doesn't know how to work a pussy properly. She leaves, upset that she didn't even manage to finish her off."),
+                        "F service_bad" : __("\n{color=[c_lightred]}%s awkwardly tries to service the customer, but her technique is clearly lacking. The customer ends up masturbating while she looks on with shame."),
+                        "F service_average" : __("\nShe does her best to service the customer, slowly developing her own technique. After teasing the customer for a while, %s smiles as she receives the customer's splashing love juices all over her face."),
+                        "F service_good" : __("\n{color=[c_lightgreen]}%s uses her skills to make the customer squirt hard, covering her face and tits with bodily fluids."),
+                        "F service_very good" : __("\n{color=[c_green]}%s is already wet thinking of the customer's pussy as she starts fingering and licking it. It isn't long until the customer comes hard from her tongue work."),
+                        "F service_perfect" : __("\n{color=[c_orange]}%s offers the customer her body to play with and makes wet sounds as she expertly licks her out. She savours the feeling of hot, sticky love juice on her face and in her mouth, begging the customer for more."),
 
-                        "F fetish_very bad" : "\n{color=[c_red]}%s is scared and tense under the customer's touch. She is not enjoying this at all and the customer leaves completely unsatisfied.",
-                        "F fetish_bad" : "\n{color=[c_lightred]}%s shivers as the customer does new, weird things to her body. The customer watches her reactions with some interest at first, but the slow pace quickly bores her.",
-                        "F fetish_average" : "\n%s moans a little as she is blindfolded and tied up. She seems more curious than scared about what's happening to her now, and the customer has fun playing with her for a while.",
-                        "F fetish_good" : "\n{color=[c_lightgreen]}%s shivers with excitement as she feels the bite of the ropes in her skin. The customer teases her body until she is completely wet, begging to be fucked.",
-                        "F fetish_very good" : "\n{color=[c_green]}%s enjoys the mix of pleasure and pain and begs submissively for more. The customer violates her as she's tied up, bringing her to climax as she cums hard with her.",
-                        "F fetish_perfect" : "\n{color=[c_orange]}%s enjoys everything the customer does to her, suggesting new, humiliating ways to tie herself up and get punished. She screams with pain and pleasure, cumming multiple times as her various holes are violated.",
+                        "F fetish_very bad" : __("\n{color=[c_red]}%s is scared and tense under the customer's touch. She is not enjoying this at all and the customer leaves completely unsatisfied."),
+                        "F fetish_bad" : __("\n{color=[c_lightred]}%s shivers as the customer does new, weird things to her body. The customer watches her reactions with some interest at first, but the slow pace quickly bores her."),
+                        "F fetish_average" : __("\n%s moans a little as she is blindfolded and tied up. She seems more curious than scared about what's happening to her now, and the customer has fun playing with her for a while."),
+                        "F fetish_good" : __("\n{color=[c_lightgreen]}%s shivers with excitement as she feels the bite of the ropes in her skin. The customer teases her body until she is completely wet, begging to be fucked."),
+                        "F fetish_very good" : __("\n{color=[c_green]}%s enjoys the mix of pleasure and pain and begs submissively for more. The customer violates her as she's tied up, bringing her to climax as she cums hard with her."),
+                        "F fetish_perfect" : __("\n{color=[c_orange]}%s enjoys everything the customer does to her, suggesting new, humiliating ways to tie herself up and get punished. She screams with pain and pleasure, cumming multiple times as her various holes are violated."),
 
-                        "F bisexual_very bad" : "\n{color=[c_red]}%s were clumsy and uncooperative. The customer quickly got bored and left, grumbling about a refund.",
-                        "F bisexual_bad" : "\n{color=[c_lightred]}It's obvious %s aren't really good at this and are just pretending. The customer fucks them one after the other, but there is no chemistry.",
-                        "F bisexual_average" : "\n%s slowly finger their pussies while the customer looks on with lust. She soon joins them, and they do their best to make it a memorable time.",
-                        "F bisexual_good" : "\n{color=[c_lightgreen]}%s are eagerly touching and teasing each other. They playfully try new ways to excite the customer, and she quickly cums as they play with each other's breasts and pussies.",
-                        "F bisexual_very good" : "\n{color=[c_green]}%s love pussy. They both work the customer's erogenous zones using their hands, mouths and bodies, making her come again and again.",
-                        "F bisexual_perfect" : "\n{color=[c_orange]}%s are perfect sex kittens, expertly licking the customer's cunt and each other. They eagerly kiss and lick the love juice from each other's mouth as she looks on with bliss.",
+                        "F bisexual_very bad" : __("\n{color=[c_red]}%s were clumsy and uncooperative. The customer quickly got bored and left, grumbling about a refund."),
+                        "F bisexual_bad" : __("\n{color=[c_lightred]}It's obvious %s aren't really good at this and are just pretending. The customer fucks them one after the other, but there is no chemistry."),
+                        "F bisexual_average" : __("\n%s slowly finger their pussies while the customer looks on with lust. She soon joins them, and they do their best to make it a memorable time."),
+                        "F bisexual_good" : __("\n{color=[c_lightgreen]}%s are eagerly touching and teasing each other. They playfully try new ways to excite the customer, and she quickly cums as they play with each other's breasts and pussies."),
+                        "F bisexual_very good" : __("\n{color=[c_green]}%s love pussy. They both work the customer's erogenous zones using their hands, mouths and bodies, making her come again and again."),
+                        "F bisexual_perfect" : __("\n{color=[c_orange]}%s are perfect sex kittens, expertly licking the customer's cunt and each other. They eagerly kiss and lick the love juice from each other's mouth as she looks on with bliss."),
 
                     }
 
@@ -2610,258 +2610,258 @@ init -4 python:
 
                         "location" : ["in the old barn", "in the hay", "by the tool shed", "down in the mud", "in the meadow", "in the pig stall", "down in a pit", "by the windmill", "beneath the old oak", "among the scarecrows", "behind the chicken coop", "in the milking parlor", "inside the stable", "behind a fence", "in the corn field", "in the corn field, forming a perfect circle visible from the sky that would remain and later confound mystery seekers"],
 
-                        "intro minion" : {"stallion" : "a well-endowed, hunking stallion", "beast" : "a dirty, vulgar beast", "monster" : "a vile, oozing monster", "machine" : "a kinky buzzing machine", "stallions" : "neighing, horny stallions", "beasts" : "drooling, mindless beasts", "monsters" : "deformed monsters", "machines" : "weird fucking machines", "various" : "a strange coterie of minions"},
+                        "intro minion" : {"stallion" : __("a well-endowed, hunking stallion"), "beast" : __("a dirty, vulgar beast"), "monster" : __("a vile, oozing monster"), "machine" : __("a kinky buzzing machine"), "stallions" : __("neighing, horny stallions"), "beasts" : __("drooling, mindless beasts"), "monsters" : __("deformed monsters"), "machines" : __("weird fucking machines"), "various" : __("a strange coterie of minions")},
 
-                        "intro perfect" : {"beauty" : "They are stunned to see such a beautiful woman standing next to %s.",
-                                            "body" : "They get rowdy seeing her perfect curves so close to %s",
-                                            "charm" : "They are mesmerized by her charm, even though she is standing next to such %s.",
-                                            "refinement" : "They wondered how such a noble and refined girl could exist in the same space as %s."},
+                        "intro perfect" : {"beauty" : __("They are stunned to see such a beautiful woman standing next to %s."),
+                                            "body" : __("They get rowdy seeing her perfect curves so close to %s"),
+                                            "charm" : __("They are mesmerized by her charm, even though she is standing next to such %s."),
+                                            "refinement" : __("They wondered how such a noble and refined girl could exist in the same space as %s.")},
 
-                        "intro good" : {"beauty" : "They are impressed to see a pretty girl with %s.",
-                                            "body" : "They whistle encouragingly at her exposed body, next to %s",
-                                            "charm" : "They think she looks graceful for someone so close to %s.",
-                                            "refinement" : "They are pleasantly surprised to see she maintains her dignity, even standing next to %s."},
+                        "intro good" : {"beauty" : __("They are impressed to see a pretty girl with %s."),
+                                            "body" : __("They whistle encouragingly at her exposed body, next to %s"),
+                                            "charm" : __("They think she looks graceful for someone so close to %s."),
+                                            "refinement" : __("They are pleasantly surprised to see she maintains her dignity, even standing next to %s.")},
 
-                        "intro average+" : {"beauty" : "They think she is quite pretty for a girl standing next to %s",
-                                            "body" : "They cheer on her sweet body as she stands next to %s",
-                                            "charm" : "They think she has charm as she stands next to %s",
-                                            "refinement" : "They are surprised to see she retains her manners next to %s"},
+                        "intro average+" : {"beauty" : __("They think she is quite pretty for a girl standing next to %s"),
+                                            "body" : __("They cheer on her sweet body as she stands next to %s"),
+                                            "charm" : __("They think she has charm as she stands next to %s"),
+                                            "refinement" : __("They are surprised to see she retains her manners next to %s")},
 
-                        "intro average-" : {"beauty" : ", but they are disappointed in her face.",
-                                            "body" : ", but they think her body is out of shape.",
-                                            "charm" : ", but her charm is lacking.",
-                                            "refinement" : ", but they feel she lacks class."},
+                        "intro average-" : {"beauty" : __(", but they are disappointed in her face."),
+                                            "body" : __(", but they think her body is out of shape."),
+                                            "charm" : __(", but her charm is lacking."),
+                                            "refinement" : __(", but they feel she lacks class.")},
 
-                        "intro bad" : {"beauty" : "They grumble as they don't think she's pretty.",
-                                            "body" : "They make disparaging comments about her lack of curves.",
-                                            "charm" : "They are disappointed to find her charisma lacking.",
-                                            "refinement" : "They frown, complaining that she is uncouth."},
+                        "intro bad" : {"beauty" : __("They grumble as they don't think she's pretty."),
+                                            "body" : __("They make disparaging comments about her lack of curves."),
+                                            "charm" : __("They are disappointed to find her charisma lacking."),
+                                            "refinement" : __("They frown, complaining that she is uncouth.")},
 
-                        "intro very bad" : {"beauty" : "They boo and call her ugly, even next to %s.",
-                                            "body" : "They loudly complain about her unattractive shape, even next to %s.",
-                                            "charm" : "They hurl insults at her for her utter lack of charm, unsurprised she is kept with %s.",
-                                            "refinement" : "They turn up their nose at her, calling her an unrefined farmhand, only good to serve %s."},
+                        "intro very bad" : {"beauty" : __("They boo and call her ugly, even next to %s."),
+                                            "body" : __("They loudly complain about her unattractive shape, even next to %s."),
+                                            "charm" : __("They hurl insults at her for her utter lack of charm, unsurprised she is kept with %s."),
+                                            "refinement" : __("They turn up their nose at her, calling her an unrefined farmhand, only good to serve %s.")},
 
 
                         # M2 & M4. Set-up
 
-                        "naked story stallion" : {"title": "The Naked Truth", "desc" : "Sometimes, all it takes for one to be mindful of their sexual self is to strip naked in the presence of strangers. %s is experiencing that, standing next to %s - although it's doubtful he is mindful about anything at all.\n\nHer eyes widen when she notices his massive cock standing to full attention, swaying mere inches from her exposed body."},
+                        "naked story stallion" : {"title": __("The Naked Truth"), "desc" : __("Sometimes, all it takes for one to be mindful of their sexual self is to strip naked in the presence of strangers. %s is experiencing that, standing next to %s - although it's doubtful he is mindful about anything at all.\n\nHer eyes widen when she notices his massive cock standing to full attention, swaying mere inches from her exposed body.")},
 
-                        "naked story beast" : {"title": "Caught in the Bare", "desc" : "Animals don't wear clothes, and %s is reminded of that as she is forced to mingle with the beasts as %s sniffs at her shivering body. As the animal releases pheromones, she feels a strange mix of shame and dirty curiosity."},
+                        "naked story beast" : {"title": __("Caught in the Bare"), "desc" : __("Animals don't wear clothes, and %s is reminded of that as she is forced to mingle with the beasts as %s sniffs at her shivering body. As the animal releases pheromones, she feels a strange mix of shame and dirty curiosity.")},
 
-                        "naked story monster" : {"title": "Personal Space Invader", "desc" : "%s is forced to spread out in a lewd pose, while the lewd creature %s grasps her wrists and ankles with its weird appendages. She can't help but offer her most intimate parts in full view of all the customers."},
+                        "naked story monster" : {"title": __("Personal Space Invader"), "desc" : __("%s is forced to spread out in a lewd pose, while the lewd creature %s grasps her wrists and ankles with its weird appendages. She can't help but offer her most intimate parts in full view of all the customers.")},
 
-                        "naked story machine" : {"title": "The Birthday Suit", "desc" : "%s is tied up to %s, the strange machine, which hums as it runs various scans on her exposed body. While nothing visible happens on the outside, her face becomes visibly flushed and she squirms, rubbing her thighs together."},
+                        "naked story machine" : {"title": __("The Birthday Suit"), "desc" : __("%s is tied up to %s, the strange machine, which hums as it runs various scans on her exposed body. While nothing visible happens on the outside, her face becomes visibly flushed and she squirms, rubbing her thighs together.")},
 
-                        "service story stallion" : {"title": "Not-So Little Pony", "desc" : "Excitement rises within the crowd as %s steps closer to %s, running her hands over his muscular torso. As always, his barely-human cock is standing to attention. Taking her time to show off to the customers, she kneels in front of the stallion, her knees buried in the dirty mud.", "desc2" : "She is holding his massive cock in her hands and licking the tip, before finally taking it in her mouth."}, # g, m
+                        "service story stallion" : {"title": __("Not-So Little Pony"), "desc" : __("Excitement rises within the crowd as %s steps closer to %s, running her hands over his muscular torso. As always, his barely-human cock is standing to attention. Taking her time to show off to the customers, she kneels in front of the stallion, her knees buried in the dirty mud."), "desc2" : __("She is holding his massive cock in her hands and licking the tip, before finally taking it in her mouth.")}, # g, m
 
-                        "service story beast" : {"title": "Around The Fur", "desc" : "Getting down right in the mud, %s spreads her legs, giving the crowd a full view of her body. %s obediently positions himself over her to form a 69, his beastly cock hanging in front of her face.", "desc2" : "The animal buries his snout into her snatch, making loud grunts as he starts licking. In turn, she opens her mouth to welcome his cock."},
+                        "service story beast" : {"title": __("Around The Fur"), "desc" : __("Getting down right in the mud, %s spreads her legs, giving the crowd a full view of her body. %s obediently positions himself over her to form a 69, his beastly cock hanging in front of her face."), "desc2" : __("The animal buries his snout into her snatch, making loud grunts as he starts licking. In turn, she opens her mouth to welcome his cock.")},
 
-                        "service story monster" : {"title": "The Shadow over Her Mouth", "desc" : "The crowd gasps when the monster extends a strange appendage, oozing with yellowish liquid that seems like the creature's pre-cum. %s hangs it right in front of %s's face.", "desc2" : "With only a moment's hesitation, she starts to lick the strange cock-like thing, running her tongue up and down the monstrous shaft."},
+                        "service story monster" : {"title": __("The Shadow over Her Mouth"), "desc" : __("The crowd gasps when the monster extends a strange appendage, oozing with yellowish liquid that seems like the creature's pre-cum. %s hangs it right in front of %s's face."), "desc2" : __("With only a moment's hesitation, she starts to lick the strange cock-like thing, running her tongue up and down the monstrous shaft.")},
 
-                        "service story machine" : {"title": "Toy Story", "desc" : "%s steps inside the strange contraption, which starts to whizz and buzz around her. A dildo pops out of the side of %s, rubbing against her face. Playing with her nipples, she takes it in her mouth.", "desc2" : "The machine sits her down on a strange stool, and an audible vibrating noise can be heard as she gasps."},
+                        "service story machine" : {"title": __("Toy Story"), "desc" : __("%s steps inside the strange contraption, which starts to whizz and buzz around her. A dildo pops out of the side of %s, rubbing against her face. Playing with her nipples, she takes it in her mouth."), "desc2" : __("The machine sits her down on a strange stool, and an audible vibrating noise can be heard as she gasps.")},
 
-                        "sex story stallion" : {"title": "Harnessing Passion", "desc" : "As soon as Gizel gives the signal, %s wastes no time, shoving %s in the mud and spreading her legs, his fat dick already pushing against her labia.", "desc2" : "The crowd holds their breath as it seems impossible that the humongous cock will fit inside her, but inch by inch, the stallion forces it in, until a visible bulge can be seen distorting her belly.\n\nHe starts moving, and her moans echo through the farm as she gets fucked mercilessly."}, # m, g
+                        "sex story stallion" : {"title": __("Harnessing Passion"), "desc" : __("As soon as Gizel gives the signal, %s wastes no time, shoving %s in the mud and spreading her legs, his fat dick already pushing against her labia."), "desc2" : __("The crowd holds their breath as it seems impossible that the humongous cock will fit inside her, but inch by inch, the stallion forces it in, until a visible bulge can be seen distorting her belly.\n\nHe starts moving, and her moans echo through the farm as she gets fucked mercilessly.")}, # m, g
 
-                        "sex story beast" : {"title": "On The Prowl", "desc" : "His beastly eyes shining with brute lust, %s pushes her to the ground, ready to mount her like a female of his own species. %s squeals as the strangely-shaped dick forces its way inside her pussy.", "desc2" : "The beast grunts and groans as he pummels her human pussy, rubbing his hairy body against her naked skin and drooling in her hair."},
+                        "sex story beast" : {"title": __("On The Prowl"), "desc" : __("His beastly eyes shining with brute lust, %s pushes her to the ground, ready to mount her like a female of his own species. %s squeals as the strangely-shaped dick forces its way inside her pussy."), "desc2" : __("The beast grunts and groans as he pummels her human pussy, rubbing his hairy body against her naked skin and drooling in her hair.")},
 
-                        "sex story monster" : {"title": "Tales from the Crotch", "desc" : "%s's monstrous body shivers with anticipation as Gizel gives the signal for the show to start. %s's eyes widen as the strange creature deploys its gooey tentacles to encircle her. A thicker, cock-like tentacle places itself at the entrance of her pussy, rubbing it with strangely fluorescent juice.", "desc2" : "The girl moans in surprise as the monster penetrates her, strecthing her cunt grotesquely. It moves inside in strange ways, extracting moans from her that are part pain and part confusing pleasure."},
+                        "sex story monster" : {"title": __("Tales from the Crotch"), "desc" : __("%s's monstrous body shivers with anticipation as Gizel gives the signal for the show to start. %s's eyes widen as the strange creature deploys its gooey tentacles to encircle her. A thicker, cock-like tentacle places itself at the entrance of her pussy, rubbing it with strangely fluorescent juice."), "desc2" : __("The girl moans in surprise as the monster penetrates her, strecthing her cunt grotesquely. It moves inside in strange ways, extracting moans from her that are part pain and part confusing pleasure.")},
 
-                        "sex story machine" : {"title": "The Joystick", "desc" : "Gizel activates %s and ties %s up to the strange machine. She shivers as the cold metal makes contact with her naked body, and she cannot advert her eyes as a rotating, buzzing rod is pushed between her legs.", "desc2" : "The machine starts fucking her, making clanking sounds as the mechanical dick accelerates its pace. She gasps and moans as the clockwork cock stretches her pussy."},
+                        "sex story machine" : {"title": __("The Joystick"), "desc" : __("Gizel activates %s and ties %s up to the strange machine. She shivers as the cold metal makes contact with her naked body, and she cannot advert her eyes as a rotating, buzzing rod is pushed between her legs."), "desc2" : __("The machine starts fucking her, making clanking sounds as the mechanical dick accelerates its pace. She gasps and moans as the clockwork cock stretches her pussy.")},
 
-                        "anal story stallion" : {"title": "Back Door Rodeo", "desc" : "As soon as Gizel gives the signal, %s wastes no time, shoving %s in the mud and spreading her buttcheeks, his fat dick already pushing against her tiny asshole.", "desc2" : "The crowd gasps as the stallion mercilessly shoves his humongous dick inside her butt, stretching her anus impossibly wide. She cries out as her ass gets fucked mercilessly."}, # m, g
+                        "anal story stallion" : {"title": __("Back Door Rodeo"), "desc" : __("As soon as Gizel gives the signal, %s wastes no time, shoving %s in the mud and spreading her buttcheeks, his fat dick already pushing against her tiny asshole."), "desc2" : __("The crowd gasps as the stallion mercilessly shoves his humongous dick inside her butt, stretching her anus impossibly wide. She cries out as her ass gets fucked mercilessly.")}, # m, g
 
-                        "anal story beast" : {"title": "Into the Wild", "desc" : "His beastly eyes shining with mad lust, %s pushes her to the ground, forcing %s in an unnatural position. She squeals as his cock forces its way inside her asshole.", "desc2" : "The beast grunts and groans as he pummels her ass, reaching inner parts that only he could with his oddly-shaped dick."},
+                        "anal story beast" : {"title": __("Into the Wild"), "desc" : __("His beastly eyes shining with mad lust, %s pushes her to the ground, forcing %s in an unnatural position. She squeals as his cock forces its way inside her asshole."), "desc2" : __("The beast grunts and groans as he pummels her ass, reaching inner parts that only he could with his oddly-shaped dick.")},
 
-                        "anal story monster" : {"title": "It Came from Uranus", "desc" : "%s's monstrous body shivers with anticipation as Gizel gives the signal for the show to start. %s's eyes widen as the strange creature deploys its gooey tentacles to encircle her. A thicker, cock-like tentacle places itself at the entrance of her asshole, rubbing it with strangely fluorescent juice.", "desc2" : "She moans in surprise as the alien cock penetrates her and stretches her asshole, pulsing and expanding to an abnormal size. It starts fucking her, extracting moans from her that are part pain and part confusing pleasure."},
+                        "anal story monster" : {"title": __("It Came from Uranus"), "desc" : __("%s's monstrous body shivers with anticipation as Gizel gives the signal for the show to start. %s's eyes widen as the strange creature deploys its gooey tentacles to encircle her. A thicker, cock-like tentacle places itself at the entrance of her asshole, rubbing it with strangely fluorescent juice."), "desc2" : __("She moans in surprise as the alien cock penetrates her and stretches her asshole, pulsing and expanding to an abnormal size. It starts fucking her, extracting moans from her that are part pain and part confusing pleasure.")},
 
-                        "anal story machine" : {"title": "Baby Got Back", "desc" : "Gizel activates %s and ties %s up to the strange machine. She shivers as the cold metal makes contact with her naked body, and she cannot advert her eyes as a rotating, buzzing rod comes up to poke her butt.", "desc2" : "She cries out as the mechanical cock invades her ass, stimulating her sensitive insides. The machine increases its pace. She gasps and moans as the clockwork cock stretches her ass."},
+                        "anal story machine" : {"title": __("Baby Got Back"), "desc" : __("Gizel activates %s and ties %s up to the strange machine. She shivers as the cold metal makes contact with her naked body, and she cannot advert her eyes as a rotating, buzzing rod comes up to poke her butt."), "desc2" : __("She cries out as the mechanical cock invades her ass, stimulating her sensitive insides. The machine increases its pace. She gasps and moans as the clockwork cock stretches her ass.")},
 
-                        "fetish story stallion" : {"title": "The Whip Cracks", "desc" : "After tying %s up with rope, Gizel hands a pair of metal clips to %s.", "desc2" : "The mindless hunk follows orders and attaches the clips to each of her nipples. She squeals in pain, but he is not done. With hands the size of dinner plates, he spanks her until her ass is flushed bright red."}, # g, m
+                        "fetish story stallion" : {"title": __("The Whip Cracks"), "desc" : __("After tying %s up with rope, Gizel hands a pair of metal clips to %s."), "desc2" : __("The mindless hunk follows orders and attaches the clips to each of her nipples. She squeals in pain, but he is not done. With hands the size of dinner plates, he spanks her until her ass is flushed bright red.")}, # g, m
 
-                        "fetish story beast" : {"title": "The Milky Way", "desc" : "Gizel ties %s's arms together and sits her up on a wooden horse, while she leads %s on a leash.", "desc2" : "The beast starts rubbing itself against her ass, smearing her with drool and pre-cum, weighing her down on the wooden device."},
+                        "fetish story beast" : {"title": __("The Milky Way"), "desc" : __("Gizel ties %s's arms together and sits her up on a wooden horse, while she leads %s on a leash."), "desc2" : __("The beast starts rubbing itself against her ass, smearing her with drool and pre-cum, weighing her down on the wooden device.")},
 
-                        "fetish story monster" : {"title": "Day of the Tentacle", "desc" : "Gizel feeds the gross monster a vial of some fiery liquid, and he becomes bright red. %s shivers as she sees %s approaching her with its tentacles dangling.", "desc2" : "The monster spurts some reddish liquid over her body, and she screams in pain. Apparently it produces a kind of hot wax, mixed with aphrodisiacs."},
+                        "fetish story monster" : {"title": __("Day of the Tentacle"), "desc" : __("Gizel feeds the gross monster a vial of some fiery liquid, and he becomes bright red. %s shivers as she sees %s approaching her with its tentacles dangling."), "desc2" : __("The monster spurts some reddish liquid over her body, and she screams in pain. Apparently it produces a kind of hot wax, mixed with aphrodisiacs.")},
 
-                        "fetish story machine" : {"title": "Plug and Play", "desc" : "%s is blindfolded. Gizel works on the machine for a little while, and %s rattles as it converts itself into a kind of translucid iron maiden.", "desc2" : "The customers hold their breath as Gizel pushes the hapless girl into the torture device. They can see everything through the glassy lid as needles prick her skin and hot iron sears her in various places."},
+                        "fetish story machine" : {"title": __("Plug and Play"), "desc" : __("%s is blindfolded. Gizel works on the machine for a little while, and %s rattles as it converts itself into a kind of translucid iron maiden."), "desc2" : __("The customers hold their breath as Gizel pushes the hapless girl into the torture device. They can see everything through the glassy lid as needles prick her skin and hot iron sears her in various places.")},
 
-                        "bisexual story stallion" : {"title": "Cock Riders in the Sack", "desc" : "Gizel conjures up a doppleganger that joins %s and the horny stallion in the ring. The summoned creature isn't shy and immediately grabs %s's thick dick, stroking it and bringing it to %s's face. The two girls actively lick and tease the stallion, using their bodies to please him and each other.", "desc2" : "The three of them keep fucking for a while, trying different positions."}, # g, m, g
+                        "bisexual story stallion" : {"title": __("Cock Riders in the Sack"), "desc" : __("Gizel conjures up a doppleganger that joins %s and the horny stallion in the ring. The summoned creature isn't shy and immediately grabs %s's thick dick, stroking it and bringing it to %s's face. The two girls actively lick and tease the stallion, using their bodies to please him and each other."), "desc2" : __("The three of them keep fucking for a while, trying different positions.")}, # g, m, g
 
-                        "bisexual story beast" : {"title": "Horny Tiger, Fucking Dragon", "desc" : "Gizel conjures up a doppleganger that immediately joins %s and %s in the mud. Unafraid to touch the beast, she pets him lovingly before grabbing his manhood and pointing it at %s.", "desc2" : "The beast fucks each girl in turn, while the other one entwines her tongue with his, her mouth tasting the animal's saliva."},
+                        "bisexual story beast" : {"title": __("Horny Tiger, Fucking Dragon"), "desc" : __("Gizel conjures up a doppleganger that immediately joins %s and %s in the mud. Unafraid to touch the beast, she pets him lovingly before grabbing his manhood and pointing it at %s."), "desc2" : __("The beast fucks each girl in turn, while the other one entwines her tongue with his, her mouth tasting the animal's saliva.")},
 
-                        "bisexual story monster" : {"title": "Invasion of the Pussy Munchers", "desc" : "More pussy is always better, so Gizel made sure to bring a friend alongside %s. Soon the girls are being held tight by a dozen tentacles, and %s starts teasing %s's sensitive parts.", "desc2" : "The monster's tentacles start fucking the girls in various holes, making them moan in unison."}, # g, m, g
+                        "bisexual story monster" : {"title": __("Invasion of the Pussy Munchers"), "desc" : __("More pussy is always better, so Gizel made sure to bring a friend alongside %s. Soon the girls are being held tight by a dozen tentacles, and %s starts teasing %s's sensitive parts."), "desc2" : __("The monster's tentacles start fucking the girls in various holes, making them moan in unison.")}, # g, m, g
 
-                        "bisexual story machine" : {"title": "Switching Gears", "desc" : "Toys are fun, but sharing is caring: Gizel invites one of the female customers to join %s in the circle, and she ties them up with %s, buzzing with dark energy as it oozes oil on %s's naked body.", "desc2" : "Soon, both girls are entering a trance, sharing an erotic experience as the love machine's various gizmos tug at their limit."},
+                        "bisexual story machine" : {"title": __("Switching Gears"), "desc" : __("Toys are fun, but sharing is caring: Gizel invites one of the female customers to join %s in the circle, and she ties them up with %s, buzzing with dark energy as it oozes oil on %s's naked body."), "desc2" : __("Soon, both girls are entering a trance, sharing an erotic experience as the love machine's various gizmos tug at their limit.")},
 
-                        "group story stallion" : {"title": "Breeding Trouble", "desc" : "As the hulking bodies of the stallions loom over %s, she looks like a frail doll. She yelps as one of them lifts her as if she was nothing, spreading her legs and forcing his large cock inside her.", "desc2" : "Her cries are soon muffled by another fat cock in her mouth, her body rocked back and forth as she gets fucked from both ends."}, # g
+                        "group story stallion" : {"title": __("Breeding Trouble"), "desc" : __("As the hulking bodies of the stallions loom over %s, she looks like a frail doll. She yelps as one of them lifts her as if she was nothing, spreading her legs and forcing his large cock inside her."), "desc2" : __("Her cries are soon muffled by another fat cock in her mouth, her body rocked back and forth as she gets fucked from both ends.")}, # g
 
-                        "group story beast" : {"title": "Number of the Beasts", "desc" : "Growling beasts surround %s, sniffing her as if she was a piece of meat.", "desc2" : "Unable to restrain themselves, the beasts shove her down in the mud, and their hairy bodies soon cover her as their animal dicks find their way inside her holes."},
+                        "group story beast" : {"title": __("Number of the Beasts"), "desc" : __("Growling beasts surround %s, sniffing her as if she was a piece of meat."), "desc2" : __("Unable to restrain themselves, the beasts shove her down in the mud, and their hairy bodies soon cover her as their animal dicks find their way inside her holes.")},
 
-                        "group story monster" : {"title": "The Hills have Dicks", "desc" : "The monsters surround %s, dripping gooey liquid over her head and body from thick, oozing tentacles.", "desc2" : "The monsters press various appendages against her whole body, stimulating her erogenous parts and penetrating her various holes."},
+                        "group story monster" : {"title": __("The Hills have Dicks"), "desc" : __("The monsters surround %s, dripping gooey liquid over her head and body from thick, oozing tentacles."), "desc2" : __("The monsters press various appendages against her whole body, stimulating her erogenous parts and penetrating her various holes.")},
 
-                        "group story machine" : {"title": "A Clockwork Orgy", "desc" : "Mechanical devices start to whir and hover around %s as the machines light up one by one.", "desc2" : "She gasps as metal clamps hold her in place and a number of pistons and dildos are brought to fuck her holes."},
+                        "group story machine" : {"title": __("A Clockwork Orgy"), "desc" : __("Mechanical devices start to whir and hover around %s as the machines light up one by one."), "desc2" : __("She gasps as metal clamps hold her in place and a number of pistons and dildos are brought to fuck her holes.")},
 
                         # M3. Crowd reaction
 
-                        "perf good" : { "beauty" : "The crowd love to see such a beautiful girl lower herself before them.",
-                                        "body" : "The customers drool as they ogle her lovely body soiled by mud and love fluids.",
-                                        "charm" : "Her natural charm shines through even in such a dirty and unusual situation.",
-                                        "refinement" : "Her elaborate, refined gestures delight the crowd even as she gets down and dirty.",
+                        "perf good" : { "beauty" : __("The crowd love to see such a beautiful girl lower herself before them."),
+                                        "body" : __("The customers drool as they ogle her lovely body soiled by mud and love fluids."),
+                                        "charm" : __("Her natural charm shines through even in such a dirty and unusual situation."),
+                                        "refinement" : __("Her elaborate, refined gestures delight the crowd even as she gets down and dirty."),
 
-                                        "obedience" : "The crowd is delighted to see that in spite of everything, she remains submissive and obedient.",
-                                        "libido" : "She is obviously horny, her juices leaking in plain view, making the crowd leer and cheer.",
-                                        "sensitivity" : "The customers love to see her reactions as her sensitive body responds to the lewd stimulations.",
-                                        "constitution" : "She goes on for a long time, her stamina impressing everyone as she works hard on her task.",
+                                        "obedience" : __("The crowd is delighted to see that in spite of everything, she remains submissive and obedient."),
+                                        "libido" : __("She is obviously horny, her juices leaking in plain view, making the crowd leer and cheer."),
+                                        "sensitivity" : __("The customers love to see her reactions as her sensitive body responds to the lewd stimulations."),
+                                        "constitution" : __("She goes on for a long time, her stamina impressing everyone as she works hard on her task."),
 
-                                        "service" : "She is a perfect little cocksucker, and the skill of her hands and tongue make the customers obviously horny.",
-                                        "sex" : "She is obviously good at sex, giving many customers a visible boner as she takes cock in stride.",
-                                        "anal" : "She is an expert anal slut, a fact that doesn't escape the eyes of the horny crowd.",
-                                        "fetish" : "She is at ease with kinky stuff, impressing the customers with her skill and depravity.",},
+                                        "service" : __("She is a perfect little cocksucker, and the skill of her hands and tongue make the customers obviously horny."),
+                                        "sex" : __("She is obviously good at sex, giving many customers a visible boner as she takes cock in stride."),
+                                        "anal" : __("She is an expert anal slut, a fact that doesn't escape the eyes of the horny crowd."),
+                                        "fetish" : __("She is at ease with kinky stuff, impressing the customers with her skill and depravity."),},
 
-                        "perf bad" : { "beauty" : "Some customers whisper that they would like the show better if she was prettier.",
-                                        "body" : "The customers find her body too plain to get excited.",
-                                        "charm" : "Her lack of charm lowers the enjoyment of the customers.",
-                                        "refinement" : "The customers wish she was more refined, even though the show is in a farm they would like her to behave better.",
+                        "perf bad" : { "beauty" : __("Some customers whisper that they would like the show better if she was prettier."),
+                                        "body" : __("The customers find her body too plain to get excited."),
+                                        "charm" : __("Her lack of charm lowers the enjoyment of the customers."),
+                                        "refinement" : __("The customers wish she was more refined, even though the show is in a farm they would like her to behave better."),
 
-                                        "obedience" : "The crowd finds her obedience lacking as she seems to balk at her task.",
-                                        "libido" : "Her lack of sexual passion is visible, marring the enjoyment of the onlookers.",
-                                        "sensitivity" : "The customers find her too stiff, wishing she had more sensitivity.",
-                                        "constitution" : "Due to her weaker constitution, she struggles to keep up, making some customers grumble.",
+                                        "obedience" : __("The crowd finds her obedience lacking as she seems to balk at her task."),
+                                        "libido" : __("Her lack of sexual passion is visible, marring the enjoyment of the onlookers."),
+                                        "sensitivity" : __("The customers find her too stiff, wishing she had more sensitivity."),
+                                        "constitution" : __("Due to her weaker constitution, she struggles to keep up, making some customers grumble."),
 
-                                        "service" : "She doesn't look skilled enough when sucking cock, causing some customers to get bored.",
-                                        "sex" : "Her lack of sexual experience is showing, as she struggles to accomodate her partner's cock.",
-                                        "anal" : "She moans in pain as she takes a cock in the ass, clearly uncomfortable with the act, spoiling the mood.",
-                                        "fetish" : "She doesn't look at ease with non-vanilla act, showing her lack of experience with fetish stuff.",},
+                                        "service" : __("She doesn't look skilled enough when sucking cock, causing some customers to get bored."),
+                                        "sex" : __("Her lack of sexual experience is showing, as she struggles to accomodate her partner's cock."),
+                                        "anal" : __("She moans in pain as she takes a cock in the ass, clearly uncomfortable with the act, spoiling the mood."),
+                                        "fetish" : __("She doesn't look at ease with non-vanilla act, showing her lack of experience with fetish stuff."),},
 
-                        "service perfect" : "%s displays expert technique, taking her time to bring %s to release, using her tongue and hands to great effect while making sure all the customers get a great view.",
+                        "service perfect" : __("%s displays expert technique, taking her time to bring %s to release, using her tongue and hands to great effect while making sure all the customers get a great view."),
 
-                        "service good" : "%s does her best to impress the customers with her technique, making sure she puts everything she's learnt to good use to make %s cum.",
+                        "service good" : __("%s does her best to impress the customers with her technique, making sure she puts everything she's learnt to good use to make %s cum."),
 
-                        "service average" : "%s is nervous, but mostly succeeds in hiding it, sucking off %s with efficiency, if not creativity.",
+                        "service average" : __("%s is nervous, but mostly succeeds in hiding it, sucking off %s with efficiency, if not creativity."),
 
-                        "service bad" : "%s's technique is wooden, and her mind is obviously somewhere else. The customers start grumbling as she takes too long to bring %s to climax.",
+                        "service bad" : __("%s's technique is wooden, and her mind is obviously somewhere else. The customers start grumbling as she takes too long to bring %s to climax."),
 
-                        "service very bad" : "%s goes through the motions without any technique, barely even touching %s's cock, obviously waiting for it all to end. The customers boo as they realize she is not going to finish.",
+                        "service very bad" : __("%s goes through the motions without any technique, barely even touching %s's cock, obviously waiting for it all to end. The customers boo as they realize she is not going to finish."),
 
-                        "sex perfect" : "%s acts like a perfect making love to %s as if he was a regular partner. The customers are amazed and envious to see how well she performs.",
+                        "sex perfect" : __("%s acts like a perfect making love to %s as if he was a regular partner. The customers are amazed and envious to see how well she performs."),
 
-                        "sex good" : "%s moans suggestively as she gets fucked by %s, putting on a show in spite of the situation.",
+                        "sex good" : __("%s moans suggestively as she gets fucked by %s, putting on a show in spite of the situation."),
 
-                        "sex average" : "%s has enough sexual experience to take it, letting %s have his way while trying to follow his lead.",
+                        "sex average" : __("%s has enough sexual experience to take it, letting %s have his way while trying to follow his lead."),
 
-                        "sex bad" : "%s does her best to match %s's moves, still in pain but trying to hide it. The customers are unimpressed.",
+                        "sex bad" : __("%s does her best to match %s's moves, still in pain but trying to hide it. The customers are unimpressed."),
 
-                        "sex very bad" : "%s remains passive, taking her mind elsewhere as she waits meekly for %s to finish. The customers hurl insults at her, angry to see her put on such a poor show.",
+                        "sex very bad" : __("%s remains passive, taking her mind elsewhere as she waits meekly for %s to finish. The customers hurl insults at her, angry to see her put on such a poor show."),
 
-                        "anal perfect" : "%s loves to be fucked in the ass and it shows. The customers yell enthusiastically as she welcomes %s's cock deeper inside her.",
+                        "anal perfect" : __("%s loves to be fucked in the ass and it shows. The customers yell enthusiastically as she welcomes %s's cock deeper inside her."),
 
-                        "anal good" : "%s grabs onto %s, moaning as she takes it the ass like a true professional.",
+                        "anal good" : __("%s grabs onto %s, moaning as she takes it the ass like a true professional."),
 
-                        "anal average" : "%s tries to ease into the act as %s fucks her, eventually relaxing and soldiering on as she takes it up the ass.",
+                        "anal average" : __("%s tries to ease into the act as %s fucks her, eventually relaxing and soldiering on as she takes it up the ass."),
 
-                        "anal bad" : "%s's obviously lacks anal experience. She grits her teeth and hangs on, but the customers start grumbling as her low energy doesn't match that of %s.",
+                        "anal bad" : __("%s's obviously lacks anal experience. She grits her teeth and hangs on, but the customers start grumbling as her low energy doesn't match that of %s."),
 
-                        "anal very bad" : "%s remains tense and uncooperative, still trying to process the stress and pain of her situation as %s violates her ass. She is oblivious to the customers throwing mud and rotten fruits at her, angered by her passivity.",
+                        "anal very bad" : __("%s remains tense and uncooperative, still trying to process the stress and pain of her situation as %s violates her ass. She is oblivious to the customers throwing mud and rotten fruits at her, angered by her passivity."),
 
-                        "fetish perfect" : "%s is completely soaking wet, savouring every little bit of pleasure and pain %s inflicts her. She could do this all day.",
+                        "fetish perfect" : __("%s is completely soaking wet, savouring every little bit of pleasure and pain %s inflicts her. She could do this all day."),
 
-                        "fetish good" : "%s is a kinky girl, and she finds pervert pleasure in everything %s does to her, giving the customers a good show.",
+                        "fetish good" : __("%s is a kinky girl, and she finds pervert pleasure in everything %s does to her, giving the customers a good show."),
 
-                        "fetish average" : "%s is clearly uncomfortable, but she hands on by a thread as %s puts her through even more humiliation.",
+                        "fetish average" : __("%s is clearly uncomfortable, but she hands on by a thread as %s puts her through even more humiliation."),
 
-                        "fetish bad" : "%s grits her teeth as she tries to endure the pain administered by %s, but she does poorly. Everyone can tell she isn't experienced enough for such a hardcore show.",
+                        "fetish bad" : __("%s grits her teeth as she tries to endure the pain administered by %s, but she does poorly. Everyone can tell she isn't experienced enough for such a hardcore show."),
 
-                        "fetish very bad" : "%s screams in shock at the abuse %s inflicts her, her face racked with fear and pain. Even the more sadistic customers are having second thoughts.",
+                        "fetish very bad" : __("%s screams in shock at the abuse %s inflicts her, her face racked with fear and pain. Even the more sadistic customers are having second thoughts."),
 
-                        "bisexual perfect" : "%s makes a show of rubbing herself against the other girl all over her body, sharing some of %s's bodily fluids in a passionate kiss. The customers applaud her performance.",
+                        "bisexual perfect" : __("%s makes a show of rubbing herself against the other girl all over her body, sharing some of %s's bodily fluids in a passionate kiss. The customers applaud her performance."),
 
-                        "bisexual good" : "%s is at ease with serving both males and females, as she demonstrates by fucking %s and the other girl in turns.",
+                        "bisexual good" : __("%s is at ease with serving both males and females, as she demonstrates by fucking %s and the other girl in turns."),
 
-                        "bisexual average" : "%s is nervous having sex with another girl in such a setting, but she does her best, leaning on %s a little more.",
+                        "bisexual average" : __("%s is nervous having sex with another girl in such a setting, but she does her best, leaning on %s a little more."),
 
-                        "bisexual bad" : "%s seems to find the idea of having sex with another girl even less appealing than fucking %s, so she spends most of her time tending to the minion. The customers are disappointed.",
+                        "bisexual bad" : __("%s seems to find the idea of having sex with another girl even less appealing than fucking %s, so she spends most of her time tending to the minion. The customers are disappointed."),
 
-                        "bisexual very bad" : "%s is unwilling or unable to touch another girl, and loudly freaks out as %s tries to force her to kiss the other girl. The customers feel cheated.",
+                        "bisexual very bad" : __("%s is unwilling or unable to touch another girl, and loudly freaks out as %s tries to force her to kiss the other girl. The customers feel cheated."),
 
-                        "group perfect" : "%s loves to fuck as many dicks as possible and it shows. She takes one in every hole, multiple times, always asking for more.",
+                        "group perfect" : __("%s loves to fuck as many dicks as possible and it shows. She takes one in every hole, multiple times, always asking for more."),
 
-                        "group good" : "%s is good at this, and soon she works all the minions close to their limits, using all the parts of her body to please them.",
+                        "group good" : __("%s is good at this, and soon she works all the minions close to their limits, using all the parts of her body to please them."),
 
-                        "group average" : "%s is not fully prepared for this, but she tries her best, tending to each minion in turn.",
+                        "group average" : __("%s is not fully prepared for this, but she tries her best, tending to each minion in turn."),
 
-                        "group bad" : "%s is clearly overwhelmed, not knowing what to do with whom. The minions take the lead and she tries to follow, but her passivity annoy the customers.",
+                        "group bad" : __("%s is clearly overwhelmed, not knowing what to do with whom. The minions take the lead and she tries to follow, but her passivity annoy the customers."),
 
-                        "group very bad" : "%s is way in over her head, unable to do anything except lie there all stiff and frozen. The minions try to work with her but she is completely frigid.",
+                        "group very bad" : __("%s is way in over her head, unable to do anything except lie there all stiff and frozen. The minions try to work with her but she is completely frigid."),
 
 
-                        "stallion cum" : "Eventually, %s the stallion cums hard, shooting his thick jizz all over %s.",
+                        "stallion cum" : __("Eventually, %s the stallion cums hard, shooting his thick jizz all over %s."),
 
-                        "stallion cum group" : "The stallions gather around her, shooting their spunk all over %s.",
+                        "stallion cum group" : __("The stallions gather around her, shooting their spunk all over %s."),
 
-                        "beast cum" : "%s climaxes loudly, his deformed cock smearing %s with dirty animal cum.",
+                        "beast cum" : __("%s climaxes loudly, his deformed cock smearing %s with dirty animal cum."),
 
-                        "beast cum group" : "The beasts excitedly shoot dirty animal cum all over %s.",
+                        "beast cum group" : __("The beasts excitedly shoot dirty animal cum all over %s."),
 
-                        "monster cum" : "Unexpectedly, %s reaches what seems like a climax, shooting thick monster cum from several appendages at once onto %s.",
+                        "monster cum" : __("Unexpectedly, %s reaches what seems like a climax, shooting thick monster cum from several appendages at once onto %s."),
 
-                        "monster cum group" : "The monsters surround %s, covering her in strange cum-like juice as they take turns to shoot their loads.",
+                        "monster cum group" : __("The monsters surround %s, covering her in strange cum-like juice as they take turns to shoot their loads."),
 
-                        "machine cum" : "After vibrating and rubbing for a while, %s brings %s to a surprise orgasm, releasing a strange thick oil that stiks to her shivering body.",
+                        "machine cum" : __("After vibrating and rubbing for a while, %s brings %s to a surprise orgasm, releasing a strange thick oil that stiks to her shivering body."),
 
-                        "machine cum group" : "The machines all work in unison, mercilessly bringing %s to multiple earth-shattering orgasms, covering her in oily mechanical fluids.",
+                        "machine cum group" : __("The machines all work in unison, mercilessly bringing %s to multiple earth-shattering orgasms, covering her in oily mechanical fluids."),
 
-                        "various cum group" : "All of the minions gather around %s to cover her body with cum and fluids.",
+                        "various cum group" : __("All of the minions gather around %s to cover her body with cum and fluids."),
 
     }
 
     stat_increase_dict = {
-                        "level" : "\n{color=[c_lightgreen]}LEVEL UP{/color}",
-                        "stat" : "\n%s {color=[c_green]}+%s{/color}",
-                        "stat_neg" : "\n%s {color=[c_red]}%s{/color}",
-                        "xp" : "\nXP {color=[c_lightgreen]}+%s{/color}",
-                        "xp_dark" : "\nXP {color=[c_darkgreen]}+%s{/color}",
-                        "jp" : "\nJP {color=[c_orange]}+%s{/color}",
-                        "gold+" : "\nGold {color=[c_darkgold]}+%s{/color}",
-                        "gold-" : "\nGold {color=[c_darkgold]}%s{/color}",
-                        "rep" : "\nRep. {color=[c_softpurple]}+%s{/color}",
-                        "rep_neg" : "\nRep. {color=[c_red]}%s{/color}",
-                        "job_up" : "\n{color=[c_orange]}JOB SKILL UP{/color}",
-                        "rank" : "\n{color=[c_softpurple]}NEW RANK AVAILABLE{/color}"
+                        "level" : __("\n{color=[c_lightgreen]}LEVEL UP{/color}"),
+                        "stat" : __("\n%s {color=[c_green]}+%s{/color}"),
+                        "stat_neg" : __("\n%s {color=[c_red]}%s{/color}"),
+                        "xp" : __("\nXP {color=[c_lightgreen]}+%s{/color}"),
+                        "xp_dark" : __("\nXP {color=[c_darkgreen]}+%s{/color}"),
+                        "jp" : __("\nJP {color=[c_orange]}+%s{/color}"),
+                        "gold+" : __("\nGold {color=[c_darkgold]}+%s{/color}"),
+                        "gold-" : __("\nGold {color=[c_darkgold]}%s{/color}"),
+                        "rep" : __("\nRep. {color=[c_softpurple]}+%s{/color}"),
+                        "rep_neg" : __("\nRep. {color=[c_red]}%s{/color}"),
+                        "job_up" : __("\n{color=[c_orange]}JOB SKILL UP{/color}"),
+                        "rank" : __("\n{color=[c_softpurple]}NEW RANK AVAILABLE{/color}")
                     }
 
     # makes text bold
     btext = "{b}%s{/b}"
 
     # Contrast colors are for lighter backgrounds
-    event_color = {None : "%s"}
+    event_color = {None : __("%s")}
 
     for k in color_dict.keys():
         event_color[k] = "{color=" + color_dict[k] + "}%s{/color}"
 
     log_event_dict = {
-                    "level" : "{color=" + c_orange + "}%s has gained a new level.{/color}",
-                    "job_up" : "{color=" + c_orange + "}%s has increased her %s skill.{/color}",
-                    "rank" : "{color=" + c_orange + "}%s is ready to reach a new rank.{/color}",
+                    "level" : __("{color=") + c_orange + "}%s has gained a new level.{/color}",
+                    "job_up" : __("{color=") + c_orange + "}%s has increased her %s skill.{/color}",
+                    "rank" : __("{color=") + c_orange + "}%s is ready to reach a new rank.{/color}",
                     }
 
     attraction_dict = {
-                        "beauty_good" : "was very beautiful",
-                        "body_good" : "had a perfect body",
-                        "charm_good" : "had great charm",
-                        "refinement_good" : "was really refined",
-                        "beauty_bad" : "was ugly",
-                        "body_bad" : "was plain looking",
-                        "charm_bad" : "was a bore",
-                        "refinement_bad" : "was clumsy"
+                        "beauty_good" : __("was very beautiful"),
+                        "body_good" : __("had a perfect body"),
+                        "charm_good" : __("had great charm"),
+                        "refinement_good" : __("was really refined"),
+                        "beauty_bad" : __("was ugly"),
+                        "body_bad" : __("was plain looking"),
+                        "charm_bad" : __("was a bore"),
+                        "refinement_bad" : __("was clumsy")
                     }
 
     #### BROTHEL SERVICES ####
 
-    maintenance_desc = {"clean" : "Your brothel is " + event_color["good"] % "{b}clean{/b}" + ".",
-                    "clean enough" : "Your brothel is " + event_color["a little good"] % "{b}clean enough{/b}" + ".",
-                    "dusty" : "Your brothel is getting " + event_color["average contrast"] % "{b}dusty{/b}" + ".",
-                    "dirty" : "Your brothel is getting " + event_color["a little bad"] % "{b}dirty{/b}" + ".",
-                    "disgusting" : "Warning! Your brothel is " + event_color["bad"] % "{b}disgusting{/b}" + "!",
+    maintenance_desc = {"clean" : __("Your brothel is ") + event_color["good"] % "{b}clean{/b}" + ".",
+                    "clean enough" : __("Your brothel is ") + event_color["a little good"] % "{b}clean enough{/b}" + ".",
+                    "dusty" : __("Your brothel is getting ") + event_color["average contrast"] % "{b}dusty{/b}" + ".",
+                    "dirty" : __("Your brothel is getting ") + event_color["a little bad"] % "{b}dirty{/b}" + ".",
+                    "disgusting" : __("Warning! Your brothel is ") + event_color["bad"] % "{b}disgusting{/b}" + "!",
                     "fire" : event_color["very bad"] % "Warning!!! Your brothel is at risk of a fire!"
                     }
 
@@ -2874,63 +2874,63 @@ init -4 python:
     #### ITEMS ####
 
     quality_prefix = {
-                    "dress_0" : "Ragged",
-                    "dress_1" : "Worn",
-                    "dress_2" : "Simple",
-                    "dress_3" : "Fine",
-                    "dress_4" : "Fancy",
-                    "dress_5" : "Enchanted",
-                    "dress_6" : "Legendary",
+                    "dress_0" : __("Ragged"),
+                    "dress_1" : __("Worn"),
+                    "dress_2" : __("Simple"),
+                    "dress_3" : __("Fine"),
+                    "dress_4" : __("Fancy"),
+                    "dress_5" : __("Enchanted"),
+                    "dress_6" : __("Legendary"),
 
-                    "necklace_0" : "Rusty",
-                    "necklace_1" : "Broken",
-                    "necklace_2" : "Small",
-                    "necklace_3" : "Medium",
-                    "necklace_4" : "Heavy",
-                    "necklace_5" : "Magical",
-                    "necklace_6" : "Legendary",
+                    "necklace_0" : __("Rusty"),
+                    "necklace_1" : __("Broken"),
+                    "necklace_2" : __("Small"),
+                    "necklace_3" : __("Medium"),
+                    "necklace_4" : __("Heavy"),
+                    "necklace_5" : __("Magical"),
+                    "necklace_6" : __("Legendary"),
 
-                    "ring_0" : "Rusty",
-                    "ring_1" : "Fake",
-                    "ring_2" : "Small",
-                    "ring_3" : "Medium",
-                    "ring_4" : "Large",
-                    "ring_5" : "Magical",
-                    "ring_6" : "Legendary",
+                    "ring_0" : __("Rusty"),
+                    "ring_1" : __("Fake"),
+                    "ring_2" : __("Small"),
+                    "ring_3" : __("Medium"),
+                    "ring_4" : __("Large"),
+                    "ring_5" : __("Magical"),
+                    "ring_6" : __("Legendary"),
 
-#                      "gift_1" : "Cheap ",
-#                      "gift_2" : "Common ",
-#                      "gift_3" : "Fine ",
-#                      "gift_4" : "Rare ",
+#                      "gift_1" : __("Cheap "),
+#                      "gift_2" : __("Common "),
+#                      "gift_3" : __("Fine "),
+#                      "gift_4" : __("Rare "),
 
-                    "food_0" : "Rotten",
-                    "food_1" : "Bland",
-                    "food_2" : "Tasty",
-                    "food_3" : "Juicy",
-                    "food_4" : "Organic",
-                    "food_5" : "Enchanted",
-                    "food_6" : "Legendary",
+                    "food_0" : __("Rotten"),
+                    "food_1" : __("Bland"),
+                    "food_2" : __("Tasty"),
+                    "food_3" : __("Juicy"),
+                    "food_4" : __("Organic"),
+                    "food_5" : __("Enchanted"),
+                    "food_6" : __("Legendary"),
 
-#                      "accessory_1" : "Worn ",
-#                      "accessory_2" : "Simple ",
-#                      "accessory_3" : "Fine ",
-#                      "accessory_4" : "Fancy ",
-#                      "accessory_5" : "Enchanted ",
+#                      "accessory_1" : __("Worn "),
+#                      "accessory_2" : __("Simple "),
+#                      "accessory_3" : __("Fine "),
+#                      "accessory_4" : __("Fancy "),
+#                      "accessory_5" : __("Enchanted "),
 
-                    "scroll_0" : "Tattered",
-                    "scroll_1" : "Minor",
-                    "scroll_2" : "Lesser",
-                    "scroll_3" : "Medium",
-                    "scroll_4" : "Greater",
-                    "scroll_5" : "Ultimate",
+                    "scroll_0" : __("Tattered"),
+                    "scroll_1" : __("Minor"),
+                    "scroll_2" : __("Lesser"),
+                    "scroll_3" : __("Medium"),
+                    "scroll_4" : __("Greater"),
+                    "scroll_5" : __("Ultimate"),
 
-                    "misc_0" : "Worthless",
-                    "misc_1" : "Cheap",
-                    "misc_2" : "Common",
-                    "misc_3" : "Fine",
-                    "misc_4" : "Rare",
-                    "misc_5" : "Magical",
-                    "misc_6" : "Legendary",
+                    "misc_0" : __("Worthless"),
+                    "misc_1" : __("Cheap"),
+                    "misc_2" : __("Common"),
+                    "misc_3" : __("Fine"),
+                    "misc_4" : __("Rare"),
+                    "misc_5" : __("Magical"),
+                    "misc_6" : __("Legendary"),
 
                     }
 
@@ -2951,12 +2951,12 @@ init -4 python:
     ## PRICES ##
 
     special_quest_description = {
-                                "Cheap" : "This class is cheap. Enroll now and benefit from better prices!",
-                                "Masterclass" : "This class is taught by a master. Stats will increase faster than normal.",
-                                "High reward" : "The rewards for this quest are more important than usual.",
-                                "Notorious" : "This quest will bring extra reputation when completed.",
-                                "Story" : "Complete this quest to advance the story.",
-                                "story" : "Complete this quest to advance the story.",
+                                "Cheap" : __("This class is cheap. Enroll now and benefit from better prices!"),
+                                "Masterclass" : __("This class is taught by a master. Stats will increase faster than normal."),
+                                "High reward" : __("The rewards for this quest are more important than usual."),
+                                "Notorious" : __("This quest will bring extra reputation when completed."),
+                                "Story" : __("Complete this quest to advance the story."),
+                                "story" : __("Complete this quest to advance the story."),
                                 }
 
     quest_base_gold = { # This the gold value per stat point of requirement and per day
@@ -2975,11 +2975,11 @@ init -4 python:
     ## CLASS PREFIXES ##
 
     class_prefixes = {
-                    1 : "Beginner ",
-                    2 : "Regular ",
-                    3 : "Advanced ",
-                    4 : "Elite ",
-                    5 : "Elite "
+                    1 : __("Beginner "),
+                    2 : __("Regular "),
+                    3 : __("Advanced "),
+                    4 : __("Elite "),
+                    5 : __("Elite ")
                     }
 
 
@@ -3078,59 +3078,59 @@ init -4 python:
     # Rank names #
 
     rank_name = {
-                    1 : "C", #"{color=[c_white]}C{/color}",
-                    2 : "B", #"{color=[c_yellow]}B{/color}",
-                    3 : "A", #"{color=[c_lightblue]}A{/color}",
-                    4 : "S", #"{color=[c_purple]}S{/color}",
-                    5 : "X", #"{color=[c_gold]}X{/color}",
-                    "waitress0": "Unskilled",
-                    "waitress1": "Beginner Waitress",
-                    "waitress2": "Competent Waitress",
-                    "waitress3": "Skilled Barmaid",
-                    "waitress4": "Expert Barmaid",
-                    "waitress5": "Tavern Queen",
-                    "dancer0": "Unskilled",
-                    "dancer1": "Beginner Dancer",
-                    "dancer2": "Competent Dancer",
-                    "dancer3": "Skilled Stripper",
-                    "dancer4": "Expert Stripper",
-                    "dancer5": "Poledance Queen",
-                    "masseuse0": "Unskilled",
-                    "masseuse1": "Beginner Masseuse",
-                    "masseuse2": "Competent Masseuse",
-                    "masseuse3": "Skilled Massage girl",
-                    "masseuse4": "Expert Massage girl",
-                    "masseuse5": "Soapy Queen",
-                    "geisha0": "Unskilled",
-                    "geisha1": "Beginner Maiko",
-                    "geisha2": "Competent Maiko",
-                    "geisha3": "Skilled Geisha",
-                    "geisha4": "Expert Geisha",
-                    "geisha5": "Courtesan Queen",
-                    "sex0" : "Unskilled",
-                    "sex1" : "Beginner Prostitute",
-                    "sex2" : "Competent Prostitute",
-                    "sex3" : "Skilled Whore",
-                    "sex4" : "Expert Whore",
-                    "sex5" : "Brothel Queen",
-                    "service0" : "Unskilled",
-                    "service1" : "Beginner Wanker",
-                    "service2" : "Competent Wanker",
-                    "service3" : "Skilled Cocksucker",
-                    "service4" : "Expert Cocksucker",
-                    "service5" : "Blowjob Queen",
-                    "anal0" : "Unskilled",
-                    "anal1" : "Beginner Anal Slut",
-                    "anal2" : "Competent Anal Slut",
-                    "anal3" : "Skilled Butt Lover",
-                    "anal4" : "Expert Butt Lover",
-                    "anal5" : "Anal Queen",
-                    "fetish0" : "Unskilled",
-                    "fetish1" : "Beginner Servant",
-                    "fetish2" : "Competent Servant",
-                    "fetish3" : "Skilled Escort",
-                    "fetish4" : "Expert Escort",
-                    "fetish5" : "Bondage Queen",
+                    1 : __("C"), #"{color=[c_white]}C{/color}",
+                    2 : __("B"), #"{color=[c_yellow]}B{/color}",
+                    3 : __("A"), #"{color=[c_lightblue]}A{/color}",
+                    4 : __("S"), #"{color=[c_purple]}S{/color}",
+                    5 : __("X"), #"{color=[c_gold]}X{/color}",
+                    "waitress0": __("Unskilled"),
+                    "waitress1": __("Beginner Waitress"),
+                    "waitress2": __("Competent Waitress"),
+                    "waitress3": __("Skilled Barmaid"),
+                    "waitress4": __("Expert Barmaid"),
+                    "waitress5": __("Tavern Queen"),
+                    "dancer0": __("Unskilled"),
+                    "dancer1": __("Beginner Dancer"),
+                    "dancer2": __("Competent Dancer"),
+                    "dancer3": __("Skilled Stripper"),
+                    "dancer4": __("Expert Stripper"),
+                    "dancer5": __("Poledance Queen"),
+                    "masseuse0": __("Unskilled"),
+                    "masseuse1": __("Beginner Masseuse"),
+                    "masseuse2": __("Competent Masseuse"),
+                    "masseuse3": __("Skilled Massage girl"),
+                    "masseuse4": __("Expert Massage girl"),
+                    "masseuse5": __("Soapy Queen"),
+                    "geisha0": __("Unskilled"),
+                    "geisha1": __("Beginner Maiko"),
+                    "geisha2": __("Competent Maiko"),
+                    "geisha3": __("Skilled Geisha"),
+                    "geisha4": __("Expert Geisha"),
+                    "geisha5": __("Courtesan Queen"),
+                    "sex0" : __("Unskilled"),
+                    "sex1" : __("Beginner Prostitute"),
+                    "sex2" : __("Competent Prostitute"),
+                    "sex3" : __("Skilled Whore"),
+                    "sex4" : __("Expert Whore"),
+                    "sex5" : __("Brothel Queen"),
+                    "service0" : __("Unskilled"),
+                    "service1" : __("Beginner Wanker"),
+                    "service2" : __("Competent Wanker"),
+                    "service3" : __("Skilled Cocksucker"),
+                    "service4" : __("Expert Cocksucker"),
+                    "service5" : __("Blowjob Queen"),
+                    "anal0" : __("Unskilled"),
+                    "anal1" : __("Beginner Anal Slut"),
+                    "anal2" : __("Competent Anal Slut"),
+                    "anal3" : __("Skilled Butt Lover"),
+                    "anal4" : __("Expert Butt Lover"),
+                    "anal5" : __("Anal Queen"),
+                    "fetish0" : __("Unskilled"),
+                    "fetish1" : __("Beginner Servant"),
+                    "fetish2" : __("Competent Servant"),
+                    "fetish3" : __("Skilled Escort"),
+                    "fetish4" : __("Expert Escort"),
+                    "fetish5" : __("Bondage Queen"),
                 }
 
 
@@ -3171,20 +3171,20 @@ init -4 python:
                     5 : 1000,
                 }
 
-    rep_gains_dict = { # Read as: For a given girl rank - 'cust.rank relative to girl.rank (e.g: 'higher' = The customer has a higher rank) : must get a result >= X to earn rep'
-                    1 : {"higher" : "bad", "same" : "average"},
-                    2 : {"higher" : "bad", "same" : "average", "lower" : "good"},
-                    3 : {"higher" : "average", "same" : "good", "lower" : "very good"},
-                    4 : {"higher" : "average", "same" : "good", "lower" : "very good"},
-                    5 : {"same" : "good", "lower" : "perfect"}, # Made easier for now
+    rep_gains_dict = { # Read as: For a given girl rank - 'cust.rank relative to girl.rank (e.g: __('higher') = The customer has a higher rank) : must get a result >= X to earn rep'
+                    1 : {"higher" : __("bad"), "same" : __("average")},
+                    2 : {"higher" : __("bad"), "same" : __("average"), "lower" : __("good")},
+                    3 : {"higher" : __("average"), "same" : __("good"), "lower" : __("very good")},
+                    4 : {"higher" : __("average"), "same" : __("good"), "lower" : __("very good")},
+                    5 : {"same" : __("good"), "lower" : __("perfect")}, # Made easier for now
                 }
 
-    rep_loss_dict = { # Read as: 'must get a result < X to lose rep'. Being < to very bad is actually impossible
-                    1 : {"higher" : "very bad", "same" : "bad"},
-                    2 : {"higher" : "very bad", "same" : "bad", "lower" : "average"},
-                    3 : {"higher" : "bad", "same" : "average", "lower" : "good"},
-                    4 : {"higher" : "bad", "same" : "average", "lower" : "good"},
-                    5 : {"same" : "average", "lower" : "very good"}, # Made easier for now
+    rep_loss_dict = { # Read as: __('must get a result < X to lose rep'). Being < to very bad is actually impossible
+                    1 : {"higher" : __("very bad"), "same" : __("bad")},
+                    2 : {"higher" : __("very bad"), "same" : __("bad"), "lower" : __("average")},
+                    3 : {"higher" : __("bad"), "same" : __("average"), "lower" : __("good")},
+                    4 : {"higher" : __("bad"), "same" : __("average"), "lower" : __("good")},
+                    5 : {"same" : __("average"), "lower" : __("very good")}, # Made easier for now
                 }
 
 #     rep_gains_dict = {
@@ -3425,17 +3425,17 @@ init:
     image rain:
         zoom 2.0
 
-        "minigame/rain/heavyrain1.webp"
+        __("minigame/rain/heavyrain1.webp")
         0.1
-        "minigame/rain/rain1.webp"
+        __("minigame/rain/rain1.webp")
         0.1
-        "minigame/rain/heavyrain2.webp"
+        __("minigame/rain/heavyrain2.webp")
         0.1
-        "minigame/rain/rain3.webp"
+        __("minigame/rain/rain3.webp")
         0.1
-        "minigame/rain/rain2.webp"
+        __("minigame/rain/rain2.webp")
         0.1
-        "minigame/rain/heavyrain3.webp"
+        __("minigame/rain/heavyrain3.webp")
         0.1
         repeat
 
@@ -3480,216 +3480,216 @@ init:
 
     image supercharge_card:
         subpixel True
-        "UI/powers/supercharge/card_supercharge/sc_1.webp"
+        __("UI/powers/supercharge/card_supercharge/sc_1.webp")
         pause 0.06
-        "UI/powers/supercharge/card_supercharge/sc_2.webp"
+        __("UI/powers/supercharge/card_supercharge/sc_2.webp")
         pause 0.06
-        "UI/powers/supercharge/card_supercharge/sc_3.webp"
+        __("UI/powers/supercharge/card_supercharge/sc_3.webp")
         pause 0.06
-        "UI/powers/supercharge/card_supercharge/sc_4.webp"
+        __("UI/powers/supercharge/card_supercharge/sc_4.webp")
         pause 0.06
-        "UI/powers/supercharge/card_supercharge/sc_5.webp"
+        __("UI/powers/supercharge/card_supercharge/sc_5.webp")
         pause 0.06
-        "UI/powers/supercharge/card_supercharge/sc_6.webp"
+        __("UI/powers/supercharge/card_supercharge/sc_6.webp")
         pause 0.06
-        "UI/powers/supercharge/card_supercharge/sc_7.webp"
+        __("UI/powers/supercharge/card_supercharge/sc_7.webp")
         pause 0.06
-        "UI/powers/supercharge/card_supercharge/sc_8.webp"
+        __("UI/powers/supercharge/card_supercharge/sc_8.webp")
         pause 0.06
-        "UI/powers/supercharge/card_supercharge/sc_9.webp"
+        __("UI/powers/supercharge/card_supercharge/sc_9.webp")
         pause 0.06
-        "UI/powers/supercharge/card_supercharge/sc_10.webp"
+        __("UI/powers/supercharge/card_supercharge/sc_10.webp")
         pause 0.06
-        "UI/powers/supercharge/card_supercharge/sc_11.webp"
+        __("UI/powers/supercharge/card_supercharge/sc_11.webp")
         pause 0.06
-        "UI/powers/supercharge/card_supercharge/sc_12.webp"
+        __("UI/powers/supercharge/card_supercharge/sc_12.webp")
         pause 0.06
-        "UI/powers/supercharge/card_supercharge/sc_13.webp"
+        __("UI/powers/supercharge/card_supercharge/sc_13.webp")
         pause 0.06
-        "UI/powers/supercharge/card_supercharge/sc_14.webp"
+        __("UI/powers/supercharge/card_supercharge/sc_14.webp")
         pause 0.06
-        "UI/powers/supercharge/card_supercharge/sc_15.webp"
+        __("UI/powers/supercharge/card_supercharge/sc_15.webp")
         pause 0.06
-        "UI/powers/supercharge/card_supercharge/sc_16.webp"
+        __("UI/powers/supercharge/card_supercharge/sc_16.webp")
         pause 0.06
-        "UI/powers/supercharge/card_supercharge/sc_17.webp"
+        __("UI/powers/supercharge/card_supercharge/sc_17.webp")
         pause 0.06
-        "UI/powers/supercharge/card_supercharge/sc_18.webp"
+        __("UI/powers/supercharge/card_supercharge/sc_18.webp")
         pause 0.06
-        "UI/powers/supercharge/card_supercharge/sc_19.webp"
+        __("UI/powers/supercharge/card_supercharge/sc_19.webp")
         pause 0.06
-        "UI/powers/supercharge/card_supercharge/sc_20.webp"
+        __("UI/powers/supercharge/card_supercharge/sc_20.webp")
         pause 0.06
-        "UI/powers/supercharge/card_supercharge/sc_21.webp"
+        __("UI/powers/supercharge/card_supercharge/sc_21.webp")
         pause 0.06
-        "UI/powers/supercharge/card_supercharge/sc_22.webp"
+        __("UI/powers/supercharge/card_supercharge/sc_22.webp")
         pause 0.06
-        "UI/powers/supercharge/card_supercharge/sc_23.webp"
+        __("UI/powers/supercharge/card_supercharge/sc_23.webp")
         pause 0.06
-        "UI/powers/supercharge/card_supercharge/sc_24.webp"
+        __("UI/powers/supercharge/card_supercharge/sc_24.webp")
         pause 0.06
-        "UI/powers/supercharge/card_supercharge/sc_25.webp"
+        __("UI/powers/supercharge/card_supercharge/sc_25.webp")
         pause 0.06
-        "UI/powers/supercharge/card_supercharge/sc_26.webp"
+        __("UI/powers/supercharge/card_supercharge/sc_26.webp")
         pause 0.06
-        "UI/powers/supercharge/card_supercharge/sc_27.webp"
+        __("UI/powers/supercharge/card_supercharge/sc_27.webp")
         pause 0.06
-        "UI/powers/supercharge/card_supercharge/sc_28.webp"
+        __("UI/powers/supercharge/card_supercharge/sc_28.webp")
         pause 0.06
-        "UI/powers/supercharge/card_supercharge/sc_29.webp"
+        __("UI/powers/supercharge/card_supercharge/sc_29.webp")
         pause 0.06
-        "UI/powers/supercharge/card_supercharge/sc_30.webp"
+        __("UI/powers/supercharge/card_supercharge/sc_30.webp")
         pause 0.06
-        "UI/powers/supercharge/card_supercharge/sc_31.webp"
+        __("UI/powers/supercharge/card_supercharge/sc_31.webp")
         pause 0.06
-        "UI/powers/supercharge/card_supercharge/sc_32.webp"
+        __("UI/powers/supercharge/card_supercharge/sc_32.webp")
         pause 0.06
-        "UI/powers/supercharge/card_supercharge/sc_33.webp"
+        __("UI/powers/supercharge/card_supercharge/sc_33.webp")
         pause 0.06
-        "UI/powers/supercharge/card_supercharge/sc_34.webp"
+        __("UI/powers/supercharge/card_supercharge/sc_34.webp")
         pause 0.06
-        "UI/powers/supercharge/card_supercharge/sc_35.webp"
+        __("UI/powers/supercharge/card_supercharge/sc_35.webp")
         pause 0.06
-        "UI/powers/supercharge/card_supercharge/sc_36.webp"
+        __("UI/powers/supercharge/card_supercharge/sc_36.webp")
         pause 0.06
         repeat
 
     image supercharge:
         subpixel True
         pause 0.1
-        "UI/powers/supercharge/screen_supercharge/supercharge-1.webp"
+        __("UI/powers/supercharge/screen_supercharge/supercharge-1.webp")
         pause 0.02
-        "UI/powers/supercharge/screen_supercharge/supercharge-2.webp"
+        __("UI/powers/supercharge/screen_supercharge/supercharge-2.webp")
         pause 0.02
-        "UI/powers/supercharge/screen_supercharge/supercharge-3.webp"
+        __("UI/powers/supercharge/screen_supercharge/supercharge-3.webp")
         pause 0.02
-        "UI/powers/supercharge/screen_supercharge/supercharge-4.webp"
+        __("UI/powers/supercharge/screen_supercharge/supercharge-4.webp")
         pause 0.02
-        "UI/powers/supercharge/screen_supercharge/supercharge-5.webp"
+        __("UI/powers/supercharge/screen_supercharge/supercharge-5.webp")
         pause 0.02
-        "UI/powers/supercharge/screen_supercharge/supercharge-6.webp"
+        __("UI/powers/supercharge/screen_supercharge/supercharge-6.webp")
         pause 0.02
-        "UI/powers/supercharge/screen_supercharge/supercharge-7.webp"
+        __("UI/powers/supercharge/screen_supercharge/supercharge-7.webp")
         pause 0.02
-        "UI/powers/supercharge/screen_supercharge/supercharge-8.webp"
+        __("UI/powers/supercharge/screen_supercharge/supercharge-8.webp")
         pause 0.02
-        "UI/powers/supercharge/screen_supercharge/supercharge-9.webp"
+        __("UI/powers/supercharge/screen_supercharge/supercharge-9.webp")
         pause 0.02
-        "UI/powers/supercharge/screen_supercharge/supercharge-10.webp"
+        __("UI/powers/supercharge/screen_supercharge/supercharge-10.webp")
         pause 0.02
-        "UI/powers/supercharge/screen_supercharge/supercharge-11.webp"
+        __("UI/powers/supercharge/screen_supercharge/supercharge-11.webp")
         pause 0.02
-        "UI/powers/supercharge/screen_supercharge/supercharge-12.webp"
+        __("UI/powers/supercharge/screen_supercharge/supercharge-12.webp")
         pause 0.02
-        "UI/powers/supercharge/screen_supercharge/supercharge-13.webp"
+        __("UI/powers/supercharge/screen_supercharge/supercharge-13.webp")
         pause 0.02
-        "UI/powers/supercharge/screen_supercharge/supercharge-14.webp"
+        __("UI/powers/supercharge/screen_supercharge/supercharge-14.webp")
         pause 0.02
-        "UI/powers/supercharge/screen_supercharge/supercharge-15.webp"
+        __("UI/powers/supercharge/screen_supercharge/supercharge-15.webp")
         pause 0.02
-        "UI/powers/supercharge/screen_supercharge/supercharge-16.webp"
+        __("UI/powers/supercharge/screen_supercharge/supercharge-16.webp")
         pause 0.02
-        "UI/powers/supercharge/screen_supercharge/supercharge-17.webp"
+        __("UI/powers/supercharge/screen_supercharge/supercharge-17.webp")
         pause 0.02
-        "UI/powers/supercharge/screen_supercharge/supercharge-18.webp"
+        __("UI/powers/supercharge/screen_supercharge/supercharge-18.webp")
         pause 0.02
-        "UI/powers/supercharge/screen_supercharge/supercharge-19.webp"
+        __("UI/powers/supercharge/screen_supercharge/supercharge-19.webp")
         pause 0.02
-        "UI/powers/supercharge/screen_supercharge/supercharge-20.webp"
+        __("UI/powers/supercharge/screen_supercharge/supercharge-20.webp")
         pause 0.02
-        "UI/powers/supercharge/screen_supercharge/supercharge-21.webp"
+        __("UI/powers/supercharge/screen_supercharge/supercharge-21.webp")
         pause 0.02
-        "UI/powers/supercharge/screen_supercharge/supercharge-22.webp"
+        __("UI/powers/supercharge/screen_supercharge/supercharge-22.webp")
         pause 0.02
-        "UI/powers/supercharge/screen_supercharge/supercharge-23.webp"
+        __("UI/powers/supercharge/screen_supercharge/supercharge-23.webp")
         pause 0.02
-        "UI/powers/supercharge/screen_supercharge/supercharge-24.webp"
+        __("UI/powers/supercharge/screen_supercharge/supercharge-24.webp")
         pause 0.02
-        "UI/powers/supercharge/screen_supercharge/supercharge-25.webp"
+        __("UI/powers/supercharge/screen_supercharge/supercharge-25.webp")
         pause 0.02
-        "UI/powers/supercharge/screen_supercharge/supercharge-26.webp"
+        __("UI/powers/supercharge/screen_supercharge/supercharge-26.webp")
         pause 0.02
-        "UI/powers/supercharge/screen_supercharge/supercharge-27.webp"
+        __("UI/powers/supercharge/screen_supercharge/supercharge-27.webp")
         pause 0.02
-        "UI/powers/supercharge/screen_supercharge/supercharge-28.webp"
+        __("UI/powers/supercharge/screen_supercharge/supercharge-28.webp")
         pause 0.02
-        "UI/powers/supercharge/screen_supercharge/supercharge-29.webp"
+        __("UI/powers/supercharge/screen_supercharge/supercharge-29.webp")
         pause 0.02
-        "UI/powers/supercharge/screen_supercharge/supercharge-30.webp"
+        __("UI/powers/supercharge/screen_supercharge/supercharge-30.webp")
         pause 0.02
-        "UI/powers/supercharge/screen_supercharge/supercharge-31.webp"
+        __("UI/powers/supercharge/screen_supercharge/supercharge-31.webp")
         pause 0.02
-        "UI/powers/supercharge/screen_supercharge/supercharge-32.webp"
+        __("UI/powers/supercharge/screen_supercharge/supercharge-32.webp")
         pause 0.02
-        "UI/powers/supercharge/screen_supercharge/supercharge-33.webp"
+        __("UI/powers/supercharge/screen_supercharge/supercharge-33.webp")
         pause 0.02
-        "UI/powers/supercharge/screen_supercharge/supercharge-placeholder.webp"
+        __("UI/powers/supercharge/screen_supercharge/supercharge-placeholder.webp")
 
     # Mojos
     image mojo_green:
-        "UI/Powers/orb_green.webp"
+        __("UI/Powers/orb_green.webp")
         size res_tb(25)
     image mojo_blue:
-        "UI/Powers/orb_blue.webp"
+        __("UI/Powers/orb_blue.webp")
         size res_tb(25)
     image mojo_red:
-        "UI/Powers/orb_red.webp"
+        __("UI/Powers/orb_red.webp")
         size res_tb(25)
     image mojo_yellow:
-        "UI/Powers/orb_yellow.webp"
+        __("UI/Powers/orb_yellow.webp")
         size res_tb(25)
     image mojo_purple:
-        "UI/Powers/orb_purple.webp"
+        __("UI/Powers/orb_purple.webp")
         size res_tb(25)
 
     # Evil spell splash screen
     image evil_spell:
-        "UI/Powers/Evil spell.webp"
+        __("UI/Powers/Evil spell.webp")
         zoom 0.4
 
     image princess fucked: ## There really must be a shorter way to do this, but I've had no luck so far
 
-        "NPC/Misc/princess/princess fucked1.gif"
+        __("NPC/Misc/princess/princess fucked1.gif")
         pause 0.03
-        "NPC/Misc/princess/princess fucked2.gif"
+        __("NPC/Misc/princess/princess fucked2.gif")
         pause 0.03
-        "NPC/Misc/princess/princess fucked3.gif"
+        __("NPC/Misc/princess/princess fucked3.gif")
         pause 0.03
-        "NPC/Misc/princess/princess fucked4.gif"
+        __("NPC/Misc/princess/princess fucked4.gif")
         pause 0.03
-        "NPC/Misc/princess/princess fucked5.gif"
+        __("NPC/Misc/princess/princess fucked5.gif")
         pause 0.03
-        "NPC/Misc/princess/princess fucked6.gif"
+        __("NPC/Misc/princess/princess fucked6.gif")
         pause 0.03
-        "NPC/Misc/princess/princess fucked7.gif"
+        __("NPC/Misc/princess/princess fucked7.gif")
         pause 0.03
-        "NPC/Misc/princess/princess fucked8.gif"
+        __("NPC/Misc/princess/princess fucked8.gif")
         pause 0.03
-        "NPC/Misc/princess/princess fucked9.gif"
+        __("NPC/Misc/princess/princess fucked9.gif")
         pause 0.03
-        "NPC/Misc/princess/princess fucked10.gif"
+        __("NPC/Misc/princess/princess fucked10.gif")
         pause 0.03
-        "NPC/Misc/princess/princess fucked11.gif"
+        __("NPC/Misc/princess/princess fucked11.gif")
         pause 0.03
-        "NPC/Misc/princess/princess fucked12.gif"
+        __("NPC/Misc/princess/princess fucked12.gif")
         pause 0.03
-        "NPC/Misc/princess/princess fucked13.gif"
+        __("NPC/Misc/princess/princess fucked13.gif")
         pause 0.03
-        "NPC/Misc/princess/princess fucked14.gif"
+        __("NPC/Misc/princess/princess fucked14.gif")
         pause 0.03
-        "NPC/Misc/princess/princess fucked15.gif"
+        __("NPC/Misc/princess/princess fucked15.gif")
         pause 0.03
-        "NPC/Misc/princess/princess fucked16.gif"
+        __("NPC/Misc/princess/princess fucked16.gif")
         pause 0.03
-        "NPC/Misc/princess/princess fucked17.gif"
+        __("NPC/Misc/princess/princess fucked17.gif")
         pause 0.03
-        "NPC/Misc/princess/princess fucked18.gif"
+        __("NPC/Misc/princess/princess fucked18.gif")
         pause 0.03
-        "NPC/Misc/princess/princess fucked19.gif"
+        __("NPC/Misc/princess/princess fucked19.gif")
         pause 0.03
-        "NPC/Misc/princess/princess fucked20.gif"
+        __("NPC/Misc/princess/princess fucked20.gif")
         pause 0.03
-        "NPC/Misc/princess/princess fucked21.gif"
+        __("NPC/Misc/princess/princess fucked21.gif")
         pause 0.03
         repeat
 
@@ -3864,7 +3864,7 @@ init -5 python:
         "fear +++" : c_softpurple,
         "fear ++" : c_softpurple,
         "fear +" : c_softpurple,
-        "fear -" : "#A6DEEE",
+        "fear -" : __("#A6DEEE"),
 
         "special" : c_orange,
         "special contrast" : c_softpurple,
@@ -3893,30 +3893,30 @@ init -2 python:
     contract_skill_limit = {2 : {"easy" : 75, "hard" : 100}, 3 : {"easy" : 100, "hard" : 125}, 4 : {"easy" : 125, "hard" : 150},
                             5 : {"easy" : 150, "hard" : 175}, 6 : {"easy" : 175, "hard" : 225}, 7 : {"easy" : 225, "hard" : 275}}
     contract_sex_limit =   {
-                            2: {"easy": "a little reluctant", "hard": "indifferent"},
-                            3: {"easy": "indifferent", "hard": "a little interested"},
-                            4: {"easy": "a little interested", "hard": "interested"},
-                            5: {"easy": "interested", "hard": "very interested"},
-                            6: {"easy": "very interested", "hard": "fascinated"},
-                            7: {"easy": "very interested", "hard": "fascinated"},
+                            2: {"easy": __("a little reluctant"), "hard": __("indifferent")},
+                            3: {"easy": __("indifferent"), "hard": __("a little interested")},
+                            4: {"easy": __("a little interested"), "hard": __("interested")},
+                            5: {"easy": __("interested"), "hard": __("very interested")},
+                            6: {"easy": __("very interested"), "hard": __("fascinated")},
+                            7: {"easy": __("very interested"), "hard": __("fascinated")},
                         }
 
     # ORG/org = Organizer, VEN/ven = venue, AVEN/aven = article + venue, LOC/loc = location, DIS/dis = district
 
-    contract_description = {"cruise" : ":ORG: is organizing a nightly cruise tour of :dis: to thank its members for their hard work this year. :AVEN: will depart for a sightseeing tour of the bay at dusk, then moor next to the :LOC: for a night of entertainment.",
-                            "party" : ":ORG: is throwing a lavish party in :aven: near the :LOC:. Everyone who is anyone in Zan is expected to attend and party until well after dawn.",
-                            "ceremony" : ":ORG: chose :aven: near the :LOC: to celebrate one of their numerous holy days. In order to get closer to their deity, worshippers are expected to transcend both spirit and flesh by indulging in the most shameful pleasures, washing away their sins with large amounts of holy alcohol, conveniently sold on the premises by the Church.",
-                            "festival" : ":ORG: is throwing a huge festival next month in :dis:, to celebrate a new season, a three-headed cow, the sun rising again, or some other redneck nonsense. Still, there will be a big feast at :aven: near the :LOC: complete with food, drinks, shows and of course, girls!",
-                            "date" : ":ORG: has invited a few friends to :aven: next to the :LOC: for the night, and has requested some company. Well-groomed, well-behaved female servants are expected to tend to his every need.",
-                            "meeting" : ":ORG: convened a meeting of like-minded nobles and diplomats to discuss :ven: in a discreet venue near the :LOC:. While the intricacies of this grave topic will occupy much of their time, they will also expect their hosts to provide top-notch service and ways of 'relieving' the tension.",
-                            "magic" : ":ORG: summoned all arcane users to a night of fun and magic out in the :LOC:. Tended to by beautiful women, the guests will attend special events in :aven:, overlooking the magnificence of :DIS:.",
-                            "orgy" : ":ORG: is happy to announce a long night of hedonism and erotic surprises in the :LOC:. Gathered in :aven:, the guests will enjoy forbidden pleasure with like-minded individuals and a hand-picked selection of elite sex slaves."
+    contract_description = {"cruise" : __(":ORG: is organizing a nightly cruise tour of :dis: to thank its members for their hard work this year. :AVEN: will depart for a sightseeing tour of the bay at dusk, then moor next to the :LOC: for a night of entertainment."),
+                            "party" : __(":ORG: is throwing a lavish party in :aven: near the :LOC:. Everyone who is anyone in Zan is expected to attend and party until well after dawn."),
+                            "ceremony" : __(":ORG: chose :aven: near the :LOC: to celebrate one of their numerous holy days. In order to get closer to their deity, worshippers are expected to transcend both spirit and flesh by indulging in the most shameful pleasures, washing away their sins with large amounts of holy alcohol, conveniently sold on the premises by the Church."),
+                            "festival" : __(":ORG: is throwing a huge festival next month in :dis:, to celebrate a new season, a three-headed cow, the sun rising again, or some other redneck nonsense. Still, there will be a big feast at :aven: near the :LOC: complete with food, drinks, shows and of course, girls!"),
+                            "date" : __(":ORG: has invited a few friends to :aven: next to the :LOC: for the night, and has requested some company. Well-groomed, well-behaved female servants are expected to tend to his every need."),
+                            "meeting" : __(":ORG: convened a meeting of like-minded nobles and diplomats to discuss :ven: in a discreet venue near the :LOC:. While the intricacies of this grave topic will occupy much of their time, they will also expect their hosts to provide top-notch service and ways of 'relieving' the tension."),
+                            "magic" : __(":ORG: summoned all arcane users to a night of fun and magic out in the :LOC:. Tended to by beautiful women, the guests will attend special events in :aven:, overlooking the magnificence of :DIS:."),
+                            "orgy" : __(":ORG: is happy to announce a long night of hedonism and erotic surprises in the :LOC:. Gathered in :aven:, the guests will enjoy forbidden pleasure with like-minded individuals and a hand-picked selection of elite sex slaves.")
                         }
 
 init python:
 
     contract_task_types_order = {"greet" : 1, "serve" : 2, "mingle" : 3, "event" : 4, "private show" : 5, "fun" : 6}
-    contract_task_types_description = {"greet" : "Greet Guests", "serve" : "Serve Guests", "mingle" : "Socialize", "event" : "Participate In An Event", "private show" : "Deliver A Private Show", "fun" : "Have 'Fun'"}
+    contract_task_types_description = {"greet" : __("Greet Guests"), "serve" : __("Serve Guests"), "mingle" : __("Socialize"), "event" : __("Participate In An Event"), "private show" : __("Deliver A Private Show"), "fun" : __("Have 'Fun'")}
 
     contract_tasks = [
                         ContractTask("clean", type="serve", requirements=["job waitress", "skill obedience", "skill constitution", ], tags=(["maid"], ["obedience"], ["waitress"], ["profile"])),
@@ -3975,46 +3975,46 @@ init python:
     ### Brothel Rankings ###
 
     brothel_ranking_reputations = {
-                        40 : "nobody",
-                        39 : "almost nobody",
-                        38 : "nameless drifter",
-                        37: "suspicious foreigner",
-                        36 : "passing stranger",
-                        35 : "new face",
-                        34 : "shifty lurker",
-                        33 : "dark alley dweller",
-                        32 : "street-corner hawker",
-                        31 : "flesh peddler",
-                        30 : "seedy innkeeper",
-                        29 : "cheap mackerel",
-                        28 : "semi-reliable hustler",
-                        27 : "small business owner",
-                        26 : "trendy bartender",
-                        25 : "young upstart",
-                        24 : "ascending pimp",
-                        23 : "well-known pimp",
-                        22 : "disreputable whoremonger",
-                        21 : "reputable whoremonger",
-                        20 : "respected brothel-keeper",
-                        19 : "red-light staple",
-                        18 : "local favorite",
-                        17 : "nightlife fixture",
-                        16 : "vice entrepreneur",
-                        15 : "bordello artist",
-                        14 : "smooth operator",
-                        13 : "smooth criminal",
-                        12 : "fancy souteneur",
-                        11 : "wealthy whoremonger",
-                        10 : "prostitution magnate",
-                        9 : "notable sexmonger",
-                        8 : "famed brothel master",
-                        7 : "icon of corruption",
-                        6 : "sin tycoon",
-                        5 : "lord of filth",
-                        4 : "pope of debauchery",
-                        3 : "king of the underworld",
-                        2 : "god emperor of whores",
-                        1 : "absolute legend"
+                        40 : __("nobody"),
+                        39 : __("almost nobody"),
+                        38 : __("nameless drifter"),
+                        37: __("suspicious foreigner"),
+                        36 : __("passing stranger"),
+                        35 : __("new face"),
+                        34 : __("shifty lurker"),
+                        33 : __("dark alley dweller"),
+                        32 : __("street-corner hawker"),
+                        31 : __("flesh peddler"),
+                        30 : __("seedy innkeeper"),
+                        29 : __("cheap mackerel"),
+                        28 : __("semi-reliable hustler"),
+                        27 : __("small business owner"),
+                        26 : __("trendy bartender"),
+                        25 : __("young upstart"),
+                        24 : __("ascending pimp"),
+                        23 : __("well-known pimp"),
+                        22 : __("disreputable whoremonger"),
+                        21 : __("reputable whoremonger"),
+                        20 : __("respected brothel-keeper"),
+                        19 : __("red-light staple"),
+                        18 : __("local favorite"),
+                        17 : __("nightlife fixture"),
+                        16 : __("vice entrepreneur"),
+                        15 : __("bordello artist"),
+                        14 : __("smooth operator"),
+                        13 : __("smooth criminal"),
+                        12 : __("fancy souteneur"),
+                        11 : __("wealthy whoremonger"),
+                        10 : __("prostitution magnate"),
+                        9 : __("notable sexmonger"),
+                        8 : __("famed brothel master"),
+                        7 : __("icon of corruption"),
+                        6 : __("sin tycoon"),
+                        5 : __("lord of filth"),
+                        4 : __("pope of debauchery"),
+                        3 : __("king of the underworld"),
+                        2 : __("god emperor of whores"),
+                        1 : __("absolute legend")
                         }
 
 # init -1 python:
