@@ -194,7 +194,7 @@ screen night(event_pic = None, event_bg = None, changes = "", has_log = True): #
                     if isinstance(changes, NightChangeLog):
                         use night_right(changes)
                     else:
-                        text "Results"
+                        text _("Results")
                         text changes size res_font(18)
 
 
@@ -304,7 +304,7 @@ screen night_old(event_pic = None, event_bg = None, changes = "", has_log = True
                 if isinstance(changes, NightChangeLog):
                     use night_right(changes)
                 else:
-                    text "Results"
+                    text _("Results")
                     text changes size res_font(18)
 
 screen night_log(log, use_filter=False):
@@ -316,7 +316,7 @@ screen night_log(log, use_filter=False):
         if use_filter:
             frame background c_ui_light xfill True:
                 has hbox
-                text "Filter: " size res_font(22) color c_brown
+                text _("Filter: ") size res_font(22) color c_brown
                 input size res_font(22) color c_darkorange changed(log.filter)
         viewport:
             mousewheel True

@@ -364,7 +364,7 @@ screen help_screen(keyword, idx = None):
 
     frame background c_ui_darker align (0.5, 0.3) xsize 0.666 ysize 0.666 xpadding xres(20) ypadding yres(20):
         has vbox spacing yres(20)
-        text "BROKIPEDIA" bold True color c_orange
+        text _("BROKIPEDIA") bold True color c_orange
 
         hbox spacing xres(20):
             fixed xsize yres(120) ysize yres(120):
@@ -384,7 +384,7 @@ screen help_screen(keyword, idx = None):
                         textbutton ">>" xsize xres(80) ysize yres(45):
                             if next_index < len(help_history):
                                 action Show("help_screen", keyword=help_history[next_index], idx = next_index)
-                    textbutton "Close" xalign 1.0 xsize xres(120) ysize(45) action Hide()
+                    textbutton _("Close") xalign 1.0 xsize xres(120) ysize(45) action Hide()
 
                 hbox spacing xres(20):
                     if get_help_center_pic(keyword):
@@ -413,7 +413,7 @@ screen help_menu(scr):
 
     key "mouseup_3" action Return("back") capture True
 
-    button style "inv_no_padding" tooltip "Click here or right-click to close the help menu." action Return("back"):
+    button style "inv_no_padding" tooltip _("Click here or right-click to close the help menu.") action Return("back"):
         xsize 0.05
         ysize 0.1
         xalign 1.0
@@ -424,7 +424,7 @@ screen help_menu(scr):
             has vbox
             style "menu"
             spacing yres(2)
-            text "Previous notifications"
+            text _("Previous notifications")
             use notify_history
 
         frame background None xsize 0.8 yalign 0.0:
@@ -433,7 +433,7 @@ screen help_menu(scr):
 
             hbox spacing xres(20):
                 add "side sill" yalign 0.5 zoom 0.5
-                text "How can I help you?" yalign 0.5
+                text _("How can I help you?") yalign 0.5
 
             for top in get_help_menu_topics(scr):
                 textbutton top[0] style "navigation_button" action Return(top[1]) xfill True text_size res_font(22)
@@ -2964,7 +2964,7 @@ screen perk_test_results(days, girls, girls2, girl_stats):
                 for d in days:
                     text str(int(d))
 
-                text "Gold made-Test" size res_font(14) yalign 0.5
+                text _("Gold made-Test") size res_font(14) yalign 0.5
 
                 for d in days:
                     text str(int(get_test_total(girls, d, "income")-get_test_total(girls, d, "upkeep"))) size res_font(14) yalign 0.5
@@ -2974,7 +2974,7 @@ screen perk_test_results(days, girls, girls2, girl_stats):
                     for d in days:
                         text str(int(get_test_total(g, d, "income")-get_test_total(g, d, "upkeep"))) size res_font(12) yalign 0.5
 
-                text "Gold made-Ctrl" size res_font(14) yalign 0.5
+                text _("Gold made-Ctrl") size res_font(14) yalign 0.5
 
                 for d in days:
                     text str(int(get_test_total(girls2, d, "income")-get_test_total(girls2, d, "upkeep"))) size res_font(12) yalign 0.5
@@ -2984,7 +2984,7 @@ screen perk_test_results(days, girls, girls2, girl_stats):
                     for d in days:
                         text str(int(get_test_total(g, d, "income")-get_test_total(g, d, "upkeep"))) size res_font(12) yalign 0.5
 
-                text "Gold adv." size res_font(14) yalign 0.5 color c_green
+                text _("Gold adv.") size res_font(14) yalign 0.5 color c_green
 
                 for d in days:
                     text str(int(get_test_advantage(girls, girls2, d, "income"))) + "%" size res_font(14) yalign 0.5
@@ -2993,7 +2993,7 @@ screen perk_test_results(days, girls, girls2, girl_stats):
                 for d in days:
                     text ""
 
-                text "Stats-Test" size res_font(14) yalign 0.5
+                text _("Stats-Test") size res_font(14) yalign 0.5
                 for d in days:
                     text str(int(get_test_total(girls, d, "stat_total"))) size res_font(14) yalign 0.5
 
@@ -3002,7 +3002,7 @@ screen perk_test_results(days, girls, girls2, girl_stats):
                     for d in days:
                         text str(int(girl_stats[g][d]["stat_total"])) size res_font(12) yalign 0.5
 
-                text "Stats-Ctrl" size res_font(14) yalign 0.5
+                text _("Stats-Ctrl") size res_font(14) yalign 0.5
                 for d in days:
                     text str(int(get_test_total(girls2, d, "stat_total"))) size res_font(14) yalign 0.5
 
@@ -3011,7 +3011,7 @@ screen perk_test_results(days, girls, girls2, girl_stats):
                     for d in days:
                         text str(int(girl_stats[g][d]["stat_total"])) size res_font(12) yalign 0.5
 
-                text "Stat adv." size res_font(14) yalign 0.5 color c_green
+                text _("Stat adv.") size res_font(14) yalign 0.5 color c_green
                 for d in days:
                     text str(int(get_test_advantage(girls, girls2, d, "stat_total"))) + "%" size res_font(14) yalign 0.5
 
@@ -3019,7 +3019,7 @@ screen perk_test_results(days, girls, girls2, girl_stats):
                 for d in days:
                     text ""
 
-                text "Level-Test" size res_font(14) yalign 0.5
+                text _("Level-Test") size res_font(14) yalign 0.5
                 for d in days:
                     text str(int(get_test_average(girls, d, "level"))) size res_font(14) yalign 0.5
 
@@ -3028,7 +3028,7 @@ screen perk_test_results(days, girls, girls2, girl_stats):
                     for d in days:
                         text str(int(girl_stats[g][d]["level"])) size res_font(12) yalign 0.5
 
-                text "Level-Ctrl" size res_font(14) yalign 0.5
+                text _("Level-Ctrl") size res_font(14) yalign 0.5
                 for d in days:
                     text str(int(get_test_average(girls2, d, "level"))) size res_font(14) yalign 0.5
 
@@ -3041,7 +3041,7 @@ screen perk_test_results(days, girls, girls2, girl_stats):
                 for d in days:
                     text ""
 
-                text "Rank-Test" size res_font(14) yalign 0.5
+                text _("Rank-Test") size res_font(14) yalign 0.5
                 for d in days:
                     text str(round(get_test_average(girls, d, "rank"),2)) size res_font(14) yalign 0.5
 
@@ -3050,7 +3050,7 @@ screen perk_test_results(days, girls, girls2, girl_stats):
                     for d in days:
                         text str(int(girl_stats[g][d]["rank"])) size res_font(12) yalign 0.5
 
-                text "Rank-Ctrl" size res_font(14) yalign 0.5
+                text _("Rank-Ctrl") size res_font(14) yalign 0.5
                 for d in days:
                     text str(round(get_test_average(girls2, d, "rank"),2)) size res_font(14) yalign 0.5
 
@@ -3063,7 +3063,7 @@ screen perk_test_results(days, girls, girls2, girl_stats):
                 for d in days:
                     text ""
 
-                text "Rep-Test" size res_font(14) yalign 0.5
+                text _("Rep-Test") size res_font(14) yalign 0.5
                 for d in days:
                     text str(int(get_test_average(girls, d, "rep"))) size res_font(14) yalign 0.5
 
@@ -3072,7 +3072,7 @@ screen perk_test_results(days, girls, girls2, girl_stats):
                     for d in days:
                         text str(int(girl_stats[g][d]["rep"])) size res_font(12) yalign 0.5
 
-                text "Rep-Ctrl" size res_font(14) yalign 0.5
+                text _("Rep-Ctrl") size res_font(14) yalign 0.5
                 for d in days:
                     text str(int(get_test_average(girls2, d, "rep"))) size res_font(14) yalign 0.5
 
@@ -3084,9 +3084,9 @@ screen perk_test_results(days, girls, girls2, girl_stats):
             text ""
 
         hbox:
-            textbutton "RESTART" action (Return(), Jump("test_perks_launch"))
-            textbutton "NEW TEST" action (Return(), Jump("test_perks"))
-            textbutton "STOP" action Return()
+            textbutton _("RESTART") action (Return(), Jump("test_perks_launch"))
+            textbutton _("NEW TEST") action (Return(), Jump("test_perks"))
+            textbutton _("STOP") action Return()
 
 
 init python:

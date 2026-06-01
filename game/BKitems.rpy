@@ -800,7 +800,7 @@ screen item_tab(context, left_party, right_party): # Where X_party are a list of
             use restock_button(right_focus)
 
     elif context == "girls":
-        textbutton "Collect all items" text_size res_font(16) xalign 0.5 yalign 0.1 tooltip "This will collect non-equipped items from all girls and store them in the left character's inventory." action Return("collect all")
+        textbutton _("Collect all items") text_size res_font(16) xalign 0.5 yalign 0.1 tooltip "This will collect non-equipped items from all girls and store them in the left character's inventory." action Return("collect all")
 
     key "mouseup_3" action (Return("back"))
     use close(Return("back"))
@@ -985,7 +985,7 @@ screen item_list(items, owner, counterpart, sc_prefix, search=False): # May also
 
             if search:
                 hbox:
-                    text "Search: " size res_font(16) color c_brown
+                    text _("Search: ") size res_font(16) color c_brown
                     input size res_font(16) color c_darkorange changed(MC.add_text_filter)
 
             if items:
@@ -1031,9 +1031,9 @@ screen item_list(items, owner, counterpart, sc_prefix, search=False): # May also
 
             else:
                 if MC.active_inv_filter:
-                    text "No items available (filters are on)." size res_font(14) color c_brown
+                    text _("No items available (filters are on).") size res_font(14) color c_brown
                 else:
-                    text "No items available." size res_font(14) color c_brown
+                    text _("No items available.") size res_font(14) color c_brown
 
         if items:
             $ start = page_offset
@@ -1090,7 +1090,7 @@ screen item_list(items, owner, counterpart, sc_prefix, search=False): # May also
                         else:
                             action SetLocalVariable("page", page+1)
 
-                hbox tooltip "Change item page":
+                hbox tooltip _("Change item page"):
                     if next:
                         xsize xres(180)
                     else:
@@ -1222,7 +1222,7 @@ screen item_profile(it):
                 text ""
 
             if isinstance(it, ItemInstance) and it in MC.items and not it.sellable:
-                text "Unsellable" italic True xalign 0.5
+                text _("Unsellable") italic True xalign 0.5
                 text ""
 
             hbox spacing 10 xalign 0.5:
@@ -1271,9 +1271,9 @@ screen inventory(char, counterpart=None):
                             action (Show("item_profile", it=eq, transition = dissolve), SetVariable("owner", char), SetVariable("counterpart", counterpart), SetVariable("selected_item", eq), SetField(MC, "active_inv_filter", [slot]), SelectedIf(slot in MC.active_inv_filter))
                             tooltip __(eq.description)
                         else:
-                            text "Empty" size res_font(12) italic True xalign 0.5 yalign 0.5
+                            text _("Empty") size res_font(12) italic True xalign 0.5 yalign 0.5
                             action (SetField(MC, "active_inv_filter", [slot]), SelectedIf(slot in MC.active_inv_filter))
-                            tooltip "No item is equipped to this slot."
+                            tooltip _("No item is equipped to this slot.")
 
 
 screen item_filter(filters=inventory_filters["base"]):
@@ -1298,7 +1298,7 @@ screen item_filter(filters=inventory_filters["base"]):
                         add "filter_all" xalign 0.5 yalign 0.5
                     else:
                         add "filter_all_unselect" xalign 0.5 yalign 0.5
-                    tooltip "Show all items."
+                    tooltip _("Show all items.")
 
 
 #### END OF BK ITEMS FILE ####

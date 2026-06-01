@@ -178,10 +178,10 @@ screen hm_forbidden_tags():
 
                 if _tag in persistent.forbidden_tags:
                     action (RemoveFromSet(persistent.forbidden_tags, _tag), SelectedIf(False))
-                    tooltip "The game will attempt not to display such pictures (Warning: This may not be 100% successful and doesn't change story events that use these fetishes.)"
+                    tooltip _("The game will attempt not to display such pictures (Warning: This may not be 100% successful and doesn't change story events that use these fetishes.)")
                 else:
                     action (AddToSet(persistent.forbidden_tags, _tag), SelectedIf(True))
-                    tooltip "The game will display such pictures."
+                    tooltip _("The game will display such pictures.")
 
 screen hm_girl_statuses():
     default current_status = ""
