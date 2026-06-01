@@ -17,7 +17,7 @@
 ## SYSTEM ##
 
 define wl_padding = int(config.screen_height*0.21)
-define bk_error = Character("ERROR", color=c_red)
+define bk_error = Character(_("ERROR"), color=c_red)
 
 # Special emoji characters not supported by the new font
 define emo_heart = "{font=DejaVuSans.ttf}❤{/font}"
@@ -43,25 +43,25 @@ define maid = DynamicCharacter("maid_name", color = c_softpurple, image = "maid"
 
 
 ## GIO ##
-define gio = Character("Gio", color = c_orange, image = "gio", window_left_padding=wl_padding)
+define gio = Character(_("Gio"), color = c_orange, image = "gio", window_left_padding=wl_padding)
 
 
 ## MISC ##
-define guard = Character("Guard", color= c_yellow, image = "guard", window_left_padding=wl_padding)
-define thug1 = Character("Thug", color= c_lightgreen, image = "thug1", window_left_padding=wl_padding)
-define thug2 = Character("Thug", color= c_red, image = "thug2", window_left_padding=wl_padding)
-define thug3 = Character("Thug", color= c_lightred, image = "thug", window_left_padding=wl_padding)
-define drogon = Character("Drogon", color= c_darkred, image = "drogon", window_left_padding=wl_padding)
-define security = Character("Security", color= c_white, image = "security", window_left_padding=wl_padding)
-define security_breach = Character("Security", color= c_red, image = "security_breach", window_left_padding=wl_padding)
-define programmer = Character("BK Programmer", color = c_lightblue, image="crying_man", window_left_padding=wl_padding)
+define guard = Character(_("Guard"), color= c_yellow, image = "guard", window_left_padding=wl_padding)
+define thug1 = Character(_("Thug"), color= c_lightgreen, image = "thug1", window_left_padding=wl_padding)
+define thug2 = Character(_("Thug"), color= c_red, image = "thug2", window_left_padding=wl_padding)
+define thug3 = Character(_("Thug"), color= c_lightred, image = "thug", window_left_padding=wl_padding)
+define drogon = Character(_("Drogon"), color= c_darkred, image = "drogon", window_left_padding=wl_padding)
+define security = Character(_("Security"), color= c_white, image = "security", window_left_padding=wl_padding)
+define security_breach = Character(_("Security"), color= c_red, image = "security_breach", window_left_padding=wl_padding)
+define programmer = Character(_("BK Programmer"), color = c_lightblue, image="crying_man", window_left_padding=wl_padding)
 
 
 #### SCREEN CHARACTERS ####
 
-define slavegirl1 = Character("Slave girl", color = c_crimson, image = "slavegirl1", window_left_padding=wl_padding)
-define slavegirl2 = Character("Slave girl", color = c_violet, image = "slavegirl2", window_left_padding=wl_padding)
-define shopgirl = Character("Merchant", color = c_pink, image = "shopgirl", window_left_padding=wl_padding)
+define slavegirl1 = Character(_("Slave girl"), color = c_crimson, image = "slavegirl1", window_left_padding=wl_padding)
+define slavegirl2 = Character(_("Slave girl"), color = c_violet, image = "slavegirl2", window_left_padding=wl_padding)
+define shopgirl = Character(_("Merchant"), color = c_pink, image = "shopgirl", window_left_padding=wl_padding)
 define jobgirl = DynamicCharacter("jobgirl_name", color = c_firered, image = "jobgirl", window_left_padding=wl_padding)
 define bast = DynamicCharacter("bast_name", color = c_copper, image = "bast", window_left_padding=wl_padding)
 define banker = DynamicCharacter("banker_name", color=c_turquoise, image = "banker", window_left_padding=wl_padding)
@@ -81,29 +81,29 @@ define gina = DynamicCharacter("gina_name", color=c_softpurple, image="gina", wi
 
 define riche = DynamicCharacter("riche_name", color=c_azure, image="riche", window_left_padding=wl_padding)
 define ramias = DynamicCharacter("ramias_name", color=c_lightgrey, image="ramias", window_left_padding=wl_padding)
-define giftgirl = Character("Gift Shop Girl", color=c_hotpink, image="giftgirl", window_left_padding=wl_padding)
+define giftgirl = Character(_("Gift Shop Girl"), color=c_hotpink, image="giftgirl", window_left_padding=wl_padding)
 define gurigura = DynamicCharacter("gurigura_name", color=c_yellow, image="gurigura", window_left_padding=wl_padding)
 define katryn = DynamicCharacter("katryn_name", color=c_lightgreen, image="katryn", window_left_padding=wl_padding)
 define today = DynamicCharacter("today_name", color=c_turquoise, image="today", window_left_padding=wl_padding)
 define yesterday = DynamicCharacter("yesterday_name", color=c_turquoise, image="yesterday", window_left_padding=wl_padding)
 
 # Extras
-define templar = Character("Knight templar", color=c_lightgrey, image="templar", window_left_padding=wl_padding)
-define initiate = Character("Initiate", color=c_white, image="initiate", window_left_padding=wl_padding)
-define initiate1 = Character("First initiate", color=c_lightblue, image="initiate", window_left_padding=wl_padding)
-define initiate2 = Character("Second initiate", color=c_lightred, image="initiate", window_left_padding=wl_padding)
-define spirit = Character("Dark spirit", color=c_white, image="spirit", window_left_padding=wl_padding)
-define milkmaid = Character("Milkmaid", color=c_pink, image="milkmaid", window_left_padding=wl_padding)
-define relative = Character("Willow's relative", color=c_copper)
-define blood1 = Character("Blonde officer", color=c_yellow, image="blood1", window_left_padding=wl_padding)
-define blood2 = Character("Auburn officer", color=c_copper, image="blood2", window_left_padding=wl_padding)
+define templar = Character(_("Knight templar"), color=c_lightgrey, image="templar", window_left_padding=wl_padding)
+define initiate = Character(_("Initiate"), color=c_white, image="initiate", window_left_padding=wl_padding)
+define initiate1 = Character(_("First initiate"), color=c_lightblue, image="initiate", window_left_padding=wl_padding)
+define initiate2 = Character(_("Second initiate"), color=c_lightred, image="initiate", window_left_padding=wl_padding)
+define spirit = Character(_("Dark spirit"), color=c_white, image="spirit", window_left_padding=wl_padding)
+define milkmaid = Character(_("Milkmaid"), color=c_pink, image="milkmaid", window_left_padding=wl_padding)
+define relative = Character(_("Willow's relative"), color=c_copper)
+define blood1 = Character(_("Blonde officer"), color=c_yellow, image="blood1", window_left_padding=wl_padding)
+define blood2 = Character(_("Auburn officer"), color=c_copper, image="blood2", window_left_padding=wl_padding)
 
 #### STORY (Chapter 1) ####
 
 define character.kosmo = DynamicCharacter("kosmo_name", color=c_gold, image = "kosmo", window_left_padding=wl_padding)
 define sergeant = DynamicCharacter("sergeant_name", color=c_copper, image = "sergeant", window_left_padding=wl_padding)
 define maya = DynamicCharacter("maya_name", color=c_firered, image = "maya", window_left_padding=wl_padding)
-define roz = Character("Roz", color=c_firered, image = "roz", window_left_padding=wl_padding)
+define roz = Character(_("Roz"), color=c_firered, image = "roz", window_left_padding=wl_padding)
 define lieutenant = DynamicCharacter("lieutenant_name", color = "#C06A45", image = "lieutenant", window_left_padding=wl_padding)
 define renza = DynamicCharacter("renza_name", color=c_orange_pink, image = "renza", window_left_padding=wl_padding)
 define satella = DynamicCharacter("satella_name", color=c_copper, image = "satella", window_left_padding=wl_padding)
@@ -120,74 +120,74 @@ define suzume = DynamicCharacter("suzume_name", color=c_lightblue, image = "suzu
 define narika = DynamicCharacter("narika_name", color=c_hotpink, image = "narika", window_left_padding=wl_padding)
 define mizuki = DynamicCharacter("mizuki_name", color=c_azure, image = "mizuki", window_left_padding=wl_padding)
 define haruka = DynamicCharacter("haruka_name", color=c_yellow, image = "haruka", window_left_padding=wl_padding)
-define kunoichi = Character("Kunoichi", color=c_red, image = "kunoichi", window_left_padding=wl_padding)
-define papa_apprentice = Character("Apprentice", color=c_softpurple, image = "papa_apprentice", window_left_padding=wl_padding)
-define papa = Character("Papa Freak", color=c_lightblue, image = "papa", window_left_padding=wl_padding)
+define kunoichi = Character(_("Kunoichi"), color=c_red, image = "kunoichi", window_left_padding=wl_padding)
+define papa_apprentice = Character(_("Apprentice"), color=c_softpurple, image = "papa_apprentice", window_left_padding=wl_padding)
+define papa = Character(_("Papa Freak"), color=c_lightblue, image = "papa", window_left_padding=wl_padding)
 define mask = DynamicCharacter("mask_name", color=c_copper, image = "mask", window_left_padding=wl_padding)
-define hokoma_warrior = Character("Fierce Woman", color=c_prune, image = "hokoma_warrior")
-define magical_girl = Character("Strange Girl", color=c_emerald, image = "magical_girl")
-define girl_scientist = Character("Nerdy Girl", color=c_firered, image = "girl_scientist")
+define hokoma_warrior = Character(_("Fierce Woman"), color=c_prune, image = "hokoma_warrior")
+define magical_girl = Character(_("Strange Girl"), color=c_emerald, image = "magical_girl")
+define girl_scientist = Character(_("Nerdy Girl"), color=c_firered, image = "girl_scientist")
 
 #### STORY (Chapter 3) ####
 define chaos = DynamicCharacter("chaos_name", color=c_lightmagenta, image = "chaos", window_left_padding=wl_padding)
-define scribe = Character("Kenshin's Scribe", color=c_grey_blue, image = "scribe", window_left_padding=wl_padding)
-define warden = Character("Prison Warden", color=c_firered, image = "warden", window_left_padding=wl_padding)
-define hound_knight = Character("Knight leader", color=c_darkred, image = "hound_leader", window_left_padding=wl_padding)
-define noroi_leader = Character("Noroi leader", color=c_darkred, image = "noroi_leader", window_left_padding=wl_padding)
-define subaru = Character("Subaru", color=c_lavender, image = "subaru", window_left_padding=wl_padding)
-define receptionist = Character("MagicU Representative", color=c_lavender, image = "receptionist", window_left_padding=wl_padding)
+define scribe = Character(_("Kenshin's Scribe"), color=c_grey_blue, image = "scribe", window_left_padding=wl_padding)
+define warden = Character(_("Prison Warden"), color=c_firered, image = "warden", window_left_padding=wl_padding)
+define hound_knight = Character(_("Knight leader"), color=c_darkred, image = "hound_leader", window_left_padding=wl_padding)
+define noroi_leader = Character(_("Noroi leader"), color=c_darkred, image = "noroi_leader", window_left_padding=wl_padding)
+define subaru = Character(_("Subaru"), color=c_lavender, image = "subaru", window_left_padding=wl_padding)
+define receptionist = Character(_("MagicU Representative"), color=c_lavender, image = "receptionist", window_left_padding=wl_padding)
 define shizuka = DynamicCharacter("shizuka_name", color=c_emerald, image = "shizuka", window_left_padding=wl_padding)
-define golem = Character("Golem guard", color=c_firered, image = "golem", window_left_padding=wl_padding)
+define golem = Character(_("Golem guard"), color=c_firered, image = "golem", window_left_padding=wl_padding)
 
 #### MISC. CHARACTERS ####
 
 ## GENERIC EVENT CHARACTERS ##
 
-define ev_girl1 = Character("Girl", color= c_pink)
-define ev_girl2 = Character("Girl", color= c_gold)
-define ev_girl3 = Character("Girl", color= c_lightblue)
-define ev_girl4 = Character("Girl", color= c_white)
-define woman = Character("Woman", color= c_violet)
-define slave = Character("Slave girl", color= c_softpurple)
-define warrior = Character("Warrior", color= c_firered)
-define yuna = Character("Yuna", color= c_lightgrey)
-define man = Character("Man", color= c_cream)
-define man2 = Character("Other Man", color= c_lightgrey)
-define customer = Character("Customer", color= c_lightbrown)
-define passerby = Character("Passerby", color = c_lightblue)
-define demonette = Character("Demonette", color = c_softpurple, image = "demonette", window_left_padding=res_portrait_size)
-define demon = Character("Demon", color=c_lightred, image = "red_demon", window_left_padding=res_portrait_size)
-define hanny = Character("Hanny", color=c_lightbrown, image = "hanny", window_left_padding=res_portrait_size)
+define ev_girl1 = Character(_("Girl"), color= c_pink)
+define ev_girl2 = Character(_("Girl"), color= c_gold)
+define ev_girl3 = Character(_("Girl"), color= c_lightblue)
+define ev_girl4 = Character(_("Girl"), color= c_white)
+define woman = Character(_("Woman"), color= c_violet)
+define slave = Character(_("Slave girl"), color= c_softpurple)
+define warrior = Character(_("Warrior"), color= c_firered)
+define yuna = Character(_("Yuna"), color= c_lightgrey)
+define man = Character(_("Man"), color= c_cream)
+define man2 = Character(_("Other Man"), color= c_lightgrey)
+define customer = Character(_("Customer"), color= c_lightbrown)
+define passerby = Character(_("Passerby"), color = c_lightblue)
+define demonette = Character(_("Demonette"), color = c_softpurple, image = "demonette", window_left_padding=res_portrait_size)
+define demon = Character(_("Demon"), color=c_lightred, image = "red_demon", window_left_padding=res_portrait_size)
+define hanny = Character(_("Hanny"), color=c_lightbrown, image = "hanny", window_left_padding=res_portrait_size)
 
 ## STORY EXTRAS ##
 
-define hmas_girl = Character("Mysterious girl", color = c_emerald, image = "hmas", window_left_padding=wl_padding)
-define sewer_woman = Character("Woman", color=c_grey_blue, image = "sewer_woman", window_left_padding=wl_padding)
+define hmas_girl = Character(_("Mysterious girl"), color = c_emerald, image = "hmas", window_left_padding=wl_padding)
+define sewer_woman = Character(_("Woman"), color=c_grey_blue, image = "sewer_woman", window_left_padding=wl_padding)
 
-define mthug = Character("Masked thug", color=c_white)
-define captain_voice = Character("Captain's voice", color=c_emerald)
-define judge = Character("Judge", color=c_lightgreen, image = "judge", window_left_padding=wl_padding)
-define knight = Character("Knight", color=c_softpurple, image = "knight", window_left_padding=wl_padding)
-define lost_soldier = Character("Soldier", color=c_copper, image = "lost_soldier", window_left_padding=wl_padding)
+define mthug = Character(_("Masked thug"), color=c_white)
+define captain_voice = Character(_("Captain's voice"), color=c_emerald)
+define judge = Character(_("Judge"), color=c_lightgreen, image = "judge", window_left_padding=wl_padding)
+define knight = Character(_("Knight"), color=c_softpurple, image = "knight", window_left_padding=wl_padding)
+define lost_soldier = Character(_("Soldier"), color=c_copper, image = "lost_soldier", window_left_padding=wl_padding)
 
-define raccoon = Character("Raccoon", color=c_yellow, image = "raccoon", window_left_padding=wl_padding)
-define akuma = Character("Akuma", color=c_steel, image = "blue_demon", window_left_padding=wl_padding)
-define gouki = Character("Gouki", color=c_lightred, image = "red_demon", window_left_padding=wl_padding)
-define rodrigo = Character("Rodrigo", color=c_lightgrey, image = "skeleton", window_left_padding=wl_padding)
+define raccoon = Character(_("Raccoon"), color=c_yellow, image = "raccoon", window_left_padding=wl_padding)
+define akuma = Character(_("Akuma"), color=c_steel, image = "blue_demon", window_left_padding=wl_padding)
+define gouki = Character(_("Gouki"), color=c_lightred, image = "red_demon", window_left_padding=wl_padding)
+define rodrigo = Character(_("Rodrigo"), color=c_lightgrey, image = "skeleton", window_left_padding=wl_padding)
 
-define receptionist = Character("MagicU Receptionist", color=c_lightgrey, image = "receptionist", window_left_padding=wl_padding)
+define receptionist = Character(_("MagicU Receptionist"), color=c_lightgrey, image = "receptionist", window_left_padding=wl_padding)
 
 
 ## CONTRACT CHARACTERS ##
 
-define young_sailor = Character("Sailor", color=c_copper, image = "sailor", window_left_padding=wl_padding)
-define party_girl = Character("Party girl", color=c_lightred, image = "party_girl", window_left_padding=wl_padding)
-define nun = Character("Nun", color=c_grey_blue, image = "nun", window_left_padding=wl_padding)
-define kimono_lady = Character("Festival lady", color=c_softpurple, image = "kimono_lady", window_left_padding=wl_padding)
-define young_maid = Character("Young maid", color=c_yellow, image = "young_maid", window_left_padding=wl_padding)
-define diplomat = Character("Lady diplomat", color=c_orange_pink, image = "diplomat", window_left_padding=wl_padding)
-define sorceress = Character("Sorceress", color=c_lightgrey, image = "sorceress", window_left_padding=wl_padding)
-define naked_lady = Character("Naked lady", color=c_cream, image = "naked_lady", window_left_padding=wl_padding)
+define young_sailor = Character(_("Sailor"), color=c_copper, image = "sailor", window_left_padding=wl_padding)
+define party_girl = Character(_("Party girl"), color=c_lightred, image = "party_girl", window_left_padding=wl_padding)
+define nun = Character(_("Nun"), color=c_grey_blue, image = "nun", window_left_padding=wl_padding)
+define kimono_lady = Character(_("Festival lady"), color=c_softpurple, image = "kimono_lady", window_left_padding=wl_padding)
+define young_maid = Character(_("Young maid"), color=c_yellow, image = "young_maid", window_left_padding=wl_padding)
+define diplomat = Character(_("Lady diplomat"), color=c_orange_pink, image = "diplomat", window_left_padding=wl_padding)
+define sorceress = Character(_("Sorceress"), color=c_lightgrey, image = "sorceress", window_left_padding=wl_padding)
+define naked_lady = Character(_("Naked lady"), color=c_cream, image = "naked_lady", window_left_padding=wl_padding)
 
 
 ####                            ####
