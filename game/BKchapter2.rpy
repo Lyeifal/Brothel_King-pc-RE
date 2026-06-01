@@ -4,7 +4,7 @@
 
 label c2_sewer_girl_returns(): # Happens after Chapter 2 if Sewers girl was protected. Sets up the event to happen in 10 days.
 
-    $ calendar.set_alarm(calendar.time+6, StoryEvent(label = "sewer_girl_returns", type = "morning"))
+    $ calendar.set_alarm(calendar.time+6, StoryEvent(label = __("sewer_girl_returns"), type = "morning"))
 
     return
 
@@ -301,7 +301,7 @@ label c2_intro():
 
     # SHOPS #
 
-    $ calendar.set_alarm(calendar.time+2, Event(label = "c2_princess_letter"))
+    $ calendar.set_alarm(calendar.time+2, Event(label = __("c2_princess_letter")))
     $ game.set_task("Get started with your new brothel.", "story")
 
     scene black with fade
@@ -2379,7 +2379,7 @@ label c2_palace_intrusion:
     "You must investigate the murders in town."
 
     $ game.set_task("Find out more about the murders of high-ranking officials.")
-    $ calendar.set_alarm(calendar.time+1, Event(label = "c2_gio_message"))
+    $ calendar.set_alarm(calendar.time+1, Event(label = __("c2_gio_message")))
 
     return
 
@@ -4944,7 +4944,7 @@ label c2_suzume_morning_visit_menu():
     "Suzume is gone, like the wind..."
 
     $ game.set_task("Get the onsen, and wait for Suzume.")
-    $ daily_events.append(StoryEvent(label = "c2_suzume_onsen", chapter=2, room="onsen", date=calendar.time + 3))
+    $ daily_events.append(StoryEvent(label = __("c2_suzume_onsen"), chapter=2, room="onsen", date=calendar.time + 3))
 
     return
 
@@ -5552,18 +5552,18 @@ label ninja_intercept(ninja, special): # Used when hunt successful (3 hits) or d
 
         if not story_flags["first ninja met"]:
             $ story_flags["first ninja met"] = True
-            $ calendar.set_alarm(calendar.time+3, StoryEvent(label = "c2_homura_okiya2", type = "night"))
+            $ calendar.set_alarm(calendar.time+3, StoryEvent(label = __("c2_homura_okiya2"), type = "night"))
 
         if NPC_narika.flags["hunt stage"] >=1 and NPC_mizuki.flags["hunt stage"] >=1 and NPC_haruka.flags["hunt stage"] >=1:
             if not story_flags["all ninjas met"]:
                 $ story_flags["all ninjas met"] = True
-                $ calendar.set_alarm(calendar.time+2, StoryEvent(label = "c2_palace_visit1", type = "morning"))
+                $ calendar.set_alarm(calendar.time+2, StoryEvent(label = __("c2_palace_visit1"), type = "morning"))
 
         if NPC_narika.flags["hunt stage"] >=2 and NPC_mizuki.flags["hunt stage"] >=2 and NPC_haruka.flags["hunt stage"] >=2:
             if not story_flags["all ninjas met twice"]:
                 $ story_flags["all ninjas met twice"] = True
-                $ calendar.set_alarm(calendar.time+2, StoryEvent(label = "c2_palace_visit2", type = "morning"))
-                $ calendar.set_alarm(calendar.time+2, StoryEvent(label = "c2_kosmo_new_recruit", type = "night"))
+                $ calendar.set_alarm(calendar.time+2, StoryEvent(label = __("c2_palace_visit2"), type = "morning"))
+                $ calendar.set_alarm(calendar.time+2, StoryEvent(label = __("c2_kosmo_new_recruit"), type = "night"))
 
     $ unlock_achievement("c2 kunoichi")
 
@@ -6258,7 +6258,7 @@ label intercept_narika():
 
                             $ game.set_task("The Void Kunoichi: Wait for Suzume to report on Narika's arrest.", "story3", 3)
                             $ NPC_narika.location = None
-                            $ calendar.set_alarm(calendar.time+1, StoryEvent(label = "c3_narika_arrested", type="morning"))
+                            $ calendar.set_alarm(calendar.time+1, StoryEvent(label = __("c3_narika_arrested"), type="morning"))
 
                         "Wait, let me reconsider":
                             you "Wait, perhaps there's another course of action we can take."
@@ -6302,7 +6302,7 @@ label intercept_narika():
                             $ game.set_task("The Void Kunoichi: Break Narika's will at the brothel.", "story3", blocking=False)
                             $ NPC_narika.location = None
 
-                            $ calendar.set_alarm(calendar.time, StoryEvent(label = "c3_narika_captured", type="night"))
+                            $ calendar.set_alarm(calendar.time, StoryEvent(label = __("c3_narika_captured"), type="night"))
 
                         "Wait, let me reconsider":
                             you "Wait, perhaps there's another course of action we can take."
@@ -7075,7 +7075,7 @@ label intercept_mizuki():
 
                 call receive_item(mizuki_kimono, msg="You have recovered %s.", use_article=False) from _call_receive_item_4
 
-                $ calendar.set_alarm(calendar.time+7, StoryEvent(label = "mizuki_onsen", type = "night"))
+                $ calendar.set_alarm(calendar.time+7, StoryEvent(label = __("mizuki_onsen"), type = "night"))
 
             else:
                 "You swim hard to reach the kimono, but it seems to stay ahead of you no matter what you do. Soon, you feel your stamina diminish."
@@ -7222,7 +7222,7 @@ label intercept_mizuki():
 
                             $ game.set_task("The Water Kunoichi: Wait for Suzume to report on Mizuki's arrest.", "story2", 3)
                             $ NPC_mizuki.location = None
-                            $ calendar.set_alarm(calendar.time+1, StoryEvent(label = "c3_mizuki_arrested", type="morning"))
+                            $ calendar.set_alarm(calendar.time+1, StoryEvent(label = __("c3_mizuki_arrested"), type="morning"))
 
                         "Wait, let me reconsider":
                             you "Wait, perhaps there's another course of action we can take."
@@ -7267,7 +7267,7 @@ label intercept_mizuki():
                             $ game.set_task("The Water Kunoichi: Break Mizuki's will at the brothel.", "story2", blocking=False)
                             $ NPC_mizuki.location = None
 
-                            $ calendar.set_alarm(calendar.time, StoryEvent(label = "c3_mizuki_captured", type="night"))
+                            $ calendar.set_alarm(calendar.time, StoryEvent(label = __("c3_mizuki_captured"), type="night"))
 
                         "Wait, let me reconsider":
                             you "Wait, perhaps there's another course of action we can take."
@@ -8328,7 +8328,7 @@ label intercept_haruka():
 
                             $ game.set_task("The Earth Kunoichi: Wait for Suzume to report on Haruka's arrest.", "story", 3)
                             $ NPC_haruka.location = None
-                            $ calendar.set_alarm(calendar.time+1, StoryEvent(label = "c3_haruka_arrested", type="morning"))
+                            $ calendar.set_alarm(calendar.time+1, StoryEvent(label = __("c3_haruka_arrested"), type="morning"))
 
                         "Wait, let me reconsider":
                             you "Wait, perhaps there's another course of action we can take."
@@ -8377,7 +8377,7 @@ label intercept_haruka():
                             $ game.set_task("The Earth Kunoichi: Break Haruka's will at the brothel.", "story", blocking=False)
                             $ NPC_haruka.location = None
 
-                            $ calendar.set_alarm(calendar.time, StoryEvent(label = "c3_haruka_captured", type="night"))
+                            $ calendar.set_alarm(calendar.time, StoryEvent(label = __("c3_haruka_captured"), type="night"))
 
                         "Wait, let me reconsider":
                             you "Wait, perhaps there's another course of action we can take."
@@ -8408,7 +8408,7 @@ label c2_palace_visit1(): # Happens after all Kunoichi have been met once
     "As you finish breakfast, Sill brings you a letter bearing the royal seal."
 
     call screen letter(header = "Meeting request",
-                    message = "Dear " + MC.name + ",\n\nI hope this letter finds you well, and that you have made some progress on our mutual subject of interest. Please meet me at the Palace for debriefing at your earliest convenience.",
+                    message = __("Dear ") + MC.name + ",\n\nI hope this letter finds you well, and that you have made some progress on our mutual subject of interest. Please meet me at the Palace for debriefing at your earliest convenience.",
                     signature = "Princess Kurohime")
 
     you "Another invitation from the Princess... She must be wondering how my investigation is going."

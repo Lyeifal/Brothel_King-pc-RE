@@ -320,7 +320,7 @@ label c1_meet_kosmo:
 
     scene black with fade
 
-    $ calendar.set_alarm(calendar.time+7+dice(3), StoryEvent(label = "kosmo_returns", type = "morning"))
+    $ calendar.set_alarm(calendar.time+7+dice(3), StoryEvent(label = __("kosmo_returns"), type = "morning"))
 
     return
 
@@ -844,7 +844,7 @@ label c1_visit_watchtower:
 
     scene black with fade
 
-    $ calendar.set_alarm(calendar.time+1, Event(label = "c1_guards_visit"))
+    $ calendar.set_alarm(calendar.time+1, Event(label = __("c1_guards_visit")))
 
     $ game.set_task("Wait for your license to be delivered.")
 
@@ -860,7 +860,7 @@ label c1_guards_visit:
 
         sill sad "What??? We need that [blist[2].cost] gold, fast!"
 
-        $ calendar.set_alarm(calendar.time+1, Event(label = "c1_guards_visit"))
+        $ calendar.set_alarm(calendar.time+1, Event(label = __("c1_guards_visit")))
 
         return
 
@@ -4700,7 +4700,7 @@ label c1_satella_intro():
 
     $ story_add_event("c1_captain_meeting")
     if MC.god == "Shalia":
-        $ calendar.set_alarm(calendar.time+1, StoryEvent(label = "shalia1", type = "morning"))
+        $ calendar.set_alarm(calendar.time+1, StoryEvent(label = __("shalia1"), type = "morning"))
 
     "Go to the {b}watchtower{/b} and confront the infamous captain of the city guard."
 
@@ -6050,7 +6050,7 @@ label c1_trial:
 
     call advance_to_chapter(2) from _call_advance_to_chapter
 
-    $ calendar.set_alarm(calendar.time+10, StoryEvent(label = "satella_letter", type = "morning"))
+    $ calendar.set_alarm(calendar.time+10, StoryEvent(label = __("satella_letter"), type = "morning"))
 
     return
 
