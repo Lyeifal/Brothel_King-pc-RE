@@ -86,7 +86,7 @@ label jobgirl_0():
 
     ## choice menu 1) yes 2) no
     menu:
-        _("My slave Sill"):
+        "My slave Sill":
             you "There is one, my first slave, Sill; I don't let anyone put their hands on her, she's mine only!"
 
             jobgirl "I see. So, even a pimp can have a heart after all. Interesting..."

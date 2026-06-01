@@ -1069,7 +1069,7 @@ label security(working_girls, ev_type=None): # Happens when the threat level ove
                     menu:
                         "What do you want to do with her?"
 
-                        _("Keep her as a slave"):                            $ girl = enemy_general
+                        "Keep her as a slave":                            $ girl = enemy_general
                             $ brothel.reset_threat() # Sanity check in case acquire_girl doesn't return
 
                             you "I will now keep you as my pet. It's only fair that you work here to rebuild the damage you caused."
@@ -1779,7 +1779,7 @@ label kidnap_rescue(girl):
     menu:
         "Do you want to try and rescue [girl.fullname] now?"
 
-        _("Yes"):            $ MC.interactions -= 1
+        "Yes":            $ MC.interactions -= 1
         "No":
             $ city_events.append(StoryEvent(label = __("kidnap_rescue"), call_args = [girl], location = selected_location.name, AP_cost=0))
             return
@@ -2002,7 +2002,7 @@ label kidnap_rescue(girl):
             menu:
                 "You do not have enough room to welcome [girl.fullname] back to the brothel."
 
-                _("Let her stay in an inn until tomorrow for 50 gold"):                    $ come_back = 1
+                "Let her stay in an inn until tomorrow for 50 gold":                    $ come_back = 1
                     $ MC.gold -= 50
                     play sound s_cash
 
@@ -2054,7 +2054,7 @@ label girl_come_back(girl):
         menu:
             "[girl.fullname] returns today. You do not have enough room to welcome her back to the brothel."
 
-            _("Let her stay in an inn until tomorrow for 50 gold"):                $ come_back = 1
+            "Let her stay in an inn until tomorrow for 50 gold":                $ come_back = 1
                 $ MC.gold -= 50
                 play sound s_cash
 

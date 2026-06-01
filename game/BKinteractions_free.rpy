@@ -589,7 +589,7 @@ label free_flirt_sex_experience(girl):
     menu:
         "What do you tell her?"
 
-        _("I'm waiting for the right person"):            $ norollback()
+        "I'm waiting for the right person":            $ norollback()
             you "It might sound silly, but I am waiting for the right person..."
 
             # Will she believe you?
@@ -1042,7 +1042,7 @@ label free_girl_friend(girl):
 
         "What do you tell her?"
 
-        _("Tell the truth"):
+        "Tell the truth":
             $ norollback()
 
             $ girl.MC_lied = False

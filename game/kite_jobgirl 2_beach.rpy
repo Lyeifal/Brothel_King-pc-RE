@@ -406,7 +406,7 @@ label jobgirl_beach_4():
     "If not for her swimsuit, you could clearly see her cunt. You realize that she's teasing you, but you're not sure if she really wants it, or she's testing you. Maybe she's got ulterior motives."
 
     menu:
-        _("Why, yes, I'd like to fuck her"):
+        "Why, yes, I'd like to fuck her":
             you "Damn right I wanna fuck her, she's so hot! Are you going to help me or put a stick in my wheel?"
 
         "Who, me? Nope!":
@@ -457,7 +457,7 @@ label jobgirl_beach_4():
 
     menu:
 
-        _("Pull out your cock"):
+        "Pull out your cock":
             $ NPC_jobgirl.flags["anika_sex"] = True
 
             "Staring at her tits you feel your cock getting harder and harder, even knowing you're in a public and open place, you can't resist anymore."
@@ -594,7 +594,7 @@ label jobgirl_beach_4():
 
             menu:
 
-                _("Cum inside"):
+                "Cum inside":
                     anika "Are you going to fill me with your semen?"
 
                     you "Is it a problem for you?"

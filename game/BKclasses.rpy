@@ -7238,7 +7238,7 @@ init -2 python:
 init -2 python:
     class Achievement(object):
 
-        def __init__(self, title="My __("ool achievement:\nWell done, bro!"), description=__("No description"), pic="misc.webp", pic_path="UI/achievements/", level_nb=1, target="", requirements="default", requirements2=None, custom_titles=None, multi=1): # {1 : C, 2 : B, 3 : A, 4 : S, 5 : X}
+        def __init__(self, title="My cool achievement:\nWell done, bro!", description=__("No description"), pic="misc.webp", pic_path="UI/achievements/", level_nb=1, target="", requirements="default", requirements2=None, custom_titles=None, multi=1): # {1 : C, 2 : B, 3 : A, 4 : S, 5 : X}
 
             self.title = title
             self.description = description
