@@ -20,32 +20,33 @@
   - 启动时自动应用语言
 
 ### Phase 1: 核心系统文件 ✅
-- [x] **BKscreens.rpy** (414处修改)
+- [x] **BKscreens.rpy** (414+处修改)
   - 标记了 text、textbutton、tooltip、label、tt.Action 中的用户可见文本
-  - 使用 `_()` 包裹
 - [x] **BKinit_variables.rpy** (大量修改)
-  - 标记了 random_tips 列表项（421处）
-  - 标记了 diff_name、diff_description、diff_setting_name、diff_setting_description 字典值
-  - 标记了 MC_playerclass_description、MC_stat_description、god_description、alignment_description
-  - 标记了 farm_description 等农场相关描述
-  - 使用 `__()` 包裹
-  - 排除了代码标识符、图片名称、罗马数字
-- [x] **BKdeclarations.rpy** (72处修改)
-  - 标记了 Character() 和 DynamicCharacter() 中的角色名称
-  - 排除了变量引用（如 "MC.name"、"sill_name"）
+  - 标记了 random_tips 列表项
+  - 标记了 diff_name、diff_description、diff_setting_name、diff_setting_description
+  - 标记了 MC/god/alignment/farm 描述字典
+- [x] **BKdeclarations.rpy** (82处修改)
+  - 标记了 Character() 定义中的角色名称
+  - 标记了 CG Gallery 中的 UI 文本
 - [x] **BKitems.rpy / BKhelp.rpy / BKendday.rpy / BKscreen_home.rpy / BKcontent_menu.rpy**
   - 标记了 screen 语言中的 UI 文本
-- [x] **剧情和事件文件** (220处修改)
+- [x] **剧情和事件文件** (220+处修改)
   - 标记了 menu 选项文本
-  - 文件：BKintro.rpy, BKchapter1-3.rpy, BKevents.rpy, BKday_events.rpy, BKcity_events.rpy, BKstory_events.rpy, BKinteractions.rpy, BKinteractions_free.rpy
 - [x] **BKspells.rpy / BKperks.rpy / BKpowers.rpy / BKpostings.rpy** (274处修改)
-  - 标记了 Spell/Moon/Perk/Power 对象的 description 和 name 参数
-- [x] **BKclasses.rpy / BKfunctions.rpy / BKgirlclass.rpy / BKeven*.rpy** (79处修改)
+  - 标记了 Spell/Moon/Perk/Power 的 description 和 name 参数
+- [x] **BKclasses.rpy / BKfunctions.rpy / BKgirlclass.rpy** (79处修改)
   - 标记了 description/name 等关键字参数
+- [x] **BKmain.rpy / BKfarm.rpy / BKsecurity.rpy / BKstart.rpy / BKminigame.rpy**
+  - 标记了 menu 选项和 kwargs
+- [x] **BKsettings.rpy** (139处修改)
+  - 标记了 stat_name_dict 值
+- [x] **Mods/** (3处修改)
+  - 标记了模组中的 UI 文本
 
 ### Phase 2: 翻译模板与UI配置 ✅
 - [x] **生成翻译模板**
-  - 提取了 4321 处字符串，3395 个唯一字符串
+  - 提取了 4754 处字符串，**3727 个唯一字符串**
   - 生成了 `game/tl/english/strings.rpy`
   - 生成了 `game/tl/chinese/strings.rpy`
   - 生成了 `game/tl/chinese_simplified/strings.rpy`
@@ -56,74 +57,60 @@
   - 在 gui.rpy 添加了 CJK 字体配置注释
   - 在 translations.rpy 中添加了语言切换时的字体自动切换逻辑
 
+## 统计汇总
+
+| 类别 | 数量 |
+|------|------|
+| 修改的文件数 | 30+ |
+| Git 提交数 | 15+ |
+| 提取的字符串位置 | 4754 |
+| 唯一可翻译字符串 | **3727** |
+| 已创建工具脚本 | 7 |
+
 ## 已创建的工具脚本
 
-### `game/tools/mark_translations.py`
-- **用途**: 标记 screen 语言中的可翻译字符串
-- **支持模式**: screen / python / auto
-- **标记规则**: text、textbutton、tooltip、label、tt.Action
+| 脚本 | 用途 |
+|------|------|
+| `mark_translations.py` | 标记 screen 语言中的可翻译字符串 |
+| `mark_lists.py` | 标记列表变量中的字符串项 |
+| `mark_dict_values.py` | 标记字典变量中的值（不标记键） |
+| `mark_characters.py` | 标记 Character() 定义中的角色名称 |
+| `mark_menus.py` | 标记 menu 选项文本 |
+| `mark_kwargs.py` | 标记函数调用中的 description/name 等参数 |
+| `extract_translations.py` | 提取所有标记字符串，生成 Ren'Py 翻译文件 |
 
-### `game/tools/mark_lists.py`
-- **用途**: 标记特定列表变量中的字符串项
-- **默认目标**: random_tips, tip_list
+## 使用说明
 
-### `game/tools/mark_dict_values.py`
-- **用途**: 标记特定字典变量中的值（不标记键）
-- **默认目标**: diff_name, diff_description 等
+### 添加翻译
+1. 打开 `game/tl/chinese/strings.rpy`（或对应的语言文件）
+2. 在 `new ""` 中填入翻译文本
+3. 示例：
+   ```renpy
+   old "Hello"
+   new "你好"
+   ```
 
-### `game/tools/mark_characters.py`
-- **用途**: 标记 Character() 定义中的角色名称
-- **排除**: 变量引用（如 "MC.name"）
+### 添加CJK字体
+1. 下载支持中文的字体（推荐：Noto Sans CJK SC）
+2. 将字体文件放入 `game/` 目录
+3. 在 `game/gui.rpy` 中取消注释 CJK 字体配置行
+4. 修改字体文件名以匹配实际文件
 
-### `game/tools/mark_menus.py`
-- **用途**: 标记 menu 选项文本
+### 切换语言
+1. 在游戏中打开 Options / Preferences
+2. 选择 Language 下的选项
+3. 游戏会自动切换语言和字体
 
-### `game/tools/mark_kwargs.py`
-- **用途**: 标记函数调用中的 description/name 等关键字参数
+## 已知限制与待办事项
 
-### `game/tools/extract_translations.py`
-- **用途**: 提取所有 `_()` 和 `__()` 字符串，生成 Ren'Py 翻译文件
+### 仍需处理的内容
+- [ ] **剧情对话文本**: Ren'Py 的 say 语句会自动生成 translate 块，不需要手动 `_()`。但大量剧情文本（intro, chapter1-3, events, dialogue）需要实际的翻译工作。
+- [ ] **表达式中的字符串**: 如 `text " (%s mood)" % plus_text(...)` 需要手动重构为 `text __(" (%s mood)") % plus_text(...)`
+- [ ] **图片内嵌文本**: 如果游戏中有文字内嵌在图片中，需要重新制图
+- [ ] **CJK字体文件**: 需要下载并配置中文字体文件
 
-## 下一步行动（待完成）
-
-### 高优先级
-1. **下载并配置CJK字体**
-   - 推荐字体：Noto Sans CJK SC (思源黑体)
-   - 将字体文件放入 game/ 目录
-   - 取消注释 gui.rpy 中的 CJK 字体配置
-
-2. **继续标记剩余文件**
-   - BKdialogue.rpy（对话系统，约986KB）
-   - BKmain.rpy（主循环中的用户可见字符串）
-   - BKfarm.rpy（农场相关文本）
-   - BKsecurity.rpy（安全系统文本）
-   - Mods/ 目录下的模组文本
-
-3. **测试翻译系统**
-   - 启动游戏，验证语言切换功能
-   - 检查中文是否正确显示
-   - 测试翻译文件是否正确加载
-
-### 中优先级
-4. **剧情文本处理**
-   - Ren'Py 的 say 语句会自动生成 translate 块，通常不需要手动 `_()`
-   - 但需要检查 narrator 文本和特殊对话格式
-   - 对于大量剧情文本，建议使用 Ren'Py Launcher 的 Generate Translations 功能
-
-5. **翻译工作流优化**
-   - 提供翻译者指南
-   - 设置翻译更新脚本
-   - 建立翻译贡献流程
-
-## Git提交历史
-- `Initial commit`: 添加项目文件、gitignore、翻译框架
-- `Add translation directory structure`: 创建tl目录和占位文件
-- `i18n: Mark UI strings in BKscreens.rpy`: 414处UI文本标记
-- `i18n: Mark translatable strings in BKinit_variables.rpy`: 系统变量和描述文本标记
-- `i18n: Mark character names in BKdeclarations.rpy`: 72处角色名称标记
-- `i18n: Mark screen UI strings in...`: 多个文件的screen文本标记
-- `i18n: Mark menu option texts in剧情 and event files`: 220处菜单选项标记
-- `i18n: Mark description/name kwargs in spells, perks, powers, postings`: 274处参数标记
-- `i18n: Mark description/name kwargs in classes, functions, events`: 79处参数标记
-- `i18n: Generate translation template files with 3395 unique strings`
-- `i18n: Add language selector in preferences and CJK font configuration`
+### 建议的后续步骤
+1. 下载 Noto Sans CJK SC 字体并配置
+2. 启动游戏测试语言切换功能
+3. 开始实际翻译工作（从最常用的UI文本开始）
+4. 使用 Ren'Py Launcher 的 Generate Translations 功能补充对话文本的翻译模板
