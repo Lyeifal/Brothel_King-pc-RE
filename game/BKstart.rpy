@@ -34,8 +34,7 @@ label start:
         menu:
             "Choose a starting mode"
 
-            "Normal mode - See intro":
-                jump intro
+            _("Normal mode - See intro"):                jump intro
 
             "Normal mode - No intro":
                 pass
@@ -54,8 +53,7 @@ label start:
         menu:
             "Would you like to see the intro?"
 
-            "Yes":
-                jump intro
+            _("Yes"):                jump intro
 
             "No":
                 pass
@@ -131,8 +129,7 @@ label choose_difficulty():
                 if starting_chapter > 1 and (NGP_settings_dict["free girl challenge"].get() or NGP_settings_dict["training challenge"].get()) and not debug_mode:
                     menu:
                         "You have activated a challenge. You cannot start at a later chapter if you want to complete the challenge."
-                        "Do the challenge and start at chapter 1":
-                            $ starting_chapter = 1
+                        _("Do the challenge and start at chapter 1"):                            $ starting_chapter = 1
 
                         "Cancel the challenge":
                             $ NGP_settings_dict["free girl challenge"].reset()
@@ -282,46 +279,46 @@ label init_game(quick=False):
 
         # NPC OBJECTS / TRAINERS #
 
-        NPC_sill = NPC(name = "Sill", portrait = "side sill happy", trainer_description = "'{i}Another cum stain? *sigh* Give me that.{/i}'\n\n{b}The Caretaker{/b}\nGrants free upkeep to a random girl every night.", effects = Effect("special", "free upkeep", 1, scope = "brothel"))
-        NPC_sad_sill = NPC(name = "Sad Sill", portrait = "side sill sad") #, trainer_description = "bla", effects = Effect("change", "charm", 40, scope = "brothel"))
+        NPC_sill = NPC(name = __("Sill"), portrait = "side sill happy", trainer_description = "'{i}Another cum stain? *sigh* Give me that.{/i}'\n\n{b}The Caretaker{/b}\nGrants free upkeep to a random girl every night.", effects = Effect("special", "free upkeep", 1, scope = "brothel"))
+        NPC_sad_sill = NPC(name = __("Sad Sill"), portrait = "side sill sad") #, trainer_description = "bla", effects = Effect("change", "charm", 40, scope = "brothel"))
         NPC_gio = NPC()
         NPC_kosmo = NPC()
-        NPC_sergeant = NPC(name = "Kashiv", char = sergeant)
-        NPC_roz = NPC(name = "Roz", char = roz)
-        NPC_maya = NPC(name = "Maya", portrait = "side maya", trainer_description = "'{i}I'd better check the perimeter. Again.{/i}'\n\n{b}Ever vigilant{/b}\nBrothel threat builds up 33 per cent slower.", effects = Effect("boost", "threat build up", -0.33, scope = "brothel"))
-        NPC_renza = NPC(name = "Renza", portrait = "side renza", bg = 'bg thieves_guild room', trainer_description = "'{i}This purse seems heavy. Let me relieve you...{/i}'\n\n{b}Sleight of hand{/b}\nAll girls can pick pockets. Girls with the {i}Thief{/i} trait never get caught.", effects = Effect("special", "pickpocket", 1, scope = "brothel"))
-        NPC_satella = NPC(name = "Satella", portrait = "side satella", bg = "bg shalia_temple", trainer_description = "'{i}Isn't it fun to play in the shadows? Fufufu...{/i}'\n\n{b}Dark priestess{/b}\nFear increases faster.", effects = Effect("boost", "fear gains", 1, scope = "world"))
-        NPC_captain = NPC(name = "Farah", char=captain, portrait = "side captain", bg = 'bg vault', trainer_description = "'{i}If you wanna get on top, you must be ready to do anything. ANYTHING!{/i}'\n\n{b}Immoral{/b}\nGirls will grow used to anal and fetish acts faster.", effects = (Effect("change", "anal preferences changes", 25, scope = "brothel"), Effect("change", "fetish preferences changes", 25, scope = "brothel")))
-        NPC_lieutenant = NPC(name = "Lydie", char = lieutenant, bg = "bg guard_office", portrait = "side lieutenant", trainer_description = "'{i}Do you want me to make an example of you? I didn't think so.{/i}'\n\n{b}Harsh discipline{/b}\nGirls are less likely to refuse to work.", effects = Effect("boost", "obedience tests", 0.1, scope = "brothel"))
-        NPC_gizel = NPC(name = "Gizel", defense = 3, portrait = "side gizel smirk", bg = 'bg farm', trainer_description = "'{i}I love the smell of despair in the morning.{/i}'\n\n{b}Bad mojo{/b}\nEarn more mojo from fear interactions in and out of the farm.", effects = Effect("boost", "all mojo gains", 0.5))
-        NPC_banker = NPC(name = "Banker", portrait = "side banker", bg = 'bg banking_quarter')
-        NPC_riche = NPC(name = "Riche", char=riche, portrait = "side riche", bg = 'bg botanical_garden', item_types=["Flower"])
-        NPC_ramias = NPC(name = "Ramias", char=ramias, portrait = "side ramias", bg = 'bg arena_front', item_types=["Weapon"], trainer_description = "'{i}Stick 'em with the pointy end!{/i}'\n\n{b}Martial training{/b}\nAll girls receive +2 to their personal defense.", effects = Effect("change", "defense", 2, scope = "brothel"))
-        NPC_gurigura = NPC(name = "Gurigura", char=gurigura, portrait = "side gurigura", bg = 'bg prison', item_types=["Toy", "Food", "Supplies"])
-        NPC_katryn = NPC(name = "Katryn", char=katryn, portrait = "side katryn", bg = 'bg magic_university', item_types=["Ring", "Necklace"])
-        NPC_giftgirl = NPC(name = "Gift Shop Girl", char=giftgirl, portrait = "side giftgirl", bg = 'bg exotic_emporium', item_types=["Gift", "Misc"])
-        NPC_twins = NPC(name = "Today", char=today, portrait = "side today", bg = 'bg pilgrim_road', item_types=["Dress", "Accessory"])
-        NPC_stella = NPC(name="Stella", char=stella, portrait = "side stella", bg = 'bg harbor', minion_type="stallion", trainer_description = "'{i}Your weak training techniques are no match for the Blood Islands.{/i}'\n\n{b}Intensive Farming{/b}\nIncreases the efficiency of all Farm sexual training.", effects = Effect("boost", "farm preference increase", 0.5, scope = "farm"))
-        NPC_goldie = NPC(name="Goldie", char=goldie, portrait = "side goldie", bg = 'bg farmland', minion_type="beast", trainer_description = "'{i}I read it in a book... *blush*{/i}'\n\n{b}Technique{/b}\nGirls will grow used to service and sex acts faster.", effects = (Effect("change", "service preferences changes", 25, scope = "brothel"), Effect("change", "sex preferences changes", 25, scope = "brothel")))
-        NPC_willow = NPC(name="Willow", char=willow, portrait = "side willow", bg = 'bg sewers', minion_type="monster")
-        NPC_gina = NPC(name="Gina", char=gina, portrait = "side gina", bg = 'bg junkyard', minion_type="machine")
-        NPC_bast = NPC(name="Bast", char=bast, portrait = "side bast", bg = 'bg market', trainer_description = "'{i}Gold is only one of the many resources that can be traded in Zan.{/i}'\n\n{b}Resourceful{/b}\nPart of your brothel's income is converted to random resources.", effects = [Effect("special", "resources as income", 1.0, scope = "brothel"), Effect("boost", "income", -0.2, scope = "brothel")])
-        NPC_jobgirl = NPC(name="Scarlet", char=jobgirl, bg = "bg town")
-        NPC_kuro = NPC(name="Kurohime", char=kuro)
-        NPC_homura = NPC(name="Homura", char=homura)
-        NPC_mask = NPC(name="Shirohito", char=mask)
-        NPC_taxgirl = NPC(name="Taxgirl", char=taxgirl, portrait = "side taxgirl", trainer_description = "'{i}Just expense the lobster and champagne... And give me some more.{/i}'\n\n{b}Tax Deductible{/b}\nShields part of your income against taxes every night.", effects = [Effect("boost", "taxable net income", -0.05, scope = "brothel")])
+        NPC_sergeant = NPC(name = __("Kashiv"), char = sergeant)
+        NPC_roz = NPC(name = __("Roz"), char = roz)
+        NPC_maya = NPC(name = __("Maya"), portrait = "side maya", trainer_description = "'{i}I'd better check the perimeter. Again.{/i}'\n\n{b}Ever vigilant{/b}\nBrothel threat builds up 33 per cent slower.", effects = Effect("boost", "threat build up", -0.33, scope = "brothel"))
+        NPC_renza = NPC(name = __("Renza"), portrait = "side renza", bg = 'bg thieves_guild room', trainer_description = "'{i}This purse seems heavy. Let me relieve you...{/i}'\n\n{b}Sleight of hand{/b}\nAll girls can pick pockets. Girls with the {i}Thief{/i} trait never get caught.", effects = Effect("special", "pickpocket", 1, scope = "brothel"))
+        NPC_satella = NPC(name = __("Satella"), portrait = "side satella", bg = "bg shalia_temple", trainer_description = "'{i}Isn't it fun to play in the shadows? Fufufu...{/i}'\n\n{b}Dark priestess{/b}\nFear increases faster.", effects = Effect("boost", "fear gains", 1, scope = "world"))
+        NPC_captain = NPC(name = __("Farah"), char=captain, portrait = "side captain", bg = 'bg vault', trainer_description = "'{i}If you wanna get on top, you must be ready to do anything. ANYTHING!{/i}'\n\n{b}Immoral{/b}\nGirls will grow used to anal and fetish acts faster.", effects = (Effect("change", "anal preferences changes", 25, scope = "brothel"), Effect("change", "fetish preferences changes", 25, scope = "brothel")))
+        NPC_lieutenant = NPC(name = __("Lydie"), char = lieutenant, bg = "bg guard_office", portrait = "side lieutenant", trainer_description = "'{i}Do you want me to make an example of you? I didn't think so.{/i}'\n\n{b}Harsh discipline{/b}\nGirls are less likely to refuse to work.", effects = Effect("boost", "obedience tests", 0.1, scope = "brothel"))
+        NPC_gizel = NPC(name = __("Gizel"), defense = 3, portrait = "side gizel smirk", bg = 'bg farm', trainer_description = "'{i}I love the smell of despair in the morning.{/i}'\n\n{b}Bad mojo{/b}\nEarn more mojo from fear interactions in and out of the farm.", effects = Effect("boost", "all mojo gains", 0.5))
+        NPC_banker = NPC(name = __("Banker"), portrait = "side banker", bg = 'bg banking_quarter')
+        NPC_riche = NPC(name = __("Riche"), char=riche, portrait = "side riche", bg = 'bg botanical_garden', item_types=["Flower"])
+        NPC_ramias = NPC(name = __("Ramias"), char=ramias, portrait = "side ramias", bg = 'bg arena_front', item_types=["Weapon"], trainer_description = "'{i}Stick 'em with the pointy end!{/i}'\n\n{b}Martial training{/b}\nAll girls receive +2 to their personal defense.", effects = Effect("change", "defense", 2, scope = "brothel"))
+        NPC_gurigura = NPC(name = __("Gurigura"), char=gurigura, portrait = "side gurigura", bg = 'bg prison', item_types=["Toy", "Food", "Supplies"])
+        NPC_katryn = NPC(name = __("Katryn"), char=katryn, portrait = "side katryn", bg = 'bg magic_university', item_types=["Ring", "Necklace"])
+        NPC_giftgirl = NPC(name = __("Gift Shop Girl"), char=giftgirl, portrait = "side giftgirl", bg = 'bg exotic_emporium', item_types=["Gift", "Misc"])
+        NPC_twins = NPC(name = __("Today"), char=today, portrait = "side today", bg = 'bg pilgrim_road', item_types=["Dress", "Accessory"])
+        NPC_stella = NPC(name=__("Stella"), char=stella, portrait = "side stella", bg = 'bg harbor', minion_type="stallion", trainer_description = "'{i}Your weak training techniques are no match for the Blood Islands.{/i}'\n\n{b}Intensive Farming{/b}\nIncreases the efficiency of all Farm sexual training.", effects = Effect("boost", "farm preference increase", 0.5, scope = "farm"))
+        NPC_goldie = NPC(name=__("Goldie"), char=goldie, portrait = "side goldie", bg = 'bg farmland', minion_type="beast", trainer_description = "'{i}I read it in a book... *blush*{/i}'\n\n{b}Technique{/b}\nGirls will grow used to service and sex acts faster.", effects = (Effect("change", "service preferences changes", 25, scope = "brothel"), Effect("change", "sex preferences changes", 25, scope = "brothel")))
+        NPC_willow = NPC(name=__("Willow"), char=willow, portrait = "side willow", bg = 'bg sewers', minion_type="monster")
+        NPC_gina = NPC(name=__("Gina"), char=gina, portrait = "side gina", bg = 'bg junkyard', minion_type="machine")
+        NPC_bast = NPC(name=__("Bast"), char=bast, portrait = "side bast", bg = 'bg market', trainer_description = "'{i}Gold is only one of the many resources that can be traded in Zan.{/i}'\n\n{b}Resourceful{/b}\nPart of your brothel's income is converted to random resources.", effects = [Effect("special", "resources as income", 1.0, scope = "brothel"), Effect("boost", "income", -0.2, scope = "brothel")])
+        NPC_jobgirl = NPC(name=__("Scarlet"), char=jobgirl, bg = "bg town")
+        NPC_kuro = NPC(name=__("Kurohime"), char=kuro)
+        NPC_homura = NPC(name=__("Homura"), char=homura)
+        NPC_mask = NPC(name=__("Shirohito"), char=mask)
+        NPC_taxgirl = NPC(name=__("Taxgirl"), char=taxgirl, portrait = "side taxgirl", trainer_description = "'{i}Just expense the lobster and champagne... And give me some more.{/i}'\n\n{b}Tax Deductible{/b}\nShields part of your income against taxes every night.", effects = [Effect("boost", "taxable net income", -0.05, scope = "brothel")])
 
         # Chapter 2 Kunoichi
-        NPC_suzume = NPC(name="Suzume", char=suzume, portrait = "side suzume", trainer_description = "'{i}Found another spy yesterday... He tried to stab me, it was hilarious! Kukukuku...{/i}'\n\n{b}Night Patrol{/b}\n33%% chance of twarting security events (does not reset threat level).", effects = [Effect("special", "security block", 1.0, 0.33, scope = "brothel")])
-        NPC_narika = NPC(name="Narika", char=narika)
-        NPC_mizuki = NPC(name="Mizuki", char=mizuki)
-        NPC_haruka = NPC(name="Haruka", char=haruka)
+        NPC_suzume = NPC(name=__("Suzume"), char=suzume, portrait = "side suzume", trainer_description = "'{i}Found another spy yesterday... He tried to stab me, it was hilarious! Kukukuku...{/i}'\n\n{b}Night Patrol{/b}\n33%% chance of twarting security events (does not reset threat level).", effects = [Effect("special", "security block", 1.0, 0.33, scope = "brothel")])
+        NPC_narika = NPC(name=__("Narika"), char=narika)
+        NPC_mizuki = NPC(name=__("Mizuki"), char=mizuki)
+        NPC_haruka = NPC(name=__("Haruka"), char=haruka)
 
-        NPC_carpenter = NPC(name="Iulia", char=carpenter)
-        NPC_freak = NPC(name="Papa Freak", char=papa)
-        NPC_kenshin = NPC(name="Lady Kenshin", char=kenshin, portrait = "side kenshin", bg = "bg palace")
-        NPC_knight = NPC(name="Knight", char = knight, bg = "bg palace")
+        NPC_carpenter = NPC(name=__("Iulia"), char=carpenter)
+        NPC_freak = NPC(name=__("Papa Freak"), char=papa)
+        NPC_kenshin = NPC(name=__("Lady Kenshin"), char=kenshin, portrait = "side kenshin", bg = "bg palace")
+        NPC_knight = NPC(name=__("Knight"), char = knight, bg = "bg palace")
 
 
     #### BROTHELS ####
@@ -341,10 +338,10 @@ label init_game(quick=False):
     #### FARM ####
 
         farm_installations = {
-                            "stables" : Installation(name = "stables", pic = "stables.webp", tags = ["big"], minions = [Minion("stallion", name="Bob", start=True)], minion_type = "stallion", skill = "libido", rank = 1),
-                            "pig stall" : Installation(name = "pig stall", pic = "pig stall.webp", tags = ["beast"], minion_type = "beast", skill = "obedience"),
-                            "monster den" : Installation(name = "monster den", pic = "monster den.webp", tags = ["monster"], minion_type = "monster", skill = "constitution"),
-                            "workshop" : Installation(name = "workshop", pic = "workshop.webp", tags = ["machine", "toy"], minion_type = "machine", skill = "sensitivity"),
+                            "stables" : Installation(name = __("stables"), pic = "stables.webp", tags = ["big"], minions = [Minion("stallion", name=__("Bob"), start=True)], minion_type = "stallion", skill = "libido", rank = 1),
+                            "pig stall" : Installation(name = __("pig stall"), pic = "pig stall.webp", tags = ["beast"], minion_type = "beast", skill = "obedience"),
+                            "monster den" : Installation(name = __("monster den"), pic = "monster den.webp", tags = ["monster"], minion_type = "monster", skill = "constitution"),
+                            "workshop" : Installation(name = __("workshop"), pic = "workshop.webp", tags = ["machine", "toy"], minion_type = "machine", skill = "sensitivity"),
                             }
         farm = Farm()
         init_powers()
@@ -485,15 +482,15 @@ label init_game(quick=False):
         # DISTRICT LIST #
 
         district_dict = {
-                "slum" : District("The Slums", 1, 1, 15, ((beggar, 80), (thug, 20)), pic = "districts/slums.webp", description = "The Slums are located on the outskirts of Zan, beyond the defensive wall. It is home to the Zani rabble: new arrivals, refugees, paupers, spice addicts... It is also rumored to host the hideout of the Thieves Guild, who worship the Shadow Goddess Shalia."),
-                "docks" : District("The Docks", 2, 2, 40, ((thug, 10), (laborer, 10), (sailor, 40), (commoner, 25), (craftsman, 15)), room = ["tavern"], pic = "districts/docks.webp", description = "The docks are home to rowdy sailors and dodgy pirates sheltering from the treacherous seas. With seamen all around, no wonder there is a thriving market for cheap whores near the port."),
-                "warehouse" : District("The Warehouse", 2, 2, 40, ((thug, 10), (laborer, 20), (sailor, 20), (commoner, 30), (craftsman, 20)), ["strip club"], pic = "districts/warehouse.webp", description = "The warehouse is the industrial part of Zan, where all kinds of craftsmen and day laborer come to look for work. Its streets are buzzing with trade and activities during the day, but dodgy at night."),
-                "gardens" : District("The Magic Gardens", 4, 3, 100, ((commoner, 5), (craftsman, 15), (bourgeois, 30), (guildmember, 30), (patrician, 20)), ["onsen"], pic = "districts/gardens.webp", description = "The gardens are where the magic-wielding locals gather to soak up mana after a long night of dangerous experiments. It is said some of those experiments occasionally escape..."),
-                "cathedra" : District("The Cathedra", 4, 3, 100, ((commoner, 5), (craftsman, 10), (bourgeois, 20), (guildmember, 35), (patrician, 30)), ["okiya"], pic = "districts/cathedra.webp", description = "The Cathedra is the holy center of the Arios order. Pilgrims, knights and priests rub elbows during prayers and rituals, while savvy merchants and bankers make a killing providing them with expensive service."),
-                "hold" : District("The King's Hold", 6, 4, 150, ((patrician, 20), (aristocrat, 50), (noble, 30)), "free", pic = "districts/final castle night.webp", description = "This is the center of power in Zan, where courtiers compete for power and the King's support. Behind the veneer of respectability and privilege, however, daggers are drawn... Beware.")
+                "slum" : District("The Slums", 1, 1, 15, ((beggar, 80), (thug, 20)), pic = "districts/slums.webp", description = __("The Slums are located on the outskirts of Zan, beyond the defensive wall. It is home to the Zani rabble: new arrivals, refugees, paupers, spice addicts... It is also rumored to host the hideout of the Thieves Guild, who worship the Shadow Goddess Shalia.")),
+                "docks" : District("The Docks", 2, 2, 40, ((thug, 10), (laborer, 10), (sailor, 40), (commoner, 25), (craftsman, 15)), room = ["tavern"], pic = "districts/docks.webp", description = __("The docks are home to rowdy sailors and dodgy pirates sheltering from the treacherous seas. With seamen all around, no wonder there is a thriving market for cheap whores near the port.")),
+                "warehouse" : District("The Warehouse", 2, 2, 40, ((thug, 10), (laborer, 20), (sailor, 20), (commoner, 30), (craftsman, 20)), ["strip club"], pic = "districts/warehouse.webp", description = __("The warehouse is the industrial part of Zan, where all kinds of craftsmen and day laborer come to look for work. Its streets are buzzing with trade and activities during the day, but dodgy at night.")),
+                "gardens" : District("The Magic Gardens", 4, 3, 100, ((commoner, 5), (craftsman, 15), (bourgeois, 30), (guildmember, 30), (patrician, 20)), ["onsen"], pic = "districts/gardens.webp", description = __("The gardens are where the magic-wielding locals gather to soak up mana after a long night of dangerous experiments. It is said some of those experiments occasionally escape...")),
+                "cathedra" : District("The Cathedra", 4, 3, 100, ((commoner, 5), (craftsman, 10), (bourgeois, 20), (guildmember, 35), (patrician, 30)), ["okiya"], pic = "districts/cathedra.webp", description = __("The Cathedra is the holy center of the Arios order. Pilgrims, knights and priests rub elbows during prayers and rituals, while savvy merchants and bankers make a killing providing them with expensive service.")),
+                "hold" : District("The King's Hold", 6, 4, 150, ((patrician, 20), (aristocrat, 50), (noble, 30)), "free", pic = "districts/final castle night.webp", description = __("This is the center of power in Zan, where courtiers compete for power and the King's support. Behind the veneer of respectability and privilege, however, daggers are drawn... Beware."))
                 }
 
-        endless_district = District("The King's Hold", chapter=7, rank = 5, diff = 200, pop = ((royal, 100),), room = ["tavern", "strip club", "onsen", "okiya"], pic = "districts/final castle.webp", description = "This is the center of power in Zan, where courtiers compete for power and the King's support. Behind the veneer of respectability and privilege, however, daggers are drawn... Beware.")
+        endless_district = District("The King's Hold", chapter=7, rank = 5, diff = 200, pop = ((royal, 100),), room = ["tavern", "strip club", "onsen", "okiya"], pic = "districts/final castle.webp", description = __("This is the center of power in Zan, where courtiers compete for power and the King's support. Behind the veneer of respectability and privilege, however, daggers are drawn... Beware."))
 
         all_districts = [district_dict[d] for d in ["slum", "warehouse", "docks", "gardens", "cathedra", "hold"]]
 
@@ -717,77 +714,77 @@ label init_game(quick=False):
                 "bis_introduction" : StoryEvent("bis_introduction", condition="has_bis"),
                 "group_introduction" : StoryEvent("group_introduction", condition="has_group"),
 
-                "farm_meet_gizel" : StoryEvent(label = "farm_meet_gizel", chapter = 1, chance = 0.5, location = "spice market", condition = None, not_condition = None, once = True),
-                "farm_meet_gizel2" : StoryEvent(label = "farm_meet_gizel2", chapter = 1, chance = 1.0, location = "junkyard", condition = None, not_condition = None, once = True),
-                "farm_go_with_gizel" : StoryEvent(label = "farm_go_with_gizel", chapter = 1, chance = 1.0, location = "farm", condition = None, not_condition = None, once = True),
-                "farm_found_a_place" : StoryEvent(label = "farm_found_a_place", chapter = 1, chance = 1.0, location = "junkyard", condition = None, not_condition = None, once = True),
-                "farm_gizel_introduction" : StoryEvent(label = "farm_gizel_introduction", chapter = 1, chance = 1.0, location = "farm", condition = None, not_condition = None, once = True),
-                "farm_meet_goldie" : StoryEvent(label = "farm_meet_goldie", chapter = 1, chance = 0.5, location = "farm", condition = None, not_condition = None, once = True, order=1),
-                "farm_meet_stella" : StoryEvent(label = "farm_meet_stella", chapter = 2, chance = 1.0, location = "harbor", condition = None, not_condition = None, once = True, order=1),
-                "farm_meet_willow" : StoryEvent(label = "farm_meet_willow", chapter = 1, chance = 1.0, location = "sewers", condition = None, not_condition = None, once = True, order=1),
-                "farm_meet_gina" : StoryEvent(label = "farm_meet_gina", chapter = 1, chance = 1.0, location = "junkyard", condition = None, not_condition = None, once = True, order=1),
-                "farm_activate_goldie" : StoryEvent(label = "farm_activate_goldie", chapter = 1, chance = 1.0, location = "farm", condition = None, not_condition = None, once = True),
-                "farm_second_monster" : StoryEvent(label = "farm_second_monster", chapter = 1, chance = 1.0, location = "farm", condition = None, not_condition = None, once = True),
+                "farm_meet_gizel" : StoryEvent(label = __("farm_meet_gizel"), chapter = 1, chance = 0.5, location = "spice market", condition = None, not_condition = None, once = True),
+                "farm_meet_gizel2" : StoryEvent(label = __("farm_meet_gizel2"), chapter = 1, chance = 1.0, location = "junkyard", condition = None, not_condition = None, once = True),
+                "farm_go_with_gizel" : StoryEvent(label = __("farm_go_with_gizel"), chapter = 1, chance = 1.0, location = "farm", condition = None, not_condition = None, once = True),
+                "farm_found_a_place" : StoryEvent(label = __("farm_found_a_place"), chapter = 1, chance = 1.0, location = "junkyard", condition = None, not_condition = None, once = True),
+                "farm_gizel_introduction" : StoryEvent(label = __("farm_gizel_introduction"), chapter = 1, chance = 1.0, location = "farm", condition = None, not_condition = None, once = True),
+                "farm_meet_goldie" : StoryEvent(label = __("farm_meet_goldie"), chapter = 1, chance = 0.5, location = "farm", condition = None, not_condition = None, once = True, order=1),
+                "farm_meet_stella" : StoryEvent(label = __("farm_meet_stella"), chapter = 2, chance = 1.0, location = "harbor", condition = None, not_condition = None, once = True, order=1),
+                "farm_meet_willow" : StoryEvent(label = __("farm_meet_willow"), chapter = 1, chance = 1.0, location = "sewers", condition = None, not_condition = None, once = True, order=1),
+                "farm_meet_gina" : StoryEvent(label = __("farm_meet_gina"), chapter = 1, chance = 1.0, location = "junkyard", condition = None, not_condition = None, once = True, order=1),
+                "farm_activate_goldie" : StoryEvent(label = __("farm_activate_goldie"), chapter = 1, chance = 1.0, location = "farm", condition = None, not_condition = None, once = True),
+                "farm_second_monster" : StoryEvent(label = __("farm_second_monster"), chapter = 1, chance = 1.0, location = "farm", condition = None, not_condition = None, once = True),
 
-                "c1_visit_watchtower" : StoryEvent(label = "c1_visit_watchtower", chapter = 1, chance = 1.0, location = "watchtower", condition = "c1_goal_reached", min_gold=1000, not_condition = None, once = True),
-                "c1_thieves_guild_tip" : StoryEvent(label = "c1_thieves_guild_tip", chapter = 1, type="city", chance = 0.25, not_condition = "c1_spice_market"),
-                "c1_spice_market_25" : StoryEvent(label = "c1_spice_market", chapter = 1, chance = 0.25, location = "spice market", condition = "c1_thieves_guild_tip"),
-                "c1_spice_market" : StoryEvent(label = "c1_spice_market", chapter = 1, chance = 1.0, location = "spice market", condition = "c1_thieves_guild_tip"),
-                "c1_sewers" : StoryEvent(label = "c1_sewers", chapter = 1, location = "sewers", condition = "c1_spice_market"),
-                "c1_sewers_return" : StoryEvent(label = "c1_sewers_return", chapter = 1, location = "sewers"),
-                "c1_thieves_guild_found" : StoryEvent(label = "c1_thieves_guild_found", chapter = 1, location = "thieves guild", not_condition = "c1_goal_reached"),
-                "c1_ask_guild_for_help" : StoryEvent(label = "c1_ask_guild_for_help", chapter = 1, location = "thieves guild", condition = "c1_robbed"),
-                "c1_satella_intro" : StoryEvent(label = "c1_satella_intro", chapter = 1, location = "thieves guild", condition = "c1_ask_guild_for_help"),
-                "c1_captain_meeting" : StoryEvent(label = "c1_captain_meeting", chapter = 1, location = "watchtower", condition = "c1_satella_intro"),
+                "c1_visit_watchtower" : StoryEvent(label = __("c1_visit_watchtower"), chapter = 1, chance = 1.0, location = "watchtower", condition = "c1_goal_reached", min_gold=1000, not_condition = None, once = True),
+                "c1_thieves_guild_tip" : StoryEvent(label = __("c1_thieves_guild_tip"), chapter = 1, type="city", chance = 0.25, not_condition = "c1_spice_market"),
+                "c1_spice_market_25" : StoryEvent(label = __("c1_spice_market"), chapter = 1, chance = 0.25, location = "spice market", condition = "c1_thieves_guild_tip"),
+                "c1_spice_market" : StoryEvent(label = __("c1_spice_market"), chapter = 1, chance = 1.0, location = "spice market", condition = "c1_thieves_guild_tip"),
+                "c1_sewers" : StoryEvent(label = __("c1_sewers"), chapter = 1, location = "sewers", condition = "c1_spice_market"),
+                "c1_sewers_return" : StoryEvent(label = __("c1_sewers_return"), chapter = 1, location = "sewers"),
+                "c1_thieves_guild_found" : StoryEvent(label = __("c1_thieves_guild_found"), chapter = 1, location = "thieves guild", not_condition = "c1_goal_reached"),
+                "c1_ask_guild_for_help" : StoryEvent(label = __("c1_ask_guild_for_help"), chapter = 1, location = "thieves guild", condition = "c1_robbed"),
+                "c1_satella_intro" : StoryEvent(label = __("c1_satella_intro"), chapter = 1, location = "thieves guild", condition = "c1_ask_guild_for_help"),
+                "c1_captain_meeting" : StoryEvent(label = __("c1_captain_meeting"), chapter = 1, location = "watchtower", condition = "c1_satella_intro"),
 
-                "c2_sewer_girl_returns" : StoryEvent(label = "c2_sewer_girl_returns", chapter = 2),
-                "c2_meet_carpenter" : StoryEvent(label = "meet_carpenter", location = "gallows"),
+                "c2_sewer_girl_returns" : StoryEvent(label = __("c2_sewer_girl_returns"), chapter = 2),
+                "c2_meet_carpenter" : StoryEvent(label = __("meet_carpenter"), location = "gallows"),
                 # "c2_intro" : StoryEvent(label = "c2_intro", chapter=2),
-                "c2_princess_visit1" : StoryEvent(label = "c2_princess_visit1", chapter=2, location = "stables", weekday="Saturday"),
-                "c2_princess_visit2" : StoryEvent(label = "c2_princess_visit2", chapter=2, weekday="Monday"),
-                "c2_gio_meeting" : StoryEvent(label = "c2_gio_meeting", chapter=2, location = "plaza"),
-                "c2_suzume_forest1" : StoryEvent(label = "c2_suzume_forest1", chapter=2, location = "farm"),
-                "c2_suzume_arena" : StoryEvent(label = "c2_suzume_arena", chapter=2, location = "arena"),
-                "c2_suzume_forest2" : StoryEvent(label = "c2_suzume_forest2", chapter=2, location = "farm"),
-                "c2_suzume_brothel" : StoryEvent(label = "c2_suzume_brothel", chapter=2, location = "seafront"),
-                "c2_homura_okiya1" : StoryEvent(label = "c2_homura_okiya1", type="night", chapter=2, room="okiya", chance=0.3),
-                "c2_narika_H1" : StoryEvent(label = "c2_narika_H1", type="night"),
+                "c2_princess_visit1" : StoryEvent(label = __("c2_princess_visit1"), chapter=2, location = "stables", weekday="Saturday"),
+                "c2_princess_visit2" : StoryEvent(label = __("c2_princess_visit2"), chapter=2, weekday="Monday"),
+                "c2_gio_meeting" : StoryEvent(label = __("c2_gio_meeting"), chapter=2, location = "plaza"),
+                "c2_suzume_forest1" : StoryEvent(label = __("c2_suzume_forest1"), chapter=2, location = "farm"),
+                "c2_suzume_arena" : StoryEvent(label = __("c2_suzume_arena"), chapter=2, location = "arena"),
+                "c2_suzume_forest2" : StoryEvent(label = __("c2_suzume_forest2"), chapter=2, location = "farm"),
+                "c2_suzume_brothel" : StoryEvent(label = __("c2_suzume_brothel"), chapter=2, location = "seafront"),
+                "c2_homura_okiya1" : StoryEvent(label = __("c2_homura_okiya1"), type="night", chapter=2, room="okiya", chance=0.3),
+                "c2_narika_H1" : StoryEvent(label = __("c2_narika_H1"), type="night"),
 
-                "c3_suzume_hint" : StoryEvent(label = "c3_suzume_hint", type="morning", chapter=3, condition="homura summoned"),
-                "c3_narika_MU_class" : StoryEvent(label = "c3_narika_MU_class", type = "morning", once=False),
-                "narika_break_test" : StoryEvent(label = "narika_break_test", type="night", once=False),
-                "haruka_break_test" : StoryEvent(label = "haruka_break_test", type="morning", once=False),
-                "homura_farm" : StoryEvent(label = "homura_farm", type="morning", once=False),
+                "c3_suzume_hint" : StoryEvent(label = __("c3_suzume_hint"), type="morning", chapter=3, condition="homura summoned"),
+                "c3_narika_MU_class" : StoryEvent(label = __("c3_narika_MU_class"), type = "morning", once=False),
+                "narika_break_test" : StoryEvent(label = __("narika_break_test"), type="night", once=False),
+                "haruka_break_test" : StoryEvent(label = __("haruka_break_test"), type="morning", once=False),
+                "homura_farm" : StoryEvent(label = __("homura_farm"), type="morning", once=False),
 
-                "meet_gurigura" : StoryEvent(label = "meet_gurigura", location = "prison", order=1),
-                "meet_ramias" : StoryEvent(label = "meet_ramias", location = "arena", order=1),
-                "meet_katryn" : StoryEvent(label = "meet_katryn", location = "magic university", order=1),
-                "meet_riche" : StoryEvent(label = "meet_riche", location = "botanical garden", order=1),
-                "meet_giftgirl" : StoryEvent(label = "meet_giftgirl", location = "exotic emporium", order=1),
-                "meet_twins" : StoryEvent(label = "meet_twins", location = "pilgrim road", order=1),
+                "meet_gurigura" : StoryEvent(label = __("meet_gurigura"), location = "prison", order=1),
+                "meet_ramias" : StoryEvent(label = __("meet_ramias"), location = "arena", order=1),
+                "meet_katryn" : StoryEvent(label = __("meet_katryn"), location = "magic university", order=1),
+                "meet_riche" : StoryEvent(label = __("meet_riche"), location = "botanical garden", order=1),
+                "meet_giftgirl" : StoryEvent(label = __("meet_giftgirl"), location = "exotic emporium", order=1),
+                "meet_twins" : StoryEvent(label = __("meet_twins"), location = "pilgrim road", order=1),
 
-                "satella_first_visit" : StoryEvent(label = "satella_first_visit", location = "thieves guild", chapter = 2),
-                "satella_visit" : StoryEvent(label = "satella_visit", location = "thieves guild", chapter = 2, once = False),
+                "satella_first_visit" : StoryEvent(label = __("satella_first_visit"), location = "thieves guild", chapter = 2),
+                "satella_visit" : StoryEvent(label = __("satella_visit"), location = "thieves guild", chapter = 2, once = False),
 
-                "wood_intro" : StoryEvent(label = "wood_intro", location = "shipyard", order=1),
-                "dye_intro" : StoryEvent(label = "dye_intro", location = "beach", order=1),
-                "leather_intro" : StoryEvent(label = "leather_intro", location = "stables", order=1),
-                "marble_intro" : StoryEvent(label = "marble_intro", location = "old ruins", order=1),
-                "silk_intro" : StoryEvent(label = "silk_intro", location = "hanging gardens", order=1),
-                "ore_intro" : StoryEvent(label = "ore_intro", location = "guild quarter", order=1),
-                "diamond_intro" : StoryEvent(label = "diamond_intro", location = "waterfalls", order=1),
+                "wood_intro" : StoryEvent(label = __("wood_intro"), location = "shipyard", order=1),
+                "dye_intro" : StoryEvent(label = __("dye_intro"), location = "beach", order=1),
+                "leather_intro" : StoryEvent(label = __("leather_intro"), location = "stables", order=1),
+                "marble_intro" : StoryEvent(label = __("marble_intro"), location = "old ruins", order=1),
+                "silk_intro" : StoryEvent(label = __("silk_intro"), location = "hanging gardens", order=1),
+                "ore_intro" : StoryEvent(label = __("ore_intro"), location = "guild quarter", order=1),
+                "diamond_intro" : StoryEvent(label = __("diamond_intro"), location = "waterfalls", order=1),
 
-                "willow fight" : StoryEvent(label = "willow_fight", chance = 0.04, once = False, room="onsen"),
-                "willow relative" : StoryEvent(label = "willow_relative", room="onsen"),
-                "gina research" : StoryEvent(label = "gina_research", location="prison"),
-                "jobgirl_beach" : StoryEvent(label = "jobgirl_beach", location="beach", once=False),
-                "MU_jobgirl" : StoryEvent(label = "MU_jobgirl", location="Magic guild", once=False),
+                "willow fight" : StoryEvent(label = __("willow_fight"), chance = 0.04, once = False, room="onsen"),
+                "willow relative" : StoryEvent(label = __("willow_relative"), room="onsen"),
+                "gina research" : StoryEvent(label = __("gina_research"), location="prison"),
+                "jobgirl_beach" : StoryEvent(label = __("jobgirl_beach"), location="beach", once=False),
+                "MU_jobgirl" : StoryEvent(label = __("MU_jobgirl"), location="Magic guild", once=False),
 
-                "stella_invitation" : StoryEvent(label = "stella_invitation", chance = 0.05, chapter=4),
-                "stella_secret1" : StoryEvent(label = "stella_secret1", location="guild quarter", condition_func=is_first_tuesday),
-                "stella_secret2" : StoryEvent(label = "stella_secret2", location="guild quarter", condition_func=is_first_tuesday, once=False),
+                "stella_invitation" : StoryEvent(label = __("stella_invitation"), chance = 0.05, chapter=4),
+                "stella_secret1" : StoryEvent(label = __("stella_secret1"), location="guild quarter", condition_func=is_first_tuesday),
+                "stella_secret2" : StoryEvent(label = __("stella_secret2"), location="guild quarter", condition_func=is_first_tuesday, once=False),
 
-                "slave_beach_event" : StoryEvent(label = "slave_beach_event", locations=beach_locations, seasons=["spring", "summer"], condition_func=slave_beach_event_happens, once=False),
+                "slave_beach_event" : StoryEvent(label = __("slave_beach_event"), locations=beach_locations, seasons=["spring", "summer"], condition_func=slave_beach_event_happens, once=False),
 
                 }
 
@@ -799,60 +796,60 @@ label init_game(quick=False):
     # NG+ Settings init
 
     $ NGP_settings = [ # Types: gold, resources, int, bool, plus, boost, dispenser, item, pref, girl
-        NGPSetting("starting chapter", "int", label="Headstart", values = range(1, 8), cost=[10*i for i in range(2, 8)], ttip="The chapter you will start the game at. Not compatible with challenges such as the free girl challenge."),
+        NGPSetting("starting chapter", "int", label=__("Headstart"), values = range(1, 8), cost=[10*i for i in range(2, 8)], ttip="The chapter you will start the game at. Not compatible with challenges such as the free girl challenge."),
 
-        NGPSetting("starting gold", "gold", label="Savings", values = [5, 15, 100, 999], cost = [2, 3, 4, 5], ttip="The amount of money you will start the game with (default: {image=img_gold} [starting_gold])."),
-        NGPSetting("starting resources", "resources", label="Resourceful", values= [20, 10, 5], cost = [15, 20, 25], ttip="Start the game with extra resources."),
-        NGPSetting("extractors Mk I", "int", label="Capitalist I", values= range(1, 4), cost = [25, 50, 75], ttip="Start the game with resource extractors Mk I."),
-        NGPSetting("extractors Mk II", "int", label="Capitalist II", values= range(1, 4), cost = [35, 70, 105], ttip="Start the game with resource extractors Mk II."),
+        NGPSetting("starting gold", "gold", label=__("Savings"), values = [5, 15, 100, 999], cost = [2, 3, 4, 5], ttip="The amount of money you will start the game with (default: {image=img_gold} [starting_gold])."),
+        NGPSetting("starting resources", "resources", label=__("Resourceful"), values= [20, 10, 5], cost = [15, 20, 25], ttip="Start the game with extra resources."),
+        NGPSetting("extractors Mk I", "int", label=__("Capitalist I"), values= range(1, 4), cost = [25, 50, 75], ttip="Start the game with resource extractors Mk I."),
+        NGPSetting("extractors Mk II", "int", label=__("Capitalist II"), values= range(1, 4), cost = [35, 70, 105], ttip="Start the game with resource extractors Mk II."),
 
-        NGPSetting("farm", "bool", label="Farm key", cost = 10, ttip="Unlock Gizel and the Farm from the beginning of the game."),
-        NGPSetting("carpenter", "bool", label="Carpenter wagon", cost = 10, ttip="Unlock Iulia the Carpenter from the beginning of the game."),
-        NGPSetting("minion merchants", "bool", label="Merchant connections (minions)", cost = 25, ttip="Unlock Stella, Goldie, Willow and Gina from the beginning of the game."),
-        NGPSetting("item merchants", "bool", label="Merchant connections (items)", cost = 100, ttip="Unlock Riche, Ramias, Gurigura, Katryn, the twins and the Giftshop girl from the beginning of the game."),
-        NGPSetting("all trainers", "bool", label="All trainers", cost = 100, ttip="Unlock all trainers from the beginning of the game."),
+        NGPSetting("farm", "bool", label=__("Farm key"), cost = 10, ttip="Unlock Gizel and the Farm from the beginning of the game."),
+        NGPSetting("carpenter", "bool", label=__("Carpenter wagon"), cost = 10, ttip="Unlock Iulia the Carpenter from the beginning of the game."),
+        NGPSetting("minion merchants", "bool", label=__("Merchant connections (minions)"), cost = 25, ttip="Unlock Stella, Goldie, Willow and Gina from the beginning of the game."),
+        NGPSetting("item merchants", "bool", label=__("Merchant connections (items)"), cost = 100, ttip="Unlock Riche, Ramias, Gurigura, Katryn, the twins and the Giftshop girl from the beginning of the game."),
+        NGPSetting("all trainers", "bool", label=__("All trainers"), cost = 100, ttip="Unlock all trainers from the beginning of the game."),
 
-        NGPSetting("strength", "plus", label="Strong", values= [1, 2, 3], cost = [15, 30, 45], ttip="Increase your character's Strength and Strength maximum beyond its base value (up to +3)."),
-        NGPSetting("spirit", "plus", label="Wise", values= [1, 2, 3], cost = [15, 30, 45], ttip="Increase your character's Spirit and Spirit maximum beyond its base value (up to +3)."),
-        NGPSetting("charisma", "plus", label="Funny", values= [1, 2, 3], cost = [15, 30, 45], ttip="Increase your character's Charisma and Charisma maximum beyond its base value (up to +3)."),
-        NGPSetting("speed", "plus", label="Quick", values= [1, 2, 3], cost = [30, 60, 90], ttip="Increase your character's Speed and Speed maximum beyond its base value (up to +3)."),
+        NGPSetting("strength", "plus", label=__("Strong"), values= [1, 2, 3], cost = [15, 30, 45], ttip="Increase your character's Strength and Strength maximum beyond its base value (up to +3)."),
+        NGPSetting("spirit", "plus", label=__("Wise"), values= [1, 2, 3], cost = [15, 30, 45], ttip="Increase your character's Spirit and Spirit maximum beyond its base value (up to +3)."),
+        NGPSetting("charisma", "plus", label=__("Funny"), values= [1, 2, 3], cost = [15, 30, 45], ttip="Increase your character's Charisma and Charisma maximum beyond its base value (up to +3)."),
+        NGPSetting("speed", "plus", label=__("Quick"), values= [1, 2, 3], cost = [30, 60, 90], ttip="Increase your character's Speed and Speed maximum beyond its base value (up to +3)."),
 
-        NGPSetting("good alignment", "bool", label="Nice guy", cost = 5, ttip="Start the game as a good person."),
-        NGPSetting("evil alignment", "bool", label="Bad boy", cost = 5, ttip="Start the game as an evil person."),
+        NGPSetting("good alignment", "bool", label=__("Nice guy"), cost = 5, ttip="Start the game as a good person."),
+        NGPSetting("evil alignment", "bool", label=__("Bad boy"), cost = 5, ttip="Start the game as an evil person."),
         # NGPSetting("polytheist", "bool", label="Polytheist", cost = 15, ttip="Unlock all deities and atheist story lines."),
         # NGPSetting("multiclass")
         # NGPSetting("new events")
 
-        NGPSetting("love generation", "boost", label="Gangster of love", values= [0.25, 0.5, 1.0], cost = [10, 25, 50], ttip="Gain love faster with slaves and free girls. Some people call you 'Maurice'."),
-        NGPSetting("fear generation", "boost", label="Actual gangster", values= [0.25, 0.5, 1.0], cost = [5, 15, 30], ttip="Gain fear faster with slaves."),
-        NGPSetting("xp generation", "boost", label="XP trainer", values= [0.25, 0.5, 1.0], cost = [5, 15, 45], ttip="Girls will gain XP faster."),
-        NGPSetting("jp generation", "boost", label="JP trainer", values= [0.25, 0.5, 1.0], cost = [5, 10, 30], ttip="Girls will gain JP faster."),
-        NGPSetting("prestige generation", "boost", label="Prestigious", values= [0.25, 0.5, 1.0], cost = [5, 15, 45], ttip="MC will earn Prestige faster."),
-        NGPSetting("training efficiency", "boost", label="Experienced", values= [0.5, 1.0, 2.0], cost = [15, 30, 60], ttip="Train your girls significantly faster."),
+        NGPSetting("love generation", "boost", label=__("Gangster of love"), values= [0.25, 0.5, 1.0], cost = [10, 25, 50], ttip="Gain love faster with slaves and free girls. Some people call you 'Maurice'."),
+        NGPSetting("fear generation", "boost", label=__("Actual gangster"), values= [0.25, 0.5, 1.0], cost = [5, 15, 30], ttip="Gain fear faster with slaves."),
+        NGPSetting("xp generation", "boost", label=__("XP trainer"), values= [0.25, 0.5, 1.0], cost = [5, 15, 45], ttip="Girls will gain XP faster."),
+        NGPSetting("jp generation", "boost", label=__("JP trainer"), values= [0.25, 0.5, 1.0], cost = [5, 10, 30], ttip="Girls will gain JP faster."),
+        NGPSetting("prestige generation", "boost", label=__("Prestigious"), values= [0.25, 0.5, 1.0], cost = [5, 15, 45], ttip="MC will earn Prestige faster."),
+        NGPSetting("training efficiency", "boost", label=__("Experienced"), values= [0.5, 1.0, 2.0], cost = [15, 30, 60], ttip="Train your girls significantly faster."),
 
-        NGPSetting("tax reduction", "boost", label="Tax evasion", values= [0.15, 0.3, 0.5], cost = [50, 100, 150], ttip="Reduce your taxes thanks to the judicious application of offshore finance, political donations and elaborate voodoo curses."),
+        NGPSetting("tax reduction", "boost", label=__("Tax evasion"), values= [0.15, 0.3, 0.5], cost = [50, 100, 150], ttip="Reduce your taxes thanks to the judicious application of offshore finance, political donations and elaborate voodoo curses."),
 
-        NGPSetting("free girl", "dispenser", label="Young chemist", cost = [5, 20, 40], ttip="Produce Potions of Seduction (raises the relationship level with any free girl by one step)."),
-        NGPSetting("virginity", "dispenser", label="Young surgeon", cost = [10, 50, 100], ttip="Produce Balms of Restoration (restores a girl's virginity)."),
-        NGPSetting("sanity", "dispenser", label="Young therapist", cost = [10, 50, 100], ttip="Produce Incense of Bliss (restores some of a girl's sanity)."),
-        NGPSetting("interactions", "dispenser", label="Young drug lord", cost = [5, 20, 40], ttip="Produce Magic Powder (regain all AP)."),
-        NGPSetting("perks", "dispenser", label="Wyvern nest", cost = [25, 100, 250], ttip="Produce Wyvern eggs (+1 Perk points)."),
+        NGPSetting("free girl", "dispenser", label=__("Young chemist"), cost = [5, 20, 40], ttip="Produce Potions of Seduction (raises the relationship level with any free girl by one step)."),
+        NGPSetting("virginity", "dispenser", label=__("Young surgeon"), cost = [10, 50, 100], ttip="Produce Balms of Restoration (restores a girl's virginity)."),
+        NGPSetting("sanity", "dispenser", label=__("Young therapist"), cost = [10, 50, 100], ttip="Produce Incense of Bliss (restores some of a girl's sanity)."),
+        NGPSetting("interactions", "dispenser", label=__("Young drug lord"), cost = [5, 20, 40], ttip="Produce Magic Powder (regain all AP)."),
+        NGPSetting("perks", "dispenser", label=__("Wyvern nest"), cost = [25, 100, 250], ttip="Produce Wyvern eggs (+1 Perk points)."),
 
-        NGPSetting("autorest", "bool", label="Autorest", cost = 10, ttip="Receive a Vitals Scanner from the beginning of the game, allowing you to use autorest."),
-        NGPSetting("personality", "item", label="Personality reader", cost = [10, 20], ttip="Receive additional information on a girl's personality in your journal."),
-        NGPSetting("taste", "item", label="Taste reader", cost = [5, 15], ttip="Receive additional information on a girl's tastes in your journal."),
-        NGPSetting("fixation", "item", label="Fixation reader", cost = [5, 25], ttip="Receive additional information on a girl's sexual preferences in your journal."),
+        NGPSetting("autorest", "bool", label=__("Autorest"), cost = 10, ttip="Receive a Vitals Scanner from the beginning of the game, allowing you to use autorest."),
+        NGPSetting("personality", "item", label=__("Personality reader"), cost = [10, 20], ttip="Receive additional information on a girl's personality in your journal."),
+        NGPSetting("taste", "item", label=__("Taste reader"), cost = [5, 15], ttip="Receive additional information on a girl's tastes in your journal."),
+        NGPSetting("fixation", "item", label=__("Fixation reader"), cost = [5, 25], ttip="Receive additional information on a girl's sexual preferences in your journal."),
 
-        NGPSetting("naturist frequency", "boost", label="Hippie", values= [8, 16, 32], cost = [5, 10, 20], ttip="Increase the frequency of the 'Naturist' trait for all girls."),
+        NGPSetting("naturist frequency", "boost", label=__("Hippie"), values= [8, 16, 32], cost = [5, 10, 20], ttip="Increase the frequency of the 'Naturist' trait for all girls."),
         # NGPSetting("portal", "special", label="Portal", cost = 0, ttip="Unlock the girl portal early."),
-        NGPSetting("preferences1", "pref", label="Naked/Service preferences", values= [125, 250, 500], cost = [5, 15, 30], ttip="Increase base sexual preferences for Naked and Service for all girls."),
-        NGPSetting("preferences2", "pref", label="Sex/Anal preferences", values= [125, 250, 500], cost = [10, 25, 50], ttip="Increase base sexual preferences for Sex and Anal for all girls."),
-        NGPSetting("preferences3", "pref", label="Fetish/Bisexual/Group preferences", values= [125, 250, 500], cost = [15, 35, 70], ttip="Increase base sexual preferences for Fetish, Bisexual and Group for all girls."),
+        NGPSetting("preferences1", "pref", label=__("Naked/Service preferences"), values= [125, 250, 500], cost = [5, 15, 30], ttip="Increase base sexual preferences for Naked and Service for all girls."),
+        NGPSetting("preferences2", "pref", label=__("Sex/Anal preferences"), values= [125, 250, 500], cost = [10, 25, 50], ttip="Increase base sexual preferences for Sex and Anal for all girls."),
+        NGPSetting("preferences3", "pref", label=__("Fetish/Bisexual/Group preferences"), values= [125, 250, 500], cost = [15, 35, 70], ttip="Increase base sexual preferences for Fetish, Bisexual and Group for all girls."),
 
-        NGPSetting("girl", "girl rank", label="Starting girl", values= [2, 3, 4], cost = [50, 100, 200], ttip="Receive a free girl at the start with random stats."),
+        NGPSetting("girl", "girl rank", label=__("Starting girl"), values= [2, 3, 4], cost = [50, 100, 200], ttip="Receive a free girl at the start with random stats."),
 
-        NGPSetting("free girl challenge", "bool", label="Free girl challenge", cost = 50, ttip="Receive a new girl at the start of each month. The slavemarket will become inaccessible. Worth 100 crystals if you complete the game."),
-        NGPSetting("training challenge", "bool", label="No training challenge", cost = 50, ttip="The Farm becomes much more efficient, but you can no longer personally train your girls. Worth 200 crystals if you complete the game."),
+        NGPSetting("free girl challenge", "bool", label=__("Free girl challenge"), cost = 50, ttip="Receive a new girl at the start of each month. The slavemarket will become inaccessible. Worth 100 crystals if you complete the game."),
+        NGPSetting("training challenge", "bool", label=__("No training challenge"), cost = 50, ttip="The Farm becomes much more efficient, but you can no longer personally train your girls. Worth 200 crystals if you complete the game."),
         ]
 
     $ NGP_settings_dict = {v.name : v for v in NGP_settings}
@@ -884,15 +881,15 @@ label init_events(chapter=1):
             story_add_event(res + "_intro")
 
         # MISC #
-        calendar.set_alarm(333, Event(label = "hmas"))
+        calendar.set_alarm(333, Event(label = __("hmas")))
         story_add_event("slave_beach_event", "city")
 
         ## 2. CHAPTER EVENTS ##
 
         # Set-up story-quests for Mizuki
-        mizuki_questK = Quest("quest", name = __('Investigate Mizuki: Karkyr'), main_stat = 'Obedience', second_stat = 'Refinement', other_stats = None, tags = 'Story', description = "Explore Karkyr to discover the story of Mizuki", sound = s_mystery, commit_label = "mizuki_k_go", return_label = "mizuki_k_back")
+        mizuki_questK = Quest("quest", name = __('Investigate Mizuki: Karkyr'), main_stat = 'Obedience', second_stat = 'Refinement', other_stats = None, tags = 'Story', description = __("Explore Karkyr to discover the story of Mizuki"), sound = s_mystery, commit_label = "mizuki_k_go", return_label = "mizuki_k_back")
         mizuki_questK.set_to(2, Picture(path="NPC/Kunoichi/Mizuki/react.webp"), duration = 7, special = "Story", requirements = [("Obedience", 75)], pos_traits=None, neg_trait=None, gold=0, xp=750, rep=10)
-        mizuki_questW = Quest("quest", name = __('Investigate Mizuki: Westmarch'), main_stat = 'Obedience', second_stat = 'Charm', other_stats = None, tags = 'Story', description = "Explore Westmarch to discover the story of Mizuki", sound = s_mystery, commit_label = "mizuki_w_go", return_label = "mizuki_w_back")
+        mizuki_questW = Quest("quest", name = __('Investigate Mizuki: Westmarch'), main_stat = 'Obedience', second_stat = 'Charm', other_stats = None, tags = 'Story', description = __("Explore Westmarch to discover the story of Mizuki"), sound = s_mystery, commit_label = "mizuki_w_go", return_label = "mizuki_w_back")
         mizuki_questW.set_to(2, Picture(path="NPC/Kunoichi/Mizuki/intro.webp"), duration = 14, special = "Story", requirements = [("Obedience", 75)], pos_traits=None, neg_trait=None, gold=0, xp=1250, rep=15)
         
         if story_mode and not debug_mode:
@@ -901,9 +898,9 @@ label init_events(chapter=1):
             
             if chapter <= 1:
                 # STORY #
-                calendar.set_alarm(3, Event(label = "c1_gio_is_back"))
-                calendar.set_alarm(5, Event(label = "c1_meet_kosmo"))
-                calendar.set_alarm(8, Event(label = "c1_ambush"))
+                calendar.set_alarm(3, Event(label = __("c1_gio_is_back")))
+                calendar.set_alarm(5, Event(label = __("c1_meet_kosmo")))
+                calendar.set_alarm(8, Event(label = __("c1_ambush")))
                 story_add_event("c1_thieves_guild_tip", "city")
                 story_add_event("farm_meet_gizel")
                 story_add_event("farm_meet_goldie")

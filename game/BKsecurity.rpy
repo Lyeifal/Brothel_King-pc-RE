@@ -1069,8 +1069,7 @@ label security(working_girls, ev_type=None): # Happens when the threat level ove
                     menu:
                         "What do you want to do with her?"
 
-                        "Keep her as a slave":
-                            $ girl = enemy_general
+                        _("Keep her as a slave"):                            $ girl = enemy_general
                             $ brothel.reset_threat() # Sanity check in case acquire_girl doesn't return
 
                             you "I will now keep you as my pet. It's only fair that you work here to rebuild the damage you caused."
@@ -1764,7 +1763,7 @@ label kidnap_tip(girl): # Happens at the taverns location if a girl has been kid
         scene black with fade
 
         $ loc = rand_choice(game.get_available_locations())
-        $ city_events.append(StoryEvent(label = "kidnap_rescue", call_args = [girl], location = loc.name, AP_cost=0))
+        $ city_events.append(StoryEvent(label = __("kidnap_rescue"), call_args = [girl], location = loc.name, AP_cost=0))
 
         "The man showed you where to find [girl.fullname] near the {b}[loc.name]{/b}."
 
@@ -1780,10 +1779,9 @@ label kidnap_rescue(girl):
     menu:
         "Do you want to try and rescue [girl.fullname] now?"
 
-        "Yes":
-            $ MC.interactions -= 1
+        _("Yes"):            $ MC.interactions -= 1
         "No":
-            $ city_events.append(StoryEvent(label = "kidnap_rescue", call_args = [girl], location = selected_location.name, AP_cost=0))
+            $ city_events.append(StoryEvent(label = __("kidnap_rescue"), call_args = [girl], location = selected_location.name, AP_cost=0))
             return
 
     "Following your informer's directions, you start looking for the entrance of the lair where [girl.fullname] is being held."
@@ -1962,7 +1960,7 @@ label kidnap_rescue(girl):
                 "You have been found! You run away from the guard patrol. Gods know where they'll be taking [girl.fullname] now."
 
     else: # Leave for now
-        $ city_events.append(StoryEvent(label = "kidnap_rescue", call_args = [girl], location = selected_location.name, AP_cost=0))
+        $ city_events.append(StoryEvent(label = __("kidnap_rescue"), call_args = [girl], location = selected_location.name, AP_cost=0))
 
         "You will come back when you are ready. Sorry, [girl.name]..."
 
@@ -2004,8 +2002,7 @@ label kidnap_rescue(girl):
             menu:
                 "You do not have enough room to welcome [girl.fullname] back to the brothel."
 
-                "Let her stay in an inn until tomorrow for 50 gold":
-                    $ come_back = 1
+                _("Let her stay in an inn until tomorrow for 50 gold"):                    $ come_back = 1
                     $ MC.gold -= 50
                     play sound s_cash
 
@@ -2031,7 +2028,7 @@ label kidnap_rescue(girl):
                     "{b}[girl.name] has been freed.{/b}"
 
             if come_back:
-                $ calendar.set_alarm(calendar.time + come_back, Event(label = "girl_come_back", object = girl, order = 1))
+                $ calendar.set_alarm(calendar.time + come_back, Event(label = __("girl_come_back"), object = girl, order = 1))
 
     else:
         play sound s_woman_scream
@@ -2057,8 +2054,7 @@ label girl_come_back(girl):
         menu:
             "[girl.fullname] returns today. You do not have enough room to welcome her back to the brothel."
 
-            "Let her stay in an inn until tomorrow for 50 gold":
-                $ come_back = 1
+            _("Let her stay in an inn until tomorrow for 50 gold"):                $ come_back = 1
                 $ MC.gold -= 50
                 play sound s_cash
 
@@ -2084,6 +2080,6 @@ label girl_come_back(girl):
                 "{b}[girl.name] has been freed.{/b}"
 
         if come_back:
-            $ calendar.set_alarm(calendar.time + come_back, Event(label = "girl_come_back", object = girl, order = 1))
+            $ calendar.set_alarm(calendar.time + come_back, Event(label = __("girl_come_back"), object = girl, order = 1))
 
     return

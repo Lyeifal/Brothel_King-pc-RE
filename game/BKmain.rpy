@@ -388,8 +388,7 @@ label brothel_loop():
 
             menu:
                 "Choose what to do"
-                "Full clean-up ([full_cost] gold)":
-                    $ result = brothel.clean_up()
+                _("Full clean-up ([full_cost] gold)"):                    $ result = brothel.clean_up()
                     sill sad "*pant* *pant* It is done, Master... I'm so tired... *pant*"
                 "Partial clean-up ([half_cost] gold)":
                     $ result = brothel.clean_up(0.5)
@@ -490,7 +489,7 @@ label farm_loop():
         python:
             menu_list = [(str(len(hurt)) + " minion" + plural(len(hurt)) + " are hurt. What do you want to do?", None)]
 
-            if MC.get_items(target="minion", name="Healing powder"):
+            if MC.get_items(target="minion", name=__("Healing powder")):
                 for mn in hurt:
                     menu_list.append(("Use healing powder on [mn.name] (level " + str(mn.level) + " " + mn.type + ")", ("heal", mn)))
 
@@ -504,7 +503,7 @@ label farm_loop():
         if res == "heal":
             gizel normal "Fine, let's use this to get the poor bastard back on its feet. Or tentacles. Whatever."
 
-            $ MC.use_item(MC.get_items(target="minion", name="Healing powder")[0])
+            $ MC.use_item(MC.get_items(target="minion", name=__("Healing powder"))[0])
             $ mn.heal()
 
             play sound s_spell
@@ -598,8 +597,7 @@ label farm_loop():
             menu:
                 "Do you want to invert her first and last name?"
 
-                "Yes":
-                    $ girl.init_dict["identity/inverted_name"] = True
+                _("Yes"):                    $ girl.init_dict["identity/inverted_name"] = True
                 "No":
                     $ girl.init_dict["identity/inverted_name"] = False
 
@@ -630,9 +628,9 @@ label farm_loop():
 
                     # Healing powder
 
-                    if MC.get_items(target="minion", name="Healing powder") and farm.get_hurt_minions():
+                    if MC.get_items(target="minion", name=__("Healing powder")) and farm.get_hurt_minions():
                         for mn in farm.get_hurt_minions():
-                            menu_list.append(["Use healing powder on [mn.name] (level " + str(mn.level) + " " + mn.type + ")", ("heal", mn, MC.get_items(target="minion", name="Healing powder")[0])])
+                            menu_list.append(["Use healing powder on [mn.name] (level " + str(mn.level) + " " + mn.type + ")", ("heal", mn, MC.get_items(target="minion", name=__("Healing powder"))[0])])
 
                     # XP items
 
@@ -1070,8 +1068,7 @@ label girls_first_time:
                             sill happy "Would you like to learn more about training your girls to become whores?"
 
                             menu:
-                                "Yes":
-                                    call help_whores() from _call_help_whores
+                                _("Yes"):                                    call help_whores() from _call_help_whores
                                 "No":
                                     pass
                                 "Don't ask me again":
@@ -1170,8 +1167,7 @@ label girls_loop():
             menu:
                 "Do you want to invert her first and last name?"
 
-                "Yes":
-                    $ girl.init_dict["identity/inverted_name"] = True
+                _("Yes"):                    $ girl.init_dict["identity/inverted_name"] = True
                 "No":
                     $ girl.init_dict["identity/inverted_name"] = False
 
@@ -1233,8 +1229,7 @@ label girls_loop():
                             sill happy "Would you like to learn more about training your girls to become whores?"
 
                             menu:
-                                "Yes":
-                                    call help_whores() from _call_help_whores_5
+                                _("Yes"):                                    call help_whores() from _call_help_whores_5
                                 "No":
                                     pass
                                 "Don't tell me again":
@@ -1293,8 +1288,7 @@ label girls_loop():
                         menu:
                             "Ask [girl.name] to work and whore at the same time?"
 
-                            "Yes":
-                                if not girl.will_do("whore"):
+                            _("Yes"):                                if not girl.will_do("whore"):
                                     call dialogue(girl, "refuse whoring") from _call_dialogue_95
 
                                     sill sad "You cannot make her a whore in her current state, you know. She'll run
@@ -1305,8 +1299,7 @@ label girls_loop():
                                         sill happy "Would you like to learn more about training your girls to become whores?"
 
                                         menu:
-                                            "Yes":
-                                                call help_whores() from _call_help_whores_7
+                                            _("Yes"):                                                call help_whores() from _call_help_whores_7
                                             "No":
                                                 pass
                                             "Don't tell me again":
@@ -1926,7 +1919,7 @@ label visit_merchant_loop():
                             $ test_achievements(["minions"])
 
                             if not story_flags["bought " + it.type]:
-                                $ calendar.set_alarm(calendar.time+1, Event(label = "farm_first_" + it.type))
+                                $ calendar.set_alarm(calendar.time+1, Event(label = __("farm_first_") + it.type))
                                 $ story_flags["bought " + it.type] = True
 
                         elif text1:

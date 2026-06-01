@@ -317,11 +317,11 @@ init -2 python:
             ##
 
             if self.target != "no training":
-                self.name = "{color=[c_orange]}" + self.target.capitalize() + " training"  + "{/color}"
+                self.name = __("{color=[c_orange]}") + self.target.capitalize() + " training"  + "{/color}"
             elif self.holding == "rest":
-                self.name = "{color=[c_lightgreen]}" + farm_holding_dict[self.holding] + "{/color}"
+                self.name = __("{color=[c_lightgreen]}") + farm_holding_dict[self.holding] + "{/color}"
             else:
-                self.name = "{color=[c_cream]}" + farm_holding_dict[self.holding] + "{/color}"
+                self.name = __("{color=[c_cream]}") + farm_holding_dict[self.holding] + "{/color}"
 
             if self.installation:
                 self.installation_name = self.installation.name
@@ -454,7 +454,7 @@ init -2 python:
                                 descript += event_color["bad"] % (girl.name + " has been injured and will be out of it for " + str(round_int(girl.hurt)) + " days.")
                                 girl.add_log("farm_hurt")
 
-                                calendar.set_alarm(calendar.time+1, StoryEvent(label="farm_resisted", type="morning", call_args=[girl, "rebel girl hurt"]))
+                                calendar.set_alarm(calendar.time+1, StoryEvent(label=__("farm_resisted"), type="morning", call_args=[girl, "rebel girl hurt"]))
                             else:
                                 mn = rand_choice(self.minions)
                                 mn.hurt = True
@@ -466,7 +466,7 @@ init -2 python:
                                 changes["fear"] -= dice(3)
                                 girl.add_log("minion_hurt")
 
-                                calendar.set_alarm(calendar.time+1, StoryEvent(label="farm_resisted", type="morning", call_args=[girl, "rebel minion hurt"]))
+                                calendar.set_alarm(calendar.time+1, StoryEvent(label=__("farm_resisted"), type="morning", call_args=[girl, "rebel minion hurt"]))
 
                         elif fight_res: # Girl wins
                             pic = "gizel whip struggling" # Picture(path="NPC/gizel/whip3.webp")
@@ -482,7 +482,7 @@ init -2 python:
                                 girl.add_log("farm_run_away")
 
                                 # calendar.set_alarm(calendar.time+1, Event(label="run_away", object=girl))
-                                calendar.set_alarm(calendar.time+1, StoryEvent(label="farm_resisted", type="morning", call_args=[girl, "rebel runaway"]))
+                                calendar.set_alarm(calendar.time+1, StoryEvent(label=__("farm_resisted"), type="morning", call_args=[girl, "rebel runaway"]))
 
                             else:
                                 mn = rand_choice(self.minions)
@@ -495,7 +495,7 @@ init -2 python:
                                 changes["fear"] -= dice(3) + 1
                                 girl.add_log("minion_hurt")
 
-                                calendar.set_alarm(calendar.time+1, StoryEvent(label="farm_resisted", type="morning", call_args=[girl, "rebel minion hurt"]))
+                                calendar.set_alarm(calendar.time+1, StoryEvent(label=__("farm_resisted"), type="morning", call_args=[girl, "rebel minion hurt"]))
 
                         else: # Gizel wins
                             girl.build_up(3)
@@ -514,7 +514,7 @@ init -2 python:
                                 changes["fear"] += dice(3)
                                 changes["obedience"] += dice(3) + 2
 
-                            calendar.set_alarm(calendar.time+1, StoryEvent(label="farm_resisted", type="morning", call_args=[girl, "rebel subdued"]))
+                            calendar.set_alarm(calendar.time+1, StoryEvent(label=__("farm_resisted"), type="morning", call_args=[girl, "rebel subdued"]))
 
                     else:
                         descript += event_color["a little bad"] % (girl.name + " " + reaction + " training and rebelled against Gizel.\n")
@@ -537,7 +537,7 @@ init -2 python:
                             farm.locked_girls.append(girl)
                             girl.build_up(1)
 
-                        calendar.set_alarm(calendar.time+1, StoryEvent(label="farm_resisted", type="morning", call_args=[girl, "rebel subdued"]))
+                        calendar.set_alarm(calendar.time+1, StoryEvent(label=__("farm_resisted"), type="morning", call_args=[girl, "rebel subdued"]))
 
                     log.add_report(descript)
 
@@ -546,10 +546,10 @@ init -2 python:
                         descript += girl.name + " didn't complain as she went into the " + self.installation.name + " for her training."
                     elif reaction == "resisted":
                         descript += girl.name + " whined and resisted, but Gizel laughed at her and shoved her into the " + self.installation.name + " anyway."
-                        calendar.set_alarm(calendar.time+1, StoryEvent(label="farm_resisted", type="morning", call_args=[girl, "resisted"]))
+                        calendar.set_alarm(calendar.time+1, StoryEvent(label=__("farm_resisted"), type="morning", call_args=[girl, "resisted"]))
                     elif reaction == "refused":
                         descript += girl.name + " yelled and cried and pleaded, but Gizel dragged her kicking and screaming into the " + self.installation.name + "."
-                        calendar.set_alarm(calendar.time+1, StoryEvent(label="farm_resisted", type="morning", call_args=[girl, "refused"]))
+                        calendar.set_alarm(calendar.time+1, StoryEvent(label=__("farm_resisted"), type="morning", call_args=[girl, "refused"]))
 
                 # Learn from interaction
 
@@ -599,7 +599,7 @@ init -2 python:
                         descript += " Gizel notices " + girl.name + " reacts strongly in the presence of " + self.minions[0].type + "s (" + event_color["fear"] % "weakness discovered" + ")."
                         farm.knows["weakness"][girl] = farm_installations_dict[girl.weakness]
 
-                        calendar.set_alarm(calendar.time+1, StoryEvent(label="farm_discovered_weakness", call_args=[girl]))
+                        calendar.set_alarm(calendar.time+1, StoryEvent(label=__("farm_discovered_weakness"), call_args=[girl]))
 
                     else:
                         MC.evil += 0.2 # Knowingly using weaknesses is evil
@@ -763,10 +763,10 @@ init -2 python:
 
                 if self.act in all_sex_acts:
                     if girl.get_stat(self.act, raw=True) >= girl.get_stat_minmax(self.act, raw = True)[1]:
-                        calendar.set_alarm(calendar.time+1, StoryEvent(label="farm_max_skill", type="morning", call_args=[girl, self.act]))
+                        calendar.set_alarm(calendar.time+1, StoryEvent(label=__("farm_max_skill"), type="morning", call_args=[girl, self.act]))
 
                 if girl.get_preference(self.act) == "fascinated" and prog.condition == "none":
-                    calendar.set_alarm(calendar.time+1, StoryEvent(label="farm_max_pref", type="morning", call_args=[girl, self.act]))
+                    calendar.set_alarm(calendar.time+1, StoryEvent(label=__("farm_max_pref"), type="morning", call_args=[girl, self.act]))
 
                 # Energy changes (not rebelled)
 
@@ -983,7 +983,7 @@ init -2 python:
                 change_log.merge(self.apply_changes(girl, changes))
 
                 if girl.get_stat(self.holding, raw=True) >= girl.get_stat_minmax(self.holding, raw = True)[1]:
-                    calendar.set_alarm(calendar.time+1, StoryEvent(label="farm_max_skill", type="morning", call_args=[girl, self.holding]))
+                    calendar.set_alarm(calendar.time+1, StoryEvent(label=__("farm_max_skill"), type="morning", call_args=[girl, self.holding]))
 
                 text1, chg = girl.tire(dice(4)+2)
                 descript += text1

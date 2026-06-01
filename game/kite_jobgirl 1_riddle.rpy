@@ -86,8 +86,7 @@ label jobgirl_0():
 
     ## choice menu 1) yes 2) no
     menu:
-        "My slave Sill":
-
+        _("My slave Sill"):
             you "There is one, my first slave, Sill; I don't let anyone put their hands on her, she's mine only!"
 
             jobgirl "I see. So, even a pimp can have a heart after all. Interesting..."
@@ -187,7 +186,7 @@ label jobgirl_1():
 
     play sound s_dress
 
-    call screen letter(header = "Mysterious letter", message = "Know, O prince, that between the years when the oceans drank Atlantis \n and the gleaming cities, and the years of the rise of the Sons of Xeros \n hither came the one who shall stand on fours under the rising sun \n the one who shall stand on two under the zenith light \n the one who shall stand on three under the many stars... \n Thou shalt name the one to succeed.")
+    call screen letter(header = "Mysterious letter", message = __("Know, O prince, that between the years when the oceans drank Atlantis \n and the gleaming cities, and the years of the rise of the Sons of Xeros \n hither came the one who shall stand on fours under the rising sun \n the one who shall stand on two under the zenith light \n the one who shall stand on three under the many stars... \n Thou shalt name the one to succeed."))
 
     play sound s_dress
 
@@ -483,7 +482,7 @@ label jobgirl_1():
     elif current_season == "fall":
         $ x = 28 * (12 - calendar.month + 4) # Waits until spring
 
-    $ calendar.set_alarm(calendar.time + x, StoryEvent(label = "jobgirl_beach_1", type = "morning"))
+    $ calendar.set_alarm(calendar.time + x, StoryEvent(label = __("jobgirl_beach_1"), type = "morning"))
     $ NPC_jobgirl.flags["stage"] = 2
 
     return
