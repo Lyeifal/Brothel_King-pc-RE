@@ -1,0 +1,84 @@
+********************
+*** BROTHEL KING *** 
+***   by Goldo   ***
+********************
+
+
+DISCLAIMER
+
+I do not own any of the images, music and sound effects used in this game. I wish I could credit the rightful authors for all of this, but most of it had been sitting on my hard drive for a long, long time. If you are the owner of any of this material and you feel that this game is infringing on your rights in any way, please contact me on the https://www.henthighschool.com/brothel-king/ forum and I'll drop it from the game.
+
+Please contact me at https://www.henthighschool.net/brothel-king/ for feedback, criticism, bug reports, etc.
+
+
+
+HOW CAN I ADD GIRLS?
+
+Adding new girls is very easy for anyone with the ability to copy/paste/rename a file. It takes 3 easy steps:
+
+1) Create a new folder in the 'game\girls\' directory; the folder name will be the girl's name. A structure like 'Firsname Lastname' works best, but simpler or more complex names are possible. Names should be under 40 characters in total for optimal display.
+(More advanced techniques allow you to set-up your own girl folders, and create different girl mixes from the folder structure. Learn about them here: https://henthighschool.net/brothel-king/resources-index-of-mods-utilities-and-useful-links/)
+
+2) Copy all the pictures you want to use for that girl in that folder.
+
+3) Rename all the picture files using some of the tags below (it might not be necessary if you got the girl pack from another sim brothel game, since many common tags are supported).
+(A much more efficient way now exists, using Chris12's tagging tool: https://henthighschool.net/brothel-king/picturenamer/)
+
+A picture can have several tags in its name: for instance 'maid_anal_sex123.png' or 'maid anal sex 123.png' will receive the 'maid', 'anal' and 'sex' tags.
+
+There are only two mandatory tags: 'profile' and 'potrait'. You must have at least one picture with each tag (and not also 'naked' tag) as a part of its name for the game to work. For other tags, the profile picture will be used if it is missing.
+
+Profile is an approximately 500x768 width x height or larger image of face and body, while portrait is about 400x400 showing usually head and sometimes shoulders and breasts.
+
+Done! If you're starting a new game, that's it. If you're using a saved game, the new girls will become available at the start of the next week in-game.
+
+For a complete list of tags that are recognized, please check BKsettings.rpy in the game folder (using a text or code editor).
+
+Finally, if you want to make a girl folder with most of the possible pictures used by the game as of this version, you will need all of the following tags (or one of their equivalent): ‘profile’, ‘portrait’, ‘rest’, ‘wait’, ‘dance’, ‘massage’, ‘geisha’, ‘service’, ‘sex’, ‘anal’, ‘fetish’, ‘group’, ‘les’
+
+
+
+WHAT IS THIS GAME?
+
+As a fan of the original Sim Brothel and some of the games it inspired, as well as games like Slave Maker, I have wanted for a long time to 'make it my own', and try my hand at coding.
+
+I first encountered Ren'Py when I made a small mod for the excellent game 'Ashford Academy', and since then I've been interested in the possibilities offered by Ren'py to a non-coder like myself. This is why I embarked on this project a couple of years ago, tinkering with Ren'py and Python until I could get it to a passably playable state. I have now decided to release it to the world, to see if I can get some people interested in playing it and giving some feedback.
+
+My philosophy for this game was simple: to make the game I wanted to play. It had to have some story and flavor, a user-friendly UI, and quality art. I also wanted to reduce micro-management to an acceptable level. For this reason I took the liberty of withdrawing some traditional Sim Brothel features that I personally found annoying, such as juggling girls between many brothels.
+
+This game is not an open-ended project. I am just one guy and my goal is to deliver a finished game in a realistic time frame, complete with a full story and balanced mechanics. After that, lack of time and focus means that I won't be able to keep adding new features, but I'll gladly hand this over to the community. 
+
+By the way, anyone feel free to tinker with the code and mod anything you like about this game, although a serious word of warning is in order: I am no programmer, I used this project as an opportunity to teach myself some coding with ren'py and python. Therefore, the game is poorly written, with A LOT of redundant and badly written code. If I could I'd start it all over and clean up everything, but I'm afraid I lack the time and energy to do it for the time being. So if you do have a look under the hood, then good luck, and, uh, sorry…
+
+
+
+WHAT'S IN THIS VERSION?
+
+As of this version (0.2), the game's core mechanics are working and more or less complete. There is a story including chapters 1 and 2, and a fairly long introduction scene and interesting gossip and events in town for flavor.
+
+In the next version, I will focus on reducing the number of bugs and improving game balance with people's feedback, then extend the story.
+
+As it is a one-man project, the game has not been extensively play-tested: it is more likely than not that it is poorly balanced and ridden with bugs.  As of this version there's a very real possibility that you might mess up a saved game. {b}Play at your own risks!{/b}. But if you do, I would love some feedback. 
+
+
+CAN I CHEAT?
+
+Yes, there are cheats accessible from the '?' menu on the home screen. Please be advised that they disable achivements for the whole game, however.
+
+If you would like to tailor the game more finely to your preferences, including changing screen resolution, stock pictures, game balance, tags, and many more options, please open and edit BKsettings.rpy in the game folder (using a text or code editor).
+The settings in BKsettings.rpy are designed to be easily changeable by players (provided you respect the proper syntax, i.e. don't put letters instead of numbers and so on).
+
+
+HOW CAN I HELP?
+
+Play the game! By now I've spent so much time working on this game that I have genuinely zero idea if it's any good. If you spot a bug, a typo (I am not a native speaker), have some ideas to improve gameplay, game balance or fun, please speak up, this will help me enormously. 
+
+Although I won't rework all game mechanics from scratch, I am expecting to make a lot of adjustments to make the game more balanced and fun, so all your suggestions will be read and welcome.
+
+If you're an experienced programmer and want to look under the hood or tinker with the game, by all means, do it! (Keep in mind that I don't really know how to code, however, so expect to be horrified by what you see.)
+
+Finally, if you have some art to recommend such as good hentai series or music that fit the flavor of the game, by all means, do it.
+
+
+
+Please contact me at https://www.henthighschool.net/brothel-king/ for feedback, criticism, bug reports, etc.

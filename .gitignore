@@ -1,0 +1,22 @@
+# Ren'Py generated files
+*.rpyc
+*.rpyb
+*.rpymc
+*.rpymb
+
+# Save files and cache
+game/cache/
+saves/
+tmp/
+
+# Build and distribution
+build/
+dist/
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
