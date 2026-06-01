@@ -559,7 +559,8 @@ label random_morning_events():
                             "It seems she's having fun all by herself."
 
                             menu:
-                                "Peek":                                    show screen show_event(girl.get_pic("mast", not_tags=["group", "bisexual"]), x=config.screen_width, y=int(config.screen_height*0.8), bg=None)
+                                "Peek":
+                                    show screen show_event(girl.get_pic("mast", not_tags=["group", "bisexual"]), x=config.screen_width, y=int(config.screen_height*0.8), bg=None)
                                     with dissolve
 
                                     play sound s_moans_quiet
@@ -755,7 +756,8 @@ label random_night_girl_event(girl, room):
 
                 menu:
                     "What do you think about her room?"
-                    "Nice place":                        you "It's a nice place you have here. Keep it up."
+                    "Nice place":
+                        you "It's a nice place you have here. Keep it up."
                         girl.char "Thank you, Master."
                         $ girl.change_love(2)
                         $ changed_stats = [(stat, dice(3)+1)]
@@ -983,7 +985,8 @@ label random_night_girl_event(girl, room):
         menu:
             "What do you do?"
 
-            "Confront her":                pass
+            "Confront her":
+                pass
 
             "Ignore her":
                 you "Well, she's here now. I've got more important things to attend to."
@@ -1012,7 +1015,8 @@ label random_night_girl_event(girl, room):
         menu:
             "What do you do?"
 
-            "Let it go":                you "I see. Fine, then. Try not to be late next time, ok?"
+            "Let it go":
+                you "I see. Fine, then. Try not to be late next time, ok?"
                 girl.char "Thank you, Master [MC.name]."
 
                 call hide_everything() from _call_hide_everything_11
@@ -1051,7 +1055,8 @@ label random_night_girl_event(girl, room):
                 menu:
                     "How will you punish her?"
 
-                    "Make her clean up the dirty sheets tonight":                        you "After your service, you're going to do all the laundry tonight, using your bare hands and a bar of soap. I want you to wipe every last cum stain off those bed sheets! Or you'll have to do it again tomorrow."
+                    "Make her clean up the dirty sheets tonight":
+                        you "After your service, you're going to do all the laundry tonight, using your bare hands and a bar of soap. I want you to wipe every last cum stain off those bed sheets! Or you'll have to do it again tomorrow."
                         girl.char "Aw..."
 
                         $ girl.change_fear(1)
@@ -1078,7 +1083,8 @@ label random_night_girl_event(girl, room):
 
                         call night_girl_perform() from _call_night_girl_perform_4
 
-                    "Make her service every customer that comes in": # No call of the perform label for this one
+                    "Make her service every customer that comes in":
+                        # No call of the perform label for this one
 
                         $ selected_act = "service"
                         $ fix = rand_choice(["handjobs", "oral", "titjobs"])
@@ -1463,7 +1469,8 @@ label random_night_girl_event(girl, room):
                 man "Why, there sure is..."
 
                 menu:
-                    "Make [girl.name] service the customer":                        $ selected_act = "service"
+                    "Make [girl.name] service the customer":
+                        $ selected_act = "service"
                         $ fix = rand_choice(["masturbation", "deep throat", "swallowing"])
 
                         if girl.get_stat("obedience") < 100:
@@ -1546,7 +1553,8 @@ label random_night_girl_event(girl, room):
         menu:
             "What do you do?"
 
-            "Join the crowd":                "You find a seat in the front row, next to a group of rowdy customers."
+            "Join the crowd":
+                "You find a seat in the front row, next to a group of rowdy customers."
 
                 $ cust = rand_choice(["man", "woman", "group of customers"])
 
@@ -1684,7 +1692,8 @@ label random_night_girl_event(girl, room):
                 menu:
                     "What do you want to do?"
 
-                    "Give a rousing speech":                        "You decide it's time for you to get your share of the limelight."
+                    "Give a rousing speech":
+                        "You decide it's time for you to get your share of the limelight."
 
                         you "Dear friends..."
 
@@ -1797,7 +1806,8 @@ label random_night_girl_event(girl, room):
                     "Make [girl.name] perform in front of the crowd":
                         menu:
                             "What do you want her to do?"
-                            "Tell her to give the customers a swimsuit show":                                $ selected_act = "naked"
+                            "Tell her to give the customers a swimsuit show":
+                                $ selected_act = "naked"
                                 $ fix = "wet"
 
                             "Tell her to give the customers a cosplay show":
@@ -1817,7 +1827,8 @@ label random_night_girl_event(girl, room):
 
                         menu:
                             "What do you want her to do?"
-                            "Give you a blowjob":                                $ selected_act = "service"
+                            "Give you a blowjob":
+                                $ selected_act = "service"
                                 $ fix = rand_choice(["cum on face", "cum in mouth"])
                                 $ attitude = girl.get_sex_attitude(selected_act, fix = ["public acts"] + [fix]) + girl.get_love()
 
@@ -2028,7 +2039,8 @@ label random_night_girl_event(girl, room):
                         girl.char "M-Master? Uh? What time is it? I'm so late!!! What should I do?"
 
                         menu:
-                            "Send her off":                                you "You know what you have to do. Run off to work, the customers are coming in as we speak."
+                            "Send her off":
+                                you "You know what you have to do. Run off to work, the customers are coming in as we speak."
 
                                 if girl.naked:
                                     if girl.get_effect("special", "naked"):
@@ -2105,7 +2117,8 @@ label random_night_girl_event(girl, room):
                                     girl.char "Uh?"
 
                                 menu:
-                                    "Ask for a handjob":                                        $ selected_act = "service"
+                                    "Ask for a handjob":
+                                        $ selected_act = "service"
                                         $ fix = "handjobs"
 
                                         "Reaching for a bottle of massage oil, you instruct her to use some on your erect cock."
@@ -2222,7 +2235,8 @@ label random_night_girl_event(girl, room):
                 "Tease her while she's sleeping":
 
                     menu:
-                        "Tickle her":                            "Reaching from behind her, you start tickling her under her armpits."
+                        "Tickle her":
+                            "Reaching from behind her, you start tickling her under her armpits."
 
                             play sound s_surprise
                             with vpunch
@@ -2387,7 +2401,8 @@ label random_night_girl_event(girl, room):
                             menu:
                                 "What do you have in mind?"
 
-                                "Cum in her hair":                                    $ selected_act = "fetish"
+                                "Cum in her hair":
+                                    $ selected_act = "fetish"
                                     $ fix = "cum in hair"
 
                                 "Pee on her":
@@ -2448,7 +2463,8 @@ label random_night_girl_event(girl, room):
         menu:
             "What do you do?"
 
-            "Tell her to get prepared":                you "Well, don't just stand there, then! Go to the cloakroom and change. I'll help you."
+            "Tell her to get prepared":
+                you "Well, don't just stand there, then! Go to the cloakroom and change. I'll help you."
 
                 girl.char "But... *blush*"
 
@@ -2591,7 +2607,8 @@ label random_night_girl_event(girl, room):
                 menu:
                     "Which show do you want [girl.name] to put on display?"
 
-                    "The Singing Carp (Traditional music and singing)":                        you "Our graceful host, Lady [girl.fullname], will now tell you the sad story of a most remarkable fish..."
+                    "The Singing Carp (Traditional music and singing)":
+                        you "Our graceful host, Lady [girl.fullname], will now tell you the sad story of a most remarkable fish..."
 
                         play sound s_sigh
 

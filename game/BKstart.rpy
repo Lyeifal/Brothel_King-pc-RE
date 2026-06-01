@@ -34,7 +34,8 @@ label start:
         menu:
             "Choose a starting mode"
 
-            "Normal mode - See intro":                jump intro
+            "Normal mode - See intro":
+                jump intro
 
             "Normal mode - No intro":
                 pass
@@ -53,7 +54,8 @@ label start:
         menu:
             "Would you like to see the intro?"
 
-            "Yes":                jump intro
+            "Yes":
+                jump intro
 
             "No":
                 pass
@@ -129,7 +131,8 @@ label choose_difficulty():
                 if starting_chapter > 1 and (NGP_settings_dict["free girl challenge"].get() or NGP_settings_dict["training challenge"].get()) and not debug_mode:
                     menu:
                         "You have activated a challenge. You cannot start at a later chapter if you want to complete the challenge."
-                        "Do the challenge and start at chapter 1":                            $ starting_chapter = 1
+                        "Do the challenge and start at chapter 1":
+                            $ starting_chapter = 1
 
                         "Cancel the challenge":
                             $ NGP_settings_dict["free girl challenge"].reset()

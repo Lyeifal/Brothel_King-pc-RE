@@ -961,7 +961,8 @@ label resume_intro3:
     menu:
         "Who?"
 
-        "The illuminati guild?":            gio "*roll eyes*"
+        "The illuminati guild?":
+            gio "*roll eyes*"
 
         "Kaizer Sauze?":
             gio "*roll eyes*"
@@ -1156,7 +1157,8 @@ label shortcut:
     menu:
         "Well..."
 
-        "Of course!":            $ text1 = "Of course"
+        "Of course!":
+            $ text1 = "Of course"
             jump resume_intro4
 
         "Sure!":

@@ -20,7 +20,8 @@ label slave_first_meet(girl):
 
         # "What do you tell her?"
 
-        "I will be kind":            $ norollback()
+        "I will be kind":
+            $ norollback()
 
             you "You have nothing to fear from me. I promise you will be treated kindly."
 
@@ -273,7 +274,8 @@ label slave_beg(girl, context): # Only sub girls will beg
     menu:
         "She's crying uncontrollably, she seems very upset. What do you do?"
 
-        "Ignore her and proceed":            "You scoff."
+        "Ignore her and proceed":
+            "You scoff."
 
             you "Giving me orders, are you? I don't think you understand your situation, slave. Now, get ready."
 
@@ -483,7 +485,8 @@ label slave_chat_slave_life(girl): # D/S
     # MC reaction
 
     menu:
-        "I see":            you "I see."
+        "I see":
+            you "I see."
 
         "You're doing well" if inter.result > -1:
             you "Keep your spirits up. Life as a slave isn't as bad as people think."
@@ -531,7 +534,8 @@ label slave_chat_brothel(girl):
 
     menu:
 
-        "I see":            you "I see."
+        "I see":
+            you "I see."
 
         "I appreciate your efforts" if r >= 0:
             you "Look, I want you to know your efforts here are appreciated."
@@ -576,7 +580,8 @@ label slave_chat_customers(girl):
 
     menu:
 
-        "I see":            you "I see."
+        "I see":
+            you "I see."
 
         "You're a big help" if inter.result >= 0:
             you "I'm glad you're getting along with the customers. I'm sure they value your presence."
@@ -657,7 +662,8 @@ label slave_chat_other_girls(girl):
 
     menu:
 
-        "I see.":            you "I see."
+        "I see.":
+            you "I see."
 
         "Keep making friends" if inter.result >= 0:
             you "Keep being nice to the other girls, and you will make more friends in no time."
@@ -766,7 +772,8 @@ label slave_chat_well_being(girl):
     # MC reaction
 
     menu:
-        "I see":            you "I see."
+        "I see":
+            you "I see."
 
         "Good to hear" if inter.result >= 0:
             you "I'm happy that things are to your liking here. Keep up the good work."
@@ -859,7 +866,8 @@ label slave_chat_feelings(girl):
     # MC reaction
 
     menu:
-        "I see":            you "I see."
+        "I see":
+            you "I see."
 
         "Thank you, I appreciate that" if inter.result >= 0:
             you "Thank you, I appreciate your honesty."
@@ -1041,7 +1049,8 @@ label slave_chat_tastes(girl):
     elif inter.response == "refused":
 
         menu:
-            "I see":                you "Fine, we'll discuss this later."
+            "I see":
+                you "Fine, we'll discuss this later."
                 $ inter.MC_reaction = "give up"
 
             "How dare you!":
@@ -1112,7 +1121,8 @@ label slave_chat_origins(girl):
     if inter.response == "refused":
 
         menu:
-            "I see":                you "Fine, we'll discuss this later."
+            "I see":
+                you "Fine, we'll discuss this later."
                 $ inter.MC_reaction = "give up"
 
             "How dare you!":
@@ -1267,7 +1277,8 @@ label slave_train_sex_acts(girl, mode):
                 menu:
                     "What do you do?"
 
-                    "Do it anyway":                        $ inter.MC_reaction = "proceed"
+                    "Do it anyway":
+                        $ inter.MC_reaction = "proceed"
                         $ MC.rand_say(("gd: I'm sorry, but this is part of your training. Let's get on with it.",
                                        "ne: I don't care about your opinion, slave. Ready or not, we are doing this.",
                                        "ev: You think you can tell me what to do? What a fucking bitch!", "Shut up and get ready. We are doing this."))
@@ -1295,7 +1306,8 @@ label slave_train_sex_acts(girl, mode):
                 menu:
                     "What do you do?"
 
-                    "Force her":                        $ inter.MC_reaction = "force"
+                    "Force her":
+                        $ inter.MC_reaction = "force"
                         $ impact = 2
                         $ MC.rand_say(("I am your master. You WILL obey me.", "You will do as I say! And that's final!!!",
                             "ev: Shut up, bitch. I make the rules!", "gd: I've reached the limit of my patience. You're not getting away with this this time."))
@@ -2270,7 +2282,8 @@ label slave_hypnotize_method(girl):
     menu:
         "Hypnosis is more efficient when exploiting your girl's existing emotions. Which technique will you use to train [girl.name]?"
 
-        "Use positive emotions":            "Reinforcing positive emotions works better if a girl likes you."
+        "Use positive emotions":
+            "Reinforcing positive emotions works better if a girl likes you."
             $ girl.magic_training = "positive"
 
         "Use negative emotions":
@@ -2615,7 +2628,8 @@ label slave_reward_sex(girl):
         menu:
             "What do you do?"
 
-            "Force her":                $ MC.rand_say(("I am your master. You WILL obey me.", "You will do as I say! And that's final!!!",
+            "Force her":
+                $ MC.rand_say(("I am your master. You WILL obey me.", "You will do as I say! And that's final!!!",
                     "ev: Shut up, bitch. I make the rules!", "gd: I've reached the limit of my patience. You're not getting away with it this time."))
 
                 $ inter.MC_reaction = "force"
@@ -3025,7 +3039,8 @@ label slave_punish(girl, pun):
         menu:
             "How long do you want her to remain in the farm?"
 
-            "1 day":                $ impact = 2
+            "1 day":
+                $ impact = 2
                 call send_to_farm(girl, duration=1) from _call_send_to_farm
             "3 days":
                 $ impact = 5
@@ -3092,7 +3107,8 @@ label slave_rape(girl, act): # If girl refused and was forced
             menu:
                 "You know that [girl.name] has [reaction] for [act] acts. Do you want to try to use it against her?"
 
-                "Yes":                    $ fix = rand_choice([fix for fix in girl.neg_fixations if girl.personality_unlock[fix.name]])
+                "Yes":
+                    $ fix = rand_choice([fix for fix in girl.neg_fixations if girl.personality_unlock[fix.name]])
 
                     if fix:
                         $ text1 = fix_description[fix.name + " description"][:-1]
@@ -3430,7 +3446,8 @@ label slave_custom_option(girl):
 
 label interaction_cheat_menu(girl):
     menu:
-        "Change love":            $ girl.love = float(renpy.input(girl.name + "'s love points (between +/-100):", default = girl.love))
+        "Change love":
+            $ girl.love = float(renpy.input(girl.name + "'s love points (between +/-100):", default = girl.love))
 
         "Change fear":
             $ girl.fear = float(renpy.input(girl.name + "'s fear points (between +/-100):", default = girl.fear))
@@ -3709,7 +3726,8 @@ label slave_story2(girl):
         menu:
             "How do you react?"
 
-            "It's okay":                $ MC.good += 1
+            "It's okay":
+                $ MC.good += 1
                 $ girl.change_love(1)
                 $ girl.change_fear(-2)
                 you "Don't worry, dear, it's your hard-earned money. I'm not going to take it away from you."
@@ -4015,7 +4033,8 @@ label slave_story3(girl):
         "Her eyes are welling with tears again. It takes a moment for her to resume her story."
 
         menu:
-            "Take your time":                $ MC.good += 1
+            "Take your time":
+                $ MC.good += 1
                 you "Take your time. I'm here to listen."
                 girl.char "Thank you."
 
@@ -4543,7 +4562,8 @@ label slave_story5(girl):
         menu:
             "How do you react?"
 
-            "Is that so?":                $ MC.evil -= 1
+            "Is that so?":
+                $ MC.evil -= 1
 
                 you "Is that so... Why do I feel like there's more to it?"
 
@@ -4891,7 +4911,8 @@ label slave_story6(girl):
 
         menu:
             "What do you do?"
-            "Defend Sill":                $ MC.good += 1
+            "Defend Sill":
+                $ MC.good += 1
                 $ NPC_sill.love += 1
 
                 you "Come on, Sill is doing her best. I don't see you helping out much in the kitchen."

@@ -255,7 +255,8 @@ label c1_meet_kosmo:
 
     menu:
 
-        "Sill's not for sale":            $ norollback()
+        "Sill's not for sale":
+            $ norollback()
             $ MC.good += 1
             $ NPC_sill.love += 1
             you "Sill is mine, and I'm not ever selling her."
@@ -1342,7 +1343,8 @@ label c1_spice_market:
 
         "What do you do?"
 
-        "Let him pass":            $ norollback()
+        "Let him pass":
+            $ norollback()
             $ MC.neutral += 1
             "Crossing your arms, you let the mysterious stranger run past you in a gust of dust and spice."
 
@@ -1506,7 +1508,8 @@ label c1_sewers:
     menu:
         "What do you do?"
 
-        "Follow the screams":            $ norollback()
+        "Follow the screams":
+            $ norollback()
             "Hastening pace, you step into the tunnel from which the screams came. You have to bend your back to avoid scraping your head on the ceiling."
 
             play sound s_scream_loud
@@ -2225,7 +2228,8 @@ label c1_thieves_guild_found:
     menu:
         "What do you do?"
 
-        "Kick his ass":            $ norollback()
+        "Kick his ass":
+            $ norollback()
             you "All right, I see you're thicker than this oak door. Maybe after I mop the floor with your sorry ass,
                  you'll be more accommodating?"
 
@@ -2873,7 +2877,8 @@ label c1_maya_interrogation:
         maya "A corrupted guard? What are you talking about? What do the thieves care about corruption?"
 
         menu:
-            "Tell the truth":                $ norollback()
+            "Tell the truth":
+                $ norollback()
                 $ MC.good += 1
 
                 you "The thieves have had enough with the Guard's harassment. They want to replace the current captain with one of their own."
@@ -2972,7 +2977,8 @@ label c1_maya_interrogation:
         maya "R... Rape me?"
 
         menu:
-            "Of course not":                $ MC.neutral += 1
+            "Of course not":
+                $ MC.neutral += 1
                 $ norollback()
                 you "Don't be so melodramatic. I just want a little chat."
 
@@ -3043,7 +3049,8 @@ label c1_maya_interrogation:
                 maya "I told you everything! Now leave me alone!"
 
                 menu:
-                    "Leave her alone":                        $ norollback()
+                    "Leave her alone":
+                        $ norollback()
                         $ MC.neutral += 1
                         you "All right, all right. Thank you for your help. I will give Sergeant Kashiv your regards."
 
@@ -3301,7 +3308,8 @@ label c1_sergeant_interrogation:
     sergeant "Who are you really, and what do you want?"
 
     menu:
-        "I'm [MC.name]":            $ norollback()
+        "I'm [MC.name]":
+            $ norollback()
             you "I'm [MC.name], a [MC.playerclass] from out of town. I have a small brothel operating here in the slums."
 
             you "What I don't have, is a lot of patience."
@@ -4730,7 +4738,8 @@ label c1_captain_meeting:
     menu:
         "You had your own reasons."
 
-        "I want my money":            $ norollback()
+        "I want my money":
+            $ norollback()
             $ MC.neutral += 1
 
             you "I worked my ass off... Well, the girls' asses off, to get that money."

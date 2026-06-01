@@ -58,7 +58,8 @@ label my_mod_init():
     menu:
         "What kind of girls do you like?"
 
-        "Blondes":            $ mymod.sec_pic = "events/thief (5).webp"
+        "Blondes":
+            $ mymod.sec_pic = "events/thief (5).webp"
             $ end_picture = "events/thief captured (1).webp"
 
         "Redheads":

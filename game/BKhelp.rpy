@@ -566,7 +566,8 @@ label help(scr):
                     "Cancel":
                         pass
 
-            "Repair girl/MC pictures": #! Broken
+            "Repair girl/MC pictures":
+                #! Broken
                 if renpy.call_screen("yes_no", "This will reset all girl and MC pictures (useful if you changed some pictures outside of the game or renamed them). Would you like to proceed?"):
 
                     python:

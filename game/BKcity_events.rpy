@@ -4873,7 +4873,8 @@ label slave_beach_event(): # Happens in Seafront, Beach, lakefront, waterfalls d
                         $ s1 = get_fix_weakness_symbol(girl, "denied orgasm")
 
                         menu:
-                            "Make her come":                                $ pic = girl.get_pic("beach", "swimsuit", "wet", and_tags=["orgasm"] + fix_dict[fix].tag_list[0], not_tags=["cumshot", "sex", "anal", "group", "bisexual"], strict=True, hide_farm=True)
+                            "Make her come":
+                                $ pic = girl.get_pic("beach", "swimsuit", "wet", and_tags=["orgasm"] + fix_dict[fix].tag_list[0], not_tags=["cumshot", "sex", "anal", "group", "bisexual"], strict=True, hide_farm=True)
                                 if not pic:
                                     $ pic = girl.get_pic(["orgasm"] + fix_dict[fix].tag_list[0], strict=True, not_tags=["sex", "anal", "group", "bisexual"], hide_farm=True)
 
@@ -4962,7 +4963,8 @@ label slave_beach_event(): # Happens in Seafront, Beach, lakefront, waterfalls d
             $ s1 = get_fix_weakness_symbol(girl, "public acts")
 
             menu:
-                "Let's do it in plain sight[s1]":                    you "Yes, here! I don't care who's watching... Let's do it!"
+                "Let's do it in plain sight[s1]":
+                    you "Yes, here! I don't care who's watching... Let's do it!"
 
                     if girl.check_fix("public acts") == "neg" and girl.get_stat("obedience") <= 150:
                         with vpunch
@@ -5033,7 +5035,8 @@ label slave_beach_event(): # Happens in Seafront, Beach, lakefront, waterfalls d
                 menu:
                     "What will you have her do?"
 
-                    "Suck your dick[s1]":                        $ act = "service"
+                    "Suck your dick[s1]":
+                        $ act = "service"
                         $ fix = "oral"
 
                         $ pic = girl.get_pic("oral", "service", and_tags=["beach"] + and_tags, not_tags=["cumshot", "group", "bisexual"], strict=True)
@@ -5338,7 +5341,8 @@ label slave_beach_event(): # Happens in Seafront, Beach, lakefront, waterfalls d
             call dialogue(girl, "beach whoring request") from _call_dialogue_249
 
             menu:
-                "Pay double her upkeep":                    $ upk = round_int(girl.upkeep * girl.get_effect("boost", "total upkeep") * 2)
+                "Pay double her upkeep":
+                    $ upk = round_int(girl.upkeep * girl.get_effect("boost", "total upkeep") * 2)
                     $ MC.good += 0.5
                     you "Listen, I'll give you... double your regular upkeep. How does that sound?"
 
@@ -5419,7 +5423,8 @@ label slave_beach_event(): # Happens in Seafront, Beach, lakefront, waterfalls d
             menu:
                 "Choose what [girl.name] will do."
 
-                "Service[s1]":                    $ act = "service"
+                "Service[s1]":
+                    $ act = "service"
                     you "You there, get yourself ready. [girl.name] will take good care of you..."
 
                 "Sex[s2]":
@@ -5628,7 +5633,8 @@ label slave_beach_event(): # Happens in Seafront, Beach, lakefront, waterfalls d
                 girl.char "What? No, I'm not going to do that with this guy!"
 
                 menu:
-                    "How dare you!":                        $ MC.rand_say(("I am your master. You WILL obey me.", "You will do as I say! And that's final!!!",
+                    "How dare you!":
+                        $ MC.rand_say(("I am your master. You WILL obey me.", "You will do as I say! And that's final!!!",
                             "ev: Shut up, bitch. I make the rules!", "gd: I've reached the limit of my patience. You're not getting away with this this time."))
 
                         call fight_attempt(girl, act, 2, outside=True) from _call_fight_attempt_21

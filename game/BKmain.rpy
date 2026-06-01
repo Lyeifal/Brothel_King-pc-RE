@@ -388,7 +388,8 @@ label brothel_loop():
 
             menu:
                 "Choose what to do"
-                "Full clean-up ([full_cost] gold)":                    $ result = brothel.clean_up()
+                "Full clean-up ([full_cost] gold)":
+                    $ result = brothel.clean_up()
                     sill sad "*pant* *pant* It is done, Master... I'm so tired... *pant*"
                 "Partial clean-up ([half_cost] gold)":
                     $ result = brothel.clean_up(0.5)
@@ -597,7 +598,8 @@ label farm_loop():
             menu:
                 "Do you want to invert her first and last name?"
 
-                "Yes":                    $ girl.init_dict["identity/inverted_name"] = True
+                "Yes":
+                    $ girl.init_dict["identity/inverted_name"] = True
                 "No":
                     $ girl.init_dict["identity/inverted_name"] = False
 
@@ -1068,7 +1070,8 @@ label girls_first_time:
                             sill happy "Would you like to learn more about training your girls to become whores?"
 
                             menu:
-                                "Yes":                                    call help_whores() from _call_help_whores
+                                "Yes":
+                                    call help_whores() from _call_help_whores
                                 "No":
                                     pass
                                 "Don't ask me again":
@@ -1167,7 +1170,8 @@ label girls_loop():
             menu:
                 "Do you want to invert her first and last name?"
 
-                "Yes":                    $ girl.init_dict["identity/inverted_name"] = True
+                "Yes":
+                    $ girl.init_dict["identity/inverted_name"] = True
                 "No":
                     $ girl.init_dict["identity/inverted_name"] = False
 
@@ -1229,7 +1233,8 @@ label girls_loop():
                             sill happy "Would you like to learn more about training your girls to become whores?"
 
                             menu:
-                                "Yes":                                    call help_whores() from _call_help_whores_5
+                                "Yes":
+                                    call help_whores() from _call_help_whores_5
                                 "No":
                                     pass
                                 "Don't tell me again":
@@ -1300,7 +1305,8 @@ label girls_loop():
                                         sill happy "Would you like to learn more about training your girls to become whores?"
 
                                         menu:
-                                            "Yes":                                                call help_whores() from _call_help_whores_7
+                                            "Yes":
+                                                call help_whores() from _call_help_whores_7
                                             "No":
                                                 pass
                                             "Don't tell me again":

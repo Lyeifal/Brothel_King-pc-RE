@@ -589,7 +589,8 @@ label free_flirt_sex_experience(girl):
     menu:
         "What do you tell her?"
 
-        "I'm waiting for the right person":            $ norollback()
+        "I'm waiting for the right person":
+            $ norollback()
             you "It might sound silly, but I am waiting for the right person..."
 
             # Will she believe you?

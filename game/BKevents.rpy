@@ -209,7 +209,8 @@ label after_load: # Happens after a game state is loaded
             menu:
                 "{b}{color=[c_red]}WARNING{/color}{/b}: This saved game was created with another version of the game ([game.version]). You are running version [config.version]. Using older saved games with a new version of BK might cause unexpected crashes or game-breaking bugs. Are you sure you want to continue?"
 
-                "Yes, and deactivate future warnings for this game/this version":                    $ game.version = config.version # quick and dirty
+                "Yes, and deactivate future warnings for this game/this version":
+                    $ game.version = config.version # quick and dirty
 
                     $ game.version = config.version
                 "Yes, but warn me again":
@@ -370,7 +371,8 @@ label sill_checks(): # Returns False if the player doesn't proceed with 'end day
 
         sill sad "Master [MC.name]!\n{color=[c_red]}The threat to [brothel.name] is high or worse!{/color} You should hire more security.\nDo you want to end the day anyway?" (interact=False) #!
         menu:
-            "Continue":                pass
+            "Continue":
+                pass
             "Change your brothel settings":
                 return False
 
@@ -381,7 +383,8 @@ label sill_checks(): # Returns False if the player doesn't proceed with 'end day
 
         sill sad "Master [MC.name]!\n{color=[c_red]}[brothel.name] is [cleanliness]!{/color} You should hire more cleaners.\nDo you want to end the day anyway?" (interact=False) #!
         menu:
-            "Continue":                pass
+            "Continue":
+                pass
             "Change your brothel settings":
                 return False
 
@@ -391,7 +394,8 @@ label sill_checks(): # Returns False if the player doesn't proceed with 'end day
         sill sad "Master [MC.name]!\n{color=[c_lightred]}Only [brothel.customer_count] customers are expected at [brothel.name] tonight.{/color} You should raise advertising.\nDo you want to end the day anyway?" (interact=False) #!
 
         menu:
-            "Continue":                pass
+            "Continue":
+                pass
             "Change your brothel settings":
                 return False
 
@@ -777,7 +781,8 @@ label advance_to_chapter(chapter, silent=False, free=False, start=False): # All 
         menu:
             "What will you use as a front for your business?"
 
-            "A tavern":                $ brothel.add_room("tavern", forced=True)
+            "A tavern":
+                $ brothel.add_room("tavern", forced=True)
 
             "A dance club":
                 $ brothel.add_room("strip club", forced=True)
@@ -863,7 +868,8 @@ label advance_to_chapter(chapter, silent=False, free=False, start=False): # All 
             menu:
                 "At the end of Chapter 1, which faction did you side with?"
 
-                "Farah, the corrupt guard captain":                    $ story_flags["c1_path"] = "evil"
+                "Farah, the corrupt guard captain":
+                    $ story_flags["c1_path"] = "evil"
                     $ thieves_guild.action = False
                     $ watchtower.action = True
                     $ new_captain = captain
@@ -940,7 +946,8 @@ label advance_to_chapter(chapter, silent=False, free=False, start=False): # All 
         if debug_mode:
             menu:
                 "Do you want to skip the intro to Chapter 3?"
-                "Yes":                    pass
+                "Yes":
+                    pass
                 "No":
                     call c3_homura_okiya3
         else:
@@ -1296,7 +1303,8 @@ label found_runaway_girl(obj):
                 menu:
                     "What do you want to do?"
 
-                    "Ask them to come back tomorrow":                        $ come_back = 1
+                    "Ask them to come back tomorrow":
+                        $ come_back = 1
 
                     "Ask them to come back in a week":
                         $ come_back = 7
@@ -1359,7 +1367,8 @@ label found_runaway_girl_come_back(obj):
         menu:
             "What do you want to do?"
 
-            "Ask them to come back tomorrow":                $ come_back = 1
+            "Ask them to come back tomorrow":
+                $ come_back = 1
 
             "Ask them to come back in a week":
                 $ come_back = 7
@@ -2000,7 +2009,8 @@ label set_up_extractor(resource): # returns True if extractor has been set-up or
         menu:
             "Do you want to set up a resource extractor in this location (cannot be undone)?"
 
-            "Yes, set up a resource [ext] in this location":                play sound resource_dict[resource].sound
+            "Yes, set up a resource [ext] in this location":
+                play sound resource_dict[resource].sound
                 $ MC.items.remove(MC.get_items(name=ext, strict=True)[0])
                 $ resource_dict[resource].activate_extractor(first=True)
                 return True
@@ -2015,7 +2025,8 @@ label set_up_extractor(resource): # returns True if extractor has been set-up or
         menu:
             "You have an active resource extractor in this location. Do you want to turn if {b}OFF{/b}?"
 
-            "Turn it OFF":                play sound s_fiz
+            "Turn it OFF":
+                play sound s_fiz
                 $ resource_dict[resource].deactivate_extractor(final=False)
                 return True
 
@@ -2029,7 +2040,8 @@ label set_up_extractor(resource): # returns True if extractor has been set-up or
         menu:
             "You have an inactive resource extractor in this location. Do you want to turn if {b}ON{/b}?"
 
-            "Turn it ON":                play sound resource_dict[resource].sound
+            "Turn it ON":
+                play sound resource_dict[resource].sound
                 $ resource_dict[resource].activate_extractor(first=False)
                 return True
 
@@ -2170,7 +2182,8 @@ label visit_exchange():
 
     if NPC_bast.love >= 30:
         menu:
-            "Exchange resources":                pass
+            "Exchange resources":
+                pass
             "Fool around":
                 you "Hey Bast, do you want to have some fun?"
 
@@ -3014,7 +3027,8 @@ label watchtower_loop:
                             captain "Why don't you follow me into my chamber?"
 
                             menu:
-                                "Sure":                                    call hide_everything() from _call_hide_everything_46
+                                "Sure":
+                                    call hide_everything() from _call_hide_everything_46
 
                                     show bg captain_office at top with dissolve
                                     $ pics = rand_choice([("captain sex1", "captain sex2"), ("bg captain sex3", "bg captain sex4")])
@@ -3112,7 +3126,8 @@ label visit_gina():
         menu:
             "What would you like to do?"
 
-            "Buy something":                pass
+            "Buy something":
+                pass
 
             "Show her what you found":
 
@@ -3258,7 +3273,8 @@ label visit_goldie():
             label goldie_chat_menu():
 
                 menu:
-                    "How are things?":                        you "How's business?"
+                    "How are things?":
+                        you "How's business?"
 
                         goldie "Oh, business is good, thank you! Ever since you managed to lift that terrible curse, things have been looking up."
 
@@ -3283,7 +3299,8 @@ label visit_goldie():
 
                         menu:
                             "What do you want to do? (costs 1 AP)"
-                            "Strip for me":                                play sound s_mmmh
+                            "Strip for me":
+                                play sound s_mmmh
                                 goldie "With pleasure..."
                                 call goldie_strip from _call_goldie_strip_1
 
@@ -4285,7 +4302,8 @@ label send_to_farm_menu():
                 menu:
                     "What do you do?"
 
-                    "Ignore her":                        you "I'm the one in charge here. Get yourself ready. Gizel will pick you up shortly."
+                    "Ignore her":
+                        you "I'm the one in charge here. Get yourself ready. Gizel will pick you up shortly."
 
                         play sound s_screams
 
@@ -4330,7 +4348,8 @@ label send_to_farm_menu():
                     menu:
                         "[girl.fullname] is resisting. What do you do?"
 
-                        "Force her":                            you "You are going, and that's final!"
+                        "Force her":
+                            you "You are going, and that's final!"
                             $ forced = True
 
                         "Send her to rest instead" if not can_cancel:
@@ -4408,7 +4427,8 @@ label send_to_farm_menu():
 
         if can_follow:
             menu:
-                "Follow her to the farm":                    $ selected_destination = "farm"
+                "Follow her to the farm":
+                    $ selected_destination = "farm"
                     $ sent_success = True
                     jump teleport
 
@@ -4508,7 +4528,8 @@ label farm_discovered_weakness(girl):
     if girl in farm.girls:
 
         menu:
-            "Yes, do that":                $ prog.installation = farm_installations[farm_installations_dict[girl.weakness]] # farm_installations_dict[girl.weakness]
+            "Yes, do that":
+                $ prog.installation = farm_installations[farm_installations_dict[girl.weakness]] # farm_installations_dict[girl.weakness]
                 $ prog.update()
                 $ prog.avoid_weakness = False
 
@@ -4705,10 +4726,12 @@ label farm_change_training_mode(girl):
     $ not_avoid = not prog.avoid_weakness
 
     menu:
-        "Change current training mode ([prog.mode])":            menu:
+        "Change current training mode ([prog.mode])":
+            menu:
                 "Change current training mode ([prog.mode])"
 
-                "Gentle":                    $ prog.mode = "gentle"
+                "Gentle":
+                    $ prog.mode = "gentle"
                     "In soft mode, she won't be forced to do something she doesn't want to."
                 "Tough":
                     $ prog.mode = "tough"
@@ -4721,7 +4744,8 @@ label farm_change_training_mode(girl):
             menu:
                 "Use her weakness for [girl.weakness]s ([not_avoid])"
 
-                "Use it":                    $ prog.avoid_weakness = False
+                "Use it":
+                    $ prog.avoid_weakness = False
                     $ prog.installation = farm_installations[farm_installations_dict[girl.weakness]]
                     $ prog.update()
 
@@ -4762,7 +4786,8 @@ label farm_take_out(_girl, check_room=True, context="normal"): # Context can be 
             if context == "normal":
                 show screen dark_filter(False)
                 menu:
-                    "Follow her to the brothel":                        hide screen dark_filter
+                    "Follow her to the brothel":
+                        hide screen dark_filter
                         jump girls
 
                     "Stay here":
@@ -5115,7 +5140,8 @@ label first_contract():
                     jobgirl "I see... Well, you could always buy a new one? You'd have one month to train her..."
 
                     menu:
-                        "Let me think about it.":                            jobgirl "All right. I'll be back tonight. But it's your last chance! You can't keep important customers waiting."
+                        "Let me think about it.":
+                            jobgirl "All right. I'll be back tonight. But it's your last chance! You can't keep important customers waiting."
                             $ add_event("first_contract_return", date=calendar.time, type="night")
 
                         "No, just come back next month.":
@@ -6504,7 +6530,8 @@ label contract_MC_event(): # The MC challenge part is hardcoded for each contrac
         menu:
             "Choose what you want [girl.fullname] to do:"
 
-            "Oral sex":                $ act = "service"
+            "Oral sex":
+                $ act = "service"
                 $ pic1 = girl.get_pic(["oral"], ["service"], hide_farm=True)
                 $ pic2 = girl.get_pic(["cim"], ["cumshot"], and_tags=["oral"], hide_farm=True)
 
@@ -8195,7 +8222,8 @@ label asylum_return(girl, score):
         $ auction_min_price = price // 20
 
         menu:
-            "Keep her at the asylum for another month (cost: {image=img_gold_24} [asylum_cost])":                play sound s_gold
+            "Keep her at the asylum for another month (cost: {image=img_gold_24} [asylum_cost])":
+                play sound s_gold
                 $ MC.gold -= asylum_cost
 
                 nun "Fine, we'll keep her here to recover and heal. There are a few spells we could try..."
@@ -8270,7 +8298,8 @@ label asylum_no_room(girl):
     nun "I'm sorry but it seems you are unable to host her at the time. You could always extend her stay, but we will need you to cover the extra cost."
 
     menu:
-        "Let her stay one more day (50 gold)":            $ price = 50
+        "Let her stay one more day (50 gold)":
+            $ price = 50
             $ duration = 1
 
         "Let her stay three more days (150 gold)":
@@ -8479,7 +8508,8 @@ label free_girl_challenge():
     girl.char "Hello Sir. I heard you had some job openings... Would you have anything for me?"
 
     menu:
-        "Yes":            hide screen girl_stats
+        "Yes":
+            hide screen girl_stats
             hide screen girl_profile
             with dissolve
 
