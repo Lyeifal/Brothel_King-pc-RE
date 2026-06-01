@@ -496,7 +496,7 @@ init -2 python:
             if not story_flags["farm powers initiated"]:
                 if farm.active and not farm.powers and self.mojo["purple"] >= 5 and game.chapter >= 3:
                     # 2 days buffer to avoid overlap with chapter change events
-                    calendar.set_alarm(calendar.time + 2, StoryEvent(label="farm_powers_init", type="morning"))
+                    calendar.set_alarm(calendar.time + 2, StoryEvent(label=__("farm_powers_init"), type="morning"))
                     story_flags["farm powers initiated"] = True
 
             return mojo
@@ -717,7 +717,7 @@ init -2 python:
             if self.loan:
                 cost = self.loan.repay()
                 if self.loan.amount <= 0: # Loan repaid
-                    calendar.set_alarm(calendar.time+1, Event(label = "loan_repaid"))
+                    calendar.set_alarm(calendar.time+1, Event(label = __("loan_repaid")))
                 return cost
             return False
 
@@ -790,7 +790,7 @@ init -2 python:
                 if renpy.random.random() <= 0.33: # 33% chance of finding diamond
                     nb = 1 # + self.get_effect("change", "diamond extraction")
                 else:
-                    renpy.call_screen("OK_screen", message="You failed to find anything.")
+                    renpy.call_screen("OK_screen", message=__("You failed to find anything."))
                     return
             else:
                 return
@@ -1480,7 +1480,7 @@ init -2 python:
 
             return False
 
-        def get_items(self, target="any", type="any", name="any", effect_type="any", effect_target="any", strict=False): # Where 'type' is a name, not an object. Use strict to avoid naming errors (such as Extractor MKI being mistaken with MKII)
+        def get_items(self, target="any", type="any", name=__("any"), effect_type="any", effect_target="any", strict=False): # Where 'type' is a name, not an object. Use strict to avoid naming errors (such as Extractor MKI being mistaken with MKII)
 
             items = []
 
@@ -1819,7 +1819,7 @@ init -2 python:
             for effect in self.effects:
                 self.effect_dict[effect.type, effect.target].append(effect)
             self.weight = weight
-            self.description = "{b}" + self.name.capitalize() + "{/b} (difficulty: " + self.get_difficulty() + "): " + get_description(base_description, effects)
+            self.description = __("{b}") + self.name.capitalize() + "{/b} (difficulty: " + self.get_difficulty() + "): " + get_description(base_description, effects)
 
         def is_allowed(self):
             return brothel.get_effect("allow", self.name) and self.weight > 0
@@ -2233,7 +2233,7 @@ init -2 python:
 
         def __init__(self, rank, level, upgrades, max_rep):
 
-            self.name = "The Rose Garden"
+            self.name = __("The Rose Garden")
             self.rank = rank
             self.level = level
             self.cost = bro_cost[self.level]
@@ -5062,7 +5062,7 @@ init -10 python:
                     self.description = self.value # value for story events must be text
 
                 else:
-                    self.description = "You are now in endless mode, enjoy continuing the game!"
+                    self.description = __("You are now in endless mode, enjoy continuing the game!")
 
             return self.description
 
@@ -5167,7 +5167,7 @@ init -2 python:
 
         """ This class covers spells used by the MC """
 
-        def __init__(self, name, pic = "aura1.webp", type = "passive", level = 0, cost = 0, effects = None, duration = None, sound = s_spell, description = "A basic spell."):
+        def __init__(self, name, pic = "aura1.webp", type = "passive", level = 0, cost = 0, effects = None, duration = None, sound = s_spell, description = __("A basic spell.")):
 
             self.name = name
             self.pic = Picture(pic, "spells/" + pic)
@@ -6739,7 +6739,7 @@ init -2 python:
 
         """This class is used to track external mods. Mods are declared in their respective rpy files, and automatically added to 'detected_mods' upon creation."""
 
-        def __init__(self, name, folder, creator="Unknown", version= 1.0, pic=None, description="This is a mod for Brothel King.", help_prompts=None, init_label="", night_label = "", update_label = "", home_rightmenu_add_buttons=None, events=None, early_label="", load_label="", remove_label=""):
+        def __init__(self, name, folder, creator="Unknown", version= 1.0, pic=None, description=__("This is a mod for Brothel King."), help_prompts=None, init_label="", night_label = "", update_label = "", home_rightmenu_add_buttons=None, events=None, early_label="", load_label="", remove_label=""):
 
             #### Init variables - All declared variables below must not be changed after init, as they will not save and will be overwritten when the game starts
             super().__setattr__('name', name)
@@ -7057,9 +7057,9 @@ init -2 python:
             if effects == None: effects = []
             self.effects = effects
             if hidden_effect:
-                self.description = "{b}" + self.name + "{/b}" + ": " + base_description
+                self.description = __("{b}") + self.name + "{/b}" + ": " + base_description
             else:
-                self.description = "{b}" + self.name + "{/b}" + ": " + get_description(base_description, effects)
+                self.description = __("{b}") + self.name + "{/b}" + ": " + get_description(base_description, effects)
             self.upgrade = upgrade
             self.built = False
             self.can_deactivate = can_deactivate
@@ -7085,10 +7085,10 @@ init -2 python:
             if self.get_duration():
                 # Carpenter events
                 if not story_flags["carpenter first build"]:
-                    calendar.set_alarm(calendar.time+1, StoryEvent(label="iulia1", type="morning"))
+                    calendar.set_alarm(calendar.time+1, StoryEvent(label=__("iulia1"), type="morning"))
                     story_flags["carpenter first build"] = True
 
-                calendar.set_alarm(calendar.time + self.get_duration(), StoryEvent(label = "furniture_built", call_args=[self]))
+                calendar.set_alarm(calendar.time + self.get_duration(), StoryEvent(label = __("furniture_built"), call_args=[self]))
                 brothel.current_building = self
                 brothel.started_building = calendar.time
                 renpy.say(carpenter, __("I'll be finished in ") + str(self.get_duration()) + __(" days. I'm sure you'll be happy with the result."))
@@ -7116,17 +7116,17 @@ init -2 python:
                 add_event("iulia2", chance = 1.0, type="city", location = "gallows", once = True, AP_cost = 1)
                 story_flags["iulia2 registered"] = True
             if not story_flags["iulia3"] and story_flags["iulia2"] and len(brothel.furniture) >= 20:
-                calendar.set_alarm(calendar.time+2, StoryEvent(label="iulia3", type="day"))
+                calendar.set_alarm(calendar.time+2, StoryEvent(label=__("iulia3"), type="day"))
             if not story_flags["iulia4"] and story_flags["iulia3"] and furniture_dict["Good tools"].built:
-                calendar.set_alarm(calendar.time+1, StoryEvent(label="iulia4", type="morning"))
+                calendar.set_alarm(calendar.time+1, StoryEvent(label=__("iulia4"), type="morning"))
             if not story_flags["iulia5"] and story_flags["iulia4"] and len(brothel.furniture) >= 30:
-                calendar.set_alarm(calendar.time+2, StoryEvent(label="iulia5", type="day"))
+                calendar.set_alarm(calendar.time+2, StoryEvent(label=__("iulia5"), type="day"))
             if not story_flags["iulia6"] and story_flags["iulia5"] and furniture_dict["Great tools"].built and brothel.has_room("tavern"):
-                calendar.set_alarm(calendar.time+1, StoryEvent(label="iulia6", type="day"))
+                calendar.set_alarm(calendar.time+1, StoryEvent(label=__("iulia6"), type="day"))
             if not story_flags["iulia7"] and story_flags["iulia6"] and furniture_dict["Master tools"].built:
-                calendar.set_alarm(calendar.time+1, StoryEvent(label="iulia7", type="morning"))
+                calendar.set_alarm(calendar.time+1, StoryEvent(label=__("iulia7"), type="morning"))
             if not story_flags["iulia_H"] and story_flags["iulia7"] and len(brothel.furniture) >= 40:
-                calendar.set_alarm(calendar.time+2, StoryEvent(label="iulia_H", type="morning"))
+                calendar.set_alarm(calendar.time+2, StoryEvent(label=__("iulia_H"), type="morning"))
                 story_flags["iulia_H"] = True
             
             test_achievement("furniture")
@@ -7140,9 +7140,9 @@ init -2 python:
                 brothel.furniture.append(furniture_dict[self.upgrade])
                 brothel.activate_furniture(furniture_dict[self.upgrade])
                 if message:
-                    renpy.call_screen("OK_screen", title = "Furniture destroyed", message = self.name + " has been destroyed and replaced with " + self.upgrade, pic = self.pic, pic_size = "large")
+                    renpy.call_screen("OK_screen", title = __("Furniture destroyed"), message = self.name + " has been destroyed and replaced with " + self.upgrade, pic = self.pic, pic_size = "large")
             elif message:
-                renpy.call_screen("OK_screen", title = "Furniture destroyed", message = self.name + " has been destroyed.", pic = self.pic, pic_size = "large")
+                renpy.call_screen("OK_screen", title = __("Furniture destroyed"), message = self.name + " has been destroyed.", pic = self.pic, pic_size = "large")
             self.activate()
 
         def activate(self):
@@ -7238,7 +7238,7 @@ init -2 python:
 init -2 python:
     class Achievement(object):
 
-        def __init__(self, title="My cool achievement:\nWell done, bro!", description="No description", pic="misc.webp", pic_path="UI/achievements/", level_nb=1, target="", requirements="default", requirements2=None, custom_titles=None, multi=1): # {1 : C, 2 : B, 3 : A, 4 : S, 5 : X}
+        def __init__(self, title="My __("ool achievement:\nWell done, bro!"), description=__("No description"), pic="misc.webp", pic_path="UI/achievements/", level_nb=1, target="", requirements="default", requirements2=None, custom_titles=None, multi=1): # {1 : C, 2 : B, 3 : A, 4 : S, 5 : X}
 
             self.title = title
             self.description = description

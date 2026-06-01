@@ -1727,7 +1727,7 @@ label random_night_girl_event(girl, room):
                             python:
                                 eff = [Effect("boost", "income", 0.1, scope="brothel")]
                                 MC.add_effects(eff)
-                                calendar.set_alarm(calendar.time + 1, StoryEvent(label = "effect_expired", call_args = [MC, eff]))
+                                calendar.set_alarm(calendar.time + 1, StoryEvent(label = __("effect_expired"), call_args = [MC, eff]))
 
                             "Your brothel's reputation has increased slightly."
 

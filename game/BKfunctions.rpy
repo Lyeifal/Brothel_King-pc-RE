@@ -3415,7 +3415,7 @@ init -3 python:
 
     def can_use_minion_item():
 
-        if MC.get_items(target="minion", name="Healing powder") and farm.get_hurt_minions():
+        if MC.get_items(target="minion", name=__("Healing powder")) and farm.get_hurt_minions():
             return True
         if MC.get_items(target="minion", effect_type="gain"):
             for it in MC.get_items(target="minion", effect_type="gain"):
@@ -4503,7 +4503,7 @@ init -3 python:
                     thing.equip(it)
 
         if expires:
-            calendar.set_alarm(expires, StoryEvent(label = "effect_expired", call_args = [thing, effects]))
+            calendar.set_alarm(expires, StoryEvent(label = __("effect_expired"), call_args = [thing, effects]))
 
         if scope_list:
             update_effects(scope_list)
@@ -5135,29 +5135,29 @@ init -3 python:
         for stat in all_MC_stats:
             if NGP_settings_dict[stat].get():
                 pic = {"strength" : "bear.webp", "spirit" : "sorcerer.webp", "charisma" : "ghost.webp", "speed" : "speed.webp"}[stat]
-                MC.learn(Spell(NGP_settings_dict[stat].label, pic, type="passive", level=1, effects=[Effect("gain", stat, NGP_settings_dict[stat].get()), Effect("change", stat + " max", NGP_settings_dict[stat].get())], description="Gain %i to MC's %s and %s maximum." % (NGP_settings_dict[stat].get(), stat.capitalize(), stat.capitalize())))
+                MC.learn(Spell(NGP_settings_dict[stat].label, pic, type="passive", level=1, effects=[Effect("gain", stat, NGP_settings_dict[stat].get()), Effect("change", stat + " max", NGP_settings_dict[stat].get())], description=__("Gain %i to MC's %s and %s maximum.") % (NGP_settings_dict[stat].get(), stat.capitalize(), stat.capitalize())))
                 # MC.change_stat(stat, NGP_settings_dict[stat].get(), False, ignore_ceil=True)
 
         if NGP_settings_dict["love generation"].get():
-            MC.learn(Spell(NGP_settings_dict["love generation"].label, 'love.webp', type="passive", level=1, effects=[Effect("boost", "love gains", NGP_settings_dict["love generation"].get(), scope="brothel")], description="Boosts love gains by %i per cent (NewGame+ effect)." % (100*NGP_settings_dict["love generation"].get())))
+            MC.learn(Spell(NGP_settings_dict["love generation"].label, 'love.webp', type="passive", level=1, effects=[Effect("boost", "love gains", NGP_settings_dict["love generation"].get(), scope="brothel")], description=__("Boosts love gains by %i per cent (NewGame+ effect).") % (100*NGP_settings_dict["love generation"].get())))
 
         if NGP_settings_dict["fear generation"].get():
-            MC.learn(Spell(NGP_settings_dict["fear generation"].label, 'doll_.webp', type="passive", level=1, effects=[Effect("boost", "fear gains", NGP_settings_dict["fear generation"].get(), scope="brothel")], description="Boosts fear gains by %i per cent (NewGame+ effect)." % (100*NGP_settings_dict["fear generation"].get())))
+            MC.learn(Spell(NGP_settings_dict["fear generation"].label, 'doll_.webp', type="passive", level=1, effects=[Effect("boost", "fear gains", NGP_settings_dict["fear generation"].get(), scope="brothel")], description=__("Boosts fear gains by %i per cent (NewGame+ effect).") % (100*NGP_settings_dict["fear generation"].get())))
 
         if NGP_settings_dict["xp generation"].get():
-            MC.learn(Spell(NGP_settings_dict["xp generation"].label, 'enhanced.webp', type="passive", level=1, effects=[Effect("boost", "xp gains", NGP_settings_dict["xp generation"].get(), scope="brothel")], description="Boosts your girl's XP gains by %i per cent (NewGame+ effect)." % (100*NGP_settings_dict["xp generation"].get())))
+            MC.learn(Spell(NGP_settings_dict["xp generation"].label, 'enhanced.webp', type="passive", level=1, effects=[Effect("boost", "xp gains", NGP_settings_dict["xp generation"].get(), scope="brothel")], description=__("Boosts your girl's XP gains by %i per cent (NewGame+ effect).") % (100*NGP_settings_dict["xp generation"].get())))
 
         if NGP_settings_dict["jp generation"].get():
-            MC.learn(Spell(NGP_settings_dict["jp generation"].label, 'hand.webp', type="passive", level=1, effects=[Effect("boost", "all jp gains", NGP_settings_dict["jp generation"].get(), scope="brothel")], description="Boosts your girl's JP gains by %i per cent (NewGame+ effect)." % (100*NGP_settings_dict["jp generation"].get())))
+            MC.learn(Spell(NGP_settings_dict["jp generation"].label, 'hand.webp', type="passive", level=1, effects=[Effect("boost", "all jp gains", NGP_settings_dict["jp generation"].get(), scope="brothel")], description=__("Boosts your girl's JP gains by %i per cent (NewGame+ effect).") % (100*NGP_settings_dict["jp generation"].get())))
 
         if NGP_settings_dict["prestige generation"].get():
-            MC.learn(Spell(NGP_settings_dict["prestige generation"].label, 'fame.webp', type="passive", level=1, effects=[Effect("boost", "prestige", NGP_settings_dict["prestige generation"].get())], description="Boosts your prestige gains by %i per cent (NewGame+ effect)." % (100*NGP_settings_dict["prestige generation"].get())))
+            MC.learn(Spell(NGP_settings_dict["prestige generation"].label, 'fame.webp', type="passive", level=1, effects=[Effect("boost", "prestige", NGP_settings_dict["prestige generation"].get())], description=__("Boosts your prestige gains by %i per cent (NewGame+ effect).") % (100*NGP_settings_dict["prestige generation"].get())))
 
         if NGP_settings_dict["training efficiency"].get():
-            MC.learn(Spell(NGP_settings_dict["training efficiency"].label, 'discipline.webp', type="passive", level=1, effects=[Effect("boost", "MC training", NGP_settings_dict["training efficiency"].get())], description="Boosts your girls' gains from your personal training by %i per cent (NewGame+ effect)." % (100*NGP_settings_dict["training efficiency"].get())))
+            MC.learn(Spell(NGP_settings_dict["training efficiency"].label, 'discipline.webp', type="passive", level=1, effects=[Effect("boost", "MC training", NGP_settings_dict["training efficiency"].get())], description=__("Boosts your girls' gains from your personal training by %i per cent (NewGame+ effect).") % (100*NGP_settings_dict["training efficiency"].get())))
 
         if NGP_settings_dict["tax reduction"].get():
-            MC.learn(Spell(NGP_settings_dict["tax reduction"].label, 'haggler.webp', type="passive", level=1, effects=[Effect("boost", "taxes", -NGP_settings_dict["tax reduction"].get())], description="Reduces your total taxes by %i per cent (NewGame+ effect)." % (100*NGP_settings_dict["tax reduction"].get())))
+            MC.learn(Spell(NGP_settings_dict["tax reduction"].label, 'haggler.webp', type="passive", level=1, effects=[Effect("boost", "taxes", -NGP_settings_dict["tax reduction"].get())], description=__("Reduces your total taxes by %i per cent (NewGame+ effect).") % (100*NGP_settings_dict["tax reduction"].get())))
 
         # Item dispensers
         if NGP_settings_dict["free girl"].get():
@@ -5206,11 +5206,11 @@ init -3 python:
         if NGP_settings_dict["free girl challenge"].get():
             calendar.set_alarm(1, StoryEvent("free_girl_challenge", type="morning"))
             slavemarket.active = False
-            MC.learn(Spell(NGP_settings_dict["free girl challenge"].label, 'girl.webp', type="passive", level=1, description="Slavemarket is disabled. You receive a new girl at the start of each month. (NewGame+ effect)."))
+            MC.learn(Spell(NGP_settings_dict["free girl challenge"].label, 'girl.webp', type="passive", level=1, description=__("Slavemarket is disabled. You receive a new girl at the start of each month. (NewGame+ effect).")))
 
         if NGP_settings_dict["training challenge"].get():
             MC.training = False
-            MC.learn(Spell(NGP_settings_dict["training challenge"].label, 'militia.webp', type="passive", level=1, effects=[Effect("boost", "farm training", 1.0)], description="The Farm becomes much more efficient, but you can no longer personally train your girls. (NewGame+ effect)."))
+            MC.learn(Spell(NGP_settings_dict["training challenge"].label, 'militia.webp', type="passive", level=1, effects=[Effect("boost", "farm training", 1.0)], description=__("The Farm becomes much more efficient, but you can no longer personally train your girls. (NewGame+ effect).")))
 
         # naturist frequency is handled in BKgirlclass.rpy generate_traits()
 
@@ -5637,7 +5637,7 @@ init -3 python:
         en_brothels.append(bro1)
 
         bro2 = EnemyBrothel(7, 5)
-        bro2.name = "Cloud's Palace"
+        bro2.name = __("Cloud's Palace")
         bro2.pic = "backgrounds/slave market5.webp"
         bro2.base_income = 5000000
         en_brothels.append(bro2)

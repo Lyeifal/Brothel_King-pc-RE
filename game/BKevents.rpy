@@ -465,7 +465,7 @@ label latest_customer_satisfaction:
     return
 
 ## Generic event screen
-label generic_event(title = "An Event Most Generic", pic = "bg farmland", desc = "One day as he was strolling by a surprisingly unremarkable place, {b}[MC.name]{/b} was struck to witness an event that was almost unfathomably generic.\n\nSo generic was that event, in fact, that within a few moments, he had forgotten all about it.\n\nIt left a strong impression in his mind that sometimes, things happen, and that sometimes, one simply does not give a flying fuck.\n\n{b}Boredom{/b} {color=[c_darkred]}+5{/color}"):
+label generic_event(title = __("An Event Most Generic"), pic = "bg farmland", desc = "One day as he was strolling by a surprisingly unremarkable place, {b}[MC.name]{/b} was struck to witness an event that was almost unfathomably generic.\n\nSo generic was that event, in fact, that within a few moments, he had forgotten all about it.\n\nIt left a strong impression in his mind that sometimes, things happen, and that sometimes, one simply does not give a flying fuck.\n\n{b}Boredom{/b} {color=[c_darkred]}+5{/color}"):
 
     window hide
 
@@ -1237,7 +1237,7 @@ label run_away(girl):
             $ MC.good += 1
 
     if hunters:
-        $ calendar.set_alarm(calendar.time + hunt_delay, Event(label = "found_runaway_girl", object = (girl, hunters), order = 1))
+        $ calendar.set_alarm(calendar.time + hunt_delay, Event(label = __("found_runaway_girl"), object = (girl, hunters), order = 1))
 
     return
 
@@ -1323,7 +1323,7 @@ label found_runaway_girl(obj):
                         $ MC.good += 1
 
                 if come_back:
-                    $ calendar.set_alarm(calendar.time + come_back, Event(label = "found_runaway_girl_come_back", object = (girl, hunters), order = 1))
+                    $ calendar.set_alarm(calendar.time + come_back, Event(label = __("found_runaway_girl_come_back"), object = (girl, hunters), order = 1))
 
         else:
 
@@ -1386,7 +1386,7 @@ label found_runaway_girl_come_back(obj):
                 $ MC.good += 1
 
         if come_back:
-            $ calendar.set_alarm(calendar.time + come_back, Event(label = "found_runaway_girl_come_back", object = (girl, hunters), order = 1))
+            $ calendar.set_alarm(calendar.time + come_back, Event(label = __("found_runaway_girl_come_back"), object = (girl, hunters), order = 1))
 
     else:
 
@@ -2763,10 +2763,10 @@ label visit_thieves_guild:
         with fade
     elif NPC_renza.love >= 20 and not NPC_renza.flags["story3"]:
         $ NPC_renza.flags["story3"] = True
-        $ calendar.set_alarm(calendar.time+1, Event(label = "renza_onsen1", order=1))
+        $ calendar.set_alarm(calendar.time+1, Event(label = __("renza_onsen1"), order=1))
     elif NPC_renza.love >= 30 and not NPC_renza.flags["story4"]:
         $ NPC_renza.flags["story4"] = True
-        $ calendar.set_alarm(calendar.time+1, Event(label = "renza_onsen3", order=1))
+        $ calendar.set_alarm(calendar.time+1, Event(label = __("renza_onsen3"), order=1))
 
     renza "Oh, hi, [MC.name]. Come to check on my merchandise?"
 
@@ -3100,7 +3100,7 @@ label visit_willow():
 
 label visit_gina():
 
-    if MC.get_items(name="Cimerian"):
+    if MC.get_items(name=__("Cimerian")):
         scene black
         show expression selected_location.get_pic(config.screen_width, int(config.screen_height*0.8)) at top
         with fade
@@ -3126,7 +3126,7 @@ label visit_gina():
                 python:
                     ev_list = []
 
-                    for it in MC.get_items(name="Cimerian"):
+                    for it in MC.get_items(name=__("Cimerian")):
                         if it.name == "Cimerian scrap":
                             price = 350
                             rv = 1
@@ -4154,7 +4154,7 @@ label farm_show(girl=None):
 
     window hide
 
-    $ title = "Farm Event"
+    $ title = __("Farm Event")
     $ pic = rand_choice(['bg farmland', 'bg farmland dusk', 'bg farmland night', 'bg farm outside', 'bg farm'])
     $ desc = ("{b}%i customers came to watch the show{/b}:\n%s" % (len(customers), cust_details)) + ("\n\n{b}Result forecast{/b}:\nFarm bonus: %i" % girl.get_build_up() + "%%\n{image=img_gold_20} " + event_color["average contrast"] % "{b}%s{/b}" + "{size=-4} (will vary according to %s's performance)") % ('{:,}'.format(total_cust_budget), girl.name)
 
@@ -7614,7 +7614,7 @@ label tax_no_money():
 
         taxgirl "I'll see you on the 8th. This better be the first and last time, though..."
 
-        $ calendar.set_alarm(calendar.time + 7, StoryEvent(label="tax_payment", type="night"))
+        $ calendar.set_alarm(calendar.time + 7, StoryEvent(label=__("tax_payment"), type="night"))
 
     elif not NPC_taxgirl.flags["paid tax"] or NPC_taxgirl.love < 5:
 
@@ -7660,7 +7660,7 @@ label tax_no_money():
 
             taxgirl "Don't make me regret this."
 
-        $ calendar.set_alarm(calendar.time + 7, StoryEvent(label="tax_payment", type="night"))
+        $ calendar.set_alarm(calendar.time + 7, StoryEvent(label=__("tax_payment"), type="night"))
         $ NPC_taxgirl.love -= 3
 
     return
@@ -8087,7 +8087,7 @@ label is_broken(girl):
 
                     # Dice is thrown when the alarm is set to discourage save scumming
                     $ relinquish_girl(girl)
-                    $ calendar.set_alarm(calendar.time + 28, StoryEvent(label = "asylum_return", call_args = (girl, dice(100)), order = 1))
+                    $ calendar.set_alarm(calendar.time + 28, StoryEvent(label = __("asylum_return"), call_args = (girl, dice(100)), order = 1))
 
                     scene black with fade
 
@@ -8200,7 +8200,7 @@ label asylum_return(girl, score):
                 nun "Fine, we'll keep her here to recover and heal. There are a few spells we could try..."
 
                 # Dice is thrown when the alarm is set to discourage save scumming
-                $ calendar.set_alarm(calendar.time + 28, StoryEvent(label = "asylum_return", call_args = (girl, dice(100)), order = 1))
+                $ calendar.set_alarm(calendar.time + 28, StoryEvent(label = __("asylum_return"), call_args = (girl, dice(100)), order = 1))
 
                 scene black with fade
 
@@ -8291,7 +8291,7 @@ label asylum_no_room(girl):
 
     play sound s_gold
     $ MC.gold -= price
-    $ calendar.set_alarm(calendar.time + duration, StoryEvent(label="asylum_return2", call_args=[girl], type="morning"))
+    $ calendar.set_alarm(calendar.time + duration, StoryEvent(label=__("asylum_return2"), call_args=[girl], type="morning"))
 
     return False
 
