@@ -469,8 +469,7 @@ label resume_intro2:
     menu:
         "What do you do?"
 
-        "Run to her rescue":
-
+        _("Run to her rescue"):
             $ MC.good += 1
             $ norollback()
 
@@ -962,8 +961,7 @@ label resume_intro3:
     menu:
         "Who?"
 
-        "The illuminati guild?":
-            gio "*roll eyes*"
+        _("The illuminati guild?"):            gio "*roll eyes*"
 
         "Kaizer Sauze?":
             gio "*roll eyes*"
@@ -1158,8 +1156,7 @@ label shortcut:
     menu:
         "Well..."
 
-        "Of course!":
-            $ text1 = "Of course"
+        _("Of course!"):            $ text1 = "Of course"
             jump resume_intro4
 
         "Sure!":
@@ -1483,8 +1480,7 @@ label resume_intro4:
 
             menu:
 
-                "Ask for a blowjob":
-
+                _("Ask for a blowjob"):
                     $ norollback()
 
                     maid "Of course my lord, please allow me to make you feel good..."

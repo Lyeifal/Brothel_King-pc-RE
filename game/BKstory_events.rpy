@@ -130,8 +130,7 @@ label hmas:
         menu:
             "Choose your present"
 
-            "Fuck her pussy":
-                call hmas_sex("sex") from _call_hmas_sex_1
+            _("Fuck her pussy"):                call hmas_sex("sex") from _call_hmas_sex_1
 
             "Fuck her ass":
                 call hmas_sex("anal") from _call_hmas_sex_2
@@ -409,8 +408,7 @@ label renza_friend1: # L >= 5 and dice(6) = 6
 
     menu:
 
-        "Maybe I do":
-
+        _("Maybe I do"):
             $ norollback()
 
             you "Well, maybe I do..."
@@ -821,8 +819,7 @@ label renza_onsen1: # NPC_renza.flags[story2] + L=25 + not NPC_renza.flags[story
 
         "You think to yourself."
 
-        "My friends should be treated well":
-            $ norollback()
+        _("My friends should be treated well"):            $ norollback()
             $ MC.good += 1
 
             you "(I'm happy Renza came. I want her to be comfortable. Plus, she's hot.)"
@@ -851,8 +848,7 @@ label renza_onsen1: # NPC_renza.flags[story2] + L=25 + not NPC_renza.flags[story
 
         "What do you do?"
 
-        "Peep on Renza":
-            jump renza_onsen2
+        _("Peep on Renza"):            jump renza_onsen2
 
         "Don't peep":
 
@@ -863,8 +859,7 @@ label renza_onsen1: # NPC_renza.flags[story2] + L=25 + not NPC_renza.flags[story
             "You swallow hard."
 
             menu:
-                "Peep on Renza":
-                    jump renza_onsen2
+                _("Peep on Renza"):                    jump renza_onsen2
 
                 "No, don't peep":
                     you "I must be strong. I'm an upstanding citizen."
@@ -880,8 +875,7 @@ label renza_onsen1: # NPC_renza.flags[story2] + L=25 + not NPC_renza.flags[story
                     show screen invisible_button
 
                     menu:
-                        "Peep on Renza":
-                            pass
+                        _("Peep on Renza"):                            pass
 
                         "Definitely don't peep":
                             "You have decided not to peep on Renza."
@@ -1142,8 +1136,7 @@ label renza_onsen3: # NPC_renza.flags[story3] and L=35 and not NPC_renza.flags[s
     you "..."
 
     menu:
-        "You have people counting on you":
-            $ norollback()
+        _("You have people counting on you"):            $ norollback()
             $ MC.good += 1
 
             you "You don't have to be alone and miserable. You have people counting on you, people who care about you..."
@@ -1239,8 +1232,7 @@ label renza_onsen3: # NPC_renza.flags[story3] and L=35 and not NPC_renza.flags[s
 
     menu:
 
-        "To make a name for myself":
-            $ MC.neutral += 1
+        _("To make a name for myself"):            $ MC.neutral += 1
 
             you "I want to rise in Zan and make a name for myself. I want to become as famous as the King himself."
 
@@ -1607,8 +1599,7 @@ label farm_meet_gizel(): # Location: spice market
     menu:
         "How do you feel about elves?"
 
-        "I bear them no grudge":
-            $ MC.rand_say(("I don't hate them. Wars come and go, and it wasn't they who started this one...", "ar: Although the Arios church denounces the elves, I do not think they are bad. They can be brought back to the light.", "wr: I have fought enough elves on the battlefield to respect their grit and abilities. They are worthy opponents.", "wz: I do enjoy a good conversation with an elf from time to time. They know a great deal of secrets, though they don't share them very willingly."))
+        _("I bear them no grudge"):            $ MC.rand_say(("I don't hate them. Wars come and go, and it wasn't they who started this one...", "ar: Although the Arios church denounces the elves, I do not think they are bad. They can be brought back to the light.", "wr: I have fought enough elves on the battlefield to respect their grit and abilities. They are worthy opponents.", "wz: I do enjoy a good conversation with an elf from time to time. They know a great deal of secrets, though they don't share them very willingly."))
             $ story_flags["elves"] = "like"
 
         "I hate them":
@@ -1735,8 +1726,7 @@ label farm_meet_gizel2():
 
         menu:
             "What do you do?"
-            "Warn the elf girl":
-                $ result = "warn"
+            _("Warn the elf girl"):                $ result = "warn"
                 $ MC.good += 1
             "Wait and see":
                 $ result = "wait"
@@ -1750,8 +1740,7 @@ label farm_meet_gizel2():
 
         menu:
             "What do you do?"
-            "Denounce the elf's hiding place":
-                $ result = "denounce"
+            _("Denounce the elf's hiding place"):                $ result = "denounce"
                 $ MC.evil += 1
             "Wait and see":
                 $ result = "wait"
@@ -1762,8 +1751,7 @@ label farm_meet_gizel2():
 
         menu:
             "What do you do?"
-            "Warn the elf girl":
-                $ result = "warn"
+            _("Warn the elf girl"):                $ result = "warn"
                 $ MC.good += 1
             "Denounce the elf's hiding place":
                 $ result = "denounce"
@@ -2045,8 +2033,7 @@ label farm_meet_gizel2():
         menu:
             "What do you do?"
 
-            "Defend yourself" if result == "warn":
-                $ reaction = "fight"
+            _("Defend yourself" if result == "warn"):                $ reaction = "fight"
 
                 you "You think I'd fall to a bunch of braindead bigots like you? I can crush you with my bare hands!"
 
@@ -2109,8 +2096,7 @@ label farm_meet_gizel2():
         menu:
             "What will you do?"
 
-            "Fight them head-on":
-                jump templar_fight
+            _("Fight them head-on"):                jump templar_fight
 
             "Use magic":
                 jump templar_magic
@@ -2921,8 +2907,7 @@ label gizel_attack():
 
             label gizel_questions_menu():
                 menu:
-                    "Who are you?":
-
+                    _("Who are you?"):
                         you "Who are you?"
 
                         gizel normal "Why, I'm Gizel, of course."
@@ -3492,8 +3477,7 @@ label farm_exorcism_attempt():
     menu:
         "What do you do?"
 
-        "Attack him with your weapon":
-
+        _("Attack him with your weapon"):
             play sound s_sheath
 
             you "En garde!"
@@ -4301,8 +4285,7 @@ label farm_meet_gina():
     menu:
         "What do you do?"
 
-        "Save her":
-            $ MC.good += 1
+        _("Save her"):            $ MC.good += 1
 
             you "Lady, wait!!!"
 
@@ -6021,8 +6004,7 @@ label stella_secret2():
     menu:
         "Stumble towards..."
 
-        "General Ka":
-            "Trying to remain zombie-like, you stumble towards the lady-in-red."
+        _("General Ka"):            "Trying to remain zombie-like, you stumble towards the lady-in-red."
 
             blood1 "Hey! The scrawny one is coming at me... Creepy!"
 
@@ -6727,8 +6709,7 @@ label farm_meet_willow():
     menu:
         "The monster seems poised to attack you. It's time to defend yourself."
 
-        "Fight the monster":
-            show sewer_monster as sewer_monster2 at truecenter:
+        _("Fight the monster"):            show sewer_monster as sewer_monster2 at truecenter:
                 xoffset -xres(100) yoffset yres(75)
             play sound s_sheath
 
@@ -7046,8 +7027,7 @@ label willow_fight(): # This event will happen somewhere in the city after a mon
     menu:
         "What do you do?"
 
-        "Follow the traces":
-            you "I wonder where this leads..."
+        _("Follow the traces"):            you "I wonder where this leads..."
 
         "Ignore them":
             you "Yeah, no."
@@ -7197,8 +7177,7 @@ label willow_fight(): # This event will happen somewhere in the city after a mon
     menu:
         "What do you do?"
 
-        "Rush to help":
-            $ MC.evil -= 1
+        _("Rush to help"):            $ MC.evil -= 1
 
             you "Damsel in distress! I got this!"
 
@@ -7457,8 +7436,7 @@ label willow_fight(): # This event will happen somewhere in the city after a mon
                 menu:
                     "Skip event? (monster)"
 
-                    "Yes":
-                        $ see_ev = False
+                    _("Yes"):                        $ see_ev = False
                     "No":
                         pass
 
@@ -8935,8 +8913,7 @@ label farm_first_beast():
         menu:
             "Skip event? (bestiality)"
 
-            "Yes":
-                return
+            _("Yes"):                return
             "No":
                 pass
 
@@ -9047,8 +9024,7 @@ label farm_first_beast():
     you "Oh..."
 
     menu:
-        "I'm sorry, my lady, we haven't been introduced":
-            pass
+        _("I'm sorry, my lady, we haven't been introduced"):            pass
 
         "Don't mind me. I was just taking a nap.":
             pass
@@ -9077,8 +9053,7 @@ label farm_first_beast():
     you "(Pet?)"
 
     menu:
-        "You must be mistaken...":
-            you "Ribbit..." with vpunch
+        _("You must be mistaken..."):            you "Ribbit..." with vpunch
         "I'm not a pet! Are you blind?":
             you "Ribbit!!! Ribbit?" with vpunch
         "Who are you calling a pet, wench?":
@@ -9143,8 +9118,7 @@ label farm_first_beast():
     "Your mind blanks for a second. When you come back to your senses, you are laying on top of the milk girl, crushing her under your weight."
 
     menu:
-        "Oh, sorry!":
-            you "Ri, ribbit!"
+        _("Oh, sorry!"):            you "Ri, ribbit!"
         "I didn't mean it...":
             you "Ribbbit..."
         "RIBBIT!":
@@ -9391,8 +9365,7 @@ label farm_first_monster():
         menu:
             "Skip event? (monster)"
 
-            "Yes":
-                return
+            _("Yes"):                return
             "No":
                 pass
 
@@ -9455,8 +9428,7 @@ label farm_first_monster():
     gizel "No, not until I get a sense of its weaknesses and I am sure I can control it. Believe me, I know these things..."
 
     menu:
-        "Agree with her":
-            $ norollback()
+        _("Agree with her"):            $ norollback()
             you "Well... I guess it's better to be safe than sorry."
 
             gizel angry "Yeah, yeah. Spare me the wise guy bullshit."
@@ -9753,8 +9725,7 @@ label farm_first_monster():
     "Gizel cannot even stand up and walk. You'll have to help her up."
 
     menu:
-        "Help her":
-            $ norollback()
+        _("Help her"):            $ norollback()
 
             "Carefully going around the resting monster, you reach Gizel and help her up."
 
@@ -9858,8 +9829,7 @@ label farm_second_monster():
         menu:
             "Skip event? (monster)"
 
-            "Yes":
-                hide bg with dissolve
+            _("Yes"):                hide bg with dissolve
                 return
             "No":
                 pass
@@ -10018,8 +9988,7 @@ label farm_first_machine():
         menu:
             "Skip event? (machine)"
 
-            "Yes":
-                return
+            _("Yes"):                return
             "No":
                 pass
 
@@ -16252,8 +16221,7 @@ label iulia5: # Happens after Iulia4 + completing 30 furniture (Ch2:20-Ch3:30-Ch
     you "Alright, stop!" with vpunch
 
     menu:
-        "Sill is right":
-            $ NPC_sill.love += 2
+        _("Sill is right"):            $ NPC_sill.love += 2
 
             you "Sill is right. Iulia, you are the one who caused that commotion."
 
@@ -16378,8 +16346,7 @@ label iulia6: # Happens after iulia5 + unlocking second tools. Tavern must be un
     carpenter "With only a lil' help here and there by yer favorite handywoman. *wink*"
 
     menu:
-        "You bet I did":
-            $ MC.good -= 1
+        _("You bet I did"):            $ MC.good -= 1
 
             you "I sure did. It's hard work being a pimp, let me tell you!"
 
@@ -16604,8 +16571,7 @@ label iulia7: # Happens after iulia6 + unlocking third tools.
     scene black with fade
 
     menu:
-        "Take the lead":
-            call iulia_sex2()
+        _("Take the lead"):            call iulia_sex2()
 
         "Follow her lead":
             call iulia_sex3()
@@ -16740,8 +16706,7 @@ label iulia_H: # Happens after iulia7 + building 40 furniture.
 
     menu:
         "What do you do?"
-        "Have sex with Iulia":
-
+        _("Have sex with Iulia"):
             you "Well, sure... I can always make time for you."
 
             "[text1]"
@@ -16751,8 +16716,7 @@ label iulia_H: # Happens after iulia7 + building 40 furniture.
             menu:
                 "Choose your position"
 
-                "Cowgirl":
-                    call iulia_sex1
+                _("Cowgirl"):                    call iulia_sex1
 
                 "Missionary":
                     call iulia_sex2
@@ -17448,8 +17412,7 @@ label trade_10_resources():
     bast "Good to see you are using your license."
 
     menu:
-        "Compliment her":
-            $ norollback()
+        _("Compliment her"):            $ norollback()
 
             you "Well, to be honest, I mostly come here to see you..."
 
@@ -17520,8 +17483,7 @@ label trade_25_resources():
     you "I think I deserve a reward."
 
     menu:
-        "Ask for a kiss":
-            $ norollback()
+        _("Ask for a kiss"):            $ norollback()
 
             you "Why not give me a big kiss to celebrate our friendship? Come to daddy..."
 
@@ -17603,8 +17565,7 @@ label trade_50_resources:
 
     menu:
 
-        "Ask her on a date":
-            $ norollback()
+        _("Ask her on a date"):            $ norollback()
 
             you "I think we should celebrate. Why don't you take some time off and join me for drinks, or dinner?"
 
@@ -17851,8 +17812,7 @@ label bast_informant():
     menu:
         "What do you do?"
 
-        "Accept the offer (1000 gold)":
-            $ norollback()
+        _("Accept the offer (1000 gold)"):            $ norollback()
             $ MC.gold -= 1000
 
             play sound s_gold
@@ -19195,8 +19155,7 @@ label meet_riche():
     riche "But what I saw during the war still haunts me. I want to be a force for good."
 
     menu:
-        "You're nice":
-            you "It's nice of you to place others before yourself."
+        _("You're nice"):            you "It's nice of you to place others before yourself."
 
             riche "Well... It's the least I can do..."
 

@@ -338,8 +338,7 @@ label c3_interrogate_contacts():
 
             if MC.gold >= 1000:
                 menu:
-                    "Sure (pay 1,000 gold)":
-                        you "Sure okay, give it to me."
+                    _("Sure (pay 1,000 gold)"):                        you "Sure okay, give it to me."
 
                         play sound s_gold
                         $ MC.gold -= 1000
@@ -761,8 +760,7 @@ label c3_hint(npc, ninja):
 
                 if MC.gold >= 1000 or len(MC.get_items(name="Cimerian scrap")) >= 2 or MC.get_items(name="Cimerian artefact"):
                     menu:
-                        "Okay (pay 1,000 gold)":
-                            $ NPC_gina.flags["research"] += 2
+                        _("Okay (pay 1,000 gold)"):                            $ NPC_gina.flags["research"] += 2
                             you "Fine, I'll take it."
 
                             play sound s_gold
@@ -1113,8 +1111,7 @@ label c3_hint(npc, ninja):
 
                 if MC.gold >= 1000:
                     menu:
-                        "Okay (pay 1,000 gold)":
-                            you "Okay, I'll take it."
+                        _("Okay (pay 1,000 gold)"):                            you "Okay, I'll take it."
 
                             play sound s_gold
                             $ MC.gold -= 1000
@@ -1569,8 +1566,7 @@ label c3_hint(npc, ninja):
                     menu:
                         "What will you do?"
 
-                        "Grab the stone for free":
-                            you "(This offer is too good to pass.)"
+                        _("Grab the stone for free"):                            you "(This offer is too good to pass.)"
 
                             you "Thank you Goldie, I'll have the stone, then."
 
@@ -2022,8 +2018,7 @@ label c3_papa_cells():
             menu:
                 "Force success"
 
-                "Yes":
-                    $ failed_stat = None
+                _("Yes"):                    $ failed_stat = None
 
                 "No":
                     pass
@@ -2048,8 +2043,7 @@ label c3_papa_cells():
             menu:
                 "Force success"
 
-                "Yes":
-                    $ forced = True
+                _("Yes"):                    $ forced = True
 
                 "No":
                     pass
@@ -2258,8 +2252,7 @@ label c3_homura_visit(): # Happens after tying the ribbon in the plaza
         homura "I thought maybe a man in your occupation might just care about... *blush*"
 
         menu:
-            "Tell her you're not like that": # For good characters
-                $ norollback()
+            _("Tell her you're not like that"):                $ norollback()
                 you "I'm not like that, you know."
 
                 if MC.get_alignment() == "good":
@@ -3747,8 +3740,7 @@ label c3_narika_MU_visit():
     label MU_questions_menu():
 
         menu:
-            "Tell me more about you":
-
+            _("Tell me more about you"):
                 you "So... You're the public face of the University, so to speak?"
 
                 receptionist "Nothing that fancy. It's just that I am more of a people person than most mages."
@@ -4192,8 +4184,7 @@ label c3_narika_MU_pay_fee():
     else:
 
         menu:
-            "Yes":
-                $ MC.change_gold(-price)
+            _("Yes"):                $ MC.change_gold(-price)
                 $ NPC_narika.flags["c3 path"] = "MagicU"
                 $ story_flags["ninja hunt locked %s" % get_ninja_district(NPC_narika)] = True
                 $ renpy.block_rollback()
@@ -5010,8 +5001,7 @@ label c3_narika_MU_class():
         sill "*mumbles incoherent excuses*"
 
         menu:
-            "Humor her":
-                $ MC.good += 1
+            _("Humor her"):                $ MC.good += 1
                 $ NPC_sill.love += 5
 
                 "You soften your voice and smile."
@@ -5224,8 +5214,7 @@ label c3_narika_MU_class():
         menu:
             "What do you do?"
 
-            "Help her":
-                $ MC.good += 1
+            _("Help her"):                $ MC.good += 1
 
                 # Challenge
                 $ chal = renpy.call_screen("challenge_menu", challenges=[("Attack", "fight", selected_district.rank), ("Dispell", "control", selected_district.rank)])
@@ -5413,8 +5402,7 @@ label c3_narika_MU_class():
         menu:
             "What do you do?"
 
-            "Join her in bed":
-                $ renpy.block_rollback()
+            _("Join her in bed"):                $ renpy.block_rollback()
                 $ NPC_narika.flags["c3 path"] = None
                 $ story_flags["ninja hunt locked %s" % get_ninja_district(NPC_narika)] = False
                 $ NPC_narika.flags["magicu failed"] = True
@@ -6170,8 +6158,7 @@ label c3_narika_MU_class():
             menu:
                 "What do you do?"
 
-                "Keep the traps disabled":
-                    $ renpy.block_rollback()
+                _("Keep the traps disabled"):                    $ renpy.block_rollback()
 
                     $ NPC_narika.flags["c3 path"] = "ally"
                     $ story_flags["ninja hunt locked %s" % get_ninja_district(NPC_narika)] = True
@@ -6697,8 +6684,7 @@ label c3_narika_interrogation():
     menu:
         "What do you do with Narika?"
 
-        "Agree to help her":
-            $ renpy.block_rollback()
+        _("Agree to help her"):            $ renpy.block_rollback()
 
             you "Okay, I will help you escape. But it's going to damage my reputation with the Dean by a lot, so you better tell me all that you know!"
 
@@ -9744,8 +9730,7 @@ label mizuki_k_back(girl):
     $ r = False
 
     menu:
-        "Attempt to woo him (Beauty: [_beauty])":
-
+        _("Attempt to woo him (Beauty: [_beauty])"):
             "[_name] removes her head cover, revealing her face."
 
             "Batting her eyelashes and playing with her hair, she gives the dorky clerk her best look."
@@ -9883,8 +9868,7 @@ label mizuki_k_back(girl):
             "The man is close to cumming. He holds on a few moments more, trying to prolong his pleasure."
 
             menu:
-                "Let him cum inside":
-                    girl.char "Go ahead, don't be shy, fill me up like you'd fill a form with red ink!"
+                _("Let him cum inside"):                    girl.char "Go ahead, don't be shy, fill me up like you'd fill a form with red ink!"
 
                     show screen show_event(girl.get_pic("cin", "creampie", "cumshot", and_tags="sex", not_tags="group", hide_farm=True))
                     with doubleflash
@@ -10279,8 +10263,7 @@ label mizuki_k_back2(girl):
         $ _service = girl.compare_preference("service", "indifferent") and _libido >= 35
 
         menu:
-            "Manipulate him (Charm: [_charm])":
-
+            _("Manipulate him (Charm: [_charm])"):
                 girl.char "Oh, come on, Sir, are you afraid to help a lady? I thought you were a real gentleman..."
 
                 if _charm >= 50:
@@ -10420,8 +10403,7 @@ label mizuki_k_back2(girl):
                 girl.char "Tell me, mister. Where do you want to finish?"
 
                 menu:
-                    "Inside her mouth":
-                        "[_name] takes him back inside her wet, warm mouth, only for him to instantly get off"
+                    _("Inside her mouth"):                        "[_name] takes him back inside her wet, warm mouth, only for him to instantly get off"
 
                         show screen show_event(girl.get_pic("cim", "cof", "cumshot", and_tags="service", not_tags="group", hide_farm=True))
                         with flash
@@ -10813,8 +10795,7 @@ label mizuki_k_back2(girl):
         girl.char "I'm sorry, Master, I... *look down*"
 
         menu:
-            "Reassure her":
-                you "Well, you did your best. It's on me for giving you an assignment that was too hard."
+            _("Reassure her"):                you "Well, you did your best. It's on me for giving you an assignment that was too hard."
 
                 girl.char "Sorry..."
 
@@ -11035,8 +11016,7 @@ label mizuki_w_back(girl):
         $ _anal = girl.compare_preference("anal", "indifferent") and _libido >= 35
 
         menu:
-            "Appeal to his sophistication (Refinement: [_refinement])":
-
+            _("Appeal to his sophistication (Refinement: [_refinement])"):
                 girl.char "Please, Sir, I wasn't expecting to meet someone so... Erudite. I am something of a scholar myself, and am working on a historical treaty of the area."
 
                 if _refinement >= 50:
@@ -11188,8 +11168,7 @@ label mizuki_w_back(girl):
                 "[_name] endures a little longer, clenching her butt muscles to try to ease him along."
 
                 menu:
-                    "Let him cum inside":
-                        "Old Elf" "OHOHOHOH!!!" with flash
+                    _("Let him cum inside"):                        "Old Elf" "OHOHOHOH!!!" with flash
 
                         show screen show_event(girl.get_pic("cin", "creampie", "cumshot", and_tags="anal", not_tags="group", hide_farm=True))
                         with doubleflash
@@ -11658,8 +11637,7 @@ label mizuki_w_back2(girl):
     $ _bisexual= girl.compare_preference("bisexual", "indifferent") and _libido >= 35
 
     menu:
-        "Flaunt her goods (Body: [_body])":
-
+        _("Flaunt her goods (Body: [_body])"):
             "Hoping to get off easy, [_name] opens up her blouse."
 
             girl.char "You want to check me out? We can make it work..."
@@ -12018,8 +11996,7 @@ label mizuki_w_back2(girl):
         "To [_name]'s surprise, her mind seems to become attuned with Mizuki's. She could probe her memories if she wanted."
 
         menu:
-            "Try to learn more":
-                "She feels the scene morph before her eyes as Mizuki's memories become her own."
+            _("Try to learn more"):                "She feels the scene morph before her eyes as Mizuki's memories become her own."
                 call c3_mizuki_rape from _call_c3_mizuki_rape
 
                 show bg mizuki death1 at top with dream
@@ -12209,8 +12186,7 @@ label mizuki_w_back2(girl):
         girl.char "S-Sorry Master..."
 
         menu:
-            "Reassure her":
-                you "Well, we knew it was a long shot. Still, Mizuki's secrets are probably out of our reach now..."
+            _("Reassure her"):                you "Well, we knew it was a long shot. Still, Mizuki's secrets are probably out of our reach now..."
 
                 girl.char "*fall silent*"
 
@@ -13512,8 +13488,7 @@ label c3_mizuki_kenshin_confrontation_menu:
             mizuki "Now that killing has lost its edge, let's see if sex can still make me feel anything. I have centuries of experience; you won't regret it."
 
             menu:
-                "Accept Mizuki":
-                    you "Sure, of course I'll have you."
+                _("Accept Mizuki"):                    you "Sure, of course I'll have you."
 
                     mizuki "It is a deal, then. I'll meet you at your place."
 
@@ -14287,8 +14262,7 @@ label c3_mizuki_princess_debrief():
         kuro "There is only one way out, of course. We need to hurry and proceed with this foolish wedding. I guess we're running out of time, and I must tell my father to make a choice soon among the powerful pretenders..."
 
         menu:
-            "Good idea":
-                $ NPC_kuro.love -= 2
+            _("Good idea"):                $ NPC_kuro.love -= 2
 
                 you "Sounds good. A noble husband would protect you, and stabilize the Kingdom."
 
@@ -14345,8 +14319,7 @@ label c3_mizuki_princess_debrief():
         kuro "Her recklessness is now the talk of the Court, as well as rumors she is from a cursed bloodline... I don't like the gossip I'm hearing."
 
         menu:
-            "She wanted to do the right thing":
-                $ MC.good += 1
+            _("She wanted to do the right thing"):                $ MC.good += 1
                 $ NPC_kenshin.love += 2
                 $ NPC_kuro.love -= 2
 
@@ -14499,8 +14472,7 @@ label c3_mizuki_captured():
     label mizuki_interrogation_menu():
 
         menu:
-            "What if he used magic?":
-                mizuki "That's impossible. Every castle has basic defenses against basic teleportation."
+            _("What if he used magic?"):                mizuki "That's impossible. Every castle has basic defenses against basic teleportation."
 
                 mizuki "And if he had tried to use more unconventional means, such as opening a portal to a hellish plane or something, the magic disturbance would have been felt a mile away."
 
@@ -14537,8 +14509,7 @@ label c3_mizuki_captured():
                 "Mizuki looks at you, her voice halfway between hopeful and skeptical."
 
                 menu:
-                    "Sure (let her go)":
-                        $ MC.good += 2
+                    _("Sure (let her go)"):                        $ MC.good += 2
 
                         you "I'm probably making a big mistake, but okay."
 
@@ -15077,8 +15048,7 @@ label c3_meet_hound_knights(route):
     menu:
         "The unnatural glint of his unblinking eyes makes you shiver. You take a moment to ponder your answer."
 
-        "Tell him about Haruka":
-            $ story_flags["c3_hounds_discussed_Haruka"] = True
+        _("Tell him about Haruka"):            $ story_flags["c3_hounds_discussed_Haruka"] = True
             $ story_flags["c3_hounds_discussed_Subaru"] = True
             "You came here to discuss the Earth kunoichi, so it's time to get down to business."
 
@@ -15224,8 +15194,7 @@ label c3_haruka_guards_success():
     hound_knight "Is this the woman prisoner you were concerned about?"
 
     menu:
-        "Yes":
-            you "Yes. This is Subaru."
+        _("Yes"):            you "Yes. This is Subaru."
 
             hound_knight "Indeed."
 
@@ -15338,8 +15307,7 @@ label c3_haruka_guards_success():
     hound_knight "Don't worry, she's heavily sedated. She won't be a threat."
 
     menu:
-        "Accept his offer":
-            $ MC.evil += 5
+        _("Accept his offer"):            $ MC.evil += 5
             you "Well, I won't turn away such an offer. Breaking tough bitches is kind of my thing."
 
             "The knight in the shadows gives a belly laugh, which startles you."
@@ -15476,8 +15444,7 @@ label c3_subaru_rape():
     subaru "No! Haruka! What... Did..."
 
     menu:
-        "Tell her Haruka is fine":
-            $ MC.evil -= 1
+        _("Tell her Haruka is fine"):            $ MC.evil -= 1
             you "Relax. Your pupil is not a prisoner... Yet."
 
             you "But in due time, I expect she'll learn her place, too."
@@ -15561,8 +15528,7 @@ label c3_subaru_rape():
     "It seems Subaru's mind is wandering far off again, but her body knows what's coming. In spite of herself, she raises her hips slightly towards you."
 
     menu:
-        "Fuck her pussy":
-            $ subaru_act = "sex"
+        _("Fuck her pussy"):            $ subaru_act = "sex"
 
             show bg subaru sex2 with dissolve
 
@@ -15712,8 +15678,7 @@ label c3_haruka_final_intercept(): # Done
     haruka "I don't want to hurt you... But I can't let you interfere with my mission."
 
     menu:
-        "Negotiate with her":
-
+        _("Negotiate with her"):
             you "Wait! I can help you."
 
             if NPC_haruka.flags["subaru visit"]:
@@ -15754,8 +15719,7 @@ label c3_haruka_final_intercept(): # Done
                     haruka "I don't have time for this! Step aside. *firm*"
 
                     menu:
-                        "Try and capture her":
-                            call c3_capture_haruka() from _call_c3_capture_haruka
+                        _("Try and capture her"):                            call c3_capture_haruka() from _call_c3_capture_haruka
 
                         "Give up":
                             "Prudently, you step aside."
@@ -15876,8 +15840,7 @@ label c3_haruka_checkpoint():
         menu:
             "What do you tell Haruka?"
 
-            "Tell her about the true secret passage":
-                $ renpy.block_rollback()
+            _("Tell her about the true secret passage"):                $ renpy.block_rollback()
                 $ NPC_haruka.flags["c3 path"] = "ally"
                 $ story_flags["ninja hunt locked %s" % get_ninja_district(NPC_haruka)] = True
 
@@ -16236,8 +16199,7 @@ label c3_haruka_sewers(): # OK
     haruka "What about them? We have no time, [MC.name]!"
 
     menu:
-        "Help them out":
-            $ MC.good += 2
+        _("Help them out"):            $ MC.good += 2
 
             you "I just can't leave them here..."
 
@@ -19585,8 +19547,7 @@ label c3_luncheon: # Follows previous event
                 kuro "Back so soon? I'm beginning to think you enjoy my company..."
 
                 menu:
-                    "Of course":
-                        $ NPC_kuro.love += 2
+                    _("Of course"):                        $ NPC_kuro.love += 2
 
                         you "Of course, Your Highness. Who wouldn't?"
 
@@ -19631,8 +19592,7 @@ label c3_luncheon: # Follows previous event
                 kuro "Things would be so much simpler if women were allowed to rule."
 
                 menu:
-                    "You're right":
-                        $ NPC_kuro.love += 1
+                    _("You're right"):                        $ NPC_kuro.love += 1
                         you "You're right. You're a more capable ruler than anyone in this crowd."
 
                         kuro "I am glad you see that."
@@ -19961,8 +19921,7 @@ label c3_homura_invitation(): # Happens the morning after the palace visit
     "In the corner of your eye, you catch Sill lingering on the treshhold, but answer nonetheless."
 
     menu:
-        "She's had a good education":
-
+        _("She's had a good education"):
             you "Yes, Sill is from a family of means. I bought her when her parents were hit by misfortune."
 
             you "It's a shame it had to come to that, but I try to give her a good home."
@@ -20000,8 +19959,7 @@ label c3_homura_invitation(): # Happens the morning after the palace visit
     homura normal "Anyway, are you and her... You know..."
 
     menu:
-        "Physical?":
-            you "Are we having sex, you mean?"
+        _("Physical?"):            you "Are we having sex, you mean?"
 
 
         "Special friends?":
@@ -20013,8 +19971,7 @@ label c3_homura_invitation(): # Happens the morning after the palace visit
     homura blush "Y-Yes..."
 
     menu:
-        "Yes":
-            you "We are."
+        _("Yes"):            you "We are."
 
             homura "Oh... I should have expected it, of course."
 
@@ -20138,8 +20095,7 @@ label c3_confrontation(): # Happens on the next Saturday night after Homura's vi
     menu:
         "How do you really feel about her?"
 
-        "I may be falling for her":
-
+        _("I may be falling for her"):
             you "I think I'm quite smitten with the girl."
 
             "You are surprised to hear yourself say this out loud."
@@ -20507,8 +20463,7 @@ label c3_mask_questions(): # Follows previous label
             mask "And you... *pointing finger* *You're no better than them..."
 
             menu:
-                "Defend the princess":
-                    $ NPC_kuro.love += 1
+                _("Defend the princess"):                    $ NPC_kuro.love += 1
                     $ NPC_mask.love -= 1
 
                     you "Mind yourself around the Princess, murderer! Or I will have your filthy tongue!"
@@ -20859,8 +20814,7 @@ label c3_mask_questions(): # Follows previous label
                     homura "When he got back to his senses, the most surprising thing happened. We... We made love."
 
                     menu:
-                        "Picture it":
-                            call c3_homura_with_shiro() from _call_c3_homura_with_shiro
+                        _("Picture it"):                            call c3_homura_with_shiro() from _call_c3_homura_with_shiro
 
                         "Do not picture it":
                             you "Ew, okay, I don't want to know the details."
@@ -21043,8 +20997,7 @@ label c3_mask_questions(): # Follows previous label
             you "Kosmo. The sad creep who owns this mansion, and who lies crumpled on the floor as we speak."
 
             menu:
-                "Ask for his release":
-                    $ MC.good += 1
+                _("Ask for his release"):                    $ MC.good += 1
 
                     you "What are you doing, Homura? Let Kosmo and his people go!"
 
@@ -22724,8 +22677,7 @@ label c3_confrontation_shiro(): # Follows previous label
             menu:
                 "Will you help Kosmo?"
 
-                "Save him":
-                    $ MC.good += 5
+                _("Save him"):                    $ MC.good += 5
 
                     "With a sigh, you grab Kosmo's arm and haul him up."
 
@@ -23282,8 +23234,7 @@ label c3_homura_capture_menu():
     menu:
         "What will you do with Homura?"
 
-        "Surrender her to the law":
-
+        _("Surrender her to the law"):
 
             you "After the little show you've pulled off, half the Realm is looking for you."
 
@@ -23294,8 +23245,7 @@ label c3_homura_capture_menu():
             homura "Please, have mercy [MC.name]! anything but that!"
 
             menu:
-                "Proceed":
-                    you "Well, maybe you should have thought of that before crossing Her Majesty."
+                _("Proceed"):                    you "Well, maybe you should have thought of that before crossing Her Majesty."
                     
                     you "Or crossing {b}me{/b}." with vpunch
 

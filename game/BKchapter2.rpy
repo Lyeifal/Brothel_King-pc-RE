@@ -347,8 +347,7 @@ label c2_intro():
         menu:
             "See Chapter 2 intro?"
 
-            "Yes":
-                pass
+            _("Yes"):                pass
             "No":
                 stop music fadeout 3.0
                 return
@@ -903,8 +902,7 @@ label c2_princess_letter:
     menu:
         "Whose fault is this?"
 
-        "Blame Sill":
-            $ norollback()
+        _("Blame Sill"):            $ norollback()
             you "Sill!!! What the hell did you think you were doing!!!"
 
             $ NPC_sill.love -= 1
@@ -1003,8 +1001,7 @@ label c2_princess_letter:
     menu:
         "Do you let Gio have his fun?"
 
-        "Let him have Sill":
-            $ norollback()
+        _("Let him have Sill"):            $ norollback()
             you "Fine... I've been too lenient with Sill recently."
 
             play sound s_surprise
@@ -2015,8 +2012,7 @@ label kurohime_conversation_menu():
     kuro "Will you help me uncover the truth about those murders?"
 
     menu:
-        "I will gladly do it":
-            $ norollback()
+        _("I will gladly do it"):            $ norollback()
             $ MC.good += 1
 
             you "Say no more, Your Highness. I will gladly help."
@@ -3982,8 +3978,7 @@ label c2_suzume_brothel():
     suzume "Is that so? And why do you care?"
 
     menu:
-        "I want to help her":
-            $ norollback()
+        _("I want to help her"):            $ norollback()
             $ MC.good += 1
 
             you "She may be a princess, but she's also a good woman. I want to help her."
@@ -4223,8 +4218,7 @@ label c2_homura_okiya1():
     homura "Because! This is real life, isn't it? This is what ordinary people do, isn't it? I want to learn about the world..."
 
     menu:
-        "I understand you":
-            $ norollback()
+        _("I understand you"):            $ norollback()
             you "I understand. Seen from the palace towers, the women and men of Zan must be more like ants than real people..."
 
             homura surprise "Exactly. That's what makes it so easy for the higher-ups to step on them."
@@ -4323,8 +4317,7 @@ label c2_homura_okiya1():
     homura "You know, if it's something about the court, I'm sure I can help you! I know everyone, and every bit of gossip..."
 
     menu:
-        "Tell her about the Princess's request":
-            $ norollback()
+        _("Tell her about the Princess's request"):            $ norollback()
             $ NPC_homura.flags["divulged assignment"] = True
 
             "You hesitate for a second, but you do need all the help you can get."
@@ -4405,8 +4398,7 @@ label c2_homura_okiya1():
     you "'Our' place?"
 
     menu:
-        "Cajole Sill":
-            $ norollback()
+        _("Cajole Sill"):            $ norollback()
             $ MC.good += 1
             $ NPC_sill.love += 1
 
@@ -5611,8 +5603,7 @@ label intercept_narika():
 
         menu:
 
-            "Flatter her":
-                $ norollback()
+            _("Flatter her"):                $ norollback()
                 you "Sure, I've heard of you. It seems the rumors about your skills were not overblown..."
 
                 narika "Ha! You haven't seen anything yet."
@@ -5710,8 +5701,7 @@ label intercept_narika():
         narika "Bwahahahaha! And here I was, worried that you might have some dirty sexy-jutsu trick up your slutty skirt... But you're just a quitter. Pathetic."
 
         menu:
-            "Defuse the situation":
-                $ norollback()
+            _("Defuse the situation"):                $ norollback()
                 you "Please, ladies, let's just calm down. We are not here to fight you, Narika."
 
                 narika sad "Like you could if you wanted to... Hmph."
@@ -5807,8 +5797,7 @@ label intercept_narika():
         narika "Grrr... I'm not saying anything to you!"
 
         menu:
-            "What are you doing in Zan?":
-                $ norollback()
+            _("What are you doing in Zan?"):                $ norollback()
 
                 you "What are you doing here in Zan? Are you here on a contract?"
 
@@ -6737,8 +6726,7 @@ label intercept_mizuki():
         $ mizuki_name = "Mizuki"
 
         menu:
-            "Flatter her":
-                $ norollback()
+            _("Flatter her"):                $ norollback()
                 you "Look, you're a legendary ninja, renowned for your cunning and subtlety..."
 
                 you "We're sure you wouldn't be protecting small-time murderers..."
@@ -6788,8 +6776,7 @@ label intercept_mizuki():
         mizuki "Remember that."
 
         menu:
-            "I'll keep it in mind":
-                $ norollback()
+            _("I'll keep it in mind"):                $ norollback()
                 you "I'll keep it in mind. I do not mean to fight you. But you and I aren't done talking..."
 
                 mizuki "You're wise to heed my warning. But unless you have something to offer me, we are very much done."
@@ -6923,8 +6910,7 @@ label intercept_mizuki():
         mizuki "So, revenge. I like mine ice-cold."
 
         menu:
-            "You're right":
-                $ norollback()
+            _("You're right"):                $ norollback()
                 $ MC.evil += 1
 
                 you "You're right, of course. If you want respect, you can't let a slight slide in this world."
@@ -6974,8 +6960,7 @@ label intercept_mizuki():
         mizuki "These people {i}will{/i} die, no matter what you do. Collateral damage be damned."
 
         menu:
-            "We could kill them for you":
-                $ norollback()
+            _("We could kill them for you"):                $ norollback()
                 $ MC.evil += 1
 
                 you "Well, perhaps we could help you put an end those bastards, whoever they are. Provided you only intend to kill people we don't know or care about."
@@ -7676,8 +7661,7 @@ label intercept_haruka():
         suzume doubt "Aw, sis, that's mean... *frown*"
 
         menu:
-            "Agree with Haruka":
-                $ norollback()
+            _("Agree with Haruka"):                $ norollback()
                 you "Indeed, she has no honor or virtue to speak of. But that's how I like her."
 
                 suzume "Was that a compliment? That didn't sound like a compliment."
@@ -7719,8 +7703,7 @@ label intercept_haruka():
         haruka "Hmpf. Why would I tell you, of all people?"
 
         menu:
-            "Offer to help":
-                $ norollback()
+            _("Offer to help"):                $ norollback()
                 you "We could help you. Then you'd help us out."
 
                 you "We want to know who's behind the recent spate of murders in town. You wouldn't have anything to do with that, by any chance?"
@@ -7797,8 +7780,7 @@ label intercept_haruka():
         "Her voice is shaking, and she looks in a state of panic, gripping her blade tightly. You try to defuse the situation before you end up with a knife in the gut."
 
         menu:
-            "I am not going to harm you":
-                $ norollback()
+            _("I am not going to harm you"):                $ norollback()
                 you "I mean you no harm. Information is all I want. You don't have to be afraid."
 
                 play sound s_surprise
@@ -8167,8 +8149,7 @@ label intercept_haruka():
         haruka "I did... And I do. I am not worthy of this title."
 
         menu:
-            "Don't say that":
-                $ norollback()
+            _("Don't say that"):                $ norollback()
                 you "Don't say that. Here you are, fighting to right the wrongs that were done to you."
 
                 you "This is what honor is all about. This makes you worthy to be a Kunoichi!"
@@ -8832,8 +8813,7 @@ label c2_homura_okiya2(): # Happens sometimes after the first Kunoichi has been 
         homura normal "If it's something I can help you with, you should tell me. I can recoup that with my own intel!"
 
         menu:
-            "Tell her about the Princess's request":
-                $ norollback()
+            _("Tell her about the Princess's request"):                $ norollback()
                 $ NPC_homura.flags["divulged assignment"] = True
                 you "Well, I guess it could be useful to share our information. I am looking after the killer who is terrorizing the court these days."
 
@@ -9044,8 +9024,7 @@ label c2_homura_okiya2(): # Happens sometimes after the first Kunoichi has been 
     menu:
         "You take your time to reply."
 
-        "Sure, let's go":
-            $ norollback()
+        _("Sure, let's go"):            $ norollback()
             $ NPC_homura.flags["drunk sex"] = True
             $ NPC_homura.love -= 2
 
@@ -10630,8 +10609,7 @@ label c3_homura_okiya3(): # Happens the night after moving to chapter 3.
     homura normal "Let's have another toast! To friendship!"
 
     menu:
-        "To friendship!":
-            $ norollback()
+        _("To friendship!"):            $ norollback()
             you "To friendship! *laugh*"
 
             if NPC_homura.flags["drunk sex"]:
@@ -10655,8 +10633,7 @@ label c3_homura_okiya3(): # Happens the night after moving to chapter 3.
             homura blush "[MC.name]... What would you like it to be, then?"
 
             menu:
-                "Lovers!":
-                    $ norollback()
+                _("Lovers!"):                    $ norollback()
                     you "You know what I would want it to be..."
 
                     "Deliberately, you place your hand on her hand. She flinches slightly, but doesn't take it away."
@@ -11191,8 +11168,7 @@ label homura_bj(first=True):
     "Homura looks up at you lewdly, while licking the sweat off your cock. Her erotic face is enough to bring you over the top."
 
     menu:
-        "Cum on her face":
-            $ norollback()
+        _("Cum on her face"):            $ norollback()
             show bg homura_bj1 at top with dissolve
 
             homura "Hmmm... Do you lik-"
