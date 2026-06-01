@@ -1119,9 +1119,6 @@ translate chinese strings:
     old "/night"
     new ""
 
-    old "1 day"
-    new ""
-
     old "1 slum brothel.webp"
     new ""
 
@@ -1323,9 +1320,6 @@ translate chinese strings:
     old "A scary"
     new ""
 
-    old "A tavern"
-    new ""
-
     old "A thieves guild, here, in the slums? Nonsense. The Guard captain would never allow it."
     new ""
 
@@ -1348,18 +1342,6 @@ translate chinese strings:
     new ""
 
     old "About"
-    new ""
-
-    old "Accept"
-    new ""
-
-    old "Accept Mizuki"
-    new ""
-
-    old "Accept his offer"
-    new ""
-
-    old "Accept the offer (1000 gold)"
     new ""
 
     old "Access NewGame+ settings."
@@ -1506,15 +1488,6 @@ translate chinese strings:
     old "After vibrating and rubbing for a while, %s brings %s to a surprise orgasm, releasing a strange thick oil that stiks to her shivering body."
     new ""
 
-    old "Agree to help her"
-    new ""
-
-    old "Agree with Haruka"
-    new ""
-
-    old "Agree with her"
-    new ""
-
     old "Ah, %s... It's not so bad... Mmmh... *flushed*"
     new ""
 
@@ -1593,9 +1566,6 @@ translate chinese strings:
     old "Apathy"
     new ""
 
-    old "Appeal to his sophistication (Refinement: [_refinement])"
-    new ""
-
     old "Apply"
     new ""
 
@@ -1668,24 +1638,6 @@ translate chinese strings:
     old "Ask Gizel for help about the farm."
     new ""
 
-    old "Ask for a blowjob"
-    new ""
-
-    old "Ask for a handjob"
-    new ""
-
-    old "Ask for a kiss"
-    new ""
-
-    old "Ask for his release"
-    new ""
-
-    old "Ask her on a date"
-    new ""
-
-    old "Ask them to come back tomorrow"
-    new ""
-
     old "At higher ranks, integrating new girls can be tough. Make sure to use Classes, Items, Perks and other bonuses to help the new girl get ahead."
     new ""
 
@@ -1693,12 +1645,6 @@ translate chinese strings:
     new ""
 
     old "At the lowest rank, a girl's Skills are limited to 50. Every additional Rank improves the Skill maximum by 50 more."
-    new ""
-
-    old "Attack him with your weapon"
-    new ""
-
-    old "Attempt to woo him (Beauty: [_beauty])"
     new ""
 
     old "Auburn officer"
@@ -1884,9 +1830,6 @@ translate chinese strings:
     old "Bisexual and Group sex are always satisfying for the customers."
     new ""
 
-    old "Blame Sill"
-    new ""
-
     old "Bland"
     new ""
 
@@ -1897,9 +1840,6 @@ translate chinese strings:
     new ""
 
     old "Blonde officer"
-    new ""
-
-    old "Blondes"
     new ""
 
     old "Blowjob Queen"
@@ -1995,9 +1935,6 @@ translate chinese strings:
     old "Business and Pleasure"
     new ""
 
-    old "Buy something"
-    new ""
-
     old "Bu{{u}}y{{/u}}"
     new ""
 
@@ -2017,9 +1954,6 @@ translate chinese strings:
     new ""
 
     old "CONFIRM"
-    new ""
-
-    old "Cajole Sill"
     new ""
 
     old "Calibrate"
@@ -2067,9 +2001,6 @@ translate chinese strings:
     old "Caught in the Bare"
     new ""
 
-    old "Change current training mode ([prog.mode])"
-    new ""
-
     old "Change difficulty settings."
     new ""
 
@@ -2077,9 +2008,6 @@ translate chinese strings:
     new ""
 
     old "Change item page"
-    new ""
-
-    old "Change love"
     new ""
 
     old "Change program"
@@ -2319,12 +2247,6 @@ translate chinese strings:
     old "Complete this quest to advance the story."
     new ""
 
-    old "Compliment her"
-    new ""
-
-    old "Compliment her\" if inter.result == \"good"
-    new ""
-
     old "Conduit: "
     new ""
 
@@ -2332,9 +2254,6 @@ translate chinese strings:
     new ""
 
     old "Confirm"
-    new ""
-
-    old "Confront her"
     new ""
 
     old "Connected minds"
@@ -2347,9 +2266,6 @@ translate chinese strings:
     new ""
 
     old "Content settings"
-    new ""
-
-    old "Continue"
     new ""
 
     old "Convincing"
@@ -2371,9 +2287,6 @@ translate chinese strings:
     new ""
 
     old "Courtesan Queen"
-    new ""
-
-    old "Cowgirl"
     new ""
 
     old "Cowgirl style"
@@ -2502,22 +2415,10 @@ translate chinese strings:
     old "Deep-throat"
     new ""
 
-    old "Defend Sill"
-    new ""
-
-    old "Defend the princess"
-    new ""
-
-    old "Defend yourself\" if result == \"warn"
-    new ""
-
     old "Defense"
     new ""
 
     old "Define which facility to use for her training (if any)."
-    new ""
-
-    old "Defuse the situation"
     new ""
 
     old "Delays threat buildup by this number of days after each event."
@@ -2533,9 +2434,6 @@ translate chinese strings:
     new ""
 
     old "Demonette"
-    new ""
-
-    old "Denounce the elf's hiding place"
     new ""
 
     old "Deny her orgasm"
@@ -2571,13 +2469,7 @@ translate chinese strings:
     old "Do a 69"
     new ""
 
-    old "Do it anyway"
-    new ""
-
     old "Do it in public"
-    new ""
-
-    old "Do the challenge and start at chapter 1"
     new ""
 
     old "Do you know about the King? I mean, the Brothel King? It's [MC.name], the legendary owner of [brothel.name]..."
@@ -2611,9 +2503,6 @@ translate chinese strings:
     new ""
 
     old "Don't like the random name generation? You can disable it in the Game Settings menu."
-    new ""
-
-    old "Don't say that"
     new ""
 
     old "Don't worry about those killers. There are only after the bigwigs, no one is paying to assassinate small fry like you and me."
@@ -2748,12 +2637,6 @@ translate chinese strings:
     old "Evil brothel owners use up slave girls until their sanity is gone, then throw them out on the street. You wouldn't do that, would you?"
     new ""
 
-    old "Examine her bedroom"
-    new ""
-
-    old "Exchange resources"
-    new ""
-
     old "Excitement rises within the crowd as %s steps closer to %s, running her hands over his muscular torso. As always, his barely-human cock is standing to attention. Taking her time to show off to the customers, she kneels in front of the stallion, her knees buried in the dirty mud."
     new ""
 
@@ -2835,9 +2718,6 @@ translate chinese strings:
     old "Farah"
     new ""
 
-    old "Farah, the corrupt guard captain"
-    new ""
-
     old "Farm"
     new ""
 
@@ -2875,15 +2755,6 @@ translate chinese strings:
     new ""
 
     old "Fierce Woman"
-    new ""
-
-    old "Fight him"
-    new ""
-
-    old "Fight the monster"
-    new ""
-
-    old "Fight them head-on"
     new ""
 
     old "Filter girls that are ready to level up (filter OFF)"
@@ -2925,37 +2796,16 @@ translate chinese strings:
     old "Fixation reader"
     new ""
 
-    old "Flatter her"
-    new ""
-
-    old "Flaunt her goods (Body: [_body])"
-    new ""
-
     old "Florist"
     new ""
 
     old "Focus"
     new ""
 
-    old "Follow her to the brothel"
-    new ""
-
-    old "Follow her to the farm"
-    new ""
-
-    old "Follow the screams"
-    new ""
-
-    old "Follow the traces"
-    new ""
-
     old "Fondle her boobs"
     new ""
 
     old "For regular Sex, high {{b}}sex{{/b}} and {{b}}libido{{/b}} skills give the best results. {{b}}Beauty{{/b}} and {{b}}service{{/b}} also boost sex."
-    new ""
-
-    old "Force her"
     new ""
 
     old "Forget"
@@ -2979,16 +2829,7 @@ translate chinese strings:
     old "From the battlefield to the whorehouse, you've never lost that edge."
     new ""
 
-    old "Fuck her mouth"
-    new ""
-
-    old "Fuck her pussy"
-    new ""
-
     old "Full Shift"
-    new ""
-
-    old "Full clean-up ([full_cost] gold)"
     new ""
 
     old "Fullscreen"
@@ -3040,12 +2881,6 @@ translate chinese strings:
     new ""
 
     old "General"
-    new ""
-
-    old "General Ka"
-    new ""
-
-    old "Gentle"
     new ""
 
     old "Get down and dirty"
@@ -3126,22 +2961,13 @@ translate chinese strings:
     old "Give a handjob"
     new ""
 
-    old "Give a rousing speech"
-    new ""
-
     old "Give a titjob"
-    new ""
-
-    old "Give her a fancy dress"
     new ""
 
     old "Give her multiple orgasms"
     new ""
 
     old "Give me the money first, and you'll get the {{b}}%s{{/b}}. Good."
-    new ""
-
-    old "Give you a blowjob"
     new ""
 
     old "Gizel"
@@ -3270,13 +3096,7 @@ translate chinese strings:
     old "Good evening."
     new ""
 
-    old "Good idea"
-    new ""
-
     old "Gouki"
-    new ""
-
-    old "Grab the stone for free"
     new ""
 
     old "Great! This leather basket will fit nicely in the entrance."
@@ -3363,9 +3183,6 @@ translate chinese strings:
     old "Have 'Fun'"
     new ""
 
-    old "Have sex with Iulia"
-    new ""
-
     old "Have you heard about the archmage that is the active Dean of the Magic University? A real piece of work, let me tell you."
     new ""
 
@@ -3424,12 +3241,6 @@ translate chinese strings:
     new ""
 
     old "Help"
-    new ""
-
-    old "Help her"
-    new ""
-
-    old "Help them out"
     new ""
 
     old "Helping Hand"
@@ -3579,9 +3390,6 @@ translate chinese strings:
     old "Hosting a large delegation at my house. We need girls to entertain our guests in every way possible..."
     new ""
 
-    old "How are things?"
-    new ""
-
     old "How beautiful she looks. Affects work as a {{b}}masseuse{{/b}} and regular {{b}}sex{{/b}}. Current masseuse capacity: {{b}}%s{{/b}} customer%s."
     new ""
 
@@ -3592,9 +3400,6 @@ translate chinese strings:
     new ""
 
     old "How dare someone threaten the life of our dear Princess? I hope they catch the motherfucker, and gouge his eyes out!"
-    new ""
-
-    old "How dare you!"
     new ""
 
     old "How eager for sex she is. Affects {{b}}dancer{{/b}}, {{b}}sex{{/b}} and max {{b}}whoring{{/b}} customers. Current whore capacity: {{b}}%s{{/b}} customer%s."
@@ -3615,9 +3420,6 @@ translate chinese strings:
     old "How intelligent and worldly she is. Affects work as a {{b}}geisha{{/b}} and {{b}}fetish{{/b}} sex acts. Current geisha capacity: {{b}}%s{{/b}} customer%s."
     new ""
 
-    old "How much do I have to pay"
-    new ""
-
     old "How receptive she is to orders and servitude. Affects {{b}}geisha{{/b}}, {{b}}fetish{{/b}} sexual acts and chances of accepting {{b}}work{{/b}} or {{b}}training{{/b}}."
     new ""
 
@@ -3631,9 +3433,6 @@ translate chinese strings:
     new ""
 
     old "Humiliate her"
-    new ""
-
-    old "Humor her"
     new ""
 
     old "Hunt for ninjas dwelling in this location."
@@ -3655,12 +3454,6 @@ translate chinese strings:
     new ""
 
     old "I aim to break the record set by Long Dick Silver, and this will take long hours of practice... Help me get harder and stronger so that I can succeed!"
-    new ""
-
-    old "I am not going to harm you"
-    new ""
-
-    old "I bear them no grudge"
     new ""
 
     old "I came by this brothel the other day, and saw a pink-haired hottie... but was disappointed to find out she wasn't one of the working staff."
@@ -3768,9 +3561,6 @@ translate chinese strings:
     old "I made a good deal last week, selling an old useless gizmo to the funny girl in the junkyard."
     new ""
 
-    old "I may be falling for her"
-    new ""
-
     old "I need an extra maid to help out in the mansion. There is a very specific uniform..."
     new ""
 
@@ -3789,12 +3579,6 @@ translate chinese strings:
     old "I saw this strange girl in the sewers, all by herself. I told her there were monsters about, but she just smiled and said 'I know.'"
     new ""
 
-    old "I see"
-    new ""
-
-    old "I see."
-    new ""
-
     old "I thought things couldn't get worse with the Guard, but it did. They looted my shop and raped my wife and daughters. No one dared lift a finger..."
     new ""
 
@@ -3804,16 +3588,7 @@ translate chinese strings:
     old "I told you I saw a child in the {{b}}Thieves' guild{{/b}} quarter... I was gonna help, but then I saw she had a huge ninja star, so I thought better of it."
     new ""
 
-    old "I understand you"
-    new ""
-
     old "I usually go and buy milk from Goldie at the farm. She gets it from her cows, but I'd rather milk her instead, if you catch my drift..."
-    new ""
-
-    old "I want my money"
-    new ""
-
-    old "I want to help her"
     new ""
 
     old "I was bored while waiting."
@@ -3849,25 +3624,13 @@ translate chinese strings:
     old "I went to this little establishment by the harbor, asking for a good massage. And I really got a good one, down there... Isn't it wonderful?"
     new ""
 
-    old "I will be kind"
-    new ""
-
     old "I will find you, and I will kill you. Twice."
-    new ""
-
-    old "I will gladly do it"
     new ""
 
     old "I wish they'd catch those women devils, the Kunoichi. I hear they consort with demons."
     new ""
 
     old "I'll be finished in "
-    new ""
-
-    old "I'll keep it in mind"
-    new ""
-
-    old "I'm [MC.name]"
     new ""
 
     old "I'm an artist, an artist I tell thee! I need a muse. Clothing unnecessary."
@@ -3882,9 +3645,6 @@ translate chinese strings:
     old "I'm sorry, but you don't seem to have enough money right now."
     new ""
 
-    old "I'm sorry, my lady, we haven't been introduced"
-    new ""
-
     old "I'm still working on that "
     new ""
 
@@ -3892,9 +3652,6 @@ translate chinese strings:
     new ""
 
     old "I'm telling you, she was a ninja! Who else could climb the {{b}}Prison{{/b}} walls like that?"
-    new ""
-
-    old "I'm waiting for the right person"
     new ""
 
     old "I've been told of a secret swapping society in the King's Hold, where members exchange their wives and daughters in all-night orgies..."
@@ -3945,12 +3702,6 @@ translate chinese strings:
     old "If your girls are in a bad mood, make sure you pay them enough, and that their accommodations are comfortable enough."
     new ""
 
-    old "Ignore her"
-    new ""
-
-    old "Ignore her and proceed"
-    new ""
-
     old "Image [index] of [count] locked."
     new ""
 
@@ -3999,9 +3750,6 @@ translate chinese strings:
     old "Initiate"
     new ""
 
-    old "Inside her mouth"
-    new ""
-
     old "Insult her"
     new ""
 
@@ -4024,9 +3772,6 @@ translate chinese strings:
     new ""
 
     old "Irrumatio"
-    new ""
-
-    old "Is that so?"
     new ""
 
     old "Is the new captain any better than the old one? Things will never change around here, no matter who's in charge."
@@ -4068,9 +3813,6 @@ translate chinese strings:
     old "It's like you can be everywhere at once."
     new ""
 
-    old "It's okay"
-    new ""
-
     old "It's raining mana! Hallelujah."
     new ""
 
@@ -4101,12 +3843,6 @@ translate chinese strings:
     old "Jobs"
     new ""
 
-    old "Join her in bed"
-    new ""
-
-    old "Join the crowd"
-    new ""
-
     old "Joystick..."
     new ""
 
@@ -4134,25 +3870,10 @@ translate chinese strings:
     old "Keep exploring the city districts for clues."
     new ""
 
-    old "Keep her as a slave"
-    new ""
-
-    old "Keep her at the asylum for another month (cost: {{image=img_gold_24}} [asylum_cost])"
-    new ""
-
-    old "Keep the gold"
-    new ""
-
-    old "Keep the traps disabled"
-    new ""
-
     old "Kenshin's Scribe"
     new ""
 
     old "Keyboard"
-    new ""
-
-    old "Kick his ass"
     new ""
 
     old "King Pharo is our rightful leader chosen by the gods themselves. It is heresy to question the place of our betters: let us talk no more of that so-called 'Brotherhood'."
@@ -4224,9 +3945,6 @@ translate chinese strings:
     old "Learnt that trick from an old bum called Zobiwan. He was good at escorting druids, though."
     new ""
 
-    old "Leave her alone"
-    new ""
-
     old "Lecture [girl.name] about the virtues of "
     new ""
 
@@ -4261,36 +3979,6 @@ translate chinese strings:
     new ""
 
     old "Let her dominate"
-    new ""
-
-    old "Let her stay in an inn until tomorrow for 50 gold"
-    new ""
-
-    old "Let her stay one more day (50 gold)"
-    new ""
-
-    old "Let him cum inside"
-    new ""
-
-    old "Let him have Sill"
-    new ""
-
-    old "Let him pass"
-    new ""
-
-    old "Let it go"
-    new ""
-
-    old "Let me think about it."
-    new ""
-
-    old "Let the [cust] fuck [girl.name] on stage"
-    new ""
-
-    old "Let the customer fuck [girl.name]"
-    new ""
-
-    old "Let's do it in plain sight[s1]"
     new ""
 
     old "Level"
@@ -4354,9 +4042,6 @@ translate chinese strings:
     new ""
 
     old "Lots of adventurers try their luck in the arena. Many end up cripples or worse after just a few fights. But Cyntia's endured."
-    new ""
-
-    old "Lovers!"
     new ""
 
     old "Loves Sex"
@@ -4434,15 +4119,6 @@ translate chinese strings:
     old "Maintenance"
     new ""
 
-    old "Make [girl.name] service the customer"
-    new ""
-
-    old "Make her clean up the dirty sheets tonight"
-    new ""
-
-    old "Make her come"
-    new ""
-
     old "Make her masturbate"
     new ""
 
@@ -4473,9 +4149,6 @@ translate chinese strings:
     old "Man the battlestations! Err… Should it be 'Woman the battlestations'?"
     new ""
 
-    old "Manipulate him (Charm: [_charm])"
-    new ""
-
     old "Many  "
     new ""
 
@@ -4501,9 +4174,6 @@ translate chinese strings:
     new ""
 
     old "Maya"
-    new ""
-
-    old "Maybe I do"
     new ""
 
     old "Me So Horny"
@@ -4665,9 +4335,6 @@ translate chinese strings:
     old "My favorite sex act was unavailable."
     new ""
 
-    old "My friends should be treated well"
-    new ""
-
     old "My guests are arriving soon, and nothing is ready! This is a disaster! I need your help!"
     new ""
 
@@ -4675,9 +4342,6 @@ translate chinese strings:
     new ""
 
     old "My sister is a maid at court. She had a glimpse of one of the ceremonies and wouldn't shut up about it. 'The dresses!', 'The lights!', 'The jewels!', 'The gold dishes!', and so on."
-    new ""
-
-    old "My slave Sill"
     new ""
 
     old "My son is already 21, and not yet married. He's a big oaf when it comes to women... Can you help him come out of his shell?"
@@ -4779,9 +4443,6 @@ translate chinese strings:
     old "Nearly broken"
     new ""
 
-    old "Negotiate with her"
-    new ""
-
     old "Nerdy Girl"
     new ""
 
@@ -4816,9 +4477,6 @@ translate chinese strings:
     new ""
 
     old "Nice guy"
-    new ""
-
-    old "Nice place"
     new ""
 
     old "Nice! This freshly painted display looks sweet."
@@ -4917,9 +4575,6 @@ translate chinese strings:
     old "None"
     new ""
 
-    old "Normal mode - See intro"
-    new ""
-
     old "Noroi leader"
     new ""
 
@@ -4968,19 +4623,7 @@ translate chinese strings:
     old "Obedience"
     new ""
 
-    old "Of course"
-    new ""
-
-    old "Of course not"
-    new ""
-
     old "Of course the war is going well. Do you think our mighty host has anything to fear from half-naked savages, tiny elves and talking cats?"
-    new ""
-
-    old "Of course!"
-    new ""
-
-    old "Offer to help"
     new ""
 
     old "Oh, %s, it makes me so horny... I get so wet when being watched... Aaaah!!! *moan*"
@@ -5007,9 +4650,6 @@ translate chinese strings:
     old "Oh, making me do this, %s again... You're such a pervert... *blush*"
     new ""
 
-    old "Oh, sorry!"
-    new ""
-
     old "Oh, sorry... But you haven't got the gold."
     new ""
 
@@ -5020,9 +4660,6 @@ translate chinese strings:
     new ""
 
     old "Ok"
-    new ""
-
-    old "Okay (pay 1,000 gold)"
     new ""
 
     old "On Call"
@@ -5115,9 +4752,6 @@ translate chinese strings:
     old "Pay a maintenance team to clean up your brothel. And boy, does it get messy in there..."
     new ""
 
-    old "Pay double her upkeep"
-    new ""
-
     old "Pay hot chicks with revealing clothing to hang around your brothel, and tell would-be patrons about your establishment."
     new ""
 
@@ -5125,12 +4759,6 @@ translate chinese strings:
     new ""
 
     old "Payment: "
-    new ""
-
-    old "Peek"
-    new ""
-
-    old "Peep on Renza"
     new ""
 
     old "People are dumb enough to believe Arios is better because he is the god of light. But who wants light to be shone on all their thoughts and secrets? Shalia has just as important a role..."
@@ -5160,13 +4788,7 @@ translate chinese strings:
     old "Personality reader"
     new ""
 
-    old "Persuade her to come back."
-    new ""
-
     old "Per{{u}}k{{/u}}s"
-    new ""
-
-    old "Physical?"
     new ""
 
     old "Pick a facility with minions for training (sexual training only)."
@@ -5178,16 +4800,10 @@ translate chinese strings:
     old "Pics"
     new ""
 
-    old "Picture it"
-    new ""
-
     old "Picture settings"
     new ""
 
     old "Piledriver"
-    new ""
-
-    old "Piss off"
     new ""
 
     old "Play watersports"
@@ -5274,9 +4890,6 @@ translate chinese strings:
     old "Private party"
     new ""
 
-    old "Proceed"
-    new ""
-
     old "Profile"
     new ""
 
@@ -5287,9 +4900,6 @@ translate chinese strings:
     new ""
 
     old "Public acts are confusing. Is it public because it's outside, or because other people can see you? I can never tell."
-    new ""
-
-    old "Pull out your cock"
     new ""
 
     old "Pumping and Pimping."
@@ -5359,9 +4969,6 @@ translate chinese strings:
     new ""
 
     old "Rare "
-    new ""
-
-    old "Reassure her"
     new ""
 
     old "Reduces your total taxes by %i per cent (NewGame+ effect)."
@@ -5523,12 +5130,6 @@ translate chinese strings:
     old "Rules of Attraction"
     new ""
 
-    old "Run to her rescue"
-    new ""
-
-    old "Rush to help"
-    new ""
-
     old "Rusty"
     new ""
 
@@ -5566,12 +5167,6 @@ translate chinese strings:
     new ""
 
     old "Save Game"
-    new ""
-
-    old "Save her"
-    new ""
-
-    old "Save him"
     new ""
 
     old "Savings"
@@ -5637,9 +5232,6 @@ translate chinese strings:
     old "Send %s on this assignment."
     new ""
 
-    old "Send her off"
-    new ""
-
     old "Send her to the farm to rest in a pen."
     new ""
 
@@ -5653,9 +5245,6 @@ translate chinese strings:
     new ""
 
     old "Service"
-    new ""
-
-    old "Service[s1]"
     new ""
 
     old "Setting a record"
@@ -6228,9 +5817,6 @@ translate chinese strings:
     old "She tries to get away and whines as everyone cums on her face and hair. She bitterly complains about the smell and taste."
     new ""
 
-    old "She wanted to do the right thing"
-    new ""
-
     old "She was distracted and didn't pay much attention to her teacher, hindering her progress."
     new ""
 
@@ -6273,9 +5859,6 @@ translate chinese strings:
     old "She yells awfully as you shoot a load of semen on her hair, whining that it's gonna take ages to get it off."
     new ""
 
-    old "She's had a good education"
-    new ""
-
     old "Shes feels safe with you, but also bored."
     new ""
 
@@ -6313,12 +5896,6 @@ translate chinese strings:
     new ""
 
     old "Sill"
-    new ""
-
-    old "Sill is right"
-    new ""
-
-    old "Sill's not for sale"
     new ""
 
     old "Simple"
@@ -6594,9 +6171,6 @@ translate chinese strings:
     old "Strange Girl"
     new ""
 
-    old "Strip for me"
-    new ""
-
     old "Strive for Perfection"
     new ""
 
@@ -6610,9 +6184,6 @@ translate chinese strings:
     new ""
 
     old "Subaru"
-    new ""
-
-    old "Suck your dick[s1]"
     new ""
 
     old "Summon cuddly pet"
@@ -6636,25 +6207,10 @@ translate chinese strings:
     old "Supply merchant"
     new ""
 
-    old "Sure"
-    new ""
-
-    old "Sure (let her go)"
-    new ""
-
-    old "Sure (pay 1,000 gold)"
-    new ""
-
     old "Sure, I didn't need this {{b}}%s{{/b}} anyway..."
     new ""
 
     old "Sure, King Pharo has a laissez-faire attitude to everything... But isn't that what makes Zan so great? Would you like to see a crackdown on whores, alcohol, spices, or even gambling?"
-    new ""
-
-    old "Sure, let's go"
-    new ""
-
-    old "Surrender her to the law"
     new ""
 
     old "Survivor"
@@ -6682,12 +6238,6 @@ translate chinese strings:
     new ""
 
     old "Take a look around (1 "
-    new ""
-
-    old "Take the lead"
-    new ""
-
-    old "Take your time"
     new ""
 
     old "Takes a screenshot."
@@ -6748,33 +6298,6 @@ translate chinese strings:
     new ""
 
     old "Tell "
-    new ""
-
-    old "Tell her Haruka is fine"
-    new ""
-
-    old "Tell her about the Princess's request"
-    new ""
-
-    old "Tell her about the true secret passage"
-    new ""
-
-    old "Tell her to get prepared"
-    new ""
-
-    old "Tell her to give the customers a swimsuit show"
-    new ""
-
-    old "Tell her you're not like that"
-    new ""
-
-    old "Tell him about Haruka"
-    new ""
-
-    old "Tell me more about you"
-    new ""
-
-    old "Tell the truth"
     new ""
 
     old "Telling %s not to move, you decide to play around with her pussy using your bare fist."
@@ -6904,9 +6427,6 @@ translate chinese strings:
     new ""
 
     old "The Shop has received new items.\n\n"
-    new ""
-
-    old "The Singing Carp (Traditional music and singing)"
     new ""
 
     old "The Slave Market has received new girls.\n\n"
@@ -7057,9 +6577,6 @@ translate chinese strings:
     new ""
 
     old "The head of the guards is Captain Farah. Best stay clear of them if you want my advice. Levies and taxes are all the guards cares about. If you ask me, they just make them up as they go."
-    new ""
-
-    old "The illuminati guild?"
     new ""
 
     old "The knights in the palace are all good Arios-loving folks. That warms my heart."
@@ -7407,19 +6924,10 @@ translate chinese strings:
     old "Thug"
     new ""
 
-    old "Tickle her"
-    new ""
-
     old "Tie her up"
     new ""
 
     old "Tired of the story? Reach the end of the game at least once to unlock 'No story' mode."
-    new ""
-
-    old "To friendship!"
-    new ""
-
-    old "To make a name for myself"
     new ""
 
     old "Today"
@@ -7452,9 +6960,6 @@ translate chinese strings:
     old "Train [girl.name] for %s acts.\nCosts {{image=img_AP}} %i."
     new ""
 
-    old "Train her"
-    new ""
-
     old "Trainers help your girls learn new skills. Discover new trainers by meeting the people of Zan!"
     new ""
 
@@ -7483,18 +6988,6 @@ translate chinese strings:
     new ""
 
     old "Try Again"
-    new ""
-
-    old "Try and capture her"
-    new ""
-
-    old "Try to learn more"
-    new ""
-
-    old "Turn it OFF"
-    new ""
-
-    old "Turn it ON"
     new ""
 
     old "UI settings"
@@ -7842,13 +7335,7 @@ translate chinese strings:
     old "Use crystals to unlock extra options for the game. You can earn crystals by unlocking achievements."
     new ""
 
-    old "Use it"
-    new ""
-
     old "Use mousewheel to cycle girls' pages."
-    new ""
-
-    old "Use positive emotions"
     new ""
 
     old "Use this setting to adjust the focus between customer attraction (how many customers will come to the brothel) and customer budget (the maximum amount of gold each customer is able to spend)."
@@ -7947,9 +7434,6 @@ translate chinese strings:
     old "Warm welcome"
     new ""
 
-    old "Warn the elf girl"
-    new ""
-
     old "Warning! "
     new ""
 
@@ -7963,9 +7447,6 @@ translate chinese strings:
     new ""
 
     old "We are holding our traditional 'ladies night' at our local guild hall. Looking for a girl to play with a friend in front of the audience..."
-    new ""
-
-    old "We could kill them for you"
     new ""
 
     old "Weak point"
@@ -7987,12 +7468,6 @@ translate chinese strings:
     new ""
 
     old "What a disgrace. I wasted my time here."
-    new ""
-
-    old "What are you doing in Zan?"
-    new ""
-
-    old "What if he used magic?"
     new ""
 
     old "What the... You haven't got the gold, stupid!"
@@ -8061,9 +7536,6 @@ translate chinese strings:
     old "Whining and bitching, she reluctantly takes off her clothes, hiding her private parts in embarrassment. She looks angry and shameful."
     new ""
 
-    old "Who are you?"
-    new ""
-
     old "Whorelord"
     new ""
 
@@ -8080,9 +7552,6 @@ translate chinese strings:
     new ""
 
     old "Why would anyone threaten the Princess's life? She's the only one who doesn't wish us little people ill in this royal nest of vipers."
-    new ""
-
-    old "Why, yes, I'd like to fuck her"
     new ""
 
     old "Will train"
@@ -8166,18 +7635,6 @@ translate chinese strings:
     old "Yes"
     new ""
 
-    old "Yes (spend 1 makibishi)"
-    new ""
-
-    old "Yes, and deactivate future warnings for this game/this version"
-    new ""
-
-    old "Yes, do that"
-    new ""
-
-    old "Yes, set up a resource [ext] in this location"
-    new ""
-
     old "Yesterday"
     new ""
 
@@ -8215,9 +7672,6 @@ translate chinese strings:
     new ""
 
     old "You assume the mysterious, ethereal form of the fairy people. Your spirit is used instead of your charisma."
-    new ""
-
-    old "You bet I did"
     new ""
 
     old "You call %s names as you force her to perform, using language that would make a harbor whore blush."
@@ -8328,9 +7782,6 @@ translate chinese strings:
     old "You have not discovered this location yet."
     new ""
 
-    old "You have people counting on you"
-    new ""
-
     old "You have reached your current goal:\n"
     new ""
 
@@ -8359,9 +7810,6 @@ translate chinese strings:
     new ""
 
     old "You make %s ride your dick."
-    new ""
-
-    old "You must be mistaken..."
     new ""
 
     old "You must build new decoration at the Carpenter's Wagon to attract this population."
@@ -8509,12 +7957,6 @@ translate chinese strings:
     new ""
 
     old "You're gorgeous, you don't need validation from anyone, but here, have this spell just in case."
-    new ""
-
-    old "You're nice"
-    new ""
-
-    old "You're right"
     new ""
 
     old "You've been hit by, you've been struck by..."
@@ -10204,9 +9646,6 @@ translate chinese strings:
     new ""
 
     old "onsen.webp"
-    new ""
-
-    old "ool achievement:\nWell done, bro!"
     new ""
 
     old "ore_intro"
