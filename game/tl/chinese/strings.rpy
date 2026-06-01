@@ -1122,10 +1122,31 @@ translate chinese strings:
     old "1 day"
     new ""
 
+    old "1 slum brothel.webp"
+    new ""
+
     old "10 what? Months, weeks?"
     new ""
 
+    old "2 town brothel.webp"
+    new ""
+
+    old "3 town brothel.webp"
+    new ""
+
+    old "4 rich brothel.webp"
+    new ""
+
+    old "5 rich brothel.webp"
+    new ""
+
+    old "6 king brothel.webp"
+    new ""
+
     old "69."
+    new ""
+
+    old "7 endless brothel.webp"
     new ""
 
     old ":ORG: chose :aven: near the :LOC: to celebrate one of their numerous holy days. In order to get closer to their deity, worshippers are expected to transcend both spirit and flesh by indulging in the most shameful pleasures, washing away their sins with large amounts of holy alcohol, conveniently sold on the premises by the Church."
@@ -1341,6 +1362,9 @@ translate chinese strings:
     old "Accept the offer (1000 gold)"
     new ""
 
+    old "Access NewGame+ settings."
+    new ""
+
     old "Access your main character, items and spells.\nYou are a level "
     new ""
 
@@ -1396,6 +1420,9 @@ translate chinese strings:
     new ""
 
     old "Add all"
+    new ""
+
+    old "Adjust default autorest options"
     new ""
 
     old "Advance"
@@ -1573,6 +1600,12 @@ translate chinese strings:
     new ""
 
     old "Apply all"
+    new ""
+
+    old "Apply for new girls only, leaving current girls' settings unchanged."
+    new ""
+
+    old "Apply to all girls, ignoring their current setting."
     new ""
 
     old "Apprentice"
@@ -1974,6 +2007,12 @@ translate chinese strings:
     old "C"
     new ""
 
+    old "CG - Game"
+    new ""
+
+    old "CG - Girl packs"
+    new ""
+
     old "CG Gallery"
     new ""
 
@@ -2029,6 +2068,9 @@ translate chinese strings:
     new ""
 
     old "Change current training mode ([prog.mode])"
+    new ""
+
+    old "Change difficulty settings."
     new ""
 
     old "Change fixation"
@@ -2115,7 +2157,19 @@ translate chinese strings:
     old "Choose the district you want to start at (maximum "
     new ""
 
+    old "Choose which sex act will be featured in the Show."
+    new ""
+
+    old "Choose your girl mixes."
+    new ""
+
     old "Cimerian"
+    new ""
+
+    old "Cimerian artefact"
+    new ""
+
+    old "Cimerian scrap"
     new ""
 
     old "City girl interactions"
@@ -2155,6 +2209,9 @@ translate chinese strings:
     new ""
 
     old "Click here to create a new girl mix."
+    new ""
+
+    old "Click here to edit your girl mixes."
     new ""
 
     old "Click here to head where Gizel is calling you."
@@ -2325,6 +2382,9 @@ translate chinese strings:
     old "Creampie"
     new ""
 
+    old "Create your Main Character."
+    new ""
+
     old "Ctrl"
     new ""
 
@@ -2433,6 +2493,9 @@ translate chinese strings:
     old "Dear Bill,\n\nI haven't slept or eaten since you've left me. I am so alone in this world.\nYou've left me with so many questions. Did you ever love me?\nI will be punished for what you did, but it's punishment I will gladly accept, because I love you. All I want is for you to give me a sign. I'll betray the Order if I have to. I'll steal for you if I must.\n\nDon't leave me, my love. I will do anything."
     new ""
 
+    old "Decide if Gizel will force girls to train against their will."
+    new ""
+
     old "Decide what the girl will do when not in training (work or rest)."
     new ""
 
@@ -2449,6 +2512,9 @@ translate chinese strings:
     new ""
 
     old "Defense"
+    new ""
+
+    old "Define which facility to use for her training (if any)."
     new ""
 
     old "Defuse the situation"
@@ -2476,6 +2542,9 @@ translate chinese strings:
     new ""
 
     old "Desirable"
+    new ""
+
+    old "Determines if Gizel will use her known weakness against her."
     new ""
 
     old "Did you know the brothel has many shortcuts? You need to find the right key..."
@@ -3168,6 +3237,9 @@ translate chinese strings:
     old "Go back to other filters."
     new ""
 
+    old "Go through Gizel's special training program. Sexual training requires available minions."
+    new ""
+
     old "Goal reached!"
     new ""
 
@@ -3850,6 +3922,9 @@ translate chinese strings:
     new ""
 
     old "I've spent months living among the amazon tribes of the Lankan Rainforest. Wanna know how they do it?"
+    new ""
+
+    old "IGNORED"
     new ""
 
     old "If I wanted to buy animals, I'd go to the farm of course. But I hear some of them are behaving strangely."
@@ -5094,6 +5169,9 @@ translate chinese strings:
     old "Physical?"
     new ""
 
+    old "Pick a facility with minions for training (sexual training only)."
+    new ""
+
     old "Pick this badge"
     new ""
 
@@ -5337,6 +5415,9 @@ translate chinese strings:
     old "Reset achievements"
     new ""
 
+    old "Reset all settings to default value"
+    new ""
+
     old "Resolution"
     new ""
 
@@ -5410,6 +5491,9 @@ translate chinese strings:
     new ""
 
     old "Roll"
+    new ""
+
+    old "Roll the dice"
     new ""
 
     old "Roll the opponent's dice"
@@ -5554,6 +5638,9 @@ translate chinese strings:
     new ""
 
     old "Send her off"
+    new ""
+
+    old "Send her to the farm to rest in a pen."
     new ""
 
     old "Sensitive girls are good at making customers happy, regardless of the act."
@@ -6165,6 +6252,9 @@ translate chinese strings:
     old "She will clean up the farm (boosts obedience, costs energy)."
     new ""
 
+    old "She will simply rest in her pen."
+    new ""
+
     old "She will tend to Gizel personally (boosts sensitivity, costs energy)."
     new ""
 
@@ -6205,6 +6295,12 @@ translate chinese strings:
     new ""
 
     old "Show last night's log"
+    new ""
+
+    old "Show less"
+    new ""
+
+    old "Show more"
     new ""
 
     old "Show satisfaction report"
@@ -6399,6 +6495,9 @@ translate chinese strings:
     old "Sorry, but this is expensive equipment. Don't touch it unless you have the coin to buy it."
     new ""
 
+    old "Sort girls by specific skills."
+    new ""
+
     old "Soul change"
     new ""
 
@@ -6457,6 +6556,12 @@ translate chinese strings:
     new ""
 
     old "Start Game"
+    new ""
+
+    old "Start a new game with these settings."
+    new ""
+
+    old "Start the show."
     new ""
 
     old "Start, Guide, B/Right Button"
@@ -6688,6 +6793,9 @@ translate chinese strings:
     new ""
 
     old "Test"
+    new ""
+
+    old "Test girl pack with the game's picture generation."
     new ""
 
     old "Test mod"
@@ -7281,6 +7389,9 @@ translate chinese strings:
     old "This will activate {{b}}"
     new ""
 
+    old "This will collect non-equipped items from all girls and store them in the left character's inventory."
+    new ""
+
     old "This woman claimed the Brotherhood will rise to help the little people. But I know the truth of it: within a few months, they'd put themselves and their relatives in all the powerful positions, and they'd be no better than King Pharo."
     new ""
 
@@ -7405,6 +7516,21 @@ translate chinese strings:
     new ""
 
     old "UI/Powers/orb_yellow.webp"
+    new ""
+
+    old "UI/al_evil.webp"
+    new ""
+
+    old "UI/al_good.webp"
+    new ""
+
+    old "UI/al_neutral.webp"
+    new ""
+
+    old "UI/arios.webp"
+    new ""
+
+    old "UI/none.webp"
     new ""
 
     old "UI/powers/supercharge/card_supercharge/sc_1.webp"
@@ -7617,6 +7743,18 @@ translate chinese strings:
     old "UI/powers/supercharge/screen_supercharge/supercharge-placeholder.webp"
     new ""
 
+    old "UI/shalia.webp"
+    new ""
+
+    old "UI/trader.webp"
+    new ""
+
+    old "UI/warrior.webp"
+    new ""
+
+    old "UI/wizard.webp"
+    new ""
+
     old "Ultimate"
     new ""
 
@@ -7690,6 +7828,9 @@ translate chinese strings:
     new ""
 
     old "Use an enema"
+    new ""
+
+    old "Use an item on your minions."
     new ""
 
     old "Use anal beads"
@@ -7972,6 +8113,9 @@ translate chinese strings:
     new ""
 
     old "Work and Whore"
+    new ""
+
+    old "Work for Gizel on the farm. These activities do no require minions."
     new ""
 
     old "Working and whoring. Change this girl's job or let her rest."
@@ -9042,6 +9186,9 @@ translate chinese strings:
     old "an "
     new ""
 
+    old "anal"
+    new ""
+
     old "anal sex"
     new ""
 
@@ -9070,6 +9217,15 @@ translate chinese strings:
     new ""
 
     old "banker_repaid_first"
+    new ""
+
+    old "basic room1.webp"
+    new ""
+
+    old "basic room2.webp"
+    new ""
+
+    old "basic room3.webp"
     new ""
 
     old "bast_informant"
@@ -9117,6 +9273,12 @@ translate chinese strings:
     old "being wet."
     new ""
 
+    old "big"
+    new ""
+
+    old "bisexual"
+    new ""
+
     old "bitches_be_crazy"
     new ""
 
@@ -9147,6 +9309,9 @@ translate chinese strings:
     old "c1_gio_is_back"
     new ""
 
+    old "c1_guards_visit"
+    new ""
+
     old "c1_meet_kosmo"
     new ""
 
@@ -9174,10 +9339,28 @@ translate chinese strings:
     old "c2_gio_meeting"
     new ""
 
+    old "c2_gio_message"
+    new ""
+
     old "c2_homura_okiya1"
     new ""
 
+    old "c2_homura_okiya2"
+    new ""
+
+    old "c2_kosmo_new_recruit"
+    new ""
+
     old "c2_narika_H1"
+    new ""
+
+    old "c2_palace_visit1"
+    new ""
+
+    old "c2_palace_visit2"
+    new ""
+
+    old "c2_princess_letter"
     new ""
 
     old "c2_princess_visit1"
@@ -9201,7 +9384,55 @@ translate chinese strings:
     old "c2_suzume_forest2"
     new ""
 
+    old "c2_suzume_onsen"
+    new ""
+
+    old "c3_confrontation"
+    new ""
+
+    old "c3_ending"
+    new ""
+
+    old "c3_haruka_arrested"
+    new ""
+
+    old "c3_haruka_captured"
+    new ""
+
+    old "c3_homura_invitation"
+    new ""
+
+    old "c3_homura_visit"
+    new ""
+
+    old "c3_mizuki_arrested"
+    new ""
+
+    old "c3_mizuki_captured"
+    new ""
+
+    old "c3_mizuki_gone"
+    new ""
+
+    old "c3_mizuki_goodbye"
+    new ""
+
+    old "c3_mizuki_kenshin_warning"
+    new ""
+
+    old "c3_mizuki_princess_debrief"
+    new ""
+
     old "c3_narika_MU_class"
+    new ""
+
+    old "c3_narika_arrested"
+    new ""
+
+    old "c3_narika_captured"
+    new ""
+
+    old "c3_palace_visit"
     new ""
 
     old "c3_suzume_hint"
@@ -9217,6 +9448,15 @@ translate chinese strings:
     new ""
 
     old "chores"
+    new ""
+
+    old "constitution"
+    new ""
+
+    old "cosplay"
+    new ""
+
+    old "cowgirl"
     new ""
 
     old "cowgirl style."
@@ -9240,6 +9480,9 @@ translate chinese strings:
     old "cum on her body."
     new ""
 
+    old "cumshot"
+    new ""
+
     old "cumshots."
     new ""
 
@@ -9261,10 +9504,40 @@ translate chinese strings:
     old "d){{/size}}"
     new ""
 
+    old "d3"
+    new ""
+
+    old "d3 + -1"
+    new ""
+
+    old "d3 + -2"
+    new ""
+
+    old "d3 + 1"
+    new ""
+
+    old "d3 + 3"
+    new ""
+
+    old "d4 + -1"
+    new ""
+
+    old "d5"
+    new ""
+
+    old "d6"
+    new ""
+
+    old "d6 + 2"
+    new ""
+
     old "dancer"
     new ""
 
     old "dark alley dweller"
+    new ""
+
+    old "date"
     new ""
 
     old "deadly"
@@ -9274,6 +9547,9 @@ translate chinese strings:
     new ""
 
     old "deformed monsters"
+    new ""
+
+    old "denied"
     new ""
 
     old "diamond_intro"
@@ -9303,6 +9579,9 @@ translate chinese strings:
     old "do, Obedience, Constitution and Sensitivity skills converge on their average value, then receive a permanent boost."
     new ""
 
+    old "doggy"
+    new ""
+
     old "doggy style."
     new ""
 
@@ -9316,6 +9595,9 @@ translate chinese strings:
     new ""
 
     old "dominating her partner."
+    new ""
+
+    old "double"
     new ""
 
     old "drooling, mindless beasts"
@@ -9417,13 +9699,40 @@ translate chinese strings:
     old "fascinated"
     new ""
 
+    old "fetish"
+    new ""
+
+    old "fight"
+    new ""
+
+    old "finger"
+    new ""
+
+    old "fist"
+    new ""
+
     old "flesh peddler"
+    new ""
+
+    old "fondle"
     new ""
 
     old "found_runaway_girl"
     new ""
 
     old "found_runaway_girl_come_back"
+    new ""
+
+    old "freq_high"
+    new ""
+
+    old "freq_highest"
+    new ""
+
+    old "freq_low"
+    new ""
+
+    old "freq_lowest"
     new ""
 
     old "fucking girls with a strap-on."
@@ -9433,6 +9742,12 @@ translate chinese strings:
     new ""
 
     old "g properly dammit, or I'll rip off your head and shove manure down your neck!'. How bad can a singing class be? Oh, you'll see..."
+    new ""
+
+    old "gag"
+    new ""
+
+    old "gallery"
     new ""
 
     old "gd: All right, I'm not going to force you to do something you don't like."
@@ -9471,7 +9786,16 @@ translate chinese strings:
     old "god emperor of whores"
     new ""
 
+    old "gold"
+    new ""
+
     old "good"
+    new ""
+
+    old "grope"
+    new ""
+
+    old "group"
     new ""
 
     old "group sex"
@@ -9483,10 +9807,16 @@ translate chinese strings:
     old "had great charm"
     new ""
 
+    old "happy"
+    new ""
+
     old "hard liquor"
     new ""
 
     old "haruka_break_test"
+    new ""
+
+    old "haruka_broken"
     new ""
 
     old "having multiple orgasms."
@@ -9567,6 +9897,9 @@ translate chinese strings:
     old "homura_farm"
     new ""
 
+    old "hurt"
+    new ""
+
     old "icon of corruption"
     new ""
 
@@ -9645,10 +9978,19 @@ translate chinese strings:
     old "kinky sex"
     new ""
 
+    old "kiss"
+    new ""
+
     old "kissing."
     new ""
 
+    old "kosmo_returns"
+    new ""
+
     old "kosmo_returns2"
+    new ""
+
+    old "lactation"
     new ""
 
     old "lactation."
@@ -9658,6 +10000,9 @@ translate chinese strings:
     new ""
 
     old "lewd"
+    new ""
+
+    old "libido"
     new ""
 
     old "loan_repaid"
@@ -9678,7 +10023,28 @@ translate chinese strings:
     old "marble_intro"
     new ""
 
+    old "market"
+    new ""
+
     old "masseuse"
+    new ""
+
+    old "master/master0.webp"
+    new ""
+
+    old "master/master1.webp"
+    new ""
+
+    old "master/master2.webp"
+    new ""
+
+    old "master/master3.webp"
+    new ""
+
+    old "master/master4.webp"
+    new ""
+
+    old "master/master5.webp"
     new ""
 
     old "masturbating."
@@ -9726,6 +10092,21 @@ translate chinese strings:
     old "minigame/rain/rain3.webp"
     new ""
 
+    old "mizuki_brothel"
+    new ""
+
+    old "mizuki_k_back2"
+    new ""
+
+    old "mizuki_onsen"
+    new ""
+
+    old "mizuki_w_back2"
+    new ""
+
+    old "model"
+    new ""
+
     old "modest"
     new ""
 
@@ -9754,6 +10135,9 @@ translate chinese strings:
     new ""
 
     old "n to pleasure a man... Or a woman, if you're so inclined. Why not learn both?{{#1}}"
+    new ""
+
+    old "naked"
     new ""
 
     old "nameless drifter"
@@ -9789,6 +10173,15 @@ translate chinese strings:
     old "no active spells"
     new ""
 
+    old "noble room1.webp"
+    new ""
+
+    old "noble room2.webp"
+    new ""
+
+    old "noble room3.webp"
+    new ""
+
     old "nobody"
     new ""
 
@@ -9798,16 +10191,28 @@ translate chinese strings:
     old "notorious"
     new ""
 
+    old "obedience"
+    new ""
+
     old "okiya"
     new ""
 
+    old "okiya.webp"
+    new ""
+
     old "onsen"
+    new ""
+
+    old "onsen.webp"
     new ""
 
     old "ool achievement:\nWell done, bro!"
     new ""
 
     old "ore_intro"
+    new ""
+
+    old "orgasm"
     new ""
 
     old "out"
@@ -9820,6 +10225,9 @@ translate chinese strings:
     new ""
 
     old "pig stall"
+    new ""
+
+    old "piledriver"
     new ""
 
     old "piledriver."
@@ -9837,19 +10245,31 @@ translate chinese strings:
     old "pope of debauchery"
     new ""
 
+    old "portrait"
+    new ""
+
     old "precious things"
     new ""
 
     old "prev"
     new ""
 
+    old "profile"
+    new ""
+
     old "prostitution magnate"
+    new ""
+
+    old "public"
     new ""
 
     old "receiving a creampie."
     new ""
 
     old "red-light staple"
+    new ""
+
+    old "refuse"
     new ""
 
     old "renza_onsen1"
@@ -9870,6 +10290,9 @@ translate chinese strings:
     old "respected brothel-keeper"
     new ""
 
+    old "rest"
+    new ""
+
     old "restore_upkeep"
     new ""
 
@@ -9879,10 +10302,25 @@ translate chinese strings:
     old "rich "
     new ""
 
+    old "rich room1.webp"
+    new ""
+
+    old "rich room2.webp"
+    new ""
+
+    old "rich room3.webp"
+    new ""
+
+    old "rim"
+    new ""
+
     old "rimming."
     new ""
 
     old "rogue"
+    new ""
+
+    old "sad"
     new ""
 
     old "satella_first_visit"
@@ -9900,6 +10338,18 @@ translate chinese strings:
     old "semi-reliable hustler"
     new ""
 
+    old "sensitivity"
+    new ""
+
+    old "service"
+    new ""
+
+    old "sewer_girl_returns"
+    new ""
+
+    old "sex"
+    new ""
+
     old "sex with a woman"
     new ""
 
@@ -9907,6 +10357,9 @@ translate chinese strings:
     new ""
 
     old "shady"
+    new ""
+
+    old "shalia1"
     new ""
 
     old "shalia2"
@@ -9972,6 +10425,9 @@ translate chinese strings:
     old "spanking."
     new ""
 
+    old "spoon"
+    new ""
+
     old "spooning."
     new ""
 
@@ -9984,6 +10440,15 @@ translate chinese strings:
     old "stallion"
     new ""
 
+    old "standard room1.webp"
+    new ""
+
+    old "standard room2.webp"
+    new ""
+
+    old "standard room3.webp"
+    new ""
+
     old "stella_invitation"
     new ""
 
@@ -9993,10 +10458,16 @@ translate chinese strings:
     old "stella_secret2"
     new ""
 
+    old "strap-on"
+    new ""
+
     old "street-corner hawker"
     new ""
 
     old "strip club"
+    new ""
+
+    old "strip club.webp"
     new ""
 
     old "stripping."
@@ -10024,6 +10495,9 @@ translate chinese strings:
     new ""
 
     old "tavern"
+    new ""
+
+    old "tavern.webp"
     new ""
 
     old "tax_payment"
@@ -10056,6 +10530,9 @@ translate chinese strings:
     old "tjb_special"
     new ""
 
+    old "toy"
+    new ""
+
     old "tr: Fortunately, your pet dragon Drogon smelled the bastard and swooped right at him roaring before he had a chance to attack."
     new ""
 
@@ -10078,6 +10555,12 @@ translate chinese strings:
     new ""
 
     old "ty, Body, Charm and Refinement skills converge on their average value, then receive a permanent boost."
+    new ""
+
+    old "unused"
+    new ""
+
+    old "upgrade_order : [chapter, resource cost, additional stock]"
     new ""
 
     old "using sex toys while fucking."
@@ -10123,6 +10606,9 @@ translate chinese strings:
     new ""
 
     old "vicious"
+    new ""
+
+    old "virgin"
     new ""
 
     old "wa: Fortunately, you were right next to her and parried the attack, unsheathing your sword right on time with cobra-like reflexes."
@@ -10186,6 +10672,9 @@ translate chinese strings:
     new ""
 
     old "were"
+    new ""
+
+    old "wet"
     new ""
 
     old "whore"
