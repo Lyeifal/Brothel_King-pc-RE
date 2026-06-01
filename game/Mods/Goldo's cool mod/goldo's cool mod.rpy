@@ -5,7 +5,7 @@ init -1 python:
     mymod_template = Mod(
 
                 ## Basic mod information (Important: Version is used to check for new versions of the mod. Failure to update the version number may lead to broken mods and saved games)
-                name = "Goldo's cool mod",
+                name = __("Goldo's cool mod"),
                 folder = "Goldo's cool mod",
                 creator = "Goldo",
                 version = 1.0,
@@ -58,8 +58,7 @@ label my_mod_init():
     menu:
         "What kind of girls do you like?"
 
-        "Blondes":
-            $ mymod.sec_pic = "events/thief (5).webp"
+        _("Blondes"):            $ mymod.sec_pic = "events/thief (5).webp"
             $ end_picture = "events/thief captured (1).webp"
 
         "Redheads":
@@ -203,7 +202,7 @@ label mymod_justice(end_picture):
 
 screen test_mod_but():
 
-    textbutton "Test mod":
+    textbutton _("Test mod"):
 
         action Function(renpy.notify, "Hey, you clicked!")
-        tooltip "This is a test. Clicking this button does nothing."
+        tooltip _("This is a test. Clicking this button does nothing.")
