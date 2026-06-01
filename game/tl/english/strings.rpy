@@ -1386,6 +1386,9 @@ translate english strings:
     old "Activity"
     new ""
 
+    old "Actual gangster"
+    new ""
+
     old "Add "
     new ""
 
@@ -1516,6 +1519,9 @@ translate english strings:
     new ""
 
     old "All time"
+    new ""
+
+    old "All trainers"
     new ""
 
     old "All travelers agree on one thing: the best thing about Zan is its sex slaves... Any kind of sexual fantasy can be fulfilled here. Many slaves take great pride in fulfilling their master's desires."
@@ -1728,10 +1734,19 @@ translate english strings:
     old "Back door man"
     new ""
 
+    old "Bad boy"
+    new ""
+
     old "Bad memories"
     new ""
 
+    old "Banker"
+    new ""
+
     old "Basic"
+    new ""
+
+    old "Bast"
     new ""
 
     old "Be careful not to let your girls fall sick or hurt! Hurt girls will recover energy half as fast as other girls."
@@ -1851,7 +1866,13 @@ translate english strings:
     old "Blonde officer"
     new ""
 
+    old "Blondes"
+    new ""
+
     old "Blowjob Queen"
+    new ""
+
+    old "Bob"
     new ""
 
     old "Body"
@@ -1971,6 +1992,12 @@ translate english strings:
     old "Cancel"
     new ""
 
+    old "Capitalist I"
+    new ""
+
+    old "Capitalist II"
+    new ""
+
     old "Captain Farah is one greedy bitch. Her men came yesterday to shake one of my friends down. Everyone hates her, but they say she's got protection in high places."
     new ""
 
@@ -1984,6 +2011,9 @@ translate english strings:
     new ""
 
     old "Captain's voice"
+    new ""
+
+    old "Carpenter wagon"
     new ""
 
     old "Carpenter's Wagon"
@@ -2478,6 +2508,9 @@ translate english strings:
     old "Do it in public"
     new ""
 
+    old "Do the challenge and start at chapter 1"
+    new ""
+
     old "Do you know about the King? I mean, the Brothel King? It's [MC.name], the legendary owner of [brothel.name]..."
     new ""
 
@@ -2574,6 +2607,9 @@ translate english strings:
     old "Energy"
     new ""
 
+    old "English"
+    new ""
+
     old "Enrolled"
     new ""
 
@@ -2658,6 +2694,9 @@ translate english strings:
     old "Exotic emporium"
     new ""
 
+    old "Experienced"
+    new ""
+
     old "Expert Barmaid"
     new ""
 
@@ -2680,6 +2719,12 @@ translate english strings:
     new ""
 
     old "Expert Whore"
+    new ""
+
+    old "Explore Karkyr to discover the story of Mizuki"
+    new ""
+
+    old "Explore Westmarch to discover the story of Mizuki"
     new ""
 
     old "Explore this location. Costs 1 {{image=img_AP}}."
@@ -2718,6 +2763,9 @@ translate english strings:
     old "Fancy ladies go to the harbor to buy some very special slaves... I hear they obey every order and they have huge... *whisper*"
     new ""
 
+    old "Farah"
+    new ""
+
     old "Farah, the corrupt guard captain"
     new ""
 
@@ -2736,6 +2784,9 @@ translate english strings:
     old "Farm activities"
     new ""
 
+    old "Farm key"
+    new ""
+
     old "Farm pen"
     new ""
 
@@ -2749,6 +2800,9 @@ translate english strings:
     new ""
 
     old "Fetish"
+    new ""
+
+    old "Fetish/Bisexual/Group preferences"
     new ""
 
     old "Fierce Woman"
@@ -2799,6 +2853,9 @@ translate english strings:
     old "Five Stars"
     new ""
 
+    old "Fixation reader"
+    new ""
+
     old "Flatter her"
     new ""
 
@@ -2844,6 +2901,9 @@ translate english strings:
     old "Foxy Lady"
     new ""
 
+    old "Free girl challenge"
+    new ""
+
     old "Frenzy"
     new ""
 
@@ -2859,7 +2919,13 @@ translate english strings:
     old "Full Shift"
     new ""
 
+    old "Full clean-up ([full_cost] gold)"
+    new ""
+
     old "Fullscreen"
+    new ""
+
+    old "Funny"
     new ""
 
     old "Furniture Built"
@@ -2887,6 +2953,9 @@ translate english strings:
     new ""
 
     old "Gamepad"
+    new ""
+
+    old "Gangster of love"
     new ""
 
     old "Geisha"
@@ -2923,6 +2992,9 @@ translate english strings:
     new ""
 
     old "Gigolo"
+    new ""
+
+    old "Gina"
     new ""
 
     old "Gio"
@@ -3001,6 +3073,9 @@ translate english strings:
     new ""
 
     old "Give you a blowjob"
+    new ""
+
+    old "Gizel"
     new ""
 
     old "Gizel activates %s and ties %s up to the strange machine. She shivers as the cold metal makes contact with her naked body, and she cannot advert her eyes as a rotating, buzzing rod comes up to poke her butt."
@@ -3111,6 +3186,12 @@ translate english strings:
     old "Gold: {{image=img_gold}} "
     new ""
 
+    old "Goldie"
+    new ""
+
+    old "Goldo's cool mod"
+    new ""
+
     old "Golem guard"
     new ""
 
@@ -3171,6 +3252,9 @@ translate english strings:
     old "Guild Fee Offset"
     new ""
 
+    old "Gurigura"
+    new ""
+
     old "HARD"
     new ""
 
@@ -3199,6 +3283,9 @@ translate english strings:
     new ""
 
     old "Harnessing Passion"
+    new ""
+
+    old "Haruka"
     new ""
 
     old "Have 'Fun'"
@@ -3241,6 +3328,9 @@ translate english strings:
     new ""
 
     old "Headmaster"
+    new ""
+
+    old "Headstart"
     new ""
 
     old "Healing powder"
@@ -3366,6 +3456,9 @@ translate english strings:
     old "Hints collected:"
     new ""
 
+    old "Hippie"
+    new ""
+
     old "Hiring help"
     new ""
 
@@ -3400,6 +3493,9 @@ translate english strings:
     new ""
 
     old "Holding mode:"
+    new ""
+
+    old "Homura"
     new ""
 
     old "Horny Tiger, Fucking Dragon"
@@ -3912,6 +4008,9 @@ translate english strings:
     old "Items"
     new ""
 
+    old "Iulia"
+    new ""
+
     old "I{{u}}t{{/u}}ems"
     new ""
 
@@ -3919,6 +4018,9 @@ translate english strings:
     new ""
 
     old "JP bonus"
+    new ""
+
+    old "JP trainer"
     new ""
 
     old "Jobs"
@@ -3945,10 +4047,19 @@ translate english strings:
     old "Karkyr is a beautiful and fascinating city, ruled by the Archmage Council. Everything is magical, even the wells and the furniture can speak. It used to freak my %s out! There were also some spectacular incidents, of course, but that was part of the fun."
     new ""
 
+    old "Kashiv"
+    new ""
+
+    old "Katryn"
+    new ""
+
     old "Keep Skipping"
     new ""
 
     old "Keep exploring the city districts for clues."
+    new ""
+
+    old "Keep her as a slave"
     new ""
 
     old "Keep her at the asylum for another month (cost: {{image=img_gold_24}} [asylum_cost])"
@@ -3987,7 +4098,13 @@ translate english strings:
     old "Knock knock."
     new ""
 
+    old "Know, O prince, that between the years when the oceans drank Atlantis \n and the gleaming cities, and the years of the rise of the Sons of Xeros \n hither came the one who shall stand on fours under the rising sun \n the one who shall stand on two under the zenith light \n the one who shall stand on three under the many stars... \n Thou shalt name the one to succeed."
+    new ""
+
     old "Kunoichi"
+    new ""
+
+    old "Kurohime"
     new ""
 
     old "L"
@@ -4002,7 +4119,13 @@ translate english strings:
     old "Ladies night"
     new ""
 
+    old "Lady Kenshin"
+    new ""
+
     old "Lady diplomat"
+    new ""
+
+    old "Language"
     new ""
 
     old "Large"
@@ -4063,6 +4186,9 @@ translate english strings:
     new ""
 
     old "Let her dominate"
+    new ""
+
+    old "Let her stay in an inn until tomorrow for 50 gold"
     new ""
 
     old "Let her stay one more day (50 gold)"
@@ -4167,7 +4293,13 @@ translate english strings:
     old "Lv"
     new ""
 
+    old "Lydie"
+    new ""
+
     old "MP: Your current mana."
+    new ""
+
+    old "MU_jobgirl"
     new ""
 
     old "Machine Anal"
@@ -4257,6 +4389,9 @@ translate english strings:
     old "Make me feel young again"
     new ""
 
+    old "Makibishi"
+    new ""
+
     old "Man"
     new ""
 
@@ -4290,6 +4425,9 @@ translate english strings:
     old "Masseuses should be {{b}}beautiful{{/b}} and {{b}}sensitive{{/b}}. A good {{b}}body{{/b}} and {{b}}refinement{{/b}} are also important."
     new ""
 
+    old "Maya"
+    new ""
+
     old "Maybe I do"
     new ""
 
@@ -4317,6 +4455,12 @@ translate english strings:
     old "Merchant"
     new ""
 
+    old "Merchant connections (items)"
+    new ""
+
+    old "Merchant connections (minions)"
+    new ""
+
     old "Middle Click"
     new ""
 
@@ -4336,6 +4480,9 @@ translate english strings:
     new ""
 
     old "Misc"
+    new ""
+
+    old "Mizuki"
     new ""
 
     old "Mmh, what if I adjusted this button... No, that's not it... Sorry. How can I help you?"
@@ -4455,6 +4602,9 @@ translate english strings:
     old "My sister is a maid at court. She had a glimpse of one of the ceremonies and wouldn't shut up about it. 'The dresses!', 'The lights!', 'The jewels!', 'The gold dishes!', and so on."
     new ""
 
+    old "My slave Sill"
+    new ""
+
     old "My son is already 21, and not yet married. He's a big oaf when it comes to women... Can you help him come out of his shell?"
     new ""
 
@@ -4536,7 +4686,13 @@ translate english strings:
     old "Naked lady"
     new ""
 
+    old "Naked/Service preferences"
+    new ""
+
     old "Name: "
+    new ""
+
+    old "Narika"
     new ""
 
     old "Nature calls"
@@ -4582,6 +4738,9 @@ translate english strings:
     new ""
 
     old "Next\ntip"
+    new ""
+
+    old "Nice guy"
     new ""
 
     old "Nice place"
@@ -4665,6 +4824,9 @@ translate english strings:
     old "No task is currently available."
     new ""
 
+    old "No training challenge"
+    new ""
+
     old "No whores! What kind of brothel is this?"
     new ""
 
@@ -4678,6 +4840,9 @@ translate english strings:
     new ""
 
     old "None"
+    new ""
+
+    old "Normal mode - See intro"
     new ""
 
     old "Noroi leader"
@@ -4917,6 +5082,9 @@ translate english strings:
     old "Personal Space Invader"
     new ""
 
+    old "Personality reader"
+    new ""
+
     old "Persuade her to come back."
     new ""
 
@@ -5007,6 +5175,9 @@ translate english strings:
     old "Prestige is earned whenever you or your girls have sex. Earning prestige will allow you to level up."
     new ""
 
+    old "Prestigious"
+    new ""
+
     old "Previous"
     new ""
 
@@ -5038,6 +5209,9 @@ translate english strings:
     new ""
 
     old "Public acts are confusing. Is it public because it's outside, or because other people can see you? I can never tell."
+    new ""
+
+    old "Pull out your cock"
     new ""
 
     old "Pumping and Pimping."
@@ -5083,6 +5257,9 @@ translate english strings:
     new ""
 
     old "Ragged"
+    new ""
+
+    old "Ramias"
     new ""
 
     old "Rancher"
@@ -5139,6 +5316,9 @@ translate english strings:
     old "Renowned throughout the realm as the sweetest flower of the Karkyr nobility, Lady Sui captivates all with her generous heart and highborn spirit, extending her kindness even to the most destitute among our citizens.\n\nAs the sole heir of the Kouchi lineage, her dowry encompasses the considerable estates of her family, stretching across Karkyr and its verdant surroundings."
     new ""
 
+    old "Renza"
+    new ""
+
     old "Rep-Ctrl"
     new ""
 
@@ -5158,6 +5338,9 @@ translate english strings:
     new ""
 
     old "Resolution"
+    new ""
+
+    old "Resourceful"
     new ""
 
     old "Resources"
@@ -5191,6 +5374,9 @@ translate english strings:
     new ""
 
     old "Rewards"
+    new ""
+
+    old "Riche"
     new ""
 
     old "Right Click"
@@ -5274,10 +5460,16 @@ translate english strings:
     old "STOP"
     new ""
 
+    old "Sad Sill"
+    new ""
+
     old "Sailor"
     new ""
 
     old "Sanity cost:"
+    new ""
+
+    old "Satella"
     new ""
 
     old "Satisfaction"
@@ -5296,6 +5488,12 @@ translate english strings:
     new ""
 
     old "Save him"
+    new ""
+
+    old "Savings"
+    new ""
+
+    old "Scarlet"
     new ""
 
     old "Sche{{u}}d{{/u}}ule"
@@ -5395,6 +5593,9 @@ translate english strings:
     new ""
 
     old "Sex. "
+    new ""
+
+    old "Sex/Anal preferences"
     new ""
 
     old "Sexual Training"
@@ -5988,6 +6189,9 @@ translate english strings:
     old "Shes feels safe with you, but also bored."
     new ""
 
+    old "Shirohito"
+    new ""
+
     old "Shoving your dick deep into %s's mouth for the big finish, you shoot loads of cum deep down her throat."
     new ""
 
@@ -6010,6 +6214,9 @@ translate english strings:
     new ""
 
     old "Shuffle"
+    new ""
+
+    old "Sill"
     new ""
 
     old "Sill is right"
@@ -6255,6 +6462,9 @@ translate english strings:
     old "Start, Guide, B/Right Button"
     new ""
 
+    old "Starting girl"
+    new ""
+
     old "Stat adv."
     new ""
 
@@ -6262,6 +6472,9 @@ translate english strings:
     new ""
 
     old "Stats-Test"
+    new ""
+
+    old "Stella"
     new ""
 
     old "Stigmata"
@@ -6283,6 +6496,9 @@ translate english strings:
     new ""
 
     old "Strolling around the %s absentmindedly, "
+    new ""
+
+    old "Strong"
     new ""
 
     old "St{{u}}a{{/u}}ts"
@@ -6337,6 +6553,9 @@ translate english strings:
     new ""
 
     old "Survivor"
+    new ""
+
+    old "Suzume"
     new ""
 
     old "Swift like a cobra."
@@ -6396,6 +6615,9 @@ translate english strings:
     old "Tasks"
     new ""
 
+    old "Taste reader"
+    new ""
+
     old "Tastes"
     new ""
 
@@ -6408,7 +6630,13 @@ translate english strings:
     old "Tavern Queen"
     new ""
 
+    old "Tax evasion"
+    new ""
+
     old "Taxes on rice, grain, vegetables, meat... Soon they'll tax water from the puddles! What's a man to eat?"
+    new ""
+
+    old "Taxgirl"
     new ""
 
     old "Teaser"
@@ -6462,6 +6690,9 @@ translate english strings:
     old "Test"
     new ""
 
+    old "Test mod"
+    new ""
+
     old "Text Speed"
     new ""
 
@@ -6502,6 +6733,9 @@ translate english strings:
     new ""
 
     old "The Cathedra is a nice enough looking building from outside, but you wouldn't like what goes on inside, believe me."
+    new ""
+
+    old "The Cathedra is the holy center of the Arios order. Pilgrims, knights and priests rub elbows during prayers and rituals, while savvy merchants and bankers make a killing providing them with expensive service."
     new ""
 
     old "The Cathedra is the pride of Zan and the crown jewel of all Xeros. All rejoice in the glorious light of Arios!"
@@ -6568,6 +6802,9 @@ translate english strings:
     new ""
 
     old "The Slave Market has received new girls.\n\n"
+    new ""
+
+    old "The Slums are located on the outskirts of Zan, beyond the defensive wall. It is home to the Zani rabble: new arrivals, refugees, paupers, spice addicts... It is also rumored to host the hideout of the Thieves Guild, who worship the Shadow Goddess Shalia."
     new ""
 
     old "The Virgin Whore"
@@ -6669,6 +6906,9 @@ translate english strings:
     old "The dialogue history is empty."
     new ""
 
+    old "The docks are home to rowdy sailors and dodgy pirates sheltering from the treacherous seas. With seamen all around, no wonder there is a thriving market for cheap whores near the port."
+    new ""
+
     old "The dry moon is nothing special, quite boring really. People would rather tend to the task at hand than idly stare at this dull moon."
     new ""
 
@@ -6682,6 +6922,9 @@ translate english strings:
     new ""
 
     old "The game will display such pictures."
+    new ""
+
+    old "The gardens are where the magic-wielding locals gather to soak up mana after a long night of dangerous experiments. It is said some of those experiments occasionally escape..."
     new ""
 
     old "The girl from the shop is always acting flirtatious and bitchy,... I don't like her. I wish we could find other places to shop in town."
@@ -6811,6 +7054,9 @@ translate english strings:
     new ""
 
     old "The ultimate challenge."
+    new ""
+
+    old "The warehouse is the industrial part of Zan, where all kinds of craftsmen and day laborer come to look for work. Its streets are buzzing with trade and activities during the day, but dodgy at night."
     new ""
 
     old "The water spirits grant the moon a surreal quality this month. It is said to make everyone loosen up a little."
@@ -6993,7 +7239,13 @@ translate english strings:
     old "This is a mod for Brothel King."
     new ""
 
+    old "This is a test. Clicking this button does nothing."
+    new ""
+
     old "This is payback for all those times they called you a 'Wise guy'."
+    new ""
+
+    old "This is the center of power in Zan, where courtiers compete for power and the King's support. Behind the veneer of respectability and privilege, however, daggers are drawn... Beware."
     new ""
 
     old "This is the current strength of your character. Improves security and helps in individual fights."
@@ -7689,16 +7941,25 @@ translate english strings:
     old "Why would anyone threaten the Princess's life? She's the only one who doesn't wish us little people ill in this royal nest of vipers."
     new ""
 
+    old "Why, yes, I'd like to fuck her"
+    new ""
+
     old "Will train"
     new ""
 
     old "Will work"
     new ""
 
+    old "Willow"
+    new ""
+
     old "Willow's relative"
     new ""
 
     old "Window"
+    new ""
+
+    old "Wise"
     new ""
 
     old "With all the crooked politicians and scheming thieves crawling in this city, you'd wonder why they didn't build a Cathedra to Shalia instead!"
@@ -7734,10 +7995,16 @@ translate english strings:
     old "Worthless"
     new ""
 
+    old "Wyvern nest"
+    new ""
+
     old "X"
     new ""
 
     old "XP"
+    new ""
+
+    old "XP trainer"
     new ""
 
     old "XXX"
@@ -7753,6 +8020,9 @@ translate english strings:
     new ""
 
     old "Yes"
+    new ""
+
+    old "Yes (spend 1 makibishi)"
     new ""
 
     old "Yes, and deactivate future warnings for this game/this version"
@@ -8106,7 +8376,19 @@ translate english strings:
     old "You've been hit by, you've been struck by..."
     new ""
 
+    old "Young chemist"
+    new ""
+
+    old "Young drug lord"
+    new ""
+
     old "Young maid"
+    new ""
+
+    old "Young surgeon"
+    new ""
+
+    old "Young therapist"
     new ""
 
     old "Your Speed determines how many actions you can take every day. It is rarely used for anything else."
@@ -8853,6 +9135,78 @@ translate english strings:
     old "bukkake."
     new ""
 
+    old "c1_ambush"
+    new ""
+
+    old "c1_ask_guild_for_help"
+    new ""
+
+    old "c1_captain_meeting"
+    new ""
+
+    old "c1_gio_is_back"
+    new ""
+
+    old "c1_meet_kosmo"
+    new ""
+
+    old "c1_satella_intro"
+    new ""
+
+    old "c1_sewers"
+    new ""
+
+    old "c1_sewers_return"
+    new ""
+
+    old "c1_spice_market"
+    new ""
+
+    old "c1_thieves_guild_found"
+    new ""
+
+    old "c1_thieves_guild_tip"
+    new ""
+
+    old "c1_visit_watchtower"
+    new ""
+
+    old "c2_gio_meeting"
+    new ""
+
+    old "c2_homura_okiya1"
+    new ""
+
+    old "c2_narika_H1"
+    new ""
+
+    old "c2_princess_visit1"
+    new ""
+
+    old "c2_princess_visit2"
+    new ""
+
+    old "c2_sewer_girl_returns"
+    new ""
+
+    old "c2_suzume_arena"
+    new ""
+
+    old "c2_suzume_brothel"
+    new ""
+
+    old "c2_suzume_forest1"
+    new ""
+
+    old "c2_suzume_forest2"
+    new ""
+
+    old "c3_narika_MU_class"
+    new ""
+
+    old "c3_suzume_hint"
+    new ""
+
     old "chance of "
     new ""
 
@@ -8922,6 +9276,9 @@ translate english strings:
     old "deformed monsters"
     new ""
 
+    old "diamond_intro"
+    new ""
+
     old "dirty"
     new ""
 
@@ -8964,6 +9321,9 @@ translate english strings:
     old "drooling, mindless beasts"
     new ""
 
+    old "dye_intro"
+    new ""
+
     old "e got more tools than a hardware store, more beasts than the palace zoo... And by the time we're finished, they're all gonna fit inside of her!"
     new ""
 
@@ -9003,7 +9363,55 @@ translate english strings:
     old "fancy souteneur"
     new ""
 
+    old "farm_activate_goldie"
+    new ""
+
+    old "farm_discovered_weakness"
+    new ""
+
+    old "farm_first_"
+    new ""
+
+    old "farm_found_a_place"
+    new ""
+
+    old "farm_gizel_introduction"
+    new ""
+
+    old "farm_go_with_gizel"
+    new ""
+
+    old "farm_max_pref"
+    new ""
+
+    old "farm_max_skill"
+    new ""
+
+    old "farm_meet_gina"
+    new ""
+
+    old "farm_meet_gizel"
+    new ""
+
+    old "farm_meet_gizel2"
+    new ""
+
+    old "farm_meet_goldie"
+    new ""
+
+    old "farm_meet_stella"
+    new ""
+
+    old "farm_meet_willow"
+    new ""
+
     old "farm_powers_init"
+    new ""
+
+    old "farm_resisted"
+    new ""
+
+    old "farm_second_monster"
     new ""
 
     old "fascinated"
@@ -9039,6 +9447,12 @@ translate english strings:
     old "getting showered with cum."
     new ""
 
+    old "gina_research"
+    new ""
+
+    old "girl_come_back"
+    new ""
+
     old "giving footjobs."
     new ""
 
@@ -9070,6 +9484,9 @@ translate english strings:
     new ""
 
     old "hard liquor"
+    new ""
+
+    old "haruka_break_test"
     new ""
 
     old "having multiple orgasms."
@@ -9147,6 +9564,9 @@ translate english strings:
     old "hmas"
     new ""
 
+    old "homura_farm"
+    new ""
+
     old "icon of corruption"
     new ""
 
@@ -9207,6 +9627,15 @@ translate english strings:
     old "job_up"
     new ""
 
+    old "jobgirl_beach"
+    new ""
+
+    old "jobgirl_beach_1"
+    new ""
+
+    old "kidnap_rescue"
+    new ""
+
     old "kidnap_return"
     new ""
 
@@ -9223,6 +9652,9 @@ translate english strings:
     new ""
 
     old "lactation."
+    new ""
+
+    old "leather_intro"
     new ""
 
     old "lewd"
@@ -9243,6 +9675,9 @@ translate english strings:
     old "machine"
     new ""
 
+    old "marble_intro"
+    new ""
+
     old "masseuse"
     new ""
 
@@ -9250,6 +9685,27 @@ translate english strings:
     new ""
 
     old "materialist"
+    new ""
+
+    old "meet_carpenter"
+    new ""
+
+    old "meet_giftgirl"
+    new ""
+
+    old "meet_gurigura"
+    new ""
+
+    old "meet_katryn"
+    new ""
+
+    old "meet_ramias"
+    new ""
+
+    old "meet_riche"
+    new ""
+
+    old "meet_twins"
     new ""
 
     old "minigame/rain/heavyrain1.webp"
@@ -9303,6 +9759,9 @@ translate english strings:
     old "nameless drifter"
     new ""
 
+    old "narika_break_test"
+    new ""
+
     old "ne: Humph. I'll let you off the hook this one time. You owe me now."
     new ""
 
@@ -9346,6 +9805,9 @@ translate english strings:
     new ""
 
     old "ool achievement:\nWell done, bro!"
+    new ""
+
+    old "ore_intro"
     new ""
 
     old "out"
@@ -9423,7 +9885,13 @@ translate english strings:
     old "rogue"
     new ""
 
+    old "satella_first_visit"
+    new ""
+
     old "satella_letter"
+    new ""
+
+    old "satella_visit"
     new ""
 
     old "seedy innkeeper"
@@ -9474,10 +9942,16 @@ translate english strings:
     old "shifty lurker"
     new ""
 
+    old "silk_intro"
+    new ""
+
     old "sin tycoon"
     new ""
 
     old "skilled"
+    new ""
+
+    old "slave_beach_event"
     new ""
 
     old "slideshow"
@@ -9508,6 +9982,15 @@ translate english strings:
     new ""
 
     old "stallion"
+    new ""
+
+    old "stella_invitation"
+    new ""
+
+    old "stella_secret1"
+    new ""
+
+    old "stella_secret2"
     new ""
 
     old "street-corner hawker"
@@ -9723,7 +10206,16 @@ translate english strings:
     old "will go to the city at night and attempt capturing a free girl. Her chances improve with her defense level."
     new ""
 
+    old "willow_fight"
+    new ""
+
+    old "willow_relative"
+    new ""
+
     old "willow_relative_returns"
+    new ""
+
+    old "wood_intro"
     new ""
 
     old "workshop"
@@ -9972,6 +10464,9 @@ translate english strings:
     old "{{color=#FFB5B5}}%s{{/color}}"
     new ""
 
+    old "{{color=[c_cream]}}"
+    new ""
+
     old "{{color=[c_darkblue]}}%s{{/color}}"
     new ""
 
@@ -10035,6 +10530,9 @@ translate english strings:
     old "{{color=[c_lightblue]}}%s{{/color}}"
     new ""
 
+    old "{{color=[c_lightgreen]}}"
+    new ""
+
     old "{{color=[c_lightgreen]}}A "
     new ""
 
@@ -10060,6 +10558,9 @@ translate english strings:
     new ""
 
     old "{{color=[c_lightred]}}Tears ran down %s's cheeks as the %s forcefully fucked her throat.{{/color}}"
+    new ""
+
+    old "{{color=[c_orange]}}"
     new ""
 
     old "{{color=[c_orange]}}%s{{/color}}"
@@ -10186,4 +10687,10 @@ translate english strings:
     new ""
 
     old "▲{{image=img_gold}}"
+    new ""
+
+    old "中文"
+    new ""
+
+    old "简体中文"
     new ""
