@@ -674,7 +674,7 @@ screen girl_tab(girls, context="girls"):
                 use sorting_tab(context, girls, sorters)
 
                 frame xsize yres(38) ysize yres(20) xpadding 0 ypadding 0 xmargin 0 ymargin 0:
-                    textbutton _("Sk.") text_italic True text_color c_darkbrown text_selected_color c_emerald text_size res_font(14) xpadding 0 ypadding 0 xalign 0.5 yalign 0.6 xsize yres(38) ysize yres(20) idle_background None action SetLocalVariable("sort_view", "advanced") tooltip "Sort girls by specific skills."
+                    textbutton _("Sk.") text_italic True text_color c_darkbrown text_selected_color c_emerald text_size res_font(14) xpadding 0 ypadding 0 xalign 0.5 yalign 0.6 xsize yres(38) ysize yres(20) idle_background None action SetLocalVariable("sort_view", "advanced") tooltip _("Sort girls by specific skills.")
 
                 if view_modes:
                     $ _next = get_next(view_modes, selected_view_mode, True)
@@ -1469,7 +1469,7 @@ screen girl_profile(girl, context = None): # context can be girls, slavemarket, 
 
                     if farm.programs[girl].target != "no training" or farm.programs[girl].holding != "rest":
                         hbox xalign 0.5 spacing xres(10):
-                            textbutton _("Training mode:") xsize xres(100) yalign 0.5 text_xalign 0.0 text_size res_font(14) background None text_color c_white action NullAction() tooltip "Decide if Gizel will force girls to train against their will."
+                            textbutton _("Training mode:") xsize xres(100) yalign 0.5 text_xalign 0.0 text_size res_font(14) background None text_color c_white action NullAction() tooltip _("Decide if Gizel will force girls to train against their will.")
                             textbutton farm.programs[girl].mode.capitalize() style "inv_no_padding" text_size res_font(14) yalign 0.5 text_bold True action NullAction() tooltip farm_ttip[farm.programs[girl].mode]
 
                             if farm.programs[girl].mode == "tough":
@@ -1479,7 +1479,7 @@ screen girl_profile(girl, context = None): # context can be girls, slavemarket, 
 
                     if farm.programs[girl].target != "no training":
                         hbox xalign 0.5 spacing xres(10):
-                            textbutton _("Training facility:") style "inv_no_padding" xsize xres(100) yalign 0.0 text_xalign 0.0 text_size res_font(14) text_color c_white action NullAction() tooltip "Define which facility to use for her training (if any)."
+                            textbutton _("Training facility:") style "inv_no_padding" xsize xres(100) yalign 0.0 text_xalign 0.0 text_size res_font(14) text_color c_white action NullAction() tooltip _("Define which facility to use for her training (if any).")
                             textbutton farm.programs[girl].installation_name.capitalize() style "inv_no_padding" yalign 0.0 text_size res_font(14) text_bold True action NullAction():
                                 if farm.programs[girl].installation:
                                     tooltip farm.programs[girl].installation.get_tooltip()
@@ -1500,7 +1500,7 @@ screen girl_profile(girl, context = None): # context can be girls, slavemarket, 
 
                         if farm.knows["weakness"][girl]:
                             hbox xalign 0.5 spacing xres(10):
-                                textbutton _("Use Weakness:") xsize xres(100) text_xalign 0.0 text_size res_font(14) background None text_color c_white action NullAction() tooltip "Determines if Gizel will use her known weakness against her."
+                                textbutton _("Use Weakness:") xsize xres(100) text_xalign 0.0 text_size res_font(14) background None text_color c_white action NullAction() tooltip _("Determines if Gizel will use her known weakness against her.")
                                 text {True: "No", False: "Yes"}[farm.programs[girl].avoid_weakness] size res_font(14) bold True
 
                     else:
@@ -2773,7 +2773,7 @@ screen button_overlay(girl, context="girls"):
                     tooltip _("Click here for useful stats about your girl.")
 
             if debug_mode:
-                textbutton _("Pics") style "small_button" action (SetVariable("selected_girl", girl), Return("debug_pics")) text_size res_font(14) tooltip "Test girl pack with the game's picture generation." selected False
+                textbutton _("Pics") style "small_button" action (SetVariable("selected_girl", girl), Return("debug_pics")) text_size res_font(14) tooltip _("Test girl pack with the game's picture generation.") selected False
 
     elif context == "free":
 
@@ -3107,7 +3107,7 @@ screen schedule(glist):
 
         hbox spacing 10 xalign 1.0:
             if brothel.get_effect("special", "autorest") or debug_mode:
-                textbutton _("Autorest options") xalign 1.0 action Show("autorest") tooltip "Adjust default autorest options"
+                textbutton _("Autorest options") xalign 1.0 action Show("autorest") tooltip _("Adjust default autorest options")
             textbutton _("Ok") action (Return())
 
 screen save_schedule(girl):
@@ -3201,8 +3201,8 @@ screen autorest(girl="default"):
 
         if girl == "default":
             hbox xalign 1.0:
-                textbutton _("Apply all") action (Function(reset_autorest), Hide("autorest")) tooltip "Apply to all girls, ignoring their current setting."
-                textbutton _("Apply") action Hide("autorest") tooltip "Apply for new girls only, leaving current girls' settings unchanged."
+                textbutton _("Apply all") action (Function(reset_autorest), Hide("autorest")) tooltip _("Apply to all girls, ignoring their current setting.")
+                textbutton _("Apply") action Hide("autorest") tooltip _("Apply for new girls only, leaving current girls' settings unchanged.")
         else:
             textbutton _("Ok") action Hide("autorest") xalign 1.0
 
@@ -5876,14 +5876,14 @@ screen quick_start(def_panel = "MC"):
 
     vbox xalign 0.5 yalign 0.5 xsize int(0.95*config.screen_width):
         hbox xfill True:
-            textbutton _("Character") xsize xres(160) ysize yres(48) text_size res_font(24) text_selected_bold True action SelectedIf(panel == "MC") hovered SetScreenVariable("panel", "MC") tooltip "Create your Main Character."
+            textbutton _("Character") xsize xres(160) ysize yres(48) text_size res_font(24) text_selected_bold True action SelectedIf(panel == "MC") hovered SetScreenVariable("panel", "MC") tooltip _("Create your Main Character.")
 
-            textbutton _("Difficulty") xsize xres(160) ysize yres(48) text_size res_font(24) text_selected_bold True action SelectedIf(panel == "diff") hovered SetScreenVariable("panel", "diff") tooltip "Change difficulty settings."
+            textbutton _("Difficulty") xsize xres(160) ysize yres(48) text_size res_font(24) text_selected_bold True action SelectedIf(panel == "diff") hovered SetScreenVariable("panel", "diff") tooltip _("Change difficulty settings.")
 
-            textbutton _("Girls") xsize xres(160) ysize yres(48) text_size res_font(24) text_selected_bold True action SelectedIf(panel == "mix") hovered SetScreenVariable("panel", "mix") tooltip "Choose your girl mixes."
+            textbutton _("Girls") xsize xres(160) ysize yres(48) text_size res_font(24) text_selected_bold True action SelectedIf(panel == "mix") hovered SetScreenVariable("panel", "mix") tooltip _("Choose your girl mixes.")
 
             if persistent.new_game_plus or debug:
-                textbutton _("NewGame+") xsize xres(160) ysize yres(48) text_size res_font(24) text_selected_bold True action SelectedIf(panel == "extras") hovered SetScreenVariable("panel", "extras") tooltip "Access NewGame+ settings."
+                textbutton _("NewGame+") xsize xres(160) ysize yres(48) text_size res_font(24) text_selected_bold True action SelectedIf(panel == "extras") hovered SetScreenVariable("panel", "extras") tooltip _("Access NewGame+ settings.")
 
             button background None xsize xres(320) ysize yres(52) xalign 1.0:
                 if GetTooltip():
@@ -6020,7 +6020,7 @@ screen quick_start(def_panel = "MC"):
                                             action AddToSet(persistent.game_mixes, mix)
                                             tooltip __("Click to add mix: {b}%s{/b} to this game's active mixes.") % mix.capitalize()
 
-                            textbutton _("Edit girl mixes") xsize xres(220) ysize yres(36) xalign 0.5 yalign 1.0 action Return("edit mix") tooltip "Click here to edit your girl mixes."
+                            textbutton _("Edit girl mixes") xsize xres(220) ysize yres(36) xalign 0.5 yalign 1.0 action Return("edit mix") tooltip _("Click here to edit your girl mixes.")
 
                         $ selected_girlpacks = get_selected_girlpacks(persistent.game_mixes)
 
@@ -6079,7 +6079,7 @@ screen quick_start(def_panel = "MC"):
 
                         null height yres(10)
 
-                        textbutton _("Reset NG+ settings") text_size res_font(12) xalign 1.0 action Return("reset NGP") tooltip "Reset all settings to default value"
+                        textbutton _("Reset NG+ settings") text_size res_font(12) xalign 1.0 action Return("reset NGP") tooltip _("Reset all settings to default value")
 
         frame xfill True xsize int(0.95*config.screen_width) ysize int(0.1*config.screen_height):
             hbox xsize 0.7 xalign 0.95 spacing xres(12):
@@ -6093,7 +6093,7 @@ screen quick_start(def_panel = "MC"):
                     else:
                         text _("Achievements will be disabled for this game.") italic True color c_red size res_font(18)
 
-                textbutton _("CONFIRM") xalign 1.0 yfill True action Return(True) tooltip "Start a new game with these settings."
+                textbutton _("CONFIRM") xalign 1.0 yfill True action Return(True) tooltip _("Start a new game with these settings.")
 
 ## MAIN CHARACTER SCREEN
 
@@ -6777,9 +6777,9 @@ screen farm_menu(prog, can_cancel=True):
 
         text "" size 16
 
-        textbutton _("Farm activities") style "inv_no_padding" xalign 0.01 text_size res_font(18) text_drop_shadow (2, 2) action NullAction() tooltip "Work for Gizel on the farm. These activities do no require minions."
+        textbutton _("Farm activities") style "inv_no_padding" xalign 0.01 text_size res_font(18) text_drop_shadow (2, 2) action NullAction() tooltip _("Work for Gizel on the farm. These activities do no require minions.")
 
-        textbutton _("Rest") style "farm_button" text_size res_font(18) xsize yres(780) action (SetField(prog, "target", "no training"), SetField(prog, "holding", "rest"), SetField(prog, "installation", None), SelectedIf(prog.target == "no training" and prog.holding=="rest")) tooltip "She will simply rest in her pen."
+        textbutton _("Rest") style "farm_button" text_size res_font(18) xsize yres(780) action (SetField(prog, "target", "no training"), SetField(prog, "holding", "rest"), SetField(prog, "installation", None), SelectedIf(prog.target == "no training" and prog.holding=="rest")) tooltip _("She will simply rest in her pen.")
 
         null height yres(9)
 
@@ -6794,7 +6794,7 @@ screen farm_menu(prog, can_cancel=True):
 
         text "" size 16
 
-        textbutton _("Sexual Training") style "inv_no_padding" xalign 0.01 text_size res_font(18) text_drop_shadow (2, 2) action NullAction() tooltip "Go through Gizel's special training program. Sexual training requires available minions."
+        textbutton _("Sexual Training") style "inv_no_padding" xalign 0.01 text_size res_font(18) text_drop_shadow (2, 2) action NullAction() tooltip _("Go through Gizel's special training program. Sexual training requires available minions.")
 
         hbox:
             for act in extended_sex_acts:
@@ -6821,7 +6821,7 @@ screen farm_menu(prog, can_cancel=True):
 
         text "" size 16
 
-        textbutton _("Facility") style "inv_no_padding" xalign 0.01 text_size res_font(18) text_drop_shadow (2, 2) action NullAction() tooltip "Pick a facility with minions for training (sexual training only)."
+        textbutton _("Facility") style "inv_no_padding" xalign 0.01 text_size res_font(18) text_drop_shadow (2, 2) action NullAction() tooltip _("Pick a facility with minions for training (sexual training only).")
 
         if prog.target == "no training":
             button style "farm_button" action SelectedIf(prog.target=="no training"):
@@ -6901,7 +6901,7 @@ screen farm_menu(prog, can_cancel=True):
         text ""
 
         if prog.target == "no training" and prog.holding=="rest":
-            textbutton _("Hold her (rest)") ypadding yres(9) text_color c_white text_size res_font(18) xsize yres(780//3) xalign 0.5 action Return("commit") tooltip "Send her to the farm to rest in a pen."
+            textbutton _("Hold her (rest)") ypadding yres(9) text_color c_white text_size res_font(18) xsize yres(780//3) xalign 0.5 action Return("commit") tooltip _("Send her to the farm to rest in a pen.")
 
         else:
             hbox xalign 0.5:
@@ -7045,7 +7045,7 @@ screen farm_tab():
 
             hbox spacing 25:
                 text _("{b}Facilities & Minions{/b}") size res_font(18) yalign 0.5 drop_shadow (2, 2)
-                textbutton _("{u}U{/u}se item") text_size res_font(18) action Return(("items", None)) tooltip "Use an item on your minions." yalign 0.5
+                textbutton _("{u}U{/u}se item") text_size res_font(18) action Return(("items", None)) tooltip _("Use an item on your minions.") yalign 0.5
 
             text "" size res_font(6)
 
@@ -7210,7 +7210,7 @@ screen fshow_init(girl, initial_act):
 
         text "" size 16
 
-        textbutton _("Choose a sex Act") style "inv_no_padding" xalign 0.01 text_size res_font(18) text_drop_shadow (2, 2) action NullAction() tooltip "Choose which sex act will be featured in the Show."
+        textbutton _("Choose a sex Act") style "inv_no_padding" xalign 0.01 text_size res_font(18) text_drop_shadow (2, 2) action NullAction() tooltip _("Choose which sex act will be featured in the Show.")
 
         null height yres(9)
 
@@ -7291,7 +7291,7 @@ screen fshow_init(girl, initial_act):
 
         text "" size 16
 
-        textbutton _("Commit") xalign 0.5 ypadding yres(9) text_color c_white text_size res_font(18) xsize yres(780//3) tooltip "Start the show.":
+        textbutton _("Commit") xalign 0.5 ypadding yres(9) text_color c_white text_size res_font(18) xsize yres(780//3) tooltip _("Start the show."):
             if farm.get_healthy_minions():
                 action (SetVariable("chosen_act", selected_act), SetVariable("chosen_minions", [mn for mn in selected_mn.keys() if selected_mn[mn]]), Return("commit"))
 
@@ -7641,9 +7641,9 @@ screen challenge(name, diff, raw=False, bonus=0, opponent_bonus=0, bonus_text=""
                             text __("Final Result: ") + str(round_int(chal.score)) size res_font(18)
 
                     elif chal.opposed:
-                        textbutton _("Roll") action (SetScreenVariable("phase", 1), Play("sound", s_dice)) tooltip "Roll the dice"
+                        textbutton _("Roll") action (SetScreenVariable("phase", 1), Play("sound", s_dice)) tooltip _("Roll the dice")
                     else:
-                        textbutton _("Roll") action (SetScreenVariable("phase", 2), Play("sound", s_dice)) tooltip "Roll the dice"
+                        textbutton _("Roll") action (SetScreenVariable("phase", 2), Play("sound", s_dice)) tooltip _("Roll the dice")
 
 
 

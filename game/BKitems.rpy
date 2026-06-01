@@ -800,7 +800,7 @@ screen item_tab(context, left_party, right_party): # Where X_party are a list of
             use restock_button(right_focus)
 
     elif context == "girls":
-        textbutton _("Collect all items") text_size res_font(16) xalign 0.5 yalign 0.1 tooltip "This will collect non-equipped items from all girls and store them in the left character's inventory." action Return("collect all")
+        textbutton _("Collect all items") text_size res_font(16) xalign 0.5 yalign 0.1 tooltip _("This will collect non-equipped items from all girls and store them in the left character's inventory.") action Return("collect all")
 
     key "mouseup_3" action (Return("back"))
     use close(Return("back"))

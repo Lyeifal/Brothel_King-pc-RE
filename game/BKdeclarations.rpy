@@ -1690,13 +1690,13 @@ screen galleries():
     frame xalign 0.5 yalign 0.5:
         has vbox spacing 10 box_wrap True
 
-        textbutton "CG - Game" action (ShowMenu("gallery", gal_type="ev"), SetVariable("gallery_type", "ev")) text_size res_font(24) xsize int(config.screen_width*0.1851)
+        textbutton _("CG - Game") action (ShowMenu("gallery", gal_type="ev"), SetVariable("gallery_type", "ev")) text_size res_font(24) xsize int(config.screen_width*0.1851)
 
-        textbutton "CG - Girl packs" action (ShowMenu("gallery", gal_type="gp"), SetVariable("gallery_type", "gp")) text_size res_font(24) xsize int(config.screen_width*0.1851)
+        textbutton _("CG - Girl packs") action (ShowMenu("gallery", gal_type="gp"), SetVariable("gallery_type", "gp")) text_size res_font(24) xsize int(config.screen_width*0.1851)
 
         # textbutton "Achievements" action ShowMenu("achievements") text_size res_font(24) xsize int(config.screen_width*0.1851)
 
-        textbutton "Main Menu" action Function(renpy.full_restart) text_size res_font(24) xsize int(config.screen_width*0.1851)
+        textbutton _("Main Menu") action Function(renpy.full_restart) text_size res_font(24) xsize int(config.screen_width*0.1851)
 
 
 screen gallery_left_menu(gal_type, gal):
@@ -1798,7 +1798,7 @@ screen gallery(gal_type="ev"): # The Gallery object must have a pics variable (a
                                     text get_button_unlock_rate(but, name) size int(config.screen_height*0.02)
                             else:
                                 if pic in persistent.pic_ignore_list:
-                                    text "IGNORED" align (0.5, 0.5) color c_red size res_font(16) drop_shadow (2, 2)
+                                    text _("IGNORED") align (0.5, 0.5) color c_red size res_font(16) drop_shadow (2, 2)
                                 if persistent.debug_pic_counter and gal_type == "gp":
                                     text _("Used %s times" % persistent.debug_pic_counter_dict[pic]) align (0.5, 1.0) size int(config.screen_height*0.02) #?
 
@@ -1812,19 +1812,19 @@ screen gallery(gal_type="ev"): # The Gallery object must have a pics variable (a
 
                 has hbox:
 
-                    textbutton "Show less":
+                    textbutton _("Show less"):
                         if shown_pics > list(but_sizes.keys())[0]:
                             action SetScreenVariable("shown_pics", cycle_list(list(but_sizes.keys()), shown_pics, -1))
-                    textbutton "Show more":
+                    textbutton _("Show more"):
                         if shown_pics < list(but_sizes.keys())[-1]:
                             action SetScreenVariable("shown_pics", cycle_list(list(but_sizes.keys()), shown_pics))
 
                     if page > 0:
                         key ["K_LEFT", "repeat_K_LEFT", "mousedown_4"]  action SetScreenVariable("page", page-1)
-                        textbutton "Previous" action SetScreenVariable("page", page-1) xalign 0.05
+                        textbutton _("Previous") action SetScreenVariable("page", page-1) xalign 0.05
                     if page < max_page:
                         key ["K_RIGHT", "repeat_K_RIGHT", "mousedown_5"] action SetScreenVariable("page", page+1)
-                        textbutton "Next" action SetScreenVariable("page", page+1) xalign 0.9
+                        textbutton _("Next") action SetScreenVariable("page", page+1) xalign 0.9
                     if page < max_page - 10:
                         key "K_PAGEDOWN" action SetScreenVariable("page", page+10)
                     else:
@@ -1838,7 +1838,7 @@ screen gallery(gal_type="ev"): # The Gallery object must have a pics variable (a
                     key "K_HOME" action SetScreenVariable("page", 0)
                     key "K_END" action SetScreenVariable("page", max_page)
 
-                    textbutton "Return" action ShowMenu("galleries") xalign 0.5
+                    textbutton _("Return") action ShowMenu("galleries") xalign 0.5
 
 
 screen _gallery:
@@ -1853,7 +1853,7 @@ screen _gallery:
             add d xalign 0.5 yalign 1.0 fit "contain"
 
             if gallery_type == "gp" and d.child.children[0].imgname in persistent.pic_ignore_list:
-                text "IGNORED" align (0.5, 0.5) color c_red size res_font(48) drop_shadow (4, 4)
+                text _("IGNORED") align (0.5, 0.5) color c_red size res_font(48) drop_shadow (4, 4)
 
     if gallery.slideshow:
         timer gallery.slideshow_delay action Return("next") repeat True
