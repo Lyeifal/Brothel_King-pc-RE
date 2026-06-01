@@ -38,19 +38,19 @@ init -10 python:
     ## Edit this dictionary to change the stat names that are displayed (change the right-hand text)
 
     stat_name_dict = {
-                        "Beauty" : "Beauty",
-                        "Body" : "Body",
-                        "Charm" : "Charm",
-                        "Refinement" : "Refinement",
-                        "Sensitivity" : "Sensitivity",
-                        "Libido" : "Libido",
-                        "Constitution" : "Constitution",
-                        "Obedience" : "Obedience",
-                        "Service" : "Service",
-                        "Sex" : "Sex",
-                        "Anal" : "Anal",
-                        "Fetish" : "Fetish",
-                        "Energy" : "Energy",
+                        "Beauty" : __("Beauty"),
+                        "Body" : __("Body"),
+                        "Charm" : __("Charm"),
+                        "Refinement" : __("Refinement"),
+                        "Sensitivity" : __("Sensitivity"),
+                        "Libido" : __("Libido"),
+                        "Constitution" : __("Constitution"),
+                        "Obedience" : __("Obedience"),
+                        "Service" : __("Service"),
+                        "Sex" : __("Sex"),
+                        "Anal" : __("Anal"),
+                        "Fetish" : __("Fetish"),
+                        "Energy" : __("Energy"),
                     }
 
 #### BALANCE / CHEATS ####
@@ -105,7 +105,7 @@ init -10 python:
 
     ## CHAPTER GOALS
 
-    # Goal types can be: 'gold', 'ranked', 'reputation', 'prestige'
+    # Goal types can be: __('gold'), 'ranked', 'reputation', 'prestige'
 
     bro_cost = {1 : 0, 2 : 1000, 3: 5000, 4 : 7500, 5 : 15000, 6 : 25000, 7 : 100000}
 
@@ -321,9 +321,9 @@ init -10 python:
     # Weekly shop item number is partly randomized. Shop inventory level can be improved with resources.
 
     shop_item_number = {
-                        "shop" : {"junk" : "d3 + 3", "common" : "d6", "rare" : "d3", "exceptional" : "d3 + -2"}, # Negative numbers must be preceded by '+' to work properly
-                        "city" : {"junk" : "d6", "common" : "d6 + 2", "rare" : "d3 + 1", "exceptional" : "d3 + -1"},
-                        "minion" : {"minion" : "d5", "item" : "d4 + -1"},
+                        "shop" : {"junk" : __("d3 + 3"), "common" : __("d6"), "rare" : __("d3"), "exceptional" : __("d3 + -2")}, # Negative numbers must be preceded by '+' to work properly
+                        "city" : {"junk" : __("d6"), "common" : __("d6 + 2"), "rare" : __("d3 + 1"), "exceptional" : __("d3 + -1")},
+                        "minion" : {"minion" : __("d5"), "item" : __("d4 + -1")},
                         }
 
     # More items are generated as chapters progress
@@ -345,7 +345,7 @@ init -10 python:
                         "minion_merchant" : {2 : 400, 3 : 800, 4 : 1600, 5 : 3200, 6 : 6400, 7 : 12000},
                         }
 
-    # Shop upgrades are stored with the following format: 'upgrade_order : [chapter, resource cost, additional stock]'
+    # Shop upgrades are stored with the following format: __('upgrade_order : [chapter, resource cost, additional stock]')
     shop_upgrades = {
                     1 : [2, ("wood", 5), ("junk", 2)],
                     2 : [2, ("dye", 10), ("common", 1)],
@@ -378,41 +378,41 @@ init -10 python:
     fix_pic_balance_variety = {"act-based" : 0.5, "generic" : 0.5} # Generic pictures will be shown 50% of the time
     fix_pic_balance_accuracy = {"act-based" : 0.75, "generic" : 0.25} # Generic pictures will be shown 25% of the time
 
-    brothel_pics = {1 : "1 slum brothel.webp",
-                    2 : "2 town brothel.webp",
-                    3 : "3 town brothel.webp",
-                    4 : "4 rich brothel.webp",
-                    5 : "5 rich brothel.webp",
-                    6 : "6 king brothel.webp",
-                    7 : "7 endless brothel.webp"
+    brothel_pics = {1 : __("1 slum brothel.webp"),
+                    2 : __("2 town brothel.webp"),
+                    3 : __("3 town brothel.webp"),
+                    4 : __("4 rich brothel.webp"),
+                    5 : __("5 rich brothel.webp"),
+                    6 : __("6 king brothel.webp"),
+                    7 : __("7 endless brothel.webp")
                     }
 
     room_pics = {
                 # Common rooms
-                "tavern" : "tavern.webp",
-                "strip club" : "strip club.webp",
-                "onsen" : "onsen.webp",
-                "okiya" : "okiya.webp",
+                "tavern" : __("tavern.webp"),
+                "strip club" : __("strip club.webp"),
+                "onsen" : __("onsen.webp"),
+                "okiya" : __("okiya.webp"),
                 # Bedrooms
-                "Basic room" : "basic room1.webp",
-                "+Basic room+" : "basic room2.webp",
-                "*Basic room*" : "basic room3.webp",
-                "Standard room" : "standard room1.webp",
-                "+Standard room+" : "standard room2.webp",
-                "*Standard room*" : "standard room3.webp",
-                "Elegant room" : "rich room1.webp",
-                "+Elegant room+" : "rich room2.webp",
-                "*Elegant room*" : "rich room3.webp",
-                "Noble suite" : "noble room1.webp",
-                "+Royal suite+" : "noble room2.webp",
-                "*Imperial suite*" : "noble room3.webp",
+                "Basic room" : __("basic room1.webp"),
+                "+Basic room+" : __("basic room2.webp"),
+                "*Basic room*" : __("basic room3.webp"),
+                "Standard room" : __("standard room1.webp"),
+                "+Standard room+" : __("standard room2.webp"),
+                "*Standard room*" : __("standard room3.webp"),
+                "Elegant room" : __("rich room1.webp"),
+                "+Elegant room+" : __("rich room2.webp"),
+                "*Elegant room*" : __("rich room3.webp"),
+                "Noble suite" : __("noble room1.webp"),
+                "+Royal suite+" : __("noble room2.webp"),
+                "*Imperial suite*" : __("noble room3.webp"),
                 # Master bedroom
-                "Single room" : "master/master0.webp",
-                "Double room" : "master/master1.webp",
-                "Small suite" : "master/master2.webp",
-                "Luxury suite" : "master/master3.webp",
-                "Royal suite" : "master/master4.webp",
-                "Royal harem" : "master/master5.webp",
+                "Single room" : __("master/master0.webp"),
+                "Double room" : __("master/master1.webp"),
+                "Small suite" : __("master/master2.webp"),
+                "Luxury suite" : __("master/master3.webp"),
+                "Royal suite" : __("master/master4.webp"),
+                "Royal harem" : __("master/master5.webp"),
                 }
 
     night_pics = ["night.webp",]
@@ -458,21 +458,21 @@ init -10 python:
     no_girls_pics = ["harem.webp",]
 
     playerclass_pics = {
-                "Warrior" : "UI/warrior.webp",
-                "Wizard" : "UI/wizard.webp",
-                "Trader" : "UI/trader.webp"
+                "Warrior" : __("UI/warrior.webp"),
+                "Wizard" : __("UI/wizard.webp"),
+                "Trader" : __("UI/trader.webp")
                 }
 
     god_pics = {
-                "Arios" : "UI/arios.webp",
-                "Shalia" : "UI/shalia.webp",
-                None : "UI/none.webp"
+                "Arios" : __("UI/arios.webp"),
+                "Shalia" : __("UI/shalia.webp"),
+                None : __("UI/none.webp")
                 }
 
     alignment_pics = {
-                "good" : "UI/al_good.webp",
-                "evil" : "UI/al_evil.webp",
-                "neutral" : "UI/al_neutral.webp"
+                "good" : __("UI/al_good.webp"),
+                "evil" : __("UI/al_evil.webp"),
+                "neutral" : __("UI/al_neutral.webp")
                 }
 
 
@@ -653,51 +653,51 @@ init -10 python:
 
                 # Frequency tags
 
-                "freq_highest" : "freq_highest",
-                "freq_high" : "freq_high",
-                "freq_low" : "freq_low",
-                "freq_lowest" : "freq_lowest",
+                "freq_highest" : __("freq_highest"),
+                "freq_high" : __("freq_high"),
+                "freq_low" : __("freq_low"),
+                "freq_lowest" : __("freq_lowest"),
 
                 # Old frequency tags (for retrocompatibility)
 
-                "xq" : "freq_highest",
-                "hq" : "freq_high",
-                "lq" : "freq_low",
+                "xq" : __("freq_highest"),
+                "hq" : __("freq_high"),
+                "lq" : __("freq_low"),
 
                 # Portrait and profile tags (every girl should have at least one)
 
-                "portrait" : "portrait",
+                "portrait" : __("portrait"),
 
-                "profile" : "profile",
+                "profile" : __("profile"),
 
                 # Specialized profile tags
 
-                "market" : "market", # Used with preference to profile for the slavemarket
+                "market" : __("market"), # Used with preference to profile for the slavemarket
                 "beauty" : ("profile", "model"), # Model is used for advertising pictures
-                "card" : "profile",
-#                "ent" : "profile", # Obsolete (conflicts with 'tent')
+                "card" : __("profile"),
+#                "ent" : __("profile"), # Obsolete (conflicts with 'tent')
                 "model" : ("profile", "model"), # Model is used for advertising pictures
-                "advertise" : "model",
-                "quest" : "profile",
-                "shop" : "profile",
-                "battle" : "fight",
-                "fight" : "fight",
-                "combat" : "fight",
-                "hurt" : "hurt", # Use this instead of 'fight' if it shows her losing a fight
+                "advertise" : __("model"),
+                "quest" : __("profile"),
+                "shop" : __("profile"),
+                "battle" : __("fight"),
+                "fight" : __("fight"),
+                "combat" : __("fight"),
+                "hurt" : __("hurt"), # Use this instead of 'fight' if it shows her losing a fight
 
-                "gallery" : "gallery", # Used as a background for the girl's CG gallery
+                "gallery" : __("gallery"), # Used as a background for the girl's CG gallery
 
-                "happy" : "happy",
-                "neutral" : "neutral",
-                "sad" : "sad",
-                "refuse" : "refuse",
+                "happy" : __("happy"),
+                "neutral" : __("neutral"),
+                "sad" : __("sad"),
+                "refuse" : __("refuse"),
 
                 # Rest and work tags (highly recommended)
 
-                "rest" : "rest",
+                "rest" : __("rest"),
                 "ecchi" : ("rest", "libido"),
 
-                "wait" : "waitress",
+                "wait" : __("waitress"),
                 "bunny" : ("waitress", "bunny", "cosplay"), # Bunny isn't used for now = cosplay
                 "maid" : ("maid"), # Maid is used in the farm (obedience training)
 
@@ -706,20 +706,20 @@ init -10 python:
                 "sing" : ("dancer", "sing"), # Sing might be used in the future for classes and quests.
                 "strip" : ("strip", "naked"), # Strip might be used in the future for classes and quests.
 
-                "mass" : "masseuse",
+                "mass" : __("masseuse"),
                 "swim" : ("swimsuit", "swim"), # Swimsuit might be used in the future for classes and quests. It is a fallback tag if no masseuse pic is found.
 
-                "geisha" : "geisha",
-                "etiquette" : "geisha",
+                "geisha" : __("geisha"),
+                "etiquette" : __("geisha"),
                 "kimono" : ("geisha", "kimono"), # kimono might be used in the future for classes and quests.
-                "date" : "date", # Date is used for free girl interactions and court location profiles, and as a fallback tag for geisha
+                "date" : __("date"), # Date is used for free girl interactions and court location profiles, and as a fallback tag for geisha
 
-                "naked" : "naked", # Used in combination with other tags to make a girl appear naked
-                "nude" : "naked",
+                "naked" : __("naked"), # Used in combination with other tags to make a girl appear naked
+                "nude" : __("naked"),
 
                 # Location tags (optional)
 
-                "public" : "public", # The girl is in a publicly accessible place where there might be onlookers. Recommended for sexual events only (in BK)
+                "public" : __("public"), # The girl is in a publicly accessible place where there might be onlookers. Recommended for sexual events only (in BK)
                 "beach" : ("public", "beach", "swimsuit", "swim"), # Beach pictures imply the swimsuit tag
                 "nature" : ("public", "nature"), # The girl is in nature (except on a beach), such as in a garden, a forest or a field
                 "town" : ("public", "town"), # The girl is in an urban environment, such as a street, a plaza or a market
@@ -727,11 +727,11 @@ init -10 python:
 
                 # Sexual tags (highly recommended)
 
-                "virgin" : "virgin", # Used for images where the girl is losing her virginity
+                "virgin" : __("virgin"), # Used for images where the girl is losing her virginity
 
                 # Note: Some service tags such as oral or handjob can have an effect on the text used in-game for flavor.
 
-                "service" : "service",
+                "service" : __("service"),
                 "mast" : ("mast"), # Most masturbating pics should be tagged service.
                 "oral" : ("oral"), # Most oral pics should be tagged service.
                 "blowjob" : ("oral"),
@@ -743,13 +743,13 @@ init -10 python:
                 "tits" : ("titjob"),
                 "titty" : ("titjob"),
 
-                "sex" : "sex",
-                "fuck" : "sex",
+                "sex" : __("sex"),
+                "fuck" : __("sex"),
                 "xxx" : ("sex", "XXX"), # XXX is used for XXX classes only, no need for it in girl packs
 
-                "anal" : "anal",
+                "anal" : __("anal"),
 
-                "fetish" : "fetish",
+                "fetish" : __("fetish"),
                 "bdsm" : ("bondage"), # Bondage pics should be tagged fetish.
                 "bondage" : ("bondage"),
                 "hardcore" : ("fetish", "hardcore"), # hardcore is used for hardcore class stock pictures only, no need to use it in girl packs
@@ -758,73 +758,73 @@ init -10 python:
 
                 # Optional tags: used for special sex acts and the farm. Can be mixed with regular sexual tags (necessary for the farm)
 
-                "group" : "group",
-                "bis" : "bisexual", # Bisexual pictures may feature up to one male
-                "bisexual" : "bisexual", # This is needed to avoid 'bisexual' detecting the 'sex' tag
+                "group" : __("group"),
+                "bis" : __("bisexual"), # Bisexual pictures may feature up to one male
+                "bisexual" : __("bisexual"), # This is needed to avoid 'bisexual' detecting the 'sex' tag
                 "les" : ("lesbian", "bisexual"), # Lesbian pictures may not feature a male. The bisexual tag is added so that these pictures can proc during the appropriate sex act (the male protagonist is then assumed to be off-camera). Recommended for sexual events only (in BK)
 
-                "beast" : "beast",
-                "best" : "beast",
+                "beast" : __("beast"),
+                "best" : __("beast"),
 
-                "big" : "big",
-                "stallion" : "big",
+                "big" : __("big"),
+                "stallion" : __("big"),
 
-                "toy" : "toy", # Toy will be used inside and outside the farm (unless used with machine). Mostly used with service (masturbation) or fetish (administered by someone else).
-                "machine" : "machine", # Machine will be excluded from regular events (except fetish if fuzzy tagging is on) and should be used for heavier machinery such as the ones found on the farm.
+                "toy" : __("toy"), # Toy will be used inside and outside the farm (unless used with machine). Mostly used with service (masturbation) or fetish (administered by someone else).
+                "machine" : __("machine"), # Machine will be excluded from regular events (except fetish if fuzzy tagging is on) and should be used for heavier machinery such as the ones found on the farm.
 
-                "monster" : "monster",
-                "tent" : "monster",
+                "monster" : __("monster"),
+                "tent" : __("monster"),
 
-                "libido" : "libido", # For the farm: Girl tending to minions
-                "obedience" : "obedience", # For the farm: Girl cleaning up the farm
-                "sensitivity" : "sensitivity", # For the farm: Girl tending to Gizel
-                "constitution" : "constitution", # For the farm: Girl running in the yard
-#                "sports" : "constitution", # Disabled to avoid confusion with watersports
+                "libido" : __("libido"), # For the farm: Girl tending to minions
+                "obedience" : __("obedience"), # For the farm: Girl cleaning up the farm
+                "sensitivity" : __("sensitivity"), # For the farm: Girl tending to Gizel
+                "constitution" : __("constitution"), # For the farm: Girl running in the yard
+#                "sports" : __("constitution"), # Disabled to avoid confusion with watersports
 
                 # Fixation tags: Used for specific fixations (recommended)
 
-                "cosplay" : "cosplay",
+                "cosplay" : __("cosplay"),
                 "dild" : ("dildo", "toy"),
                 "vibr" : ("vibrator", "toy"),
                 "plug" : ("plug", "toy"),
-                "dirty" : "dirty",
+                "dirty" : __("dirty"),
                 "penis w" : ("handjob"), # Most handjob pics should be tagged service as well
                 "penisw" : ("handjob"),
                 "penis_w" : ("handjob"),
                 "penis-w" : ("handjob"),
-                "oil" : "wet",
-                "wet" : "wet",
-                "sub" : "sub",
-                "humiliat" : "sub",
-                "master" : "sub", # Some Internet packs apparently use this tag, included here to avoid conflict with mast (masturbate)
-                "dom" : "dom",
-                "gag" : "gag",
-                "strap" : "strap-on",
-                "role" : "cosplay", # roleplay has been deprecated to cosplay
+                "oil" : __("wet"),
+                "wet" : __("wet"),
+                "sub" : __("sub"),
+                "humiliat" : __("sub"),
+                "master" : __("sub"), # Some Internet packs apparently use this tag, included here to avoid conflict with mast (masturbate)
+                "dom" : __("dom"),
+                "gag" : __("gag"),
+                "strap" : __("strap-on"),
+                "role" : __("cosplay"), # roleplay has been deprecated to cosplay
                 "bead" : ("beads", "toy"),
 
                 "irru" : ("deep"), # irrumatio has been deprecated to deepthroat
                 "deep" : ("deep"),
                 "dt" : ("deep"),
-                "double" : "double", # Will add the 'group' tag if not used with the beast/monster/machine tag (hardcoded)
-                "finger" : "finger",
-                "fist" : "fist",
+                "double" : __("double"), # Will add the 'group' tag if not used with the beast/monster/machine tag (hardcoded)
+                "finger" : __("finger"),
+                "fist" : __("fist"),
                 "insults" : ("sub"),
                 "sixty" : ("69"),
                 "watersp" : ("watersports"), # watersports means the girl peeing
                 "enema" : ("enema"),
-                "kiss" : "kiss",
+                "kiss" : __("kiss"),
                 "spank" : ("spank"),
-                "rim" : "rim",
-                "grop" : "grope",
-                "fondl" : "fondle",
-                "lact" : "lactation",
-                "doggy" : "doggy",
-                "cowg" : "cowgirl",
-                "pile" : "piledriver",
-                "spoon" : "spoon",
+                "rim" : __("rim"),
+                "grop" : __("grope"),
+                "fondl" : __("fondle"),
+                "lact" : __("lactation"),
+                "doggy" : __("doggy"),
+                "cowg" : __("cowgirl"),
+                "pile" : __("piledriver"),
+                "spoon" : __("spoon"),
 
-                "cum" : "cumshot",
+                "cum" : __("cumshot"),
                 "buk" : ("buk", "cumshot"),
                 "cim" : ("cim", "cumshot"),
                 "mouth" : ("cim", "cumshot"),
@@ -841,15 +841,15 @@ init -10 python:
                 "cream" : ("creampie", "cumshot"), # Creampie differs from cum inside in that the dick is shown outside
                 "cin" : ("cin", "cumshot"), # Cum inside differs from creampie in that the dick is shown inside her
                 "inside" : ("cin", "cumshot"),
-                "orgasm" : "orgasm",
-                "denied" : "denied",
+                "orgasm" : __("orgasm"),
+                "denied" : __("denied"),
                 "squirt" : ("squirt", "orgasm"),
 
 
                 # Unused tags: Used for pictures that are ignored by the 'Check untagged girl pics' cheat. Mostly ignore this.
 
-                "death" : "unused",
-                "preg" : "unused", # the pregnant tag might be used one day. One day...
+                "death" : __("unused"),
+                "preg" : __("unused"), # the pregnant tag might be used one day. One day...
 
                 }
 

@@ -6,7 +6,7 @@ Only marks values, not keys.
 import re
 import sys
 
-TARGET_DICTS = {'diff_name', 'diff_description', 'diff_setting_name', 'diff_setting_description'}
+TARGET_DICTS = {'diff_name', 'diff_description', 'diff_setting_name', 'diff_setting_description', 'stat_name_dict', 'job_name_dict', 'sex_act_name_dict'}
 
 def should_translate(text):
     t = text.strip()
