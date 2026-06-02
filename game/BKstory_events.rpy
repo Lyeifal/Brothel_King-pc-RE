@@ -2044,7 +2044,8 @@ label farm_meet_gizel2():
         menu:
             "What do you do?"
 
-            "Defend yourself" if result == "warn":                $ reaction = "fight"
+            "Defend yourself" if result == "warn":
+                $ reaction = "fight"
 
                 you "You think I'd fall to a bunch of braindead bigots like you? I can crush you with my bare hands!"
 

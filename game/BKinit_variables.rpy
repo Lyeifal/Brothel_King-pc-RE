@@ -2137,7 +2137,7 @@ init -4 python:
 
     chapter_gossip = {
                     1 : [
-                            __("Have you seen the new Guard uniforms? They adorn their armor with fine silk, while the rest of us starve..., ")
+                            __("Have you seen the new Guard uniforms? They adorn their armor with fine silk, while the rest of us starve..., "),
                             __("I've heard some talk of a secret lair somewhere around the Slums... A haven for thieves and bandits. I shiver to think of it."),
                             __("Captain Farah is one greedy bitch. Her men came yesterday to shake one of my friends down. Everyone hates her, but they say she's got protection in high places."),
                             __("The head of the guards is Captain Farah. Best stay clear of them if you want my advice. Levies and taxes are all the guards care about. If you ask me, they just make them up as they go."),
@@ -2236,7 +2236,7 @@ init -4 python:
                                     __("I told you I saw a child in the {b}Thieves' guild{/b} quarter... I was gonna help, but then I saw she had a huge ninja star, so I thought better of it."),
                                     __("She did look like a lil' brat, but she was a ninja, I tells ya! Standin' atop the {b}Thieves' guild{/b}'s roof, no less."),
 
-                                    __("I was walking alongside the {b}Beach{/b} at night, when I saw a ghost! A beautiful, pale lady ghost. And she was walking over water. Like a ninja!")
+                                    __("I was walking alongside the {b}Beach{/b} at night, when I saw a ghost! A beautiful, pale lady ghost. And she was walking over water. Like a ninja!"),
                                     __("I went to the {b}Beach{/b} at night to fish for trout, and I saw a beautiful lady taking a bath by the moonlight. When I tried to approach her, she disappeared like a ghost!"),
                                     __("There have been disappearances near the {b}Beach{/b}. Some blame ninjas, but that's childish nonsense."),
                                     __("So the pretty lady waved her hand, and the water around her rose and shielded her from view. We couldn't see her from the {b}Beach{/b} anymore, and none of us dared venture into the sea."),

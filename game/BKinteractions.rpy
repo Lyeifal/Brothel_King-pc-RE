@@ -1597,7 +1597,8 @@ label slave_train_obedience(girl):
 
         "What do you do?"
 
-        "Compliment her" if inter.result == "good":            $ inter.MC_reaction = "encourage"
+        "Compliment her" if inter.result == "good":
+            $ inter.MC_reaction = "encourage"
             you "I'm happy that you are giving it your best."
             call dialogue(girl, "slave thanks") from _call_dialogue_174
 
@@ -1661,7 +1662,8 @@ label slave_train_constitution(girl):
 
         "What do you do?"
 
-        "Compliment her" if inter.result == "good":            $ inter.MC_reaction = "encourage"
+        "Compliment her" if inter.result == "good":
+            $ inter.MC_reaction = "encourage"
             you "I'm happy that you are giving it your best."
             call dialogue(girl, "slave thanks") from _call_dialogue_177
 
