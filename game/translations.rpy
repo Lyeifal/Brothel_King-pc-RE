@@ -58,7 +58,4 @@ init -10 python:
                 persistent._bk_language = None
                 renpy.change_language(None)
 
-# Apply language when the game starts
-label before_main_menu:
-    $ bk_apply_language()
-    return
+# Language is applied in BKevents.rpy::before_main_menu to avoid duplicate label

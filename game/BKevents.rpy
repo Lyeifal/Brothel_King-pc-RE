@@ -68,6 +68,8 @@
 
 label before_main_menu(): # Will show before main menu (standard Ren'py label)
 
+    $ bk_apply_language()
+
     window hide
 
     scene black
