@@ -1,58 +1,6 @@
 ﻿# TODO: Translation updated at 2026-06-03 23:34
 
-translate chinese_simplified strings:
 
-    # game/BKmain.rpy:389
-    old "Choose what to do"
-    new "Choose what to do"
-
-    # game/BKmain.rpy:389
-    old "Full clean-up ([full_cost] gold)"
-    new "Full clean-up ([full_cost] gold)"
-
-    # game/BKmain.rpy:389
-    old "Partial clean-up ([half_cost] gold)"
-    new "Partial clean-up ([half_cost] gold)"
-
-    # game/BKmain.rpy:598
-    old "Do you want to invert her first and last name?"
-    new "Do you want to invert her first and last name?"
-
-    # game/BKmain.rpy:1033
-    old "Work as a waitress"
-    new "Work as a waitress"
-
-    # game/BKmain.rpy:1033
-    old "Work as a dancer"
-    new "Work as a dancer"
-
-    # game/BKmain.rpy:1033
-    old "Work as a masseuse"
-    new "Work as a masseuse"
-
-    # game/BKmain.rpy:1033
-    old "Work as a geisha"
-    new "Work as a geisha"
-
-    # game/BKmain.rpy:1033
-    old "Work as a whore"
-    new "Work as a whore"
-
-    # game/BKmain.rpy:1072
-    old "Don't ask me again"
-    new "Don't ask me again"
-
-    # game/BKmain.rpy:1235
-    old "Don't tell me again"
-    new "Don't tell me again"
-
-    # game/BKmain.rpy:1293
-    old "Ask [girl.name] to work and whore at the same time?"
-    new "Ask [girl.name] to work and whore at the same time?"
-
-# TODO: Translation updated at 2026-06-03 23:34
-
-# game/BKmain.rpy:23
 translate chinese_simplified slavemarket_0b3d827c:
 
     # slavegirl1 "Greetings Master."

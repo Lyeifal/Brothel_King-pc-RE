@@ -1,30 +1,6 @@
 ﻿# TODO: Translation updated at 2026-06-03 23:34
 
-translate chinese_simplified strings:
 
-    # game/kite_jobgirl 2_beach.rpy:408
-    old "Why, yes, I'd like to fuck her"
-    new "Why, yes, I'd like to fuck her"
-
-    # game/kite_jobgirl 2_beach.rpy:408
-    old "Who, me? Nope!"
-    new "Who, me? Nope!"
-
-    # game/kite_jobgirl 2_beach.rpy:458
-    old "Pull out your cock"
-    new "Pull out your cock"
-
-    # game/kite_jobgirl 2_beach.rpy:458
-    old "Don't indulge her"
-    new "Don't indulge her"
-
-    # game/kite_jobgirl 2_beach.rpy:595
-    old "Pull out"
-    new "Pull out"
-
-# TODO: Translation updated at 2026-06-03 23:34
-
-# game/kite_jobgirl 2_beach.rpy:25
 translate chinese_simplified jobgirl_beach_1_5c25899c:
 
     # "You wake up early this morning; it is a hot sunny day, and you are in desperate need of fresh air."

@@ -1,18 +1,6 @@
 ﻿# TODO: Translation updated at 2026-06-03 23:34
 
-translate chinese_simplified strings:
 
-    # game/kite_jobgirl 1_riddle.rpy:88
-    old "My slave Sill"
-    new "My slave Sill"
-
-    # game/kite_jobgirl 1_riddle.rpy:88
-    old "I wish I had one"
-    new "I wish I had one"
-
-# TODO: Translation updated at 2026-06-03 23:34
-
-# game/kite_jobgirl 1_riddle.rpy:23
 translate chinese_simplified jobgirl_0_473133ba:
 
     # jobgirl "Hey there!"

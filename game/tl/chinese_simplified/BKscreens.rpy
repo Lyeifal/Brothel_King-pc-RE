@@ -1,66 +1,6 @@
 ﻿# TODO: Translation updated at 2026-06-03 23:34
 
-translate chinese_simplified strings:
 
-    # game/BKscreens.rpy:8478
-    old "Girl pack mix"
-    new "Girl pack mix"
-
-    # game/BKscreens.rpy:8478
-    old "Update packstates"
-    new "Update packstates"
-
-    # game/BKscreens.rpy:8481
-    old "Would you like to see girl ratings (this may take some time if you have many girl packs)?"
-    new "Would you like to see girl ratings (this may take some time if you have many girl packs)?"
-
-    # game/BKscreens.rpy:9648
-    old "Welcome to the packstate feature (courtesy of {color=[c_magenta]}{b}Chris12{/b}{/color})"
-    new "Welcome to the packstate feature (courtesy of {color=[c_magenta]}{b}Chris12{/b}{/color})"
-
-    # game/BKscreens.rpy:9648
-    old "Introduction to Packstates"
-    new "Introduction to Packstates"
-
-    # game/BKscreens.rpy:9648
-    old "Unrecognized Images: [preferences.packstate_unrecognized]"
-    new "Unrecognized Images: [preferences.packstate_unrecognized]"
-
-    # game/BKscreens.rpy:9648
-    old "Simulation"
-    new "Simulation"
-
-    # game/BKscreens.rpy:9648
-    old "Apply packstate"
-    new "Apply packstate"
-
-    # game/BKscreens.rpy:9663
-    old "Hide: Rename and don't show unrecognized images.\nRename: Rename unrecognized images, but show them.\nIgnore: Don't rename unrecognized images. Will also show them.\n Removes any _UNRECOGNIZED tags again.\n(Renaming means adding _UNRECOGNIZED as tag to the filename)"
-    new "Hide: Rename and don't show unrecognized images.\nRename: Rename unrecognized images, but show them.\nIgnore: Don't rename unrecognized images. Will also show them.\n Removes any _UNRECOGNIZED tags again.\n(Renaming means adding _UNRECOGNIZED as tag to the filename)"
-
-    # game/BKscreens.rpy:9663
-    old "Hide"
-    new "Hide"
-
-    # game/BKscreens.rpy:9663
-    old "Rename"
-    new "Rename"
-
-    # game/BKscreens.rpy:9663
-    old "Ignore"
-    new "Ignore"
-
-    # game/BKscreens.rpy:9663
-    old "Back (don't change setting)"
-    new "Back (don't change setting)"
-
-    # game/BKscreens.rpy:9683
-    old "It is recommended that you backup your girls folder and run a simulation beforehand. There is no Undo operation!{fast}{nw}"
-    new "It is recommended that you backup your girls folder and run a simulation beforehand. There is no Undo operation!{fast}{nw}"
-
-# TODO: Translation updated at 2026-06-03 23:34
-
-# game/BKscreens.rpy:9652
 translate chinese_simplified packstates_menu_da3bbd8f:
 
     # "Oftentimes, a Girlpack creator may wish to change some of the picture names to better fit Brothel King's tagging system. The packstate feature helps updating girlpacks without having to download hundreds of pictures all over again."
