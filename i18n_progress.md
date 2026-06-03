@@ -194,10 +194,11 @@ game/data/
   - 使用自动化脚本 `wrap_dialogue.py` 完成修改
   - `dialogue_say_multiple` 的前缀剥离逻辑无需调整（运行时 `__()` 与 `init` 时 `__()` 不产生冲突）
   - 使用 `merge_translations.py` 重新生成 `strings.rpy`
-    - 保留 1,757 条中文翻译
-    - 780 条原有未翻译字符串保持 fallback
     - 新增 7,037 条待翻译字符串（主要来自对话系统）
-    - 总计 9,574 条翻译条目
+  - **修复重复翻译错误**: `tl/chinese_simplified/*.rpy` 剧情翻译文件中也包含 `translate chinese_simplified strings:` 块，与新生成的 `strings.rpy` 产生 `old` 键冲突
+    - 使用 `merge_tl_strings.py` 从 20 个剧情翻译文件中移除 `strings:` 块
+    - 合并 1,500 条重叠翻译到 `strings.rpy`
+    - 最终 `strings.rpy`: **11,074** 条总条目，**1,757** 条中文翻译，**9,317** 条待翻译
   - **验证通过**: 游戏可正常启动，无报错
 - [ ] **剧情对话翻译填充 (Phase 4)**: `tl/chinese_simplified/BKchapter*.rpy` 等文件的 `translate` 脚手架已生成，需填充 `new` 值为实际中文翻译
 - [ ] **Mod `name` 持久化修复**: 示例 Mod 和 `Mod` 类文档中 `name = __(...)` 的用法会导致语言切换后持久化键丢失
