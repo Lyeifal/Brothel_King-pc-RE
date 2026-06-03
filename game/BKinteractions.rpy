@@ -1336,7 +1336,7 @@ label slave_remove_fixation(girl):
             menu_list = [] #[("Choose a fixation to work on", None)]
             for fix in neg_fix:
                 if fix.name in girl.locked_fix:
-                    menu_list.append(("{color=[c_lightgrey]}" + __(fix.name.capitalize()) + " (locked){/color}", fix))
+                    menu_list.append(("{color=[c_lightgrey]}%s (locked){/color}" % fix.name.capitalize(), fix))
                 else:
                     menu_list.append((__(fix.name.capitalize()), fix))
 
@@ -1458,7 +1458,7 @@ label slave_remove_fixation(girl):
 
         $ renpy.say("", __(fix_description[fix.name + " pos_reaction"]))
 
-        $ renpy.say("", __("Training went very well. ") + event_color["special"] % (girl.fullname + __(" is no longer disgusted by ") + __(fix.name) + "."))
+        $ renpy.say("", __("Training went very well. %s") % (event_color["special"] % __("%s is no longer disgusted by %s.") % (girl.fullname, fix.name)))
 
         $ girl.add_log(__("neg fixation removed"))
 
@@ -1484,7 +1484,7 @@ label slave_remove_fixation(girl):
 
         if inter.result == 1:
             "[girl.name] is still very reluctant, but you could show her a thing or two."
-            $ renpy.say("",  __("Training went well. ") + event_color["good"] % (girl.name + __(" has made some progress.")))
+            $ renpy.say("",  __("Training went well. %s") % (event_color["good"] % __("%s has made some progress.") % girl.name))
         elif inter.result == 2:
             $ text1 = fix_description[fix.name + " description"]
 
@@ -1492,11 +1492,11 @@ label slave_remove_fixation(girl):
 #                 $ text1 = "to " + text1
 
             "[girl.name] is getting used to [text1] Her progress is encouraging."
-            $ renpy.say("",  __("Training went well. ") + event_color["good"] % (girl.name + __(" has made some progress.")))
+            $ renpy.say("",  __("Training went well. %s") % (event_color["good"] % __("%s has made some progress.") % girl.name))
         elif inter.result == 3:
             $ text1 = __(fix.name).capitalize()
             "[girl.name] did very well today. [text1] is beginning to feel almost normal to her."
-            $ renpy.say("",  __("Training went well. ") + event_color["good"] % (girl.name + __(" has made some progress.")))
+            $ renpy.say("",  __("Training went well. %s") % (event_color["good"] % __("%s has made some progress.") % girl.name))
 
     return
 
@@ -1559,7 +1559,7 @@ label slave_train_obedience(girl):
 
     "You start with giving [girl.name] simple orders around the house."
 
-    $ MC.rand_say(("Clean up the attic, will you?", "Help Sill with her chores.", "Change all the bedsheets.", __("Take a broom and clean up the ") + __(rand_choice(brothel.rooms.keys())) + ".",
+    $ MC.rand_say(("Clean up the attic, will you?", "Help Sill with her chores.", "Change all the bedsheets.", __("Take a broom and clean up the %s.") % rand_choice(brothel.rooms.keys()),
                   "Fetch some water at the well.", "ar: Clean up the Arios altar.", "Make sure there is no dust on the walls.", "Cook something for us.", "ev: Shine my boots real good. I don't want a speck of dirt on them, you hear me?",
                   "wr: Oil my weapons. I mean my swords, of course.", "tr: Feed Drogon a frog. Don't be shy, he very rarely bites people's hand off.", "wz: Wipe my staff. My magic staff. I mean... Well, you know."))
 
@@ -1624,8 +1624,8 @@ label slave_train_constitution(girl):
 
     "You ask [girl.name] to do a few simple exercises."
 
-    $ MC.rand_say((str(10 + dice(40)) + __(" push-ups. Go!"), "Run up and down the stairs. Count your steps.", "Carry this bucket of water four times around the yard.",
-                   __("Lift this log about ") + str(5 + dice(15)) + __(" times."), "Run around the neighbourhood for half an hour.", "wr: Train a little with a practice sword.",
+    $ MC.rand_say((__("%s push-ups. Go!") % str(10 + dice(40)), "Run up and down the stairs. Count your steps.", "Carry this bucket of water four times around the yard.",
+                   __("Lift this log about %s times.") % str(5 + dice(15)), "Run around the neighbourhood for half an hour.", "wr: Train a little with a practice sword.",
                    "tr: Take Drogon out for a walk. Try to keep up!", "wz: Go fetch my magical supplies. It's a large, metal chest."))
 
     $ pic = girl.get_pic("constitution", "dancer", "profile", naked_filter=True, soft=True)
@@ -2230,11 +2230,11 @@ label slave_do(girl, act, context="generic"): # Receives 'pic' and 'reluctance' 
         $ pos_reaction, neg_reaction = girl.test_weakness(act, unlock=True)
 
         if pos_reaction and neg_reaction:
-            $ renpy.say("", __("You notice that ") + girl.name + __(" is feeling strange during ") + __(long_act_description[act]) + __(". It's like she both loves it and hates it."))
+            $ renpy.say("", __("You notice that %s is feeling strange during %s. It's like she both loves it and hates it.") % (girl.name, long_act_description[act]))
         elif pos_reaction:
-            $ renpy.say("", __("You notice that ") + girl.name + __(" is very sensitive during ") + __(long_act_description[act]) + __(". Perhaps you should explore this further."))
+            $ renpy.say("", __("You notice that %s is very sensitive during %s. Perhaps you should explore this further.") % (girl.name, long_act_description[act]))
         elif neg_reaction:
-            $ renpy.say("", __("You notice that ") + girl.name + __(" seems to dislike ") + __(long_act_description[act]) + __(". Perhaps there's something in particular that makes her uncomfortable."))
+            $ renpy.say("", __("You notice that %s seems to dislike %s. Perhaps there's something in particular that makes her uncomfortable.") % (girl.name, long_act_description[act]))
 
 
     return
@@ -2550,7 +2550,7 @@ label slave_reward_gift(girl):
     return
 
 label slave_reward_pet(girl):
-    $ MC.rand_say((__("Come here, you! Who's my cutest little slave... It's ") + girl.name + __("! It is!"), __("Come here and give Master ") + MC.name + __(" a hug. There..."), __("Come here, baby, come to daddy.")))
+    $ MC.rand_say((__("Come here, you! Who's my cutest little slave... It's %s! It is!") % girl.name, __("Come here and give Master %s a hug. There...") % MC.name, __("Come here, baby, come to daddy.")))
     $ success_factor = 1
     call slave_reward(girl, "pet") from _call_slave_reward_3
     return
@@ -3311,11 +3311,11 @@ label slave_rape(girl, act): # If girl refused and was forced
         $ pos_reaction, neg_reaction = girl.test_weakness(act, unlock=True)
 
         if pos_reaction and neg_reaction:
-            $ renpy.say("", __("You notice that ") + girl.name + __(" is feeling a mix of pleasure and disgust during ") + __(long_act_description[act]) + __(". It seems she has ambivalent feelings about it."))
+            $ renpy.say("", __("You notice that %s is feeling a mix of pleasure and disgust during %s. It seems she has ambivalent feelings about it.") % (girl.name, long_act_description[act]))
         elif pos_reaction:
-            $ renpy.say("", __("In spite of her cries, you notice that ") + girl.name + __(" seems to enjoy ") + __(long_act_description[act]) + __(". Perhaps you should explore this further."))
+            $ renpy.say("", __("In spite of her cries, you notice that %s seems to enjoy %s. Perhaps you should explore this further.") % (girl.name, long_act_description[act]))
         elif neg_reaction:
-            $ renpy.say("", __("You notice that ") + girl.name + __(" seems to hate ") + __(long_act_description[act]) + __(" with passion. Perhaps you could use this information against her."))
+            $ renpy.say("", __("You notice that %s seems to hate %s with passion. Perhaps you could use this information against her.") % (girl.name, long_act_description[act]))
 
     return
 

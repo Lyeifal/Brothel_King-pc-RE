@@ -482,7 +482,7 @@ label jobgirl_1():
     elif current_season == "fall":
         $ x = 28 * (12 - calendar.month + 4) # Waits until spring
 
-    $ calendar.set_alarm(calendar.time + x, StoryEvent(label = __("jobgirl_beach_1"), type = "morning"))
+    $ calendar.set_alarm(calendar.time + x, StoryEvent(label = "jobgirl_beach_1", type = "morning"))
     $ NPC_jobgirl.flags["stage"] = 2
 
     return

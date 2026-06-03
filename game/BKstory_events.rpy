@@ -205,7 +205,7 @@ label hmas:
 
     play sound s_chimes
 
-    $ calendar.set_alarm(calendar.time + 336, Event(label = __("hmas")))
+    $ calendar.set_alarm(calendar.time + 336, Event(label = "hmas"))
     $ unlock_achievement("hmas")
 
     return
@@ -3780,7 +3780,7 @@ label farm_go_with_gizel():
 
     extend "{i}Lutaneth Mot Garazoth!!{/i}" with vpunch
 
-    $ calendar.set_alarm(calendar.time + 1, Event(label = __("bitches_be_crazy")))
+    $ calendar.set_alarm(calendar.time + 1, Event(label = "bitches_be_crazy"))
 
     you "Old Valyrian... Strange..."
 
@@ -8246,7 +8246,7 @@ label willow_relative():
     you "This will pay for itself... With a body like this, she'll be dragging in a bunch of customers."
 
     # Willow's relative will come back in one month
-    $ calendar.set_alarm(calendar.time + 28, Event(label=__("willow_relative_returns")))
+    $ calendar.set_alarm(calendar.time + 28, Event(label="willow_relative_returns"))
 
 return
 
@@ -8509,7 +8509,7 @@ label willow_relative_returns():
             you "Nah, I'm too busy."
 
     # Willow's relative will come back in one month (unless the MC is an Arios-worshipper: She doesn't like that.)
-    $ calendar.set_alarm(calendar.time + 28, Event(label=__("willow_relative_returns")))
+    $ calendar.set_alarm(calendar.time + 28, Event(label="willow_relative_returns"))
 
     return
 
@@ -11047,10 +11047,10 @@ label satella_first_visit(): # Happens when visiting the thieves guild after the
     "You have received 300 gold."
 
     $ story_remove_event("satella_first_visit")
-    $ calendar.set_alarm(calendar.time+14, StoryEvent(label = __("satella_letter"), type = "morning"))
+    $ calendar.set_alarm(calendar.time+14, StoryEvent(label = "satella_letter", type = "morning"))
 
     if MC.god == "Shalia":
-        $ calendar.set_alarm(calendar.time+1, StoryEvent(label = __("shalia2"), type = "morning"))
+        $ calendar.set_alarm(calendar.time+1, StoryEvent(label = "shalia2", type = "morning"))
 
     return
 
@@ -11058,7 +11058,7 @@ label satella_visit(): # Happens on all subsequent visits to Satella (visiting t
 
     $ story_remove_event("satella_visit") # Avoids the event proc-ing again without receiving a new letter
 
-    $ calendar.set_alarm(calendar.time+14, StoryEvent(label = __("satella_letter"), type = "morning"))
+    $ calendar.set_alarm(calendar.time+14, StoryEvent(label = "satella_letter", type = "morning"))
 
     stop music fadeout 3.0
 
@@ -11681,9 +11681,9 @@ label satella_thunderbolt():
 
     $ reaction = False
 
-    if MC.get_items(name=__("Lightning Rod")) or MC.get_spirit() > 5:
+    if MC.get_items(name="Lightning Rod") or MC.get_spirit() > 5:
         menu:
-            "Use the lightning rod" if MC.get_items(name=__("Lightning Rod")):
+            "Use the lightning rod" if MC.get_items(name="Lightning Rod"):
                 you "I knew this day would come... {i}Lightning rod{/i}! Lend me your power!"
 
                 "Holding the lightning rod by the rubbery part, you brandish it as Satella completes her casting."
@@ -11884,7 +11884,7 @@ label satella_won():
             $ NPC_satella.love = 25
 
             if MC.god == "Shalia" and not story_flags["shalia3"]:
-                $ calendar.set_alarm(calendar.time+1, StoryEvent(label = __("shalia3"), type = "morning"))
+                $ calendar.set_alarm(calendar.time+1, StoryEvent(label = "shalia3", type = "morning"))
 
             you "Come on, it's just a little massage... Let yourself go..."
 
@@ -12063,7 +12063,7 @@ label satella_lost():
         $ NPC_satella.love = 25
 
         if MC.god == "Shalia" and not story_flags["shalia3"]:
-            $ calendar.set_alarm(calendar.time+1, StoryEvent(label = __("shalia3"), type = "morning"))
+            $ calendar.set_alarm(calendar.time+1, StoryEvent(label = "shalia3", type = "morning"))
 
         "You feel like you have come a bit too far already. You leave before Satella has a chance to recover and fry your balls."
 
@@ -12178,7 +12178,7 @@ label satella_virgin_sex():
     "You have earned prestige."
 
     if MC.god == "Shalia":
-        $ calendar.set_alarm(calendar.time+1, StoryEvent(label = __("shalia4"), type = "morning"))
+        $ calendar.set_alarm(calendar.time+1, StoryEvent(label = "shalia4", type = "morning"))
 
     $ NPC_satella.unlock_trainer()
 
@@ -12280,7 +12280,7 @@ label satella_sex():
     "You have earned prestige."
 
     if MC.god == "Shalia":
-        $ calendar.set_alarm(calendar.time+3, StoryEvent(label = __("shalia_visit"), type = "morning"))
+        $ calendar.set_alarm(calendar.time+3, StoryEvent(label = "shalia_visit", type = "morning"))
 
     return
 
@@ -13479,7 +13479,7 @@ label kosmo_returns(): # Happens 7-9 days after meeting Kosmo
 
     sill sad "That guy..."
 
-    $ calendar.set_alarm(calendar.time+6+dice(3), StoryEvent(label = __("kosmo_returns2"), type = "morning"))
+    $ calendar.set_alarm(calendar.time+6+dice(3), StoryEvent(label = "kosmo_returns2", type = "morning"))
     $ game.track("kosmo")
 #     $ unlock_achievement("kosmo", level_cap=1)
 
@@ -14020,7 +14020,7 @@ label kosmo_returns2(): # Happens every 7-9 days (yes, Kosmo IS annoying)
 
         scene black with fade
 
-    $ calendar.set_alarm(calendar.time+6+dice(3), StoryEvent(label = __("kosmo_returns2"), type = "morning"))
+    $ calendar.set_alarm(calendar.time+6+dice(3), StoryEvent(label = "kosmo_returns2", type = "morning"))
     $ game.track("kosmo")
 #     $ unlock_achievement("kosmo")
 
@@ -14288,7 +14288,7 @@ label no_money():
 
         "You have borrowed [loan_amount] gold. You must give it back in 10 days."
 
-        $ calendar.set_alarm(calendar.time+10, StoryEvent(label = __("banker_repaid_first"), type = "morning"))
+        $ calendar.set_alarm(calendar.time+10, StoryEvent(label = "banker_repaid_first", type = "morning"))
 
     else: # New loan proposition
 
@@ -14631,7 +14631,7 @@ label visit_bank():
 
                 banker "I'll see you in 7 days... Don't disappoint me! [emo_heart]"
 
-                $ calendar.set_alarm(calendar.time + 7, StoryEvent(label = __("tjb_special"), type = "morning"))
+                $ calendar.set_alarm(calendar.time + 7, StoryEvent(label = "tjb_special", type = "morning"))
 
 
         else:
@@ -16765,7 +16765,7 @@ label iulia_H: # Happens after iulia7 + building 40 furniture.
 
     scene black with fade
 
-    $ calendar.set_alarm(calendar.time+24+dice(16), StoryEvent(label=__("iulia_H"), type="morning")) # Event occurs every 25-40 days 
+    $ calendar.set_alarm(calendar.time+24+dice(16), StoryEvent(label="iulia_H", type="morning")) # Event occurs every 25-40 days 
 
     return
 
@@ -17788,7 +17788,7 @@ label trade_50_resources:
 
             "Bast lets you leave by a side gate, carrying the extra resources in a covered cart."
 
-    $ calendar.set_alarm(calendar.time, StoryEvent(label = __("bast_informant"), type = "night"))
+    $ calendar.set_alarm(calendar.time, StoryEvent(label = "bast_informant", type = "night"))
 
     return
 

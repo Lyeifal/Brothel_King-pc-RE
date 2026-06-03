@@ -158,18 +158,18 @@ screen right_menu_mc():
             text ""
 
         # Define tool tip text for hover on MC button
-        $ ttip = __("Access your main character, items and spells.\nYou are a {color=[c_main]}{b}Level [MC.level] [MC.playerclass]{/b}{/color}") + __(". You currently have ")
+        $ ttip = __("Access your main character, items and spells.\nYou are a {color=[c_main]}{b}Level [MC.level] [MC.playerclass]{/b}{/color}. You currently have ")
         #$ ttip = __("Access your main character, items and spells.\nYou are a level ") + str(MC.level) + " " + __(MC.playerclass) + __(". You currently have ")
         $ active_spells = len([1 for s in MC.active_spells if s.type!="passive"])
         $ auto_spells = len([1 for s in MC.known_spells if s.auto])
 
         if active_spells:
-            $ ttip += str(active_spells) + __(" active spell") + plural(active_spells)
+            $ ttip += __("%s active spell%s") % (str(active_spells), plural(active_spells))
         else:
             $ ttip += __("no active spells")
 
         if auto_spells:
-            $ ttip += __(" and ") + str(auto_spells) + __(" auto-cast spell") + plural(auto_spells) + "."
+            $ ttip += __(" and %s auto-cast spell%s.") % (str(auto_spells), plural(auto_spells))
         else:
             $ ttip += "."
 
@@ -219,9 +219,9 @@ screen right_menu_girls():
         else:
             text ""
 
-        $ ttip = __("Interact with the girls in your brothel.\nYou have {color=[c_hotpink]}{b}") + str(len(MC.girls)) + __(" girl") + plural(len(MC.girls)) + __("{/b}{/color} in your brothel (max ") + str(brothel.bedrooms) + ").\n"
+        $ ttip = __("Interact with the girls in your brothel.\nYou have {color=[c_hotpink]}{b}%s girl%s{/b}{/color} in your brothel (max %s).\n") % (str(len(MC.girls)), plural(len(MC.girls)), str(brothel.bedrooms))
         $ working_girls = sum(1 for girl in MC.girls if girl.works_today())
-        $ ttip += str(working_girls) + __(" girl") + plural(working_girls) + __(" will be working tonight.")
+        $ ttip += __("%s girl%s will be working tonight.") % (working_girls, plural(working_girls))
 
         textbutton _("{u}G{/u}irls") style_group "rm":
             text_size res_font(20)
@@ -311,7 +311,7 @@ screen right_menu_slavemarket():
             else:
                 text_size res_font(18)
             action Return("slavemarket")
-            tooltip __("Visit the {b}slavemarket{/b} to find the perfect slave. Or just a cheap one. The slavemarket currently has {color=[c_hotpink]}{b}") + str(len(slavemarket.girls)) + __(" girl") + plural(len(slavemarket.girls)) + __("{/b}{/color} for sale.")
+            tooltip __("Visit the {b}slavemarket{/b} to find the perfect slave. Or just a cheap one. The slavemarket currently has {color=[c_hotpink]}{b}%s girl%s{/b}{/color} for sale.") % (str(len(slavemarket.girls)), plural(len(slavemarket.girls)))
 
 ################
 ## Home - Right menu - Display Shop alert and button
@@ -331,7 +331,7 @@ screen right_menu_shop():
 
         textbutton _("{u}S{/u}hop") style_group "rm":
             action Return("shop")
-            tooltip __("Visit the {b}shop{/b} to buy useful items.\nThe shop currently has {color=[c_yellow]}{b}") + str(len(shop.items)) + __(" item") + plural(len(shop.items)) + __("{/b}{/color} for sale.")
+            tooltip __("Visit the {b}shop{/b} to buy useful items.\nThe shop currently has {color=[c_yellow]}{b}%s item%s{/b}{/color} for sale.") % (str(len(shop.items)), plural(len(shop.items)))
 
 ################
 ## Home - Right menu - Display Postings alert and button
@@ -350,7 +350,7 @@ screen right_menu_postings():
 
         textbutton _("Pos{u}t{/u}ings") style_group "rm":
             action Return("postings")
-            tooltip __("See available classes and quests.\n{color=[c_orange_pink]}{b}") + str(len(quest_board.classes)) + __(" class") + plural(len(quest_board.quests), __("es")) + __("{/b}{/color} and {color=[c_orange_pink]}{b}") + str(len(quest_board.quests)) + __(" quest") + plural(len(quest_board.quests)) + __("{/b}{/color} are currently available.")
+            tooltip __("See available classes and quests.\n{color=[c_orange_pink]}{b}%s class%s{/b}{/color} and {color=[c_orange_pink]}{b}%s quest%s{/b}{/color} are currently available.") % (str(len(quest_board.classes)), plural(len(quest_board.quests), __("es")), str(len(quest_board.quests)), plural(len(quest_board.quests)))
 
 
 ################

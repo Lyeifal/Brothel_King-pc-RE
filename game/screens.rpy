@@ -1169,9 +1169,9 @@ screen preferences(): #!
                     has vbox
 
                     label _("Language")
-                    textbutton _("English") action Language(None)
-                    textbutton _("中文") action Language("chinese")
-                    textbutton _("简体中文") action Language("chinese_simplified")
+                    textbutton _("English") action Function(bk_set_language, None)
+                    textbutton _("中文") action Function(bk_set_language, "chinese")
+                    textbutton _("简体中文") action Function(bk_set_language, "chinese_simplified")
 
                 frame:
                     style_group "pref"

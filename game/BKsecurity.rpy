@@ -1215,7 +1215,7 @@ init -3 python:
 
             elif guard_defense + MC_defense >= _min:
                 sec_pic = "events/" + rand_choice(security_pics["thief"])
-                sec_text = __("{color=[c_lightgreen]}A ") + rand_choice([__("bold"), __("sneaky"), __("dirty"), __("notorious"), __("skilled")]) + __(" thief showed up, but your guards drove her away!{/color} You didn't lose any money.")
+                sec_text = __("{color=[c_lightgreen]}A %s thief showed up, but your guards drove her away!{/color} You didn't lose any money.") % rand_choice([__("bold"), __("sneaky"), __("dirty"), __("notorious"), __("skilled")])
 
                 log.add_report("{color=[c_green]}Security alert! No gold lost.{/color}")
 
@@ -1227,7 +1227,7 @@ init -3 python:
                 sec_pic = "events/" + rand_choice(security_pics["thief"])
                 sec_sound = s_evil_laugh
                 lost_gold = round_int(MC.gold // 20)
-                sec_text = (__("{color=[c_red]}A ") + rand_choice([__("bold"), __("sneaky"), __("dirty"), __("notorious"), __("skilled")]) + __(" thief managed to infiltrate your brothel and make away with {b}") + str_int(lost_gold) + "{/b} gold!{/color}")
+                sec_text = __("{color=[c_red]}A %s thief managed to infiltrate your brothel and make away with {b}%s{/b} gold!{/color}") % (rand_choice([__("bold"), __("sneaky"), __("dirty"), __("notorious"), __("skilled")]), str_int(lost_gold))
 
                 log.add_report("{color=[c_red]}Security alert! " + str(lost_gold) + " gold lost.{/color}")
 
@@ -1260,7 +1260,7 @@ init -3 python:
 
             elif guard_defense + MC_defense >= _min:
                 sec_pic = "events/" + rand_choice(security_pics["monster defense"])
-                sec_text = "{color=[c_lightgreen]}" + rand_choice([__("A vile"), __("An ugly"), __("A dirty"), __("A filthy"), __(" A scary"), __("A disgusting")]) + __(" monster crawled in from the shadows, but your guards drove it away!{/color} Fortunately, no one got hurt.")
+                sec_text = __("{color=[c_lightgreen]}%s monster crawled in from the shadows, but your guards drove it away!{/color} Fortunately, no one got hurt.") % rand_choice([__("A vile"), __("An ugly"), __("A dirty"), __("A filthy"), __(" A scary"), __("A disgusting")])
 
                 log.add_report("{color=[c_green]}Security alert! No one was hurt.{/color}")
 
@@ -1271,13 +1271,13 @@ init -3 python:
                 girl = rand_choice([g for g in MC.girls])
 
                 sec_char = security_breach
-                sec_text = "{color=[c_red]}" + rand_choice([__("A vile"), __("An ugly"), __("A dirty"), __("A filthy"), __("A scary"), __("A disgusting")]) + __(" night creature crawled in from ") + rand_choice([__("the shadows"), __("a window"), __("the sewers"), __("the roof")])
+                sec_text = __("{color=[c_red]}%s night creature crawled in from %s") % (rand_choice([__("A vile"), __("An ugly"), __("A dirty"), __("A filthy"), __("A scary"), __("A disgusting")]), rand_choice([__("the shadows"), __("a window"), __("the sewers"), __("the roof")]))
 
                 if girl.test_shield():
                     sec_pic = "events/" + rand_choice(security_pics["girl shield"])
                     sec_sound = s_spell
                     sec_with = vpunch
-                    sec_text += __(" and attacked ") + girl.fullname + __("{/color}, but {color=[c_lightgreen]}a {b}magic shield{/b} protected her from harm{/color} and the beast ran away.")
+                    sec_text += __(" and attacked %s{/color}, but {color=[c_lightgreen]}a {b}magic shield{/b} protected her from harm{/color} and the beast ran away.") % girl.fullname
 
                     log.add_report("{color=[c_green]}Security alert! Shield protected " + girl.fullname + ".{/color}")
 
@@ -1290,9 +1290,9 @@ init -3 python:
                         if not sec_pic:
                             sec_pic = "events/" + rand_choice(security_pics["default girl fight"])
 
-                    sec_text += __(" and attacked ") + girl.fullname + __("{/color}, but\n") + event_color["good"] % rand_choice([__("she kicked the critter's scaly ass and sent it packing."), __("she was ready to defend herself and butchered it."), __("her combat training paid off."), __("she had a weapon ready and scared it off."), __("she wounded it badly and it ran off.")])
+                    sec_text += __(" and attacked %s{/color}, but\n%s") % (girl.fullname, event_color["good"] % rand_choice([__("she kicked the critter's scaly ass and sent it packing."), __("she was ready to defend herself and butchered it."), __("her combat training paid off."), __("she had a weapon ready and scared it off."), __("she wounded it badly and it ran off.")]))
 
-                    log.add_report(__("{color=[c_green]}Security alert! ")+ girl.fullname + __(" defended herself.{/color}"))
+                    log.add_report(__("{color=[c_green]}Security alert! %s defended herself.{/color}") % girl.fullname)
 
                 else:
                     if is_censored("monster"):
@@ -1303,7 +1303,7 @@ init -3 python:
                         sec_pic = "events/" + rand_choice(security_pics["monster rape"])
                     sec_sound = s_roar
                     sec_with = vpunch
-                    sec_text += __(" and raped ") + girl.fullname + __(". {/color}\nYou manage to drive it away, but the girl is in shock.")
+                    sec_text += __(" and raped %s. {/color}\nYou manage to drive it away, but the girl is in shock.") % girl.fullname
 
                     if girl.has_trait("Virgin"):
                         if dice(6) >= 4:
@@ -1318,9 +1318,9 @@ init -3 python:
 
                     if girl.hurt > 0:
                         girl.track_event("hurt", arg="an evil night monster.")
-                        log.add_report(__("{color=[c_red]}Security alert! ") + girl.fullname + __(" was hurt.{/color}"))
+                        log.add_report(__("{color=[c_red]}Security alert! %s was hurt.{/color}") % girl.fullname)
                     else:
-                        log.add_report(__("{color=[c_red]}Security alert! ") + girl.fullname + __(" was raped.{/color}"))
+                        log.add_report(__("{color=[c_red]}Security alert! %s was raped.{/color}") % girl.fullname)
 
                     if not story_flags["first security event"]:
                         NPC_sill.flags["first security heal"] = [girl]
@@ -1334,7 +1334,7 @@ init -3 python:
 
             _min, _max = alert_limits2[game.chapter]
 
-            sec_text = __("A ") + rand_choice([__("shady"), __("sneaky"), __("skilled"), __("deadly"), __("mysterious"), __("rogue"), __("vicious")]) + __(" ninja made an attempt on ") + girl.fullname + __("'s life! ")
+            sec_text = __("A %s ninja made an attempt on %s's life! ") % (rand_choice([__("shady"), __("sneaky"), __("skilled"), __("deadly"), __("mysterious"), __("rogue"), __("vicious")]), girl.fullname)
 
             renpy.play(s_sheath, "sound")
             renpy.pause(0.5)
@@ -1357,8 +1357,8 @@ init -3 python:
                     sec_pic = "events/" + rand_choice(security_pics["dragon defense"])
                     sec_sound = s_roar
 
-                sec_text = ("A " + rand_choice([__("shady"), __("sneaky"), __("skilled"), __("deadly"), __("mysterious"), __("rogue"), __("vicious")]) + __(" ninja made an attempt on ") + girl.fullname + __("'s life! ")
-                           + event_color["good"] % rand_choice(MC.filter_say([__("wa: Fortunately, you were right next to her and parried the attack, unsheathing your sword right on time with cobra-like reflexes."), __("wi: Fortunately, you blocked the attack at the last second with a magical barrier."), __("tr: Fortunately, your pet dragon Drogon smelled the bastard and swooped right at him roaring before he had a chance to attack.")])) + __(" The assassin ran away."))
+                sec_text = __("A %s ninja made an attempt on %s's life! ") % (rand_choice([__("shady"), __("sneaky"), __("skilled"), __("deadly"), __("mysterious"), __("rogue"), __("vicious")]), girl.fullname)
+                sec_text += __("%s The assassin ran away.") % (event_color["good"] % rand_choice(MC.filter_say([__("wa: Fortunately, you were right next to her and parried the attack, unsheathing your sword right on time with cobra-like reflexes."), __("wi: Fortunately, you blocked the attack at the last second with a magical barrier."), __("tr: Fortunately, your pet dragon Drogon smelled the bastard and swooped right at him roaring before he had a chance to attack.")])))
 
                 log.add_report(__("{color=[c_green]}Security alert! No was one hurt.{/color}"))
 
@@ -1372,10 +1372,10 @@ init -3 python:
 
                 lost_gold = (99 + dice(101)) * game.chapter
 
-                sec_text += (event_color["a little good"] % __("Fortunately, your security was on hand. ") + __("A guard threw himself into harm's way and took the hit.\n")
-                            + rand_choice([__("You gave the brave soul ") + str(lost_gold) + __(" gold for his trouble."), __("You gave the poor sod's family ") + str(lost_gold) + __(" gold and thanks for his loyal services."), __("You paid ") + str(lost_gold) + __(" gold for the courageous man medical expenses.")]))
+                sec_text += __("%sA guard threw himself into harm's way and took the hit.\n") % (event_color["a little good"] % __("Fortunately, your security was on hand. "))
+                sec_text += rand_choice([__("You gave the brave soul %s gold for his trouble.") % str(lost_gold), __("You gave the poor sod's family %s gold and thanks for his loyal services.") % str(lost_gold), __("You paid %s gold for the courageous man medical expenses.") % str(lost_gold)])
 
-                log.add_report(__("{color=[c_red]}Security alert! ") + str(lost_gold) + __(" gold lost.{/color}"))
+                log.add_report(__("{color=[c_red]}Security alert! %s gold lost.{/color}") % str(lost_gold))
 
                 if MC_defense:
                     MC.interactions -= 1
@@ -1410,7 +1410,7 @@ init -3 python:
                     sec_with = vpunch
                     sec_text = event_color["bad"] % sec_text + event_color["a little good"] % __("\nYour girl used her weapons to defend herself and escaped unscathed by a thread.")
 
-                    log.add_report(__("{color=[c_green]}Security alert! ") + girl.fullname + __(" defended herself.{/color}"))
+                    log.add_report(__("{color=[c_green]}Security alert! %s defended herself.{/color}") % girl.fullname)
 
                 else:
                     sec_pic = girl.get_pic("hurt", not_tags=["rest"], naked_filter=True, soft=True, strict=True)
@@ -1441,9 +1441,9 @@ init -3 python:
                                         ("Constitution", __("After struggling between life and death for a few hours, her fever eventually recesses, and it looks like she will survive. She is still very weak, however.\n") + event_color["bad"] % __("She is hurt for %s days, and her constitution has decreased by %s permanently.")),
                                         ("Obedience", __("When she comes through, she seems wild, almost feral. She nearly bites you when you come near. You hope the effect will recess with time.\n") + event_color["bad"] % __("She is hurt for %s days, and her obedience has decreased by %s permanently.")),
                                         ("Sensistivity", __("When she opens her eyes, she whispers faintly 'Master, I... I can't feel my limbs...'. She fights against paralysis all night, and without Sill's advanced alchimist skills, she would have become crippled. When she is finally able to get up, she still feels numb.") + event_color["bad"] % __("She is hurt for %s days, and her sensitivity has decreased by %s permanently.")),
-                                        ("libido+", __("When she wakes up, she looks feverish, with a strange look in her eye. 'Master... Come over here...', she whispers. As you approach her bed, she grabs your dick and starts fondling it. 'Master's dick... Aaah...', she moans.\n") + event_color["bad"] % __("She is hurt for %s days") + __(", but ") + event_color["good"] % __("her libido has increased by %s permanently.") + __(" You wonder if you should thank the mysterious love ninja.")),
+                                        ("libido+", __("%s%s, but %s%s") % (__("When she wakes up, she looks feverish, with a strange look in her eye. 'Master... Come over here...', she whispers. As you approach her bed, she grabs your dick and starts fondling it. 'Master's dick... Aaah...', she moans.\n"), event_color["bad"] % __("She is hurt for %s days"), event_color["good"] % __("her libido has increased by %s permanently."), __(" You wonder if you should thank the mysterious love ninja."))),
                                         ("personality", __("When she finally gets up, she looks like a different person. 'W-Who are you?'. It seems like she hit her head or something.\n") + event_color["average"] % __("She is hurt for %s days, and her {b}personality{/b} has changed. Her {b}love{/b} and {b}fear{/b} have been reset.")),
-                                        ("naked", __("After a while, she opens her eyes and slowly comes to her senses. Suddenly, she shrieks, and throws the linen sheet to the side. 'No! It burns my skin!', she yells. It seems she has developped a phobia for cloth of any kind.\n") + event_color["bad"] % __("She is hurt for %s days") + __(", and ") + event_color["good"] % "%s." + __(" You guess it could really be worse.")),
+                                        ("naked", __("%s%s, and %s%s") % (__("After a while, she opens her eyes and slowly comes to her senses. Suddenly, she shrieks, and throws the linen sheet to the side. 'No! It burns my skin!', she yells. It seems she has developped a phobia for cloth of any kind.\n"), event_color["bad"] % __("She is hurt for %s days"), event_color["good"] % "%s.", __(" You guess it could really be worse."))),
                                         ])
 
                     girl.get_hurt(3+dice(6))
@@ -1484,7 +1484,7 @@ init -3 python:
                         if girl.preferences["naked"] < 200:
                             girl.preferences["naked"] = 200
 
-                    log.add_report(__("{color=[c_red]}Security alert! ") + girl.fullname + __(" was hurt.{/color}"))
+                    log.add_report(__("{color=[c_red]}Security alert! %s was hurt.{/color}") % girl.fullname)
             
             brothel.reset_threat()
 
@@ -1496,8 +1496,8 @@ init -3 python:
             sec_sound = s_crowd_riot
             sec_with = vpunch
 
-            sec_text = (__("A brawl erupted in the ") + __(rand_choice(brothel.get_common_rooms()).name) + __(" after ")
-                        + __(rand_choice(["a customer spilled his boiling-hot grog on another man's crotch.",
+            sec_text = __("A brawl erupted in the %s after %s") % (rand_choice(brothel.get_common_rooms()).name, rand_choice([
+                        "a customer spilled his boiling-hot grog on another man's crotch.",
                                        "two customers starting fighting over the same girl.",
                                        "a famous girls band from Borgo came to do a concert.",
                                        "a hated politician came in with his cronies.",
@@ -1516,7 +1516,7 @@ init -3 python:
                                        "a rogue ship captain shot first.",
                                        "someone brought a herd of goats in and they started rampaging through the brothel.",
                                        "interdimensional aliens from another galaxy ripped the fabric of spacetime, as well as a girl's panties.",
-                                      ])))
+                                      ]))
 
             if guard_defense >= _max:
                 sec_text += event_color["good"] % __("\nFortunately, your guards were ready, and they threw the troublemakers out before they had a chance to do any serious damage.")
@@ -1546,7 +1546,7 @@ init -3 python:
                 rep = brothel.change_rep(-10 * game.chapter)
 
                 sec_text += (__("\nChaos and confusion ensued as your guards joined the fray. Thankfully, after an hour of fighting and with great difficulty, they managed to protect your girls and quell the riot.\n")
-                             + event_color["a little bad"] % (__("Unfortunately, the brothel is now littered with trash (+") + str_int(dirt) + __(" dirt) and has lost ") + str_int(rep) + __(" reputation.")))
+                             + event_color["a little bad"] % (__("Unfortunately, the brothel is now littered with trash (+%s dirt) and has lost %s reputation.") % (str_int(dirt), str_int(rep))))
 
                 log.add_report("{color=[c_red]}Security alert! +" + str_int(dirt) + " dirt, -" + str(rep) + " reputation.{/color}")
 
@@ -1571,8 +1571,8 @@ init -3 python:
 
                 sec_char = security_breach
                 sec_text += (__(" The rioting customers overwhelmed your security guards and started looting your brothel's supplies and assaulting your girls.\n")
-                             + event_color["bad"] % (and_text([g.fullname for g in hurt_girls]) + __(" were hurt.\n"))
-                             + event_color["bad"] % (__("The brothel is just one big mess (+") + str_int(dirt) + __(" dirt) and has lost ") + str_int(rep) + __(" reputation.")))
+                             + event_color["bad"] % __("%s were hurt.\n") % and_text([g.fullname for g in hurt_girls])
+                             + event_color["bad"] % (__("The brothel is just one big mess (+%s dirt) and has lost %s reputation.") % (str_int(dirt), str_int(rep))))
 
                 log.add_report("{color=[c_red]}Security alert! +" + str_int(dirt) + " dirt, -" + str_int(rep) + " reputation, " + and_text([g.fullname for g in hurt_girls]) + " were hurt.{/color}")
 
@@ -1615,23 +1615,21 @@ init -3 python:
             game.track("security event", -1)
             sec_char = security_breach
 
-            sec_text += __("As you come out of the brothel to ") + rand_choice([__("breathe some fresh air"), __("check the perimeter"), __("take a leak"), __("watch the storm"), __("watch the night skies")]) + __(", you notice something odd.\n")
+            sec_text += __("As you come out of the brothel to %s, you notice something odd.\n") % rand_choice([__("breathe some fresh air"), __("check the perimeter"), __("take a leak"), __("watch the storm"), __("watch the night skies")])
 
             if brothel.alert_level == 1:
                 sec_pic = "events/" + rand_choice(security_pics["hood"])
                 sec_sound = s_wolf
-                sec_text += (__("A hooded silhouette is standing in the distance, watching your brothel, unmoving. ") + rand_choice([__("You hail it, but it "), __("You start approaching it, but it "), __("You try to get a better look at it, but it notices you and ")])
-                             + __("disappears into the night."))
+                sec_text += __("%s%sdisappears into the night.") % (__("A hooded silhouette is standing in the distance, watching your brothel, unmoving. "), rand_choice([__("You hail it, but it "), __("You start approaching it, but it "), __("You try to get a better look at it, but it notices you and ")]))
                 brothel.threat += 5
 
             else:
                 sec_pic = "events/" + rand_choice(security_pics["dark street"])
                 sec_sound = s_wolf
-                sec_text += (__("An inert body is lying on the pavement. You flip it around, and recognize one of your guards, ") + rand_choice([__("a dagger stuck inside his neck."), __("a shuriken protuding from his forehead."), __("a knife lodged between his shoulders."), __("his face grinning in a mortal rictus caused by an unknown poison"), __("his body charred by a nasty spell"),__ ("his face blue from suffocating with a grocery bag placed over his head"), __("his head split open with a candlestick, in the library.")])
-                             + __("The poor henchman is stone-cold dead. You will have him replaced by tomorrow, of course, but you wonder what evil is afoot."))
+                sec_text += __("%s%s%s") % (__("An inert body is lying on the pavement. You flip it around, and recognize one of your guards, "), rand_choice([__("a dagger stuck inside his neck."), __("a shuriken protuding from his forehead."), __("a knife lodged between his shoulders."), __("his face grinning in a mortal rictus caused by an unknown poison"), __("his body charred by a nasty spell"),__ ("his face blue from suffocating with a grocery bag placed over his head"), __("his head split open with a candlestick, in the library.")]), __("The poor henchman is stone-cold dead. You will have him replaced by tomorrow, of course, but you wonder what evil is afoot."))
                 brothel.threat += 10
 
-            sec_text += __("This is a bad sign of things to come. ") + event_color["bad"] % __("The {b}threat{/b} to [brothel.name] has escalated.")
+            sec_text += __("%s%s") % (__("This is a bad sign of things to come. "), event_color["bad"] % __("The {b}threat{/b} to [brothel.name] has escalated."))
 
             brothel.alert_level += 1
 
@@ -1764,7 +1762,7 @@ label kidnap_tip(girl): # Happens at the taverns location if a girl has been kid
         scene black with fade
 
         $ loc = rand_choice(game.get_available_locations())
-        $ city_events.append(StoryEvent(label = __("kidnap_rescue"), call_args = [girl], location = loc.name, AP_cost=0))
+        $ city_events.append(StoryEvent(label = "kidnap_rescue", call_args = [girl], location = loc.name, AP_cost=0))
 
         "The man showed you where to find [girl.fullname] near the {b}[loc.name]{/b}."
 
@@ -1783,7 +1781,7 @@ label kidnap_rescue(girl):
         "Yes":
             $ MC.interactions -= 1
         "No":
-            $ city_events.append(StoryEvent(label = __("kidnap_rescue"), call_args = [girl], location = selected_location.name, AP_cost=0))
+            $ city_events.append(StoryEvent(label = "kidnap_rescue", call_args = [girl], location = selected_location.name, AP_cost=0))
             return
 
     "Following your informer's directions, you start looking for the entrance of the lair where [girl.fullname] is being held."
@@ -1962,7 +1960,7 @@ label kidnap_rescue(girl):
                 "You have been found! You run away from the guard patrol. Gods know where they'll be taking [girl.fullname] now."
 
     else: # Leave for now
-        $ city_events.append(StoryEvent(label = __("kidnap_rescue"), call_args = [girl], location = selected_location.name, AP_cost=0))
+        $ city_events.append(StoryEvent(label = "kidnap_rescue", call_args = [girl], location = selected_location.name, AP_cost=0))
 
         "You will come back when you are ready. Sorry, [girl.name]..."
 
@@ -2031,7 +2029,7 @@ label kidnap_rescue(girl):
                     "{b}[girl.name] has been freed.{/b}"
 
             if come_back:
-                $ calendar.set_alarm(calendar.time + come_back, Event(label = __("girl_come_back"), object = girl, order = 1))
+                $ calendar.set_alarm(calendar.time + come_back, Event(label = "girl_come_back", object = girl, order = 1))
 
     else:
         play sound s_woman_scream
@@ -2084,6 +2082,6 @@ label girl_come_back(girl):
                 "{b}[girl.name] has been freed.{/b}"
 
         if come_back:
-            $ calendar.set_alarm(calendar.time + come_back, Event(label = __("girl_come_back"), object = girl, order = 1))
+            $ calendar.set_alarm(calendar.time + come_back, Event(label = "girl_come_back", object = girl, order = 1))
 
     return

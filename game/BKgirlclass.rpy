@@ -3413,7 +3413,7 @@ init -2 python:
 
                     self.track_event("job up", arg=job)
 
-                    calendar.set_alarm(calendar.time + announcement_delay, Event(label = __("job_up"), object = (self, job, self.job_level[job])))
+                    calendar.set_alarm(calendar.time + announcement_delay, Event(label = "job_up", object = (self, job, self.job_level[job])))
 
 
         def ready_to_level(self):
@@ -5432,7 +5432,7 @@ init -2 python:
                 charge = self.workdays[day]
                 self.workdays[day] = 0
                 self.block_schedule = day
-                calendar.set_alarm(calendar.time + day_nb, Event(label =  __("reset_workday"), object = (self, day, charge)))
+                calendar.set_alarm(calendar.time + day_nb, Event(label =  "reset_workday", object = (self, day, charge)))
 
                 return True
 
@@ -5456,7 +5456,7 @@ init -2 python:
 
             self.locked_upkeep = self.upkeep
             self.upkeep = 0
-            calendar.set_alarm(calendar.time + 1, Event(label = __("restore_upkeep"), object = self))
+            calendar.set_alarm(calendar.time + 1, Event(label = "restore_upkeep", object = self))
 
         def restore_upkeep(self):
             if self.locked_upkeep:

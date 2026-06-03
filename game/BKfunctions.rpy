@@ -822,7 +822,7 @@ init -3 python:
 
     def get_description(basetext, effects, separator="\n", final_dot=True):
 
-        text1 = "{i}" + __(basetext) + "{/i}"
+        text1 = "{i}" + basetext + "{/i}"
         begin = True
 
         for effect in effects:
@@ -890,13 +890,13 @@ init -3 python:
 
             if nb:
                 if stat in ("rep", "reputation"):
-                    text_changes += __("Girl reputation: ") + plus_text(nb, color_scheme="rep", decimals=1)
+                    text_changes += __("Girl reputation: %s") % plus_text(nb, color_scheme="rep", decimals=1)
 
                 elif stat == "gold":
-                    text_changes += __("Gold: {image=img_gold} ") + plus_text(round_int(nb), color_scheme="gold")
+                    text_changes += __("Gold: {image=img_gold} %s") % plus_text(round_int(nb), color_scheme="gold")
 
                 else:
-                    text_changes += __("%s: " % stat.capitalize()) + plus_text(round_int(nb), color_scheme="standard")
+                    text_changes += __("%s: %s") % (__(stat.capitalize()), plus_text(round_int(nb), color_scheme="standard"))
 
             text_changes += "\n"
 
@@ -1064,7 +1064,7 @@ init -3 python:
                 notify("%s: Assault attempt" % girl.fullname, pic=girl.portrait)
                 crazy_changes.add("Assault attempt", "header")
 
-                violent_text = __(cust.name) + __(" went berserk and attacked ") + girl.name + __(" all of a sudden!")
+                violent_text = __("%s went berserk and attacked %s all of a sudden!") % (cust.name, girl.name)
                 violent_report = __("Security alert! Violent customer.")
 
                 if brothel.get_risk() < 0: # Your guards on duty are ready to help
@@ -1082,7 +1082,7 @@ init -3 python:
                 elif MC.can_defend() and MC.get_defense() > girl.get_defense(): # Your guards are somewhere else, your girl is helpless, it's your turn to take action!
                     if have_fight(cust, MC) == False:
                         violent_text += __("\n{color=[c_green]}You rush to the scene and break the guy's face before he has any time to act.\n{/color}Your girl is safe, and you pocket the content of his wallet: %s gold.") % str(cust.ent_budget)
-                        violent_report = "{color=[c_green]}" + violent_report + __(" You beat him up (%s gold earned).{/color}") % str(cust.ent_budget)
+                        violent_report = __("{color=[c_green]}%s You beat him up (%s gold earned).{/color}") % (violent_report, str(cust.ent_budget)) % str(cust.ent_budget)
                         girl.change_mood(1)
                         girl.change_fear(-2)
                         girl.change_love(1)
@@ -1109,12 +1109,12 @@ init -3 python:
                         crazy_changes.add("Averted by Immunity", col="good", ttip = event_color["good"] % "Mood +")
 
                     else:
-                        violent_text += __("\n{color=[c_red]}You try to help her but the bastard knocks you to the ground and beats up the both of you.\n{/color}") + girl.name + __(" is hurt, and you lose some self-respect.")
+                        violent_text += __("\n{color=[c_red]}You try to help her but the bastard knocks you to the ground and beats up the both of you.\n{/color}%s is hurt, and you lose some self-respect.") % girl.name
                         wounds = girl.get_hurt(dice(3)+1)
 
                         girl.track_event("hurt", "a violent customer")
 
-                        violent_report = "{color=[c_red]}" + violent_report + __(" He beat you up and %s is hurt.{/color} ") % girl.name
+                        violent_report = __("{color=[c_red]}%s He beat you up and %s is hurt.{/color} ") % (violent_report, girl.name)
                         girl.change_mood(-2)
                         girl.change_fear(2)
                         girl.change_love(-1)
@@ -1136,11 +1136,11 @@ init -3 python:
                         mod = -1
 
                     if girl.get_defense() + mod >= cust.get_defense():
-                        violent_text += (__("\n{color=[c_green]}Your girl has the means to defend herself, however. ") + rand_choice([__("She stabs the poor sod in the guts, stopping him right in his tracks."),
+                        defense_action = rand_choice([__("She stabs the poor sod in the guts, stopping him right in his tracks."),
                                         __("She knees the bastard right in the balls and he crumbles on the floor crying."), __("She kicks him right in the face, knocking him out for good.")])
-                                        + __("\n{/color}Your girl is safe, and you pocket the content of his wallet while your henchmen throw the poor sucker out in a dark alley: %s gold.") % str(cust.ent_budget))
+                        violent_text += __("\n{color=[c_green]}Your girl has the means to defend herself, however. %s\n{/color}Your girl is safe, and you pocket the content of his wallet while your henchmen throw the poor sucker out in a dark alley: %s gold.") % (defense_action, str(cust.ent_budget))
 
-                        violent_report = "{color=[c_green]}" + violent_report + __(" %s beat him up (%s gold earned).{/color}") % (girl.name, str(cust.ent_budget))
+                        violent_report = __("{color=[c_green]}%s %s beat him up (%s gold earned).{/color}") % (violent_report, girl.name, str(cust.ent_budget)) % (girl.name, str(cust.ent_budget))
 
                         girl.track_event("defended")
 
@@ -1174,13 +1174,13 @@ init -3 python:
                         crazy_changes.add("Averted by Immunity", col="good", ttip = event_color["good"] % "Mood +")
 
                     else:
-                        violent_text += __("\n{color=[c_red]}Your girl tried to defend herself but he is stronger, kicking her to ground and pummeling her with his fists.\n{/color}You finally throw him out, but ") + girl.name + __(" is hurt.")
+                        violent_text += __("\n{color=[c_red]}Your girl tried to defend herself but he is stronger, kicking her to ground and pummeling her with his fists.\n{/color}You finally throw him out, but %s is hurt.") % girl.name
                         girl.get_hurt(dice(3)+1)
 #                         girl.add_log("hurt_days")
 
                         girl.track_event("hurt", "a violent customer")
 
-                        violent_report = "{color=[c_red]}" + violent_report + __(" %s is hurt.{/color}") % girl.name
+                        violent_report = __("{color=[c_red]}%s %s is hurt.{/color}") % (violent_report, girl.name)
                         girl.change_mood(-2)
                         girl.change_fear(2)
 
@@ -1208,22 +1208,22 @@ init -3 python:
                 arson = False
 
                 if brothel.get_risk() < 0: # Your guards on duty are ready to help
-                    arson_text += __(cust.name) + __(" tried to set fire to your brothel!\n{color=[c_green]}Your guards tackled him and fucked him up before he could light a match.{/color}")
-                    arson_report = "{color=[c_green]}" + arson_report + __(" Your guards stopped it.{/color}")
+                    arson_text += __("%s tried to set fire to your brothel!\n{color=[c_green]}Your guards tackled him and fucked him up before he could light a match.{/color}") % cust.name
+                    arson_report = __("{color=[c_green]}%s Your guards stopped it.{/color}") % arson_report
 
                 elif MC.can_defend(): # Your guards are somewhere else, it's your turn to take action!
                     if have_fight(cust, MC) == False:
-                        arson_text += __(cust.name) + __(" tried to set fire to your brothel!\n{color=[c_green]}You were patrolling as it happened, and knocked the wretch senseless before he could carry out his plan.{/color}")
-                        arson_report = "{color=[c_green]}" + arson_report + __(" You stopped it.{/color}")
+                        arson_text += __("%s tried to set fire to your brothel!\n{color=[c_green]}You were patrolling as it happened, and knocked the wretch senseless before he could carry out his plan.{/color}") % cust.name
+                        arson_report = __("{color=[c_green]}%s You stopped it.{/color}") % arson_report
                     else:
-                        arson_text += __(cust.name) + __(" tried to set fire to your brothel!\n{color=[c_red]}You tried to stop him but he fought you like a madman, allowing time for the flames to grow high.{/color}")
-                        arson_report = "{color=[c_red]}" + arson_report + __(" You were beaten and the brothel caught fire.{/color}")
+                        arson_text += __("%s tried to set fire to your brothel!\n{color=[c_red]}You tried to stop him but he fought you like a madman, allowing time for the flames to grow high.{/color}") % cust.name
+                        arson_report = __("{color=[c_red]}%s You were beaten and the brothel caught fire.{/color}") % arson_report
                         arson = True
                     MC.interactions -= 1
 
                 else: # No one is here to help out
-                    arson_text += __(cust.name) + __("{color=[c_red]} has set fire to your brothel!\nYou hear your girls yell, and soon see the smoke rising from your burning estate.{/color}")
-                    arson_report = "{color=[c_red]}" + arson_report + __(" The bro- The bro- The brothel's on fire!{/color}")
+                    arson_text += __("{color=[c_red]}%s has set fire to your brothel!\nYou hear your girls yell, and soon see the smoke rising from your burning estate.{/color}") % cust.name
+                    arson_report = __("{color=[c_red]}%s The bro- The bro- The brothel's on fire!{/color}") % arson_report
                     arson = True
 
                 if arson:
@@ -1232,7 +1232,7 @@ init -3 python:
                         if damage < 0:
                             damage = 0
 
-                        arson_text += __("\nGathering the power of the Storm, you quickly cast a raining spell. In the end, damage is limited. Your brothel condition deteriorates by ") + str(damage) + "."
+                        arson_text += __("\nGathering the power of the Storm, you quickly cast a raining spell. In the end, damage is limited. Your brothel condition deteriorates by %s.") % str(damage)
                         brothel.change_dirt(damage)
 
                     else:
@@ -1300,7 +1300,7 @@ init -3 python:
             return li[0]
 
         elif len(li) > 1:
-            return separator.join(li[:-1]) + __(txt) + li[-1]
+            return separator.join(li[:-1]) + txt + li[-1]
 
         else:
             return if_none
@@ -1949,7 +1949,7 @@ init -3 python:
                     cust.entertainment_score = score
         #</Chris Job Mod>
 
-        change_log.add(__("{b}Final result{/b}: %i\n" % score) + result_star_dict[result], "header", ttip_title="{color=" + result_colors[result] + "}" + __(result.capitalize()) + " result (%i){/color}" % score, ttip=result_reference)
+        change_log.add(__("{b}Final result{/b}: %i\n%s") % (score, result_star_dict[result]), "header", ttip_title="{color=%s}%s result (%i){/color}" % (result_colors[result], result.capitalize(), score), ttip=result_reference)
 
         if act in all_jobs:
             change_log.add("Customers entertained: %i/%i" % (sum(1 for cust in customers if cust.service_dict["entertained"] > 0), len(customers)))
@@ -2437,7 +2437,7 @@ init -3 python:
                 if s_act == "naked":
 
                     if d == 1: # Obedience
-                        text1 = __("Customers started clamoring for ") + girl.name + __(" to strip naked. Soon, she found herself surrounded by horny customers trying to rip her clothes off.")
+                        text1 = __("Customers started clamoring for %s to strip naked. Soon, she found herself surrounded by horny customers trying to rip her clothes off.") % girl.name
 
                         r = girl.get_stat("obedience") - dice(250)
 
@@ -2461,7 +2461,7 @@ init -3 python:
 
 
                     elif d == 2: # Libido
-                        text1 = __("A horny customer started undressing in the middle of the ") + __(job_room_dict[girl.job]) + __(". He dared %s to do the same.") % girl.name
+                        text1 = __("A horny customer started undressing in the middle of the %s. He dared %s to do the same.") % (job_room_dict[girl.job], girl.name)
 
                         r = girl.get_stat("libido") - dice(250)
 
@@ -2517,7 +2517,7 @@ init -3 python:
                 else:
 
                     if d == 1: # Obedience
-                        text1 = __("A customer ordered ") + girl.name + __(" to give him extra service. He wanted her to ") + __(s_des[s_act]) + "."
+                        text1 = __("A customer ordered %s to give him extra service. He wanted her to %s.") % (girl.name, s_des[s_act])
 
                         r =  girl.get_stat("obedience") - dice(100) - preference_modifier[girl.get_preference(s_act)] # Reminder: preference modifier is between 150 (refuses) and -75 (fascinated)
 
@@ -2527,7 +2527,7 @@ init -3 python:
                         if r > 0:
                             if girl.has_trait("Virgin") and s_act == "sex":
                                 s_act = weighted_choice([("service", 4), ("anal", 2), ("fetish", 1)])
-                                text1 += __("\n{color=[c_green]}As she is a virgin, she gently denied the customer's request and agreed to ") + __(s_des[s_act]) + " instead.{/color}"
+                                text1 += __("\n{color=[c_green]}As she is a virgin, she gently denied the customer's request and agreed to %s instead.{/color}") % s_des[s_act]
                             else:
                                 text1 += __("\n{color=[c_green]}She obediently accepted the customer's request.{/color}")
 
@@ -2549,14 +2549,14 @@ init -3 python:
 
 
                     elif d == 2: # Libido
-                        text1 = __("A customer flirted with ") + girl.name + __(" all night. He tried to get her to ") + __(s_des[s_act]) + "."
+                        text1 = __("A customer flirted with %s all night. He tried to get her to %s.") % (girl.name, s_des[s_act])
 
                         r = girl.get_stat("libido") - dice(100) - preference_modifier[girl.get_preference(s_act)] # Reminder: preference modifier is between 150 (refuses) and -75 (fascinated)
 
                         if r > 0:
                             if girl.has_trait("Virgin") and s_act == "sex":
                                 s_act = weighted_choice([("service", 4), ("anal", 2), ("fetish", 1)])
-                                text1 += __("\n{color=[c_green]}To protect her virginity, she lustily agreed to ") + __(s_des[s_act]) + __(" instead.{/color}")
+                                text1 += __("\n{color=[c_green]}To protect her virginity, she lustily agreed to %s instead.{/color}") % s_des[s_act]
                             else:
                                 text1 += __("\n{color=[c_green]}She was feeling horny and she liked the customer, so she agreed.{/color}")
                             extra_changes.append(("libido", girl.change_stat("libido", dice(3), silent=True)))
@@ -2576,14 +2576,14 @@ init -3 python:
                             extra_changes.append(("brothel reputation", brothel.change_rep(-1*customers[0].rank)))
 
                     elif d == 3: # Sensitivity
-                        text1 = __("A customer told her a very sad and touching story. He asked if she would ") + __(s_des[s_act]) + __(", to help him forget his sorrows.")
+                        text1 = __("A customer told her a very sad and touching story. He asked if she would %s, to help him forget his sorrows.") % s_des[s_act]
 
                         r = girl.get_stat("sensitivity") - dice(100) - preference_modifier[girl.get_preference(s_act)] # Reminder: preference modifier is between 150 (refuses) and -75 (fascinated)
 
                         if r > 0:
                             if girl.has_trait("Virgin") and s_act == "sex":
                                 s_act = weighted_choice([("service", 4), ("anal", 2), ("fetish", 1)])
-                                text1 += __("\n{color=[c_green]}She wanted to help him and offered to ") + __(s_des[s_act]) + __(" instead, to retain her virginity.{/color}")
+                                text1 += __("\n{color=[c_green]}She wanted to help him and offered to %s instead, to retain her virginity.{/color}") % s_des[s_act]
                             else:
                                 text1 += __("\n{color=[c_green]}She was touched by his story, and decided she couldn't refuse him.{/color}")
                             extra_changes.append(("sensitivity", girl.change_stat("sensitivity", dice(3), silent=True)))
@@ -2636,28 +2636,28 @@ init -3 python:
                     pos_reaction, neg_reaction = girl.test_weakness(s_act, unlock=True)
 
                     if pos_reaction and neg_reaction:
-                        text1 += girl.name + __(" blushes bright red and looks very uncomfortable with ") + __(long_act_description[s_act]) + __(". However, her nipples are erect and she becomes noticeably wet. {color=[c_yellow]}It's like she both loves and hates it.{/color}")
+                        text1 += __("%s blushes bright red and looks very uncomfortable with %s. However, her nipples are erect and she becomes noticeably wet. {color=[c_yellow]}It's like she both loves and hates it.{/color}") % (girl.name, long_act_description[s_act])
                         ev_sound = s_sigh
-                        log.add_report(girl.name + __(" is {color=[c_darkgold]}ambivalent{/color} about ") + __(long_act_description[s_act]) + ".")
+                        log.add_report(__("%s is {color=[c_darkgold]}ambivalent{/color} about %s.") % (girl.name, long_act_description[s_act]))
                         chg = "{color=%s}Ambivalent act discovered:\n%s{/color}" % (c_yellow, s_act.capitalize())
 
                     elif pos_reaction:
                         if act == "service":
-                            text1 += girl.name + __(" is flustered by the sight of the customer's dick while servicing him. She starts masturbating as she plays with the customer") + plur + "."
+                            text1 += __("%s is flustered by the sight of the customer's dick while servicing him. She starts masturbating as she plays with the customer%s.") % (girl.name, plur)
                         elif act == "fetish":
-                            text1 += girl.name + __("'s pleasure centers are overwhelmed by unknown sensations, and she becomes very wet as the customer toys with her.")
+                            text1 += __("%s's pleasure centers are overwhelmed by unknown sensations, and she becomes very wet as the customer toys with her.") % girl.name
                         else:
-                            text1 += girl.name + __(" is very sensitive and she eventully reaches orgasm as she is fucked by the customer") + plur + "."
+                            text1 += __("%s is very sensitive and she eventully reaches orgasm as she is fucked by the customer%s.") % (girl.name, plur)
 
-                        text1 += __("\n{color=[c_green]}It seems that she loves ") + __(long_act_description[s_act]) + ".{/color}"
+                        text1 += __("\n{color=[c_green]}It seems that she loves %s.{/color}") % long_act_description[s_act]
                         ev_sound = s_mmmh
-                        log.add_report(girl.name + __(" is {color=[c_green]}sensitive{/color} to ") + __(long_act_description[s_act]) + ".")
+                        log.add_report(__("%s is {color=[c_green]}sensitive{/color} to %s.") % (girl.name, long_act_description[s_act]))
                         chg = "{color=%s}Positive act discovered:\n%s{/color}" % (c_green, s_act.capitalize())
 
                     elif neg_reaction:
-                        text1 += girl.name + __(" acts very uncomfortable around the customer") + plur + __(", something is bothering her. {color=[c_red]}She seems to dislike ") + __(long_act_description[act]) + ".{/color}"
+                        text1 += __("%s acts very uncomfortable around the customer%s, something is bothering her. {color=[c_red]}She seems to dislike %s.{/color}") % (girl.name, plur, long_act_description[act])
                         ev_sound = s_surprise
-                        log.add_report(girl.name + __(" is {color=[c_red]}uncomfortable{/color} with ") + __(long_act_description[s_act]) + ".")
+                        log.add_report(__("%s is {color=[c_red]}uncomfortable{/color} with %s.") % (girl.name, long_act_description[s_act]))
                         chg = "{color=%s}Negative act discovered:\n%s{/color}" % (c_red, s_act.capitalize())
 
                     if pos_reaction or neg_reaction:
@@ -3415,7 +3415,7 @@ init -3 python:
 
     def can_use_minion_item():
 
-        if MC.get_items(target="minion", name=__("Healing powder")) and farm.get_hurt_minions():
+        if MC.get_items(target="minion", name="Healing powder") and farm.get_hurt_minions():
             return True
         if MC.get_items(target="minion", effect_type="gain"):
             for it in MC.get_items(target="minion", effect_type="gain"):
@@ -4044,7 +4044,8 @@ init -3 python:
 
     def get_next_day_report(): # Compiles Yesterday's report for the Brothel screen
 
-        msg = __("You have ") + str(len(MC.girls)) + __(" girl") + plural(len(MC.girls)) + __(" in your brothel (max ") + str(brothel.bedrooms) + ").\n\n"
+        n = len(MC.girls)
+        msg = __("You have %s girl%s in your brothel (max %s).\n\n") % (n, plural(n), brothel.bedrooms)
 
         working_girls = sum(1 for girl in MC.girls if girl.works_today(check_autorest=True))
         waitresses = sum(1 for girl in MC.girls if girl.works_today(check_autorest=True) and girl.job == "waitress")
@@ -4055,32 +4056,32 @@ init -3 python:
         away = sum(1 for girl in MC.girls if girl.away)
         resting = sum(1 for girl in MC.girls if not girl.works_today(check_autorest=True) and not girl.away)
 
-        msg += str(working_girls) + __(" girl") + plural(working_girls) + __(" will be working tonight.")
+        msg += __("%s girl%s will be working tonight.") % (working_girls, plural(working_girls))
 
-        msg += "\n{size=-2}" + __("- Waitress: ") + event_color["good"] % str(waitresses) + "\n"
-        msg += __("- Dancer: ") + event_color["good"] % str(dancers) + "\n"
-        msg += __("- Masseuse: ") + event_color["good"] % str(masseuses) + "\n"
-        msg += __("- Geisha: ") + event_color["good"] % str(geishas) + "\n"
-        msg += __("- Whore: ") + event_color["good"] % str(whores) + "\n{/size}\n"
+        msg += __("\n{size=-2}- Waitress: %s\n") % (event_color["good"] % str(waitresses))
+        msg += __("- Dancer: %s\n") % (event_color["good"] % str(dancers))
+        msg += __("- Masseuse: %s\n") % (event_color["good"] % str(masseuses))
+        msg += __("- Geisha: %s\n") % (event_color["good"] % str(geishas))
+        msg += __("- Whore: %s\n{/size}\n") % (event_color["good"] % str(whores))
 
         if away > 1:
-            msg += str(away) + __(" are away on a quest or class.\n\n")
+            msg += __("%s are away on a quest or class.\n\n") % away
         elif away > 0:
-            msg += str(away) + __(" is away on a quest or class.\n\n")
+            msg += __("%s is away on a quest or class.\n\n") % away
 
-        msg += str(resting) + __(" girl") + plural(resting) + __(" will be resting at the brothel tonight.\n\n")
+        msg += __("%s girl%s will be resting at the brothel tonight.\n\n") % (resting, plural(resting))
 
         if farm.active:
             farm_training = sum(1 for girl in farm.girls if farm.programs[girl].target != "no training")
             farm_holding = sum(1 for girl in farm.girls if farm.programs[girl].target == "no training" and farm.programs[girl].holding != "rest")
             farm_resting = sum(1 for girl in farm.girls if farm.programs[girl].target == "no training" and farm.programs[girl].holding == "rest")
 
-            msg += str(len(farm.girls)) + __(" girl") + plural(len(farm.girls)) + __(" will be at the farm tonight.")
+            msg += __("%s girl%s will be at the farm tonight.") % (len(farm.girls), plural(len(farm.girls)))
 
-            msg += "\n{size=-2}" + __("- In training: ") + event_color["good"] % str(farm_training) + "\n"
-            msg += __("- In holding: ") + event_color["good"] % str(farm_holding) + "\n{/size}\n"
+            msg += __("\n{size=-2}- In training: %s\n") % (event_color["good"] % str(farm_training))
+            msg += __("- In holding: %s\n{/size}\n") % (event_color["good"] % str(farm_holding))
 
-            msg += str(farm_resting) + __(" girl") + plural(farm_resting) + __(" will be resting at the farm tonight.")
+            msg += __("%s girl%s will be resting at the farm tonight.") % (farm_resting, plural(farm_resting))
 
         return msg
 
@@ -4098,7 +4099,7 @@ init -3 python:
 
         for girl in MC.girls:
             if girl.run_away_check():
-                msg += event_color["a little bad contrast"] % (__("Warning! ") + girl.fullname + __(" is grumbling about running away.\n"))
+                msg += event_color["a little bad contrast"] % (__("Warning! %s is grumbling about running away.\n") % girl.fullname)
 
         # Tired and hurt girls
 
@@ -4154,7 +4155,7 @@ init -3 python:
 
         # Log incoming customers
 
-        cust_text = str(cust_nb) + " " + __("customers came to ") + brothel.name + "."
+        cust_text = __("%s customers came to %s.") % (cust_nb, brothel.name)
         if use_log:
             log.add_report(event_color["good"] % cust_text)
 
@@ -4183,7 +4184,7 @@ init -3 python:
 
         if use_log:
             for c in cust_list:
-                log.add_report(c.name + __(" came to the brothel. He wants to be attended to by a ") + __(c.wants_entertainment) + __(" and likes ") + __(c.wants_sex_act) + ".")
+                log.add_report(__("%s came to the brothel. He wants to be attended to by a %s and likes %s.") % (c.name, c.wants_entertainment, c.wants_sex_act))
 
         return cust_list, cust_text, cust_nb_dict
 
@@ -4503,7 +4504,7 @@ init -3 python:
                     thing.equip(it)
 
         if expires:
-            calendar.set_alarm(expires, StoryEvent(label = __("effect_expired"), call_args = [thing, effects]))
+            calendar.set_alarm(expires, StoryEvent(label = "effect_expired", call_args = [thing, effects]))
 
         if scope_list:
             update_effects(scope_list)

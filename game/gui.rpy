@@ -94,13 +94,13 @@ define gui.label_text_color = c_prune
 ## Fonts and Font Sizes ########################################################
 
 ## The font used for in-game text.
-define gui.text_font = "Lato-Regular.TTF"
+define gui.text_font = "NotoSansCJKsc-Regular.otf"
 
 ## The font used for character names.
-define gui.name_text_font = "Lato-Regular.TTF"
+define gui.name_text_font = "NotoSansCJKsc-Regular.otf"
 
 ## The font used for out-of-game text.
-define gui.interface_text_font = "Lato-Regular.TTF"
+define gui.interface_text_font = "NotoSansCJKsc-Regular.otf"
 
 ## CJK fonts - set these after adding a CJK font file to the game/ folder
 ## Example: Noto Sans CJK SC from https://github.com/notofonts/noto-cjk
@@ -523,3 +523,11 @@ init python:
 
         gui.nvl_button_width = 1860
         gui.nvl_button_xpos = 30
+
+## Default font is set to CJK font so Chinese never shows as tofu.
+## Noto Sans CJK covers Latin glyphs, so English remains readable.
+define gui.text_font = "NotoSansCJKsc-Regular.otf"
+define gui.name_text_font = "NotoSansCJKsc-Regular.otf"
+define gui.interface_text_font = "NotoSansCJKsc-Regular.otf"
+define gui.button_text_font = gui.interface_text_font
+define gui.choice_button_text_font = gui.text_font

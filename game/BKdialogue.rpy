@@ -90,9 +90,9 @@ init -3 python:
                 for stat, chg in self.changes:
                     chg = girl.change_stat(stat, chg)
                     if chg > 0:
-                        chg_note += "\n" + __(stat.capitalize()) + " increased" # To do: try and find a way to color this string
+                        chg_note += "\n%s increased" % __(stat.capitalize()) # To do: try and find a way to color this string
                     elif chg < 0:
-                        chg_note += "\n" + __(stat.capitalize()) + " decreased"
+                        chg_note += "\n%s decreased" % __(stat.capitalize())
 
                 renpy.notify(chg_note)
             norollback()

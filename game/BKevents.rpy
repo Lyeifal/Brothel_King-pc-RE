@@ -622,7 +622,7 @@ label reached_goal():
             call c1_reached_goal() from _call_c1_reached_goal
 
         else:
-            $ text1 = __("You have reached your current goal:\n") + __(game.get_goal_description()) + __("\n\nYou may now advance to the next chapter!")
+            $ text1 = __("You have reached your current goal:\n%s\n\nYou may now advance to the next chapter!") % game.get_goal_description()
 
             call screen OK_screen(__("Goal reached!"), text1, pic = Picture(path="UI/goal.webp"))
 
@@ -699,9 +699,9 @@ label advance_to_chapter(chapter, silent=False, free=False, start=False): # All 
             $ chosen_district = None
 
             if not start:
-                $ sill(__("You can now move to a larger brothel (maximum ")+ str(blist[chapter].get_maxbedrooms()) + __(" bedrooms).\nChoose a district to set up your new brothel."), interact = False)
+                $ sill(__("You can now move to a larger brothel (maximum %s bedrooms).\nChoose a district to set up your new brothel.") % str(blist[chapter].get_maxbedrooms()), interact = False)
             else:
-                $ sill(__("Choose the district you want to start at (maximum ")+ str(blist[chapter].get_maxbedrooms()) + __(" bedrooms)."), interact = False)
+                $ sill(__("Choose the district you want to start at (maximum %s bedrooms).") % str(blist[chapter].get_maxbedrooms()), interact = False)
 
             $ chosen_district = ui.interact()
 
@@ -714,12 +714,12 @@ label advance_to_chapter(chapter, silent=False, free=False, start=False): # All 
                         $ free_room_text = __("\nYou will receive a free room of your choice.")
 
                     elif chosen_district.room != []:
-                        $ free_room_text =  __("\nYou will receive a {b}free ") + __(chosen_district.room[0]) + "{/b}.\n\n{image=img_%s}" % chosen_district.room[0]
+                        $ free_room_text =  __("\nYou will receive a {b}free %s{/b}.\n\n{image=img_%s}") % (chosen_district.room[0], chosen_district.room[0])
 
                     else:
                         $ free_room_text = ""
 
-                    if renpy.call_screen("yes_no", __("{i}[chosen_district.description]{/i}\n\nDo you really want to move your brothel to {b}[chosen_district.name]{/b}?\n\n{size=-2}This will reset all your room improvements, but you will keep your furniture and decorations.") + __(free_room_text)):
+                    if renpy.call_screen("yes_no", __("%s%s") % (__("{i}[chosen_district.description]{/i}\n\nDo you really want to move your brothel to {b}[chosen_district.name]{/b}?\n\n{size=-2}This will reset all your room improvements, but you will keep your furniture and decorations."), free_room_text)):
                         $ change_district(chosen_district, free, start)
                         $ norollback()
 
@@ -1049,7 +1049,7 @@ label got_license(level):
 
     $ lic_name, lic_pic = license_dict[level]
 
-    call screen OK_screen(__("New license available!"), __("You have received a brand new ") + __(lic_name) + __(". Good work!"), pic = Picture(lic_pic, "UI/" + lic_pic))
+    call screen OK_screen(__("New license available!"), __("You have received a brand new %s. Good work!") % lic_name, pic = Picture(lic_pic, "UI/" + lic_pic))
 
     return
 
@@ -1246,7 +1246,7 @@ label run_away(girl):
             $ MC.good += 1
 
     if hunters:
-        $ calendar.set_alarm(calendar.time + hunt_delay, Event(label = __("found_runaway_girl"), object = (girl, hunters), order = 1))
+        $ calendar.set_alarm(calendar.time + hunt_delay, Event(label = "found_runaway_girl", object = (girl, hunters), order = 1))
 
     return
 
@@ -1333,7 +1333,7 @@ label found_runaway_girl(obj):
                         $ MC.good += 1
 
                 if come_back:
-                    $ calendar.set_alarm(calendar.time + come_back, Event(label = __("found_runaway_girl_come_back"), object = (girl, hunters), order = 1))
+                    $ calendar.set_alarm(calendar.time + come_back, Event(label = "found_runaway_girl_come_back", object = (girl, hunters), order = 1))
 
         else:
 
@@ -1397,7 +1397,7 @@ label found_runaway_girl_come_back(obj):
                 $ MC.good += 1
 
         if come_back:
-            $ calendar.set_alarm(calendar.time + come_back, Event(label = __("found_runaway_girl_come_back"), object = (girl, hunters), order = 1))
+            $ calendar.set_alarm(calendar.time + come_back, Event(label = "found_runaway_girl_come_back", object = (girl, hunters), order = 1))
 
     else:
 
@@ -1701,17 +1701,17 @@ label job_up(obj): # This event describes the results of job ups
 
 #        mylevel = girl.job_level[job]
 
-        text1 = girl.fullname + __(" is now ") + article(__(rank_name[job + str(mylevel)]))
+        text1 = __("%s is now %s") % (girl.fullname, article(rank_name[job + str(mylevel)]))
 
         primary, secondary, boost1, boost2 = job_up_dict[job]
 
-        text2 = "\n" + __(primary.capitalize()) + " {color=[c_emerald]}+" + str(job_up_change[mylevel][0]) + "{/color}"
-        text2 += "\n" + __(secondary.capitalize()) + " {color=[c_emerald]}+" + str(job_up_change[mylevel][1]) + "{/color}"
+        text2 = "\n%s {color=[c_emerald]}+%s{/color}" % (primary.capitalize(), str(job_up_change[mylevel][0]))
+        text2 += "\n%s {color=[c_emerald]}+%s{/color}" % (secondary.capitalize(), str(job_up_change[mylevel][1]))
 
         if job_up_change[mylevel][2] != 0:
 
-            text2 += "\n" + __(boost1.capitalize()) + " {color=[c_emerald]}+" + str(job_up_change[mylevel][2]) + "{/color}"
-            text2 += "\n" + __(boost2.capitalize()) + " {color=[c_emerald]}+" + str(job_up_change[mylevel][2]) + "{/color}"
+            text2 += "\n%s {color=[c_emerald]}+%s{/color}" % (boost1.capitalize(), str(job_up_change[mylevel][2]))
+            text2 += "\n%s {color=[c_emerald]}+%s{/color}" % (boost2.capitalize(), str(job_up_change[mylevel][2]))
 
         text2 += __("\n\n Skill level +1 {image=img_star}")
 
@@ -2779,10 +2779,10 @@ label visit_thieves_guild:
         with fade
     elif NPC_renza.love >= 20 and not NPC_renza.flags["story3"]:
         $ NPC_renza.flags["story3"] = True
-        $ calendar.set_alarm(calendar.time+1, Event(label = __("renza_onsen1"), order=1))
+        $ calendar.set_alarm(calendar.time+1, Event(label = "renza_onsen1", order=1))
     elif NPC_renza.love >= 30 and not NPC_renza.flags["story4"]:
         $ NPC_renza.flags["story4"] = True
-        $ calendar.set_alarm(calendar.time+1, Event(label = __("renza_onsen3"), order=1))
+        $ calendar.set_alarm(calendar.time+1, Event(label = "renza_onsen3", order=1))
 
     renza "Oh, hi, [MC.name]. Come to check on my merchandise?"
 
@@ -3117,7 +3117,7 @@ label visit_willow():
 
 label visit_gina():
 
-    if MC.get_items(name=__("Cimerian")):
+    if MC.get_items(name="Cimerian"):
         scene black
         show expression selected_location.get_pic(config.screen_width, int(config.screen_height*0.8)) at top
         with fade
@@ -3144,7 +3144,7 @@ label visit_gina():
                 python:
                     ev_list = []
 
-                    for it in MC.get_items(name=__("Cimerian")):
+                    for it in MC.get_items(name="Cimerian"):
                         if it.name == "Cimerian scrap":
                             price = 350
                             rv = 1
@@ -7084,8 +7084,8 @@ label tax_payment(): # Happens in the evening of the 1st each month if taxes are
 
             show taxgirl with dissolve
 
-            $ text1 = rand_choice([__("Good evening."), __("Hello, ") + MC.name +".", __("Hi, dear."), __("Knock knock."), __("Hey, ") + MC.name + ".", __("Hi.")])
-            $ text1 += " " + __(rand_choice(["Here comes the guild collection.", "Your friendly neighborhood tax collector is here.", "Your guild membership fees are due.", "I hope you have my... the Guild's money ready.", "It's time to pay your dues.", "It's time for the slavers' guild to collect its due.", "I hope you have gathered enough money for protection."]))
+            $ text1 = rand_choice([__("Good evening."), __("Hello, %s.") % MC.name, __("Hi, dear."), __("Knock knock."), __("Hey, %s.") % MC.name, __("Hi.")])
+            $ text1 += " %s" % __(rand_choice(["Here comes the guild collection.", "Your friendly neighborhood tax collector is here.", "Your guild membership fees are due.", "I hope you have my... the Guild's money ready.", "It's time to pay your dues.", "It's time for the slavers' guild to collect its due.", "I hope you have gathered enough money for protection."]))
 
             taxgirl "[text1!t]"
 
@@ -7644,7 +7644,7 @@ label tax_no_money():
 
         taxgirl "I'll see you on the 8th. This better be the first and last time, though..."
 
-        $ calendar.set_alarm(calendar.time + 7, StoryEvent(label=__("tax_payment"), type="night"))
+        $ calendar.set_alarm(calendar.time + 7, StoryEvent(label="tax_payment", type="night"))
 
     elif not NPC_taxgirl.flags["paid tax"] or NPC_taxgirl.love < 5:
 
@@ -7690,7 +7690,7 @@ label tax_no_money():
 
             taxgirl "Don't make me regret this."
 
-        $ calendar.set_alarm(calendar.time + 7, StoryEvent(label=__("tax_payment"), type="night"))
+        $ calendar.set_alarm(calendar.time + 7, StoryEvent(label="tax_payment", type="night"))
         $ NPC_taxgirl.love -= 3
 
     return
@@ -8117,7 +8117,7 @@ label is_broken(girl):
 
                     # Dice is thrown when the alarm is set to discourage save scumming
                     $ relinquish_girl(girl)
-                    $ calendar.set_alarm(calendar.time + 28, StoryEvent(label = __("asylum_return"), call_args = (girl, dice(100)), order = 1))
+                    $ calendar.set_alarm(calendar.time + 28, StoryEvent(label = "asylum_return", call_args = (girl, dice(100)), order = 1))
 
                     scene black with fade
 
@@ -8231,7 +8231,7 @@ label asylum_return(girl, score):
                 nun "Fine, we'll keep her here to recover and heal. There are a few spells we could try..."
 
                 # Dice is thrown when the alarm is set to discourage save scumming
-                $ calendar.set_alarm(calendar.time + 28, StoryEvent(label = __("asylum_return"), call_args = (girl, dice(100)), order = 1))
+                $ calendar.set_alarm(calendar.time + 28, StoryEvent(label = "asylum_return", call_args = (girl, dice(100)), order = 1))
 
                 scene black with fade
 
@@ -8323,7 +8323,7 @@ label asylum_no_room(girl):
 
     play sound s_gold
     $ MC.gold -= price
-    $ calendar.set_alarm(calendar.time + duration, StoryEvent(label=__("asylum_return2"), call_args=[girl], type="morning"))
+    $ calendar.set_alarm(calendar.time + duration, StoryEvent(label="asylum_return2", call_args=[girl], type="morning"))
 
     return False
 

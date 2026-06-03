@@ -496,7 +496,7 @@ init -2 python:
             if not story_flags["farm powers initiated"]:
                 if farm.active and not farm.powers and self.mojo["purple"] >= 5 and game.chapter >= 3:
                     # 2 days buffer to avoid overlap with chapter change events
-                    calendar.set_alarm(calendar.time + 2, StoryEvent(label=__("farm_powers_init"), type="morning"))
+                    calendar.set_alarm(calendar.time + 2, StoryEvent(label="farm_powers_init", type="morning"))
                     story_flags["farm powers initiated"] = True
 
             return mojo
@@ -717,7 +717,7 @@ init -2 python:
             if self.loan:
                 cost = self.loan.repay()
                 if self.loan.amount <= 0: # Loan repaid
-                    calendar.set_alarm(calendar.time+1, Event(label = __("loan_repaid")))
+                    calendar.set_alarm(calendar.time+1, Event(label = "loan_repaid"))
                 return cost
             return False
 
@@ -768,7 +768,7 @@ init -2 python:
             if message:
                 renpy.call("resource_gained", resource, number)
             else:
-                renpy.notify("+" + str(number) + " " + __(resource))
+                renpy.notify("+%s %s" % (number, resource))
 
         def collect_resource(self, resource): # Where resource is the resource name
 
@@ -896,11 +896,11 @@ init -2 python:
                 self.active_spells.append(spl)
                 self.add_effects(spl.effects)
 
-                renpy.call_screen("OK_screen", title = spl.name, message = self.name + __(" has learnt a new talent.\n\n") + __(spl.description), pic = spl.pic, pic_size = "small")
+                renpy.call_screen("OK_screen", title = spl.name, message = __("%s has learnt a new talent.\n\n%s") % (self.name, spl.description), pic = spl.pic, pic_size = "small")
 
             else:
                 self.known_spells.append(spl)
-                renpy.call_screen("OK_screen", title = spl.name, message = self.name + __(" has learnt a new spell.\n\n") + __(spl.description), pic = spl.pic, pic_size = "small")
+                renpy.call_screen("OK_screen", title = spl.name, message = __("%s has learnt a new spell.\n\n%s") % (self.name, spl.description), pic = spl.pic, pic_size = "small")
 
             spl.auto = False
 
@@ -953,11 +953,11 @@ init -2 python:
 
             if spell.auto == _time and spell not in self.active_spells:
                 if self.activate_spell(spell):
-                    msg = __("You have cast ") + __(spell.name) + "."
+                    msg = __("You have cast %s.") % spell.name
                     result = "success"
                     _sound = s_spell
                 else:
-                    msg = __("You failed to cast ") + __(spell.name) + "."
+                    msg = __("You failed to cast %s.") % spell.name
                     result = "fail"
                     _sound = s_fizzle
 
@@ -973,7 +973,7 @@ init -2 python:
             self.active_spells.remove(spl)
             self.remove_effects(spl.effects)
 
-            renpy.notify(__(spl.name) + __(" has expired"))
+            renpy.notify(__("%s has expired") % spl.name)
             # renpy.pause(0.5)
 
             return
@@ -1365,7 +1365,7 @@ init -2 python:
 
             if item.giveable:
                 self.items.remove(item)
-                renpy.say("", __("You give ") + taker.name + " {b}" + __(article(item.name)) + "{/b}.")
+                renpy.say("", __("You give %s {b}%s{/b}.") % (taker.name, article(item.name)))
                 result = taker.receive_gift(item)
                 if not result:
                     renpy.notify("%s: You cannot give this item to this person." % item.name)
@@ -1480,7 +1480,7 @@ init -2 python:
 
             return False
 
-        def get_items(self, target="any", type="any", name=__("any"), effect_type="any", effect_target="any", strict=False): # Where 'type' is a name, not an object. Use strict to avoid naming errors (such as Extractor MKI being mistaken with MKII)
+        def get_items(self, target="any", type="any", name="any", effect_type="any", effect_target="any", strict=False): # Where 'type' is a name, not an object. Use strict to avoid naming errors (such as Extractor MKI being mistaken with MKII)
 
             items = []
 
@@ -1819,7 +1819,7 @@ init -2 python:
             for effect in self.effects:
                 self.effect_dict[effect.type, effect.target].append(effect)
             self.weight = weight
-            self.description = __("{b}") + self.name.capitalize() + "{/b} (difficulty: " + self.get_difficulty() + "): " + get_description(base_description, effects)
+            self.description = __("{b}%s{/b} (difficulty: %s): %s") % (self.name.capitalize(), self.get_difficulty(), get_description(base_description, effects))
 
         def is_allowed(self):
             return brothel.get_effect("allow", self.name) and self.weight > 0
@@ -1894,7 +1894,7 @@ init -2 python:
 
             self.randomize()
 
-            self.name = article(__(self.adjective) + __(self.pop.get_rand_name())).capitalize()
+            self.name = article(__("%s%s") % (self.adjective, self.pop.get_rand_name())).capitalize()
 
             self.reason = ""
             self.satisfaction = self.get_effect("change", "overall customer satisfaction")
@@ -1919,7 +1919,7 @@ init -2 python:
 
         def set_gender(self, gender):
             self.gender = gender
-            self.name = article(__(self.adjective) + __(self.pop.get_rand_name(self.gender))).capitalize()
+            self.name = article(__("%s%s") % (self.adjective, self.pop.get_rand_name(self.gender))).capitalize()
 
         def get_pic(self, x, y):
             return self.pop.get_pic(x, y)
@@ -2079,15 +2079,15 @@ init -2 python:
             desc = ""
 
             if self.crazy:
-                crz_text = " {color=" + c_red + __("}%s is crazy!{/color}") % __(pronoun)
+                crz_text = __(" {color=%s}%s is crazy!{/color}") % (c_red, pronoun)
             else:
                 crz_text = ""
 
             if act == "idle job" or act in all_jobs:
-                return self.name + __(" came in.%s %s wanted to be entertained by a {b}%s{/b}. %s prefers %s girls.") % (crz_text, __(pronoun), __(self.wants_entertainment), __(pronoun), __(self.fetish.lower()))
+                return __("%s came in.%s %s wanted to be entertained by a {b}%s{/b}. %s prefers %s girls.") % (self.name, crz_text, pronoun, self.wants_entertainment, pronoun, self.fetish.lower())
 
             elif act == "idle whore":
-                return self.name + __("%s %s likes {b}%s{/b}. %s prefers %s girls.") % (crz_text, __(pronoun), __(self.wants_sex_act), __(pronoun), __(self.fetish.lower()))
+                return __("%s %s likes {b}%s{/b}. %s prefers %s girls.") % (self.name, crz_text, pronoun, self.wants_sex_act, pronoun, self.fetish.lower())
 
             # elif act in all_jobs:
             #     desc += self.name + __(" came in.%s\n%s wanted to be entertained by a {b}%s{/b}") % (crz_text, __(pronoun), __(self.wants_entertainment))
@@ -2096,11 +2096,11 @@ init -2 python:
             #     return desc
 
             elif act in all_sex_acts:
-                desc += self.name + __("%s %s likes {b}%s{/b}. %s prefers %s girls.") % (crz_text, __(pronoun), __(self.wants_sex_act), __(pronoun), __(self.fetish.lower()))
+                desc += __("%s %s likes {b}%s{/b}. %s prefers %s girls.") % (self.name, crz_text, pronoun, self.wants_sex_act, pronoun, self.fetish.lower())
                 if self.wants_sex_act != act:
                     desc += __(", but settled for {b}%s{/b}") % __(act)
                 if self.group:
-                    desc += __(". %s joined a {color=" + c_purple + "}{b}group of %s{/b}{/color}") % (pronoun, self.group)
+                    desc += __(". %s joined a {color=#9933FF}{b}group of %s{/b}{/color}") % (pronoun, self.group)
                 return desc + "." + crz_text
 
             elif act == "end":
@@ -2161,20 +2161,20 @@ init -2 python:
                     girl_score += 250
 
                     if trait_dict[self.fetish].verb == "be":
-                        reason = __(":cust: came looking for a ") + __(self.fetish) + __(" girl. :Pron: :verb: elated to meet :girl:.")
+                        reason = __(":cust: came looking for a %s girl. :Pron: :verb: elated to meet :girl:.") % self.fetish
                     elif trait_dict[self.fetish].verb == "be a":
-                        reason = __(":cust: came looking for a ") + __(self.fetish) + __(". :Pron: :verb: elated to meet :girl:.")
+                        reason = __(":cust: came looking for a %s. :Pron: :verb: elated to meet :girl:.") % self.fetish
                     elif trait_dict[self.fetish].verb == "have":
-                        reason = __(":cust: came looking for a girl with ") + __(self.fetish) + __(". :Pron: :verb: elated to meet :girl:.")
+                        reason = __(":cust: came looking for a girl with %s. :Pron: :verb: elated to meet :girl:.") % self.fetish
                     elif trait_dict[self.fetish].verb == "have a":
-                        reason = __(":cust: came looking for a girl with a ") + __(self.fetish) + __(". :Pron: :verb: elated to meet :girl:.")
+                        reason = __(":cust: came looking for a girl with a %s. :Pron: :verb: elated to meet :girl:.") % self.fetish
 
                 # 2. The customer looks for a particular stat
 
                 girl_score += girl.get_stat(self.preference) # Customers are looking for one stat in particular
 
                 if not reason:
-                    reason = __(":cust: wanted to meet ") + __(gstats_descript[self.preference]) + ". "
+                    reason = __(":cust: wanted to meet %s. ") % gstats_descript[self.preference]
 
                     if girl_score >= 50*self.rank:
                         reason += __(":Pron: :verb: elated to meet :girl:.")
@@ -2216,7 +2216,7 @@ init -2 python:
                 else:
                     sex_act = rand_choice([act for act in all_sex_acts if chosen.does[act] == True])
             if not self.reason:
-                self.reason = __(":cust: wanted to meet ") + __(gstats_descript[self.preference]) + __(". :pron: couldn't find a suitable girl.")
+                self.reason = __(":cust: wanted to meet %s. :pron: couldn't find a suitable girl.") % gstats_descript[self.preference]
 
             return chosen, sex_act
 
@@ -2379,8 +2379,8 @@ init -2 python:
                     renpy.say(carpenter, "Look, boss, you gotta have the right amount of resources before I can start the job.")
                     break
             else:
-                renpy.say(carpenter, __("A'right, looks like you've got the goods. Hand them over, and I'll get started on that ") + __(furn.name) + __(" right away."))
-                if renpy.call_screen("yes_no", __("Are you sure you want to build a ") + __(furn.name) + __(" for ") + __(furn.describe_cost()) + "?"):
+                renpy.say(carpenter, __("A'right, looks like you've got the goods. Hand them over, and I'll get started on that %s right away.") % furn.name)
+                if renpy.call_screen("yes_no", __("Are you sure you want to build a %s for %s?") % (furn.name, furn.describe_cost())):
                     MC.spend_resources(furn.cost)
                     norollback()
                     furn.start_building()
@@ -2548,7 +2548,7 @@ init -2 python:
                 base_cust_nb = self.customer_count - self.customer_count_dict["advertising"] - self.customer_count_dict["special"]
 
             if short:
-                des = __("{color=" + col + "}{b}%i customer%s{/b}{/color} expected") % (self.customer_count, plural(self.customer_count))
+                des = __("{color=%s}{b}%i customer%s{/b}{/color} expected") % (col, self.customer_count, plural(self.customer_count))
             else:
                 des = __("{b}%i customer%s{/b} are expected to come to the brothel tonight") % (self.customer_count, plural(self.customer_count))
 
@@ -2735,18 +2735,18 @@ init -2 python:
             msg = ""
 
             if short:
-                msg += __("Advertising: ") + brothel.count_customers_description(short=True)
+                msg += __("Advertising: %s") % brothel.count_customers_description(short=True)
 
-                msg += __("\nSecurity: The threat level is ") + self.estimate_threat_level(contrast=False) + "."
+                msg += __("\nSecurity: The threat level is %s.") % self.estimate_threat_level(contrast=False)
 
-                msg += __("\nMaintenance: ") + __(maintenance_desc[self.get_cleanliness()])
+                msg += __("\nMaintenance: %s") % maintenance_desc[self.get_cleanliness()]
 
             else:
-                msg += __("Advertising report: ") + brothel.count_customers_description()
+                msg += __("Advertising report: %s") % brothel.count_customers_description()
 
-                msg += __(".\n\nSecurity report: The threat to your brothel is ") + self.estimate_threat_level(contrast=True) + "."
+                msg += __(".\n\nSecurity report: The threat to your brothel is %s.") % self.estimate_threat_level(contrast=True)
 
-                msg += __("\n\nMaintenance report: ") + __(maintenance_desc[self.get_cleanliness()])
+                msg += __("\n\nMaintenance report: %s") % maintenance_desc[self.get_cleanliness()]
 
             return msg
 
@@ -2835,7 +2835,7 @@ init -2 python:
 
                 price = self.get_room_price()
 
-                text1 = __("Do you want to buy a new bedroom for ") + str(price) + " gold?"
+                text1 = __("Do you want to buy a new bedroom for %s gold?") % str(price)
 
                 if self.bedrooms < self.get_maxbedrooms():
 
@@ -3503,7 +3503,7 @@ init -2 python:
                     col = "bad"
                 bonus_text = " (%s)" % plus_text(bonus, color_scheme="standard")
 
-            description = event_color[col] % ("{b}%s/%s{/b}" % (int(total_value), maxrange)) + "%s. " % (bonus_text) + __(gstats_dict[self.name])
+            description = __("%s%s. %s") % (event_color[col] % ("{b}%s/%s{/b}" % (int(total_value), maxrange)), bonus_text, gstats_dict[self.name])
 
             if self.name in gstat_job_skill.keys():
                 return description % (self.parent.get_max_cust_served(gstat_job_skill[self.name]), plural(self.parent.get_max_cust_served(gstat_job_skill[self.name])))
@@ -3723,7 +3723,7 @@ init -2 python:
 
                 if context in ("slavemarket", "free"):
                     if self.archetype:
-                        des += __("\nUnlocks {b}") + __(self.archetype) + __("{/b} zodiac sign.")
+                        des += __("\nUnlocks {b}%s{/b} zodiac sign.") % self.archetype
 
                 return des
 
@@ -3762,7 +3762,7 @@ init -2 python:
             if short:
                 return get_description("", self.effects)
             else:
-                return get_description("\n{i}" + __(self.base_description) + "\n\n" + "{/i}", self.effects)
+                return get_description("\n{i}" + self.base_description + "\n\n{/i}", self.effects)
 
     class PerkArchetype(object):
 
@@ -4063,7 +4063,7 @@ init -2 python:
                 return "accelerates a girl's healing by " + str(val) + " day(s)."
 
             if self.type == "set":
-                text1 += "set " + target + __(" to ") + str(val)
+                text1 += "set %s%s" % (target, __(" to %s") % str(val))
                 if self.scope:
                     text1 += " (%s)" % self.scope
                 return text1
@@ -4107,35 +4107,35 @@ init -2 python:
 
             if self.type in ("gain", "instant"): # Permanent x gain (xp, reputation...)
                 try:
-                    text1 += __(str(round_int(val))) + " "
+                    text1 += __("%s ") % str(round_int(val))
                 except:
-                    text1 += __(str(val)) + " "
+                    text1 += __("%s ") % str(val)
 
                 if self.target.endswith("preference") or self.target.endswith("preferences"):
                     text1 += __(" to ")
 
             elif self.type == "change": # Temporary x effect (can be added or removed)
-                text1 += str(round_best(val, 2)) + __(" to ")
+                text1 += __("%s to ") % str(round_best(val, 2))
 
             elif self.type == "resist":
-                text1 += str(round_int(val)) + __(" negated {#1}")
+                text1 += __("%s negated {#1}") % str(round_int(val))
 
             elif self.type == "spillover":
                 percentage = round_int(val * 100)
 
-                text1 += str(percentage) + "% " + self.target + __(" spread out between other girls when earning ")
+                text1 += __("%s%% %s spread out between other girls when earning ") % (str(percentage), self.target)
 
             elif self.type == "boost": # Temporary % effect (can be removed)
 
                 percentage = round_int(val * 100)
 
-                text1 += str(percentage) + __("% to ")
+                text1 += __("%s%% to ") % str(percentage)
 
             elif self.type == "gift":
                 text1 += str(round_int(val)) + " "
 
             elif self.type == "increase satisfaction":
-                text1 += str(round_int(val)) + __(" to customer satisfaction for ")
+                text1 += __("%s to customer satisfaction for ") % str(round_int(val))
 
             if self.scope and not target.startswith(self.scope): # The second part handles the 'brothel rep' special case, although renaming brothel reputation to something different to avoid confusion with girl reputation would be a good long-term fix
                 #text1 += __(self.scope) + " "
@@ -4163,7 +4163,7 @@ init -2 python:
                     text1 += __(" for each customer when whoring")
 
                 else:
-                    text1 += __(" for each point of ") + __(self.scales_with)
+                    text1 += __(" for each point of %s") % self.scales_with
 
 
             if self.duration > 0:
@@ -4540,7 +4540,7 @@ init -2 python:
                 self.update_cust_limit(True)
 
             elif brothel.free_room:
-                if renpy.call_screen("yes_no", __("Do you really want to choose the ") + __(self.name) + __(" as your free room?")):
+                if renpy.call_screen("yes_no", __("Do you really want to choose the %s as your free room?") % self.name):
                     renpy.play(s_spell, "sound")
                     self.level = 1
                     self.update_cust_limit()
@@ -4550,7 +4550,7 @@ init -2 python:
                 renpy.say(sill, "Sorry Master, you do not have enough gold to build this room.")
 
 
-            elif renpy.call_screen("yes_no", __("Are you sure you want to build the ") + __(self.name) + __(" for ") + str(self.get_price()) + " gold?"):
+            elif renpy.call_screen("yes_no", __("Are you sure you want to build the %s for %s gold?") % (self.name, str(self.get_price()))):
                 MC.gold -= self.get_price()
                 brothel.total_value += self.get_price()
                 renpy.play(s_gold, "sound")
@@ -4565,7 +4565,7 @@ init -2 python:
                 self.update_cust_limit(True)
             elif self.get_price() >= MC.gold:
                 renpy.say(sill, "Sorry Master, you do not have enough gold to upgrade this room.")
-            elif renpy.call_screen("yes_no", __("Are you sure you want to upgrade the ") + __(self.name) + __(" for ") + str(self.get_price()) + " gold?"):
+            elif renpy.call_screen("yes_no", __("Are you sure you want to upgrade the %s for %s gold?") % (self.name, str(self.get_price()))):
                 MC.gold -= self.get_price()
                 brothel.total_value += self.get_price()
                 renpy.play(s_gold, "sound")
@@ -4854,8 +4854,8 @@ init -2 python:
 
         def get_results(self, girl):
 
-            title = __(self.type.capitalize()) + __(" completed")
-            description = girl.fullname + __(" has returned from her ") + __(self.type) + ". "
+            title = __("%s completed") % self.type.capitalize()
+            description = __("%s has returned from her %s. ") % (girl.fullname, self.type)
 
             if self.type == "class":
 
@@ -4884,25 +4884,25 @@ init -2 python:
                     description += __("She studied very hard and made exceptional progress.")
                     boost = 2.0
 
-                    girl.track_event("class good result", arg=__("She studied really hard for her ") + __(self.name)  + __(" class."))
+                    girl.track_event("class good result", arg=__("She studied really hard for her %s class.") % self.name)
 
                 elif perf >= 9:
                     description += __("She listened carefully to her teacher and made good progress.")
                     boost = 1.5
 
-                    girl.track_event("class good result", arg=__("She made good progress during her ") + __(self.name) + __(" class."))
+                    girl.track_event("class good result", arg=__("She made good progress during her %s class.") % self.name)
 
                 elif perf <= 2:
                     description += __("She was distracted and didn't pay much attention to her teacher, hindering her progress.")
                     boost = 0.75
 
-                    girl.track_event("class bad result", arg=__("She didn't study hard during her ") + __(self.name) + __(" class."))
+                    girl.track_event("class bad result", arg=__("She didn't study hard during her %s class.") % self.name)
 
                 elif perf <= 5:
                     description += __("She didn't care about the lessons at all, making almost no progress.")
                     boost = 0.5
 
-                    girl.track_event("class bad result", arg=__("She didn't study at all for her ") + __(self.name) + __(" class."))
+                    girl.track_event("class bad result", arg=__("She didn't study at all for her %s class.") % self.name)
 
                 else:
                     description += __("She made some progress with the help of her teacher.")
@@ -4966,11 +4966,11 @@ init -2 python:
                         boost *= 1.5
 
                 if had:
-                    description += __(" The customer was excited that she ") + __(and_text(had)) + "."
+                    description += __(" The customer was excited that she %s.") % and_text(had)
 
                 if self.neg_trait:
                     if girl.has_trait(self.neg_trait.name):
-                        description += __(" The customer was upset that she ") + __(self.neg_trait.get_past_tense()) + "."
+                        description += __(" The customer was upset that she %s.") % self.neg_trait.get_past_tense()
                         boost /= 2.0
 
                 boost *= girl.get_effect("boost", "quest results") # Note quest results boost is different from quest reward boost
@@ -5047,16 +5047,16 @@ init -10 python:
         def get_description(self):
             if not self.description:
                 if self.type == "gold":
-                    self.description = __("you must collect ") + str(int(self.value)) + " gold"
+                    self.description = __("you must collect %s gold") % str(int(self.value))
 
                 elif self.type == "ranked":
-                    self.description = str(self.target) + __(" of your girls must reach rank ") + rank_name[self.value]
+                    self.description = __("%s of your girls must reach rank %s") % (str(self.target), rank_name[self.value])
 
                 elif self.type == "reputation":
-                    self.description = __("your brothel must reach ") + str(int(self.value)) + __(" reputation")
+                    self.description = __("your brothel must reach %s reputation") % str(int(self.value))
 
                 elif self.type == "prestige":
-                    self.description = __("you must gather ") + str(int(self.value)) + __(" prestige")
+                    self.description = __("you must gather %s prestige") % str(int(self.value))
 
                 elif self.type == "story":
                     self.description = self.value # value for story events must be text
@@ -5450,9 +5450,9 @@ init -2 python:
                                     break
                                 if text1:
                                     text1 += __(" or ")
-                                text1 += __(cond) + " (" + __(pref) + ")"
+                                text1 += __("%s (%s)") % (cond, pref)
                             else:
-                                return False, __("You cannot train ") + __(self.act) + __(" yet. Requirements: ") + text1
+                                return False, __("You cannot train %s yet. Requirements: %s") % (self.act, text1)
 
                     elif self.type == "magic":
                         if magic_training_test_dict[self.act]:
@@ -5461,9 +5461,9 @@ init -2 python:
                                     break
                                 if text1:
                                     text1 += __(" or ")
-                                text1 += __(cond) + " (" + __(pref) + ")"
+                                text1 += __("%s (%s)") % (cond, pref)
                             else:
-                                return False, __("You cannot train ") + __(self.act) + __(" yet. Requirements: ") + text1
+                                return False, __("You cannot train %s yet. Requirements: %s") % (self.act, text1)
 
                     if mode == "advanced":
                         if MC.interactions < 2 and not free:
@@ -6633,7 +6633,7 @@ init -2 python:
                     shown = str(round_int(c))
 
                 if v != 0 and c != 0:
-                    text1 += "\n" + __(s.capitalize()) + ": " + shown
+                    text1 += __("\n%s: %s") % (s.capitalize(), shown)
 
             text1 += "\n"
 
@@ -6644,7 +6644,7 @@ init -2 python:
                     else:
                         shown = get_plus_rating(brk[a], "pref")
 
-                    text1 += "\n" + __(a.capitalize()) + " preference: " + shown
+                    text1 += __("\n%s preference: %s") % (a.capitalize(), shown)
                 else:
                     raise AssertionError("Unexpected breaking value for " + a + ". Please report this bug.")
 
@@ -7057,9 +7057,9 @@ init -2 python:
             if effects == None: effects = []
             self.effects = effects
             if hidden_effect:
-                self.description = __("{b}") + self.name + "{/b}" + ": " + base_description
+                self.description = __("{b}%s{/b}: %s") % (self.name, base_description)
             else:
-                self.description = __("{b}") + self.name + "{/b}" + ": " + get_description(base_description, effects)
+                self.description = __("{b}%s{/b}: %s") % (self.name, get_description(base_description, effects))
             self.upgrade = upgrade
             self.built = False
             self.can_deactivate = can_deactivate
@@ -7085,13 +7085,13 @@ init -2 python:
             if self.get_duration():
                 # Carpenter events
                 if not story_flags["carpenter first build"]:
-                    calendar.set_alarm(calendar.time+1, StoryEvent(label=__("iulia1"), type="morning"))
+                    calendar.set_alarm(calendar.time+1, StoryEvent(label="iulia1", type="morning"))
                     story_flags["carpenter first build"] = True
 
-                calendar.set_alarm(calendar.time + self.get_duration(), StoryEvent(label = __("furniture_built"), call_args=[self]))
+                calendar.set_alarm(calendar.time + self.get_duration(), StoryEvent(label = "furniture_built", call_args=[self]))
                 brothel.current_building = self
                 brothel.started_building = calendar.time
-                renpy.say(carpenter, __("I'll be finished in ") + str(self.get_duration()) + __(" days. I'm sure you'll be happy with the result."))
+                renpy.say(carpenter, __("I'll be finished in %s days. I'm sure you'll be happy with the result.") % str(self.get_duration()))
             else:
                 self.build()
 
@@ -7106,9 +7106,9 @@ init -2 python:
                     brothel.furniture.remove(furniture_dict[self.upgrade])
                 brothel.deactivate_furniture(furniture_dict[self.upgrade])
                 if message:
-                    renpy.call_screen("OK_screen", title = __("Furniture Upgraded"), message = __(self.upgrade) + __(" has been upgraded to a ") + __(self.name) + ".\n\n" + __(self.description), pic = self.pic, pic_size = "large")
+                    renpy.call_screen("OK_screen", title = __("Furniture Upgraded"), message = __("%s has been upgraded to a %s.\n\n%s") % (self.upgrade, self.name, self.description), pic = self.pic, pic_size = "large")
             elif message:
-                renpy.call_screen("OK_screen", title = __("Furniture Built"), message = __("A new ") + __(self.name) + __(" has been built.\n\n") + __(self.description), pic = self.pic, pic_size = "large")
+                renpy.call_screen("OK_screen", title = __("Furniture Built"), message = __("A new %s has been built.\n\n%s") % (self.name, self.description), pic = self.pic, pic_size = "large")
             self.activate()
 
             # Carpenter events
@@ -7116,17 +7116,17 @@ init -2 python:
                 add_event("iulia2", chance = 1.0, type="city", location = "gallows", once = True, AP_cost = 1)
                 story_flags["iulia2 registered"] = True
             if not story_flags["iulia3"] and story_flags["iulia2"] and len(brothel.furniture) >= 20:
-                calendar.set_alarm(calendar.time+2, StoryEvent(label=__("iulia3"), type="day"))
+                calendar.set_alarm(calendar.time+2, StoryEvent(label="iulia3", type="day"))
             if not story_flags["iulia4"] and story_flags["iulia3"] and furniture_dict["Good tools"].built:
-                calendar.set_alarm(calendar.time+1, StoryEvent(label=__("iulia4"), type="morning"))
+                calendar.set_alarm(calendar.time+1, StoryEvent(label="iulia4", type="morning"))
             if not story_flags["iulia5"] and story_flags["iulia4"] and len(brothel.furniture) >= 30:
-                calendar.set_alarm(calendar.time+2, StoryEvent(label=__("iulia5"), type="day"))
+                calendar.set_alarm(calendar.time+2, StoryEvent(label="iulia5", type="day"))
             if not story_flags["iulia6"] and story_flags["iulia5"] and furniture_dict["Great tools"].built and brothel.has_room("tavern"):
-                calendar.set_alarm(calendar.time+1, StoryEvent(label=__("iulia6"), type="day"))
+                calendar.set_alarm(calendar.time+1, StoryEvent(label="iulia6", type="day"))
             if not story_flags["iulia7"] and story_flags["iulia6"] and furniture_dict["Master tools"].built:
-                calendar.set_alarm(calendar.time+1, StoryEvent(label=__("iulia7"), type="morning"))
+                calendar.set_alarm(calendar.time+1, StoryEvent(label="iulia7", type="morning"))
             if not story_flags["iulia_H"] and story_flags["iulia7"] and len(brothel.furniture) >= 40:
-                calendar.set_alarm(calendar.time+2, StoryEvent(label=__("iulia_H"), type="morning"))
+                calendar.set_alarm(calendar.time+2, StoryEvent(label="iulia_H", type="morning"))
                 story_flags["iulia_H"] = True
             
             test_achievement("furniture")
@@ -7170,7 +7170,7 @@ init -2 python:
                 self.activate()
 
         def describe_cost(self):
-            dlist = [(str(amount) + " " + __(resource)) for resource, amount in self.cost]
+            dlist = [__("%s %s") % (str(amount), resource) for resource, amount in self.cost]
 
             return and_text(dlist)
 
@@ -7768,11 +7768,11 @@ init -2 python:
 
             for req in self.requirements:
                 if req.startswith("job"):
-                    r.append("{b}"+ __(req[4:].capitalize()) + "{/b} %s or better" % ("{image=img_star}" * self.limits[req]))
+                    r.append(__("{b}%s{/b} %s or better") % (req[4:].capitalize(), "{image=img_star}" * self.limits[req]))
                 elif req.startswith("skill"):
-                    r.append("{b}" + __(stat_name_dict[req[6:].capitalize()]) +  " " + str(self.limits[req]) + "{/b} or better")
+                    r.append(__("{b}%s %s{/b} or better") % (stat_name_dict[req[6:].capitalize()], str(self.limits[req])))
                 elif req.startswith("pref"):
-                    r.append("{b}" + __(req[5:].capitalize()) + " preference: " + self.limits[req].capitalize() + "{/b} or better")
+                    r.append(__("{b}%s preference: %s{/b} or better") % (req[5:].capitalize(), self.limits[req].capitalize()))
 
             return r
 

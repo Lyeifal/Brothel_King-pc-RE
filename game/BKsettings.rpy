@@ -37,21 +37,7 @@ init -10 python:
 
     ## Edit this dictionary to change the stat names that are displayed (change the right-hand text)
 
-    stat_name_dict = {
-                        "Beauty" : __("Beauty"),
-                        "Body" : __("Body"),
-                        "Charm" : __("Charm"),
-                        "Refinement" : __("Refinement"),
-                        "Sensitivity" : __("Sensitivity"),
-                        "Libido" : __("Libido"),
-                        "Constitution" : __("Constitution"),
-                        "Obedience" : __("Obedience"),
-                        "Service" : __("Service"),
-                        "Sex" : __("Sex"),
-                        "Anal" : __("Anal"),
-                        "Fetish" : __("Fetish"),
-                        "Energy" : __("Energy"),
-                    }
+    # <MIGRATED: see data/settings.rpy>
 
 #### BALANCE / CHEATS ####
 
@@ -378,41 +364,41 @@ init -10 python:
     fix_pic_balance_variety = {"act-based" : 0.5, "generic" : 0.5} # Generic pictures will be shown 50% of the time
     fix_pic_balance_accuracy = {"act-based" : 0.75, "generic" : 0.25} # Generic pictures will be shown 25% of the time
 
-    brothel_pics = {1 : __("1 slum brothel.webp"),
-                    2 : __("2 town brothel.webp"),
-                    3 : __("3 town brothel.webp"),
-                    4 : __("4 rich brothel.webp"),
-                    5 : __("5 rich brothel.webp"),
-                    6 : __("6 king brothel.webp"),
-                    7 : __("7 endless brothel.webp")
+    brothel_pics = {1 : "1 slum brothel.webp",
+                    2 : "2 town brothel.webp",
+                    3 : "3 town brothel.webp",
+                    4 : "4 rich brothel.webp",
+                    5 : "5 rich brothel.webp",
+                    6 : "6 king brothel.webp",
+                    7 : "7 endless brothel.webp"
                     }
 
     room_pics = {
                 # Common rooms
-                "tavern" : __("tavern.webp"),
-                "strip club" : __("strip club.webp"),
-                "onsen" : __("onsen.webp"),
-                "okiya" : __("okiya.webp"),
+                "tavern" : "tavern.webp",
+                "strip club" : "strip club.webp",
+                "onsen" : "onsen.webp",
+                "okiya" : "okiya.webp",
                 # Bedrooms
-                "Basic room" : __("basic room1.webp"),
-                "+Basic room+" : __("basic room2.webp"),
-                "*Basic room*" : __("basic room3.webp"),
-                "Standard room" : __("standard room1.webp"),
-                "+Standard room+" : __("standard room2.webp"),
-                "*Standard room*" : __("standard room3.webp"),
-                "Elegant room" : __("rich room1.webp"),
-                "+Elegant room+" : __("rich room2.webp"),
-                "*Elegant room*" : __("rich room3.webp"),
-                "Noble suite" : __("noble room1.webp"),
-                "+Royal suite+" : __("noble room2.webp"),
-                "*Imperial suite*" : __("noble room3.webp"),
+                "Basic room" : "basic room1.webp",
+                "+Basic room+" : "basic room2.webp",
+                "*Basic room*" : "basic room3.webp",
+                "Standard room" : "standard room1.webp",
+                "+Standard room+" : "standard room2.webp",
+                "*Standard room*" : "standard room3.webp",
+                "Elegant room" : "rich room1.webp",
+                "+Elegant room+" : "rich room2.webp",
+                "*Elegant room*" : "rich room3.webp",
+                "Noble suite" : "noble room1.webp",
+                "+Royal suite+" : "noble room2.webp",
+                "*Imperial suite*" : "noble room3.webp",
                 # Master bedroom
-                "Single room" : __("master/master0.webp"),
-                "Double room" : __("master/master1.webp"),
-                "Small suite" : __("master/master2.webp"),
-                "Luxury suite" : __("master/master3.webp"),
-                "Royal suite" : __("master/master4.webp"),
-                "Royal harem" : __("master/master5.webp"),
+                "Single room" : "master/master0.webp",
+                "Double room" : "master/master1.webp",
+                "Small suite" : "master/master2.webp",
+                "Luxury suite" : "master/master3.webp",
+                "Royal suite" : "master/master4.webp",
+                "Royal harem" : "master/master5.webp",
                 }
 
     night_pics = ["night.webp",]
@@ -458,21 +444,21 @@ init -10 python:
     no_girls_pics = ["harem.webp",]
 
     playerclass_pics = {
-                "Warrior" : __("UI/warrior.webp"),
-                "Wizard" : __("UI/wizard.webp"),
-                "Trader" : __("UI/trader.webp")
+                "Warrior" : "UI/warrior.webp",
+                "Wizard" : "UI/wizard.webp",
+                "Trader" : "UI/trader.webp"
                 }
 
     god_pics = {
-                "Arios" : __("UI/arios.webp"),
-                "Shalia" : __("UI/shalia.webp"),
-                None : __("UI/none.webp")
+                "Arios" : "UI/arios.webp",
+                "Shalia" : "UI/shalia.webp",
+                None : "UI/none.webp"
                 }
 
     alignment_pics = {
-                "good" : __("UI/al_good.webp"),
-                "evil" : __("UI/al_evil.webp"),
-                "neutral" : __("UI/al_neutral.webp")
+                "good" : "UI/al_good.webp",
+                "evil" : "UI/al_evil.webp",
+                "neutral" : "UI/al_neutral.webp"
                 }
 
 

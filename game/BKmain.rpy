@@ -490,7 +490,7 @@ label farm_loop():
         python:
             menu_list = [(str(len(hurt)) + " minion" + plural(len(hurt)) + " are hurt. What do you want to do?", None)]
 
-            if MC.get_items(target="minion", name=__("Healing powder")):
+            if MC.get_items(target="minion", name="Healing powder"):
                 for mn in hurt:
                     menu_list.append(("Use healing powder on [mn.name] (level " + str(mn.level) + " " + mn.type + ")", ("heal", mn)))
 
@@ -504,7 +504,7 @@ label farm_loop():
         if res == "heal":
             gizel normal "Fine, let's use this to get the poor bastard back on its feet. Or tentacles. Whatever."
 
-            $ MC.use_item(MC.get_items(target="minion", name=__("Healing powder"))[0])
+            $ MC.use_item(MC.get_items(target="minion", name="Healing powder")[0])
             $ mn.heal()
 
             play sound s_spell
@@ -630,9 +630,9 @@ label farm_loop():
 
                     # Healing powder
 
-                    if MC.get_items(target="minion", name=__("Healing powder")) and farm.get_hurt_minions():
+                    if MC.get_items(target="minion", name="Healing powder") and farm.get_hurt_minions():
                         for mn in farm.get_hurt_minions():
-                            menu_list.append(["Use healing powder on [mn.name] (level " + str(mn.level) + " " + mn.type + ")", ("heal", mn, MC.get_items(target="minion", name=__("Healing powder"))[0])])
+                            menu_list.append(["Use healing powder on [mn.name] (level " + str(mn.level) + " " + mn.type + ")", ("heal", mn, MC.get_items(target="minion", name="Healing powder")[0])])
 
                     # XP items
 
@@ -1680,7 +1680,7 @@ label perks(): # girl is passed by the previous label (girls)
 
         elif result == "commit":
             if new_perks:
-                if renpy.call_screen("yes_no", __("Are you sure you want to buy {b}") + str(len(new_perks)) + __(" new perk") + plural(len(new_perks)) + "{/b}?"):
+                if renpy.call_screen("yes_no", __("Are you sure you want to buy {b}%s new perk%s{/b}?") % (str(len(new_perks)), plural(len(new_perks)))):
                     play sound event_sounds["perk " + str(new_perks[-1].level)]
 
                     python:
@@ -1926,7 +1926,7 @@ label visit_merchant_loop():
                             $ test_achievements(["minions"])
 
                             if not story_flags["bought " + it.type]:
-                                $ calendar.set_alarm(calendar.time+1, Event(label = __("farm_first_") + it.type))
+                                $ calendar.set_alarm(calendar.time+1, Event(label = "farm_first_" + it.type))
                                 $ story_flags["bought " + it.type] = True
 
                         elif text1:
@@ -2247,11 +2247,11 @@ label postings:
             $ commited_quest = selected_quest # Needed to avoid UI problems
             if commited_quest.type == "class":
                 if story_flags["postings free class"]:
-                    $ t = __("Are you sure you want to register ") + selected_girl.name + __(" for this class {b}for free{/b}? She will be away for ") + str_int(commited_quest.duration) + __(" days.")
+                    $ t = __("Are you sure you want to register %s for this class {b}for free{/b}? She will be away for %s days.") % (selected_girl.name, str_int(commited_quest.duration))
                 else:
-                    $ t = __("Are you sure you want to register ") + selected_girl.name + __(" for this class? It will cost you ") + str_int(commited_quest.get_gold()) + __(" gold. She will be away for ") + str_int(commited_quest.duration) + __(" days.")
+                    $ t = __("Are you sure you want to register %s for this class? It will cost you %s gold. She will be away for %s days.") % (selected_girl.name, str_int(commited_quest.get_gold()), str_int(commited_quest.duration))
             else:
-                $ t = __("Are you sure you want to send ") + selected_girl.name + __(" on this assignment? She will be away for ") + str_int(commited_quest.duration) + __(" days.")
+                $ t = __("Are you sure you want to send %s on this assignment? She will be away for %s days.") % (selected_girl.name, str_int(commited_quest.duration))
 
             if renpy.call_screen("yes_no", t):
                 $ selected_girl.commit(commited_quest)

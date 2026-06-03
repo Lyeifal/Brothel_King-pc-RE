@@ -159,43 +159,7 @@ init -3 python:
 
     diff_list = ["very easy", "easy", "normal", "hard", "insane"] # A list is needed to show the values in order
 
-    diff_name = {"very easy" : __("Gigolo"), "easy" : __("Hustler"), "normal" : __("Whorelord"), "hard" : __("Brothel Prince"), "insane" : __("Brothel King{#1}")}
-
-    diff_description = {"very easy" : __("No challenge at all. You're either here for the story, or the pretty pictures. {i}All achievements are locked.{/i}"), "easy" : __("A basic challenge for new players."), "normal" : __("The classic experience."), "hard" : __("Want more challenge? Hard has got you covered."), "insane" : __("The ultimate challenge.")}
-
-    diff_settings = ["stats", "xp", "jp", "pref", "rep", "gold", "budget", "rewards", "resources", "prestige", "tax rate", "satisfaction", "security"] # A list is needed to show the values in order
-
-    diff_setting_name = {
-                        "gold" : __("Income"),
-                        "budget" : __("Customer budget"),
-                        "rewards" : __("Rewards"),
-                        "resources" : __("Resources"),
-                        "stats" : __("Girl skills"),
-                        "pref" : __("Preferences"),
-                        "xp" : __("XP"),
-                        "jp" : __("JP"),
-                        "rep" : __("Girl reputation"),
-                        "prestige" : __("Prestige"),
-                        "tax rate" : __("Guild Fee Offset"),
-                        "satisfaction" : __("Customer satisfaction"),
-                        "security" : __("Security grace period"),
-                        }
-
-    diff_setting_description = {
-                        "gold" : __("Affects your {b}Brothel Income{/b}."),
-                        "budget" : __("Changes cap on customers' individual {b}budget{/b}."),
-                        "rewards" : __("Affects {b}Rewards{/b} from quests, classes and monthly contracts."),
-                        "resources" : __("Affects the amount of {b}Resources{/b} you get from collecting and trading."),
-                        "stats" : __("Affects the progression of your girls' {b}Skills{/b}."),
-                        "pref" : __("Affects the progression of your girls' {b}Sexual Preferences{/b}."),
-                        "xp" : __("Affects the progression of your girls' {b}XP{/b}."),
-                        "jp" : __("Affects the progression of your girls' {b}JP{/b}."),
-                        "rep" : __("Affects the progression of your girls' {b}REP{/b}."),
-                        "prestige" : __("Affects the progression of your Main Character's {b}Prestige{/b}."),
-                        "tax rate" : __("Increases or decreases the Slave Guild's {b}fee{/b}."),
-                        "satisfaction" : __("Changes customer {b}satisfaction{/b} bonus."),
-                        "security" : __("Delays threat buildup by this number of days after each event."),
-                        }
+    # <MIGRATED: see data/settings.rpy>
 
     diff_settings_range = {
                         "gold" : {"min" : 0.1, "max" : 5.0,  "pace" : 0.05},
@@ -961,11 +925,11 @@ init -4 python:
 
     encounter_pics = {
                     "rape" : ("monster1.webp", "monster2.webp", "monster3.webp", "monster4.webp", "monster5.webp", "monster6.webp", "monster7.webp", "monster8.webp", "monster9.webp", "monster10.webp"),
-                    "impress" : __("impress0.webp"),
+                    "impress" : "impress0.webp",
                     "impress1" : ("impress1_1.webp", "impress1_2.webp", "impress1_3.webp", "impress1_4.webp", "impress1_5.webp", "impress1_6.webp", "impress1_7.webp", "impress1_8.webp", "impress1_9.webp", "impress1_10.webp"),
                     "impress2" : ("impress2_1.webp", "impress2_2.webp"),
                     "impress3" : ("impress3_1.webp", "impress3_2.webp", "impress3_3.webp"),
-                    "impress4" : __("impress4.webp"),
+                    "impress4" : "impress4.webp",
                     "slave" : ("slave1.webp", "slave2.webp", "slave3.webp", "slave4.webp", "slave5.webp", "slave6.webp", "slave7.webp", "slave8.webp", "slave9.webp", "slave10.webp"),
                     "slave_service" : (("slave service1.webp","slave service2.webp", "slave service3.webp", "slave service4.webp"), ("slave service5.webp","slave service6.webp", "slave service7.webp", "slave service8.webp")),
                     "slave_sex" : (("slave sex1.webp","slave sex2.webp", "slave sex3.webp", "slave sex4.webp"), ("slave sex5.webp","slave sex6.webp", "slave sex7.webp", "slave sex8.webp")),
@@ -2369,7 +2333,7 @@ init -4 python:
     roll_dict = {1 : __("critical failure"), 2 : __("failure"), 3 : __("neutral"), 4 : __("neutral"), 5 : __("success"), 6 : __("critical success")}
     result_dict = {-999 : __("very bad"), 1 : __("bad"), 6 : __("average"), 9 : __("good"), 12 : __("very good"), 15 : __("perfect")}
     result_colors = {"very bad" : c_red, "bad" : c_lightred, "average" : c_white, "good" : c_lightgreen, "very good" : c_green, "perfect" : c_orange}
-    result_star_dict = {"very bad" : __("{image=img_empty_star}")*5, "bad" : __("{image=img_star}")+"{image=img_empty_star}"*4, "average" : __("{image=img_star}")*2+"{image=img_empty_star}"*3, "good" : __("{image=img_star}")*3+"{image=img_empty_star}"*2, "very good" : __("{image=img_star}")*4+"{image=img_empty_star}", "perfect" : __("{image=img_star}")*5}
+    result_star_dict = {"very bad" : "{image=img_empty_star}"*5, "bad" : "{image=img_star}"+"{image=img_empty_star}"*4, "average" : "{image=img_star}"*2+"{image=img_empty_star}"*3, "good" : "{image=img_star}"*3+"{image=img_empty_star}"*2, "very good" : "{image=img_star}"*4+"{image=img_empty_star}", "perfect" : "{image=img_star}"*5}
 
     reversed_result_dict = {v: k for k, v in result_dict.items()}
 
@@ -2383,217 +2347,7 @@ init -4 python:
 #    result_names = {v: k for k, v in result_value.items()}
 #    roll_names = {v: k for k, v in roll_value.items()}
 
-    perform_job_dict = {
-#                        "roll_critical failure" : __("\n{color=[c_red]}%s wasn't trying hard today. She barely even paid attention to what she was doing.{/color}"),
-#                        "roll_failure" : __("\n%s wasn't really into it."),
-#                        "roll_neutral" : __("\n%s went about her job as usual."),
-#                        "roll_success" : __("\n%s was really motivated today."),
-#                        "roll_critical success" : __("\n{color=[c_green]}%s did everything she could to please the customers.{/color}"),
-
-                        "waitress_stats" : (("charm", 6), ("constitution", 2), ("body", 1), ("beauty", 1)),
-                        "waitress_changes" : ((("charm",), 100, 2), (("constitution",), 35, 1), (("obedience", "body", "beauty"), 15, 1), (("sensitivity",), 15, -1)),
-
-                        "waitress_init" : __("%s served drinks to %s customers."),
-                        "waitress_tags" : ["waitress"],
-                        "waitress_tags2" : ["maid", "geisha"],
-
-                        "dancer_stats" : (("body", 6), ("libido", 2), ("refinement", 1), ("charm", 1)),
-                        "dancer_changes" : ((("body",), 100, 2), (("libido",), 35, 1), (("constitution", "refinement", "charm"), 15, 1), (("obedience",), 15, -1)),
-
-                        "dancer_init" : __("%s danced sexily for %s customers."),
-                        "dancer_tags" : ["dancer"],
-                        "dancer_tags2" : ["fight"],
-
-                        "masseuse_stats" : (("beauty", 6), ("sensitivity", 2), ("refinement", 1), ("body", 1)),
-                        "masseuse_changes" : ((("beauty",), 100, 2), (("sensitivity",), 35, 1), (("refinement", "body", "libido"), 15, 1), (("constitution",), 15, -1)),
-
-                        "masseuse_init" : __("%s gave a hot massage to %s customers."),
-                        "masseuse_tags" : ["masseuse"],
-                        "masseuse_tags2" : ["swim"],
-
-                        "geisha_stats" : (("refinement", 6), ("obedience", 2), ("beauty", 1), ("charm", 1)),
-                        "geisha_changes" : ((("refinement",), 100, 2), (("obedience",), 35, 1), (("beauty", "charm", "sensitivity"), 15, 1), (("libido",), 15, -1)),
-
-                        "geisha_init" : __("%s entertained %s customers with a display of traditional arts."),
-                        "geisha_tags" : ["geisha"],
-                        "geisha_tags2" : ["maid", "waitress", "date"], # Date pictures can be used as substitutes for geisha
-
-                        "waitress_very bad" : __("\n{color=[c_red]}%s spilled drinks everywhere and didn't even apologize. The customers thought the service was terrible and complained."),
-                        "waitress_bad" : __("\n{color=[c_lightred]}%s was shy and clumsy. The customers grumbled that the service was bad."),
-                        "waitress_average" : __("\n%s served everyone and chatted with the customers. They thought she was ok."),
-                        "waitress_good" : __("\n{color=[c_lightgreen]}%s flirted with the customers as she served them drinks, making them feel welcome."),
-                        "waitress_very good" : __("\n{color=[c_green]}%s traded rowdy jokes with the customers, flashing her goods while serving. Everyone loved her."),
-                        "waitress_perfect" : __("\n{color=[c_orange]}%s worked without underwear today and used all of her charms to drive the customers wild. They completely fell over for her."),
-
-                        "dancer_very bad" : __("\n{color=[c_red]}%s has two left feet. Her dancing was embarrassingly bad and the customers booed and threw things at her."),
-                        "dancer_bad" : __("\n{color=[c_lightred]}%s's dance was awkward and uninteresting."),
-                        "dancer_average" : __("\n%s danced suggestively in front of the customers."),
-                        "dancer_good" : __("\n{color=[c_lightgreen]}The club heated up as %s danced around the stage, flashing her goods."),
-                        "dancer_very good" : __("\n{color=[c_green]}The crowd went wild as %s danced and stripped on stage, her skin glistening with sweat as she worked the pole."),
-                        "dancer_perfect" : __("\n{color=[c_orange]}The customers couldn't take their eyes off %s as she waved to the music, slowly and sexily stripping off, until she stood there naked and wet under their perverted gaze."),
-
-                        "masseuse_very bad" : __("\n{color=[c_red]}%s clumsily went around giving back rubs, hurting some of them in the process. They grumbled and told her to go away."),
-                        "masseuse_bad" : __("\n{color=[c_lightred]}%s tried to give customers a relaxing rub. Her technique was lacking, and the customers were left unsatisfied."),
-                        "masseuse_average" : __("\n%s gave massages to customers in the onsen, helping them relax and feel more comfortable."),
-                        "masseuse_good" : __("\n{color=[c_lightgreen]}%s joined the customers in the onsen, wearing only a towel, and gave them a nice massage. The customers were visibly turned on after she was done."),
-                        "masseuse_very good" : __("\n{color=[c_green]}The towels slipped off as %s gave the customers a passionate body massage. She used her hands and tongue to turn them on while they waited for their turn."),
-                        "masseuse_perfect" : __("\n{color=[c_orange]}%s went naked into the onsen among the customers, rubbing her body against them until they came all over her silky skin."),
-
-                        "geisha_very bad" : __("\n{color=[c_red]}%s completely lacked class and came across as clumsy and ignorant. The customers complained that she was just a street girl dressed like a geisha."),
-                        "geisha_bad" : __("\n{color=[c_lightred]}%s kept trying to act like a real geisha when serving tea; it was obvious to anyone that she was not the real thing, though, and customers quickly lost interest."),
-                        "geisha_average" : __("\n%s played a little shamisen and chatted with the customers, helping them relax and forget their worries..."),
-                        "geisha_good" : __("\n{color=[c_lightgreen]}%s held a tea ceremony with the customers, exchanging pleasantries while she nonchalantly let her kimono slide to the side, revealing some skin."),
-                        "geisha_very good" : __("\n{color=[c_green]}%s was the life of the party as she greeted customers by their name and complimented them. Wearing a short, revealing kimono, she brushed against their bodies, leaving them all turned on by her scent."),
-                        "geisha_perfect" : __("\n{color=[c_orange]}%s was the epitome of the geisha, being in turn sweet, gifted, witty, and sexy as hell. She wore a see-through kimono, kinkily displaying her cleavage and thighs to drive the customers wild."),
-
-                        "flasher" : __(" A customer dared her to show her tits, and she proudly displayed them for everyone to see."),
-                        "temptress" : __(" She convinced the customer%s to try it."),
-                        "catgirl" : __(" She purred as she eagerly drank all the customer's cum and licked his dick clean."),
-                        "virgin" : __(" The customer was amazed that she was a virgin and paid extra."),
-                        "virgin_group" : __(" The customers were amazed that she was a virgin and paid extra."),
-                        "reroll" : __(" She barely avoided a catastrophe."),
-                        "unlucky" : "",
-                        "lucky" : "",
-                        "random item" : __(" The customer%s left something valuable."),
-                        "beauty bonus" : __(" The customer%s found her beauty stunning."),
-                        "body bonus" : __(" The customer%s loved her curves."),
-                        "charm bonus" : __(" The customer%s fell under her charm."),
-                        "refinement bonus" : __(" The customer%s loved how refined she was."),
-                        "libido bonus" : __(" The customer%s thought she was hot."),
-                        "obedience bonus" : __(" The customer%s liked how she took orders."),
-                        "constitution bonus" : __(" The customer%s thought she was fit."),
-                        "sensitivity bonus" : __(" The customer%s loved how sensitive she was."),
-
-                        "DT_group" : __(" The customers took turns sticking their dicks down her throat as deep as they could."),
-                        "DT" : __(" The customer was amazed that he could stick his dick so far down her throat."),
-                        "bukkake" : __(" She was fucked hard in her every hole, then the customers took turns coming all over her face."),
-                        "creampie" : __(" He came all over her pussy and belly while she moaned with pleasure."),
-                        "creampie_group" : __(" They took turns coming into her pussy until it dripped buckets of cum."),
-                        "anal creampie" : __(" He fucked her ass hard then shot a huge load in her open asshole."),
-                        "anal creampie_group" : __(" They took turns fucking and cumming in her ass until her belly was swollen with cum."),
-                        "cum on face" : __(" He moaned and came loads all over her face and hair."),
-                        "cum on face_group" : __(" They moaned, cumming loads all over her face and hair."),
-                        "swallow" : __(" She eagerly swallowed the cum as it dripped down her throat."),
-                        "irrumatio" : "",
-
-                        "not satisfied" : __(" :Pron: was disappointed that she wouldn't do what :pron: wanted."),
-                        "group not satisfied" : __(" She wouldn't do it, but they didn't mind because group %s is hot."),
-                        "bisexual not satisfied" : __(" In the end :pron: got %s, but :pron: was happy to let the girls have their way."),
-
-                        "roll_critical failure" : __("\n{color=[c_red]}%s wasn't trying hard today. She barely even paid attention to what she was doing.{/color}"),
-                        "roll_failure" : __("\n%s wasn't really into it."),
-                        "roll_neutral" : __("\n%s went about her job as usual."),
-                        "roll_success" : __("\n%s was really motivated today."),
-                        "roll_critical success" : __("\n{color=[c_green]}%s did everything she could to please.{/color}"),
-
-                        "bisexual_roll_critical failure" : __("\n{color=[c_red]}%s weren't trying hard today. They weren't paying attention to what they were doing.{/color}"),
-                        "bisexual_roll_failure" : __("\n%s weren't really into it."),
-                        "bisexual_roll_neutral" : __("\n%s went about their job as usual."),
-                        "bisexual_roll_success" : __("\n%s were really motivated and playful today."),
-                        "bisexual_roll_critical success" : __("\n{color=[c_green]}%s did everything they could to please the customers and each other.{/color}"),
-
-                        "anal_stats" : (("anal", 6), ("constitution", 2), ("body", 1), ("sex",1)),
-                        "anal_changes" : ((("anal",), 100, 2), (("constitution",), 70, 1), (("libido", "obedience", "body"), 25, 1), (("sensitivity",), 25, -1)),
-                        "anal_init" : __(" :Pron: wanted to fuck %s in the ass."),
-                        "anal_tags" : ["anal"],
-
-                        "sex_stats" : (("sex", 6), ("libido", 2), ("beauty", 1), ("service",1)),
-                        "sex_changes" : ((("sex",), 100, 2), (("libido",), 70, 1), (("sensitivity", "constitution", "beauty"), 25, 1), (("obedience",), 25, -1)),
-                        "sex_init" : __(" :Pron: wanted to have sex with %s."),
-                        "sex_tags" : ["sex"],
-
-                        "service_stats" : (("service", 6), ("sensitivity", 2), ("charm", 1), ("fetish",1)),
-                        "service_changes" : ((("service",), 100, 2), (("sensitivity",), 70, 1), (("obedience", "libido", "charm"), 25, 1), (("constitution",), 25, -1)),
-                        "service_init" : __(" :Pron: wanted %s to give service."),
-                        "service_tags" : ["service"],
-
-                        "fetish_stats" : (("fetish", 6), ("obedience", 2), ("refinement", 1), ("anal",1)),
-                        "fetish_changes" : ((("fetish",), 100, 2), (("obedience",), 70, 1), (("constitution", "sensitivity", "refinement"), 25, 1), (("libido",), 25, -1)),
-                        "fetish_init" : __(" :Pron: had some very special requests for %s."),
-                        "fetish_tags" : ["fetish"],
-
-                        "whore_init" : __("%s came to your brothel and chose %s."),
-                        "bisexual_tags" : ["bisexual"],
-                        "group_tags" : ["group"],
-
-                        "M anal_very bad" : __("\n{color=[c_red]}%s had a hard time and didn't like it one bit. The customer quickly lost interest and left grumbling."),
-                        "M anal_bad" : __("\n{color=[c_lightred]}%s doesn't like it in the ass and it showed. She didn't enjoy herself and neither did the customer."),
-                        "M anal_average" : __("\n%s moans as the customer gets his way with her ass. She's growing to enjoy anal sex."),
-                        "M anal_good" : __("\n{color=[c_lightgreen]}%s takes it up the ass with moans of pleasure. The customer comes all over her butt with a delighted smile on his face."),
-                        "M anal_very good" : __("\n{color=[c_green]}Looks like this girl was made for anal. %s uses her ass to work the customer's dick until it's hard as a rock, inviting him to cum and fill her up."),
-                        "M anal_perfect" : __("\n{color=[c_orange]}%s is an anal sex goddess. She takes it up the ass with unbridled pleasure, crying out loud as the customer releases his seed deep into her belly."),
-
-                        "M sex_very bad" : __("\n{color=[c_red]}%s is a terrible lay, not enjoying it one bit as the customer violates her body. The customer thought she was awful and left complaining."),
-                        "M sex_bad" : __("\n{color=[c_lightred]}%s tries her best to give the customer a good time, but her fake cries are rather obvious. The customer left relieved but disappointed."),
-                        "M sex_average" : __("\n%s fucks with the customer and tries a few interesting positions. She is starting to enjoy herself and some of her moans were clearly not fake."),
-                        "M sex_good" : __("\n{color=[c_lightgreen]}After a quick bout of foreplay, %s and the customer have wild sex in various positions until he cums hard all over her body."),
-                        "M sex_very good" : __("\n{color=[c_green]}%s is amazing and works that dick like a succubus. She reaches orgasm and cries out as the customer pumps warm cum into her."),
-                        "M sex_perfect" : __("\n{color=[c_orange]}%s cannot get enough, screaming loudly as she enjoys being fucked through multiple orgasms and being covered in the customer's sticky cum."),
-
-                        "M service_very bad" : __("\n{color=[c_red]}The customer complains that %s doesn't know how to work a dick properly. The customer leaves, upset that she didn't even manage to finish him off."),
-                        "M service_bad" : __("\n{color=[c_lightred]}%s awkwardly tries to service the customer, but her technique is clearly lacking. He ends up masturbating while she looks on with shame."),
-                        "M service_average" : __("\n%s does her best to service the customer, slowly developing her own technique. After teasing the customer for a while, she smiles as he releases his load on her face."),
-                        "M service_good" : __("\n{color=[c_lightgreen]}%s uses her skills to make the customer cum quickly and repeatedly, covering her face and tits with bodily fluids."),
-                        "M service_very good" : __("\n{color=[c_green]}%s is already wet thinking of the customer's dick as she starts sucking and licking it. It isn't long until the customer comes hard in her mouth."),
-                        "M service_perfect" : __("\n{color=[c_orange]}%s offers the customer her body to play with and makes wet sounds as she expertly sucks him off. She savours the feeling of hot, sticky cum on her face and in her mouth, begging the customer for more."),
-
-                        "M fetish_very bad" : __("\n{color=[c_red]}%s is scared and tense under the customer's touch. She is not enjoying this at all and the customer leaves completely unsatisfied."),
-                        "M fetish_bad" : __("\n{color=[c_lightred]}%s shivers as the customer does new, weird things to her body. The customer watches her reactions with some interest at first, but the slow pace quickly bores him."),
-                        "M fetish_average" : __("\n%s moans a little as she is blindfolded and tied up. She seems more curious than scared about what's happening to her now, and the customer has fun playing with her for a while."),
-                        "M fetish_good" : __("\n{color=[c_lightgreen]}%s shivers with excitement as she feels the bite of the ropes in her skin. The customer teases her body until she is completely wet, begging to be fucked."),
-                        "M fetish_very good" : __("\n{color=[c_green]}%s enjoys the mix of pleasure and pain and begs submissively for more. The customer violates her as she's tied up, bringing her to climax as he cums hard all over her."),
-                        "M fetish_perfect" : __("\n{color=[c_orange]}%s enjoys everything the customer does to her, suggesting new, humiliating ways to tie herself up and get punished. She screams with pain and pleasure, cumming multiple times as her various holes are violated."),
-
-                        "M bisexual_very bad" : __("\n{color=[c_red]}%s were clumsy and uncooperative. The customer quickly got bored and left, grumbling about a refund."),
-                        "M bisexual_bad" : __("\n{color=[c_lightred]}It's obvious %s aren't really good at this and are just pretending. The customer fucks them one after the other, but there is no chemistry."),
-                        "M bisexual_average" : __("\n%s slowly finger their pussies while the customer looks on with lust. He soon joins them, and they do their best to make it a memorable time."),
-                        "M bisexual_good" : __("\n{color=[c_lightgreen]}%s are eagerly touching and teasing each other. They playfully try new ways to excite the customer, and he quickly cums as they play with each other's breasts and pussy."),
-                        "M bisexual_very good" : __("\n{color=[c_green]}%s love cock as much as they love each other. They both work the customer's dick using their hands, mouths and bodies, making him come all over them."),
-                        "M bisexual_perfect" : __("\n{color=[c_orange]}%s are perfect sex kittens, expertly licking each other's cunt while the customer fucks their every hole. They eagerly kiss and lick the cum from each other's mouth as he looks on with bliss."),
-
-                        "group_very bad" : __("\n{color=[c_red]}With too many customers to satisfy, %s seems at a loss and doesn't know what to do. The group leaves unsatisfied and complaining."),
-                        "group_bad" : __("\n{color=[c_lightred]}%s is kind of shy in a group. She tries to do her job but the customers find her performance rather underwhelming."),
-                        "group_average" : __("\nThe customers take turns fucking %s. She takes it all in stride."),
-                        "group_good" : __("\n{color=[c_lightgreen]}%s works hard to please every customer in the group, bringing them to a grand finish using her every hole. A moment they will not soon forget."),
-                        "group_very good" : __("\n{color=[c_green]}%s is fucked long and hard by the customers and it looks like she isn't ready to stop. It looks like no matter how many times they fuck her, she always wants another dick."),
-                        "group_perfect" : __("\n{color=[c_orange]}%s couldn't wait to have her every hole filled by the customers, not letting them rest until they have spurted their cum over every inch of her body."),
-
-                        "F anal_very bad" : __("\n{color=[c_red]}%s had a hard time and didn't like it one bit. The customer quickly lost interest and left grumbling."),
-                        "F anal_bad" : __("\n{color=[c_lightred]}%s doesn't like it in the ass and it showed. She didn't enjoy herself and neither did the customer."),
-                        "F anal_average" : __("\n%s moans as the customer gets her way with her ass. She's growing to enjoy anal sex."),
-                        "F anal_good" : __("\n{color=[c_lightgreen]}%s takes it up the ass with moans of pleasure. The customer pounds her butt with a delighted smile on her face."),
-                        "F anal_very good" : __("\n{color=[c_green]}Looks like this girl was made for anal. %s uses her ass to grind against the customer's pussy until it becomes very wet, inviting her to cum together with her."),
-                        "F anal_perfect" : __("\n{color=[c_orange]}%s is an anal sex goddess. She takes it up the ass with unbridled pleasure, crying out loud as the customer reaches her own intense orgasm."),
-
-                        "F sex_very bad" : __("\n{color=[c_red]}%s is a terrible lay, not enjoying it one bit as the customer violates her body. The customer thought she was awful and left complaining."),
-                        "F sex_bad" : __("\n{color=[c_lightred]}%s tries her best to give the customer a good time, but her fake cries are rather obvious. The customer left relieved but disappointed."),
-                        "F sex_average" : __("\n%s fucks with the customer and tries a few interesting positions. She is starting to enjoy herself and some of her moans were clearly not fake."),
-                        "F sex_good" : __("\n{color=[c_lightgreen]}After a quick bout of foreplay, %s and the customer have wild sex in various positions until they both cum hard."),
-                        "F sex_very good" : __("\n{color=[c_green]}%s is amazing and works that pussy like a succubus. She reaches orgasm and cries out as the customer gushes love juice all over her."),
-                        "F sex_perfect" : __("\n{color=[c_orange]}%s cannot get enough, screaming loudly as she enjoys being fucked through multiple orgasms and being covered in the customer's sticky love juice."),
-
-                        "F service_very bad" : __("\n{color=[c_red]}The customer complains that %s doesn't know how to work a pussy properly. She leaves, upset that she didn't even manage to finish her off."),
-                        "F service_bad" : __("\n{color=[c_lightred]}%s awkwardly tries to service the customer, but her technique is clearly lacking. The customer ends up masturbating while she looks on with shame."),
-                        "F service_average" : __("\nShe does her best to service the customer, slowly developing her own technique. After teasing the customer for a while, %s smiles as she receives the customer's splashing love juices all over her face."),
-                        "F service_good" : __("\n{color=[c_lightgreen]}%s uses her skills to make the customer squirt hard, covering her face and tits with bodily fluids."),
-                        "F service_very good" : __("\n{color=[c_green]}%s is already wet thinking of the customer's pussy as she starts fingering and licking it. It isn't long until the customer comes hard from her tongue work."),
-                        "F service_perfect" : __("\n{color=[c_orange]}%s offers the customer her body to play with and makes wet sounds as she expertly licks her out. She savours the feeling of hot, sticky love juice on her face and in her mouth, begging the customer for more."),
-
-                        "F fetish_very bad" : __("\n{color=[c_red]}%s is scared and tense under the customer's touch. She is not enjoying this at all and the customer leaves completely unsatisfied."),
-                        "F fetish_bad" : __("\n{color=[c_lightred]}%s shivers as the customer does new, weird things to her body. The customer watches her reactions with some interest at first, but the slow pace quickly bores her."),
-                        "F fetish_average" : __("\n%s moans a little as she is blindfolded and tied up. She seems more curious than scared about what's happening to her now, and the customer has fun playing with her for a while."),
-                        "F fetish_good" : __("\n{color=[c_lightgreen]}%s shivers with excitement as she feels the bite of the ropes in her skin. The customer teases her body until she is completely wet, begging to be fucked."),
-                        "F fetish_very good" : __("\n{color=[c_green]}%s enjoys the mix of pleasure and pain and begs submissively for more. The customer violates her as she's tied up, bringing her to climax as she cums hard with her."),
-                        "F fetish_perfect" : __("\n{color=[c_orange]}%s enjoys everything the customer does to her, suggesting new, humiliating ways to tie herself up and get punished. She screams with pain and pleasure, cumming multiple times as her various holes are violated."),
-
-                        "F bisexual_very bad" : __("\n{color=[c_red]}%s were clumsy and uncooperative. The customer quickly got bored and left, grumbling about a refund."),
-                        "F bisexual_bad" : __("\n{color=[c_lightred]}It's obvious %s aren't really good at this and are just pretending. The customer fucks them one after the other, but there is no chemistry."),
-                        "F bisexual_average" : __("\n%s slowly finger their pussies while the customer looks on with lust. She soon joins them, and they do their best to make it a memorable time."),
-                        "F bisexual_good" : __("\n{color=[c_lightgreen]}%s are eagerly touching and teasing each other. They playfully try new ways to excite the customer, and she quickly cums as they play with each other's breasts and pussies."),
-                        "F bisexual_very good" : __("\n{color=[c_green]}%s love pussy. They both work the customer's erogenous zones using their hands, mouths and bodies, making her come again and again."),
-                        "F bisexual_perfect" : __("\n{color=[c_orange]}%s are perfect sex kittens, expertly licking the customer's cunt and each other. They eagerly kiss and lick the love juice from each other's mouth as she looks on with bliss."),
-
-                    }
+    # <MIGRATED: see data/jobs.rpy>
 
     farm_perform_dict = {
                         "pref_bonus" : {"fascinated": 0.5, "very interested": 0.3, "interested": 0.15, "a little interested": 0.05, "indifferent": 0.0, "a little reluctant": -0.05, "reluctant": -0.15, "very reluctant": -0.3, "refuses": -0.5, "positive act": 0.15, "negative act": -0.15, "farm weakness": 0.2},
@@ -2839,9 +2593,9 @@ init -4 python:
         event_color[k] = "{color=" + color_dict[k] + "}%s{/color}"
 
     log_event_dict = {
-                    "level" : __("{color=") + c_orange + "}%s has gained a new level.{/color}",
-                    "job_up" : __("{color=") + c_orange + "}%s has increased her %s skill.{/color}",
-                    "rank" : __("{color=") + c_orange + "}%s is ready to reach a new rank.{/color}",
+                    "level" : "{color=" + c_orange + "}%s has gained a new level.{/color}",
+                    "job_up" : "{color=" + c_orange + "}%s has increased her %s skill.{/color}",
+                    "rank" : "{color=" + c_orange + "}%s is ready to reach a new rank.{/color}",
                     }
 
     attraction_dict = {
@@ -3425,17 +3179,17 @@ init:
     image rain:
         zoom 2.0
 
-        __("minigame/rain/heavyrain1.webp")
+        "minigame/rain/heavyrain1.webp"
         0.1
-        __("minigame/rain/rain1.webp")
+        "minigame/rain/rain1.webp"
         0.1
-        __("minigame/rain/heavyrain2.webp")
+        "minigame/rain/heavyrain2.webp"
         0.1
-        __("minigame/rain/rain3.webp")
+        "minigame/rain/rain3.webp"
         0.1
-        __("minigame/rain/rain2.webp")
+        "minigame/rain/rain2.webp"
         0.1
-        __("minigame/rain/heavyrain3.webp")
+        "minigame/rain/heavyrain3.webp"
         0.1
         repeat
 
@@ -3480,216 +3234,216 @@ init:
 
     image supercharge_card:
         subpixel True
-        __("UI/powers/supercharge/card_supercharge/sc_1.webp")
+        "UI/powers/supercharge/card_supercharge/sc_1.webp"
         pause 0.06
-        __("UI/powers/supercharge/card_supercharge/sc_2.webp")
+        "UI/powers/supercharge/card_supercharge/sc_2.webp"
         pause 0.06
-        __("UI/powers/supercharge/card_supercharge/sc_3.webp")
+        "UI/powers/supercharge/card_supercharge/sc_3.webp"
         pause 0.06
-        __("UI/powers/supercharge/card_supercharge/sc_4.webp")
+        "UI/powers/supercharge/card_supercharge/sc_4.webp"
         pause 0.06
-        __("UI/powers/supercharge/card_supercharge/sc_5.webp")
+        "UI/powers/supercharge/card_supercharge/sc_5.webp"
         pause 0.06
-        __("UI/powers/supercharge/card_supercharge/sc_6.webp")
+        "UI/powers/supercharge/card_supercharge/sc_6.webp"
         pause 0.06
-        __("UI/powers/supercharge/card_supercharge/sc_7.webp")
+        "UI/powers/supercharge/card_supercharge/sc_7.webp"
         pause 0.06
-        __("UI/powers/supercharge/card_supercharge/sc_8.webp")
+        "UI/powers/supercharge/card_supercharge/sc_8.webp"
         pause 0.06
-        __("UI/powers/supercharge/card_supercharge/sc_9.webp")
+        "UI/powers/supercharge/card_supercharge/sc_9.webp"
         pause 0.06
-        __("UI/powers/supercharge/card_supercharge/sc_10.webp")
+        "UI/powers/supercharge/card_supercharge/sc_10.webp"
         pause 0.06
-        __("UI/powers/supercharge/card_supercharge/sc_11.webp")
+        "UI/powers/supercharge/card_supercharge/sc_11.webp"
         pause 0.06
-        __("UI/powers/supercharge/card_supercharge/sc_12.webp")
+        "UI/powers/supercharge/card_supercharge/sc_12.webp"
         pause 0.06
-        __("UI/powers/supercharge/card_supercharge/sc_13.webp")
+        "UI/powers/supercharge/card_supercharge/sc_13.webp"
         pause 0.06
-        __("UI/powers/supercharge/card_supercharge/sc_14.webp")
+        "UI/powers/supercharge/card_supercharge/sc_14.webp"
         pause 0.06
-        __("UI/powers/supercharge/card_supercharge/sc_15.webp")
+        "UI/powers/supercharge/card_supercharge/sc_15.webp"
         pause 0.06
-        __("UI/powers/supercharge/card_supercharge/sc_16.webp")
+        "UI/powers/supercharge/card_supercharge/sc_16.webp"
         pause 0.06
-        __("UI/powers/supercharge/card_supercharge/sc_17.webp")
+        "UI/powers/supercharge/card_supercharge/sc_17.webp"
         pause 0.06
-        __("UI/powers/supercharge/card_supercharge/sc_18.webp")
+        "UI/powers/supercharge/card_supercharge/sc_18.webp"
         pause 0.06
-        __("UI/powers/supercharge/card_supercharge/sc_19.webp")
+        "UI/powers/supercharge/card_supercharge/sc_19.webp"
         pause 0.06
-        __("UI/powers/supercharge/card_supercharge/sc_20.webp")
+        "UI/powers/supercharge/card_supercharge/sc_20.webp"
         pause 0.06
-        __("UI/powers/supercharge/card_supercharge/sc_21.webp")
+        "UI/powers/supercharge/card_supercharge/sc_21.webp"
         pause 0.06
-        __("UI/powers/supercharge/card_supercharge/sc_22.webp")
+        "UI/powers/supercharge/card_supercharge/sc_22.webp"
         pause 0.06
-        __("UI/powers/supercharge/card_supercharge/sc_23.webp")
+        "UI/powers/supercharge/card_supercharge/sc_23.webp"
         pause 0.06
-        __("UI/powers/supercharge/card_supercharge/sc_24.webp")
+        "UI/powers/supercharge/card_supercharge/sc_24.webp"
         pause 0.06
-        __("UI/powers/supercharge/card_supercharge/sc_25.webp")
+        "UI/powers/supercharge/card_supercharge/sc_25.webp"
         pause 0.06
-        __("UI/powers/supercharge/card_supercharge/sc_26.webp")
+        "UI/powers/supercharge/card_supercharge/sc_26.webp"
         pause 0.06
-        __("UI/powers/supercharge/card_supercharge/sc_27.webp")
+        "UI/powers/supercharge/card_supercharge/sc_27.webp"
         pause 0.06
-        __("UI/powers/supercharge/card_supercharge/sc_28.webp")
+        "UI/powers/supercharge/card_supercharge/sc_28.webp"
         pause 0.06
-        __("UI/powers/supercharge/card_supercharge/sc_29.webp")
+        "UI/powers/supercharge/card_supercharge/sc_29.webp"
         pause 0.06
-        __("UI/powers/supercharge/card_supercharge/sc_30.webp")
+        "UI/powers/supercharge/card_supercharge/sc_30.webp"
         pause 0.06
-        __("UI/powers/supercharge/card_supercharge/sc_31.webp")
+        "UI/powers/supercharge/card_supercharge/sc_31.webp"
         pause 0.06
-        __("UI/powers/supercharge/card_supercharge/sc_32.webp")
+        "UI/powers/supercharge/card_supercharge/sc_32.webp"
         pause 0.06
-        __("UI/powers/supercharge/card_supercharge/sc_33.webp")
+        "UI/powers/supercharge/card_supercharge/sc_33.webp"
         pause 0.06
-        __("UI/powers/supercharge/card_supercharge/sc_34.webp")
+        "UI/powers/supercharge/card_supercharge/sc_34.webp"
         pause 0.06
-        __("UI/powers/supercharge/card_supercharge/sc_35.webp")
+        "UI/powers/supercharge/card_supercharge/sc_35.webp"
         pause 0.06
-        __("UI/powers/supercharge/card_supercharge/sc_36.webp")
+        "UI/powers/supercharge/card_supercharge/sc_36.webp"
         pause 0.06
         repeat
 
     image supercharge:
         subpixel True
         pause 0.1
-        __("UI/powers/supercharge/screen_supercharge/supercharge-1.webp")
+        "UI/powers/supercharge/screen_supercharge/supercharge-1.webp"
         pause 0.02
-        __("UI/powers/supercharge/screen_supercharge/supercharge-2.webp")
+        "UI/powers/supercharge/screen_supercharge/supercharge-2.webp"
         pause 0.02
-        __("UI/powers/supercharge/screen_supercharge/supercharge-3.webp")
+        "UI/powers/supercharge/screen_supercharge/supercharge-3.webp"
         pause 0.02
-        __("UI/powers/supercharge/screen_supercharge/supercharge-4.webp")
+        "UI/powers/supercharge/screen_supercharge/supercharge-4.webp"
         pause 0.02
-        __("UI/powers/supercharge/screen_supercharge/supercharge-5.webp")
+        "UI/powers/supercharge/screen_supercharge/supercharge-5.webp"
         pause 0.02
-        __("UI/powers/supercharge/screen_supercharge/supercharge-6.webp")
+        "UI/powers/supercharge/screen_supercharge/supercharge-6.webp"
         pause 0.02
-        __("UI/powers/supercharge/screen_supercharge/supercharge-7.webp")
+        "UI/powers/supercharge/screen_supercharge/supercharge-7.webp"
         pause 0.02
-        __("UI/powers/supercharge/screen_supercharge/supercharge-8.webp")
+        "UI/powers/supercharge/screen_supercharge/supercharge-8.webp"
         pause 0.02
-        __("UI/powers/supercharge/screen_supercharge/supercharge-9.webp")
+        "UI/powers/supercharge/screen_supercharge/supercharge-9.webp"
         pause 0.02
-        __("UI/powers/supercharge/screen_supercharge/supercharge-10.webp")
+        "UI/powers/supercharge/screen_supercharge/supercharge-10.webp"
         pause 0.02
-        __("UI/powers/supercharge/screen_supercharge/supercharge-11.webp")
+        "UI/powers/supercharge/screen_supercharge/supercharge-11.webp"
         pause 0.02
-        __("UI/powers/supercharge/screen_supercharge/supercharge-12.webp")
+        "UI/powers/supercharge/screen_supercharge/supercharge-12.webp"
         pause 0.02
-        __("UI/powers/supercharge/screen_supercharge/supercharge-13.webp")
+        "UI/powers/supercharge/screen_supercharge/supercharge-13.webp"
         pause 0.02
-        __("UI/powers/supercharge/screen_supercharge/supercharge-14.webp")
+        "UI/powers/supercharge/screen_supercharge/supercharge-14.webp"
         pause 0.02
-        __("UI/powers/supercharge/screen_supercharge/supercharge-15.webp")
+        "UI/powers/supercharge/screen_supercharge/supercharge-15.webp"
         pause 0.02
-        __("UI/powers/supercharge/screen_supercharge/supercharge-16.webp")
+        "UI/powers/supercharge/screen_supercharge/supercharge-16.webp"
         pause 0.02
-        __("UI/powers/supercharge/screen_supercharge/supercharge-17.webp")
+        "UI/powers/supercharge/screen_supercharge/supercharge-17.webp"
         pause 0.02
-        __("UI/powers/supercharge/screen_supercharge/supercharge-18.webp")
+        "UI/powers/supercharge/screen_supercharge/supercharge-18.webp"
         pause 0.02
-        __("UI/powers/supercharge/screen_supercharge/supercharge-19.webp")
+        "UI/powers/supercharge/screen_supercharge/supercharge-19.webp"
         pause 0.02
-        __("UI/powers/supercharge/screen_supercharge/supercharge-20.webp")
+        "UI/powers/supercharge/screen_supercharge/supercharge-20.webp"
         pause 0.02
-        __("UI/powers/supercharge/screen_supercharge/supercharge-21.webp")
+        "UI/powers/supercharge/screen_supercharge/supercharge-21.webp"
         pause 0.02
-        __("UI/powers/supercharge/screen_supercharge/supercharge-22.webp")
+        "UI/powers/supercharge/screen_supercharge/supercharge-22.webp"
         pause 0.02
-        __("UI/powers/supercharge/screen_supercharge/supercharge-23.webp")
+        "UI/powers/supercharge/screen_supercharge/supercharge-23.webp"
         pause 0.02
-        __("UI/powers/supercharge/screen_supercharge/supercharge-24.webp")
+        "UI/powers/supercharge/screen_supercharge/supercharge-24.webp"
         pause 0.02
-        __("UI/powers/supercharge/screen_supercharge/supercharge-25.webp")
+        "UI/powers/supercharge/screen_supercharge/supercharge-25.webp"
         pause 0.02
-        __("UI/powers/supercharge/screen_supercharge/supercharge-26.webp")
+        "UI/powers/supercharge/screen_supercharge/supercharge-26.webp"
         pause 0.02
-        __("UI/powers/supercharge/screen_supercharge/supercharge-27.webp")
+        "UI/powers/supercharge/screen_supercharge/supercharge-27.webp"
         pause 0.02
-        __("UI/powers/supercharge/screen_supercharge/supercharge-28.webp")
+        "UI/powers/supercharge/screen_supercharge/supercharge-28.webp"
         pause 0.02
-        __("UI/powers/supercharge/screen_supercharge/supercharge-29.webp")
+        "UI/powers/supercharge/screen_supercharge/supercharge-29.webp"
         pause 0.02
-        __("UI/powers/supercharge/screen_supercharge/supercharge-30.webp")
+        "UI/powers/supercharge/screen_supercharge/supercharge-30.webp"
         pause 0.02
-        __("UI/powers/supercharge/screen_supercharge/supercharge-31.webp")
+        "UI/powers/supercharge/screen_supercharge/supercharge-31.webp"
         pause 0.02
-        __("UI/powers/supercharge/screen_supercharge/supercharge-32.webp")
+        "UI/powers/supercharge/screen_supercharge/supercharge-32.webp"
         pause 0.02
-        __("UI/powers/supercharge/screen_supercharge/supercharge-33.webp")
+        "UI/powers/supercharge/screen_supercharge/supercharge-33.webp"
         pause 0.02
-        __("UI/powers/supercharge/screen_supercharge/supercharge-placeholder.webp")
+        "UI/powers/supercharge/screen_supercharge/supercharge-placeholder.webp"
 
     # Mojos
     image mojo_green:
-        __("UI/Powers/orb_green.webp")
+        "UI/Powers/orb_green.webp"
         size res_tb(25)
     image mojo_blue:
-        __("UI/Powers/orb_blue.webp")
+        "UI/Powers/orb_blue.webp"
         size res_tb(25)
     image mojo_red:
-        __("UI/Powers/orb_red.webp")
+        "UI/Powers/orb_red.webp"
         size res_tb(25)
     image mojo_yellow:
-        __("UI/Powers/orb_yellow.webp")
+        "UI/Powers/orb_yellow.webp"
         size res_tb(25)
     image mojo_purple:
-        __("UI/Powers/orb_purple.webp")
+        "UI/Powers/orb_purple.webp"
         size res_tb(25)
 
     # Evil spell splash screen
     image evil_spell:
-        __("UI/Powers/Evil spell.webp")
+        "UI/Powers/Evil spell.webp"
         zoom 0.4
 
     image princess fucked: ## There really must be a shorter way to do this, but I've had no luck so far
 
-        __("NPC/Misc/princess/princess fucked1.gif")
+        "NPC/Misc/princess/princess fucked1.gif"
         pause 0.03
-        __("NPC/Misc/princess/princess fucked2.gif")
+        "NPC/Misc/princess/princess fucked2.gif"
         pause 0.03
-        __("NPC/Misc/princess/princess fucked3.gif")
+        "NPC/Misc/princess/princess fucked3.gif"
         pause 0.03
-        __("NPC/Misc/princess/princess fucked4.gif")
+        "NPC/Misc/princess/princess fucked4.gif"
         pause 0.03
-        __("NPC/Misc/princess/princess fucked5.gif")
+        "NPC/Misc/princess/princess fucked5.gif"
         pause 0.03
-        __("NPC/Misc/princess/princess fucked6.gif")
+        "NPC/Misc/princess/princess fucked6.gif"
         pause 0.03
-        __("NPC/Misc/princess/princess fucked7.gif")
+        "NPC/Misc/princess/princess fucked7.gif"
         pause 0.03
-        __("NPC/Misc/princess/princess fucked8.gif")
+        "NPC/Misc/princess/princess fucked8.gif"
         pause 0.03
-        __("NPC/Misc/princess/princess fucked9.gif")
+        "NPC/Misc/princess/princess fucked9.gif"
         pause 0.03
-        __("NPC/Misc/princess/princess fucked10.gif")
+        "NPC/Misc/princess/princess fucked10.gif"
         pause 0.03
-        __("NPC/Misc/princess/princess fucked11.gif")
+        "NPC/Misc/princess/princess fucked11.gif"
         pause 0.03
-        __("NPC/Misc/princess/princess fucked12.gif")
+        "NPC/Misc/princess/princess fucked12.gif"
         pause 0.03
-        __("NPC/Misc/princess/princess fucked13.gif")
+        "NPC/Misc/princess/princess fucked13.gif"
         pause 0.03
-        __("NPC/Misc/princess/princess fucked14.gif")
+        "NPC/Misc/princess/princess fucked14.gif"
         pause 0.03
-        __("NPC/Misc/princess/princess fucked15.gif")
+        "NPC/Misc/princess/princess fucked15.gif"
         pause 0.03
-        __("NPC/Misc/princess/princess fucked16.gif")
+        "NPC/Misc/princess/princess fucked16.gif"
         pause 0.03
-        __("NPC/Misc/princess/princess fucked17.gif")
+        "NPC/Misc/princess/princess fucked17.gif"
         pause 0.03
-        __("NPC/Misc/princess/princess fucked18.gif")
+        "NPC/Misc/princess/princess fucked18.gif"
         pause 0.03
-        __("NPC/Misc/princess/princess fucked19.gif")
+        "NPC/Misc/princess/princess fucked19.gif"
         pause 0.03
-        __("NPC/Misc/princess/princess fucked20.gif")
+        "NPC/Misc/princess/princess fucked20.gif"
         pause 0.03
-        __("NPC/Misc/princess/princess fucked21.gif")
+        "NPC/Misc/princess/princess fucked21.gif"
         pause 0.03
         repeat
 

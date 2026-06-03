@@ -298,7 +298,7 @@ label run_ninja_game(njgame): # Returns "ninja" if ninja caught, "guest" if gues
                 "Yes (spend 1 makibishi)":
                     play sound s_dice
                     $ njgame.hits = 3
-                    $ it = MC.get_items(name=__("Makibishi"))[0]
+                    $ it = MC.get_items(name="Makibishi")[0]
                     $ MC.items.remove(it)
                 "No":
                     pass

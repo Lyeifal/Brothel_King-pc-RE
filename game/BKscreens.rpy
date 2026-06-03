@@ -484,7 +484,7 @@ screen overlay(current_screen = None, kwargs=None, ttip=False):
 
                 text _("Year: [calendar.year]") size res_font(18) yalign 0.5
                 text _("Month: [calendar.month]") size res_font(18) yalign 0.5
-                text (__("Day: [calendar.day] (") + __(calendar.get_weekday())[:3] + ")") size res_font(18) yalign 0.5
+                text (__("Day: %s (%s)") % (calendar.day, __(calendar.get_weekday())[:3])) size res_font(18) yalign 0.5
 
         hbox xalign 1.0 spacing xres(6):
             if MC.resource_tab_active:
@@ -923,10 +923,10 @@ screen girl_button(girl, bsize="x4", status_list=[], context="girls", extra_acti
     if context == "girls" or context == "powers":
         if girl.job:
             $ text1 = __(girl.job.capitalize()) # text1 is displayed on the button next to girl name and portrait
-            $ but_ttip = "{b}" + girl.fullname + "{/b} " + __("is a level {0} {1}.").format(__(str(girl.level)), __(girl.job))
+            $ but_ttip = __("{b}%s{/b} is a level %s %s.") % (girl.fullname, girl.level, girl.job)
         else:
             $ text1 = "No job"
-            $ but_ttip = "{b}" + girl.fullname + __("{/b} has no job.")
+            $ but_ttip = __("{b}%s{/b} has no job.") % girl.fullname
         $ text_col = job_color[girl.job]
         $ use_badge = True
 
@@ -952,7 +952,7 @@ screen girl_button(girl, bsize="x4", status_list=[], context="girls", extra_acti
     elif context == "slavemarket":
         $ text1 = experienced_description[girl.sexual_experience]
         $ text2 = "{image=img_gold}%s" % '{:,}'.format(girl.get_price("buy"))
-        $ but_ttip = "{b}" + girl.fullname + "{/b}, " + text2 + __(". Click for details.")
+        $ but_ttip = __("{b}%s{/b}, %s. Click for details.") % (girl.fullname, text2)
         $ text_col = experienced_color[girl.sexual_experience]
 
     if context == "powers":
@@ -962,7 +962,7 @@ screen girl_button(girl, bsize="x4", status_list=[], context="girls", extra_acti
         $ but_ttip = custom_ttip
 
     if context not in ("free", "slavemarket"):
-        $ but_ttip += __("\nEnergy: ") + str_int(girl.energy) + "/" + str(int(girl.get_stat_minmax("energy")[1]))
+        $ but_ttip += __("\nEnergy: %s/%s") % (str_int(girl.energy), str(int(girl.get_stat_minmax("energy")[1])))
         $ but_ttip += girl_status_dict[girl, "summary"]
 
     if custom_action:
@@ -1853,7 +1853,7 @@ screen girl_stats(girl, context = "girls"): # context can be girls, slavemarket,
 
                         #Rank
 
-                        $ rank_text = __("Rank ") + rank_name[girl.rank]
+                        $ rank_text = __("Rank %s") % rank_name[girl.rank]
 
         #                $ rank_ttip = "Reputation: " + str(round_int(girl.rep)) + "/" + str(girl.get_rep_cap())
 
@@ -1868,7 +1868,7 @@ screen girl_stats(girl, context = "girls"): # context can be girls, slavemarket,
 
                         #Level
 
-                        $ level_text = __("Level ") + str(girl.level)
+                        $ level_text = __("Level %s") % girl.level
 
                         use custom_bar(labl = level_text, val = (girl.xp - xp_to_levelup[girl.level - 1]), _max = (girl.get_xp_cap() - xp_to_levelup[girl.level - 1]), col = c_lightgreen, x = xres(70), y=yres(10))
 
@@ -1994,7 +1994,7 @@ screen girl_stats(girl, context = "girls"): # context can be girls, slavemarket,
                                 action Return(("debug change all stats", 0))
                             else:
                                 action NullAction()
-                            tooltip __("She has {b}") + str_int(girl.energy) + __("{/b} energy remaining. Her maximum energy is {b}") + str_int(girl_max) + __("{/b} (increase constitution for higher energy).")
+                            tooltip __("She has {b}%s{/b} energy remaining. Her maximum energy is {b}%s{/b} (increase constitution for higher energy).") % (str_int(girl.energy), str_int(girl_max))
                             keyboard_focus False
                             yfill False
                             ysize yres(30)
@@ -2087,8 +2087,8 @@ screen girl_stats(girl, context = "girls"): # context can be girls, slavemarket,
                                         size res_font(12)
 
                 if context == "slavemarket":
-                    $ ttip = __(experienced_description[girl.sexual_experience + " ttip"]) + __(" Prior training may make a girl more suitable for sex acts.")
-                    textbutton __("Prior training received:   {color=") + experienced_color[girl.sexual_experience] + "}" + __(experienced_description[girl.sexual_experience]) + "{/color}" ymargin yres(3) ypadding 0 text_color c_white text_size res_font(14) background None action NullAction() tooltip ttip
+                    $ ttip = __("%s Prior training may make a girl more suitable for sex acts.") % experienced_description[girl.sexual_experience + " ttip"]
+                    textbutton __("Prior training received:   {color=%s}%s{/color}") % (experienced_color[girl.sexual_experience], experienced_description[girl.sexual_experience]) ymargin yres(3) ypadding 0 text_color c_white text_size res_font(14) background None action NullAction() tooltip ttip
 
 
                 vbox:
@@ -2137,7 +2137,7 @@ screen girl_stats(girl, context = "girls"): # context can be girls, slavemarket,
                                         $ result, reason = girl.will_do_sex_act(stat.name.lower(), True)
 
                                         if result:
-                                            $ ttip = __("This will activate {b}") + __(stat_name_dict[stat.name]) + __("{/b} for this girl.")
+                                            $ ttip = __("This will activate {b}%s{/b} for this girl.") % stat_name_dict[stat.name]
                                         else:
                                             $ ttip = reason
 
@@ -2317,7 +2317,7 @@ screen girl_stats(girl, context = "girls"): # context can be girls, slavemarket,
                                 xsize xres(25)
                                 yalign 0.5
                                 action (ToggleField(girl, "auto_upkeep"), SetField(girl, "upkeep_ratio", (girl.upkeep - girl.get_med_upkeep())/girl.rank), Play("sound", s_click))
-                                tooltip "{size=+2}" + text1 + __("\nWhen this is turned on, current upkeep balance will 'lock', and upkeep will rise and fall automatically.") + "{/size=+2}"
+                                tooltip __("{size=+2}%s\nWhen this is turned on, current upkeep balance will 'lock', and upkeep will rise and fall automatically.{/size=+2}") % text1
 
                 elif context == "farm":
                     text "" size res_font(3)
@@ -2358,7 +2358,7 @@ screen assign_job(girl):
 
             button background None xpadding 2 ypadding 2:
                 action Return("rest")
-                tooltip __("Tell ") + girl.fullname + __(" to get some rest.")
+                tooltip __("Tell %s to get some rest.") % girl.fullname
                 at alpha_transform
                 fixed fit_first True:
                     add "tb rest" xalign 0.5 yalign 0.5 # alpha 0.6 hover_alpha 1.0 selected_hover_alpha 1.0 selected_idle_alpha 1.0
@@ -2369,7 +2369,7 @@ screen assign_job(girl):
                 button background None xpadding 2 ypadding 2 xalign 0:
                     if brothel.has_room(job_room_dict[j]):
                         action Return(j)
-                        tooltip __("Ask ") + girl.fullname + __(" to work as a ") + __(j)
+                        tooltip __("Ask %s to work as a %s.") % (girl.fullname, j)
                         at alpha_transform
                         fixed fit_first True:
                             add "tb " + j xalign 0.5 yalign 0.5 # idle_alpha 0.66 selected_hover_alpha 1.0 selected_idle_alpha 1.0 hover_alpha 1.0
@@ -2381,14 +2381,14 @@ screen assign_job(girl):
                             text text1 size res_font(12) xalign 0.05 yalign 0.95 drop_shadow (1, 1)
 
                     else:
-                        text __(j.capitalize()) + __("\n(unavailable)") selected_bold True xalign 0.5 yalign 0.5 drop_shadow (1, 1) size res_font(14)
+                        text __("%s\n(unavailable)") % j.capitalize() selected_bold True xalign 0.5 yalign 0.5 drop_shadow (1, 1) size res_font(14)
 
 
             if farm.active:
                 button background None xpadding 2 ypadding 2 xpos 0:
 #                     selected girl.job=="farm" # What was this?
                     action Return("farm")
-                    tooltip __("Send ") + girl.fullname + __(" to the farm.")
+                    tooltip __("Send %s to the farm.") % girl.fullname
                     at alpha_transform
                     fixed fit_first True:
                         add "tb farm" xalign 0.5 yalign 0.5 # idle_alpha 0.66 selected_hover_alpha 1.0 selected_idle_alpha 1.0 hover_alpha 1.0
@@ -2400,10 +2400,10 @@ screen assign_job(girl):
             if brothel.master_bedroom.level >= 1:
                 $ text1 = "Auto-train "
                 if girl in brothel.master_bedroom.girls:
-                    $ ttip = __("Remove ") + girl.fullname + __(" from your bedroom.")
+                    $ ttip = __("Remove %s from your bedroom.") % girl.fullname
                     $ text1 += "(ON)"
                 else:
-                    $ ttip = __("Add ") + girl.fullname + __(" to your bedroom.")
+                    $ ttip = __("Add %s to your bedroom.") % girl.fullname
                     $ text1 += "(OFF)"
 
                 button background None xpadding 2 ypadding 2 xpos 0:
@@ -2599,7 +2599,7 @@ screen button_overlay(girl, context="girls"):
 
             key "noshift_K_y" action Return(girl)
 
-            textbutton _("Bu{u}y{/u}") xsize xres(60) text_size res_font(22) xalign 1.0 action Return(girl) tooltip __("Click to buy ") + girl.fullname + __(" for ") + text1
+            textbutton _("Bu{u}y{/u}") xsize xres(60) text_size res_font(22) xalign 1.0 action Return(girl) tooltip __("Click to buy %s for %s") % (girl.fullname, text1)
 
     elif context == "girls":
 
@@ -2641,7 +2641,7 @@ screen button_overlay(girl, context="girls"):
                 if girl.hurt <= 1:
                     $ ttip = __("This girl is hurt and will need to rest for 1 more day until she is ready to do anything.")
                 else:
-                    $ ttip = __("This girl is hurt and will need to rest for ") + str(round_int(girl.hurt)) + __(" more days until she is ready to do anything.")
+                    $ ttip = __("This girl is hurt and will need to rest for %s more days until she is ready to do anything.") % str(round_int(girl.hurt))
 
             elif girl.exhausted:
                 $ text1 = "Tired"
@@ -2663,7 +2663,7 @@ screen button_overlay(girl, context="girls"):
                 $ text1 = girl.job.capitalize()
                 $ ttip = __("Change this girl's job or let her rest.")
 
-            textbutton text1 style "small_button" action (SetVariable("selected_girl", girl), Return("assign")) tooltip ttip + __(" ({i}shortcut: {u}j{/u}{/i})") selected False
+            textbutton text1 style "small_button" action (SetVariable("selected_girl", girl), Return("assign")) tooltip __("%s ({i}shortcut: {u}j{/u}{/i})") % ttip selected False
 
             $ sched = girl.workdays[calendar.get_weekday()]
 
@@ -2740,7 +2740,7 @@ screen button_overlay(girl, context="girls"):
                 textbutton _("Level {u}u{/u}p") style "small_button":
                     action (SetVariable("selected_girl", girl), Return("level_or_perks"))
                     alternate (SetVariable("selected_girl", girl), Return("perks"))
-                    tooltip (__("You have ") + str_int(girl.perk_points) + __(" perk points to spend.\nRight-click to access perks."))
+                    tooltip (__("You have %s perk points to spend.\nRight-click to access perks.") % str_int(girl.perk_points))
                     hovered Show("perk_details", girl=girl)
                     unhovered Hide("perk_details")
 
@@ -3232,7 +3232,7 @@ screen level(girl):
         spacing 3
         xalign 0.5
 
-        $ text1 = girl.name + __(" is ready to level up.")
+        $ text1 = __("%s is ready to level up.") % girl.name
 
         text text1 color c_emerald xalign 0.5
 
@@ -3252,7 +3252,7 @@ screen level(girl):
 
                     frame background None xsize xres(180):
                         hbox:
-                            text "{b}" + __(stat_name_dict[stat]) + "{/b}" + ": " size res_font(14) color c_brown
+                            text __("{b}%s{/b}: ") % stat_name_dict[stat] size res_font(14) color c_brown
                             text str(girl.get_stat(stat)) + " / " + str(girl.get_stat_minmax(stat)[1]) size res_font(14) color c_green
 
                     grid 4 1:
@@ -3404,7 +3404,7 @@ screen perks(girl):
                                 text __(text2) size res_font(14) yalign 0.0
 
                             vbox yalign 1.0 xfill True:
-                                text __("Perk points: ") + str_int(perk_points) color c_orange size res_font(20) xalign 0.5 drop_shadow 2,2
+                                text __("Perk points: %s") % str_int(perk_points) color c_orange size res_font(20) xalign 0.5 drop_shadow 2,2
                                 hbox xalign 0.5:
                                     textbutton _("Cancel") action Return(("cancel", ""))
                                     textbutton _("Confirm"):
@@ -3619,10 +3619,10 @@ screen girl_log(): # Reminder: selected_girl is a Global variable that holds the
                                 else:
                                     $ col1 = c_white
 
-                                $ ttip = __("{b}Profit: {color=[c_white]}") + str_int(net) + "{/color}{/b}"
-                                $ ttip += __("\nJobs: {color=[c_green]}") + str_int(j_gold) + "{/color}"
-                                $ ttip += __("     Quests: {color=[c_green]}") + str_int(q_gold) + "{/color}"
-                                $ ttip += __("\nUpkeep: {color=[c_red]}-") + str_int(upk) + "{/color}"
+                                $ ttip = __("{b}Profit: {color=[c_white]}%s{/color}{/b}") % str_int(net)
+                                $ ttip += __("\nJobs: {color=[c_green]}%s{/color}") % str_int(j_gold)
+                                $ ttip += __("     Quests: {color=[c_green]}%s{/color}") % str_int(q_gold)
+                                $ ttip += __("\nUpkeep: {color=[c_red]}-%s{/color}") % str_int(upk)
 
                                 textbutton str_int(j_gold + q_gold) background None xpadding 0 ypadding 0 xmargin 0 ymargin 0 text_size average text_color c_prune xalign 0.5 action NullAction() tooltip ttip
 
@@ -3655,7 +3655,7 @@ screen girl_log(): # Reminder: selected_girl is a Global variable that holds the
 
                                     text _("{b}Worked{/b}") color c_orange size small xalign 0.5
 
-                                    $ ttip = __("Waitress: ") + str_int(log_dict["waitress_days"][days]) + __("              Dancer: ") + str_int(log_dict["waitress_days"][days]) + __("\nMasseuse: ") + str_int(log_dict["masseuse_days"][days]) + __("            Geisha: ") + str_int(log_dict["geisha_days"][days]) + __("\nWhore: ") + str_int(log_dict["whore_days"][days]) + __("                 Work/whore : ") + str_int(log_dict["work_whore_days"][days])
+                                    $ ttip = __("Waitress: %s              Dancer: %s\nMasseuse: %s            Geisha: %s\nWhore: %s                 Work/whore : %s") % (str_int(log_dict["waitress_days"][days]), str_int(log_dict["waitress_days"][days]), str_int(log_dict["masseuse_days"][days]), str_int(log_dict["geisha_days"][days]), str_int(log_dict["whore_days"][days]), str_int(log_dict["work_whore_days"][days]))
 
                                     textbutton str_int(log_dict["work_days"][days]) background None xpadding 0 ypadding 0 xmargin 0 ymargin 0 text_size average text_color c_brown xalign 0.5 action NullAction() hovered tt.Action(ttip)
 
@@ -3715,7 +3715,7 @@ screen girl_log(): # Reminder: selected_girl is a Global variable that holds the
 
                         for job in all_jobs:
 
-                            text "{b}" + __(job.capitalize()) + "{/b}" color c_firered size small xalign 0.5
+                            text __("{b}%s{/b}") % job.capitalize() color c_firered size small xalign 0.5
 
                             text str_int(log_dict[job + "_cust"][days]) size average color c_brown xalign 0.5
 
@@ -3803,7 +3803,7 @@ screen girl_log(): # Reminder: selected_girl is a Global variable that holds the
 
                         for act in all_sex_acts:
 
-                            text "{b}" + __(act.capitalize()) + "{/b}" color c_firered size small xalign 0.5
+                            text __("{b}%s{/b}") % act.capitalize() color c_firered size small xalign 0.5
 
                             text str_int(log_dict[act + "_cust"][days]) size average color c_brown xalign 0.5
 
@@ -3939,7 +3939,7 @@ screen districts(context = "visit"): # returns a chosen district. Context can be
 
                     add ProportionalScale("UI/" + license_dict[0][1], *res_tb(50)) xalign 0.5
 
-                text __(license_dict[1][0]) + __("\nrequired") xalign 0.5 yalign 0.0 size res_font(14) text_align 0.5 color c_darkgrey
+                text __("%s\nrequired") % license_dict[1][0] xalign 0.5 yalign 0.0 size res_font(14) text_align 0.5 color c_darkgrey
 
             use district_button(district_dict["warehouse"], context) id "b2"
             use district_button(district_dict["docks"], context) id "b3"
@@ -3965,7 +3965,7 @@ screen districts(context = "visit"): # returns a chosen district. Context can be
 
                     add ProportionalScale("UI/" + license_dict[0][1], *res_tb(50))
 
-                text __(license_dict[2][0]) + __("\nrequired") xalign 0.5 yalign 0.0 xsize xres(160) size res_font(14) text_align 0.5 color c_darkgrey
+                text __("%s\nrequired") % license_dict[2][0] xalign 0.5 yalign 0.0 xsize xres(160) size res_font(14) text_align 0.5 color c_darkgrey
 
             use district_button(district_dict["gardens"], context)  id "b4"
             use district_button(district_dict["cathedra"], context)  id "b5"
@@ -3990,7 +3990,7 @@ screen districts(context = "visit"): # returns a chosen district. Context can be
 
                     add ProportionalScale("UI/" + license_dict[0][1], *res_tb(50))
 
-                text __(license_dict[3][0]) + __("\nrequired") xalign 0.5 yalign 0.0 xsize xres(150) size res_font(14) text_align 0.5 color c_darkgrey
+                text __("%s\nrequired") % license_dict[3][0] xalign 0.5 yalign 0.0 xsize xres(150) size res_font(14) text_align 0.5 color c_darkgrey
 
             use district_button(district_dict["hold"], context)  id "b6"
 
@@ -4115,7 +4115,7 @@ screen visit_district():
                         if location.secret:
                             tooltip _("You have not discovered this location yet.")
                         else:
-                            tooltip "{b}" + __(location.name) + __("{/b}. Press ") + str(location_dict[selected_district.name].index(location) + 1) + __(" to visit this location.")
+                            tooltip __("{b}%s{/b}. Press %s to visit this location.") % (location.name, str(location_dict[selected_district.name].index(location) + 1))
 
                         vbox:
 
@@ -4156,11 +4156,11 @@ screen visit_district():
 
                                             if location.menu_costs_AP and MC.interactions < 1:
                                                 action NullAction()
-                                                tooltip __(location.menu[0]) + __(". You cannot collect as you are out of AP.")
+                                                tooltip __("%s. You cannot collect as you are out of AP.") % location.menu[0]
                                             else:
                                                 action Return([location, "special"])
                                                 if location.menu_costs_AP:
-                                                    tooltip __(location.menu[0]) + __(". Costs 1 {image=img_AP}.")
+                                                    tooltip __("%s. Costs 1 {image=img_AP}.") % location.menu[0]
                                                 else:
                                                     tooltip __(location.menu[0]) + "."
 
@@ -4225,7 +4225,7 @@ screen visit_location():
                     at alpha_transform
 
                     if girl.MC_interact:
-                        tooltip __("Talk to ") + girl.fullname + "."
+                        tooltip __("Talk to %s.") % girl.fullname
                     else:
                         tooltip _("Talk to this unknown girl. Costs 1 {image=img_AP}.")
 
@@ -4288,9 +4288,9 @@ screen visit_location():
                     if selected_location.can_do_action():
                         action Return("special")
                         if selected_location.menu_costs_AP:
-                            tooltip __(selected_location.menu[0]) + __(". Costs 1 {image=img_AP}.")
+                            tooltip __("%s. Costs 1 {image=img_AP}.") % selected_location.menu[0]
                         else:
-                            tooltip __(selected_location.menu[0]) + __(" (free).")
+                            tooltip __("%s (free).") % selected_location.menu[0]
                     hbox yalign 0.5 xfill True:
                         if selected_location.can_do_action() and selected_location.menu[1] in location_tb.keys():
                             add location_tb[selected_location.menu[1]] fit "contain" # insensitive_alpha 0.33 idle_alpha 0.66 hover_alpha 1.0
@@ -4343,9 +4343,9 @@ screen brothel():
 
                 if brothel.current_building:
                     if len(brothel.current_building.name) > 15:
-                        $ text1 += "\n(" + __(brothel.current_building.name[:15]) + ". "
+                        $ text1 += __("\n(%s. ") % brothel.current_building.name[:15]
                     else:
-                        $ text1 += "\n(" + __(brothel.current_building.name) + " "
+                        $ text1 += __("\n(%s ") % brothel.current_building.name
 
                     $ max_dur = float(brothel.current_building.get_duration())
                     $ leftover_dur = round_int(max_dur - (calendar.time - brothel.started_building))
@@ -4357,7 +4357,7 @@ screen brothel():
                     else:
                         $ text1 += u"\u25d4"
 
-                    $ text1 += "" + str(leftover_dur) + __("d){/size}")
+                    $ text1 += __("%sd){/size}") % str(leftover_dur)
                 
                 $ ttip = "Build furniture to unlock various upgrades for the brothel."
             else:
@@ -4390,13 +4390,13 @@ screen brothel():
                 $ bro_upk = round_int(sum(g.upkeep*g.get_effect("boost", "total upkeep") for g in MC.girls))
                 $ farm_upk = round_int(sum(g.upkeep*g.get_effect("boost", "total upkeep")//2 for g in farm.girls))
 
-                $ text1 = __("You must pay {b}") + '{:,}'.format(bro_costs) + __("{/b} gold for your brothel services. You must also pay {b}") + '{:,}'.format(bro_upk) + __("{/b} gold for your girls upkeep")
+                $ text1 = __("You must pay {b}%s{/b} gold for your brothel services. You must also pay {b}%s{/b} gold for your girls upkeep") % ('{:,}'.format(bro_costs), '{:,}'.format(bro_upk))
 
                 if farm.active and farm.girls:
                     $ text1 += " and {b}" + '{:,}'.format(farm_upk) + "{/b} gold for the girls in the farm"
                 $ text1 += __(" (not accounting for special effects).")
 
-                textbutton __("Daily cost: ") + '{:,}'.format(bro_costs + bro_upk + farm_upk) + " gold" text_size res_font(18) text_xalign 0.0 xalign 0.0 background c_ui_dark xsize xres(300) ysize yres(36) action NullAction() tooltip text1
+                textbutton __("Daily cost: %s gold") % '{:,}'.format(bro_costs + bro_upk + farm_upk) text_size res_font(18) text_xalign 0.0 xalign 0.0 background c_ui_dark xsize xres(300) ysize yres(36) action NullAction() tooltip text1
 
                 textbutton brothel.name text_size res_font(24) xalign 0.5 ysize yres(40) action Return("change name") tooltip __("Click to change your brothel's name.")
 
@@ -4481,12 +4481,12 @@ screen brothel():
 
                             $ adv_bonus = brothel.get_effect("change", "advertising")
                             if adv_bonus != 0:
-                                $ text1 = " ({color=[c_green]}+" + str(adv_bonus) + __("{/color} from girls/effects)")
+                                $ text1 = __(" ({color=[c_green]}+%s{/color} from girls/effects)") % str(adv_bonus)
                             else:
                                 $ text1 = ""
                             $ text2 = brothel.get_adv_cost()
 
-                            textbutton __("[brothel.advertising]  babes") + text1 background None text_size res_font(14) xpos 0.6 ypos 0.1 ypadding 6
+                            textbutton __("[brothel.advertising]  babes%s") % text1 background None text_size res_font(14) xpos 0.6 ypos 0.1 ypadding 6
 
                             $ ttip = "Your brothel's current threat level is " + brothel.estimate_threat_level() + "."
 
@@ -4505,12 +4505,12 @@ screen brothel():
 
                             $ sec_bonus = brothel.get_effect("change", "security")
                             if sec_bonus != 0:
-                                $ text1 = " ({color=[c_green]}+" + str(sec_bonus) + __("{/color} from girls/effects)")
+                                $ text1 = __(" ({color=[c_green]}+%s{/color} from girls/effects)") % str(sec_bonus)
                             else:
                                 $ text1 = ""
                             $ text2 = brothel.get_sec_cost()
 
-                            textbutton __("[brothel.security]  goons") + text1 background None text_size res_font(14) xpos 0.6 ypos 0.4 ypadding 6
+                            textbutton __("[brothel.security]  goons%s") % text1 background None text_size res_font(14) xpos 0.6 ypos 0.4 ypadding 6
 
 
 
@@ -4531,12 +4531,12 @@ screen brothel():
 
                             $ maint_bonus= brothel.get_effect("change", "maintenance")
                             if maint_bonus != 0:
-                                $ text1 = " ({color=[c_green]}+" + str(maint_bonus) + __("{/color} from girls/effects)")
+                                $ text1 = __(" ({color=[c_green]}+%s{/color} from girls/effects)") % str(maint_bonus)
                             else:
                                 $ text1 = ""
                             $ text2 = brothel.get_maintenance_cost()
 
-                            textbutton __("[brothel.maintenance]  cleaners") + text1 background None text_size res_font(14) xpos 0.6 ypos 0.7 ypadding 6
+                            textbutton __("[brothel.maintenance]  cleaners%s") % text1 background None text_size res_font(14) xpos 0.6 ypos 0.7 ypadding 6
 
                         hbox xfill True spacing 10:
 
@@ -4582,7 +4582,7 @@ screen brothel():
                     hbox spacing xres(6):
                         text _("{b}Bedrooms{/b}") size res_font(18) xalign 0.0 yalign 0.5 drop_shadow (2, 2)
 
-                        $ ttip = __("Upgrade all your bedrooms for ") + str(brothel.get_room_upgrade_price(brothel.bedrooms)) + __(" gold. Upgraded bedrooms are more comfortable for girls and customers alike.")
+                        $ ttip = __("Upgrade all your bedrooms for %s gold. Upgraded bedrooms are more comfortable for girls and customers alike.") % str(brothel.get_room_upgrade_price(brothel.bedrooms))
                         textbutton _("▲{image=img_gold}") text_font "DejaVuSans.ttf" ysize yres(24):
                             xalign 0.5
                             yalign 0.5
@@ -4762,7 +4762,7 @@ screen furniture():
             elif not brothel.current_building:
                 $ text1 = __("Oh, hi. Got a new job for me?")
             else:
-                $ text1 = __("I'm still working on that ") + __(brothel.current_building.name) + __(". You should come back later.")
+                $ text1 = __("I'm still working on that %s. You should come back later.") % brothel.current_building.name
 
             text text1 xsize 0.4 yalign 0.5 size res_font(18) justify True italic True
 
@@ -4784,7 +4784,7 @@ screen furniture():
                     else:
                         text _("No building in progress.") italic True size res_font(14)
 
-        text brothel.name + __("'s Decoration and Furniture") drop_shadow (2, 2) size res_font(18)
+        text __("%s's Decoration and Furniture") % brothel.name drop_shadow (2, 2) size res_font(18)
 
         if brothel.furniture:
             frame xfill True background c_ui_brown:
@@ -4809,14 +4809,14 @@ screen furniture():
                     $ builds = [f for f in all_furniture if f.type == type and f.can_build()]
 
                     if builds:
-                        text "{b}" + __(type.capitalize()) + "{/b} - {i}" + __(description) size res_font(14)
+                        text __("{b}%s{/b} - {i}%s") % (type.capitalize(), description) size res_font(14)
                         frame xfill True background c_ui_brown:
                             hbox spacing 6 box_wrap True:
                                 for furn in builds:
                                     if furn.get_duration() < 2:
-                                        $ text2 = __(furn.description) + " (" + str(furn.get_duration()) + __(" day to complete).")
+                                        $ text2 = __("%s (%s day to complete).") % (furn.description, str(furn.get_duration()))
                                     else:
-                                        $ text2 = __(furn.description) + " (" + str(furn.get_duration()) + __(" days to complete).")
+                                        $ text2 = __("%s (%s days to complete).") % (furn.description, str(furn.get_duration()))
                                     button xsize xres(110) ysize yres(90) xpadding 2 ypadding 2:
                                         action Return(furn)
                                         tooltip text2
@@ -4826,7 +4826,7 @@ screen furniture():
                                             action Return(furn)
                                             tooltip text2
                                             use resource_tab(furn.cost, sp=1)
-                                        text str(furn.get_duration()) + __("d") xalign 0.95 yalign 0.05 size res_font(18)
+                                        text __("%sd") % str(furn.get_duration()) xalign 0.95 yalign 0.05 size res_font(18)
 #                        else:
 #                            text "You have built every available " + type +"." size res_font(14) italic True
                     text "" size res_font(8)
@@ -5068,7 +5068,7 @@ screen matchmaking(girls, customers, match_list, context="job"): # Where match l
                                     add room.get_pic(*res_tb(100))
 
                                     vbox spacing 6:
-                                        text __(room.name.capitalize()) + " ({image=img_cust} %i/%i)" % (job_customers[job], room.cust_limit) size res_font(18) color c_brown
+                                        text __("%s ({image=img_cust} %i/%i)") % (room.name.capitalize(), job_customers[job], room.cust_limit) size res_font(18) color c_brown
 
                                         vbox spacing 3:
                                             for girl in [g for g in girls if g.job == job]:
@@ -5093,7 +5093,7 @@ screen matchmaking(girls, customers, match_list, context="job"): # Where match l
                     has vbox spacing 3
                     $ room = brothel.bedroom_type
 
-                    text __("Bedrooms") + " ({image=img_cust} %i)" % job_customers["whore"] size res_font(18) color c_brown
+                    text __("Bedrooms ({image=img_cust} %i)") % job_customers["whore"] size res_font(18) color c_brown
                     hbox spacing 20:
                         add room.get_pic(*res_tb(100))
 
@@ -5820,11 +5820,11 @@ screen girl_select(girl_list, orange = False, no_sched=False, action_button=None
                                     if badge:
                                         add ProportionalScale(badge, *res_tb(40)) xalign 0.9 yalign 0.1
 
-                        $ text1 = selected_girl.fullname + __("\nRank ") + rank_name[selected_girl.rank] + __(" - Level ") + str(selected_girl.level)
+                        $ text1 = __("%s\nRank %s - Level %s") % (selected_girl.fullname, rank_name[selected_girl.rank], selected_girl.level)
 
                         if not no_sched:
                             if selected_girl.job:
-                                $ text1 += "\n" + __(selected_girl.job.capitalize())
+                                $ text1 += "\n%s" % selected_girl.job.capitalize()
                                 if selected_girl.job in all_jobs and selected_girl.work_whore:
                                     $ text1 += __("/Whore")
                                 $ sched = selected_girl.workdays[calendar.get_weekday()]
@@ -5984,9 +5984,9 @@ screen quick_start(def_panel = "MC"):
                         grid 2 y:
                             for ds in diff_settings:
                                 if ds == "satisfaction":
-                                    textbutton __(diff_setting_name[ds]) + ": " + plus_text(game.get_diff_setting(ds)) text_color c_brown background None text_size res_font(18) action NullAction() tooltip diff_setting_description[ds]
+                                    textbutton __("%s: %s") % (diff_setting_name[ds], plus_text(game.get_diff_setting(ds))) text_color c_brown background None text_size res_font(18) action NullAction() tooltip diff_setting_description[ds]
                                 else: # percentage description
-                                    textbutton __(diff_setting_name[ds]) + ": " + percent_text(game.get_diff_setting(ds), False) text_color c_brown background None text_size res_font(18) action NullAction() tooltip diff_setting_description[ds]
+                                    textbutton __("%s: %s") % (diff_setting_name[ds], percent_text(game.get_diff_setting(ds), False)) text_color c_brown background None text_size res_font(18) action NullAction() tooltip diff_setting_description[ds]
 
                                 hbox:
                                     textbutton "-" text_size res_font(18) xsize xres(24) action Function(game.change_diff_setting, ds, -diff_settings_range[ds]["pace"]) # Trying to go around the prediction problem
@@ -6118,7 +6118,7 @@ screen main_character():
         frame xpadding 3 ypadding 10 xfill True:
             has vbox
             textbutton MC.name background None text_color c_main action Return("change_name") hovered tt.Action(_("Click here to change your character's name"))
-            textbutton (__("Level ") + str(MC.level) + " " + __(MC.playerclass)) background None text_size res_font(18) text_color c_darkgrey action NullAction() tooltip "You need " + str(int(MC_xp_to_levelup[MC.level])) + " prestige to level up."
+            textbutton (__("Level %s %s") % (MC.level, MC.playerclass)) background None text_size res_font(18) text_color c_darkgrey action NullAction() tooltip __("You need %s prestige to level up.") % int(MC_xp_to_levelup[MC.level])
 
         frame xpadding 3 ypadding 10 xfill True:
             has vbox spacing 6
@@ -6156,7 +6156,7 @@ screen main_character():
                 if MC.level == 25:
                     $ text1 += __("\nYou have reached the maximum level.")
                 else:
-                    $ text1 += __("\nYou need ") + str(int(MC_xp_to_levelup[MC.level])) + __(" prestige to level up.")
+                    $ text1 += __("\nYou need %s prestige to level up.") % int(MC_xp_to_levelup[MC.level])
 
                 button:
                     background None
@@ -6170,7 +6170,7 @@ screen main_character():
                     action NullAction()
                     tooltip _("You get 1 skill point for every new level.")
 
-                    text str(MC.skill_points) + __(" skill points") size res_font(14) color c_brown
+                    text __("%s skill points") % str(MC.skill_points) size res_font(14) color c_brown
 
         frame xpadding 3 ypadding 10 xfill True:
             has vbox
@@ -6189,7 +6189,7 @@ screen main_character():
 
             text "" size res_font(10)
 
-            textbutton __("{b}Current goal{/b}\n{i}{size=-2}") + game.get_first_goal() xalign 0.1 yalign 0.5 xsize xres(180) text_size res_font(14) text_color c_brown background None:
+            textbutton __("{b}Current goal{/b}\n{i}{size=-2}%s") % game.get_first_goal() xalign 0.1 yalign 0.5 xsize xres(180) text_size res_font(14) text_color c_brown background None:
                 action NullAction()
                 hovered Show("goal_ttip", transition=Dissolve(0.15))
                 unhovered Hide("goal_ttip", transition=Dissolve(0.15))
@@ -6394,7 +6394,7 @@ screen postings(qlist):
                         xalign 0.0
 
                         if selected_quest.special:
-                            textbutton "{image=img_star} " + __(selected_quest.special) + " {image=img_star}" xalign 0.0 yalign 0.5 ypadding 0 text_color c_orange background None action NullAction() hovered tt.Action(special_quest_description[selected_quest.special])
+                            textbutton "{image=img_star} %s {image=img_star}" % selected_quest.special xalign 0.0 yalign 0.5 ypadding 0 text_color c_orange background None action NullAction() hovered tt.Action(special_quest_description[selected_quest.special])
 
                         text selected_quest.name xalign 0.0 yalign 0.5 color c_prune
 
@@ -6417,7 +6417,7 @@ screen postings(qlist):
 
                             text _("Duration") size res_font(18) color c_prune
 
-                            text str(selected_quest.duration) + __(" days") size res_font(14) color c_brown
+                            text __("%s days") % str(selected_quest.duration) size res_font(14) color c_brown
 
                             text "" size res_font(18)
 
@@ -6437,7 +6437,7 @@ screen postings(qlist):
                                     has vbox
                                     text _("Enrolled") size res_font(18) color c_prune
 
-                                    text str(len(selected_quest.enrolled)) + "/" + str(selected_quest.capacity) + __(" girls") size res_font(14) color c_brown
+                                    text __("%s/%s girls") % (str(len(selected_quest.enrolled)), str(selected_quest.capacity)) size res_font(14) color c_brown
 
                                 text "" size res_font(18)
 
@@ -6558,12 +6558,12 @@ screen postings(qlist):
 
                                 if quest.type == "quest":
 
-                                    $ ttip = __("This task requires ") + __(and_text([stat for stat, v in quest.requirements])) + ".\n"
-                                    $ ttip += str(quest.count_eligible_girls()) + __(" girls can complete this task.")
+                                    $ ttip = __("This task requires %s.\n") % and_text([stat for stat, v in quest.requirements])
+                                    $ ttip += __("%s girls can complete this task.") % str(quest.count_eligible_girls())
 
                                 elif quest.type == "class":
 
-                                    $ ttip = __("This class may improve {b}") + __(and_text([stat for stat, _min, _max in quest.bonuses])) + "{/b}.\n"
+                                    $ ttip = __("This class may improve {b}%s{/b}.\n") % and_text([stat for stat, _min, _max in quest.bonuses])
                                     $ ttip += str(len(quest.enrolled)) + "/" + str(quest.capacity) + " are enrolled in this class"
                                     if quest.enrolled:
                                         $ ttip += " (%i%% discount)." % (len(quest.enrolled)*-100*class_discount)
@@ -7496,7 +7496,7 @@ screen sex_details(girl):
                     $ text1 = ""
 
                 if girl.personality_unlock[act]:
-                    text preference_color[girl.get_preference(act)] % __(girl.get_preference(act).capitalize()) + text1 size res_font(14)
+                    text (preference_color[girl.get_preference(act)] % girl.get_preference(act).capitalize()) + text1 size res_font(14)
                 else:
                     text "Unknown" + text1 size res_font(14) italic True
 
@@ -7581,7 +7581,7 @@ screen challenge_menu(header="What do you do?", challenges=[], cancel=False):
             for title, challenge_type, diff in challenges:
                 $ chal = MC.challenges[challenge_type]
                 $ diff = chal.adjust_diff(diff)
-                $ ttip = "{b}" + __(chal.name) + __(" challenge{/b}: This challenges your {b}") + __(chal.stat.capitalize()) + "{/b} (" + str_int(MC.get_stat(chal.stat)) + ")" + __(". Estimated difficulty: {b}") + __(chal.estimate_diff(diff=diff)) + "{/b}."
+                $ ttip = __("{b}%s challenge{/b}: This challenges your {b}%s{/b} (%s). Estimated difficulty: {b}%s{/b}.") % (chal.name, chal.stat.capitalize(), str_int(MC.get_stat(chal.stat)), chal.estimate_diff(diff=diff))
 
                 button background None action(Return(challenge_type)):
                     vbox:
@@ -7620,7 +7620,7 @@ screen challenge(name, diff, raw=False, bonus=0, opponent_bonus=0, bonus_text=""
         has vbox
 
         frame xalign 0.5 xfill True background "#22222288":
-            text __("Player challenge: ") + chal.name xalign 0.5
+            text __("Player challenge: %s") % chal.name xalign 0.5
 
         text ""
 
@@ -7629,16 +7629,16 @@ screen challenge(name, diff, raw=False, bonus=0, opponent_bonus=0, bonus_text=""
             frame background "#22222288" xfill True xsize xres(250) ysize yres(160) xpadding 10 ypadding 10:
 
                 vbox:
-                    textbutton __("Player ") + __(chal.stat.capitalize()) + ": " + str_int(MC.get_stat(chal.stat, raw=True)) text_size res_font(18) style "inv_no_padding"
+                    textbutton __("Player %s: %s") % (chal.stat.capitalize(), str_int(MC.get_stat(chal.stat, raw=True))) text_size res_font(18) style "inv_no_padding"
                     textbutton __("Active bonus: ") + str_int(bonus + MC.get_stat(chal.stat, raw) - MC.get_stat(chal.stat, raw=True) + MC.get_effect("change", chal.name + " challenges")) text_size int(config.screen_height*0.0222) style "inv_no_padding" action NullAction() tooltip bonus_text
                     text ""
 
                     if phase >= 1:
-                        text __("Roll: ") + "{image=" + "img_dice" + str(chal.d) + "}" size res_font(18)
+                        text __("Roll: {image=img_dice%s}") % str(chal.d) size res_font(18)
                         text ""
 
                         if phase >= 2:
-                            text __("Final Result: ") + str(round_int(chal.score)) size res_font(18)
+                            text __("Final Result: %s") % str(round_int(chal.score)) size res_font(18)
 
                     elif chal.opposed:
                         textbutton _("Roll") action (SetScreenVariable("phase", 1), Play("sound", s_dice)) tooltip _("Roll the dice")
@@ -7651,18 +7651,18 @@ screen challenge(name, diff, raw=False, bonus=0, opponent_bonus=0, bonus_text=""
                 has vbox
 
                 if chal.opposed:
-                    text __("Opponent ") + __(chal.stat.capitalize()) + ": " + str_int(diff + opponent_bonus) size res_font(18)
+                    text __("Opponent %s: %s") % (chal.stat.capitalize(), str_int(diff + opponent_bonus)) size res_font(18)
                     text "" size res_font(18)
                     text ""
 
                     if phase >= 2:
-                        text __("Roll: ") + "{image=" + "img_dice" + str_int(chal.d_op) + "}" size res_font(18)
+                        text __("Roll: {image=img_dice%s}") % str_int(chal.d_op) size res_font(18)
                         text ""
-                        text __("Final Result: ") + str_int(chal.score_op) size res_font(18)
+                        text __("Final Result: %s") % str_int(chal.score_op) size res_font(18)
                     elif phase == 1:
                         textbutton __("Roll") action (SetScreenVariable("phase", 2), Play("sound", s_dice)) tooltip _("Roll the opponent's dice")
                 else:
-                    text __("Difficulty: ") + str_int(diff) size res_font(18)
+                    text __("Difficulty: %s") % str_int(diff) size res_font(18)
 
         if phase >= 2:
             text ""
@@ -7715,7 +7715,7 @@ screen resource_tab(rlist="MC", sz = yres(15), sp = 3, x=0.0, y=0.0, bg=None, fo
             for resource in [resource_dict[r] for r in build_resources]:
 
                 if MC.resources[resource.name]>0:
-                    button background None action NullAction() tooltip (resource.description + __(" You have ") + str(MC.resources[resource.name]) + " " + __(resource.name) + __(" in store.")) xpadding sp ypadding sp:
+                    button background None action NullAction() tooltip __("%s You have %s %s in store.") % (resource.description, str(MC.resources[resource.name]), resource.name) xpadding sp ypadding sp:
                         has hbox spacing sp*2 yalign 0.5
                         add resource.pic.get(sz, sz) yalign 0.5
                         if MC.resources[resource.name] < 100:
@@ -7790,7 +7790,7 @@ screen resource_exchange():
                 for r in calendar.scarce:
                     $ resource = resource_dict[r]
                     if resource.rank <= story_flags["builder license"]:
-                        button background None action NullAction() tooltip __("There is a shortage of ") + r.capitalize() + __(" this week. Value is going up."):
+                        button background None action NullAction() tooltip __("There is a shortage of %s this week. Value is going up.") % r.capitalize():
                             has hbox spacing 3
                             add resource.pic.get(*res_tb(20)) yalign 0.5
                             text "▲" size res_font(16) color c_emerald yalign 0.5 font "DejaVuSans.TTF"
@@ -7798,7 +7798,7 @@ screen resource_exchange():
                 for r in calendar.discounted:
                     $ resource = resource_dict[r]
                     if resource.rank <= story_flags["builder license"]:
-                        button background None action NullAction() tooltip r.capitalize() + __(" is plentiful this week. Value is going down."):
+                        button background None action NullAction() tooltip __("%s is plentiful this week. Value is going down.") % r.capitalize():
                             has hbox spacing 3
                             add resource.pic.get(*res_tb(20)) yalign 0.5
                             text "▼" size res_font(16) color c_red yalign 0.5 font "DejaVuSans.TTF"
@@ -8142,7 +8142,7 @@ screen free_girl_interact(girl):
                 if topic.is_shown(girl):
                     $ text1 = " ([topic.AP_cost]{image=img_AP})"
 
-                    textbutton __(topic.caption) + text1 background None ypadding yres(0) text_size res_font(16):
+                    textbutton __("%s%s") % (topic.caption, text1) background None ypadding yres(0) text_size res_font(16):
                         if topic.is_available(girl)[0]:
                             action Return(topic)
                             text_hover_underline True
@@ -8241,11 +8241,11 @@ screen girl_interact(girl, free=False):
                         if topic.advanced:
                             hbox spacing 0:
 
-                                textbutton __(topic.caption) + get_act_weakness_symbol(girl, topic.act) background None text_layout "nobreak" text_size res_font(13) text_color c_white xsize xres(100) text_xalign 0.0 action NullAction():
+                                textbutton __("%s%s") % (topic.caption, get_act_weakness_symbol(girl, topic.act)) background None text_layout "nobreak" text_size res_font(13) text_color c_white xsize xres(100) text_xalign 0.0 action NullAction():
                                     if girl.personality_unlock[topic.act]:
-                                        tooltip __("You know that [girl.name] has ") + __(girl.get_reaction_to_act(topic.act)) + __(" for ") + __(topic.act) + __(" acts.")
+                                        tooltip __("You know that [girl.name] has %s for %s acts.") % (girl.get_reaction_to_act(topic.act), topic.act)
                                     else:
-                                        tooltip __("You do not know [girl.name]'s reaction to ") + __(topic.act) + __(" acts.")
+                                        tooltip __("You do not know [girl.name]'s reaction to %s acts.") % topic.act
                                     hovered Show("sex_details", girl=girl)
                                     unhovered Hide("sex_details")
 
@@ -8254,7 +8254,7 @@ screen girl_interact(girl, free=False):
                                         if topic.is_available(girl, "lecture", free)[0]:
                                             text_hover_underline True
                                             action Return([topic, "lecture"])
-                                            tooltip __("Lecture [girl.name] about the virtues of ") + __(topic.act) + __(" acts (soft).\nCosts {image=img_AP} %i.") % normal_cost
+                                            tooltip __("Lecture [girl.name] about the virtues of %s acts (soft).\nCosts {image=img_AP} %i.") % (topic.act, normal_cost)
                                         else:
                                             text_color c_grey
                                             action NullAction()
@@ -8265,7 +8265,7 @@ screen girl_interact(girl, free=False):
                                         text_hover_underline True
                                         action Return([topic, "train"])
                                         if topic.gold_cost:
-                                            tooltip __("Train [girl.name] for %s acts.\nCosts {image=img_AP} %i and {image=img_gold} %i.") % (__(topic.act), normal_cost, topic.get_gold_cost())
+                                            tooltip __("Train [girl.name] for %s acts.\nCosts {image=img_AP} %i and {image=img_gold} %i.") % (topic.act, normal_cost, topic.get_gold_cost())
                                         elif topic.base_MP_cost:
                                             tooltip __("Train [girl.name] for %s acts.\nCosts {image=img_AP} %i and {image=img_MP} %i.") % (__(topic.act), normal_cost, topic.get_MP_cost(girl))
                                         else:
@@ -8320,7 +8320,7 @@ screen girl_interact(girl, free=False):
                             if free or topic.AP_cost or topic.gold_cost or topic.base_MP_cost:
                                 $ text1 += ")"
 
-                            textbutton __(topic.caption) + text1 background None ypadding yres(3) text_size res_font(16):
+                            textbutton __("%s%s") % (topic.caption, text1) background None ypadding yres(3) text_size res_font(16):
                                 if topic.is_available(girl, free=free)[0]:
                                     action Return(topic)
                                     text_hover_underline True
@@ -8930,7 +8930,7 @@ screen auction_brothel(name, pic, price):
         spacing 20
 
         add pic xalign 0.0 fit "contain"
-        use increment_counter(0, price, _caption = __("Sold " + name + " for {b}%s{/b} {image=img_gold}"), _color = c_emerald)
+        use increment_counter(0, price, _caption = __("Sold %s for {b}%s{/b} {image=img_gold}") % (name, '{:,}'.format(price)), _color = c_emerald)
         # text __("Sold %s for {b}%s{/b} {image=img_gold}") % (name, '{:,}'.format(price)) color c_emerald size res_font(16) xalign 0.5 yalign 0.5
 
 

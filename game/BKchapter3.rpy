@@ -759,7 +759,7 @@ label c3_hint(npc, ninja):
                 else:
                     gina "Want the time-warping runic stone? The price is still 1,000 gold, or two Cimerian scraps."
 
-                if MC.gold >= 1000 or len(MC.get_items(name=__("Cimerian scrap"))) >= 2 or MC.get_items(name=__("Cimerian artefact")):
+                if MC.gold >= 1000 or len(MC.get_items(name="Cimerian scrap")) >= 2 or MC.get_items(name="Cimerian artefact"):
                     menu:
                         "Okay (pay 1,000 gold)":
                             $ NPC_gina.flags["research"] += 2
@@ -772,17 +772,17 @@ label c3_hint(npc, ninja):
                             $ story_flags["void rune"] = True
                             call receive_item(void_rune) from _call_receive_item_20
 
-                        "Okay (give 2 Cimerian scrap)" if len(MC.get_items(name=__("Cimerian scrap"))) >= 2:
+                        "Okay (give 2 Cimerian scrap)" if len(MC.get_items(name="Cimerian scrap")) >= 2:
                             $ NPC_gina.flags["research"] += 2
-                            call remove_item(MC.get_items(name=__("Cimerian scrap"))[0]) from _call_remove_item_2
-                            call remove_item(MC.get_items(name=__("Cimerian scrap"))[0]) from _call_remove_item_3
+                            call remove_item(MC.get_items(name="Cimerian scrap")[0]) from _call_remove_item_2
+                            call remove_item(MC.get_items(name="Cimerian scrap")[0]) from _call_remove_item_3
                             gina "Thanks! This will help with my research."
                             $ story_flags["void rune"] = True
                             call receive_item(void_rune) from _call_receive_item_45
 
-                        "What about this? (give Cimerian artefact)" if MC.get_items(name=__("Cimerian artefact")):
+                        "What about this? (give Cimerian artefact)" if MC.get_items(name="Cimerian artefact"):
                             $ NPC_gina.flags["research"] += 5
-                            $ MC.remove_item(MC.get_items(name=__("Cimerian artefact"))[0])
+                            $ MC.remove_item(MC.get_items(name="Cimerian artefact")[0])
                             gina "Whoah, amazing find!!! This will help a lot with my research, thank you. Here, take this."
                             $ MC.change_gold(500)
                             $ story_flags["void rune"] = True
@@ -2216,7 +2216,7 @@ label c3_contact_homura():
             $ MC.items.remove(blue_ribbon)
             $ plaza.action = False
 
-        $ calendar.set_alarm(calendar.time, StoryEvent(label = __("c3_homura_visit"), type = "night"))
+        $ calendar.set_alarm(calendar.time, StoryEvent(label = "c3_homura_visit", type = "night"))
 
         $ NPC_homura.flags["is summoned"] = True
 
@@ -10182,7 +10182,7 @@ label mizuki_k_back(girl):
 
     $ MC.rand_say("gd: You deserve a good rest.", "ne: You will need to recover before you can go back to your duties.", "ev: Because I expect you to be back on the job shortly!")
 
-    $ calendar.set_alarm(calendar.time+1, StoryEvent(label=__("mizuki_k_back2"), type="morning", call_args = (girl, )))
+    $ calendar.set_alarm(calendar.time+1, StoryEvent(label="mizuki_k_back2", type="morning", call_args = (girl, )))
 
     sill "[girl.fullname] is now back to [brothel.name]. You may want to let her rest before putting her back on the job."
 
@@ -11537,7 +11537,7 @@ label mizuki_w_back(girl):
 
     girl.char "(Gods, I can't wait to sleep in my bed again...)"
 
-    $ calendar.set_alarm(calendar.time+1, StoryEvent(label=__("mizuki_w_back2"), type="morning", call_args = (girl, )))
+    $ calendar.set_alarm(calendar.time+1, StoryEvent(label="mizuki_w_back2", type="morning", call_args = (girl, )))
 
     sill "[girl.fullname] is now back to [brothel.name]. You may want to let her rest before putting her back on the job."
 
@@ -13007,7 +13007,7 @@ label c3_mizuki_investigation_menu():
             hide suzume with dissolve
 
             if not NPC_mizuki.flags["c3 path"] == "waiting":
-                $ calendar.set_alarm(calendar.time, StoryEvent(label=__("c3_mizuki_kenshin_warning"), type="night"))
+                $ calendar.set_alarm(calendar.time, StoryEvent(label="c3_mizuki_kenshin_warning", type="night"))
             $ NPC_mizuki.location = None
             $ NPC_mizuki.flags["c3 path"] = "waiting"
 
@@ -13426,7 +13426,7 @@ label c3_mizuki_kenshin_confrontation_menu:
 
             "No blood was shed today. But is this really the last you'll see of Mizuki?"
 
-            $ calendar.set_alarm(calendar.time+1, StoryEvent(label=__("c3_mizuki_goodbye"), type="morning"))
+            $ calendar.set_alarm(calendar.time+1, StoryEvent(label="c3_mizuki_goodbye", type="morning"))
             $ NPC_mizuki.flags["c3 path"] = "redeemed"
 
 
@@ -13519,7 +13519,7 @@ label c3_mizuki_kenshin_confrontation_menu:
                     $ girl = create_girl("Mizuki Ike", force_original=True, level=10)
                     $ girl.pop_virginity("other")
 
-                    $ calendar.set_alarm(calendar.day + 1, StoryEvent(label=__("mizuki_brothel"), type="morning", arg=girl))
+                    $ calendar.set_alarm(calendar.day + 1, StoryEvent(label="mizuki_brothel", type="morning", arg=girl))
 
                     call acquire_ninja(girl) from _call_acquire_ninja_3
 
@@ -13542,7 +13542,7 @@ label c3_mizuki_kenshin_confrontation_menu:
 
     $ game.set_task("The Water Kunoichi: Wait for events to unfold.", "story2", 3)
 
-    $ calendar.set_alarm(calendar.time+1, StoryEvent(label=__("c3_mizuki_princess_debrief"), type="morning"))
+    $ calendar.set_alarm(calendar.time+1, StoryEvent(label="c3_mizuki_princess_debrief", type="morning"))
 
     return
 
@@ -13577,7 +13577,7 @@ label mizuki_brothel(girl): # Fires up every morning until Mizuki runs out of br
 
             call mizuki_brothel_fetish(girl) from _call_mizuki_brothel_fetish
 
-        $ calendar.set_alarm(calendar.day + 1, StoryEvent(label=__("mizuki_brothel"), type="morning", arg=girl))
+        $ calendar.set_alarm(calendar.day + 1, StoryEvent(label="mizuki_brothel", type="morning", arg=girl))
     return
 
 label mizuki_brothel_service(girl):
@@ -14598,7 +14598,7 @@ label c3_mizuki_captured():
 
                         "Slightly disapointed by her lack of reaction, you leave her there. Alone in a dark cell, in a pool of cum."
 
-                        $ calendar.set_alarm(calendar.time+1, StoryEvent(label = __("c3_mizuki_gone"), type="night"))
+                        $ calendar.set_alarm(calendar.time+1, StoryEvent(label = "c3_mizuki_gone", type="night"))
 
                         scene black with fade
 
@@ -17794,7 +17794,7 @@ label haruka_break_test(): # Fires up every morning after capturing Haruka
 
         if NPC_haruka.flags["farm completed"] == 4:
             $ story_remove_event("haruka_break_test", "daily")
-            $ calendar.set_alarm(calendar.day + 1, StoryEvent(label=__("haruka_broken")))
+            $ calendar.set_alarm(calendar.day + 1, StoryEvent(label="haruka_broken"))
         else:
             "You congratulate Gizel on her progress with Haruka. You look forward to the next part of her training."
     else:
@@ -19261,7 +19261,7 @@ label c3_end_story(ninja):
         if not story_flags["c3 all kunoichi resolved"]:
             $ story_flags["c3 all kunoichi resolved"] = True
             $ suzume_hints_active = False
-            $ calendar.set_alarm(calendar.day + 2, StoryEvent(label=__("c3_palace_visit")))
+            $ calendar.set_alarm(calendar.day + 2, StoryEvent(label="c3_palace_visit"))
 
     return
 
@@ -19515,7 +19515,7 @@ label c3_palace_visit_menu(): #! Hide used-up questions later
 
     kuro "It is almost noon. Please attend the luncheon with me."
 
-    $ calendar.set_alarm(calendar.day + 3, StoryEvent(label=__("c3_homura_invitation")))
+    $ calendar.set_alarm(calendar.day + 3, StoryEvent(label="c3_homura_invitation"))
     $ game.set_task("Wait events to unfold.", "story")
 
     menu:
@@ -20083,7 +20083,7 @@ label c3_homura_invitation(): # Happens the morning after the palace visit
 
     you "Okay..."
 
-    $ calendar.set_alarm(calendar.find_next("Saturday"), StoryEvent(label=__("c3_confrontation"), type = "night"))
+    $ calendar.set_alarm(calendar.find_next("Saturday"), StoryEvent(label="c3_confrontation", type = "night"))
     $ game.set_task("Attend Princess Kurohime's birthday party on Saturday night.", "story")
 
     scene black with fade
@@ -22803,7 +22803,7 @@ label c3_confrontation_shiro(): # Follows previous label
 
             "Exhausted, you make your way back to the brothel."
 
-            $ calendar.set_alarm(calendar.time + 3, StoryEvent(label = __("c3_ending"), type = "morning"))
+            $ calendar.set_alarm(calendar.time + 3, StoryEvent(label = "c3_ending", type = "morning"))
 
             return
 
@@ -22966,7 +22966,7 @@ label c3_confrontation_shiro(): # Follows previous label
 
     "You were hoping to catch a breather, but something foul is in the air. And it isn't just the dungeon's stench."
 
-    $ calendar.set_alarm(calendar.time + 3, StoryEvent(label = __("c3_ending"), type = "morning"))
+    $ calendar.set_alarm(calendar.time + 3, StoryEvent(label = "c3_ending", type = "morning"))
 
     return
 

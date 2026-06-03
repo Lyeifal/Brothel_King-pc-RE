@@ -615,7 +615,7 @@ label end_day:
             night_early.add(line, ttip=ttip, ttip_title = event_color["a little good"] % "Working today")
 
             for girl in working_girls:
-                log.add_report(girl.fullname + __(" is working today as a ") + __(girl.job) + ".")
+                log.add_report(__("%s is working today as a %s.") % (girl.fullname, girl.job))
 
         if sick_girls:
             line = event_color["bad"] % ("Sick girls: %s" % len(sick_girls))
@@ -627,8 +627,8 @@ label end_day:
             ttip = list_text([g.fullname for g in striking_girls])
             night_early.add(line, ttip=ttip, ttip_title = event_color["bad"] % "Refused to work")
 
-            night_text += "\n{color=[c_red]}" + and_text([g.name for g in striking_girls]) + __(" refused to work!{/color} ")
-            log.add_report("{color=[c_red]}" + and_text([g.name for g in striking_girls]) + __(" refused to work!{/color}"))
+            night_text += __("\n{color=[c_red]}%s refused to work!{/color} ") % and_text([g.name for g in striking_girls])
+            log.add_report(__("{color=[c_red]}%s refused to work!{/color}") % and_text([g.name for g in striking_girls]))
 
         if resting_girls:
             line = event_color["normal"] % ("Resting: %s" % len(resting_girls))
@@ -654,7 +654,7 @@ label end_day:
 
             ad_pic = "events/" + rand_choice(night_pics)
             night_text += __("The brothel was closed tonight.")
-            cust_text = brothel.name + __(" was closed tonight, because none of your girls were working.\n")
+            cust_text = __("%s was closed tonight, because none of your girls were working.\n") % brothel.name
 
             if len(customers) > 5: # Lose rep for each customer that comes in vain
                 old_rep = brothel.rep
@@ -1046,7 +1046,7 @@ label end_day:
                         break # Only one toy can be used at a time
 
                     else:
-                        extra_text += __("\nShe refused to use the ") + __(it.name) + "."
+                        extra_text += __("\nShe refused to use the %s.") % it.name
 
             if used:
                 extra_text += __("\nShe had some fun with the %s." % used)
@@ -1306,18 +1306,18 @@ label end_day:
             girl.add_log("upkeep", girl.get_med_upkeep() * girl.get_effect("boost", "total upkeep") // 4)
 
         # _gold_text is displayed to the right-hand side. _gold_recap is displayed in the renpy window
-        _gold_text = __("You paid ") + '{image=img_gold} ' + '{:,}'.format(round_int(log.upkeep)) + __(" upkeep for your girls")
+        _gold_text = __("You paid {image=img_gold} %s upkeep for your girls") % '{:,}'.format(round_int(log.upkeep))
 
         if free_girl:
             _gold_text += __(" (free upkeep: ") + free_girl.name + ")"
 
         if working_girls:
             log.costs = brothel.get_adv_cost() + brothel.get_sec_cost() + brothel.get_maintenance_cost()
-            _gold_text += __(".\nYou paid ") + '{image=img_gold} ' + '{:,}'.format(round_int(log.costs)) + __(" for your brothel services.")
+            _gold_text += __(".\nYou paid {image=img_gold} %s for your brothel services.") % '{:,}'.format(round_int(log.costs))
 
         else:
             log.costs = brothel.get_maintenance_cost()
-            _gold_text += ". " + brothel.name + __(" was closed, so you sent the security and advertising crews home. You paid ") + '{:,}'.format(round_int(log.costs)) + __(" for maintenance.")
+            _gold_text += __(". %s was closed, so you sent the security and advertising crews home. You paid %s for maintenance.") % (brothel.name, '{:,}'.format(round_int(log.costs)))
 
         loan_payment = MC.repay_loan()
 

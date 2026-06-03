@@ -20,3 +20,22 @@ dist/
 # OS
 .DS_Store
 Thumbs.db
+
+# Python cache
+__pycache__/
+*.pyc
+
+# Game runtime artifacts
+log.txt
+errors.txt
+traceback.txt
+
+# User content (girl packs should not be tracked)
+game/girls/*
+!game/girls/YOUR GIRL FOLDERS GO HERE.txt
+
+# Translation work-in-progress exports
+game/tl/chinese_simplified/to_translate.txt
+game/tl/chinese_simplified/translated.txt
+game/tl/chinese_simplified/to_translate.docx
+game/tl/chinese_simplified/to_translated.docx
