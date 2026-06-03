@@ -49,9 +49,10 @@ def unquote_rpy(s: str) -> str:
     return ''.join(result)
 
 def extract_strings():
-    """Scan .rpy files for __() calls. Returns dict: text -> (filepath, line_num)"""
+    """Scan .rpy files for _() and __() calls. Returns dict: text -> (filepath, line_num)"""
     found = OrderedDict()
-    pattern = re.compile(r'__\(\s*(["\'])(.*?)\1\s*\)')
+    # Match both _() (not preceded by another _) and __()
+    pattern = re.compile(r'(?:__|(?<![_])_)\(\s*(["\'])(.*?)\1\s*\)')
     
     for filepath in sorted(glob.glob('game/**/*.rpy', recursive=True)):
         # Skip translation files

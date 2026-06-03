@@ -198,7 +198,11 @@ game/data/
   - **修复重复翻译错误**: `tl/chinese_simplified/*.rpy` 剧情翻译文件中也包含 `translate chinese_simplified strings:` 块，与新生成的 `strings.rpy` 产生 `old` 键冲突
     - 使用 `merge_tl_strings.py` 从 20 个剧情翻译文件中移除 `strings:` 块
     - 合并 1,500 条重叠翻译到 `strings.rpy`
-    - 最终 `strings.rpy`: **11,074** 条总条目，**1,757** 条中文翻译，**9,317** 条待翻译
+  - **修复 `_()` 字符串丢失**: `merge_translations.py` 最初只扫描 `__()`，漏掉了 1,217 个 `_()` 调用（屏幕语言字符串），导致 523 条中文翻译丢失
+    - 修改 `merge_translations.py` 同时扫描 `_()` 和 `__()`
+    - 使用 `restore_lost.py` 从 git 历史找回 523 条丢失翻译
+    - 最终 `strings.rpy`: **10,192** 条总条目，**2,280** 条中文翻译，**7,912** 条待翻译
+  - **新增翻译说明文档**: `game/tl/TRANSLATION_GUIDE.md`
   - **验证通过**: 游戏可正常启动，无报错
 - [ ] **剧情对话翻译填充 (Phase 4)**: `tl/chinese_simplified/BKchapter*.rpy` 等文件的 `translate` 脚手架已生成，需填充 `new` 值为实际中文翻译
 - [ ] **Mod `name` 持久化修复**: 示例 Mod 和 `Mod` 类文档中 `name = __(...)` 的用法会导致语言切换后持久化键丢失
