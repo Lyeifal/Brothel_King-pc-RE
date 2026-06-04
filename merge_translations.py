@@ -124,6 +124,10 @@ def main():
     ]
     
     for text, (filepath, line_num) in source_strings.items():
+        # Skip empty strings
+        if not text:
+            continue
+        
         if text in existing:
             new_text, has_todo = existing[text]
             if new_text and new_text != text:
