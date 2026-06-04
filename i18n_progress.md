@@ -203,7 +203,16 @@ game/data/
     - 使用 `restore_lost.py` 从 git 历史找回 523 条丢失翻译
     - 最终 `strings.rpy`: **10,192** 条总条目，**2,280** 条中文翻译，**7,912** 条待翻译
   - **新增翻译说明文档**: `game/tl/TRANSLATION_GUIDE.md`
+  - **批量导入 25,224 条中文翻译**: 用户通过 Google Translate 手动翻译 `to_translate.xlsx` 后，使用 `import_translated_xlsx.py` 导回
+    - `strings.rpy`: 7,821 条
+    - 剧情文件: 17,403 条（涵盖主线、支线、事件、互动等全部 16 个剧情文件）
   - **验证通过**: 游戏可正常启动，无报错
+
+### Phase 4: 剧情对话翻译填充 ✅ COMPLETED
+- [x] 通过 `export_translation_xlsx.py` 导出全部待翻译文本到 `to_translate.xlsx`
+- [x] 用户手动翻译后通过 `import_translated_xlsx.py` 批量导回
+- [x] 翻译覆盖率大幅提升，`strings.rpy` + 剧情文件共 25,224 条新翻译已生效
+- [x] 游戏在中文语言下可正常运行，翻译正确加载
 - [ ] **剧情对话翻译填充 (Phase 4)**: `tl/chinese_simplified/BKchapter*.rpy` 等文件的 `translate` 脚手架已生成，需填充 `new` 值为实际中文翻译
 - [ ] **Mod `name` 持久化修复**: 示例 Mod 和 `Mod` 类文档中 `name = __(...)` 的用法会导致语言切换后持久化键丢失
 - [ ] **图片内嵌文本**: 如果游戏中有文字内嵌在图片中，需要重新制图
