@@ -16,7 +16,7 @@ translate chinese_simplified city_rape_795cacf6:
 translate chinese_simplified city_rape_69107b8c:
 
     # ev_girl1 "Mmmmph! Aaaah!"
-    ev_girl1 "Mmmmph! Aaaah!"
+    ev_girl1 "嗯！啊！"
 
 # game/BKcity_events.rpy:35
 translate chinese_simplified city_rape_6081d6b6:
@@ -28,7 +28,7 @@ translate chinese_simplified city_rape_6081d6b6:
 translate chinese_simplified city_rape_956cf43e:
 
     # ev_girl1 "Aaah, aah, noooo... It's ravaging me! Help! Help me!!!"
-    ev_girl1 "Aaah, aah, noooo... It's ravaging me! Help! Help me!!!"
+    ev_girl1 "啊啊啊，不……它快把我折磨死了！救命！救救我！！！"
 
 # game/BKcity_events.rpy:39
 translate chinese_simplified city_rape_df1322d0:
@@ -46,7 +46,7 @@ translate chinese_simplified city_rape_fae09fc1:
 translate chinese_simplified city_rape_837365c4:
 
     # you "Back away, you filthy beast!"
-    you "Back away, you filthy beast!"
+    you "滚开，你这肮脏的畜生！"
 
 # game/BKcity_events.rpy:54
 translate chinese_simplified city_rape_fea121be:
@@ -82,25 +82,25 @@ translate chinese_simplified city_rape_28fb9dab:
 translate chinese_simplified city_rape_61cbe017:
 
     # you "Don't worry, I've got this under control."
-    you "Don't worry, I've got this under control."
+    you "别担心，我能搞定。"
 
 # game/BKcity_events.rpy:100
 translate chinese_simplified city_rape_8c1203b7:
 
     # ev_girl1 "Thanks, you saved me... *sob* I will tell everyone what you did for me..."
-    ev_girl1 "Thanks, you saved me... *sob* I will tell everyone what you did for me..."
+    ev_girl1 "谢谢你，你救了我……呜咽……我会告诉所有人你为我做了什么……"
 
 # game/BKcity_events.rpy:102
 translate chinese_simplified city_rape_07c5e6ea:
 
     # you "You be on your way. Don't stay here."
-    you "You be on your way. Don't stay here."
+    you "你赶紧走吧，别留在这里。"
 
 # game/BKcity_events.rpy:104
 translate chinese_simplified city_rape_fb02adf5:
 
     # you "Now, this knocked out monster... What should I do with it?"
-    you "Now, this knocked out monster... What should I do with it?"
+    you "现在，这只昏迷的怪物……我该怎么处置它呢？"
 
 # game/BKcity_events.rpy:117
 translate chinese_simplified city_rape_3b16f6a2:
@@ -118,7 +118,7 @@ translate chinese_simplified city_rape_004738f9:
 translate chinese_simplified city_rape_bac50fb6:
 
     # ev_girl1 "Thank, you saved me... *sob* I will tell everyone what you did for me..."
-    ev_girl1 "Thank, you saved me... *sob* I will tell everyone what you did for me..."
+    ev_girl1 "谢谢你，你救了我……呜咽……我会告诉所有人你为我做了什么……"
 
 # game/BKcity_events.rpy:137
 translate chinese_simplified city_rape_a9baabcd:
@@ -148,7 +148,7 @@ translate chinese_simplified city_rape_abcf6f33:
 translate chinese_simplified city_rape_036f648a:
 
     # you "Damn you..."
-    you "Damn you..."
+    you "该死的你..."
 
 # game/BKcity_events.rpy:171
 translate chinese_simplified city_rape_9e384a5b:
@@ -166,25 +166,25 @@ translate chinese_simplified city_rape_b0a90d75:
 translate chinese_simplified city_rape_9ac4bedd:
 
     # you "Banish spell? Do I look like I have time for this nonsense?"
-    you "Banish spell? Do I look like I have time for this nonsense?"
+    you "驱逐咒？你看我像有空理会这种无聊事吗？"
 
 # game/BKcity_events.rpy:185
 translate chinese_simplified city_rape_6b5419d7:
 
     # you "Fry, you piece of shit!"
-    you "Fry, you piece of shit!"
+    you "弗莱，你这个混蛋！"
 
 # game/BKcity_events.rpy:189
 translate chinese_simplified city_rape_800e1264:
 
     # you "Thou shall not pass...{w=1.0} your genes!"
-    you "Thou shall not pass...{w=1.0} your genes!"
+    you "你休想通过……{w=1.0}你的基因！"
 
 # game/BKcity_events.rpy:192
 translate chinese_simplified city_rape_c3acfded:
 
     # you "Back to the underworld with you, foul demon!"
-    you "Back to the underworld with you, foul demon!"
+    you "滚回冥界去吧，邪恶的恶魔！"
 
 # game/BKcity_events.rpy:196
 translate chinese_simplified city_rape_44dd620e:
@@ -202,7 +202,7 @@ translate chinese_simplified city_rape_a160ff8c:
 translate chinese_simplified city_rape_8bfd5117:
 
     # you "So, you're still alive?"
-    you "So, you're still alive?"
+    you "所以，你还活着？"
 
 # game/BKcity_events.rpy:215
 translate chinese_simplified city_rape_4d07f4ed:
@@ -214,7 +214,7 @@ translate chinese_simplified city_rape_4d07f4ed:
 translate chinese_simplified city_rape_a2fbc6f3:
 
     # you "Shazam!"
-    you "Shazam!"
+    you "沙赞！"
 
 # game/BKcity_events.rpy:227
 translate chinese_simplified city_rape_cde27e5c:
@@ -226,25 +226,25 @@ translate chinese_simplified city_rape_cde27e5c:
 translate chinese_simplified city_rape_463a3e6f:
 
     # ev_girl1 "Wh... What happenned?"
-    ev_girl1 "Wh... What happenned?"
+    ev_girl1 "什……发生了什么事？"
 
 # game/BKcity_events.rpy:231
 translate chinese_simplified city_rape_3b0ecb8b:
 
     # you "I cast a hypnotic spell... Don't worry, child, it is unable to harm you now."
-    you "I cast a hypnotic spell... Don't worry, child, it is unable to harm you now."
+    you "我施了个催眠咒……别担心，孩子，它现在伤害不了你了。"
 
 # game/BKcity_events.rpy:233
 translate chinese_simplified city_rape_f234f69e:
 
     # ev_girl1 "Oh, you saved me... *sob* I will tell everyone what you did for me... *sob*"
-    ev_girl1 "Oh, you saved me... *sob* I will tell everyone what you did for me... *sob*"
+    ev_girl1 "哦，你救了我……呜咽……我会告诉所有人你为我做了什么……呜咽……"
 
 # game/BKcity_events.rpy:235
 translate chinese_simplified city_rape_c1f8088e:
 
     # you "It is best for you to leave now, while I dispose of this creature."
-    you "It is best for you to leave now, while I dispose of this creature."
+    you "你最好现在就离开，让我来处理掉这个怪物。"
 
 # game/BKcity_events.rpy:249
 translate chinese_simplified city_rape_c02efa77:
@@ -262,13 +262,13 @@ translate chinese_simplified city_rape_cd195c41:
 translate chinese_simplified city_rape_60b7ab26:
 
     # you "What a dumb bitch... <sigh>"
-    you "What a dumb bitch... <sigh>"
+    you "真是个蠢女人……<叹气>"
 
 # game/BKcity_events.rpy:262
 translate chinese_simplified city_rape_a2fbc6f3_1:
 
     # you "Shazam!"
-    you "Shazam!"
+    you "沙赞！"
 
 # game/BKcity_events.rpy:268
 translate chinese_simplified city_rape_660b4123:
@@ -280,7 +280,7 @@ translate chinese_simplified city_rape_660b4123:
 translate chinese_simplified city_rape_f234f69e_1:
 
     # ev_girl1 "Oh, you saved me... *sob* I will tell everyone what you did for me... *sob*"
-    ev_girl1 "Oh, you saved me... *sob* I will tell everyone what you did for me... *sob*"
+    ev_girl1 "哦，你救了我……呜咽……我会告诉所有人你为我做了什么……呜咽……"
 
 # game/BKcity_events.rpy:277
 translate chinese_simplified city_rape_a9baabcd_1:
@@ -292,13 +292,13 @@ translate chinese_simplified city_rape_a9baabcd_1:
 translate chinese_simplified city_rape_fa1760f7:
 
     # you "Now take that, you..."
-    you "Now take that, you..."
+    you "现在，你……"
 
 # game/BKcity_events.rpy:289
 translate chinese_simplified city_rape_e29b3f0b:
 
     # you "Uh oh..."
-    you "Uh oh..."
+    you "糟糕……"
 
 # game/BKcity_events.rpy:293
 translate chinese_simplified city_rape_49436318:
@@ -328,7 +328,7 @@ translate chinese_simplified city_rape_7bc3e35c:
 translate chinese_simplified city_rape_612d9431:
 
     # you "Well, discretion is the better part of valor..."
-    you "Well, discretion is the better part of valor..."
+    you "嗯，谨慎是上策……"
 
 # game/BKcity_events.rpy:317
 translate chinese_simplified city_rape_8c0db1f9:
@@ -352,7 +352,7 @@ translate chinese_simplified city_monster_menu_6c123776:
 translate chinese_simplified city_monster_menu_88539a28:
 
     # you "How would you like to get room and board, pal, and fuck some girls all day?"
-    you "How would you like to get room and board, pal, and fuck some girls all day?"
+    you "哥们儿，你想不想包吃包住，然后整天跟姑娘们鬼混？"
 
 # game/BKcity_events.rpy:346
 translate chinese_simplified city_monster_menu_7fa4cb7f:
@@ -370,7 +370,7 @@ translate chinese_simplified city_monster_menu_c964ce72:
 translate chinese_simplified city_monster_menu_f2a54552:
 
     # you "I know someone who can take care of it, making me some money in the process..."
-    you "I know someone who can take care of it, making me some money in the process..."
+    you "我知道有人能处理这件事，这样我还能赚点钱……"
 
 # game/BKcity_events.rpy:371
 translate chinese_simplified city_monster_menu_5763083e:
@@ -382,13 +382,13 @@ translate chinese_simplified city_monster_menu_5763083e:
 translate chinese_simplified city_monster_menu_6971486e:
 
     # willow "Thanks!"
-    willow "Thanks!"
+    willow "谢谢！"
 
 # game/BKcity_events.rpy:384
 translate chinese_simplified city_monster_menu_72d8c12b:
 
     # you "Your days of happily roaming around and randomly banging innocent girls are over, monster. Prepare to die."
-    you "Your days of happily roaming around and randomly banging innocent girls are over, monster. Prepare to die."
+    you "你这种到处游荡、随意猥亵无辜少女的日子已经结束了，怪物。准备受死吧。"
 
 # game/BKcity_events.rpy:403
 translate chinese_simplified city_monster_menu_a1280571:
@@ -400,7 +400,7 @@ translate chinese_simplified city_monster_menu_a1280571:
 translate chinese_simplified city_monster_menu_6a46223a:
 
     # you "Go, fly, little monster. But don't you dare ever attack an innocent girl again."
-    you "Go, fly, little monster. But don't you dare ever attack an innocent girl again."
+    you "去吧，飞吧，小怪物。但你胆敢再伤害无辜的女孩，就再也不许了。"
 
 # game/BKcity_events.rpy:413
 translate chinese_simplified city_monster_menu_ac479bb5:
@@ -424,31 +424,31 @@ translate chinese_simplified city_impress_daff885e:
 translate chinese_simplified city_impress_2ac65c34:
 
     # ev_girl1 "Aw... After so long scouting muddy swamps and dirty dungeons, it's good to be back ..."
-    ev_girl1 "Aw... After so long scouting muddy swamps and dirty dungeons, it's good to be back ..."
+    ev_girl1 "啊……在泥泞的沼泽和肮脏的地牢里探索了这么久，终于回来了……"
 
 # game/BKcity_events.rpy:450
 translate chinese_simplified city_impress_3baa2d51:
 
     # ev_girl2 "But look at those dumb peasants... I wish we could find a real man..."
-    ev_girl2 "But look at those dumb peasants... I wish we could find a real man..."
+    ev_girl2 "但看看那些愚蠢的农民……我真希望我们能找到一个真正的男人……"
 
 # game/BKcity_events.rpy:452
 translate chinese_simplified city_impress_4c5a4d70:
 
     # ev_girl3 "Patience, sister... Hey look, someone is coming."
-    ev_girl3 "Patience, sister... Hey look, someone is coming."
+    ev_girl3 "耐心点，姐姐……嘿，看，有人来了。"
 
 # game/BKcity_events.rpy:456
 translate chinese_simplified city_impress_06040ba6:
 
     # ev_girl2 "Hey, you! Are you man enough to party with us?"
-    ev_girl2 "Hey, you! Are you man enough to party with us?"
+    ev_girl2 "嘿，你！你够胆和我们一起狂欢吗？"
 
 # game/BKcity_events.rpy:467
 translate chinese_simplified city_impress_d84bfeb9:
 
     # you "Of course I am! Watch and enjoy the show, ladies!"
-    you "Of course I am! Watch and enjoy the show, ladies!"
+    you "当然啦！女士们，请欣赏节目吧！"
 
 # game/BKcity_events.rpy:478
 translate chinese_simplified city_impress_a762f9b4:
@@ -460,25 +460,25 @@ translate chinese_simplified city_impress_a762f9b4:
 translate chinese_simplified city_impress_9db62c4b:
 
     # you "Ooooh... My back... <holding back tears>"
-    you "Ooooh... My back... <holding back tears>"
+    you "哦……我的背……（强忍泪水）"
 
 # game/BKcity_events.rpy:496
 translate chinese_simplified city_impress_9bb6561b:
 
     # ev_girl2 "Well, that was an unexpected move! I suppose it deserves an artistic note... I bet Katya could show you how it's done..."
-    ev_girl2 "Well, that was an unexpected move! I suppose it deserves an artistic note... I bet Katya could show you how it's done..."
+    ev_girl2 "哇，这真是个意想不到的举动！我觉得这值得好好琢磨琢磨……我敢打赌，卡佳肯定能教你怎么做到……"
 
 # game/BKcity_events.rpy:498
 translate chinese_simplified city_impress_53ccd857:
 
     # ev_girl3 "I don't like to waste my time on losers."
-    ev_girl3 "I don't like to waste my time on losers."
+    ev_girl3 "我不喜欢把时间浪费在失败者身上。"
 
 # game/BKcity_events.rpy:500
 translate chinese_simplified city_impress_1cd7b566:
 
     # ev_girl4 "None of us does... This is embarrassing. Let's move on, sisters!"
-    ev_girl4 "None of us does... This is embarrassing. Let's move on, sisters!"
+    ev_girl4 "我们都不知道……这太尴尬了。姐妹们，我们还是继续吧！"
 
 # game/BKcity_events.rpy:509
 translate chinese_simplified city_impress_b1056eb7:
@@ -490,31 +490,31 @@ translate chinese_simplified city_impress_b1056eb7:
 translate chinese_simplified city_impress_0fff7e2b:
 
     # ev_girl3 "So, what do you think?"
-    ev_girl3 "So, what do you think?"
+    ev_girl3 "所以，你觉得怎么样？"
 
 # game/BKcity_events.rpy:515
 translate chinese_simplified city_impress_cec4c3ed:
 
     # ev_girl2 "I don't know... He's good, but I think I could take him in a fight."
-    ev_girl2 "I don't know... He's good, but I think I could take him in a fight."
+    ev_girl2 "我不知道……他很厉害，但我认为我能打败他。"
 
 # game/BKcity_events.rpy:517
 translate chinese_simplified city_impress_fba1e449:
 
     # ev_girl1 "I like him. I can't wait anymore sisters... You! Come here."
-    ev_girl1 "I like him. I can't wait anymore sisters... You! Come here."
+    ev_girl1 "我喜欢他。我等不及了，姐妹们……你们！过来。"
 
 # game/BKcity_events.rpy:519
 translate chinese_simplified city_impress_b9f03b8c:
 
     # you "Yes?"
-    you "Yes?"
+    you "是的？"
 
 # game/BKcity_events.rpy:521
 translate chinese_simplified city_impress_fb1754e7:
 
     # ev_girl1 "I have waited for this moment... You, strong guy! Let's fuck!"
-    ev_girl1 "I have waited for this moment... You, strong guy! Let's fuck!"
+    ev_girl1 "我一直都在等这一刻……你，强壮的家伙！来做爱吧！"
 
 # game/BKcity_events.rpy:530
 translate chinese_simplified city_impress_6ef50743:
@@ -526,31 +526,31 @@ translate chinese_simplified city_impress_6ef50743:
 translate chinese_simplified city_impress_53ef784c:
 
     # ev_girl1 "Wow! He's strong!"
-    ev_girl1 "Wow! He's strong!"
+    ev_girl1 "哇！他力气真大！"
 
 # game/BKcity_events.rpy:536
 translate chinese_simplified city_impress_b20d0adf:
 
     # ev_girl3 "And he's got a nice body..."
-    ev_girl3 "And he's got a nice body..."
+    ev_girl3 "而且他身材很好……"
 
 # game/BKcity_events.rpy:538
 translate chinese_simplified city_impress_0bb32398:
 
     # you "I could easily carry the both of you, you know."
-    you "I could easily carry the both of you, you know."
+    you "你知道，我轻轻松松就能背起你们两个。"
 
 # game/BKcity_events.rpy:540
 translate chinese_simplified city_impress_5863f924:
 
     # ev_girl4 "You could take care of two of us?"
-    ev_girl4 "You could take care of two of us?"
+    ev_girl4 "你能照顾我们两个人吗？"
 
 # game/BKcity_events.rpy:542
 translate chinese_simplified city_impress_48b7d138:
 
     # ev_girl3 "Let's see about that..."
-    ev_girl3 "Let's see about that..."
+    ev_girl3 "我们来看看……"
 
 # game/BKcity_events.rpy:550
 translate chinese_simplified city_impress_4a22364e:
@@ -568,19 +568,19 @@ translate chinese_simplified city_impress_6c5af145:
 translate chinese_simplified city_impress_0e53cc21:
 
     # ev_girl2 "I want to fuck that one so bad..."
-    ev_girl2 "I want to fuck that one so bad..."
+    ev_girl2 "我好想和她上床……"
 
 # game/BKcity_events.rpy:558
 translate chinese_simplified city_impress_68760cfe:
 
     # ev_girl3 "Oh, me too!"
-    ev_girl3 "Oh, me too!"
+    ev_girl3 "哦，我也是！"
 
 # game/BKcity_events.rpy:560
 translate chinese_simplified city_impress_1de6010c:
 
     # ev_girl4 "Hey, what about me?"
-    ev_girl4 "Hey, what about me?"
+    ev_girl4 "那我呢？"
 
 # game/BKcity_events.rpy:566
 translate chinese_simplified city_impress_1825b68f:
@@ -592,49 +592,49 @@ translate chinese_simplified city_impress_1825b68f:
 translate chinese_simplified city_impress_f75b081d:
 
     # ev_girl3 "Girls, are we in heaven?"
-    ev_girl3 "Girls, are we in heaven?"
+    ev_girl3 "女孩们，我们是在天堂吗？"
 
 # game/BKcity_events.rpy:572
 translate chinese_simplified city_impress_4d7f2852:
 
     # ev_girl2 "Look at those pecs..."
-    ev_girl2 "Look at those pecs..."
+    ev_girl2 "看看那胸肌……"
 
 # game/BKcity_events.rpy:574
 translate chinese_simplified city_impress_5ee28dbf:
 
     # ev_girl4 "And looks like he's got a big... too..."
-    ev_girl4 "And looks like he's got a big... too..."
+    ev_girl4 "而且看起来他好像也有个很大的……"
 
 # game/BKcity_events.rpy:576
 translate chinese_simplified city_impress_90323092:
 
     # ev_girl1 "Oh, I want him!"
-    ev_girl1 "Oh, I want him!"
+    ev_girl1 "哦，我想要他！"
 
 # game/BKcity_events.rpy:578
 translate chinese_simplified city_impress_7fe30539:
 
     # ev_girl2 "I want him too!"
-    ev_girl2 "I want him too!"
+    ev_girl2 "我也想要他！"
 
 # game/BKcity_events.rpy:580
 translate chinese_simplified city_impress_4c958196:
 
     # ev_girl4 "Sisters! Calm down... Look how much man there is, we can all share!"
-    ev_girl4 "Sisters! Calm down... Look how much man there is, we can all share!"
+    ev_girl4 "姐妹们！冷静点……看看这儿有多少男人，我们可以一起分享！"
 
 # game/BKcity_events.rpy:582
 translate chinese_simplified city_impress_834c2638:
 
     # ev_girl3 "Oh, what a wonderful idea!"
-    ev_girl3 "Oh, what a wonderful idea!"
+    ev_girl3 "哦，真是个好主意！"
 
 # game/BKcity_events.rpy:591
 translate chinese_simplified city_impress_29c5be5e:
 
     # you "Well, hello, ladies! I'm always one to party..."
-    you "Well, hello, ladies! I'm always one to party..."
+    you "嗨，各位女士们！我总是喜欢参加派对……"
 
 # game/BKcity_events.rpy:593
 translate chinese_simplified city_impress_dadddaff:
@@ -646,163 +646,163 @@ translate chinese_simplified city_impress_dadddaff:
 translate chinese_simplified city_impress_7fef2142:
 
     # you "So, erm... The weather is quite fine today, don't you think? Even though, yesterday..."
-    you "So, erm... The weather is quite fine today, don't you think? Even though, yesterday..."
+    you "嗯……今天天气真不错，你不觉得吗？虽然昨天……"
 
 # game/BKcity_events.rpy:603
 translate chinese_simplified city_impress_515d2231:
 
     # ev_girl3 "Aw... This man is a bore, don't you think?"
-    ev_girl3 "Aw... This man is a bore, don't you think?"
+    ev_girl3 "哎……这个人真无聊，你不觉得吗？"
 
 # game/BKcity_events.rpy:607
 translate chinese_simplified city_impress_c6722fb7:
 
     # ev_girl2 "Totally! Get out of here, maggot! We have better things to do than waste our time with you."
-    ev_girl2 "Totally! Get out of here, maggot! We have better things to do than waste our time with you."
+    ev_girl2 "没错！滚出去，蛆虫！我们还有更重要的事要做，没空跟你浪费时间。"
 
 # game/BKcity_events.rpy:609
 translate chinese_simplified city_impress_e0cc606b:
 
     # ev_girl4 "She's a little harsh, friend, but she's right. We do have to move on... Sorry!"
-    ev_girl4 "She's a little harsh, friend, but she's right. We do have to move on... Sorry!"
+    ev_girl4 "朋友，她说话有点狠，但她说得对。我们确实得向前看了……抱歉！"
 
 # game/BKcity_events.rpy:615
 translate chinese_simplified city_impress_33533913:
 
     # you "...and then I said: 'I had the cactus in my pants all along!'"
-    you "...and then I said: 'I had the cactus in my pants all along!'"
+    you "然后我说：“我一直把仙人掌藏在裤子里！”"
 
 # game/BKcity_events.rpy:619
 translate chinese_simplified city_impress_16eddf55:
 
     # ev_girl4 "Good one!"
-    ev_girl4 "Good one!"
+    ev_girl4 "好主意！"
 
 # game/BKcity_events.rpy:621
 translate chinese_simplified city_impress_aecc46b4:
 
     # ev_girl1 "Can you tell us one more?"
-    ev_girl1 "Can you tell us one more?"
+    ev_girl1 "您能再讲一个吗？"
 
 # game/BKcity_events.rpy:623
 translate chinese_simplified city_impress_0c26feb9:
 
     # ev_girl2 "Aw, enough jokes, girls! I have an itch that funny guy here could scratch..."
-    ev_girl2 "Aw, enough jokes, girls! I have an itch that funny guy here could scratch..."
+    ev_girl2 "好了，姑娘们，玩笑开够了！我身上痒得难受，这位幽默的家伙能帮我挠挠痒……"
 
 # game/BKcity_events.rpy:625
 translate chinese_simplified city_impress_8bac7a4b:
 
     # ev_girl3 "Ooh, lucky him! *wink*"
-    ev_girl3 "Ooh, lucky him! *wink*"
+    ev_girl3 "哇，他真幸运！😉"
 
 # game/BKcity_events.rpy:631
 translate chinese_simplified city_impress_c14379a4:
 
     # you "Wow, you girls are all so pretty I can't decide which one I'd rather bring home..."
-    you "Wow, you girls are all so pretty I can't decide which one I'd rather bring home..."
+    you "哇，你们都好漂亮啊，我不知道该带哪个回家……"
 
 # game/BKcity_events.rpy:635
 translate chinese_simplified city_impress_59621a05:
 
     # ev_girl1 "Oh, you're such a tease!"
-    ev_girl1 "Oh, you're such a tease!"
+    ev_girl1 "哦，你真是个磨人的小妖精！"
 
 # game/BKcity_events.rpy:637
 translate chinese_simplified city_impress_a09aed63:
 
     # ev_girl2 "If you can't choose one, why don't you take two of us?"
-    ev_girl2 "If you can't choose one, why don't you take two of us?"
+    ev_girl2 "如果你不能选择一个，为什么不带上我们两个呢？"
 
 # game/BKcity_events.rpy:639
 translate chinese_simplified city_impress_01b0316a:
 
     # ev_girl3 "Sounds like a plan..."
-    ev_girl3 "Sounds like a plan..."
+    ev_girl3 "听起来像个好计划……"
 
 # game/BKcity_events.rpy:645
 translate chinese_simplified city_impress_b7e3043f:
 
     # you "...and that's how I brought peace to the kingdom, and ended up in the princess's bed..."
-    you "...and that's how I brought peace to the kingdom, and ended up in the princess's bed..."
+    you "就这样，我给王国带来了和平，最后却躺在了公主的床上……"
 
 # game/BKcity_events.rpy:649
 translate chinese_simplified city_impress_7299ea59:
 
     # ev_girl4 "She's a lucky one... I'd like you in my bed as well!"
-    ev_girl4 "She's a lucky one... I'd like you in my bed as well!"
+    ev_girl4 "她真是个幸运儿……我也想让你上我的床！"
 
 # game/BKcity_events.rpy:651
 translate chinese_simplified city_impress_e4125816:
 
     # ev_girl3 "So would I!"
-    ev_girl3 "So would I!"
+    ev_girl3 "我也会！"
 
 # game/BKcity_events.rpy:653
 translate chinese_simplified city_impress_629bd96b:
 
     # ev_girl2 "Hey, what about me?"
-    ev_girl2 "Hey, what about me?"
+    ev_girl2 "那我呢？"
 
 # game/BKcity_events.rpy:655
 translate chinese_simplified city_impress_7bbe0445:
 
     # ev_girl3 "I go first!"
-    ev_girl3 "I go first!"
+    ev_girl3 "我先来！"
 
 # game/BKcity_events.rpy:659
 translate chinese_simplified city_impress_97f21646:
 
     # ev_girl2 "No, I do!!!"
-    ev_girl2 "No, I do!!!"
+    ev_girl2 "不，我真的有！！！"
 
 # game/BKcity_events.rpy:665
 translate chinese_simplified city_impress_c615e5c3:
 
     # you "...that's how I ended up with the three ninja sisters. It was a fun night!"
-    you "...that's how I ended up with the three ninja sisters. It was a fun night!"
+    you "就这样，我跟那三个忍者姐妹凑到了一起。那晚真是太开心了！"
 
 # game/BKcity_events.rpy:669
 translate chinese_simplified city_impress_f3b3bb54:
 
     # ev_girl1 "Ah, you're so cool... Talking about sex with you is making me all wet..."
-    ev_girl1 "Ah, you're so cool... Talking about sex with you is making me all wet..."
+    ev_girl1 "啊，你真酷……跟你聊性让我都湿了……"
 
 # game/BKcity_events.rpy:671
 translate chinese_simplified city_impress_4bca3277:
 
     # ev_girl2 "Me too... I want some!"
-    ev_girl2 "Me too... I want some!"
+    ev_girl2 "我也想要！"
 
 # game/BKcity_events.rpy:675
 translate chinese_simplified city_impress_dcadeb26:
 
     # ev_girl4 "Three sisters? You're a horny devil... Think you could take on the four of us?"
-    ev_girl4 "Three sisters? You're a horny devil... Think you could take on the four of us?"
+    ev_girl4 "三姐妹？你真是个色鬼……你觉得你能对付我们四个吗？"
 
 # game/BKcity_events.rpy:677
 translate chinese_simplified city_impress_6f0fb496:
 
     # ev_girl3 "Yes! Fuck the four of us! I bet we could show the ninja sisters a thing or two..."
-    ev_girl3 "Yes! Fuck the four of us! I bet we could show the ninja sisters a thing or two..."
+    ev_girl3 "没错！管他我们四个！我敢打赌我们能给那几个忍者姐妹好好上一课……"
 
 # game/BKcity_events.rpy:685
 translate chinese_simplified city_impress_034035c7:
 
     # you "Sorry ladies, I have a schedule to keep."
-    you "Sorry ladies, I have a schedule to keep."
+    you "抱歉各位女士，我得按计划行事。"
 
 # game/BKcity_events.rpy:687
 translate chinese_simplified city_impress_be00aa42:
 
     # ev_girl2 "Hey! Who do you think you are!"
-    ev_girl2 "Hey! Who do you think you are!"
+    ev_girl2 "嘿！你以为你是谁！"
 
 # game/BKcity_events.rpy:689
 translate chinese_simplified city_impress_18b34c32:
 
     # ev_girl3 "Calm down, sister... Plenty of fish in the sea. Let's look elsewhere."
-    ev_girl3 "Calm down, sister... Plenty of fish in the sea. Let's look elsewhere."
+    ev_girl3 "冷静点，姐姐……天涯何处无芳草。咱们去别处看看吧。"
 
 # game/BKcity_events.rpy:701
 translate chinese_simplified city_impress_c55b17d5:
@@ -820,25 +820,25 @@ translate chinese_simplified city_impress_a8fab31f:
 translate chinese_simplified city_impress_58e8061b:
 
     # ev_girl1 "Oh, yes!!! Cum! Give me more cum! The smell of cock is driving me crazy..."
-    ev_girl1 "Oh, yes!!! Cum! Give me more cum! The smell of cock is driving me crazy..."
+    ev_girl1 "哦，是的！！！射！再给我点精液！鸡巴的味道快把我逼疯了……"
 
 # game/BKcity_events.rpy:727
 translate chinese_simplified city_impress_9b39d4b4:
 
     # ev_girl2 "That's our girl..."
-    ev_girl2 "That's our girl..."
+    ev_girl2 "那就是我们的女孩……"
 
 # game/BKcity_events.rpy:729
 translate chinese_simplified city_impress_30727017:
 
     # ev_girl4 "She's such a cum hungry whore, isn't she?"
-    ev_girl4 "She's such a cum hungry whore, isn't she?"
+    ev_girl4 "她真是个饥渴难耐的荡妇，不是吗？"
 
 # game/BKcity_events.rpy:731
 translate chinese_simplified city_impress_a46b4173:
 
     # ev_girl3 "Way to go, sister..."
-    ev_girl3 "Way to go, sister..."
+    ev_girl3 "好样的，姐姐……"
 
 # game/BKcity_events.rpy:737
 translate chinese_simplified city_impress_a9baabcd:
@@ -862,13 +862,13 @@ translate chinese_simplified city_impress_8086c3f7:
 translate chinese_simplified city_impress_f2241653:
 
     # ev_girl1 "I love it!"
-    ev_girl1 "I love it!"
+    ev_girl1 "我喜欢它！"
 
 # game/BKcity_events.rpy:763
 translate chinese_simplified city_impress_4f0b1f1d:
 
     # ev_girl3 "Oh, it's sooo good... Aaaaah!!!"
-    ev_girl3 "Oh, it's sooo good... Aaaaah!!!"
+    ev_girl3 "哦，太好吃了……啊啊啊！！！"
 
 # game/BKcity_events.rpy:771
 translate chinese_simplified city_impress_a9baabcd_1:
@@ -886,19 +886,19 @@ translate chinese_simplified city_impress_b485c9ae:
 translate chinese_simplified city_impress_45fcdc80:
 
     # ev_girl4 "Master, allow us to suck your dick dry..."
-    ev_girl4 "Master, allow us to suck your dick dry..."
+    ev_girl4 "主人，请允许我们吸干您的阴茎……"
 
 # game/BKcity_events.rpy:793
 translate chinese_simplified city_impress_eac51347:
 
     # ev_girl3 "Please, spare some cum for me! I love it..."
-    ev_girl3 "Please, spare some cum for me! I love it..."
+    ev_girl3 "请给我留点精液！我喜欢……"
 
 # game/BKcity_events.rpy:795
 translate chinese_simplified city_impress_6b277130:
 
     # ev_girl2 "You have to give us all a good fucking..."
-    ev_girl2 "You have to give us all a good fucking..."
+    ev_girl2 "你得好好操我们一顿……"
 
 # game/BKcity_events.rpy:803
 translate chinese_simplified city_impress_55d3ab7e:
@@ -922,25 +922,25 @@ translate chinese_simplified city_impress_1e1a8a90:
 translate chinese_simplified city_impress_8b4ef274:
 
     # ev_girl2 "Oh, master, it's sooo big... Fuck me harder! Ruin my pussy!"
-    ev_girl2 "Oh, master, it's sooo big... Fuck me harder! Ruin my pussy!"
+    ev_girl2 "哦，主人，它好大……用力操我！蹂躏我的阴道！"
 
 # game/BKcity_events.rpy:833
 translate chinese_simplified city_impress_dda7fded:
 
     # ev_girl1 "No, it's my turn! I want your cum!"
-    ev_girl1 "No, it's my turn! I want your cum!"
+    ev_girl1 "不，该我了！我要你的精液！"
 
 # game/BKcity_events.rpy:837
 translate chinese_simplified city_impress_01b725c3:
 
     # ev_girl4 "Master, I feel empty inside... Why don't you stick it in my ass?"
-    ev_girl4 "Master, I feel empty inside... Why don't you stick it in my ass?"
+    ev_girl4 "主人，我感觉内心空虚……为什么不插进我的屁股里呢？"
 
 # game/BKcity_events.rpy:841
 translate chinese_simplified city_impress_1831fa09:
 
     # ev_girl3 "Oh, please, let me drink your milk..."
-    ev_girl3 "Oh, please, let me drink your milk..."
+    ev_girl3 "哦，求求你，让我喝你的牛奶吧……"
 
 # game/BKcity_events.rpy:853
 translate chinese_simplified city_impress_e9410bdc:
@@ -964,13 +964,13 @@ translate chinese_simplified city_impress_7648ac44:
 translate chinese_simplified city_impress_c749dbaa:
 
     # ev_girl1 "Hey, buddy, thanks for the ride... Here, we found this on our last adventure."
-    ev_girl1 "Hey, buddy, thanks for the ride... Here, we found this on our last adventure."
+    ev_girl1 "嘿，哥们儿，谢谢你载我一程……这是我们上次探险时发现的。"
 
 # game/BKcity_events.rpy:873
 translate chinese_simplified city_impress_16e83859:
 
     # ev_girl1 "You can have it. This will be a nice souvenir..."
-    ev_girl1 "You can have it. This will be a nice souvenir..."
+    ev_girl1 "你可以拿去用。这会是个不错的纪念品……"
 
 # game/BKcity_events.rpy:889
 translate chinese_simplified city_slave_98472443:
@@ -982,55 +982,55 @@ translate chinese_simplified city_slave_98472443:
 translate chinese_simplified city_slave_41f096b7:
 
     # slavegirl1 "Master [MC.name]! It's good to see you!"
-    slavegirl1 "Master [MC.name]! It's good to see you!"
+    slavegirl1 "[MC.name] 主人！见到您真高兴！"
 
 # game/BKcity_events.rpy:897
 translate chinese_simplified city_slave_d5c1bdf2:
 
     # you "Hey, you're the trainer from the slave market! What are you doing at the [loc]?"
-    you "Hey, you're the trainer from the slave market! What are you doing at the [loc]?"
+    you "嘿，你就是奴隶市场上的那个训练师！你在[loc]干什么呢？"
 
 # game/BKcity_events.rpy:899
 translate chinese_simplified city_slave_ec6a122a:
 
     # slavegirl1 "Well, it's about this slave..."
-    slavegirl1 "Well, it's about this slave..."
+    slavegirl1 "嗯，故事是关于这个奴隶的……"
 
 # game/BKcity_events.rpy:913
 translate chinese_simplified city_slave_d25a17fd:
 
     # slavegirl1 "My master wants her broken and trained by tomorrow, but she stubbornly refuses to do her duties."
-    slavegirl1 "My master wants her broken and trained by tomorrow, but she stubbornly refuses to do her duties."
+    slavegirl1 "我的主人希望明天之前把她驯服好，但她却固执地拒绝履行职责。"
 
 # game/BKcity_events.rpy:917
 translate chinese_simplified city_slave_b704bef2:
 
     # slavegirl1 "I have tried everything and I'm at the end of my wits..."
-    slavegirl1 "I have tried everything and I'm at the end of my wits..."
+    slavegirl1 "我已经尝试了所有方法，真的束手无策了……"
 
 # game/BKcity_events.rpy:921
 translate chinese_simplified city_slave_3bb89407:
 
     # slavegirl1 "But wait, you're an experienced slave trainer! Maybe you could try some of your tricks on her?"
-    slavegirl1 "But wait, you're an experienced slave trainer! Maybe you could try some of your tricks on her?"
+    slavegirl1 "等等，你可是个经验丰富的奴隶训练师啊！或许你可以对她使出你的一些绝招？"
 
 # game/BKcity_events.rpy:923
 translate chinese_simplified city_slave_e93e26ab:
 
     # slavegirl1 "Oh, please, Master, I beg of you!"
-    slavegirl1 "Oh, please, Master, I beg of you!"
+    slavegirl1 "哦，主人，求求您了！"
 
 # game/BKcity_events.rpy:934
 translate chinese_simplified city_slave_3fc58e28:
 
     # you "Let me see if I can talk some sense into her."
-    you "Let me see if I can talk some sense into her."
+    you "我试试能不能劝劝她。"
 
 # game/BKcity_events.rpy:936
 translate chinese_simplified city_slave_03b23db1:
 
     # slavegirl1 "Oh, thank you!"
-    slavegirl1 "Oh, thank you!"
+    slavegirl1 "哦，谢谢！"
 
 # game/BKcity_events.rpy:938
 translate chinese_simplified city_slave_40fc8fdc:
@@ -1042,13 +1042,13 @@ translate chinese_simplified city_slave_40fc8fdc:
 translate chinese_simplified city_slave_e4bdc8ff:
 
     # slave "What do you want?"
-    slave "What do you want?"
+    slave "你想要什么？"
 
 # game/BKcity_events.rpy:942
 translate chinese_simplified city_slave_d170ee15:
 
     # you "Your behavior is not gonna help, you know."
-    you "Your behavior is not gonna help, you know."
+    you "你知道，你的这种行为于事无补。"
 
 # game/BKcity_events.rpy:951
 translate chinese_simplified city_slave_86661eb6:
@@ -1060,7 +1060,7 @@ translate chinese_simplified city_slave_86661eb6:
 translate chinese_simplified city_slave_f24b61f7:
 
     # slave "Go to hell."
-    slave "Go to hell."
+    slave "下地狱吧。"
 
 # game/BKcity_events.rpy:959
 translate chinese_simplified city_slave_d4353c3c:
@@ -1072,7 +1072,7 @@ translate chinese_simplified city_slave_d4353c3c:
 translate chinese_simplified city_slave_ae26c544:
 
     # you "You belong to your rightful owner. There is nothing you can do about it. If you accept it, it will be easier for you."
-    you "You belong to your rightful owner. There is nothing you can do about it. If you accept it, it will be easier for you."
+    you "你属于你真正的主人。你对此无能为力。如果你接受这一点，对你来说会更容易些。"
 
 # game/BKcity_events.rpy:963
 translate chinese_simplified city_slave_3f38a025:
@@ -1084,13 +1084,13 @@ translate chinese_simplified city_slave_3f38a025:
 translate chinese_simplified city_slave_4780975b:
 
     # slave "But I don't want to serve the needs of this dirty old man... *sob*"
-    slave "But I don't want to serve the needs of this dirty old man... *sob*"
+    slave "但我不想满足这个肮脏老头的欲望……呜咽"
 
 # game/BKcity_events.rpy:967
 translate chinese_simplified city_slave_0fff381f:
 
     # you "I'm sorry, but it's not your call."
-    you "I'm sorry, but it's not your call."
+    you "抱歉，这不由你决定。"
 
 # game/BKcity_events.rpy:969
 translate chinese_simplified city_slave_99bff055:
@@ -1102,13 +1102,13 @@ translate chinese_simplified city_slave_99bff055:
 translate chinese_simplified city_slave_a6260ef4:
 
     # slave "I understand. The choice is not mine, anyway. I have to find a way to live with this."
-    slave "I understand. The choice is not mine, anyway. I have to find a way to live with this."
+    slave "我明白。反正选择权不在我。我只能想办法接受这一切。"
 
 # game/BKcity_events.rpy:975
 translate chinese_simplified city_slave_8b40cafb:
 
     # you "This is the right attitude."
-    you "This is the right attitude."
+    you "这是正确的态度。"
 
 # game/BKcity_events.rpy:981
 translate chinese_simplified city_slave_d6149901:
@@ -1120,7 +1120,7 @@ translate chinese_simplified city_slave_d6149901:
 translate chinese_simplified city_slave_a4ad0d8a:
 
     # you "At first, everyone is afraid, but with time this work can grow on you. Being a slave doesn't mean giving up on life - it's an entirely new life. With the right mindset, it can be exciting."
-    you "At first, everyone is afraid, but with time this work can grow on you. Being a slave doesn't mean giving up on life - it's an entirely new life. With the right mindset, it can be exciting."
+    you "起初，每个人都会感到害怕，但随着时间的推移，你会慢慢喜欢上这份工作。做奴隶并不意味着放弃生命——那是一种全新的生活。只要心态正确，它也能充满乐趣。"
 
 # game/BKcity_events.rpy:985
 translate chinese_simplified city_slave_ab75b130:
@@ -1132,37 +1132,37 @@ translate chinese_simplified city_slave_ab75b130:
 translate chinese_simplified city_slave_6fb22144:
 
     # slave "Really? Can a sex slave find happiness?"
-    slave "Really? Can a sex slave find happiness?"
+    slave "真的吗？性奴也能获得幸福？"
 
 # game/BKcity_events.rpy:991
 translate chinese_simplified city_slave_d56b70e6:
 
     # you "Bliss, even. I have girls in my brothel who wouldn't do anything else for all the gold in Xeros."
-    you "Bliss, even. I have girls in my brothel who wouldn't do anything else for all the gold in Xeros."
+    you "简直是人间天堂。我妓院里的女孩们，就算给我Xeros里所有的金币，她们也什么都愿意做。"
 
 # game/BKcity_events.rpy:993
 translate chinese_simplified city_slave_a0f8e770:
 
     # slave "I had never heard something like that before..."
-    slave "I had never heard something like that before..."
+    slave "我以前从未听说过这样的事情……"
 
 # game/BKcity_events.rpy:995
 translate chinese_simplified city_slave_85ac5c55:
 
     # slave "You have given me some hope. I will give it my best."
-    slave "You have given me some hope. I will give it my best."
+    slave "你给了我希望。我会尽我所能。"
 
 # game/BKcity_events.rpy:997
 translate chinese_simplified city_slave_c7d97402:
 
     # you "And I am certain you will do great."
-    you "And I am certain you will do great."
+    you "我相信你一定会做得很好。"
 
 # game/BKcity_events.rpy:999
 translate chinese_simplified city_slave_190538b3:
 
     # slave "Thank you, Master [MC.name]."
-    slave "Thank you, Master [MC.name]."
+    slave "感谢大师[MC.name]。"
 
 # game/BKcity_events.rpy:1005
 translate chinese_simplified city_slave_0769663a:
@@ -1174,13 +1174,13 @@ translate chinese_simplified city_slave_0769663a:
 translate chinese_simplified city_slave_4b50ad06:
 
     # you "If you embrace your condition, you can do amazing things. You can be a godly vessel, harnessing the power of lust and vice and turning it into positive energy..."
-    you "If you embrace your condition, you can do amazing things. You can be a godly vessel, harnessing the power of lust and vice and turning it into positive energy..."
+    you "如果你能接受自己的现状，你就能成就非凡之事。你可以成为神圣的器皿，驾驭欲望和恶习的力量，并将其转化为积极的能量……"
 
 # game/BKcity_events.rpy:1008
 translate chinese_simplified city_slave_18ecba08:
 
     # you "It is a holy duty."
-    you "It is a holy duty."
+    you "这是神圣的职责。"
 
 # game/BKcity_events.rpy:1010
 translate chinese_simplified city_slave_d2f41821:
@@ -1192,37 +1192,37 @@ translate chinese_simplified city_slave_d2f41821:
 translate chinese_simplified city_slave_f64ae40a:
 
     # slave "I never knew that being a sex slave could lead to such fulfilling lives!"
-    slave "I never knew that being a sex slave could lead to such fulfilling lives!"
+    slave "我从未想过，做性奴也能拥有如此充实的生活！"
 
 # game/BKcity_events.rpy:1014
 translate chinese_simplified city_slave_e5dee2b4:
 
     # you "You can not only fulfill your life, but that of others. Using your body to serve others is the holiest sacrifice there is."
-    you "You can not only fulfill your life, but that of others. Using your body to serve others is the holiest sacrifice there is."
+    you "你不仅可以充实自己的人生，也能充实他人的人生。用你的身体服务他人，是世间最神圣的奉献。"
 
 # game/BKcity_events.rpy:1016
 translate chinese_simplified city_slave_57b4dddf:
 
     # you "And you can enjoy it, too."
-    you "And you can enjoy it, too."
+    you "你也可以享受它。"
 
 # game/BKcity_events.rpy:1018
 translate chinese_simplified city_slave_ea7feb9e:
 
     # slave "I can see how wrong I was now! When can I start? I want to do it!"
-    slave "I can see how wrong I was now! When can I start? I want to do it!"
+    slave "我现在才意识到自己错得有多离谱！我什么时候可以开始？我想做！"
 
 # game/BKcity_events.rpy:1026
 translate chinese_simplified city_slave_eebb6fe5:
 
     # you "I could try an obedience spell."
-    you "I could try an obedience spell."
+    you "我可以试试服从咒语。"
 
 # game/BKcity_events.rpy:1028
 translate chinese_simplified city_slave_ade99e4d:
 
     # slavegirl1 "A spell? Oooh, this is exciting!"
-    slavegirl1 "A spell? Oooh, this is exciting!"
+    slavegirl1 "魔法？哇，这太令人兴奋了！"
 
 # game/BKcity_events.rpy:1030
 translate chinese_simplified city_slave_dc65289a:
@@ -1234,7 +1234,7 @@ translate chinese_simplified city_slave_dc65289a:
 translate chinese_simplified city_slave_9adcdda3:
 
     # slave "Watch it! You psycho!"
-    slave "Watch it! You psycho!"
+    slave "小心点！你这个疯子！"
 
 # game/BKcity_events.rpy:1036
 translate chinese_simplified city_slave_64a33bef:
@@ -1246,19 +1246,19 @@ translate chinese_simplified city_slave_64a33bef:
 translate chinese_simplified city_slave_dc474f7c:
 
     # you "You will now do as I command! Obey your master!"
-    you "You will now do as I command! Obey your master!"
+    you "现在你必须听从我的命令！服从你的主人！"
 
 # game/BKcity_events.rpy:1046
 translate chinese_simplified city_slave_ca4d4c16:
 
     # slave "I command you to fuck off!"
-    slave "I command you to fuck off!"
+    slave "你滚开！"
 
 # game/BKcity_events.rpy:1048
 translate chinese_simplified city_slave_d4036871:
 
     # you "Damn, she's strong-willed..."
-    you "Damn, she's strong-willed..."
+    you "天哪，她意志真坚定……"
 
 # game/BKcity_events.rpy:1050
 translate chinese_simplified city_slave_613e7676:
@@ -1270,13 +1270,13 @@ translate chinese_simplified city_slave_613e7676:
 translate chinese_simplified city_slave_8ac66e62:
 
     # you "Follow my bidding now, child."
-    you "Follow my bidding now, child."
+    you "孩子，现在听我的。"
 
 # game/BKcity_events.rpy:1060
 translate chinese_simplified city_slave_e58e4d1a:
 
     # you "Resistance is futile..."
-    you "Resistance is futile..."
+    you "抵抗是徒劳的……"
 
 # game/BKcity_events.rpy:1062
 translate chinese_simplified city_slave_99bff055_1:
@@ -1288,13 +1288,13 @@ translate chinese_simplified city_slave_99bff055_1:
 translate chinese_simplified city_slave_9aa59e9b:
 
     # slave "Resistance..."
-    slave "Resistance..."
+    slave "反抗..."
 
 # game/BKcity_events.rpy:1066
 translate chinese_simplified city_slave_d919dde5:
 
     # slave "...is futile..."
-    slave "...is futile..."
+    slave "……徒劳无功……"
 
 # game/BKcity_events.rpy:1068
 translate chinese_simplified city_slave_1cb9453f:
@@ -1312,49 +1312,49 @@ translate chinese_simplified city_slave_493c83fa:
 translate chinese_simplified city_slave_ad5b4a5f:
 
     # you "I think it worked."
-    you "I think it worked."
+    you "我觉得成功了。"
 
 # game/BKcity_events.rpy:1080
 translate chinese_simplified city_slave_5c966fa6:
 
     # you "Hear my voice. I am the voice of your master."
-    you "Hear my voice. I am the voice of your master."
+    you "听我的声音。我是你们主人的声音。"
 
 # game/BKcity_events.rpy:1084
 translate chinese_simplified city_slave_81e3d044:
 
     # slave "You... You are the voice of my master..."
-    slave "You... You are the voice of my master..."
+    slave "你……你是我的主人的声音……"
 
 # game/BKcity_events.rpy:1086
 translate chinese_simplified city_slave_de31bc83:
 
     # you "Your master commands you to obey. You must do whatever is asked of you, whenever and wherever you are."
-    you "Your master commands you to obey. You must do whatever is asked of you, whenever and wherever you are."
+    you "你的主人命令你服从。无论何时何地，你都必须执行主人交代的一切命令。"
 
 # game/BKcity_events.rpy:1088
 translate chinese_simplified city_slave_0a925e06:
 
     # slave "I must do whatever is asked of me, whenever and wherever I am."
-    slave "I must do whatever is asked of me, whenever and wherever I am."
+    slave "无论何时何地，我都必须完成被要求做的任何事。"
 
 # game/BKcity_events.rpy:1090
 translate chinese_simplified city_slave_b7fdcb00:
 
     # you "You will never forget my command."
-    you "You will never forget my command."
+    you "你永远不会忘记我的命令。"
 
 # game/BKcity_events.rpy:1092
 translate chinese_simplified city_slave_cc63b4b2:
 
     # slave "I will never forget your command."
-    slave "I will never forget your command."
+    slave "我永远不会忘记您的命令。"
 
 # game/BKcity_events.rpy:1094
 translate chinese_simplified city_slave_256ac5e8:
 
     # you "Now, you may rest."
-    you "Now, you may rest."
+    you "现在，你可以休息了。"
 
 # game/BKcity_events.rpy:1096
 translate chinese_simplified city_slave_8ddcc16e:
@@ -1366,13 +1366,13 @@ translate chinese_simplified city_slave_8ddcc16e:
 translate chinese_simplified city_slave_f950481d:
 
     # slave "Master, what can I do for you? I will do whatever you ask. *smile*"
-    slave "Master, what can I do for you? I will do whatever you ask. *smile*"
+    slave "主人，我能为您做些什么？我愿为您效劳。*微笑*"
 
 # game/BKcity_events.rpy:1104
 translate chinese_simplified city_slave_bcd6f635:
 
     # you "I summon thee, succubus. Lend your powers of arousal and lust to that wretched slave."
-    you "I summon thee, succubus. Lend your powers of arousal and lust to that wretched slave."
+    you "我召唤你，魅魔。将你欲望和情欲的力量赋予那个可怜的奴隶。"
 
 # game/BKcity_events.rpy:1108
 translate chinese_simplified city_slave_c1dacd9f:
@@ -1384,7 +1384,7 @@ translate chinese_simplified city_slave_c1dacd9f:
 translate chinese_simplified city_slave_91a39f4f:
 
     # slave "What... What is going on?"
-    slave "What... What is going on?"
+    slave "什么……到底发生了什么？"
 
 # game/BKcity_events.rpy:1112
 translate chinese_simplified city_slave_3db876d9:
@@ -1396,7 +1396,7 @@ translate chinese_simplified city_slave_3db876d9:
 translate chinese_simplified city_slave_78be7583:
 
     # slave "Oooh... What's happening to me..."
-    slave "Oooh... What's happening to me..."
+    slave "哦……我这是怎么了……"
 
 # game/BKcity_events.rpy:1118
 translate chinese_simplified city_slave_4c003d45:
@@ -1408,7 +1408,7 @@ translate chinese_simplified city_slave_4c003d45:
 translate chinese_simplified city_slave_171152c2:
 
     # slave "I'm so horny!!! AAAAAH!"
-    slave "I'm so horny!!! AAAAAH!"
+    slave "我好想要！！！啊啊啊啊！"
 
 # game/BKcity_events.rpy:1124
 translate chinese_simplified city_slave_f53cddb0:
@@ -1420,37 +1420,37 @@ translate chinese_simplified city_slave_f53cddb0:
 translate chinese_simplified city_slave_1d713ca3:
 
     # slave "Someone fuck me! Please, anyone!!!"
-    slave "Someone fuck me! Please, anyone!!!"
+    slave "谁来操我！求求了，随便谁都行！！！"
 
 # game/BKcity_events.rpy:1130
 translate chinese_simplified city_slave_24dcda9a:
 
     # slave "I'm a dirty whore, I'll do anything... Please... Fuck meeeeeeee!"
-    slave "I'm a dirty whore, I'll do anything... Please... Fuck meeeeeeee!"
+    slave "我是个肮脏的妓女，我什么都愿意做……求求你……操我！"
 
 # game/BKcity_events.rpy:1140
 translate chinese_simplified city_slave_9f1451e7:
 
     # you "Sorry, but I can't help you."
-    you "Sorry, but I can't help you."
+    you "抱歉，我帮不了你。"
 
 # game/BKcity_events.rpy:1142
 translate chinese_simplified city_slave_8f297150:
 
     # slavegirl1 "I see."
-    slavegirl1 "I see."
+    slavegirl1 "我懂了。"
 
 # game/BKcity_events.rpy:1144
 translate chinese_simplified city_slave_6aa02aa8:
 
     # slavegirl1 "Of course. It was a silly request. I apologize, Master."
-    slavegirl1 "Of course. It was a silly request. I apologize, Master."
+    slavegirl1 "当然。那是个愚蠢的要求。对不起，主人。"
 
 # game/BKcity_events.rpy:1159
 translate chinese_simplified city_slave_aa59c0b5:
 
     # you "I'm sorry, it didn't work."
-    you "I'm sorry, it didn't work."
+    you "抱歉，没成功。"
 
 # game/BKcity_events.rpy:1161
 translate chinese_simplified city_slave_ad7409c3:
@@ -1462,19 +1462,19 @@ translate chinese_simplified city_slave_ad7409c3:
 translate chinese_simplified city_slave_b0d1501d:
 
     # slavegirl1 "That was a long shot. Thank you for trying."
-    slavegirl1 "That was a long shot. Thank you for trying."
+    slavegirl1 "那真是个渺茫的希望。谢谢你的尝试。"
 
 # game/BKcity_events.rpy:1171
 translate chinese_simplified city_slave_fc7df733:
 
     # slavegirl1 "You did it! I hope she won't change her mind..."
-    slavegirl1 "You did it! I hope she won't change her mind..."
+    slavegirl1 "你成功了！希望她不会改变主意……"
 
 # game/BKcity_events.rpy:1173
 translate chinese_simplified city_slave_a8201bf0:
 
     # slavegirl1 "Thank you so much for your help."
-    slavegirl1 "Thank you so much for your help."
+    slavegirl1 "非常感谢您的帮助。"
 
 # game/BKcity_events.rpy:1179
 translate chinese_simplified city_slave_a9baabcd:
@@ -1486,31 +1486,31 @@ translate chinese_simplified city_slave_a9baabcd:
 translate chinese_simplified city_slave_1f77043b:
 
     # slavegirl1 "Amazing! You succeeded where I failed... You are truly something."
-    slavegirl1 "Amazing! You succeeded where I failed... You are truly something."
+    slavegirl1 "太棒了！我失败的地方，你都做到了……你真是个了不起的人。"
 
 # game/BKcity_events.rpy:1193
 translate chinese_simplified city_slave_6a0acc1f:
 
     # slavegirl1 "Perhaps you can help me with something else, if you have time..."
-    slavegirl1 "Perhaps you can help me with something else, if you have time..."
+    slavegirl1 "如果你有时间的话，或许还能帮我做点别的事……"
 
 # game/BKcity_events.rpy:1195
 translate chinese_simplified city_slave_79360ee2:
 
     # slavegirl1 "One of the girls needs advanced sexual training. Would you care to help me with it?"
-    slavegirl1 "One of the girls needs advanced sexual training. Would you care to help me with it?"
+    slavegirl1 "其中一位女孩需要接受高级性教育。你愿意帮帮我吗？"
 
 # game/BKcity_events.rpy:1197
 translate chinese_simplified city_slave_ad2f56b0:
 
     # slavegirl1 "She can do anything you ask."
-    slavegirl1 "She can do anything you ask."
+    slavegirl1 "她能做到你要求的任何事。"
 
 # game/BKcity_events.rpy:1222
 translate chinese_simplified city_slave_311afc8c:
 
     # slavegirl1 "I see, that's too bad then."
-    slavegirl1 "I see, that's too bad then."
+    slavegirl1 "我明白了，那真是太可惜了。"
 
 # game/BKcity_events.rpy:1228
 translate chinese_simplified city_slave_a9baabcd_1:
@@ -1522,55 +1522,55 @@ translate chinese_simplified city_slave_a9baabcd_1:
 translate chinese_simplified city_slave_b250f193:
 
     # slavegirl1 "This is a great choice! Let's get to it. *smile*"
-    slavegirl1 "This is a great choice! Let's get to it. *smile*"
+    slavegirl1 "这是个绝佳的选择！我们开始吧。*微笑*"
 
 # game/BKcity_events.rpy:1240
 translate chinese_simplified city_slave_ffb55243:
 
     # slavegirl1 "There she is! Be a nice girl now, Master [MC.name] is going to take good care of you."
-    slavegirl1 "There she is! Be a nice girl now, Master [MC.name] is going to take good care of you."
+    slavegirl1 "她来了！乖乖的，主人[MC.name]会好好照顾你的。"
 
 # game/BKcity_events.rpy:1250
 translate chinese_simplified city_slave_99a292db:
 
     # slave "Oh!!!"
-    slave "Oh!!!"
+    slave "哦！！！"
 
 # game/BKcity_events.rpy:1254
 translate chinese_simplified city_slave_cbaacbae:
 
     # slavegirl1 "Now, be a good girl and suck his dick off, like I showed you last time, ok?"
-    slavegirl1 "Now, be a good girl and suck his dick off, like I showed you last time, ok?"
+    slavegirl1 "现在，乖乖地给他口交，就像我上次教你的那样，好吗？"
 
 # game/BKcity_events.rpy:1258
 translate chinese_simplified city_slave_36eacddf:
 
     # slavegirl1 "Master [MC.name] will now fuck your pussy. Brace yourself, now, he's got a big dick. Mmmh..."
-    slavegirl1 "Master [MC.name] will now fuck your pussy. Brace yourself, now, he's got a big dick. Mmmh..."
+    slavegirl1 "主人[MC.name]现在要操你的屄了。做好准备，他有根大屌。嗯……"
 
 # game/BKcity_events.rpy:1262
 translate chinese_simplified city_slave_0657eae3:
 
     # slavegirl1 "It's good we performed that enema together this morning, don't you think? Raise your ass a little... There!"
-    slavegirl1 "It's good we performed that enema together this morning, don't you think? Raise your ass a little... There!"
+    slavegirl1 "今天早上我们一起灌肠感觉不错，你不觉得吗？把屁股抬起来一点……好了！"
 
 # game/BKcity_events.rpy:1266
 translate chinese_simplified city_slave_ae115b8a:
 
     # slavegirl1 "Master [MC.name] will show you something new today. Make sure to enjoy it!"
-    slavegirl1 "Master [MC.name] will show you something new today. Make sure to enjoy it!"
+    slavegirl1 "今天，[MC.name]大师将向你展示一些新东西。请尽情欣赏！"
 
 # game/BKcity_events.rpy:1276
 translate chinese_simplified city_slave_465730fc:
 
     # slave "Aaaaaah!!!"
-    slave "Aaaaaah!!!"
+    slave "啊啊啊啊！！！"
 
 # game/BKcity_events.rpy:1278
 translate chinese_simplified city_slave_4d802672:
 
     # slavegirl1 "Take some time to get used to the feeling... Ease into it..."
-    slavegirl1 "Take some time to get used to the feeling... Ease into it..."
+    slavegirl1 "给自己一些时间适应这种感觉……慢慢来……"
 
 # game/BKcity_events.rpy:1282
 translate chinese_simplified city_slave_9d371e26:
@@ -1582,13 +1582,13 @@ translate chinese_simplified city_slave_9d371e26:
 translate chinese_simplified city_slave_f5e822a4:
 
     # slavegirl1 "There, that's better..."
-    slavegirl1 "There, that's better..."
+    slavegirl1 "这样好多了……"
 
 # game/BKcity_events.rpy:1290
 translate chinese_simplified city_slave_340bb775:
 
     # you "Let's not forget your other hole!"
-    you "Let's not forget your other hole!"
+    you "别忘了你还有另一个洞！"
 
 # game/BKcity_events.rpy:1298
 translate chinese_simplified city_slave_a8f91e1b:
@@ -1600,31 +1600,31 @@ translate chinese_simplified city_slave_a8f91e1b:
 translate chinese_simplified city_slave_46143a51:
 
     # you "Oh, you're good..."
-    you "Oh, you're good..."
+    you "哦，你真棒……"
 
 # game/BKcity_events.rpy:1304
 translate chinese_simplified city_slave_d5de3b60:
 
     # slavegirl1 "Looks like you managed to turn Master [MC.name] on... *giggle*"
-    slavegirl1 "Looks like you managed to turn Master [MC.name] on... *giggle*"
+    slavegirl1 "看来你成功唤醒了[MC.name]大师……*咯咯笑*"
 
 # game/BKcity_events.rpy:1308
 translate chinese_simplified city_slave_5d29cd48:
 
     # you "I'm close..."
-    you "I'm close..."
+    you "我快到了……"
 
 # game/BKcity_events.rpy:1312
 translate chinese_simplified city_slave_802d5805:
 
     # slave "Ohhhh, aaaahhh... AAAAAH!"
-    slave "Ohhhh, aaaahhh... AAAAAH!"
+    slave "哦，啊……啊啊啊啊！"
 
 # game/BKcity_events.rpy:1321
 translate chinese_simplified city_slave_6c6ac6f8:
 
     # you "HAAAAAAAAAAAAA!!!"
-    you "HAAAAAAAAAAAAA!!!"
+    you "哈哈哈哈哈哈哈哈！！！"
 
 # game/BKcity_events.rpy:1327
 translate chinese_simplified city_slave_3aa91c80:
@@ -1660,25 +1660,25 @@ translate chinese_simplified city_slave_b4ca92e6:
 translate chinese_simplified city_slave_45586e61:
 
     # you "You like it, don't you, slave? What if I push deeper!"
-    you "You like it, don't you, slave? What if I push deeper!"
+    you "你喜欢这样，对吧，奴隶？如果我再深入一点呢！"
 
 # game/BKcity_events.rpy:1345
 translate chinese_simplified city_slave_21261637:
 
     # slave "AAAAH! UHHH!!!"
-    slave "AAAAH! UHHH!!!"
+    slave "啊啊啊！呃！！！"
 
 # game/BKcity_events.rpy:1347
 translate chinese_simplified city_slave_9c0b235e:
 
     # slavegirl1 "Look like she's going to cum! This is so fun!"
-    slavegirl1 "Look like she's going to cum! This is so fun!"
+    slavegirl1 "她好像要高潮了！太刺激了！"
 
 # game/BKcity_events.rpy:1353
 translate chinese_simplified city_slave_20f91c9b:
 
     # slave "AAAAAAAAAAAAAAH!!!!"
-    slave "AAAAAAAAAAAAAAH!!!!"
+    slave "啊 ..."
 
 # game/BKcity_events.rpy:1362
 translate chinese_simplified city_slave_52216f2d:
@@ -1690,25 +1690,25 @@ translate chinese_simplified city_slave_52216f2d:
 translate chinese_simplified city_slave_15f2cc69:
 
     # you "That was good..."
-    you "That was good..."
+    you "那很好……"
 
 # game/BKcity_events.rpy:1372
 translate chinese_simplified city_slave_3b4b082b:
 
     # you "Thank you, I enjoyed it."
-    you "Thank you, I enjoyed it."
+    you "谢谢，我很喜欢。"
 
 # game/BKcity_events.rpy:1374
 translate chinese_simplified city_slave_2764ba73:
 
     # slavegirl1 "My pleasure! *smile*"
-    slavegirl1 "My pleasure! *smile*"
+    slavegirl1 "不客气！*微笑*"
 
 # game/BKcity_events.rpy:1376
 translate chinese_simplified city_slave_34169bac:
 
     # you "Maybe I could show the girls a thing or two back at the brothel..."
-    you "Maybe I could show the girls a thing or two back at the brothel..."
+    you "或许我可以回妓院给那些姑娘们上一课……"
 
 # game/BKcity_events.rpy:1380
 translate chinese_simplified city_slave_51a349cb:
@@ -1720,73 +1720,73 @@ translate chinese_simplified city_slave_51a349cb:
 translate chinese_simplified city_slave_50201891:
 
     # slavegirl1 "That was incredible! You truly are a master among slave trainers!"
-    slavegirl1 "That was incredible! You truly are a master among slave trainers!"
+    slavegirl1 "太棒了！你真是奴隶训练大师！"
 
 # game/BKcity_events.rpy:1405
 translate chinese_simplified city_slave_6c7e6493:
 
     # slavegirl1 "I want to personally reward you... Miki, come over here!"
-    slavegirl1 "I want to personally reward you... Miki, come over here!"
+    slavegirl1 "我想亲自奖励你……美纪，过来一下！"
 
 # game/BKcity_events.rpy:1417
 translate chinese_simplified city_slave_227495f0:
 
     # slavegirl2 "Mmmh, aaah..."
-    slavegirl2 "Mmmh, aaah..."
+    slavegirl2 "嗯，啊……"
 
 # game/BKcity_events.rpy:1419
 translate chinese_simplified city_slave_77342fea:
 
     # slavegirl1 "This is so big..."
-    slavegirl1 "This is so big..."
+    slavegirl1 "这太惊人了……"
 
 # game/BKcity_events.rpy:1427
 translate chinese_simplified city_slave_849622ef:
 
     # slavegirl1 "And such a strong taste... I love it..."
-    slavegirl1 "And such a strong taste... I love it..."
+    slavegirl1 "味道真浓郁……我喜欢……"
 
 # game/BKcity_events.rpy:1431
 translate chinese_simplified city_slave_d5bb2c99:
 
     # slavegirl2 "Mmmmh..."
-    slavegirl2 "Mmmmh..."
+    slavegirl2 "嗯……"
 
 # game/BKcity_events.rpy:1433
 translate chinese_simplified city_slave_eefaf412:
 
     # slavegirl1 "It's pulsating! It's so warm!"
-    slavegirl1 "It's pulsating! It's so warm!"
+    slavegirl1 "它充满活力！它好温暖！"
 
 # game/BKcity_events.rpy:1447
 translate chinese_simplified city_slave_b502c3b5:
 
     # slavegirl1 "Aaaaaaah!!!"
-    slavegirl1 "Aaaaaaah!!!"
+    slavegirl1 "啊啊啊啊！！！"
 
 # game/BKcity_events.rpy:1449
 translate chinese_simplified city_slave_f3666851:
 
     # slavegirl2 "Oooooh!!!"
-    slavegirl2 "Oooooh!!!"
+    slavegirl2 "哦哦哦！！！"
 
 # game/BKcity_events.rpy:1462
 translate chinese_simplified city_slave_f5245a47:
 
     # slavegirl1 "Master... You came so much!"
-    slavegirl1 "Master... You came so much!"
+    slavegirl1 "主人……您来了好多次！"
 
 # game/BKcity_events.rpy:1464
 translate chinese_simplified city_slave_f44ca558:
 
     # slavegirl2 "It's all over my face..."
-    slavegirl2 "It's all over my face..."
+    slavegirl2 "我脸上全是……"
 
 # game/BKcity_events.rpy:1468
 translate chinese_simplified city_slave_28ffc30e:
 
     # slavegirl1 "So delicious... More..."
-    slavegirl1 "So delicious... More..."
+    slavegirl1 "太好吃了……还要……"
 
 # game/BKcity_events.rpy:1470
 translate chinese_simplified city_slave_3d8c5057:
@@ -1798,7 +1798,7 @@ translate chinese_simplified city_slave_3d8c5057:
 translate chinese_simplified city_slave_0ab5aa90:
 
     # slavegirl1 "The night has only just started..."
-    slavegirl1 "The night has only just started..."
+    slavegirl1 "夜幕才刚刚降临……"
 
 # game/BKcity_events.rpy:1480
 translate chinese_simplified city_slave_a9046625:
@@ -1822,7 +1822,7 @@ translate chinese_simplified city_gamble_7d17a49f:
 translate chinese_simplified city_gamble_8d2c768a:
 
     # ev_girl1 "Hello, mister! I'm bored... Won't you play with me? We can wage a few denars..."
-    ev_girl1 "Hello, mister! I'm bored... Won't you play with me? We can wage a few denars..."
+    ev_girl1 "你好，先生！我好无聊……要不要和我玩玩？我们可以打赌几个第纳尔……"
 
 # game/BKcity_events.rpy:1531
 translate chinese_simplified city_gamble_82f4a93b:
@@ -1834,13 +1834,13 @@ translate chinese_simplified city_gamble_82f4a93b:
 translate chinese_simplified city_gamble_8c163964:
 
     # you "A game? Sounds exciting!"
-    you "A game? Sounds exciting!"
+    you "游戏？听起来很棒！"
 
 # game/BKcity_events.rpy:1542
 translate chinese_simplified city_gamble_b749aeee:
 
     # ev_girl1 "Yay! *smile*"
-    ev_girl1 "Yay! *smile*"
+    ev_girl1 "耶！*微笑*"
 
 # game/BKcity_events.rpy:1546
 translate chinese_simplified city_gamble_1c754eb2:
@@ -1852,13 +1852,13 @@ translate chinese_simplified city_gamble_1c754eb2:
 translate chinese_simplified city_gamble_31ca0d2f:
 
     # ev_girl1 "Haha, you really got me there mister!"
-    ev_girl1 "Haha, you really got me there mister!"
+    ev_girl1 "哈哈，你这话可真把我逗乐了，先生！"
 
 # game/BKcity_events.rpy:1550
 translate chinese_simplified city_gamble_bd16486a:
 
     # you "Hey, this is fun!"
-    you "Hey, this is fun!"
+    you "嘿，这真有趣！"
 
 # game/BKcity_events.rpy:1554
 translate chinese_simplified city_gamble_19359337:
@@ -1876,19 +1876,19 @@ translate chinese_simplified city_gamble_7de57ce5:
 translate chinese_simplified city_gamble_b65f8599:
 
     # ev_girl1 "Well, mister, it looks like lady luck is favoring me now... Teehee..."
-    ev_girl1 "Well, mister, it looks like lady luck is favoring me now... Teehee..."
+    ev_girl1 "哎呀，先生，看来幸运女神这次眷顾我了……嘻嘻……"
 
 # game/BKcity_events.rpy:1559
 translate chinese_simplified city_gamble_40703e17:
 
     # ev_girl1 "But you can catch up!"
-    ev_girl1 "But you can catch up!"
+    ev_girl1 "但你可以迎头赶上！"
 
 # game/BKcity_events.rpy:1561
 translate chinese_simplified city_gamble_d6d23918:
 
     # you "Aw..."
-    you "Aw..."
+    you "啊……"
 
 # game/BKcity_events.rpy:1563
 translate chinese_simplified city_gamble_5517eeab:
@@ -1900,13 +1900,13 @@ translate chinese_simplified city_gamble_5517eeab:
 translate chinese_simplified city_gamble_ff747cb2:
 
     # ev_girl1 "Let's play another one!"
-    ev_girl1 "Let's play another one!"
+    ev_girl1 "我们再玩一局吧！"
 
 # game/BKcity_events.rpy:1582
 translate chinese_simplified city_gamble_fbf8a65d:
 
     # you "All right, let's do this."
-    you "All right, let's do this."
+    you "好了，我们开始吧。"
 
 # game/BKcity_events.rpy:1586
 translate chinese_simplified city_gamble_d57674e3:
@@ -1930,7 +1930,7 @@ translate chinese_simplified city_gamble_cef78f8d:
 translate chinese_simplified city_gamble_de6b3fac:
 
     # ev_girl1 "Grrr, you're so lucky all of a sudden! But this time, I'll show you!"
-    ev_girl1 "Grrr, you're so lucky all of a sudden! But this time, I'll show you!"
+    ev_girl1 "哼，你突然间就走运了！不过这次，我会让你见识见识！"
 
 # game/BKcity_events.rpy:1596
 translate chinese_simplified city_gamble_b2168319:
@@ -1942,19 +1942,19 @@ translate chinese_simplified city_gamble_b2168319:
 translate chinese_simplified city_gamble_fcae88b9:
 
     # ev_girl1 "What do you say about that!"
-    ev_girl1 "What do you say about that!"
+    ev_girl1 "你对此有何看法？"
 
 # game/BKcity_events.rpy:1600
 translate chinese_simplified city_gamble_54e9617b:
 
     # you "And... {w=1.0}I win!"
-    you "And... {w=1.0}I win!"
+    you "而且……{w=1.0}我赢了！"
 
 # game/BKcity_events.rpy:1606
 translate chinese_simplified city_gamble_f31f9295:
 
     # ev_girl1 "Nooooooooo!!!"
-    ev_girl1 "Nooooooooo!!!"
+    ev_girl1 "不要啊！！！"
 
 # game/BKcity_events.rpy:1610
 translate chinese_simplified city_gamble_e977888f:
@@ -1972,19 +1972,19 @@ translate chinese_simplified city_gamble_a75181bc:
 translate chinese_simplified city_gamble_becd0c06:
 
     # you "Oh no..."
-    you "Oh no..."
+    you "哦不……"
 
 # game/BKcity_events.rpy:1618
 translate chinese_simplified city_gamble_fd340498:
 
     # ev_girl1 "Hahaha! *evil laugh*"
-    ev_girl1 "Hahaha! *evil laugh*"
+    ev_girl1 "哈哈哈！*邪恶的笑声*"
 
 # game/BKcity_events.rpy:1630
 translate chinese_simplified city_gamble_2cb9dcbb:
 
     # you "Ok, but let's take a break."
-    you "Ok, but let's take a break."
+    you "好的，我们休息一下吧。"
 
 # game/BKcity_events.rpy:1632
 translate chinese_simplified city_gamble_d4c4c437:
@@ -1996,7 +1996,7 @@ translate chinese_simplified city_gamble_d4c4c437:
 translate chinese_simplified city_gamble_1a3f7fa9:
 
     # you "This is the right time..."
-    you "This is the right time..."
+    you "现在正是时候……"
 
 # game/BKcity_events.rpy:1640
 translate chinese_simplified city_gamble_56297960:
@@ -2014,19 +2014,19 @@ translate chinese_simplified city_gamble_2dbfeada:
 translate chinese_simplified city_gamble_72e8fbb8:
 
     # ev_girl1 "So, where were we?"
-    ev_girl1 "So, where were we?"
+    ev_girl1 "我们刚才说到哪儿了？"
 
 # game/BKcity_events.rpy:1648
 translate chinese_simplified city_gamble_9045087f:
 
     # you "I was about to kick your sweet ass, I believe!"
-    you "I was about to kick your sweet ass, I believe!"
+    you "我当时差点就揍扁你了！"
 
 # game/BKcity_events.rpy:1650
 translate chinese_simplified city_gamble_b9e6afb2:
 
     # ev_girl1 "Bring it on! *laugh*"
-    ev_girl1 "Bring it on! *laugh*"
+    ev_girl1 "放马过来吧！*笑*"
 
 # game/BKcity_events.rpy:1652
 translate chinese_simplified city_gamble_40e5a4b3:
@@ -2038,7 +2038,7 @@ translate chinese_simplified city_gamble_40e5a4b3:
 translate chinese_simplified city_gamble_d4f15bd0:
 
     # ev_girl1 "This is uncanny! But your luck will run out, eventually! *frown*"
-    ev_girl1 "This is uncanny! But your luck will run out, eventually! *frown*"
+    ev_girl1 "真是不可思议！不过你的好运总有用完的时候！*皱眉*"
 
 # game/BKcity_events.rpy:1658
 translate chinese_simplified city_gamble_b3d16850:
@@ -2050,13 +2050,13 @@ translate chinese_simplified city_gamble_b3d16850:
 translate chinese_simplified city_gamble_7ed54380:
 
     # ev_girl1 "What the hell! You're cheating, I'm sure! *mad*"
-    ev_girl1 "What the hell! You're cheating, I'm sure! *mad*"
+    ev_girl1 "搞什么鬼！你肯定作弊了！*生气*"
 
 # game/BKcity_events.rpy:1662
 translate chinese_simplified city_gamble_6f00c98e:
 
     # you "There, there, don't be a bad sport."
-    you "There, there, don't be a bad sport."
+    you "好了好了，别这么没风度。"
 
 # game/BKcity_events.rpy:1666
 translate chinese_simplified city_gamble_93270bbf:
@@ -2080,25 +2080,25 @@ translate chinese_simplified city_gamble_c85b6ff4:
 translate chinese_simplified city_gamble_9dc3e641:
 
     # ev_girl1 "What are you doing?"
-    ev_girl1 "What are you doing?"
+    ev_girl1 "你在干什么？"
 
 # game/BKcity_events.rpy:1682
 translate chinese_simplified city_gamble_da3b5fec:
 
     # you "Oh, uh, ahem... Just stretching, hahahahaha!"
-    you "Oh, uh, ahem... Just stretching, hahahahaha!"
+    you "哦，呃，咳……只是伸个懒腰，哈哈哈哈！"
 
 # game/BKcity_events.rpy:1684
 translate chinese_simplified city_gamble_a005b622:
 
     # ev_girl1 "You're acting weird... Don't try to cheat, now, ok?"
-    ev_girl1 "You're acting weird... Don't try to cheat, now, ok?"
+    ev_girl1 "你行为举止很奇怪……别想作弊，好吗？"
 
 # game/BKcity_events.rpy:1686
 translate chinese_simplified city_gamble_6878d040:
 
     # you "Of course not, hahahahaha! *sweat*"
-    you "Of course not, hahahahaha! *sweat*"
+    you "当然不是，哈哈哈哈！*冒汗*"
 
 # game/BKcity_events.rpy:1688
 translate chinese_simplified city_gamble_fa8448bd:
@@ -2110,7 +2110,7 @@ translate chinese_simplified city_gamble_fa8448bd:
 translate chinese_simplified city_gamble_d192838d:
 
     # you "It's been a fun game, but it's getting late. I'll play you another time."
-    you "It's been a fun game, but it's getting late. I'll play you another time."
+    you "游戏很开心，不过时间不早了，下次再跟你玩。"
 
 # game/BKcity_events.rpy:1697
 translate chinese_simplified city_gamble_dfd842f8:
@@ -2122,7 +2122,7 @@ translate chinese_simplified city_gamble_dfd842f8:
 translate chinese_simplified city_gamble_fbd1f22d:
 
     # ev_girl1 "Aw, that's too bad, I'm sure you were about to win big... *sneer*"
-    ev_girl1 "Aw, that's too bad, I'm sure you were about to win big... *sneer*"
+    ev_girl1 "哎呀，真可惜，我敢肯定你本来要大获全胜的……*冷笑*"
 
 # game/BKcity_events.rpy:1715
 translate chinese_simplified city_gamble_04964a88:
@@ -2134,7 +2134,7 @@ translate chinese_simplified city_gamble_04964a88:
 translate chinese_simplified city_gamble_963ed26a:
 
     # you "All right honey, time to cough up the gold."
-    you "All right honey, time to cough up the gold."
+    you "好了亲爱的，是时候把金子吐出来了。"
 
 # game/BKcity_events.rpy:1730
 translate chinese_simplified city_gamble_f1b8b9a3:
@@ -2146,7 +2146,7 @@ translate chinese_simplified city_gamble_f1b8b9a3:
 translate chinese_simplified city_gamble_3771127e:
 
     # ev_girl1 "Aw... You're robbing me blind..."
-    ev_girl1 "Aw... You're robbing me blind..."
+    ev_girl1 "啊……你这是在抢劫我……"
 
 # game/BKcity_events.rpy:1742
 translate chinese_simplified city_gamble_b1b89f60:
@@ -2164,13 +2164,13 @@ translate chinese_simplified city_gamble_3a3405b9:
 translate chinese_simplified city_gamble_41ab9b9e:
 
     # ev_girl1 "Uh... It's... I..."
-    ev_girl1 "Uh... It's... I..."
+    ev_girl1 "呃……是……我……"
 
 # game/BKcity_events.rpy:1754
 translate chinese_simplified city_gamble_d8259c57:
 
     # you "What now?"
-    you "What now?"
+    you "接下来怎么办？"
 
 # game/BKcity_events.rpy:1756
 translate chinese_simplified city_gamble_c6c7993a:
@@ -2182,19 +2182,19 @@ translate chinese_simplified city_gamble_c6c7993a:
 translate chinese_simplified city_gamble_3c7d3a1e:
 
     # ev_girl1 "I do not have the gold to repay you, mister."
-    ev_girl1 "I do not have the gold to repay you, mister."
+    ev_girl1 "先生，我没有足够的黄金来偿还您。"
 
 # game/BKcity_events.rpy:1762
 translate chinese_simplified city_gamble_a577ad0e:
 
     # you "What?"
-    you "What?"
+    you "什么？"
 
 # game/BKcity_events.rpy:1764
 translate chinese_simplified city_gamble_4b439b96:
 
     # ev_girl1 "I don't have any money... This gig was supposed to earn me some..."
-    ev_girl1 "I don't have any money... This gig was supposed to earn me some..."
+    ev_girl1 "我没钱……这份工作本来应该让我赚点钱的……"
 
 # game/BKcity_events.rpy:1766
 translate chinese_simplified city_gamble_ef9737fb:
@@ -2206,13 +2206,13 @@ translate chinese_simplified city_gamble_ef9737fb:
 translate chinese_simplified city_gamble_75088c84:
 
     # you "I'm sorry. But you have to pay up. Don't make me fetch the guard..."
-    you "I'm sorry. But you have to pay up. Don't make me fetch the guard..."
+    you "对不起，你必须付钱。别逼我去叫保安……"
 
 # game/BKcity_events.rpy:1770
 translate chinese_simplified city_gamble_491bbda7:
 
     # ev_girl1 "The guard? No, please! We can work this out!!!"
-    ev_girl1 "The guard? No, please! We can work this out!!!"
+    ev_girl1 "警卫？不，千万别！我们可以想办法的！！！"
 
 # game/BKcity_events.rpy:1772
 translate chinese_simplified city_gamble_24e6b6dd:
@@ -2224,19 +2224,19 @@ translate chinese_simplified city_gamble_24e6b6dd:
 translate chinese_simplified city_gamble_c3e3c1f2:
 
     # ev_girl1 "I can make it up to you in another way..."
-    ev_girl1 "I can make it up to you in another way..."
+    ev_girl1 "我可以用另一种方式补偿你……"
 
 # game/BKcity_events.rpy:1784
 translate chinese_simplified city_gamble_d2482226:
 
     # ev_girl1 "Oh, mister, you're being rough, aaha!!"
-    ev_girl1 "Oh, mister, you're being rough, aaha!!"
+    ev_girl1 "哦，先生，你太粗鲁了，啊哈！！"
 
 # game/BKcity_events.rpy:1786
 translate chinese_simplified city_gamble_a46ec1aa:
 
     # you "You owe me a great deal, and I intend to collect, ha!"
-    you "You owe me a great deal, and I intend to collect, ha!"
+    you "你欠我很多钱，我打算好好讨回来，哈！"
 
 # game/BKcity_events.rpy:1788
 translate chinese_simplified city_gamble_c2182a64:
@@ -2248,13 +2248,13 @@ translate chinese_simplified city_gamble_c2182a64:
 translate chinese_simplified city_gamble_0ec82c53:
 
     # ev_girl1 "Ooooh... I like it... Mister, your cock is huge, oh..."
-    ev_girl1 "Ooooh... I like it... Mister, your cock is huge, oh..."
+    ev_girl1 "哦……我喜欢……先生，你的鸡巴好大，哦……"
 
 # game/BKcity_events.rpy:1794
 translate chinese_simplified city_gamble_d89d6d72:
 
     # you "This is only the beginning..."
-    you "This is only the beginning..."
+    you "这仅仅是个开始……"
 
 # game/BKcity_events.rpy:1796
 translate chinese_simplified city_gamble_4736b5fc:
@@ -2272,19 +2272,19 @@ translate chinese_simplified city_gamble_1342b6c9:
 translate chinese_simplified city_gamble_d07cca1a:
 
     # ev_girl1 "You're ravaging me! I love it!"
-    ev_girl1 "You're ravaging me! I love it!"
+    ev_girl1 "你让我神魂颠倒！我喜欢！"
 
 # game/BKcity_events.rpy:1804
 translate chinese_simplified city_gamble_4f8540f7:
 
     # you "Take this, you little slut! Uuuuaaaahhhhh!!!!"
-    you "Take this, you little slut! Uuuuaaaahhhhh!!!!"
+    you "接招吧，你这小贱货！呜呜呜呜呜呜呜！！！！"
 
 # game/BKcity_events.rpy:1806
 translate chinese_simplified city_gamble_03cd20eb:
 
     # ev_girl1 "HAAAAAAAAAAA!!!"
-    ev_girl1 "HAAAAAAAAAAA!!!"
+    ev_girl1 "哈哈哈哈哈哈！！！"
 
 # game/BKcity_events.rpy:1816
 translate chinese_simplified city_gamble_be5e7738:
@@ -2302,7 +2302,7 @@ translate chinese_simplified city_gamble_cd6b38b6:
 translate chinese_simplified city_gamble_a1e9c257:
 
     # ev_girl1 "Cum... So warm inside... Feels so good... Aaaah..."
-    ev_girl1 "Cum... So warm inside... Feels so good... Aaaah..."
+    ev_girl1 "高潮……里面好温暖……感觉真好……啊……"
 
 # game/BKcity_events.rpy:1830
 translate chinese_simplified city_gamble_a9baabcd:
@@ -2314,13 +2314,13 @@ translate chinese_simplified city_gamble_a9baabcd:
 translate chinese_simplified city_gamble_995a6198:
 
     # ev_girl1 "Time to pay up, now, mister!"
-    ev_girl1 "Time to pay up, now, mister!"
+    ev_girl1 "先生，现在该付钱了！"
 
 # game/BKcity_events.rpy:1839
 translate chinese_simplified city_gamble_48a2c215:
 
     # you "Damn..."
-    you "Damn..."
+    you "该死..."
 
 # game/BKcity_events.rpy:1853
 translate chinese_simplified city_gamble_04964a88_1:
@@ -2332,13 +2332,13 @@ translate chinese_simplified city_gamble_04964a88_1:
 translate chinese_simplified city_gamble_cfb1a132:
 
     # you "Sorry, but I'm not one to waste time playing games."
-    you "Sorry, but I'm not one to waste time playing games."
+    you "抱歉，我不是那种会浪费时间玩游戏的人。"
 
 # game/BKcity_events.rpy:1865
 translate chinese_simplified city_gamble_dba13d1b:
 
     # ev_girl1 "Really? That's too bad, I figured you were the playing type... Goodbye, then."
-    ev_girl1 "Really? That's too bad, I figured you were the playing type... Goodbye, then."
+    ev_girl1 "真的吗？太可惜了，我还以为你是那种喜欢玩乐的人呢……那就再见了。"
 
 # game/BKcity_events.rpy:1880
 translate chinese_simplified city_thief_b71bafed:
@@ -2350,7 +2350,7 @@ translate chinese_simplified city_thief_b71bafed:
 translate chinese_simplified city_thief_280c7553:
 
     # woman "Thief! A thief! Help me!"
-    woman "Thief! A thief! Help me!"
+    woman "小偷！小偷！救命啊！"
 
 # game/BKcity_events.rpy:1904
 translate chinese_simplified city_thief_877ebc36:
@@ -2374,7 +2374,7 @@ translate chinese_simplified city_thief_7f383b19:
 translate chinese_simplified city_thief_addf0ba7:
 
     # you "Damn you!"
-    you "Damn you!"
+    you "该死的你！"
 
 # game/BKcity_events.rpy:1925
 translate chinese_simplified city_thief_27600d3e:
@@ -2404,7 +2404,7 @@ translate chinese_simplified city_thief_cee55968:
 translate chinese_simplified city_thief_48a2c215:
 
     # you "Damn..."
-    you "Damn..."
+    you "该死..."
 
 # game/BKcity_events.rpy:1945
 translate chinese_simplified city_thief_19de95e8:
@@ -2482,7 +2482,7 @@ translate chinese_simplified city_thief_34c6d5bd:
 translate chinese_simplified city_thief_7a5c01cf:
 
     # you "This is none of my concern, really."
-    you "This is none of my concern, really."
+    you "这其实与我无关。"
 
 # game/BKcity_events.rpy:1995
 translate chinese_simplified city_thief_2feec416:
@@ -2494,7 +2494,7 @@ translate chinese_simplified city_thief_2feec416:
 translate chinese_simplified city_thief_071d6883:
 
     # woman "Oh thank you, thank you!"
-    woman "Oh thank you, thank you!"
+    woman "哦，谢谢，谢谢！"
 
 # game/BKcity_events.rpy:2004
 translate chinese_simplified city_thief_75863963:
@@ -2506,19 +2506,19 @@ translate chinese_simplified city_thief_75863963:
 translate chinese_simplified city_thief_f61cb9b5:
 
     # you "Thank you, but this isn't necessary..."
-    you "Thank you, but this isn't necessary..."
+    you "谢谢，但这没必要……"
 
 # game/BKcity_events.rpy:2010
 translate chinese_simplified city_thief_ba41d60b:
 
     # woman "Please, I insist."
-    woman "Please, I insist."
+    woman "请您务必同意。"
 
 # game/BKcity_events.rpy:2014
 translate chinese_simplified city_thief_7596837c:
 
     # you "Nice!"
-    you "Nice!"
+    you "好的！"
 
 # game/BKcity_events.rpy:2024
 translate chinese_simplified city_thief_b1b89f60:
@@ -2548,13 +2548,13 @@ translate chinese_simplified city_wrestle_72ab9f57:
 translate chinese_simplified city_wrestle_c22c192b:
 
     # warrior "Hey, you! Think you're strong? What do you say to a bout of arm wrestling?"
-    warrior "Hey, you! Think you're strong? What do you say to a bout of arm wrestling?"
+    warrior "嘿，你！觉得自己很强壮吗？要不要来场掰手腕比赛？"
 
 # game/BKcity_events.rpy:2070
 translate chinese_simplified city_wrestle_5a52de6c:
 
     # warrior "I wager a fistful of gold I could beat you fair and square right here, right now."
-    warrior "I wager a fistful of gold I could beat you fair and square right here, right now."
+    warrior "我敢用一把金子打赌，我现在就能光明正大地打败你。"
 
 # game/BKcity_events.rpy:2074
 translate chinese_simplified city_wrestle_1bd940ab:
@@ -2566,7 +2566,7 @@ translate chinese_simplified city_wrestle_1bd940ab:
 translate chinese_simplified city_wrestle_74709d0e:
 
     # you "Let's see about that!"
-    you "Let's see about that!"
+    you "让我们拭目以待！"
 
 # game/BKcity_events.rpy:2088
 translate chinese_simplified city_wrestle_f32dd71d:
@@ -2614,7 +2614,7 @@ translate chinese_simplified city_wrestle_0ff91404:
 translate chinese_simplified city_wrestle_50310af9:
 
     # warrior "Aaaargh!!!"
-    warrior "Aaaargh!!!"
+    warrior "啊啊啊！！！"
 
 # game/BKcity_events.rpy:2123
 translate chinese_simplified city_wrestle_f7ba7de8:
@@ -2632,7 +2632,7 @@ translate chinese_simplified city_wrestle_9002ecf7:
 translate chinese_simplified city_wrestle_d95d8254:
 
     # warrior "Feeling a little tired, greenhorn?"
-    warrior "Feeling a little tired, greenhorn?"
+    warrior "菜鸟，感觉有点累了吗？"
 
 # game/BKcity_events.rpy:2133
 translate chinese_simplified city_wrestle_bce48510:
@@ -2644,13 +2644,13 @@ translate chinese_simplified city_wrestle_bce48510:
 translate chinese_simplified city_wrestle_5ee7ff9d:
 
     # you "Shit..."
-    you "Shit..."
+    you "拉屎..."
 
 # game/BKcity_events.rpy:2141
 translate chinese_simplified city_wrestle_3e8a4b55:
 
     # you "Oh, a fight with a monkey. I hear they're strong, if a little intellectually-challenged."
-    you "Oh, a fight with a monkey. I hear they're strong, if a little intellectually-challenged."
+    you "哦，跟猴子打架。我听说它们力气很大，就是智力有点欠缺。"
 
 # game/BKcity_events.rpy:2143
 translate chinese_simplified city_wrestle_b2bea753:
@@ -2662,7 +2662,7 @@ translate chinese_simplified city_wrestle_b2bea753:
 translate chinese_simplified city_wrestle_141f5b86:
 
     # warrior "Careful now, boy..."
-    warrior "Careful now, boy..."
+    warrior "小心点，孩子……"
 
 # game/BKcity_events.rpy:2147
 translate chinese_simplified city_wrestle_cd163e53:
@@ -2680,31 +2680,31 @@ translate chinese_simplified city_wrestle_0fc6b13e:
 translate chinese_simplified city_wrestle_65ee0a62:
 
     # you "Hey, you've got a chunk of pork on your face. Ah, sorry, that's your nose."
-    you "Hey, you've got a chunk of pork on your face. Ah, sorry, that's your nose."
+    you "嘿，你脸上沾了块猪肉。啊，抱歉，那是你的鼻子。"
 
 # game/BKcity_events.rpy:2159
 translate chinese_simplified city_wrestle_85598211:
 
     # warrior "Grrr..."
-    warrior "Grrr..."
+    warrior "啊啊啊……"
 
 # game/BKcity_events.rpy:2161
 translate chinese_simplified city_wrestle_f9f43a26:
 
     # you "So, ever rubbed your mother's cunt with your ears?"
-    you "So, ever rubbed your mother's cunt with your ears?"
+    you "所以，你有没有用耳朵蹭过你妈的阴部？"
 
 # game/BKcity_events.rpy:2163
 translate chinese_simplified city_wrestle_a87365e5:
 
     # warrior "What??? No!!!"
-    warrior "What??? No!!!"
+    warrior "什么？？？不！！！"
 
 # game/BKcity_events.rpy:2165
 translate chinese_simplified city_wrestle_129cdef2:
 
     # you "I see, you were born with a helmet then..."
-    you "I see, you were born with a helmet then..."
+    you "原来如此，看来你生来就戴着头盔啊……"
 
 # game/BKcity_events.rpy:2169
 translate chinese_simplified city_wrestle_36a2ce18:
@@ -2722,13 +2722,13 @@ translate chinese_simplified city_wrestle_dc656e1f:
 translate chinese_simplified city_wrestle_0c5f398c:
 
     # you "Touché!"
-    you "Touché!"
+    you "说得好！"
 
 # game/BKcity_events.rpy:2179
 translate chinese_simplified city_wrestle_19079579:
 
     # warrior "What?? How could I lose!"
-    warrior "What?? How could I lose!"
+    warrior "什么？我怎么会输！"
 
 # game/BKcity_events.rpy:2183
 translate chinese_simplified city_wrestle_b9943a91:
@@ -2740,13 +2740,13 @@ translate chinese_simplified city_wrestle_b9943a91:
 translate chinese_simplified city_wrestle_ce6831c7:
 
     # you "You know what? I'm... I'm stronger than you! You might as well give up."
-    you "You know what? I'm... I'm stronger than you! You might as well give up."
+    you "你知道吗？我……我比你强！你还是放弃吧。"
 
 # game/BKcity_events.rpy:2187
 translate chinese_simplified city_wrestle_422a594d:
 
     # warrior "Oh yeah? I have another idea. How about I break your arm?"
-    warrior "Oh yeah? I have another idea. How about I break your arm?"
+    warrior "哦，是吗？我还有个主意。不如我打断你的胳膊怎么样？"
 
 # game/BKcity_events.rpy:2193
 translate chinese_simplified city_wrestle_0ac056e2:
@@ -2758,25 +2758,25 @@ translate chinese_simplified city_wrestle_0ac056e2:
 translate chinese_simplified city_wrestle_8a556914:
 
     # you "Aaaargh!!!"
-    you "Aaaargh!!!"
+    you "啊啊啊！！！"
 
 # game/BKcity_events.rpy:2197
 translate chinese_simplified city_wrestle_f8910b6b:
 
     # warrior "Hahahahaha!!!"
-    warrior "Hahahahaha!!!"
+    warrior "哈哈哈哈！！！"
 
 # game/BKcity_events.rpy:2203
 translate chinese_simplified city_wrestle_fa530948:
 
     # you "I can't, I have... stuff to do."
-    you "I can't, I have... stuff to do."
+    you "我不能，我还有事要做。"
 
 # game/BKcity_events.rpy:2205
 translate chinese_simplified city_wrestle_fb565e36:
 
     # warrior "I see. Then scram, weakling."
-    warrior "I see. Then scram, weakling."
+    warrior "我明白了。那就滚开，弱者。"
 
 # game/BKcity_events.rpy:2209
 translate chinese_simplified city_wrestle_a6a9279d:
@@ -2794,13 +2794,13 @@ translate chinese_simplified city_wrestle_5a884e0e:
 translate chinese_simplified city_wrestle_a48d4343:
 
     # you "Time to pay up."
-    you "Time to pay up."
+    you "该还钱了。"
 
 # game/BKcity_events.rpy:2229
 translate chinese_simplified city_wrestle_0043fb82:
 
     # warrior "Fine, here's your gold... *frown*"
-    warrior "Fine, here's your gold... *frown*"
+    warrior "好吧，这是你的金子……*皱眉*"
 
 # game/BKcity_events.rpy:2239
 translate chinese_simplified city_wrestle_b1b89f60:
@@ -2812,7 +2812,7 @@ translate chinese_simplified city_wrestle_b1b89f60:
 translate chinese_simplified city_wrestle_bc99f824:
 
     # warrior "I want my money now, wimp."
-    warrior "I want my money now, wimp."
+    warrior "我现在就要钱，你个怂包。"
 
 # game/BKcity_events.rpy:2261
 translate chinese_simplified city_wrestle_04964a88:
@@ -2830,103 +2830,103 @@ translate chinese_simplified city_cat_8af25751:
 translate chinese_simplified city_cat_ea6e8d15:
 
     # ev_girl3 "Nyaa! Mister, help me!"
-    ev_girl3 "Nyaa! Mister, help me!"
+    ev_girl3 "喵！先生，救救我！"
 
 # game/BKcity_events.rpy:2296
 translate chinese_simplified city_cat_c25ad0ac:
 
     # you "What is it? ...and what's with the strange ears??"
-    you "What is it? ...and what's with the strange ears??"
+    you "那是什么？……还有，那奇怪的耳朵是怎么回事？"
 
 # game/BKcity_events.rpy:2300
 translate chinese_simplified city_cat_21c2f2e0:
 
     # ev_girl3 "It's Yuna! My best friend! I can't find her anywhere!"
-    ev_girl3 "It's Yuna! My best friend! I can't find her anywhere!"
+    ev_girl3 "是尤娜！我最好的朋友！我到处都找不到她！"
 
 # game/BKcity_events.rpy:2302
 translate chinese_simplified city_cat_aa8879a5:
 
     # ev_girl3 "She's been missing for days! She told me she was going out for a while, but..."
-    ev_girl3 "She's been missing for days! She told me she was going out for a while, but..."
+    ev_girl3 "她已经失踪好几天了！她告诉我她要出去一会儿，但是……"
 
 # game/BKcity_events.rpy:2304
 translate chinese_simplified city_cat_dda822f5:
 
     # you "Do you have any idea where she went? Did you talk to any of her other friends?"
-    you "Do you have any idea where she went? Did you talk to any of her other friends?"
+    you "你知道她去了哪里吗？你跟她的其他朋友谈过吗？"
 
 # game/BKcity_events.rpy:2306
 translate chinese_simplified city_cat_eea52340:
 
     # ev_girl3 "Well... She's been fooling around with those cool cats lately..."
-    ev_girl3 "Well... She's been fooling around with those cool cats lately..."
+    ev_girl3 "嗯……她最近一直在和那些酷哥们儿鬼混……"
 
 # game/BKcity_events.rpy:2308
 translate chinese_simplified city_cat_fbbe8633:
 
     # you "Cool cats?"
-    you "Cool cats?"
+    you "酷猫？"
 
 # game/BKcity_events.rpy:2310
 translate chinese_simplified city_cat_65fd96dc:
 
     # ev_girl3 "There's Steve, the handsome dark one... Garfy, the fat, funny one... And the siamese twins..."
-    ev_girl3 "There's Steve, the handsome dark one... Garfy, the fat, funny one... And the siamese twins..."
+    ev_girl3 "有英俊的黑发史蒂夫……胖乎乎又滑稽的加菲……还有连体双胞胎……"
 
 # game/BKcity_events.rpy:2312
 translate chinese_simplified city_cat_2f7024d1:
 
     # you "Siamese twins?? That's rare... I don't remember ever meeting any of those guys..."
-    you "Siamese twins?? That's rare... I don't remember ever meeting any of those guys..."
+    you "连体双胞胎？真罕见……我好像从来没见过这种人……"
 
 # game/BKcity_events.rpy:2316
 translate chinese_simplified city_cat_63521e2b:
 
     # ev_girl3 "Oh, mister, what am I gonna do... What if she gets eaten?"
-    ev_girl3 "Oh, mister, what am I gonna do... What if she gets eaten?"
+    ev_girl3 "哦，先生，我该怎么办……万一她被吃掉了怎么办？"
 
 # game/BKcity_events.rpy:2318
 translate chinese_simplified city_cat_7fcfbc3e:
 
     # you "Eaten? Calm down, I don't think anyone will eat your friend..."
-    you "Eaten? Calm down, I don't think anyone will eat your friend..."
+    you "被吃了？别紧张，我觉得没人会吃你的朋友……"
 
 # game/BKcity_events.rpy:2320
 translate chinese_simplified city_cat_cbb5c79e:
 
     # ev_girl3 "But some people like eating cats!!! There's Alf, this dodgy dwarf, he..."
-    ev_girl3 "But some people like eating cats!!! There's Alf, this dodgy dwarf, he..."
+    ev_girl3 "但有些人就是喜欢吃猫！！！比如阿尔夫，这个狡猾的矮子，他……"
 
 # game/BKcity_events.rpy:2322
 translate chinese_simplified city_cat_c979b16a:
 
     # you "Cats??? Wait a minute... Your friend is a cat?"
-    you "Cats??? Wait a minute... Your friend is a cat?"
+    you "猫？？？等等……你的朋友是只猫？"
 
 # game/BKcity_events.rpy:2324
 translate chinese_simplified city_cat_9d607a1e:
 
     # ev_girl3 "Yes, of course! She's my best friend! We have such great conversations, you know, about life, love, nyaa... We share the same world view..."
-    ev_girl3 "Yes, of course! She's my best friend! We have such great conversations, you know, about life, love, nyaa... We share the same world view..."
+    ev_girl3 "当然啦！她是我最好的朋友！我们经常聊天，你知道，聊生活、聊爱情、聊其他各种话题……我们有着相同的世界观……"
 
 # game/BKcity_events.rpy:2326
 translate chinese_simplified city_cat_537ab76c:
 
     # you "Okaay... Right..."
-    you "Okaay... Right..."
+    you "好的……没错……"
 
 # game/BKcity_events.rpy:2337
 translate chinese_simplified city_cat_c3b1c980:
 
     # you "Very well, then. I'll help you find her."
-    you "Very well, then. I'll help you find her."
+    you "好的，那我帮你找到她。"
 
 # game/BKcity_events.rpy:2339
 translate chinese_simplified city_cat_d801513d:
 
     # ev_girl3 "Oh, mister, thank you, nyaaa! I think she went this way..."
-    ev_girl3 "Oh, mister, thank you, nyaaa! I think she went this way..."
+    ev_girl3 "哦，先生，谢谢你，喵！我想她往这边走了……"
 
 # game/BKcity_events.rpy:2345
 translate chinese_simplified city_cat_11aa6670:
@@ -2944,13 +2944,13 @@ translate chinese_simplified city_cat_7b1d55c6:
 translate chinese_simplified city_cat_bb49702d:
 
     # ev_girl3 "Oh, it's her!"
-    ev_girl3 "Oh, it's her!"
+    ev_girl3 "哦，是她！"
 
 # game/BKcity_events.rpy:2365
 translate chinese_simplified city_cat_fc9aa7de:
 
     # you "Hey, Yuna! Come down here you dumb critter!"
-    you "Hey, Yuna! Come down here you dumb critter!"
+    you "喂，尤娜！你这笨家伙，快下来！"
 
 # game/BKcity_events.rpy:2367
 translate chinese_simplified city_cat_aa939283:
@@ -2962,7 +2962,7 @@ translate chinese_simplified city_cat_aa939283:
 translate chinese_simplified city_cat_99f689a2:
 
     # ev_girl3 "Nooo! Come back, Yuna, come baaaaack! Nyaaa!"
-    ev_girl3 "Nooo! Come back, Yuna, come baaaaack! Nyaaa!"
+    ev_girl3 "不！回来吧，尤娜，回来吧！尼亚啊！"
 
 # game/BKcity_events.rpy:2373
 translate chinese_simplified city_cat_777b91ba:
@@ -2974,7 +2974,7 @@ translate chinese_simplified city_cat_777b91ba:
 translate chinese_simplified city_cat_9e0ced25:
 
     # you "Come here, kitty kitty... Yuna, please come here, there's nothing to be afraid of..."
-    you "Come here, kitty kitty... Yuna, please come here, there's nothing to be afraid of..."
+    you "过来，小猫咪……尤娜，快过来，没什么好怕的……"
 
 # game/BKcity_events.rpy:2387
 translate chinese_simplified city_cat_4cff14e4:
@@ -2986,7 +2986,7 @@ translate chinese_simplified city_cat_4cff14e4:
 translate chinese_simplified city_cat_c969d1cf:
 
     # ev_girl3 "Yuna!!! You're here! I'm so happy!!!"
-    ev_girl3 "Yuna!!! You're here! I'm so happy!!!"
+    ev_girl3 "尤娜！！！你来了！我太高兴了！！！"
 
 # game/BKcity_events.rpy:2395
 translate chinese_simplified city_cat_71f73778:
@@ -2998,7 +2998,7 @@ translate chinese_simplified city_cat_71f73778:
 translate chinese_simplified city_cat_575dc3c9:
 
     # you "Meow!!!"
-    you "Meow!!!"
+    you "喵！！！"
 
 # game/BKcity_events.rpy:2403
 translate chinese_simplified city_cat_8db54dc5:
@@ -3016,19 +3016,19 @@ translate chinese_simplified city_cat_b2cc1a33:
 translate chinese_simplified city_cat_6b6728e4:
 
     # ev_girl3 "Amazing! You are a cat lover too, I can tell! Nyaa!"
-    ev_girl3 "Amazing! You are a cat lover too, I can tell! Nyaa!"
+    ev_girl3 "太棒了！看得出来你也是个爱猫人士！喵！"
 
 # game/BKcity_events.rpy:2420
 translate chinese_simplified city_cat_70e1a4d7:
 
     # you "I could locate your 'friend' using a spell. That might work."
-    you "I could locate your 'friend' using a spell. That might work."
+    you "我可以用魔法找到你的“朋友”。这或许可行。"
 
 # game/BKcity_events.rpy:2424
 translate chinese_simplified city_cat_9df3ba9f:
 
     # ev_girl3 "Really? That's so cool! Thank you mister, nyaaah!"
-    ev_girl3 "Really? That's so cool! Thank you mister, nyaaah!"
+    ev_girl3 "真的吗？太酷了！谢谢你，先生，喵~"
 
 # game/BKcity_events.rpy:2426
 translate chinese_simplified city_cat_b61348fb:
@@ -3040,13 +3040,13 @@ translate chinese_simplified city_cat_b61348fb:
 translate chinese_simplified city_cat_332f1f8f:
 
     # you "Hum, hum. First, let me gather some personal item of her. A collar, perhaps?"
-    you "Hum, hum. First, let me gather some personal item of her. A collar, perhaps?"
+    you "嗯，嗯。首先，让我收集一些她的私人物品。也许是项圈？"
 
 # game/BKcity_events.rpy:2430
 translate chinese_simplified city_cat_fba7a045:
 
     # ev_girl3 "Haha, mister, that's kinky! We don't do this kind of stuff. But I can find you some of her hair, I guess."
-    ev_girl3 "Haha, mister, that's kinky! We don't do this kind of stuff. But I can find you some of her hair, I guess."
+    ev_girl3 "哈哈，先生，这太变态了！我们不做这种事。不过我想我可以帮你找些她的头发。"
 
 # game/BKcity_events.rpy:2432
 translate chinese_simplified city_cat_a8912ef4:
@@ -3058,13 +3058,13 @@ translate chinese_simplified city_cat_a8912ef4:
 translate chinese_simplified city_cat_4f7a97bf:
 
     # you "Come hereforth, you furry beast! Come to daddy!"
-    you "Come hereforth, you furry beast! Come to daddy!"
+    you "过来，你这毛茸茸的野兽！到爸爸这儿来！"
 
 # game/BKcity_events.rpy:2444
 translate chinese_simplified city_cat_a0517fa6:
 
     # ev_girl3 "What... What's this sound?"
-    ev_girl3 "What... What's this sound?"
+    ev_girl3 "这……这是什么声音？"
 
 # game/BKcity_events.rpy:2446
 translate chinese_simplified city_cat_25f7a449:
@@ -3076,13 +3076,13 @@ translate chinese_simplified city_cat_25f7a449:
 translate chinese_simplified city_cat_e770ceee:
 
     # ev_girl3 "Oh no... It's..."
-    ev_girl3 "Oh no... It's..."
+    ev_girl3 "哦不……是……"
 
 # game/BKcity_events.rpy:2452
 translate chinese_simplified city_cat_8ad8d44f:
 
     # ev_girl3 "DOGS!!!"
-    ev_girl3 "DOGS!!!"
+    ev_girl3 "狗狗们！！！"
 
 # game/BKcity_events.rpy:2454
 translate chinese_simplified city_cat_335bf053:
@@ -3094,7 +3094,7 @@ translate chinese_simplified city_cat_335bf053:
 translate chinese_simplified city_cat_8e328a26:
 
     # ev_girl3 "Hiiiii!!! I hate dogs, nyaaa!"
-    ev_girl3 "Hiiiii!!! I hate dogs, nyaaa!"
+    ev_girl3 "嗨！！！我讨厌狗，喵！"
 
 # game/BKcity_events.rpy:2464
 translate chinese_simplified city_cat_7b5d8682:
@@ -3106,7 +3106,7 @@ translate chinese_simplified city_cat_7b5d8682:
 translate chinese_simplified city_cat_5ae7d7af:
 
     # you "Haaa! No!!! It tickles!!!"
-    you "Haaa! No!!! It tickles!!!"
+    you "啊！不要！！！好痒！！！"
 
 # game/BKcity_events.rpy:2472
 translate chinese_simplified city_cat_8bae13a6:
@@ -3118,7 +3118,7 @@ translate chinese_simplified city_cat_8bae13a6:
 translate chinese_simplified city_cat_1d82668c:
 
     # you "I summon thee, ye little feline furball! Thy friend misses thee..."
-    you "I summon thee, ye little feline furball! Thy friend misses thee..."
+    you "我召唤你，你这毛茸茸的小猫咪！你的朋友想念你……"
 
 # game/BKcity_events.rpy:2482
 translate chinese_simplified city_cat_63a801bd:
@@ -3130,13 +3130,13 @@ translate chinese_simplified city_cat_63a801bd:
 translate chinese_simplified city_cat_49eb5da7:
 
     # ev_girl3 "Did it work? It's like nothing happened..."
-    ev_girl3 "Did it work? It's like nothing happened..."
+    ev_girl3 "成功了吗？好像什么都没发生过……"
 
 # game/BKcity_events.rpy:2486
 translate chinese_simplified city_cat_82ed3050:
 
     # you "I'm sorry. I think..."
-    you "I'm sorry. I think..."
+    you "对不起。我想……"
 
 # game/BKcity_events.rpy:2490
 translate chinese_simplified city_cat_617eadfd:
@@ -3148,7 +3148,7 @@ translate chinese_simplified city_cat_617eadfd:
 translate chinese_simplified city_cat_91fdb66f:
 
     # ev_girl3 "Yuna!!!"
-    ev_girl3 "Yuna!!!"
+    ev_girl3 "尤娜！！！"
 
 # game/BKcity_events.rpy:2507
 translate chinese_simplified city_cat_fd86ec75:
@@ -3160,13 +3160,13 @@ translate chinese_simplified city_cat_fd86ec75:
 translate chinese_simplified city_cat_4643c4be:
 
     # you "Nine tails, nine lives, I summon thee, Neko spirit... Bring me thy kin, do us a favor and we will repay thee..."
-    you "Nine tails, nine lives, I summon thee, Neko spirit... Bring me thy kin, do us a favor and we will repay thee..."
+    you "九尾九命，我召唤你，猫妖……带上你的族人，帮我们一个忙，我们必将报答你……"
 
 # game/BKcity_events.rpy:2517
 translate chinese_simplified city_cat_852da9ef:
 
     # ev_girl3 "You're glowing! Your scent is strange... Musky..."
-    ev_girl3 "You're glowing! Your scent is strange... Musky..."
+    ev_girl3 "你容光焕发！你的味道很特别……麝香味……"
 
 # game/BKcity_events.rpy:2536
 translate chinese_simplified city_cat_7eea6700:
@@ -3178,7 +3178,7 @@ translate chinese_simplified city_cat_7eea6700:
 translate chinese_simplified city_cat_9d58bf54:
 
     # ev_girl3 "Amazing! Coral! Mr. Kitty! Steve... The siamese twins!"
-    ev_girl3 "Amazing! Coral! Mr. Kitty! Steve... The siamese twins!"
+    ev_girl3 "太棒了！珊瑚！猫先生！史蒂夫……连体双胞胎！"
 
 # game/BKcity_events.rpy:2540
 translate chinese_simplified city_cat_2b93463b:
@@ -3190,7 +3190,7 @@ translate chinese_simplified city_cat_2b93463b:
 translate chinese_simplified city_cat_91fdb66f_1:
 
     # ev_girl3 "Yuna!!!"
-    ev_girl3 "Yuna!!!"
+    ev_girl3 "尤娜！！！"
 
 # game/BKcity_events.rpy:2548
 translate chinese_simplified city_cat_aeeb291c:
@@ -3202,19 +3202,19 @@ translate chinese_simplified city_cat_aeeb291c:
 translate chinese_simplified city_cat_3416a6ed:
 
     # ev_girl3 "She's here! Oh, mister, you're a genius!"
-    ev_girl3 "She's here! Oh, mister, you're a genius!"
+    ev_girl3 "她来了！哦，先生，你真是个天才！"
 
 # game/BKcity_events.rpy:2563
 translate chinese_simplified city_cat_0c967b4d:
 
     # you "Ahem, I don't have time to look for your pet. Anyway, I'm sure she's fine."
-    you "Ahem, I don't have time to look for your pet. Anyway, I'm sure she's fine."
+    you "咳，我没时间帮你找宠物。不过，我相信她没事的。"
 
 # game/BKcity_events.rpy:2565
 translate chinese_simplified city_cat_e6a510b8:
 
     # ev_girl3 "No, waaait! You must help me!"
-    ev_girl3 "No, waaait! You must help me!"
+    ev_girl3 "不，等等！你一定要帮帮我！"
 
 # game/BKcity_events.rpy:2567
 translate chinese_simplified city_cat_d18dd64e:
@@ -3232,31 +3232,31 @@ translate chinese_simplified city_cat_bc08d581:
 translate chinese_simplified city_cat_e4f211b5:
 
     # ev_girl3 "Oh, Yuna, you silly whore! I was here worried out of my mind, and all the while you were out there fooling around with male cats!"
-    ev_girl3 "Oh, Yuna, you silly whore! I was here worried out of my mind, and all the while you were out there fooling around with male cats!"
+    ev_girl3 "哦，尤娜，你这个傻婊子！我在这里担心得要命，而你却在外面和公猫鬼混！"
 
 # game/BKcity_events.rpy:2586
 translate chinese_simplified city_cat_50abf0f8:
 
     # ev_girl3 "Well, at least you had fun..."
-    ev_girl3 "Well, at least you had fun..."
+    ev_girl3 "好吧，至少你玩得开心……"
 
 # game/BKcity_events.rpy:2591
 translate chinese_simplified city_cat_c658bc12:
 
     # ev_girl3 "Thanks, mister, I was so worried... It was lucky you were here to help!"
-    ev_girl3 "Thanks, mister, I was so worried... It was lucky you were here to help!"
+    ev_girl3 "谢谢您，先生，我真是太担心了……幸好您在这里帮忙！"
 
 # game/BKcity_events.rpy:2593
 translate chinese_simplified city_cat_a266484b:
 
     # ev_girl3 "Here, please have this. I've had this forever and I don't use it."
-    ev_girl3 "Here, please have this. I've had this forever and I don't use it."
+    ev_girl3 "给你，这个。我一直都有这个，但一直没用过。"
 
 # game/BKcity_events.rpy:2605
 translate chinese_simplified city_cat_3d687d5f:
 
     # bk_error "Couldn't generate Item for rank [_rank]"
-    bk_error "Couldn't generate Item for rank [_rank]"
+    bk_error "无法为排名 [_rank] 生成项目"
 
 # game/BKcity_events.rpy:2611
 translate chinese_simplified city_cat_1a608fa9:
@@ -3268,25 +3268,25 @@ translate chinese_simplified city_cat_1a608fa9:
 translate chinese_simplified city_cat_af7a0f21:
 
     # ev_girl3 "Thank you, mister, you were amazing."
-    ev_girl3 "Thank you, mister, you were amazing."
+    ev_girl3 "谢谢您，先生，您太棒了。"
 
 # game/BKcity_events.rpy:2617
 translate chinese_simplified city_cat_6f50c6ec:
 
     # ev_girl3 "Yuna would also like to thank you..."
-    ev_girl3 "Yuna would also like to thank you..."
+    ev_girl3 "尤娜也想借此机会向大家表示感谢……"
 
 # game/BKcity_events.rpy:2619
 translate chinese_simplified city_cat_6cf2b05f:
 
     # you "Yuna? Err, I don't think it's necessary..."
-    you "Yuna? Err, I don't think it's necessary..."
+    you "尤娜？呃，我觉得没必要……"
 
 # game/BKcity_events.rpy:2621
 translate chinese_simplified city_cat_1264adb3:
 
     # ev_girl3 "It's very necessary! You won't be disappointed, believe me... *wink*"
-    ev_girl3 "It's very necessary! You won't be disappointed, believe me... *wink*"
+    ev_girl3 "非常必要！相信我，你不会失望的……😉"
 
 # game/BKcity_events.rpy:2623
 translate chinese_simplified city_cat_95cc9628:
@@ -3298,7 +3298,7 @@ translate chinese_simplified city_cat_95cc9628:
 translate chinese_simplified city_cat_e01181ea:
 
     # yuna "Hello, mister!"
-    yuna "Hello, mister!"
+    yuna "你好，先生！"
 
 # game/BKcity_events.rpy:2639
 translate chinese_simplified city_cat_67d4bb67:
@@ -3310,19 +3310,19 @@ translate chinese_simplified city_cat_67d4bb67:
 translate chinese_simplified city_cat_2d912c92:
 
     # yuna "Yuna is in heat... It burns... Mister, won't you help Yuna? Nyaah..."
-    yuna "Yuna is in heat... It burns... Mister, won't you help Yuna? Nyaah..."
+    yuna "尤娜发情了……好烫……先生，您能帮帮尤娜吗？喵……"
 
 # game/BKcity_events.rpy:2645
 translate chinese_simplified city_cat_84974854:
 
     # yuna "Yuna has been with many cats, but now, Yuna wants a human dick... Yuna is dripping down there, just to think about a big, fat human cock..."
-    yuna "Yuna has been with many cats, but now, Yuna wants a human dick... Yuna is dripping down there, just to think about a big, fat human cock..."
+    yuna "尤娜和很多猫都交往过，但现在，尤娜想要的是人类的阴茎……光是想想又粗又大的人类阴茎，尤娜下面就湿透了……"
 
 # game/BKcity_events.rpy:2647
 translate chinese_simplified city_cat_52d8142e:
 
     # yuna "Mister, won't you help a poor lonely pussy?"
-    yuna "Mister, won't you help a poor lonely pussy?"
+    yuna "先生，您难道不愿意帮助一下这只可怜的、孤独的小猫咪吗？"
 
 # game/BKcity_events.rpy:2649
 translate chinese_simplified city_cat_eb44d7e6:
@@ -3334,7 +3334,7 @@ translate chinese_simplified city_cat_eb44d7e6:
 translate chinese_simplified city_cat_390b9719:
 
     # yuna "Yuna is so horny... Yuna needed a cock so bad... Nyaaaaah!"
-    yuna "Yuna is so horny... Yuna needed a cock so bad... Nyaaaaah!"
+    yuna "尤娜好饥渴啊……尤娜好想要个鸡巴……喵呜！"
 
 # game/BKcity_events.rpy:2655
 translate chinese_simplified city_cat_65feaf5f:
@@ -3346,13 +3346,13 @@ translate chinese_simplified city_cat_65feaf5f:
 translate chinese_simplified city_cat_852ecace:
 
     # yuna "Haaahaaaaaa!!!"
-    yuna "Haaahaaaaaa!!!"
+    yuna "哈哈哈哈哈哈！！！"
 
 # game/BKcity_events.rpy:2669
 translate chinese_simplified city_cat_6fb426dd:
 
     # yuna "Yuna is so happy... Aaaaah..."
-    yuna "Yuna is so happy... Aaaaah..."
+    yuna "尤娜好开心……啊……"
 
 # game/BKcity_events.rpy:2677
 translate chinese_simplified city_cat_a9baabcd:
@@ -3364,7 +3364,7 @@ translate chinese_simplified city_cat_a9baabcd:
 translate chinese_simplified city_cat_e01181ea_1:
 
     # yuna "Hello, mister!"
-    yuna "Hello, mister!"
+    yuna "你好，先生！"
 
 # game/BKcity_events.rpy:2686
 translate chinese_simplified city_cat_c235fa2b:
@@ -3382,7 +3382,7 @@ translate chinese_simplified city_cat_80d93bbb:
 translate chinese_simplified city_cat_9bb965a8:
 
     # ev_girl3 "Mind if I join? I can't control myself right now..."
-    ev_girl3 "Mind if I join? I can't control myself right now..."
+    ev_girl3 "我可以加入吗？我现在控制不住自己……"
 
 # game/BKcity_events.rpy:2696
 translate chinese_simplified city_cat_05aae2b0:
@@ -3394,37 +3394,37 @@ translate chinese_simplified city_cat_05aae2b0:
 translate chinese_simplified city_cat_58566848:
 
     # ev_girl3 "Such a big cock... Mister, isn't it too big for Yuna?"
-    ev_girl3 "Such a big cock... Mister, isn't it too big for Yuna?"
+    ev_girl3 "好大的鸡巴……先生，对尤娜来说会不会太大了？"
 
 # game/BKcity_events.rpy:2708
 translate chinese_simplified city_cat_49c34f11:
 
     # yuna "Nooo! It's just perfect! Go ahead, mister, fuck Yuna's pussy as hard as you can! Ahaa!!!"
-    yuna "Nooo! It's just perfect! Go ahead, mister, fuck Yuna's pussy as hard as you can! Ahaa!!!"
+    yuna "不！简直完美！来吧，先生，使劲操尤娜的屄！啊哈！！！"
 
 # game/BKcity_events.rpy:2710
 translate chinese_simplified city_cat_672ec378:
 
     # you "So tight... Hmmm..."
-    you "So tight... Hmmm..."
+    you "好紧……嗯……"
 
 # game/BKcity_events.rpy:2716
 translate chinese_simplified city_cat_e2352d1b:
 
     # yuna "Yuna can't take it anymore... Yuna is cumming..."
-    yuna "Yuna can't take it anymore... Yuna is cumming..."
+    yuna "尤娜再也受不了了……尤娜要高潮了……"
 
 # game/BKcity_events.rpy:2718
 translate chinese_simplified city_cat_a47c436c:
 
     # ev_girl3 "Good girl, Yuna! Squeeze the nice mister's cock hard!"
-    ev_girl3 "Good girl, Yuna! Squeeze the nice mister's cock hard!"
+    ev_girl3 "好女孩，尤娜！用力捏捏这位好先生的鸡巴！"
 
 # game/BKcity_events.rpy:2720
 translate chinese_simplified city_cat_030686f5:
 
     # you "Ooooh..."
-    you "Ooooh..."
+    you "哦……"
 
 # game/BKcity_events.rpy:2734
 translate chinese_simplified city_cat_5db132a6:
@@ -3436,25 +3436,25 @@ translate chinese_simplified city_cat_5db132a6:
 translate chinese_simplified city_cat_4d7e7ccf:
 
     # yuna "Aw... Yuna's pussy is so full... Full of hot cum... Nyaaah..."
-    yuna "Aw... Yuna's pussy is so full... Full of hot cum... Nyaaah..."
+    yuna "啊……尤娜的阴道好满……里面全是热乎乎的精液……喵……"
 
 # game/BKcity_events.rpy:2740
 translate chinese_simplified city_cat_36f9b415:
 
     # ev_girl3 "Oh, I want some too... *licking her lips*"
-    ev_girl3 "Oh, I want some too... *licking her lips*"
+    ev_girl3 "哦，我也想要一些……（舔了舔嘴唇）"
 
 # game/BKcity_events.rpy:2742
 translate chinese_simplified city_cat_fe2ffae4:
 
     # you "*pant* *pant*"
-    you "*pant* *pant*"
+    you "*喘气* *喘气*"
 
 # game/BKcity_events.rpy:2762
 translate chinese_simplified city_cat_91734fa9:
 
     # ev_girl3 "Mister, this isn't finished!!! Let's go for another round!"
-    ev_girl3 "Mister, this isn't finished!!! Let's go for another round!"
+    ev_girl3 "先生，还没结束呢！我们再来一轮！"
 
 # game/BKcity_events.rpy:2764
 translate chinese_simplified city_cat_3d4288ab:
@@ -3466,7 +3466,7 @@ translate chinese_simplified city_cat_3d4288ab:
 translate chinese_simplified city_cat_8f9a1c62:
 
     # you "Of course... Come here and spread your legs... Show me everything... That's it..."
-    you "Of course... Come here and spread your legs... Show me everything... That's it..."
+    you "当然……过来，把腿张开……让我看看……就是这样……"
 
 # game/BKcity_events.rpy:2768
 translate chinese_simplified city_cat_47128241:
@@ -3484,19 +3484,19 @@ translate chinese_simplified city_cat_62f43f09:
 translate chinese_simplified city_cat_3714e19b:
 
     # you "Haaaaa!"
-    you "Haaaaa!"
+    you "哈哈哈哈！"
 
 # game/BKcity_events.rpy:2776
 translate chinese_simplified city_cat_cbafcc88:
 
     # ev_girl3 "Hiiiii!!!"
-    ev_girl3 "Hiiiii!!!"
+    ev_girl3 "嗨！！！"
 
 # game/BKcity_events.rpy:2780
 translate chinese_simplified city_cat_9a2e12a9:
 
     # yuna "Nyaaaaaaaah!!!"
-    yuna "Nyaaaaaaaah!!!"
+    yuna "呀啊啊啊啊啊！！！"
 
 # game/BKcity_events.rpy:2784
 translate chinese_simplified city_cat_69bf38ed:
@@ -3508,13 +3508,13 @@ translate chinese_simplified city_cat_69bf38ed:
 translate chinese_simplified city_cat_85f5b86f:
 
     # ev_girl3 "Creampie!!! I love cream..."
-    ev_girl3 "Creampie!!! I love cream..."
+    ev_girl3 "奶油派！！！我爱奶油……"
 
 # game/BKcity_events.rpy:2800
 translate chinese_simplified city_cat_914e2d9f:
 
     # yuna "Ooooh... Yuna wants to lick it clean... Nyaaah..."
-    yuna "Ooooh... Yuna wants to lick it clean... Nyaaah..."
+    yuna "哦……尤娜想把它舔干净……喵……"
 
 # game/BKcity_events.rpy:2802
 translate chinese_simplified city_cat_1c7fd903:
@@ -3586,7 +3586,7 @@ translate chinese_simplified city_secret_86b6b0a5:
 translate chinese_simplified city_secret_e8730471:
 
     # you "There's nothing that can't be solved with a little violence."
-    you "There's nothing that can't be solved with a little violence."
+    you "没有什么问题是暴力解决不了的。"
 
 # game/BKcity_events.rpy:2879
 translate chinese_simplified city_secret_8db41ea1:
@@ -3598,7 +3598,7 @@ translate chinese_simplified city_secret_8db41ea1:
 translate chinese_simplified city_secret_73032446:
 
     # you "Kyaaaah!!!"
-    you "Kyaaaah!!!"
+    you "啊啊啊！！！"
 
 # game/BKcity_events.rpy:2883
 translate chinese_simplified city_secret_243d4c23:
@@ -3616,7 +3616,7 @@ translate chinese_simplified city_secret_ec07890f:
 translate chinese_simplified city_secret_2ed6fda0:
 
     # you "I wonder where this leads..."
-    you "I wonder where this leads..."
+    you "我想知道这最终会走向何方……"
 
 # game/BKcity_events.rpy:2903
 translate chinese_simplified city_secret_fe2f02f7:
@@ -3646,13 +3646,13 @@ translate chinese_simplified city_secret_bcfb6305:
 translate chinese_simplified city_secret_69e68765:
 
     # you "I am the seeker of secrets! None shall be hidden from my all-seeing eye..."
-    you "I am the seeker of secrets! None shall be hidden from my all-seeing eye..."
+    you "我是秘密的探寻者！任何秘密都逃不过我无所不知的双眼……"
 
 # game/BKcity_events.rpy:2919
 translate chinese_simplified city_secret_7fbf3529:
 
     # you "Open sesame!"
-    you "Open sesame!"
+    you "芝麻开门！"
 
 # game/BKcity_events.rpy:2927
 translate chinese_simplified city_secret_6e4d077d:
@@ -3682,7 +3682,7 @@ translate chinese_simplified city_secret_807c93c3:
 translate chinese_simplified city_secret_6e5f3372:
 
     # you "Damn... This powder isn't cheap..."
-    you "Damn... This powder isn't cheap..."
+    you "哎……这粉末可不便宜……"
 
 # game/BKcity_events.rpy:2952
 translate chinese_simplified city_secret_74964b19:
@@ -3694,7 +3694,7 @@ translate chinese_simplified city_secret_74964b19:
 translate chinese_simplified city_secret_ea9cc5de:
 
     # you "This is a waste of time. Let's just go."
-    you "This is a waste of time. Let's just go."
+    you "这是浪费时间，我们走吧。"
 
 # game/BKcity_events.rpy:2967
 translate chinese_simplified city_secret_5185d497:
@@ -3730,7 +3730,7 @@ translate chinese_simplified city_secret_a09bde46:
 translate chinese_simplified city_secret_3d687d5f:
 
     # bk_error "Couldn't generate Item for rank [_rank]"
-    bk_error "Couldn't generate Item for rank [_rank]"
+    bk_error "无法为排名 [_rank] 生成项目"
 
 # game/BKcity_events.rpy:3003
 translate chinese_simplified city_secret_8a1ad209:
@@ -3760,7 +3760,7 @@ translate chinese_simplified city_secret_0e568b0c:
 translate chinese_simplified city_secret_d5dec428:
 
     # you "Do you need help?"
-    you "Do you need help?"
+    you "您需要帮助吗？"
 
 # game/BKcity_events.rpy:3023
 translate chinese_simplified city_secret_b751bc5d:
@@ -3778,7 +3778,7 @@ translate chinese_simplified city_secret_ecf3532f:
 translate chinese_simplified city_secret_14e020c1:
 
     # ev_girl1 "Aaaaaaaaaah!!!"
-    ev_girl1 "Aaaaaaaaaah!!!"
+    ev_girl1 "啊啊啊啊啊啊！！！"
 
 # game/BKcity_events.rpy:3035
 translate chinese_simplified city_secret_1a1e27d3:
@@ -3796,7 +3796,7 @@ translate chinese_simplified city_secret_562e0d6a:
 translate chinese_simplified city_secret_7c244c01:
 
     # you "Do you mind?"
-    you "Do you mind?"
+    you "你介意吗？"
 
 # game/BKcity_events.rpy:3045
 translate chinese_simplified city_secret_ecda54b4:
@@ -3808,7 +3808,7 @@ translate chinese_simplified city_secret_ecda54b4:
 translate chinese_simplified city_secret_3d687d5f_1:
 
     # bk_error "Couldn't generate Item for rank [_rank]"
-    bk_error "Couldn't generate Item for rank [_rank]"
+    bk_error "无法为排名 [_rank] 生成项目"
 
 # game/BKcity_events.rpy:3065
 translate chinese_simplified city_secret_e9413567:
@@ -3826,19 +3826,19 @@ translate chinese_simplified city_gypsy_133717b4:
 translate chinese_simplified city_gypsy_81b477d7:
 
     # ev_girl2 "Hey, you! [nickname]!"
-    ev_girl2 "Hey, you! [nickname]!"
+    ev_girl2 "嘿，你！[昵称]！"
 
 # game/BKcity_events.rpy:3125
 translate chinese_simplified city_gypsy_ac3493fd:
 
     # you "Uh? Me?"
-    you "Uh? Me?"
+    you "呃？我？"
 
 # game/BKcity_events.rpy:3127
 translate chinese_simplified city_gypsy_787b1498:
 
     # ev_girl2 "Yes! [nickname]! I need your help. Please?"
-    ev_girl2 "Yes! [nickname]! I need your help. Please?"
+    ev_girl2 "是的！[昵称]！我需要你的帮助。拜托了？"
 
 # game/BKcity_events.rpy:3129
 translate chinese_simplified city_gypsy_8184bfec:
@@ -3850,7 +3850,7 @@ translate chinese_simplified city_gypsy_8184bfec:
 translate chinese_simplified city_gypsy_1d6c2446:
 
     # ev_girl2 "My wagon broke down on the way to the market. It's stuck here, in this deserted place."
-    ev_girl2 "My wagon broke down on the way to the market. It's stuck here, in this deserted place."
+    ev_girl2 "我的马车在去集市的路上抛锚了。它被困在这里，在这个荒凉的地方。"
 
 # game/BKcity_events.rpy:3133
 translate chinese_simplified city_gypsy_407a8e5e:
@@ -3862,43 +3862,43 @@ translate chinese_simplified city_gypsy_407a8e5e:
 translate chinese_simplified city_gypsy_94fc1c7e:
 
     # ev_girl2 "I can't find any customers here, and without customers I cannot get the money I need to get the repairs done!"
-    ev_girl2 "I can't find any customers here, and without customers I cannot get the money I need to get the repairs done!"
+    ev_girl2 "我在这里找不到任何客户，没有客户我就拿不到维修所需的资金！"
 
 # game/BKcity_events.rpy:3137
 translate chinese_simplified city_gypsy_d4fad9bf:
 
     # you "And what is it that you do?"
-    you "And what is it that you do?"
+    you "你具体是做什么的？"
 
 # game/BKcity_events.rpy:3139
 translate chinese_simplified city_gypsy_4910c724:
 
     # ev_girl2 "I'm a fortune teller. Want to know the exact place, cause and depth of agony of your inevitable death? I can tell you."
-    ev_girl2 "I'm a fortune teller. Want to know the exact place, cause and depth of agony of your inevitable death? I can tell you."
+    ev_girl2 "我是个算命先生。想知道你不可避免的死亡的确切地点、原因和痛苦程度吗？我可以告诉你。"
 
 # game/BKcity_events.rpy:3141
 translate chinese_simplified city_gypsy_0f169813:
 
     # you "Erm, no, thanks..."
-    you "Erm, no, thanks..."
+    you "呃，不用了，谢谢……"
 
 # game/BKcity_events.rpy:3143
 translate chinese_simplified city_gypsy_eef0eb53:
 
     # ev_girl2 "So, [nickname_l]. Will you help me?"
-    ev_girl2 "So, [nickname_l]. Will you help me?"
+    ev_girl2 "所以，[nickname_l]，你能帮帮我吗？"
 
 # game/BKcity_events.rpy:3154
 translate chinese_simplified city_gypsy_acdd4596:
 
     # you "I could always try to fix your ride... Let me have a look."
-    you "I could always try to fix your ride... Let me have a look."
+    you "我可以试试修好你的车……让我看看。"
 
 # game/BKcity_events.rpy:3156
 translate chinese_simplified city_gypsy_cb4959c6:
 
     # ev_girl2 "Thank you, [nickname_l]! You're a dear!"
-    ev_girl2 "Thank you, [nickname_l]! You're a dear!"
+    ev_girl2 "谢谢你，[nickname_l]！你真是太好了！"
 
 # game/BKcity_events.rpy:3158
 translate chinese_simplified city_gypsy_60fce3e9:
@@ -3916,7 +3916,7 @@ translate chinese_simplified city_gypsy_e9054f2d:
 translate chinese_simplified city_gypsy_fa73f4ec:
 
     # you "HAAAAAAAA..."
-    you "HAAAAAAAA..."
+    you "哈哈哈哈……"
 
 # game/BKcity_events.rpy:3174
 translate chinese_simplified city_gypsy_d2cb010c:
@@ -3928,19 +3928,19 @@ translate chinese_simplified city_gypsy_d2cb010c:
 translate chinese_simplified city_gypsy_c445c883:
 
     # you "Fuck!!!"
-    you "Fuck!!!"
+    you "他妈的！！！"
 
 # game/BKcity_events.rpy:3178
 translate chinese_simplified city_gypsy_4fc4b582:
 
     # ev_girl2 "Ooooh... The wheel broke down again... And you've splashed mud all over the place!"
-    ev_girl2 "Ooooh... The wheel broke down again... And you've splashed mud all over the place!"
+    ev_girl2 "哦……车轮又坏了……泥巴溅得到处都是！"
 
 # game/BKcity_events.rpy:3180
 translate chinese_simplified city_gypsy_6ed7ba4d:
 
     # you "Well, excuse me, I was just trying to help..."
-    you "Well, excuse me, I was just trying to help..."
+    you "不好意思，我只是想帮忙……"
 
 # game/BKcity_events.rpy:3186
 translate chinese_simplified city_gypsy_da9c56eb:
@@ -3958,7 +3958,7 @@ translate chinese_simplified city_gypsy_0a2a8633:
 translate chinese_simplified city_gypsy_607c39b0:
 
     # ev_girl2 "Hey!!! My philters!!!"
-    ev_girl2 "Hey!!! My philters!!!"
+    ev_girl2 "嘿！！！我的滤嘴！！！"
 
 # game/BKcity_events.rpy:3200
 translate chinese_simplified city_gypsy_2393573f:
@@ -3970,13 +3970,13 @@ translate chinese_simplified city_gypsy_2393573f:
 translate chinese_simplified city_gypsy_527330c6:
 
     # ev_girl2 "You did it!!!"
-    ev_girl2 "You did it!!!"
+    ev_girl2 "你做到了！！！"
 
 # game/BKcity_events.rpy:3204
 translate chinese_simplified city_gypsy_f7f10345:
 
     # you "*pant*, *pant*"
-    you "*pant*, *pant*"
+    you "*喘气*，*喘气*"
 
 # game/BKcity_events.rpy:3206
 translate chinese_simplified city_gypsy_a35326b2:
@@ -3994,37 +3994,37 @@ translate chinese_simplified city_gypsy_b06d6038:
 translate chinese_simplified city_gypsy_4f4b8598:
 
     # ev_girl2 "You did it, [nickname_l]!!! It's amazing!!!"
-    ev_girl2 "You did it, [nickname_l]!!! It's amazing!!!"
+    ev_girl2 "你做到了，[nickname_l]！！！太棒了！！！"
 
 # game/BKcity_events.rpy:3218
 translate chinese_simplified city_gypsy_f2984926:
 
     # you "*pant* It was easy... *pant*"
-    you "*pant* It was easy... *pant*"
+    you "（喘气）真容易……（喘气）"
 
 # game/BKcity_events.rpy:3220
 translate chinese_simplified city_gypsy_fcd41708:
 
     # ev_girl2 "Let me touch those big muscles of yours... Oh, they're nice..."
-    ev_girl2 "Let me touch those big muscles of yours... Oh, they're nice..."
+    ev_girl2 "让我摸摸你那结实的肌肉……哦，真棒……"
 
 # game/BKcity_events.rpy:3230
 translate chinese_simplified city_gypsy_618ee2db:
 
     # you "I can go to the main street, and tell people about your services. Word of mouth could help."
-    you "I can go to the main street, and tell people about your services. Word of mouth could help."
+    you "我可以去主街，向人们介绍你们的服务。口碑宣传可能会有帮助。"
 
 # game/BKcity_events.rpy:3232
 translate chinese_simplified city_gypsy_61e9d2fa:
 
     # ev_girl2 "Oh..."
-    ev_girl2 "Oh..."
+    ev_girl2 "哦..."
 
 # game/BKcity_events.rpy:3234
 translate chinese_simplified city_gypsy_149b5791:
 
     # ev_girl2 "You're right, [nickname_l]! It's certainly worth trying."
-    ev_girl2 "You're right, [nickname_l]! It's certainly worth trying."
+    ev_girl2 "你说得对，[nickname_l]！确实值得一试。"
 
 # game/BKcity_events.rpy:3238
 translate chinese_simplified city_gypsy_85f3ffa9:
@@ -4036,7 +4036,7 @@ translate chinese_simplified city_gypsy_85f3ffa9:
 translate chinese_simplified city_gypsy_f111166d:
 
     # you "Come with me, friends, meet the amazing lass who can reveal your future! Destiny awaits, just a few steps away!"
-    you "Come with me, friends, meet the amazing lass who can reveal your future! Destiny awaits, just a few steps away!"
+    you "朋友们，跟我来，去见见这位能揭示你未来的神奇姑娘！命运就在眼前，近在咫尺！"
 
 # game/BKcity_events.rpy:3248
 translate chinese_simplified city_gypsy_58d67c08:
@@ -4048,7 +4048,7 @@ translate chinese_simplified city_gypsy_58d67c08:
 translate chinese_simplified city_gypsy_daef8ba2:
 
     # man "Heretic! This foul heretic is advertising the services of a witch!"
-    man "Heretic! This foul heretic is advertising the services of a witch!"
+    man "异端！这个卑鄙的异端竟然在招揽女巫的服务！"
 
 # game/BKcity_events.rpy:3252
 translate chinese_simplified city_gypsy_e1fe1bd6:
@@ -4060,7 +4060,7 @@ translate chinese_simplified city_gypsy_e1fe1bd6:
 translate chinese_simplified city_gypsy_5cb7c6d8:
 
     # man "No doubt he wants to lead us into an alley so he can slit our throat! Down with the heretic!"
-    man "No doubt he wants to lead us into an alley so he can slit our throat! Down with the heretic!"
+    man "毫无疑问，他想把我们引到小巷里，然后割断我们的喉咙！打倒异端！"
 
 # game/BKcity_events.rpy:3256
 translate chinese_simplified city_gypsy_209f759c:
@@ -4072,7 +4072,7 @@ translate chinese_simplified city_gypsy_209f759c:
 translate chinese_simplified city_gypsy_b7762874:
 
     # man "Come with us!"
-    man "Come with us!"
+    man "跟我们一起来！"
 
 # game/BKcity_events.rpy:3262
 translate chinese_simplified city_gypsy_3803a96a:
@@ -4084,7 +4084,7 @@ translate chinese_simplified city_gypsy_3803a96a:
 translate chinese_simplified city_gypsy_3599bd33:
 
     # you "That was close..."
-    you "That was close..."
+    you "好险……"
 
 # game/BKcity_events.rpy:3272
 translate chinese_simplified city_gypsy_12d9bfd1:
@@ -4108,13 +4108,13 @@ translate chinese_simplified city_gypsy_e68988da:
 translate chinese_simplified city_gypsy_bc350c26:
 
     # you "Hello there! Did you get enough to get by?"
-    you "Hello there! Did you get enough to get by?"
+    you "你好！你过得够吗？"
 
 # game/BKcity_events.rpy:3284
 translate chinese_simplified city_gypsy_aabe3f92:
 
     # ev_girl2 "I did! Some customers paid extra... It helped."
-    ev_girl2 "I did! Some customers paid extra... It helped."
+    ev_girl2 "我确实这么做了！有些顾客额外付费……这很有帮助。"
 
 # game/BKcity_events.rpy:3286
 translate chinese_simplified city_gypsy_47e4dbd6:
@@ -4138,7 +4138,7 @@ translate chinese_simplified city_gypsy_82dfb4ae:
 translate chinese_simplified city_gypsy_6ac98a16:
 
     # man "Hey, let's get our fortune told! I wanna know when I'm gonna get laid!"
-    man "Hey, let's get our fortune told! I wanna know when I'm gonna get laid!"
+    man "嘿，咱们去算算命吧！我想知道我什么时候才能破处！"
 
 # game/BKcity_events.rpy:3298
 translate chinese_simplified city_gypsy_ccb1a892:
@@ -4156,7 +4156,7 @@ translate chinese_simplified city_gypsy_e0991a37:
 translate chinese_simplified city_gypsy_f9264ca4:
 
     # ev_girl2 "Hey, it's you!!! I made a killing! It's amazing!"
-    ev_girl2 "Hey, it's you!!! I made a killing! It's amazing!"
+    ev_girl2 "嘿，是你啊！！！我发大财了！太棒了！"
 
 # game/BKcity_events.rpy:3308
 translate chinese_simplified city_gypsy_6bce16ef:
@@ -4168,19 +4168,19 @@ translate chinese_simplified city_gypsy_6bce16ef:
 translate chinese_simplified city_gypsy_f75186ef:
 
     # ev_girl2 "It's all thanks to you, [nickname_l]! I'm really grateful..."
-    ev_girl2 "It's all thanks to you, [nickname_l]! I'm really grateful..."
+    ev_girl2 "这一切都要感谢你，[nickname_l]！我真的非常感激……"
 
 # game/BKcity_events.rpy:3318
 translate chinese_simplified city_gypsy_992ff48b:
 
     # you "I'm sorry, but I can't do anything about it. Best of luck with your problem."
-    you "I'm sorry, but I can't do anything about it. Best of luck with your problem."
+    you "很抱歉，我对此无能为力。祝你好运，希望你的问题能够尽快解决。"
 
 # game/BKcity_events.rpy:3320
 translate chinese_simplified city_gypsy_ba785b70:
 
     # ev_girl2 "Hey, waaaait!"
-    ev_girl2 "Hey, waaaait!"
+    ev_girl2 "嘿，等等！"
 
 # game/BKcity_events.rpy:3338
 translate chinese_simplified city_gypsy_930f560c:
@@ -4192,7 +4192,7 @@ translate chinese_simplified city_gypsy_930f560c:
 translate chinese_simplified city_gypsy_60b73731:
 
     # ev_girl2 "Thank you, [nickname_l], you did me a favor! Here, wait a second..."
-    ev_girl2 "Thank you, [nickname_l], you did me a favor! Here, wait a second..."
+    ev_girl2 "谢谢你，[nickname_l]，你帮了我大忙！等一下……"
 
 # game/BKcity_events.rpy:3346
 translate chinese_simplified city_gypsy_7d532edc:
@@ -4204,13 +4204,13 @@ translate chinese_simplified city_gypsy_7d532edc:
 translate chinese_simplified city_gypsy_16a968c2:
 
     # ev_girl2 "Here, have this."
-    ev_girl2 "Here, have this."
+    ev_girl2 "给你。"
 
 # game/BKcity_events.rpy:3362
 translate chinese_simplified city_gypsy_3d687d5f:
 
     # bk_error "Couldn't generate Item for rank [_rank]"
-    bk_error "Couldn't generate Item for rank [_rank]"
+    bk_error "无法为排名 [_rank] 生成项目"
 
 # game/BKcity_events.rpy:3367
 translate chinese_simplified city_gypsy_8c372b81:
@@ -4222,25 +4222,25 @@ translate chinese_simplified city_gypsy_8c372b81:
 translate chinese_simplified city_gypsy_4dc9a6cd:
 
     # ev_girl2 "You saved me, [nickname_l], so I will show you something interesting... Follow me..."
-    ev_girl2 "You saved me, [nickname_l], so I will show you something interesting... Follow me..."
+    ev_girl2 "你救了我，[nickname_l]，所以我给你看点有趣的东西……跟我来……"
 
 # game/BKcity_events.rpy:3395
 translate chinese_simplified city_gypsy_3eb9711f:
 
     # ev_girl2 "Oh, [nickname_l]! Give it to me... Mmmh..."
-    ev_girl2 "Oh, [nickname_l]! Give it to me... Mmmh..."
+    ev_girl2 "哦，[nickname_l]！给我……嗯……"
 
 # game/BKcity_events.rpy:3401
 translate chinese_simplified city_gypsy_5fe5687c:
 
     # ev_girl2 "Aaaaaah! I... I didn't know you liked this sort of things..."
-    ev_girl2 "Aaaaaah! I... I didn't know you liked this sort of things..."
+    ev_girl2 "啊！我……我不知道你喜欢这种东西……"
 
 # game/BKcity_events.rpy:3403
 translate chinese_simplified city_gypsy_106d629b:
 
     # you "You seem to enjoy it just as much as me..."
-    you "You seem to enjoy it just as much as me..."
+    you "看来你和我一样喜欢它……"
 
 # game/BKcity_events.rpy:3405
 translate chinese_simplified city_gypsy_384154a6:
@@ -4258,31 +4258,31 @@ translate chinese_simplified city_gypsy_380348d4:
 translate chinese_simplified city_gypsy_929d633d:
 
     # you "Aaaaah!!!"
-    you "Aaaaah!!!"
+    you "啊啊啊！！！"
 
 # game/BKcity_events.rpy:3419
 translate chinese_simplified city_gypsy_fdbf20d3:
 
     # ev_girl2 "I'm cumming!!! Hiiiiii!!!"
-    ev_girl2 "I'm cumming!!! Hiiiiii!!!"
+    ev_girl2 "我要高潮了！！！嗨！！！"
 
 # game/BKcity_events.rpy:3423
 translate chinese_simplified city_gypsy_34b60ad2:
 
     # ev_girl2 "Your dick is so big and tasty... Give me your juice..."
-    ev_girl2 "Your dick is so big and tasty... Give me your juice..."
+    ev_girl2 "你的鸡巴又大又好吃……给我你的精液……"
 
 # game/BKcity_events.rpy:3425
 translate chinese_simplified city_gypsy_ae7875cc:
 
     # you "Oh, it's good... Oooooh..."
-    you "Oh, it's good... Oooooh..."
+    you "哦，真不错……哦……"
 
 # game/BKcity_events.rpy:3431
 translate chinese_simplified city_gypsy_d12156fb:
 
     # ev_girl2 "Oooh!!!"
-    ev_girl2 "Oooh!!!"
+    ev_girl2 "哦！！！"
 
 # game/BKcity_events.rpy:3435
 translate chinese_simplified city_gypsy_87a82292:
@@ -4300,25 +4300,25 @@ translate chinese_simplified city_gypsy_5f2e05d3:
 translate chinese_simplified city_gypsy_c380fa0a:
 
     # ev_girl2 "Mmmmh..."
-    ev_girl2 "Mmmmh..."
+    ev_girl2 "嗯……"
 
 # game/BKcity_events.rpy:3445
 translate chinese_simplified city_gypsy_0e33a685:
 
     # ev_girl2 "I almost forgot... I have this I no longer need. I'm sure you can put it to good use."
-    ev_girl2 "I almost forgot... I have this I no longer need. I'm sure you can put it to good use."
+    ev_girl2 "我差点忘了……我有个用不着的东西。我相信你能好好利用它。"
 
 # game/BKcity_events.rpy:3447
 translate chinese_simplified city_gypsy_dfdf7298:
 
     # ev_girl2 "Now... I hope you're ready for round two! *wink*"
-    ev_girl2 "Now... I hope you're ready for round two! *wink*"
+    ev_girl2 "现在……希望你已经准备好迎接第二轮了！😉"
 
 # game/BKcity_events.rpy:3464
 translate chinese_simplified city_gypsy_3d687d5f_1:
 
     # bk_error "Couldn't generate Item for rank [_rank]"
-    bk_error "Couldn't generate Item for rank [_rank]"
+    bk_error "无法为排名 [_rank] 生成项目"
 
 # game/BKcity_events.rpy:3478
 translate chinese_simplified city_rob_22642a73:
@@ -4330,13 +4330,13 @@ translate chinese_simplified city_rob_22642a73:
 translate chinese_simplified city_rob_ee0d4625:
 
     # woman "Hey there, Mister! Going somewhere?"
-    woman "Hey there, Mister! Going somewhere?"
+    woman "嘿，先生！要去哪儿吗？"
 
 # game/BKcity_events.rpy:3504
 translate chinese_simplified city_rob_a4d44ee9:
 
     # woman "Don't be in such a hurry..."
-    woman "Don't be in such a hurry..."
+    woman "别这么着急……"
 
 # game/BKcity_events.rpy:3506
 translate chinese_simplified city_rob_f98fd8d4:
@@ -4348,7 +4348,7 @@ translate chinese_simplified city_rob_f98fd8d4:
 translate chinese_simplified city_rob_27314a95:
 
     # woman "This pouch of gold is weighting you down, methinks. Why don't you hand it over, and be on your way?"
-    woman "This pouch of gold is weighting you down, methinks. Why don't you hand it over, and be on your way?"
+    woman "我觉得你背着这袋金子太重了。不如把它交出来，然后走吧？"
 
 # game/BKcity_events.rpy:3523
 translate chinese_simplified city_rob_1ea17f50:
@@ -4360,7 +4360,7 @@ translate chinese_simplified city_rob_1ea17f50:
 translate chinese_simplified city_rob_343b1821:
 
     # you "Out of my way, bitch, or I'll crush you like a worm."
-    you "Out of my way, bitch, or I'll crush you like a worm."
+    you "滚开，贱人，否则我就把你像虫子一样碾碎。"
 
 # game/BKcity_events.rpy:3535
 translate chinese_simplified city_rob_0bc7db9d:
@@ -4372,7 +4372,7 @@ translate chinese_simplified city_rob_0bc7db9d:
 translate chinese_simplified city_rob_30edc188:
 
     # woman "Oh, a stubborn one. Have it your way, sucker!"
-    woman "Oh, a stubborn one. Have it your way, sucker!"
+    woman "哦，真是个固执的家伙。随你便吧，傻瓜！"
 
 # game/BKcity_events.rpy:3539
 translate chinese_simplified city_rob_0d497728:
@@ -4390,7 +4390,7 @@ translate chinese_simplified city_rob_1cf9a909:
 translate chinese_simplified city_rob_281147bb:
 
     # woman "KYAAAAAAAAAAH!!!"
-    woman "KYAAAAAAAAAAH!!!"
+    woman "啊啊啊啊啊啊啊！！！"
 
 # game/BKcity_events.rpy:3553
 translate chinese_simplified city_rob_9f0ea931:
@@ -4402,13 +4402,13 @@ translate chinese_simplified city_rob_9f0ea931:
 translate chinese_simplified city_rob_7d3fb1b2:
 
     # woman "Taking on the queen of bandits! You're lucky to be alive..."
-    woman "Taking on the queen of bandits! You're lucky to be alive..."
+    woman "挑战女匪首！你活下来真是幸运……"
 
 # game/BKcity_events.rpy:3559
 translate chinese_simplified city_rob_264126d8:
 
     # woman "Now, if you'll excuse me, I have other weaklings to attend to."
-    woman "Now, if you'll excuse me, I have other weaklings to attend to."
+    woman "现在，恕我失陪，我还有其他弱者要照顾。"
 
 # game/BKcity_events.rpy:3563
 translate chinese_simplified city_rob_ca8c1ab5:
@@ -4420,7 +4420,7 @@ translate chinese_simplified city_rob_ca8c1ab5:
 translate chinese_simplified city_rob_4a0f2c55:
 
     # woman "Thank you! Have a nice day!"
-    woman "Thank you! Have a nice day!"
+    woman "谢谢！祝您今天愉快！"
 
 # game/BKcity_events.rpy:3569
 translate chinese_simplified city_rob_e814e33f:
@@ -4444,25 +4444,25 @@ translate chinese_simplified city_rob_3ae276c8:
 translate chinese_simplified city_rob_dd019ae4:
 
     # woman "Humph... Maybe this won't be as easy as I thought. *mutter*"
-    woman "Humph... Maybe this won't be as easy as I thought. *mutter*"
+    woman "哼……看来事情并没有我想的那么容易。*嘟囔*"
 
 # game/BKcity_events.rpy:3598
 translate chinese_simplified city_rob_172dbbf1:
 
     # woman "All right! I'm in a good mood today, you're in luck!"
-    woman "All right! I'm in a good mood today, you're in luck!"
+    woman "太好了！我今天心情不错，你运气真好！"
 
 # game/BKcity_events.rpy:3600
 translate chinese_simplified city_rob_5b462fec:
 
     # woman "You can go, but next time, you will have to pay my toll."
-    woman "You can go, but next time, you will have to pay my toll."
+    woman "你可以走，但是下次你得付我的过路费。"
 
 # game/BKcity_events.rpy:3602
 translate chinese_simplified city_rob_39b396c2:
 
     # you "Whatever. *sigh*"
-    you "Whatever. *sigh*"
+    you "算了。唉。"
 
 # game/BKcity_events.rpy:3606
 translate chinese_simplified city_rob_efb96f01:
@@ -4474,7 +4474,7 @@ translate chinese_simplified city_rob_efb96f01:
 translate chinese_simplified city_rob_2da2f8a4:
 
     # woman "Who do you think you are! I'll teach you!!! I'll..."
-    woman "Who do you think you are! I'll teach you!!! I'll..."
+    woman "你以为你是谁！我会让你好看！！！我……"
 
 # game/BKcity_events.rpy:3624
 translate chinese_simplified city_rob_890e88c2:
@@ -4492,7 +4492,7 @@ translate chinese_simplified city_rob_310ab429:
 translate chinese_simplified city_rob_4f4dae69:
 
     # woman "F... Fast... How..."
-    woman "F... Fast... How..."
+    woman "快……怎么……"
 
 # game/BKcity_events.rpy:3632
 translate chinese_simplified city_rob_1d846d90:
@@ -4504,13 +4504,13 @@ translate chinese_simplified city_rob_1d846d90:
 translate chinese_simplified city_rob_adaac038:
 
     # you "Shut up. You're coming with me now, we'll have a word with the guard."
-    you "Shut up. You're coming with me now, we'll have a word with the guard."
+    you "闭嘴。你现在跟我走，我们去跟守卫谈谈。"
 
 # game/BKcity_events.rpy:3638
 translate chinese_simplified city_rob_9f18653f:
 
     # woman "The guard? Noooo! They'll rape and torture me! Please, Mister, I'll do anything!"
-    woman "The guard? Noooo! They'll rape and torture me! Please, Mister, I'll do anything!"
+    woman "守卫？不要啊！他们会强奸我、折磨我！先生，求求您，我什么都愿意做！"
 
 # game/BKcity_events.rpy:3642
 translate chinese_simplified city_rob_dae0ec55:
@@ -4528,19 +4528,19 @@ translate chinese_simplified city_rob_f609fb29:
 translate chinese_simplified city_rob_5d1f9b1a:
 
     # you "Anything, uh?"
-    you "Anything, uh?"
+    you "什么事吗？"
 
 # game/BKcity_events.rpy:3650
 translate chinese_simplified city_rob_c85476fc:
 
     # woman "Yes..."
-    woman "Yes..."
+    woman "是的..."
 
 # game/BKcity_events.rpy:3652
 translate chinese_simplified city_rob_29eb521d:
 
     # you "Follow me, then."
-    you "Follow me, then."
+    you "那就跟着我吧。"
 
 # game/BKcity_events.rpy:3660
 translate chinese_simplified city_rob_a0830602:
@@ -4552,25 +4552,25 @@ translate chinese_simplified city_rob_a0830602:
 translate chinese_simplified city_rob_4dd3fc1e:
 
     # you "Well, hello, my lady. *smile*"
-    you "Well, hello, my lady. *smile*"
+    you "你好，女士。*微笑*"
 
 # game/BKcity_events.rpy:3670
 translate chinese_simplified city_rob_ac221403:
 
     # you "I, uh... I bet your dad was a thief too!"
-    you "I, uh... I bet your dad was a thief too!"
+    you "我，呃……我猜你爸爸也是个小偷！"
 
 # game/BKcity_events.rpy:3674
 translate chinese_simplified city_rob_2497c403:
 
     # woman "Oh, really, why?"
-    woman "Oh, really, why?"
+    woman "哦，真的吗？为什么？"
 
 # game/BKcity_events.rpy:3676
 translate chinese_simplified city_rob_1c0eb605:
 
     # you "Because he stole all of the stars in the night sky... And put them into your eyes! Hahaha... *nervous*"
-    you "Because he stole all of the stars in the night sky... And put them into your eyes! Hahaha... *nervous*"
+    you "因为他偷走了夜空中所有的星星……然后把它们放进了你的眼睛里！哈哈哈……*紧张*"
 
 # game/BKcity_events.rpy:3678
 translate chinese_simplified city_rob_2a5463be:
@@ -4582,7 +4582,7 @@ translate chinese_simplified city_rob_2a5463be:
 translate chinese_simplified city_rob_f1dad0a2:
 
     # you "Stars? In your eyes? It means you have beautiful eyes, you see... get it?"
-    you "Stars? In your eyes? It means you have beautiful eyes, you see... get it?"
+    you "眼睛里有星星？这说明你的眼睛很漂亮，明白吗？"
 
 # game/BKcity_events.rpy:3684
 translate chinese_simplified city_rob_54730e63:
@@ -4594,19 +4594,19 @@ translate chinese_simplified city_rob_54730e63:
 translate chinese_simplified city_rob_0cee55a9:
 
     # woman "I should kick your ass just for using such a cheesy pick up line!!! Hand over your purse, NOW!"
-    woman "I should kick your ass just for using such a cheesy pick up line!!! Hand over your purse, NOW!"
+    woman "就凭你这老套的搭讪方式，我真想揍你一顿！把你的钱包交出来，现在！"
 
 # game/BKcity_events.rpy:3690
 translate chinese_simplified city_rob_d6d23918:
 
     # you "Aw..."
-    you "Aw..."
+    you "啊……"
 
 # game/BKcity_events.rpy:3692
 translate chinese_simplified city_rob_808e866c:
 
     # woman "And make sure to empty your pockets, too..."
-    woman "And make sure to empty your pockets, too..."
+    woman "别忘了把口袋里的东西也清空……"
 
 # game/BKcity_events.rpy:3696
 translate chinese_simplified city_rob_aa255b8d:
@@ -4618,7 +4618,7 @@ translate chinese_simplified city_rob_aa255b8d:
 translate chinese_simplified city_rob_19cd19c7:
 
     # woman "So long, sucker! *laugh*"
-    woman "So long, sucker! *laugh*"
+    woman "再见啦，傻瓜！*笑*"
 
 # game/BKcity_events.rpy:3712
 translate chinese_simplified city_rob_04964a88_1:
@@ -4630,61 +4630,61 @@ translate chinese_simplified city_rob_04964a88_1:
 translate chinese_simplified city_rob_3badc2a5:
 
     # you "I know you."
-    you "I know you."
+    you "我认识你。"
 
 # game/BKcity_events.rpy:3720
 translate chinese_simplified city_rob_1bd51fc7:
 
     # woman "You do?"
-    woman "You do?"
+    woman "你做？"
 
 # game/BKcity_events.rpy:3722
 translate chinese_simplified city_rob_bf9426fa:
 
     # you "You're the one they call the queen of bandits, aren't you? Whose beauty and cunning is the talk of all the town?"
-    you "You're the one they call the queen of bandits, aren't you? Whose beauty and cunning is the talk of all the town?"
+    you "你就是人们口中的女匪首，对吧？你的美貌和狡诈让全城人人都津津乐道？"
 
 # game/BKcity_events.rpy:3728
 translate chinese_simplified city_rob_ccc043dc:
 
     # woman "Well, err..."
-    woman "Well, err..."
+    woman "嗯……"
 
 # game/BKcity_events.rpy:3732
 translate chinese_simplified city_rob_8be76df3:
 
     # woman "Yes! That's me, of course, haha!"
-    woman "Yes! That's me, of course, haha!"
+    woman "没错！那当然是我，哈哈！"
 
 # game/BKcity_events.rpy:3734
 translate chinese_simplified city_rob_167fe98a:
 
     # you "They say you got out of a thousand traps, and evaded arrest a hundred times! You made a mockery of the guard and are the darling of the people..."
-    you "They say you got out of a thousand traps, and evaded arrest a hundred times! You made a mockery of the guard and are the darling of the people..."
+    you "据说你躲过了上千次陷阱，逃脱了上百次逮捕！你戏弄了守卫，是人民的宠儿……"
 
 # game/BKcity_events.rpy:3736
 translate chinese_simplified city_rob_bc36bcc4:
 
     # woman "Oh, well... This is a little exaggerated... *blush*"
-    woman "Oh, well... This is a little exaggerated... *blush*"
+    woman "哦，好吧……这有点夸张了……*脸红*"
 
 # game/BKcity_events.rpy:3738
 translate chinese_simplified city_rob_f413dc9b:
 
     # you "They also said you were a real beauty, and now I can see they were telling the truth..."
-    you "They also said you were a real beauty, and now I can see they were telling the truth..."
+    you "他们还说你是个美人，现在看来他们说得没错……"
 
 # game/BKcity_events.rpy:3742
 translate chinese_simplified city_rob_95b67283:
 
     # woman "Oh, what a gentleman... Ok, you may go. Spread the word of my generosity in those taverns of yours, will ya!"
-    woman "Oh, what a gentleman... Ok, you may go. Spread the word of my generosity in those taverns of yours, will ya!"
+    woman "哦，真是位绅士……好了，你可以走了。记得把你的慷慨之举传遍你常去的那些酒馆！"
 
 # game/BKcity_events.rpy:3744
 translate chinese_simplified city_rob_69cf745b:
 
     # you "Of course, my lady. *smile*"
-    you "Of course, my lady. *smile*"
+    you "当然，夫人。*微笑*"
 
 # game/BKcity_events.rpy:3748
 translate chinese_simplified city_rob_f02a6c95:
@@ -4696,43 +4696,43 @@ translate chinese_simplified city_rob_f02a6c95:
 translate chinese_simplified city_rob_3c8f2fe4:
 
     # you "Are you really going to rob me? A second time?"
-    you "Are you really going to rob me? A second time?"
+    you "你真要抢劫我吗？第二次？"
 
 # game/BKcity_events.rpy:3756
 translate chinese_simplified city_rob_f34ed0f0:
 
     # woman "What do you mean, a second time?"
-    woman "What do you mean, a second time?"
+    woman "你的意思是，第二次？"
 
 # game/BKcity_events.rpy:3760
 translate chinese_simplified city_rob_ed8348e6:
 
     # you "Because you already stole my heart..."
-    you "Because you already stole my heart..."
+    you "因为你已经偷走了我的心……"
 
 # game/BKcity_events.rpy:3764
 translate chinese_simplified city_rob_88cdb07c:
 
     # woman "Uh, what?"
-    woman "Uh, what?"
+    woman "呃，什么？"
 
 # game/BKcity_events.rpy:3766
 translate chinese_simplified city_rob_24965e94:
 
     # you "I haven't seen a girl so fair in this entire kingdom. My lady, you're the jewel of the [loc]."
-    you "I haven't seen a girl so fair in this entire kingdom. My lady, you're the jewel of the [loc]."
+    you "我在这整个王国里都没见过如此美丽的姑娘。我的女士，您是[loc]的瑰宝。"
 
 # game/BKcity_events.rpy:3768
 translate chinese_simplified city_rob_3ae8a6e1:
 
     # woman "I am... What?"
-    woman "I am... What?"
+    woman "我是……什么？"
 
 # game/BKcity_events.rpy:3770
 translate chinese_simplified city_rob_7cfbceb6:
 
     # you "Your fair skin and beautiful smile is reason enough for anyone to drop at your feet in adoration."
-    you "Your fair skin and beautiful smile is reason enough for anyone to drop at your feet in adoration."
+    you "你白皙的皮肤和美丽的笑容足以让任何人拜倒在你的石榴裙下，对你倾慕不已。"
 
 # game/BKcity_events.rpy:3772
 translate chinese_simplified city_rob_de534082:
@@ -4744,37 +4744,37 @@ translate chinese_simplified city_rob_de534082:
 translate chinese_simplified city_rob_04736b7f:
 
     # woman "Oh..."
-    woman "Oh..."
+    woman "哦..."
 
 # game/BKcity_events.rpy:3780
 translate chinese_simplified city_rob_d6432bc2:
 
     # woman "No one... No one has ever talked to me like this..."
-    woman "No one... No one has ever talked to me like this..."
+    woman "从来没有人……从来没有人这样跟我说过话……"
 
 # game/BKcity_events.rpy:3782
 translate chinese_simplified city_rob_55455558:
 
     # woman "You're quite handsome yourself, if I may say so... *blush*"
-    woman "You're quite handsome yourself, if I may say so... *blush*"
+    woman "恕我直言，你本人也很帅……*脸红*"
 
 # game/BKcity_events.rpy:3784
 translate chinese_simplified city_rob_de158ee5:
 
     # you "My lady, you're even more beautiful when you're blushing.."
-    you "My lady, you're even more beautiful when you're blushing.."
+    you "女士，你脸红的时候更美了……"
 
 # game/BKcity_events.rpy:3788
 translate chinese_simplified city_rob_33cafd22:
 
     # woman "Oh, you devil..."
-    woman "Oh, you devil..."
+    woman "哦，你这个魔鬼……"
 
 # game/BKcity_events.rpy:3790
 translate chinese_simplified city_rob_8ad91dba:
 
     # you "Come on, why don't we move from this wretched place to somewhere more... Comfortable?"
-    you "Come on, why don't we move from this wretched place to somewhere more... Comfortable?"
+    you "来吧，我们为什么不离开这个糟糕的地方，去一个更……舒适的地方呢？"
 
 # game/BKcity_events.rpy:3792
 translate chinese_simplified city_rob_5a0ab639:
@@ -4798,13 +4798,13 @@ translate chinese_simplified city_rob_e25d6411:
 translate chinese_simplified city_rob_a9d9bd91:
 
     # you "I don't want no trouble. Here, have this."
-    you "I don't want no trouble. Here, have this."
+    you "我不想惹麻烦。给你。"
 
 # game/BKcity_events.rpy:3813
 translate chinese_simplified city_rob_fdc59ac9:
 
     # woman "Good, very good! I knew you were a reasonable man."
-    woman "Good, very good! I knew you were a reasonable man."
+    woman "好，非常好！我就知道你是个通情达理的人。"
 
 # game/BKcity_events.rpy:3825
 translate chinese_simplified city_rob_04964a88_2:
@@ -4816,25 +4816,25 @@ translate chinese_simplified city_rob_04964a88_2:
 translate chinese_simplified city_rob_da6db8c0:
 
     # woman "Mister... Oh!!!"
-    woman "Mister... Oh!!!"
+    woman "先生……哦！！！"
 
 # game/BKcity_events.rpy:3844
 translate chinese_simplified city_rob_9f8fdc49:
 
     # you "Who would have thought... The queen of bandits is also the queen of sluts... Hmmpf..."
-    you "Who would have thought... The queen of bandits is also the queen of sluts... Hmmpf..."
+    you "谁能想到……女匪首竟然也是荡妇女王……哼……"
 
 # game/BKcity_events.rpy:3846
 translate chinese_simplified city_rob_28d5f91b:
 
     # woman "Oh, ah, don't say that... *blush*"
-    woman "Oh, ah, don't say that... *blush*"
+    woman "哦，啊，别这么说……*脸红*"
 
 # game/BKcity_events.rpy:3848
 translate chinese_simplified city_rob_8148c643:
 
     # you "I am not finished with you..."
-    you "I am not finished with you..."
+    you "我还没完事儿呢……"
 
 # game/BKcity_events.rpy:3852
 translate chinese_simplified city_rob_369f454d:
@@ -4846,7 +4846,7 @@ translate chinese_simplified city_rob_369f454d:
 translate chinese_simplified city_rob_70db8e4f:
 
     # woman "Oh, no... I'm cumming again, aaaah!"
-    woman "Oh, no... I'm cumming again, aaaah!"
+    woman "哦，不……我又高潮了，啊啊啊！"
 
 # game/BKcity_events.rpy:3862
 translate chinese_simplified city_rob_a185120a:
@@ -4858,7 +4858,7 @@ translate chinese_simplified city_rob_a185120a:
 translate chinese_simplified city_rob_f0349cbd:
 
     # woman "Aaaaah..."
-    woman "Aaaaah..."
+    woman "啊……"
 
 # game/BKcity_events.rpy:3879
 translate chinese_simplified city_rob_b21c27d9:
@@ -4918,7 +4918,7 @@ translate chinese_simplified city_ambush_12bd2f28:
 translate chinese_simplified city_ambush_fd39755e:
 
     # you "Bring it on!"
-    you "Bring it on!"
+    you "来吧！"
 
 # game/BKcity_events.rpy:3958
 translate chinese_simplified city_ambush_73e99845:
@@ -4936,7 +4936,7 @@ translate chinese_simplified city_ambush_155ea4f8:
 translate chinese_simplified city_ambush_d2daa834:
 
     # "Bandit" "Aaargh!!!"
-    "Bandit" "Aaargh!!!"
+    "Bandit" "啊啊啊！！！"
 
 # game/BKcity_events.rpy:3994
 translate chinese_simplified city_ambush_f134b62c:
@@ -4948,7 +4948,7 @@ translate chinese_simplified city_ambush_f134b62c:
 translate chinese_simplified city_ambush_608c2c15:
 
     # you "Anybody else wants to negotiate?"
-    you "Anybody else wants to negotiate?"
+    you "还有其他人想谈判吗？"
 
 # game/BKcity_events.rpy:4006
 translate chinese_simplified city_ambush_7e9b4a3d:
@@ -4966,7 +4966,7 @@ translate chinese_simplified city_ambush_9bb797a1:
 translate chinese_simplified city_ambush_6e12d02c:
 
     # you "Damn you, lowlife!"
-    you "Damn you, lowlife!"
+    you "你这个卑鄙无耻的人！"
 
 # game/BKcity_events.rpy:4024
 translate chinese_simplified city_ambush_a1f47868:
@@ -4978,7 +4978,7 @@ translate chinese_simplified city_ambush_a1f47868:
 translate chinese_simplified city_ambush_666400aa:
 
     # you "Ouch!!!"
-    you "Ouch!!!"
+    you "哎哟！！！"
 
 # game/BKcity_events.rpy:4036
 translate chinese_simplified city_ambush_16f34bd0:
@@ -5002,7 +5002,7 @@ translate chinese_simplified city_ambush_b73ae8cf:
 translate chinese_simplified city_ambush_c89cbe27:
 
     # you "Come on, punk, make my day."
-    you "Come on, punk, make my day."
+    you "来吧，小子，让我高兴高兴。"
 
 # game/BKcity_events.rpy:4069
 translate chinese_simplified city_ambush_60b31a61:
@@ -5020,7 +5020,7 @@ translate chinese_simplified city_ambush_784dff99:
 translate chinese_simplified city_ambush_6b56f577:
 
     # you "THUNDER!!!"
-    you "THUNDER!!!"
+    you "雷！！！"
 
 # game/BKcity_events.rpy:4104
 translate chinese_simplified city_ambush_8f83324b:
@@ -5032,7 +5032,7 @@ translate chinese_simplified city_ambush_8f83324b:
 translate chinese_simplified city_ambush_99d30435:
 
     # man "Aha-ha-haw!"
-    man "Aha-ha-haw!"
+    man "哈哈哈哈！"
 
 # game/BKcity_events.rpy:4110
 translate chinese_simplified city_ambush_ad1f7aea:
@@ -5044,7 +5044,7 @@ translate chinese_simplified city_ambush_ad1f7aea:
 translate chinese_simplified city_ambush_1f90cc0b:
 
     # you "You've been... Thunderstruck!"
-    you "You've been... Thunderstruck!"
+    you "你被……雷击了！"
 
 # game/BKcity_events.rpy:4118
 translate chinese_simplified city_ambush_dc842bb3:
@@ -5062,13 +5062,13 @@ translate chinese_simplified city_ambush_06fdb63b:
 translate chinese_simplified city_ambush_38d3feab:
 
     # you "ME!!!"
-    you "ME!!!"
+    you "我！！！"
 
 # game/BKcity_events.rpy:4126
 translate chinese_simplified city_ambush_a634c3b3:
 
     # you "HA..."
-    you "HA..."
+    you "哈..."
 
 # game/BKcity_events.rpy:4130
 translate chinese_simplified city_ambush_7e6d9cc5:
@@ -5080,7 +5080,7 @@ translate chinese_simplified city_ambush_7e6d9cc5:
 translate chinese_simplified city_ambush_2537f429:
 
     # you "ME... OUCH!!!"
-    you "ME... OUCH!!!"
+    you "我……哎哟！！！"
 
 # game/BKcity_events.rpy:4142
 translate chinese_simplified city_ambush_74f77e89:
@@ -5092,7 +5092,7 @@ translate chinese_simplified city_ambush_74f77e89:
 translate chinese_simplified city_ambush_83f807e5:
 
     # man "Disarm him!"
-    man "Disarm him!"
+    man "解除他的武装！"
 
 # game/BKcity_events.rpy:4150
 translate chinese_simplified city_ambush_39753097:
@@ -5104,7 +5104,7 @@ translate chinese_simplified city_ambush_39753097:
 translate chinese_simplified city_ambush_4777ce1d:
 
     # you "Ouch! Arrh! Raah!!!"
-    you "Ouch! Arrh! Raah!!!"
+    you "哎哟！啊！拉啊！！！"
 
 # game/BKcity_events.rpy:4174
 translate chinese_simplified city_ambush_c1b11258:
@@ -5116,7 +5116,7 @@ translate chinese_simplified city_ambush_c1b11258:
 translate chinese_simplified city_ambush_ba73a5fa:
 
     # you "Stop..."
-    you "Stop..."
+    you "停止..."
 
 # game/BKcity_events.rpy:4180
 translate chinese_simplified city_ambush_d9d7a526:
@@ -5128,7 +5128,7 @@ translate chinese_simplified city_ambush_d9d7a526:
 translate chinese_simplified city_ambush_e37b1b31:
 
     # you "*sob*"
-    you "*sob*"
+    you "*哭泣*"
 
 # game/BKcity_events.rpy:4198
 translate chinese_simplified city_ambush_b73ae8cf_1:
@@ -5140,7 +5140,7 @@ translate chinese_simplified city_ambush_b73ae8cf_1:
 translate chinese_simplified city_ambush_de5538e6:
 
     # you "Aaaaaah!!!!"
-    you "Aaaaaah!!!!"
+    you "啊啊啊啊啊！！！！"
 
 # game/BKcity_events.rpy:4215
 translate chinese_simplified city_ambush_2bb7d284:
@@ -5152,7 +5152,7 @@ translate chinese_simplified city_ambush_2bb7d284:
 translate chinese_simplified city_ambush_addf0ba7:
 
     # you "Damn you!"
-    you "Damn you!"
+    you "该死的你！"
 
 # game/BKcity_events.rpy:4219
 translate chinese_simplified city_ambush_368e7679:
@@ -5164,7 +5164,7 @@ translate chinese_simplified city_ambush_368e7679:
 translate chinese_simplified city_ambush_027edb5f:
 
     # you "I guess I have no choice..."
-    you "I guess I have no choice..."
+    you "看来我别无选择……"
 
 # game/BKcity_events.rpy:4223
 translate chinese_simplified city_ambush_19fc3801:
@@ -5176,7 +5176,7 @@ translate chinese_simplified city_ambush_19fc3801:
 translate chinese_simplified city_ambush_0a1db7f4:
 
     # man "Gold! It's gold!"
-    man "Gold! It's gold!"
+    man "黄金！是黄金！"
 
 # game/BKcity_events.rpy:4229
 translate chinese_simplified city_ambush_33b60461:
@@ -5188,7 +5188,7 @@ translate chinese_simplified city_ambush_33b60461:
 translate chinese_simplified city_ambush_3599bd33:
 
     # you "That was close..."
-    you "That was close..."
+    you "好险……"
 
 # game/BKcity_events.rpy:4247
 translate chinese_simplified city_ambush_04964a88:
@@ -5206,13 +5206,13 @@ translate chinese_simplified city_mob_533141a1:
 translate chinese_simplified city_mob_cd39c36d:
 
     # man "Down! Down with demon worshippers and heretics!"
-    man "Down! Down with demon worshippers and heretics!"
+    man "打倒！打倒邪教徒和异端！"
 
 # game/BKcity_events.rpy:4280
 translate chinese_simplified city_mob_35eba98f:
 
     # man "They hide amongst our people, spreading vice and corruption in their filthy taverns and whorehouses..."
-    man "They hide amongst our people, spreading vice and corruption in their filthy taverns and whorehouses..."
+    man "他们藏匿在我们人民中间，在肮脏的酒馆和妓院里散播罪恶和腐败……"
 
 # game/BKcity_events.rpy:4282
 translate chinese_simplified city_mob_853d1124:
@@ -5230,13 +5230,13 @@ translate chinese_simplified city_mob_e07c58f0:
 translate chinese_simplified city_mob_b510dc91:
 
     # man "Wait!!! I recognize him!"
-    man "Wait!!! I recognize him!"
+    man "等等！！！我认出他了！"
 
 # game/BKcity_events.rpy:4292
 translate chinese_simplified city_mob_6c748b57:
 
     # man "He's one of the brothel owners! The scum of [place]!!!"
-    man "He's one of the brothel owners! The scum of [place]!!!"
+    man "他竟然是妓院老板之一！真是[地方]的渣滓！！！"
 
 # game/BKcity_events.rpy:4294
 translate chinese_simplified city_mob_b7447831:
@@ -5254,19 +5254,19 @@ translate chinese_simplified city_mob_747efbfb:
 translate chinese_simplified city_mob_6dc22a32:
 
     # you "Fellas, I..."
-    you "Fellas, I..."
+    you "伙计们，我……"
 
 # game/BKcity_events.rpy:4311
 translate chinese_simplified city_mob_3175b40d:
 
     # man "You! Confess! You're a devil worshipper, aren't you! A mage, a witch! Maybe even a druid!"
-    man "You! Confess! You're a devil worshipper, aren't you! A mage, a witch! Maybe even a druid!"
+    man "你！坦白！你是个恶魔崇拜者，对吧！一个法师，一个女巫！甚至可能还是个德鲁伊！"
 
 # game/BKcity_events.rpy:4313
 translate chinese_simplified city_mob_6527bb82:
 
     # you "You're making a mistake, good sir..."
-    you "You're making a mistake, good sir..."
+    you "先生，您犯了个错误……"
 
 # game/BKcity_events.rpy:4315
 translate chinese_simplified city_mob_bc5fe762:
@@ -5278,13 +5278,13 @@ translate chinese_simplified city_mob_bc5fe762:
 translate chinese_simplified city_mob_b6e89e07:
 
     # you "You need to let me go. I am not the one you are looking for."
-    you "You need to let me go. I am not the one you are looking for."
+    you "你应该放我走。我不是你要找的人。"
 
 # game/BKcity_events.rpy:4327
 translate chinese_simplified city_mob_7c0d9d13:
 
     # man "We... need to let him go. This is not the druid we are looking for."
-    man "We... need to let him go. This is not the druid we are looking for."
+    man "我们……必须放他走。这不是我们要找的德鲁伊。"
 
 # game/BKcity_events.rpy:4329
 translate chinese_simplified city_mob_c30de29a:
@@ -5296,7 +5296,7 @@ translate chinese_simplified city_mob_c30de29a:
 translate chinese_simplified city_mob_7abda4d9:
 
     # man "I said let him go! It's not him. End of story."
-    man "I said let him go! It's not him. End of story."
+    man "我说放了他！那不是他。事情就是这样。"
 
 # game/BKcity_events.rpy:4333
 translate chinese_simplified city_mob_918b6e4a:
@@ -5308,7 +5308,7 @@ translate chinese_simplified city_mob_918b6e4a:
 translate chinese_simplified city_mob_304746b8:
 
     # man "Oh, but I know who you are! Heretic!!! We'll give you a lesson you won't forget!"
-    man "Oh, but I know who you are! Heretic!!! We'll give you a lesson you won't forget!"
+    man "哦，但我知道你是谁！异端！！！我们会让你永生难忘！"
 
 # game/BKcity_events.rpy:4346
 translate chinese_simplified city_mob_1b1b8f26:
@@ -5320,13 +5320,13 @@ translate chinese_simplified city_mob_1b1b8f26:
 translate chinese_simplified city_mob_4aa1c879:
 
     # you "Good people of Zan! Listen to me."
-    you "Good people of Zan! Listen to me."
+    you "赞恩的善良人民！请听我说。"
 
 # game/BKcity_events.rpy:4356
 translate chinese_simplified city_mob_20e93590:
 
     # you "Yes, brothels are places of sin and debauchery..."
-    you "Yes, brothels are places of sin and debauchery..."
+    you "是的，妓院是罪恶和放荡的地方……"
 
 # game/BKcity_events.rpy:4358
 translate chinese_simplified city_mob_db0ad6cd:
@@ -5338,13 +5338,13 @@ translate chinese_simplified city_mob_db0ad6cd:
 translate chinese_simplified city_mob_ffa329fc:
 
     # you "But think about it: whoring has been, is and will always be a part of our lives."
-    you "But think about it: whoring has been, is and will always be a part of our lives."
+    you "但仔细想想：卖淫过去是、现在是、将来也永远是我们生活的一部分。"
 
 # game/BKcity_events.rpy:4362
 translate chinese_simplified city_mob_9e4730f3:
 
     # you "Have you ever seen a place in Xeros without a hooker? It doesn't exist."
-    you "Have you ever seen a place in Xeros without a hooker? It doesn't exist."
+    you "你见过泽罗斯哪个地方没有妓女吗？根本不存在。"
 
 # game/BKcity_events.rpy:4364
 translate chinese_simplified city_mob_315ed600:
@@ -5356,19 +5356,19 @@ translate chinese_simplified city_mob_315ed600:
 translate chinese_simplified city_mob_5f1322bd:
 
     # man "Lies! Your kind is an abomination in the eyes of Arios!"
-    man "Lies! Your kind is an abomination in the eyes of Arios!"
+    man "谎言！你们这种人在阿里奥斯眼中是可憎的！"
 
 # game/BKcity_events.rpy:4368
 translate chinese_simplified city_mob_45205e62:
 
     # you "Oh, really? But what does Arios teach us? To seek the light. If you refuse the sex trade to be out in the open, it will only move to the shadows. Into the realm of Shalia, far from Arios's reach. Is that what you want?"
-    you "Oh, really? But what does Arios teach us? To seek the light. If you refuse the sex trade to be out in the open, it will only move to the shadows. Into the realm of Shalia, far from Arios's reach. Is that what you want?"
+    you "哦，真的吗？但阿瑞俄斯教导我们什么呢？是寻求光明。如果你拒绝让性交易公开化，它只会转移到阴影中，转移到莎莉娅的领域，远离阿瑞俄斯的触及。这就是你想要的吗？"
 
 # game/BKcity_events.rpy:4370
 translate chinese_simplified city_mob_924122b6:
 
     # man "Well, err... No, I meant..."
-    man "Well, err... No, I meant..."
+    man "嗯……不，我的意思是……"
 
 # game/BKcity_events.rpy:4372
 translate chinese_simplified city_mob_b0ccecda:
@@ -5380,7 +5380,7 @@ translate chinese_simplified city_mob_b0ccecda:
 translate chinese_simplified city_mob_af0457ee:
 
     # you "Who here hasn't sinned at least once? As long as brothels remain out in the open, they are sanctuaries of the Light just like any other place."
-    you "Who here hasn't sinned at least once? As long as brothels remain out in the open, they are sanctuaries of the Light just like any other place."
+    you "在座各位谁没犯过罪？只要妓院还公开营业，它们就和其他任何地方一样，是光明的圣地。"
 
 # game/BKcity_events.rpy:4376
 translate chinese_simplified city_mob_9577fc55:
@@ -5392,7 +5392,7 @@ translate chinese_simplified city_mob_9577fc55:
 translate chinese_simplified city_mob_d82dedae:
 
     # you "Very well, friends, now you see why brothels are so important. Come to the brothel, tonight, and there will be a special discount for Arios worshippers!"
-    you "Very well, friends, now you see why brothels are so important. Come to the brothel, tonight, and there will be a special discount for Arios worshippers!"
+    you "好了，朋友们，现在你们明白为什么妓院如此重要了吧。今晚来妓院吧，阿瑞俄斯信徒可享特别折扣！"
 
 # game/BKcity_events.rpy:4382
 translate chinese_simplified city_mob_8220b2d2:
@@ -5404,19 +5404,19 @@ translate chinese_simplified city_mob_8220b2d2:
 translate chinese_simplified city_mob_e4deca1f:
 
     # you "He lies!"
-    you "He lies!"
+    you "他撒谎！"
 
 # game/BKcity_events.rpy:4390
 translate chinese_simplified city_mob_64c93e8c:
 
     # you "My establishment is not a whorehouse! It is a reputable [cover], and I am a lawful citizen!"
-    you "My establishment is not a whorehouse! It is a reputable [cover], and I am a lawful citizen!"
+    you "我的店不是妓院！它是一家信誉良好的[掩护机构]，而且我是守法公民！"
 
 # game/BKcity_events.rpy:4392
 translate chinese_simplified city_mob_1fbc1693:
 
     # man "It is a brothel! I went there on a, ahem, an errand, and I saw half-naked girls rubbing themselves against a customer. And the prices were outrageous, too! Not that I'd care, of course, but..."
-    man "It is a brothel! I went there on a, ahem, an errand, and I saw half-naked girls rubbing themselves against a customer. And the prices were outrageous, too! Not that I'd care, of course, but..."
+    man "那竟然是家妓院！我去那儿办点事，结果看到几个半裸的女孩在跟一个客人蹭来蹭去。价格也贵得离谱！当然，我倒是不介意，但是……"
 
 # game/BKcity_events.rpy:4394
 translate chinese_simplified city_mob_97c895b4:
@@ -5428,7 +5428,7 @@ translate chinese_simplified city_mob_97c895b4:
 translate chinese_simplified city_mob_cb8bc9d2:
 
     # you "Good people!"
-    you "Good people!"
+    you "好人！"
 
 # game/BKcity_events.rpy:4398
 translate chinese_simplified city_mob_f99b3da1:
@@ -5440,13 +5440,13 @@ translate chinese_simplified city_mob_f99b3da1:
 translate chinese_simplified city_mob_3be50249:
 
     # man "Catch him!"
-    man "Catch him!"
+    man "抓住他！"
 
 # game/BKcity_events.rpy:4408
 translate chinese_simplified city_mob_0a5f47cd:
 
     # you "Oh, wait! What's this?"
-    you "Oh, wait! What's this?"
+    you "哦，等等！这是什么？"
 
 # game/BKcity_events.rpy:4410
 translate chinese_simplified city_mob_eff675e3:
@@ -5464,7 +5464,7 @@ translate chinese_simplified city_mob_cbb9609b:
 translate chinese_simplified city_mob_00a55a35:
 
     # man "People of Zan! Listen! Listen to me!!!"
-    man "People of Zan! Listen! Listen to me!!!"
+    man "赞恩的子民们！听着！听我说！！！"
 
 # game/BKcity_events.rpy:4420
 translate chinese_simplified city_mob_56f56aa2:
@@ -5494,7 +5494,7 @@ translate chinese_simplified city_mob_d90b21cb:
 translate chinese_simplified city_mob_8874c0e7:
 
     # man "That will teach you, you evil demon-worshipping bitches! Hmm..."
-    man "That will teach you, you evil demon-worshipping bitches! Hmm..."
+    man "让你们这些邪恶的恶魔崇拜者尝尝苦头吧！嗯……"
 
 # game/BKcity_events.rpy:4488
 translate chinese_simplified city_mob_ce040dd1:
@@ -5512,7 +5512,7 @@ translate chinese_simplified city_mob_a20e77e1:
 translate chinese_simplified city_mob_b347d1cf:
 
     # you "No... Not the face!!!"
-    you "No... Not the face!!!"
+    you "不……别打脸！！！"
 
 # game/BKcity_events.rpy:4512
 translate chinese_simplified city_mob_fa2bb8a9:
@@ -5524,7 +5524,7 @@ translate chinese_simplified city_mob_fa2bb8a9:
 translate chinese_simplified city_mob_19abe4ab:
 
     # you "Ouch! Aaah!"
-    you "Ouch! Aaah!"
+    you "哎哟！啊！"
 
 # game/BKcity_events.rpy:4520
 translate chinese_simplified city_mob_a6a55e78:
@@ -5548,7 +5548,7 @@ translate chinese_simplified city_mob_9f1c09dd:
 translate chinese_simplified city_mob_0b364580:
 
     # you "Hell..."
-    you "Hell..."
+    you "地狱..."
 
 # game/BKcity_events.rpy:4542
 translate chinese_simplified city_mob_a490fd10:
@@ -5578,7 +5578,7 @@ translate chinese_simplified city_luck_7fab135b:
 translate chinese_simplified city_luck_6eae37c9:
 
     # you "What's this... Oh! It's a purse of gold! Nice!"
-    you "What's this... Oh! It's a purse of gold! Nice!"
+    you "这是什么……哦！是一袋金子！真棒！"
 
 # game/BKcity_events.rpy:4625
 translate chinese_simplified city_luck_d5210ceb:
@@ -5590,7 +5590,7 @@ translate chinese_simplified city_luck_d5210ceb:
 translate chinese_simplified city_luck_856d3e40:
 
     # npc "Oh no... Where is it? It must be around here..."
-    npc "Oh no... Where is it? It must be around here..."
+    npc "糟了……它在哪儿？应该就在这附近……"
 
 # game/BKcity_events.rpy:4631
 translate chinese_simplified city_luck_266a6db4:
@@ -5602,37 +5602,37 @@ translate chinese_simplified city_luck_266a6db4:
 translate chinese_simplified city_luck_012a58c6:
 
     # npc "Mister, can you help me? I lost my purse... I really need it..."
-    npc "Mister, can you help me? I lost my purse... I really need it..."
+    npc "先生，您能帮帮我吗？我的钱包丢了……我真的很需要它……"
 
 # game/BKcity_events.rpy:4641
 translate chinese_simplified city_luck_1545fa72:
 
     # you "Are you looking for a bag of gold? Maybe one containing, like, %(gain)d gold?"
-    you "Are you looking for a bag of gold? Maybe one containing, like, %(gain)d gold?"
+    you "你在找一袋金子吗？也许是那种含有比如 %(gain)d 黄金的袋子？"
 
 # game/BKcity_events.rpy:4643
 translate chinese_simplified city_luck_0ec82954:
 
     # npc "Yes, Sir... Have you seen it anywhere?"
-    npc "Yes, Sir... Have you seen it anywhere?"
+    npc "是的，先生……您在哪儿见过它吗？"
 
 # game/BKcity_events.rpy:4645
 translate chinese_simplified city_luck_254d3caf:
 
     # you "Nope. Not at all. Tough luck, friend."
-    you "Nope. Not at all. Tough luck, friend."
+    you "不，完全不是。真可惜，朋友。"
 
 # game/BKcity_events.rpy:4647
 translate chinese_simplified city_luck_d84c1181:
 
     # npc "Aw..."
-    npc "Aw..."
+    npc "啊……"
 
 # game/BKcity_events.rpy:4653
 translate chinese_simplified city_luck_6218b925:
 
     # you "Oh, so it's yours... Here, I found this."
-    you "Oh, so it's yours... Here, I found this."
+    you "哦，原来是你的……我找到了这个。"
 
 # game/BKcity_events.rpy:4657
 translate chinese_simplified city_luck_af655f88:
@@ -5644,7 +5644,7 @@ translate chinese_simplified city_luck_af655f88:
 translate chinese_simplified city_luck_d5448762:
 
     # npc "Oh, thank you! It's good to see that gentlemen still exist in this rotten city."
-    npc "Oh, thank you! It's good to see that gentlemen still exist in this rotten city."
+    npc "哦，谢谢！很高兴在这座破败的城市里还能看到绅士的存在。"
 
 # game/BKcity_events.rpy:4704
 translate chinese_simplified slave_beach_event_f54a88e7:
@@ -5662,7 +5662,7 @@ translate chinese_simplified slave_beach_event_d8076f8d:
 translate chinese_simplified slave_beach_event_b86cad14:
 
     # you "Hey, if it isn't [girl.name]. What's up?"
-    you "Hey, if it isn't [girl.name]. What's up?"
+    you "嘿，这不是[女孩名字]吗？怎么了？"
 
 # game/BKcity_events.rpy:4718
 translate chinese_simplified slave_beach_event_125c68e8:
@@ -5692,7 +5692,7 @@ translate chinese_simplified slave_beach_event_3202ba13:
 translate chinese_simplified slave_beach_event_693314da:
 
     # you "Listen..."
-    you "Listen..."
+    you "听..."
 
 # game/BKcity_events.rpy:4736
 translate chinese_simplified slave_beach_event_11fdb519:
@@ -5704,13 +5704,13 @@ translate chinese_simplified slave_beach_event_11fdb519:
 translate chinese_simplified slave_beach_event_0add0ae4:
 
     # you "The sun is getting high, I wouldn't want you to get sunburnt. Let me help you..."
-    you "The sun is getting high, I wouldn't want you to get sunburnt. Let me help you..."
+    you "太阳越来越高了，我不想你晒伤。让我来帮你……"
 
 # game/BKcity_events.rpy:4744
 translate chinese_simplified slave_beach_event_dfcfefd5:
 
     # girl.char "Oil? No!!!"
-    girl.char "Oil? No!!!"
+    girl.char "石油？不！！！"
 
 # game/BKcity_events.rpy:4746
 translate chinese_simplified slave_beach_event_3f65e064:
@@ -5728,25 +5728,25 @@ translate chinese_simplified slave_beach_event_c752d3f7:
 translate chinese_simplified slave_beach_event_6363db8b:
 
     # girl.char "Yeah, no, I don't think so. I'll do it myself."
-    girl.char "Yeah, no, I don't think so. I'll do it myself."
+    girl.char "不，我不这么认为。我会自己做。"
 
 # game/BKcity_events.rpy:4756
 translate chinese_simplified slave_beach_event_39570823:
 
     # girl.char "Oh... O-Okay..."
-    girl.char "Oh... O-Okay..."
+    girl.char "哦……好的……"
 
 # game/BKcity_events.rpy:4759
 translate chinese_simplified slave_beach_event_62bfef84:
 
     # girl.char "Oh, you're right. But you don't need to worry about it, I'll do it myself."
-    girl.char "Oh, you're right. But you don't need to worry about it, I'll do it myself."
+    girl.char "哦，你说得对。不过你不用担心，我会自己做的。"
 
 # game/BKcity_events.rpy:4761
 translate chinese_simplified slave_beach_event_5473c3ac:
 
     # girl.char "Well, it's nice of you to suggest it. Please do."
-    girl.char "Well, it's nice of you to suggest it. Please do."
+    girl.char "谢谢你的建议。请便。"
 
 # game/BKcity_events.rpy:4765
 translate chinese_simplified slave_beach_event_f6634f7e:
@@ -5758,7 +5758,7 @@ translate chinese_simplified slave_beach_event_f6634f7e:
 translate chinese_simplified slave_beach_event_d104f8c5:
 
     # girl.char "Thank you, Master, it's nice..."
-    girl.char "Thank you, Master, it's nice..."
+    girl.char "谢谢师父，真好……"
 
 # game/BKcity_events.rpy:4775
 translate chinese_simplified slave_beach_event_79dc27c9:
@@ -5818,7 +5818,7 @@ translate chinese_simplified slave_beach_event_c88763ca:
 translate chinese_simplified slave_beach_event_721fea8a:
 
     # you "Let me massage here too..."
-    you "Let me massage here too..."
+    you "我也来按摩一下这里……"
 
 # game/BKcity_events.rpy:4842
 translate chinese_simplified slave_beach_event_39c46cf2:
@@ -5848,7 +5848,7 @@ translate chinese_simplified slave_beach_event_a9b98d2f:
 translate chinese_simplified slave_beach_event_28be6530:
 
     # girl.char "Aaaah! [emo_heart]"
-    girl.char "Aaaah! [emo_heart]"
+    girl.char "啊啊啊！[emo_heart]"
 
 # game/BKcity_events.rpy:4860
 translate chinese_simplified slave_beach_event_f853db99:
@@ -5878,7 +5878,7 @@ translate chinese_simplified slave_beach_event_23b03eb3:
 translate chinese_simplified slave_beach_event_8a41b161:
 
     # girl.char "Aaah, ah, AAAAAH!!!"
-    girl.char "Aaah, ah, AAAAAH!!!"
+    girl.char "啊 ..."
 
 # game/BKcity_events.rpy:4892
 translate chinese_simplified slave_beach_event_00dded58:
@@ -5896,7 +5896,7 @@ translate chinese_simplified slave_beach_event_2d7049c8:
 translate chinese_simplified slave_beach_event_36104a17:
 
     # girl.char "What? Is it over? But..."
-    girl.char "What? Is it over? But..."
+    girl.char "什么？结束了吗？可是……"
 
 # game/BKcity_events.rpy:4911
 translate chinese_simplified slave_beach_event_255c6ada:
@@ -5914,7 +5914,7 @@ translate chinese_simplified slave_beach_event_ada9ca75:
 translate chinese_simplified slave_beach_event_5a190256:
 
     # you "That was fun..."
-    you "That was fun..."
+    you "那真有趣……"
 
 # game/BKcity_events.rpy:4932
 translate chinese_simplified slave_beach_event_cc252f77:
@@ -5926,7 +5926,7 @@ translate chinese_simplified slave_beach_event_cc252f77:
 translate chinese_simplified slave_beach_event_48a2c215:
 
     # you "Damn..."
-    you "Damn..."
+    you "该死..."
 
 # game/BKcity_events.rpy:4942
 translate chinese_simplified slave_beach_event_4c934cd5:
@@ -5950,19 +5950,19 @@ translate chinese_simplified slave_beach_event_4c934cd5_1:
 translate chinese_simplified slave_beach_event_0ae096ea:
 
     # you "I'm feeling horny right now. Let's fuck."
-    you "I'm feeling horny right now. Let's fuck."
+    you "我现在性欲很强。我们做爱吧。"
 
 # game/BKcity_events.rpy:4959
 translate chinese_simplified slave_beach_event_9041689f:
 
     # girl.char "What?!? Here?"
-    girl.char "What?!? Here?"
+    girl.char "什么？！这里？"
 
 # game/BKcity_events.rpy:4967
 translate chinese_simplified slave_beach_event_ebd18616:
 
     # you "Yes, here! I don't care who's watching... Let's do it!"
-    you "Yes, here! I don't care who's watching... Let's do it!"
+    you "对，就在这儿！我不在乎谁在看……开始吧！"
 
 # game/BKcity_events.rpy:4973
 translate chinese_simplified slave_beach_event_c7ec28eb:
@@ -5974,7 +5974,7 @@ translate chinese_simplified slave_beach_event_c7ec28eb:
 translate chinese_simplified slave_beach_event_f21ba248:
 
     # girl.char "In... In public? I mean... Sure..."
-    girl.char "In... In public? I mean... Sure..."
+    girl.char "在……在公共场合？我的意思是……当然……"
 
 # game/BKcity_events.rpy:4980
 translate chinese_simplified slave_beach_event_cac033de:
@@ -5992,7 +5992,7 @@ translate chinese_simplified slave_beach_event_aab7e42f:
 translate chinese_simplified slave_beach_event_1f40409e:
 
     # you "Let us hide behind some rocks..."
-    you "Let us hide behind some rocks..."
+    you "我们躲到石头后面去吧……"
 
 # game/BKcity_events.rpy:4999
 translate chinese_simplified slave_beach_event_82c4f436:
@@ -6010,7 +6010,7 @@ translate chinese_simplified slave_beach_event_b891e11a:
 translate chinese_simplified slave_beach_event_71c0b1b5:
 
     # girl.char "Hiding? Why? It's all the same to me... Let's just stay here."
-    girl.char "Hiding? Why? It's all the same to me... Let's just stay here."
+    girl.char "躲起来？为什么？对我来说都一样……我们就待在这儿吧。"
 
 # game/BKcity_events.rpy:5008
 translate chinese_simplified slave_beach_event_cbebd128:
@@ -6034,19 +6034,19 @@ translate chinese_simplified slave_beach_event_a56ec551:
 translate chinese_simplified slave_beach_event_e37339ef:
 
     # you "Open your mouth and look me in the eyes..."
-    you "Open your mouth and look me in the eyes..."
+    you "张开嘴，看着我的眼睛……"
 
 # game/BKcity_events.rpy:5065
 translate chinese_simplified slave_beach_event_d86d6012:
 
     # you "I've got my eyes on your titties for some time... Why don't you use them to pleasure me?"
-    you "I've got my eyes on your titties for some time... Why don't you use them to pleasure me?"
+    you "我早就盯上你的胸部了……为什么不利用它们来取悦我呢？"
 
 # game/BKcity_events.rpy:5079
 translate chinese_simplified slave_beach_event_5e0b0700:
 
     # you "Spread your legs, babe. We're going to have some fun!"
-    you "Spread your legs, babe. We're going to have some fun!"
+    you "宝贝，把腿张开。我们要好好玩玩！"
 
 # game/BKcity_events.rpy:5108
 translate chinese_simplified slave_beach_event_888233e3:
@@ -6094,7 +6094,7 @@ translate chinese_simplified slave_beach_event_8f2a8204:
 translate chinese_simplified slave_beach_event_292c7391:
 
     # girl.char "Ahaaa!"
-    girl.char "Ahaaa!"
+    girl.char "啊哈！"
 
 # game/BKcity_events.rpy:5134
 translate chinese_simplified slave_beach_event_0cecfc03:
@@ -6112,7 +6112,7 @@ translate chinese_simplified slave_beach_event_de6a410f:
 translate chinese_simplified slave_beach_event_5ff1ca2e:
 
     # passerby "Look at 'em go! I wish I had a recording crystal..."
-    passerby "Look at 'em go! I wish I had a recording crystal..."
+    passerby "看他们跑得多快！真希望我有个录像水晶球……"
 
 # game/BKcity_events.rpy:5151
 translate chinese_simplified slave_beach_event_95a28545:
@@ -6124,13 +6124,13 @@ translate chinese_simplified slave_beach_event_95a28545:
 translate chinese_simplified slave_beach_event_9ce6fdb2:
 
     # you "Here it comes... Get ready!"
-    you "Here it comes... Get ready!"
+    you "它来了……准备好！"
 
 # game/BKcity_events.rpy:5155
 translate chinese_simplified slave_beach_event_71bc82a6:
 
     # girl.char "Nggh!"
-    girl.char "Nggh!"
+    girl.char "呃！"
 
 # game/BKcity_events.rpy:5170
 translate chinese_simplified slave_beach_event_47645da3:
@@ -6142,7 +6142,7 @@ translate chinese_simplified slave_beach_event_47645da3:
 translate chinese_simplified slave_beach_event_da2af5af:
 
     # girl.char "Ngggh!!! *cough* *cough*"
-    girl.char "Ngggh!!! *cough* *cough*"
+    girl.char "呃！！！*咳嗽* *咳嗽*"
 
 # game/BKcity_events.rpy:5178
 translate chinese_simplified slave_beach_event_4081e2d5:
@@ -6154,7 +6154,7 @@ translate chinese_simplified slave_beach_event_4081e2d5:
 translate chinese_simplified slave_beach_event_198e6936:
 
     # girl.char "So rough... Aaah..."
-    girl.char "So rough... Aaah..."
+    girl.char "好粗糙……啊……"
 
 # game/BKcity_events.rpy:5185
 translate chinese_simplified slave_beach_event_795f8948:
@@ -6166,7 +6166,7 @@ translate chinese_simplified slave_beach_event_795f8948:
 translate chinese_simplified slave_beach_event_831759f8:
 
     # girl.char "Aah!"
-    girl.char "Aah!"
+    girl.char "啊！"
 
 # game/BKcity_events.rpy:5193
 translate chinese_simplified slave_beach_event_5cf32175:
@@ -6178,7 +6178,7 @@ translate chinese_simplified slave_beach_event_5cf32175:
 translate chinese_simplified slave_beach_event_063eacfd:
 
     # girl.char "So... Much... Semen..."
-    girl.char "So... Much... Semen..."
+    girl.char "好多……精液……"
 
 # game/BKcity_events.rpy:5200
 translate chinese_simplified slave_beach_event_00ef63b5:
@@ -6190,7 +6190,7 @@ translate chinese_simplified slave_beach_event_00ef63b5:
 translate chinese_simplified slave_beach_event_ba1ded7a:
 
     # girl.char "Hey!!!"
-    girl.char "Hey!!!"
+    girl.char "嘿！！！"
 
 # game/BKcity_events.rpy:5208
 translate chinese_simplified slave_beach_event_4606b25e:
@@ -6202,7 +6202,7 @@ translate chinese_simplified slave_beach_event_4606b25e:
 translate chinese_simplified slave_beach_event_5a2909b8:
 
     # girl.char "It will take hours to wash it away... Aw..."
-    girl.char "It will take hours to wash it away... Aw..."
+    girl.char "洗掉它得花好几个小时……哎……"
 
 # game/BKcity_events.rpy:5215
 translate chinese_simplified slave_beach_event_c54783b0:
@@ -6214,7 +6214,7 @@ translate chinese_simplified slave_beach_event_c54783b0:
 translate chinese_simplified slave_beach_event_f5b6bc2f:
 
     # girl.char "Mmmh..."
-    girl.char "Mmmh..."
+    girl.char "嗯……"
 
 # game/BKcity_events.rpy:5223
 translate chinese_simplified slave_beach_event_67bf8a92:
@@ -6226,7 +6226,7 @@ translate chinese_simplified slave_beach_event_67bf8a92:
 translate chinese_simplified slave_beach_event_004f83c6:
 
     # girl.char "There's cum all over my swimsuit... And I've got no other clothes to wear! Aw..."
-    girl.char "There's cum all over my swimsuit... And I've got no other clothes to wear! Aw..."
+    girl.char "我的泳衣上全是精液……而且我还没有别的衣服可以穿！啊……"
 
 # game/BKcity_events.rpy:5228
 translate chinese_simplified slave_beach_event_5db0bde8:
@@ -6238,19 +6238,19 @@ translate chinese_simplified slave_beach_event_5db0bde8:
 translate chinese_simplified slave_beach_event_a3d34740:
 
     # girl.char "Ooh..."
-    girl.char "Ooh..."
+    girl.char "哦……"
 
 # game/BKcity_events.rpy:5234
 translate chinese_simplified slave_beach_event_c14666d3:
 
     # girl.char "My swimsuit is ruined... And I have no spare clothes!"
-    girl.char "My swimsuit is ruined... And I have no spare clothes!"
+    girl.char "我的泳衣毁了……而且我没有备用衣服！"
 
 # game/BKcity_events.rpy:5236
 translate chinese_simplified slave_beach_event_6a7bf726:
 
     # you "Oh well, too bad..."
-    you "Oh well, too bad..."
+    you "唉，太可惜了……"
 
 # game/BKcity_events.rpy:5242
 translate chinese_simplified slave_beach_event_4b744439:
@@ -6268,7 +6268,7 @@ translate chinese_simplified slave_beach_event_5f0536be:
 translate chinese_simplified slave_beach_event_107c173f:
 
     # girl.char "Aah, aaah, aaaaaah!!!"
-    girl.char "Aah, aaah, aaaaaah!!!"
+    girl.char "啊啊啊啊啊！！！"
 
 # game/BKcity_events.rpy:5250
 translate chinese_simplified slave_beach_event_e5349557:
@@ -6280,13 +6280,13 @@ translate chinese_simplified slave_beach_event_e5349557:
 translate chinese_simplified slave_beach_event_c7922447:
 
     # you "Take this!"
-    you "Take this!"
+    you "拿着！"
 
 # game/BKcity_events.rpy:5254
 translate chinese_simplified slave_beach_event_0fbb58dc:
 
     # girl.char "AAAAAAH!"
-    girl.char "AAAAAAH!"
+    girl.char "啊啊啊啊！"
 
 # game/BKcity_events.rpy:5270
 translate chinese_simplified slave_beach_event_abc1e59b:
@@ -6298,7 +6298,7 @@ translate chinese_simplified slave_beach_event_abc1e59b:
 translate chinese_simplified slave_beach_event_6e03b3c5:
 
     # girl.char "Aaaaah!!!"
-    girl.char "Aaaaah!!!"
+    girl.char "啊啊啊！！！"
 
 # game/BKcity_events.rpy:5280
 translate chinese_simplified slave_beach_event_51a34b98:
@@ -6310,7 +6310,7 @@ translate chinese_simplified slave_beach_event_51a34b98:
 translate chinese_simplified slave_beach_event_a4604e4c:
 
     # girl.char "You came inside... Aaah..."
-    girl.char "You came inside... Aaah..."
+    girl.char "你进来了……啊……"
 
 # game/BKcity_events.rpy:5287
 translate chinese_simplified slave_beach_event_2e26bc9b:
@@ -6322,7 +6322,7 @@ translate chinese_simplified slave_beach_event_2e26bc9b:
 translate chinese_simplified slave_beach_event_6e03b3c5_1:
 
     # girl.char "Aaaaah!!!"
-    girl.char "Aaaaah!!!"
+    girl.char "啊啊啊！！！"
 
 # game/BKcity_events.rpy:5297
 translate chinese_simplified slave_beach_event_bc93318d:
@@ -6334,7 +6334,7 @@ translate chinese_simplified slave_beach_event_bc93318d:
 translate chinese_simplified slave_beach_event_9d3f5943:
 
     # girl.char "I'm so dirty... Mmmh..."
-    girl.char "I'm so dirty... Mmmh..."
+    girl.char "我好脏啊……嗯……"
 
 # game/BKcity_events.rpy:5306
 translate chinese_simplified slave_beach_event_6d35652f:
@@ -6346,7 +6346,7 @@ translate chinese_simplified slave_beach_event_6d35652f:
 translate chinese_simplified slave_beach_event_3041fa8c:
 
     # girl.char "Hey!"
-    girl.char "Hey!"
+    girl.char "嘿！"
 
 # game/BKcity_events.rpy:5314
 translate chinese_simplified slave_beach_event_37e819ad:
@@ -6358,7 +6358,7 @@ translate chinese_simplified slave_beach_event_37e819ad:
 translate chinese_simplified slave_beach_event_5d204b66:
 
     # girl.char "My swimsuit is all sticky now... Aw..."
-    girl.char "My swimsuit is all sticky now... Aw..."
+    girl.char "我的泳衣现在黏糊糊的……哎……"
 
 # game/BKcity_events.rpy:5323
 translate chinese_simplified slave_beach_event_8a001466:
@@ -6376,37 +6376,37 @@ translate chinese_simplified slave_beach_event_01ea3072:
 translate chinese_simplified slave_beach_event_7b8f473b:
 
     # you "Well, I hope you enjoyed your time off - because it's over now."
-    you "Well, I hope you enjoyed your time off - because it's over now."
+    you "希望你假期过得愉快——因为假期已经结束了。"
 
 # game/BKcity_events.rpy:5332
 translate chinese_simplified slave_beach_event_9ec50e45:
 
     # girl.char "Uh? What do you mean?"
-    girl.char "Uh? What do you mean?"
+    girl.char "嗯？你什么意思？"
 
 # game/BKcity_events.rpy:5334
 translate chinese_simplified slave_beach_event_51f4b6cf:
 
     # you "I mean, I can't let such a nice piece of booty go to waste even for a day. You look damn sexy in your swimsuit, and I'm sure customers are ready to pay some good money to use you right now!"
-    you "I mean, I can't let such a nice piece of booty go to waste even for a day. You look damn sexy in your swimsuit, and I'm sure customers are ready to pay some good money to use you right now!"
+    you "我的意思是，这么好的身材，我一天都不能浪费。你穿泳装真是性感极了，我相信顾客们现在都愿意花大价钱来享用你！"
 
 # game/BKcity_events.rpy:5347
 translate chinese_simplified slave_beach_event_a5efeed9:
 
     # you "Listen, I'll give you... double your regular upkeep. How does that sound?"
-    you "Listen, I'll give you... double your regular upkeep. How does that sound?"
+    you "听着，我给你……双倍的日常维护费。怎么样？"
 
 # game/BKcity_events.rpy:5349
 translate chinese_simplified slave_beach_event_534f02be:
 
     # girl.char "Double the money, uh..."
-    girl.char "Double the money, uh..."
+    girl.char "钱翻倍，呃……"
 
 # game/BKcity_events.rpy:5359
 translate chinese_simplified slave_beach_event_fc71f818:
 
     # you "I'll pay your normal upkeep, of course. It's only fair..."
-    you "I'll pay your normal upkeep, of course. It's only fair..."
+    you "我当然会支付你正常的维护费用。这很公平……"
 
 # game/BKcity_events.rpy:5361
 translate chinese_simplified slave_beach_event_c1da3d17:
@@ -6418,13 +6418,13 @@ translate chinese_simplified slave_beach_event_c1da3d17:
 translate chinese_simplified slave_beach_event_dd50664b:
 
     # you "I own you, so why should I care about your opinion? Get your ass to work!"
-    you "I own you, so why should I care about your opinion? Get your ass to work!"
+    you "你是我的，我为什么要关心你的意见？赶紧去干活！"
 
 # game/BKcity_events.rpy:5368
 translate chinese_simplified slave_beach_event_fdde360c:
 
     # girl.char "Hey! That's not fair..."
-    girl.char "Hey! That's not fair..."
+    girl.char "嘿！这不公平……"
 
 # game/BKcity_events.rpy:5389
 translate chinese_simplified slave_beach_event_30ebcc9d:
@@ -6436,73 +6436,73 @@ translate chinese_simplified slave_beach_event_30ebcc9d:
 translate chinese_simplified slave_beach_event_4ee40f29:
 
     # you "Good. Let me get things set-up..."
-    you "Good. Let me get things set-up..."
+    you "好的。让我来准备一下……"
 
 # game/BKcity_events.rpy:5398
 translate chinese_simplified slave_beach_event_5d3c6149:
 
     # you "Hear hear!"
-    you "Hear hear!"
+    you "说得好！"
 
 # game/BKcity_events.rpy:5400
 translate chinese_simplified slave_beach_event_9dfc76af:
 
     # you "Ladies and Gentlemen, I mean, mostly you Gentlemen, why don't you come and sample one of the best produce of [brothel.name], brought to you right here at the [loc]?"
-    you "Ladies and Gentlemen, I mean, mostly you Gentlemen, why don't you come and sample one of the best produce of [brothel.name], brought to you right here at the [loc]?"
+    you "女士们先生们，我是说，主要是各位先生们，何不来品尝一下[brothel.name]最好的产品之一，就在[loc]这里为您奉上？"
 
 # game/BKcity_events.rpy:5402
 translate chinese_simplified slave_beach_event_c42686a9:
 
     # you "Lovely miss [girl.fullname] is waiting for you here, ready to serve at your whim..."
-    you "Lovely miss [girl.fullname] is waiting for you here, ready to serve at your whim..."
+    you "美丽的[girl.fullname]小姐在此恭候您的光临，随时准备为您效劳……"
 
 # game/BKcity_events.rpy:5410
 translate chinese_simplified slave_beach_event_0cd402a4:
 
     # girl.char "Who wants to try me? Come forward, don't be shy!"
-    girl.char "Who wants to try me? Come forward, don't be shy!"
+    girl.char "谁想试试我？上前来，别害羞！"
 
 # game/BKcity_events.rpy:5412
 translate chinese_simplified slave_beach_event_c550eaaf:
 
     # "Dude" "Sweet! I want her to suck my dick... Is it cool?"
-    "Dude" "Sweet! I want her to suck my dick... Is it cool?"
+    "Dude" "太棒了！我想让她给我口交……可以吗？"
 
 # game/BKcity_events.rpy:5414
 translate chinese_simplified slave_beach_event_e836a702:
 
     # man "No, dude! I want to bang her!"
-    man "No, dude! I want to bang her!"
+    man "不，兄弟！我想和她上床！"
 
 # game/BKcity_events.rpy:5416
 translate chinese_simplified slave_beach_event_230fb705:
 
     # passerby "Not fair! I wanted to fuck her ass..."
-    passerby "Not fair! I wanted to fuck her ass..."
+    passerby "不公平！我想操她的屁股……"
 
 # game/BKcity_events.rpy:5428
 translate chinese_simplified slave_beach_event_724bde1c:
 
     # you "You there, get yourself ready. [girl.name] will take good care of you..."
-    you "You there, get yourself ready. [girl.name] will take good care of you..."
+    you "你，准备好。[girl.name]会好好照顾你的……"
 
 # game/BKcity_events.rpy:5432
 translate chinese_simplified slave_beach_event_ba9e6bd0:
 
     # you "One of you lucky bastards can get laid today... You! Step forward."
-    you "One of you lucky bastards can get laid today... You! Step forward."
+    you "你们这些幸运的家伙，今天有一个人可以上床……就是你！上前一步。"
 
 # game/BKcity_events.rpy:5436
 translate chinese_simplified slave_beach_event_562e2e91:
 
     # you "Did someone say 'anal sex'? You've come to the right place!"
-    you "Did someone say 'anal sex'? You've come to the right place!"
+    you "有人提到“肛交”吗？你来对地方了！"
 
 # game/BKcity_events.rpy:5440
 translate chinese_simplified slave_beach_event_50a53d71:
 
     # you "Chill, guys, there's no need to fight: [girl.fullname] will serve all of you today!"
-    you "Chill, guys, there's no need to fight: [girl.fullname] will serve all of you today!"
+    you "冷静点，伙计们，没必要打架：[girl.fullname]今天会为你们所有人服务！"
 
 # game/BKcity_events.rpy:5444
 translate chinese_simplified slave_beach_event_c64f1079:
@@ -6514,7 +6514,7 @@ translate chinese_simplified slave_beach_event_c64f1079:
 translate chinese_simplified slave_beach_event_a9b8e8b4:
 
     # "Dude" "Oh, this is my lucky day..."
-    "Dude" "Oh, this is my lucky day..."
+    "Dude" "哦，今天真是我的幸运日……"
 
 # game/BKcity_events.rpy:5448
 translate chinese_simplified slave_beach_event_841402fd:
@@ -6526,7 +6526,7 @@ translate chinese_simplified slave_beach_event_841402fd:
 translate chinese_simplified slave_beach_event_bac2af43:
 
     # man "Come on, babe! Let's fuck..."
-    man "Come on, babe! Let's fuck..."
+    man "来吧，宝贝！我们做爱吧……"
 
 # game/BKcity_events.rpy:5452
 translate chinese_simplified slave_beach_event_061b0610:
@@ -6538,7 +6538,7 @@ translate chinese_simplified slave_beach_event_061b0610:
 translate chinese_simplified slave_beach_event_64a4be4e:
 
     # passerby "Let me just move this swimsuit out of the way... Nice."
-    passerby "Let me just move this swimsuit out of the way... Nice."
+    passerby "让我把这件泳衣挪开……不错。"
 
 # game/BKcity_events.rpy:5457
 translate chinese_simplified slave_beach_event_65ebfa4c:
@@ -6556,7 +6556,7 @@ translate chinese_simplified slave_beach_event_5c691dae:
 translate chinese_simplified slave_beach_event_59a50666:
 
     # girl.char "Aaaaah!"
-    girl.char "Aaaaah!"
+    girl.char "啊啊啊！"
 
 # game/BKcity_events.rpy:5480
 translate chinese_simplified slave_beach_event_0affd0ff:
@@ -6592,7 +6592,7 @@ translate chinese_simplified slave_beach_event_a3debe29:
 translate chinese_simplified slave_beach_event_a7325ce9:
 
     # "Dude" "Oh, man... I will not stand... this aggression... Man..."
-    "Dude" "Oh, man... I will not stand... this aggression... Man..."
+    "Dude" "哦，天哪……我绝不能容忍……这种侵略……天哪……"
 
 # game/BKcity_events.rpy:5493
 translate chinese_simplified slave_beach_event_97a15c09:
@@ -6610,7 +6610,7 @@ translate chinese_simplified slave_beach_event_67a2ab6d:
 translate chinese_simplified slave_beach_event_d1de2594:
 
     # man "Oh, yes! I'm on fire..."
-    man "Oh, yes! I'm on fire..."
+    man "哦，是的！我状态极佳……"
 
 # game/BKcity_events.rpy:5502
 translate chinese_simplified slave_beach_event_fb7cd5b5:
@@ -6622,7 +6622,7 @@ translate chinese_simplified slave_beach_event_fb7cd5b5:
 translate chinese_simplified slave_beach_event_dff03954:
 
     # passerby "Oh, I can go all the way in... I'm balls deep... This is the best!"
-    passerby "Oh, I can go all the way in... I'm balls deep... This is the best!"
+    passerby "哦，我可以完全进去……我完全进去了……这感觉太棒了！"
 
 # game/BKcity_events.rpy:5508
 translate chinese_simplified slave_beach_event_1686205b:
@@ -6634,13 +6634,13 @@ translate chinese_simplified slave_beach_event_1686205b:
 translate chinese_simplified slave_beach_event_afefac09:
 
     # man "Oh, man, look at that! She was a virgin, hahaha..."
-    man "Oh, man, look at that! She was a virgin, hahaha..."
+    man "我的天哪，快看！她居然还是个处女，哈哈哈……"
 
 # game/BKcity_events.rpy:5513
 translate chinese_simplified slave_beach_event_00417ccb:
 
     # passerby "Unbelievable!"
-    passerby "Unbelievable!"
+    passerby "难以置信！"
 
 # game/BKcity_events.rpy:5518
 translate chinese_simplified slave_beach_event_47f929f9:
@@ -6658,25 +6658,25 @@ translate chinese_simplified slave_beach_event_7ff63124:
 translate chinese_simplified slave_beach_event_323a8633:
 
     # "Dude" "Awesome..."
-    "Dude" "Awesome..."
+    "Dude" "惊人的..."
 
 # game/BKcity_events.rpy:5524
 translate chinese_simplified slave_beach_event_85bafe9e:
 
     # man "This is too good.."
-    man "This is too good.."
+    man "这太好了……"
 
 # game/BKcity_events.rpy:5526
 translate chinese_simplified slave_beach_event_19af7a9d:
 
     # passerby "That brothel guy wasn't joking... I've never had so much fun!"
-    passerby "That brothel guy wasn't joking... I've never had so much fun!"
+    passerby "那个妓院老板没开玩笑……我从来没这么开心过！"
 
 # game/BKcity_events.rpy:5530
 translate chinese_simplified slave_beach_event_b3717b26:
 
     # girl.char "Hmm... Oooh..."
-    girl.char "Hmm... Oooh..."
+    girl.char "嗯……哦……"
 
 # game/BKcity_events.rpy:5540
 translate chinese_simplified slave_beach_event_f33411fa:
@@ -6766,19 +6766,19 @@ translate chinese_simplified slave_beach_event_3db5f193:
 translate chinese_simplified slave_beach_event_5d996cc8:
 
     # girl.char "What? No, I'm not going to do that with this guy!"
-    girl.char "What? No, I'm not going to do that with this guy!"
+    girl.char "什么？不，我不会对这个人做那种事！"
 
 # game/BKcity_events.rpy:5643
 translate chinese_simplified slave_beach_event_2a52d73e:
 
     # you "Damn you! Just you wait until I catch you again..."
-    you "Damn you! Just you wait until I catch you again..."
+    you "你这该死的！等着瞧，我迟早会再抓到你……"
 
 # game/BKcity_events.rpy:5645
 translate chinese_simplified slave_beach_event_41dee3d2:
 
     # you "Hmph, you're not even worth the trouble... You'd better do what I tell you next time!"
-    you "Hmph, you're not even worth the trouble... You'd better do what I tell you next time!"
+    you "哼，你根本不值得我费心……下次你最好听我的话！"
 
 # game/BKcity_events.rpy:5647
 translate chinese_simplified slave_beach_event_7bafea4a:
@@ -6796,5 +6796,5 @@ translate chinese_simplified slave_beach_event_dc0306da:
 translate chinese_simplified slave_beach_event_2666d939:
 
     # you "All right, I'll see you at [brothel.name]."
-    you "All right, I'll see you at [brothel.name]."
+    you "好的，[brothel.name]见。"
 

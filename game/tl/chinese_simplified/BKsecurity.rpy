@@ -4,13 +4,13 @@
 translate chinese_simplified security_488f4983:
 
     # security "{color=[c_red]}[brothel.name] is being raided by [attackers]!{/color}\nYou rush outside with the defenders."
-    security "{color=[c_red]}[brothel.name] is being raided by [attackers]!{/color}\nYou rush outside with the defenders."
+    security "{color=[c_red]}[brothel.name] 正在遭受 [attackers] 的袭击！{/color}\n你和守卫们一起冲了出去。"
 
 # game/BKsecurity.rpy:76
 translate chinese_simplified security_56178303:
 
     # security "Your first assault breaks their line and they quickly scatter. That's when you hear a scream."
-    security "Your first assault breaks their line and they quickly scatter. That's when you hear a scream."
+    security "你的第一次进攻突破了他们的防线，他们迅速溃逃。就在这时，你听到了一声尖叫。"
 
 # game/BKsecurity.rpy:79
 translate chinese_simplified security_e458fe67:
@@ -22,7 +22,7 @@ translate chinese_simplified security_e458fe67:
 translate chinese_simplified security_af6afeb1:
 
     # security "Some of the attackers have sneaked out the back of [brothel.name] while the security guards were distracted! You rush back to the brothel to help.\n{color=[c_red]}[girl_nb] of your girls are under attack, but you can only help one!{/color}"
-    security "Some of the attackers have sneaked out the back of [brothel.name] while the security guards were distracted! You rush back to the brothel to help.\n{color=[c_red]}[girl_nb] of your girls are under attack, but you can only help one!{/color}"
+    security "趁着保安不注意，一些袭击者从[brothel.name]的后门溜走了！你赶紧赶回妓院帮忙。\n{color=[c_red]}[girl_nb]个女孩正在遭受攻击，但你只能救一个！{/color}"
 
 # game/BKsecurity.rpy:108
 translate chinese_simplified security_80691383:
@@ -112,13 +112,13 @@ translate chinese_simplified security_40d05f1c:
 translate chinese_simplified security_6a73366b:
 
     # guard "Boss! I counted [enemies] of them. And they also have [war_machines] war machines! They are led by [enemy_general.fullname], a renowned [enemy_g]."
-    guard "Boss! I counted [enemies] of them. And they also have [war_machines] war machines! They are led by [enemy_general.fullname], a renowned [enemy_g]."
+    guard "老大！我数了数他们有[敌人]人。他们还有[战争机器]台战争机器！他们的首领是[敌方将军.全名]，一位声名显赫的[敌方将军]。"
 
 # game/BKsecurity.rpy:386
 translate chinese_simplified security_d7897846:
 
     # you "Damn it, mercenaries! They're besieging us! Quick, get the girls inside, gather everyone, and get in battle formation!"
-    you "Damn it, mercenaries! They're besieging us! Quick, get the girls inside, gather everyone, and get in battle formation!"
+    you "该死的雇佣兵！他们包围了我们！快，把姑娘们带进去，召集所有人，摆出战斗队形！"
 
 # game/BKsecurity.rpy:389
 translate chinese_simplified security_9296ec4b:
@@ -136,13 +136,13 @@ translate chinese_simplified security_f144d3fa:
 translate chinese_simplified security_3ec535f6:
 
     # you "C'm'on baby, light my fire!"
-    you "C'm'on baby, light my fire!"
+    you "来吧宝贝，点燃我的激情！"
 
 # game/BKsecurity.rpy:404
 translate chinese_simplified security_cdc6eb7a:
 
     # you "Let's see how well those machines burn!"
-    you "Let's see how well those machines burn!"
+    you "让我们看看这些机器燃烧得怎么样！"
 
 # game/BKsecurity.rpy:420
 translate chinese_simplified security_2266e5fc:
@@ -184,7 +184,7 @@ translate chinese_simplified security_771685c0:
 translate chinese_simplified security_157c264f:
 
     # you "To say they called me crazy when I insisted the brothel needed battlements! Ha!"
-    you "To say they called me crazy when I insisted the brothel needed battlements! Ha!"
+    you "当我坚持认为妓院需要城垛时，他们竟然说我疯了！哈哈！"
 
 # game/BKsecurity.rpy:449
 translate chinese_simplified security_ad33f955:
@@ -196,7 +196,7 @@ translate chinese_simplified security_ad33f955:
 translate chinese_simplified security_d8ac240c:
 
     # you "Burn, burn, yes ya gonna burn!"
-    you "Burn, burn, yes ya gonna burn!"
+    you "烧吧，烧吧，你肯定要烧死了！"
 
 # game/BKsecurity.rpy:459
 translate chinese_simplified security_10fa092a:
@@ -208,79 +208,79 @@ translate chinese_simplified security_10fa092a:
 translate chinese_simplified security_733ed97b:
 
     # security_breach "Your fireball hits the ground near the war machines and sets fire to the grass. However, some of the mercenaries stand ready with water buckets and they quickly extinguish the fire."
-    security_breach "Your fireball hits the ground near the war machines and sets fire to the grass. However, some of the mercenaries stand ready with water buckets and they quickly extinguish the fire."
+    security_breach "你的火球落在战争机器附近的地面上，点燃了草地。然而，一些雇佣兵早已准备好水桶，他们迅速扑灭了火焰。"
 
 # game/BKsecurity.rpy:467
 translate chinese_simplified security_f0beac49:
 
     # you "Damn!"
-    you "Damn!"
+    you "该死！"
 
 # game/BKsecurity.rpy:469
 translate chinese_simplified security_c112ec25:
 
     # security_breach "{b}Battle Phase 2{/b}\nThe war machines get ready to fire."
-    security_breach "{b}Battle Phase 2{/b}\nThe war machines get ready to fire."
+    security_breach "{b}战斗阶段 2{/b}\n战争机器准备开火。"
 
 # game/BKsecurity.rpy:482
 translate chinese_simplified security_5da4e062:
 
     # security "Your fireball hits right amidst the war machines, sending [destroyed] of them up in flames."
-    security "Your fireball hits right amidst the war machines, sending [destroyed] of them up in flames."
+    security "你的火球直接击中了战争机器的中心，将其中一些摧毁并燃起了熊熊大火。"
 
 # game/BKsecurity.rpy:485
 translate chinese_simplified security_c518ae29:
 
     # security_breach "{b}Battle Phase 2{/b}\nThe remaining war machines get ready to attack."
-    security_breach "{b}Battle Phase 2{/b}\nThe remaining war machines get ready to attack."
+    security_breach "{b}战斗阶段 2{/b}\n剩余的战争机器准备发起攻击。"
 
 # game/BKsecurity.rpy:487
 translate chinese_simplified security_eb05bc0e:
 
     # security "{b}Battle Phase 2{/b}\nNo war machines are left to attack."
-    security "{b}Battle Phase 2{/b}\nNo war machines are left to attack."
+    security "{b}战斗阶段 2{/b}\n没有战争机器可以发动攻击。"
 
 # game/BKsecurity.rpy:490
 translate chinese_simplified security_c112ec25_1:
 
     # security_breach "{b}Battle Phase 2{/b}\nThe war machines get ready to fire."
-    security_breach "{b}Battle Phase 2{/b}\nThe war machines get ready to fire."
+    security_breach "{b}战斗阶段 2{/b}\n战争机器准备开火。"
 
 # game/BKsecurity.rpy:513
 translate chinese_simplified security_447932b3:
 
     # security_breach "{b}Battle Phase 3{/b}\nThere are [enemies] enemies facing your [allies] remaining guards. They have the advantage, and they know it."
-    security_breach "{b}Battle Phase 3{/b}\nThere are [enemies] enemies facing your [allies] remaining guards. They have the advantage, and they know it."
+    security_breach "{b}战斗阶段3{/b}\n有[敌人]名敌人正与你的[盟友]剩余守卫对峙。他们占据优势，而且他们也知道这一点。"
 
 # game/BKsecurity.rpy:520
 translate chinese_simplified security_5fc315f2:
 
     # enemy_general.char "CHAAAARGE!!!"
-    enemy_general.char "CHAAAARGE!!!"
+    enemy_general.char "冲啊！！！"
 
 # game/BKsecurity.rpy:523
 translate chinese_simplified security_cee97817:
 
     # security "{b}Battle Phase 3{/b}\nThere are [enemies] enemies facing your [allies] remaining guards. You have the advantage, and their lines seem to falter."
-    security "{b}Battle Phase 3{/b}\nThere are [enemies] enemies facing your [allies] remaining guards. You have the advantage, and their lines seem to falter."
+    security "{b}战斗阶段3{/b}\n有[敌人]名敌人正与你的[盟友]剩余守卫对峙。你占据优势，他们的防线似乎开始动摇。"
 
 # game/BKsecurity.rpy:527
 translate chinese_simplified security_410ac7d0:
 
     # you "CHAAAARGE!!!"
-    you "CHAAAARGE!!!"
+    you "冲啊！！！"
 
 # game/BKsecurity.rpy:529
 translate chinese_simplified security_c12de197:
 
     # security "{b}Battle Phase 3{/b}\nThere are [enemies] enemies facing your [allies] remaining guards. Your forces are evenly matched."
-    security "{b}Battle Phase 3{/b}\nThere are [enemies] enemies facing your [allies] remaining guards. Your forces are evenly matched."
+    security "{b}战斗阶段3{/b}\n有[敌人]名敌人正与你的[盟友]剩余守卫对峙。双方兵力相当。"
 
 # game/BKsecurity.rpy:532
 translate chinese_simplified security_0ee3ac03:
 
     # guard "CHAAAARGE!!!"
-    guard "CHAAAARGE!!!"
+    guard "冲啊！！！"
 
 # game/BKsecurity.rpy:542
 translate chinese_simplified security_512177f8:
@@ -298,13 +298,13 @@ translate chinese_simplified security_b6ff1c89:
 translate chinese_simplified security_dada2aba:
 
     # you "You! [enemy_general.name]! Prepare to be defeated!"
-    you "You! [enemy_general.name]! Prepare to be defeated!"
+    you "你！[敌方将军姓名]！准备被打败吧！"
 
 # game/BKsecurity.rpy:553
 translate chinese_simplified security_e36b1a5f:
 
     # enemy_general.char "Ha! Fancy yourself a fighter, pimp boy?"
-    enemy_general.char "Ha! Fancy yourself a fighter, pimp boy?"
+    enemy_general.char "哈！你以为自己是个斗士吗，小混混？"
 
 # game/BKsecurity.rpy:558
 translate chinese_simplified security_fcfef7de:
@@ -322,7 +322,7 @@ translate chinese_simplified security_a7e30abb:
 translate chinese_simplified security_775bf7e7:
 
     # enemy_general.char "Men! Help me!"
-    enemy_general.char "Men! Help me!"
+    enemy_general.char "男人们！救救我！"
 
 # game/BKsecurity.rpy:574
 translate chinese_simplified security_923be87f:
@@ -340,7 +340,7 @@ translate chinese_simplified security_d3fc0c30:
 translate chinese_simplified security_1430511d:
 
     # you "Damn, she's strong. Men! To me!"
-    you "Damn, she's strong. Men! To me!"
+    you "天哪，她真强壮。男人啊！对我来说！"
 
 # game/BKsecurity.rpy:594
 translate chinese_simplified security_6cb0d445:
@@ -364,7 +364,7 @@ translate chinese_simplified security_84c1c8b2:
 translate chinese_simplified security_c4910e23:
 
     # enemy_general.char "Demons! Familiar! Help me!"
-    enemy_general.char "Demons! Familiar! Help me!"
+    enemy_general.char "恶魔！熟悉的恶魔！救救我！"
 
 # game/BKsecurity.rpy:615
 translate chinese_simplified security_d3b597d8:
@@ -382,7 +382,7 @@ translate chinese_simplified security_5bc9732b:
 translate chinese_simplified security_9b6f07b2:
 
     # you "Men! Attack her! Quick! *frantic*"
-    you "Men! Attack her! Quick! *frantic*"
+    you "男人们！攻击她！快！*慌乱地*"
 
 # game/BKsecurity.rpy:628
 translate chinese_simplified security_3f5ed950:
@@ -400,85 +400,85 @@ translate chinese_simplified security_25471562:
 translate chinese_simplified security_13f7a93e:
 
     # security_breach "In spite of your fighting skills, you are not achieving much, and soon you find yourself surrounded by five enemies. As you try to defend yourself, one of them slams your leg with a warhammer and you fall down flat in the mud. He gets ready for the killing blow, but your men counter-charge and one brings you inside the brothel to safety."
-    security_breach "In spite of your fighting skills, you are not achieving much, and soon you find yourself surrounded by five enemies. As you try to defend yourself, one of them slams your leg with a warhammer and you fall down flat in the mud. He gets ready for the killing blow, but your men counter-charge and one brings you inside the brothel to safety."
+    security_breach "尽管你身手不凡，却收效甚微，很快便被五个敌人包围。你奋力自卫，其中一人用战锤猛击你的腿，你应声倒地，摔在泥泞中。他正要给你致命一击，你的部下却发起反击，其中一人将你救进妓院。"
 
 # game/BKsecurity.rpy:653
 translate chinese_simplified security_5b35f27f:
 
     # security "You deal mighty blows to the enemies, grievously wounding one of their champions and routing [score] of his followers."
-    security "You deal mighty blows to the enemies, grievously wounding one of their champions and routing [score] of his followers."
+    security "你重创敌人，重创他们的一名勇士，击溃了他的[分数]名追随者。"
 
 # game/BKsecurity.rpy:667
 translate chinese_simplified security_e7a4ab93:
 
     # security "[enemy_damage] of your allies and [allies_damage] of your enemies have fallen. There are [enemies] enemies remaining against your [allies] standing guards."
-    security "[enemy_damage] of your allies and [allies_damage] of your enemies have fallen. There are [enemies] enemies remaining against your [allies] standing guards."
+    security "你的盟友和敌人分别损失了 [enemy_damage] 和 [allies_damage] 名敌人。目前还有 [enemys] 名敌人对抗你的 [allies_damage] 名守卫。"
 
 # game/BKsecurity.rpy:672
 translate chinese_simplified security_42110203:
 
     # security_breach "The enemies have brought [d] reinforcements! There are now [enemies] enemies against your [allies] guards."
-    security_breach "The enemies have brought [d] reinforcements! There are now [enemies] enemies against your [allies] guards."
+    security_breach "敌人带来了援军！现在有敌人与你们的盟友守卫对抗。"
 
 # game/BKsecurity.rpy:677
 translate chinese_simplified security_2c034aaf:
 
     # extend "\nThey have the advantage, and they know it. Their morale improves."
-    extend "\nThey have the advantage, and they know it. Their morale improves."
+    extend "他们拥有优势，而且他们也知道这一点。他们的士气因此得到提升。"
 
 # game/BKsecurity.rpy:679
 translate chinese_simplified security_d08f389b:
 
     # enemy_general.char "All right, men! Finish the job!"
-    enemy_general.char "All right, men! Finish the job!"
+    enemy_general.char "好了，伙计们！完成任务！"
 
 # game/BKsecurity.rpy:682
 translate chinese_simplified security_f1244f78:
 
     # extend "\nYou have the advantage, and it seems they hesitate to attack again."
-    extend "\nYou have the advantage, and it seems they hesitate to attack again."
+    extend "你们占据了优势，他们似乎犹豫是否要再次进攻。"
 
 # game/BKsecurity.rpy:684
 translate chinese_simplified security_4fa4ab29:
 
     # you "Let's end this."
-    you "Let's end this."
+    you "就此结束吧。"
 
 # game/BKsecurity.rpy:686
 translate chinese_simplified security_f958ded8:
 
     # extend "\nYour forces are evenly matched."
-    extend "\nYour forces are evenly matched."
+    extend "你们双方兵力相当。"
 
 # game/BKsecurity.rpy:687
 translate chinese_simplified security_1f4fb028:
 
     # guard "For honor, glory, and a fair and regulated competitive environment for all lawful pleasure businesses!"
-    guard "For honor, glory, and a fair and regulated competitive environment for all lawful pleasure businesses!"
+    guard "为了荣誉、荣耀，以及所有合法娱乐企业公平、规范的竞争环境！"
 
 # game/BKsecurity.rpy:701
 translate chinese_simplified security_f6e1a64b:
 
     # security "Your forces clash again with the enemy."
-    security "Your forces clash again with the enemy."
+    security "你的部队再次与敌人交战。"
 
 # game/BKsecurity.rpy:704
 translate chinese_simplified security_f26eb1af:
 
     # security "[enemy_damage] of your men fall, while [enemy_damage] foes are defeated. They are now [enemies] enemies left and [allies] standing guards."
-    security "[enemy_damage] of your men fall, while [enemy_damage] foes are defeated. They are now [enemies] enemies left and [allies] standing guards."
+    security "你的士兵中有 [enemy_damage] 人阵亡，而敌人被击败。现在只剩下 [enemy_damage] 个敌人和 [allies] 个守卫。"
 
 # game/BKsecurity.rpy:707
 translate chinese_simplified security_d5f88296:
 
     # security "[enemy_damage] of your allies and [allies_damage] of your enemies have fallen. All the enemies are wounded or routed. You {b}win{/b} this battle."
-    security "[enemy_damage] of your allies and [allies_damage] of your enemies have fallen. All the enemies are wounded or routed. You {b}win{/b} this battle."
+    security "你的盟友损失了 [enemy_damage] 点生命值，你的敌人损失了 [allies_damage] 点生命值。所有敌人都已受伤或溃败。你赢得了这场战斗。"
 
 # game/BKsecurity.rpy:710
 translate chinese_simplified security_8b6e18d7:
 
     # security_breach "The enemy has wiped out your security guards. You take refuge inside the brothel with your girls and try to organize what little defenses you have."
-    security_breach "The enemy has wiped out your security guards. You take refuge inside the brothel with your girls and try to organize what little defenses you have."
+    security_breach "敌人消灭了你的保安。你带着姑娘们躲进妓院，试图组织起仅存的一点防御力量。"
 
 # game/BKsecurity.rpy:725
 translate chinese_simplified security_e1290c35:
@@ -496,13 +496,13 @@ translate chinese_simplified security_11fdb519:
 translate chinese_simplified security_fd39755e:
 
     # you "Bring it on!"
-    you "Bring it on!"
+    you "来吧！"
 
 # game/BKsecurity.rpy:757
 translate chinese_simplified security_4e89346a:
 
     # you "Every one, get inside the pentagram!"
-    you "Every one, get inside the pentagram!"
+    you "所有人，都进入五芒星内！"
 
 # game/BKsecurity.rpy:765
 translate chinese_simplified security_25ceac08:
@@ -538,19 +538,19 @@ translate chinese_simplified security_6d51d383:
 translate chinese_simplified security_038b5d02:
 
     # security_breach "The [enemies] remaining enemies come at you all at once, and their combined assault sends you falling backwards, only to be trampled upon as they keep on charging your girls, ignoring you as you lie defeated in the dust."
-    security_breach "The [enemies] remaining enemies come at you all at once, and their combined assault sends you falling backwards, only to be trampled upon as they keep on charging your girls, ignoring you as you lie defeated in the dust."
+    security_breach "剩下的敌人同时向你袭来，他们的联合攻击将你击退，然后继续冲向你的女孩们，把你踩在脚下，完全无视你败倒在尘土中的状态。"
 
 # game/BKsecurity.rpy:841
 translate chinese_simplified security_db83263d:
 
     # security "The enemy shock troopers rush through the door, but you are ready for them. You fight [damage] of them simultaneously, keeping them from attacking your girls."
-    security "The enemy shock troopers rush through the door, but you are ready for them. You fight [damage] of them simultaneously, keeping them from attacking your girls."
+    security "敌军突击队员冲破大门，但你早有准备。你同时与他们交战，造成[伤害]点伤害，并阻止他们攻击你的女孩们。"
 
 # game/BKsecurity.rpy:844
 translate chinese_simplified security_ab4c5041:
 
     # you "You shall not pass!!!"
-    you "You shall not pass!!!"
+    you "你不可以过去！！！"
 
 # game/BKsecurity.rpy:847
 translate chinese_simplified security_7bb9cd2a:
@@ -580,7 +580,7 @@ translate chinese_simplified security_a56bb971:
 translate chinese_simplified security_f3fc9968:
 
     # extend "Jumping out of hiding, you charge the enemy general with a war cry."
-    extend "Jumping out of hiding, you charge the enemy general with a war cry."
+    extend "你从藏身之处跃出，发出战吼，向敌方将领发起冲锋。"
 
 # game/BKsecurity.rpy:880
 translate chinese_simplified security_3f8d1a4f:
@@ -592,13 +592,13 @@ translate chinese_simplified security_3f8d1a4f:
 translate chinese_simplified security_637b87f0:
 
     # you "Yield."
-    you "Yield."
+    you "屈服。"
 
 # game/BKsecurity.rpy:884
 translate chinese_simplified security_d630ba04:
 
     # enemy_general.char "Damn you..."
-    enemy_general.char "Damn you..."
+    enemy_general.char "该死的你..."
 
 # game/BKsecurity.rpy:887
 translate chinese_simplified security_f65ca89d:
@@ -616,7 +616,7 @@ translate chinese_simplified security_befe5d45:
 translate chinese_simplified security_7ced056c:
 
     # enemy_general.char "You! Damn you!"
-    enemy_general.char "You! Damn you!"
+    enemy_general.char "你！该死的你！"
 
 # game/BKsecurity.rpy:897
 translate chinese_simplified security_c2c2c42d:
@@ -640,7 +640,7 @@ translate chinese_simplified security_0f444b1c:
 translate chinese_simplified security_aa3b574c:
 
     # enemy_general.char "Hahahaha! You are no match for me!"
-    enemy_general.char "Hahahaha! You are no match for me!"
+    enemy_general.char "哈哈哈哈！你根本不是我的对手！"
 
 # game/BKsecurity.rpy:920
 translate chinese_simplified security_91f895fd:
@@ -652,7 +652,7 @@ translate chinese_simplified security_91f895fd:
 translate chinese_simplified security_21cb7564:
 
     # extend "Readying a spell, you come out of your hiding, aiming at her."
-    extend "Readying a spell, you come out of your hiding, aiming at her."
+    extend "你准备好法术，从藏身之处走出，瞄准了她。"
 
 # game/BKsecurity.rpy:929
 translate chinese_simplified security_a2859643:
@@ -670,7 +670,7 @@ translate chinese_simplified security_b75e3137:
 translate chinese_simplified security_e5340962:
 
     # enemy_general.char "Y...You... Damn... You..."
-    enemy_general.char "Y...You... Damn... You..."
+    enemy_general.char "你……该死的……你……"
 
 # game/BKsecurity.rpy:937
 translate chinese_simplified security_d068958f:
@@ -694,7 +694,7 @@ translate chinese_simplified security_8d387df5:
 translate chinese_simplified security_3a6aca93:
 
     # enemy_general.char "Impossible! *scared*"
-    enemy_general.char "Impossible! *scared*"
+    enemy_general.char "不可能！*害怕*"
 
 # game/BKsecurity.rpy:951
 translate chinese_simplified security_eaac5125:
@@ -724,7 +724,7 @@ translate chinese_simplified security_547618f9:
 translate chinese_simplified security_1e8d0e3e:
 
     # enemy_general.char "W-What do you want to do with me? You bastard!"
-    enemy_general.char "W-What do you want to do with me? You bastard!"
+    enemy_general.char "你……你想对我做什么？你这个混蛋！"
 
 # game/BKsecurity.rpy:1056
 translate chinese_simplified security_be274b69:
@@ -736,91 +736,91 @@ translate chinese_simplified security_be274b69:
 translate chinese_simplified enemy_general_captured_c73f5a6c:
 
     # security "You have captured the enemy general, [enemy_general.fullname]!"
-    security "You have captured the enemy general, [enemy_general.fullname]!"
+    security "你俘虏了敌方将领[enemy_general.fullname]！"
 
 # game/BKsecurity.rpy:1076
 translate chinese_simplified enemy_general_captured_0d9c079f:
 
     # you "I will now keep you as my pet. It's only fair that you work here to rebuild the damage you caused."
-    you "I will now keep you as my pet. It's only fair that you work here to rebuild the damage you caused."
+    you "我现在要把你当宠物养着。你理应在这里工作，弥补你造成的破坏。"
 
 # game/BKsecurity.rpy:1078
 translate chinese_simplified enemy_general_captured_f98ae4df:
 
     # enemy_general.char "Me? A whore??? No!!!"
-    enemy_general.char "Me? A whore??? No!!!"
+    enemy_general.char "我？妓女？？？不！！！"
 
 # game/BKsecurity.rpy:1085
 translate chinese_simplified enemy_general_captured_0d372f79:
 
     # you "Sill, take her away and have her branded."
-    you "Sill, take her away and have her branded."
+    you "把她带走，给她烙上印记。"
 
 # game/BKsecurity.rpy:1090
 translate chinese_simplified enemy_general_captured_9c32ef71:
 
     # you "Hmph, it's a shame, but it seems I can't take you right now."
-    you "Hmph, it's a shame, but it seems I can't take you right now."
+    you "哼，真可惜，看来我现在不能带你去了。"
 
 # game/BKsecurity.rpy:1096
 translate chinese_simplified enemy_general_captured_4dd4e0ff:
 
     # you "I have no use for the likes of you. I'm sure you'll be an excellent slave to... Somebody."
-    you "I have no use for the likes of you. I'm sure you'll be an excellent slave to... Somebody."
+    you "我不需要你这种人。我相信你会成为……某个人的绝佳奴隶。"
 
 # game/BKsecurity.rpy:1098
 translate chinese_simplified enemy_general_captured_7d4fc1d7:
 
     # enemy_general.char "Wait, no!!!"
-    enemy_general.char "Wait, no!!!"
+    enemy_general.char "等等，不！！！"
 
 # game/BKsecurity.rpy:1106
 translate chinese_simplified enemy_general_captured_17421a6e:
 
     # you "Well well... A woman with such spirit would be a perfect sacrifice for the demon lords of the blood islands..."
-    you "Well well... A woman with such spirit would be a perfect sacrifice for the demon lords of the blood islands..."
+    you "嗯……像她这样意志坚强的女子，简直是献给血岛恶魔领主的完美祭品……"
 
 # game/BKsecurity.rpy:1110
 translate chinese_simplified enemy_general_captured_ef0515a5:
 
     # enemy_general.char "No!!! You can't be serious! *panic*"
-    enemy_general.char "No!!! You can't be serious! *panic*"
+    enemy_general.char "不！！！你不是认真的吧！*惊慌*"
 
 # game/BKsecurity.rpy:1112
 translate chinese_simplified enemy_general_captured_16619f94:
 
     # you "Oh, but I am. Sill, take her to the blood slavers' galley. I never want to hear from that bitch again."
-    you "Oh, but I am. Sill, take her to the blood slavers' galley. I never want to hear from that bitch again."
+    you "哦，但我的确是。希尔，把她带到奴隶贩子的船坞去。我再也不想听到那个贱人的消息了。"
 
 # game/BKsecurity.rpy:1120
 translate chinese_simplified enemy_general_captured_07b66ad2:
 
     # you "I'll let you go with a warning: leave town, and never come back."
-    you "I'll let you go with a warning: leave town, and never come back."
+    you "我会放你走，但警告你：离开这座城市，永远不要回来。"
 
 # game/BKsecurity.rpy:1124
 translate chinese_simplified enemy_general_captured_0ef42837:
 
     # enemy_general.char "You... Really? Can I go?"
-    enemy_general.char "You... Really? Can I go?"
+    enemy_general.char "你……真的吗？我可以走吗？"
 
 # game/BKsecurity.rpy:1126
 translate chinese_simplified enemy_general_captured_6f7bc476:
 
     # you "Yes, if you promise not to cause more trouble."
-    you "Yes, if you promise not to cause more trouble."
+    you "是的，如果你保证不再惹麻烦的话。"
 
 # game/BKsecurity.rpy:1128
 translate chinese_simplified enemy_general_captured_64d9bf4f:
 
     # enemy_general.char "Very well, then, you have my word. I will leave Zan."
-    enemy_general.char "Very well, then, you have my word. I will leave Zan."
+    enemy_general.char "好吧，我保证。我会离开赞恩。"
 
 # game/BKsecurity.rpy:1683
 translate chinese_simplified kidnap_tip_0b240c9e:
 
     # man "Psst, Captain!"
-    man "Psst, Captain!"
+    man "嘘，船长！"
 
 # game/BKsecurity.rpy:1685
 translate chinese_simplified kidnap_tip_0b778190:
@@ -832,13 +832,13 @@ translate chinese_simplified kidnap_tip_0b778190:
 translate chinese_simplified kidnap_tip_4671fbd2:
 
     # you "Sorry mate, I'm not recruiting... Not the likes of you, anyway."
-    you "Sorry mate, I'm not recruiting... Not the likes of you, anyway."
+    you "抱歉兄弟，我不招人……至少不招你这种人。"
 
 # game/BKsecurity.rpy:1689
 translate chinese_simplified kidnap_tip_4db04105:
 
     # man "Arr, but ye'll be sorry if ye don't listen. Remember sweet little [girl.fullname]?"
-    man "Arr, but ye'll be sorry if ye don't listen. Remember sweet little [girl.fullname]?"
+    man "哎呀，你们要是不听话，可就后悔了。还记得可爱的小[女孩全名]吗？"
 
 # game/BKsecurity.rpy:1691
 translate chinese_simplified kidnap_tip_f4fadbf1:
@@ -850,31 +850,31 @@ translate chinese_simplified kidnap_tip_f4fadbf1:
 translate chinese_simplified kidnap_tip_89c009f7:
 
     # man "Hey, no need to give me {i}that{/i} look. I ain't with the fellas that took her."
-    man "Hey, no need to give me {i}that{/i} look. I ain't with the fellas that took her."
+    man "嘿，别用那种眼神看我。我跟那些把她带走的人没关系。"
 
 # game/BKsecurity.rpy:1695
 translate chinese_simplified kidnap_tip_9c6e503b:
 
     # you "Good for you... Speak then, if you know something."
-    you "Good for you... Speak then, if you know something."
+    you "真不错……如果你知道些什么，就说出来吧。"
 
 # game/BKsecurity.rpy:1697
 translate chinese_simplified kidnap_tip_b311a25b:
 
     # man "I will, I will, but there's this terrible thirst in my throat... Plus this small coin I owe the red sea pirates, a trifle really, but they's pretty pissed about it..."
-    man "I will, I will, but there's this terrible thirst in my throat... Plus this small coin I owe the red sea pirates, a trifle really, but they's pretty pissed about it..."
+    man "我会的，我会的，可是我的喉咙渴得厉害……还有，我还欠红海海盗一小笔钱，真的只是小钱，但他们对此很生气……"
 
 # game/BKsecurity.rpy:1699
 translate chinese_simplified kidnap_tip_fa9b38dc:
 
     # you "*sigh* How much?"
-    you "*sigh* How much?"
+    you "唉，多少钱？"
 
 # game/BKsecurity.rpy:1701
 translate chinese_simplified kidnap_tip_24238d43:
 
     # man "Well, we's talking about a rank [rk] chick here... Let's say [price] denars. A bargain for such information."
-    man "Well, we's talking about a rank [rk] chick here... Let's say [price] denars. A bargain for such information."
+    man "嗯，我们说的可是个名不见经传的小妞儿……就说价格是第纳尔吧。这种信息真是物超所值。"
 
 # game/BKsecurity.rpy:1703
 translate chinese_simplified kidnap_tip_11fdb519:
@@ -892,25 +892,25 @@ translate chinese_simplified kidnap_tip_4643fa54:
 translate chinese_simplified kidnap_tip_93086ceb:
 
     # you "I don't have the coin right now. Stay put."
-    you "I don't have the coin right now. Stay put."
+    you "我现在没带硬币。待在原地。"
 
 # game/BKsecurity.rpy:1715
 translate chinese_simplified kidnap_tip_67de6d2d:
 
     # man "Well... You know where to find me."
-    man "Well... You know where to find me."
+    man "嗯……你知道在哪里可以找到我。"
 
 # game/BKsecurity.rpy:1720
 translate chinese_simplified kidnap_tip_d9494cbc:
 
     # man "Well, I wouldn't count on that... Have it your way, friend."
-    man "Well, I wouldn't count on that... Have it your way, friend."
+    man "嗯，我可不敢保证……随你便吧，朋友。"
 
 # game/BKsecurity.rpy:1730
 translate chinese_simplified kidnap_tip_f7939efc:
 
     # man "I have information about [girl.fullname] for [price] gold. Interested?"
-    man "I have information about [girl.fullname] for [price] gold. Interested?"
+    man "我这里有关于[girl.fullname]的信息，价格是[price]黄金。有兴趣吗？"
 
 # game/BKsecurity.rpy:1732
 translate chinese_simplified kidnap_tip_11fdb519_1:
@@ -928,31 +928,31 @@ translate chinese_simplified kidnap_tip_4643fa54_1:
 translate chinese_simplified kidnap_tip_93086ceb_1:
 
     # you "I don't have the coin right now. Stay put."
-    you "I don't have the coin right now. Stay put."
+    you "我现在没带硬币。待在原地。"
 
 # game/BKsecurity.rpy:1745
 translate chinese_simplified kidnap_tip_67de6d2d_1:
 
     # man "Well... You know where to find me."
-    man "Well... You know where to find me."
+    man "嗯……你知道在哪里可以找到我。"
 
 # game/BKsecurity.rpy:1750
 translate chinese_simplified kidnap_tip_d9494cbc_1:
 
     # man "Well, I wouldn't count on that... Have it your way, friend."
-    man "Well, I wouldn't count on that... Have it your way, friend."
+    man "嗯，我可不敢保证……随你便吧，朋友。"
 
 # game/BKsecurity.rpy:1758
 translate chinese_simplified kidnap_tip_cd15ccdf:
 
     # man "Thank you, kind sir!"
-    man "Thank you, kind sir!"
+    man "谢谢您，好心的先生！"
 
 # game/BKsecurity.rpy:1760
 translate chinese_simplified kidnap_tip_4afd0488:
 
     # man "Right then. [girl.name] was captured by [girl.kidnapper]. I know where their lair is..."
-    man "Right then. [girl.name] was captured by [girl.kidnapper]. I know where their lair is..."
+    man "没错。[girl.name]被[girl.kidnapper]抓走了。我知道他们的老巢在哪儿……"
 
 # game/BKsecurity.rpy:1767
 translate chinese_simplified kidnap_tip_7423ebaa:
@@ -1024,7 +1024,7 @@ translate chinese_simplified kidnap_rescue_82ab3d83:
 translate chinese_simplified kidnap_rescue_90ddb2bf:
 
     # "Ogre" "Duh?"
-    "Ogre" "Duh?"
+    "Ogre" "呃？"
 
 # game/BKsecurity.rpy:1873
 translate chinese_simplified kidnap_rescue_3057cbf5:
@@ -1036,7 +1036,7 @@ translate chinese_simplified kidnap_rescue_3057cbf5:
 translate chinese_simplified kidnap_rescue_2577cb10:
 
     # "Monster" "Grrr..."
-    "Monster" "Grrr..."
+    "Monster" "啊啊啊……"
 
 # game/BKsecurity.rpy:1885
 translate chinese_simplified kidnap_rescue_37a4cbde:
@@ -1048,7 +1048,7 @@ translate chinese_simplified kidnap_rescue_37a4cbde:
 translate chinese_simplified kidnap_rescue_5414534b:
 
     # man "What?!?"
-    man "What?!?"
+    man "什么？！？"
 
 # game/BKsecurity.rpy:1895
 translate chinese_simplified kidnap_rescue_3b0d7b3a:
@@ -1072,13 +1072,13 @@ translate chinese_simplified kidnap_rescue_84d8f40d:
 translate chinese_simplified kidnap_rescue_608c23f3:
 
     # you "Booh."
-    you "Booh."
+    you "呸。"
 
 # game/BKsecurity.rpy:1913
 translate chinese_simplified kidnap_rescue_e0fc9b8b:
 
     # "Ogre" "Uh?"
-    "Ogre" "Uh?"
+    "Ogre" "嗯？"
 
 # game/BKsecurity.rpy:1920
 translate chinese_simplified kidnap_rescue_13a83ec7:
@@ -1090,7 +1090,7 @@ translate chinese_simplified kidnap_rescue_13a83ec7:
 translate chinese_simplified kidnap_rescue_d949bfa6:
 
     # "Monster" "Rrrh!!!"
-    "Monster" "Rrrh!!!"
+    "Monster" "啊！！！"
 
 # game/BKsecurity.rpy:1930
 translate chinese_simplified kidnap_rescue_c43cbf0e:
@@ -1102,7 +1102,7 @@ translate chinese_simplified kidnap_rescue_c43cbf0e:
 translate chinese_simplified kidnap_rescue_88142c53:
 
     # man "*whistle* Uh?"
-    man "*whistle* Uh?"
+    man "*吹口哨* 嗯？"
 
 # game/BKsecurity.rpy:1940
 translate chinese_simplified kidnap_rescue_ee6958e7:
@@ -1150,7 +1150,7 @@ translate chinese_simplified kidnap_rescue_37d3058f:
 translate chinese_simplified kidnap_rescue_6d81a86f:
 
     # girl.char "Master [MC.name]! It's you!!!"
-    girl.char "Master [MC.name]! It's you!!!"
+    girl.char "[MC.name] 主人！是你啊！！！"
 
 # game/BKsecurity.rpy:1977
 translate chinese_simplified kidnap_rescue_cc0732b4:
@@ -1162,7 +1162,7 @@ translate chinese_simplified kidnap_rescue_cc0732b4:
 translate chinese_simplified kidnap_rescue_b276b909:
 
     # girl.char "Oh, Master... Thank you, thank you..."
-    girl.char "Oh, Master... Thank you, thank you..."
+    girl.char "哦，师父……谢谢，谢谢……"
 
 # game/BKsecurity.rpy:1984
 translate chinese_simplified kidnap_rescue_81867aeb:
@@ -1192,13 +1192,13 @@ translate chinese_simplified kidnap_rescue_866a79ae:
 translate chinese_simplified kidnap_rescue_c3e4feb2:
 
     # you "I shall free you now. You have been through a lot."
-    you "I shall free you now. You have been through a lot."
+    you "现在我放了你。你经历了太多苦难。"
 
 # game/BKsecurity.rpy:2027
 translate chinese_simplified kidnap_rescue_e0fd2bd0:
 
     # girl.char "Really? Oh, Master!!!"
-    girl.char "Really? Oh, Master!!!"
+    girl.char "真的吗？哦，主人！！！"
 
 # game/BKsecurity.rpy:2029
 translate chinese_simplified kidnap_rescue_e964c4d3:
@@ -1234,13 +1234,13 @@ translate chinese_simplified girl_come_back_94285fc8:
 translate chinese_simplified girl_come_back_c3e4feb2:
 
     # you "I shall free you now. You have been through a lot."
-    you "I shall free you now. You have been through a lot."
+    you "现在我放了你。你经历了太多苦难。"
 
 # game/BKsecurity.rpy:2080
 translate chinese_simplified girl_come_back_e0fd2bd0:
 
     # girl.char "Really? Oh, Master!!!"
-    girl.char "Really? Oh, Master!!!"
+    girl.char "真的吗？哦，主人！！！"
 
 # game/BKsecurity.rpy:2082
 translate chinese_simplified girl_come_back_e964c4d3:

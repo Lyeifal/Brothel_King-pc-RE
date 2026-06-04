@@ -10,7 +10,7 @@ translate chinese_simplified jobgirl_beach_1_5c25899c:
 translate chinese_simplified jobgirl_beach_1_3d14c82c:
 
     # you "It's a perfect day to go for a swim... I could go to the beach, watch girls in their hot swimsuits..."
-    you "It's a perfect day to go for a swim... I could go to the beach, watch girls in their hot swimsuits..."
+    you "今天真是个游泳的好日子……我可以去海滩，看看穿着性感泳衣的女孩们……"
 
 # game/kite_jobgirl 2_beach.rpy:29
 translate chinese_simplified jobgirl_beach_1_668ea459:
@@ -22,7 +22,7 @@ translate chinese_simplified jobgirl_beach_1_668ea459:
 translate chinese_simplified jobgirl_beach_1_9eebc757:
 
     # you "Sill! Come over here!"
-    you "Sill! Come over here!"
+    you "希尔！过来！"
 
 # game/kite_jobgirl 2_beach.rpy:41
 translate chinese_simplified jobgirl_beach_1_008557ff:
@@ -34,13 +34,13 @@ translate chinese_simplified jobgirl_beach_1_008557ff:
 translate chinese_simplified jobgirl_beach_1_d75d39bc:
 
     # you "Get your lazy ass in here. You remember that task I had for you? Follow that adventurer chick and find out where she goes swimming?"
-    you "Get your lazy ass in here. You remember that task I had for you? Follow that adventurer chick and find out where she goes swimming?"
+    you "你这懒鬼，给我过来。你还记得我交给你的任务吗？跟着那个爱冒险的妞，找到她去游泳的地方？"
 
 # game/kite_jobgirl 2_beach.rpy:45
 translate chinese_simplified jobgirl_beach_1_b33464e5:
 
     # sill "Uhm, yes, I remember..."
-    sill "Uhm, yes, I remember..."
+    sill "嗯，是的，我记得……"
 
 # game/kite_jobgirl 2_beach.rpy:47
 translate chinese_simplified jobgirl_beach_1_527bea44:
@@ -52,43 +52,43 @@ translate chinese_simplified jobgirl_beach_1_527bea44:
 translate chinese_simplified jobgirl_beach_1_9735274c:
 
     # you "Show me on the map, I better double check... It's for my, uh, volunteer lifeguard exam! Of course! Haha, haha, haha..."
-    you "Show me on the map, I better double check... It's for my, uh, volunteer lifeguard exam! Of course! Haha, haha, haha..."
+    you "给我看看地图，我最好再确认一下……这是为了我的，呃，志愿救生员考试！当然啦！哈哈哈哈……"
 
 # game/kite_jobgirl 2_beach.rpy:51
 translate chinese_simplified jobgirl_beach_1_9e036067:
 
     # sill "Really, uh... Well, it was around here. Is that all, Master?"
-    sill "Really, uh... Well, it was around here. Is that all, Master?"
+    sill "真的吗？呃……嗯，就在这附近。就这些吗，主人？"
 
 # game/kite_jobgirl 2_beach.rpy:53
 translate chinese_simplified jobgirl_beach_1_e4769af2:
 
     # you "Wait! Ahem... Can you describe what she was wearing?"
-    you "Wait! Ahem... Can you describe what she was wearing?"
+    you "等等！咳……你能描述一下她当时穿的衣服吗？"
 
 # game/kite_jobgirl 2_beach.rpy:55
 translate chinese_simplified jobgirl_beach_1_316533b9:
 
     # sill "What? How is that relevant to the lifeguard exam???"
-    sill "What? How is that relevant to the lifeguard exam???"
+    sill "什么？这跟救生员考试有什么关系？？？"
 
 # game/kite_jobgirl 2_beach.rpy:57
 translate chinese_simplified jobgirl_beach_1_1cb8d75e:
 
     # you "Well, uh, I have to, you know..."
-    you "Well, uh, I have to, you know..."
+    you "嗯，我不得不这么做，你知道……"
 
 # game/kite_jobgirl 2_beach.rpy:59
 translate chinese_simplified jobgirl_beach_1_5fd05a9b:
 
     # you "I must make sure she doesn't expose herself too much to the sun! She could get sunburns, and, uh, cancer, and you know... Sun sickness! Lifeguards have to care about those things!"
-    you "I must make sure she doesn't expose herself too much to the sun! She could get sunburns, and, uh, cancer, and you know... Sun sickness! Lifeguards have to care about those things!"
+    you "我必须确保她不要过度日晒！她可能会晒伤，呃，还有，你知道的……晒伤！救生员必须注意这些问题！"
 
 # game/kite_jobgirl 2_beach.rpy:61
 translate chinese_simplified jobgirl_beach_1_472c9bf5:
 
     # sill "Oh..."
-    sill "Oh..."
+    sill "哦..."
 
 # game/kite_jobgirl 2_beach.rpy:63
 translate chinese_simplified jobgirl_beach_1_1b78ddc6:
@@ -100,19 +100,19 @@ translate chinese_simplified jobgirl_beach_1_1b78ddc6:
 translate chinese_simplified jobgirl_beach_1_a577ad0e:
 
     # you "What?"
-    you "What?"
+    you "什么？"
 
 # game/kite_jobgirl 2_beach.rpy:67
 translate chinese_simplified jobgirl_beach_1_7ba222e9:
 
     # sill "She's wearing very little! There's barely any fabric to protect her! Her skin is totally exposed... Her bikini is so tight that..."
-    sill "She's wearing very little! There's barely any fabric to protect her! Her skin is totally exposed... Her bikini is so tight that..."
+    sill "她穿得很少！几乎没有布料遮挡！她的皮肤完全裸露着……她的比基尼紧得……"
 
 # game/kite_jobgirl 2_beach.rpy:69
 translate chinese_simplified jobgirl_beach_1_bfd08253:
 
     # you "By the gods! This is terrible! I have to intervene right away!!!"
-    you "By the gods! This is terrible! I have to intervene right away!!!"
+    you "我的天哪！这太糟糕了！我必须马上介入！！！"
 
 # game/kite_jobgirl 2_beach.rpy:73
 translate chinese_simplified jobgirl_beach_1_af8155b7:
@@ -124,7 +124,7 @@ translate chinese_simplified jobgirl_beach_1_af8155b7:
 translate chinese_simplified jobgirl_beach_1_1be08bd5:
 
     # sill "He forgot his breakfast..."
-    sill "He forgot his breakfast..."
+    sill "他忘了吃早餐……"
 
 # game/kite_jobgirl 2_beach.rpy:79
 translate chinese_simplified jobgirl_beach_1_aa594212:
@@ -136,7 +136,7 @@ translate chinese_simplified jobgirl_beach_1_aa594212:
 translate chinese_simplified jobgirl_beach_1_ba73d4ce:
 
     # sill "He's quite the model citizen! *smile*"
-    sill "He's quite the model citizen! *smile*"
+    sill "他真是个模范公民！*微笑*"
 
 # game/kite_jobgirl 2_beach.rpy:83
 translate chinese_simplified jobgirl_beach_1_58ccc8f3:
@@ -154,19 +154,19 @@ translate chinese_simplified jobgirl_beach_2_c8a0fc9a:
 translate chinese_simplified jobgirl_beach_2_09323470:
 
     # you "(A bit crazy and obviously not a genius, but damn she's smoking hot! Her cleavage and buttocks almost gave me nosebleeds last time!)"
-    you "(A bit crazy and obviously not a genius, but damn she's smoking hot! Her cleavage and buttocks almost gave me nosebleeds last time!)"
+    you "（有点疯疯癫癫的，显然也不是天才，但她真是性感火辣！上次她的乳沟和臀部差点让我流鼻血！）"
 
 # game/kite_jobgirl 2_beach.rpy:128
 translate chinese_simplified jobgirl_beach_2_c5ed5cbf:
 
     # you "(Now, I'm going to surprise her at the beach. She's wearing a skimpy bikini...)"
-    you "(Now, I'm going to surprise her at the beach. She's wearing a skimpy bikini...)"
+    you "（现在，我要去海滩给她一个惊喜。她穿着一套性感比基尼……）"
 
 # game/kite_jobgirl 2_beach.rpy:130
 translate chinese_simplified jobgirl_beach_2_b8a37839:
 
     # you "(Oops, here comes the nosebleed again!)"
-    you "(Oops, here comes the nosebleed again!)"
+    you "（哎呀，又流鼻血了！）"
 
 # game/kite_jobgirl 2_beach.rpy:132
 translate chinese_simplified jobgirl_beach_2_b1993080:
@@ -184,13 +184,13 @@ translate chinese_simplified jobgirl_beach_2_715bc24e:
 translate chinese_simplified jobgirl_beach_2_fd46cb7f:
 
     # you "(There she is... Oh, gods...)"
-    you "(There she is... Oh, gods...)"
+    you "（她在那儿……我的天哪……）"
 
 # game/kite_jobgirl 2_beach.rpy:142
 translate chinese_simplified jobgirl_beach_2_f4617725:
 
     # you "(This is definitely my lucky day!)"
-    you "(This is definitely my lucky day!)"
+    you "（这绝对是我走运的一天！）"
 
 # game/kite_jobgirl 2_beach.rpy:144
 translate chinese_simplified jobgirl_beach_2_6024f7de:
@@ -208,13 +208,13 @@ translate chinese_simplified jobgirl_beach_2_384b5b4c:
 translate chinese_simplified jobgirl_beach_2_21728aa7:
 
     # you "(Based on what Sill told me, the two girls often come here together. It will be difficult to spend some time alone with her.)"
-    you "(Based on what Sill told me, the two girls often come here together. It will be difficult to spend some time alone with her.)"
+    you "（根据希尔告诉我的情况，这两个女孩经常一起来这里。很难有机会和她单独相处。）"
 
 # game/kite_jobgirl 2_beach.rpy:150
 translate chinese_simplified jobgirl_beach_2_aa707485:
 
     # you "(Nevermind, just seeing her in a bikini makes the trip worth the effort.)"
-    you "(Nevermind, just seeing her in a bikini makes the trip worth the effort.)"
+    you "（算了，光是看她穿比基尼就值回票价了。）"
 
 # game/kite_jobgirl 2_beach.rpy:152
 translate chinese_simplified jobgirl_beach_2_672893ba:
@@ -226,37 +226,37 @@ translate chinese_simplified jobgirl_beach_2_672893ba:
 translate chinese_simplified jobgirl_beach_2_1dfd57dd:
 
     # jobgirl "Hey there! [MC.name]! My favourite soft-hearted pimp who helps damsels in distress! *wink*"
-    jobgirl "Hey there! [MC.name]! My favourite soft-hearted pimp who helps damsels in distress! *wink*"
+    jobgirl "嘿！[MC.name]！我最爱的那个心软的皮条客，专门帮助落难少女！😉"
 
 # game/kite_jobgirl 2_beach.rpy:161
 translate chinese_simplified jobgirl_beach_2_dbbe3256:
 
     # you "Hey! You shouldn't say what I do for a living so loudly, you know? People around may get embarrassed."
-    you "Hey! You shouldn't say what I do for a living so loudly, you know? People around may get embarrassed."
+    you "嘿！你不应该这么大声地说出我的职业，你知道吗？周围的人可能会觉得尴尬。"
 
 # game/kite_jobgirl 2_beach.rpy:163
 translate chinese_simplified jobgirl_beach_2_4619bce3:
 
     # jobgirl "Oh, really? I don't care. Half the girls on this beach are sluts, only they don't have the sense to get paid for it..."
-    jobgirl "Oh, really? I don't care. Half the girls on this beach are sluts, only they don't have the sense to get paid for it..."
+    jobgirl "哦，真的吗？我不在乎。这沙滩上一半的女孩都是荡妇，只是她们没脑子去挣钱……"
 
 # game/kite_jobgirl 2_beach.rpy:164
 translate chinese_simplified jobgirl_beach_2_914cbfa1:
 
     # jobgirl "What brings you here by the way? It's quite a coincidence..."
-    jobgirl "What brings you here by the way? It's quite a coincidence..."
+    jobgirl "对了，您来这里做什么呢？真是巧合……"
 
 # game/kite_jobgirl 2_beach.rpy:166
 translate chinese_simplified jobgirl_beach_2_2ee19163:
 
     # you "Smart girl. You know the answer, I've told you last time: you drive me crazy. No reason to hide it."
-    you "Smart girl. You know the answer, I've told you last time: you drive me crazy. No reason to hide it."
+    you "你这聪明的女孩。你知道答案，上次我就跟你说过：你快把我逼疯了。没必要隐瞒。"
 
 # game/kite_jobgirl 2_beach.rpy:168
 translate chinese_simplified jobgirl_beach_2_6312bad6:
 
     # jobgirl "Ew! A stalker? Still, I'm flattered, I guess. But now..."
-    jobgirl "Ew! A stalker? Still, I'm flattered, I guess. But now..."
+    jobgirl "呃！跟踪狂？不过，我还是挺受宠若惊的。但是现在……"
 
 # game/kite_jobgirl 2_beach.rpy:170
 translate chinese_simplified jobgirl_beach_2_9f140641:
@@ -268,25 +268,25 @@ translate chinese_simplified jobgirl_beach_2_9f140641:
 translate chinese_simplified jobgirl_beach_2_6076fbef:
 
     # jobgirl "Let me introduce you to my dear friend Anika. Anika, this is [MC.name], the one and only. *winks at you*"
-    jobgirl "Let me introduce you to my dear friend Anika. Anika, this is [MC.name], the one and only. *winks at you*"
+    jobgirl "让我来介绍一下我的好朋友阿妮卡。阿妮卡，这位是[MC.name]，独一无二的你。*眨眼*"
 
 # game/kite_jobgirl 2_beach.rpy:178
 translate chinese_simplified jobgirl_beach_2_8450528e:
 
     # anika "Nice to meet you [MC.name], I was looking forward to see you in person, after all I've heard about you. *malicious smile*"
-    anika "Nice to meet you [MC.name], I was looking forward to see you in person, after all I've heard about you. *malicious smile*"
+    anika "很高兴见到你[MC.name]，我一直很期待见到你本人，毕竟我听过很多关于你的事。*邪恶的微笑*"
 
 # game/kite_jobgirl 2_beach.rpy:180
 translate chinese_simplified jobgirl_beach_2_d4603072:
 
     # you "Really? I hope you only heard good stuff..."
-    you "Really? I hope you only heard good stuff..."
+    you "真的吗？希望你听到的都是好消息……"
 
 # game/kite_jobgirl 2_beach.rpy:182
 translate chinese_simplified jobgirl_beach_2_2b6d4bd1:
 
     # anika "Yeah yeah, she wouldn't stop going on about you. How you're really smart and helpful, solved that ancient riddle in no time, and so on."
-    anika "Yeah yeah, she wouldn't stop going on about you. How you're really smart and helpful, solved that ancient riddle in no time, and so on."
+    anika "是啊是啊，她一直念叨着你。说你多么聪明，多么乐于助人，很快就解开了那个古老的谜题，等等等等。"
 
 # game/kite_jobgirl 2_beach.rpy:184
 translate chinese_simplified jobgirl_beach_2_0da2b9fc:
@@ -298,61 +298,61 @@ translate chinese_simplified jobgirl_beach_2_0da2b9fc:
 translate chinese_simplified jobgirl_beach_2_3a6c996e:
 
     # you "That's... Good to know. Say, I wanted to ask you something: our friend here didn't tell me her true name yet, so I was wondering if you could solve {i}that{/i} riddle for me."
-    you "That's... Good to know. Say, I wanted to ask you something: our friend here didn't tell me her true name yet, so I was wondering if you could solve {i}that{/i} riddle for me."
+    you "那……真是个好消息。对了，我想问你件事：我们这位朋友还没告诉我她的真名，所以我想请你帮我解开这个谜题。"
 
 # game/kite_jobgirl 2_beach.rpy:188
 translate chinese_simplified jobgirl_beach_2_e85a5884:
 
     # anika "Her true name? Oh oh, I see, she didn't tell you, and I can guess why..."
-    anika "Her true name? Oh oh, I see, she didn't tell you, and I can guess why..."
+    anika "她的真名？哦哦，我明白了，她没告诉你，我大概能猜到为什么……"
 
 # game/kite_jobgirl 2_beach.rpy:190
 translate chinese_simplified jobgirl_beach_2_53a3a2f5:
 
     # anika "Sorry [MC.name], but you have to wait until she is ready to tell you. That, or you can try and guess... Good luck with that."
-    anika "Sorry [MC.name], but you have to wait until she is ready to tell you. That, or you can try and guess... Good luck with that."
+    anika "抱歉，[MC.name]，你得等她准备好告诉你。或者，你也可以试着猜猜……祝你好运。"
 
 # game/kite_jobgirl 2_beach.rpy:192
 translate chinese_simplified jobgirl_beach_2_9e8813ed:
 
     # jobgirl "I won't tell you! Bleeeee! *makes a face*"
-    jobgirl "I won't tell you! Bleeeee! *makes a face*"
+    jobgirl "我不会告诉你的！呸！*做鬼脸*"
 
 # game/kite_jobgirl 2_beach.rpy:194
 translate chinese_simplified jobgirl_beach_2_528299fd:
 
     # you "So, am I supposed to call you Scarlet all the time?"
-    you "So, am I supposed to call you Scarlet all the time?"
+    you "所以，我应该一直叫你斯嘉丽吗？"
 
 # game/kite_jobgirl 2_beach.rpy:196
 translate chinese_simplified jobgirl_beach_2_b1ad2376:
 
     # jobgirl "Sure thing! We spoke about it before, right? Why are you insisting?"
-    jobgirl "Sure thing! We spoke about it before, right? Why are you insisting?"
+    jobgirl "当然可以！我们之前不是谈过这件事吗？你为什么这么坚持？"
 
 # game/kite_jobgirl 2_beach.rpy:198
 translate chinese_simplified jobgirl_beach_2_2292f6fe:
 
     # you "Well, because that's not your true name, it's just... how do I call it, an art name..."
-    you "Well, because that's not your true name, it's just... how do I call it, an art name..."
+    you "嗯，因为那不是你的真名，那只是……该怎么说呢，一个艺名……"
 
 # game/kite_jobgirl 2_beach.rpy:200
 translate chinese_simplified jobgirl_beach_2_0e43011a:
 
     # jobgirl "One day, perhaps, if we get more acquainted. Don't press it, ok?"
-    jobgirl "One day, perhaps, if we get more acquainted. Don't press it, ok?"
+    jobgirl "或许有一天，如果我们更熟悉一些的话。别逼我，好吗？"
 
 # game/kite_jobgirl 2_beach.rpy:202
 translate chinese_simplified jobgirl_beach_2_d60cbdde:
 
     # you "Fine, I won't bother you anymore with it. So be it, I'm going to call you Scarlet all the time."
-    you "Fine, I won't bother you anymore with it. So be it, I'm going to call you Scarlet all the time."
+    you "好吧，我不再为这件事烦你了。就这样吧，我以后都叫你斯嘉丽。"
 
 # game/kite_jobgirl 2_beach.rpy:204
 translate chinese_simplified jobgirl_beach_2_ede4eeee:
 
     # jobgirl "Finally! *smile*"
-    jobgirl "Finally! *smile*"
+    jobgirl "终于！*微笑*"
 
 # game/kite_jobgirl 2_beach.rpy:206
 translate chinese_simplified jobgirl_beach_2_3602d3f3:
@@ -364,7 +364,7 @@ translate chinese_simplified jobgirl_beach_2_3602d3f3:
 translate chinese_simplified jobgirl_beach_2_dcfe4a5e:
 
     # jobgirl "Now time to take a swim! Let's gooooo!!"
-    jobgirl "Now time to take a swim! Let's gooooo!!"
+    jobgirl "现在该游泳啦！冲啊！！"
 
 # game/kite_jobgirl 2_beach.rpy:212
 translate chinese_simplified jobgirl_beach_2_16c6a3c9:
@@ -376,7 +376,7 @@ translate chinese_simplified jobgirl_beach_2_16c6a3c9:
 translate chinese_simplified jobgirl_beach_2_d6b345cd:
 
     # you "It's confirmed: she's really crazy... and hot."
-    you "It's confirmed: she's really crazy... and hot."
+    you "可以确定的是：她真的很疯狂……而且很性感。"
 
 # game/kite_jobgirl 2_beach.rpy:216
 translate chinese_simplified jobgirl_beach_2_9b44f4f3:
@@ -388,13 +388,13 @@ translate chinese_simplified jobgirl_beach_2_9b44f4f3:
 translate chinese_simplified jobgirl_beach_2_1b6c9bb9:
 
     # jobgirl "Yeeeeh! The water is great! Take this, Anika! *Splashes water*"
-    jobgirl "Yeeeeh! The water is great! Take this, Anika! *Splashes water*"
+    jobgirl "耶！这水真棒！安妮卡，接招！*泼水*"
 
 # game/kite_jobgirl 2_beach.rpy:224
 translate chinese_simplified jobgirl_beach_2_97435acc:
 
     # anika "Heyyy, I wasn't ready for that! It's not fair!"
-    anika "Heyyy, I wasn't ready for that! It's not fair!"
+    anika "哎呀，我完全没料到！这不公平！"
 
 # game/kite_jobgirl 2_beach.rpy:226
 translate chinese_simplified jobgirl_beach_2_02c930f5:
@@ -424,7 +424,7 @@ translate chinese_simplified jobgirl_beach_2_edc1e1a3:
 translate chinese_simplified jobgirl_beach_2_aefff77e:
 
     # anika "Payback time! Here comes the tickling!"
-    anika "Payback time! Here comes the tickling!"
+    anika "报复时间到！挠痒痒开始了！"
 
 # game/kite_jobgirl 2_beach.rpy:233
 translate chinese_simplified jobgirl_beach_2_234633da:
@@ -436,7 +436,7 @@ translate chinese_simplified jobgirl_beach_2_234633da:
 translate chinese_simplified jobgirl_beach_2_5d6d132b:
 
     # you "*huge nosebleed*"
-    you "*huge nosebleed*"
+    you "*大量流鼻血*"
 
 # game/kite_jobgirl 2_beach.rpy:239
 translate chinese_simplified jobgirl_beach_2_c921b8d3:
@@ -460,25 +460,25 @@ translate chinese_simplified jobgirl_beach_3_b396cc55:
 translate chinese_simplified jobgirl_beach_3_22406422:
 
     # you "(Damn, after witnessing such a view, a man can die happy!)"
-    you "(Damn, after witnessing such a view, a man can die happy!)"
+    you "（天哪，见识过这样的景色，死而无憾！）"
 
 # game/kite_jobgirl 2_beach.rpy:262
 translate chinese_simplified jobgirl_beach_3_202a75fa:
 
     # you "(Better focus on something else, otherwise I'll need to 'relieve' myself in the bathroom)."
-    you "(Better focus on something else, otherwise I'll need to 'relieve' myself in the bathroom)."
+    you "（最好把注意力放在别的事情上，否则我得去洗手间“方便”一下。）"
 
 # game/kite_jobgirl 2_beach.rpy:268
 translate chinese_simplified jobgirl_beach_3_71c76854:
 
     # anika "Hey, you seem concerned about something. What could that be... *sarcastic look*"
-    anika "Hey, you seem concerned about something. What could that be... *sarcastic look*"
+    anika "嘿，你好像在担心什么。是什么事呢……（讽刺的表情）"
 
 # game/kite_jobgirl 2_beach.rpy:272
 translate chinese_simplified jobgirl_beach_3_4d92bc5c:
 
     # jobgirl "Worried? After all the fun we got today? I don't think so!"
-    jobgirl "Worried? After all the fun we got today? I don't think so!"
+    jobgirl "担心吗？今天玩得这么开心，我觉得你不会担心！"
 
 # game/kite_jobgirl 2_beach.rpy:274
 translate chinese_simplified jobgirl_beach_3_c0767fa7:
@@ -490,37 +490,37 @@ translate chinese_simplified jobgirl_beach_3_c0767fa7:
 translate chinese_simplified jobgirl_beach_3_28d90e5d:
 
     # you "Just some minor thoughts that business men have sometimes... Nothing to worry about... Do you girls want something to drink?"
-    you "Just some minor thoughts that business men have sometimes... Nothing to worry about... Do you girls want something to drink?"
+    you "只是商人偶尔会冒出的一些小想法……没什么好担心的……姑娘们想喝点什么吗？"
 
 # game/kite_jobgirl 2_beach.rpy:278
 translate chinese_simplified jobgirl_beach_3_1605b812:
 
     # anika "Why not? There is a small kiosk over there, the owner uses magic to keep beverages cool; I'd like to have a fruit cocktail, if you don't mind bringing me one, dear..."
-    anika "Why not? There is a small kiosk over there, the owner uses magic to keep beverages cool; I'd like to have a fruit cocktail, if you don't mind bringing me one, dear..."
+    anika "为什么不呢？那边有个小亭子，老板会用魔法让饮料保持冰爽；亲爱的，如果你不介意的话，我想来杯水果鸡尾酒……"
 
 # game/kite_jobgirl 2_beach.rpy:280
 translate chinese_simplified jobgirl_beach_3_1a580ac6:
 
     # jobgirl "Ani, are you okay? You shouldn't drink alcohol while sunbathing, it's dangerous..."
-    jobgirl "Ani, are you okay? You shouldn't drink alcohol while sunbathing, it's dangerous..."
+    jobgirl "阿妮，你还好吗？晒日光浴的时候不应该喝酒，很危险……"
 
 # game/kite_jobgirl 2_beach.rpy:282
 translate chinese_simplified jobgirl_beach_3_b1b5b408:
 
     # anika "Oh come on, let's celebrate a new friendship! Alcohol is mandatory for a toast! Try one and stop complaining! For your best friend, please..."
-    anika "Oh come on, let's celebrate a new friendship! Alcohol is mandatory for a toast! Try one and stop complaining! For your best friend, please..."
+    anika "哎呀，来吧，让我们庆祝一下这段新友谊！举杯庆祝，怎能少了酒？尝一口，别再抱怨了！为了你最好的朋友，请……"
 
 # game/kite_jobgirl 2_beach.rpy:284
 translate chinese_simplified jobgirl_beach_3_d2c0a56e:
 
     # jobgirl "*heh* Alright, I'll join you this time, but don't make it a habit."
-    jobgirl "*heh* Alright, I'll join you this time, but don't make it a habit."
+    jobgirl "*呵呵* 好吧，这次我就陪你们去，但别养成习惯。"
 
 # game/kite_jobgirl 2_beach.rpy:286
 translate chinese_simplified jobgirl_beach_3_0fb1bda5:
 
     # anika "Sure thing!"
-    anika "Sure thing!"
+    anika "当然可以！"
 
 # game/kite_jobgirl 2_beach.rpy:291
 translate chinese_simplified jobgirl_beach_3_58c4fbec:
@@ -538,7 +538,7 @@ translate chinese_simplified jobgirl_beach_3_f99524ad:
 translate chinese_simplified jobgirl_beach_3_72179799:
 
     # you "It's nice and fresh! Man, ice magic is really awesome..."
-    you "It's nice and fresh! Man, ice magic is really awesome..."
+    you "真好，好清新！哇，冰魔法真是太棒了……"
 
 # game/kite_jobgirl 2_beach.rpy:302
 translate chinese_simplified jobgirl_beach_3_a357db74:
@@ -574,7 +574,7 @@ translate chinese_simplified jobgirl_beach_3_dadac91e:
 translate chinese_simplified jobgirl_beach_3_187f7c67:
 
     # jobgirl "I believe there is always a good quest for everyone, the secret is to know which skills are required for which job and how good you are with such skills. Then it's only a matter of finding a match!"
-    jobgirl "I believe there is always a good quest for everyone, the secret is to know which skills are required for which job and how good you are with such skills. Then it's only a matter of finding a match!"
+    jobgirl "我相信每个人都能找到适合自己的工作，关键在于了解哪些技能适合哪些工作，以及你在这方面的技能水平如何。然后，剩下的就是找到与之匹配的工作了！"
 
 # game/kite_jobgirl 2_beach.rpy:326
 translate chinese_simplified jobgirl_beach_3_540cfe9d:
@@ -586,49 +586,49 @@ translate chinese_simplified jobgirl_beach_3_540cfe9d:
 translate chinese_simplified jobgirl_beach_3_72b8161f:
 
     # jobgirl "When will we come back, Anika?"
-    jobgirl "When will we come back, Anika?"
+    jobgirl "阿尼卡，我们什么时候回来？"
 
 # game/kite_jobgirl 2_beach.rpy:330
 translate chinese_simplified jobgirl_beach_3_9d95686c:
 
     # anika "Don't ask me, you're the one that has a job! I have plenty of free time."
-    anika "Don't ask me, you're the one that has a job! I have plenty of free time."
+    anika "别问我，你才是有工作的人！我有很多空闲时间。"
 
 # game/kite_jobgirl 2_beach.rpy:332
 translate chinese_simplified jobgirl_beach_3_b6505fa5:
 
     # you "Seriously Anika? If you don't have a job, how do you get money for going out? That swimsuit alone is designer-made, it looks expensive..."
-    you "Seriously Anika? If you don't have a job, how do you get money for going out? That swimsuit alone is designer-made, it looks expensive..."
+    you "认真的吗，阿尼卡？如果你没有工作，哪来的钱出去玩？光是那件泳衣就是名牌，看起来很贵……"
 
 # game/kite_jobgirl 2_beach.rpy:334
 translate chinese_simplified jobgirl_beach_3_c375d09d:
 
     # anika "Uhuhuh, I thought you could have figured that out by yourself, Mister genius.. There are a lot of handsome men trying to conquer my heart every day, giving me many expensive gifts just to go out with me."
-    anika "Uhuhuh, I thought you could have figured that out by yourself, Mister genius.. There are a lot of handsome men trying to conquer my heart every day, giving me many expensive gifts just to go out with me."
+    anika "呵呵，我还以为你自己就能想到呢，天才先生……每天都有很多帅哥试图俘获我的芳心，送我很多昂贵的礼物，只是为了和我出去约会。"
 
 # game/kite_jobgirl 2_beach.rpy:336
 translate chinese_simplified jobgirl_beach_3_d57a8bf3:
 
     # you "Uhm, I see... You're definitely a man-eater, poor souls..."
-    you "Uhm, I see... You're definitely a man-eater, poor souls..."
+    you "嗯，我明白了……你真是个吃人的家伙，可怜的家伙们……"
 
 # game/kite_jobgirl 2_beach.rpy:338
 translate chinese_simplified jobgirl_beach_3_25b01a82:
 
     # anika "Just kidding. I'm just really, really rich. Or rather, my family is."
-    anika "Just kidding. I'm just really, really rich. Or rather, my family is."
+    anika "开玩笑啦。我只是真的很有钱。或者更确切地说，是我家很有钱。"
 
 # game/kite_jobgirl 2_beach.rpy:340
 translate chinese_simplified jobgirl_beach_3_59e958cf:
 
     # jobgirl "Sure, sure, and you get lots of presents from boys... *laughs*"
-    jobgirl "Sure, sure, and you get lots of presents from boys... *laughs*"
+    jobgirl "当然，当然，你还会收到很多男生送的礼物……*笑*"
 
 # game/kite_jobgirl 2_beach.rpy:342
 translate chinese_simplified jobgirl_beach_3_090ef040:
 
     # anika "Hey,! As my best friend, you shouldn't badmouth me..."
-    anika "Hey,! As my best friend, you shouldn't badmouth me..."
+    anika "嘿！作为我最好的朋友，你不应该在背后说我坏话……"
 
 # game/kite_jobgirl 2_beach.rpy:344
 translate chinese_simplified jobgirl_beach_3_aa235491:
@@ -664,7 +664,7 @@ translate chinese_simplified jobgirl_beach_4_d3e5498d:
 translate chinese_simplified jobgirl_beach_4_eb1caf89:
 
     # you "(As a gentleman, I must honor a hot girl's invitation!)"
-    you "(As a gentleman, I must honor a hot girl's invitation!)"
+    you "（作为一名绅士，我必须接受美女的邀请！）"
 
 # game/kite_jobgirl 2_beach.rpy:373
 translate chinese_simplified jobgirl_beach_4_76676073:
@@ -682,13 +682,13 @@ translate chinese_simplified jobgirl_beach_4_cdf7da87:
 translate chinese_simplified jobgirl_beach_4_45e8c885:
 
     # you "Hello Anika, nice to see you. Where's Scarlet?"
-    you "Hello Anika, nice to see you. Where's Scarlet?"
+    you "你好，阿尼卡，很高兴见到你。斯嘉丽呢？"
 
 # game/kite_jobgirl 2_beach.rpy:383
 translate chinese_simplified jobgirl_beach_4_a5dd69f1:
 
     # anika "Mmmh, hi handsome, she's on an errand somewhere out of town, so I'm all alone today... or better say {i}we{/i} are..."
-    anika "Mmmh, hi handsome, she's on an errand somewhere out of town, so I'm all alone today... or better say {i}we{/i} are..."
+    anika "嗯，帅哥，她去外地办事了，所以今天只有我一个人……或者更确切地说，我们俩……"
 
 # game/kite_jobgirl 2_beach.rpy:385
 translate chinese_simplified jobgirl_beach_4_d3a1250d:
@@ -700,31 +700,31 @@ translate chinese_simplified jobgirl_beach_4_d3a1250d:
 translate chinese_simplified jobgirl_beach_4_7c832451:
 
     # anika "Let's see if I can get her out of your head for just a day."
-    anika "Let's see if I can get her out of your head for just a day."
+    anika "看看我能不能让你一天之内把她从脑海里赶走。"
 
 # game/kite_jobgirl 2_beach.rpy:389
 translate chinese_simplified jobgirl_beach_4_cf8f96b3:
 
     # you "Excuse me?"
-    you "Excuse me?"
+    you "打扰一下？"
 
 # game/kite_jobgirl 2_beach.rpy:391
 translate chinese_simplified jobgirl_beach_4_833f13eb:
 
     # anika "Now now, no need to hide it, you got a crush on her, like every man she encounters. Am I wrong?"
-    anika "Now now, no need to hide it, you got a crush on her, like every man she encounters. Am I wrong?"
+    anika "好了好了，不用隐瞒了，你喜欢她，就像她遇到的每个男人一样。我说错了吗？"
 
 # game/kite_jobgirl 2_beach.rpy:393
 translate chinese_simplified jobgirl_beach_4_e4d94b38:
 
     # you "Well, I must admit she's an interesting girl, one of a kind..."
-    you "Well, I must admit she's an interesting girl, one of a kind..."
+    you "嗯，我得承认她是个很有趣的女孩，独一无二……"
 
 # game/kite_jobgirl 2_beach.rpy:395
 translate chinese_simplified jobgirl_beach_4_c1e3bd60:
 
     # anika "Do you want to fuck her?"
-    anika "Do you want to fuck her?"
+    anika "你想和她做爱吗？"
 
 # game/kite_jobgirl 2_beach.rpy:397
 translate chinese_simplified jobgirl_beach_4_09f76194:
@@ -736,7 +736,7 @@ translate chinese_simplified jobgirl_beach_4_09f76194:
 translate chinese_simplified jobgirl_beach_4_57406f2d:
 
     # anika "My my, why are you so embarrassed? I thought that with your job, you'd be more open-minded. Who knows how many naughty things you could do with that girl..."
-    anika "My my, why are you so embarrassed? I thought that with your job, you'd be more open-minded. Who knows how many naughty things you could do with that girl..."
+    anika "哎呀，你干嘛这么害羞？我还以为你的工作会让你思想更开放呢。谁知道你会和那个女孩做多少出格的事……"
 
 # game/kite_jobgirl 2_beach.rpy:405
 translate chinese_simplified jobgirl_beach_4_ab05f6a3:
@@ -754,49 +754,49 @@ translate chinese_simplified jobgirl_beach_4_32643d34:
 translate chinese_simplified jobgirl_beach_4_8ad80c75:
 
     # you "Damn right I wanna fuck her, she's so hot! Are you going to help me or put a stick in my wheel?"
-    you "Damn right I wanna fuck her, she's so hot! Are you going to help me or put a stick in my wheel?"
+    you "我当然想上她，她太性感了！你是要帮我还是想给我找个麻烦？"
 
 # game/kite_jobgirl 2_beach.rpy:414
 translate chinese_simplified jobgirl_beach_4_3438fbb4:
 
     # you "I'm not so mean. I don't want to do what you said. Nor am I looking to do 'naughty things' right now. For now I just want to know her better."
-    you "I'm not so mean. I don't want to do what you said. Nor am I looking to do 'naughty things' right now. For now I just want to know her better."
+    you "我没那么坏。我不想按你说的做。我现在也不想做“坏事”。我现在只想更了解她。"
 
 # game/kite_jobgirl 2_beach.rpy:416
 translate chinese_simplified jobgirl_beach_4_75ee2bf8:
 
     # anika "Mmh, we'll see... come closer, I wanna show you something..."
-    anika "Mmh, we'll see... come closer, I wanna show you something..."
+    anika "嗯，我们走着瞧……过来，我想给你看样东西……"
 
 # game/kite_jobgirl 2_beach.rpy:424
 translate chinese_simplified jobgirl_beach_4_77459794:
 
     # anika "Do you like them? You can touch if you want..."
-    anika "Do you like them? You can touch if you want..."
+    anika "你喜欢它们吗？想摸的话可以摸摸……"
 
 # game/kite_jobgirl 2_beach.rpy:426
 translate chinese_simplified jobgirl_beach_4_89b1fdf8:
 
     # you "Damn Anika, if you act that way I can't guarantee I will stay a gentleman! As they say, don't mess with fire or you end up burnt!"
-    you "Damn Anika, if you act that way I can't guarantee I will stay a gentleman! As they say, don't mess with fire or you end up burnt!"
+    you "阿妮卡，你这样下去，我可不敢保证还能继续做个绅士！俗话说，玩火自焚！"
 
 # game/kite_jobgirl 2_beach.rpy:428
 translate chinese_simplified jobgirl_beach_4_63d34962:
 
     # anika "Actually I'm not afraid to be fucked by you. You're a decent guy, nice looking, and based on the size of your bulge, well equipped! *winks*"
-    anika "Actually I'm not afraid to be fucked by you. You're a decent guy, nice looking, and based on the size of your bulge, well equipped! *winks*"
+    anika "其实我不怕被你操。你人不错，长得也好看，而且看你那儿鼓鼓囊囊的，肯定很厉害！😉"
 
 # game/kite_jobgirl 2_beach.rpy:430
 translate chinese_simplified jobgirl_beach_4_6088243b:
 
     # you "No man can stand such a view without having an erection. I must admit you know how to play your cards Anika, but I want to know what are your intentions. Do you try to fuck any man who approaches Scarlet? Is it a sort of fidelity test?"
-    you "No man can stand such a view without having an erection. I must admit you know how to play your cards Anika, but I want to know what are your intentions. Do you try to fuck any man who approaches Scarlet? Is it a sort of fidelity test?"
+    you "没有哪个男人看到这种景象不会勃起。我得承认，阿尼卡，你很会玩弄感情，但我很想知道你的意图。你是不是想跟每个接近斯嘉丽的男人上床？这是某种忠诚度测试吗？"
 
 # game/kite_jobgirl 2_beach.rpy:434
 translate chinese_simplified jobgirl_beach_4_1ec6a1f3:
 
     # anika "*smiles* Oh boy, nothing like that! Your fantasy is really something! What a perverse bitch did you take me for? I just want to have sex with you, darling."
-    anika "*smiles* Oh boy, nothing like that! Your fantasy is really something! What a perverse bitch did you take me for? I just want to have sex with you, darling."
+    anika "*微笑* 哦，天哪，根本不是那样！你的幻想真是太离谱了！你把我当成什么变态的婊子了？我只是想和你做爱，亲爱的。"
 
 # game/kite_jobgirl 2_beach.rpy:440
 translate chinese_simplified jobgirl_beach_4_0bb5da97:
@@ -808,7 +808,7 @@ translate chinese_simplified jobgirl_beach_4_0bb5da97:
 translate chinese_simplified jobgirl_beach_4_ec330307:
 
     # anika "What are you waiting for? I bet you want to cum on my tits... I'm waiting..."
-    anika "What are you waiting for? I bet you want to cum on my tits... I'm waiting..."
+    anika "你还在等什么？我猜你想把精液射到我的乳房上……我等着呢……"
 
 # game/kite_jobgirl 2_beach.rpy:456
 translate chinese_simplified jobgirl_beach_4_5b046348:
@@ -826,25 +826,25 @@ translate chinese_simplified jobgirl_beach_4_0ebc0ddb:
 translate chinese_simplified jobgirl_beach_4_a8a70c4e:
 
     # you "Get ready, here it comes your 'cream beauty treatment'!"
-    you "Get ready, here it comes your 'cream beauty treatment'!"
+    you "准备好了吗？你的“乳霜美容护理”来了！"
 
 # game/kite_jobgirl 2_beach.rpy:471
 translate chinese_simplified jobgirl_beach_4_1312aefc:
 
     # anika "Mmmh, as I figured, your manhood is remarkable. It's a pity we have too much company, I would've gladly given it a taste..."
-    anika "Mmmh, as I figured, your manhood is remarkable. It's a pity we have too much company, I would've gladly given it a taste..."
+    anika "嗯，果然不出我所料，你的那方面确实很了不起。可惜人太多了，不然我肯定会好好尝尝的……"
 
 # game/kite_jobgirl 2_beach.rpy:473
 translate chinese_simplified jobgirl_beach_4_a2c5365c:
 
     # you "Well, you can still tell me how you would enjoy it in your mouth..."
-    you "Well, you can still tell me how you would enjoy it in your mouth..."
+    you "嗯，你还是可以告诉我你觉得它入口是什么滋味……"
 
 # game/kite_jobgirl 2_beach.rpy:475
 translate chinese_simplified jobgirl_beach_4_3260a7c0:
 
     # anika "Oh naughty boy, you want me to talk dirty, do you? I like it."
-    anika "Oh naughty boy, you want me to talk dirty, do you? I like it."
+    anika "哦，坏男孩，你想让我说些荤话，是吗？我喜欢。"
 
 # game/kite_jobgirl 2_beach.rpy:477
 translate chinese_simplified jobgirl_beach_4_07cdf5c5:
@@ -856,7 +856,7 @@ translate chinese_simplified jobgirl_beach_4_07cdf5c5:
 translate chinese_simplified jobgirl_beach_4_4eea914d:
 
     # anika "I would start licking the tip a little... my tongue would then feel its full length, slowly but firmly... up and down... up and down..."
-    anika "I would start licking the tip a little... my tongue would then feel its full length, slowly but firmly... up and down... up and down..."
+    anika "我会先轻轻舔一下尖端……然后我的舌头会慢慢地、但坚定地感受它的全长……上下……上下……"
 
 # game/kite_jobgirl 2_beach.rpy:483
 translate chinese_simplified jobgirl_beach_4_9cadf97a:
@@ -868,25 +868,25 @@ translate chinese_simplified jobgirl_beach_4_9cadf97a:
 translate chinese_simplified jobgirl_beach_4_289c8904:
 
     # anika "My lips would wrap around the tip very slowly, so much that you would beg me to swallow it at once, but I wouldn't listen to you. I would start sucking your glans, while my tongue was still tickling its tip."
-    anika "My lips would wrap around the tip very slowly, so much that you would beg me to swallow it at once, but I wouldn't listen to you. I would start sucking your glans, while my tongue was still tickling its tip."
+    anika "我的嘴唇会非常缓慢地包裹住你的龟头，你会求我立刻吞下去，但我不会听你的。我会开始吮吸你的龟头，同时我的舌尖还在轻柔地挑逗着它的顶端。"
 
 # game/kite_jobgirl 2_beach.rpy:487
 translate chinese_simplified jobgirl_beach_4_338b9a50:
 
     # you "Damn I wish I could try it for real some day, if you're half as good as I think you are..."
-    you "Damn I wish I could try it for real some day, if you're half as good as I think you are..."
+    you "真希望有一天我能真正尝试一下，如果你真有我想象中那么厉害的话……"
 
 # game/kite_jobgirl 2_beach.rpy:489
 translate chinese_simplified jobgirl_beach_4_0ac6a3a9:
 
     # anika "You can bet I am... and the best is yet to come! While sucking the glans, I would start feeling your cock inch by inch, every time swallowing a little more, until your whole length is inside me."
-    anika "You can bet I am... and the best is yet to come! While sucking the glans, I would start feeling your cock inch by inch, every time swallowing a little more, until your whole length is inside me."
+    anika "当然，我肯定会……而且最好的还在后头！我会一边吮吸龟头，一边一点一点地感受你的阴茎，每次都吞咽更多，直到你的整个阴茎都进入我的体内。"
 
 # game/kite_jobgirl 2_beach.rpy:491
 translate chinese_simplified jobgirl_beach_4_ab5ae628:
 
     # anika "At that point I would stop before you cum... You would ask me to continue, you'd be almost there... Then I would swallow it again, but this time straight into my throat, and you would use all your willpower to not cum too soon. You would feel in paradise..."
-    anika "At that point I would stop before you cum... You would ask me to continue, you'd be almost there... Then I would swallow it again, but this time straight into my throat, and you would use all your willpower to not cum too soon. You would feel in paradise..."
+    anika "那时我会在你射精前停下来……你会求我继续，你快要达到高潮了……然后我会再次吞咽，但这次直接吞到喉咙里，你会用尽全力克制自己不要太快射精。你会感觉自己身处天堂……"
 
 # game/kite_jobgirl 2_beach.rpy:493
 translate chinese_simplified jobgirl_beach_4_059ed46a:
@@ -898,13 +898,13 @@ translate chinese_simplified jobgirl_beach_4_059ed46a:
 translate chinese_simplified jobgirl_beach_4_3d0673d9:
 
     # you "Almost... there... cumming now... prepare yourself..."
-    you "Almost... there... cumming now... prepare yourself..."
+    you "快了……就要到了……准备好……"
 
 # game/kite_jobgirl 2_beach.rpy:497
 translate chinese_simplified jobgirl_beach_4_461b7b57:
 
     # anika "Yes, cover my breasts with your semen... aaah!!"
-    anika "Yes, cover my breasts with your semen... aaah!!"
+    anika "对，用你的精液涂满我的乳房……啊啊啊！！"
 
 # game/kite_jobgirl 2_beach.rpy:503
 translate chinese_simplified jobgirl_beach_4_d70654a4:
@@ -934,7 +934,7 @@ translate chinese_simplified jobgirl_beach_4_e5edcb65:
 translate chinese_simplified jobgirl_beach_4_cd31aed5:
 
     # anika "It's hot... mmmh... you too are hot, baby. Nice load."
-    anika "It's hot... mmmh... you too are hot, baby. Nice load."
+    anika "好热……嗯……你也很热，宝贝。好棒。"
 
 # game/kite_jobgirl 2_beach.rpy:515
 translate chinese_simplified jobgirl_beach_4_589daf60:
@@ -946,7 +946,7 @@ translate chinese_simplified jobgirl_beach_4_589daf60:
 translate chinese_simplified jobgirl_beach_4_e972644d:
 
     # anika "Thank you very much [MC.name], I enjoyed our little moment very much. Now I need a good shower. Feel free to join me... if you want more..."
-    anika "Thank you very much [MC.name], I enjoyed our little moment very much. Now I need a good shower. Feel free to join me... if you want more..."
+    anika "非常感谢[MC.name]，我很享受我们在一起的这段时光。现在我需要好好洗个澡。如果你还想的话，欢迎一起来……"
 
 # game/kite_jobgirl 2_beach.rpy:523
 translate chinese_simplified jobgirl_beach_4_c0d60bdf:
@@ -958,7 +958,7 @@ translate chinese_simplified jobgirl_beach_4_c0d60bdf:
 translate chinese_simplified jobgirl_beach_4_d246fb15:
 
     # you "I would follow that perfect ass everywhere! Hey wait for me!"
-    you "I would follow that perfect ass everywhere! Hey wait for me!"
+    you "我愿意追随那完美的臀部到处走！嘿，等等我！"
 
 # game/kite_jobgirl 2_beach.rpy:529
 translate chinese_simplified jobgirl_beach_4_e84d2074:
@@ -994,7 +994,7 @@ translate chinese_simplified jobgirl_beach_4_2e70ba12:
 translate chinese_simplified jobgirl_beach_4_2f71bae3:
 
     # anika "Mmhmaaah, aah, so rough... mmmh, like that! Yes! Ah! Ah! Mmmh..."
-    anika "Mmhmaaah, aah, so rough... mmmh, like that! Yes! Ah! Ah! Mmmh..."
+    anika "嗯……啊，好粗糙……嗯，就是这样！对！啊！啊！嗯……"
 
 # game/kite_jobgirl 2_beach.rpy:553
 translate chinese_simplified jobgirl_beach_4_43d05a7a:
@@ -1012,25 +1012,25 @@ translate chinese_simplified jobgirl_beach_4_f37e6ee0:
 translate chinese_simplified jobgirl_beach_4_785d0630:
 
     # anika "Aaah! Y-yes, there! Oh my gods! Mmmmhhh!"
-    anika "Aaah! Y-yes, there! Oh my gods! Mmmmhhh!"
+    anika "啊！对，就是那里！我的天哪！嗯……"
 
 # game/kite_jobgirl 2_beach.rpy:559
 translate chinese_simplified jobgirl_beach_4_cf15aad5:
 
     # you "You're squeezing my dick... urgh..."
-    you "You're squeezing my dick... urgh..."
+    you "你捏着我的鸡巴……呃……"
 
 # game/kite_jobgirl 2_beach.rpy:561
 translate chinese_simplified jobgirl_beach_4_175b17e1:
 
     # anika "I-I'm close... cumming... m-more! Gimme more! Ahn! Aahn!"
-    anika "I-I'm close... cumming... m-more! Gimme more! Ahn! Aahn!"
+    anika "我快要……高潮了……还要！再给我更多！啊！啊！"
 
 # game/kite_jobgirl 2_beach.rpy:565
 translate chinese_simplified jobgirl_beach_4_0f5dc5cd:
 
     # you "Get ready for something special then. Here we go!"
-    you "Get ready for something special then. Here we go!"
+    you "准备好迎接特别的时刻吧！开始！"
 
 # game/kite_jobgirl 2_beach.rpy:567
 translate chinese_simplified jobgirl_beach_4_5ea34c6c:
@@ -1078,31 +1078,31 @@ translate chinese_simplified jobgirl_beach_4_8c0c72cc:
 translate chinese_simplified jobgirl_beach_4_53087f6f:
 
     # anika "Aaaaahh... uhm... anf... uff... ah... I... came... s-so good..."
-    anika "Aaaaahh... uhm... anf... uff... ah... I... came... s-so good..."
+    anika "啊……嗯……啊……呼……啊……我……高潮了……好爽……"
 
 # game/kite_jobgirl 2_beach.rpy:593
 translate chinese_simplified jobgirl_beach_4_ab96a219:
 
     # you "Now it's my turn!"
-    you "Now it's my turn!"
+    you "现在轮到我了！"
 
 # game/kite_jobgirl 2_beach.rpy:598
 translate chinese_simplified jobgirl_beach_4_3716f7a6:
 
     # anika "Are you going to fill me with your semen?"
-    anika "Are you going to fill me with your semen?"
+    anika "你要把你的精液射进我体内吗？"
 
 # game/kite_jobgirl 2_beach.rpy:600
 translate chinese_simplified jobgirl_beach_4_20c93462:
 
     # you "Is it a problem for you?"
-    you "Is it a problem for you?"
+    you "这对你来说是个问题吗？"
 
 # game/kite_jobgirl 2_beach.rpy:602
 translate chinese_simplified jobgirl_beach_4_7fcf7ee3:
 
     # anika "Mmh not now, I should not be on my fertile period. Go on, I wanna feel how hot it is inside my little naughty pussy!"
-    anika "Mmh not now, I should not be on my fertile period. Go on, I wanna feel how hot it is inside my little naughty pussy!"
+    anika "嗯，现在不行，我还没到排卵期呢。来吧，我想感受一下我那小骚穴里有多热！"
 
 # game/kite_jobgirl 2_beach.rpy:604
 translate chinese_simplified jobgirl_beach_4_14d74d88:
@@ -1114,7 +1114,7 @@ translate chinese_simplified jobgirl_beach_4_14d74d88:
 translate chinese_simplified jobgirl_beach_4_7c939ccc:
 
     # anika "I... aaah... came again..."
-    anika "I... aaah... came again..."
+    anika "我……啊……又来了……"
 
 # game/kite_jobgirl 2_beach.rpy:612
 translate chinese_simplified jobgirl_beach_4_dc05eba1:
@@ -1126,13 +1126,13 @@ translate chinese_simplified jobgirl_beach_4_dc05eba1:
 translate chinese_simplified jobgirl_beach_4_7fb3b3ac:
 
     # anika "Uhmm, I can feel how hot it is despite us taking a hot shower..."
-    anika "Uhmm, I can feel how hot it is despite us taking a hot shower..."
+    anika "嗯，即使我们洗了热水澡，我还是能感觉到很热……"
 
 # game/kite_jobgirl 2_beach.rpy:621
 translate chinese_simplified jobgirl_beach_4_79867d82:
 
     # you "You're amazing... Best sex I've ever had under a shower... and I did it so many times!"
-    you "You're amazing... Best sex I've ever had under a shower... and I did it so many times!"
+    you "你太棒了……这是我在淋浴下体验过的最棒的性爱……而且我做过很多次！"
 
 # game/kite_jobgirl 2_beach.rpy:623
 translate chinese_simplified jobgirl_beach_4_1a87d5c7:
@@ -1144,97 +1144,97 @@ translate chinese_simplified jobgirl_beach_4_1a87d5c7:
 translate chinese_simplified jobgirl_beach_4_300ce520:
 
     # you "Hey Anika, Is something wrong? Did I do anything that bothers you? You don't look satisified..."
-    you "Hey Anika, Is something wrong? Did I do anything that bothers you? You don't look satisified..."
+    you "嘿，阿妮卡，出什么事了吗？我做错什么了吗？你看上去不太满意……"
 
 # game/kite_jobgirl 2_beach.rpy:631
 translate chinese_simplified jobgirl_beach_4_5977975a:
 
     # anika "Oh, don't take me wrong, I'm fully satisfied by your bed skills, in fact I haven't had such an orgasm in months..."
-    anika "Oh, don't take me wrong, I'm fully satisfied by your bed skills, in fact I haven't had such an orgasm in months..."
+    anika "哦，别误会，我对你的床上功夫非常满意，事实上我已经好几个月没体验过如此高潮了……"
 
 # game/kite_jobgirl 2_beach.rpy:633
 translate chinese_simplified jobgirl_beach_4_19beb19d:
 
     # you "So why do you look so grave now?"
-    you "So why do you look so grave now?"
+    you "那你现在为什么看起来这么严肃？"
 
 # game/kite_jobgirl 2_beach.rpy:635
 translate chinese_simplified jobgirl_beach_4_71e74bb2:
 
     # anika "To tell you the truth, I've put you to a test. It's something I did in the past for my friend, to see if the man of the moment would be good for her or not."
-    anika "To tell you the truth, I've put you to a test. It's something I did in the past for my friend, to see if the man of the moment would be good for her or not."
+    anika "说实话，我考验过你。我以前也对我朋友做过类似的事，看看她现在交往的那个男人是否适合她。"
 
 # game/kite_jobgirl 2_beach.rpy:637
 translate chinese_simplified jobgirl_beach_4_d3a8a928:
 
     # you "I knew it! Damn, so I guess I've failed your test since we had sex, right?"
-    you "I knew it! Damn, so I guess I've failed your test since we had sex, right?"
+    you "我就知道！该死，看来自从我们发生性关系后，我就没通过你的考验，对吧？"
 
 # game/kite_jobgirl 2_beach.rpy:639
 translate chinese_simplified jobgirl_beach_4_ea319ed8:
 
     # anika "It's not that simple [MC.name], it's not up to me to judge you. I will tell her what we did here, plain and simple. Especially how good you are in bed."
-    anika "It's not that simple [MC.name], it's not up to me to judge you. I will tell her what we did here, plain and simple. Especially how good you are in bed."
+    anika "事情没那么简单，[MC.name]，我没资格评判你。我会把我们在这里做的事告诉她，就这么简单。特别是你床上功夫有多好。"
 
 # game/kite_jobgirl 2_beach.rpy:641
 translate chinese_simplified jobgirl_beach_4_4149ac2b:
 
     # anika "Well, I suspect she already knows you have some skills in that field since it's your job. I guess I will just confirm her thoughts. Anyway..."
-    anika "Well, I suspect she already knows you have some skills in that field since it's your job. I guess I will just confirm her thoughts. Anyway..."
+    anika "嗯，我猜她应该已经知道你在那方面有一些技能，毕竟那是你的工作。我想我只需要证实一下她的想法就行了。总之……"
 
 # game/kite_jobgirl 2_beach.rpy:643
 translate chinese_simplified jobgirl_beach_4_ef31249d:
 
     # you "What else?"
-    you "What else?"
+    you "还有什么？"
 
 # game/kite_jobgirl 2_beach.rpy:645
 translate chinese_simplified jobgirl_beach_4_8ce8d25a:
 
     # anika "I can't blame you for having sex with me since you are not engaged to anyone right now, am I right? You're free, I'm free, we had some fun. That's all."
-    anika "I can't blame you for having sex with me since you are not engaged to anyone right now, am I right? You're free, I'm free, we had some fun. That's all."
+    anika "既然你现在单身，我不能怪你跟我发生性关系，对吧？你单身，我也单身，我们玩得很开心。仅此而已。"
 
 # game/kite_jobgirl 2_beach.rpy:647
 translate chinese_simplified jobgirl_beach_4_b474be66:
 
     # you "Did you just use me like a toy then?"
-    you "Did you just use me like a toy then?"
+    you "那你只是把我当玩具一样用吗？"
 
 # game/kite_jobgirl 2_beach.rpy:649
 translate chinese_simplified jobgirl_beach_4_11a52837:
 
     # anika "Speaking of that, I think you do the same with the girls in your brothel. Consider it a fair retribution. *winks*"
-    anika "Speaking of that, I think you do the same with the girls in your brothel. Consider it a fair retribution. *winks*"
+    anika "说到这个，我觉得你对你妓院里的女孩们也是这么做的。就当是公平的报复吧。😉"
 
 # game/kite_jobgirl 2_beach.rpy:651
 translate chinese_simplified jobgirl_beach_4_df31a8cf:
 
     # anika "For once it's been a girl using you for sex, not the other way around. How do you feel?"
-    anika "For once it's been a girl using you for sex, not the other way around. How do you feel?"
+    anika "这次是女生利用你发生性关系，而不是你利用她。你感觉如何？"
 
 # game/kite_jobgirl 2_beach.rpy:653
 translate chinese_simplified jobgirl_beach_4_6513cae3:
 
     # you "Can't argue with that; I had a good time, you've been amazing. But don't pull my leg more than this, ok?"
-    you "Can't argue with that; I had a good time, you've been amazing. But don't pull my leg more than this, ok?"
+    you "这我没意见；我玩得很开心，你真是太棒了。不过别再捉弄我了，好吗？"
 
 # game/kite_jobgirl 2_beach.rpy:655
 translate chinese_simplified jobgirl_beach_4_35f825d9:
 
     # anika "Don't worry, I don't plan to test you again, or do any more tricks. But today I had to act like this, for my friend's sake. Can you understand how much I'm worried for her?"
-    anika "Don't worry, I don't plan to test you again, or do any more tricks. But today I had to act like this, for my friend's sake. Can you understand how much I'm worried for her?"
+    anika "别担心，我不会再试探你，也不会再耍什么花招。但我今天不得不这么做，都是为了我的朋友。你能理解我有多担心她吗？"
 
 # game/kite_jobgirl 2_beach.rpy:657
 translate chinese_simplified jobgirl_beach_4_26f7c1af:
 
     # you "Honestly not much. She seems to be able to take care of herself; I bet she has a lot of men around, so what's the problem?"
-    you "Honestly not much. She seems to be able to take care of herself; I bet she has a lot of men around, so what's the problem?"
+    you "说实话，没什么大问题。她看起来很能照顾自己；我猜她身边肯定有很多男人，所以有什么问题呢？"
 
 # game/kite_jobgirl 2_beach.rpy:659
 translate chinese_simplified jobgirl_beach_4_c01c48f1:
 
     # anika "Indeed she gets a lot of attention, but try to understand what kind of people are hitting on her."
-    anika "Indeed she gets a lot of attention, but try to understand what kind of people are hitting on her."
+    anika "她确实很受关注，但试着了解一下都是些什么样的人在追求她。"
 
 # game/kite_jobgirl 2_beach.rpy:661
 translate chinese_simplified jobgirl_beach_4_8b310ff0:
@@ -1258,55 +1258,55 @@ translate chinese_simplified jobgirl_beach_4_f8acb32a:
 translate chinese_simplified jobgirl_beach_4_895370b8:
 
     # anika "Look at your face! *smiles* You got my point then. Now you understand how much I was worried for her when she started talking about you: a man who can turn any girl into a slut at his service!"
-    anika "Look at your face! *smiles* You got my point then. Now you understand how much I was worried for her when she started talking about you: a man who can turn any girl into a slut at his service!"
+    anika "看看你的表情！*微笑* 看来你明白我的意思了。现在你明白我有多担心她了吧，当她开始谈论你的时候：你可是个能让任何女孩都拜倒在他石榴裙下的男人！"
 
 # game/kite_jobgirl 2_beach.rpy:668
 translate chinese_simplified jobgirl_beach_4_9d41a679:
 
     # you "Hey, don't exaggerate, you're describing me like a monster!"
-    you "Hey, don't exaggerate, you're describing me like a monster!"
+    you "嘿，别夸张了，你把我描述得像个怪物一样！"
 
 # game/kite_jobgirl 2_beach.rpy:670
 translate chinese_simplified jobgirl_beach_4_c8a43b78:
 
     # anika "It's exactly how I thought you were. A danger to my friend. I couldn't let you take her and make her become your next brothel girl!"
-    anika "It's exactly how I thought you were. A danger to my friend. I couldn't let you take her and make her become your next brothel girl!"
+    anika "你果然就是我以为的那种人。你对我朋友来说是个危险人物。我不能让你把她带走，让她成为你下一个妓女！"
 
 # game/kite_jobgirl 2_beach.rpy:672
 translate chinese_simplified jobgirl_beach_4_de19478a:
 
     # you "You mean you sacrificed yourself; what a good friend you are... but from my point of view you just wanted to be screwed by me since you laid eyes on me."
-    you "You mean you sacrificed yourself; what a good friend you are... but from my point of view you just wanted to be screwed by me since you laid eyes on me."
+    you "你是说你牺牲了自己；你真是个好朋友……但在我看来，你从见到我的那一刻起就只想被我玩弄。"
 
 # game/kite_jobgirl 2_beach.rpy:674
 translate chinese_simplified jobgirl_beach_4_71e66058:
 
     # anika "Umpf! That's a low blow... I can't deny you're a nice guy, good in bed and everything... so yes, I was curious to see how much I could have fun with you."
-    anika "Umpf! That's a low blow... I can't deny you're a nice guy, good in bed and everything... so yes, I was curious to see how much I could have fun with you."
+    anika "哼！这话说得真损……我不能否认你是个好人，床上功夫也不错……所以，是的，我很好奇和你在一起能有多开心。"
 
 # game/kite_jobgirl 2_beach.rpy:676
 translate chinese_simplified jobgirl_beach_4_ec3a7cef:
 
     # you "And...?"
-    you "And...?"
+    you "和...？"
 
 # game/kite_jobgirl 2_beach.rpy:678
 translate chinese_simplified jobgirl_beach_4_6d77e6bd:
 
     # anika "Oh come on, we had a good time, I told you I haven't felt that good for a while. What else should I say about it?"
-    anika "Oh come on, we had a good time, I told you I haven't felt that good for a while. What else should I say about it?"
+    anika "哎呀，我们玩得很开心，我都跟你说过我好久没这么开心过了。我还能说什么呢？"
 
 # game/kite_jobgirl 2_beach.rpy:680
 translate chinese_simplified jobgirl_beach_4_4a65ad02:
 
     # you "I just want to know if I ruined my chances to go out with your friend, that's all."
-    you "I just want to know if I ruined my chances to go out with your friend, that's all."
+    you "我只想知道我是否毁掉了和你朋友约会的机会，仅此而已。"
 
 # game/kite_jobgirl 2_beach.rpy:682
 translate chinese_simplified jobgirl_beach_4_7ad44b48:
 
     # anika "You must find it out later yourself. Go talk to her after I'm gone... In the meantime, take a shower, a cold one."
-    anika "You must find it out later yourself. Go talk to her after I'm gone... In the meantime, take a shower, a cold one."
+    anika "你得自己稍后去弄清楚。等我走了之后再去跟她谈谈……与此同时，去冲个澡，洗个冷水澡。"
 
 # game/kite_jobgirl 2_beach.rpy:684
 translate chinese_simplified jobgirl_beach_4_8f067d54:
@@ -1318,7 +1318,7 @@ translate chinese_simplified jobgirl_beach_4_8f067d54:
 translate chinese_simplified jobgirl_beach_4_5e015473:
 
     # you "Fine with me. I'll take that cold shower. I suppose you'll be gone when I'm finished, so let's say goodbye for now."
-    you "Fine with me. I'll take that cold shower. I suppose you'll be gone when I'm finished, so let's say goodbye for now."
+    you "我没意见。我去洗个冷水澡。我想等我洗完你肯定走了，那我们现在就说再见吧。"
 
 # game/kite_jobgirl 2_beach.rpy:688
 translate chinese_simplified jobgirl_beach_4_76eba428:
@@ -1330,7 +1330,7 @@ translate chinese_simplified jobgirl_beach_4_76eba428:
 translate chinese_simplified jobgirl_beach_4_b8ded712:
 
     # anika "Until next time... don't make me wait too long..."
-    anika "Until next time... don't make me wait too long..."
+    anika "下次再见……别让我等太久……"
 
 # game/kite_jobgirl 2_beach.rpy:696
 translate chinese_simplified jobgirl_beach_4_541b9a18:
@@ -1342,13 +1342,13 @@ translate chinese_simplified jobgirl_beach_4_541b9a18:
 translate chinese_simplified jobgirl_beach_4_0132edf3:
 
     # you "(If Anika is so worried about her being with me, there must be more to it than she told me. She's not a child after all. Even if she only knows assholes, the fact I'm good at hitting on girls is not enough to be so worried!)"
-    you "(If Anika is so worried about her being with me, there must be more to it than she told me. She's not a child after all. Even if she only knows assholes, the fact I'm good at hitting on girls is not enough to be so worried!)"
+    you "（如果阿妮卡这么担心她和我在一起，那肯定还有她没告诉我的原因。她毕竟不是小孩子了。就算她认识的都是些混蛋，仅仅因为我擅长撩妹就让她这么担心也不至于吧！）"
 
 # game/kite_jobgirl 2_beach.rpy:700
 translate chinese_simplified jobgirl_beach_4_c2530b10:
 
     # you "(Or it is just a trick and she wanted to fuck with me, then make me feel guilty so that she doesn't appear to be the slut she is. Mmh, maybe this is the truth...)"
-    you "(Or it is just a trick and she wanted to fuck with me, then make me feel guilty so that she doesn't appear to be the slut she is. Mmh, maybe this is the truth...)"
+    you "（或者这只是个圈套，她想耍我，然后让我感到内疚，这样她就不会显得那么放荡。嗯，也许这才是真相……）"
 
 # game/kite_jobgirl 2_beach.rpy:702
 translate chinese_simplified jobgirl_beach_4_4f46d208:
@@ -1360,121 +1360,121 @@ translate chinese_simplified jobgirl_beach_4_4f46d208:
 translate chinese_simplified jobgirl_beach_4_b22a6a6f:
 
     # you "Are you serious? We barely know each other!"
-    you "Are you serious? We barely know each other!"
+    you "你是认真的吗？我们彼此都还不认识！"
 
 # game/kite_jobgirl 2_beach.rpy:713
 translate chinese_simplified jobgirl_beach_4_9f04348a:
 
     # anika "I didn't think you were so shy, since you fuck your sluts every day I figured you could give me a ride on your cock without any problem."
-    anika "I didn't think you were so shy, since you fuck your sluts every day I figured you could give me a ride on your cock without any problem."
+    anika "我没想到你这么害羞，因为你每天都和你的荡妇们做爱，我想你让我骑在你的鸡巴上应该没什么问题。"
 
 # game/kite_jobgirl 2_beach.rpy:715
 translate chinese_simplified jobgirl_beach_4_b28c7501:
 
     # anika "Or maybe there is something else, mmmh? You don't want to do it in front of her, am I right?"
-    anika "Or maybe there is something else, mmmh? You don't want to do it in front of her, am I right?"
+    anika "或许还有其他原因，嗯？你不想当着她的面做，对吧？"
 
 # game/kite_jobgirl 2_beach.rpy:717
 translate chinese_simplified jobgirl_beach_4_acb7e8bd:
 
     # you "Who knows... by the way you're a very attractive girl, your body is gorgeous and all, but really, I can't do it now, sorry. Nothing personal."
-    you "Who knows... by the way you're a very attractive girl, your body is gorgeous and all, but really, I can't do it now, sorry. Nothing personal."
+    you "谁知道呢……顺便说一句，你是个非常漂亮的女孩子，身材也很棒，但是真的，我现在做不到，抱歉。没有恶意。"
 
 # game/kite_jobgirl 2_beach.rpy:721
 translate chinese_simplified jobgirl_beach_4_08c043c7:
 
     # anika "Eheh, this doesn't happen very often, to be rejected by a man..."
-    anika "Eheh, this doesn't happen very often, to be rejected by a man..."
+    anika "呵呵，被男人拒绝这种事可不常发生……"
 
 # game/kite_jobgirl 2_beach.rpy:723
 translate chinese_simplified jobgirl_beach_4_1b04ee82:
 
     # you "I can imagine, with such a body I'm not surprised that men fall at your feet."
-    you "I can imagine, with such a body I'm not surprised that men fall at your feet."
+    you "我可以想象，拥有这样的身材，难怪男人们会拜倒在你的石榴裙下。"
 
 # game/kite_jobgirl 2_beach.rpy:729
 translate chinese_simplified jobgirl_beach_4_0d4b4ac6:
 
     # anika "Eh, this time it didn't work. What a pity... you will never know what you have missed. *winks*"
-    anika "Eh, this time it didn't work. What a pity... you will never know what you have missed. *winks*"
+    anika "唉，这次没成功。真可惜……你永远不会知道自己错过了什么。😉"
 
 # game/kite_jobgirl 2_beach.rpy:731
 translate chinese_simplified jobgirl_beach_4_3103d0be:
 
     # you "I guess so. But I made a choice before and I want to respect it."
-    you "I guess so. But I made a choice before and I want to respect it."
+    you "我想是的。但我之前已经做出了选择，我想尊重它。"
 
 # game/kite_jobgirl 2_beach.rpy:733
 translate chinese_simplified jobgirl_beach_4_0d09afcc:
 
     # anika "I see.. and I'm happy. Really. Well, a bit disappointed because I really wanted to have some fun with a handsome guy today, but the important thing is you seem to be a good person."
-    anika "I see.. and I'm happy. Really. Well, a bit disappointed because I really wanted to have some fun with a handsome guy today, but the important thing is you seem to be a good person."
+    anika "我明白了……我很高兴。真的。嗯，有点失望，因为我今天真的很想和一个帅哥玩玩，但重要的是你看起来是个好人。"
 
 # game/kite_jobgirl 2_beach.rpy:735
 translate chinese_simplified jobgirl_beach_4_43f5686a:
 
     # anika "She deserves the best, maybe you could fit the role after all."
-    anika "She deserves the best, maybe you could fit the role after all."
+    anika "她值得拥有最好的，或许你真的适合这个角色。"
 
 # game/kite_jobgirl 2_beach.rpy:737
 translate chinese_simplified jobgirl_beach_4_1b72cb25:
 
     # you "What are you talking about?"
-    you "What are you talking about?"
+    you "你在说什么？"
 
 # game/kite_jobgirl 2_beach.rpy:739
 translate chinese_simplified jobgirl_beach_4_67c566d1:
 
     # anika "Eheh, it's women only stuff. *winks*"
-    anika "Eheh, it's women only stuff. *winks*"
+    anika "呵呵，这是女生专属的东西哦。😉"
 
 # game/kite_jobgirl 2_beach.rpy:741
 translate chinese_simplified jobgirl_beach_4_d923981c:
 
     # anika "For now let's just say that she got the wrong man more than once, and she's not taking any risks anymore."
-    anika "For now let's just say that she got the wrong man more than once, and she's not taking any risks anymore."
+    anika "现在我们只能说她不止一次找错了对象，所以她不想再冒任何风险了。"
 
 # game/kite_jobgirl 2_beach.rpy:743
 translate chinese_simplified jobgirl_beach_4_562bda3a:
 
     # you "You make it sound so mysterious."
-    you "You make it sound so mysterious."
+    you "你把它说得好神秘啊。"
 
 # game/kite_jobgirl 2_beach.rpy:745
 translate chinese_simplified jobgirl_beach_4_a727a38e:
 
     # anika "Not my intention to do that, it's just that I'd prefer you hear the story from Scarlet, if she's willing to share it with you of course."
-    anika "Not my intention to do that, it's just that I'd prefer you hear the story from Scarlet, if she's willing to share it with you of course."
+    anika "我并非有意如此，只是我更希望你能从斯嘉丽那里听到这个故事，当然，前提是她愿意与你分享。"
 
 # game/kite_jobgirl 2_beach.rpy:747
 translate chinese_simplified jobgirl_beach_4_eb0bd925:
 
     # anika "I know her since before we moved to Zan, so it's natural I care about her like a little sister."
-    anika "I know her since before we moved to Zan, so it's natural I care about her like a little sister."
+    anika "我在搬到赞恩之前就认识她了，所以我很自然地像对待亲妹妹一样关心她。"
 
 # game/kite_jobgirl 2_beach.rpy:749
 translate chinese_simplified jobgirl_beach_4_5ba90e2a:
 
     # you "Yeah I can understand. But promise me this: don't try to seduce me any more!"
-    you "Yeah I can understand. But promise me this: don't try to seduce me any more!"
+    you "是的，我能理解。但请你答应我：别再试图勾引我了！"
 
 # game/kite_jobgirl 2_beach.rpy:751
 translate chinese_simplified jobgirl_beach_4_8963ed76:
 
     # anika "Eheh, sorry I can't. As long as you're not Scarlet's boyfriend I'll decide whether or not I try to hit on you."
-    anika "Eheh, sorry I can't. As long as you're not Scarlet's boyfriend I'll decide whether or not I try to hit on you."
+    anika "呵呵，抱歉，我不能。只要你不是斯嘉丽的男朋友，我就会决定要不要追求你。"
 
 # game/kite_jobgirl 2_beach.rpy:753
 translate chinese_simplified jobgirl_beach_4_ea632cd5:
 
     # you "Damn... well, sorry if I don't feel honored by such attention."
-    you "Damn... well, sorry if I don't feel honored by such attention."
+    you "哎……好吧，如果我对这样的关注没有感到荣幸，那很抱歉。"
 
 # game/kite_jobgirl 2_beach.rpy:755
 translate chinese_simplified jobgirl_beach_4_039a4bd4:
 
     # anika "Ahah! You're so funny!"
-    anika "Ahah! You're so funny!"
+    anika "哈哈！你真幽默！"
 
 # game/kite_jobgirl 2_beach.rpy:759
 translate chinese_simplified jobgirl_beach_4_6256df33:
@@ -1486,13 +1486,13 @@ translate chinese_simplified jobgirl_beach_4_6256df33:
 translate chinese_simplified jobgirl_beach_4_a0d34c49:
 
     # you "(What a mess: two hot girls before my eyes; on one hand Anika would let me screw her anytime but she seems to be such a slut; on the other hand Scarlet would take a long time to fall for me, can I even make it?)"
-    you "(What a mess: two hot girls before my eyes; on one hand Anika would let me screw her anytime but she seems to be such a slut; on the other hand Scarlet would take a long time to fall for me, can I even make it?)"
+    you "（真是乱成一团：两个辣妹在我眼前；一方面，阿妮卡随时都愿意让我上她，但她看起来又很放荡；另一方面，斯嘉丽要很久才会爱上我，我能成功吗？）"
 
 # game/kite_jobgirl 2_beach.rpy:763
 translate chinese_simplified jobgirl_beach_4_6c535603:
 
     # you "(Nevermind, let's see what happens next and how it ends.)"
-    you "(Nevermind, let's see what happens next and how it ends.)"
+    you "（算了，我们看看接下来会发生什么，结局会如何。）"
 
 # game/kite_jobgirl 2_beach.rpy:767
 translate chinese_simplified jobgirl_beach_4_72ed4b3a:
@@ -1522,13 +1522,13 @@ translate chinese_simplified jobgirl_beach_5_53a329ce:
 translate chinese_simplified jobgirl_beach_5_9b0355b3:
 
     # jobgirl "Hey look who's here! Ani just left a couple of minutes ago and I was about to leave too, but now I changed my mind!"
-    jobgirl "Hey look who's here! Ani just left a couple of minutes ago and I was about to leave too, but now I changed my mind!"
+    jobgirl "嘿，瞧瞧谁来了！安妮几分钟前刚走，我也正准备走，不过现在我改变主意了！"
 
 # game/kite_jobgirl 2_beach.rpy:797
 translate chinese_simplified jobgirl_beach_5_9ea36b2d:
 
     # you "So I came right on time. Glad to see you again. By the way, why did Anika leave so early?"
-    you "So I came right on time. Glad to see you again. By the way, why did Anika leave so early?"
+    you "我来得正准时。很高兴再次见到你。对了，阿妮卡为什么走得那么早？"
 
 # game/kite_jobgirl 2_beach.rpy:799
 translate chinese_simplified jobgirl_beach_5_71aa7a47:
@@ -1540,37 +1540,37 @@ translate chinese_simplified jobgirl_beach_5_71aa7a47:
 translate chinese_simplified jobgirl_beach_5_d371bff3:
 
     # jobgirl "Anika told me you both had fun last time you met each other. A lot of fun."
-    jobgirl "Anika told me you both had fun last time you met each other. A lot of fun."
+    jobgirl "阿妮卡告诉我，你们上次见面玩得很开心。非常开心。"
 
 # game/kite_jobgirl 2_beach.rpy:803
 translate chinese_simplified jobgirl_beach_5_fa0e932d:
 
     # you "Are you angry with me?"
-    you "Are you angry with me?"
+    you "你在生我的气吗？"
 
 # game/kite_jobgirl 2_beach.rpy:805
 translate chinese_simplified jobgirl_beach_5_e2264e6e:
 
     # jobgirl "Why should I be angry with you? Are we a couple? I barely know you... I don't even like you."
-    jobgirl "Why should I be angry with you? Are we a couple? I barely know you... I don't even like you."
+    jobgirl "我为什么要生你的气？我们是情侣吗？我根本不了解你……我甚至都不喜欢你。"
 
 # game/kite_jobgirl 2_beach.rpy:807
 translate chinese_simplified jobgirl_beach_5_4ff57a46:
 
     # you "Well, sure, we're not... just acquaintances... right..."
-    you "Well, sure, we're not... just acquaintances... right..."
+    you "当然，我们不是……只是点头之交……对吧……"
 
 # game/kite_jobgirl 2_beach.rpy:809
 translate chinese_simplified jobgirl_beach_5_0ddaf57a:
 
     # jobgirl "Hey what's up? Are you disappointed? I'm the one who should be! You screwed my best friend practically in front of me - well, figuratively speaking, since I wasn't there, but it doesn't matter!"
-    jobgirl "Hey what's up? Are you disappointed? I'm the one who should be! You screwed my best friend practically in front of me - well, figuratively speaking, since I wasn't there, but it doesn't matter!"
+    jobgirl "嘿，怎么了？你失望了吗？我才应该失望才对！你几乎当着我的面——好吧，其实我当时不在场——就睡了我最好的朋友，不过这不重要！"
 
 # game/kite_jobgirl 2_beach.rpy:811
 translate chinese_simplified jobgirl_beach_5_c5180b86:
 
     # you "Okay, you're right, but now try to calm down a little-"
-    you "Okay, you're right, but now try to calm down a little-"
+    you "好吧，你说得对，但现在试着冷静一下。"
 
 # game/kite_jobgirl 2_beach.rpy:817
 translate chinese_simplified jobgirl_beach_5_93579075:
@@ -1600,7 +1600,7 @@ translate chinese_simplified jobgirl_beach_5_0f195874:
 translate chinese_simplified jobgirl_beach_5_f295262b:
 
     # you "Have you finished?"
-    you "Have you finished?"
+    you "你做完了吗？"
 
 # game/kite_jobgirl 2_beach.rpy:827
 translate chinese_simplified jobgirl_beach_5_3bff533a:
@@ -1612,7 +1612,7 @@ translate chinese_simplified jobgirl_beach_5_3bff533a:
 translate chinese_simplified jobgirl_beach_5_72675493:
 
     # you "I take it as a yes. So, what are you angry for? We're not a couple, as you stated so clearly before; we're in a public place full of people-"
-    you "I take it as a yes. So, what are you angry for? We're not a couple, as you stated so clearly before; we're in a public place full of people-"
+    you "我理解为同意了。那么，你到底在生什么气？我们又不是情侣，你之前已经说得很清楚了；我们现在身处人来人往的公共场所——"
 
 # game/kite_jobgirl 2_beach.rpy:831
 translate chinese_simplified jobgirl_beach_5_509dac61:
@@ -1624,7 +1624,7 @@ translate chinese_simplified jobgirl_beach_5_509dac61:
 translate chinese_simplified jobgirl_beach_5_a75b4ccc:
 
     # you "Well, it {i}was{/i} full of people before... so why are you yelling at me? Are you a little child who lost her toy?"
-    you "Well, it {i}was{/i} full of people before... so why are you yelling at me? Are you a little child who lost her toy?"
+    you "之前这里人很多……那你为什么冲我大喊大叫？你是丢了玩具的小孩吗？"
 
 # game/kite_jobgirl 2_beach.rpy:835
 translate chinese_simplified jobgirl_beach_5_3bff533a_1:
@@ -1636,43 +1636,43 @@ translate chinese_simplified jobgirl_beach_5_3bff533a_1:
 translate chinese_simplified jobgirl_beach_5_baa347ce:
 
     # you "Or maybe there's more to it. Your friend Anika played a dirty trick on me, first seducing me, then telling you who knows what shit to get you so mad about me."
-    you "Or maybe there's more to it. Your friend Anika played a dirty trick on me, first seducing me, then telling you who knows what shit to get you so mad about me."
+    you "或许事情还有更深层的原因。你的朋友阿妮卡对我耍了卑鄙的手段，她先是勾引我，然后不知说了些什么让你这么恨我。"
 
 # game/kite_jobgirl 2_beach.rpy:839
 translate chinese_simplified jobgirl_beach_5_7ea941f3:
 
     # jobgirl "She just told me that-"
-    jobgirl "She just told me that-"
+    jobgirl "她刚才告诉我——"
 
 # game/kite_jobgirl 2_beach.rpy:841
 translate chinese_simplified jobgirl_beach_5_1f51741a:
 
     # you "I don't give a shit about what she told you! And now you listen to what I have to say: you're a pretty girl and I want to continue seeing you, if and only if you can accept that I'm free to screw every single woman in this world, unless you want to be engaged to me."
-    you "I don't give a shit about what she told you! And now you listen to what I have to say: you're a pretty girl and I want to continue seeing you, if and only if you can accept that I'm free to screw every single woman in this world, unless you want to be engaged to me."
+    you "我才不在乎她跟你说了什么！现在你听好了：你是个漂亮女孩，我想继续跟你交往，前提是你能接受我可以和世界上任何一个女人上床，除非你想跟我订婚。"
 
 # game/kite_jobgirl 2_beach.rpy:843
 translate chinese_simplified jobgirl_beach_5_cd9b04c7:
 
     # jobgirl "*blushes* S-sorry..."
-    jobgirl "*blushes* S-sorry..."
+    jobgirl "*脸红* 对不起……"
 
 # game/kite_jobgirl 2_beach.rpy:845
 translate chinese_simplified jobgirl_beach_5_f8748443:
 
     # you "Second thing: be sure that I can be a good guy: if by any chance you find yourself in trouble, I would come and rescue you with no hesitation, even leaving a dripping pussy in the middle of a good fuck!"
-    you "Second thing: be sure that I can be a good guy: if by any chance you find yourself in trouble, I would come and rescue you with no hesitation, even leaving a dripping pussy in the middle of a good fuck!"
+    you "第二件事：请相信我，我是一个好人：万一你遇到麻烦，我会毫不犹豫地来救你，即使这意味着在享受性爱的过程中，我的阴道会湿漉漉的！"
 
 # game/kite_jobgirl 2_beach.rpy:847
 translate chinese_simplified jobgirl_beach_5_fe08f4fd:
 
     # jobgirl "*blushes even more* Y-you don't need to be so explicit, you know?..."
-    jobgirl "*blushes even more* Y-you don't need to be so explicit, you know?..."
+    jobgirl "*脸更红了* 你、你不用说得这么直白，好吗？"
 
 # game/kite_jobgirl 2_beach.rpy:849
 translate chinese_simplified jobgirl_beach_5_22353f92:
 
     # you "Good, I think now you know me better. But this argument ruined my mood, so I think I'll leave. Better if you leave too, the sun is setting soon. Don't want you to get a cold..."
-    you "Good, I think now you know me better. But this argument ruined my mood, so I think I'll leave. Better if you leave too, the sun is setting soon. Don't want you to get a cold..."
+    you "很好，我想现在你更了解我了。不过这场争吵让我心情很差，所以我打算走了。你也最好离开，太阳快要落山了，免得你着凉……"
 
 # game/kite_jobgirl 2_beach.rpy:851
 translate chinese_simplified jobgirl_beach_5_aaac2019:
@@ -1702,7 +1702,7 @@ translate chinese_simplified jobgirl_beach_5_dcc4fc30:
 translate chinese_simplified jobgirl_beach_5_2d2fcad4:
 
     # you "See you next time."
-    you "See you next time."
+    you "下次见。"
 
 # game/kite_jobgirl 2_beach.rpy:864
 translate chinese_simplified jobgirl_beach_5_6e0c029d:
@@ -1726,37 +1726,37 @@ translate chinese_simplified jobgirl_beach_5_ee37af5d:
 translate chinese_simplified jobgirl_beach_5_fa4cbe22:
 
     # jobgirl "Over here! You're my savior today! I need help!"
-    jobgirl "Over here! You're my savior today! I need help!"
+    jobgirl "这边！你今天真是我的救星！我需要帮助！"
 
 # game/kite_jobgirl 2_beach.rpy:882
 translate chinese_simplified jobgirl_beach_5_72936e83:
 
     # you "Hi Scarlet, what's up?"
-    you "Hi Scarlet, what's up?"
+    you "嗨，斯嘉丽，你好吗？"
 
 # game/kite_jobgirl 2_beach.rpy:884
 translate chinese_simplified jobgirl_beach_5_6f9abe28:
 
     # jobgirl "Ouch, my shoulders are starting to burn, I need to put on more sunscreen... would you... if you don't mind..."
-    jobgirl "Ouch, my shoulders are starting to burn, I need to put on more sunscreen... would you... if you don't mind..."
+    jobgirl "哎哟，我的肩膀开始发烫了，我得再涂点防晒霜……你……不介意的话……"
 
 # game/kite_jobgirl 2_beach.rpy:886
 translate chinese_simplified jobgirl_beach_5_762a592a:
 
     # you "I don't mind at all! On the contrary, it will be my pleasure to help you. I'm also good at massages, you know? Want to try?"
-    you "I don't mind at all! On the contrary, it will be my pleasure to help you. I'm also good at massages, you know? Want to try?"
+    you "我一点也不介意！相反，我很乐意帮忙。而且我按摩也很厉害，你知道吗？想试试吗？"
 
 # game/kite_jobgirl 2_beach.rpy:888
 translate chinese_simplified jobgirl_beach_5_bb73e13a:
 
     # jobgirl "Sure, why not?"
-    jobgirl "Sure, why not?"
+    jobgirl "当然可以，为什么不呢？"
 
 # game/kite_jobgirl 2_beach.rpy:890
 translate chinese_simplified jobgirl_beach_5_cd573737:
 
     # you "Fine, lay down and enjoy."
-    you "Fine, lay down and enjoy."
+    you "好，躺下好好享受吧。"
 
 # game/kite_jobgirl 2_beach.rpy:896
 translate chinese_simplified jobgirl_beach_5_52e064b1:
@@ -1768,67 +1768,67 @@ translate chinese_simplified jobgirl_beach_5_52e064b1:
 translate chinese_simplified jobgirl_beach_5_821c5fba:
 
     # jobgirl "Mmmh... there... it's good..."
-    jobgirl "Mmmh... there... it's good..."
+    jobgirl "嗯……就是这个……不错……"
 
 # game/kite_jobgirl 2_beach.rpy:902
 translate chinese_simplified jobgirl_beach_5_503a2f4e:
 
     # you "Not to brag, but I have a lot of experience massaging. I teach my girls how to do it to our customers..."
-    you "Not to brag, but I have a lot of experience massaging. I teach my girls how to do it to our customers..."
+    you "并非自夸，但我确实有很多按摩经验。我会教我的女孩们如何为顾客服务……"
 
 # game/kite_jobgirl 2_beach.rpy:904
 translate chinese_simplified jobgirl_beach_5_88e45fb7:
 
     # jobgirl "And are your clients always satisfied?"
-    jobgirl "And are your clients always satisfied?"
+    jobgirl "您的客户总是满意吗？"
 
 # game/kite_jobgirl 2_beach.rpy:906
 translate chinese_simplified jobgirl_beach_5_e3ead795:
 
     # you "It depends on how much the girl has learned when she serves them, but they usually are happy about the service."
-    you "It depends on how much the girl has learned when she serves them, but they usually are happy about the service."
+    you "这取决于女孩在服务顾客时学到了多少知识，但顾客通常对服务感到满意。"
 
 # game/kite_jobgirl 2_beach.rpy:908
 translate chinese_simplified jobgirl_beach_5_dbcf733c:
 
     # jobgirl "I see... if you teach as well as you can massage... they'll learn fast. Mmmmhh...."
-    jobgirl "I see... if you teach as well as you can massage... they'll learn fast. Mmmmhh...."
+    jobgirl "我明白了……如果你教得像按摩一样好……他们学得很快。嗯……"
 
 # game/kite_jobgirl 2_beach.rpy:910
 translate chinese_simplified jobgirl_beach_5_65f59cb1:
 
     # you "Can I ask you something?"
-    you "Can I ask you something?"
+    you "我能问你一件事吗？"
 
 # game/kite_jobgirl 2_beach.rpy:912
 translate chinese_simplified jobgirl_beach_5_829e5641:
 
     # jobgirl "Mmmm yes... right now you can do everything to me... Uhm n-not in that sense! I-I mean a-ask anything!"
-    jobgirl "Mmmm yes... right now you can do everything to me... Uhm n-not in that sense! I-I mean a-ask anything!"
+    jobgirl "嗯……是的……现在你可以对我做任何事……呃，不、不是那个意思！我是说，你可以问我任何事！"
 
 # game/kite_jobgirl 2_beach.rpy:914
 translate chinese_simplified jobgirl_beach_5_4a00cb6e:
 
     # you "Hey don't be so rigid all of a sudden, or the massage won't have any effect. Relax... relax... good, that way..."
-    you "Hey don't be so rigid all of a sudden, or the massage won't have any effect. Relax... relax... good, that way..."
+    you "嘿，别突然这么僵硬，不然按摩就没效果了。放松……放松……很好，这样……"
 
 # game/kite_jobgirl 2_beach.rpy:916
 translate chinese_simplified jobgirl_beach_5_19b7df77:
 
     # you "I was thinking about your reaction every time you have to deal with... sexual topics. Even now, when you thought about something naughty."
-    you "I was thinking about your reaction every time you have to deal with... sexual topics. Even now, when you thought about something naughty."
+    you "我一直在想，每当你不得不面对……性方面的话题时，你的反应会是什么样。即使是现在，当你想到一些不正经的事情时，我也会想到。"
 
 # game/kite_jobgirl 2_beach.rpy:920
 translate chinese_simplified jobgirl_beach_5_fcf80fc3:
 
     # jobgirl "N-naughty? Me? W-what are talking about? I didn't do anything like that!"
-    jobgirl "N-naughty? Me? W-what are talking about? I didn't do anything like that!"
+    jobgirl "淘气？我？你、你在说什么？我根本没做那种事！"
 
 # game/kite_jobgirl 2_beach.rpy:922
 translate chinese_simplified jobgirl_beach_5_74e562d3:
 
     # you "What did you imagine I would have done to you, when you told me I could have done {i}anything{/i} to you?"
-    you "What did you imagine I would have done to you, when you told me I could have done {i}anything{/i} to you?"
+    you "当你告诉我我可以对你做任何事的时候，你想象我会对你做什么？"
 
 # game/kite_jobgirl 2_beach.rpy:924
 translate chinese_simplified jobgirl_beach_5_22f3d2ca:
@@ -1840,145 +1840,145 @@ translate chinese_simplified jobgirl_beach_5_22f3d2ca:
 translate chinese_simplified jobgirl_beach_5_120f31f3:
 
     # jobgirl "Umph! It's just that... I'm not at ease with such things... sex and all the rest. I... never... not yet..."
-    jobgirl "Umph! It's just that... I'm not at ease with such things... sex and all the rest. I... never... not yet..."
+    jobgirl "嗯！只是……我对这类事情不太自在……性什么的。我……从来没有……还没有……"
 
 # game/kite_jobgirl 2_beach.rpy:928
 translate chinese_simplified jobgirl_beach_5_6caa83cc:
 
     # you "Uhm, so you're shy because you never had any experience... you're still a virgin."
-    you "Uhm, so you're shy because you never had any experience... you're still a virgin."
+    you "嗯，所以你害羞是因为你从来没有过经验……你还是个处男。"
 
 # game/kite_jobgirl 2_beach.rpy:930
 translate chinese_simplified jobgirl_beach_5_bcb9b15f:
 
     # jobgirl "Ehi, don't you dare spread the word around! I'll kill you if you even think to try!!"
-    jobgirl "Ehi, don't you dare spread the word around! I'll kill you if you even think to try!!"
+    jobgirl "喂，你敢到处乱说试试！你要是敢这么做，我就杀了你！！"
 
 # game/kite_jobgirl 2_beach.rpy:932
 translate chinese_simplified jobgirl_beach_5_a2ff4fb5:
 
     # you "Relax, girl, and don't worry. It is something personal, I know and respect it. No one will ever hear it from me, I swear."
-    you "Relax, girl, and don't worry. It is something personal, I know and respect it. No one will ever hear it from me, I swear."
+    you "放松点，姑娘，别担心。这是我的私事，我知道，也尊重你的选择。我发誓，我绝对不会告诉任何人。"
 
 # game/kite_jobgirl 2_beach.rpy:934
 translate chinese_simplified jobgirl_beach_5_a2084245:
 
     # jobgirl "Okay... thanks, I guess... You know what? Now that you know it I'm feeling a bit relieved. I don't know why."
-    jobgirl "Okay... thanks, I guess... You know what? Now that you know it I'm feeling a bit relieved. I don't know why."
+    jobgirl "好吧……谢谢，我想……你知道吗？既然你知道了，我感觉轻松了一些。我也不知道为什么。"
 
 # game/kite_jobgirl 2_beach.rpy:936
 translate chinese_simplified jobgirl_beach_5_85cca022:
 
     # you "I'm just glad we learned more about each other. I like to be in your company. You're cute and smart."
-    you "I'm just glad we learned more about each other. I like to be in your company. You're cute and smart."
+    you "我很高兴我们能更了解彼此。我喜欢和你在一起。你既可爱又聪明。"
 
 # game/kite_jobgirl 2_beach.rpy:940
 translate chinese_simplified jobgirl_beach_5_7c0f3c72:
 
     # jobgirl "Oooh, stop that!"
-    jobgirl "Oooh, stop that!"
+    jobgirl "哦，别这样！"
 
 # game/kite_jobgirl 2_beach.rpy:942
 translate chinese_simplified jobgirl_beach_5_1d14c89f:
 
     # you "What about your feelings? What do you think about me?"
-    you "What about your feelings? What do you think about me?"
+    you "你对我的感觉如何？你觉得我怎么样？"
 
 # game/kite_jobgirl 2_beach.rpy:944
 translate chinese_simplified jobgirl_beach_5_5ffc1ee2:
 
     # jobgirl "About you? Let's see... you're a pimp who fucks his girls all day long... but you help damsels in distress, don't screw girls you just met on the beach, and your massage skills are superb."
-    jobgirl "About you? Let's see... you're a pimp who fucks his girls all day long... but you help damsels in distress, don't screw girls you just met on the beach, and your massage skills are superb."
+    jobgirl "关于你？让我想想……你是个皮条客，整天和你的女伴们鬼混……但你会帮助落难少女，不会和刚在海滩上认识的女孩发生关系，而且你的按摩技术非常棒。"
 
 # game/kite_jobgirl 2_beach.rpy:946
 translate chinese_simplified jobgirl_beach_5_de8ad615:
 
     # you "(Screwing girls on the beach? Could that be... damn Anika, she planned to tell her everything since the beginning! I must be on the lookout when she's around!)"
-    you "(Screwing girls on the beach? Could that be... damn Anika, she planned to tell her everything since the beginning! I must be on the lookout when she's around!)"
+    you "（在沙滩上和女孩们鬼混？难道是……该死的阿妮卡，她从一开始就计划好要把一切都告诉她！我得在她出现的时候多加留意！）"
 
 # game/kite_jobgirl 2_beach.rpy:948
 translate chinese_simplified jobgirl_beach_5_bf64e685:
 
     # jobgirl "And you're... uhm... handsome too..."
-    jobgirl "And you're... uhm... handsome too..."
+    jobgirl "而且你……嗯……也很帅……"
 
 # game/kite_jobgirl 2_beach.rpy:950
 translate chinese_simplified jobgirl_beach_5_58032473:
 
     # you "Really? So you do like me after all..."
-    you "Really? So you do like me after all..."
+    you "真的吗？看来你其实喜欢我……"
 
 # game/kite_jobgirl 2_beach.rpy:952
 translate chinese_simplified jobgirl_beach_5_7ace2275:
 
     # jobgirl "I like you more, but don't think we're gonna be a couple yet. I want to know you more for now. And yes, I admit I start to feel good in your company. You're not an asshole like the many other men I know."
-    jobgirl "I like you more, but don't think we're gonna be a couple yet. I want to know you more for now. And yes, I admit I start to feel good in your company. You're not an asshole like the many other men I know."
+    jobgirl "我越来越喜欢你了，但别以为我们现在就能成为情侣。我想先多了解你一些。而且，我承认和你在一起感觉很舒服。你不像我认识的其他很多男人那样是个混蛋。"
 
 # game/kite_jobgirl 2_beach.rpy:954
 translate chinese_simplified jobgirl_beach_5_46c6b163:
 
     # you "It's good news then! And the massage is over now, thank you for choosing [MC.name]'s masseur service. Please come back again!"
-    you "It's good news then! And the massage is over now, thank you for choosing [MC.name]'s masseur service. Please come back again!"
+    you "那真是个好消息！按摩结束了，感谢您选择[MC.name]的按摩服务。欢迎下次光临！"
 
 # game/kite_jobgirl 2_beach.rpy:962
 translate chinese_simplified jobgirl_beach_5_16e01315:
 
     # jobgirl "Ahahah!"
-    jobgirl "Ahahah!"
+    jobgirl "哈哈！"
 
 # game/kite_jobgirl 2_beach.rpy:964
 translate chinese_simplified jobgirl_beach_5_4163b033:
 
     # jobgirl "You're very funny! I like that!"
-    jobgirl "You're very funny! I like that!"
+    jobgirl "你真幽默！我喜欢！"
 
 # game/kite_jobgirl 2_beach.rpy:966
 translate chinese_simplified jobgirl_beach_5_f5cf055c:
 
     # you "That means you like me!"
-    you "That means you like me!"
+    you "那说明你喜欢我！"
 
 # game/kite_jobgirl 2_beach.rpy:968
 translate chinese_simplified jobgirl_beach_5_a5c0bd59:
 
     # jobgirl "Hey not again!"
-    jobgirl "Hey not again!"
+    jobgirl "哎，又来了！"
 
 # game/kite_jobgirl 2_beach.rpy:970
 translate chinese_simplified jobgirl_beach_5_9c81f9f9:
 
     # you "Just joking."
-    you "Just joking."
+    you "开玩笑啦。"
 
 # game/kite_jobgirl 2_beach.rpy:972
 translate chinese_simplified jobgirl_beach_5_9ec8a4d6:
 
     # jobgirl "It's been a beautiful day here with you and Anika, I really needed to relax! Will we meet again?"
-    jobgirl "It's been a beautiful day here with you and Anika, I really needed to relax! Will we meet again?"
+    jobgirl "今天和你还有阿妮卡在一起真是美好的一天，我太需要放松一下了！我们还会再见面吗？"
 
 # game/kite_jobgirl 2_beach.rpy:974
 translate chinese_simplified jobgirl_beach_5_14571421:
 
     # you "Anytime you want, just give me a call and I'll be there with you!"
-    you "Anytime you want, just give me a call and I'll be there with you!"
+    you "任何时候你想来，只要给我打电话，我就会到你身边！"
 
 # game/kite_jobgirl 2_beach.rpy:976
 translate chinese_simplified jobgirl_beach_5_06839674:
 
     # jobgirl "Make sure not to disappear, otherwise you will lose all the points you scored today!"
-    jobgirl "Make sure not to disappear, otherwise you will lose all the points you scored today!"
+    jobgirl "千万不要消失，否则你今天获得的所有积分都会丢失！"
 
 # game/kite_jobgirl 2_beach.rpy:978
 translate chinese_simplified jobgirl_beach_5_50a878e1:
 
     # you "Are you taking note of my score with you? Really?"
-    you "Are you taking note of my score with you? Really?"
+    you "你在记下我的分数吗？真的吗？"
 
 # game/kite_jobgirl 2_beach.rpy:980
 translate chinese_simplified jobgirl_beach_5_a1fb2a78:
 
     # jobgirl "Naaah that's a joke! Hihihi!"
-    jobgirl "Naaah that's a joke! Hihihi!"
+    jobgirl "哈哈，开玩笑啦！嘻嘻嘻！"
 
 # game/kite_jobgirl 2_beach.rpy:982
 translate chinese_simplified jobgirl_beach_5_8f96c736:
@@ -1990,7 +1990,7 @@ translate chinese_simplified jobgirl_beach_5_8f96c736:
 translate chinese_simplified jobgirl_beach_5_7afea309:
 
     # jobgirl "Thank you again, for everything. This is a little gift for you. But first close your eyes."
-    jobgirl "Thank you again, for everything. This is a little gift for you. But first close your eyes."
+    jobgirl "再次感谢你所做的一切。这是送给你的小礼物。不过，先闭上眼睛吧。"
 
 # game/kite_jobgirl 2_beach.rpy:986
 translate chinese_simplified jobgirl_beach_5_a3920a6d:
@@ -2014,7 +2014,7 @@ translate chinese_simplified jobgirl_beach_5_1ba3995b:
 translate chinese_simplified jobgirl_beach_5_85909c62:
 
     # jobgirl "I have to go now. See you soon!"
-    jobgirl "I have to go now. See you soon!"
+    jobgirl "我得走了。回头见！"
 
 # game/kite_jobgirl 2_beach.rpy:994
 translate chinese_simplified jobgirl_beach_5_142d68a2:
@@ -2026,5 +2026,5 @@ translate chinese_simplified jobgirl_beach_5_142d68a2:
 translate chinese_simplified jobgirl_beach_5_6ccd9795:
 
     # you "(See you soon, sweetie.)"
-    you "(See you soon, sweetie.)"
+    you "（亲爱的，回头见。）"
 

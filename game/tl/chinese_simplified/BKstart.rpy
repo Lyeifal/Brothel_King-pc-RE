@@ -4,5 +4,5 @@
 translate chinese_simplified init_game_38728340:
 
     # centered "Loading...{nw}"
-    centered "Loading...{nw}"
+    centered "加载中……{nw}"
 

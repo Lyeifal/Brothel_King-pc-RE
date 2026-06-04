@@ -4,7 +4,7 @@
 translate chinese_simplified farm_powers_init_584de151:
 
     # you "Uh? What a strange feeling, all of a sudden..."
-    you "Uh? What a strange feeling, all of a sudden..."
+    you "嗯？这感觉真奇怪，突然就这么有了……"
 
 # game/BKpowers.rpy:186
 translate chinese_simplified farm_powers_init_b1c2eb11:
@@ -82,7 +82,7 @@ translate chinese_simplified power_use_85ee378f:
 translate chinese_simplified power_use_cc52c818:
 
     # demonette "Hello, Summoner... Hmmm..."
-    demonette "Hello, Summoner... Hmmm..."
+    demonette "你好，召唤师……嗯……"
 
 # game/BKpowers.rpy:497
 translate chinese_simplified power_use_edabd997:
@@ -100,7 +100,7 @@ translate chinese_simplified power_use_7cf6e2c8:
 translate chinese_simplified power_use_4376ca8a:
 
     # demon "Reporting for duty, Summoner."
-    demon "Reporting for duty, Summoner."
+    demon "传唤官，前来报到。"
 
 # game/BKpowers.rpy:509
 translate chinese_simplified power_use_57e12adf:
@@ -118,7 +118,7 @@ translate chinese_simplified power_use_d751bd74:
 translate chinese_simplified power_use_9eccdcba:
 
     # hanny "HANNYYYYY!!!"
-    hanny "HANNYYYYY!!!"
+    hanny "汉尼！！！"
 
 # game/BKpowers.rpy:521
 translate chinese_simplified power_use_bb87a45d:
@@ -346,7 +346,7 @@ translate chinese_simplified power_use_c14e8f8a:
 translate chinese_simplified power_use_b4f4c940:
 
     # you "Go to the city, and find [girl2.fullname]. Fly, my pretty!"
-    you "Go to the city, and find [girl2.fullname]. Fly, my pretty!"
+    you "去城里，找到[girl2.fullname]。飞吧，我的美人！"
 
 # game/BKpowers.rpy:1024
 translate chinese_simplified power_use_5f4082b6:
@@ -406,7 +406,7 @@ translate chinese_simplified power_use_f6d2b0e3:
 translate chinese_simplified incubus_scene_c9378c93:
 
     # girl.char "Oooh, aaah, aaaaaaaah!!!"
-    girl.char "Oooh, aaah, aaaaaaaah!!!"
+    girl.char "哦，啊，啊啊啊啊啊！！！"
 
 # game/BKpowers.rpy:1187
 translate chinese_simplified incubus_scene_cdd908e8:
@@ -424,7 +424,7 @@ translate chinese_simplified kidnap_return_d46236f9:
 translate chinese_simplified kidnap_return_7268c83a:
 
     # kidnapped_girl.char "Oh... My head... Where... Where am I?"
-    kidnapped_girl.char "Oh... My head... Where... Where am I?"
+    kidnapped_girl.char "哦……我的头……这是……这是哪里？"
 
 # game/BKpowers.rpy:1241
 translate chinese_simplified kidnap_return_093c73c8:
@@ -436,19 +436,19 @@ translate chinese_simplified kidnap_return_093c73c8:
 translate chinese_simplified kidnap_return_92651163:
 
     # kidnapped_girl.char "Wait, you're [MC.name]! What have you done to me?"
-    kidnapped_girl.char "Wait, you're [MC.name]! What have you done to me?"
+    kidnapped_girl.char "等等，你是[MC.name]！你对我做了什么？"
 
 # game/BKpowers.rpy:1249
 translate chinese_simplified kidnap_return_09fefce8:
 
     # you "Listen carefully. You're mine now, and from now on I will be your master. Don't even think about escaping: we caught you once, we can catch you again."
-    you "Listen carefully. You're mine now, and from now on I will be your master. Don't even think about escaping: we caught you once, we can catch you again."
+    you "听好了。你现在是我的了，从今以后我就是你的主人。别想逃跑：我们抓到过你一次，就能再抓到你一次。"
 
 # game/BKpowers.rpy:1252
 translate chinese_simplified kidnap_return_1ade255c:
 
     # you "Damn, I should have thought of that before... Hmph, just tell the goons to dump her in the back alley, before she wakes up and makes a scene."
-    you "Damn, I should have thought of that before... Hmph, just tell the goons to dump her in the back alley, before she wakes up and makes a scene."
+    you "该死，我之前怎么没想到呢……哼，就让那帮喽啰把她扔到后巷里去，免得她醒来闹事。"
 
 # game/BKpowers.rpy:1254
 translate chinese_simplified kidnap_return_18a2ceb5:
@@ -472,7 +472,7 @@ translate chinese_simplified powers_intro_00f58e42:
 translate chinese_simplified powers_intro_54049127:
 
     # you "Gizel? Is that you?"
-    you "Gizel? Is that you?"
+    you "吉泽尔？是你吗？"
 
 # game/BKpowers.rpy:1288
 translate chinese_simplified powers_intro_72cf28dd:
@@ -484,7 +484,7 @@ translate chinese_simplified powers_intro_72cf28dd:
 translate chinese_simplified powers_intro_a0730db8:
 
     # gizel "What's up?"
-    gizel "What's up?"
+    gizel "这是怎么回事？"
 
 # game/BKpowers.rpy:1302
 translate chinese_simplified powers_intro_6049edc4:
@@ -502,7 +502,7 @@ translate chinese_simplified powers_intro_677281ac:
 translate chinese_simplified powers_intro_a9ba7286:
 
     # you "You startled me!"
-    you "You startled me!"
+    you "你吓了我一跳！"
 
 # game/BKpowers.rpy:1308
 translate chinese_simplified powers_intro_9f0bfdf8:
@@ -514,7 +514,7 @@ translate chinese_simplified powers_intro_9f0bfdf8:
 translate chinese_simplified powers_intro_fec1fe3c:
 
     # you "What do you mean?"
-    you "What do you mean?"
+    you "你是什么意思？"
 
 # game/BKpowers.rpy:1312
 translate chinese_simplified powers_intro_26a8a620:
@@ -526,7 +526,7 @@ translate chinese_simplified powers_intro_26a8a620:
 translate chinese_simplified powers_intro_fa803099:
 
     # you "This doesn't look like it belongs in a farm."
-    you "This doesn't look like it belongs in a farm."
+    you "这看起来不像是农场里的东西。"
 
 # game/BKpowers.rpy:1316
 translate chinese_simplified powers_intro_7fb92799:
@@ -544,13 +544,13 @@ translate chinese_simplified powers_intro_fc357fc7:
 translate chinese_simplified powers_intro_d3dca03b:
 
     # gizel "This place is much more than it looks. It oozes with dark powers. And I'm thinking that it all started here, in this very basement."
-    gizel "This place is much more than it looks. It oozes with dark powers. And I'm thinking that it all started here, in this very basement."
+    gizel "这个地方远比表面看起来要复杂得多。它散发着黑暗的力量。而且我觉得这一切都是从这里开始的，就在这个地下室里。"
 
 # game/BKpowers.rpy:1322
 translate chinese_simplified powers_intro_0d926a2a:
 
     # you "Why didn't you tell me about this place before?"
-    you "Why didn't you tell me about this place before?"
+    you "为什么之前没告诉我这个地方？"
 
 # game/BKpowers.rpy:1324
 translate chinese_simplified powers_intro_e7356cfe:
@@ -574,7 +574,7 @@ translate chinese_simplified powers_intro_99881c29:
 translate chinese_simplified powers_intro_eff1a2d7:
 
     # you "Me?"
-    you "Me?"
+    you "我？"
 
 # game/BKpowers.rpy:1332
 translate chinese_simplified powers_intro_43f67828:
@@ -592,37 +592,37 @@ translate chinese_simplified powers_intro_415ce12a:
 translate chinese_simplified powers_intro_fe4ea925:
 
     # gizel "It's the fear, you see!"
-    gizel "It's the fear, you see!"
+    gizel "你看，都是恐惧作祟！"
 
 # game/BKpowers.rpy:1340
 translate chinese_simplified powers_intro_ea7f64ea:
 
     # you "The fear? What are you rambling about?"
-    you "The fear? What are you rambling about?"
+    you "恐惧？你在胡言乱语些什么？"
 
 # game/BKpowers.rpy:1342
 translate chinese_simplified powers_intro_d5b4edd8:
 
     # gizel "The fear that you have been causing people around you. It sticks with you. Around you."
-    gizel "The fear that you have been causing people around you. It sticks with you. Around you."
+    gizel "你给周围的人带来的恐惧，会一直伴随着你，也一直影响着你。"
 
 # game/BKpowers.rpy:1344
 translate chinese_simplified powers_intro_8698264c:
 
     # gizel "I can sense it... And this place can, too. The fear is strong with you."
-    gizel "I can sense it... And this place can, too. The fear is strong with you."
+    gizel "我能感觉到……这个地方也能感觉到。你感到恐惧。"
 
 # game/BKpowers.rpy:1346
 translate chinese_simplified powers_intro_3e849511:
 
     # you "You're the one to talk..."
-    you "You're the one to talk..."
+    you "你才有资格说这些……"
 
 # game/BKpowers.rpy:1348
 translate chinese_simplified powers_intro_38b48f13:
 
     # gizel "This place also absorbs the fear I cause your girls... But it only seems to actively react to you."
-    gizel "This place also absorbs the fear I cause your girls... But it only seems to actively react to you."
+    gizel "这个地方也吸收了我带给你女儿们的恐惧……但它似乎只对你有所反应。"
 
 # game/BKpowers.rpy:1350
 translate chinese_simplified powers_intro_c2289b51:
@@ -634,7 +634,7 @@ translate chinese_simplified powers_intro_c2289b51:
 translate chinese_simplified powers_intro_760aa20c:
 
     # you "I did not... Hey!"
-    you "I did not... Hey!"
+    you "我没有……嘿！"
 
 # game/BKpowers.rpy:1354
 translate chinese_simplified powers_intro_2b23e417:
@@ -652,7 +652,7 @@ translate chinese_simplified powers_intro_74e6f621:
 translate chinese_simplified powers_intro_bfc851a3:
 
     # you "What... What was that?"
-    you "What... What was that?"
+    you "那……那是什么？"
 
 # game/BKpowers.rpy:1369
 translate chinese_simplified powers_intro_28a72783:
@@ -664,7 +664,7 @@ translate chinese_simplified powers_intro_28a72783:
 translate chinese_simplified powers_intro_cbe8c193:
 
     # you "What on earth is that?"
-    you "What on earth is that?"
+    you "那到底是什么东西？"
 
 # game/BKpowers.rpy:1386
 translate chinese_simplified powers_intro_689c9dbc:
@@ -676,13 +676,13 @@ translate chinese_simplified powers_intro_689c9dbc:
 translate chinese_simplified powers_intro_0aa1970b:
 
     # gizel "It appears to be a floating deck of cards."
-    gizel "It appears to be a floating deck of cards."
+    gizel "它看起来像是一副漂浮的扑克牌。"
 
 # game/BKpowers.rpy:1390
 translate chinese_simplified powers_intro_a21e6761:
 
     # you "Such sharp wits. That's what I like about you..."
-    you "Such sharp wits. That's what I like about you..."
+    you "你真是机智过人。这就是我喜欢你的地方……"
 
 # game/BKpowers.rpy:1394
 translate chinese_simplified powers_intro_ca6fc252:
@@ -700,5 +700,5 @@ translate chinese_simplified powers_intro_e1175aa4:
 translate chinese_simplified powers_intro_9bf1152d:
 
     # you "(What am I saying... Of course she's crazy.)"
-    you "(What am I saying... Of course she's crazy.)"
+    you "（我这是在说什么……她当然疯了。）"
 
