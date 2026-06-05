@@ -4,7 +4,7 @@
 translate chinese_simplified sewer_girl_returns_006c950d:
 
     # "As you get on with your morning routine, the brothel receives an unexpected visitor."
-    "As you get on with your morning routine, the brothel receives an unexpected visitor."
+    "当你开始晨间例行活动时，妓院迎来了一位不速之客。"
 
 # game/BKchapter2.rpy:26
 translate chinese_simplified sewer_girl_returns_fb83d71b:
@@ -22,7 +22,7 @@ translate chinese_simplified sewer_girl_returns_c9406bad:
 translate chinese_simplified sewer_girl_returns_647e5474:
 
     # "A serious-looking woman in a uniform is standing at your door. She looks somewhat familiar."
-    "A serious-looking woman in a uniform is standing at your door. She looks somewhat familiar."
+    "一位身穿制服、神情严肃的女子站在你家门口。她看起来有点眼熟。"
 
 # game/BKchapter2.rpy:32
 translate chinese_simplified sewer_girl_returns_79906e5f:
@@ -142,7 +142,7 @@ translate chinese_simplified sewer_girl_returns_menu_70900da6:
 translate chinese_simplified sewer_girl_returns_menu_bb324cb8:
 
     # "You have received 750 gold."
-    "You have received 750 gold."
+    "您已获得750金币。"
 
 # game/BKchapter2.rpy:110
 translate chinese_simplified sewer_girl_returns_menu_e6e14aff:
@@ -154,7 +154,7 @@ translate chinese_simplified sewer_girl_returns_menu_e6e14aff:
 translate chinese_simplified sewer_girl_returns_menu_aa4fb3f5:
 
     # "You have earned a lot of prestige."
-    "You have earned a lot of prestige."
+    "你已经赢得了很高的声望。"
 
 # game/BKchapter2.rpy:120
 translate chinese_simplified sewer_girl_returns_menu_c14e3f7a:
@@ -184,7 +184,7 @@ translate chinese_simplified sewer_girl_returns_menu_7a924cd9:
 translate chinese_simplified sewer_girl_returns_menu_d9b70e3e:
 
     # "You have received 500 gold. You have earned a good amount of prestige."
-    "You have received 500 gold. You have earned a good amount of prestige."
+    "你获得了500金币。你获得了相当可观的声望。"
 
 # game/BKchapter2.rpy:144
 translate chinese_simplified sewer_girl_returns_menu_2bf10dd6:
@@ -226,7 +226,7 @@ translate chinese_simplified sewer_girl_returns_menu_c66308ef:
 translate chinese_simplified sewer_girl_returns_menu_53cde91f:
 
     # "She frowns and pauses, thinking for a moment."
-    "She frowns and pauses, thinking for a moment."
+    "她皱起眉头，停顿了一下，思考片刻。"
 
 # game/BKchapter2.rpy:167
 translate chinese_simplified sewer_girl_returns_menu_6d5714f5:
@@ -280,13 +280,13 @@ translate chinese_simplified sewer_girl_returns_menu_c84fd439:
 translate chinese_simplified sewer_girl_returns_menu_47648ba3:
 
     # sewer_woman "You're too big... Aaaaah..." with hpunch
-    sewer_woman "You're too big... Aaaaah..." with hpunch
+    sewer_woman "你太大了……啊……" with hpunch
 
 # game/BKchapter2.rpy:194
 translate chinese_simplified sewer_girl_returns_menu_b863372a:
 
     # "Your hard cock hits deep inside her wet pussy as she holds on for dear life."
-    "Your hard cock hits deep inside her wet pussy as she holds on for dear life."
+    "你的硬挺阴茎深深插入她湿润的阴道，她紧紧抓住不放。"
 
 # game/BKchapter2.rpy:196
 translate chinese_simplified sewer_girl_returns_menu_e94d7e62:
@@ -298,7 +298,7 @@ translate chinese_simplified sewer_girl_returns_menu_e94d7e62:
 translate chinese_simplified sewer_girl_returns_menu_f93b17e0:
 
     # sewer_woman "Aaah, aaaaaaah, nghhhh..." with hpunch
-    sewer_woman "Aaah, aaaaaaah, nghhhh..." with hpunch
+    sewer_woman "啊啊啊啊啊，嗯……" with hpunch
 
 # game/BKchapter2.rpy:200
 translate chinese_simplified sewer_girl_returns_menu_c0e55d00:
@@ -310,7 +310,7 @@ translate chinese_simplified sewer_girl_returns_menu_c0e55d00:
 translate chinese_simplified sewer_girl_returns_menu_ee53a170:
 
     # "She moans wildly as your cock makes wet noises pounding her hungry cunt."
-    "She moans wildly as your cock makes wet noises pounding her hungry cunt."
+    "当你的阴茎在她饥渴的阴道里猛烈抽插，发出湿漉漉的声音时，她疯狂地呻吟起来。"
 
 # game/BKchapter2.rpy:204
 translate chinese_simplified sewer_girl_returns_menu_45077a9f:
@@ -328,19 +328,19 @@ translate chinese_simplified sewer_girl_returns_menu_57c2e40e:
 translate chinese_simplified sewer_girl_returns_menu_c3001905:
 
     # "Instead of answering, you fuck her even harder, hitting her womb as you drive your dick deeper and deeper inside her."
-    "Instead of answering, you fuck her even harder, hitting her womb as you drive your dick deeper and deeper inside her."
+    "你没有回答，反而更加用力地操她，将阴茎越插越深，撞击着她的子宫。"
 
 # game/BKchapter2.rpy:210
 translate chinese_simplified sewer_girl_returns_menu_f6db5610:
 
     # sewer_woman "No, aaaah!!! You brute... Don't... Don't make me pregnant..." with hpunch
-    sewer_woman "No, aaaah!!! You brute... Don't... Don't make me pregnant..." with hpunch
+    sewer_woman "不，啊啊啊！！！你这个混蛋……别……别让我怀孕……" with hpunch
 
 # game/BKchapter2.rpy:212
 translate chinese_simplified sewer_girl_returns_menu_1bf8fded:
 
     # sewer_woman "It's too much..." with hpunch
-    sewer_woman "It's too much..." with hpunch
+    sewer_woman "太过分了……" with hpunch
 
 # game/BKchapter2.rpy:218
 translate chinese_simplified sewer_girl_returns_menu_cfe85ebd:
@@ -352,13 +352,13 @@ translate chinese_simplified sewer_girl_returns_menu_cfe85ebd:
 translate chinese_simplified sewer_girl_returns_menu_c2510d94:
 
     # "Pulling out at the last moment, you shoot your load all over her tits and face."
-    "Pulling out at the last moment, you shoot your load all over her tits and face."
+    "在最后一刻抽出阴茎，你把精液射得她胸部和脸上到处都是。"
 
 # game/BKchapter2.rpy:228
 translate chinese_simplified sewer_girl_returns_menu_aaa9e82e:
 
     # sewer_woman "Aaaah... Oooh..." with flash
-    sewer_woman "Aaaah... Oooh..." with flash
+    sewer_woman "啊……哦……" with flash
 
 # game/BKchapter2.rpy:232
 translate chinese_simplified sewer_girl_returns_menu_d31bcf31:
@@ -370,7 +370,7 @@ translate chinese_simplified sewer_girl_returns_menu_d31bcf31:
 translate chinese_simplified sewer_girl_returns_menu_0ae05a5f:
 
     # sewer_woman "You made me all dirty... You came all over my glasses!" with vpunch
-    sewer_woman "You made me all dirty... You came all over my glasses!" with vpunch
+    sewer_woman "你弄得我浑身脏兮兮的……你把精液射到我的眼镜上了！" with vpunch
 
 # game/BKchapter2.rpy:236
 translate chinese_simplified sewer_girl_returns_menu_d845f42b:
@@ -418,7 +418,7 @@ translate chinese_simplified sewer_girl_returns_menu_853b7fe8:
 translate chinese_simplified sewer_girl_returns_menu_65555694:
 
     # "Hours later..."
-    "Hours later..."
+    "几个小时后……"
 
 # game/BKchapter2.rpy:267
 translate chinese_simplified sewer_girl_returns_menu_c79505bf:
@@ -484,13 +484,13 @@ translate chinese_simplified sewer_girl_returns_menu_a3a66a5a:
 translate chinese_simplified c2_intro_0df2cb5f:
 
     # "It's a bright new day, and you are filled with optimism as you give one last look to the empty shell of your old brothel."
-    "It's a bright new day, and you are filled with optimism as you give one last look to the empty shell of your old brothel."
+    "这是一个崭新的日子，你充满乐观，最后看了一眼你那间空荡荡的旧妓院。"
 
 # game/BKchapter2.rpy:312
 translate chinese_simplified c2_intro_d402a041:
 
     # "You start laughing as you remember the visit you got this morning."
-    "You start laughing as you remember the visit you got this morning."
+    "你想起今天早上来的那位访客，忍不住笑了起来。"
 
 # game/BKchapter2.rpy:318
 translate chinese_simplified c2_intro_9c9e6def:
@@ -526,7 +526,7 @@ translate chinese_simplified c2_intro_f32ce1e3:
 translate chinese_simplified c2_intro_43a8f942:
 
     # kosmo angry bw "Whaat?!?" with vpunch
-    kosmo angry bw "Whaat?!?" with vpunch
+    kosmo angry bw "什么？！" with vpunch
 
 # game/BKchapter2.rpy:332
 translate chinese_simplified c2_intro_7e1a565d:
@@ -538,7 +538,7 @@ translate chinese_simplified c2_intro_7e1a565d:
 translate chinese_simplified c2_intro_755a4a88:
 
     # kosmo "GROSS!!" with vpunch
-    kosmo "GROSS!!" with vpunch
+    kosmo "总的！！" with vpunch
 
 # game/BKchapter2.rpy:356
 translate chinese_simplified c2_intro_8a0035a5:
@@ -550,7 +550,7 @@ translate chinese_simplified c2_intro_8a0035a5:
 translate chinese_simplified c2_intro_9e248dde:
 
     # sill sad "*pant*, *pant*..."
-    sill sad "*pant*, *pant*..."
+    sill sad "*喘气*，*喘气*……"
 
 # game/BKchapter2.rpy:360
 translate chinese_simplified c2_intro_73a8bdf1:
@@ -568,7 +568,7 @@ translate chinese_simplified c2_intro_50a60b11:
 translate chinese_simplified c2_intro_fedbb43c:
 
     # "Sill can barely stand under the weight of a giant backpack filled with clothes, tools, silverware, carpets, supplies, and your personal collection of lead weights (only you think that's cool). The bag threatens to crush her with every step."
-    "Sill can barely stand under the weight of a giant backpack filled with clothes, tools, silverware, carpets, supplies, and your personal collection of lead weights (only you think that's cool). The bag threatens to crush her with every step."
+    "希尔背着一个装满衣服、工具、餐具、地毯、用品以及你个人收藏的铅块（只有你觉得这很酷）的巨大背包，几乎站都站不稳。每走一步，背包都像是要把她压垮一样。"
 
 # game/BKchapter2.rpy:368
 translate chinese_simplified c2_intro_361902c5:
@@ -592,19 +592,19 @@ translate chinese_simplified c2_intro_7e3c797f:
 translate chinese_simplified c2_intro_1be66adb:
 
     # "Not letting Sill's whining spoil your mood, you watch with satisfaction as you leave the slums behind and enter the bustling streets of Zan's popular neighborhoods, stepping into [district.name]."
-    "Not letting Sill's whining spoil your mood, you watch with satisfaction as you leave the slums behind and enter the bustling streets of Zan's popular neighborhoods, stepping into [district.name]."
+    "你没有让希尔的抱怨破坏你的心情，满意地看着自己离开贫民窟，进入赞恩热闹的街区，踏入[district.name]。"
 
 # game/BKchapter2.rpy:381
 translate chinese_simplified c2_intro_b63ec5de:
 
     # "The sounds of waves crashing on the pier and seagulls shrieking echo everywhere. It's a pleasant change from the Slums, although you have a feeling it might get old quickly."
-    "The sounds of waves crashing on the pier and seagulls shrieking echo everywhere. It's a pleasant change from the Slums, although you have a feeling it might get old quickly."
+    "海浪拍打码头的声音和海鸥的鸣叫声回荡在四周。这与贫民窟截然不同，令人耳目一新，不过你也隐隐觉得这种环境可能很快就会变得乏味。"
 
 # game/BKchapter2.rpy:383
 translate chinese_simplified c2_intro_3cdf850e:
 
     # "As with every city, the docks are next to the seedier parts of town. The plazas near the docks are packed with the wildest taverns in the city. Rowdy sailors and shady dealers pass you by, not paying any attention to you."
-    "As with every city, the docks are next to the seedier parts of town. The plazas near the docks are packed with the wildest taverns in the city. Rowdy sailors and shady dealers pass you by, not paying any attention to you."
+    "和所有城市一样，码头附近往往是比较鱼龙混杂的区域。码头附近的广场上挤满了城里最喧闹的酒馆。粗鲁的水手和形迹可疑的商贩从你身边走过，根本不会注意到你。"
 
 # game/BKchapter2.rpy:385
 translate chinese_simplified c2_intro_61ccd6d1:
@@ -616,13 +616,13 @@ translate chinese_simplified c2_intro_61ccd6d1:
 translate chinese_simplified c2_intro_2c601bfe:
 
     # "Workers, merchants and craftsmen mingle in the busiest neighbourhood of the city. Zan's main market is just a few streets away, the noise of a thousand people bartering echoing in your ears."
-    "Workers, merchants and craftsmen mingle in the busiest neighbourhood of the city. Zan's main market is just a few streets away, the noise of a thousand people bartering echoing in your ears."
+    "在城里最繁华的街区，工人、商人和工匠熙熙攘攘。赞恩的主要市场就在几条街之外，上千人讨价还价的喧闹声在耳边回荡。"
 
 # game/BKchapter2.rpy:390
 translate chinese_simplified c2_intro_f0bb559e:
 
     # "Every trade known to man is represented in the side streets near the market. In the distance, the grim outline of the city prison and the nearby gallows give you a chill."
-    "Every trade known to man is represented in the side streets near the market. In the distance, the grim outline of the city prison and the nearby gallows give you a chill."
+    "市场附近的小巷里，各种行业应有尽有。远处，城市监狱和附近绞刑架阴森的轮廓令人不寒而栗。"
 
 # game/BKchapter2.rpy:392
 translate chinese_simplified c2_intro_556c5d97:
@@ -646,7 +646,7 @@ translate chinese_simplified c2_intro_c642564b:
 translate chinese_simplified c2_intro_62e764e9:
 
     # you "It's FANTASTIC!" with vpunch
-    you "It's FANTASTIC!" with vpunch
+    you "太棒了！" with vpunch
 
 # game/BKchapter2.rpy:404
 translate chinese_simplified c2_intro_6dd50508:
@@ -658,7 +658,7 @@ translate chinese_simplified c2_intro_6dd50508:
 translate chinese_simplified c2_intro_ed7adc54:
 
     # "Sill is crawling on all fours now, she cannot even gather the strength to look up."
-    "Sill is crawling on all fours now, she cannot even gather the strength to look up."
+    "希尔现在只能四肢着地爬行，她甚至连抬头的力气都没有了。"
 
 # game/BKchapter2.rpy:408
 translate chinese_simplified c2_intro_68c19088:
@@ -718,7 +718,7 @@ translate chinese_simplified c2_intro_8cc30898:
 translate chinese_simplified c2_intro_25f86d6a:
 
     # "Shoving Sill and her bags inside, you decide to enjoy a little break from all your hard work and step outside to take a look at your new neighbourhood."
-    "Shoving Sill and her bags inside, you decide to enjoy a little break from all your hard work and step outside to take a look at your new neighbourhood."
+    "你把希尔和她的行李塞进屋里，决定从辛勤的工作中稍作休息，走到外面看看你的新社区。"
 
 # game/BKchapter2.rpy:432
 translate chinese_simplified c2_intro_5700888f:
@@ -730,7 +730,7 @@ translate chinese_simplified c2_intro_5700888f:
 translate chinese_simplified c2_intro_99098d21:
 
     # "A young girl's laugh draws your attention away from the rowdy crowds. Looking up the street, you spot a group of women walking down the street."
-    "A young girl's laugh draws your attention away from the rowdy crowds. Looking up the street, you spot a group of women walking down the street."
+    "一声小女孩的笑声将你的注意力从喧闹的人群中吸引过来。你抬头望向街道，看到一群妇女正沿着街道走来。"
 
 # game/BKchapter2.rpy:440
 translate chinese_simplified c2_intro_65a0d629:
@@ -778,7 +778,7 @@ translate chinese_simplified c2_intro_9fdf71c9:
 translate chinese_simplified c2_intro_3260fe0f:
 
     # katryn "SHUT UP, you simpleton! We're here on business, remember?" with vpunch
-    katryn "SHUT UP, you simpleton! We're here on business, remember?" with vpunch
+    katryn "闭嘴，你这个蠢货！我们是来谈生意的，记得吗？" with vpunch
 
 # game/BKchapter2.rpy:488
 translate chinese_simplified c2_intro_a119948e:
@@ -790,7 +790,7 @@ translate chinese_simplified c2_intro_a119948e:
 translate chinese_simplified c2_intro_55229ebc:
 
     # katryn "Yes, you dumb f..." with vpunch
-    katryn "Yes, you dumb f..." with vpunch
+    katryn "是的，你这个蠢货……" with vpunch
 
 # game/BKchapter2.rpy:500
 translate chinese_simplified c2_intro_c347864d:
@@ -808,7 +808,7 @@ translate chinese_simplified c2_intro_ca958122:
 translate chinese_simplified c2_intro_a158fce2:
 
     # katryn "WHY ARE YOU ALL TAKING HER SIDE? I'm the genius here!!!" with vpunch
-    katryn "WHY ARE YOU ALL TAKING HER SIDE? I'm the genius here!!!" with vpunch
+    katryn "你们为什么都站在她那边？我才是天才啊！！！" with vpunch
 
 # game/BKchapter2.rpy:514
 translate chinese_simplified c2_intro_4630173a:
@@ -826,19 +826,19 @@ translate chinese_simplified c2_intro_fb8bd46c:
 translate chinese_simplified c2_intro_dadb111c:
 
     # "As the women walk down the street, they pass in front of [brothel.name] and you ogle them a bit."
-    "As the women walk down the street, they pass in front of [brothel.name] and you ogle them a bit."
+    "当女人们沿着街道走来时，她们经过[brothel.name]前面，你会忍不住多看她们几眼。"
 
 # game/BKchapter2.rpy:525
 translate chinese_simplified c2_intro_905320e2:
 
     # you "Mmmh..." nointeract
-    you "Mmmh..." nointeract
+    you "嗯……" nointeract
 
 # game/BKchapter2.rpy:532
 translate chinese_simplified c2_intro_0979cf93:
 
     # "You look at the young girl, Gurigura, and flash her a bright smile. She notices you and smiles back."
-    "You look at the young girl, Gurigura, and flash her a bright smile. She notices you and smiles back."
+    "你看向小女孩古丽古拉，对她露出灿烂的笑容。她注意到你，也回以微笑。"
 
 # game/BKchapter2.rpy:534
 translate chinese_simplified c2_intro_7a89e029:
@@ -850,13 +850,13 @@ translate chinese_simplified c2_intro_7a89e029:
 translate chinese_simplified c2_intro_6f14e23a:
 
     # gurigura "Hiii!" with vpunch
-    gurigura "Hiii!" with vpunch
+    gurigura "嗨！" with vpunch
 
 # game/BKchapter2.rpy:543
 translate chinese_simplified c2_intro_0a0c1ab0:
 
     # "You look at the haughty girl and notice that for all her arrogance, she is quite pretty."
-    "You look at the haughty girl and notice that for all her arrogance, she is quite pretty."
+    "你看着这个傲慢的女孩，注意到尽管她很傲慢，但她长得相当漂亮。"
 
 # game/BKchapter2.rpy:545
 translate chinese_simplified c2_intro_1cd6fc49:
@@ -868,19 +868,19 @@ translate chinese_simplified c2_intro_1cd6fc49:
 translate chinese_simplified c2_intro_fa292bce:
 
     # "Suddenly, she turns her head and looks straight at you with cold eyes. It's like she just read your thoughts. Frowning disapprovingly, she turns her head away."
-    "Suddenly, she turns her head and looks straight at you with cold eyes. It's like she just read your thoughts. Frowning disapprovingly, she turns her head away."
+    "她突然转过头，目光冰冷地直直地盯着你，仿佛看穿了你的心思。她皱起眉头，不赞同地别过头去。"
 
 # game/BKchapter2.rpy:556
 translate chinese_simplified c2_intro_0cdc39c6:
 
     # "The warrior girl cuts a sexy figure with her skimpy clothing, which is as diminutive as the weapons on her back are huge."
-    "The warrior girl cuts a sexy figure with her skimpy clothing, which is as diminutive as the weapons on her back are huge."
+    "这位女战士身着暴露的服装，显得身材性感，她的衣服与背上巨大的武器形成了鲜明的对比。"
 
 # game/BKchapter2.rpy:564
 translate chinese_simplified c2_intro_6315f073:
 
     # "Her chest bounces up and down suggestively as she walks over the pavement. Noticing your eyes are on her, she stares back, assessing you as a potential threat."
-    "Her chest bounces up and down suggestively as she walks over the pavement. Noticing your eyes are on her, she stares back, assessing you as a potential threat."
+    "她走在人行道上，胸口随着步伐上下起伏，姿态撩人。注意到你的目光落在她身上，她也回望过去，将你视为潜在的威胁。"
 
 # game/BKchapter2.rpy:566
 translate chinese_simplified c2_intro_3e4aaccc:
@@ -904,7 +904,7 @@ translate chinese_simplified c2_intro_b5d3af7b:
 translate chinese_simplified c2_intro_ccfef98a:
 
     # "The pretty blonde girl looks sweet and innocent. You wonder if this delicate flower has a naughty side, and soon your mind is filled with racy thoughts."
-    "The pretty blonde girl looks sweet and innocent. You wonder if this delicate flower has a naughty side, and soon your mind is filled with racy thoughts."
+    "这位漂亮的金色头发女孩看起来甜美又纯真。你忍不住好奇，这朵娇弱的花朵是否也藏着不为人知的性感一面，很快，你的脑海中就浮现出各种淫荡的念头。"
 
 # game/BKchapter2.rpy:581
 translate chinese_simplified c2_intro_45d9c568:
@@ -916,7 +916,7 @@ translate chinese_simplified c2_intro_45d9c568:
 translate chinese_simplified c2_intro_2180a3ca:
 
     # "She notices you looking at her, and blushes bright red."
-    "She notices you looking at her, and blushes bright red."
+    "她注意到你在看她，脸颊瞬间涨得通红。"
 
 # game/BKchapter2.rpy:585
 translate chinese_simplified c2_intro_6b233ab8:
@@ -964,7 +964,7 @@ translate chinese_simplified c2_intro_99bea593:
 translate chinese_simplified c2_intro_25e3ae8e:
 
     # "The blonde girl blushes bright red."
-    "The blonde girl blushes bright red."
+    "金发女孩脸颊绯红。"
 
 # game/BKchapter2.rpy:614
 translate chinese_simplified c2_intro_cbf322b0:
@@ -976,7 +976,7 @@ translate chinese_simplified c2_intro_cbf322b0:
 translate chinese_simplified c2_intro_31bcae19:
 
     # katryn "OK, OK!!!" with vpunch
-    katryn "OK, OK!!!" with vpunch
+    katryn "好，好！！！" with vpunch
 
 # game/BKchapter2.rpy:628
 translate chinese_simplified c2_intro_5a9a2780:
@@ -1006,7 +1006,7 @@ translate chinese_simplified c2_intro_c53b960f:
 translate chinese_simplified c2_intro_f97104a6:
 
     # katryn "OF COURSE YOU DON'T, YOU MORON! *mad*" with vpunch
-    katryn "OF COURSE YOU DON'T, YOU MORON! *mad*" with vpunch
+    katryn "你当然不知道，你这个白痴！*生气*" with vpunch
 
 # game/BKchapter2.rpy:645
 translate chinese_simplified c2_intro_c789d31d:
@@ -1036,7 +1036,7 @@ translate chinese_simplified c2_intro_89527c50:
 translate chinese_simplified c2_intro_4bd73c8a:
 
     # "Coming from a side street, you see a group of a dozen or so thugs making their way, shoving passersby out of their way."
-    "Coming from a side street, you see a group of a dozen or so thugs making their way, shoving passersby out of their way."
+    "从一条小巷里走出来，你会看到十几个暴徒正横冲直撞，推搡着路人。"
 
 # game/BKchapter2.rpy:663
 translate chinese_simplified c2_intro_a8962e59:
@@ -1054,7 +1054,7 @@ translate chinese_simplified c2_intro_38af7725:
 translate chinese_simplified c2_intro_a131002e:
 
     # "You sense trouble as the thugs pour into your street and find themselves face-to-face with the group of girls."
-    "You sense trouble as the thugs pour into your street and find themselves face-to-face with the group of girls."
+    "你感觉到了麻烦，一群恶棍涌入你的街道，与这群女孩正面相遇。"
 
 # game/BKchapter2.rpy:669
 translate chinese_simplified c2_intro_7861a720:
@@ -1102,7 +1102,7 @@ translate chinese_simplified c2_intro_1b0c3a77:
 translate chinese_simplified c2_intro_65c41327:
 
     # gurigura "I am NOT a kid! I'm FIFTEEN!" with vpunch
-    gurigura "I am NOT a kid! I'm FIFTEEN!" with vpunch
+    gurigura "我不是小孩！我已经十五岁了！" with vpunch
 
 # game/BKchapter2.rpy:696
 translate chinese_simplified c2_intro_66ea9497:
@@ -1138,13 +1138,13 @@ translate chinese_simplified c2_intro_2e508b8a:
 translate chinese_simplified c2_intro_57979be6:
 
     # thug3 "Hey! Shut up, bitches! Don't talk like we're not even there!" with vpunch
-    thug3 "Hey! Shut up, bitches! Don't talk like we're not even there!" with vpunch
+    thug3 "嘿！都给我闭嘴，贱人们！别装作我们不存在似的说话！" with vpunch
 
 # game/BKchapter2.rpy:710
 translate chinese_simplified c2_intro_093ea532:
 
     # "The thug looks mad now. He draws out a mean looking knife."
-    "The thug looks mad now. He draws out a mean looking knife."
+    "那恶棍现在看起来很生气，他拔出了一把看起来很凶狠的刀。"
 
 # game/BKchapter2.rpy:712
 translate chinese_simplified c2_intro_4f2d800d:
@@ -1174,13 +1174,13 @@ translate chinese_simplified c2_intro_5f374bd1:
 translate chinese_simplified c2_intro_cfbea5a9:
 
     # "Faster than your eyes can follow, the small girl whirls and hits the thugs like a tornado, the sharp blades at the end of her goofy paws cutting them to shreds."
-    "Faster than your eyes can follow, the small girl whirls and hits the thugs like a tornado, the sharp blades at the end of her goofy paws cutting them to shreds."
+    "小女孩转身像龙卷风一样猛扑过去，把恶棍们打得落花流水，她那滑稽的爪子末端的锋利刀刃把他们切成了碎片。"
 
 # game/BKchapter2.rpy:750
 translate chinese_simplified c2_intro_f230e353:
 
     # "In only a matter of seconds, the men are lying dead or wounded at the girl's feet. She giggles like nothing happened."
-    "In only a matter of seconds, the men are lying dead or wounded at the girl's feet. She giggles like nothing happened."
+    "短短几秒钟，那些男人就死在或受伤地躺在女孩脚边。她却像什么都没发生一样咯咯地笑着。"
 
 # game/BKchapter2.rpy:763
 translate chinese_simplified c2_intro_0e20da08:
@@ -1228,7 +1228,7 @@ translate chinese_simplified c2_intro_5742c403:
 translate chinese_simplified c2_intro_cfd35b71:
 
     # katryn "Yes. ENGINEERING." with vpunch
-    katryn "Yes. ENGINEERING." with vpunch
+    katryn "是的，工程学。" with vpunch
 
 # game/BKchapter2.rpy:785
 translate chinese_simplified c2_intro_b9148996:
@@ -1264,7 +1264,7 @@ translate chinese_simplified c2_intro_bd7c188e:
 translate chinese_simplified c2_intro_afc42b41:
 
     # "Gurigura's eyes fill with tears, and Katryn quickly backs off."
-    "Gurigura's eyes fill with tears, and Katryn quickly backs off."
+    "古里古拉眼中噙满了泪水，卡特琳连忙后退。"
 
 # game/BKchapter2.rpy:799
 translate chinese_simplified c2_intro_913f6cef:
@@ -1366,19 +1366,19 @@ translate chinese_simplified c2_intro_9d2b21ee:
 translate chinese_simplified c2_intro_28958bea:
 
     # "The women split and leave in different directions. You wonder if you'll see them again."
-    "The women split and leave in different directions. You wonder if you'll see them again."
+    "女人们分头离开，朝不同的方向走去。你心想，以后还会不会再见到她们。"
 
 # game/BKchapter2.rpy:875
 translate chinese_simplified c2_princess_letter_4833dc91:
 
     # "Late in the morning, you come back to [brothel.name] from [activity] when you hear a sudden scream."
-    "Late in the morning, you come back to [brothel.name] from [activity] when you hear a sudden scream."
+    "上午晚些时候，你从[brothel.name]回到[activity]时，突然听到一声尖叫。"
 
 # game/BKchapter2.rpy:879
 translate chinese_simplified c2_princess_letter_d143ae00:
 
     # sill sad "Eeek!" with vpunch
-    sill sad "Eeek!" with vpunch
+    sill sad "啊！" with vpunch
 
 # game/BKchapter2.rpy:891
 translate chinese_simplified c2_princess_letter_1781add9:
@@ -1402,7 +1402,7 @@ translate chinese_simplified c2_princess_letter_27f26465:
 translate chinese_simplified c2_princess_letter_3c81341b:
 
     # "A bunch of plates lie shattered on the floor. It looks like half your tableware is broken."
-    "A bunch of plates lie shattered on the floor. It looks like half your tableware is broken."
+    "地上散落着许多摔碎的盘子。看起来你一半的餐具都碎了。"
 
 # game/BKchapter2.rpy:908
 translate chinese_simplified c2_princess_letter_f9401a33:
@@ -1456,19 +1456,19 @@ translate chinese_simplified c2_princess_letter_bab8d931:
 translate chinese_simplified c2_princess_letter_799ad503:
 
     # you "O, [MC.god]! Why do you mock me so!!! Why did you curse your humble servant with such lousy friends and clumsy slaves!!!" with vpunch
-    you "O, [MC.god]! Why do you mock me so!!! Why did you curse your humble servant with such lousy friends and clumsy slaves!!!" with vpunch
+    you "哦，[MC.god]！你为何如此嘲弄我！！！为何诅咒你卑微的仆人，赐予我如此糟糕的朋友和笨拙的奴隶！！！" with vpunch
 
 # game/BKchapter2.rpy:937
 translate chinese_simplified c2_princess_letter_8f4cf088:
 
     # you "O, cruel and heartless gods! Why do you mock me so!!! Did you have to punish my defiance by giving me lousy friends and clumsy slaves?!?" with vpunch
-    you "O, cruel and heartless gods! Why do you mock me so!!! Did you have to punish my defiance by giving me lousy friends and clumsy slaves?!?" with vpunch
+    you "哦，残酷无情的诸神啊！你们为何如此嘲弄我！！！难道非要用糟糕的朋友和笨拙的奴隶来惩罚我的反抗吗？！" with vpunch
 
 # game/BKchapter2.rpy:939
 translate chinese_simplified c2_princess_letter_e5982e0a:
 
     # gio "Lousy friends... Hey!" with vpunch
-    gio "Lousy friends... Hey!" with vpunch
+    gio "糟糕的朋友……嘿！" with vpunch
 
 # game/BKchapter2.rpy:941
 translate chinese_simplified c2_princess_letter_85e92bdc:
@@ -1480,7 +1480,7 @@ translate chinese_simplified c2_princess_letter_85e92bdc:
 translate chinese_simplified c2_princess_letter_ca911a6a:
 
     # sill sad "Hey!" with vpunch
-    sill sad "Hey!" with vpunch
+    sill sad "嘿！" with vpunch
 
 # game/BKchapter2.rpy:947
 translate chinese_simplified c2_princess_letter_91107c5c:
@@ -1504,7 +1504,7 @@ translate chinese_simplified c2_princess_letter_19709593:
 translate chinese_simplified c2_princess_letter_ddfdf539:
 
     # sill sad "Er..."
-    sill sad "Er..."
+    sill sad "呃……"
 
 # game/BKchapter2.rpy:955
 translate chinese_simplified c2_princess_letter_b9b0b42c:
@@ -1516,13 +1516,13 @@ translate chinese_simplified c2_princess_letter_b9b0b42c:
 translate chinese_simplified c2_princess_letter_584e0cc4:
 
     # gio "Good luck!" with vpunch
-    gio "Good luck!" with vpunch
+    gio "祝你好运！" with vpunch
 
 # game/BKchapter2.rpy:959
 translate chinese_simplified c2_princess_letter_98aefce0:
 
     # sill "Bad luck!" with vpunch
-    sill "Bad luck!" with vpunch
+    sill "厄运！" with vpunch
 
 # game/BKchapter2.rpy:961
 translate chinese_simplified c2_princess_letter_07602dfa:
@@ -1594,7 +1594,7 @@ translate chinese_simplified c2_princess_letter_b717b4b5:
 translate chinese_simplified c2_princess_letter_709005fa:
 
     # you "The Princess?!?" with vpunch
-    you "The Princess?!?" with vpunch
+    you "公主？！" with vpunch
 
 # game/BKchapter2.rpy:985
 translate chinese_simplified c2_princess_letter_b9fa891e:
@@ -1630,7 +1630,7 @@ translate chinese_simplified c2_princess_letter_fb263d44:
 translate chinese_simplified c2_princess_letter_837be793:
 
     # sill sad "Master!!! No!!!" with vpunch
-    sill sad "Master!!! No!!!" with vpunch
+    sill sad "主人！！！不！！！" with vpunch
 
 # game/BKchapter2.rpy:1001
 translate chinese_simplified c2_princess_letter_e01b7117:
@@ -1648,7 +1648,7 @@ translate chinese_simplified c2_princess_letter_242af99a:
 translate chinese_simplified c2_princess_letter_69188bc3:
 
     # sill "!!!" with vpunch
-    sill "!!!" with vpunch
+    sill "！！！" with vpunch
 
 # game/BKchapter2.rpy:1013
 translate chinese_simplified c2_princess_letter_45d41ee6:
@@ -1684,13 +1684,13 @@ translate chinese_simplified c2_princess_letter_3ce13387:
 translate chinese_simplified c2_princess_letter_e7d35fb8:
 
     # "Gio grumbles, but he's too horny to pass on a free hooker."
-    "Gio grumbles, but he's too horny to pass on a free hooker."
+    "乔虽然抱怨了几句，但他性欲太旺盛，无法拒绝免费的妓女。"
 
 # game/BKchapter2.rpy:1045
 translate chinese_simplified c2_princess_letter_6f6fbeae:
 
     # you "[girl.name]! Come over here."
-    you "[女孩名字]！过来一下。"
+    you "[girl.name]！过来一下。"
 
 # game/BKchapter2.rpy:1047
 translate chinese_simplified c2_princess_letter_a5702761:
@@ -1756,7 +1756,7 @@ translate chinese_simplified c2_princess_letter_665a969c:
 translate chinese_simplified c2_princess_letter_dfc296cb:
 
     # "He seems to have forgotten all about Sill."
-    "He seems to have forgotten all about Sill."
+    "他似乎已经把希尔的事忘得一干二净了。"
 
 # game/BKchapter2.rpy:1080
 translate chinese_simplified c2_princess_letter_1ad4bc9e:
@@ -1810,7 +1810,7 @@ translate chinese_simplified c2_princess_letter_42d2065d:
 translate chinese_simplified c2_princess_letter_273eeb0b:
 
     # "Gio elopes with the girls in one of the back rooms, while you turn your attention back to the letter."
-    "Gio elopes with the girls in one of the back rooms, while you turn your attention back to the letter."
+    "趁你把注意力重新集中到信上的时候，乔带着女孩们在后面的房间里私奔了。"
 
 # game/BKchapter2.rpy:1103
 translate chinese_simplified c2_princess_letter_aa510322:
@@ -1822,13 +1822,13 @@ translate chinese_simplified c2_princess_letter_aa510322:
 translate chinese_simplified c2_princess_letter_81df339f:
 
     # gio "You're... MEAN!!!" with vpunch
-    gio "You're... MEAN!!!" with vpunch
+    gio "你真是……太坏了！！！" with vpunch
 
 # game/BKchapter2.rpy:1112
 translate chinese_simplified c2_princess_letter_2f22f014:
 
     # "Gio looks dejected."
-    "Gio looks dejected."
+    "吉奥看起来很沮丧。"
 
 # game/BKchapter2.rpy:1114
 translate chinese_simplified c2_princess_letter_377ccb06:
@@ -1852,7 +1852,7 @@ translate chinese_simplified c2_princess_letter_d5ac56af:
 translate chinese_simplified c2_princess_letter_ecbb6820:
 
     # "After a few moments, you start hearing moans coming from the bedroom. You ignore them and turn your attention to the letter."
-    "After a few moments, you start hearing moans coming from the bedroom. You ignore them and turn your attention to the letter."
+    "过了一会儿，你开始听到卧室里传来呻吟声。你没有理会，而是把注意力转向了信上。"
 
 # game/BKchapter2.rpy:1127
 translate chinese_simplified c2_princess_letter_798f3def:
@@ -1864,7 +1864,7 @@ translate chinese_simplified c2_princess_letter_798f3def:
 translate chinese_simplified c2_princess_letter_e65723b2:
 
     # "You are awestruck for a moment."
-    "You are awestruck for a moment."
+    "你一时被眼前的景象惊呆了。"
 
 # game/BKchapter2.rpy:1137
 translate chinese_simplified c2_princess_letter_665a2e29:
@@ -1882,7 +1882,7 @@ translate chinese_simplified c2_princess_letter_a649969b:
 translate chinese_simplified c2_princess_letter_726093b6:
 
     # "Meanwhile..."
-    "Meanwhile..."
+    "同时..."
 
 # game/BKchapter2.rpy:1152
 translate chinese_simplified c2_princess_letter_229b2be8:
@@ -1894,7 +1894,7 @@ translate chinese_simplified c2_princess_letter_229b2be8:
 translate chinese_simplified c2_princess_letter_7d629790:
 
     # sill "Hgn..."
-    sill "Hgn..."
+    sill "嗯..."
 
 # game/BKchapter2.rpy:1156
 translate chinese_simplified c2_princess_letter_eacee126:
@@ -1912,7 +1912,7 @@ translate chinese_simplified c2_princess_letter_271c96f1:
 translate chinese_simplified c2_princess_letter_e344f6b1:
 
     # sill "No! Not inside! Plea..." with vpunch
-    sill "No! Not inside! Plea..." with vpunch
+    sill "不！别进去！求求你们……" with vpunch
 
 # game/BKchapter2.rpy:1164
 translate chinese_simplified c2_princess_letter_d90a3fdc:
@@ -1924,25 +1924,25 @@ translate chinese_simplified c2_princess_letter_d90a3fdc:
 translate chinese_simplified c2_princess_letter_80e53b6f:
 
     # sill "EEEEK!!!" with vpunch
-    sill "EEEEK!!!" with vpunch
+    sill "啊啊啊！！！" with vpunch
 
 # game/BKchapter2.rpy:1177
 translate chinese_simplified c2_princess_letter_56e32a8f:
 
     # girl.char "Oh, Mister, aah!!!" with vpunch
-    girl.char "Oh, Mister, aah!!!" with vpunch
+    girl.char "哦，先生，啊！！！" with vpunch
 
 # game/BKchapter2.rpy:1181
 translate chinese_simplified c2_princess_letter_4840a360:
 
     # girl2.char "Oh, yes! Touch me right there!" with vpunch
-    girl2.char "Oh, yes! Touch me right there!" with vpunch
+    girl2.char "哦，对！就摸摸这里！" with vpunch
 
 # game/BKchapter2.rpy:1183
 translate chinese_simplified c2_princess_letter_dcfd5695:
 
     # "Gio has fun with [girl.name] and [girl2.name] for over an hour."
-    "Gio has fun with [girl.name] and [girl2.name] for over an hour."
+    "Gio 和 [girl.name] 以及 [girl2.name] 玩了一个多小时。"
 
 # game/BKchapter2.rpy:1191
 translate chinese_simplified c2_princess_letter_833770b5:
@@ -1960,7 +1960,7 @@ translate chinese_simplified c2_princess_letter_c5711c6e:
 translate chinese_simplified c2_princess_letter_046435ce:
 
     # "Tears of joy well up in Gio's eyes."
-    "Tears of joy well up in Gio's eyes."
+    "乔的眼中涌出了喜悦的泪水。"
 
 # game/BKchapter2.rpy:1200
 translate chinese_simplified c2_princess_letter_45d8742c:
@@ -1972,7 +1972,7 @@ translate chinese_simplified c2_princess_letter_45d8742c:
 translate chinese_simplified c2_princess_letter_eb9eed2f:
 
     # girl.char "Aah, ah, aaaaaah!!!" with vpunch
-    girl.char "Aah, ah, aaaaaah!!!" with vpunch
+    girl.char "啊啊啊啊啊！！！" with vpunch
 
 # game/BKchapter2.rpy:1208
 translate chinese_simplified c2_princess_letter_a20cefa7:
@@ -1984,7 +1984,7 @@ translate chinese_simplified c2_princess_letter_a20cefa7:
 translate chinese_simplified c2_princess_letter_a004a22f:
 
     # "Gio comes back after a while, buckling his pants and grinning like an idiot."
-    "Gio comes back after a while, buckling his pants and grinning like an idiot."
+    "过了一会儿，乔回来了，一边系着裤子，一边傻笑着。"
 
 # game/BKchapter2.rpy:1217
 translate chinese_simplified c2_princess_letter_db1c7f4f:
@@ -1996,7 +1996,7 @@ translate chinese_simplified c2_princess_letter_db1c7f4f:
 translate chinese_simplified c2_princess_letter_a1b9ebae:
 
     # "Gio is turning away from you, smoking a cigar, still sulking."
-    "Gio is turning away from you, smoking a cigar, still sulking."
+    "乔背对着你，抽着雪茄，还在生闷气。"
 
 # game/BKchapter2.rpy:1222
 translate chinese_simplified c2_princess_letter_ae6d28d8:
@@ -2008,7 +2008,7 @@ translate chinese_simplified c2_princess_letter_ae6d28d8:
 translate chinese_simplified c2_princess_letter_8eec5cba:
 
     # gio "Uh? How did you..." with vpunch
-    gio "Uh? How did you..." with vpunch
+    gio "呃？你怎么……" with vpunch
 
 # game/BKchapter2.rpy:1226
 translate chinese_simplified c2_princess_letter_b3711159:
@@ -2182,7 +2182,7 @@ translate chinese_simplified c2_princess_letter_9e8bd5f6:
 translate chinese_simplified c2_princess_letter_f6ba9b9e:
 
     # "You show Gio out before he gets a chance to ransack the kitchen."
-    "You show Gio out before he gets a chance to ransack the kitchen."
+    "在乔有机会洗劫厨房之前，赶紧把他赶出去。"
 
 # game/BKchapter2.rpy:1290
 translate chinese_simplified c2_princess_letter_123f646a:
@@ -2230,7 +2230,7 @@ translate chinese_simplified c2_princess_visit1_7cb68c88:
 translate chinese_simplified c2_princess_visit1_12616042:
 
     # "Gio explains Zan to you as you move deeper inside the city."
-    "Gio explains Zan to you as you move deeper inside the city."
+    "当你深入城市腹地时，乔会向你解释赞恩的情况。"
 
 # game/BKchapter2.rpy:1328
 translate chinese_simplified c2_princess_visit1_75d2332b:
@@ -2242,7 +2242,7 @@ translate chinese_simplified c2_princess_visit1_75d2332b:
 translate chinese_simplified c2_princess_visit1_1689c6c8:
 
     # "You reach the inner gates. After Gio shows the guards a document, they let you pass through, into the upper city."
-    "You reach the inner gates. After Gio shows the guards a document, they let you pass through, into the upper city."
+    "你到达了内城门。乔向守卫出示了一份文件后，他们放你通过，进入了上城区。"
 
 # game/BKchapter2.rpy:1334
 translate chinese_simplified c2_princess_visit1_b2d7ac9c:
@@ -2266,7 +2266,7 @@ translate chinese_simplified c2_princess_visit1_f1eac234:
 translate chinese_simplified c2_princess_visit1_b727652d:
 
     # "You soon reach a major artery, cleaving through the city in a long, straight line."
-    "You soon reach a major artery, cleaving through the city in a long, straight line."
+    "你很快就会到达一条主要干道，它笔直地贯穿整个城市。"
 
 # game/BKchapter2.rpy:1344
 translate chinese_simplified c2_princess_visit1_5b7c6e53:
@@ -2308,7 +2308,7 @@ translate chinese_simplified c2_princess_visit1_2f7441a8:
 translate chinese_simplified c2_princess_visit1_d83b2510:
 
     # "A bulky knight bars the way. Gio shows him the letter of conduct."
-    "A bulky knight bars the way. Gio shows him the letter of conduct."
+    "一个身材魁梧的骑士挡住了去路。乔向他出示了行为准则信。"
 
 # game/BKchapter2.rpy:1365
 translate chinese_simplified c2_princess_visit1_f363c3a0:
@@ -2332,7 +2332,7 @@ translate chinese_simplified c2_princess_visit1_4d1b2e32:
 translate chinese_simplified c2_princess_visit1_533651bd:
 
     # "The knight towers above Gio, resting his hand on the pommel of his sword."
-    "The knight towers above Gio, resting his hand on the pommel of his sword."
+    "骑士高高地俯视着乔，一只手搭在剑柄上。"
 
 # game/BKchapter2.rpy:1373
 translate chinese_simplified c2_princess_visit1_025a131a:
@@ -2344,7 +2344,7 @@ translate chinese_simplified c2_princess_visit1_025a131a:
 translate chinese_simplified c2_princess_visit1_3a2fdbe9:
 
     # "Gio stutters to answer, but quickly backs down, grumbling."
-    "Gio stutters to answer, but quickly backs down, grumbling."
+    "乔结结巴巴地回答，但很快又嘟囔着退缩了。"
 
 # game/BKchapter2.rpy:1377
 translate chinese_simplified c2_princess_visit1_a5443948:
@@ -2428,13 +2428,13 @@ translate chinese_simplified c2_princess_visit1_f3467447:
 translate chinese_simplified c2_princess_visit1_47e9ca0f:
 
     # "Walking a few steps behind the knight, you take in the view of the royal palace from the inside."
-    "Walking a few steps behind the knight, you take in the view of the royal palace from the inside."
+    "跟在骑士身后几步，你就能从内部欣赏到皇宫的景色。"
 
 # game/BKchapter2.rpy:1409
 translate chinese_simplified c2_princess_visit1_e256ff78:
 
     # "A magnificent courtyard separates several massive aisles, each one larger than a high-ranking noble's estate."
-    "A magnificent courtyard separates several massive aisles, each one larger than a high-ranking noble's estate."
+    "宏伟的庭院将几条巨大的走廊分隔开来，每一条走廊都比一位高级贵族的庄园还要大。"
 
 # game/BKchapter2.rpy:1411
 translate chinese_simplified c2_princess_visit1_28ab28d7:
@@ -2446,7 +2446,7 @@ translate chinese_simplified c2_princess_visit1_28ab28d7:
 translate chinese_simplified c2_princess_visit1_d14ddfc1:
 
     # "Although the masonry is top-notch, you notice a clear difference in design and material between the foundations and the newer buildings above."
-    "Although the masonry is top-notch, you notice a clear difference in design and material between the foundations and the newer buildings above."
+    "虽然砌筑工艺一流，但你会注意到地基和上面新建的建筑物在设计和材料上存在明显的差异。"
 
 # game/BKchapter2.rpy:1417
 translate chinese_simplified c2_princess_visit1_c6fe0e04:
@@ -2488,7 +2488,7 @@ translate chinese_simplified c2_princess_visit1_0c02699d:
 translate chinese_simplified c2_princess_visit1_2fb5f8c0:
 
     # "The knight leads you towards the right aisle, which has the most breathtaking view of the city, hanging right on top of the cliff overlooking Zan."
-    "The knight leads you towards the right aisle, which has the most breathtaking view of the city, hanging right on top of the cliff overlooking Zan."
+    "骑士引领你走向右侧的走廊，那里可以欣赏到这座城市最令人叹为观止的景色，它就悬挂在俯瞰赞城的悬崖顶上。"
 
 # game/BKchapter2.rpy:1433
 translate chinese_simplified c2_princess_visit1_d9869771:
@@ -2500,7 +2500,7 @@ translate chinese_simplified c2_princess_visit1_d9869771:
 translate chinese_simplified c2_princess_visit1_57b13414:
 
     # "This last piece of information sounded a little like a threat. You're not sure, but you feel like the knight is looking at you disapprovingly from under his helmet."
-    "This last piece of information sounded a little like a threat. You're not sure, but you feel like the knight is looking at you disapprovingly from under his helmet."
+    "最后这条信息听起来有点像威胁。你不太确定，但感觉那位骑士正从头盔下用不赞同的目光看着你。"
 
 # game/BKchapter2.rpy:1439
 translate chinese_simplified c2_princess_visit1_d3e3eb3a:
@@ -2542,13 +2542,13 @@ translate chinese_simplified c2_princess_visit1_1d4a3b90_1:
 translate chinese_simplified c2_princess_visit1_96e28e65:
 
     # "The Palace will send someone to pick you up {b}next Monday{/b}."
-    "The Palace will send someone to pick you up {b}next Monday{/b}."
+    "王室将于下周一派人来接你。"
 
 # game/BKchapter2.rpy:1468
 translate chinese_simplified c2_princess_visit2_cc644bdb:
 
     # "Today is the day you're supposed to visit the Princess again."
-    "Today is the day you're supposed to visit the Princess again."
+    "今天是你再次拜访公主的日子。"
 
 # game/BKchapter2.rpy:1475
 translate chinese_simplified c2_princess_visit2_836bb405:
@@ -2560,7 +2560,7 @@ translate chinese_simplified c2_princess_visit2_836bb405:
 translate chinese_simplified c2_princess_visit2_96a3725c:
 
     # "???" "*clear throat* Sir?"
-    "???" "*清嗓子* 先生？"
+    "？？？" "*清嗓子* 先生？"
 
 # game/BKchapter2.rpy:1479
 translate chinese_simplified c2_princess_visit2_3bc0cda7:
@@ -2572,13 +2572,13 @@ translate chinese_simplified c2_princess_visit2_3bc0cda7:
 translate chinese_simplified c2_princess_visit2_0ced6656:
 
     # "A large man wearing a knight's helmet and the palace livery calls out to you from atop a fancy carriage."
-    "A large man wearing a knight's helmet and the palace livery calls out to you from atop a fancy carriage."
+    "一个身材魁梧、头戴骑士头盔、身着宫廷制服的男子，站在一辆豪华马车上向你喊话。"
 
 # game/BKchapter2.rpy:1485
 translate chinese_simplified c2_princess_visit2_a9b92345:
 
     # "Carriage driver" "Hi there. I've been instructed to take you to the palace."
-    "Carriage driver" "Hi there. I've been instructed to take you to the palace."
+    "马车夫" "Hi there. I've been instructed to take you to the palace."
 
 # game/BKchapter2.rpy:1487
 translate chinese_simplified c2_princess_visit2_51fc080e:
@@ -2590,31 +2590,31 @@ translate chinese_simplified c2_princess_visit2_51fc080e:
 translate chinese_simplified c2_princess_visit2_e0e8bda4:
 
     # "The man ignores your tone, and you try to shrug off your bad mood. He points you towards the carriage's door. You step inside the dark, cramped cabin."
-    "The man ignores your tone, and you try to shrug off your bad mood. He points you towards the carriage's door. You step inside the dark, cramped cabin."
+    "那人无视你的语气，你努力压下心中的不快。他指了指马车门。你走进了黑暗狭窄的车厢。"
 
 # game/BKchapter2.rpy:1491
 translate chinese_simplified c2_princess_visit2_7ed82811:
 
     # "Inside is very dark, and you feel your way towards your seat. Your hand meets a warm, supple yet firm cushion that feels nice to the touch."
-    "Inside is very dark, and you feel your way towards your seat. Your hand meets a warm, supple yet firm cushion that feels nice to the touch."
+    "里面很黑，你摸索着找到座位。你的手摸到了一个温暖、柔软而又结实的坐垫，触感很好。"
 
 # game/BKchapter2.rpy:1495
 translate chinese_simplified c2_princess_visit2_869181dd:
 
     # "Female voice" "Ahem... Sir?"
-    "Female voice" "Ahem... Sir?"
+    "女声" "Ahem... Sir?"
 
 # game/BKchapter2.rpy:1499
 translate chinese_simplified c2_princess_visit2_4042094e:
 
     # "Female voice" "Would you mind... letting go of my thigh?"
-    "Female voice" "Would you mind... letting go of my thigh?"
+    "女声" "Would you mind... letting go of my thigh?"
 
 # game/BKchapter2.rpy:1501
 translate chinese_simplified c2_princess_visit2_25242c53:
 
     # "You weren't expecting anyone else to be in the carriage. Startled, you withdraw your hand in a hurry."
-    "You weren't expecting anyone else to be in the carriage. Startled, you withdraw your hand in a hurry."
+    "你没想到车厢里还会有其他人。你吓了一跳，赶紧缩回了手。"
 
 # game/BKchapter2.rpy:1503
 translate chinese_simplified c2_princess_visit2_266eb78a:
@@ -2626,7 +2626,7 @@ translate chinese_simplified c2_princess_visit2_266eb78a:
 translate chinese_simplified c2_princess_visit2_d11fbf74:
 
     # "You give a profuse apology. As your eyes get used to the dim light, you see the kind face of a young woman smiling back at you."
-    "You give a profuse apology. As your eyes get used to the dim light, you see the kind face of a young woman smiling back at you."
+    "你连连道歉。当你的眼睛逐渐适应昏暗的光线后，你看到一张年轻女子和蔼的脸庞正对着你微笑。"
 
 # game/BKchapter2.rpy:1509
 translate chinese_simplified c2_princess_visit2_64177312:
@@ -2650,13 +2650,13 @@ translate chinese_simplified c2_princess_visit2_4d0a0461:
 translate chinese_simplified c2_princess_visit2_b9cad20d:
 
     # "The young lady extends her alabaster-white hand to you in a delicate gesture. You take it and bow, unsure about the proper salute."
-    "The young lady extends her alabaster-white hand to you in a delicate gesture. You take it and bow, unsure about the proper salute."
+    "这位年轻女士优雅地向你伸出她那雪白的手。你握住她的手，鞠了一躬，却不知该如何行礼。"
 
 # game/BKchapter2.rpy:1521
 translate chinese_simplified c2_princess_visit2_49d64e31:
 
     # "The woman laughs gently."
-    "The woman laughs gently."
+    "女人轻轻地笑了。"
 
 # game/BKchapter2.rpy:1523
 translate chinese_simplified c2_princess_visit2_6743ab30:
@@ -2668,7 +2668,7 @@ translate chinese_simplified c2_princess_visit2_6743ab30:
 translate chinese_simplified c2_princess_visit2_bda07e5c:
 
     # "The coach is rolling and shaking as it makes its way through the city streets."
-    "The coach is rolling and shaking as it makes its way through the city streets."
+    "长途汽车在城市街道上颠簸摇晃。"
 
 # game/BKchapter2.rpy:1530
 translate chinese_simplified c2_princess_visit2_917e96eb:
@@ -2722,7 +2722,7 @@ translate chinese_simplified c2_princess_visit2_a3fc079f:
 translate chinese_simplified c2_princess_visit2_e85f95c2:
 
     # "The coach is now coming up Pilgrim's Road, the driver yelling at the pilgrims to clear a path for the carriage."
-    "The coach is now coming up Pilgrim's Road, the driver yelling at the pilgrims to clear a path for the carriage."
+    "马车正沿着朝圣之路驶来，车夫大声向朝圣者们喊叫，让他们为马车让出一条路。"
 
 # game/BKchapter2.rpy:1552
 translate chinese_simplified c2_princess_visit2_797fb373:
@@ -2782,7 +2782,7 @@ translate chinese_simplified c2_princess_visit2_19297687:
 translate chinese_simplified c2_princess_visit2_832b5f7d:
 
     # "The coach now reaches the gates to the Palace. You are finally there."
-    "The coach now reaches the gates to the Palace. You are finally there."
+    "马车已抵达皇宫大门。你们终于到了。"
 
 # game/BKchapter2.rpy:1576
 translate chinese_simplified c2_castle_interview_3ec4686a:
@@ -2794,7 +2794,7 @@ translate chinese_simplified c2_castle_interview_3ec4686a:
 translate chinese_simplified c2_castle_interview_83dc6ffb:
 
     # "The knight lets you in after checking your letter of conduct, and the carriage enters the courtyard. You and Lady Henso get off near the Princess's aisle."
-    "The knight lets you in after checking your letter of conduct, and the carriage enters the courtyard. You and Lady Henso get off near the Princess's aisle."
+    "骑士检查了你的品行证明后放你上车，马车驶入庭院。你和亨索夫人在公主的走道附近下了车。"
 
 # game/BKchapter2.rpy:1583
 translate chinese_simplified c2_castle_interview_13fc48f1:
@@ -2824,13 +2824,13 @@ translate chinese_simplified c2_castle_interview_7f0aa9ed:
 translate chinese_simplified c2_castle_interview_3253f240:
 
     # "After climbing the steep stairs, you reach a vast corridor."
-    "After climbing the steep stairs, you reach a vast corridor."
+    "爬上陡峭的楼梯后，就来到了一条宽敞的走廊。"
 
 # game/BKchapter2.rpy:1609
 translate chinese_simplified c2_castle_interview_f17b4e50:
 
     # "A guard beckons you to come forward."
-    "A guard beckons you to come forward."
+    "一名警卫示意你上前。"
 
 # game/BKchapter2.rpy:1611
 translate chinese_simplified c2_castle_interview_d9c238ed:
@@ -2842,7 +2842,7 @@ translate chinese_simplified c2_castle_interview_d9c238ed:
 translate chinese_simplified c2_castle_interview_f5bbcf8a:
 
     # "Woman's voice" "Do come in."
-    "Woman's voice" "Do come in."
+    "女人的声音" "Do come in."
 
 # game/BKchapter2.rpy:1624
 translate chinese_simplified c2_castle_interview_f5f82de5:
@@ -2914,7 +2914,7 @@ translate chinese_simplified c2_castle_interview_d47d7066:
 translate chinese_simplified c2_castle_interview_4b7e6026:
 
     # "She takes a moment to regain her composure. After she's done, she stiffens, and goes straight to the point."
-    "She takes a moment to regain her composure. After she's done, she stiffens, and goes straight to the point."
+    "她花了一点时间平复心情。平复之后，她身体僵硬，直奔主题。"
 
 # game/BKchapter2.rpy:1657
 translate chinese_simplified c2_castle_interview_2c5e65de:
@@ -2998,7 +2998,7 @@ translate chinese_simplified c2_castle_interview_20bc404c:
 translate chinese_simplified c2_castle_interview_9424c331:
 
     # "Princess Kurohime gives you a purse full of coins. You have earned 500 denars."
-    "Princess Kurohime gives you a purse full of coins. You have earned 500 denars."
+    "黑姬公主给了你一袋金币。你赚到了500第纳尔。"
 
 # game/BKchapter2.rpy:1693
 translate chinese_simplified c2_castle_interview_bec45058:
@@ -3034,7 +3034,7 @@ translate chinese_simplified c2_castle_interview_6ef1387f:
 translate chinese_simplified kurohime_conversation_menu_01bf83cc:
 
     # you "I wanted to know more..." nointeract
-    you "I wanted to know more..." nointeract
+    you "我想了解更多……" nointeract
 
 # game/BKchapter2.rpy:1711
 translate chinese_simplified kurohime_conversation_menu_2a0080c2:
@@ -3160,7 +3160,7 @@ translate chinese_simplified kurohime_conversation_menu_8c43a7f1:
 translate chinese_simplified kurohime_conversation_menu_d1200750:
 
     # "She looks at you a little differently."
-    "She looks at you a little differently."
+    "她看你的眼神有点不一样了。"
 
 # game/BKchapter2.rpy:1767
 translate chinese_simplified kurohime_conversation_menu_d55db4d8:
@@ -3232,7 +3232,7 @@ translate chinese_simplified kurohime_conversation_menu_c0c1fe39:
 translate chinese_simplified kurohime_conversation_menu_68e6f802:
 
     # "The Princess smiles rarely, but when she does, it looks lovely."
-    "The Princess smiles rarely, but when she does, it looks lovely."
+    "公主很少微笑，但她微笑时，笑容十分甜美。"
 
 # game/BKchapter2.rpy:1803
 translate chinese_simplified kurohime_conversation_menu_83979da7:
@@ -3334,7 +3334,7 @@ translate chinese_simplified kurohime_conversation_menu_98b1e59b:
 translate chinese_simplified kurohime_conversation_menu_b239a0fd:
 
     # "She looks uncomfortable."
-    "She looks uncomfortable."
+    "她看起来很不自在。"
 
 # game/BKchapter2.rpy:1842
 translate chinese_simplified kurohime_conversation_menu_6726aad0:
@@ -3376,7 +3376,7 @@ translate chinese_simplified kurohime_conversation_menu_f1b4fba1:
 translate chinese_simplified kurohime_conversation_menu_2eed7a71:
 
     # kuro "Those are lies, of course!!! *offended*" with vpunch
-    kuro "Those are lies, of course!!! *offended*" with vpunch
+    kuro "当然，那都是谎言！！！*生气*" with vpunch
 
 # game/BKchapter2.rpy:1863
 translate chinese_simplified kurohime_conversation_menu_cbd44188:
@@ -3460,7 +3460,7 @@ translate chinese_simplified kurohime_conversation_menu_be6bef43:
 translate chinese_simplified kurohime_conversation_menu_03e5deb3:
 
     # you "Your wedding?" with vpunch
-    you "Your wedding?" with vpunch
+    you "你的婚礼？" with vpunch
 
 # game/BKchapter2.rpy:1901
 translate chinese_simplified kurohime_conversation_menu_523a8fae:
@@ -3478,7 +3478,7 @@ translate chinese_simplified kurohime_conversation_menu_1e2b2d12:
 translate chinese_simplified kurohime_conversation_menu_9c8a9afb:
 
     # "Her mood darkens."
-    "Her mood darkens."
+    "她的情绪变得阴沉起来。"
 
 # game/BKchapter2.rpy:1907
 translate chinese_simplified kurohime_conversation_menu_e939287f:
@@ -3550,7 +3550,7 @@ translate chinese_simplified kurohime_conversation_menu_40ed1abb:
 translate chinese_simplified kurohime_conversation_menu_2aa8875c:
 
     # "Her voice becomes cold."
-    "Her voice becomes cold."
+    "她的声音变得冰冷。"
 
 # game/BKchapter2.rpy:1931
 translate chinese_simplified kurohime_conversation_menu_4f1ae12a:
@@ -3580,7 +3580,7 @@ translate chinese_simplified kurohime_conversation_menu_2c2702fc:
 translate chinese_simplified kurohime_conversation_menu_048ee287:
 
     # "Her voice trails off."
-    "Her voice trails off."
+    "她的声音渐渐消失。"
 
 # game/BKchapter2.rpy:1941
 translate chinese_simplified kurohime_conversation_menu_f6f8ff08:
@@ -3634,7 +3634,7 @@ translate chinese_simplified kurohime_conversation_menu_fecba87e:
 translate chinese_simplified kurohime_conversation_menu_4d830657:
 
     # "She looks lost and vulnerable. You feel an urge to protect her."
-    "She looks lost and vulnerable. You feel an urge to protect her."
+    "她看起来迷茫又脆弱，你很想保护她。"
 
 # game/BKchapter2.rpy:1965
 translate chinese_simplified kurohime_conversation_menu_e75c3d2e:
@@ -3784,7 +3784,7 @@ translate chinese_simplified kurohime_conversation_menu_4e2e30fc:
 translate chinese_simplified kurohime_conversation_menu_a2f1fb82:
 
     # "Gratitude gleams in her eyes as she bows slightly towards you."
-    "Gratitude gleams in her eyes as she bows slightly towards you."
+    "她眼中闪烁着感激的光芒，微微向你鞠躬。"
 
 # game/BKchapter2.rpy:2028
 translate chinese_simplified kurohime_conversation_menu_4dc0d1ac:
@@ -3814,7 +3814,7 @@ translate chinese_simplified kurohime_conversation_menu_9cfb6bd1:
 translate chinese_simplified kurohime_conversation_menu_5c584dbd:
 
     # "She looks at you coldly."
-    "She looks at you coldly."
+    "她冷冷地看着你。"
 
 # game/BKchapter2.rpy:2045
 translate chinese_simplified kurohime_conversation_menu_dd8bbf84:
@@ -3886,19 +3886,19 @@ translate chinese_simplified c2_palace_intrusion_ea34acbd:
 translate chinese_simplified c2_palace_intrusion_bf70f6e4:
 
     # "Sounds of sudden fighting are coming from outside the room."
-    "Sounds of sudden fighting are coming from outside the room."
+    "房间外传来一阵突如其来的打斗声。"
 
 # game/BKchapter2.rpy:2103
 translate chinese_simplified c2_palace_intrusion_9f7ad5be:
 
     # "Rushing outside, you stumble upon the inert body of the palace guard."
-    "Rushing outside, you stumble upon the inert body of the palace guard."
+    "你冲到外面，却发现宫廷卫兵一动不动地躺在那里。"
 
 # game/BKchapter2.rpy:2112
 translate chinese_simplified c2_palace_intrusion_72364781:
 
     # "Before him, purposefully left there for everyone to see, you stumble upon a grim sight: A severed head."
-    "Before him, purposefully left there for everyone to see, you stumble upon a grim sight: A severed head."
+    "在他面前，故意留在那里供所有人观看，你偶然发现了一个可怕的景象：一颗被砍下的头颅。"
 
 # game/BKchapter2.rpy:2117
 translate chinese_simplified c2_palace_intrusion_6fb6e2ec:
@@ -3916,25 +3916,25 @@ translate chinese_simplified c2_palace_intrusion_dee50e7c:
 translate chinese_simplified c2_palace_intrusion_ffbfa37c:
 
     # "Before you can collect your bearings, you see movement at the end of the corridor."
-    "Before you can collect your bearings, you see movement at the end of the corridor."
+    "还没等你回过神来，就看到走廊尽头有人在动。"
 
 # game/BKchapter2.rpy:2133
 translate chinese_simplified c2_palace_intrusion_5a2c542f:
 
     # mask unknown "Muhahahahaha..."
-    mask unknown "Muhahahahaha..."
+    mask unknown "哈哈哈哈哈哈……"
 
 # game/BKchapter2.rpy:2141
 translate chinese_simplified c2_palace_intrusion_6edaeda8:
 
     # "The hissing sound of a thrown dagger sends you dodging reflexively, tumbling on the floor."
-    "The hissing sound of a thrown dagger sends you dodging reflexively, tumbling on the floor."
+    "飞刀投掷的嘶嘶声让你本能地闪避，摔倒在地。"
 
 # game/BKchapter2.rpy:2147
 translate chinese_simplified c2_palace_intrusion_9360b025:
 
     # "The dagger's blade hits right where you were standing."
-    "The dagger's blade hits right where you were standing."
+    "匕首的刀刃正好击中了你刚才站立的地方。"
 
 # game/BKchapter2.rpy:2149
 translate chinese_simplified c2_palace_intrusion_5142fccb:
@@ -3946,37 +3946,37 @@ translate chinese_simplified c2_palace_intrusion_5142fccb:
 translate chinese_simplified c2_palace_intrusion_73f59634:
 
     # "Drawing your weapon, you leap back to your feet and run after the intruder."
-    "Drawing your weapon, you leap back to your feet and run after the intruder."
+    "你拔出武器，跳回站起身，追赶入侵者。"
 
 # game/BKchapter2.rpy:2161
 translate chinese_simplified c2_palace_intrusion_b9eca7cb:
 
     # mask "MUHAHAHAHAHAHA..." with vpunch
-    mask "MUHAHAHAHAHAHA..." with vpunch
+    mask "哈哈哈哈哈哈哈哈……" with vpunch
 
 # game/BKchapter2.rpy:2163
 translate chinese_simplified c2_palace_intrusion_3a05c3f5:
 
     # "Swift like the wind, the dark silhouette keeps running away from you. You manage to close in as it stops by a large window at the end of the corridor."
-    "Swift like the wind, the dark silhouette keeps running away from you. You manage to close in as it stops by a large window at the end of the corridor."
+    "那道黑色的身影迅疾如风，不断逃离你的视线。你设法靠近，它最终停在了走廊尽头的一扇大窗户前。"
 
 # game/BKchapter2.rpy:2165
 translate chinese_simplified c2_palace_intrusion_572ae0ce:
 
     # "Catching up with the intruder, you take your first good look at the man."
-    "Catching up with the intruder, you take your first good look at the man."
+    "你追上入侵者，第一次好好看了看这个人。"
 
 # game/BKchapter2.rpy:2169
 translate chinese_simplified c2_palace_intrusion_a1147ff5:
 
     # "The intruder cuts a tall, fearsome figure, his sword dripping with fresh blood. He is wearing a metal mask, behind which his eyes burn with a fierce, dark light."
-    "The intruder cuts a tall, fearsome figure, his sword dripping with fresh blood. He is wearing a metal mask, behind which his eyes burn with a fierce, dark light."
+    "入侵者身形高大，面目狰狞，手中的剑上滴着鲜血。他戴着金属面具，面具后双眼燃烧着凶狠的暗光。"
 
 # game/BKchapter2.rpy:2171
 translate chinese_simplified c2_palace_intrusion_f0d52557:
 
     # mask normal "What do we have here... Another lapdog of the crown... *hiss*"
-    mask normal "What do we have here... Another lapdog of the crown... *hiss*"
+    mask normal "这是什么……又一个王室的走狗……*嘶嘶*"
 
 # game/BKchapter2.rpy:2173
 translate chinese_simplified c2_palace_intrusion_e688931c:
@@ -3994,7 +3994,7 @@ translate chinese_simplified c2_palace_intrusion_13ce568e:
 translate chinese_simplified c2_palace_intrusion_9e0247ab:
 
     # "The man turns around and leaps through the open window."
-    "The man turns around and leaps through the open window."
+    "那人转身，从敞开的窗户跳了出去。"
 
 # game/BKchapter2.rpy:2183
 translate chinese_simplified c2_palace_intrusion_1cc1f5eb:
@@ -4012,13 +4012,13 @@ translate chinese_simplified c2_palace_intrusion_7cafcab0:
 translate chinese_simplified c2_palace_intrusion_1afc9fd4:
 
     # "???" "GOTCHA!!!"
-    "???" "明白了！！！"
+    "？？？" "明白了！！！"
 
 # game/BKchapter2.rpy:2196
 translate chinese_simplified c2_palace_intrusion_510d78f4:
 
     # "Before you have a chance to go after him, you get hit from behind and thrown hard on the palace floor."
-    "Before you have a chance to go after him, you get hit from behind and thrown hard on the palace floor."
+    "还没等你追上去，就被人从背后袭击，重重地摔在了宫殿的地板上。"
 
 # game/BKchapter2.rpy:2202
 translate chinese_simplified c2_palace_intrusion_b5b4e3d4:
@@ -4036,7 +4036,7 @@ translate chinese_simplified c2_palace_intrusion_a40b7db3:
 translate chinese_simplified c2_palace_intrusion_94a28e6f:
 
     # "The knight is petite, but she has an iron grasp. She holds a dagger to your throat as you give her a confused look."
-    "The knight is petite, but she has an iron grasp. She holds a dagger to your throat as you give her a confused look."
+    "这位女骑士身材娇小，但力气却如铁。你一脸茫然地看着她，她却用匕首抵住了你的喉咙。"
 
 # game/BKchapter2.rpy:2208
 translate chinese_simplified c2_palace_intrusion_dae0ec55:
@@ -4060,7 +4060,7 @@ translate chinese_simplified c2_palace_intrusion_75337ad0:
 translate chinese_simplified c2_palace_intrusion_d9fefbd0:
 
     # "You cannot help but notice that as she sits on you to pin you to the floor, her lower body is pressing against your crotch."
-    "You cannot help but notice that as she sits on you to pin you to the floor, her lower body is pressing against your crotch."
+    "你无法忽视，当她坐在你身上把你压在地上时，她的下半身正紧贴着你的胯部。"
 
 # game/BKchapter2.rpy:2216
 translate chinese_simplified c2_palace_intrusion_5c641209:
@@ -4078,7 +4078,7 @@ translate chinese_simplified c2_palace_intrusion_8add209a:
 translate chinese_simplified c2_palace_intrusion_9d00bf89:
 
     # kenshin "Uh?" with vpunch
-    kenshin "Uh?" with vpunch
+    kenshin "嗯？" with vpunch
 
 # game/BKchapter2.rpy:2224
 translate chinese_simplified c2_palace_intrusion_17dc8be4:
@@ -4096,7 +4096,7 @@ translate chinese_simplified c2_palace_intrusion_d569d44d:
 translate chinese_simplified c2_palace_intrusion_b557f0ab:
 
     # "Using her free hand, the knight pats you down to look for a hidden blade."
-    "Using her free hand, the knight pats you down to look for a hidden blade."
+    "骑士用空着的那只手在你身上搜身，看看有没有藏着什么刀刃。"
 
 # game/BKchapter2.rpy:2230
 translate chinese_simplified c2_palace_intrusion_d4de9ee7:
@@ -4108,7 +4108,7 @@ translate chinese_simplified c2_palace_intrusion_d4de9ee7:
 translate chinese_simplified c2_palace_intrusion_54ad1555:
 
     # kenshin "It's, uh... Whaaaat?!? *BLUSH*" with vpunch
-    kenshin "It's, uh... Whaaaat?!? *BLUSH*" with vpunch
+    kenshin "呃……什么？！*脸红*" with vpunch
 
 # game/BKchapter2.rpy:2237
 translate chinese_simplified c2_palace_intrusion_02b7f59f:
@@ -4120,13 +4120,13 @@ translate chinese_simplified c2_palace_intrusion_02b7f59f:
 translate chinese_simplified c2_palace_intrusion_4c3e8ec3:
 
     # "Unable to help yourself, you watch helplessly as your dick swells even more."
-    "Unable to help yourself, you watch helplessly as your dick swells even more."
+    "你无力控制自己，只能眼睁睁地看着自己的阴茎更加肿胀。"
 
 # game/BKchapter2.rpy:2246
 translate chinese_simplified c2_palace_intrusion_743c0a8d:
 
     # kenshin "UWAAAAAAAH!!!" with vpunch
-    kenshin "UWAAAAAAAH!!!" with vpunch
+    kenshin "哇啊啊啊啊啊！！！" with vpunch
 
 # game/BKchapter2.rpy:2250
 translate chinese_simplified c2_palace_intrusion_7436e3ce:
@@ -4138,7 +4138,7 @@ translate chinese_simplified c2_palace_intrusion_7436e3ce:
 translate chinese_simplified c2_palace_intrusion_11a5eb05:
 
     # kuro "Dick! Johnson! Wiener! And all the other knights! Catch the fleeing killer!!!" with vpunch
-    kuro "Dick! Johnson! Wiener! And all the other knights! Catch the fleeing killer!!!" with vpunch
+    kuro "迪克！约翰逊！维纳！还有所有其他骑士！抓住逃跑的杀手！！！" with vpunch
 
 # game/BKchapter2.rpy:2254
 translate chinese_simplified c2_palace_intrusion_b6de8466:
@@ -4162,13 +4162,13 @@ translate chinese_simplified c2_palace_intrusion_5df6c213:
 translate chinese_simplified c2_palace_intrusion_d9383949:
 
     # kenshin "W-What?!? UWAAAH!!!" with vpunch
-    kenshin "W-What?!? UWAAAH!!!" with vpunch
+    kenshin "什、什么？！啊啊啊啊！！！" with vpunch
 
 # game/BKchapter2.rpy:2269
 translate chinese_simplified c2_palace_intrusion_bdf5a5c7:
 
     # "Jumping away from you, the knight commander bows very low and apologizes profusely."
-    "Jumping away from you, the knight commander bows very low and apologizes profusely."
+    "骑士指挥官跳开，深深鞠躬，连连道歉。"
 
 # game/BKchapter2.rpy:2271
 translate chinese_simplified c2_palace_intrusion_de7d1260:
@@ -4180,7 +4180,7 @@ translate chinese_simplified c2_palace_intrusion_de7d1260:
 translate chinese_simplified c2_palace_intrusion_cc4994ab:
 
     # "Princess Kurohime grabs the knight and yanks her back and forth."
-    "Princess Kurohime grabs the knight and yanks her back and forth."
+    "黑姬公主抓住骑士，用力将她来回拽动。"
 
 # game/BKchapter2.rpy:2276
 translate chinese_simplified c2_palace_intrusion_6cbf1fbb:
@@ -4198,7 +4198,7 @@ translate chinese_simplified c2_palace_intrusion_f0601352:
 translate chinese_simplified c2_palace_intrusion_9ea739fc:
 
     # "Still blushing bright red, the knight commander runs down the corridor at superhuman speed, disappearing from sight in an instant."
-    "Still blushing bright red, the knight commander runs down the corridor at superhuman speed, disappearing from sight in an instant."
+    "骑士指挥官脸颊依然通红，以超人的速度沿着走廊奔跑，瞬间消失在人们的视线中。"
 
 # game/BKchapter2.rpy:2288
 translate chinese_simplified c2_palace_intrusion_ce1bfc09:
@@ -4210,13 +4210,13 @@ translate chinese_simplified c2_palace_intrusion_ce1bfc09:
 translate chinese_simplified c2_palace_intrusion_596e5d48:
 
     # kuro "Forgive Commander Uesugi, Sir [MC.name]. She is a very loyal and capable knight, it's not like her to act so oafish..."
-    kuro "请原谅上杉指挥官，[主角名]大人。她是一位非常忠诚能干的骑士，不会做出如此愚蠢的事情……"
+    kuro "请原谅上杉指挥官，[MC.name]大人。她是一位非常忠诚能干的骑士，不会做出如此愚蠢的事情……"
 
 # game/BKchapter2.rpy:2292
 translate chinese_simplified c2_palace_intrusion_d50f5c70:
 
     # "You slowly get up on your feet, nursing the pain in your lower back."
-    "You slowly get up on your feet, nursing the pain in your lower back."
+    "你慢慢站起身来，忍受着腰部的疼痛。"
 
 # game/BKchapter2.rpy:2294
 translate chinese_simplified c2_palace_intrusion_cf12b33a:
@@ -4246,13 +4246,13 @@ translate chinese_simplified c2_palace_intrusion_79fb2752:
 translate chinese_simplified c2_palace_intrusion_4a2098c9:
 
     # "The princess looks deeply troubled. She doesn't seem surprised by your description, as if it is already known to her."
-    "The princess looks deeply troubled. She doesn't seem surprised by your description, as if it is already known to her."
+    "公主面露忧色。你的描述似乎并未让她感到意外，仿佛她早已知晓。"
 
 # game/BKchapter2.rpy:2345
 translate chinese_simplified c2_palace_intrusion_1957630d:
 
     # "She takes a moment to regain her composure."
-    "She takes a moment to regain her composure."
+    "她花了一点时间平复心情。"
 
 # game/BKchapter2.rpy:2347
 translate chinese_simplified c2_palace_intrusion_0a07418b:
@@ -4264,7 +4264,7 @@ translate chinese_simplified c2_palace_intrusion_0a07418b:
 translate chinese_simplified c2_palace_intrusion_ccda5e61:
 
     # "Her eyes brim with tears."
-    "Her eyes brim with tears."
+    "她眼眶里噙满了泪水。"
 
 # game/BKchapter2.rpy:2353
 translate chinese_simplified c2_palace_intrusion_98b1e59b:
@@ -4318,7 +4318,7 @@ translate chinese_simplified c2_palace_intrusion_c444cfff:
 translate chinese_simplified c2_palace_intrusion_7fa2d2f7:
 
     # "Stepping out of the Princess's quarter, you see the Palace buzzing with activity as knights run around yelling orders and confused servants wander aimlessly."
-    "Stepping out of the Princess's quarter, you see the Palace buzzing with activity as knights run around yelling orders and confused servants wander aimlessly."
+    "走出公主的寝宫，你会看到宫殿里一片繁忙景象，骑士们奔跑着，大声下达命令，而不知所措的仆人们则漫无目的地游荡。"
 
 # game/BKchapter2.rpy:2374
 translate chinese_simplified c2_palace_intrusion_d6231446:
@@ -4342,13 +4342,13 @@ translate chinese_simplified c2_palace_intrusion_84737ea3:
 translate chinese_simplified c2_palace_intrusion_816b9d1b:
 
     # "You must investigate the murders in town."
-    "You must investigate the murders in town."
+    "你必须调查镇上的谋杀案。"
 
 # game/BKchapter2.rpy:2476
 translate chinese_simplified c2_gio_message_77e86c4f:
 
     # "The next morning, you wake up to find a note slipped under your door."
-    "The next morning, you wake up to find a note slipped under your door."
+    "第二天早上醒来，你发现门缝里塞了一张纸条。"
 
 # game/BKchapter2.rpy:2481
 translate chinese_simplified c2_gio_message_e847e668:
@@ -4366,25 +4366,25 @@ translate chinese_simplified c2_gio_message_62912bb7:
 translate chinese_simplified c2_gio_message_0dd23579:
 
     # "Meet Gio by the {b}Plaza{/b} in the warehouse district."
-    "Meet Gio by the {b}Plaza{/b} in the warehouse district."
+    "在仓库区的{b}Plaza{/b}与Gio见面。"
 
 # game/BKchapter2.rpy:2498
 translate chinese_simplified c2_gio_meeting_65fa81c1:
 
     # "As you reach the plaza, you scan the area for signs of Gio."
-    "As you reach the plaza, you scan the area for signs of Gio."
+    "到达广场后，你环顾四周，寻找乔的踪迹。"
 
 # game/BKchapter2.rpy:2500
 translate chinese_simplified c2_gio_meeting_762b7b72:
 
     # "You spot a shady figure leaning against a wall, trying to look inconspicuous in spite of his bulk."
-    "You spot a shady figure leaning against a wall, trying to look inconspicuous in spite of his bulk."
+    "你发现一个形迹可疑的人靠在墙上，尽管身材魁梧，却试图让自己看起来不引人注目。"
 
 # game/BKchapter2.rpy:2502
 translate chinese_simplified c2_gio_meeting_dab0c8ce:
 
     # "Upon closer inspection, the fat man is wearing a fake nose and mustache, a top hat and ill-fitting glasses."
-    "Upon closer inspection, the fat man is wearing a fake nose and mustache, a top hat and ill-fitting glasses."
+    "仔细一看，这个胖子戴着假鼻子和假胡子，头上戴着高顶礼帽，还戴着不合身的眼镜。"
 
 # game/BKchapter2.rpy:2504
 translate chinese_simplified c2_gio_meeting_d02ce014:
@@ -4396,7 +4396,7 @@ translate chinese_simplified c2_gio_meeting_d02ce014:
 translate chinese_simplified c2_gio_meeting_c4f0f716:
 
     # gio incognito "Hush!!! I am here incognito! Don't blow my cover!"
-    gio incognito "Hush!!! I am here incognito! Don't blow my cover!"
+    gio incognito "嘘！我在这里秘密现身！别暴露我的身份！"
 
 # game/BKchapter2.rpy:2508
 translate chinese_simplified c2_gio_meeting_dae0ec55:
@@ -4420,7 +4420,7 @@ translate chinese_simplified c2_gio_meeting_01e38bb9:
 translate chinese_simplified c2_gio_meeting_4b9e6a40:
 
     # "Gio looks around him carefully four or five times, with exaggerated caution."
-    "Gio looks around him carefully four or five times, with exaggerated caution."
+    "乔小心翼翼地环顾四周四五次，表现得异常谨慎。"
 
 # game/BKchapter2.rpy:2516
 translate chinese_simplified c2_gio_meeting_6bbcdea2:
@@ -4432,7 +4432,7 @@ translate chinese_simplified c2_gio_meeting_6bbcdea2:
 translate chinese_simplified c2_gio_meeting_a1736331:
 
     # gio normal "So you finally came. You gave me a good scare, my boy!"
-    gio normal "So you finally came. You gave me a good scare, my boy!"
+    gio normal "你终于来了。可真把我吓了一跳，小家伙！"
 
 # game/BKchapter2.rpy:2522
 translate chinese_simplified c2_gio_meeting_834d4f0f:
@@ -4540,7 +4540,7 @@ translate chinese_simplified c2_gio_meeting_7001681c:
 translate chinese_simplified c2_gio_meeting_6f80f0bc:
 
     # "Gio gives you a skeptical look."
-    "Gio gives you a skeptical look."
+    "吉奥用怀疑的眼神看着你。"
 
 # game/BKchapter2.rpy:2565
 translate chinese_simplified c2_gio_meeting_67d8d05e:
@@ -4582,7 +4582,7 @@ translate chinese_simplified c2_gio_meeting_a08c6321:
 translate chinese_simplified c2_gio_meeting_b32a313a:
 
     # "Gio looks carefully around him and takes a conspiring tone."
-    "Gio looks carefully around him and takes a conspiring tone."
+    "乔仔细环顾四周，语气中带着一丝阴谋。"
 
 # game/BKchapter2.rpy:2581
 translate chinese_simplified c2_gio_meeting_a60d86fd:
@@ -4762,7 +4762,7 @@ translate chinese_simplified c2_gio_meeting_32ba305e:
 translate chinese_simplified c2_gio_meeting_c8ae8fbf:
 
     # "Gio looks nervous and starts glancing anxiously around him."
-    "Gio looks nervous and starts glancing anxiously around him."
+    "乔看起来很紧张，开始焦躁地环顾四周。"
 
 # game/BKchapter2.rpy:2641
 translate chinese_simplified c2_gio_meeting_c344e32b:
@@ -4804,7 +4804,7 @@ translate chinese_simplified c2_gio_meeting_0f087a04:
 translate chinese_simplified c2_gio_meeting_1817ca9e:
 
     # you "A contract? On my head?" with vpunch
-    you "A contract? On my head?" with vpunch
+    you "悬赏？要我命？" with vpunch
 
 # game/BKchapter2.rpy:2655
 translate chinese_simplified c2_gio_meeting_52631eb7:
@@ -4834,7 +4834,7 @@ translate chinese_simplified c2_gio_meeting_d2a43635:
 translate chinese_simplified c2_gio_meeting_3905526d:
 
     # you "WHAAAAAAT!!!" with vpunch
-    you "WHAAAAAAT!!!" with vpunch
+    you "什么？！" with vpunch
 
 # game/BKchapter2.rpy:2665
 translate chinese_simplified c2_gio_meeting_ad98b7f6:
@@ -4858,7 +4858,7 @@ translate chinese_simplified c2_gio_meeting_951ffe30:
 translate chinese_simplified c2_gio_meeting_eb211c67:
 
     # you "THAT'S NOT THE DAMN POINT!!!" with vpunch
-    you "THAT'S NOT THE DAMN POINT!!!" with vpunch
+    you "这根本不是重点！！！" with vpunch
 
 # game/BKchapter2.rpy:2673
 translate chinese_simplified c2_gio_meeting_0b2435a8:
@@ -4882,7 +4882,7 @@ translate chinese_simplified c2_gio_meeting_fe5b536b:
 translate chinese_simplified c2_gio_meeting_ed0e14c5:
 
     # you "Not if I'm being MURDERED!!!" with vpunch
-    you "Not if I'm being MURDERED!!!" with vpunch
+    you "除非我被谋杀！！！" with vpunch
 
 # game/BKchapter2.rpy:2681
 translate chinese_simplified c2_gio_meeting_9788655f:
@@ -4894,13 +4894,13 @@ translate chinese_simplified c2_gio_meeting_9788655f:
 translate chinese_simplified c2_gio_meeting_c271a3c1:
 
     # "A paperboy runs past you both."
-    "A paperboy runs past you both."
+    "一个报童从你们俩身边跑过。"
 
 # game/BKchapter2.rpy:2685
 translate chinese_simplified c2_gio_meeting_d738db33:
 
     # "Paperboy" "Read the Zanic Magic Tribune! A JUDGE HAS BEEN GRUESOMELY MURDERED!!!"
-    "Paperboy" "快去看《Zanic Magic Tribune》！一名法官惨遭谋杀！！！"
+    "报童" "快去看《Zanic Magic Tribune》！一名法官惨遭谋杀！！！"
 
 # game/BKchapter2.rpy:2687
 translate chinese_simplified c2_gio_meeting_7000be84:
@@ -4912,13 +4912,13 @@ translate chinese_simplified c2_gio_meeting_7000be84:
 translate chinese_simplified c2_gio_meeting_69eac85b:
 
     # "Paperboy" "EVERYONE IS GETTING MURDERED LEFT AND RIGHT!" with vpunch
-    "Paperboy" "EVERYONE IS GETTING MURDERED LEFT AND RIGHT!" with vpunch
+    "报童" "EVERYONE IS GETTING MURDERED LEFT AND RIGHT!" with vpunch
 
 # game/BKchapter2.rpy:2691
 translate chinese_simplified c2_gio_meeting_528ad6ac:
 
     # "Paperboy" "MURDER MURDER MUUURRRRDEEER!!!" with vpunch
-    "Paperboy" "MURDER MURDER MUUURRRRDEEER!!!" with vpunch
+    "报童" "MURDER MURDER MUUURRRRDEEER!!!" with vpunch
 
 # game/BKchapter2.rpy:2693
 translate chinese_simplified c2_gio_meeting_19709593:
@@ -4942,19 +4942,19 @@ translate chinese_simplified c2_gio_meeting_602afcd7:
 translate chinese_simplified c2_gio_meeting_f98085bb:
 
     # "(Some weird boy in the background)" "Redrum, redrum..."
-    "(Some weird boy in the background)" "Redrum, redrum..."
+    "（背景里有个奇怪的男孩）" "Redrum, redrum..."
 
 # game/BKchapter2.rpy:2702
 translate chinese_simplified c2_gio_meeting_ee9d309c:
 
     # "Gio nervously fastens his fake nose and mustache back on."
-    "Gio nervously fastens his fake nose and mustache back on."
+    "乔紧张地把假鼻子和假胡子重新戴好。"
 
 # game/BKchapter2.rpy:2704
 translate chinese_simplified c2_gio_meeting_bbaba63a:
 
     # gio incognito "Look, I will be awfully busy in the coming days... Maybe take a little vacation outside the city for a while."
-    gio incognito "Look, I will be awfully busy in the coming days... Maybe take a little vacation outside the city for a while."
+    gio incognito "接下来几天我会非常忙……也许可以趁这段时间去城外度假。"
 
 # game/BKchapter2.rpy:2706
 translate chinese_simplified c2_gio_meeting_7b06e9bb:
@@ -4996,7 +4996,7 @@ translate chinese_simplified c2_gio_meeting_15f7cd73:
 translate chinese_simplified c2_gio_meeting_91d7fa04:
 
     # "Gio starts off, running across the plaza with an arm above his head in an exaggerated gesture, waving his cloak around with his other arm, like he's some cheap pulp novel adventurer."
-    "Gio starts off, running across the plaza with an arm above his head in an exaggerated gesture, waving his cloak around with his other arm, like he's some cheap pulp novel adventurer."
+    "乔开始奔跑，一只胳膊高举过头，夸张地挥舞着斗篷，穿过广场，就像一个廉价通俗小说里的冒险家。"
 
 # game/BKchapter2.rpy:2724
 translate chinese_simplified c2_gio_meeting_d6829f62:
@@ -5014,7 +5014,7 @@ translate chinese_simplified c2_gio_meeting_4cc82402:
 translate chinese_simplified c2_suzume_invitation_6f12cd3c:
 
     # "This morning, you come out of [brothel.name], ready to start your day."
-    "This morning, you come out of [brothel.name], ready to start your day."
+    "今天早上，你从[brothel.name]出来，准备开始你的一天。"
 
 # game/BKchapter2.rpy:2749
 translate chinese_simplified c2_suzume_invitation_9c3ac752:
@@ -5026,13 +5026,13 @@ translate chinese_simplified c2_suzume_invitation_9c3ac752:
 translate chinese_simplified c2_suzume_invitation_8054ccf1:
 
     # "*SWOOSH*" with hpunch
-    "*SWOOSH*" with hpunch
+    "*嗖*" with hpunch
 
 # game/BKchapter2.rpy:2753
 translate chinese_simplified c2_suzume_invitation_f3e0ded8:
 
     # "As you come out of the house, a sudden strong gust of wind nearly makes you fall over."
-    "As you come out of the house, a sudden strong gust of wind nearly makes you fall over."
+    "你刚走出房子，一阵突如其来的强风差点让你摔倒。"
 
 # game/BKchapter2.rpy:2755
 translate chinese_simplified c2_suzume_invitation_a31105aa:
@@ -5044,7 +5044,7 @@ translate chinese_simplified c2_suzume_invitation_a31105aa:
 translate chinese_simplified c2_suzume_invitation_d63c5876:
 
     # "Your scream is muffled by a piece of cloth that falls over your head."
-    "Your scream is muffled by a piece of cloth that falls over your head."
+    "你的尖叫声被一块盖在你头上的布闷住了。"
 
 # game/BKchapter2.rpy:2759
 translate chinese_simplified c2_suzume_invitation_7e66b0f2:
@@ -5062,7 +5062,7 @@ translate chinese_simplified c2_suzume_invitation_8712f8f7:
 translate chinese_simplified c2_suzume_invitation_d2790c6a:
 
     # "You go into a panic, desperately trying to free yourself from the gagging cloth. After a few moments, however, you realize what it is."
-    "You go into a panic, desperately trying to free yourself from the gagging cloth. After a few moments, however, you realize what it is."
+    "你惊慌失措，拼命想挣脱堵住嘴的布。然而，过了一会儿，你才意识到那是什么。"
 
 # game/BKchapter2.rpy:2768
 translate chinese_simplified c2_suzume_invitation_8cc08fbc:
@@ -5074,7 +5074,7 @@ translate chinese_simplified c2_suzume_invitation_8cc08fbc:
 translate chinese_simplified c2_suzume_invitation_6cbc4700:
 
     # "The cloth that the wind pushed into your face is actually a piece of women's panties. Quite sexy panties, at that."
-    "The cloth that the wind pushed into your face is actually a piece of women's panties. Quite sexy panties, at that."
+    "被风吹到你脸上的那块布，其实是一块女士内裤。而且还是很性感的那种。"
 
 # game/BKchapter2.rpy:2772
 translate chinese_simplified c2_suzume_invitation_cd6451a6:
@@ -5104,7 +5104,7 @@ translate chinese_simplified c2_suzume_invitation_ad47bf24:
 translate chinese_simplified c2_suzume_invitation_fcc9d85a:
 
     # "Hiding the panties in your pocket, you strike the dust off of your clothes."
-    "Hiding the panties in your pocket, you strike the dust off of your clothes."
+    "你把内裤藏进口袋，然后拍掉衣服上的灰尘。"
 
 # game/BKchapter2.rpy:2786
 translate chinese_simplified c2_suzume_invitation_30dfbf20:
@@ -5116,13 +5116,13 @@ translate chinese_simplified c2_suzume_invitation_30dfbf20:
 translate chinese_simplified c2_suzume_invitation_8054ccf1_1:
 
     # "*SWOOSH*" with hpunch
-    "*SWOOSH*" with hpunch
+    "*嗖*" with hpunch
 
 # game/BKchapter2.rpy:2790
 translate chinese_simplified c2_suzume_invitation_28b12ec4:
 
     # "Another strong gust of wind suddenly pushes you forward, and you stumble down the street, doing your best not to fall. You end up grabbing a wooden post to try to keep your balance, stopping your face inches from some sort of flyer."
-    "Another strong gust of wind suddenly pushes you forward, and you stumble down the street, doing your best not to fall. You end up grabbing a wooden post to try to keep your balance, stopping your face inches from some sort of flyer."
+    "又一阵强风突然袭来，你踉跄着向前走去，竭力不让自己摔倒。最后你抓住一根木柱才勉强保持平衡，脸几乎就要撞到什么东西了。"
 
 # game/BKchapter2.rpy:2792
 translate chinese_simplified c2_suzume_invitation_ca6510be:
@@ -5134,7 +5134,7 @@ translate chinese_simplified c2_suzume_invitation_ca6510be:
 translate chinese_simplified c2_suzume_invitation_fa4ee550:
 
     # "A piece of paper is pinned to the wooden post. You feel like you might as well read the message."
-    "A piece of paper is pinned to the wooden post. You feel like you might as well read the message."
+    "木柱上钉着一张纸条。你觉得不妨读读上面的信息。"
 
 # game/BKchapter2.rpy:2798
 translate chinese_simplified c2_suzume_invitation_a08ed2b2:
@@ -5146,7 +5146,7 @@ translate chinese_simplified c2_suzume_invitation_a08ed2b2:
 translate chinese_simplified c2_suzume_invitation_25e92eb7:
 
     # "Strangely, you notice several dozen such flyers, pinned everywhere around your side of the street."
-    "Strangely, you notice several dozen such flyers, pinned everywhere around your side of the street."
+    "奇怪的是，你注意到街道这边到处都贴着几十张这样的传单。"
 
 # game/BKchapter2.rpy:2802
 translate chinese_simplified c2_suzume_invitation_57b86b5b:
@@ -5164,7 +5164,7 @@ translate chinese_simplified c2_suzume_invitation_193c07f0:
 translate chinese_simplified c2_suzume_invitation_fd55bf10:
 
     # you "What should I do..." nointeract
-    you "What should I do..." nointeract
+    you "我应该怎么办..." nointeract
 
 # game/BKchapter2.rpy:2813
 translate chinese_simplified c2_suzume_invitation_7008aeee:
@@ -5182,7 +5182,7 @@ translate chinese_simplified c2_suzume_invitation_1b3e30dc:
 translate chinese_simplified c2_suzume_invitation_0ac198df:
 
     # you "No! It's a TRAP!!!" with vpunch
-    you "No! It's a TRAP!!!" with vpunch
+    you "不！这是个陷阱！！！" with vpunch
 
 # game/BKchapter2.rpy:2823
 translate chinese_simplified c2_suzume_invitation_95e3cb0f:
@@ -5200,7 +5200,7 @@ translate chinese_simplified c2_suzume_invitation_f9484665:
 translate chinese_simplified c2_suzume_invitation_a7a97b36:
 
     # "You scratch your head."
-    "You scratch your head."
+    "你挠了挠头。"
 
 # game/BKchapter2.rpy:2829
 translate chinese_simplified c2_suzume_invitation_d70b25fc:
@@ -5212,19 +5212,19 @@ translate chinese_simplified c2_suzume_invitation_d70b25fc:
 translate chinese_simplified c2_suzume_invitation_598f9d07:
 
     # "Visit the farm to return the panties to their rightful wearer."
-    "Visit the farm to return the panties to their rightful wearer."
+    "去农场把内裤还给它的主人。"
 
 # game/BKchapter2.rpy:2841
 translate chinese_simplified c2_suzume_forest1_3ee604f1:
 
     # "Girl panties held firmly in your hand, you decide to investigate the mysterious posting you saw outside your door."
-    "Girl panties held firmly in your hand, you decide to investigate the mysterious posting you saw outside your door."
+    "你手里紧紧攥着女式内裤，决定调查一下你在门外看到的神秘告示。"
 
 # game/BKchapter2.rpy:2847
 translate chinese_simplified c2_suzume_forest1_b62ec073:
 
     # "Ignoring the weird looks passersby are giving you, you head for the farmlands outside the city. Soon, you reach a little-used path that leads deep into the forest."
-    "Ignoring the weird looks passersby are giving you, you head for the farmlands outside the city. Soon, you reach a little-used path that leads deep into the forest."
+    "你无视路人异样的目光，径直走向城外的农田。很快，你来到一条人迹罕至的小路，这条路通往森林深处。"
 
 # game/BKchapter2.rpy:2852
 translate chinese_simplified c2_suzume_forest1_4b05bd83:
@@ -5242,7 +5242,7 @@ translate chinese_simplified c2_suzume_forest1_e1071e21:
 translate chinese_simplified c2_suzume_forest1_b3d3ca13:
 
     # "Heading deeper into the forest, you quickly lose sight of the main road, light dimming around you."
-    "Heading deeper into the forest, you quickly lose sight of the main road, light dimming around you."
+    "继续深入森林，很快就会看不到主路，周围的光线也越来越暗。"
 
 # game/BKchapter2.rpy:2859
 translate chinese_simplified c2_suzume_forest1_59e8b25a:
@@ -5254,13 +5254,13 @@ translate chinese_simplified c2_suzume_forest1_59e8b25a:
 translate chinese_simplified c2_suzume_forest1_8cef6b99:
 
     # "A gentle laugh echoes among the trees."
-    "A gentle laugh echoes among the trees."
+    "一阵轻柔的笑声在树林间回荡。"
 
 # game/BKchapter2.rpy:2865
 translate chinese_simplified c2_suzume_forest1_e151026e:
 
     # "Female voice" "Mister..."
-    "Female voice" "Mister..."
+    "女声" "Mister..."
 
 # game/BKchapter2.rpy:2867
 translate chinese_simplified c2_suzume_forest1_1ec47f6f:
@@ -5272,7 +5272,7 @@ translate chinese_simplified c2_suzume_forest1_1ec47f6f:
 translate chinese_simplified c2_suzume_forest1_aee550c2:
 
     # "Female voice" "Come, dear mister... Don't be afraid..."
-    "Female voice" "Come, dear mister... Don't be afraid..."
+    "女声" "Come, dear mister... Don't be afraid..."
 
 # game/BKchapter2.rpy:2875
 translate chinese_simplified c2_suzume_forest1_394e1f07:
@@ -5296,19 +5296,19 @@ translate chinese_simplified c2_suzume_forest1_8e0f8eb6:
 translate chinese_simplified c2_suzume_forest1_d821f50d:
 
     # "Standing in the middle of the clearing, you feel as if someone is watching your every move. Suddenly, you wonder if coming here was really such a good idea."
-    "Standing in the middle of the clearing, you feel as if someone is watching your every move. Suddenly, you wonder if coming here was really such a good idea."
+    "站在空地中央，你感觉好像有人在注视着你的一举一动。突然间，你开始怀疑来这里是不是个好主意。"
 
 # game/BKchapter2.rpy:2888
 translate chinese_simplified c2_suzume_forest1_599d3dec:
 
     # "Female voice" "KU KU KU KU... *odd giggle*"
-    "Female voice" "KU KU KU KU... *odd giggle*"
+    "女声" "KU KU KU KU... *odd giggle*"
 
 # game/BKchapter2.rpy:2893
 translate chinese_simplified c2_suzume_forest1_423f5389:
 
     # "Out of thin air, a young woman appears before you, where no one was standing just a second before."
-    "Out of thin air, a young woman appears before you, where no one was standing just a second before."
+    "一个年轻女子凭空出现在你面前，而就在一秒钟前，那里还空无一人。"
 
 # game/BKchapter2.rpy:2897
 translate chinese_simplified c2_suzume_forest1_60126f45:
@@ -5374,7 +5374,7 @@ translate chinese_simplified c2_suzume_forest1_bd0970cb:
 translate chinese_simplified c2_suzume_forest1_4c44cffc:
 
     # suzume "It was a lucky guess!" with vpunch
-    suzume "It was a lucky guess!" with vpunch
+    suzume "纯属运气好！" with vpunch
 
 # game/BKchapter2.rpy:2921
 translate chinese_simplified c2_suzume_forest1_ff2fef5e:
@@ -5440,7 +5440,7 @@ translate chinese_simplified c2_suzume_forest1_a9c6be6c:
 translate chinese_simplified c2_suzume_forest1_7c63bac9:
 
     # "Suddenly, you realize that you've been clutching the panties the whole time."
-    "Suddenly, you realize that you've been clutching the panties the whole time."
+    "突然，你意识到自己一直都紧紧抓着那条内裤。"
 
 # game/BKchapter2.rpy:2958
 translate chinese_simplified c2_suzume_forest1_a09ee553:
@@ -5524,7 +5524,7 @@ translate chinese_simplified c2_suzume_forest1_54a78d4a:
 translate chinese_simplified c2_suzume_forest1_af48f267:
 
     # "A sudden gust of wind lifts suzume's skirt even more, giving you a perfect view of her round, youthful ass."
-    "A sudden gust of wind lifts suzume's skirt even more, giving you a perfect view of her round, youthful ass."
+    "一阵突如其来的风将铃芽的裙子撩得更高，让你完美地看到了她圆润、年轻的臀部。"
 
 # game/BKchapter2.rpy:2997
 translate chinese_simplified c2_suzume_forest1_5cd30a54:
@@ -5542,7 +5542,7 @@ translate chinese_simplified c2_suzume_forest1_00022c02_1:
 translate chinese_simplified c2_suzume_forest1_0e7c8f99:
 
     # "The wind gets even stronger, this time bringing her top into disarray. It was never very clear how it held up in the first place."
-    "The wind gets even stronger, this time bringing her top into disarray. It was never very clear how it held up in the first place."
+    "风势更猛了，这次把她的上衣吹得凌乱不堪。这件上衣当初是怎么撑住的，一直都让人摸不着头脑。"
 
 # game/BKchapter2.rpy:3008
 translate chinese_simplified c2_suzume_forest1_7a384292:
@@ -5560,7 +5560,7 @@ translate chinese_simplified c2_suzume_forest1_2ea5e49c:
 translate chinese_simplified c2_suzume_forest1_d681e06d:
 
     # "Suzume grabs your hands and places them firmly on her tits. You feel her nipples harden against your touch."
-    "Suzume grabs your hands and places them firmly on her tits. You feel her nipples harden against your touch."
+    "铃芽抓住你的手，用力按在她的胸部上。你感觉到她的乳头在你触摸下变得坚挺。"
 
 # game/BKchapter2.rpy:3016
 translate chinese_simplified c2_suzume_forest1_dc82ab46:
@@ -5572,7 +5572,7 @@ translate chinese_simplified c2_suzume_forest1_dc82ab46:
 translate chinese_simplified c2_suzume_forest1_b6584ea8:
 
     # "Wind" "WOOSH..."
-    "Wind" "嗖……"
+    "风" "嗖……"
 
 # game/BKchapter2.rpy:3020
 translate chinese_simplified c2_suzume_forest1_45a93732:
@@ -5596,7 +5596,7 @@ translate chinese_simplified c2_suzume_forest1_3c1d3edb:
 translate chinese_simplified c2_suzume_forest1_5be212d7:
 
     # "The wind blows erratically, somehow shoving you forward as your pants mysteriously drop on your ankles. Suzume backs down towards you, and suddenly finds herself impaled on your erect dick."
-    "The wind blows erratically, somehow shoving you forward as your pants mysteriously drop on your ankles. Suzume backs down towards you, and suddenly finds herself impaled on your erect dick."
+    "风无序地吹拂着，不知怎的把你往前推，你的裤子也莫名其妙地滑落到脚踝。铃芽向后退去，突然发现自己被你勃起的阴茎贯穿了。"
 
 # game/BKchapter2.rpy:3033
 translate chinese_simplified c2_suzume_forest1_0e9c8de4:
@@ -5620,7 +5620,7 @@ translate chinese_simplified c2_suzume_forest1_8ca533d8:
 translate chinese_simplified c2_suzume_forest1_9abccfc6:
 
     # "Before you can even take stock of the strange situation you're in, Suzume's petite body starts moving of its own volition."
-    "Before you can even take stock of the strange situation you're in, Suzume's petite body starts moving of its own volition."
+    "在你还没来得及弄清自己所处的奇怪处境之前，铃芽娇小的身体就开始自主地动了起来。"
 
 # game/BKchapter2.rpy:3044
 translate chinese_simplified c2_suzume_forest1_48f482dd:
@@ -5638,7 +5638,7 @@ translate chinese_simplified c2_suzume_forest1_7630a3bb:
 translate chinese_simplified c2_suzume_forest1_88d7dfda:
 
     # "Her pussy is amazingly tight and seems alive as she expertly contracts around your dick, massaging your cock in all the right ways..."
-    "Her pussy is amazingly tight and seems alive as she expertly contracts around your dick, massaging your cock in all the right ways..."
+    "她的阴道紧致得惊人，仿佛充满生命力，她熟练地收缩着，包裹着你的阴茎，用各种恰当的方式按摩着你的鸡巴……"
 
 # game/BKchapter2.rpy:3050
 translate chinese_simplified c2_suzume_forest1_0a6d5918:
@@ -5650,7 +5650,7 @@ translate chinese_simplified c2_suzume_forest1_0a6d5918:
 translate chinese_simplified c2_suzume_forest1_8f7e250b:
 
     # "Her voice has become sultry and somewhat more mature. She turns her head and looks at you with dreamy eyes..."
-    "Her voice has become sultry and somewhat more mature. She turns her head and looks at you with dreamy eyes..."
+    "她的声音变得低沉沙哑，也更显成熟。她转过头，用迷离的眼神望着你……"
 
 # game/BKchapter2.rpy:3056
 translate chinese_simplified c2_suzume_forest1_4dc9f615:
@@ -5662,7 +5662,7 @@ translate chinese_simplified c2_suzume_forest1_4dc9f615:
 translate chinese_simplified c2_suzume_forest1_72e2de01:
 
     # "Shaking and moving her butt, Suzume bends your cock at different angles, each time hitting more of your pleasure centers."
-    "Shaking and moving her butt, Suzume bends your cock at different angles, each time hitting more of your pleasure centers."
+    "铃芽扭动着臀部，以不同的角度弯曲你的阴茎，每一次都刺激到你更多的快感中心。"
 
 # game/BKchapter2.rpy:3060
 translate chinese_simplified c2_suzume_forest1_2e848342:
@@ -5674,7 +5674,7 @@ translate chinese_simplified c2_suzume_forest1_2e848342:
 translate chinese_simplified c2_suzume_forest1_cdf3f4f3:
 
     # "Suzume is now moving wildly, arching her back in impossible ways, bringing your cock deeper and deeper in until it hits her cervix, almost painfully."
-    "Suzume is now moving wildly, arching her back in impossible ways, bringing your cock deeper and deeper in until it hits her cervix, almost painfully."
+    "铃芽现在疯狂地扭动着身体，以不可思议的方式拱起背部，将你的阴茎越插越深，直到触碰到她的子宫颈，几乎让她感到疼痛。"
 
 # game/BKchapter2.rpy:3066
 translate chinese_simplified c2_suzume_forest1_e1106824:
@@ -5686,7 +5686,7 @@ translate chinese_simplified c2_suzume_forest1_e1106824:
 translate chinese_simplified c2_suzume_forest1_caa3fc7d:
 
     # "Your dick is hit simultaneously from all sides with jolts of energy as Suzume's pussy walls close in around you. It is more than you can possibly stand."
-    "Your dick is hit simultaneously from all sides with jolts of energy as Suzume's pussy walls close in around you. It is more than you can possibly stand."
+    "铃芽的阴道壁紧紧地包裹着你，你的阴茎同时受到来自四面八方的冲击，一股股强烈的能量冲击着你。你根本无法承受这种感觉。"
 
 # game/BKchapter2.rpy:3073
 translate chinese_simplified c2_suzume_forest1_3fa142eb:
@@ -5698,7 +5698,7 @@ translate chinese_simplified c2_suzume_forest1_3fa142eb:
 translate chinese_simplified c2_suzume_forest1_a150cd7d:
 
     # "Your cock explodes like a volcano, filling her pussy with hot cum."
-    "Your cock explodes like a volcano, filling her pussy with hot cum."
+    "你的阴茎像火山一样爆发，滚烫的精液灌满了她的阴道。"
 
 # game/BKchapter2.rpy:3079
 translate chinese_simplified c2_suzume_forest1_98f0e582:
@@ -5710,7 +5710,7 @@ translate chinese_simplified c2_suzume_forest1_98f0e582:
 translate chinese_simplified c2_suzume_forest1_2532b26f:
 
     # "Your cock keeps cumming and cumming. You almost feel as if your whole life energy is draining out of you."
-    "Your cock keeps cumming and cumming. You almost feel as if your whole life energy is draining out of you."
+    "你的阴茎不停地射精，你感觉自己好像所有的生命能量都在被抽走。"
 
 # game/BKchapter2.rpy:3085
 translate chinese_simplified c2_suzume_forest1_d343057d:
@@ -5746,7 +5746,7 @@ translate chinese_simplified c2_suzume_forest1_a20cefa7:
 translate chinese_simplified c2_suzume_forest1_6786df29:
 
     # "When you finally wake up, the sun is getting low on the horizon."
-    "When you finally wake up, the sun is getting low on the horizon."
+    "当你终于醒来时，太阳已经西沉。"
 
 # game/BKchapter2.rpy:3109
 translate chinese_simplified c2_suzume_forest1_d2cb4573:
@@ -5758,7 +5758,7 @@ translate chinese_simplified c2_suzume_forest1_d2cb4573:
 translate chinese_simplified c2_suzume_forest1_0af767ce:
 
     # "You stand naked and shivering in the center of a large pool of bodily fluids. You try not to think about how all of this could have come out of your body."
-    "You stand naked and shivering in the center of a large pool of bodily fluids. You try not to think about how all of this could have come out of your body."
+    "你赤身裸体地站在一大滩体液中央，瑟瑟发抖。你努力不去想这些东西是怎么从你身体里流出来的。"
 
 # game/BKchapter2.rpy:3113
 translate chinese_simplified c2_suzume_forest1_7ec5a69f:
@@ -5770,19 +5770,19 @@ translate chinese_simplified c2_suzume_forest1_7ec5a69f:
 translate chinese_simplified c2_suzume_forest1_a352d4d8:
 
     # "Limping back towards the farmlands before sunset, you try to make sense of what happened, but thinking back on it threatens to give you an erection again, and it hurts."
-    "Limping back towards the farmlands before sunset, you try to make sense of what happened, but thinking back on it threatens to give you an erection again, and it hurts."
+    "在日落之前，你一瘸一拐地回到农田，试图弄明白发生了什么事，但回想起来却让你再次勃起，这让你感到痛苦。"
 
 # game/BKchapter2.rpy:3119
 translate chinese_simplified c2_suzume_forest1_be69242d:
 
     # "Reaching the main road again, you start heading home. Little by little, your condition is improving."
-    "Reaching the main road again, you start heading home. Little by little, your condition is improving."
+    "重新回到主路上后，你开始往家走。你的病情正在逐渐好转。"
 
 # game/BKchapter2.rpy:3121
 translate chinese_simplified c2_suzume_forest1_952c333c:
 
     # "As you approach the city, you spot a familiar figure."
-    "As you approach the city, you spot a familiar figure."
+    "当你接近城市时，你发现了一个熟悉的身影。"
 
 # game/BKchapter2.rpy:3125
 translate chinese_simplified c2_suzume_forest1_ba5a8bdb:
@@ -5824,7 +5824,7 @@ translate chinese_simplified c2_suzume_forest1_23e48cfd:
 translate chinese_simplified c2_suzume_forest1_9bb5956a:
 
     # suzume "A bo- What?!?" with vpunch
-    suzume "A bo- What?!?" with vpunch
+    suzume "什么？！" with vpunch
 
 # game/BKchapter2.rpy:3141
 translate chinese_simplified c2_suzume_forest1_cb4e1a69:
@@ -5836,7 +5836,7 @@ translate chinese_simplified c2_suzume_forest1_cb4e1a69:
 translate chinese_simplified c2_suzume_forest1_4c8f6b00:
 
     # suzume "I KNOW WHAT A FREAKING BONER IS!!!" with vpunch
-    suzume "I KNOW WHAT A FREAKING BONER IS!!!" with vpunch
+    suzume "我知道勃起到底是什么感觉！！！" with vpunch
 
 # game/BKchapter2.rpy:3145
 translate chinese_simplified c2_suzume_forest1_88999a27:
@@ -5848,7 +5848,7 @@ translate chinese_simplified c2_suzume_forest1_88999a27:
 translate chinese_simplified c2_suzume_forest1_091ae434:
 
     # "You poke Suzume in a booby."
-    "You poke Suzume in a booby."
+    "你戳了铃芽的胸部。"
 
 # game/BKchapter2.rpy:3151
 translate chinese_simplified c2_suzume_forest1_befab729:
@@ -5896,7 +5896,7 @@ translate chinese_simplified c2_suzume_forest1_cdd9076e:
 translate chinese_simplified c2_suzume_forest1_c4fbd96b:
 
     # "She's gone. She disappeared so fast you couldn't even see her go."
-    "She's gone. She disappeared so fast you couldn't even see her go."
+    "她走了。她消失得太快了，你甚至都没看到她离开。"
 
 # game/BKchapter2.rpy:3171
 translate chinese_simplified c2_suzume_forest1_47e88e49:
@@ -5920,7 +5920,7 @@ translate chinese_simplified c2_suzume_forest1_3a46c7df:
 translate chinese_simplified c2_suzume_forest1_98c2ec20:
 
     # "Your cock threatens to burst out of your pants just thinking about her."
-    "Your cock threatens to burst out of your pants just thinking about her."
+    "光是想到她，你的鸡巴就快要从裤子里蹦出来了。"
 
 # game/BKchapter2.rpy:3179
 translate chinese_simplified c2_suzume_forest1_0a2cf161:
@@ -5932,25 +5932,25 @@ translate chinese_simplified c2_suzume_forest1_0a2cf161:
 translate chinese_simplified c2_suzume_forest1_33765bf9:
 
     # "You have spent all your actions for today."
-    "You have spent all your actions for today."
+    "你今天的所有行动次数已经用完了。"
 
 # game/BKchapter2.rpy:3199
 translate chinese_simplified c2_suzume_report1_a4bba622:
 
     # "Somewhere within the rich districts of the Inner City..."
-    "Somewhere within the rich districts of the Inner City..."
+    "在市中心富人区的某个地方……"
 
 # game/BKchapter2.rpy:3203
 translate chinese_simplified c2_suzume_report1_285b8e9c:
 
     # "Male voice" "It's cold out here... Where the hell is the damn girl?"
-    "Male voice" "It's cold out here... Where the hell is the damn girl?"
+    "男声" "It's cold out here... Where the hell is the damn girl?"
 
 # game/BKchapter2.rpy:3209
 translate chinese_simplified c2_suzume_report1_77faeb2f:
 
     # "Male voice" "Gyaaah!" with vpunch
-    "Male voice" "Gyaaah!" with vpunch
+    "男声" "Gyaaah!" with vpunch
 
 # game/BKchapter2.rpy:3211
 translate chinese_simplified c2_suzume_report1_35d16279:
@@ -5962,7 +5962,7 @@ translate chinese_simplified c2_suzume_report1_35d16279:
 translate chinese_simplified c2_suzume_report1_f5419113:
 
     # "Male voice" "D-d-don't creep up on me like that!"
-    "Male voice" "D-d-don't creep up on me like that!"
+    "男声" "D-d-don't creep up on me like that!"
 
 # game/BKchapter2.rpy:3215
 translate chinese_simplified c2_suzume_report1_94159993:
@@ -5974,7 +5974,7 @@ translate chinese_simplified c2_suzume_report1_94159993:
 translate chinese_simplified c2_suzume_report1_088c6bb7:
 
     # "Male voice" "Humph. Anyway, what's your report? Is the deed done?"
-    "Male voice" "Humph. Anyway, what's your report? Is the deed done?"
+    "男声" "Humph. Anyway, what's your report? Is the deed done?"
 
 # game/BKchapter2.rpy:3219
 translate chinese_simplified c2_suzume_report1_2bf39f6c:
@@ -5986,7 +5986,7 @@ translate chinese_simplified c2_suzume_report1_2bf39f6c:
 translate chinese_simplified c2_suzume_report1_bb2b04e9:
 
     # "Male voice" "WHAT? Do you know how much I pay you?" with vpunch
-    "Male voice" "WHAT? Do you know how much I pay you?" with vpunch
+    "男声" "WHAT? Do you know how much I pay you?" with vpunch
 
 # game/BKchapter2.rpy:3223
 translate chinese_simplified c2_suzume_report1_6dc59fb5:
@@ -5998,7 +5998,7 @@ translate chinese_simplified c2_suzume_report1_6dc59fb5:
 translate chinese_simplified c2_suzume_report1_46873018:
 
     # "Male voice" "I want results. RESULTS, you hear! If I wanted incompetence, I'd have sent my own men!"
-    "Male voice" "I want results. RESULTS, you hear! If I wanted incompetence, I'd have sent my own men!"
+    "男声" "I want results. RESULTS, you hear! If I wanted incompetence, I'd have sent my own men!"
 
 # game/BKchapter2.rpy:3227
 translate chinese_simplified c2_suzume_report1_66bdc409:
@@ -6010,7 +6010,7 @@ translate chinese_simplified c2_suzume_report1_66bdc409:
 translate chinese_simplified c2_suzume_report1_7044a7a8:
 
     # "Male voice" "Make sure you take care of this by next week. Now, go. Dismissed, shoo!"
-    "Male voice" "Make sure you take care of this by next week. Now, go. Dismissed, shoo!"
+    "男声" "Make sure you take care of this by next week. Now, go. Dismissed, shoo!"
 
 # game/BKchapter2.rpy:3231
 translate chinese_simplified c2_suzume_report1_6dc59fb5_1:
@@ -6022,31 +6022,31 @@ translate chinese_simplified c2_suzume_report1_6dc59fb5_1:
 translate chinese_simplified c2_suzume_report1_f480a8c0:
 
     # "Male voice" "(She'd better do what she's told... I need to get rid of this bastard [MC.name]...)"
-    "Male voice" "(She'd better do what she's told... I need to get rid of this bastard [MC.name]...)"
+    "男声" "(She'd better do what she's told... I need to get rid of this bastard [MC.name]...)"
 
 # game/BKchapter2.rpy:3249
 translate chinese_simplified c2_suzume_arena_8912d18b:
 
     # "The arena is quiet today, as it is a holy day for gladiators. The lucky bastards have lots of perks like this, their unions being notoriously powerful."
-    "The arena is quiet today, as it is a holy day for gladiators. The lucky bastards have lots of perks like this, their unions being notoriously powerful."
+    "今天竞技场一片寂静，因为今天是角斗士的圣日。这些幸运的家伙享有诸多特权，他们的联盟势力强大，臭名昭著。"
 
 # game/BKchapter2.rpy:3253
 translate chinese_simplified c2_suzume_arena_1add5dab:
 
     # "An eerie silence fills the empty plaza in front of the arena as you cross it, there isn't a soul in sight."
-    "An eerie silence fills the empty plaza in front of the arena as you cross it, there isn't a soul in sight."
+    "当你穿过竞技场前的空旷广场时，一片诡异的寂静笼罩着这里，看不到一个人影。"
 
 # game/BKchapter2.rpy:3255
 translate chinese_simplified c2_suzume_arena_6bc41c11:
 
     # "You've heard many a deadly challenge has been cast here, the bloodlust of the arena spilling out into the nearby streets. Today, however, you're more in the mood for herbal tea."
-    "You've heard many a deadly challenge has been cast here, the bloodlust of the arena spilling out into the nearby streets. Today, however, you're more in the mood for herbal tea."
+    "你听说过这里曾上演过无数生死搏斗，竞技场的嗜血氛围甚至蔓延到附近的街道。然而今天，你更想喝杯花草茶。"
 
 # game/BKchapter2.rpy:3259
 translate chinese_simplified c2_suzume_arena_ed670703:
 
     # "Female voice" "HEY, YOU!!!" with vpunch
-    "Female voice" "HEY, YOU!!!" with vpunch
+    "女声" "HEY, YOU!!!" with vpunch
 
 # game/BKchapter2.rpy:3261
 translate chinese_simplified c2_suzume_arena_cdd9076e:
@@ -6058,19 +6058,19 @@ translate chinese_simplified c2_suzume_arena_cdd9076e:
 translate chinese_simplified c2_suzume_arena_c6284f05:
 
     # "A sudden gust of wind engulfs the plaza, almost making you spin on your heels."
-    "A sudden gust of wind engulfs the plaza, almost making you spin on your heels."
+    "一阵突如其来的狂风席卷了广场，几乎让人转身就跑。"
 
 # game/BKchapter2.rpy:3270
 translate chinese_simplified c2_suzume_arena_0fedb2c6:
 
     # "Voice" "YOU! I CHALLENGE YOU!!! FACE ME!!!" with vpunch
-    "Voice" "YOU! I CHALLENGE YOU!!! FACE ME!!!" with vpunch
+    "嗓音" "YOU! I CHALLENGE YOU!!! FACE ME!!!" with vpunch
 
 # game/BKchapter2.rpy:3272
 translate chinese_simplified c2_suzume_arena_74b741b8:
 
     # "Looking up towards the voice, you see a colorful silhouette standing against the sky, as if she just materialized out of thin air."
-    "Looking up towards the voice, you see a colorful silhouette standing against the sky, as if she just materialized out of thin air."
+    "循着声音望去，只见一个色彩斑斓的身影矗立在天空中，仿佛凭空出现一般。"
 
 # game/BKchapter2.rpy:3276
 translate chinese_simplified c2_suzume_arena_0596bac9:
@@ -6082,7 +6082,7 @@ translate chinese_simplified c2_suzume_arena_0596bac9:
 translate chinese_simplified c2_suzume_arena_6084775e:
 
     # "Immediately upon seeing the girl, you have a keen recollection of her missing panties, meeting her in the forest, and everything else. Your groin grows swollen and painful..."
-    "Immediately upon seeing the girl, you have a keen recollection of her missing panties, meeting her in the forest, and everything else. Your groin grows swollen and painful..."
+    "你一见到那个女孩，就清晰地记得她不见了内裤，记得在森林里遇见她，以及其他所有的一切。你的下身开始肿胀疼痛……"
 
 # game/BKchapter2.rpy:3280
 translate chinese_simplified c2_suzume_arena_d903c13a:
@@ -6136,13 +6136,13 @@ translate chinese_simplified c2_suzume_arena_0f36a211:
 translate chinese_simplified c2_suzume_arena_b39889ec:
 
     # "Go to the {b}farm{/b} again to meet with Suzume."
-    "Go to the {b}farm{/b} again to meet with Suzume."
+    "再次前往{b}farm{/b}与Suzume见面。"
 
 # game/BKchapter2.rpy:3320
 translate chinese_simplified c2_suzume_forest2_62d8e56d:
 
     # "Going back to the farm, you follow the tracks to the middle of the forest to meet with the strange blue-haired girl."
-    "Going back to the farm, you follow the tracks to the middle of the forest to meet with the strange blue-haired girl."
+    "回到农场后，你沿着小路来到森林中央，遇到了那个奇怪的蓝头发女孩。"
 
 # game/BKchapter2.rpy:3324
 translate chinese_simplified c2_suzume_forest2_e4aae7cb:
@@ -6160,7 +6160,7 @@ translate chinese_simplified c2_suzume_forest2_93b67ce1:
 translate chinese_simplified c2_suzume_forest2_71bbdb17:
 
     # "Female voice" "KU KU KU KU KU... You came..."
-    "Female voice" "KU KU KU KU KU... You came..."
+    "女声" "KU KU KU KU KU... You came..."
 
 # game/BKchapter2.rpy:3332
 translate chinese_simplified c2_suzume_forest2_110a267f:
@@ -6172,7 +6172,7 @@ translate chinese_simplified c2_suzume_forest2_110a267f:
 translate chinese_simplified c2_suzume_forest2_f746edef:
 
     # "The cute girl from the last time materializes before your eyes."
-    "The cute girl from the last time materializes before your eyes."
+    "上次那个可爱的女孩突然出现在你眼前。"
 
 # game/BKchapter2.rpy:3339
 translate chinese_simplified c2_suzume_forest2_ffe85cd1:
@@ -6202,19 +6202,19 @@ translate chinese_simplified c2_suzume_forest2_66bdc409:
 translate chinese_simplified c2_suzume_forest2_052f3019:
 
     # suzume doubt "(Well, I was thinking of slicing him up... But I am a master of sex martial arts... I can't let a man beat me at my own game...)"
-    suzume doubt "(Well, I was thinking of slicing him up... But I am a master of sex martial arts... I can't let a man beat me at my own game...)"
+    suzume doubt "（嗯，我本来想把他切成碎片……但我可是性爱武术大师……我可不能让一个男人在我的领域打败我……）"
 
 # game/BKchapter2.rpy:3354
 translate chinese_simplified c2_suzume_forest2_eea8f2dc:
 
     # suzume bend "Ahem. YES! Yes, of course, we shall engage in a battle of the sexes... And by this I mean we should engage in combat using only our bodies!"
-    suzume bend "Ahem. YES! Yes, of course, we shall engage in a battle of the sexes... And by this I mean we should engage in combat using only our bodies!"
+    suzume bend "咳咳。没错！当然，我们要进行一场性别大战……我的意思是，我们要只用身体来战斗！"
 
 # game/BKchapter2.rpy:3356
 translate chinese_simplified c2_suzume_forest2_d9007276:
 
     # "Her voice suddenly turns more seductive."
-    "Her voice suddenly turns more seductive."
+    "她的声音突然变得更加妩媚动人。"
 
 # game/BKchapter2.rpy:3358
 translate chinese_simplified c2_suzume_forest2_9067c8f0:
@@ -6238,13 +6238,13 @@ translate chinese_simplified c2_suzume_forest2_55e82f53:
 translate chinese_simplified c2_suzume_forest2_eee9aada:
 
     # you "ATTACK!" with vpunch
-    you "ATTACK!" with vpunch
+    you "攻击！" with vpunch
 
 # game/BKchapter2.rpy:3374
 translate chinese_simplified c2_suzume_forest2_cc3a861d:
 
     # "You waste no time and rip your clothes off, before lowering her panties and exposing her young, wet slit."
-    "You waste no time and rip your clothes off, before lowering her panties and exposing her young, wet slit."
+    "你毫不犹豫地脱掉自己的衣服，然后拉下她的内裤，露出她年轻、湿润的阴唇。"
 
 # game/BKchapter2.rpy:3376
 translate chinese_simplified c2_suzume_forest2_cb3db7bd:
@@ -6256,7 +6256,7 @@ translate chinese_simplified c2_suzume_forest2_cb3db7bd:
 translate chinese_simplified c2_suzume_forest2_f3e220cd:
 
     # "Without further ado, you stick your tongue inside her. She squeals with pleasure as her love juice starts pouring out of her."
-    "Without further ado, you stick your tongue inside her. She squeals with pleasure as her love juice starts pouring out of her."
+    "你二话不说，就把舌头伸进了她的身体。她发出愉悦的尖叫，爱液开始涌出。"
 
 # game/BKchapter2.rpy:3382
 translate chinese_simplified c2_suzume_forest2_f67d53e6:
@@ -6268,7 +6268,7 @@ translate chinese_simplified c2_suzume_forest2_f67d53e6:
 translate chinese_simplified c2_suzume_forest2_f9e895be:
 
     # "Grabbing her ass, you start kneading her firm buttocks, all the while shoving your tongue deeper inside her. She moans wildly."
-    "Grabbing her ass, you start kneading her firm buttocks, all the while shoving your tongue deeper inside her. She moans wildly."
+    "你抓住她的臀部，开始揉捏她紧实的臀肌，同时将舌头更深地探入她的体内。她发出疯狂的呻吟。"
 
 # game/BKchapter2.rpy:3386
 translate chinese_simplified c2_suzume_forest2_f9724822:
@@ -6280,13 +6280,13 @@ translate chinese_simplified c2_suzume_forest2_f9724822:
 translate chinese_simplified c2_suzume_forest2_3ee5d977:
 
     # "Feeling your own desire grow, you start undressing her, popping her ample breasts out of her skimpy outfit."
-    "Feeling your own desire grow, you start undressing her, popping her ample breasts out of her skimpy outfit."
+    "你感到自己的欲望越来越强烈，于是开始脱她的衣服，让她丰满的乳房从她那件单薄的衣服里露出来。"
 
 # game/BKchapter2.rpy:3394
 translate chinese_simplified c2_suzume_forest2_330bcefc:
 
     # suzume naked "Oh yes, pinch my nipples... Harder! Oh, I'm close to... to..."
-    suzume naked "Oh yes, pinch my nipples... Harder! Oh, I'm close to... to..."
+    suzume naked "哦，对，捏我的乳头……用力点！哦，我快……快……"
 
 # game/BKchapter2.rpy:3400
 translate chinese_simplified c2_suzume_forest2_94a66279:
@@ -6298,13 +6298,13 @@ translate chinese_simplified c2_suzume_forest2_94a66279:
 translate chinese_simplified c2_suzume_forest2_37d413a8:
 
     # "The blue-haired girl cums hard as you hungrily gulp her love juices."
-    "The blue-haired girl cums hard as you hungrily gulp her love juices."
+    "当你贪婪地吞咽她的爱液时，蓝发女孩达到了高潮。"
 
 # game/BKchapter2.rpy:3404
 translate chinese_simplified c2_suzume_forest2_b0cfeaaa:
 
     # "She is far from being done, though."
-    "She is far from being done, though."
+    "但她的行动远未结束。"
 
 # game/BKchapter2.rpy:3408
 translate chinese_simplified c2_suzume_forest2_a1e7a45f:
@@ -6316,7 +6316,7 @@ translate chinese_simplified c2_suzume_forest2_a1e7a45f:
 translate chinese_simplified c2_suzume_forest2_5971dc15:
 
     # "Before you know it, you are ramming her pussy furiously, her inner walls squeezing your dick like a boa constrictor."
-    "Before you know it, you are ramming her pussy furiously, her inner walls squeezing your dick like a boa constrictor."
+    "不知不觉间，你正疯狂地抽插着她的阴道，她内壁像蟒蛇一样紧紧地包裹着你的阴茎。"
 
 # game/BKchapter2.rpy:3414
 translate chinese_simplified c2_suzume_forest2_01f3b450:
@@ -6334,7 +6334,7 @@ translate chinese_simplified c2_suzume_forest2_fe8985d1:
 translate chinese_simplified c2_suzume_forest2_d8dcb20c:
 
     # "Her stamina is amazing, and her pussy flows like a river. You bang her with abandon, slamming your dick deeper and deeper with every stroke."
-    "Her stamina is amazing, and her pussy flows like a river. You bang her with abandon, slamming your dick deeper and deeper with every stroke."
+    "她的耐力惊人，阴道分泌物像河流一样源源不断。你肆意地操她，每一次抽插都让你的阴茎更深地插入。"
 
 # game/BKchapter2.rpy:3420
 translate chinese_simplified c2_suzume_forest2_cf179e9f:
@@ -6346,13 +6346,13 @@ translate chinese_simplified c2_suzume_forest2_cf179e9f:
 translate chinese_simplified c2_suzume_forest2_37c74095:
 
     # "She is barely able to stand as you continue your assault, and the whole forest echoes with screams of passion."
-    "She is barely able to stand as you continue your assault, and the whole forest echoes with screams of passion."
+    "当你继续进攻时，她几乎站立不稳，整个森林都回荡着激情澎湃的尖叫声。"
 
 # game/BKchapter2.rpy:3426
 translate chinese_simplified c2_suzume_forest2_49432e80:
 
     # suzume "YYYESSSS!!!" with flash
-    suzume "YYYESSSS!!!" with flash
+    suzume "耶！！！" with flash
 
 # game/BKchapter2.rpy:3431
 translate chinese_simplified c2_suzume_forest2_793fd5a5:
@@ -6364,13 +6364,13 @@ translate chinese_simplified c2_suzume_forest2_793fd5a5:
 translate chinese_simplified c2_suzume_forest2_cf9445c3:
 
     # "You cum an insane amount inside the young girl's pussy, filling her up to the brim until it leaks out of her tight cunt."
-    "You cum an insane amount inside the young girl's pussy, filling her up to the brim until it leaks out of her tight cunt."
+    "你将大量的精液射入年轻女孩的阴道内，直到精液从她紧致的阴道口流出。"
 
 # game/BKchapter2.rpy:3435
 translate chinese_simplified c2_suzume_forest2_e28e5939:
 
     # "She shivers with pleasure with every spurt, her body enticing you to spend more."
-    "She shivers with pleasure with every spurt, her body enticing you to spend more."
+    "她每次高潮都兴奋得颤抖，她的身体诱惑着你花更多的钱。"
 
 # game/BKchapter2.rpy:3439
 translate chinese_simplified c2_suzume_forest2_4bf5700c:
@@ -6382,7 +6382,7 @@ translate chinese_simplified c2_suzume_forest2_4bf5700c:
 translate chinese_simplified c2_suzume_forest2_da7a3fad:
 
     # suzume shrewd "But the battle is only getting started..."
-    suzume shrewd "But the battle is only getting started..."
+    suzume shrewd "但战斗才刚刚开始……"
 
 # game/BKchapter2.rpy:3443
 translate chinese_simplified c2_suzume_forest2_2bc0f4ce:
@@ -6394,31 +6394,31 @@ translate chinese_simplified c2_suzume_forest2_2bc0f4ce:
 translate chinese_simplified c2_suzume_forest2_c13e15d1:
 
     # suzume naked "Ah yes! YES!!!" with hpunch
-    suzume naked "Ah yes! YES!!!" with hpunch
+    suzume naked "啊，对！对！！！" with hpunch
 
 # game/BKchapter2.rpy:3457
 translate chinese_simplified c2_suzume_forest2_04b7b2b0:
 
     # suzume "MORE! MORE!" with doubleflash
-    suzume "MORE! MORE!" with doubleflash
+    suzume "还要！还要！" with doubleflash
 
 # game/BKchapter2.rpy:3463
 translate chinese_simplified c2_suzume_forest2_35aaf064:
 
     # suzume "AGAIN! Cum inside me again!" with hpunch
-    suzume "AGAIN! Cum inside me again!" with hpunch
+    suzume "再来一次！再射在我里面一次！" with hpunch
 
 # game/BKchapter2.rpy:3471
 translate chinese_simplified c2_suzume_forest2_78bb3c35:
 
     # suzume "Do you think you're done here? Come on! More!" with doubleflash
-    suzume "Do you think you're done here? Come on! More!" with doubleflash
+    suzume "你以为这就完了吗？来吧！继续！" with doubleflash
 
 # game/BKchapter2.rpy:3479
 translate chinese_simplified c2_suzume_forest2_332edd76:
 
     # suzume "Oh yes... yes... YES!!!" with hpunch
-    suzume "Oh yes... yes... YES!!!" with hpunch
+    suzume "哦耶……耶……耶！！！" with hpunch
 
 # game/BKchapter2.rpy:3485
 translate chinese_simplified c2_suzume_forest2_c479ddb2:
@@ -6436,7 +6436,7 @@ translate chinese_simplified c2_suzume_forest2_9deb0975:
 translate chinese_simplified c2_suzume_forest2_dc91722b:
 
     # you "UWAAH!!!" with flash
-    you "UWAAH!!!" with flash
+    you "哇啊！！！" with flash
 
 # game/BKchapter2.rpy:3495
 translate chinese_simplified c2_suzume_forest2_c4ac7a72:
@@ -6448,7 +6448,7 @@ translate chinese_simplified c2_suzume_forest2_c4ac7a72:
 translate chinese_simplified c2_suzume_forest2_be5d6bf6:
 
     # you "Aaaah... AGAIN!" with doubleflash
-    you "Aaaah... AGAIN!" with doubleflash
+    you "啊……又来了！" with doubleflash
 
 # game/BKchapter2.rpy:3499
 translate chinese_simplified c2_suzume_forest2_9872ac08:
@@ -6472,13 +6472,13 @@ translate chinese_simplified c2_suzume_forest2_f53feedf:
 translate chinese_simplified c2_suzume_forest2_4539ef63:
 
     # "You both keep fucking for a long time..."
-    "You both keep fucking for a long time..."
+    "你们俩一直做爱，时间很长……"
 
 # game/BKchapter2.rpy:3513
 translate chinese_simplified c2_suzume_forest2_2d3801fa:
 
     # suzume shrewd "I... I need a break..."
-    suzume shrewd "I... I need a break..."
+    suzume shrewd "我……我需要休息一下……"
 
 # game/BKchapter2.rpy:3515
 translate chinese_simplified c2_suzume_forest2_49a14e2e:
@@ -6532,7 +6532,7 @@ translate chinese_simplified c2_suzume_forest2_1016d245:
 translate chinese_simplified c2_suzume_forest2_03aeb058:
 
     # suzume "ZZZZZZZ..."
-    suzume "ZZZZZZZZ..."
+    suzume "呜呜呜……"
 
 # game/BKchapter2.rpy:3533
 translate chinese_simplified c2_suzume_forest2_68339f45:
@@ -6550,7 +6550,7 @@ translate chinese_simplified c2_suzume_forest2_a5572d14:
 translate chinese_simplified c2_suzume_forest2_0a2d2618:
 
     # "Stumbling back to the brothel, you find yourself very light-headed."
-    "Stumbling back to the brothel, you find yourself very light-headed."
+    "你跌跌撞撞地回到妓院，发现自己头晕目眩。"
 
 # game/BKchapter2.rpy:3541
 translate chinese_simplified c2_suzume_forest2_e6b5a705:
@@ -6562,25 +6562,25 @@ translate chinese_simplified c2_suzume_forest2_e6b5a705:
 translate chinese_simplified c2_suzume_forest2_18923731:
 
     # "When you finally reach home, all you have the strength to do is to fall in bed and sleep for twelve hours straight."
-    "When you finally reach home, all you have the strength to do is to fall in bed and sleep for twelve hours straight."
+    "当你终于回到家时，你唯一能做的就是倒在床上，一睡就是十二个小时。"
 
 # game/BKchapter2.rpy:3546
 translate chinese_simplified c2_suzume_forest2_6e6242a8:
 
     # "You have lost your remaining actions for the day."
-    "You have lost your remaining actions for the day."
+    "您今天剩余的操作次数已全部用完。"
 
 # game/BKchapter2.rpy:3559
 translate chinese_simplified c2_suzume_report2_3844625d:
 
     # "Later that night."
-    "Later that night."
+    "当晚晚些时候。"
 
 # game/BKchapter2.rpy:3563
 translate chinese_simplified c2_suzume_report2_6439667a:
 
     # "Male voice" "YOU WHAT?!?" with vpunch
-    "Male voice" "YOU WHAT?!?" with vpunch
+    "男声" "YOU WHAT?!?" with vpunch
 
 # game/BKchapter2.rpy:3567
 translate chinese_simplified c2_suzume_report2_b9736cb9:
@@ -6598,7 +6598,7 @@ translate chinese_simplified c2_suzume_report2_78a637da:
 translate chinese_simplified c2_suzume_report2_cd877359:
 
     # "Male voice" "You did! You failed me twice!"
-    "Male voice" "You did! You failed me twice!"
+    "男声" "You did! You failed me twice!"
 
 # game/BKchapter2.rpy:3573
 translate chinese_simplified c2_suzume_report2_c3cebe13:
@@ -6610,7 +6610,7 @@ translate chinese_simplified c2_suzume_report2_c3cebe13:
 translate chinese_simplified c2_suzume_report2_4b1531ca:
 
     # "Male voice" "Too high? How high?"
-    "Male voice" "Too high? How high?"
+    "男声" "Too high? How high?"
 
 # game/BKchapter2.rpy:3577
 translate chinese_simplified c2_suzume_report2_9dbce8eb:
@@ -6628,19 +6628,19 @@ translate chinese_simplified c2_suzume_report2_e0964a5e:
 translate chinese_simplified c2_suzume_report2_de952b5c:
 
     # "Male voice" "Over NINE THOUSAND??? AAAARGH!!!" with vpunch
-    "Male voice" "Over NINE THOUSAND??? AAAARGH!!!" with vpunch
+    "男声" "Over NINE THOUSAND??? AAAARGH!!!" with vpunch
 
 # game/BKchapter2.rpy:3585
 translate chinese_simplified c2_suzume_report2_bfe793f4:
 
     # "The man breaks something in frustration."
-    "The man breaks something in frustration."
+    "男子因沮丧而摔坏了东西。"
 
 # game/BKchapter2.rpy:3587
 translate chinese_simplified c2_suzume_report2_d50839f3:
 
     # "Male voice" "Come to think of it... Over 9,000 what? I didn't know there was a scale for sexual stamina."
-    "Male voice" "Come to think of it... Over 9,000 what? I didn't know there was a scale for sexual stamina."
+    "男声" "Come to think of it... Over 9,000 what? I didn't know there was a scale for sexual stamina."
 
 # game/BKchapter2.rpy:3589
 translate chinese_simplified c2_suzume_report2_5132a70e:
@@ -6658,7 +6658,7 @@ translate chinese_simplified c2_suzume_report2_4db82fa6:
 translate chinese_simplified c2_suzume_report2_eec9f710:
 
     # "Male voice" "Whoah, isn't that a little extreme? I hired you to render him impotent..."
-    "Male voice" "Whoah, isn't that a little extreme? I hired you to render him impotent..."
+    "男声" "Whoah, isn't that a little extreme? I hired you to render him impotent..."
 
 # game/BKchapter2.rpy:3595
 translate chinese_simplified c2_suzume_report2_820dc493:
@@ -6670,19 +6670,19 @@ translate chinese_simplified c2_suzume_report2_820dc493:
 translate chinese_simplified c2_suzume_report2_c9909255:
 
     # "Male voice" "*gulp*"
-    "Male voice" "*gulp*"
+    "男声" "*gulp*"
 
 # game/BKchapter2.rpy:3599
 translate chinese_simplified c2_suzume_report2_856cdc8d:
 
     # "Male voice" "Alright, if that's what it takes... But you will do this for half-pay!"
-    "Male voice" "Alright, if that's what it takes... But you will do this for half-pay!"
+    "男声" "Alright, if that's what it takes... But you will do this for half-pay!"
 
 # game/BKchapter2.rpy:3601
 translate chinese_simplified c2_suzume_report2_baac9cca:
 
     # "Male voice" "I've had enough of your failures!" with vpunch
-    "Male voice" "I've had enough of your failures!" with vpunch
+    "男声" "I've had enough of your failures!" with vpunch
 
 # game/BKchapter2.rpy:3603
 translate chinese_simplified c2_suzume_report2_66bdc409:
@@ -6700,7 +6700,7 @@ translate chinese_simplified c2_suzume_report2_fe571a1a:
 translate chinese_simplified c2_suzume_report2_07d7ff4c:
 
     # "Male voice" "For... free?"
-    "Male voice" "For... free?"
+    "男声" "For... free?"
 
 # game/BKchapter2.rpy:3609
 translate chinese_simplified c2_suzume_report2_ff71a901:
@@ -6712,13 +6712,13 @@ translate chinese_simplified c2_suzume_report2_ff71a901:
 translate chinese_simplified c2_suzume_report2_0280dd02:
 
     # "Male voice" "Well... Very well, then, fufufu..."
-    "Male voice" "Well... Very well, then, fufufu..."
+    "男声" "Well... Very well, then, fufufu..."
 
 # game/BKchapter2.rpy:3613
 translate chinese_simplified c2_suzume_report2_2a8fc0d7:
 
     # "Male voice" "Make him bleed! Cut his dick off!" with vpunch
-    "Male voice" "Make him bleed! Cut his dick off!" with vpunch
+    "男声" "Make him bleed! Cut his dick off!" with vpunch
 
 # game/BKchapter2.rpy:3615
 translate chinese_simplified c2_suzume_report2_2131f9b8:
@@ -6736,19 +6736,19 @@ translate chinese_simplified c2_suzume_report2_b20f720d:
 translate chinese_simplified c2_suzume_report2_efa995c8:
 
     # "Male voice" "Just make sure to stop the bleeding afterwards, cauterize it or something... I enjoy making fun of cripples, I mean, don't we all, but I don't want to be an accessory to murder."
-    "Male voice" "Just make sure to stop the bleeding afterwards, cauterize it or something... I enjoy making fun of cripples, I mean, don't we all, but I don't want to be an accessory to murder."
+    "男声" "Just make sure to stop the bleeding afterwards, cauterize it or something... I enjoy making fun of cripples, I mean, don't we all, but I don't want to be an accessory to murder."
 
 # game/BKchapter2.rpy:3632
 translate chinese_simplified c2_suzume_invitation2_ab3e9651:
 
     # "As you walk back towards your brothel for the night, a big gust of wind engulfs the street."
-    "As you walk back towards your brothel for the night, a big gust of wind engulfs the street."
+    "当你走回当晚要去的妓院时，一阵狂风席卷了街道。"
 
 # game/BKchapter2.rpy:3634
 translate chinese_simplified c2_suzume_invitation2_cf9a0ad7:
 
     # "A lone flyer glides in the air, as if aimed right towards you. It hits your chest, then lands softly at your feet."
-    "A lone flyer glides in the air, as if aimed right towards you. It hits your chest, then lands softly at your feet."
+    "一只孤零零的飞虫在空中滑翔，仿佛径直朝你飞来。它撞到你的胸口，然后轻轻地落在你的脚边。"
 
 # game/BKchapter2.rpy:3636
 translate chinese_simplified c2_suzume_invitation2_6bfce0db:
@@ -6760,7 +6760,7 @@ translate chinese_simplified c2_suzume_invitation2_6bfce0db:
 translate chinese_simplified c2_suzume_invitation2_39c81038:
 
     # "Cautiously picking up the flyer, you quickly recognize the letterhead. It's from 'The Dark Serpent', one of the most upscale hostess clubs in the lower city."
-    "Cautiously picking up the flyer, you quickly recognize the letterhead. It's from 'The Dark Serpent', one of the most upscale hostess clubs in the lower city."
+    "你小心翼翼地拿起传单，很快就认出了上面的抬头。这是“黑暗之蛇”的传单，那是下城区最高档的陪酒俱乐部之一。"
 
 # game/BKchapter2.rpy:3643
 translate chinese_simplified c2_suzume_invitation2_43edbd30:
@@ -6778,13 +6778,13 @@ translate chinese_simplified c2_suzume_invitation2_663d8ff5:
 translate chinese_simplified c2_suzume_invitation2_70ff819e:
 
     # "You've heard it is a very selective club catering to the wealthiest clients of the lower city. Some of the big names from the upper city even visit from time to time."
-    "You've heard it is a very selective club catering to the wealthiest clients of the lower city. Some of the big names from the upper city even visit from time to time."
+    "你听说过，那是一家非常高端的俱乐部，只接待下城区最富有的客户。就连上城区的一些大人物也偶尔会光顾。"
 
 # game/BKchapter2.rpy:3651
 translate chinese_simplified c2_suzume_invitation2_4b087829:
 
     # "Its imposing building is a familiar sight by the seafront. You've heard it's got all sorts of kinky rooms in there..."
-    "Its imposing building is a familiar sight by the seafront. You've heard it's got all sorts of kinky rooms in there..."
+    "它那气势恢宏的建筑是海滨一道熟悉的风景。你肯定听说过里面有各种各样的情趣房间……"
 
 # game/BKchapter2.rpy:3653
 translate chinese_simplified c2_suzume_invitation2_253a503a:
@@ -6802,13 +6802,13 @@ translate chinese_simplified c2_suzume_invitation2_4ba709d8:
 translate chinese_simplified c2_suzume_invitation2_6706c589:
 
     # "Visit the {b}Seafront{/b} to enjoy your free night at the Dark Serpent."
-    "Visit the {b}Seafront{/b} to enjoy your free night at the Dark Serpent."
+    "前往海滨，在黑暗巨蛇酒店享受您的免费夜晚。"
 
 # game/BKchapter2.rpy:3667
 translate chinese_simplified c2_suzume_brothel_201230bf:
 
     # "You decide it's time to use the free hostess club coupon that you found in the street."
-    "You decide it's time to use the free hostess club coupon that you found in the street."
+    "你决定是时候使用你在街上捡到的免费招待俱乐部优惠券了。"
 
 # game/BKchapter2.rpy:3672
 translate chinese_simplified c2_suzume_brothel_4e9b7d17:
@@ -6820,7 +6820,7 @@ translate chinese_simplified c2_suzume_brothel_4e9b7d17:
 translate chinese_simplified c2_suzume_brothel_c0d3b5b7:
 
     # "The Dark Serpent overlooks the seafront, its elegant architecture a mix of traditional Zanic features and more eccentric influences."
-    "The Dark Serpent overlooks the seafront, its elegant architecture a mix of traditional Zanic features and more eccentric influences."
+    "黑蛇酒店俯瞰着海滨，其优雅的建筑融合了传统的赞尼亚风格和更古怪的影响。"
 
 # game/BKchapter2.rpy:3676
 translate chinese_simplified c2_suzume_brothel_1e0f0144:
@@ -6832,13 +6832,13 @@ translate chinese_simplified c2_suzume_brothel_1e0f0144:
 translate chinese_simplified c2_suzume_brothel_525733e9:
 
     # "You enter the lobby. An elderly majordomo mans the desk. He seems to take an instant dislike to you."
-    "You enter the lobby. An elderly majordomo mans the desk. He seems to take an instant dislike to you."
+    "你走进大厅。一位年迈的管家在前台值班。他似乎对你立刻产生了反感。"
 
 # game/BKchapter2.rpy:3684
 translate chinese_simplified c2_suzume_brothel_0f06550d:
 
     # "Receptionist" "Ahem, Sir, the taverns are further down the docks. Go back to the street, then take a right..."
-    "Receptionist" "咳，先生，酒馆在码头更远的地方。回到街上，然后右转……"
+    "接待员" "咳，先生，酒馆在码头更远的地方。回到街上，然后右转……"
 
 # game/BKchapter2.rpy:3686
 translate chinese_simplified c2_suzume_brothel_3a20fc69:
@@ -6850,13 +6850,13 @@ translate chinese_simplified c2_suzume_brothel_3a20fc69:
 translate chinese_simplified c2_suzume_brothel_c48a3616:
 
     # "The old man stiffens."
-    "The old man stiffens."
+    "老人身体僵住了。"
 
 # game/BKchapter2.rpy:3690
 translate chinese_simplified c2_suzume_brothel_afedee2e:
 
     # "Receptionist" "Indeed it is, we are the most upscale, and shall I say, {i}expensive{/i} entertainment this side of the inner gates. And I don't think you..."
-    "Receptionist" "的确如此，我们是内门这边最高档，也可以说是最昂贵的娱乐场所。而且我认为你……"
+    "接待员" "的确如此，我们是内门这边最高档，也可以说是最昂贵的娱乐场所。而且我认为你……"
 
 # game/BKchapter2.rpy:3692
 translate chinese_simplified c2_suzume_brothel_f7faca34:
@@ -6868,55 +6868,55 @@ translate chinese_simplified c2_suzume_brothel_f7faca34:
 translate chinese_simplified c2_suzume_brothel_9d28e98c:
 
     # "You brandish the flyer under his nose. He picks it up with obvious distaste, between two fingers."
-    "You brandish the flyer under his nose. He picks it up with obvious distaste, between two fingers."
+    "你把传单在他鼻子底下晃了晃。他明显很不情愿地用两根手指夹起它。"
 
 # game/BKchapter2.rpy:3696
 translate chinese_simplified c2_suzume_brothel_5c2eff1e:
 
     # "Receptionist" "We don't just give vouchers to..."
-    "Receptionist" "我们不仅仅发放代金券……"
+    "接待员" "我们不仅仅发放代金券……"
 
 # game/BKchapter2.rpy:3698
 translate chinese_simplified c2_suzume_brothel_b4002846:
 
     # "He frowns."
-    "He frowns."
+    "他皱起了眉头。"
 
 # game/BKchapter2.rpy:3700
 translate chinese_simplified c2_suzume_brothel_18e841a6:
 
     # "Receptionist" "Well, it is the Manager's seal..."
-    "Receptionist" "这是经理的印章……"
+    "接待员" "这是经理的印章……"
 
 # game/BKchapter2.rpy:3702
 translate chinese_simplified c2_suzume_brothel_85fb8084:
 
     # "Out of the blue, the receptionist breaks into an obsequious smile."
-    "Out of the blue, the receptionist breaks into an obsequious smile."
+    "前台接待员突然露出谄媚的笑容。"
 
 # game/BKchapter2.rpy:3704
 translate chinese_simplified c2_suzume_brothel_9000c76e:
 
     # "Receptionist" "As our esteemed guest, you are most welcome to our humble establishment. We will do our utmost to make this the best night of your life."
-    "Receptionist" "尊敬的客人，我们热烈欢迎您光临本店。我们将竭尽全力，让您度过一个毕生难忘的夜晚。"
+    "接待员" "尊敬的客人，我们热烈欢迎您光临本店。我们将竭尽全力，让您度过一个毕生难忘的夜晚。"
 
 # game/BKchapter2.rpy:3706
 translate chinese_simplified c2_suzume_brothel_913649f3:
 
     # "His sudden mood change is even more unsettling."
-    "His sudden mood change is even more unsettling."
+    "他情绪的突然转变更令人不安。"
 
 # game/BKchapter2.rpy:3708
 translate chinese_simplified c2_suzume_brothel_fd9fcd69:
 
     # "Receptionist" "Your invitation gives you access to the Deluxe bedroom on the top floor. There are no other rooms on this floor, so you will be able to go about your business discreetly."
-    "Receptionist" "您的邀请函允许您入住顶层的豪华卧室。该楼层没有其他房间，因此您可以低调地处理您的事务。"
+    "接待员" "您的邀请函允许您入住顶层的豪华卧室。该楼层没有其他房间，因此您可以低调地处理您的事务。"
 
 # game/BKchapter2.rpy:3710
 translate chinese_simplified c2_suzume_brothel_49f01a5c:
 
     # "Recptionist" "(And not scare the other customers away, hopefully.)"
-    "Recptionist" "（希望不会吓跑其他顾客。）"
+    "接待员" "（希望不会吓跑其他顾客。）"
 
 # game/BKchapter2.rpy:3712
 translate chinese_simplified c2_suzume_brothel_d825505d:
@@ -6928,13 +6928,13 @@ translate chinese_simplified c2_suzume_brothel_d825505d:
 translate chinese_simplified c2_suzume_brothel_1a65c0d2:
 
     # "Receptionist" "Nothing. Follow me, Sir."
-    "Receptionist" "没什么。请跟我来，先生。"
+    "接待员" "没什么。请跟我来，先生。"
 
 # game/BKchapter2.rpy:3718
 translate chinese_simplified c2_suzume_brothel_e77aa6b0:
 
     # "The old man leads you up a flight of grandiose stairs, past a couple of expensive paper sliding doors. Beyond lies a richly decorated room with lacquered flooring and a fancy king-size futon."
-    "The old man leads you up a flight of grandiose stairs, past a couple of expensive paper sliding doors. Beyond lies a richly decorated room with lacquered flooring and a fancy king-size futon."
+    "老人领着你走上一段气派的楼梯，经过几扇昂贵的纸质推拉门。门后是一间装饰华丽的房间，铺着漆面地板，摆放着一张豪华的特大号日式床垫。"
 
 # game/BKchapter2.rpy:3720
 translate chinese_simplified c2_suzume_brothel_37b17422:
@@ -6946,7 +6946,7 @@ translate chinese_simplified c2_suzume_brothel_37b17422:
 translate chinese_simplified c2_suzume_brothel_64914e1a:
 
     # "The rich scent of incense and rose's oil tickles your senses. The room opens on a large moonlit balcony which overlooks the whole district."
-    "The rich scent of incense and rose's oil tickles your senses. The room opens on a large moonlit balcony which overlooks the whole district."
+    "浓郁的焚香和玫瑰精油的香气撩拨着你的感官。房间通向一个宽敞的阳台，月光洒满阳台，俯瞰着整个街区。"
 
 # game/BKchapter2.rpy:3724
 translate chinese_simplified c2_suzume_brothel_cd4a9604:
@@ -6958,13 +6958,13 @@ translate chinese_simplified c2_suzume_brothel_cd4a9604:
 translate chinese_simplified c2_suzume_brothel_e706addb:
 
     # "Receptionist" "Your companion shall join you shortly. Please make yourself comfortable."
-    "Receptionist" "您的同伴很快就会与您会合。请随意坐。"
+    "接待员" "您的同伴很快就会与您会合。请随意坐。"
 
 # game/BKchapter2.rpy:3728
 translate chinese_simplified c2_suzume_brothel_fbd6bef8:
 
     # "You heave a sigh of relief as the grumpy majordomo leaves."
-    "You heave a sigh of relief as the grumpy majordomo leaves."
+    "脾气暴躁的管家离开后，你长舒了一口气。"
 
 # game/BKchapter2.rpy:3730
 translate chinese_simplified c2_suzume_brothel_ab8b15f0:
@@ -6976,7 +6976,7 @@ translate chinese_simplified c2_suzume_brothel_ab8b15f0:
 translate chinese_simplified c2_suzume_brothel_a6e1e448:
 
     # "You take all of your clothes off, and lay down on the silk sheets."
-    "You take all of your clothes off, and lay down on the silk sheets."
+    "你脱光衣服，躺在丝绸床单上。"
 
 # game/BKchapter2.rpy:3734
 translate chinese_simplified c2_suzume_brothel_1700f93c:
@@ -6988,13 +6988,13 @@ translate chinese_simplified c2_suzume_brothel_1700f93c:
 translate chinese_simplified c2_suzume_brothel_a6ec95d4:
 
     # "You can already feel the excitement as you get ready to meet the mysterious courtesan."
-    "You can already feel the excitement as you get ready to meet the mysterious courtesan."
+    "你已经能感受到即将与神秘的交际花见面时的兴奋之情了。"
 
 # game/BKchapter2.rpy:3738
 translate chinese_simplified c2_suzume_brothel_ddde0e23:
 
     # "The room is warm, but a light scented mist starts filling the air from a vent mechanism, giving you a delicious chill."
-    "The room is warm, but a light scented mist starts filling the air from a vent mechanism, giving you a delicious chill."
+    "房间很暖和，但通风装置开始散发出淡淡的香味，带来一丝清凉感。"
 
 # game/BKchapter2.rpy:3740
 translate chinese_simplified c2_suzume_brothel_ee0a01e2:
@@ -7006,13 +7006,13 @@ translate chinese_simplified c2_suzume_brothel_ee0a01e2:
 translate chinese_simplified c2_suzume_brothel_4eb2c587:
 
     # "After a moment, the first sliding door opens with a smooth sound, and a woman's silhouette appears in the entrance. "
-    "After a moment, the first sliding door opens with a smooth sound, and a woman's silhouette appears in the entrance. "
+    "片刻之后，第一扇滑动门发出平稳的声音打开了，一个女人的身影出现在入口处。"
 
 # game/BKchapter2.rpy:3744
 translate chinese_simplified c2_suzume_brothel_d9c2cd61:
 
     # "You can only see her through the paper door as she prepares herself. Somehow, it makes the whole thing even more exciting."
-    "You can only see her through the paper door as she prepares herself. Somehow, it makes the whole thing even more exciting."
+    "你只能透过纸门看到她做准备的样子。不知为何，这反而让一切更加令人兴奋了。"
 
 # game/BKchapter2.rpy:3746
 translate chinese_simplified c2_suzume_brothel_6cc52bc1:
@@ -7024,7 +7024,7 @@ translate chinese_simplified c2_suzume_brothel_6cc52bc1:
 translate chinese_simplified c2_suzume_brothel_cb95cda6:
 
     # "Your imagination is running wild, and you start feeling really horny. You hear some clanging sounds as the woman prepares herself."
-    "Your imagination is running wild, and you start feeling really horny. You hear some clanging sounds as the woman prepares herself."
+    "你的想象力开始不受控制地驰骋，你感到欲火焚身。你听到一些金属碰撞的声音，那是女人在做准备。"
 
 # game/BKchapter2.rpy:3750
 translate chinese_simplified c2_suzume_brothel_491eaf61:
@@ -7042,13 +7042,13 @@ translate chinese_simplified c2_suzume_brothel_bf1976e9:
 translate chinese_simplified c2_suzume_brothel_8156667b:
 
     # "Your dick is now rock-hard as you indulge in your fantasy."
-    "Your dick is now rock-hard as you indulge in your fantasy."
+    "沉浸在幻想中，你的阴茎现在坚硬如铁。"
 
 # game/BKchapter2.rpy:3756
 translate chinese_simplified c2_suzume_brothel_8647904f:
 
     # "You're also starting to feel light-headed. Sniffing a bit of the mist, you feel both extremely horny and more than a little dazed."
-    "You're also starting to feel light-headed. Sniffing a bit of the mist, you feel both extremely horny and more than a little dazed."
+    "你开始感到头晕目眩。吸入些许雾气后，你既感到极度兴奋，又感到有些迷茫。"
 
 # game/BKchapter2.rpy:3758
 translate chinese_simplified c2_suzume_brothel_62eaad11:
@@ -7060,7 +7060,7 @@ translate chinese_simplified c2_suzume_brothel_62eaad11:
 translate chinese_simplified c2_suzume_brothel_310918a1:
 
     # "The woman is finished preparing, and she slowly opens the screen. As she advances into the light, you get your first good look at her."
-    "The woman is finished preparing, and she slowly opens the screen. As she advances into the light, you get your first good look at her."
+    "女人准备完毕，缓缓打开屏风。当她走向光亮处时，你才第一次看清她的模样。"
 
 # game/BKchapter2.rpy:3762
 translate chinese_simplified c2_suzume_brothel_5adc7534:
@@ -7072,7 +7072,7 @@ translate chinese_simplified c2_suzume_brothel_5adc7534:
 translate chinese_simplified c2_suzume_brothel_33a63608:
 
     # suzume shrewd "We meet again! [MC.name], my nemesis... PREPARE TO DIE!"
-    suzume shrewd "We meet again! [MC.name], my nemesis... PREPARE TO DIE!"
+    suzume shrewd "我们又见面了！[MC.name]，我的宿敌……准备受死吧！"
 
 # game/BKchapter2.rpy:3770
 translate chinese_simplified c2_suzume_brothel_01526480:
@@ -7102,7 +7102,7 @@ translate chinese_simplified c2_suzume_brothel_a8586dc1:
 translate chinese_simplified c2_suzume_brothel_a1f8574c:
 
     # "Even though your mind is getting foggy, you notice she is holding a couple of short blades made of the best steel and covered in runes..."
-    "Even though your mind is getting foggy, you notice she is holding a couple of short blades made of the best steel and covered in runes..."
+    "即使你的头脑开始变得昏沉，你还是注意到她手里拿着两把用上等钢材打造、刻满符文的短刀……"
 
 # game/BKchapter2.rpy:3782
 translate chinese_simplified c2_suzume_brothel_b3d4b9d3:
@@ -7120,7 +7120,7 @@ translate chinese_simplified c2_suzume_brothel_9bb12303:
 translate chinese_simplified c2_suzume_brothel_9444ea28:
 
     # "She ignores your rambling as she walks slowly towards you."
-    "She ignores your rambling as she walks slowly towards you."
+    "她不理会你的絮叨，缓缓向你走来。"
 
 # game/BKchapter2.rpy:3788
 translate chinese_simplified c2_suzume_brothel_0ad2d65a:
@@ -7132,7 +7132,7 @@ translate chinese_simplified c2_suzume_brothel_0ad2d65a:
 translate chinese_simplified c2_suzume_brothel_45182b08:
 
     # "She steps forward menacingly. As she comes into the mist, her dress becomes wet and clings even more to her perfect shapes."
-    "She steps forward menacingly. As she comes into the mist, her dress becomes wet and clings even more to her perfect shapes."
+    "她气势汹汹地向前迈步。当她走进迷雾中时，她的裙子被雾气浸湿，更加紧贴着她完美的身材。"
 
 # game/BKchapter2.rpy:3794
 translate chinese_simplified c2_suzume_brothel_030686f5:
@@ -7144,7 +7144,7 @@ translate chinese_simplified c2_suzume_brothel_030686f5:
 translate chinese_simplified c2_suzume_brothel_0b8d2218:
 
     # "Your cock was already rock-hard, but it seems to grow even more in size. Suzume lifts an eyebrow."
-    "Your cock was already rock-hard, but it seems to grow even more in size. Suzume lifts an eyebrow."
+    "你的阴茎原本就坚硬如铁，但现在似乎变得更大了。铃芽挑了挑眉。"
 
 # game/BKchapter2.rpy:3798
 translate chinese_simplified c2_suzume_brothel_1f1e53f8:
@@ -7162,7 +7162,7 @@ translate chinese_simplified c2_suzume_brothel_f0693f09:
 translate chinese_simplified c2_suzume_brothel_e9fde3b5:
 
     # "She tightens her grip on her blades, and lifts one over her head, ready to strike."
-    "She tightens her grip on her blades, and lifts one over her head, ready to strike."
+    "她握紧手中的刀刃，举起一把刀过头顶，准备攻击。"
 
 # game/BKchapter2.rpy:3804
 translate chinese_simplified c2_suzume_brothel_fe1fd6c4:
@@ -7180,7 +7180,7 @@ translate chinese_simplified c2_suzume_brothel_a3523ec4:
 translate chinese_simplified c2_suzume_brothel_2bfe6e2f:
 
     # you "No!!! Wait!!!" with vpunch
-    you "No!!! Wait!!!" with vpunch
+    you "不！！！等等！！！" with vpunch
 
 # game/BKchapter2.rpy:3810
 translate chinese_simplified c2_suzume_brothel_b52d4c90:
@@ -7216,13 +7216,13 @@ translate chinese_simplified c2_suzume_brothel_dc82ab46:
 translate chinese_simplified c2_suzume_brothel_61d62a71:
 
     # you "What are you wearing under your blouse???" with vpunch
-    you "What are you wearing under your blouse???" with vpunch
+    you "你衬衫里面穿的是什么？" with vpunch
 
 # game/BKchapter2.rpy:3825
 translate chinese_simplified c2_suzume_brothel_642a3ae7:
 
     # suzume normal "Uh?"
-    suzume normal "Uh?"
+    suzume normal "嗯？"
 
 # game/BKchapter2.rpy:3827
 translate chinese_simplified c2_suzume_brothel_b8a22caa:
@@ -7234,19 +7234,19 @@ translate chinese_simplified c2_suzume_brothel_b8a22caa:
 translate chinese_simplified c2_suzume_brothel_8caa56f4:
 
     # suzume doubt "Well, I wear nothing, of course... Underwear hinders movement, and I can't have that. Look!"
-    suzume doubt "Well, I wear nothing, of course... Underwear hinders movement, and I can't have that. Look!"
+    suzume doubt "当然，我什么都没穿……内衣会妨碍行动，我可不能那样。看！"
 
 # game/BKchapter2.rpy:3837
 translate chinese_simplified c2_suzume_brothel_7c7c45c5:
 
     # "She lifts her blouse, and you can see she isn't lying. From your futon, you get a perfect view of her moist slit."
-    "She lifts her blouse, and you can see she isn't lying. From your futon, you get a perfect view of her moist slit."
+    "她撩起衬衫，你可以看出她没说谎。从你的被褥上，你可以清楚地看到她湿润的私处。"
 
 # game/BKchapter2.rpy:3839
 translate chinese_simplified c2_suzume_brothel_a5769123:
 
     # "It seems the mist is having an effect on her too. Your nose starts bleeding."
-    "It seems the mist is having an effect on her too. Your nose starts bleeding."
+    "看来这雾气也对她产生了影响。你的鼻子开始流血。"
 
 # game/BKchapter2.rpy:3841
 translate chinese_simplified c2_suzume_brothel_ecfe670e:
@@ -7264,7 +7264,7 @@ translate chinese_simplified c2_suzume_brothel_79ed6440:
 translate chinese_simplified c2_suzume_brothel_0d890e4d:
 
     # suzume shrewd "Now, prepare to... Uh?"
-    suzume shrewd "Now, prepare to... Uh?"
+    suzume shrewd "现在，准备……呃？"
 
 # game/BKchapter2.rpy:3847
 translate chinese_simplified c2_suzume_brothel_5972564c:
@@ -7276,13 +7276,13 @@ translate chinese_simplified c2_suzume_brothel_5972564c:
 translate chinese_simplified c2_suzume_brothel_89db9d55:
 
     # you "UAAAAAAAAAAAAAGGGGH!!!"
-    you "UAAAAAAAAAAAAAGGGGH!!!"
+    you "啊啊啊啊啊！！！"
 
 # game/BKchapter2.rpy:3855
 translate chinese_simplified c2_suzume_brothel_7a10c102:
 
     # "Unable to contain yourself, you explode point-blank on Suzume, covering her body, clothes and blades with an eruption of thick semen."
-    "Unable to contain yourself, you explode point-blank on Suzume, covering her body, clothes and blades with an eruption of thick semen."
+    "你无法控制自己，对着铃芽近距离爆发，浓稠的精液喷涌而出，覆盖了她的身体、衣服和刀刃。"
 
 # game/BKchapter2.rpy:3859
 translate chinese_simplified c2_suzume_brothel_66bdc409:
@@ -7294,13 +7294,13 @@ translate chinese_simplified c2_suzume_brothel_66bdc409:
 translate chinese_simplified c2_suzume_brothel_26a4e696:
 
     # "She watches in amazement as your cock releases an inhuman amount of cum."
-    "She watches in amazement as your cock releases an inhuman amount of cum."
+    "她惊奇地看着你的阴茎射出非人的精液量。"
 
 # game/BKchapter2.rpy:3863
 translate chinese_simplified c2_suzume_brothel_9c146f6d:
 
     # "The murderous glint in her eyes dims, and changes to something different, yet equally ravenous."
-    "The murderous glint in her eyes dims, and changes to something different, yet equally ravenous."
+    "她眼中杀气腾腾的光芒渐渐黯淡，变成了另一种截然不同但同样充满渴望的眼神。"
 
 # game/BKchapter2.rpy:3865
 translate chinese_simplified c2_suzume_brothel_47fddee7:
@@ -7312,13 +7312,13 @@ translate chinese_simplified c2_suzume_brothel_47fddee7:
 translate chinese_simplified c2_suzume_brothel_bb50c570:
 
     # suzume normal "Such a MAGNIFICENT DICK!!!" with vpunch
-    suzume normal "Such a MAGNIFICENT DICK!!!" with vpunch
+    suzume normal "真是个了不起的家伙！！！" with vpunch
 
 # game/BKchapter2.rpy:3871
 translate chinese_simplified c2_suzume_brothel_e10f695a:
 
     # "She drops her weapons to the side."
-    "She drops her weapons to the side."
+    "她把武器扔到一边。"
 
 # game/BKchapter2.rpy:3873
 translate chinese_simplified c2_suzume_brothel_ae520b58:
@@ -7330,13 +7330,13 @@ translate chinese_simplified c2_suzume_brothel_ae520b58:
 translate chinese_simplified c2_suzume_brothel_7829d3da:
 
     # "She rips her blouse off."
-    "She rips her blouse off."
+    "她一把扯掉了自己的衬衫。"
 
 # game/BKchapter2.rpy:3877
 translate chinese_simplified c2_suzume_brothel_6aaf5187:
 
     # suzume naked "YOU! Owner of the perfect dick! FUCK ME!"
-    suzume naked "YOU! Owner of the perfect dick! FUCK ME!"
+    suzume naked "你！拥有完美阴茎的人！操我！"
 
 # game/BKchapter2.rpy:3879
 translate chinese_simplified c2_suzume_brothel_eedf4eb4:
@@ -7348,31 +7348,31 @@ translate chinese_simplified c2_suzume_brothel_eedf4eb4:
 translate chinese_simplified c2_suzume_brothel_463fd685:
 
     # suzume "NOW!" with vpunch
-    suzume "NOW!" with vpunch
+    suzume "现在！" with vpunch
 
 # game/BKchapter2.rpy:3887
 translate chinese_simplified c2_suzume_brothel_b1b94401:
 
     # "Suzume lands on top of you like a frenzied she-wolf. Before you know it, you are both fucking with abandon."
-    "Suzume lands on top of you like a frenzied she-wolf. Before you know it, you are both fucking with abandon."
+    "铃芽像一头狂暴的母狼一样扑到你身上。还没等你反应过来，你们俩就放纵地做爱起来。"
 
 # game/BKchapter2.rpy:3891
 translate chinese_simplified c2_suzume_brothel_ab056819:
 
     # "As usual, you and Suzume have amazing chemistry."
-    "As usual, you and Suzume have amazing chemistry."
+    "你和铃芽一如既往地默契十足。"
 
 # game/BKchapter2.rpy:3893
 translate chinese_simplified c2_suzume_brothel_073d5e11:
 
     # suzume "Oh yes, [MC.name]! Fuck me! Ravage my worthless pussy!" with vpunch
-    suzume "Oh yes, [MC.name]! Fuck me! Ravage my worthless pussy!" with vpunch
+    suzume "哦耶，[MC.name]！操我！蹂躏我这没用的屄！" with vpunch
 
 # game/BKchapter2.rpy:3895
 translate chinese_simplified c2_suzume_brothel_1c62afcf:
 
     # you "K-Kinky..."
-    you "K-Kinky..."
+    you "K-变态..."
 
 # game/BKchapter2.rpy:3897
 translate chinese_simplified c2_suzume_brothel_d42a568d:
@@ -7390,7 +7390,7 @@ translate chinese_simplified c2_suzume_brothel_5c74a7a5:
 translate chinese_simplified c2_suzume_brothel_938e9718:
 
     # you "A ninja? So this is, mmh... This is really what you are?" with vpunch
-    you "A ninja? So this is, mmh... This is really what you are?" with vpunch
+    you "忍者？所以，嗯……这就是你真正的身份？" with vpunch
 
 # game/BKchapter2.rpy:3903
 translate chinese_simplified c2_suzume_brothel_305b01bd:
@@ -7408,13 +7408,13 @@ translate chinese_simplified c2_suzume_brothel_7d17bddd:
 translate chinese_simplified c2_suzume_brothel_2928134e:
 
     # suzume doubt "Well, I never liked that job anyway, and that pompous asshole... Riding your dick is a lot better than carrying out old men's bidding!"
-    suzume doubt "Well, I never liked that job anyway, and that pompous asshole... Riding your dick is a lot better than carrying out old men's bidding!"
+    suzume doubt "反正我从来都不喜欢那份工作，还有那个自大的混蛋……骑在你身上可比听老头子使唤强多了！"
 
 # game/BKchapter2.rpy:3909
 translate chinese_simplified c2_suzume_brothel_23ed3c64:
 
     # suzume normal "I'm only nineteen, anyway... I've got lots of time to figure out something else to do with my life! (Aaah... Keep doing that...)" with vpunch
-    suzume normal "I'm only nineteen, anyway... I've got lots of time to figure out something else to do with my life! (Aaah... Keep doing that...)" with vpunch
+    suzume normal "我才十九岁……反正我还有很多时间去思考我的人生该何去何从！（啊……继续努力……）" with vpunch
 
 # game/BKchapter2.rpy:3911
 translate chinese_simplified c2_suzume_brothel_a1dcc137:
@@ -7432,13 +7432,13 @@ translate chinese_simplified c2_suzume_brothel_0aef0aac:
 translate chinese_simplified c2_suzume_brothel_a87383bf:
 
     # "You cum inside her again, the first of a long series..."
-    "You cum inside her again, the first of a long series..."
+    "你又一次在她体内射精，这只是漫长系列的开始……"
 
 # game/BKchapter2.rpy:3923
 translate chinese_simplified c2_suzume_brothel_824ba0e2:
 
     # "Hours later, when you are both fully satisfied, she lies down on your chest and breathes a deep sigh."
-    "Hours later, when you are both fully satisfied, she lies down on your chest and breathes a deep sigh."
+    "几个小时后，当你们都心满意足时，她躺在你的胸口，深深地叹了口气。"
 
 # game/BKchapter2.rpy:3930
 translate chinese_simplified c2_suzume_brothel_455fe550:
@@ -7462,7 +7462,7 @@ translate chinese_simplified c2_suzume_brothel_9d0a24a3:
 translate chinese_simplified c2_suzume_brothel_8a1e559c:
 
     # you "Wait? What did you say?" with vpunch
-    you "Wait? What did you say?" with vpunch
+    you "等等？你说什么？" with vpunch
 
 # game/BKchapter2.rpy:3938
 translate chinese_simplified c2_suzume_brothel_e7cf48eb:
@@ -7486,7 +7486,7 @@ translate chinese_simplified c2_suzume_brothel_dee1e758:
 translate chinese_simplified c2_suzume_brothel_811568a2:
 
     # you "So you're in league with the murderer!!! The masked dude!" with vpunch
-    you "So you're in league with the murderer!!! The masked dude!" with vpunch
+    you "所以你和凶手是一伙的！！！就是那个戴面具的家伙！" with vpunch
 
 # game/BKchapter2.rpy:3948
 translate chinese_simplified c2_suzume_brothel_b52d4c90_1:
@@ -7510,7 +7510,7 @@ translate chinese_simplified c2_suzume_brothel_e2cb947b:
 translate chinese_simplified c2_suzume_brothel_c7439be0:
 
     # you "Don't try to fool me! The masked man works with the kunoichi, and you're part of the kunoichi, aren't you?" with vpunch
-    you "Don't try to fool me! The masked man works with the kunoichi, and you're part of the kunoichi, aren't you?" with vpunch
+    you "别想骗我！那个蒙面人是和女忍者们一起行动的，而你也是女忍者们的一员，对吧？" with vpunch
 
 # game/BKchapter2.rpy:3956
 translate chinese_simplified c2_suzume_brothel_d19e3940:
@@ -7570,7 +7570,7 @@ translate chinese_simplified c2_suzume_brothel_b07e2283:
 translate chinese_simplified c2_suzume_brothel_023c9fbf:
 
     # you "Damn! I'm going to get back at the bastard..." with vpunch
-    you "Damn! I'm going to get back at the bastard..." with vpunch
+    you "该死！我一定要报复那个混蛋……" with vpunch
 
 # game/BKchapter2.rpy:3976
 translate chinese_simplified c2_suzume_brothel_89b3fb9f:
@@ -7666,19 +7666,19 @@ translate chinese_simplified c2_suzume_brothel_d71bdd55:
 translate chinese_simplified c2_suzume_brothel_c653ecfe:
 
     # "Suzume doesn't let you escape so easily. After she's done with you, you wonder if you didn't escape mutilation to die from oversex after all."
-    "Suzume doesn't let you escape so easily. After she's done with you, you wonder if you didn't escape mutilation to die from oversex after all."
+    "铃芽不会让你轻易逃脱。在她摆弄完你之后，你会怀疑自己当初逃过酷刑，是不是最终却死于过度性交。"
 
 # game/BKchapter2.rpy:4028
 translate chinese_simplified c2_suzume_brothel_a47d14f0:
 
     # "You have spent all of your actions for the night."
-    "You have spent all of your actions for the night."
+    "你已经用完了今晚的所有行动机会。"
 
 # game/BKchapter2.rpy:4042
 translate chinese_simplified c2_homura_city_meet_cb1006b8:
 
     # "One morning, as you open your window, you spot a familiar figure that looks out of place in [district.name]."
-    "One morning, as you open your window, you spot a familiar figure that looks out of place in [district.name]."
+    "一天早晨，当你打开窗户时，你发现一个熟悉的身影在[district.name]显得格格不入。"
 
 # game/BKchapter2.rpy:4047
 translate chinese_simplified c2_homura_city_meet_a4616de8:
@@ -7690,13 +7690,13 @@ translate chinese_simplified c2_homura_city_meet_a4616de8:
 translate chinese_simplified c2_homura_city_meet_6b74aec4:
 
     # homura surprise "Uh?"
-    homura surprise "Uh?"
+    homura surprise "嗯？"
 
 # game/BKchapter2.rpy:4053
 translate chinese_simplified c2_homura_city_meet_5afe5034:
 
     # homura normal "Oh, Mister [MC.name]. Nice to see you again. So this is where you live?"
-    homura normal "Oh, Mister [MC.name]. Nice to see you again. So this is where you live?"
+    homura normal "哦，[MC.name]先生，很高兴再次见到您。原来您住在这里啊？"
 
 # game/BKchapter2.rpy:4055
 translate chinese_simplified c2_homura_city_meet_b4740282:
@@ -7714,7 +7714,7 @@ translate chinese_simplified c2_homura_city_meet_8af716d9:
 translate chinese_simplified c2_homura_city_meet_e456c860:
 
     # "Welcoming Lady Henso inside [brothel.name], you send Sill to the kitchen to fetch some tea."
-    "Welcoming Lady Henso inside [brothel.name], you send Sill to the kitchen to fetch some tea."
+    "欢迎亨索夫人进入[brothel.name]，你派希尔去厨房泡些茶。"
 
 # game/BKchapter2.rpy:4071
 translate chinese_simplified c2_homura_city_meet_6bae63fc:
@@ -7762,7 +7762,7 @@ translate chinese_simplified c2_homura_city_meet_6629e43e:
 translate chinese_simplified c2_homura_city_meet_e309de67:
 
     # homura "Don't you agree?" nointeract
-    homura "Don't you agree?" nointeract
+    homura "你同意吗？" nointeract
 
 # game/BKchapter2.rpy:4090
 translate chinese_simplified c2_homura_city_meet_c6d10674:
@@ -7774,7 +7774,7 @@ translate chinese_simplified c2_homura_city_meet_c6d10674:
 translate chinese_simplified c2_homura_city_meet_a487ae20:
 
     # "She blinks."
-    "She blinks."
+    "她眨了眨眼。"
 
 # game/BKchapter2.rpy:4094
 translate chinese_simplified c2_homura_city_meet_851c984b:
@@ -7810,7 +7810,7 @@ translate chinese_simplified c2_homura_city_meet_48611c49:
 translate chinese_simplified c2_homura_city_meet_d83ba17e:
 
     # "She frowns."
-    "She frowns."
+    "她皱起了眉头。"
 
 # game/BKchapter2.rpy:4110
 translate chinese_simplified c2_homura_city_meet_7f1091b5:
@@ -7834,7 +7834,7 @@ translate chinese_simplified c2_homura_city_meet_72872053:
 translate chinese_simplified c2_homura_city_meet_9dd26d3e:
 
     # "She pauses for a moment."
-    "She pauses for a moment."
+    "她停顿了一下。"
 
 # game/BKchapter2.rpy:4120
 translate chinese_simplified c2_homura_city_meet_31cd5118:
@@ -7852,7 +7852,7 @@ translate chinese_simplified c2_homura_city_meet_f22e96e8:
 translate chinese_simplified c2_homura_city_meet_9ba0550c:
 
     # homura blush "... [MC.name]. I couldn't help but notice the sign outside. Is this a..."
-    homura blush "... [MC.name]. I couldn't help but notice the sign outside. Is this a..."
+    homura blush "……[MC.name]。我忍不住注意到外面的招牌。这是……"
 
 # game/BKchapter2.rpy:4126
 translate chinese_simplified c2_homura_city_meet_8c58ea7e:
@@ -7876,7 +7876,7 @@ translate chinese_simplified c2_homura_city_meet_1a8f1eaf:
 translate chinese_simplified c2_homura_city_meet_8d5ccb5e:
 
     # "Sill enters the room with a teapot. She looks at Lady Homura sideways."
-    "Sill enters the room with a teapot. She looks at Lady Homura sideways."
+    "希尔端着茶壶走进房间，侧目打量着焰大人。"
 
 # game/BKchapter2.rpy:4134
 translate chinese_simplified c2_homura_city_meet_41ab53ad:
@@ -7888,7 +7888,7 @@ translate chinese_simplified c2_homura_city_meet_41ab53ad:
 translate chinese_simplified c2_homura_city_meet_9685d2f8:
 
     # "Sill overheard and is frowning, but she keeps quiet."
-    "Sill overheard and is frowning, but she keeps quiet."
+    "Sill听到了，皱着眉头，但她保持沉默。"
 
 # game/BKchapter2.rpy:4138
 translate chinese_simplified c2_homura_city_meet_cb470a28:
@@ -7900,13 +7900,13 @@ translate chinese_simplified c2_homura_city_meet_cb470a28:
 translate chinese_simplified c2_homura_city_meet_34235812:
 
     # "Lady Homura looks slightly disappointed."
-    "Lady Homura looks slightly disappointed."
+    "焰小姐看起来有些失望。"
 
 # game/BKchapter2.rpy:4142
 translate chinese_simplified c2_homura_city_meet_3017211f:
 
     # homura normal "Oh, I see."
-    homura normal "Oh, I see."
+    homura normal "我懂了。"
 
 # game/BKchapter2.rpy:4144
 translate chinese_simplified c2_homura_city_meet_4d1a2340:
@@ -7930,7 +7930,7 @@ translate chinese_simplified c2_homura_city_meet_5ebe3573:
 translate chinese_simplified c2_homura_city_meet_6afa030a:
 
     # homura blush "This place, though... It must get really different at night, right? Such debauchery... I can barely imagine it... Mmh..."
-    homura blush "This place, though... It must get really different at night, right? Such debauchery... I can barely imagine it... Mmh..."
+    homura blush "不过，这个地方……晚上肯定完全不一样吧？到处都是放荡不羁的景象……我简直难以想象……嗯……"
 
 # game/BKchapter2.rpy:4152
 translate chinese_simplified c2_homura_city_meet_bb62fd8b:
@@ -7948,7 +7948,7 @@ translate chinese_simplified c2_homura_city_meet_f4ff4140:
 translate chinese_simplified c2_homura_city_meet_a546598b:
 
     # "She blushes."
-    "She blushes."
+    "她脸红了。"
 
 # game/BKchapter2.rpy:4158
 translate chinese_simplified c2_homura_city_meet_568d8c7d:
@@ -7966,7 +7966,7 @@ translate chinese_simplified c2_homura_city_meet_b5d4b199:
 translate chinese_simplified c2_homura_city_meet_4e202827:
 
     # "She blushes even more. Sill grumbles something and excuses herself."
-    "She blushes even more. Sill grumbles something and excuses herself."
+    "她脸更红了。西尔咕哝了几句，然后找了个借口离开。"
 
 # game/BKchapter2.rpy:4164
 translate chinese_simplified c2_homura_city_meet_38662fb2:
@@ -7978,13 +7978,13 @@ translate chinese_simplified c2_homura_city_meet_38662fb2:
 translate chinese_simplified c2_homura_city_meet_a27082bf:
 
     # homura surprise "Really? That's a tempting offer... I'm so curious about the world you live in!"
-    homura surprise "Really? That's a tempting offer... I'm so curious about the world you live in!"
+    homura surprise "真的吗？这真是个诱人的提议……我对你生活的世界充满了好奇！"
 
 # game/BKchapter2.rpy:4170
 translate chinese_simplified c2_homura_city_meet_bc70cdbf:
 
     # homura blush "But I'm not allowed to go out at night... I'd have to slip through undetected... Use the sewers, maybe.."
-    homura blush "But I'm not allowed to go out at night... I'd have to slip through undetected... Use the sewers, maybe.."
+    homura blush "但我晚上不准出门……我得偷偷溜过去……或许可以利用下水道……"
 
 # game/BKchapter2.rpy:4172
 translate chinese_simplified c2_homura_city_meet_fb4a7ea1:
@@ -7996,7 +7996,7 @@ translate chinese_simplified c2_homura_city_meet_fb4a7ea1:
 translate chinese_simplified c2_homura_city_meet_6b2e3089:
 
     # homura normal "On the contrary! Sounds like an adventure! Count me in... I shall visit your Okiya!" with vpunch
-    homura normal "On the contrary! Sounds like an adventure! Count me in... I shall visit your Okiya!" with vpunch
+    homura normal "恰恰相反！听起来像是一次冒险！算我一个……我要去拜访你的置屋！" with vpunch
 
 # game/BKchapter2.rpy:4176
 translate chinese_simplified c2_homura_city_meet_1d313ffc:
@@ -8014,13 +8014,13 @@ translate chinese_simplified c2_homura_city_meet_766077fb:
 translate chinese_simplified c2_homura_city_meet_60680c29:
 
     # "You wonder how an innocent noble girl can be so enthusiastic about smut. She's nice to talk to, though."
-    "You wonder how an innocent noble girl can be so enthusiastic about smut. She's nice to talk to, though."
+    "你很纳闷，一个天真无邪的贵族小姐怎么会对色情内容如此着迷。不过，她人挺好的，跟她聊天挺愉快的。"
 
 # game/BKchapter2.rpy:4196
 translate chinese_simplified c2_homura_okiya1_74845832:
 
     # "As the sun starts to set and the first red lamps are lit in the street, you take some time to inspect your brothel."
-    "As the sun starts to set and the first red lamps are lit in the street, you take some time to inspect your brothel."
+    "当太阳开始西沉，街上第一盏红灯亮起时，你花了一些时间检查你的妓院。"
 
 # game/BKchapter2.rpy:4198
 translate chinese_simplified c2_homura_okiya1_c479423b:
@@ -8032,7 +8032,7 @@ translate chinese_simplified c2_homura_okiya1_c479423b:
 translate chinese_simplified c2_homura_okiya1_ef11c035:
 
     # "Woman" "Ahem. Mister [MC.name]?"
-    "Woman" "咳。[MC.name]先生？"
+    "女士" "咳。[MC.name]先生？"
 
 # game/BKchapter2.rpy:4202
 translate chinese_simplified c2_homura_okiya1_b9f03b8c:
@@ -8050,7 +8050,7 @@ translate chinese_simplified c2_homura_okiya1_34b587e0:
 translate chinese_simplified c2_homura_okiya1_1c9f65f9:
 
     # homura blush "But perhaps you're too busy? I apologize, I shouldn't have barged in like that..."
-    homura blush "But perhaps you're too busy? I apologize, I shouldn't have barged in like that..."
+    homura blush "或许你太忙了？抱歉，我不该那样闯进来……"
 
 # game/BKchapter2.rpy:4211
 translate chinese_simplified c2_homura_okiya1_0e07d3d3:
@@ -8080,7 +8080,7 @@ translate chinese_simplified c2_homura_okiya1_f7e7951c:
 translate chinese_simplified c2_homura_okiya1_c0f452c8:
 
     # homura normal "So this is the calm before the storm... My father would kill me if he knew I was visiting this place!"
-    homura normal "So this is the calm before the storm... My father would kill me if he knew I was visiting this place!"
+    homura normal "这是暴风雨前的宁静……如果我父亲知道我来这里，他会杀了我的！"
 
 # game/BKchapter2.rpy:4221
 translate chinese_simplified c2_homura_okiya1_db845157:
@@ -8104,13 +8104,13 @@ translate chinese_simplified c2_homura_okiya1_df678f09:
 translate chinese_simplified c2_homura_okiya1_7fd0052d:
 
     # homura surprise "Exactly. That's what makes it so easy for the higher-ups to step on them."
-    homura surprise "Exactly. That's what makes it so easy for the higher-ups to step on them."
+    homura surprise "没错。正因如此，上级才能如此轻易地打压他们。"
 
 # game/BKchapter2.rpy:4232
 translate chinese_simplified c2_homura_okiya1_b54db977:
 
     # "Her voice became harsher, but she quickly recovers her composure."
-    "Her voice became harsher, but she quickly recovers her composure."
+    "她的声音变得严厉起来，但她很快恢复了镇定。"
 
 # game/BKchapter2.rpy:4238
 translate chinese_simplified c2_homura_okiya1_30e17710:
@@ -8122,13 +8122,13 @@ translate chinese_simplified c2_homura_okiya1_30e17710:
 translate chinese_simplified c2_homura_okiya1_83727c51:
 
     # homura blush "You don't understand... A golden cage is a cage all the same. Sometimes, destiny locks you in..."
-    homura blush "You don't understand... A golden cage is a cage all the same. Sometimes, destiny locks you in..."
+    homura blush "你不明白……金笼子终究还是笼子。有时候，命运会把你困在里面……"
 
 # game/BKchapter2.rpy:4242
 translate chinese_simplified c2_homura_okiya1_efe7e491:
 
     # "She seems a bit distant for a moment, but quickly recovers her composure."
-    "She seems a bit distant for a moment, but quickly recovers her composure."
+    "她似乎有一瞬间显得有些心不在焉，但很快恢复了镇定。"
 
 # game/BKchapter2.rpy:4246
 translate chinese_simplified c2_homura_okiya1_dd4ebc41:
@@ -8140,13 +8140,13 @@ translate chinese_simplified c2_homura_okiya1_dd4ebc41:
 translate chinese_simplified c2_homura_okiya1_43084994:
 
     # homura normal "Oh, but surely I will be safe here! Escorted by [MC.name], [text1], and good friend of the Princess!"
-    homura normal "Oh, but surely I will be safe here! Escorted by [MC.name], [text1], and good friend of the Princess!"
+    homura normal "哦，但我在这里肯定会很安全！有[MC.name]、[text1]和公主的好朋友护送！"
 
 # game/BKchapter2.rpy:4257
 translate chinese_simplified c2_homura_okiya1_0a457116:
 
     # "She smiles and takes your arm."
-    "She smiles and takes your arm."
+    "她笑着挽住你的胳膊。"
 
 # game/BKchapter2.rpy:4259
 translate chinese_simplified c2_homura_okiya1_4fe28a00:
@@ -8182,7 +8182,7 @@ translate chinese_simplified c2_homura_okiya1_f326a348:
 translate chinese_simplified c2_homura_okiya1_6af6d17f:
 
     # homura blush "But still... Naughty stuff happens here too, right? *blush*"
-    homura blush "But still... Naughty stuff happens here too, right? *blush*"
+    homura blush "但是……这里也会发生一些不好的事，对吧？*脸红*"
 
 # game/BKchapter2.rpy:4276
 translate chinese_simplified c2_homura_okiya1_2cfaef3b:
@@ -8194,13 +8194,13 @@ translate chinese_simplified c2_homura_okiya1_2cfaef3b:
 translate chinese_simplified c2_homura_okiya1_409d298a:
 
     # homura normal "Oh."
-    homura normal "Oh."
+    homura normal "哦。"
 
 # game/BKchapter2.rpy:4280
 translate chinese_simplified c2_homura_okiya1_42b49c4e:
 
     # "You cannot tell if it is disappointment or relief that you hear in her voice."
-    "You cannot tell if it is disappointment or relief that you hear in her voice."
+    "你无法从她的声音中听出是失望还是释然。"
 
 # game/BKchapter2.rpy:4282
 translate chinese_simplified c2_homura_okiya1_3bab46d3:
@@ -8248,7 +8248,7 @@ translate chinese_simplified c2_homura_okiya1_4cd002e4:
 translate chinese_simplified c2_homura_okiya1_fbc70854:
 
     # "You detect a hint of sarcasm in her voice."
-    "You detect a hint of sarcasm in her voice."
+    "你听出她语气中带有一丝讽刺意味。"
 
 # game/BKchapter2.rpy:4303
 translate chinese_simplified c2_homura_okiya1_c7b3af2b:
@@ -8272,19 +8272,19 @@ translate chinese_simplified c2_homura_okiya1_33bbdc79:
 translate chinese_simplified c2_homura_okiya1_ee5d2a9d:
 
     # homura blush "I-I... *blush*"
-    homura blush "I-I... *blush*"
+    homura blush "二……*脸红*"
 
 # game/BKchapter2.rpy:4313
 translate chinese_simplified c2_homura_okiya1_8a321d87:
 
     # "She quickly changes the subject."
-    "She quickly changes the subject."
+    "她迅速转移了话题。"
 
 # game/BKchapter2.rpy:4315
 translate chinese_simplified c2_homura_okiya1_1ccce569:
 
     # homura normal "So the princess granted you an audience, even though she has so little time! She doesn't even take time to meet with her dear friends anymore..."
-    homura normal "So the princess granted you an audience, even though she has so little time! She doesn't even take time to meet with her dear friends anymore..."
+    homura normal "所以公主殿下百忙之中还是接见了您！她现在连和挚友相聚的时间都没有了……"
 
 # game/BKchapter2.rpy:4317
 translate chinese_simplified c2_homura_okiya1_e0901a38:
@@ -8308,7 +8308,7 @@ translate chinese_simplified c2_homura_okiya1_da2954a2:
 translate chinese_simplified c2_homura_okiya1_f970c3b7:
 
     # "You hesitate for a second, but you do need all the help you can get."
-    "You hesitate for a second, but you do need all the help you can get."
+    "你犹豫了一秒钟，但你的确需要尽可能多的帮助。"
 
 # game/BKchapter2.rpy:4332
 translate chinese_simplified c2_homura_okiya1_44969840:
@@ -8350,7 +8350,7 @@ translate chinese_simplified c2_homura_okiya1_95ff8b60:
 translate chinese_simplified c2_homura_okiya1_801f2cb8:
 
     # "She's way too giddy given the seriousness of the situation."
-    "She's way too giddy given the seriousness of the situation."
+    "考虑到事态的严重性，她表现得过于兴奋了。"
 
 # game/BKchapter2.rpy:4346
 translate chinese_simplified c2_homura_okiya1_35ffdf06:
@@ -8386,7 +8386,7 @@ translate chinese_simplified c2_homura_okiya1_02b77bf1:
 translate chinese_simplified c2_homura_okiya1_2f8ba946:
 
     # "You remember the Princess requested you keep your assignment secret."
-    "You remember the Princess requested you keep your assignment secret."
+    "你还记得公主要求你对任务保密吗？"
 
 # game/BKchapter2.rpy:4361
 translate chinese_simplified c2_homura_okiya1_d405ecb6:
@@ -8434,25 +8434,25 @@ translate chinese_simplified c2_homura_okiya1_f33ccea0:
 translate chinese_simplified c2_homura_okiya1_9387b596:
 
     # homura blush "Thank you, [MC.name]! See you..."
-    homura blush "Thank you, [MC.name]! See you..."
+    homura blush "谢谢你，[MC.name]！再见……"
 
 # game/BKchapter2.rpy:4387
 translate chinese_simplified c2_homura_okiya1_04b7caa7:
 
     # "After Homura takes her leave, Sill comes to you unexpectedly. She looks concerned."
-    "After Homura takes her leave, Sill comes to you unexpectedly. She looks concerned."
+    "焰离开后，希尔突然出现，看起来很担心。"
 
 # game/BKchapter2.rpy:4389
 translate chinese_simplified c2_homura_okiya1_9ed5643c:
 
     # sill sad "Master, I noticed you invited that little lady from the other day..."
-    sill sad "Master, I noticed you invited that little lady from the other day..."
+    sill sad "主人，我注意到您那天邀请了那位小姑娘……"
 
 # game/BKchapter2.rpy:4391
 translate chinese_simplified c2_homura_okiya1_ed7e472b:
 
     # "Sill and Homura are about the same height."
-    "Sill and Homura are about the same height."
+    "希尔和焰的身高差不多。"
 
 # game/BKchapter2.rpy:4393
 translate chinese_simplified c2_homura_okiya1_d928c566:
@@ -8464,13 +8464,13 @@ translate chinese_simplified c2_homura_okiya1_d928c566:
 translate chinese_simplified c2_homura_okiya1_be32f657:
 
     # "Sill bites her lip, then blurts out."
-    "Sill bites her lip, then blurts out."
+    "希尔咬着嘴唇，然后脱口而出。"
 
 # game/BKchapter2.rpy:4397
 translate chinese_simplified c2_homura_okiya1_4d6e0664:
 
     # sill sad "Master, don't trust that shifty ingenue! I don't like the way she looks at you..."
-    sill sad "Master, don't trust that shifty ingenue! I don't like the way she looks at you..."
+    sill sad "主人，别相信那个狡猾的姑娘！我不喜欢她看您的眼神……"
 
 # game/BKchapter2.rpy:4399
 translate chinese_simplified c2_homura_okiya1_aaa76684:
@@ -8500,7 +8500,7 @@ translate chinese_simplified c2_homura_okiya1_43c73b84:
 translate chinese_simplified c2_homura_okiya1_6d137fcc:
 
     # "You pat Sill on the head."
-    "You pat Sill on the head."
+    "你拍了拍希尔的头。"
 
 # game/BKchapter2.rpy:4415
 translate chinese_simplified c2_homura_okiya1_20846929:
@@ -8512,7 +8512,7 @@ translate chinese_simplified c2_homura_okiya1_20846929:
 translate chinese_simplified c2_homura_okiya1_f3183629:
 
     # sill happy "Oh, Master..."
-    sill happy "Oh, Master..."
+    sill happy "哦，主人……"
 
 # game/BKchapter2.rpy:4419
 translate chinese_simplified c2_homura_okiya1_2af80abd:
@@ -8524,7 +8524,7 @@ translate chinese_simplified c2_homura_okiya1_2af80abd:
 translate chinese_simplified c2_homura_okiya1_0572783b:
 
     # "You frown."
-    "You frown."
+    "你皱起了眉头。"
 
 # game/BKchapter2.rpy:4428
 translate chinese_simplified c2_homura_okiya1_a8a2ef3d:
@@ -8554,13 +8554,13 @@ translate chinese_simplified c2_homura_okiya1_a39a743b:
 translate chinese_simplified c2_homura_okiya1_914e652e:
 
     # "Without a warning, you hit Sill in the back of the head."
-    "Without a warning, you hit Sill in the back of the head."
+    "你毫无预警地击中了希尔的后脑勺。"
 
 # game/BKchapter2.rpy:4446
 translate chinese_simplified c2_homura_okiya1_61fb4d73:
 
     # sill sad "OUCH!" with vpunch
-    sill sad "OUCH!" with vpunch
+    sill sad "哎哟！" with vpunch
 
 # game/BKchapter2.rpy:4448
 translate chinese_simplified c2_homura_okiya1_6ef6141a:
@@ -8584,7 +8584,7 @@ translate chinese_simplified c2_homura_okiya1_6b1723d0:
 translate chinese_simplified c2_homura_okiya1_8d2f85bf:
 
     # "You rip her clothes off, leaving her naked on the floor."
-    "You rip her clothes off, leaving her naked on the floor."
+    "你撕掉她的衣服，让她赤身裸体地躺在地板上。"
 
 # game/BKchapter2.rpy:4464
 translate chinese_simplified c2_homura_okiya1_aea11224:
@@ -8626,7 +8626,7 @@ translate chinese_simplified c2_homura_okiya1_da052cca:
 translate chinese_simplified c2_homura_okiya1_f9b7dc01:
 
     # "Sill grows pale, and her eyes well up."
-    "Sill grows pale, and her eyes well up."
+    "希尔脸色苍白，眼眶湿润。"
 
 # game/BKchapter2.rpy:4479
 translate chinese_simplified c2_homura_okiya1_e2b4ea5c:
@@ -8638,13 +8638,13 @@ translate chinese_simplified c2_homura_okiya1_e2b4ea5c:
 translate chinese_simplified c2_homura_okiya1_7309db43:
 
     # extend "A MEANIE!!!" with vpunch
-    extend "A MEANIE!!!" with vpunch
+    extend "坏蛋！！！" with vpunch
 
 # game/BKchapter2.rpy:4489
 translate chinese_simplified c2_homura_okiya1_1e5f840b:
 
     # "She runs out, sobbing."
-    "She runs out, sobbing."
+    "她哭着跑了出去。"
 
 # game/BKchapter2.rpy:4491
 translate chinese_simplified c2_homura_okiya1_b66253cf:
@@ -8656,19 +8656,19 @@ translate chinese_simplified c2_homura_okiya1_b66253cf:
 translate chinese_simplified c2_suzume_morning_visit_d67331b4:
 
     # "Late in the morning, you are standing just outside your porch, enjoying the soft breeze."
-    "Late in the morning, you are standing just outside your porch, enjoying the soft breeze."
+    "上午晚些时候，你站在自家门廊外，享受着轻柔的微风。"
 
 # game/BKchapter2.rpy:4505
 translate chinese_simplified c2_suzume_morning_visit_8f484251:
 
     # suzume "Heya!!!" with vpunch
-    suzume "Heya!!!" with vpunch
+    suzume "嘿！！！" with vpunch
 
 # game/BKchapter2.rpy:4511
 translate chinese_simplified c2_suzume_morning_visit_0ad226b3:
 
     # you "BWAAH!" with vpunch
-    you "BWAAH!" with vpunch
+    you "哇啊！" with vpunch
 
 # game/BKchapter2.rpy:4513
 translate chinese_simplified c2_suzume_morning_visit_1eb5a8d6:
@@ -8692,7 +8692,7 @@ translate chinese_simplified c2_suzume_morning_visit_01c0bf87:
 translate chinese_simplified c2_suzume_morning_visit_22130489:
 
     # "Suzume leaps down from the roof with feline grace. For the hundredth time, you wonder how her skimpy outfit can hold it together."
-    "Suzume leaps down from the roof with feline grace. For the hundredth time, you wonder how her skimpy outfit can hold it together."
+    "铃芽以猫一般的优雅从屋顶跃下。你第一百次好奇，她那身暴露的衣服是怎么撑住的。"
 
 # game/BKchapter2.rpy:4531
 translate chinese_simplified c2_suzume_morning_visit_50dddf1e:
@@ -8710,7 +8710,7 @@ translate chinese_simplified c2_suzume_morning_visit_2e252553:
 translate chinese_simplified c2_suzume_morning_visit_3b344e68:
 
     # suzume doubt "Well... Ask away! It's not like I have a lot of other things to do."
-    suzume doubt "Well... Ask away! It's not like I have a lot of other things to do."
+    suzume doubt "好吧……尽管问吧！反正我也没什么其他事可做。"
 
 # game/BKchapter2.rpy:4541
 translate chinese_simplified c2_suzume_morning_visit_menu_11fdb519:
@@ -8728,7 +8728,7 @@ translate chinese_simplified c2_suzume_morning_visit_menu_4c1619c6:
 translate chinese_simplified c2_suzume_morning_visit_menu_6e304ddb:
 
     # suzume doubt "I'm Suzume... Do you always forget a girl's name after a night of steamy-hot sex? *frown*"
-    suzume doubt "I'm Suzume... Do you always forget a girl's name after a night of steamy-hot sex? *frown*"
+    suzume doubt "我是铃芽……你是不是每次激情一夜后都会忘记女孩的名字？*皱眉*"
 
 # game/BKchapter2.rpy:4550
 translate chinese_simplified c2_suzume_morning_visit_menu_692db143:
@@ -8740,7 +8740,7 @@ translate chinese_simplified c2_suzume_morning_visit_menu_692db143:
 translate chinese_simplified c2_suzume_morning_visit_menu_1a99b4d0:
 
     # suzume normal "Ha! My story would fill a hundred books, and inspire a hundred songs! And none of them would be fit for children."
-    suzume normal "Ha! My story would fill a hundred books, and inspire a hundred songs! And none of them would be fit for children."
+    suzume normal "哈！我的故事能写成一百本书，还能谱写一百首歌！而且没有一本适合孩子听。"
 
 # game/BKchapter2.rpy:4554
 translate chinese_simplified c2_suzume_morning_visit_menu_8e3b5aef:
@@ -8752,7 +8752,7 @@ translate chinese_simplified c2_suzume_morning_visit_menu_8e3b5aef:
 translate chinese_simplified c2_suzume_morning_visit_menu_ec5be91e:
 
     # suzume bend "Oh, but I did do many things in my short life... Because I'm fast! Swift like the wind! Kukukuku..."
-    suzume bend "Oh, but I did do many things in my short life... Because I'm fast! Swift like the wind! Kukukuku..."
+    suzume bend "哦，但我短暂的一生中也做了很多事……因为我速度很快！像风一样快！库库库库……"
 
 # game/BKchapter2.rpy:4560
 translate chinese_simplified c2_suzume_morning_visit_menu_630173ef:
@@ -8764,7 +8764,7 @@ translate chinese_simplified c2_suzume_morning_visit_menu_630173ef:
 translate chinese_simplified c2_suzume_morning_visit_menu_e7d385d3:
 
     # suzume normal "Of course it is! Because I'm from the School of Air, you see?"
-    suzume normal "Of course it is! Because I'm from the School of Air, you see?"
+    suzume normal "当然是啦！因为我可是航空学院毕业的，懂吗？"
 
 # game/BKchapter2.rpy:4564
 translate chinese_simplified c2_suzume_morning_visit_menu_55cf08fc:
@@ -8782,7 +8782,7 @@ translate chinese_simplified c2_suzume_morning_visit_menu_cbdc5bae:
 translate chinese_simplified c2_suzume_morning_visit_menu_a155e721:
 
     # suzume doubt "Which is good, because I always sucked at those magic lessons anyway..."
-    suzume doubt "Which is good, because I always sucked at those magic lessons anyway..."
+    suzume doubt "这很好，因为我本来就学不好那些魔法课……"
 
 # game/BKchapter2.rpy:4570
 translate chinese_simplified c2_suzume_morning_visit_menu_6ff2ac5c:
@@ -8794,7 +8794,7 @@ translate chinese_simplified c2_suzume_morning_visit_menu_6ff2ac5c:
 translate chinese_simplified c2_suzume_morning_visit_menu_4d46756c:
 
     # suzume normal "Well, it's a little blurry, really. My earliest memories are from the monastery where I was raised, north of the Arik Mountains."
-    suzume normal "Well, it's a little blurry, really. My earliest memories are from the monastery where I was raised, north of the Arik Mountains."
+    suzume normal "嗯，其实有点模糊。我最早的记忆来自我长大的那座修道院，它位于阿里克山脉以北。"
 
 # game/BKchapter2.rpy:4574
 translate chinese_simplified c2_suzume_morning_visit_menu_89195954:
@@ -8818,7 +8818,7 @@ translate chinese_simplified c2_suzume_morning_visit_menu_df8972fb:
 translate chinese_simplified c2_suzume_morning_visit_menu_7537cf92:
 
     # suzume doubt "Uh? What do you mean?"
-    suzume doubt "Uh? What do you mean?"
+    suzume doubt "嗯？你什么意思？"
 
 # game/BKchapter2.rpy:4582
 translate chinese_simplified c2_suzume_morning_visit_menu_9157a7c9:
@@ -8830,7 +8830,7 @@ translate chinese_simplified c2_suzume_morning_visit_menu_9157a7c9:
 translate chinese_simplified c2_suzume_morning_visit_menu_7a21f0ef:
 
     # suzume normal "I just told you. I had no parents."
-    suzume normal "I just told you. I had no parents."
+    suzume normal "我刚才已经说了，我没有父母。"
 
 # game/BKchapter2.rpy:4586
 translate chinese_simplified c2_suzume_morning_visit_menu_1a1bd19f:
@@ -8842,13 +8842,13 @@ translate chinese_simplified c2_suzume_morning_visit_menu_1a1bd19f:
 translate chinese_simplified c2_suzume_morning_visit_menu_08f6f123:
 
     # suzume doubt "Uh? Do they?"
-    suzume doubt "Uh? Do they?"
+    suzume doubt "呃？真的吗？"
 
 # game/BKchapter2.rpy:4590
 translate chinese_simplified c2_suzume_morning_visit_menu_6c1585f7:
 
     # you "Of course!!!" with vpunch
-    you "Of course!!!" with vpunch
+    you "当然！！！" with vpunch
 
 # game/BKchapter2.rpy:4592
 translate chinese_simplified c2_suzume_morning_visit_menu_b27f4962:
@@ -8860,7 +8860,7 @@ translate chinese_simplified c2_suzume_morning_visit_menu_b27f4962:
 translate chinese_simplified c2_suzume_morning_visit_menu_78cd9a0d:
 
     # suzume bend "I see! People have parents, but I don't! So I must be really special!" with vpunch
-    suzume bend "I see! People have parents, but I don't! So I must be really special!" with vpunch
+    suzume bend "我明白了！别人都有父母，但我没有！所以我一定很特别！" with vpunch
 
 # game/BKchapter2.rpy:4596
 translate chinese_simplified c2_suzume_morning_visit_menu_dae0ec55:
@@ -8896,7 +8896,7 @@ translate chinese_simplified c2_suzume_morning_visit_menu_58c071e4:
 translate chinese_simplified c2_suzume_morning_visit_menu_dd6afdba:
 
     # suzume normal "Right! The monks wanted to make me one of theirs once I got older, but eventually it dawned on them that maybe I wasn't nun material."
-    suzume normal "Right! The monks wanted to make me one of theirs once I got older, but eventually it dawned on them that maybe I wasn't nun material."
+    suzume normal "没错！等我长大些，僧侣们想让我成为他们的一员，但最终他们意识到，我可能并不适合当尼姑。"
 
 # game/BKchapter2.rpy:4608
 translate chinese_simplified c2_suzume_morning_visit_menu_8b31fa5e:
@@ -8908,25 +8908,25 @@ translate chinese_simplified c2_suzume_morning_visit_menu_8b31fa5e:
 translate chinese_simplified c2_suzume_morning_visit_menu_51a3cbe3:
 
     # suzume doubt "I think it must have been after I was caught giving one of the novices a blowjob behind the altar... for the third time in a week."
-    suzume doubt "I think it must have been after I was caught giving one of the novices a blowjob behind the altar... for the third time in a week."
+    suzume doubt "我想那一定是在我一周内第三次被发现在圣坛后面给一个新人口交之后发生的。"
 
 # game/BKchapter2.rpy:4612
 translate chinese_simplified c2_suzume_morning_visit_menu_f220af71:
 
     # you "You... What?" with vpunch
-    you "You... What?" with vpunch
+    you "你……什么？" with vpunch
 
 # game/BKchapter2.rpy:4614
 translate chinese_simplified c2_suzume_morning_visit_menu_4238256f:
 
     # suzume bend "Well, you see, I've always had a healthy sex drive. Some people would say 'too healthy'. [emo_heart]"
-    suzume bend "Well, you see, I've always had a healthy sex drive. Some people would say 'too healthy'. [emo_heart]"
+    suzume bend "嗯，你看，我的性欲一直都很旺盛。有些人甚至会说“太旺盛了”。[emo_heart]"
 
 # game/BKchapter2.rpy:4616
 translate chinese_simplified c2_suzume_morning_visit_menu_c6af0db9:
 
     # suzume doubt "The monks sometimes said it was because of my 'animal instincts', and whispered something about cats in heat, but I never really got their point."
-    suzume doubt "The monks sometimes said it was because of my 'animal instincts', and whispered something about cats in heat, but I never really got their point."
+    suzume doubt "僧侣们有时说这是因为我的“动物本能”，还低声说着一些关于发情的猫的话，但我始终没能真正理解他们的意思。"
 
 # game/BKchapter2.rpy:4618
 translate chinese_simplified c2_suzume_morning_visit_menu_dae0ec55_1:
@@ -8944,7 +8944,7 @@ translate chinese_simplified c2_suzume_morning_visit_menu_00f1991b:
 translate chinese_simplified c2_suzume_morning_visit_menu_59691de1:
 
     # suzume normal "Kukuku, you really know me! Thinking is exhausting. I'd much rather jump around, have sex, or lie down on the roof soaking up the sun..."
-    suzume normal "Kukuku, you really know me! Thinking is exhausting. I'd much rather jump around, have sex, or lie down on the roof soaking up the sun..."
+    suzume normal "哈哈，你真了解我！思考太累了。我宁愿蹦蹦跳跳，做爱，或者躺在屋顶上晒太阳……"
 
 # game/BKchapter2.rpy:4624
 translate chinese_simplified c2_suzume_morning_visit_menu_a60bd92f:
@@ -8980,7 +8980,7 @@ translate chinese_simplified c2_suzume_morning_visit_menu_4ec8592e:
 translate chinese_simplified c2_suzume_morning_visit_menu_ed29698b:
 
     # suzume normal "One day, the monastery was visited by this really old guy. He might have been like, over forty."
-    suzume normal "One day, the monastery was visited by this really old guy. He might have been like, over forty."
+    suzume normal "有一天，一位年纪很大的老人来修道院参观。他大概有四十多岁了。"
 
 # game/BKchapter2.rpy:4639
 translate chinese_simplified c2_suzume_morning_visit_menu_b82483ac:
@@ -9004,7 +9004,7 @@ translate chinese_simplified c2_suzume_morning_visit_menu_e56ecc7d:
 translate chinese_simplified c2_suzume_morning_visit_menu_2a1cb223:
 
     # suzume doubt "Hmm, good point. I probably should have asked those questions. Haha."
-    suzume doubt "Hmm, good point. I probably should have asked those questions. Haha."
+    suzume doubt "嗯，说得对。我或许应该问问这些问题的。哈哈。"
 
 # game/BKchapter2.rpy:4647
 translate chinese_simplified c2_suzume_morning_visit_menu_dae0ec55_2:
@@ -9022,7 +9022,7 @@ translate chinese_simplified c2_suzume_morning_visit_menu_cdd8f5f0:
 translate chinese_simplified c2_suzume_morning_visit_menu_bd736e52:
 
     # suzume normal "So I followed the old man. Turns out, he was the master of a ninja school!"
-    suzume normal "So I followed the old man. Turns out, he was the master of a ninja school!"
+    suzume normal "于是我跟着那位老人走了。结果发现，他竟然是忍者学校的师傅！"
 
 # game/BKchapter2.rpy:4653
 translate chinese_simplified c2_suzume_morning_visit_menu_e33e92b5:
@@ -9076,7 +9076,7 @@ translate chinese_simplified c2_suzume_morning_visit_menu_ce1a35ba:
 translate chinese_simplified c2_suzume_morning_visit_menu_e4e0b75d:
 
     # suzume doubt "Well, you see, I was the best at my weapon of choice. Not all weapons have blades or arrows, you see..."
-    suzume doubt "Well, you see, I was the best at my weapon of choice. Not all weapons have blades or arrows, you see..."
+    suzume doubt "你看，我最擅长使用我选择的武器。并非所有武器都有刀剑或箭矢，你明白吗……"
 
 # game/BKchapter2.rpy:4671
 translate chinese_simplified c2_suzume_morning_visit_menu_e2992e2a:
@@ -9088,7 +9088,7 @@ translate chinese_simplified c2_suzume_morning_visit_menu_e2992e2a:
 translate chinese_simplified c2_suzume_morning_visit_menu_424f73f9:
 
     # suzume bend "Pussy, my dear! Pussy is a weapon, some say the best of all."
-    suzume bend "Pussy, my dear! Pussy is a weapon, some say the best of all."
+    suzume bend "宝贝，我的天！宝贝是一种武器，有人说它是最好的武器。"
 
 # game/BKchapter2.rpy:4675
 translate chinese_simplified c2_suzume_morning_visit_menu_12b40111:
@@ -9100,7 +9100,7 @@ translate chinese_simplified c2_suzume_morning_visit_menu_12b40111:
 translate chinese_simplified c2_suzume_morning_visit_menu_5e6389e5:
 
     # suzume "Of course not, silly! MURDERING them with my pussy!" with vpunch
-    suzume "Of course not, silly! MURDERING them with my pussy!" with vpunch
+    suzume "当然不是，傻瓜！我要用我的阴道把他们杀了！" with vpunch
 
 # game/BKchapter2.rpy:4679
 translate chinese_simplified c2_suzume_morning_visit_menu_8040c233:
@@ -9118,13 +9118,13 @@ translate chinese_simplified c2_suzume_morning_visit_menu_925a6551:
 translate chinese_simplified c2_suzume_morning_visit_menu_37926abe:
 
     # suzume normal "But worst of all..."
-    suzume normal "But worst of all..."
+    suzume normal "但最糟糕的是……"
 
 # game/BKchapter2.rpy:4685
 translate chinese_simplified c2_suzume_morning_visit_menu_d0bdfde5:
 
     # suzume "I was forbidden from having sex, the whole time!!!" with vpunch
-    suzume "I was forbidden from having sex, the whole time!!!" with vpunch
+    suzume "我一直被禁止发生性行为！！！" with vpunch
 
 # game/BKchapter2.rpy:4687
 translate chinese_simplified c2_suzume_morning_visit_menu_52630de7:
@@ -9142,13 +9142,13 @@ translate chinese_simplified c2_suzume_morning_visit_menu_77780cfe:
 translate chinese_simplified c2_suzume_morning_visit_menu_547555f8:
 
     # suzume "It was {b}HELL{/b}!!!" with vpunch
-    suzume "It was {b}HELL{/b}!!!" with vpunch
+    suzume "简直是地狱！！！" with vpunch
 
 # game/BKchapter2.rpy:4693
 translate chinese_simplified c2_suzume_morning_visit_menu_1893f7df:
 
     # suzume normal "You can imagine my 'relief' when I got out of that damn school."
-    suzume normal "You can imagine my 'relief' when I got out of that damn school."
+    suzume normal "你可以想象我离开那所该死的学校时有多么“如释重负”。"
 
 # game/BKchapter2.rpy:4695
 translate chinese_simplified c2_suzume_morning_visit_menu_a09c0bf8:
@@ -9172,7 +9172,7 @@ translate chinese_simplified c2_suzume_morning_visit_menu_af23c16d:
 translate chinese_simplified c2_suzume_morning_visit_menu_6246cb2a:
 
     # suzume doubt "Well, because of my training, everyone I had sex with ended up either dead or maimed. Found that out the hard way."
-    suzume doubt "Well, because of my training, everyone I had sex with ended up either dead or maimed. Found that out the hard way."
+    suzume doubt "唉，因为我受过训练，所有跟我发生过性关系的人最终要么死了，要么伤残了。我可是付出了惨痛的代价才明白这一点的。"
 
 # game/BKchapter2.rpy:4703
 translate chinese_simplified c2_suzume_morning_visit_menu_00022c02:
@@ -9190,13 +9190,13 @@ translate chinese_simplified c2_suzume_morning_visit_menu_8843627b:
 translate chinese_simplified c2_suzume_morning_visit_menu_67b8be09:
 
     # suzume normal "Honestly, that job was pretty lame. Not a big challenge at all. Any street hoe could give a seventy-year-old court official a heart attack. No offense to your pensioners, of course..."
-    suzume normal "Honestly, that job was pretty lame. Not a big challenge at all. Any street hoe could give a seventy-year-old court official a heart attack. No offense to your pensioners, of course..."
+    suzume normal "说实话，那份工作挺无聊的，一点挑战性都没有。随便哪个街头混混都能把七十岁的法院官员吓出心脏病。当然，我这么说没有冒犯你们这些退休老人的意思……"
 
 # game/BKchapter2.rpy:4709
 translate chinese_simplified c2_suzume_morning_visit_menu_fb143add:
 
     # suzume bend "Until I met you! This is the single most interesting thing that happened since I became a Kunoichi."
-    suzume bend "Until I met you! This is the single most interesting thing that happened since I became a Kunoichi."
+    suzume bend "直到遇见你！这是我成为女忍者以来发生的最有趣的事情。"
 
 # game/BKchapter2.rpy:4711
 translate chinese_simplified c2_suzume_morning_visit_menu_5f312bc1:
@@ -9214,7 +9214,7 @@ translate chinese_simplified c2_suzume_morning_visit_menu_778f8b69:
 translate chinese_simplified c2_suzume_morning_visit_menu_31b53c16:
 
     # suzume shrewd "I'm taking bets with myself on how long you'll last... As long as possible, I hope!"
-    suzume shrewd "I'm taking bets with myself on how long you'll last... As long as possible, I hope!"
+    suzume shrewd "我跟自己打赌你能坚持多久……我希望你能坚持得越久越好！"
 
 # game/BKchapter2.rpy:4717
 translate chinese_simplified c2_suzume_morning_visit_menu_dae0ec55_3:
@@ -9232,7 +9232,7 @@ translate chinese_simplified c2_suzume_morning_visit_menu_dc9787ca:
 translate chinese_simplified c2_suzume_morning_visit_menu_b7c4f9a0:
 
     # suzume normal "Order? The Kunoichi is not an order. We each hail from different ninjutsu schools."
-    suzume normal "Order? The Kunoichi is not an order. We each hail from different ninjutsu schools."
+    suzume normal "秩序？女忍者并非一个组织。我们每个人都来自不同的忍术流派。"
 
 # game/BKchapter2.rpy:4726
 translate chinese_simplified c2_suzume_morning_visit_menu_17a42e35:
@@ -9274,7 +9274,7 @@ translate chinese_simplified c2_suzume_morning_visit_menu_34d8d1a8:
 translate chinese_simplified c2_suzume_morning_visit_menu_40aca2c5:
 
     # suzume doubt "I guess that must be why people always called me an airhead..."
-    suzume doubt "I guess that must be why people always called me an airhead..."
+    suzume doubt "我想这就是为什么人们总是叫我笨蛋的原因吧……"
 
 # game/BKchapter2.rpy:4740
 translate chinese_simplified c2_suzume_morning_visit_menu_34f9716f:
@@ -9298,7 +9298,7 @@ translate chinese_simplified c2_suzume_morning_visit_menu_04812135:
 translate chinese_simplified c2_suzume_morning_visit_menu_493f5dd8:
 
     # suzume bend "Actually, I haven't got the faintest idea! *smile*" with vpunch
-    suzume bend "Actually, I haven't got the faintest idea! *smile*" with vpunch
+    suzume bend "其实，我一点头绪都没有！*微笑*" with vpunch
 
 # game/BKchapter2.rpy:4748
 translate chinese_simplified c2_suzume_morning_visit_menu_dae0ec55_4:
@@ -9316,7 +9316,7 @@ translate chinese_simplified c2_suzume_morning_visit_menu_a9c1ffb6:
 translate chinese_simplified c2_suzume_morning_visit_menu_fcb57644:
 
     # suzume doubt "Well, the prophesy says that one day, a Kunoichi shall be seeded, and give birth to the ninja master who will unite all the ninja schools..."
-    suzume doubt "Well, the prophesy says that one day, a Kunoichi shall be seeded, and give birth to the ninja master who will unite all the ninja schools..."
+    suzume doubt "预言说，总有一天，一位女忍者会诞生，她将孕育出一位忍者大师，这位大师将统一所有忍者流派……"
 
 # game/BKchapter2.rpy:4754
 translate chinese_simplified c2_suzume_morning_visit_menu_be643576:
@@ -9334,13 +9334,13 @@ translate chinese_simplified c2_suzume_morning_visit_menu_0ddc898c:
 translate chinese_simplified c2_suzume_morning_visit_menu_b058634b:
 
     # suzume doubt "Well, there are sometimes gatherings, rituals, fan conventions, but..."
-    suzume doubt "Well, there are sometimes gatherings, rituals, fan conventions, but..."
+    suzume doubt "嗯，有时候会有一些聚会、仪式、粉丝见面会，但是……"
 
 # game/BKchapter2.rpy:4760
 translate chinese_simplified c2_suzume_morning_visit_menu_9ffa9337:
 
     # suzume bend "I never went to any of them! It sounded boring. *smile*"
-    suzume bend "I never went to any of them! It sounded boring. *smile*"
+    suzume bend "我一个都没去过！听起来好无聊。*微笑*"
 
 # game/BKchapter2.rpy:4762
 translate chinese_simplified c2_suzume_morning_visit_menu_dae0ec55_5:
@@ -9358,7 +9358,7 @@ translate chinese_simplified c2_suzume_morning_visit_menu_31325987:
 translate chinese_simplified c2_suzume_morning_visit_menu_34e20372:
 
     # suzume doubt "But I know many of them by reputation. The most gifted are famous all around Xeros, in ninja circles anyway."
-    suzume doubt "But I know many of them by reputation. The most gifted are famous all around Xeros, in ninja circles anyway."
+    suzume doubt "但我对他们中的许多人都有着不俗的名声。最有天赋的那些人，在泽罗斯大陆上，至少在忍者圈子里，都赫赫有名。"
 
 # game/BKchapter2.rpy:4768
 translate chinese_simplified c2_suzume_morning_visit_menu_3ae63dd0:
@@ -9370,7 +9370,7 @@ translate chinese_simplified c2_suzume_morning_visit_menu_3ae63dd0:
 translate chinese_simplified c2_suzume_morning_visit_menu_4e280903:
 
     # suzume shrewd "Well, this is where it gets interesting... I know of {i}three{/i} other Kunoichi in Zan at this very moment, and all of them are famous!"
-    suzume shrewd "Well, this is where it gets interesting... I know of {i}three{/i} other Kunoichi in Zan at this very moment, and all of them are famous!"
+    suzume shrewd "嗯，接下来就有趣了……我知道此刻在Zan还有三位女忍者，而且她们都很有名！"
 
 # game/BKchapter2.rpy:4772
 translate chinese_simplified c2_suzume_morning_visit_menu_c18759d0:
@@ -9388,7 +9388,7 @@ translate chinese_simplified c2_suzume_morning_visit_menu_758f446c:
 translate chinese_simplified c2_suzume_morning_visit_menu_b6e502c7:
 
     # suzume normal "There are three of them in Zan. Any one of them could be in league with your killer... Of perhaps all of them."
-    suzume normal "There are three of them in Zan. Any one of them could be in league with your killer... Of perhaps all of them."
+    suzume normal "赞恩有三个这样的人。他们中的任何一个都可能与你的凶手是一伙的……或许他们所有人都是。"
 
 # game/BKchapter2.rpy:4781
 translate chinese_simplified c2_suzume_morning_visit_menu_10084d5f:
@@ -9412,7 +9412,7 @@ translate chinese_simplified c2_suzume_morning_visit_menu_1fbdbd4b:
 translate chinese_simplified c2_suzume_morning_visit_menu_d1a448ce:
 
     # you "Tell me about the Kunoichi from..." nointeract
-    you "Tell me about the Kunoichi from..." nointeract
+    you "请告诉我关于……的女忍者的故事。" nointeract
 
 # game/BKchapter2.rpy:4795
 translate chinese_simplified c2_suzume_morning_visit_menu_8f7ed483:
@@ -9424,7 +9424,7 @@ translate chinese_simplified c2_suzume_morning_visit_menu_8f7ed483:
 translate chinese_simplified c2_suzume_morning_visit_menu_6fe8a5cd:
 
     # suzume doubt "The Earth School Kunoichi... Hmm."
-    suzume doubt "The Earth School Kunoichi... Hmm."
+    suzume doubt "地球忍者学校的女忍者……嗯。"
 
 # game/BKchapter2.rpy:4799
 translate chinese_simplified c2_suzume_morning_visit_menu_6987351e:
@@ -9460,13 +9460,13 @@ translate chinese_simplified c2_suzume_morning_visit_menu_9c9c442e:
 translate chinese_simplified c2_suzume_morning_visit_menu_5a824e75:
 
     # suzume doubt "'You must be hard as a rock, flexible as a reed', that kind of senpai bullshit."
-    suzume doubt "'You must be hard as a rock, flexible as a reed', that kind of senpai bullshit."
+    suzume doubt "“你必须像石头一样坚硬，像芦苇一样柔软”，诸如此类的前辈废话。"
 
 # game/BKchapter2.rpy:4811
 translate chinese_simplified c2_suzume_morning_visit_menu_aa5982f0:
 
     # suzume shrewd "She seems strong, and serious, and capable... And boring, if you ask me."
-    suzume shrewd "She seems strong, and serious, and capable... And boring, if you ask me."
+    suzume shrewd "她看起来坚强、严肃、能干……但依我看，也很无趣。"
 
 # game/BKchapter2.rpy:4813
 translate chinese_simplified c2_suzume_morning_visit_menu_0c79b497:
@@ -9478,7 +9478,7 @@ translate chinese_simplified c2_suzume_morning_visit_menu_0c79b497:
 translate chinese_simplified c2_suzume_morning_visit_menu_f40f59be:
 
     # suzume normal "Beats me! But I heard she can be found in the {b}Warehouse{/b} district."
-    suzume normal "Beats me! But I heard she can be found in the {b}Warehouse{/b} district."
+    suzume normal "我也不知道！但我听说她会在仓库区出现。"
 
 # game/BKchapter2.rpy:4818
 translate chinese_simplified c2_suzume_morning_visit_menu_3328e262:
@@ -9490,7 +9490,7 @@ translate chinese_simplified c2_suzume_morning_visit_menu_3328e262:
 translate chinese_simplified c2_suzume_morning_visit_menu_97e3b49f:
 
     # suzume doubt "Hmm, water. Not my favorite element."
-    suzume doubt "Hmm, water. Not my favorite element."
+    suzume doubt "嗯，水。不是我最喜欢的元素。"
 
 # game/BKchapter2.rpy:4822
 translate chinese_simplified c2_suzume_morning_visit_menu_bf1fd0b0:
@@ -9502,7 +9502,7 @@ translate chinese_simplified c2_suzume_morning_visit_menu_bf1fd0b0:
 translate chinese_simplified c2_suzume_morning_visit_menu_95e4bb51:
 
     # suzume normal "She's one of the oldest living Kunoichi, some say she is over a hundred years old. Imagine that!"
-    suzume normal "She's one of the oldest living Kunoichi, some say she is over a hundred years old. Imagine that!"
+    suzume normal "她是现存最年长的女忍者之一，有人说她已经超过一百岁了。真是难以置信！"
 
 # game/BKchapter2.rpy:4826
 translate chinese_simplified c2_suzume_morning_visit_menu_d3f1bf11:
@@ -9538,13 +9538,13 @@ translate chinese_simplified c2_suzume_morning_visit_menu_a64e6e91:
 translate chinese_simplified c2_suzume_morning_visit_menu_f499f664:
 
     # suzume normal "Who knows? Politics, most likely. But it could also be a personal score... You'll have to find out."
-    suzume normal "Who knows? Politics, most likely. But it could also be a personal score... You'll have to find out."
+    suzume normal "谁知道呢？很可能是政治因素。但也可能是私人恩怨……你得自己去查清楚。"
 
 # game/BKchapter2.rpy:4838
 translate chinese_simplified c2_suzume_morning_visit_menu_14729ca3:
 
     # suzume normal "Anyway, wherever that old hag is hiding, it has to be near water. I'd check the {b}Docks{/b} district, if I were you."
-    suzume normal "Anyway, wherever that old hag is hiding, it has to be near water. I'd check the {b}Docks{/b} district, if I were you."
+    suzume normal "总之，不管那个老巫婆躲在哪里，肯定都在水边。如果我是你，我会去码头区看看。"
 
 # game/BKchapter2.rpy:4841
 translate chinese_simplified c2_suzume_morning_visit_menu_5efbf01a:
@@ -9556,7 +9556,7 @@ translate chinese_simplified c2_suzume_morning_visit_menu_5efbf01a:
 translate chinese_simplified c2_suzume_morning_visit_menu_ea5f8b83:
 
     # suzume doubt "Aw, do I have to talk about that little brat? *annoyed*"
-    suzume doubt "Aw, do I have to talk about that little brat? *annoyed*"
+    suzume doubt "哎，我非得说说那个小屁孩吗？*恼火*"
 
 # game/BKchapter2.rpy:4845
 translate chinese_simplified c2_suzume_morning_visit_menu_4a8a576e:
@@ -9580,7 +9580,7 @@ translate chinese_simplified c2_suzume_morning_visit_menu_b7e0f2b8:
 translate chinese_simplified c2_suzume_morning_visit_menu_91775dc2:
 
     # suzume normal "The Void School is a very peculiar school. They teach no magic, instead focusing on physical feats, speed, and secret techniques. People say Void ninjas move so fast, you can only see their shadows."
-    suzume normal "The Void School is a very peculiar school. They teach no magic, instead focusing on physical feats, speed, and secret techniques. People say Void ninjas move so fast, you can only see their shadows."
+    suzume normal "虚空学院是一所非常独特的学院。他们不教授魔法，而是专注于体能、速度和秘技。据说虚空忍者速度极快，你只能看到他们的影子。"
 
 # game/BKchapter2.rpy:4853
 translate chinese_simplified c2_suzume_morning_visit_menu_7b0efe04:
@@ -9592,7 +9592,7 @@ translate chinese_simplified c2_suzume_morning_visit_menu_7b0efe04:
 translate chinese_simplified c2_suzume_morning_visit_menu_fc5835ed:
 
     # suzume doubt "Because she's just a little younger, I was constantly compared to her when I was training - always falling short of the milestones she set."
-    suzume doubt "Because she's just a little younger, I was constantly compared to her when I was training - always falling short of the milestones she set."
+    suzume doubt "因为她比我小一点，所以我在训练的时候总是被拿来和她比较——总是达不到她设定的里程碑。"
 
 # game/BKchapter2.rpy:4857
 translate chinese_simplified c2_suzume_morning_visit_menu_ab92222d:
@@ -9610,7 +9610,7 @@ translate chinese_simplified c2_suzume_morning_visit_menu_0fea6fb0:
 translate chinese_simplified c2_suzume_morning_visit_menu_d956493f:
 
     # suzume normal "According to my intel, she's only just reached the city. Probably lurking in the {b}Slums{/b}, outside the walls."
-    suzume normal "According to my intel, she's only just reached the city. Probably lurking in the {b}Slums{/b}, outside the walls."
+    suzume normal "据我所知，她才刚到这座城市。很可能就藏在城墙外的贫民窟里。"
 
 # game/BKchapter2.rpy:4863
 translate chinese_simplified c2_suzume_morning_visit_menu_407bfa4f:
@@ -9628,7 +9628,7 @@ translate chinese_simplified c2_suzume_morning_visit_menu_4f678085:
 translate chinese_simplified c2_suzume_morning_visit_menu_c01555cc:
 
     # suzume bend "So, you know everything."
-    suzume bend "So, you know everything."
+    suzume bend "所以，你什么都知道了。"
 
 # game/BKchapter2.rpy:4877
 translate chinese_simplified c2_suzume_morning_visit_menu_3c932111:
@@ -9640,13 +9640,13 @@ translate chinese_simplified c2_suzume_morning_visit_menu_3c932111:
 translate chinese_simplified c2_suzume_morning_visit_menu_4b942ad3:
 
     # suzume doubt "I'm not sure. Let me take a good look at you..."
-    suzume doubt "I'm not sure. Let me take a good look at you..."
+    suzume doubt "我不太确定。让我仔细看看你……"
 
 # game/BKchapter2.rpy:4881
 translate chinese_simplified c2_suzume_morning_visit_menu_0e4ba80f:
 
     # suzume normal "Nope."
-    suzume normal "Nope."
+    suzume normal "没有。"
 
 # game/BKchapter2.rpy:4883
 translate chinese_simplified c2_suzume_morning_visit_menu_b11a11c4:
@@ -9670,13 +9670,13 @@ translate chinese_simplified c2_suzume_morning_visit_menu_08c08340:
 translate chinese_simplified c2_suzume_morning_visit_menu_675cf280:
 
     # suzume bend "That you did! But only because I'm a sex ninja, and that happens to be your natural strength."
-    suzume bend "That you did! But only because I'm a sex ninja, and that happens to be your natural strength."
+    suzume bend "没错！但这仅仅是因为我是性爱忍者，而这恰好是你的强项。"
 
 # game/BKchapter2.rpy:4891
 translate chinese_simplified c2_suzume_morning_visit_menu_12fcb866:
 
     # suzume normal "None of the other Kunoichi uses sex as a weapon... They just get their marks using old-fashioned weapons and magic. And this is where you'll fall short."
-    suzume normal "None of the other Kunoichi uses sex as a weapon... They just get their marks using old-fashioned weapons and magic. And this is where you'll fall short."
+    suzume normal "其他女忍者都不用性作为武器……她们只用传统的武器和魔法来取得胜利。而这正是你的短板。"
 
 # game/BKchapter2.rpy:4893
 translate chinese_simplified c2_suzume_morning_visit_menu_84713263:
@@ -9700,7 +9700,7 @@ translate chinese_simplified c2_suzume_morning_visit_menu_2afb6fe3:
 translate chinese_simplified c2_suzume_morning_visit_menu_4be271e7:
 
     # suzume shrewd "What if I told you there was a weapon that could put you on equal footing with any of those warriors?"
-    suzume shrewd "What if I told you there was a weapon that could put you on equal footing with any of those warriors?"
+    suzume shrewd "如果我告诉你有一种武器可以让你与那些战士平起平坐，你会相信吗？"
 
 # game/BKchapter2.rpy:4901
 translate chinese_simplified c2_suzume_morning_visit_menu_88656754:
@@ -9712,7 +9712,7 @@ translate chinese_simplified c2_suzume_morning_visit_menu_88656754:
 translate chinese_simplified c2_suzume_morning_visit_menu_dc5b3edf:
 
     # suzume shrewd "Yes. A warhammer, to be precise."
-    suzume shrewd "Yes. A warhammer, to be precise."
+    suzume shrewd "是的，准确地说，是一把战锤。"
 
 # game/BKchapter2.rpy:4905
 translate chinese_simplified c2_suzume_morning_visit_menu_0f9d2f9b:
@@ -9730,7 +9730,7 @@ translate chinese_simplified c2_suzume_morning_visit_menu_35767d24:
 translate chinese_simplified c2_suzume_morning_visit_menu_71926caa:
 
     # suzume "'The Hammer Of Light'." with vpunch
-    suzume "'The Hammer Of Light'." with vpunch
+    suzume "《光之锤》。" with vpunch
 
 # game/BKchapter2.rpy:4914
 translate chinese_simplified c2_suzume_morning_visit_menu_1ad48df3:
@@ -9742,7 +9742,7 @@ translate chinese_simplified c2_suzume_morning_visit_menu_1ad48df3:
 translate chinese_simplified c2_suzume_morning_visit_menu_5d6807b4:
 
     # suzume bend "The Hammer Of Light!" with vpunch
-    suzume bend "The Hammer Of Light!" with vpunch
+    suzume bend "光明之锤！" with vpunch
 
 # game/BKchapter2.rpy:4921
 translate chinese_simplified c2_suzume_morning_visit_menu_696897d8:
@@ -9760,25 +9760,25 @@ translate chinese_simplified c2_suzume_morning_visit_menu_919d3b33:
 translate chinese_simplified c2_suzume_morning_visit_menu_5196816e:
 
     # suzume normal "I shall tell you, of course... On my next visit."
-    suzume normal "I shall tell you, of course... On my next visit."
+    suzume normal "当然，下次来的时候我会告诉你。"
 
 # game/BKchapter2.rpy:4927
 translate chinese_simplified c2_suzume_morning_visit_menu_8c237268:
 
     # you "What? Why?" with vpunch
-    you "What? Why?" with vpunch
+    you "什么？为什么？" with vpunch
 
 # game/BKchapter2.rpy:4929
 translate chinese_simplified c2_suzume_morning_visit_menu_29cf2c20:
 
     # suzume doubt "Well, you cannot expect me to simply reveal the location of such a precious and powerful artefact... I need to do some groundwork, cross-check sources, invoke wind spirits, read forgotten prophesies..."
-    suzume doubt "Well, you cannot expect me to simply reveal the location of such a precious and powerful artefact... I need to do some groundwork, cross-check sources, invoke wind spirits, read forgotten prophesies..."
+    suzume doubt "你不能指望我直接透露如此珍贵而强大的神器的下落……我需要做一些前期准备工作，核实各种资料，召唤风之精灵，解读那些被遗忘的预言……"
 
 # game/BKchapter2.rpy:4931
 translate chinese_simplified c2_suzume_morning_visit_menu_81e38206:
 
     # suzume normal "Also, I'm starving. And I could use a nap."
-    suzume normal "Also, I'm starving. And I could use a nap."
+    suzume normal "另外，我饿坏了。而且我好想睡个午觉。"
 
 # game/BKchapter2.rpy:4933
 translate chinese_simplified c2_suzume_morning_visit_menu_154b11d5:
@@ -9790,7 +9790,7 @@ translate chinese_simplified c2_suzume_morning_visit_menu_154b11d5:
 translate chinese_simplified c2_suzume_morning_visit_menu_52671854:
 
     # suzume bend "Oh, you know what else I could use? A bath!"
-    suzume bend "Oh, you know what else I could use? A bath!"
+    suzume bend "哦，你知道我还需要什么吗？洗澡！"
 
 # game/BKchapter2.rpy:4937
 translate chinese_simplified c2_suzume_morning_visit_menu_a577ad0e:
@@ -9832,13 +9832,13 @@ translate chinese_simplified c2_suzume_morning_visit_menu_b960b219:
 translate chinese_simplified c2_suzume_morning_visit_menu_da0d6584:
 
     # "Suzume is gone, like the wind..."
-    "Suzume is gone, like the wind..."
+    "铃芽走了，就像风一样……"
 
 # game/BKchapter2.rpy:4964
 translate chinese_simplified c2_suzume_onsen_83fd0da2:
 
     # "As the daylight dims and the red lanterns are lit, you stroll around [brothel.name], making sure everything is going well."
-    "As the daylight dims and the red lanterns are lit, you stroll around [brothel.name], making sure everything is going well."
+    "当日光渐暗，红灯笼亮起时，你在[brothel.name]里闲逛，确保一切顺利。"
 
 # game/BKchapter2.rpy:4966
 translate chinese_simplified c2_suzume_onsen_3ba2bc73:
@@ -9850,7 +9850,7 @@ translate chinese_simplified c2_suzume_onsen_3ba2bc73:
 translate chinese_simplified c2_suzume_onsen_a9f7fa62:
 
     # "You hear a commotion coming from the hot springs."
-    "You hear a commotion coming from the hot springs."
+    "你听到温泉那边传来一阵骚动。"
 
 # game/BKchapter2.rpy:4973
 translate chinese_simplified c2_suzume_onsen_23a4916e:
@@ -9862,7 +9862,7 @@ translate chinese_simplified c2_suzume_onsen_23a4916e:
 translate chinese_simplified c2_suzume_onsen_12242d1d:
 
     # "Rushing towards the source of the noise, you reach the onsen pool. A crowd of cheering customers blocks your view."
-    "Rushing towards the source of the noise, you reach the onsen pool. A crowd of cheering customers blocks your view."
+    "你循着噪音的来源赶去，来到了温泉池边。一群欢呼雀跃的顾客挡住了你的视线。"
 
 # game/BKchapter2.rpy:4977
 translate chinese_simplified c2_suzume_onsen_4186207f:
@@ -9874,19 +9874,19 @@ translate chinese_simplified c2_suzume_onsen_4186207f:
 translate chinese_simplified c2_suzume_onsen_aa147a5a:
 
     # "Elbowing your way forward, you spot the source of their excitement, and your jaw drops."
-    "Elbowing your way forward, you spot the source of their excitement, and your jaw drops."
+    "你挤上前去，发现了他们兴奋的原因，顿时目瞪口呆。"
 
 # game/BKchapter2.rpy:4985
 translate chinese_simplified c2_suzume_onsen_dad6fd0d:
 
     # suzume normal "Oh, hello, [MC.name]!"
-    suzume normal "Oh, hello, [MC.name]!"
+    suzume normal "哦，你好，[MC.name]！"
 
 # game/BKchapter2.rpy:4987
 translate chinese_simplified c2_suzume_onsen_2855edb5:
 
     # you "Whaaaat?" with vpunch
-    you "Whaaaat?" with vpunch
+    you "什么？" with vpunch
 
 # game/BKchapter2.rpy:4989
 translate chinese_simplified c2_suzume_onsen_f77b6c51:
@@ -9898,7 +9898,7 @@ translate chinese_simplified c2_suzume_onsen_f77b6c51:
 translate chinese_simplified c2_suzume_onsen_62d26c86:
 
     # "Suzume seems blissfully uncaring about the dozen customers that surround her, howling."
-    "Suzume seems blissfully uncaring about the dozen customers that surround her, howling."
+    "铃芽似乎对周围十几位嚎叫的顾客毫不在意。"
 
 # game/BKchapter2.rpy:4993
 translate chinese_simplified c2_suzume_onsen_3156c832:
@@ -9940,7 +9940,7 @@ translate chinese_simplified c2_suzume_onsen_2c63df8d:
 translate chinese_simplified c2_suzume_onsen_d69b89c3:
 
     # suzume doubt "I'd fuck the poor guys, but it would kill them... Sad."
-    suzume doubt "I'd fuck the poor guys, but it would kill them... Sad."
+    suzume doubt "我真想和这些可怜的家伙上床，但这会要了他们的命……真可悲。"
 
 # game/BKchapter2.rpy:5007
 translate chinese_simplified c2_suzume_onsen_b28def07:
@@ -9958,19 +9958,19 @@ translate chinese_simplified c2_suzume_onsen_93c10c6b:
 translate chinese_simplified c2_suzume_onsen_6897ecaf:
 
     # "*WHOOSH*"
-    "*WHOOSH*"
+    "*嗖*"
 
 # game/BKchapter2.rpy:5017
 translate chinese_simplified c2_suzume_onsen_0673aa20:
 
     # you "Aaaah!!!" with vpunch
-    you "Aaaah!!!" with vpunch
+    you "啊啊啊！！！" with vpunch
 
 # game/BKchapter2.rpy:5019
 translate chinese_simplified c2_suzume_onsen_451747f1:
 
     # "Waving her hand, Suzume summons a gust of wind that shoves you right into the bath."
-    "Waving her hand, Suzume summons a gust of wind that shoves you right into the bath."
+    "铃芽挥了挥手，召唤出一阵风，把你直接推进了浴缸里。"
 
 # game/BKchapter2.rpy:5023
 translate chinese_simplified c2_suzume_onsen_bb60d211:
@@ -9982,13 +9982,13 @@ translate chinese_simplified c2_suzume_onsen_bb60d211:
 translate chinese_simplified c2_suzume_onsen_697e0bda:
 
     # "The crowd laughs as you flounder about in the hot water, wading towards Suzume."
-    "The crowd laughs as you flounder about in the hot water, wading towards Suzume."
+    "你在热水中挣扎着，趟过热水，走向铃芽，人群发出笑声。"
 
 # game/BKchapter2.rpy:5029
 translate chinese_simplified c2_suzume_onsen_28682f99:
 
     # "When you finally reach her, you are feeling quite mad."
-    "When you finally reach her, you are feeling quite mad."
+    "当你终于见到她时，你感到非常生气。"
 
 # game/BKchapter2.rpy:5031
 translate chinese_simplified c2_suzume_onsen_15dd670a:
@@ -10012,7 +10012,7 @@ translate chinese_simplified c2_suzume_onsen_fbac01ab:
 translate chinese_simplified c2_suzume_onsen_e7573fb5:
 
     # "Suzume smacks you on the side of the head, and everything goes black."
-    "Suzume smacks you on the side of the head, and everything goes black."
+    "铃芽打了你一巴掌，你眼前一黑。"
 
 # game/BKchapter2.rpy:5045
 translate chinese_simplified c2_suzume_onsen_37c7ad96:
@@ -10024,7 +10024,7 @@ translate chinese_simplified c2_suzume_onsen_37c7ad96:
 translate chinese_simplified c2_suzume_onsen_d0d6af33:
 
     # "When you come back to your senses, you are surprised to feel something warm and wet wrapped around your cock."
-    "When you come back to your senses, you are surprised to feel something warm and wet wrapped around your cock."
+    "当你回过神来时，你会惊讶地发现有什么温暖湿润的东西包裹着你的阴茎。"
 
 # game/BKchapter2.rpy:5055
 translate chinese_simplified c2_suzume_onsen_4ea43438:
@@ -10036,19 +10036,19 @@ translate chinese_simplified c2_suzume_onsen_4ea43438:
 translate chinese_simplified c2_suzume_onsen_f507c909:
 
     # "You are surprised to find yourself naked, with Suzume's pussy an inch from your face."
-    "You are surprised to find yourself naked, with Suzume's pussy an inch from your face."
+    "你惊讶地发现自己一丝不挂，铃芽的阴部离你的脸只有一寸远。"
 
 # game/BKchapter2.rpy:5061
 translate chinese_simplified c2_suzume_onsen_880647dd:
 
     # "The customers are cheering Suzume on. You should feel embarrassed, but you're feeling dizzy, and her technique is too good to focus on anything else."
-    "The customers are cheering Suzume on. You should feel embarrassed, but you're feeling dizzy, and her technique is too good to focus on anything else."
+    "顾客们都在为铃芽加油。你应该感到尴尬，但你却感到头晕目眩，她的技术太好了，让你根本无法集中注意力。"
 
 # game/BKchapter2.rpy:5063
 translate chinese_simplified c2_suzume_onsen_72e703c6:
 
     # "Your instincts kick in, and you start licking her pussy."
-    "Your instincts kick in, and you start licking her pussy."
+    "你本能地开始舔她的阴部。"
 
 # game/BKchapter2.rpy:5067
 translate chinese_simplified c2_suzume_onsen_76153906:
@@ -10060,7 +10060,7 @@ translate chinese_simplified c2_suzume_onsen_76153906:
 translate chinese_simplified c2_suzume_onsen_e581088b:
 
     # "The little she-devil hungrily sucks you off as if your cock was the most delicious lollipop she had ever latched onto."
-    "The little she-devil hungrily sucks you off as if your cock was the most delicious lollipop she had ever latched onto."
+    "这个小妖精如饥似渴地吮吸着你的阴茎，仿佛你的阴茎是她吃过的最美味的棒棒糖。"
 
 # game/BKchapter2.rpy:5071
 translate chinese_simplified c2_suzume_onsen_7e80721d:
@@ -10072,19 +10072,19 @@ translate chinese_simplified c2_suzume_onsen_7e80721d:
 translate chinese_simplified c2_suzume_onsen_81b2f7dc:
 
     # "It isn't long before you feel the rush of an orgasm coming. You shove your tongue deep inside Suzume's drenched pussy, pushing her over the edge too."
-    "It isn't long before you feel the rush of an orgasm coming. You shove your tongue deep inside Suzume's drenched pussy, pushing her over the edge too."
+    "没过多久，你就感觉到高潮的浪潮即将到来。你将舌头深深探入铃芽湿润的阴道，也让她达到了高潮。"
 
 # game/BKchapter2.rpy:5075
 translate chinese_simplified c2_suzume_onsen_a93ecc57:
 
     # suzume "Aaaah! [emo_heart]" with vpunch
-    suzume "Aaaah! [emo_heart]" with vpunch
+    suzume "啊啊啊！[emo_heart]" with vpunch
 
 # game/BKchapter2.rpy:5081
 translate chinese_simplified c2_suzume_onsen_872495cd:
 
     # "You cannot hold it anymore, and explode in Suzume's mouth. She cums hard as she feels your cum gushing down her throat."
-    "You cannot hold it anymore, and explode in Suzume's mouth. She cums hard as she feels your cum gushing down her throat."
+    "你再也忍不住了，精液喷射到铃芽的嘴里。她感受到你的精液顺着她的喉咙流下去，也随之达到了高潮。"
 
 # game/BKchapter2.rpy:5085
 translate chinese_simplified c2_suzume_onsen_6475022c:
@@ -10096,25 +10096,25 @@ translate chinese_simplified c2_suzume_onsen_6475022c:
 translate chinese_simplified c2_suzume_onsen_cea05312:
 
     # "The crowd is pleased with the spectacle you just gave them and cheer."
-    "The crowd is pleased with the spectacle you just gave them and cheer."
+    "观众们对你刚才的表演非常满意，纷纷欢呼。"
 
 # game/BKchapter2.rpy:5095
 translate chinese_simplified c2_suzume_onsen_bb9e73c4:
 
     # "Seeing that the show is over, the customers scatter, some of them slipping you and Suzume a tip."
-    "Seeing that the show is over, the customers scatter, some of them slipping you and Suzume a tip."
+    "演出结束后，顾客们四散而去，其中一些人悄悄地给了你和铃芽一些小费。"
 
 # game/BKchapter2.rpy:5101
 translate chinese_simplified c2_suzume_onsen_5e9fde46:
 
     # "You have received 350 gold."
-    "You have received 350 gold."
+    "您已获得350金币。"
 
 # game/BKchapter2.rpy:5105
 translate chinese_simplified c2_suzume_onsen_ab9aa104:
 
     # "Suzume washes herself as you gather your wet clothes and try to recover some dignity. You try to ignore the fact that she licks herself a lot."
-    "Suzume washes herself as you gather your wet clothes and try to recover some dignity. You try to ignore the fact that she licks herself a lot."
+    "当你收拾湿衣服，试图挽回些许尊严时，铃芽正在给自己洗澡。你努力不去注意她经常舔舐自己的行为。"
 
 # game/BKchapter2.rpy:5107
 translate chinese_simplified c2_suzume_onsen_af689775:
@@ -10318,13 +10318,13 @@ translate chinese_simplified c2_suzume_onsen_44ce016f:
 translate chinese_simplified c2_suzume_onsen_c82f342a:
 
     # "You hit Suzume square on the top of the head."
-    "You hit Suzume square on the top of the head."
+    "你正中铃芽的头顶。"
 
 # game/BKchapter2.rpy:5191
 translate chinese_simplified c2_suzume_onsen_2dca7aec:
 
     # suzume "AAAAH!" with vpunch
-    suzume "AAAAH!" with vpunch
+    suzume "啊啊啊！" with vpunch
 
 # game/BKchapter2.rpy:5196
 translate chinese_simplified c2_suzume_onsen_cdd9076e_1:
@@ -10336,19 +10336,19 @@ translate chinese_simplified c2_suzume_onsen_cdd9076e_1:
 translate chinese_simplified c2_suzume_onsen_2164466f:
 
     # "To your utter surprise, the hammer gives out a flash of lightning when it hits Suzume. She slips down to the floor like a ragdoll."
-    "To your utter surprise, the hammer gives out a flash of lightning when it hits Suzume. She slips down to the floor like a ragdoll."
+    "令你万万没想到，锤子击中铃芽时竟然闪过一道闪电。她像个破布娃娃一样滑倒在地。"
 
 # game/BKchapter2.rpy:5202
 translate chinese_simplified c2_suzume_onsen_85097159:
 
     # you "Suzume!" with vpunch
-    you "Suzume!" with vpunch
+    you "苏梅！" with vpunch
 
 # game/BKchapter2.rpy:5204
 translate chinese_simplified c2_suzume_onsen_3e66aaf7:
 
     # "Kneeling beside her, you cradle the girl in your arms."
-    "Kneeling beside her, you cradle the girl in your arms."
+    "你跪在她身边，将女孩抱在怀里。"
 
 # game/BKchapter2.rpy:5206
 translate chinese_simplified c2_suzume_onsen_e78e649b:
@@ -10396,7 +10396,7 @@ translate chinese_simplified c2_suzume_onsen_fd76e843:
 translate chinese_simplified c2_suzume_onsen_ede63197:
 
     # "You feel relieved as she grabs your cheek and shakes your head back and forth."
-    "You feel relieved as she grabs your cheek and shakes your head back and forth."
+    "她抓住你的脸颊，让你的头来回摇晃，你感到如释重负。"
 
 # game/BKchapter2.rpy:5222
 translate chinese_simplified c2_suzume_onsen_9e20b16a:
@@ -10408,7 +10408,7 @@ translate chinese_simplified c2_suzume_onsen_9e20b16a:
 translate chinese_simplified c2_suzume_onsen_97fe1a6b:
 
     # "Suzume rises back on her feet, still shaking a little."
-    "Suzume rises back on her feet, still shaking a little."
+    "铃芽重新站了起来，身体还有些颤抖。"
 
 # game/BKchapter2.rpy:5228
 translate chinese_simplified c2_suzume_onsen_b454cf78:
@@ -10564,7 +10564,7 @@ translate chinese_simplified ninja_hunt_6e9a44fb:
 translate chinese_simplified ninja_hunt_e481de04:
 
     # "The toy hammer weighs lightly in your hands, offering little reassurance as you are about to embark on a hunt for trained killers."
-    "The toy hammer weighs lightly in your hands, offering little reassurance as you are about to embark on a hunt for trained killers."
+    "玩具锤子在你手中很轻，在你即将开始追捕训练有素的杀手时，它并不能给你带来多少安全感。"
 
 # game/BKchapter2.rpy:5342
 translate chinese_simplified ninja_hunt_35a9f4a5:
@@ -10576,7 +10576,7 @@ translate chinese_simplified ninja_hunt_35a9f4a5:
 translate chinese_simplified ninja_hunt_b3d1e56e:
 
     # suzume bend "If you see them, just whack 'em with the hammer!"
-    suzume bend "If you see them, just whack 'em with the hammer!"
+    suzume bend "如果看到它们，就用锤子狠狠敲它们！"
 
 # game/BKchapter2.rpy:5346
 translate chinese_simplified ninja_hunt_769262c9:
@@ -10588,19 +10588,19 @@ translate chinese_simplified ninja_hunt_769262c9:
 translate chinese_simplified ninja_hunt_d2b86572:
 
     # "You can only fight a ninja once every day."
-    "You can only fight a ninja once every day."
+    "你每天只能和忍者战斗一次。"
 
 # game/BKchapter2.rpy:5364
 translate chinese_simplified ninja_hunt_d2b86572_1:
 
-    # "You can only fight a ninja once every day."
-    "You can only fight a ninja once every day."
+    # "你每天只能和忍者战斗一次。"
+    "你每天只能和忍者战斗一次。"
 
 # game/BKchapter2.rpy:5369
 translate chinese_simplified ninja_hunt_d2b86572_2:
 
     # "You can only fight a ninja once every day."
-    "You can only fight a ninja once every day."
+    "你每天只能和忍者战斗一次。"
 
 # game/BKchapter2.rpy:5405
 translate chinese_simplified ninja_hunt_intro_36e59502:
@@ -10642,7 +10642,7 @@ translate chinese_simplified ninja_hunt_intro_69bd1f8d:
 translate chinese_simplified ninja_hunt_intro_541cbc8b:
 
     # "Hit the Kunoichi {b}three times{/b} within the time limit to stop her."
-    "Hit the Kunoichi {b}three times{/b} within the time limit to stop her."
+    "在时限内击中女忍者三次以阻止她。"
 
 # game/BKchapter2.rpy:5429
 translate chinese_simplified ninja_hunt_begins_8f457a71:
@@ -10738,7 +10738,7 @@ translate chinese_simplified ninja_hunt_react_da648273:
 translate chinese_simplified ninja_hunt_react_aca9782c:
 
     # haruka ninja "Back off! *tremor*{w=0.5}{nw}"
-    haruka ninja "Back off! *tremor*{w=0.5}{nw}"
+    haruka ninja "退后！*震颤*{w=0.5}{nw}"
 
 # game/BKchapter2.rpy:5513
 translate chinese_simplified ninja_intercept_9b802e93:
@@ -10750,13 +10750,13 @@ translate chinese_simplified ninja_intercept_9b802e93:
 translate chinese_simplified ninja_intercept_4e6ead66:
 
     # you "[text1]"
-    you "[文本1]"
+    you "[text1]"
 
 # game/BKchapter2.rpy:5550
 translate chinese_simplified ninja_intercept_8dd05b5b:
 
     # suzume doubt "This won't work... We have to find a way to bypass her power somehow."
-    suzume doubt "This won't work... We have to find a way to bypass her power somehow."
+    suzume doubt "这样行不通……我们必须想办法绕过她的力量。"
 
 # game/BKchapter2.rpy:5593
 translate chinese_simplified intercept_narika_390dd5c4:
@@ -10768,13 +10768,13 @@ translate chinese_simplified intercept_narika_390dd5c4:
 translate chinese_simplified intercept_narika_8a5b2fcf:
 
     # "The scent of Sakura flowers floats in the air. Before you stands a young woman clad in a red ninja tunic, cheerful and confident."
-    "The scent of Sakura flowers floats in the air. Before you stands a young woman clad in a red ninja tunic, cheerful and confident."
+    "空气中弥漫着樱花的香气。在你面前站着一位身穿红色忍者服的年轻女子，她神采奕奕，自信满满。"
 
 # game/BKchapter2.rpy:5600
 translate chinese_simplified intercept_narika_ec8c0b6c:
 
     # narika normal "Bet that stained glass craftsman will not be happy to find out what you did to his workshop, though."
-    narika normal "Bet that stained glass craftsman will not be happy to find out what you did to his workshop, though."
+    narika normal "不过，我敢打赌，那位彩绘玻璃工匠要是知道你对他的工作室做了什么，肯定不会高兴的。"
 
 # game/BKchapter2.rpy:5602
 translate chinese_simplified intercept_narika_75a6897d:
@@ -10810,7 +10810,7 @@ translate chinese_simplified intercept_narika_a7f3852a:
 translate chinese_simplified intercept_narika_1370103f:
 
     # narika happy "But you're welcome to join the lo-o-ong line of my admirers. Maybe one day I'll let you shine my boots, if you're a good boy."
-    narika happy "But you're welcome to join the lo-o-ong line of my admirers. Maybe one day I'll let you shine my boots, if you're a good boy."
+    narika happy "不过，欢迎你加入我长长的仰慕者队伍。如果你表现好，也许有一天我会让你帮我擦靴子。"
 
 # game/BKchapter2.rpy:5622
 translate chinese_simplified intercept_narika_0fc8b29a:
@@ -10822,7 +10822,7 @@ translate chinese_simplified intercept_narika_0fc8b29a:
 translate chinese_simplified intercept_narika_961faf01:
 
     # narika sad "And why would I waste my time answering idle questions from a random fan... *sigh*"
-    narika sad "And why would I waste my time answering idle questions from a random fan... *sigh*"
+    narika sad "我为什么要浪费时间回答一个陌生粉丝的无聊问题呢……唉……"
 
 # game/BKchapter2.rpy:5630
 translate chinese_simplified intercept_narika_c8843621:
@@ -10834,13 +10834,13 @@ translate chinese_simplified intercept_narika_c8843621:
 translate chinese_simplified intercept_narika_a8c3338f:
 
     # narika angry "NARIKA SHIHOUDOU!!!" with vpunch
-    narika angry "NARIKA SHIHOUDOU!!!" with vpunch
+    narika angry "成香士法堂！！！" with vpunch
 
 # game/BKchapter2.rpy:5634
 translate chinese_simplified intercept_narika_f19d1eaa:
 
     # narika normal "Mark my name, punk, it may well be the last thing you hear!"
-    narika normal "Mark my name, punk, it may well be the last thing you hear!"
+    narika normal "记住我的名字，小子，这很可能是你听到的最后一句话！"
 
 # game/BKchapter2.rpy:5636
 translate chinese_simplified intercept_narika_02b111dd:
@@ -10864,7 +10864,7 @@ translate chinese_simplified intercept_narika_c1df0664:
 translate chinese_simplified intercept_narika_42e19a0d:
 
     # narika angry "Whaaat?!? I'll have you know, I'm the greatest ninja that's ever existed, BAR NONE!" with vpunch
-    narika angry "Whaaat?!? I'll have you know, I'm the greatest ninja that's ever existed, BAR NONE!" with vpunch
+    narika angry "什么？！我告诉你，我是有史以来最伟大的忍者，没有之一！" with vpunch
 
 # game/BKchapter2.rpy:5646
 translate chinese_simplified intercept_narika_9b329f69:
@@ -10882,7 +10882,7 @@ translate chinese_simplified intercept_narika_4e8f7fe2:
 translate chinese_simplified intercept_narika_ab5646a1:
 
     # narika sad "You impudent rat! Hmph."
-    narika sad "You impudent rat! Hmph."
+    narika sad "你这无耻的老鼠！哼。"
 
 # game/BKchapter2.rpy:5654
 translate chinese_simplified intercept_narika_6c19060a:
@@ -10894,19 +10894,19 @@ translate chinese_simplified intercept_narika_6c19060a:
 translate chinese_simplified intercept_narika_0d145a59:
 
     # suzume normal "Yes! Tell us who you're working for."
-    suzume normal "Yes! Tell us who you're working for."
+    suzume normal "是的！告诉我们你为哪家公司工作。"
 
 # game/BKchapter2.rpy:5658
 translate chinese_simplified intercept_narika_5a105eef:
 
     # narika normal "You..."
-    narika normal "You..."
+    narika normal "你..."
 
 # game/BKchapter2.rpy:5660
 translate chinese_simplified intercept_narika_5d39db5f:
 
     # "Her eyes narrow."
-    "Her eyes narrow."
+    "她眯起了眼睛。"
 
 # game/BKchapter2.rpy:5662
 translate chinese_simplified intercept_narika_94b0c053:
@@ -10918,7 +10918,7 @@ translate chinese_simplified intercept_narika_94b0c053:
 translate chinese_simplified intercept_narika_e98dcb19:
 
     # "She concentrates for a moment."
-    "She concentrates for a moment."
+    "她集中精神片刻。"
 
 # game/BKchapter2.rpy:5666
 translate chinese_simplified intercept_narika_32b6bc74:
@@ -10930,13 +10930,13 @@ translate chinese_simplified intercept_narika_32b6bc74:
 translate chinese_simplified intercept_narika_9cc5fe52:
 
     # suzume normal "Hey!" with vpunch
-    suzume normal "Hey!" with vpunch
+    suzume normal "嘿！" with vpunch
 
 # game/BKchapter2.rpy:5670
 translate chinese_simplified intercept_narika_db1d2f96:
 
     # narika happy "Famed for your sexy-jutsu, if I remember correctly... But I always do."
-    narika happy "Famed for your sexy-jutsu, if I remember correctly... But I always do."
+    narika happy "我记得你以色诱术闻名……但我一直都记得。"
 
 # game/BKchapter2.rpy:5672
 translate chinese_simplified intercept_narika_c42c26b2:
@@ -10960,7 +10960,7 @@ translate chinese_simplified intercept_narika_66bdc409:
 translate chinese_simplified intercept_narika_5536a7c5:
 
     # narika sad "...but because you're weak and you know it, you brought your needy toy boy here as backup! Ridiculous. I could take on both of you while blindfolded."
-    narika sad "...but because you're weak and you know it, you brought your needy toy boy here as backup! Ridiculous. I could take on both of you while blindfolded."
+    narika sad "……但因为你软弱，你自己也知道，所以你才带了你那只会耍赖的小白脸来当后援！真是荒谬。我蒙着眼睛都能对付你们两个。"
 
 # game/BKchapter2.rpy:5680
 translate chinese_simplified intercept_narika_451d5da9:
@@ -10972,7 +10972,7 @@ translate chinese_simplified intercept_narika_451d5da9:
 translate chinese_simplified intercept_narika_c1355487:
 
     # narika normal "But I've gotta warn you, if I have to kill you, it will be in a fair fight. I don't partake in such despicable techniques as sexy-jutsu."
-    narika normal "But I've gotta warn you, if I have to kill you, it will be in a fair fight. I don't partake in such despicable techniques as sexy-jutsu."
+    narika normal "但我必须警告你，如果我不得不杀了你，那也一定是公平决斗。我不会使用色诱术这种卑鄙的手段。"
 
 # game/BKchapter2.rpy:5684
 translate chinese_simplified intercept_narika_752a2d69:
@@ -10984,7 +10984,7 @@ translate chinese_simplified intercept_narika_752a2d69:
 translate chinese_simplified intercept_narika_6574c712:
 
     # narika angry "I'm not A VIRGIN!!!" with vpunch
-    narika angry "I'm not A VIRGIN!!!" with vpunch
+    narika angry "我不是处女！！！" with vpunch
 
 # game/BKchapter2.rpy:5688
 translate chinese_simplified intercept_narika_e95df9bf:
@@ -11002,13 +11002,13 @@ translate chinese_simplified intercept_narika_2edc62da:
 translate chinese_simplified intercept_narika_b4d6f9f4:
 
     # narika sad "They're... They're..."
-    narika sad "They're... They're..."
+    narika sad "他们……他们……"
 
 # game/BKchapter2.rpy:5694
 translate chinese_simplified intercept_narika_d62d6ce5:
 
     # narika angry "I'm not telling!" with vpunch
-    narika angry "I'm not telling!" with vpunch
+    narika angry "我不会说的！" with vpunch
 
 # game/BKchapter2.rpy:5696
 translate chinese_simplified intercept_narika_a7591d6f:
@@ -11044,7 +11044,7 @@ translate chinese_simplified intercept_narika_53bfc30b:
 translate chinese_simplified intercept_narika_78c82aa5:
 
     # narika normal "Not a Kunoichi? You mean you quit?"
-    narika normal "Not a Kunoichi? You mean you quit?"
+    narika normal "不是女忍者？你是说你退出了？"
 
 # game/BKchapter2.rpy:5710
 translate chinese_simplified intercept_narika_676147c4:
@@ -11062,7 +11062,7 @@ translate chinese_simplified intercept_narika_c1c17529:
 translate chinese_simplified intercept_narika_77e69ea1:
 
     # narika sad "Like you could if you wanted to... Hmph."
-    narika sad "Like you could if you wanted to... Hmph."
+    narika sad "好像你想做就能做似的……哼。"
 
 # game/BKchapter2.rpy:5721
 translate chinese_simplified intercept_narika_6edf044c:
@@ -11086,7 +11086,7 @@ translate chinese_simplified intercept_narika_22e31d84:
 translate chinese_simplified intercept_narika_d75724f1:
 
     # narika angry "I'm NOT a VIRGIN!!!" with vpunch
-    narika angry "I'm NOT a VIRGIN!!!" with vpunch
+    narika angry "我不是处女！！！" with vpunch
 
 # game/BKchapter2.rpy:5735
 translate chinese_simplified intercept_narika_99cd2084:
@@ -11122,13 +11122,13 @@ translate chinese_simplified intercept_narika_2d1b8f01:
 translate chinese_simplified intercept_narika_16e76f37:
 
     # narika ninja "Enmaku no jutsu!" with vpunch
-    narika ninja "Enmaku no jutsu!" with vpunch
+    narika ninja "炎魔无术！" with vpunch
 
 # game/BKchapter2.rpy:5753
 translate chinese_simplified intercept_narika_c996cbd6:
 
     # "Narika throws a smoke bomb at your feet, and you start tearing up and choking."
-    "Narika throws a smoke bomb at your feet, and you start tearing up and choking."
+    "娜丽卡向你脚边扔了一颗烟雾弹，你开始流泪并窒息。"
 
 # game/BKchapter2.rpy:5755
 translate chinese_simplified intercept_narika_5e090b54:
@@ -11146,19 +11146,19 @@ translate chinese_simplified intercept_narika_0c57a348:
 translate chinese_simplified intercept_narika_f2f6d835:
 
     # "*BONK*" with vpunch
-    "*BONK*" with vpunch
+    "*砰*" with vpunch
 
 # game/BKchapter2.rpy:5763
 translate chinese_simplified intercept_narika_8077fd03:
 
     # "Something hits you on the side of the head, and you fall down in the dirt."
-    "Something hits you on the side of the head, and you fall down in the dirt."
+    "有什么东西击中了你的头部侧面，你摔倒在泥土里。"
 
 # game/BKchapter2.rpy:5765
 translate chinese_simplified intercept_narika_f37377f3:
 
     # "When you come back to your senses, the Kunoichi is gone. Only the scent of Sakura flowers reminds you of her presence."
-    "When you come back to your senses, the Kunoichi is gone. Only the scent of Sakura flowers reminds you of her presence."
+    "当你回过神来时，女忍者已经消失了。只有樱花的香气让你想起她的存在。"
 
 # game/BKchapter2.rpy:5767
 translate chinese_simplified intercept_narika_c0e2f8dd:
@@ -11188,19 +11188,19 @@ translate chinese_simplified intercept_narika_d7d82bdc:
 translate chinese_simplified intercept_narika_13098eb7:
 
     # suzume doubt "She got the drop on us this time... But we'll run into her again. She's too bold to go into hiding."
-    suzume doubt "She got the drop on us this time... But we'll run into her again. She's too bold to go into hiding."
+    suzume doubt "这次她占了上风……但我们还会再遇到她。她胆子太大，根本不可能躲起来。"
 
 # game/BKchapter2.rpy:5787
 translate chinese_simplified intercept_narika_dc410738:
 
     # narika angry "*puff*, *puff*"
-    narika angry "*puff*, *puff*"
+    narika angry "*噗*，*噗*"
 
 # game/BKchapter2.rpy:5789
 translate chinese_simplified intercept_narika_2cc95666:
 
     # "You smell the scent of Sakura flowers again as you approach the tired girl."
-    "You smell the scent of Sakura flowers again as you approach the tired girl."
+    "当你走近疲惫的女孩时，你再次闻到了樱花的香气。"
 
 # game/BKchapter2.rpy:5791
 translate chinese_simplified intercept_narika_ccd3457e:
@@ -11230,19 +11230,19 @@ translate chinese_simplified intercept_narika_1de173d8:
 translate chinese_simplified intercept_narika_7a1a34ac:
 
     # narika sad "And here I thought you were wielding it around just trying to be cute..."
-    narika sad "And here I thought you were wielding it around just trying to be cute..."
+    narika sad "我还以为你拿着它只是为了卖萌呢……"
 
 # game/BKchapter2.rpy:5801
 translate chinese_simplified intercept_narika_5d7eed30:
 
     # narika normal "No matter, I'm the best ninja on the continent. I won't let you catch me!"
-    narika normal "No matter, I'm the best ninja on the continent. I won't let you catch me!"
+    narika normal "没关系，我是这片大陆上最厉害的忍者。我绝不会让你抓住我的！"
 
 # game/BKchapter2.rpy:5803
 translate chinese_simplified intercept_narika_7e1975cf:
 
     # narika normal "I just need to catch my breath, is all... *puff*"
-    narika normal "I just need to catch my breath, is all... *puff*"
+    narika normal "我只是需要喘口气……呼……"
 
 # game/BKchapter2.rpy:5805
 translate chinese_simplified intercept_narika_a1626de1:
@@ -11266,19 +11266,19 @@ translate chinese_simplified intercept_narika_ff37177d:
 translate chinese_simplified intercept_narika_486d18c7:
 
     # narika angry "Of course, I'm here on a contract! I'm the best ninja in the whole of Xeros! My skills are always in demand..."
-    narika angry "Of course, I'm here on a contract! I'm the best ninja in the whole of Xeros! My skills are always in demand..."
+    narika angry "当然，我是受雇于此！我是整个泽罗斯最厉害的忍者！我的技能一直都很抢手……"
 
 # game/BKchapter2.rpy:5817
 translate chinese_simplified intercept_narika_40b17cd3:
 
     # narika happy "But mostly, I'm doing it for glory! Soon, the name 'Narika Shihoudou' will be the stuff of legends..."
-    narika happy "But mostly, I'm doing it for glory! Soon, the name 'Narika Shihoudou' will be the stuff of legends..."
+    narika happy "但最主要的，我是为了荣耀而战！很快，“诗穗堂奈里香”这个名字就会成为传奇……"
 
 # game/BKchapter2.rpy:5819
 translate chinese_simplified intercept_narika_2e77692b:
 
     # narika normal "Even more than it already is, I mean."
-    narika normal "Even more than it already is, I mean."
+    narika normal "我的意思是，比现在还要糟糕。"
 
 # game/BKchapter2.rpy:5822
 translate chinese_simplified intercept_narika_11fdb519:
@@ -11296,7 +11296,7 @@ translate chinese_simplified intercept_narika_d50bc21d:
 translate chinese_simplified intercept_narika_3ac013d0:
 
     # narika happy "You bet! And in case anyone still has doubts, I'm going to prove it!"
-    narika happy "You bet! And in case anyone still has doubts, I'm going to prove it!"
+    narika happy "当然！如果还有人怀疑，我这就证明给他们看！"
 
 # game/BKchapter2.rpy:5831
 translate chinese_simplified intercept_narika_8fc75265:
@@ -11308,13 +11308,13 @@ translate chinese_simplified intercept_narika_8fc75265:
 translate chinese_simplified intercept_narika_dbd9f431:
 
     # narika angry "Whaaat? Who! Tell me who! I'll beat them all to a pulp... Grrr." with vpunch
-    narika angry "Whaaat? Who! Tell me who! I'll beat them all to a pulp... Grrr." with vpunch
+    narika angry "什么？谁！告诉我是谁！我要把他们全都揍成肉泥……吼！" with vpunch
 
 # game/BKchapter2.rpy:5835
 translate chinese_simplified intercept_narika_dbf761bc:
 
     # narika sad "Hmph, no matter. After this contract is done, they'll all be left in the dust."
-    narika sad "Hmph, no matter. After this contract is done, they'll all be left in the dust."
+    narika sad "哼，无所谓。合同结束后，他们都会被远远甩在后面。"
 
 # game/BKchapter2.rpy:5842
 translate chinese_simplified intercept_narika_746361fa:
@@ -11326,7 +11326,7 @@ translate chinese_simplified intercept_narika_746361fa:
 translate chinese_simplified intercept_narika_2ebc5a2f:
 
     # narika angry "Ha! I'm not going to reveal my connections to you..."
-    narika angry "Ha! I'm not going to reveal my connections to you..."
+    narika angry "哈哈！我不会透露我和你的关系……"
 
 # game/BKchapter2.rpy:5846
 translate chinese_simplified intercept_narika_d4debdb6:
@@ -11338,7 +11338,7 @@ translate chinese_simplified intercept_narika_d4debdb6:
 translate chinese_simplified intercept_narika_b4d8543d:
 
     # narika normal "I wouldn't bother coming to this dunghole for anything less!"
-    narika normal "I wouldn't bother coming to this dunghole for anything less!"
+    narika normal "如果条件不允许，我才不会来这个粪坑呢！"
 
 # game/BKchapter2.rpy:5851
 translate chinese_simplified intercept_narika_11fdb519_1:
@@ -11362,7 +11362,7 @@ translate chinese_simplified intercept_narika_6cbf22d6:
 translate chinese_simplified intercept_narika_077e26cf:
 
     # suzume doubt "Psst, [MC.name]... She's right, you know, this shirt doesn't really fit you..."
-    suzume doubt "Psst, [MC.name]... She's right, you know, this shirt doesn't really fit you..."
+    suzume doubt "嘘，[MC.name]……她说得对，这件衬衫确实不太适合你……"
 
 # game/BKchapter2.rpy:5860
 translate chinese_simplified intercept_narika_74d53df6:
@@ -11380,7 +11380,7 @@ translate chinese_simplified intercept_narika_fa27fa56:
 translate chinese_simplified intercept_narika_5cb610fa:
 
     # narika angry "WHAT?" with vpunch
-    narika angry "WHAT?" with vpunch
+    narika angry "什么？" with vpunch
 
 # game/BKchapter2.rpy:5870
 translate chinese_simplified intercept_narika_c96a4383:
@@ -11392,19 +11392,19 @@ translate chinese_simplified intercept_narika_c96a4383:
 translate chinese_simplified intercept_narika_4108b9f2:
 
     # narika sad "I just delegate some minor tasks to others, like, er... Setting the objective and strategy... And planning..."
-    narika sad "I just delegate some minor tasks to others, like, er... Setting the objective and strategy... And planning..."
+    narika sad "我只是把一些琐碎的任务委派给其他人，比如……设定目标和策略……以及制定计划……"
 
 # game/BKchapter2.rpy:5874
 translate chinese_simplified intercept_narika_c535d1c8:
 
     # narika angry "But I'm the mastermind of punching people in the face!" with vpunch
-    narika angry "But I'm the mastermind of punching people in the face!" with vpunch
+    narika angry "但我才是打人脸部的幕后策划者！" with vpunch
 
 # game/BKchapter2.rpy:5876
 translate chinese_simplified intercept_narika_236a1365:
 
     # suzume doubt "Is that what a mastermind is?"
-    suzume doubt "Is that what a mastermind is?"
+    suzume doubt "这就是所谓的策划大师吗？"
 
 # game/BKchapter2.rpy:5882
 translate chinese_simplified intercept_narika_763206b1:
@@ -11416,7 +11416,7 @@ translate chinese_simplified intercept_narika_763206b1:
 translate chinese_simplified intercept_narika_fece9fed:
 
     # narika angry "Uh? *blush*"
-    narika angry "Uh? *blush*"
+    narika angry "呃？*脸红*"
 
 # game/BKchapter2.rpy:5888
 translate chinese_simplified intercept_narika_21dcc968:
@@ -11428,7 +11428,7 @@ translate chinese_simplified intercept_narika_21dcc968:
 translate chinese_simplified intercept_narika_2e579911:
 
     # narika blush "Such a... Such a bold question..."
-    narika blush "Such a... Such a bold question..."
+    narika blush "真是个……真是个大胆的问题……"
 
 # game/BKchapter2.rpy:5892
 translate chinese_simplified intercept_narika_8e71790c:
@@ -11470,7 +11470,7 @@ translate chinese_simplified intercept_narika_692e5027:
 translate chinese_simplified intercept_narika_3d124413:
 
     # narika "By carrier pigeons!" with vpunch
-    narika "By carrier pigeons!" with vpunch
+    narika "用信鸽！" with vpunch
 
 # game/BKchapter2.rpy:5905
 translate chinese_simplified intercept_narika_3054af38:
@@ -11482,13 +11482,13 @@ translate chinese_simplified intercept_narika_3054af38:
 translate chinese_simplified intercept_narika_36b2f0c2:
 
     # suzume doubt "She can't even lie properly. Pathetic."
-    suzume doubt "She can't even lie properly. Pathetic."
+    suzume doubt "她连撒谎都不会，真可悲。"
 
 # game/BKchapter2.rpy:5909
 translate chinese_simplified intercept_narika_ed8c28e1:
 
     # narika angry "It's TRUE!" with vpunch
-    narika angry "It's TRUE!" with vpunch
+    narika angry "是真的！" with vpunch
 
 # game/BKchapter2.rpy:5912
 translate chinese_simplified intercept_narika_11fdb519_2:
@@ -11512,7 +11512,7 @@ translate chinese_simplified intercept_narika_51311459:
 translate chinese_simplified intercept_narika_b52b5179:
 
     # narika blush "You do? I mean, uh... Of course! Haha, hahaha..."
-    narika blush "You do? I mean, uh... Of course! Haha, hahaha..."
+    narika blush "真的吗？我是说，呃……当然啦！哈哈，哈哈哈……"
 
 # game/BKchapter2.rpy:5926
 translate chinese_simplified intercept_narika_0b11f665:
@@ -11524,13 +11524,13 @@ translate chinese_simplified intercept_narika_0b11f665:
 translate chinese_simplified intercept_narika_52125ccb:
 
     # narika angry "Screw you! I have a boyfriend, in fact, I'm engaged!" with vpunch
-    narika angry "Screw you! I have a boyfriend, in fact, I'm engaged!" with vpunch
+    narika angry "去你的！我有男朋友了，事实上，我已经订婚了！" with vpunch
 
 # game/BKchapter2.rpy:5930
 translate chinese_simplified intercept_narika_b23de846:
 
     # suzume normal "Oh yeah? What's his name?"
-    suzume normal "Oh yeah? What's his name?"
+    suzume normal "哦，是吗？他叫什么名字？"
 
 # game/BKchapter2.rpy:5932
 translate chinese_simplified intercept_narika_6b92152c:
@@ -11542,13 +11542,13 @@ translate chinese_simplified intercept_narika_6b92152c:
 translate chinese_simplified intercept_narika_623bf68e:
 
     # narika "NONE OF YOUR DAMN BUSINESS!!!" with vpunch
-    narika "NONE OF YOUR DAMN BUSINESS!!!" with vpunch
+    narika "关你屁事！！！" with vpunch
 
 # game/BKchapter2.rpy:5936
 translate chinese_simplified intercept_narika_b9fe9611:
 
     # suzume doubt "Weird name."
-    suzume doubt "Weird name."
+    suzume doubt "名字真奇怪。"
 
 # game/BKchapter2.rpy:5938
 translate chinese_simplified intercept_narika_e7847efe:
@@ -11566,7 +11566,7 @@ translate chinese_simplified intercept_narika_ac007929:
 translate chinese_simplified intercept_narika_dd9abc70:
 
     # narika normal "Ha! Did you think I'd spill the beans about my plans so easily?"
-    narika normal "Ha! Did you think I'd spill the beans about my plans so easily?"
+    narika normal "哈！你以为我会这么轻易地泄露我的计划吗？"
 
 # game/BKchapter2.rpy:5946
 translate chinese_simplified intercept_narika_487284bb:
@@ -11590,19 +11590,19 @@ translate chinese_simplified intercept_narika_3133241d:
 translate chinese_simplified intercept_narika_6de9d154:
 
     # narika blush "Who said anything about a heist, ahahaha... I said this height! Err... My height!"
-    narika blush "Who said anything about a heist, ahahaha... I said this height! Err... My height!"
+    narika blush "谁说要抢劫了，哈哈哈哈……我说的是这个高度！呃……我的高度！"
 
 # game/BKchapter2.rpy:5954
 translate chinese_simplified intercept_narika_f59291af:
 
     # suzume doubt "But you're tiny..."
-    suzume doubt "But you're tiny..."
+    suzume doubt "但你个子很小……"
 
 # game/BKchapter2.rpy:5956
 translate chinese_simplified intercept_narika_1d094be3:
 
     # narika "I'm still growing up, okay!" with vpunch
-    narika "I'm still growing up, okay!" with vpunch
+    narika "我还在成长中，好吗！" with vpunch
 
 # game/BKchapter2.rpy:5958
 translate chinese_simplified intercept_narika_0b1ec709:
@@ -11626,19 +11626,19 @@ translate chinese_simplified intercept_narika_8cac84c7:
 translate chinese_simplified intercept_narika_1dbcb419:
 
     # narika "A thief! A thief?" with vpunch
-    narika "A thief! A thief?" with vpunch
+    narika "小偷！小偷？" with vpunch
 
 # game/BKchapter2.rpy:5968
 translate chinese_simplified intercept_narika_89ad2a18:
 
     # narika "I'm a ninja! And not just any ninja, I'm the most legendary Kunoichi in Xeros history!" with vpunch
-    narika "I'm a ninja! And not just any ninja, I'm the most legendary Kunoichi in Xeros history!" with vpunch
+    narika "我是一名忍者！而且不是普通的忍者，我是Xeros历史上最传奇的女忍者！" with vpunch
 
 # game/BKchapter2.rpy:5970
 translate chinese_simplified intercept_narika_cd6fd7d2:
 
     # narika normal "It just so happens that stealing is one of the skills a ninja needs to master, and I wouldn't be the best if I wasn't able to do it properly..."
-    narika normal "It just so happens that stealing is one of the skills a ninja needs to master, and I wouldn't be the best if I wasn't able to do it properly..."
+    narika normal "碰巧的是，偷窃是忍者必须掌握的技能之一，如果我不会偷窃，我就称不上最优秀的忍者……"
 
 # game/BKchapter2.rpy:5972
 translate chinese_simplified intercept_narika_ec9698be:
@@ -11650,13 +11650,13 @@ translate chinese_simplified intercept_narika_ec9698be:
 translate chinese_simplified intercept_narika_30c37771:
 
     # narika normal "Ha! It all depends on what's stolen, of course!"
-    narika normal "Ha! It all depends on what's stolen, of course!"
+    narika normal "哈哈！当然，这完全取决于被偷的是什么！"
 
 # game/BKchapter2.rpy:5976
 translate chinese_simplified intercept_narika_7fd5b4f1:
 
     # "Her eyes are shining."
-    "Her eyes are shining."
+    "她的眼睛闪闪发光。"
 
 # game/BKchapter2.rpy:5978
 translate chinese_simplified intercept_narika_df4fbd52:
@@ -11674,13 +11674,13 @@ translate chinese_simplified intercept_narika_74d258bf:
 translate chinese_simplified intercept_narika_5f6c3cbb:
 
     # narika sad "Hmph. Some will have you believe that others are my equals... Nonsense, of course."
-    narika sad "Hmph. Some will have you believe that others are my equals... Nonsense, of course."
+    narika sad "哼。有些人会让你相信其他人与我平起平坐……当然，这纯属胡说八道。"
 
 # game/BKchapter2.rpy:5984
 translate chinese_simplified intercept_narika_aa08abef:
 
     # narika normal "There are some who whisper behind my back that some weird old lady from the Water school is the best, just because she's lived longer..."
-    narika normal "There are some who whisper behind my back that some weird old lady from the Water school is the best, just because she's lived longer..."
+    narika normal "有些人背地里说，水之流派里一个古怪的老太太才是最厉害的，仅仅因为她年纪大……"
 
 # game/BKchapter2.rpy:5987
 translate chinese_simplified intercept_narika_3836cb9c:
@@ -11692,7 +11692,7 @@ translate chinese_simplified intercept_narika_3836cb9c:
 translate chinese_simplified intercept_narika_32d00b71:
 
     # suzume doubt "The Water Kunoichi..."
-    suzume doubt "The Water Kunoichi..."
+    suzume doubt "水之女忍者……"
 
 # game/BKchapter2.rpy:5992
 translate chinese_simplified intercept_narika_647dc9ec:
@@ -11704,7 +11704,7 @@ translate chinese_simplified intercept_narika_647dc9ec:
 translate chinese_simplified intercept_narika_fa094a06:
 
     # narika sad "Others talk about some chick from the Earth School... More serious competition, that one."
-    narika sad "Others talk about some chick from the Earth School... More serious competition, that one."
+    narika sad "其他人则在谈论地球学校的某个女孩……那才是更强劲的对手。"
 
 # game/BKchapter2.rpy:5997
 translate chinese_simplified intercept_narika_e14921df:
@@ -11716,13 +11716,13 @@ translate chinese_simplified intercept_narika_e14921df:
 translate chinese_simplified intercept_narika_d4eb8230:
 
     # suzume doubt "We have yet to meet her..."
-    suzume doubt "We have yet to meet her..."
+    suzume doubt "我们还没见过她……"
 
 # game/BKchapter2.rpy:6002
 translate chinese_simplified intercept_narika_94499f49:
 
     # narika angry "Ha! They put her up on a pedestal, just because she rebuilt her school from the ground up!"
-    narika angry "Ha! They put her up on a pedestal, just because she rebuilt her school from the ground up!"
+    narika angry "哈！他们把她捧上神坛，就因为她从零开始重建了她的学校！"
 
 # game/BKchapter2.rpy:6004
 translate chinese_simplified intercept_narika_bab95d84:
@@ -11734,13 +11734,13 @@ translate chinese_simplified intercept_narika_bab95d84:
 translate chinese_simplified intercept_narika_d7af2a07:
 
     # suzume doubt "Well, you were born with inherited abilities... While she worked hard every day to get where she is."
-    suzume doubt "Well, you were born with inherited abilities... While she worked hard every day to get where she is."
+    suzume doubt "嗯，你是天生拥有天赋……而她则是每天努力奋斗才有了今天的成就。"
 
 # game/BKchapter2.rpy:6008
 translate chinese_simplified intercept_narika_8fa5c0d7:
 
     # narika "I know! Ridiculous, isn't it?" with vpunch
-    narika "I know! Ridiculous, isn't it?" with vpunch
+    narika "我知道！太荒谬了，不是吗？" with vpunch
 
 # game/BKchapter2.rpy:6010
 translate chinese_simplified intercept_narika_85628710:
@@ -11752,7 +11752,7 @@ translate chinese_simplified intercept_narika_85628710:
 translate chinese_simplified intercept_narika_ff6b6ae7:
 
     # "She is getting quite worked up now, her cheeks are becoming red."
-    "She is getting quite worked up now, her cheeks are becoming red."
+    "她现在情绪非常激动，脸颊都涨红了。"
 
 # game/BKchapter2.rpy:6014
 translate chinese_simplified intercept_narika_7da5c6d2:
@@ -11770,7 +11770,7 @@ translate chinese_simplified intercept_narika_c9251880:
 translate chinese_simplified intercept_narika_c879b417:
 
     # narika sad "Why, it's obvious, isn't it? Why do you think these second-rate Kunoichi are heading to this dump of a city..."
-    narika sad "Why, it's obvious, isn't it? Why do you think these second-rate Kunoichi are heading to this dump of a city..."
+    narika sad "原因显而易见，不是吗？你以为这些二流女忍者为什么要跑到这个破城市来……"
 
 # game/BKchapter2.rpy:6020
 translate chinese_simplified intercept_narika_467f2497:
@@ -11782,13 +11782,13 @@ translate chinese_simplified intercept_narika_467f2497:
 translate chinese_simplified intercept_narika_6f3c1b90:
 
     # narika angry "Because they're all trying to upstage me, that's why!" with vpunch
-    narika angry "Because they're all trying to upstage me, that's why!" with vpunch
+    narika angry "因为她们都想抢我的风头，就是这样！" with vpunch
 
 # game/BKchapter2.rpy:6024
 translate chinese_simplified intercept_narika_7fc457e3:
 
     # narika normal "But I'm going to turn the tables on them! Beat them on their own turf!"
-    narika normal "But I'm going to turn the tables on them! Beat them on their own turf!"
+    narika normal "但我要扭转乾坤！在他们的地盘上打败他们！"
 
 # game/BKchapter2.rpy:6027
 translate chinese_simplified intercept_narika_11fdb519_3:
@@ -11806,7 +11806,7 @@ translate chinese_simplified intercept_narika_3f0fc8e5:
 translate chinese_simplified intercept_narika_b6afe5d1:
 
     # narika normal "Yes!"
-    narika normal "Yes!"
+    narika normal "是的！"
 
 # game/BKchapter2.rpy:6034
 translate chinese_simplified intercept_narika_b55f0d7d:
@@ -11818,7 +11818,7 @@ translate chinese_simplified intercept_narika_b55f0d7d:
 translate chinese_simplified intercept_narika_9c648cac:
 
     # narika "Exactly!" with vpunch
-    narika "Exactly!" with vpunch
+    narika "确切地！" with vpunch
 
 # game/BKchapter2.rpy:6038
 translate chinese_simplified intercept_narika_dae0ec55:
@@ -11836,7 +11836,7 @@ translate chinese_simplified intercept_narika_fd6f86b0:
 translate chinese_simplified intercept_narika_458fbf79:
 
     # narika blush "I mean no! There is no heist! I meant, uh..."
-    narika blush "I mean no! There is no heist! I meant, uh..."
+    narika blush "我的意思是，不！根本没有抢劫！我的意思是，呃……"
 
 # game/BKchapter2.rpy:6046
 translate chinese_simplified intercept_narika_56509ad8:
@@ -11848,7 +11848,7 @@ translate chinese_simplified intercept_narika_56509ad8:
 translate chinese_simplified intercept_narika_91d44b2b:
 
     # narika angry "You don't know what you're talking about!" with vpunch
-    narika angry "You don't know what you're talking about!" with vpunch
+    narika angry "你根本不知道自己在说什么！" with vpunch
 
 # game/BKchapter2.rpy:6050
 translate chinese_simplified intercept_narika_2d2a44c0:
@@ -11860,7 +11860,7 @@ translate chinese_simplified intercept_narika_2d2a44c0:
 translate chinese_simplified intercept_narika_a7944092:
 
     # suzume doubt "No we don't..."
-    suzume doubt "No we don't..."
+    suzume doubt "不，我们没有……"
 
 # game/BKchapter2.rpy:6054
 translate chinese_simplified intercept_narika_962ae68e:
@@ -11878,7 +11878,7 @@ translate chinese_simplified intercept_narika_e6a7bbbb:
 translate chinese_simplified intercept_narika_76e097b6:
 
     # narika angry "How dare you!" with vpunch
-    narika angry "How dare you!" with vpunch
+    narika angry "你竟敢这样！" with vpunch
 
 # game/BKchapter2.rpy:6064
 translate chinese_simplified intercept_narika_fd337f31:
@@ -11896,13 +11896,13 @@ translate chinese_simplified intercept_narika_7fb47bcc:
 translate chinese_simplified intercept_narika_71f5c65e:
 
     # suzume doubt "Wait. So you're chickening out?"
-    suzume doubt "Wait. So you're chickening out?"
+    suzume doubt "等等。所以你是临阵退缩了？"
 
 # game/BKchapter2.rpy:6070
 translate chinese_simplified intercept_narika_573d9939:
 
     # narika angry "Not at all!" with vpunch
-    narika angry "Not at all!" with vpunch
+    narika angry "一点也不！" with vpunch
 
 # game/BKchapter2.rpy:6072
 translate chinese_simplified intercept_narika_fe11a931:
@@ -11914,7 +11914,7 @@ translate chinese_simplified intercept_narika_fe11a931:
 translate chinese_simplified intercept_narika_2f88d11e:
 
     # narika sad "I'm not going to risk getting any scar on my perfect-looking face."
-    narika sad "I'm not going to risk getting any scar on my perfect-looking face."
+    narika sad "我可不想在完美无瑕的脸上留下任何疤痕。"
 
 # game/BKchapter2.rpy:6078
 translate chinese_simplified intercept_narika_889a49bd:
@@ -11932,7 +11932,7 @@ translate chinese_simplified intercept_narika_f0a09fc5:
 translate chinese_simplified intercept_narika_54476a6a:
 
     # suzume doubt "I don't think that's what the others are here for at all..."
-    suzume doubt "I don't think that's what the others are here for at all..."
+    suzume doubt "我觉得其他人来这里根本不是为了这个……"
 
 # game/BKchapter2.rpy:6084
 translate chinese_simplified intercept_narika_35807924:
@@ -11962,7 +11962,7 @@ translate chinese_simplified intercept_narika_689cd4a7:
 translate chinese_simplified intercept_narika_fce897ff:
 
     # narika ninja "I can see my strength has returned in full! You won't be able to catch me again, let me tell you!"
-    narika ninja "I can see my strength has returned in full! You won't be able to catch me again, let me tell you!"
+    narika ninja "我感觉我的力量已经完全恢复了！我告诉你，你再也抓不到我了！"
 
 # game/BKchapter2.rpy:6098
 translate chinese_simplified intercept_narika_8dbeba8c:
@@ -11980,13 +11980,13 @@ translate chinese_simplified intercept_narika_01be5ae9:
 translate chinese_simplified intercept_narika_c0bb0af0:
 
     # "Suzume leaps at Narika, throwing a shuriken at her face."
-    "Suzume leaps at Narika, throwing a shuriken at her face."
+    "铃芽扑向奈莉卡，向她的脸部投掷了一枚手里剑。"
 
 # game/BKchapter2.rpy:6117
 translate chinese_simplified intercept_narika_ada59d53:
 
     # "She misses by a few inches. Narika laughs."
-    "She misses by a few inches. Narika laughs."
+    "她差几英寸就击中了目标。娜丽卡笑了。"
 
 # game/BKchapter2.rpy:6121
 translate chinese_simplified intercept_narika_c3ba8766:
@@ -12004,13 +12004,13 @@ translate chinese_simplified intercept_narika_fc5501dd:
 translate chinese_simplified intercept_narika_627123d8:
 
     # "Narika effortlessly kicks Suzume out of the way, sending her crashing into a wall yards away."
-    "Narika effortlessly kicks Suzume out of the way, sending her crashing into a wall yards away."
+    "奈里卡轻而易举地一脚将铃芽踢开，铃芽被踢飞到几码外的墙上。"
 
 # game/BKchapter2.rpy:6133
 translate chinese_simplified intercept_narika_85097159:
 
     # you "Suzume!" with vpunch
-    you "Suzume!" with vpunch
+    you "苏梅！" with vpunch
 
 # game/BKchapter2.rpy:6138
 translate chinese_simplified intercept_narika_fb64429f:
@@ -12028,13 +12028,13 @@ translate chinese_simplified intercept_narika_412eb9b3:
 translate chinese_simplified intercept_narika_6969a550:
 
     # "Narika zooms past you both, laughing like a schoolgirl as she quickly disappears into the distance, leaving only the faint scent of Sakura flowers behind."
-    "Narika zooms past you both, laughing like a schoolgirl as she quickly disappears into the distance, leaving only the faint scent of Sakura flowers behind."
+    "奈丽卡飞快地从你们身边掠过，像个女学生一样咯咯笑着，迅速消失在远方，只留下淡淡的樱花香气。"
 
 # game/BKchapter2.rpy:6148
 translate chinese_simplified intercept_narika_7ee27247:
 
     # "Suzume is crumpled in the dirt, lying under the half-broken mud wall."
-    "Suzume is crumpled in the dirt, lying under the half-broken mud wall."
+    "铃芽蜷缩在泥土里，躺在半倒塌的泥墙下。"
 
 # game/BKchapter2.rpy:6150
 translate chinese_simplified intercept_narika_795f0f31:
@@ -12046,7 +12046,7 @@ translate chinese_simplified intercept_narika_795f0f31:
 translate chinese_simplified intercept_narika_92421337:
 
     # suzume doubt "Ouch... That kick was no joke... I think I might have a couple of broken ribs."
-    suzume doubt "Ouch... That kick was no joke... I think I might have a couple of broken ribs."
+    suzume doubt "哎哟……这一脚可真不是闹着玩的……我觉得我可能断了两根肋骨。"
 
 # game/BKchapter2.rpy:6156
 translate chinese_simplified intercept_narika_e545aea1:
@@ -12064,7 +12064,7 @@ translate chinese_simplified intercept_narika_a56a3017:
 translate chinese_simplified intercept_narika_f3f72f38:
 
     # you "Why on earth did you attack her? It was pointless!" with vpunch
-    you "Why on earth did you attack her? It was pointless!" with vpunch
+    you "你到底为什么要攻击她？这毫无意义！" with vpunch
 
 # game/BKchapter2.rpy:6162
 translate chinese_simplified intercept_narika_65a5c262:
@@ -12076,7 +12076,7 @@ translate chinese_simplified intercept_narika_65a5c262:
 translate chinese_simplified intercept_narika_4fe61a87:
 
     # suzume shrewd "Pointless? Not at all, [MC.name]..."
-    suzume shrewd "Pointless? Not at all, [MC.name]..."
+    suzume shrewd "毫无意义？一点也不，[MC.name]……"
 
 # game/BKchapter2.rpy:6168
 translate chinese_simplified intercept_narika_fec1fe3c:
@@ -12094,7 +12094,7 @@ translate chinese_simplified intercept_narika_9828f917:
 translate chinese_simplified intercept_narika_f8b06f62:
 
     # "Taking you by the hand, Suzume walks to the place where Narika was standing, picking up something from the ground."
-    "Taking you by the hand, Suzume walks to the place where Narika was standing, picking up something from the ground."
+    "铃芽牵着你的手，走到奈里香刚才站着的地方，从地上捡起什么东西。"
 
 # game/BKchapter2.rpy:6176
 translate chinese_simplified intercept_narika_4affc9c0:
@@ -12136,13 +12136,13 @@ translate chinese_simplified intercept_narika_f2480f4a:
 translate chinese_simplified intercept_narika_7c640af2:
 
     # suzume shrewd "Fufufu, it's you who have become awfully slow..."
-    suzume shrewd "Fufufu, it's you who have become awfully slow..."
+    suzume shrewd "呵呵，是你反应变得好慢啊……"
 
 # game/BKchapter2.rpy:6205
 translate chinese_simplified intercept_narika_69852ff8:
 
     # "You loom over Narika, brandishing your warhammer, its head sizzling with dark void energy."
-    "You loom over Narika, brandishing your warhammer, its head sizzling with dark void energy."
+    "你居高临下地俯视着纳里卡，挥舞着你的战锤，锤头散发着黑暗虚空能量的灼热光芒。"
 
 # game/BKchapter2.rpy:6207
 translate chinese_simplified intercept_narika_e355ea25:
@@ -12154,25 +12154,25 @@ translate chinese_simplified intercept_narika_e355ea25:
 translate chinese_simplified intercept_narika_2bc886d9:
 
     # "Holding it with both hands, you lift the hammer high for the finishing blow, blocking the sun as Narika's eyes widen in fear."
-    "Holding it with both hands, you lift the hammer high for the finishing blow, blocking the sun as Narika's eyes widen in fear."
+    "你双手握住锤子，高高举起，准备给予最后一击，遮蔽了阳光，娜丽卡的眼睛因恐惧而睁大。"
 
 # game/BKchapter2.rpy:6213
 translate chinese_simplified intercept_narika_3bd5972f:
 
     # narika "Nooooooo!!!" with vpunch
-    narika "Nooooooo!!!" with vpunch
+    narika "不！！！" with vpunch
 
 # game/BKchapter2.rpy:6215
 translate chinese_simplified intercept_narika_5aedc965:
 
     # "You hit her savagely with all your strength."
-    "You hit her savagely with all your strength."
+    "你用尽全力狠狠地打了她。"
 
 # game/BKchapter2.rpy:6219
 translate chinese_simplified intercept_narika_1270c9dc:
 
     # "*OINK*" with vpunch
-    "*OINK*" with vpunch
+    "*哼哼*" with vpunch
 
 # game/BKchapter2.rpy:6221
 translate chinese_simplified intercept_narika_384db28e:
@@ -12184,7 +12184,7 @@ translate chinese_simplified intercept_narika_384db28e:
 translate chinese_simplified intercept_narika_9630a822:
 
     # "The toy hammer bumps against her head, bouncing off harmlessly."
-    "The toy hammer bumps against her head, bouncing off harmlessly."
+    "玩具锤子撞到她的头上，弹开后没有伤到她。"
 
 # game/BKchapter2.rpy:6225
 translate chinese_simplified intercept_narika_88044a41:
@@ -12196,19 +12196,19 @@ translate chinese_simplified intercept_narika_88044a41:
 translate chinese_simplified intercept_narika_b4dfe55d:
 
     # "Although your toy hammer didn't do any damage, it is enough for the void rune to siphon the last of Narika's energy."
-    "Although your toy hammer didn't do any damage, it is enough for the void rune to siphon the last of Narika's energy."
+    "虽然你的玩具锤子没有造成任何伤害，但足以让虚空符文吸走娜丽卡的最后一点能量。"
 
 # game/BKchapter2.rpy:6229
 translate chinese_simplified intercept_narika_1dd87b53:
 
     # narika "I'm feeling... Ugh... *faint*" with vpunch
-    narika "I'm feeling... Ugh... *faint*" with vpunch
+    narika "我感觉……呃……*晕倒*" with vpunch
 
 # game/BKchapter2.rpy:6233
 translate chinese_simplified intercept_narika_14e31273:
 
     # "Narika collapses unconscious. You and Suzume exchange a victorious high five."
-    "Narika collapses unconscious. You and Suzume exchange a victorious high five."
+    "奈里香昏倒在地。你和铃芽击掌庆祝胜利。"
 
 # game/BKchapter2.rpy:6235
 translate chinese_simplified intercept_narika_da73571f:
@@ -12220,13 +12220,13 @@ translate chinese_simplified intercept_narika_da73571f:
 translate chinese_simplified intercept_narika_7d01dcd2:
 
     # suzume normal "Off to the dungeon with this one!"
-    suzume normal "Off to the dungeon with this one!"
+    suzume normal "带着他下地牢！"
 
 # game/BKchapter2.rpy:6242
 translate chinese_simplified narika_defeat_menu_21a19ffc:
 
     # suzume "Want me to bring her somewhere?" nointeract
-    suzume "Want me to bring her somewhere?" nointeract
+    suzume "想让我带她去哪儿吗？" nointeract
 
 # game/BKchapter2.rpy:6246
 translate chinese_simplified narika_defeat_menu_62b345cb:
@@ -12238,7 +12238,7 @@ translate chinese_simplified narika_defeat_menu_62b345cb:
 translate chinese_simplified narika_defeat_menu_bcf44c1a:
 
     # suzume doubt "Well, I guess the Princess can have her people lock her away, or expel her from the city."
-    suzume doubt "Well, I guess the Princess can have her people lock her away, or expel her from the city."
+    suzume doubt "我想公主可以让她的人把她囚禁起来，或者把她驱逐出城。"
 
 # game/BKchapter2.rpy:6250
 translate chinese_simplified narika_defeat_menu_2b16af9e:
@@ -12262,13 +12262,13 @@ translate chinese_simplified narika_defeat_menu_6f3652ac:
 translate chinese_simplified narika_defeat_menu_a46f75a2:
 
     # suzume normal "Sure thing, boss."
-    suzume normal "Sure thing, boss."
+    suzume normal "当然可以，老板。"
 
 # game/BKchapter2.rpy:6268
 translate chinese_simplified narika_defeat_menu_58164dc8:
 
     # "Wait for Suzume to come back from the castle with news."
-    "Wait for Suzume to come back from the castle with news."
+    "等待铃芽从城堡带回消息。"
 
 # game/BKchapter2.rpy:6275
 translate chinese_simplified narika_defeat_menu_38fe1661:
@@ -12286,7 +12286,7 @@ translate chinese_simplified narika_defeat_menu_9909066a:
 translate chinese_simplified narika_defeat_menu_9c1ade0c:
 
     # suzume normal "You want to put her in school?"
-    suzume normal "You want to put her in school?"
+    suzume normal "你想送她去上学吗？"
 
 # game/BKchapter2.rpy:6285
 translate chinese_simplified narika_defeat_menu_f3295874:
@@ -12298,7 +12298,7 @@ translate chinese_simplified narika_defeat_menu_f3295874:
 translate chinese_simplified narika_defeat_menu_bbe9c34a:
 
     # suzume doubt "The brothel? It isn't safe, not unless we have one of these wards against her super speed..."
-    suzume doubt "The brothel? It isn't safe, not unless we have one of these wards against her super speed..."
+    suzume doubt "妓院？那可不安全，除非我们有能抵挡她超高速攻击的防护措施……"
 
 # game/BKchapter2.rpy:6291
 translate chinese_simplified narika_defeat_menu_88876e1e:
@@ -12310,7 +12310,7 @@ translate chinese_simplified narika_defeat_menu_88876e1e:
 translate chinese_simplified narika_defeat_menu_38765399:
 
     # suzume doubt "She's a little brat, but she's still a dangerous Kunoichi. You won't be able to use her in the brothel, not unless you train her thoroughly..."
-    suzume doubt "She's a little brat, but she's still a dangerous Kunoichi. You won't be able to use her in the brothel, not unless you train her thoroughly..."
+    suzume doubt "她虽然有点任性，但仍然是个危险的女忍者。除非你对她进行彻底的训练，否则你没法在妓院里使用她……"
 
 # game/BKchapter2.rpy:6298
 translate chinese_simplified narika_defeat_menu_11fdb519_1:
@@ -12328,13 +12328,13 @@ translate chinese_simplified narika_defeat_menu_ee997e5f:
 translate chinese_simplified narika_defeat_menu_dfeeb8b3:
 
     # suzume normal "All right... Don't blame me if things go sideways!"
-    suzume normal "All right... Don't blame me if things go sideways!"
+    suzume normal "好吧……如果事情进展不顺利，可别怪我！"
 
 # game/BKchapter2.rpy:6311
 translate chinese_simplified narika_defeat_menu_18723bbc:
 
     # "Wait until tonight to deal with Narika at your brothel."
-    "Wait until tonight to deal with Narika at your brothel."
+    "等到今晚再去妓院处理娜丽卡的事。"
 
 # game/BKchapter2.rpy:6319
 translate chinese_simplified narika_defeat_menu_38fe1661_1:
@@ -12352,7 +12352,7 @@ translate chinese_simplified narika_defeat_menu_554d3a16:
 translate chinese_simplified narika_defeat_menu_d815067a:
 
     # suzume doubt "But boss! We can't let her go, she's at our mercy!"
-    suzume doubt "But boss! We can't let her go, she's at our mercy!"
+    suzume doubt "老板！我们不能放她走，她现在任我们处置！"
 
 # game/BKchapter2.rpy:6328
 translate chinese_simplified narika_defeat_menu_54513643:
@@ -12370,13 +12370,13 @@ translate chinese_simplified narika_defeat_menu_b398f873:
 translate chinese_simplified c2_narika_H1_3ba596c7:
 
     # "Later that night, you receive Suzume's visit."
-    "Later that night, you receive Suzume's visit."
+    "当晚晚些时候，铃芽来访。"
 
 # game/BKchapter2.rpy:6350
 translate chinese_simplified c2_narika_H1_ca211145:
 
     # suzume "Tadaa!!!" with vpunch
-    suzume "Tadaa!!!" with vpunch
+    suzume "锵锵！！！" with vpunch
 
 # game/BKchapter2.rpy:6352
 translate chinese_simplified c2_narika_H1_dae0ec55:
@@ -12394,13 +12394,13 @@ translate chinese_simplified c2_narika_H1_e5a409cd:
 translate chinese_simplified c2_narika_H1_2736bdb2:
 
     # suzume doubt "Oh, it's already healed, don't worry about that!"
-    suzume doubt "Oh, it's already healed, don't worry about that!"
+    suzume doubt "哦，已经痊愈了，别担心！"
 
 # game/BKchapter2.rpy:6358
 translate chinese_simplified c2_narika_H1_6bfaa50f:
 
     # suzume normal "I've got a natural recovery ability, and years of training with spices and poisons to enhance it."
-    suzume normal "I've got a natural recovery ability, and years of training with spices and poisons to enhance it."
+    suzume normal "我天生具有很强的恢复能力，并且经过多年使用香料和毒药的训练来增强这种能力。"
 
 # game/BKchapter2.rpy:6360
 translate chinese_simplified c2_narika_H1_214b57af:
@@ -12412,7 +12412,7 @@ translate chinese_simplified c2_narika_H1_214b57af:
 translate chinese_simplified c2_narika_H1_a576477a:
 
     # suzume shrewd "But that spoiled brat will live to regret this... By the way, do you still have her lock of hair? Give it to me!"
-    suzume shrewd "But that spoiled brat will live to regret this... By the way, do you still have her lock of hair? Give it to me!"
+    suzume shrewd "但那个被宠坏的丫头会后悔的……对了，你还留着她那缕头发吗？给我！"
 
 # game/BKchapter2.rpy:6364
 translate chinese_simplified c2_narika_H1_6ea0391d:
@@ -12436,7 +12436,7 @@ translate chinese_simplified c2_narika_H1_ad2971e6:
 translate chinese_simplified c2_narika_H1_b071cbe9:
 
     # suzume normal "Perfect! I'll let you lead the ritual, then... I'm, err, not the best with magic."
-    suzume normal "Perfect! I'll let you lead the ritual, then... I'm, err, not the best with magic."
+    suzume normal "太好了！那我就让你来主持仪式吧……我嘛，呃，不太擅长魔法。"
 
 # game/BKchapter2.rpy:6377
 translate chinese_simplified c2_narika_H1_e0a6f2ac:
@@ -12448,13 +12448,13 @@ translate chinese_simplified c2_narika_H1_e0a6f2ac:
 translate chinese_simplified c2_narika_H1_1eb46c42:
 
     # suzume doubt "Well... I mean we were taught the basics in school... Although I may have been sleeping through most of the class... Kukuku..."
-    suzume doubt "Well... I mean we were taught the basics in school... Although I may have been sleeping through most of the class... Kukuku..."
+    suzume doubt "嗯……我的意思是，我们在学校学过一些基础知识……虽然我可能上课大部分时间都在睡觉……呵呵呵……"
 
 # game/BKchapter2.rpy:6381
 translate chinese_simplified c2_narika_H1_5e740183:
 
     # suzume doubt "I, err, have a little tendency to cause catastrophes when I attempt magic..."
-    suzume doubt "I, err, have a little tendency to cause catastrophes when I attempt magic..."
+    suzume doubt "我，呃，似乎有点儿在尝试魔法时会引发灾难的倾向……"
 
 # game/BKchapter2.rpy:6383
 translate chinese_simplified c2_narika_H1_737150bd:
@@ -12466,7 +12466,7 @@ translate chinese_simplified c2_narika_H1_737150bd:
 translate chinese_simplified c2_narika_H1_43de1aef:
 
     # suzume normal "But you're going to help me! Setting up the ritual can be done easily enough, then I'll leave the casting to you!"
-    suzume normal "But you're going to help me! Setting up the ritual can be done easily enough, then I'll leave the casting to you!"
+    suzume normal "但是你要帮我！准备仪式很容易，施法就交给你了！"
 
 # game/BKchapter2.rpy:6387
 translate chinese_simplified c2_narika_H1_bfdebd1a:
@@ -12484,7 +12484,7 @@ translate chinese_simplified c2_narika_H1_fdda596d:
 translate chinese_simplified c2_narika_H1_9e424fd7:
 
     # suzume normal "...and that should work."
-    suzume normal "...and that should work."
+    suzume normal "这样应该可行。"
 
 # game/BKchapter2.rpy:6395
 translate chinese_simplified c2_narika_H1_041fe20b:
@@ -12520,7 +12520,7 @@ translate chinese_simplified c2_narika_H1_c76a46b9:
 translate chinese_simplified c2_narika_H1_2a8be0ba:
 
     # suzume doubt "(I'd say... It looks quite well stocked. Fancy, even...)"
-    suzume doubt "(I'd say... It looks quite well stocked. Fancy, even...)"
+    suzume doubt "（我觉得……看起来货品很齐全。甚至还挺高档的……）"
 
 # game/BKchapter2.rpy:6422
 translate chinese_simplified c2_narika_H1_f9e2b99e:
@@ -12586,7 +12586,7 @@ translate chinese_simplified c2_narika_H1_f7d2c2ad:
 translate chinese_simplified c2_narika_H1_9e88775f:
 
     # suzume shrewd "(Hmm... It might not be what you think.)"
-    suzume shrewd "(Hmm... It might not be what you think.)"
+    suzume shrewd "（嗯……可能跟你想的不一样。）"
 
 # game/BKchapter2.rpy:6447
 translate chinese_simplified c2_narika_H1_cdd9076e:
@@ -12598,7 +12598,7 @@ translate chinese_simplified c2_narika_H1_cdd9076e:
 translate chinese_simplified c2_narika_H1_341d238f:
 
     # narika blush "I've been holding it in all day... Aaah..."
-    narika blush "I've been holding it in all day... Aaah..."
+    narika blush "我憋了一整天了……啊……"
 
 # game/BKchapter2.rpy:6456
 translate chinese_simplified c2_narika_H1_e14bcf57:
@@ -12628,7 +12628,7 @@ translate chinese_simplified c2_narika_H1_33c73691:
 translate chinese_simplified c2_narika_H1_6e801bbe:
 
     # "Narika starts touching herself, unaware that she is being watched through the looking glass."
-    "Narika starts touching herself, unaware that she is being watched through the looking glass."
+    "娜丽卡开始抚摸自己，却丝毫没有意识到自己正被人透过镜子注视着。"
 
 # game/BKchapter2.rpy:6470
 translate chinese_simplified c2_narika_H1_d162f0d0:
@@ -12646,7 +12646,7 @@ translate chinese_simplified c2_narika_H1_08f6a888:
 translate chinese_simplified c2_narika_H1_c6ef9faa:
 
     # narika sad "You can't help it if you're so perfect and beautiful, the boys are afraid to talk to you..."
-    narika sad "You can't help it if you're so perfect and beautiful, the boys are afraid to talk to you..."
+    narika sad "你长得太完美太漂亮了，男生不敢跟你说话，这也没办法……"
 
 # game/BKchapter2.rpy:6476
 translate chinese_simplified c2_narika_H1_1b1da6ec:
@@ -12670,7 +12670,7 @@ translate chinese_simplified c2_narika_H1_1b7f45a8:
 translate chinese_simplified c2_narika_H1_0f280c0d:
 
     # "She now slides her fingers inside her wet pussy, making more obscene noises."
-    "She now slides her fingers inside her wet pussy, making more obscene noises."
+    "她现在将手指滑入湿润的阴道，发出更加淫秽的声音。"
 
 # game/BKchapter2.rpy:6486
 translate chinese_simplified c2_narika_H1_1d52ae22:
@@ -12688,13 +12688,13 @@ translate chinese_simplified c2_narika_H1_8cec1ac9:
 translate chinese_simplified c2_narika_H1_e1d37d83:
 
     # narika "Ooh!" with hpunch
-    narika "Ooh!" with hpunch
+    narika "哦！" with hpunch
 
 # game/BKchapter2.rpy:6496
 translate chinese_simplified c2_narika_H1_1328329c:
 
     # "Narika increases her pace, she's really into it now. The spell is now giving you a close-up view, and you wonder how it decides on an angle."
-    "Narika increases her pace, she's really into it now. The spell is now giving you a close-up view, and you wonder how it decides on an angle."
+    "娜丽卡加快了速度，她现在真的全神贯注了。魔法现在让你近距离观察，你好奇它是如何决定角度的。"
 
 # game/BKchapter2.rpy:6498
 translate chinese_simplified c2_narika_H1_84207d62:
@@ -12742,7 +12742,7 @@ translate chinese_simplified c2_narika_H1_a9119d36:
 translate chinese_simplified c2_narika_H1_ad7ad564:
 
     # narika "Comiiiing!!!" with vpunch
-    narika "Comiiiing!!!" with vpunch
+    narika "来了！！！" with vpunch
 
 # game/BKchapter2.rpy:6519
 translate chinese_simplified c2_narika_H1_e0ab363e:
@@ -12772,7 +12772,7 @@ translate chinese_simplified c2_narika_H1_15a08e63:
 translate chinese_simplified c2_narika_H1_1403faf8:
 
     # narika sad "Well, more like satisfactory."
-    narika sad "Well, more like satisfactory."
+    narika sad "嗯，更像是令人满意。"
 
 # game/BKchapter2.rpy:6532
 translate chinese_simplified c2_narika_H1_34f33734:
@@ -12784,13 +12784,13 @@ translate chinese_simplified c2_narika_H1_34f33734:
 translate chinese_simplified c2_narika_H1_fb38562b:
 
     # narika blush "Where did I hide that damn thing... Ah, here."
-    narika blush "Where did I hide that damn thing... Ah, here."
+    narika blush "我把那该死的东西藏哪儿了……啊，找到了。"
 
 # game/BKchapter2.rpy:6540
 translate chinese_simplified c2_narika_H1_72dc30ec:
 
     # narika blush "Now, this should be better! Just like a real man's... Thing."
-    narika blush "Now, this should be better! Just like a real man's... Thing."
+    narika blush "现在这样就好多了！这才像个真正的男人……该有的样子。"
 
 # game/BKchapter2.rpy:6544
 translate chinese_simplified c2_narika_H1_cfeee2fa:
@@ -12820,7 +12820,7 @@ translate chinese_simplified c2_narika_H1_4d17bdf3:
 translate chinese_simplified c2_narika_H1_edec10e6:
 
     # you "(Rustic?!?)" with vpunch
-    you "(Rustic?!?)" with vpunch
+    you "（乡村？！？）" with vpunch
 
 # game/BKchapter2.rpy:6555
 translate chinese_simplified c2_narika_H1_9e78c264:
@@ -12838,7 +12838,7 @@ translate chinese_simplified c2_narika_H1_c3218eef:
 translate chinese_simplified c2_narika_H1_e2de3ed5:
 
     # narika "He wants to marry us!" with vpunch
-    narika "He wants to marry us!" with vpunch
+    narika "他想娶我们！" with vpunch
 
 # game/BKchapter2.rpy:6561
 translate chinese_simplified c2_narika_H1_2d3d9f6a:
@@ -12862,7 +12862,7 @@ translate chinese_simplified c2_narika_H1_1a981a43:
 translate chinese_simplified c2_narika_H1_a4b7e0d1:
 
     # you "(Me? Old?)" with vpunch
-    you "(Me? Old?)" with vpunch
+    you "（我？老了吗？）" with vpunch
 
 # game/BKchapter2.rpy:6570
 translate chinese_simplified c2_narika_H1_bc11a361:
@@ -12874,13 +12874,13 @@ translate chinese_simplified c2_narika_H1_bc11a361:
 translate chinese_simplified c2_narika_H1_826974ea:
 
     # you "(Hey!)" with vpunch
-    you "(Hey!)" with vpunch
+    you "（嘿！）" with vpunch
 
 # game/BKchapter2.rpy:6577
 translate chinese_simplified c2_narika_H1_a51b16d1:
 
     # "*WHIZZ*"
-    "*WHIZZ*"
+    "*呼啸*"
 
 # game/BKchapter2.rpy:6579
 translate chinese_simplified c2_narika_H1_eca93a6d:
@@ -12892,13 +12892,13 @@ translate chinese_simplified c2_narika_H1_eca93a6d:
 translate chinese_simplified c2_narika_H1_05984940:
 
     # "Her love juice is sloshing out now, as she pushes the dildo into her tight virgin hole."
-    "Her love juice is sloshing out now, as she pushes the dildo into her tight virgin hole."
+    "她将假阳具插入自己紧致的处女穴时，她的爱液正汩汩流出。"
 
 # game/BKchapter2.rpy:6583
 translate chinese_simplified c2_narika_H1_990861c5:
 
     # "She plays with her nipples at the same time, biting her lips as the dildo inches deeper inside. Unknowingly she's giving you a hell of a peep show."
-    "She plays with her nipples at the same time, biting her lips as the dildo inches deeper inside. Unknowingly she's giving you a hell of a peep show."
+    "她一边玩弄着自己的乳头，一边咬着嘴唇，任由假阳具一点点深入体内。她浑然不觉地为你上演了一场精彩绝伦的偷窥秀。"
 
 # game/BKchapter2.rpy:6585
 translate chinese_simplified c2_narika_H1_38210081:
@@ -12916,7 +12916,7 @@ translate chinese_simplified c2_narika_H1_268d3678:
 translate chinese_simplified c2_narika_H1_78f48177:
 
     # you "(Who is she calling uneducated...)" with vpunch
-    you "(Who is she calling uneducated...)" with vpunch
+    you "（她到底在说谁没受过教育……）" with vpunch
 
 # game/BKchapter2.rpy:6591
 translate chinese_simplified c2_narika_H1_32d46996:
@@ -12928,7 +12928,7 @@ translate chinese_simplified c2_narika_H1_32d46996:
 translate chinese_simplified c2_narika_H1_38b77224:
 
     # "*WHIIIZZ*" with hpunch
-    "*WHIIIZZ*" with hpunch
+    "*嗖*" with hpunch
 
 # game/BKchapter2.rpy:6600
 translate chinese_simplified c2_narika_H1_5baa0f03:
@@ -12946,13 +12946,13 @@ translate chinese_simplified c2_narika_H1_f42c8f96:
 translate chinese_simplified c2_narika_H1_5b3ccf4c:
 
     # "She is furiously shaking the dildo around sideways, now, trying to stimulate every part of her cunt."
-    "She is furiously shaking the dildo around sideways, now, trying to stimulate every part of her cunt."
+    "她现在正疯狂地左右摇晃着假阳具，试图刺激她阴道的每一部分。"
 
 # game/BKchapter2.rpy:6608
 translate chinese_simplified c2_narika_H1_7b01afdf:
 
     # "Love juice splashes around as she squeezes her breasts hard."
-    "Love juice splashes around as she squeezes her breasts hard."
+    "她用力挤压乳房，爱液四溅。"
 
 # game/BKchapter2.rpy:6610
 translate chinese_simplified c2_narika_H1_3e89c5c6:
@@ -12964,7 +12964,7 @@ translate chinese_simplified c2_narika_H1_3e89c5c6:
 translate chinese_simplified c2_narika_H1_002cc124:
 
     # "*WHIIIIIIZZ*" with hpunch
-    "*WHIIIIIIZZ*" with hpunch
+    "*嗖嗖嗖*" with hpunch
 
 # game/BKchapter2.rpy:6618
 translate chinese_simplified c2_narika_H1_2f8e2885:
@@ -12976,13 +12976,13 @@ translate chinese_simplified c2_narika_H1_2f8e2885:
 translate chinese_simplified c2_narika_H1_4caa7249:
 
     # narika "AAAAAAAAAH!!!" with vpunch
-    narika "AAAAAAAAAH!!!" with vpunch
+    narika "啊啊啊啊啊啊！！！" with vpunch
 
 # game/BKchapter2.rpy:6625
 translate chinese_simplified c2_narika_H1_7e370681:
 
     # "Narika squirts hard as she angles the dildo just right to hit her G-spot. Her love juice splashes out so hard that even on the other side of the mirror, you almost feel like dodging."
-    "Narika squirts hard as she angles the dildo just right to hit her G-spot. Her love juice splashes out so hard that even on the other side of the mirror, you almost feel like dodging."
+    "娜丽卡调整好假阳具的角度，精准地刺激到G点，随即喷出大量爱液。她的爱液喷溅得如此猛烈，即使隔着镜子，你也几乎会想要躲开。"
 
 # game/BKchapter2.rpy:6629
 translate chinese_simplified c2_narika_H1_990f5b04:
@@ -13018,7 +13018,7 @@ translate chinese_simplified c2_narika_H1_c7ed90fb:
 translate chinese_simplified c2_narika_H1_e909c520:
 
     # suzume "(No, don't touch that circle!!!)" with vpunch
-    suzume "(No, don't touch that circle!!!)" with vpunch
+    suzume "（不，别碰那个圆圈！！！）" with vpunch
 
 # game/BKchapter2.rpy:6642
 translate chinese_simplified c2_narika_H1_b88561d2:
@@ -13036,7 +13036,7 @@ translate chinese_simplified c2_narika_H1_a9c32b71:
 translate chinese_simplified c2_narika_H1_998cefc1:
 
     # suzume doubt "Oops."
-    suzume doubt "Oops."
+    suzume doubt "糟糕。"
 
 # game/BKchapter2.rpy:6651
 translate chinese_simplified c2_narika_H1_8850625e:
@@ -13054,7 +13054,7 @@ translate chinese_simplified c2_narika_H1_8205d3b8:
 translate chinese_simplified c2_narika_H1_3ce8b017:
 
     # narika "AAAAH! There's a ghost here with me!" with vpunch
-    narika "AAAAH! There's a ghost here with me!" with vpunch
+    narika "啊啊啊！这里有个鬼！" with vpunch
 
 # game/BKchapter2.rpy:6659
 translate chinese_simplified c2_narika_H1_418eb27e:
@@ -13090,7 +13090,7 @@ translate chinese_simplified c2_narika_H1_69ddc5f5:
 translate chinese_simplified c2_narika_H1_6bb9499f:
 
     # narika "You WHAAAAT?!?" with vpunch
-    narika "You WHAAAAT?!?" with vpunch
+    narika "你说什么？！" with vpunch
 
 # game/BKchapter2.rpy:6673
 translate chinese_simplified c2_narika_H1_886f18bb:
@@ -13102,7 +13102,7 @@ translate chinese_simplified c2_narika_H1_886f18bb:
 translate chinese_simplified c2_narika_H1_d6860788:
 
     # narika angry "UWAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAH!!!!!!!!!!!" with vpunch
-    narika angry "UWAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAH!!!!!!!!!!!" with vpunch
+    narika angry "哇啊啊啊啊啊啊啊啊啊啊啊啊啊！！！！！！！！！" with vpunch
 
 # game/BKchapter2.rpy:6687
 translate chinese_simplified c2_narika_H1_354901b9:
@@ -13150,7 +13150,7 @@ translate chinese_simplified c2_narika_H1_3ec5f869:
 translate chinese_simplified intercept_mizuki_bd667b40:
 
     # "The ninja escapes you and flies off towards the beach. You frantically run after her, only to find her crouched in the water, calmly waiting for you."
-    "The ninja escapes you and flies off towards the beach. You frantically run after her, only to find her crouched in the water, calmly waiting for you."
+    "忍者摆脱了你的追捕，飞向海滩。你疯狂地追赶她，却发现她正蹲在水中，平静地等着你。"
 
 # game/BKchapter2.rpy:6716
 translate chinese_simplified intercept_mizuki_5e7c08b7:
@@ -13162,13 +13162,13 @@ translate chinese_simplified intercept_mizuki_5e7c08b7:
 translate chinese_simplified intercept_mizuki_849b7452:
 
     # mizuki normal "What do you want?"
-    mizuki normal "What do you want?"
+    mizuki normal "你想要什么？"
 
 # game/BKchapter2.rpy:6725
 translate chinese_simplified intercept_mizuki_2d76a36d:
 
     # suzume doubt "You got her! But wait... She's no old lady!"
-    suzume doubt "You got her! But wait... She's no old lady!"
+    suzume doubt "你抓到她了！但是等等……她可不是老太太！"
 
 # game/BKchapter2.rpy:6727
 translate chinese_simplified intercept_mizuki_34552621:
@@ -13240,7 +13240,7 @@ translate chinese_simplified intercept_mizuki_d136fdde:
 translate chinese_simplified intercept_mizuki_0275a62a:
 
     # mizuki happy "Fufufu, aren't you optimistic... Cute."
-    mizuki happy "Fufufu, aren't you optimistic... Cute."
+    mizuki happy "呵呵，你真乐观……真可爱。"
 
 # game/BKchapter2.rpy:6764
 translate chinese_simplified intercept_mizuki_e623884d:
@@ -13270,7 +13270,7 @@ translate chinese_simplified intercept_mizuki_8044f0e7:
 translate chinese_simplified intercept_mizuki_034efb87:
 
     # mizuki angry "What am I doing? What are {i}you{/i} doing, aside from running after respectable ladies, waving a hammer like a maniac?"
-    mizuki angry "What am I doing? What are {i}you{/i} doing, aside from running after respectable ladies, waving a hammer like a maniac?"
+    mizuki angry "我到底在干什么？除了像疯子一样挥舞着锤子追逐淑女之外，你又在干什么？"
 
 # game/BKchapter2.rpy:6776
 translate chinese_simplified intercept_mizuki_13a7e82b:
@@ -13288,19 +13288,19 @@ translate chinese_simplified intercept_mizuki_8a3ed154:
 translate chinese_simplified intercept_mizuki_7d05653b:
 
     # "You try to sound menacing, but you're only too aware that brandishing a toy hammer is not helping your cause."
-    "You try to sound menacing, but you're only too aware that brandishing a toy hammer is not helping your cause."
+    "你试图让自己听起来很凶狠，但你也很清楚，挥舞着玩具锤子对你的处境没有任何帮助。"
 
 # game/BKchapter2.rpy:6784
 translate chinese_simplified intercept_mizuki_24b4786f:
 
     # mizuki happy "A world of trouble? Oh, my dear boy... I've been courting trouble for longer than any man alive can know."
-    mizuki happy "A world of trouble? Oh, my dear boy... I've been courting trouble for longer than any man alive can know."
+    mizuki happy "麻烦缠身？哦，我的宝贝……我惹麻烦的时间比任何一个活着的人所能想象的都要长。"
 
 # game/BKchapter2.rpy:6786
 translate chinese_simplified intercept_mizuki_9ed4f051:
 
     # mizuki normal "I'm going to give you a warning of my own... I don't indulge curiosity for curiosity's sake. And the people I find snooping do not tend to live long."
-    mizuki normal "I'm going to give you a warning of my own... I don't indulge curiosity for curiosity's sake. And the people I find snooping do not tend to live long."
+    mizuki normal "我得事先警告你……我不会为了好奇而好奇。而且，那些被我发现偷窥的人，往往都活不长。"
 
 # game/BKchapter2.rpy:6788
 translate chinese_simplified intercept_mizuki_ce5ceeee:
@@ -13348,7 +13348,7 @@ translate chinese_simplified intercept_mizuki_f53825c8:
 translate chinese_simplified intercept_mizuki_b595698e:
 
     # mizuki angry "Go now, before I decide keeping you breathing is a waste of my time."
-    mizuki angry "Go now, before I decide keeping you breathing is a waste of my time."
+    mizuki angry "走吧，趁我还没觉得让你继续活下去是在浪费我的时间。"
 
 # game/BKchapter2.rpy:6817
 translate chinese_simplified intercept_mizuki_246e1514:
@@ -13360,13 +13360,13 @@ translate chinese_simplified intercept_mizuki_246e1514:
 translate chinese_simplified intercept_mizuki_955a152e:
 
     # suzume normal "Magic!" with vpunch
-    suzume normal "Magic!" with vpunch
+    suzume normal "魔法！" with vpunch
 
 # game/BKchapter2.rpy:6829
 translate chinese_simplified intercept_mizuki_c8f3e2ac:
 
     # "All of a sudden, Mizuki's eyes glow and water rises into the air around her, solidifying into an ice barrier."
-    "All of a sudden, Mizuki's eyes glow and water rises into the air around her, solidifying into an ice barrier."
+    "突然间，瑞希的眼睛发出光芒，水汽在她周围升腾而起，凝结成一道冰墙。"
 
 # game/BKchapter2.rpy:6831
 translate chinese_simplified intercept_mizuki_9e99f5e5:
@@ -13378,19 +13378,19 @@ translate chinese_simplified intercept_mizuki_9e99f5e5:
 translate chinese_simplified intercept_mizuki_dc82a41a:
 
     # "Conjuring a fire spell to turn your staff into a blowtorch, you start melting the thick ice. After you're done, you cannot see the Kunoichi anywhere."
-    "Conjuring a fire spell to turn your staff into a blowtorch, you start melting the thick ice. After you're done, you cannot see the Kunoichi anywhere."
+    "你施展火焰魔法，将法杖变成喷灯，开始融化厚厚的冰层。完成后，你发现女忍者踪迹全无。"
 
 # game/BKchapter2.rpy:6841
 translate chinese_simplified intercept_mizuki_a7e4f3a7:
 
     # "Hacking at the ice barrier, you slowly manage to break it down as the ice weakens. But once you're done, there is no trace of the Kunoichi."
-    "Hacking at the ice barrier, you slowly manage to break it down as the ice weakens. But once you're done, there is no trace of the Kunoichi."
+    "你挥刀砍击冰层，随着冰层逐渐减弱，你慢慢地将其击碎。但一切结束后，女忍者却消失得无影无踪。"
 
 # game/BKchapter2.rpy:6845
 translate chinese_simplified intercept_mizuki_52d42156:
 
     # suzume doubt "She vanished... She just... vanished. I cannot sense her anymore."
-    suzume doubt "She vanished... She just... vanished. I cannot sense her anymore."
+    suzume doubt "她消失了……她就这么……消失了。我再也感觉不到她的存在了。"
 
 # game/BKchapter2.rpy:6847
 translate chinese_simplified intercept_mizuki_8040b936:
@@ -13408,13 +13408,13 @@ translate chinese_simplified intercept_mizuki_c7713bb2:
 translate chinese_simplified intercept_mizuki_9262751b:
 
     # "Mizuki runs towards the seaside, but you and Suzume get in her way before she has a chance to reach the water."
-    "Mizuki runs towards the seaside, but you and Suzume get in her way before she has a chance to reach the water."
+    "美月朝着海边跑去，但你和铃芽在她有机会到达水边之前挡住了她的去路。"
 
 # game/BKchapter2.rpy:6862
 translate chinese_simplified intercept_mizuki_4c7ad531:
 
     # mizuki normal "Phew... Normally I would have no problem blasting you two out of the way, but I feel my magic is all drained out..."
-    mizuki normal "Phew... Normally I would have no problem blasting you two out of the way, but I feel my magic is all drained out..."
+    mizuki normal "呼……平时我轻而易举就能把你们两个干掉，但我感觉我的魔力都耗尽了……"
 
 # game/BKchapter2.rpy:6864
 translate chinese_simplified intercept_mizuki_b7a96a09:
@@ -13438,7 +13438,7 @@ translate chinese_simplified intercept_mizuki_c56a6e30:
 translate chinese_simplified intercept_mizuki_8df8986b:
 
     # mizuki happy "At your mercy! Don't overestimate your advantage. I have more tricks up my kimono sleeve."
-    mizuki happy "At your mercy! Don't overestimate your advantage. I have more tricks up my kimono sleeve."
+    mizuki happy "任你宰割！别高估自己的优势。我还有更多绝招等着你。"
 
 # game/BKchapter2.rpy:6874
 translate chinese_simplified intercept_mizuki_827e71e4:
@@ -13516,13 +13516,13 @@ translate chinese_simplified intercept_mizuki_68e1cd2b:
 translate chinese_simplified intercept_mizuki_5843248a:
 
     # "She strikes a serious tone."
-    "She strikes a serious tone."
+    "她语气严肃。"
 
 # game/BKchapter2.rpy:6903
 translate chinese_simplified intercept_mizuki_f58a685c:
 
     # mizuki sad "Have you ever heard the saying, 'Revenge is a dish best served cold'?"
-    mizuki sad "Have you ever heard the saying, 'Revenge is a dish best served cold'?"
+    mizuki sad "你听过“复仇是最好的冷盘”这句谚语吗？"
 
 # game/BKchapter2.rpy:6905
 translate chinese_simplified intercept_mizuki_7880cc74:
@@ -13588,7 +13588,7 @@ translate chinese_simplified intercept_mizuki_93954897:
 translate chinese_simplified intercept_mizuki_a499be16:
 
     # mizuki angry "A 'slight'? You think I would care about a slight? *hiss*"
-    mizuki angry "A 'slight'? You think I would care about a slight? *hiss*"
+    mizuki angry "“轻视”？你觉得我会在乎这点轻视吗？*嘶*"
 
 # game/BKchapter2.rpy:6934
 translate chinese_simplified intercept_mizuki_7f085d1b:
@@ -13618,13 +13618,13 @@ translate chinese_simplified intercept_mizuki_9b051e42:
 translate chinese_simplified intercept_mizuki_6cb9f7fd:
 
     # "She scoffs."
-    "She scoffs."
+    "她嗤之以鼻。"
 
 # game/BKchapter2.rpy:6947
 translate chinese_simplified intercept_mizuki_2938c805:
 
     # mizuki angry "Oh, aren't you Mister Goody-two-shoes! You have no idea what I've been through. None. *mad*"
-    mizuki angry "Oh, aren't you Mister Goody-two-shoes! You have no idea what I've been through. None. *mad*"
+    mizuki angry "哦，你真是个伪善先生！你根本不知道我经历了什么。一点都不知道。*生气*"
 
 # game/BKchapter2.rpy:6949
 translate chinese_simplified intercept_mizuki_f6ff4dbd:
@@ -13648,19 +13648,19 @@ translate chinese_simplified intercept_mizuki_b9849faf:
 translate chinese_simplified intercept_mizuki_8b1c2ce0:
 
     # mizuki sad "That's right. You don't know my circumstances. *sad*"
-    mizuki sad "That's right. You don't know my circumstances. *sad*"
+    mizuki sad "没错。你不了解我的处境。*难过*"
 
 # game/BKchapter2.rpy:6962
 translate chinese_simplified intercept_mizuki_fb8e92b9:
 
     # mizuki normal "But if it makes you feel better, this is not about a petty dispute. These people destroyed everything I ever held dear."
-    mizuki normal "But if it makes you feel better, this is not about a petty dispute. These people destroyed everything I ever held dear."
+    mizuki normal "但如果你觉得这样能好受些，我要告诉你，这并非一场鸡毛蒜皮的小纠纷。这些人毁掉了我珍视的一切。"
 
 # game/BKchapter2.rpy:6964
 translate chinese_simplified intercept_mizuki_5447414c:
 
     # mizuki sad "There is no healing, no way out, no forgiveness. Not even time will help... Gods know I've tried."
-    mizuki sad "There is no healing, no way out, no forgiveness. Not even time will help... Gods know I've tried."
+    mizuki sad "没有治愈的可能，没有出路，没有宽恕。就连时间也无济于事……上帝知道我已尽力。"
 
 # game/BKchapter2.rpy:6966
 translate chinese_simplified intercept_mizuki_959347d9:
@@ -13672,7 +13672,7 @@ translate chinese_simplified intercept_mizuki_959347d9:
 translate chinese_simplified intercept_mizuki_e2dbe57f:
 
     # mizuki normal "You don't need to know the details. But know that some people - or rather a certain family - have badly wronged me. And I am here to repay them with extreme prejudice."
-    mizuki normal "You don't need to know the details. But know that some people - or rather a certain family - have badly wronged me. And I am here to repay them with extreme prejudice."
+    mizuki normal "你无需了解细节。但要知道，有些人——或者更确切地说，是某个家族——曾深深地伤害过我。而我今天来到这里，就是要以最残酷的方式报复他们。"
 
 # game/BKchapter2.rpy:6970
 translate chinese_simplified intercept_mizuki_5e59ce3f:
@@ -13750,7 +13750,7 @@ translate chinese_simplified intercept_mizuki_47b43daa:
 translate chinese_simplified intercept_mizuki_018b41f1:
 
     # mizuki happy "Nice theory. Perhaps I'm just biding my time."
-    mizuki happy "Nice theory. Perhaps I'm just biding my time."
+    mizuki happy "理论不错。或许我只是在等待时机。"
 
 # game/BKchapter2.rpy:7007
 translate chinese_simplified intercept_mizuki_3a1234e9:
@@ -13762,7 +13762,7 @@ translate chinese_simplified intercept_mizuki_3a1234e9:
 translate chinese_simplified intercept_mizuki_0492a5e9:
 
     # mizuki normal "There is one thing I need, but... You don't strike me as the right people to ask."
-    mizuki normal "There is one thing I need, but... You don't strike me as the right people to ask."
+    mizuki normal "我需要一件事，但是……我觉得问你们可能不太合适。"
 
 # game/BKchapter2.rpy:7011
 translate chinese_simplified intercept_mizuki_cd337f88:
@@ -13780,7 +13780,7 @@ translate chinese_simplified intercept_mizuki_8679ae91:
 translate chinese_simplified intercept_mizuki_4c11cee1:
 
     # "Her face hardens."
-    "Her face hardens."
+    "她脸色变得严肃起来。"
 
 # game/BKchapter2.rpy:7021
 translate chinese_simplified intercept_mizuki_e3cfbf60:
@@ -13798,13 +13798,13 @@ translate chinese_simplified intercept_mizuki_73bead26:
 translate chinese_simplified intercept_mizuki_82f14ab0:
 
     # mizuki happy "Fufufu... Magic isn't everything, dear boy..."
-    mizuki happy "Fufufu... Magic isn't everything, dear boy..."
+    mizuki happy "呵呵……魔法并非万能，亲爱的孩子……"
 
 # game/BKchapter2.rpy:7029
 translate chinese_simplified intercept_mizuki_597478f6:
 
     # "The air starts undulating, as if you were seeing a mirage."
-    "The air starts undulating, as if you were seeing a mirage."
+    "空气开始波动，仿佛看到了海市蜃楼。"
 
 # game/BKchapter2.rpy:7031
 translate chinese_simplified intercept_mizuki_4beb20a5:
@@ -13816,7 +13816,7 @@ translate chinese_simplified intercept_mizuki_4beb20a5:
 translate chinese_simplified intercept_mizuki_c1610737:
 
     # "Mizuki's body seems to dissolve, and the daylight gets weird. You blink, and suddenly she's gone."
-    "Mizuki's body seems to dissolve, and the daylight gets weird. You blink, and suddenly she's gone."
+    "瑞希的身体仿佛消融了，日光也变得诡异起来。你眨一下眼，她就突然消失了。"
 
 # game/BKchapter2.rpy:7037
 translate chinese_simplified intercept_mizuki_a747aa7c:
@@ -13828,7 +13828,7 @@ translate chinese_simplified intercept_mizuki_a747aa7c:
 translate chinese_simplified intercept_mizuki_61c37508:
 
     # "The only thing left behind is her kimono, floating off like a kite in the ocean wind."
-    "The only thing left behind is her kimono, floating off like a kite in the ocean wind."
+    "唯一留下的只有她的和服，像风筝一样在海风中飘走。"
 
 # game/BKchapter2.rpy:7043
 translate chinese_simplified intercept_mizuki_668fb825:
@@ -13864,7 +13864,7 @@ translate chinese_simplified intercept_mizuki_b364bf8b:
 translate chinese_simplified intercept_mizuki_c9909d85:
 
     # "Whilst you were talking, Mizuki's kimono got carried off by the strong seaside wind, and landed far away in the water."
-    "Whilst you were talking, Mizuki's kimono got carried off by the strong seaside wind, and landed far away in the water."
+    "在你说话的时候，瑞希的和服被强劲的海风吹走了，落入了远处的海水中。"
 
 # game/BKchapter2.rpy:7059
 translate chinese_simplified intercept_mizuki_24176847:
@@ -13894,19 +13894,19 @@ translate chinese_simplified intercept_mizuki_a6762bf2:
 translate chinese_simplified intercept_mizuki_b6029a1b:
 
     # "Quickly dropping off your equipment, you leap into the water and swim off after the floating kimono."
-    "Quickly dropping off your equipment, you leap into the water and swim off after the floating kimono."
+    "你迅速放下装备，跳入水中，追着漂浮的和服游去。"
 
 # game/BKchapter2.rpy:7079
 translate chinese_simplified intercept_mizuki_a6b7b08d:
 
     # "The sea is more treacherous than you imagined, and you are glad you are a good swimmer."
-    "The sea is more treacherous than you imagined, and you are glad you are a good swimmer."
+    "大海比你想象的更危险，你很庆幸自己是个游泳好手。"
 
 # game/BKchapter2.rpy:7081
 translate chinese_simplified intercept_mizuki_ea22a59a:
 
     # "You reach the kimono before it gets too far away from the shore, and swim back, clutching it in your hand."
-    "You reach the kimono before it gets too far away from the shore, and swim back, clutching it in your hand."
+    "你趁着和服还没游离岸边太远，游了回去，手里紧紧抓着和服。"
 
 # game/BKchapter2.rpy:7085
 translate chinese_simplified intercept_mizuki_1b51ec13:
@@ -13924,7 +13924,7 @@ translate chinese_simplified intercept_mizuki_c2bb2b4c:
 translate chinese_simplified intercept_mizuki_8b222c76:
 
     # "You swim hard to reach the kimono, but it seems to stay ahead of you no matter what you do. Soon, you feel your stamina diminish."
-    "You swim hard to reach the kimono, but it seems to stay ahead of you no matter what you do. Soon, you feel your stamina diminish."
+    "你拼命游向和服，但无论你做什么，它似乎总能游在你前面。很快，你感到体力逐渐耗尽。"
 
 # game/BKchapter2.rpy:7099
 translate chinese_simplified intercept_mizuki_4a042bc9:
@@ -13936,13 +13936,13 @@ translate chinese_simplified intercept_mizuki_4a042bc9:
 translate chinese_simplified intercept_mizuki_014db8df:
 
     # "The current is against you, but you remember from your time as a child swimming in Borgo's harbor that it is useless to struggle against it."
-    "The current is against you, but you remember from your time as a child swimming in Borgo's harbor that it is useless to struggle against it."
+    "水流与你逆流而上，但你还记得小时候在博尔戈港游泳时，与水流对抗是徒劳的。"
 
 # game/BKchapter2.rpy:7103
 translate chinese_simplified intercept_mizuki_36caa177:
 
     # "Swimming laterally and saving your strength, you eventually find a spot where the waves can carry you back towards the shore."
-    "Swimming laterally and saving your strength, you eventually find a spot where the waves can carry you back towards the shore."
+    "横向游动并保存体力，你最终会找到一个地方，让海浪把你带回岸边。"
 
 # game/BKchapter2.rpy:7105
 translate chinese_simplified intercept_mizuki_dca440ed:
@@ -13954,13 +13954,13 @@ translate chinese_simplified intercept_mizuki_dca440ed:
 translate chinese_simplified intercept_mizuki_0663510a:
 
     # "You have lost track of the kimono, but at least you came back without adverse effects."
-    "You have lost track of the kimono, but at least you came back without adverse effects."
+    "你把和服弄丢了，但至少你平安回来了。"
 
 # game/BKchapter2.rpy:7112
 translate chinese_simplified intercept_mizuki_35ef57f0:
 
     # "Turning around, you realize the shore is a lot farther than you thought it would be. It seems the current is carrying you out to sea."
-    "Turning around, you realize the shore is a lot farther than you thought it would be. It seems the current is carrying you out to sea."
+    "转身一看，你才发现海岸线比你想象的要远得多。看来海流正把你带向大海深处。"
 
 # game/BKchapter2.rpy:7114
 translate chinese_simplified intercept_mizuki_8040b936_1:
@@ -13972,7 +13972,7 @@ translate chinese_simplified intercept_mizuki_8040b936_1:
 translate chinese_simplified intercept_mizuki_712e02e7:
 
     # "Attempting to swim back, you have a hard time making enough progress. Your forces are almost exhausted..."
-    "Attempting to swim back, you have a hard time making enough progress. Your forces are almost exhausted..."
+    "你试图游回去，却发现很难取得足够的进展。你的体力几乎耗尽了……"
 
 # game/BKchapter2.rpy:7118
 translate chinese_simplified intercept_mizuki_d200ddf0:
@@ -13984,13 +13984,13 @@ translate chinese_simplified intercept_mizuki_d200ddf0:
 translate chinese_simplified intercept_mizuki_8849bbc5:
 
     # "You realize you kept your purse with you. There is no choice but to let it go."
-    "You realize you kept your purse with you. There is no choice but to let it go."
+    "你意识到自己把钱包带在身上了。别无选择，只能放弃它。"
 
 # game/BKchapter2.rpy:7130
 translate chinese_simplified intercept_mizuki_d1ccafa9:
 
     # "You have lost [lost] gold."
-    "You have lost [lost] gold."
+    "你丢失了黄金。"
 
 # game/BKchapter2.rpy:7132
 translate chinese_simplified intercept_mizuki_1396f9c9:
@@ -14002,13 +14002,13 @@ translate chinese_simplified intercept_mizuki_1396f9c9:
 translate chinese_simplified intercept_mizuki_13874eea:
 
     # "*SMOOCH*"
-    "*SMOOCH*"
+    "*亲亲*"
 
 # game/BKchapter2.rpy:7142
 translate chinese_simplified intercept_mizuki_e1377cd2:
 
     # "When you come back to your senses, you are laying down on the sand, with Suzume standing by your side doing mouth-to-mouth resuscitation."
-    "When you come back to your senses, you are laying down on the sand, with Suzume standing by your side doing mouth-to-mouth resuscitation."
+    "当你恢复意识时，你正躺在沙滩上，铃芽站在你身边，对你进行口对口人工呼吸。"
 
 # game/BKchapter2.rpy:7144
 translate chinese_simplified intercept_mizuki_bbc5be04:
@@ -14044,7 +14044,7 @@ translate chinese_simplified intercept_mizuki_46146746:
 translate chinese_simplified intercept_mizuki_0f8346eb:
 
     # "You go back to the brothel, exhausted. You have lost all your actions for today."
-    "You go back to the brothel, exhausted. You have lost all your actions for today."
+    "你筋疲力尽地回到妓院。你今天的所有行动都白费了。"
 
 # game/BKchapter2.rpy:7161
 translate chinese_simplified intercept_mizuki_0c65b079:
@@ -14062,7 +14062,7 @@ translate chinese_simplified intercept_mizuki_460485ec:
 translate chinese_simplified intercept_mizuki_111e8b85:
 
     # "Mizuki's ice barrier has just melted and she is down on the ground, exhausted."
-    "Mizuki's ice barrier has just melted and she is down on the ground, exhausted."
+    "瑞希的冰屏障刚刚融化，她筋疲力尽地倒在地上。"
 
 # game/BKchapter2.rpy:7176
 translate chinese_simplified intercept_mizuki_2a6032c2:
@@ -14074,7 +14074,7 @@ translate chinese_simplified intercept_mizuki_2a6032c2:
 translate chinese_simplified intercept_mizuki_c6fcff02:
 
     # "Mist forms around Mizuki, and her body become translucent."
-    "Mist forms around Mizuki, and her body become translucent."
+    "水树周围弥漫着雾气，她的身体变得半透明。"
 
 # game/BKchapter2.rpy:7183
 translate chinese_simplified intercept_mizuki_88dcca5c:
@@ -14092,7 +14092,7 @@ translate chinese_simplified intercept_mizuki_e78477bb:
 translate chinese_simplified intercept_mizuki_73989dd4:
 
     # "Suzume sweeps in from behind Mizuki and kicks her at the base of the head, interrupting her."
-    "Suzume sweeps in from behind Mizuki and kicks her at the base of the head, interrupting her."
+    "铃芽从瑞希身后猛地一脚踢在她的后脑勺上，打断了她的话。"
 
 # game/BKchapter2.rpy:7192
 translate chinese_simplified intercept_mizuki_8c29632d:
@@ -14104,7 +14104,7 @@ translate chinese_simplified intercept_mizuki_8c29632d:
 translate chinese_simplified intercept_mizuki_9f2108ba:
 
     # "Mizuki slumps to the ground, finally unconscious and defeated."
-    "Mizuki slumps to the ground, finally unconscious and defeated."
+    "瑞希瘫倒在地，最终失去知觉，彻底败北。"
 
 # game/BKchapter2.rpy:7203
 translate chinese_simplified intercept_mizuki_1c076de9:
@@ -14122,7 +14122,7 @@ translate chinese_simplified intercept_mizuki_6451f53d:
 translate chinese_simplified mizuki_defeat_menu_413f6c57:
 
     # suzume "What should we do with her?" nointeract
-    suzume "What should we do with her?" nointeract
+    suzume "我们该如何处置她？" nointeract
 
 # game/BKchapter2.rpy:7214
 translate chinese_simplified mizuki_defeat_menu_09547255:
@@ -14158,7 +14158,7 @@ translate chinese_simplified mizuki_defeat_menu_41cb26ec:
 translate chinese_simplified mizuki_defeat_menu_0d880083:
 
     # "Wait for Suzume to report on how it went."
-    "Wait for Suzume to report on how it went."
+    "等铃芽汇报情况再说。"
 
 # game/BKchapter2.rpy:7243
 translate chinese_simplified mizuki_defeat_menu_38fe1661:
@@ -14176,7 +14176,7 @@ translate chinese_simplified mizuki_defeat_menu_92e6dfd5:
 translate chinese_simplified mizuki_defeat_menu_0f630cf3:
 
     # "You shamelessly eye Mizuki's heaving breasts as she lays unconscious, with a glint in your eye."
-    "You shamelessly eye Mizuki's heaving breasts as she lays unconscious, with a glint in your eye."
+    "你肆无忌惮地盯着昏迷不醒的瑞希起伏的胸部，眼中闪过一丝邪光。"
 
 # game/BKchapter2.rpy:7253
 translate chinese_simplified mizuki_defeat_menu_ec56b9ef:
@@ -14224,7 +14224,7 @@ translate chinese_simplified mizuki_defeat_menu_b4600862:
 translate chinese_simplified mizuki_defeat_menu_a1b5b9b5:
 
     # "Wait until tonight to 'interrogate' Mizuki at your brothel."
-    "Wait until tonight to 'interrogate' Mizuki at your brothel."
+    "等到今晚再去你的妓院“审问”瑞希吧。"
 
 # game/BKchapter2.rpy:7288
 translate chinese_simplified mizuki_defeat_menu_38fe1661_1:
@@ -14242,7 +14242,7 @@ translate chinese_simplified mizuki_defeat_menu_554d3a16:
 translate chinese_simplified mizuki_defeat_menu_0105348c:
 
     # suzume doubt "But boss! After all we went through to capture her?"
-    suzume doubt "But boss! After all we went through to capture her?"
+    suzume doubt "但是老大！我们费了那么大劲才抓到她啊？"
 
 # game/BKchapter2.rpy:7297
 translate chinese_simplified mizuki_defeat_menu_54513643:
@@ -14260,7 +14260,7 @@ translate chinese_simplified mizuki_defeat_menu_2a702ae3:
 translate chinese_simplified mizuki_onsen_fbab7a3a:
 
     # sill happy "Now, this is the last of these towels, all perfectly folded and piled up in the neatest way!"
-    sill happy "Now, this is the last of these towels, all perfectly folded and piled up in the neatest way!"
+    sill happy "这是最后一条毛巾了，它们都折叠得非常整齐，堆放得井井有条！"
 
 # game/BKchapter2.rpy:7314
 translate chinese_simplified mizuki_onsen_d84dcf1b:
@@ -14278,7 +14278,7 @@ translate chinese_simplified mizuki_onsen_6bdfc369:
 translate chinese_simplified mizuki_onsen_0c35b039:
 
     # sill sad "Aaargh..."
-    sill sad "Aaargh..."
+    sill sad "啊……"
 
 # game/BKchapter2.rpy:7320
 translate chinese_simplified mizuki_onsen_c349f0b1:
@@ -14314,7 +14314,7 @@ translate chinese_simplified mizuki_onsen_ef34c35d:
 translate chinese_simplified mizuki_onsen_3277002d:
 
     # "A noise at the other end of the pool takes you out of your reverie."
-    "A noise at the other end of the pool takes you out of your reverie."
+    "泳池另一端传来一阵响动，把你从沉思中拉了出来。"
 
 # game/BKchapter2.rpy:7339
 translate chinese_simplified mizuki_onsen_18e6d96d:
@@ -14326,13 +14326,13 @@ translate chinese_simplified mizuki_onsen_18e6d96d:
 translate chinese_simplified mizuki_onsen_22765529:
 
     # "Your first thought is that some kind of animal may have entered the bath stealthily. You sure hope it isn't a dead raccoon carrying a dumb message."
-    "Your first thought is that some kind of animal may have entered the bath stealthily. You sure hope it isn't a dead raccoon carrying a dumb message."
+    "你首先想到的可能是某种动物偷偷溜进了浴缸。你真心希望它不是一只死浣熊，还带着什么愚蠢的信息。"
 
 # game/BKchapter2.rpy:7345
 translate chinese_simplified mizuki_onsen_b7a6b8bf:
 
     # "Woman" "Fufufufu..."
-    "Woman" "呼呼呼呼……"
+    "女士" "呼呼呼呼……"
 
 # game/BKchapter2.rpy:7347
 translate chinese_simplified mizuki_onsen_b613a16c:
@@ -14344,7 +14344,7 @@ translate chinese_simplified mizuki_onsen_b613a16c:
 translate chinese_simplified mizuki_onsen_0ff71929:
 
     # "You clear your throat."
-    "You clear your throat."
+    "你清了清嗓子。"
 
 # game/BKchapter2.rpy:7351
 translate chinese_simplified mizuki_onsen_54ecf45a:
@@ -14356,13 +14356,13 @@ translate chinese_simplified mizuki_onsen_54ecf45a:
 translate chinese_simplified mizuki_onsen_8ca86cc0:
 
     # "Although it is hard to see through the onsen mist, it seems a woman is lazily bathing at the other end of the pool. She is quite naked, too."
-    "Although it is hard to see through the onsen mist, it seems a woman is lazily bathing at the other end of the pool. She is quite naked, too."
+    "虽然温泉水雾弥漫，难以看清，但似乎有个女人正懒洋洋地在池子另一端泡澡。她一丝不挂。"
 
 # game/BKchapter2.rpy:7357
 translate chinese_simplified mizuki_onsen_ec2ecfc6:
 
     # "Since you occasionally receive female customers, you assume she might be an early patron that managed to slip in."
-    "Since you occasionally receive female customers, you assume she might be an early patron that managed to slip in."
+    "由于你偶尔会接待女顾客，你认为她可能是个偷偷溜进来的早到顾客。"
 
 # game/BKchapter2.rpy:7359
 translate chinese_simplified mizuki_onsen_73d59445:
@@ -14374,7 +14374,7 @@ translate chinese_simplified mizuki_onsen_73d59445:
 translate chinese_simplified mizuki_onsen_ab12ef0d:
 
     # "You blink, and the lady is gone. Not quite believing your eyes, you slowly make your way around the spot where she was sitting."
-    "You blink, and the lady is gone. Not quite believing your eyes, you slowly make your way around the spot where she was sitting."
+    "你眨了眨眼，那位女士就消失了。你简直不敢相信自己的眼睛，慢慢地绕到她刚才坐的地方。"
 
 # game/BKchapter2.rpy:7366
 translate chinese_simplified mizuki_onsen_aceb96eb:
@@ -14386,13 +14386,13 @@ translate chinese_simplified mizuki_onsen_aceb96eb:
 translate chinese_simplified mizuki_onsen_754c5e6f:
 
     # "Hearing a splashing sound behind you, you flip around, surprised."
-    "Hearing a splashing sound behind you, you flip around, surprised."
+    "听到身后传来水花声，你惊讶地转过身。"
 
 # game/BKchapter2.rpy:7375
 translate chinese_simplified mizuki_onsen_b29b92b7:
 
     # "The woman is now sitting right where you were moments before."
-    "The woman is now sitting right where you were moments before."
+    "现在，那位女士就坐在你刚才坐的位置上。"
 
 # game/BKchapter2.rpy:7377
 translate chinese_simplified mizuki_onsen_f8af1f1f:
@@ -14404,13 +14404,13 @@ translate chinese_simplified mizuki_onsen_f8af1f1f:
 translate chinese_simplified mizuki_onsen_24a01f2d:
 
     # "Woman" "Fufufu... Why, don't you recognize me?"
-    "Woman" "呵呵……怎么，你不认识我了吗？"
+    "女士" "呵呵……怎么，你不认识我了吗？"
 
 # game/BKchapter2.rpy:7383
 translate chinese_simplified mizuki_onsen_f44ef01c:
 
     # "Even though it's hard to see her through the mist, her voice sounds familiar."
-    "Even though it's hard to see her through the mist, her voice sounds familiar."
+    "虽然透过迷雾很难看清她，但她的声音听起来很熟悉。"
 
 # game/BKchapter2.rpy:7385
 translate chinese_simplified mizuki_onsen_a2994d47:
@@ -14434,37 +14434,37 @@ translate chinese_simplified mizuki_onsen_47297483:
 translate chinese_simplified mizuki_onsen_31bdaa68:
 
     # "You splash around the pool looking for her, but fail to find her anywhere."
-    "You splash around the pool looking for her, but fail to find her anywhere."
+    "你在泳池里四处寻找她，却怎么也找不到她。"
 
 # game/BKchapter2.rpy:7396
 translate chinese_simplified mizuki_onsen_f3977f0f:
 
     # "You are about to give up and call Sill, when suddenly you feel a presence behind you."
-    "You are about to give up and call Sill, when suddenly you feel a presence behind you."
+    "你正要放弃并给希尔打电话时，突然感觉身后有人。"
 
 # game/BKchapter2.rpy:7399
 translate chinese_simplified mizuki_onsen_561c2bdf:
 
     # "Woman" "Here... *whisper*"
-    "Woman" "这里……*低语*"
+    "女士" "这里……*低语*"
 
 # game/BKchapter2.rpy:7404
 translate chinese_simplified mizuki_onsen_7c6dbf84:
 
     # "The lady is standing right behind you, whispering in your ear."
-    "The lady is standing right behind you, whispering in your ear."
+    "那位女士就站在你身后，在你耳边低语。"
 
 # game/BKchapter2.rpy:7408
 translate chinese_simplified mizuki_onsen_54252307:
 
     # mizuki naked "Do you recognize me now?"
-    mizuki naked "Do you recognize me now?"
+    mizuki naked "现在你认出我了吗？"
 
 # game/BKchapter2.rpy:7410
 translate chinese_simplified mizuki_onsen_7c233dc7:
 
     # "You would turn around to face her, but it turns out she has seized your cock in a tight grip."
-    "You would turn around to face her, but it turns out she has seized your cock in a tight grip."
+    "你转身面对她，却发现她紧紧地抓住了你的阴茎。"
 
 # game/BKchapter2.rpy:7414
 translate chinese_simplified mizuki_onsen_f56dbc1f:
@@ -14494,7 +14494,7 @@ translate chinese_simplified mizuki_onsen_a4a015f5:
 translate chinese_simplified mizuki_onsen_21792b2e:
 
     # "You can feel her wet, large breasts shamelessly rubbing against your back."
-    "You can feel her wet, large breasts shamelessly rubbing against your back."
+    "你能感觉到她湿润丰满的乳房毫不掩饰地摩擦着你的背。"
 
 # game/BKchapter2.rpy:7424
 translate chinese_simplified mizuki_onsen_6119ee61:
@@ -14506,7 +14506,7 @@ translate chinese_simplified mizuki_onsen_6119ee61:
 translate chinese_simplified mizuki_onsen_937df56c:
 
     # "Her grip on your cock is really tight, and your body feels strangely heavy and powerless."
-    "Her grip on your cock is really tight, and your body feels strangely heavy and powerless."
+    "她紧紧地握着你的阴茎，你的身体感到异常沉重和无力。"
 
 # game/BKchapter2.rpy:7428
 translate chinese_simplified mizuki_onsen_d713c829:
@@ -14524,13 +14524,13 @@ translate chinese_simplified mizuki_onsen_046cb246:
 translate chinese_simplified mizuki_onsen_8084090e:
 
     # "She squeezes your dick harder, and you can feel her trained ninja hands could just as easily crush it."
-    "She squeezes your dick harder, and you can feel her trained ninja hands could just as easily crush it."
+    "她更用力地捏你的阴茎，你能感觉到她训练有素的忍者之手可以轻易地把它捏碎。"
 
 # game/BKchapter2.rpy:7436
 translate chinese_simplified mizuki_onsen_a5f2d12b:
 
     # "Despite the danger you're in, you can't help but feel oddly aroused by your predicament."
-    "Despite the danger you're in, you can't help but feel oddly aroused by your predicament."
+    "尽管你身处险境，但你却不由自主地对自己的处境感到一种莫名的兴奋。"
 
 # game/BKchapter2.rpy:7438
 translate chinese_simplified mizuki_onsen_3819bad6:
@@ -14554,7 +14554,7 @@ translate chinese_simplified mizuki_onsen_a2a3d5c1:
 translate chinese_simplified mizuki_onsen_e0b2ef1b:
 
     # you "*GULP*" with vpunch
-    you "*GULP*" with vpunch
+    you "*咕咚*" with vpunch
 
 # game/BKchapter2.rpy:7446
 translate chinese_simplified mizuki_onsen_bd665847:
@@ -14608,7 +14608,7 @@ translate chinese_simplified mizuki_onsen_4c856331:
 translate chinese_simplified mizuki_onsen_b0921333:
 
     # "She squeezes your dick a little harder. You swear that this should stop the blood flow, but instead your cock grows painfully larger."
-    "She squeezes your dick a little harder. You swear that this should stop the blood flow, but instead your cock grows painfully larger."
+    "她又用力捏了捏你的阴茎。你发誓这样应该能止血，但你的阴茎却反而痛苦地增大了。"
 
 # game/BKchapter2.rpy:7466
 translate chinese_simplified mizuki_onsen_c109ae90:
@@ -14638,7 +14638,7 @@ translate chinese_simplified mizuki_onsen_44a7826a:
 translate chinese_simplified mizuki_onsen_71a77ec8:
 
     # "She squeezes your dick harder still, but now you are starting to seriously get pleasure from it. You can feel the pain of your cock throbbing hard under her grip."
-    "She squeezes your dick harder still, but now you are starting to seriously get pleasure from it. You can feel the pain of your cock throbbing hard under her grip."
+    "她更加用力地捏着你的阴茎，但你却开始从中获得真正的快感。你能感觉到阴茎在她手中剧烈跳动，疼痛难忍。"
 
 # game/BKchapter2.rpy:7476
 translate chinese_simplified mizuki_onsen_dae0ec55:
@@ -14650,7 +14650,7 @@ translate chinese_simplified mizuki_onsen_dae0ec55:
 translate chinese_simplified mizuki_onsen_6e44deab:
 
     # "You think about your dick exploding, and wonder what would be in the coroner report. It's not a very appealing train of thought."
-    "You think about your dick exploding, and wonder what would be in the coroner report. It's not a very appealing train of thought."
+    "你想象着自己的阴茎爆炸，然后琢磨着验尸报告会写些什么。这种想法实在令人不快。"
 
 # game/BKchapter2.rpy:7480
 translate chinese_simplified mizuki_onsen_6685cad3:
@@ -14680,7 +14680,7 @@ translate chinese_simplified mizuki_onsen_09ecc342:
 translate chinese_simplified mizuki_onsen_d2833ee7:
 
     # "You tried, and failed, not to sound whiny."
-    "You tried, and failed, not to sound whiny."
+    "你努力克制自己，但还是失败了，没让自己听起来像个抱怨者。"
 
 # game/BKchapter2.rpy:7492
 translate chinese_simplified mizuki_onsen_17920e0d:
@@ -14698,13 +14698,13 @@ translate chinese_simplified mizuki_onsen_e9b94ee8:
 translate chinese_simplified mizuki_onsen_7b364897:
 
     # you "Hngh!" with hpunch
-    you "Hngh!" with hpunch
+    you "啊！" with hpunch
 
 # game/BKchapter2.rpy:7498
 translate chinese_simplified mizuki_onsen_36553196:
 
     # "Without losing its tight grip, her hand suddenly starts moving, stroking the length of your shaft."
-    "Without losing its tight grip, her hand suddenly starts moving, stroking the length of your shaft."
+    "她的手紧紧握着你的阴茎，突然开始移动，抚摸着你的阴茎。"
 
 # game/BKchapter2.rpy:7500
 translate chinese_simplified mizuki_onsen_7c332fe8:
@@ -14722,7 +14722,7 @@ translate chinese_simplified mizuki_onsen_3f4775a5:
 translate chinese_simplified mizuki_onsen_14feca56:
 
     # you "Please, stop... This isn't... Uh..." with hpunch
-    you "Please, stop... This isn't... Uh..." with hpunch
+    you "请停下……这不是……呃……" with hpunch
 
 # game/BKchapter2.rpy:7508
 translate chinese_simplified mizuki_onsen_1ee028b7:
@@ -14734,7 +14734,7 @@ translate chinese_simplified mizuki_onsen_1ee028b7:
 translate chinese_simplified mizuki_onsen_19085c7b:
 
     # "You can't deny that your cock is now fully erect, in spite of the brutal squeeze from her iron-like hand."
-    "You can't deny that your cock is now fully erect, in spite of the brutal squeeze from her iron-like hand."
+    "尽管她那铁手狠狠地捏着你的阴茎，你也无法否认你的阴茎现在已经完全勃起。"
 
 # game/BKchapter2.rpy:7512
 translate chinese_simplified mizuki_onsen_cd4cbe3b:
@@ -14746,13 +14746,13 @@ translate chinese_simplified mizuki_onsen_cd4cbe3b:
 translate chinese_simplified mizuki_onsen_4a4d6e6b:
 
     # "Using her thumb, she toys with the pre-cum leaking from your urethra, teasing the head of your cock with her nail. It should feel bad, but it doesn't."
-    "Using her thumb, she toys with the pre-cum leaking from your urethra, teasing the head of your cock with her nail. It should feel bad, but it doesn't."
+    "她用拇指拨弄着从你尿道口渗出的前列腺液，用指甲轻柔地挑逗着你的龟头。这本该让你感到难受，但你却不会。"
 
 # game/BKchapter2.rpy:7516
 translate chinese_simplified mizuki_onsen_ec9e7daf:
 
     # you "Ugh..." with hpunch
-    you "Ugh..." with hpunch
+    you "啊..." with hpunch
 
 # game/BKchapter2.rpy:7518
 translate chinese_simplified mizuki_onsen_b0e51b7e:
@@ -14770,7 +14770,7 @@ translate chinese_simplified mizuki_onsen_f64244de:
 translate chinese_simplified mizuki_onsen_02eecb88:
 
     # "She starts moving her wrist faster, and you can feel her plump nipples harden against your back. It is hard to resist her technique."
-    "She starts moving her wrist faster, and you can feel her plump nipples harden against your back. It is hard to resist her technique."
+    "她手腕的动作越来越快，你能感觉到她丰满的乳头抵着你的背挺立起来。你很难抗拒她的技巧。"
 
 # game/BKchapter2.rpy:7525
 translate chinese_simplified mizuki_onsen_dae0ec55_1:
@@ -14830,13 +14830,13 @@ translate chinese_simplified mizuki_onsen_04ae7af9:
 translate chinese_simplified mizuki_onsen_59f0697c:
 
     # "Her wrist starts jerking you in quick, painful but erotic bursts."
-    "Her wrist starts jerking you in quick, painful but erotic bursts."
+    "她的手腕开始快速地抽动，带来痛苦但又充满情欲的快感。"
 
 # game/BKchapter2.rpy:7549
 translate chinese_simplified mizuki_onsen_8e248e22:
 
     # "Her fingertips wrap around your cock's head, stroking erogenous zones you didn't know existed."
-    "Her fingertips wrap around your cock's head, stroking erogenous zones you didn't know existed."
+    "她的指尖环绕着你的阴茎头，抚摸着你从未察觉的性感带。"
 
 # game/BKchapter2.rpy:7551
 translate chinese_simplified mizuki_onsen_52e222ed:
@@ -14848,7 +14848,7 @@ translate chinese_simplified mizuki_onsen_52e222ed:
 translate chinese_simplified mizuki_onsen_afb3b708:
 
     # "Suddenly, you feel a powerful rush build up inside you. Her hand closes into a fist around your cock, not letting anything come out."
-    "Suddenly, you feel a powerful rush build up inside you. Her hand closes into a fist around your cock, not letting anything come out."
+    "突然，你感到一股强烈的快感涌上心头。她的手紧紧握住你的阴茎，不让你射出来。"
 
 # game/BKchapter2.rpy:7558
 translate chinese_simplified mizuki_onsen_d09c9973:
@@ -14860,7 +14860,7 @@ translate chinese_simplified mizuki_onsen_d09c9973:
 translate chinese_simplified mizuki_onsen_db2ad24e:
 
     # "Your cock grows to abnormal proportions, throbbing extremely painfully with every heartbeat. For an instant, you think your cock might explode and you might die here."
-    "Your cock grows to abnormal proportions, throbbing extremely painfully with every heartbeat. For an instant, you think your cock might explode and you might die here."
+    "你的阴茎异常膨胀，随着每一次心跳剧烈跳动。那一瞬间，你感觉阴茎仿佛要爆炸，而你也可能就此丧命。"
 
 # game/BKchapter2.rpy:7562
 translate chinese_simplified mizuki_onsen_1601faa5:
@@ -14872,25 +14872,25 @@ translate chinese_simplified mizuki_onsen_1601faa5:
 translate chinese_simplified mizuki_onsen_4c804865:
 
     # mizuki "HA!" with vpunch
-    mizuki "HA!" with vpunch
+    mizuki "哈！" with vpunch
 
 # game/BKchapter2.rpy:7568
 translate chinese_simplified mizuki_onsen_c74398a3:
 
     # "Just before you pass out from the pain, Mizuki releases her hold on your dick, letting a veritable geyser of cum spurt out."
-    "Just before you pass out from the pain, Mizuki releases her hold on your dick, letting a veritable geyser of cum spurt out."
+    "就在你痛到昏厥之前，瑞希松开了握住你阴茎的手，一股精液像喷泉一样喷涌而出。"
 
 # game/BKchapter2.rpy:7570
 translate chinese_simplified mizuki_onsen_d604e00b:
 
     # "*SPURT* *SPURT*" with doubleflash
-    "*SPURT* *SPURT*" with doubleflash
+    "*爆发* *爆发*" with doubleflash
 
 # game/BKchapter2.rpy:7572
 translate chinese_simplified mizuki_onsen_f37b6d67:
 
     # "You grunt as your now released cock sprays loads into the air, your cum landing all over a pile of fresh towels."
-    "You grunt as your now released cock sprays loads into the air, your cum landing all over a pile of fresh towels."
+    "你发出低沉的呻吟，释放出的阴茎喷射出大量的精液，落在了成堆的干净毛巾上。"
 
 # game/BKchapter2.rpy:7576
 translate chinese_simplified mizuki_onsen_42ad24aa:
@@ -14902,13 +14902,13 @@ translate chinese_simplified mizuki_onsen_42ad24aa:
 translate chinese_simplified mizuki_onsen_238fcb45:
 
     # "*SPURT*"
-    "*SPURT*"
+    "*喷*"
 
 # game/BKchapter2.rpy:7584
 translate chinese_simplified mizuki_onsen_ee7ca226:
 
     # "After the last of your cum is spent, you feel physically and emotionally drained."
-    "After the last of your cum is spent, you feel physically and emotionally drained."
+    "当你射精完毕后，你会感到身心俱疲。"
 
 # game/BKchapter2.rpy:7588
 translate chinese_simplified mizuki_onsen_cbfdc985:
@@ -14938,19 +14938,19 @@ translate chinese_simplified mizuki_onsen_7786e40c:
 translate chinese_simplified mizuki_onsen_67dd9c55:
 
     # mizuki naked "Farewell, boy... Fufufu."
-    mizuki naked "Farewell, boy... Fufufu."
+    mizuki naked "再见了，孩子……呵呵呵。"
 
 # game/BKchapter2.rpy:7608
 translate chinese_simplified mizuki_onsen_d98d4985:
 
     # "You don't even see her leave, she seems to vanish into thin air in the same way she came."
-    "You don't even see her leave, she seems to vanish into thin air in the same way she came."
+    "你甚至看不到她离开，她就像来时一样，仿佛凭空消失了一样。"
 
 # game/BKchapter2.rpy:7610
 translate chinese_simplified mizuki_onsen_aa9af0b5:
 
     # "It takes you a while to regain enough energy to even move out of the pool."
-    "It takes you a while to regain enough energy to even move out of the pool."
+    "你需要一段时间才能恢复足够的精力，甚至才能离开泳池。"
 
 # game/BKchapter2.rpy:7612
 translate chinese_simplified mizuki_onsen_e4624daa:
@@ -14986,13 +14986,13 @@ translate chinese_simplified mizuki_onsen_8dc76bbb:
 translate chinese_simplified mizuki_onsen_1d5310cb:
 
     # sill sad "UWAAAAAAAAAAAAAAAAAAAAAAH!!!" with vpunch
-    sill sad "UWAAAAAAAAAAAAAAAAAAAAAAH!!!" with vpunch
+    sill sad "哇啊 ..." with vpunch
 
 # game/BKchapter2.rpy:7628
 translate chinese_simplified mizuki_onsen_498da1de:
 
     # "With Sill yelling and raging, you make a prudent escape to your room - trying hard to ignore the customers' strange looks as you cross the brothel butt-naked."
-    "With Sill yelling and raging, you make a prudent escape to your room - trying hard to ignore the customers' strange looks as you cross the brothel butt-naked."
+    "希尔大声叫喊着，你小心翼翼地逃回房间——努力忽略顾客们奇怪的目光，一丝不挂地穿过妓院。"
 
 # game/BKchapter2.rpy:7639
 translate chinese_simplified intercept_haruka_7e785c26:
@@ -15004,13 +15004,13 @@ translate chinese_simplified intercept_haruka_7e785c26:
 translate chinese_simplified intercept_haruka_0817eb33:
 
     # haruka normal "Do not come any closer, if you value your life!"
-    haruka normal "Do not come any closer, if you value your life!"
+    haruka normal "如果你珍惜生命，就不要再靠近了！"
 
 # game/BKchapter2.rpy:7646
 translate chinese_simplified intercept_haruka_6c97c60d:
 
     # suzume normal "You've got her!"
-    suzume normal "You've got her!"
+    suzume normal "你抓到她了！"
 
 # game/BKchapter2.rpy:7648
 translate chinese_simplified intercept_haruka_c9f9554d:
@@ -15046,13 +15046,13 @@ translate chinese_simplified intercept_haruka_1bc8ef68:
 translate chinese_simplified intercept_haruka_4ea63789:
 
     # suzume doubt "A Kunoichi?"
-    suzume doubt "A Kunoichi?"
+    suzume doubt "女忍者？"
 
 # game/BKchapter2.rpy:7662
 translate chinese_simplified intercept_haruka_1fb67929:
 
     # suzume normal "Oh yeah, I was! Now that you mention it."
-    suzume normal "Oh yeah, I was! Now that you mention it."
+    suzume normal "哦，对啊，我的确是！你这么一说，我才想起来。"
 
 # game/BKchapter2.rpy:7664
 translate chinese_simplified intercept_haruka_bff35848:
@@ -15064,7 +15064,7 @@ translate chinese_simplified intercept_haruka_bff35848:
 translate chinese_simplified intercept_haruka_0f40ab29:
 
     # suzume normal "But [MC.name] defeated me fair and square, and I have renounced my vows. I'm free now, baby!"
-    suzume normal "But [MC.name] defeated me fair and square, and I have renounced my vows. I'm free now, baby!"
+    suzume normal "但是[MC.name]光明正大地打败了我，我已经解除了我的誓言。我现在自由了，宝贝！"
 
 # game/BKchapter2.rpy:7668
 translate chinese_simplified intercept_haruka_98119d93:
@@ -15082,7 +15082,7 @@ translate chinese_simplified intercept_haruka_36f663bc:
 translate chinese_simplified intercept_haruka_d83ba17e:
 
     # "She frowns."
-    "She frowns."
+    "她皱起了眉头。"
 
 # game/BKchapter2.rpy:7674
 translate chinese_simplified intercept_haruka_dfee0d8f:
@@ -15094,7 +15094,7 @@ translate chinese_simplified intercept_haruka_dfee0d8f:
 translate chinese_simplified intercept_haruka_dccec356:
 
     # suzume doubt "Aw, sis, that's mean... *frown*"
-    suzume doubt "Aw, sis, that's mean... *frown*"
+    suzume doubt "哎呀，姐姐，你这样太过分了……*皱眉*"
 
 # game/BKchapter2.rpy:7681
 translate chinese_simplified intercept_haruka_ff62bb98:
@@ -15166,7 +15166,7 @@ translate chinese_simplified intercept_haruka_ac18eda5:
 translate chinese_simplified intercept_haruka_17b056e4:
 
     # "Her voice is bitter."
-    "Her voice is bitter."
+    "她的声音充满苦涩。"
 
 # game/BKchapter2.rpy:7713
 translate chinese_simplified intercept_haruka_cc8f22a9:
@@ -15232,7 +15232,7 @@ translate chinese_simplified intercept_haruka_bb21f2a4:
 translate chinese_simplified intercept_haruka_ff2a3eee:
 
     # haruka angry "You think I'd betray my duties for a pouch of gold? Ha! Think again."
-    haruka angry "You think I'd betray my duties for a pouch of gold? Ha! Think again."
+    haruka angry "你以为我会为了区区一袋金子就背叛我的职责吗？哈！想得美！"
 
 # game/BKchapter2.rpy:7746
 translate chinese_simplified intercept_haruka_5321823c:
@@ -15244,7 +15244,7 @@ translate chinese_simplified intercept_haruka_5321823c:
 translate chinese_simplified intercept_haruka_db062d64:
 
     # haruka angry "It's over, [MC.name]! I have the high ground!"
-    haruka angry "It's over, [MC.name]! I have the high ground!"
+    haruka angry "结束了，[MC.name]！我占据了制高点！"
 
 # game/BKchapter2.rpy:7750
 translate chinese_simplified intercept_haruka_fd1043b2:
@@ -15262,19 +15262,19 @@ translate chinese_simplified intercept_haruka_3ecb2cae:
 translate chinese_simplified intercept_haruka_bf0c2df3:
 
     # haruka normal "Forget it... I have too many things to do, and too little time. I've wasted enough with you already."
-    haruka normal "Forget it... I have too many things to do, and too little time. I've wasted enough with you already."
+    haruka normal "算了……我事情太多，时间太少。我已经浪费在你身上太多时间了。"
 
 # game/BKchapter2.rpy:7756
 translate chinese_simplified intercept_haruka_ea7e9012:
 
     # haruka "HA!!!" with vpunch
-    haruka "HA!!!" with vpunch
+    haruka "哈！！！" with vpunch
 
 # game/BKchapter2.rpy:7761
 translate chinese_simplified intercept_haruka_127bfb0a:
 
     # "Haruka raises her hand, and the ground starts to shake violently. The pavement bursts from under you, sending you tumbling backwards."
-    "Haruka raises her hand, and the ground starts to shake violently. The pavement bursts from under you, sending you tumbling backwards."
+    "遥举起手，地面开始剧烈震动。脚下的路面突然崩塌，你向后摔去。"
 
 # game/BKchapter2.rpy:7765
 translate chinese_simplified intercept_haruka_65179bcb:
@@ -15286,7 +15286,7 @@ translate chinese_simplified intercept_haruka_65179bcb:
 translate chinese_simplified intercept_haruka_dc277576:
 
     # "Before you can get back up on trembling legs, the Kunoichi is already leaping from roof to roof, disappearing into the distance."
-    "Before you can get back up on trembling legs, the Kunoichi is already leaping from roof to roof, disappearing into the distance."
+    "你还没来得及用颤抖的双腿重新站起来，女忍者就已经从一个屋顶跳到另一个屋顶，消失在远方。"
 
 # game/BKchapter2.rpy:7769
 translate chinese_simplified intercept_haruka_ba63c3eb:
@@ -15298,13 +15298,13 @@ translate chinese_simplified intercept_haruka_ba63c3eb:
 translate chinese_simplified intercept_haruka_05e9e0eb:
 
     # suzume doubt "Well, we lost for today... But she'll be back to the district eventually, the prison seems to be her target. Let's come back on another day."
-    suzume doubt "Well, we lost for today... But she'll be back to the district eventually, the prison seems to be her target. Let's come back on another day."
+    suzume doubt "好吧，我们今天输了……但她最终还会回到这个区，监狱似乎是她的目标。我们改天再来吧。"
 
 # game/BKchapter2.rpy:7779
 translate chinese_simplified intercept_haruka_503755a5:
 
     # "After a long, intense chase in Zan's streets, you finally corner Haruka in a dead end, overlooked by the grim grey walls of the prison in the distance."
-    "After a long, intense chase in Zan's streets, you finally corner Haruka in a dead end, overlooked by the grim grey walls of the prison in the distance."
+    "在赞恩的街道上经过一场漫长而激烈的追逐后，你终于将遥逼入了死胡同，远处监狱阴森的灰色墙壁俯瞰着这里。"
 
 # game/BKchapter2.rpy:7783
 translate chinese_simplified intercept_haruka_393a9e37:
@@ -15316,13 +15316,13 @@ translate chinese_simplified intercept_haruka_393a9e37:
 translate chinese_simplified intercept_haruka_6d834800:
 
     # "You close in on Haruka. She takes a fighting stance but is panting, her strength drained after being grazed by the hammer."
-    "You close in on Haruka. She takes a fighting stance but is panting, her strength drained after being grazed by the hammer."
+    "你逼近遥香。她摆出战斗姿势，但已气喘吁吁，被锤子擦伤后体力耗尽。"
 
 # game/BKchapter2.rpy:7787
 translate chinese_simplified intercept_haruka_91eb4f8c:
 
     # haruka surprise "My power is ebbing away... What treachery is this..."
-    haruka surprise "My power is ebbing away... What treachery is this..."
+    haruka surprise "我的力量正在消退……这是何等的背叛……"
 
 # game/BKchapter2.rpy:7789
 translate chinese_simplified intercept_haruka_40cf05a3:
@@ -15334,13 +15334,13 @@ translate chinese_simplified intercept_haruka_40cf05a3:
 translate chinese_simplified intercept_haruka_48ae8dd8:
 
     # haruka angry "You can't... You can't capture me..."
-    haruka angry "You can't... You can't capture me..."
+    haruka angry "你抓不到我……你抓不到我……"
 
 # game/BKchapter2.rpy:7793
 translate chinese_simplified intercept_haruka_aa8432cf:
 
     # "She looks like a wounded beast, desperately looking for an escape. Her eyes look past you, as if reliving past memories."
-    "She looks like a wounded beast, desperately looking for an escape. Her eyes look past you, as if reliving past memories."
+    "她看起来像一头受伤的野兽，拼命寻找逃脱的出口。她的目光越过你，仿佛在重温过去的记忆。"
 
 # game/BKchapter2.rpy:7795
 translate chinese_simplified intercept_haruka_72168735:
@@ -15352,7 +15352,7 @@ translate chinese_simplified intercept_haruka_72168735:
 translate chinese_simplified intercept_haruka_ee111aa9:
 
     # "Her voice is shaking, and she looks in a state of panic, gripping her blade tightly. You try to defuse the situation before you end up with a knife in the gut."
-    "Her voice is shaking, and she looks in a state of panic, gripping her blade tightly. You try to defuse the situation before you end up with a knife in the gut."
+    "她声音颤抖，神情惊恐，紧紧握着刀柄。你试图缓和局势，以免自己也被刀捅一口。"
 
 # game/BKchapter2.rpy:7802
 translate chinese_simplified intercept_haruka_25046d4b:
@@ -15364,19 +15364,19 @@ translate chinese_simplified intercept_haruka_25046d4b:
 translate chinese_simplified intercept_haruka_62244c46:
 
     # haruka angry "Afraid! I am not... I am not afraid!"
-    haruka angry "Afraid! I am not... I am not afraid!"
+    haruka angry "害怕吗？我不……我不害怕！"
 
 # game/BKchapter2.rpy:7808
 translate chinese_simplified intercept_haruka_c2f82c8f:
 
     # haruka normal "Never again..."
-    haruka normal "Never again..."
+    haruka normal "绝不再犯……"
 
 # game/BKchapter2.rpy:7810
 translate chinese_simplified intercept_haruka_c45bb8ba:
 
     # "Her voice trails off. She seems to recover from her panic, and soon her face is back to her usual stony self."
-    "Her voice trails off. She seems to recover from her panic, and soon her face is back to her usual stony self."
+    "她的声音渐渐低了下去。她似乎从恐慌中恢复过来，很快，她的表情又恢复了往常的冷漠。"
 
 # game/BKchapter2.rpy:7816
 translate chinese_simplified intercept_haruka_ba26a0b7:
@@ -15394,7 +15394,7 @@ translate chinese_simplified intercept_haruka_828572d0:
 translate chinese_simplified intercept_haruka_194e442c:
 
     # "She emerges from her panic and now eyes you with fury."
-    "She emerges from her panic and now eyes you with fury."
+    "她从惊慌中回过神来，怒视着你。"
 
 # game/BKchapter2.rpy:7824
 translate chinese_simplified intercept_haruka_c33a71e1:
@@ -15418,13 +15418,13 @@ translate chinese_simplified intercept_haruka_3ab8616d:
 translate chinese_simplified intercept_haruka_3724d541:
 
     # "She looks at you for a moment with sheer terror. She quickly snaps out of it, though, gripping her weapon tight."
-    "She looks at you for a moment with sheer terror. She quickly snaps out of it, though, gripping her weapon tight."
+    "她惊恐地看了你一眼，但很快回过神来，紧紧握住武器。"
 
 # game/BKchapter2.rpy:7836
 translate chinese_simplified intercept_haruka_e2406068:
 
     # haruka blush "N-No! You can't make me!"
-    haruka blush "N-No! You can't make me!"
+    haruka blush "不！你不能强迫我！"
 
 # game/BKchapter2.rpy:7838
 translate chinese_simplified intercept_haruka_01a2d5f7:
@@ -15436,13 +15436,13 @@ translate chinese_simplified intercept_haruka_01a2d5f7:
 translate chinese_simplified intercept_haruka_f15aace1:
 
     # "Seeing that she is not in immediate danger, she relaxes her shoulders ever so slightly."
-    "Seeing that she is not in immediate danger, she relaxes her shoulders ever so slightly."
+    "见自己没有立即危险，她微微放松了肩膀。"
 
 # game/BKchapter2.rpy:7842
 translate chinese_simplified intercept_haruka_bb050e9e:
 
     # haruka normal "Matters of honor. Nothing that you and your lackey would understand."
-    haruka normal "Matters of honor. Nothing that you and your lackey would understand."
+    haruka normal "这是关乎荣誉的事。你和你那走狗根本不会明白。"
 
 # game/BKchapter2.rpy:7844
 translate chinese_simplified intercept_haruka_3c1af112:
@@ -15466,13 +15466,13 @@ translate chinese_simplified intercept_haruka_ccaead41:
 translate chinese_simplified intercept_haruka_22210566:
 
     # haruka angry "This is none of your business!"
-    haruka angry "This is none of your business!"
+    haruka angry "这不关你的事！"
 
 # game/BKchapter2.rpy:7852
 translate chinese_simplified intercept_haruka_7f2f9f99:
 
     # "Her voice shakes just a little, enough to confirm Suzume's suspicion. She isn't good at hiding her feelings."
-    "Her voice shakes just a little, enough to confirm Suzume's suspicion. She isn't good at hiding her feelings."
+    "她的声音微微颤抖，足以证实铃芽的猜测。她不擅长隐藏自己的感情。"
 
 # game/BKchapter2.rpy:7854
 translate chinese_simplified intercept_haruka_d6b78b17:
@@ -15484,13 +15484,13 @@ translate chinese_simplified intercept_haruka_d6b78b17:
 translate chinese_simplified intercept_haruka_3046a0aa:
 
     # haruka angry "She's no criminal! How dare you!" with vpunch
-    haruka angry "She's no criminal! How dare you!" with vpunch
+    haruka angry "她不是罪犯！你竟敢这样！" with vpunch
 
 # game/BKchapter2.rpy:7860
 translate chinese_simplified intercept_haruka_b095173e:
 
     # "She bites her lips, but too late."
-    "She bites her lips, but too late."
+    "她咬住嘴唇，但为时已晚。"
 
 # game/BKchapter2.rpy:7862
 translate chinese_simplified intercept_haruka_29d60ba5:
@@ -15502,19 +15502,19 @@ translate chinese_simplified intercept_haruka_29d60ba5:
 translate chinese_simplified intercept_haruka_7d6bab63:
 
     # haruka "Stop it!" with vpunch
-    haruka "Stop it!" with vpunch
+    haruka "住手！" with vpunch
 
 # game/BKchapter2.rpy:7866
 translate chinese_simplified intercept_haruka_459f572c:
 
     # "Haruka looks lost in her thoughts for a moment."
-    "Haruka looks lost in her thoughts for a moment."
+    "遥似乎陷入了沉思。"
 
 # game/BKchapter2.rpy:7868
 translate chinese_simplified intercept_haruka_8ab75be1:
 
     # haruka sad "Subaru..."
-    haruka sad "Subaru..."
+    haruka sad "斯巴鲁..."
 
 # game/BKchapter2.rpy:7870
 translate chinese_simplified intercept_haruka_dc066c7e:
@@ -15526,7 +15526,7 @@ translate chinese_simplified intercept_haruka_dc066c7e:
 translate chinese_simplified intercept_haruka_bfc35823:
 
     # haruka normal "Hmph, of course you do. Subaru was a legendary Kunoichi."
-    haruka normal "Hmph, of course you do. Subaru was a legendary Kunoichi."
+    haruka normal "哼，你当然知道。昴可是传说中的女忍者。"
 
 # game/BKchapter2.rpy:7874
 translate chinese_simplified intercept_haruka_62e1977d:
@@ -15538,13 +15538,13 @@ translate chinese_simplified intercept_haruka_62e1977d:
 translate chinese_simplified intercept_haruka_81cd101a:
 
     # haruka sad "Yes..."
-    haruka sad "Yes..."
+    haruka sad "是的..."
 
 # game/BKchapter2.rpy:7882
 translate chinese_simplified intercept_haruka_410c8396:
 
     # haruka sad "Subaru was the master of our school, and our Kunoichi to boot. She was the best one among us."
-    haruka sad "Subaru was the master of our school, and our Kunoichi to boot. She was the best one among us."
+    haruka sad "昴是我们学校的老师，也是我们学校的女忍者。她是我们当中最优秀的。"
 
 # game/BKchapter2.rpy:7884
 translate chinese_simplified intercept_haruka_ef02ba45:
@@ -15562,7 +15562,7 @@ translate chinese_simplified intercept_haruka_4ab18666:
 translate chinese_simplified intercept_haruka_780cf4cc:
 
     # "Haruka's face becomes incredibly sad."
-    "Haruka's face becomes incredibly sad."
+    "遥的脸色变得无比悲伤。"
 
 # game/BKchapter2.rpy:7890
 translate chinese_simplified intercept_haruka_cec36dea:
@@ -15586,7 +15586,7 @@ translate chinese_simplified intercept_haruka_4634a3f4:
 translate chinese_simplified intercept_haruka_955bf79d:
 
     # haruka normal "The Noroi. Our sworn enemies, a ninja clan of half-breed demons."
-    haruka normal "The Noroi. Our sworn enemies, a ninja clan of half-breed demons."
+    haruka normal "诺罗伊。我们的死敌，一个由半恶魔组成的忍者氏族。"
 
 # game/BKchapter2.rpy:7898
 translate chinese_simplified intercept_haruka_68df7aa1:
@@ -15616,7 +15616,7 @@ translate chinese_simplified intercept_haruka_61204a1e:
 translate chinese_simplified intercept_haruka_ad25bb46:
 
     # "Subaru" "AGGGH!!!"
-    "Subaru" "啊啊啊！！！"
+    "斯巴鲁" "啊啊啊！！！"
 
 # game/BKchapter2.rpy:7928
 translate chinese_simplified intercept_haruka_4463a3b5:
@@ -15652,43 +15652,43 @@ translate chinese_simplified intercept_haruka_38bb7628:
 translate chinese_simplified intercept_haruka_895333ae:
 
     # haruka angry "Noooo! Let me go, you bastards!"
-    haruka angry "Noooo! Let me go, you bastards!"
+    haruka angry "不！放开我，你们这些混蛋！"
 
 # game/BKchapter2.rpy:7944
 translate chinese_simplified intercept_haruka_6b046169:
 
     # "Noroi" "Hyark hyark hyark... Look at this dumb slu-u-ut. No one is coming to he-e-elp you..."
-    "Noroi" "哈哈哈哈……看看这个蠢货。没人会来救你的……"
+    "诺罗伊" "哈哈哈哈……看看这个蠢货。没人会来救你的……"
 
 # game/BKchapter2.rpy:7946
 translate chinese_simplified intercept_haruka_12e50ef7:
 
     # "Noroi" "Why don't we impregnate her for r-e-e-ecruits, boss? She's got strong hi-i-ips..."
-    "Noroi" "老大，我们何不让她怀孕，好招募新兵呢？她胸部很丰满……"
+    "诺罗伊" "老大，我们何不让她怀孕，好招募新兵呢？她胸部很丰满……"
 
 # game/BKchapter2.rpy:7948
 translate chinese_simplified intercept_haruka_5adf075c:
 
     # "Noroi Leader" "No. Look at that wretch. She is weak and cowardly. We can't raise good stock from this one."
-    "Noroi Leader" "No. Look at that wretch. She is weak and cowardly. We can't raise good stock from this one."
+    "诺罗伊领袖" "No. Look at that wretch. She is weak and cowardly. We can't raise good stock from this one."
 
 # game/BKchapter2.rpy:7950
 translate chinese_simplified intercept_haruka_48fbece3:
 
     # "Noroi" "Sha-a-a-ame... Shall we just ki-i-ill her, then?"
-    "Noroi" "真丢人……那我们干脆杀了她算了？"
+    "诺罗伊" "真丢人……那我们干脆杀了她算了？"
 
 # game/BKchapter2.rpy:7952
 translate chinese_simplified intercept_haruka_a545571d:
 
     # "Noroi Leader" "No. She might be of some use to us yet. I just thought of an easy way to keep our allies happy..."
-    "Noroi Leader" "No. She might be of some use to us yet. I just thought of an easy way to keep our allies happy..."
+    "诺罗伊领袖" "No. She might be of some use to us yet. I just thought of an easy way to keep our allies happy..."
 
 # game/BKchapter2.rpy:7962
 translate chinese_simplified intercept_haruka_94b47054:
 
     # haruka surprise "HEEELP!!!"
-    haruka surprise "HEEELP!!!"
+    haruka surprise "救命啊！！！"
 
 # game/BKchapter2.rpy:7966
 translate chinese_simplified intercept_haruka_16e5e0e4:
@@ -15700,13 +15700,13 @@ translate chinese_simplified intercept_haruka_16e5e0e4:
 translate chinese_simplified intercept_haruka_13001fc1:
 
     # haruka sad "I can't... I won't talk about it."
-    haruka sad "I can't... I won't talk about it."
+    haruka sad "我不能……我不会谈论这件事。"
 
 # game/BKchapter2.rpy:7970
 translate chinese_simplified intercept_haruka_49c427bd:
 
     # "Her eyes well up. She seems distraught."
-    "Her eyes well up. She seems distraught."
+    "她眼眶湿润，看起来很痛苦。"
 
 # game/BKchapter2.rpy:7977
 translate chinese_simplified intercept_haruka_bf70eb48:
@@ -15730,7 +15730,7 @@ translate chinese_simplified intercept_haruka_9b90a2d8:
 translate chinese_simplified intercept_haruka_539971bc:
 
     # "She ponders your words for a long moment."
-    "She ponders your words for a long moment."
+    "她沉思了很久，仔细琢磨你的话。"
 
 # game/BKchapter2.rpy:7993
 translate chinese_simplified intercept_haruka_ffd6dec7:
@@ -15754,7 +15754,7 @@ translate chinese_simplified intercept_haruka_a4f6880b:
 translate chinese_simplified intercept_haruka_0c048439:
 
     # haruka surprise "Let me go! I'm from the ninja temple... We protect your village!"
-    haruka surprise "Let me go! I'm from the ninja temple... We protect your village!"
+    haruka surprise "放开我！我来自忍者神庙……我们会保护你们的村子！"
 
 # game/BKchapter2.rpy:8008
 translate chinese_simplified intercept_haruka_9c61d238:
@@ -15766,7 +15766,7 @@ translate chinese_simplified intercept_haruka_9c61d238:
 translate chinese_simplified intercept_haruka_0fae01c9:
 
     # "He turned to address the crowd of raunchy men who assembled in the village plaza."
-    "He turned to address the crowd of raunchy men who assembled in the village plaza."
+    "他转身面向聚集在村广场上的一群粗俗的男人们讲话。"
 
 # game/BKchapter2.rpy:8012
 translate chinese_simplified intercept_haruka_fc292d16:
@@ -15826,7 +15826,7 @@ translate chinese_simplified intercept_haruka_6727ed61:
 translate chinese_simplified intercept_haruka_3f9a18ac:
 
     # haruka blush "No! Noooo!"
-    haruka blush "No! Noooo!"
+    haruka blush "不！不要啊！"
 
 # game/BKchapter2.rpy:8042
 translate chinese_simplified intercept_haruka_1e8e4e1e:
@@ -15862,7 +15862,7 @@ translate chinese_simplified intercept_haruka_9132d05d:
 translate chinese_simplified intercept_haruka_c6edf780:
 
     # "The crowd bursts into laughter as Haruka sheds silent tears."
-    "The crowd bursts into laughter as Haruka sheds silent tears."
+    "人群爆发出哄堂大笑，而遥却默默地流下了眼泪。"
 
 # game/BKchapter2.rpy:8060
 translate chinese_simplified intercept_haruka_47d678cc:
@@ -15874,7 +15874,7 @@ translate chinese_simplified intercept_haruka_47d678cc:
 translate chinese_simplified intercept_haruka_c45ca1dd:
 
     # "Another man brusquely shoved his cock in Haruka's mouth. Broken by the slurs and soul-crushing words, she didn't even try to fight back."
-    "Another man brusquely shoved his cock in Haruka's mouth. Broken by the slurs and soul-crushing words, she didn't even try to fight back."
+    "另一个男人粗暴地将他的阴茎塞进遥的嘴里。被污言秽语和伤人的话语击垮，她甚至没有反抗。"
 
 # game/BKchapter2.rpy:8066
 translate chinese_simplified intercept_haruka_bb7ed9e1:
@@ -15886,7 +15886,7 @@ translate chinese_simplified intercept_haruka_bb7ed9e1:
 translate chinese_simplified intercept_haruka_74ff7a11:
 
     # "Haruka gagged as the man started to fuck her throat."
-    "Haruka gagged as the man started to fuck her throat."
+    "男人开始猛操遥的喉咙时，遥作呕了。"
 
 # game/BKchapter2.rpy:8072
 translate chinese_simplified intercept_haruka_eaefb055:
@@ -15916,7 +15916,7 @@ translate chinese_simplified intercept_haruka_092680f8:
 translate chinese_simplified intercept_haruka_836d651d:
 
     # haruka surprise "Ngggh!!!!"
-    haruka surprise "Ngggh!!!!"
+    haruka surprise "啊啊啊啊！！！！"
 
 # game/BKchapter2.rpy:8082
 translate chinese_simplified intercept_haruka_77836a65:
@@ -15934,19 +15934,19 @@ translate chinese_simplified intercept_haruka_fea7f638:
 translate chinese_simplified intercept_haruka_d4d7018e:
 
     # man "UWAAH!" with vpunch
-    man "UWAAH!" with vpunch
+    man "哇啊！" with vpunch
 
 # game/BKchapter2.rpy:8092
 translate chinese_simplified intercept_haruka_4024c773:
 
     # "The first man exploded inside her pussy, laughing as he pumped her cunt full of cum."
-    "The first man exploded inside her pussy, laughing as he pumped her cunt full of cum."
+    "第一个男人在她阴道里射精，一边笑着一边把精液灌满她的阴道。"
 
 # game/BKchapter2.rpy:8096
 translate chinese_simplified intercept_haruka_32a150d7:
 
     # "The second man immediately came inside her mouth, ramming his cock deep."
-    "The second man immediately came inside her mouth, ramming his cock deep."
+    "第二个男人立刻将精液射入她的口中，将阴茎深深插入。"
 
 # game/BKchapter2.rpy:8098
 translate chinese_simplified intercept_haruka_3e7d9123:
@@ -15970,7 +15970,7 @@ translate chinese_simplified intercept_haruka_4eed5cbd:
 translate chinese_simplified intercept_haruka_b56de356:
 
     # "Those two were the first of a long series..."
-    "Those two were the first of a long series..."
+    "那两个人是漫长系列故事的开端……"
 
 # game/BKchapter2.rpy:8113
 translate chinese_simplified intercept_haruka_440dea36:
@@ -15982,7 +15982,7 @@ translate chinese_simplified intercept_haruka_440dea36:
 translate chinese_simplified intercept_haruka_ac3f043e:
 
     # haruka normal "No, I'm not going to tell you. This is my burden to bear."
-    haruka normal "No, I'm not going to tell you. This is my burden to bear."
+    haruka normal "不，我不会告诉你。这是我自己的负担。"
 
 # game/BKchapter2.rpy:8119
 translate chinese_simplified intercept_haruka_d6d23918:
@@ -16018,7 +16018,7 @@ translate chinese_simplified intercept_haruka_284f0a2e:
 translate chinese_simplified intercept_haruka_becc99fc:
 
     # haruka sad "I didn't. After a while, they got tired of abusing me, and threw me unconscious on a heap of garbage."
-    haruka sad "I didn't. After a while, they got tired of abusing me, and threw me unconscious on a heap of garbage."
+    haruka sad "我没有。过了一会儿，他们虐待我虐待得不耐烦了，就把我昏迷不醒地扔到一堆垃圾上。"
 
 # game/BKchapter2.rpy:8141
 translate chinese_simplified intercept_haruka_878c000a:
@@ -16042,7 +16042,7 @@ translate chinese_simplified intercept_haruka_2e754827:
 translate chinese_simplified intercept_haruka_002f95dc:
 
     # haruka sad "My intention was to quit then and there, to admit that I wasn't fit to be a ninja."
-    haruka sad "My intention was to quit then and there, to admit that I wasn't fit to be a ninja."
+    haruka sad "我当时就打算退出，承认自己不适合当忍者。"
 
 # game/BKchapter2.rpy:8149
 translate chinese_simplified intercept_haruka_78b627d4:
@@ -16054,7 +16054,7 @@ translate chinese_simplified intercept_haruka_78b627d4:
 translate chinese_simplified intercept_haruka_698f03cc:
 
     # haruka angry "Half of the temple had burnt down. Dead bodies were lying unburied in the rubble."
-    haruka angry "Half of the temple had burnt down. Dead bodies were lying unburied in the rubble."
+    haruka angry "寺庙一半被烧毁了。废墟中到处都是无人掩埋的尸体。"
 
 # game/BKchapter2.rpy:8153
 translate chinese_simplified intercept_haruka_428f943d:
@@ -16072,7 +16072,7 @@ translate chinese_simplified intercept_haruka_0c575390:
 translate chinese_simplified intercept_haruka_7e06b9e3:
 
     # haruka normal "Before I knew, I was yelling orders, tending to the wounded and slapping bullies around, to try and sort this mess out."
-    haruka normal "Before I knew, I was yelling orders, tending to the wounded and slapping bullies around, to try and sort this mess out."
+    haruka normal "不知不觉中，我开始大声下达命令，照顾伤员，并掌掴欺凌者，试图解决这场混乱。"
 
 # game/BKchapter2.rpy:8159
 translate chinese_simplified intercept_haruka_d7db8a5b:
@@ -16120,25 +16120,25 @@ translate chinese_simplified intercept_haruka_c31cc423:
 translate chinese_simplified intercept_haruka_18b0eed2:
 
     # "She looks at you, dumbfounded."
-    "She looks at you, dumbfounded."
+    "她目瞪口呆地看着你。"
 
 # game/BKchapter2.rpy:8178
 translate chinese_simplified intercept_haruka_b33a380b:
 
     # haruka surprise "What... You..."
-    haruka surprise "What... You..."
+    haruka surprise "什么……你……"
 
 # game/BKchapter2.rpy:8180
 translate chinese_simplified intercept_haruka_a546598b:
 
     # "She blushes."
-    "She blushes."
+    "她脸红了。"
 
 # game/BKchapter2.rpy:8182
 translate chinese_simplified intercept_haruka_ca22b0b0:
 
     # haruka blush "I didn't expect a pimp would give me a speech about honor. These are definitely strange times."
-    haruka blush "I didn't expect a pimp would give me a speech about honor. These are definitely strange times."
+    haruka blush "我没想到一个皮条客会跟我讲什么荣誉。这时代真是怪异。"
 
 # game/BKchapter2.rpy:8184
 translate chinese_simplified intercept_haruka_f358d97d:
@@ -16162,13 +16162,13 @@ translate chinese_simplified intercept_haruka_3719ddf0:
 translate chinese_simplified intercept_haruka_96f3f034:
 
     # suzume doubt "And you criticized me for quitting the last time we met... But you're also about to run away from your life as a ninja!"
-    suzume doubt "And you criticized me for quitting the last time we met... But you're also about to run away from your life as a ninja!"
+    suzume doubt "上次见面时你还批评我放弃……但你自己也即将放弃忍者生涯！"
 
 # game/BKchapter2.rpy:8196
 translate chinese_simplified intercept_haruka_95d38273:
 
     # haruka angry "I am nothing like you!" with vpunch
-    haruka angry "I am nothing like you!" with vpunch
+    haruka angry "我跟你一点都不像！" with vpunch
 
 # game/BKchapter2.rpy:8198
 translate chinese_simplified intercept_haruka_0972398e:
@@ -16192,7 +16192,7 @@ translate chinese_simplified intercept_haruka_ba0e3daf:
 translate chinese_simplified intercept_haruka_78c6ca7e:
 
     # haruka sad "I... I..."
-    haruka sad "I... I..."
+    haruka sad "我……我……"
 
 # game/BKchapter2.rpy:8210
 translate chinese_simplified intercept_haruka_ad278ea7:
@@ -16222,7 +16222,7 @@ translate chinese_simplified intercept_haruka_557251b6:
 translate chinese_simplified intercept_haruka_a309c906:
 
     # haruka angry "I said 'stop'!" with vpunch
-    haruka angry "I said 'stop'!" with vpunch
+    haruka angry "我说“停”！" with vpunch
 
 # game/BKchapter2.rpy:8220
 translate chinese_simplified intercept_haruka_a606c1b4:
@@ -16234,13 +16234,13 @@ translate chinese_simplified intercept_haruka_a606c1b4:
 translate chinese_simplified intercept_haruka_cb63eaeb:
 
     # haruka angry "Before I give up, I must do one last thing as a ninja."
-    haruka angry "Before I give up, I must do one last thing as a ninja."
+    haruka angry "在我放弃之前，我必须以忍者的身份做最后一件事。"
 
 # game/BKchapter2.rpy:8224
 translate chinese_simplified intercept_haruka_f5fff906:
 
     # haruka angry "I must free my Sensei, Subaru!" with vpunch
-    haruka angry "I must free my Sensei, Subaru!" with vpunch
+    haruka angry "我必须救出我的老师，昴！" with vpunch
 
 # game/BKchapter2.rpy:8226
 translate chinese_simplified intercept_haruka_8656e902:
@@ -16252,7 +16252,7 @@ translate chinese_simplified intercept_haruka_8656e902:
 translate chinese_simplified intercept_haruka_796f83ad:
 
     # haruka defiant "I had to catch and bust the heads of more than a few of the traitors from the village to get this information. It took me years to track them down."
-    haruka defiant "I had to catch and bust the heads of more than a few of the traitors from the village to get this information. It took me years to track them down."
+    haruka defiant "为了得到这些信息，我不得不抓到村里好几个叛徒，把他们的脑袋都打爆了。我花了几年时间才把他们找到。"
 
 # game/BKchapter2.rpy:8230
 translate chinese_simplified intercept_haruka_8797cd66:
@@ -16282,13 +16282,13 @@ translate chinese_simplified intercept_haruka_edb717a5:
 translate chinese_simplified intercept_haruka_fe5f57d4:
 
     # "She looks at you defiantly."
-    "She looks at you defiantly."
+    "她挑衅地看着你。"
 
 # game/BKchapter2.rpy:8240
 translate chinese_simplified intercept_haruka_d538a1d5:
 
     # haruka angry "What is it to you? Who do you work for, anyway, whoremonger? *angry*"
-    haruka angry "What is it to you? Who do you work for, anyway, whoremonger? *angry*"
+    haruka angry "这关你什么事？你这嫖客，到底为谁效力？*愤怒*"
 
 # game/BKchapter2.rpy:8244
 translate chinese_simplified intercept_haruka_842f91e5:
@@ -16306,7 +16306,7 @@ translate chinese_simplified intercept_haruka_fd9659ef:
 translate chinese_simplified intercept_haruka_b9b0fff0:
 
     # "The ground starts shaking."
-    "The ground starts shaking."
+    "地面开始震动。"
 
 # game/BKchapter2.rpy:8255
 translate chinese_simplified intercept_haruka_39aa34bd:
@@ -16324,13 +16324,13 @@ translate chinese_simplified intercept_haruka_8e241f92:
 translate chinese_simplified intercept_haruka_d43016c4:
 
     # "Haruka suddenly picks up and runs towards you. You try to swing your hammer to hit her, but the tremor breaks your balance."
-    "Haruka suddenly picks up and runs towards you. You try to swing your hammer to hit her, but the tremor breaks your balance."
+    "遥突然起身朝你跑来。你试图挥动锤子打她，但震动让你失去了平衡。"
 
 # game/BKchapter2.rpy:8265
 translate chinese_simplified intercept_haruka_789e0fbf:
 
     # "She leaps effortlessly above you."
-    "She leaps effortlessly above you."
+    "她毫不费力地跃到你上方。"
 
 # game/BKchapter2.rpy:8269
 translate chinese_simplified intercept_haruka_d293d372:
@@ -16342,7 +16342,7 @@ translate chinese_simplified intercept_haruka_d293d372:
 translate chinese_simplified intercept_haruka_b169e250:
 
     # "When the earthquake recedes, you and Suzume look for her everywhere, but you cannot find her trace."
-    "When the earthquake recedes, you and Suzume look for her everywhere, but you cannot find her trace."
+    "地震过后，你和铃芽到处寻找她，却找不到她的踪迹。"
 
 # game/BKchapter2.rpy:8277
 translate chinese_simplified intercept_haruka_19c28420:
@@ -16360,7 +16360,7 @@ translate chinese_simplified intercept_haruka_5876cb12:
 translate chinese_simplified intercept_haruka_b742283d:
 
     # haruka defiant "What... How..."
-    haruka defiant "What... How..."
+    haruka defiant "什么……怎么会……"
 
 # game/BKchapter2.rpy:8293
 translate chinese_simplified intercept_haruka_2402841b:
@@ -16372,7 +16372,7 @@ translate chinese_simplified intercept_haruka_2402841b:
 translate chinese_simplified intercept_haruka_3eb7e03c:
 
     # suzume shrewd "Surrender, don't make us hurt you."
-    suzume shrewd "Surrender, don't make us hurt you."
+    suzume shrewd "投降吧，别逼我们伤害你。"
 
 # game/BKchapter2.rpy:8297
 translate chinese_simplified intercept_haruka_24bc4f0d:
@@ -16384,37 +16384,37 @@ translate chinese_simplified intercept_haruka_24bc4f0d:
 translate chinese_simplified intercept_haruka_680832ef:
 
     # haruka angry "I'll get you! I'll... For Subaru!!!" with vpunch
-    haruka angry "I'll get you! I'll... For Subaru!!!" with vpunch
+    haruka angry "我一定会抓住你！我……为了斯巴鲁！！！" with vpunch
 
 # game/BKchapter2.rpy:8303
 translate chinese_simplified intercept_haruka_7aa95e47:
 
     # "In a last desperate dash, Haruka charges at you, but her movement is slow and clumsy."
-    "In a last desperate dash, Haruka charges at you, but her movement is slow and clumsy."
+    "在最后的绝望冲刺中，遥向你冲来，但她的动作缓慢而笨拙。"
 
 # game/BKchapter2.rpy:8307
 translate chinese_simplified intercept_haruka_80420b0e:
 
     # haruka blush "OW!!!" with vpunch
-    haruka blush "OW!!!" with vpunch
+    haruka blush "哎哟！！！" with vpunch
 
 # game/BKchapter2.rpy:8313
 translate chinese_simplified intercept_haruka_da52122c:
 
     # "You hit Haruka with the hammer as she runs and it connects with her stomach, knocking the wind out of her. She collapses at your feet, unable to stand anymore."
-    "You hit Haruka with the hammer as she runs and it connects with her stomach, knocking the wind out of her. She collapses at your feet, unable to stand anymore."
+    "你趁着遥奔跑时用锤子击中了她，锤子击中了她的腹部，让她喘不过气来。她瘫倒在你脚边，再也站不起来了。"
 
 # game/BKchapter2.rpy:8315
 translate chinese_simplified intercept_haruka_814ceede:
 
     # suzume normal "Great job, boss! We finally bagged this one!"
-    suzume normal "Great job, boss! We finally bagged this one!"
+    suzume normal "干得漂亮，老板！我们终于拿下这笔交易了！"
 
 # game/BKchapter2.rpy:8320
 translate chinese_simplified haruka_defeat_menu_0dfb1573:
 
     # suzume "What do we do with her now?" nointeract
-    suzume "What do we do with her now?" nointeract
+    suzume "现在我们该如何处置她？" nointeract
 
 # game/BKchapter2.rpy:8324
 translate chinese_simplified haruka_defeat_menu_10c5ef12:
@@ -16426,7 +16426,7 @@ translate chinese_simplified haruka_defeat_menu_10c5ef12:
 translate chinese_simplified haruka_defeat_menu_32366c1c:
 
     # suzume doubt "I guess the Princess can have experienced mages and knights lock her away, or expel her from the city."
-    suzume doubt "I guess the Princess can have experienced mages and knights lock her away, or expel her from the city."
+    suzume doubt "我猜想，经验丰富的法师和骑士可能会把公主囚禁起来，或者把她驱逐出城。"
 
 # game/BKchapter2.rpy:8328
 translate chinese_simplified haruka_defeat_menu_2b16af9e:
@@ -16450,13 +16450,13 @@ translate chinese_simplified haruka_defeat_menu_4f9a2f1a:
 translate chinese_simplified haruka_defeat_menu_a46f75a2:
 
     # suzume normal "Sure thing, boss."
-    suzume normal "Sure thing, boss."
+    suzume normal "当然可以，老板。"
 
 # game/BKchapter2.rpy:8346
 translate chinese_simplified haruka_defeat_menu_0d880083:
 
     # "Wait for Suzume to report on how it went."
-    "Wait for Suzume to report on how it went."
+    "等铃芽汇报情况再说。"
 
 # game/BKchapter2.rpy:8353
 translate chinese_simplified haruka_defeat_menu_38fe1661:
@@ -16474,13 +16474,13 @@ translate chinese_simplified haruka_defeat_menu_375442f8:
 translate chinese_simplified haruka_defeat_menu_1e1cd123:
 
     # suzume shrewd "Before you say anything about our relative sizes, let me remind you that I am a trained killer..."
-    suzume shrewd "Before you say anything about our relative sizes, let me remind you that I am a trained killer..."
+    suzume shrewd "在你评论我们体型大小之前，请允许我提醒你，我是一名训练有素的杀手……"
 
 # game/BKchapter2.rpy:8365
 translate chinese_simplified haruka_defeat_menu_38f82d73:
 
     # suzume doubt "But anyway, we don't have any cell where we could hold her. She wields powerful air magic, remember?"
-    suzume doubt "But anyway, we don't have any cell where we could hold her. She wields powerful air magic, remember?"
+    suzume doubt "不过，我们没有任何牢房可以关押她。别忘了，她会使用强大的气系魔法。"
 
 # game/BKchapter2.rpy:8367
 translate chinese_simplified haruka_defeat_menu_88876e1e:
@@ -16492,7 +16492,7 @@ translate chinese_simplified haruka_defeat_menu_88876e1e:
 translate chinese_simplified haruka_defeat_menu_b167f8fb:
 
     # suzume doubt "Look, once we lock her in, she will be mad as hell. You will have to break her completely if you want her to comply."
-    suzume doubt "Look, once we lock her in, she will be mad as hell. You will have to break her completely if you want her to comply."
+    suzume doubt "听着，一旦我们把她关起来，她肯定会气疯。如果你想让她服从，就必须彻底摧毁她的意志。"
 
 # game/BKchapter2.rpy:8374
 translate chinese_simplified haruka_defeat_menu_11fdb519_1:
@@ -16510,13 +16510,13 @@ translate chinese_simplified haruka_defeat_menu_858de28d:
 translate chinese_simplified haruka_defeat_menu_a62acc9e:
 
     # suzume normal "Well, I think if you succeed, she'll make a nice addition to your brothel!"
-    suzume normal "Well, I think if you succeed, she'll make a nice addition to your brothel!"
+    suzume normal "嗯，我觉得如果你成功了，她会成为你妓院里一个不错的补充！"
 
 # game/BKchapter2.rpy:8386
 translate chinese_simplified haruka_defeat_menu_6e5288eb:
 
     # suzume shrewd "(And if you fail, I'll make myself scarce while she's busy murdering you...)"
-    suzume shrewd "(And if you fail, I'll make myself scarce while she's busy murdering you...)"
+    suzume shrewd "（如果你失败了，我会趁她忙着杀你的时候溜走……）"
 
 # game/BKchapter2.rpy:8388
 translate chinese_simplified haruka_defeat_menu_d825505d:
@@ -16528,13 +16528,13 @@ translate chinese_simplified haruka_defeat_menu_d825505d:
 translate chinese_simplified haruka_defeat_menu_0cb8509d:
 
     # suzume normal "Nothing, nothing! Come on, let's bring the girl home."
-    suzume normal "Nothing, nothing! Come on, let's bring the girl home."
+    suzume normal "没什么，没什么！走吧，我们把女孩带回家。"
 
 # game/BKchapter2.rpy:8394
 translate chinese_simplified haruka_defeat_menu_9ab08fd7:
 
     # "Wait until tonight to deal with Haruka at your brothel."
-    "Wait until tonight to deal with Haruka at your brothel."
+    "等到今晚再去妓院处理遥香的事。"
 
 # game/BKchapter2.rpy:8402
 translate chinese_simplified haruka_defeat_menu_38fe1661_1:
@@ -16552,7 +16552,7 @@ translate chinese_simplified haruka_defeat_menu_554d3a16:
 translate chinese_simplified haruka_defeat_menu_0105348c:
 
     # suzume doubt "But boss! After all we went through to capture her?"
-    suzume doubt "But boss! After all we went through to capture her?"
+    suzume doubt "但是老大！我们费了那么大劲才抓到她啊？"
 
 # game/BKchapter2.rpy:8411
 translate chinese_simplified haruka_defeat_menu_54513643:
@@ -16570,7 +16570,7 @@ translate chinese_simplified haruka_defeat_menu_39629838:
 translate chinese_simplified c2_palace_visit1_769f4fb2:
 
     # "As you finish breakfast, Sill brings you a letter bearing the royal seal."
-    "As you finish breakfast, Sill brings you a letter bearing the royal seal."
+    "早餐结束后，希尔给你带来了一封盖有皇家印章的信。"
 
 # game/BKchapter2.rpy:8433
 translate chinese_simplified c2_palace_visit1_93e77161:
@@ -16594,13 +16594,13 @@ translate chinese_simplified c2_palace_visit1_247cb9ca:
 translate chinese_simplified c2_palace_visit1_b347dd2b:
 
     # sill sad "O-Of course!"
-    sill sad "O-Of course!"
+    sill sad "当然！"
 
 # game/BKchapter2.rpy:8445
 translate chinese_simplified c2_palace_visit1_f1b0a7af:
 
     # "You get inside the carriage and leave for the Palace."
-    "You get inside the carriage and leave for the Palace."
+    "你上了马车，出发前往皇宫。"
 
 # game/BKchapter2.rpy:8449
 translate chinese_simplified c2_palace_visit1_789ec286:
@@ -16612,7 +16612,7 @@ translate chinese_simplified c2_palace_visit1_789ec286:
 translate chinese_simplified c2_palace_visit1_c5f3ce8b:
 
     # "Following your escort, you get to the Palace without trouble and are led to the Princess's antechambers."
-    "Following your escort, you get to the Palace without trouble and are led to the Princess's antechambers."
+    "在护送人员的带领下，你顺利抵达宫殿，并被引至公主的前厅。"
 
 # game/BKchapter2.rpy:8462
 translate chinese_simplified c2_palace_visit1_f082e6c3:
@@ -16624,7 +16624,7 @@ translate chinese_simplified c2_palace_visit1_f082e6c3:
 translate chinese_simplified c2_palace_visit1_d36bd62e:
 
     # "Princess Kurohime and Knight Commander Uesugi are standing over a table, covered with maps of Zan and various folders thick with documents. You can tell the meeting has been going on since morning."
-    "Princess Kurohime and Knight Commander Uesugi are standing over a table, covered with maps of Zan and various folders thick with documents. You can tell the meeting has been going on since morning."
+    "黑姬公主和骑士团长上杉站在一张桌子旁，桌上堆满了赞恩的地图和厚厚的文件夹，里面塞满了文件。显然，这场会议从早上就开始了。"
 
 # game/BKchapter2.rpy:8466
 translate chinese_simplified c2_palace_visit1_1192a2c4:
@@ -16636,7 +16636,7 @@ translate chinese_simplified c2_palace_visit1_1192a2c4:
 translate chinese_simplified c2_palace_visit1_c0b8e097:
 
     # "The knight looks less than pleased to see you."
-    "The knight looks less than pleased to see you."
+    "骑士看起来不太高兴见到你。"
 
 # game/BKchapter2.rpy:8470
 translate chinese_simplified c2_palace_visit1_1171755c:
@@ -16648,7 +16648,7 @@ translate chinese_simplified c2_palace_visit1_1171755c:
 translate chinese_simplified c2_palace_visit1_08340385:
 
     # "The biting remark makes Uesugi Kenshin blush bright red, as she remembers the humiliation of your first meeting."
-    "The biting remark makes Uesugi Kenshin blush bright red, as she remembers the humiliation of your first meeting."
+    "这句尖刻的话让上杉谦信脸颊绯红，因为她想起了第一次见面时受到的羞辱。"
 
 # game/BKchapter2.rpy:8474
 translate chinese_simplified c2_palace_visit1_7fcbee03:
@@ -16666,7 +16666,7 @@ translate chinese_simplified c2_palace_visit1_168db05c:
 translate chinese_simplified c2_palace_visit1_f35c0d48:
 
     # "She sounds tired."
-    "She sounds tired."
+    "她听起来很累。"
 
 # game/BKchapter2.rpy:8480
 translate chinese_simplified c2_palace_visit1_cd159632:
@@ -16678,7 +16678,7 @@ translate chinese_simplified c2_palace_visit1_cd159632:
 translate chinese_simplified c2_palace_visit1_d5a5fcce:
 
     # "She is lost in her thoughts for a moment, then she raises her eyes and gazes at you, unflinching."
-    "She is lost in her thoughts for a moment, then she raises her eyes and gazes at you, unflinching."
+    "她陷入沉思片刻，然后抬起头，目光坚定地注视着你。"
 
 # game/BKchapter2.rpy:8484
 translate chinese_simplified c2_palace_visit1_57824ff2:
@@ -16696,7 +16696,7 @@ translate chinese_simplified c2_palace_visit1_9f1b1eae:
 translate chinese_simplified c2_palace_visit1_3eef5bcb:
 
     # "The Princess's eyes narrow."
-    "The Princess's eyes narrow."
+    "公主眯起了眼睛。"
 
 # game/BKchapter2.rpy:8490
 translate chinese_simplified c2_palace_visit1_848e9e98:
@@ -16714,7 +16714,7 @@ translate chinese_simplified c2_palace_visit1_0914e320:
 translate chinese_simplified c2_palace_visit1_ac67fe36:
 
     # "She looks straight at you while she says this."
-    "She looks straight at you while she says this."
+    "她说这话的时候，眼睛直直地看着你。"
 
 # game/BKchapter2.rpy:8496
 translate chinese_simplified c2_palace_visit1_6a99f073:
@@ -16846,25 +16846,25 @@ translate chinese_simplified c2_palace_visit1_e0275b25:
 translate chinese_simplified c2_palace_visit1_8ba48ae0:
 
     # "For all of the Princess's criticism, the luncheon is a fancy affair. Well-dressed courtiers mingle with elegant maids and buttoned-up manservants, exchanging the latest gossip over plates of rare and expensive foodstuffs."
-    "For all of the Princess's criticism, the luncheon is a fancy affair. Well-dressed courtiers mingle with elegant maids and buttoned-up manservants, exchanging the latest gossip over plates of rare and expensive foodstuffs."
+    "尽管公主百般批评，但这场午宴依然十分隆重。衣着考究的朝臣与优雅的女仆和一丝不苟的男仆们谈笑风生，一边享用着珍稀昂贵的佳肴，一边交流着最新的八卦消息。"
 
 # game/BKchapter2.rpy:8543
 translate chinese_simplified c2_palace_visit1_dd6a6d71:
 
     # "You gorge yourself on cocktail shrimps, only too happy to eat something other than the usual gruel. Checking the assembly, you wonder who you should start up a conversation with."
-    "You gorge yourself on cocktail shrimps, only too happy to eat something other than the usual gruel. Checking the assembly, you wonder who you should start up a conversation with."
+    "你狼吞虎咽地吃着鸡尾虾，很高兴终于能吃到除了平常粥以外的东西。环顾四周，你琢磨着该和谁搭讪。"
 
 # game/BKchapter2.rpy:8548
 translate chinese_simplified c2_palace_visit1_0cb8f041:
 
     # "The luncheon is getting started. Who do you wish to mingle with?"
-    "The luncheon is getting started. Who do you wish to mingle with?"
+    "午餐会即将开始。您想和谁交流？"
 
 # game/BKchapter2.rpy:8554
 translate chinese_simplified c2_palace_visit1_3fddbb07:
 
     # "The luncheon is almost over. Who do you want to join now?"
-    "The luncheon is almost over. Who do you want to join now?"
+    "午餐会快结束了。你现在想和谁一起用餐？"
 
 # game/BKchapter2.rpy:8557
 translate chinese_simplified c2_palace_visit1_11fdb519:
@@ -16876,49 +16876,49 @@ translate chinese_simplified c2_palace_visit1_11fdb519:
 translate chinese_simplified c2_palace_visit1_3797f695:
 
     # "You approach the large group of courtiers surrounding the Princess, lavishing her with constant attention."
-    "You approach the large group of courtiers surrounding the Princess, lavishing her with constant attention."
+    "你走向围绕着公主的一大群侍臣，他们对公主百般殷勤。"
 
 # game/BKchapter2.rpy:8568
 translate chinese_simplified c2_palace_visit1_42e54465:
 
     # "Noble man" "Your Highness, you are resplendent as the stars in the night sky, as always."
-    "Noble man" "Your Highness, you are resplendent as the stars in the night sky, as always."
+    "贵族" "Your Highness, you are resplendent as the stars in the night sky, as always."
 
 # game/BKchapter2.rpy:8570
 translate chinese_simplified c2_palace_visit1_f846f227:
 
     # "Noble woman" "Your Highness, have you met my son? He is {i}so{/i} eager to make your acquaintance..."
-    "Noble woman" "Your Highness, have you met my son? He is {i}so{/i} eager to make your acquaintance..."
+    "贵族女性" "Your Highness, have you met my son? He is {i}so{/i} eager to make your acquaintance..."
 
 # game/BKchapter2.rpy:8572
 translate chinese_simplified c2_palace_visit1_9b15d706:
 
     # "Foreign dignitary" "Please, Your Highness, you must pass on this important request to your father..."
-    "Foreign dignitary" "Please, Your Highness, you must pass on this important request to your father..."
+    "外国政要" "Please, Your Highness, you must pass on this important request to your father..."
 
 # game/BKchapter2.rpy:8574
 translate chinese_simplified c2_palace_visit1_af85a210:
 
     # "Elder gentleman" "Your Highness, you know how lonely I've been since my poor wife passed away... But it's high time I remarry, as my children say. Did I mention how large my estate is?"
-    "Elder gentleman" "Your Highness, you know how lonely I've been since my poor wife passed away... But it's high time I remarry, as my children say. Did I mention how large my estate is?"
+    "老先生" "Your Highness, you know how lonely I've been since my poor wife passed away... But it's high time I remarry, as my children say. Did I mention how large my estate is?"
 
 # game/BKchapter2.rpy:8578
 translate chinese_simplified c2_palace_visit1_f666b028:
 
     # "The Princess cordially answers everyone, smiling and laughing gently at the courtiers' overtures. You are astonished to see her in her courtly state, a long ways from the determined strong-willed woman you've come to know."
-    "The Princess cordially answers everyone, smiling and laughing gently at the courtiers' overtures. You are astonished to see her in her courtly state, a long ways from the determined strong-willed woman you've come to know."
+    "公主亲切地回应了每个人，面带微笑，轻声笑着回应着朝臣们的殷勤。你惊讶地发现她举止优雅，与你认识的那个意志坚定、性格强势的女人判若两人。"
 
 # game/BKchapter2.rpy:8580
 translate chinese_simplified c2_palace_visit1_42cb99c3:
 
     # "The procession of courtiers goes on forever, but finally it is your turn to pay your respects."
-    "The procession of courtiers goes on forever, but finally it is your turn to pay your respects."
+    "朝臣们列队行进，永无止境，但最终还是轮到你表达敬意了。"
 
 # game/BKchapter2.rpy:8582
 translate chinese_simplified c2_palace_visit1_3fd2a9ec:
 
     # "Seeing you, the Princess slightly raises an eyebrow. You remember you must pretend not to know her."
-    "Seeing you, the Princess slightly raises an eyebrow. You remember you must pretend not to know her."
+    "看到你，公主微微挑了挑眉。你这才想起，必须假装不认识她。"
 
 # game/BKchapter2.rpy:8584
 translate chinese_simplified c2_palace_visit1_42296774:
@@ -16942,7 +16942,7 @@ translate chinese_simplified c2_palace_visit1_b9cdf443:
 translate chinese_simplified c2_palace_visit1_42b9b62c:
 
     # "Matter-of-factly, she places her hand on your forearm, pulling you towards the window. You hear audible gasps and jealous whispers as people question who you are to deserve such an honor."
-    "Matter-of-factly, she places her hand on your forearm, pulling you towards the window. You hear audible gasps and jealous whispers as people question who you are to deserve such an honor."
+    "她一本正经地把手放在你的前臂上，把你拉向窗边。你听到周围传来阵阵惊呼和嫉妒的窃窃私语，人们都在质疑你究竟是何许人也，竟配得上这份殊荣。"
 
 # game/BKchapter2.rpy:8592
 translate chinese_simplified c2_palace_visit1_a5ebf40b:
@@ -16984,7 +16984,7 @@ translate chinese_simplified c2_palace_visit1_cdf972df:
 translate chinese_simplified c2_palace_visit1_8d569091:
 
     # "She seems quite bitter."
-    "She seems quite bitter."
+    "她似乎很怨恨。"
 
 # game/BKchapter2.rpy:8606
 translate chinese_simplified c2_palace_visit1_f50e0338:
@@ -17026,13 +17026,13 @@ translate chinese_simplified c2_palace_visit1_8bb00932:
 translate chinese_simplified c2_palace_visit1_9d910c45:
 
     # "A dignified servant interrupts."
-    "A dignified servant interrupts."
+    "一位举止端庄的仆人插话道。"
 
 # game/BKchapter2.rpy:8622
 translate chinese_simplified c2_palace_visit1_f35774c5:
 
     # "Majordomo" "Your Highness, the Duke of Hazz-Aard is here."
-    "Majordomo" "殿下，哈兹-阿德公爵驾到。"
+    "管家" "殿下，哈兹-阿德公爵驾到。"
 
 # game/BKchapter2.rpy:8624
 translate chinese_simplified c2_palace_visit1_269df8de:
@@ -17062,7 +17062,7 @@ translate chinese_simplified c2_palace_visit1_1d1b6de6:
 translate chinese_simplified c2_palace_visit1_fe5965ab:
 
     # "Uesugi is standing alone with her arms folded and her back to the wall, scanning the guests to make sure there's no trouble."
-    "Uesugi is standing alone with her arms folded and her back to the wall, scanning the guests to make sure there's no trouble."
+    "上杉独自一人站着，双臂抱胸，背靠着墙，扫视着宾客，确保没有危险。"
 
 # game/BKchapter2.rpy:8644
 translate chinese_simplified c2_palace_visit1_65ffa375:
@@ -17086,7 +17086,7 @@ translate chinese_simplified c2_palace_visit1_dae0ec55:
 translate chinese_simplified c2_palace_visit1_af9b2ed9:
 
     # "You both stand in awkward silence for a moment."
-    "You both stand in awkward silence for a moment."
+    "两人尴尬地沉默了一会儿。"
 
 # game/BKchapter2.rpy:8652
 translate chinese_simplified c2_palace_visit1_c97c8ad9:
@@ -17128,13 +17128,13 @@ translate chinese_simplified c2_palace_visit1_e2181a03:
 translate chinese_simplified c2_palace_visit1_b0e53c34:
 
     # kenshin "We don't need foreigners to help with our own affairs, okay!" with vpunch
-    kenshin "We don't need foreigners to help with our own affairs, okay!" with vpunch
+    kenshin "我们不需要外国人来帮我们处理自己的事务，好吗！" with vpunch
 
 # game/BKchapter2.rpy:8666
 translate chinese_simplified c2_palace_visit1_fc2fcf97:
 
     # "Her voice rises and her face becomes flushed."
-    "Her voice rises and her face becomes flushed."
+    "她的声音提高了，脸也涨红了。"
 
 # game/BKchapter2.rpy:8668
 translate chinese_simplified c2_palace_visit1_655105fd:
@@ -17188,169 +17188,169 @@ translate chinese_simplified c2_palace_visit1_f6ef3283:
 translate chinese_simplified c2_palace_visit1_aa8e51fa:
 
     # "You can't get much more out of Kenshin, and eventually leave her to her stubborn pouting."
-    "You can't get much more out of Kenshin, and eventually leave her to her stubborn pouting."
+    "你再也无法从剑心身上得到更多东西，最终只能让她继续固执地生闷气。"
 
 # game/BKchapter2.rpy:8692
 translate chinese_simplified c2_palace_visit1_2e44eb63:
 
     # "Trying to look inconspicuous, you drift alongside various groups of courtiers that are gossiping around the tables."
-    "Trying to look inconspicuous, you drift alongside various groups of courtiers that are gossiping around the tables."
+    "你尽量不引人注目，悄悄地跟在围坐在桌旁闲聊的各色朝臣身边。"
 
 # game/BKchapter2.rpy:8694
 translate chinese_simplified c2_palace_visit1_d4c6aacb:
 
     # "You quickly realize that they are a diverse bunch, with foreign merchants mingling with petty nobles, country officials and professional intriguants. It makes you feel less of an outsider."
-    "You quickly realize that they are a diverse bunch, with foreign merchants mingling with petty nobles, country officials and professional intriguants. It makes you feel less of an outsider."
+    "你很快就会发现他们形形色色，既有外国商人，也有小贵族、国家官员和职业阴谋家。这让你感觉自己不再那么格格不入。"
 
 # game/BKchapter2.rpy:8698
 translate chinese_simplified c2_palace_visit1_7d9c6e33:
 
     # "Leaning in, you try to overhear some conversations."
-    "Leaning in, you try to overhear some conversations."
+    "你凑近他们，试图偷听一些对话。"
 
 # game/BKchapter2.rpy:8700
 translate chinese_simplified c2_palace_visit1_9b9aafaf:
 
     # "Noble man" "How long has it been since we've last seen him? Six weeks?"
-    "Noble man" "How long has it been since we've last seen him? Six weeks?"
+    "贵族" "How long has it been since we've last seen him? Six weeks?"
 
 # game/BKchapter2.rpy:8702
 translate chinese_simplified c2_palace_visit1_35333dd4:
 
     # "Guild member" "Yes. The old man is going to kick the bucket soon, I tell you."
-    "Guild member" "Yes. The old man is going to kick the bucket soon, I tell you."
+    "公会成员" "Yes. The old man is going to kick the bucket soon, I tell you."
 
 # game/BKchapter2.rpy:8704
 translate chinese_simplified c2_palace_visit1_08e395fc:
 
     # "Arios priest" "Hey! You're talking about the King! Show some respect!"
-    "Arios priest" "Hey! You're talking about the King! Show some respect!"
+    "阿瑞俄斯祭司" "Hey! You're talking about the King! Show some respect!"
 
 # game/BKchapter2.rpy:8706
 translate chinese_simplified c2_palace_visit1_1ff4709e:
 
     # "Merchant" "Some King he is, leaving the affairs of State to be handled by a girl..."
-    "Merchant" "他真是个好国王，竟然把国家大事交给一个女孩来处理……"
+    "商人" "他真是个好国王，竟然把国家大事交给一个女孩来处理……"
 
 # game/BKchapter2.rpy:8708
 translate chinese_simplified c2_palace_visit1_cd810c38:
 
     # "Noble man" "Don't disparage Princess Kurohime. She's doing a better job than the King ever did."
-    "Noble man" "Don't disparage Princess Kurohime. She's doing a better job than the King ever did."
+    "贵族" "Don't disparage Princess Kurohime. She's doing a better job than the King ever did."
 
 # game/BKchapter2.rpy:8710
 translate chinese_simplified c2_palace_visit1_d774aff7:
 
     # "Merchant" "A woman is only fit for one kind of job, and that's a blowjob! Am I right?"
-    "Merchant" "女人只适合做一种工作，那就是口交！我说得对吗？"
+    "商人" "女人只适合做一种工作，那就是口交！我说得对吗？"
 
 # game/BKchapter2.rpy:8714
 translate chinese_simplified c2_palace_visit1_2affecb9:
 
     # "Arios priest" "How dare you! *mad*"
-    "Arios priest" "How dare you! *mad*"
+    "阿瑞俄斯祭司" "How dare you! *mad*"
 
 # game/BKchapter2.rpy:8718
 translate chinese_simplified c2_palace_visit1_16f0be5a:
 
     # "You listen to many such conversations as you move around the room. It seems disdain for the royal family is barely hidden within this crowd."
-    "You listen to many such conversations as you move around the room. It seems disdain for the royal family is barely hidden within this crowd."
+    "你在房间里走动时，听到了许多类似的对话。看来，这群人对王室的蔑视几乎毫不掩饰。"
 
 # game/BKchapter2.rpy:8724
 translate chinese_simplified c2_palace_visit1_3bf3ff7d:
 
     # "Sensing a good occasion to gather information {i}and{/i} devour a lot of tasty canapes, you strike up a conversation with several members of the staff. A group of young servants is especially talkative."
-    "Sensing a good occasion to gather information {i}and{/i} devour a lot of tasty canapes, you strike up a conversation with several members of the staff. A group of young servants is especially talkative."
+    "你觉得这是个收集信息并享用美味小点的好机会，于是和几位工作人员攀谈起来。其中一群年轻的仆人尤其健谈。"
 
 # game/BKchapter2.rpy:8726
 translate chinese_simplified c2_palace_visit1_206344da:
 
     # "Valet" "...and let me tell you, I've only been here three months, but this place is mighty strange."
-    "Valet" "……而且我告诉你，我才来这里三个月，但这个地方真是太奇怪了。"
+    "代客泊车" "……而且我告诉你，我才来这里三个月，但这个地方真是太奇怪了。"
 
 # game/BKchapter2.rpy:8728
 translate chinese_simplified c2_palace_visit1_f30f1f90:
 
     # "Manservant" "You bet. The castle's foundations were laid out by some elder civilization, I hear. Left without a trace, they did..."
-    "Manservant" "没错。我听说，这座城堡的地基是由某个古老的文明建造的。他们离开时，没有留下任何痕迹……"
+    "男仆" "没错。我听说，这座城堡的地基是由某个古老的文明建造的。他们离开时，没有留下任何痕迹……"
 
 # game/BKchapter2.rpy:8730
 translate chinese_simplified c2_palace_visit1_186e8dc4:
 
     # "Maid" "But I hear they left a whole network of tunnels and galleries that radiates from the Palace and criss-crosses Zan. Some secret passages are still in use, I just know it!"
-    "Maid" "但我听说他们留下了一整套从宫殿向外辐射、纵横交错的隧道和通道网络。我敢肯定，有些秘密通道至今仍在被使用！"
+    "女佣" "但我听说他们留下了一整套从宫殿向外辐射、纵横交错的隧道和通道网络。我敢肯定，有些秘密通道至今仍在被使用！"
 
 # game/BKchapter2.rpy:8732
 translate chinese_simplified c2_palace_visit1_293db293:
 
     # "Valet" "Oh, really?"
-    "Valet" "哦真的吗？"
+    "代客泊车" "哦真的吗？"
 
 # game/BKchapter2.rpy:8734
 translate chinese_simplified c2_palace_visit1_bf7c3e33:
 
     # "Maid" "Yes, or so the older staffers tell me. That would explain..."
-    "Maid" "是的，至少那些年纪大些的员工是这么说的。这就解释得通了……"
+    "女佣" "是的，至少那些年纪大些的员工是这么说的。这就解释得通了……"
 
 # game/BKchapter2.rpy:8736
 translate chinese_simplified c2_palace_visit1_5299b72b:
 
     # "Manservant" "Explain what?"
-    "Manservant" "解释什么？"
+    "男仆" "解释什么？"
 
 # game/BKchapter2.rpy:8738
 translate chinese_simplified c2_palace_visit1_b5b1d439:
 
     # "Maid" "Why, the assassin of course! He got into the castle, made it to the Princess's doorstep, didn't you hear?"
-    "Maid" "当然是刺客！他进了城堡，都到了公主的家门口，你没听说吗？"
+    "女佣" "当然是刺客！他进了城堡，都到了公主的家门口，你没听说吗？"
 
 # game/BKchapter2.rpy:8740
 translate chinese_simplified c2_palace_visit1_857de5a3:
 
     # "Maid" "I thought it was strange, because the security around here is {i}very{/i} tight. Commander Uesugi sees to that."
-    "Maid" "我觉得很奇怪，因为这里的安保非常严密。上杉司令负责这方面的工作。"
+    "女佣" "我觉得很奇怪，因为这里的安保非常严密。上杉司令负责这方面的工作。"
 
 # game/BKchapter2.rpy:8742
 translate chinese_simplified c2_palace_visit1_e4826612:
 
     # "Valet" "But the secret passages might explain how he got in. Or maybe there's a traitor in the Palace..."
-    "Valet" "但那些秘密通道或许能解释他是如何进入宫内的。又或许，宫里有叛徒……"
+    "代客泊车" "但那些秘密通道或许能解释他是如何进入宫内的。又或许，宫里有叛徒……"
 
 # game/BKchapter2.rpy:8744
 translate chinese_simplified c2_palace_visit1_2f9c69a8:
 
     # "Manservant" "Speaking of Commander Uesugi, have you seen her? She's {i}so{/i} hot, isn't she? Too bad she's got such a stick up her arse."
-    "Manservant" "说到上杉司令，你见过她吗？她真是太漂亮了，不是吗？可惜她太死板了。"
+    "男仆" "说到上杉司令，你见过她吗？她真是太漂亮了，不是吗？可惜她太死板了。"
 
 # game/BKchapter2.rpy:8746
 translate chinese_simplified c2_palace_visit1_8fe581a4:
 
     # "Maid" "I'm sure you'd like to stick something else up her arse, you pig..."
-    "Maid" "我敢肯定你还想往她屁股里塞点别的东西，你这头猪……"
+    "女佣" "我敢肯定你还想往她屁股里塞点别的东西，你这头猪……"
 
 # game/BKchapter2.rpy:8748
 translate chinese_simplified c2_palace_visit1_55e3c3c9:
 
     # "Manservant" "You bet!"
-    "Manservant" "当然！"
+    "男仆" "当然！"
 
 # game/BKchapter2.rpy:8752
 translate chinese_simplified c2_palace_visit1_84795083:
 
     # "The young staffers burst out laughing, safely assuming that the highborns around them do not pay any attention to their idle gossip."
-    "The young staffers burst out laughing, safely assuming that the highborns around them do not pay any attention to their idle gossip."
+    "年轻的职员们哄堂大笑，他们笃定地认为周围的贵族们不会在意他们的闲言碎语。"
 
 # game/BKchapter2.rpy:8758
 translate chinese_simplified c2_palace_visit1_272b74b4:
 
     # "Eventually, the Princess gets up to leave, and is quickly followed by the guests. Gathering some more leftover food in a bucket to snack on, you head back to your place, thinking about what you've learnt."
-    "Eventually, the Princess gets up to leave, and is quickly followed by the guests. Gathering some more leftover food in a bucket to snack on, you head back to your place, thinking about what you've learnt."
+    "最终，公主起身离开，宾客们也紧随其后。你把剩下的食物装进桶里当零食，然后回到住处，回想着自己学到的东西。"
 
 # game/BKchapter2.rpy:8770
 translate chinese_simplified c2_homura_okiya2_343f1ab7:
 
     # "Homura comes to your place again tonight, she looks happy."
-    "Homura comes to your place again tonight, she looks happy."
+    "焰今晚又来你家了，她看起来很高兴。"
 
 # game/BKchapter2.rpy:8774
 translate chinese_simplified c2_homura_okiya2_93d98753:
@@ -17362,13 +17362,13 @@ translate chinese_simplified c2_homura_okiya2_93d98753:
 translate chinese_simplified c2_homura_okiya2_42451dda:
 
     # sill sad "That woman again... She's stalking us..."
-    sill sad "That woman again... She's stalking us..."
+    sill sad "又是那个女人……她跟踪我们……"
 
 # game/BKchapter2.rpy:8784
 translate chinese_simplified c2_homura_okiya2_ab9aa1b7:
 
     # "You elbow Sill out of the way and greet Homura with a smile."
-    "You elbow Sill out of the way and greet Homura with a smile."
+    "你用手肘推开希尔，笑着向焰打招呼。"
 
 # game/BKchapter2.rpy:8786
 translate chinese_simplified c2_homura_okiya2_96bce280:
@@ -17440,13 +17440,13 @@ translate chinese_simplified c2_homura_okiya2_52fa1001:
 translate chinese_simplified c2_homura_okiya2_07e8ecb7:
 
     # homura blush "Err, no."
-    homura blush "Err, no."
+    homura blush "呃，不。"
 
 # game/BKchapter2.rpy:8812
 translate chinese_simplified c2_homura_okiya2_a0c4ae5b:
 
     # homura normal "But I'll get to the bottom of this! Please give me time."
-    homura normal "But I'll get to the bottom of this! Please give me time."
+    homura normal "但我会查明真相！请给我一些时间。"
 
 # game/BKchapter2.rpy:8815
 translate chinese_simplified c2_homura_okiya2_ed022a9c:
@@ -17476,7 +17476,7 @@ translate chinese_simplified c2_homura_okiya2_1b2eb9aa:
 translate chinese_simplified c2_homura_okiya2_b1b4659e:
 
     # homura surprise "It cannot be anything good with that shadowy sort... Please be careful, don't take chances!"
-    homura surprise "It cannot be anything good with that shadowy sort... Please be careful, don't take chances!"
+    homura surprise "跟那种来路不明的人在一起肯定没好事……请务必小心，不要冒险！"
 
 # game/BKchapter2.rpy:8825
 translate chinese_simplified c2_homura_okiya2_4bdf234c:
@@ -17494,13 +17494,13 @@ translate chinese_simplified c2_homura_okiya2_b3017e63:
 translate chinese_simplified c2_homura_okiya2_0640b4a0:
 
     # homura sad "I didn't manage to see her even once since we last spoke... She's growing distant. *sad*"
-    homura sad "I didn't manage to see her even once since we last spoke... She's growing distant. *sad*"
+    homura sad "自从上次见面后，我一次都没见到她……她越来越疏远我了。*难过*"
 
 # game/BKchapter2.rpy:8832
 translate chinese_simplified c2_homura_okiya2_7bc3ea1b:
 
     # homura normal "If it's something I can help you with, you should tell me. I can recoup that with my own intel!"
-    homura normal "If it's something I can help you with, you should tell me. I can recoup that with my own intel!"
+    homura normal "如果有什么我能帮上忙的，请告诉我。我可以凭借自己的情报把钱找回来！"
 
 # game/BKchapter2.rpy:8838
 translate chinese_simplified c2_homura_okiya2_c0069eea:
@@ -17542,7 +17542,7 @@ translate chinese_simplified c2_homura_okiya2_cc4cd2a9:
 translate chinese_simplified c2_homura_okiya2_45146d18:
 
     # homura sad "Aw, really? I see..."
-    homura sad "Aw, really? I see..."
+    homura sad "哦，真的吗？我明白了……"
 
 # game/BKchapter2.rpy:8854
 translate chinese_simplified c2_homura_okiya2_5bf9aad0:
@@ -17554,13 +17554,13 @@ translate chinese_simplified c2_homura_okiya2_5bf9aad0:
 translate chinese_simplified c2_homura_okiya2_97e4307e:
 
     # homura normal "Oh, well... Why not?"
-    homura normal "Oh, well... Why not?"
+    homura normal "哦，好吧……为什么不呢？"
 
 # game/BKchapter2.rpy:8860
 translate chinese_simplified c2_homura_okiya2_76007da8:
 
     # homura blush "*cough* Whoah! What is that?"
-    homura blush "*cough* Whoah! What is that?"
+    homura blush "*咳嗽* 哇！那是什么？"
 
 # game/BKchapter2.rpy:8862
 translate chinese_simplified c2_homura_okiya2_d23fc489:
@@ -17572,7 +17572,7 @@ translate chinese_simplified c2_homura_okiya2_d23fc489:
 translate chinese_simplified c2_homura_okiya2_6afe71f0:
 
     # "(In fact, you asked Sill to make some, but she made a point of ignoring you.)"
-    "(In fact, you asked Sill to make some, but she made a point of ignoring you.)"
+    "（事实上，你曾让希尔做一些，但她故意无视你。）"
 
 # game/BKchapter2.rpy:8866
 translate chinese_simplified c2_homura_okiya2_247bd40b:
@@ -17602,7 +17602,7 @@ translate chinese_simplified c2_homura_okiya2_4ff7e916:
 translate chinese_simplified c2_homura_okiya2_9c0614a2:
 
     # "She gulps a large sip, becoming visibly red but doing her best to keep a brave face."
-    "She gulps a large sip, becoming visibly red but doing her best to keep a brave face."
+    "她咕咚咕咚喝了一大口，脸涨得通红，但她还是努力保持镇定。"
 
 # game/BKchapter2.rpy:8876
 translate chinese_simplified c2_homura_okiya2_6b40ae42:
@@ -17638,13 +17638,13 @@ translate chinese_simplified c2_homura_okiya2_9076045b:
 translate chinese_simplified c2_homura_okiya2_78350744:
 
     # "You chat amiably for a long time. She's pleasant to talk to, and you try to think of a new conversation topic to broach."
-    "You chat amiably for a long time. She's pleasant to talk to, and you try to think of a new conversation topic to broach."
+    "你们愉快地聊了很久。她很健谈，你努力想找个新的话题来开启对话。"
 
 # game/BKchapter2.rpy:8889
 translate chinese_simplified c2_homura_okiya2_2b281fbc:
 
     # you "So..." nointeract
-    you "So..." nointeract
+    you "所以..." nointeract
 
 # game/BKchapter2.rpy:8893
 translate chinese_simplified c2_homura_okiya2_b590082d:
@@ -17656,7 +17656,7 @@ translate chinese_simplified c2_homura_okiya2_b590082d:
 translate chinese_simplified c2_homura_okiya2_3506b98f:
 
     # homura sad "Oh... I guess many people see me only through that lense..."
-    homura sad "Oh... I guess many people see me only through that lense..."
+    homura sad "哦……看来很多人都只透过那种视角来看我……"
 
 # game/BKchapter2.rpy:8899
 translate chinese_simplified c2_homura_okiya2_fbd79765:
@@ -17674,7 +17674,7 @@ translate chinese_simplified c2_homura_okiya2_d24660e5:
 translate chinese_simplified c2_homura_okiya2_601ebe3c:
 
     # homura blush "Sorry, I'm being rude..."
-    homura blush "Sorry, I'm being rude..."
+    homura blush "抱歉，我失礼了……"
 
 # game/BKchapter2.rpy:8905
 translate chinese_simplified c2_homura_okiya2_fe11bb0e:
@@ -17686,13 +17686,13 @@ translate chinese_simplified c2_homura_okiya2_fe11bb0e:
 translate chinese_simplified c2_homura_okiya2_f45a7ed3:
 
     # homura sad "Please forgive me, I don't like to talk about my family. *frown*"
-    homura sad "Please forgive me, I don't like to talk about my family. *frown*"
+    homura sad "请原谅，我不喜欢谈论我的家人。*皱眉*"
 
 # game/BKchapter2.rpy:8909
 translate chinese_simplified c2_homura_okiya2_59d8d5ee:
 
     # "You can feel she is being evasive, and quickly change subjects."
-    "You can feel she is being evasive, and quickly change subjects."
+    "你能感觉到她在回避问题，然后迅速转移话题。"
 
 # game/BKchapter2.rpy:8915
 translate chinese_simplified c2_homura_okiya2_04dce7d9:
@@ -17704,13 +17704,13 @@ translate chinese_simplified c2_homura_okiya2_04dce7d9:
 translate chinese_simplified c2_homura_okiya2_6102589f:
 
     # homura normal "Well, I like adventures!"
-    homura normal "Well, I like adventures!"
+    homura normal "我喜欢冒险！"
 
 # game/BKchapter2.rpy:8921
 translate chinese_simplified c2_homura_okiya2_a02bba02:
 
     # homura surprise "But that's not very specific, I realize."
-    homura surprise "But that's not very specific, I realize."
+    homura surprise "但我知道，这个说法不够具体。"
 
 # game/BKchapter2.rpy:8923
 translate chinese_simplified c2_homura_okiya2_482a16c7:
@@ -17722,13 +17722,13 @@ translate chinese_simplified c2_homura_okiya2_482a16c7:
 translate chinese_simplified c2_homura_okiya2_8e733dfe:
 
     # homura normal "I like to explore new areas by myself, discover the world, be like a fly on the wall... I like walking in nature and enjoy the peace and quiet..."
-    homura normal "I like to explore new areas by myself, discover the world, be like a fly on the wall... I like walking in nature and enjoy the peace and quiet..."
+    homura normal "我喜欢独自探索新领域，发现世界，像一只隐形的苍蝇一样观察周围的一切……我喜欢在大自然中漫步，享受那份宁静……"
 
 # game/BKchapter2.rpy:8927
 translate chinese_simplified c2_homura_okiya2_f2e74e67:
 
     # homura blush "You could say I was born as the wrong person... Every step I take is watched by my father's guards, and I am stuck in the city. I rarely have time to simply be myself..."
-    homura blush "You could say I was born as the wrong person... Every step I take is watched by my father's guards, and I am stuck in the city. I rarely have time to simply be myself..."
+    homura blush "可以说，我生错了人……我的每一步都被父亲的卫兵监视着，我被困在这座城市里。我几乎没有时间做回自己……"
 
 # game/BKchapter2.rpy:8929
 translate chinese_simplified c2_homura_okiya2_2d3573ec:
@@ -17746,7 +17746,7 @@ translate chinese_simplified c2_homura_okiya2_1054b1f4:
 translate chinese_simplified c2_homura_okiya2_7fb452cf:
 
     # homura surprise "Whoah! Such a direct question! *blush*"
-    homura surprise "Whoah! Such a direct question! *blush*"
+    homura surprise "哇！这个问题问得真直接！*脸红*"
 
 # game/BKchapter2.rpy:8939
 translate chinese_simplified c2_homura_okiya2_590b13bb:
@@ -17758,7 +17758,7 @@ translate chinese_simplified c2_homura_okiya2_590b13bb:
 translate chinese_simplified c2_homura_okiya2_ac89493c:
 
     # you "Well..." nointeract
-    you "Well..." nointeract
+    you "出色地..." nointeract
 
 # game/BKchapter2.rpy:8946
 translate chinese_simplified c2_homura_okiya2_a8f653fb:
@@ -17770,7 +17770,7 @@ translate chinese_simplified c2_homura_okiya2_a8f653fb:
 translate chinese_simplified c2_homura_okiya2_f33f30d0:
 
     # homura sad "Oh. Of course... I should have guessed... Never mind."
-    homura sad "Oh. Of course... I should have guessed... Never mind."
+    homura sad "哦，当然……我应该想到的……算了。"
 
 # game/BKchapter2.rpy:8954
 translate chinese_simplified c2_homura_okiya2_611719cb:
@@ -17782,7 +17782,7 @@ translate chinese_simplified c2_homura_okiya2_611719cb:
 translate chinese_simplified c2_homura_okiya2_f33f30d0_1:
 
     # homura sad "Oh. Of course... I should have guessed... Never mind."
-    homura sad "Oh. Of course... I should have guessed... Never mind."
+    homura sad "哦，当然……我应该想到的……算了。"
 
 # game/BKchapter2.rpy:8962
 translate chinese_simplified c2_homura_okiya2_8df5a86a:
@@ -17812,13 +17812,13 @@ translate chinese_simplified c2_homura_okiya2_26ef54b5:
 translate chinese_simplified c2_homura_okiya2_2c403ae6:
 
     # "You hear something from the kitchen, as if Sill was clearing her throat loudly, but pay it no mind."
-    "You hear something from the kitchen, as if Sill was clearing her throat loudly, but pay it no mind."
+    "你听到厨房里传来声音，好像希尔在大声清嗓子，但不要在意。"
 
 # game/BKchapter2.rpy:8978
 translate chinese_simplified c2_homura_okiya2_d5358093:
 
     # homura blush "Oh, that's good... I mean, no, of course, that's a shame... Haha..."
-    homura blush "Oh, that's good... I mean, no, of course, that's a shame... Haha..."
+    homura blush "哦，那太好了……我的意思是，不，当然，那太可惜了……哈哈……"
 
 # game/BKchapter2.rpy:8984
 translate chinese_simplified c2_homura_okiya2_240cc743:
@@ -17830,7 +17830,7 @@ translate chinese_simplified c2_homura_okiya2_240cc743:
 translate chinese_simplified c2_homura_okiya2_375ff635:
 
     # homura blush "So you're a free spirit, uh? Well, I'm a little more traditional, but... I can respect that."
-    homura blush "So you're a free spirit, uh? Well, I'm a little more traditional, but... I can respect that."
+    homura blush "所以你是个自由奔放的人，是吗？嗯，我比较传统一些，不过……我能理解。"
 
 # game/BKchapter2.rpy:8988
 translate chinese_simplified c2_homura_okiya2_443f465b:
@@ -17842,13 +17842,13 @@ translate chinese_simplified c2_homura_okiya2_443f465b:
 translate chinese_simplified c2_homura_okiya2_7179189c:
 
     # homura surprise "Oh, I, uh... Yes, I mean, no, I mean... A long time ago..."
-    homura surprise "Oh, I, uh... Yes, I mean, no, I mean... A long time ago..."
+    homura surprise "哦，我，呃……是的，我是说，不，我是说……很久以前……"
 
 # game/BKchapter2.rpy:8992
 translate chinese_simplified c2_homura_okiya2_83da9760:
 
     # homura blush "But it's all in the past. I'm alone now, I guess... Single, I mean."
-    homura blush "But it's all in the past. I'm alone now, I guess... Single, I mean."
+    homura blush "但那都过去了。我现在大概是单身吧……我是说，单身。"
 
 # game/BKchapter2.rpy:8994
 translate chinese_simplified c2_homura_okiya2_ccc1e90e:
@@ -17860,13 +17860,13 @@ translate chinese_simplified c2_homura_okiya2_ccc1e90e:
 translate chinese_simplified c2_homura_okiya2_c6b1657a:
 
     # "She looks into the distance, staying strangely quiet."
-    "She looks into the distance, staying strangely quiet."
+    "她凝视着远方，异常安静。"
 
 # game/BKchapter2.rpy:8998
 translate chinese_simplified c2_homura_okiya2_a48b06f0:
 
     # homura sad "Yes."
-    homura sad "Yes."
+    homura sad "是的。"
 
 # game/BKchapter2.rpy:9000
 translate chinese_simplified c2_homura_okiya2_70e73a84:
@@ -17884,25 +17884,25 @@ translate chinese_simplified c2_homura_okiya2_4055e58b:
 translate chinese_simplified c2_homura_okiya2_7b846f6a:
 
     # "You talked for so long that [brothel.name] is now opened and the night is in full swing. Bawdy customers banter with your girls as they perform geisha displays."
-    "You talked for so long that [brothel.name] is now opened and the night is in full swing. Bawdy customers banter with your girls as they perform geisha displays."
+    "你们聊了这么久，[brothel.name] 现在已经开门营业了，夜色正浓。粗俗的顾客们一边和你的艺伎们调情，一边欣赏她们的表演。"
 
 # game/BKchapter2.rpy:9008
 translate chinese_simplified c2_homura_okiya2_6fedbd81:
 
     # "The sake bottle now sits comfortably empty, and the room is now so full that Homura and you are pushed beside each other by the crowd."
-    "The sake bottle now sits comfortably empty, and the room is now so full that Homura and you are pushed beside each other by the crowd."
+    "清酒瓶现在空空如也地摆在那里，房间里挤满了人，焰和你被人群推挤到一起。"
 
 # game/BKchapter2.rpy:9010
 translate chinese_simplified c2_homura_okiya2_8a9627af:
 
     # homura blush "Hey! Watch out! Sheesh, what a boor..."
-    homura blush "Hey! Watch out! Sheesh, what a boor..."
+    homura blush "嘿！小心！哎呀，真是个粗鲁的人……"
 
 # game/BKchapter2.rpy:9012
 translate chinese_simplified c2_homura_okiya2_523b62ab:
 
     # "She is now quite drunk, and you feel pleasantly warmed up. Suddenly, she leans in against you, resting her head on your shoulder."
-    "She is now quite drunk, and you feel pleasantly warmed up. Suddenly, she leans in against you, resting her head on your shoulder."
+    "她现在已经喝得有点醉了，你感到一阵暖意袭来。突然，她靠向你，把头枕在你的肩膀上。"
 
 # game/BKchapter2.rpy:9016
 translate chinese_simplified c2_homura_okiya2_4553bbb6:
@@ -17926,13 +17926,13 @@ translate chinese_simplified c2_homura_okiya2_be2dc2e3:
 translate chinese_simplified c2_homura_okiya2_fc94927f:
 
     # "Feeling her petite body resting against yours and her hair brush your face, you feel a bit aroused. You try to steal a glance at her cleavage, but her kimono is too well-fitted."
-    "Feeling her petite body resting against yours and her hair brush your face, you feel a bit aroused. You try to steal a glance at her cleavage, but her kimono is too well-fitted."
+    "感受到她娇小的身躯贴着你，发丝拂过你的脸颊，你感到一阵悸动。你想偷瞄一眼她的乳沟，但她的和服太过贴身。"
 
 # game/BKchapter2.rpy:9024
 translate chinese_simplified c2_homura_okiya2_8a27886a:
 
     # "A little while goes by before she speaks again."
-    "A little while goes by before she speaks again."
+    "过了一会儿，她才再次开口说话。"
 
 # game/BKchapter2.rpy:9026
 translate chinese_simplified c2_homura_okiya2_c7325e74:
@@ -17974,7 +17974,7 @@ translate chinese_simplified c2_homura_okiya2_b4c4882f:
 translate chinese_simplified c2_homura_okiya2_9c757208:
 
     # "Turning her head, she whispers in your ear."
-    "Turning her head, she whispers in your ear."
+    "她转过头，在你耳边低语。"
 
 # game/BKchapter2.rpy:9040
 translate chinese_simplified c2_homura_okiya2_4d40d8ec:
@@ -17986,7 +17986,7 @@ translate chinese_simplified c2_homura_okiya2_4d40d8ec:
 translate chinese_simplified c2_homura_okiya2_66166935:
 
     # "Taken aback, you blink and find yourself at a loss for words for an instant."
-    "Taken aback, you blink and find yourself at a loss for words for an instant."
+    "你愣住了，眨了眨眼，一时语塞。"
 
 # game/BKchapter2.rpy:9052
 translate chinese_simplified c2_homura_okiya2_40d54e64:
@@ -17998,7 +17998,7 @@ translate chinese_simplified c2_homura_okiya2_40d54e64:
 translate chinese_simplified c2_homura_okiya2_41ccdb09:
 
     # "She locks eyes with you, looking seductive."
-    "She locks eyes with you, looking seductive."
+    "她与你四目相对，眼神充满诱惑。"
 
 # game/BKchapter2.rpy:9058
 translate chinese_simplified c2_homura_okiya2_214a5607:
@@ -18010,7 +18010,7 @@ translate chinese_simplified c2_homura_okiya2_214a5607:
 translate chinese_simplified c2_homura_okiya2_f86338ec:
 
     # "She holds on to your arm, her pace unsteady as she walks with you towards your room."
-    "She holds on to your arm, her pace unsteady as she walks with you towards your room."
+    "她挽着你的胳膊，脚步不稳地和你一起走向你的房间。"
 
 # game/BKchapter2.rpy:9071
 translate chinese_simplified c2_homura_okiya2_c0b7cdb4:
@@ -18022,7 +18022,7 @@ translate chinese_simplified c2_homura_okiya2_c0b7cdb4:
 translate chinese_simplified c2_homura_okiya2_f1b659b6:
 
     # "Homura takes a few steps in. You close the door behind you."
-    "Homura takes a few steps in. You close the door behind you."
+    "焰走了几步。你关上了身后的门。"
 
 # game/BKchapter2.rpy:9077
 translate chinese_simplified c2_homura_okiya2_cebc8958:
@@ -18058,7 +18058,7 @@ translate chinese_simplified c2_homura_okiya2_8c718e35:
 translate chinese_simplified c2_homura_okiya2_89118cb6:
 
     # "She looks at you with burning eyes, a mix of shame and anticipation."
-    "She looks at you with burning eyes, a mix of shame and anticipation."
+    "她用充满羞愧和期待的眼神望着你。"
 
 # game/BKchapter2.rpy:9091
 translate chinese_simplified c2_homura_okiya2_3f3e7599:
@@ -18094,7 +18094,7 @@ translate chinese_simplified c2_homura_okiya2_0364eb4f:
 translate chinese_simplified c2_homura_okiya2_a1ee7aea:
 
     # "You look her straight in the eyes, and she blushes, but she doesn't look down."
-    "You look her straight in the eyes, and she blushes, but she doesn't look down."
+    "你直视她的眼睛，她脸红了，但她没有低下头。"
 
 # game/BKchapter2.rpy:9103
 translate chinese_simplified c2_homura_okiya2_39219941:
@@ -18106,7 +18106,7 @@ translate chinese_simplified c2_homura_okiya2_39219941:
 translate chinese_simplified c2_homura_okiya2_0dfa3ea9:
 
     # "Without waiting for an invitation, Homura sits down on your bed, her face flushed. Her kimono loosens, giving you a glimpse of her legs, all the way up to her thighs."
-    "Without waiting for an invitation, Homura sits down on your bed, her face flushed. Her kimono loosens, giving you a glimpse of her legs, all the way up to her thighs."
+    "不等邀请，焰就坐在了你的床上，脸颊绯红。她的和服松开了，让你得以瞥见她修长的双腿，一直到大腿根部。"
 
 # game/BKchapter2.rpy:9107
 translate chinese_simplified c2_homura_okiya2_253bc5d4:
@@ -18130,7 +18130,7 @@ translate chinese_simplified c2_homura_okiya2_b1ac9429:
 translate chinese_simplified c2_homura_okiya2_8271df47:
 
     # "You blank out for a little while, feeling uncharacteristically spent."
-    "You blank out for a little while, feeling uncharacteristically spent."
+    "你突然大脑一片空白，感觉异常疲惫。"
 
 # game/BKchapter2.rpy:9123
 translate chinese_simplified c2_homura_okiya2_f97e59dc:
@@ -18154,13 +18154,13 @@ translate chinese_simplified c2_homura_okiya2_5e92b676:
 translate chinese_simplified c2_homura_okiya2_c88d5835:
 
     # homura naked "Zzzzz..."
-    homura naked "Zzzzz..."
+    homura naked "呼呼……"
 
 # game/BKchapter2.rpy:9131
 translate chinese_simplified c2_homura_okiya2_b7691b9a:
 
     # "Lying down on the bed with her kimono in disarray and her face smeared with cum, Homura is snoring loudly."
-    "Lying down on the bed with her kimono in disarray and her face smeared with cum, Homura is snoring loudly."
+    "焰躺在床上，和服凌乱不堪，脸上沾满了精液，鼾声如雷。"
 
 # game/BKchapter2.rpy:9133
 translate chinese_simplified c2_homura_okiya2_a50a1f59:
@@ -18172,13 +18172,13 @@ translate chinese_simplified c2_homura_okiya2_a50a1f59:
 translate chinese_simplified c2_homura_okiya2_c9d0e323:
 
     # "She obviously was very drunk, so it's no wonder she passed out."
-    "She obviously was very drunk, so it's no wonder she passed out."
+    "她显然喝得酩酊大醉，所以昏过去也就不足为奇了。"
 
 # game/BKchapter2.rpy:9141
 translate chinese_simplified c2_homura_okiya2_f583f48e:
 
     # "Eventually, Homura wakes up, looking hungover and confused."
-    "Eventually, Homura wakes up, looking hungover and confused."
+    "最终，焰醒了过来，一副宿醉未醒、神情迷茫的样子。"
 
 # game/BKchapter2.rpy:9145
 translate chinese_simplified c2_homura_okiya2_145e07c7:
@@ -18202,7 +18202,7 @@ translate chinese_simplified c2_homura_okiya2_d9683b4a:
 translate chinese_simplified c2_homura_okiya2_fed1800f:
 
     # "It all comes back to her."
-    "It all comes back to her."
+    "最终一切都回到了她身上。"
 
 # game/BKchapter2.rpy:9153
 translate chinese_simplified c2_homura_okiya2_556d92b7:
@@ -18214,19 +18214,19 @@ translate chinese_simplified c2_homura_okiya2_556d92b7:
 translate chinese_simplified c2_homura_okiya2_8b7e11ec:
 
     # "You try to reassure her that there's nothing to worry about. Grabbing her clothes, she hurries towards the bathroom to fix herself."
-    "You try to reassure her that there's nothing to worry about. Grabbing her clothes, she hurries towards the bathroom to fix herself."
+    "你试图安慰她，让她别担心。她抓起衣服，匆匆走向浴室整理自己。"
 
 # game/BKchapter2.rpy:9157
 translate chinese_simplified c2_homura_okiya2_4f9e9088:
 
     # "When she comes out moments later, she meekly bows to you and wordlessly makes her exit, without looking you in the eye."
-    "When she comes out moments later, she meekly bows to you and wordlessly makes her exit, without looking you in the eye."
+    "片刻之后，她走了出来，温顺地向你鞠了一躬，一言不发地离开了，甚至没有看你一眼。"
 
 # game/BKchapter2.rpy:9159
 translate chinese_simplified c2_homura_okiya2_73b1d851:
 
     # "You follow her outside, trying to find something to say to her, but she is already rushing for the exit."
-    "You follow her outside, trying to find something to say to her, but she is already rushing for the exit."
+    "你跟着她走到外面，想找些话跟她说，但她已经急匆匆地走向出口了。"
 
 # game/BKchapter2.rpy:9165
 translate chinese_simplified c2_homura_okiya2_23c8c415:
@@ -18238,7 +18238,7 @@ translate chinese_simplified c2_homura_okiya2_23c8c415:
 translate chinese_simplified c2_homura_okiya2_bf01f510:
 
     # homura sad "What's the matter... Am I not good enough for you?"
-    homura sad "What's the matter... Am I not good enough for you?"
+    homura sad "怎么了……我配不上你吗？"
 
 # game/BKchapter2.rpy:9171
 translate chinese_simplified c2_homura_okiya2_3a4d70f9:
@@ -18256,13 +18256,13 @@ translate chinese_simplified c2_homura_okiya2_4c8daeb1:
 translate chinese_simplified c2_homura_okiya2_048e06a7:
 
     # "She looks at you pensively for a while, then nods."
-    "She looks at you pensively for a while, then nods."
+    "她若有所思地看了你一会儿，然后点了点头。"
 
 # game/BKchapter2.rpy:9177
 translate chinese_simplified c2_homura_okiya2_e2c392a9:
 
     # homura blush "I didn't expect you to be so... Gentle."
-    homura blush "I didn't expect you to be so... Gentle."
+    homura blush "我没想到你会这么……温柔。"
 
 # game/BKchapter2.rpy:9179
 translate chinese_simplified c2_homura_okiya2_1b85367b:
@@ -18274,7 +18274,7 @@ translate chinese_simplified c2_homura_okiya2_1b85367b:
 translate chinese_simplified c2_homura_okiya2_29491aa3:
 
     # "She tries to get up, but stumbles and falls back into your arms."
-    "She tries to get up, but stumbles and falls back into your arms."
+    "她试图起身，却踉跄了一下，又跌回你的怀里。"
 
 # game/BKchapter2.rpy:9185
 translate chinese_simplified c2_homura_okiya2_baea29c7:
@@ -18286,7 +18286,7 @@ translate chinese_simplified c2_homura_okiya2_baea29c7:
 translate chinese_simplified c2_homura_okiya2_91856e3a:
 
     # "Before getting up again, she kisses your cheek softly."
-    "Before getting up again, she kisses your cheek softly."
+    "在她再次起身之前，她轻轻地吻了吻你的脸颊。"
 
 # game/BKchapter2.rpy:9189
 translate chinese_simplified c2_homura_okiya2_0d4f596d:
@@ -18298,7 +18298,7 @@ translate chinese_simplified c2_homura_okiya2_0d4f596d:
 translate chinese_simplified c2_homura_okiya2_83d0e1e0:
 
     # "Your eyes trail her as she walks out of the brothel. Suddenly, your eyes meet Sill's, standing next to the door and burning with fury."
-    "Your eyes trail her as she walks out of the brothel. Suddenly, your eyes meet Sill's, standing next to the door and burning with fury."
+    "你的目光追随着她，看着她走出妓院。突然，你的目光与站在门口、怒火中烧的希尔的目光相遇。"
 
 # game/BKchapter2.rpy:9193
 translate chinese_simplified c2_homura_okiya2_e3419185:
@@ -18310,19 +18310,19 @@ translate chinese_simplified c2_homura_okiya2_e3419185:
 translate chinese_simplified c2_homura_okiya2_4af31c9f:
 
     # "Sill goes to her room and slams the door so hard that a few drunk patrons fall over like bowling pins. You head back to your bedroom, sensing a headache coming."
-    "Sill goes to her room and slams the door so hard that a few drunk patrons fall over like bowling pins. You head back to your bedroom, sensing a headache coming."
+    "希尔回到房间，用力摔上门，几个醉醺醺的客人像保龄球瓶一样摔倒在地。你回到自己的卧室，感觉头痛欲裂。"
 
 # game/BKchapter2.rpy:9211
 translate chinese_simplified c2_palace_visit2_85be6880:
 
     # "You wake up to find a messenger bearing the royal seal knocking on your door."
-    "You wake up to find a messenger bearing the royal seal knocking on your door."
+    "你醒来时发现一名携带皇家印章的信使正在敲你的门。"
 
 # game/BKchapter2.rpy:9213
 translate chinese_simplified c2_palace_visit2_da7b1d49:
 
     # "Messenger" "Sir, I have been asked to take you to the Palace. Princess Kurohime's orders."
-    "Messenger" "大人，我奉黑姬公主之命，前来接您前往皇宫。"
+    "信使" "大人，我奉黑姬公主之命，前来接您前往皇宫。"
 
 # game/BKchapter2.rpy:9215
 translate chinese_simplified c2_palace_visit2_4a3edb9f:
@@ -18334,13 +18334,13 @@ translate chinese_simplified c2_palace_visit2_4a3edb9f:
 translate chinese_simplified c2_palace_visit2_141cbae1:
 
     # "You are getting used to the royal summons."
-    "You are getting used to the royal summons."
+    "你渐渐习惯了接到皇室的召见。"
 
 # game/BKchapter2.rpy:9222
 translate chinese_simplified c2_palace_visit2_8b43f996:
 
     # "During the ride to the Palace, you reflect on what you've learnt."
-    "During the ride to the Palace, you reflect on what you've learnt."
+    "在前往皇宫的途中，你会反思自己所学到的东西。"
 
 # game/BKchapter2.rpy:9224
 translate chinese_simplified c2_palace_visit2_fb754e19:
@@ -18358,13 +18358,13 @@ translate chinese_simplified c2_palace_visit2_1b6a439d:
 translate chinese_simplified c2_palace_visit2_815a922f:
 
     # "As you enter the room, you immediately feel tension in the air."
-    "As you enter the room, you immediately feel tension in the air."
+    "一走进房间，你就能立刻感受到空气中的紧张气氛。"
 
 # game/BKchapter2.rpy:9237
 translate chinese_simplified c2_palace_visit2_6790a03e:
 
     # kuro "Another murder this week! The chief executioner, no less! How can we manage a proper Kingdom without a chief executioner!" with vpunch
-    kuro "Another murder this week! The chief executioner, no less! How can we manage a proper Kingdom without a chief executioner!" with vpunch
+    kuro "本周又一起谋杀案！而且还是刽子手头上的刽子手！没有刽子手头上官，我们怎么能治理好一个王国！" with vpunch
 
 # game/BKchapter2.rpy:9239
 translate chinese_simplified c2_palace_visit2_4a791ffc:
@@ -18382,7 +18382,7 @@ translate chinese_simplified c2_palace_visit2_6cc32187:
 translate chinese_simplified c2_palace_visit2_5640c639:
 
     # "Kenshin's jaw visibly clenches, but she lowers her eyes and answers in a subdued voice."
-    "Kenshin's jaw visibly clenches, but she lowers her eyes and answers in a subdued voice."
+    "剑心明显咬紧了牙关，但她垂下眼帘，用低沉的声音回答道。"
 
 # game/BKchapter2.rpy:9245
 translate chinese_simplified c2_palace_visit2_b5184d42:
@@ -18400,7 +18400,7 @@ translate chinese_simplified c2_palace_visit2_d93bc0f4:
 translate chinese_simplified c2_palace_visit2_b453a22e:
 
     # "Kenshin looks at the Princess and you in turn, helplessly. She seems about to protest, but then she just bows her head and leaves."
-    "Kenshin looks at the Princess and you in turn, helplessly. She seems about to protest, but then she just bows her head and leaves."
+    "剑心无奈地看着公主，又看了看你。公主似乎想要抗议，但最终只是低下头，离开了。"
 
 # game/BKchapter2.rpy:9255
 translate chinese_simplified c2_palace_visit2_4d474d9e:
@@ -18436,7 +18436,7 @@ translate chinese_simplified c2_palace_visit2_e1586a89:
 translate chinese_simplified c2_palace_visit2_e6cba671:
 
     # "She catches herself."
-    "She catches herself."
+    "她意识到自己错了。"
 
 # game/BKchapter2.rpy:9274
 translate chinese_simplified c2_palace_visit2_134958c3:
@@ -18514,7 +18514,7 @@ translate chinese_simplified c2_palace_visit2_2b339765:
 translate chinese_simplified c2_palace_visit2_cf8eb763:
 
     # "A tiny portrait adorns the inside of the pendant. Although the colors are faded, you immediately recognize the face of the beautiful, smiling woman."
-    "A tiny portrait adorns the inside of the pendant. Although the colors are faded, you immediately recognize the face of the beautiful, smiling woman."
+    "吊坠内侧镶嵌着一幅小小的肖像画。虽然颜色已经褪色，但你仍然能一眼认出那是一位美丽微笑女子的脸庞。"
 
 # game/BKchapter2.rpy:9316
 translate chinese_simplified c2_palace_visit2_ddfb74a0:
@@ -18574,7 +18574,7 @@ translate chinese_simplified c2_palace_visit2_d0bfa6a9:
 translate chinese_simplified c2_palace_visit2_2e920eea:
 
     # "You think back on the incident that day."
-    "You think back on the incident that day."
+    "你回想起那天发生的事情。"
 
 # game/BKchapter2.rpy:9340
 translate chinese_simplified c2_palace_visit2_e2bb86df:
@@ -18700,7 +18700,7 @@ translate chinese_simplified c2_palace_visit2_ee13dda7:
 translate chinese_simplified c2_palace_visit2_5c2157b6:
 
     # "She stiffens."
-    "She stiffens."
+    "她身体僵硬起来。"
 
 # game/BKchapter2.rpy:9390
 translate chinese_simplified c2_palace_visit2_7d78de3d:
@@ -18718,7 +18718,7 @@ translate chinese_simplified c2_palace_visit2_8040c233:
 translate chinese_simplified c2_palace_visit2_06398373:
 
     # "She sighs."
-    "She sighs."
+    "她叹了口气。"
 
 # game/BKchapter2.rpy:9396
 translate chinese_simplified c2_palace_visit2_4d7e7e5d:
@@ -18820,13 +18820,13 @@ translate chinese_simplified c2_palace_visit2_31a34c99:
 translate chinese_simplified c2_palace_visit2_ac89493c:
 
     # you "Well..." nointeract
-    you "Well..." nointeract
+    you "出色地..." nointeract
 
 # game/BKchapter2.rpy:9436
 translate chinese_simplified c2_palace_visit2_8921febe:
 
     # "It isn't like you to skip a free meal."
-    "It isn't like you to skip a free meal."
+    "你可不会放过免费的饭菜。"
 
 # game/BKchapter2.rpy:9438
 translate chinese_simplified c2_palace_visit2_caee6215:
@@ -18856,7 +18856,7 @@ translate chinese_simplified c2_palace_visit2_783ff731:
 translate chinese_simplified c2_luncheon2_1a068960:
 
     # "As you come out of the Princess's apartments, you bump into Knight Commander Kenshin. When she sees you, she... blushes?"
-    "As you come out of the Princess's apartments, you bump into Knight Commander Kenshin. When she sees you, she... blushes?"
+    "你走出公主的寝宫时，正好撞见了骑士团长剑心。她看到你时，竟然……脸红了？"
 
 # game/BKchapter2.rpy:9461
 translate chinese_simplified c2_luncheon2_bc79f3b1:
@@ -18892,19 +18892,19 @@ translate chinese_simplified c2_luncheon2_a9fb6b6f:
 translate chinese_simplified c2_luncheon2_141531c7:
 
     # "She looks away, avoiding your stare. You shrug and head for the reception hall."
-    "She looks away, avoiding your stare. You shrug and head for the reception hall."
+    "她别过脸去，避开你的目光。你耸耸肩，走向接待大厅。"
 
 # game/BKchapter2.rpy:9481
 translate chinese_simplified c2_luncheon2_8a87d71e:
 
     # "The luncheon is getting started. Who do you wish to join?"
-    "The luncheon is getting started. Who do you wish to join?"
+    "午餐会即将开始。你想和谁一起参加？"
 
 # game/BKchapter2.rpy:9489
 translate chinese_simplified c2_luncheon2_d365a732:
 
     # "The luncheon is coming to an end soon, but you still have a little time to mingle. Who do you want to see now?" with fade
-    "The luncheon is coming to an end soon, but you still have a little time to mingle. Who do you want to see now?" with fade
+    "午餐会即将结束，但您还有一些时间可以和大家交流。您现在想见谁？" with fade
 
 # game/BKchapter2.rpy:9492
 translate chinese_simplified c2_luncheon2_11fdb519:
@@ -18916,13 +18916,13 @@ translate chinese_simplified c2_luncheon2_11fdb519:
 translate chinese_simplified c2_luncheon2_034e2c31:
 
     # "It's hard for you to get noticed among the dozens of courtiers that vie for the Princess's attention, but eventually she nods to you and you step forward."
-    "It's hard for you to get noticed among the dozens of courtiers that vie for the Princess's attention, but eventually she nods to you and you step forward."
+    "在数十名争相博取公主欢心的朝臣中，你很难脱颖而出，但最终公主还是向你点了点头，你便上前一步。"
 
 # game/BKchapter2.rpy:9502
 translate chinese_simplified c2_luncheon2_dcfac4b8:
 
     # "She takes your arm, once again raising eyebrows, and leads you away from the crowd."
-    "She takes your arm, once again raising eyebrows, and leads you away from the crowd."
+    "她挽着你的胳膊，再次挑了挑眉，把你从人群中带走。"
 
 # game/BKchapter2.rpy:9504
 translate chinese_simplified c2_luncheon2_657cafa1:
@@ -19042,7 +19042,7 @@ translate chinese_simplified c2_luncheon2_60d6fd99:
 translate chinese_simplified c2_luncheon2_af47d184:
 
     # "Kenshin is still sulking in a corner, eyeing the assembly with distrust."
-    "Kenshin is still sulking in a corner, eyeing the assembly with distrust."
+    "剑心仍然独自躲在角落里生闷气，用不信任的目光打量着众人。"
 
 # game/BKchapter2.rpy:9553
 translate chinese_simplified c2_luncheon2_a534339b:
@@ -19096,7 +19096,7 @@ translate chinese_simplified c2_luncheon2_17989845:
 translate chinese_simplified c2_luncheon2_6ed3b521:
 
     # "To your surprise, she doesn't take the bait. She only lowers her head in shame."
-    "To your surprise, she doesn't take the bait. She only lowers her head in shame."
+    "出乎你意料的是，她并没有上钩，只是羞愧地低下了头。"
 
 # game/BKchapter2.rpy:9579
 translate chinese_simplified c2_luncheon2_be3b5866:
@@ -19120,7 +19120,7 @@ translate chinese_simplified c2_luncheon2_f9e96df4:
 translate chinese_simplified c2_luncheon2_d5818526:
 
     # "She looks at you with some surprise."
-    "She looks at you with some surprise."
+    "她带着几分惊讶的神情看着你。"
 
 # game/BKchapter2.rpy:9590
 translate chinese_simplified c2_luncheon2_6cd8f928:
@@ -19138,7 +19138,7 @@ translate chinese_simplified c2_luncheon2_6aba50d2:
 translate chinese_simplified c2_luncheon2_f4bc3df9:
 
     # "You both stay silent for a moment. You think back to your earlier conversation with Princess Kurohime. You need to fish for information."
-    "You both stay silent for a moment. You think back to your earlier conversation with Princess Kurohime. You need to fish for information."
+    "两人沉默了一会儿。你回想起之前与黑姬公主的对话。你需要从她口中套取信息。"
 
 # game/BKchapter2.rpy:9596
 translate chinese_simplified c2_luncheon2_7fd8fda3:
@@ -19156,19 +19156,19 @@ translate chinese_simplified c2_luncheon2_6eaa11c4:
 translate chinese_simplified c2_luncheon2_05f6d844:
 
     # kenshin blush "A p-personal question? Why?"
-    kenshin blush "A p-personal question? Why?"
+    kenshin blush "一个涉及个人隐私的问题？为什么？"
 
 # game/BKchapter2.rpy:9602
 translate chinese_simplified c2_luncheon2_0a29ce77:
 
     # "She blushes. That makes her kind of cute."
-    "She blushes. That makes her kind of cute."
+    "她脸红了。这让她看起来有点可爱。"
 
 # game/BKchapter2.rpy:9607
 translate chinese_simplified luncheon2_kenshin_menu_5a125138:
 
     # you "I wanted to ask you..." nointeract
-    you "I wanted to ask you..." nointeract
+    you "我想问你……" nointeract
 
 # game/BKchapter2.rpy:9613
 translate chinese_simplified luncheon2_kenshin_menu_ae6851a2:
@@ -19186,7 +19186,7 @@ translate chinese_simplified luncheon2_kenshin_menu_667bb850:
 translate chinese_simplified luncheon2_kenshin_menu_f6289877:
 
     # kenshin normal "The great Lord Commander Mitsuhide Maru abandoned duty and family one night, and just vanished."
-    kenshin normal "The great Lord Commander Mitsuhide Maru abandoned duty and family one night, and just vanished."
+    kenshin normal "伟大的总司令光秀丸一夜之间抛弃了职责和家人，消失得无影无踪。"
 
 # game/BKchapter2.rpy:9619
 translate chinese_simplified luncheon2_kenshin_menu_d2914ae1:
@@ -19264,7 +19264,7 @@ translate chinese_simplified luncheon2_kenshin_menu_8be19ca6:
 translate chinese_simplified luncheon2_kenshin_menu_50f1e0a7:
 
     # "Her voice breaks."
-    "Her voice breaks."
+    "她的声音哽咽了。"
 
 # game/BKchapter2.rpy:9645
 translate chinese_simplified luncheon2_kenshin_menu_654526f1:
@@ -19276,7 +19276,7 @@ translate chinese_simplified luncheon2_kenshin_menu_654526f1:
 translate chinese_simplified luncheon2_kenshin_menu_34dc94fe:
 
     # "Her eyes get shiny."
-    "Her eyes get shiny."
+    "她的眼睛闪闪发光。"
 
 # game/BKchapter2.rpy:9649
 translate chinese_simplified luncheon2_kenshin_menu_49afe8bb:
@@ -19288,7 +19288,7 @@ translate chinese_simplified luncheon2_kenshin_menu_49afe8bb:
 translate chinese_simplified luncheon2_kenshin_menu_5b56c3e2:
 
     # "She blinks her tears away, and her eyes look hard again."
-    "She blinks her tears away, and her eyes look hard again."
+    "她眨了眨眼，把眼泪甩掉，眼神又变得坚定起来。"
 
 # game/BKchapter2.rpy:9653
 translate chinese_simplified luncheon2_kenshin_menu_08f06d01:
@@ -19336,7 +19336,7 @@ translate chinese_simplified luncheon2_kenshin_menu_75e2e27d:
 translate chinese_simplified luncheon2_kenshin_menu_8bae7cd6:
 
     # kenshin normal "My mother?"
-    kenshin normal "My mother?"
+    kenshin normal "我的母亲？"
 
 # game/BKchapter2.rpy:9675
 translate chinese_simplified luncheon2_kenshin_menu_a3f1242a:
@@ -19348,7 +19348,7 @@ translate chinese_simplified luncheon2_kenshin_menu_a3f1242a:
 translate chinese_simplified luncheon2_kenshin_menu_b7e7165d:
 
     # "For a second it looks as if she's going to shoot you, but she keeps talking."
-    "For a second it looks as if she's going to shoot you, but she keeps talking."
+    "那一瞬间，她看起来像是要开枪打你，但她还是继续说了下去。"
 
 # game/BKchapter2.rpy:9679
 translate chinese_simplified luncheon2_kenshin_menu_6c90f301:
@@ -19390,7 +19390,7 @@ translate chinese_simplified luncheon2_kenshin_menu_58d45636:
 translate chinese_simplified luncheon2_kenshin_menu_08be572d:
 
     # kenshin blush "What? No way! My mother was no slut!" with vpunch
-    kenshin blush "What? No way! My mother was no slut!" with vpunch
+    kenshin blush "什么？不可能！我妈才不是荡妇！" with vpunch
 
 # game/BKchapter2.rpy:9693
 translate chinese_simplified luncheon2_kenshin_menu_2135715a:
@@ -19402,7 +19402,7 @@ translate chinese_simplified luncheon2_kenshin_menu_2135715a:
 translate chinese_simplified luncheon2_kenshin_menu_c3e75668:
 
     # kenshin normal "No, my mother would never have had any of that. She kept saying my father would return... That he was honorable..."
-    kenshin normal "No, my mother would never have had any of that. She kept saying my father would return... That he was honorable..."
+    kenshin normal "不，我母亲绝不会接受这些。她一直说我父亲会回来的……说他是个正直的人……"
 
 # game/BKchapter2.rpy:9697
 translate chinese_simplified luncheon2_kenshin_menu_8c6e74af:
@@ -19432,19 +19432,19 @@ translate chinese_simplified luncheon2_kenshin_menu_aedb53db:
 translate chinese_simplified luncheon2_kenshin_menu_efaf5a2d:
 
     # "She blushes bright red."
-    "She blushes bright red."
+    "她脸颊绯红。"
 
 # game/BKchapter2.rpy:9715
 translate chinese_simplified luncheon2_kenshin_menu_6de75a94:
 
     # kenshin blush "S-Such a personal question! I-I won't... I can't..."
-    kenshin blush "S-Such a personal question! I-I won't... I can't..."
+    kenshin blush "这……这个问题太私人了！我不会……我不能……"
 
 # game/BKchapter2.rpy:9717
 translate chinese_simplified luncheon2_kenshin_menu_d5dc996b:
 
     # "She looks completely unbalanced all of a sudden, like a teenage girl caught in an embarrassing position by a teacher."
-    "She looks completely unbalanced all of a sudden, like a teenage girl caught in an embarrassing position by a teacher."
+    "她突然看起来完全失去了平衡，就像一个十几岁的女孩被老师撞见了尴尬的处境。"
 
 # game/BKchapter2.rpy:9719
 translate chinese_simplified luncheon2_kenshin_menu_125fb969:
@@ -19456,13 +19456,13 @@ translate chinese_simplified luncheon2_kenshin_menu_125fb969:
 translate chinese_simplified luncheon2_kenshin_menu_7ed04c9d:
 
     # kenshin normal "I have no b-boyfriend, or husband! No time for that, nor do I need one!"
-    kenshin normal "I have no b-boyfriend, or husband! No time for that, nor do I need one!"
+    kenshin normal "我没有男朋友，也没有老公！没时间，也不需要！"
 
 # game/BKchapter2.rpy:9723
 translate chinese_simplified luncheon2_kenshin_menu_ff0c7b3e:
 
     # "She gets heated, and it seems to you she protests too much."
-    "She gets heated, and it seems to you she protests too much."
+    "她情绪激动，你觉得她抗议得太过头了。"
 
 # game/BKchapter2.rpy:9725
 translate chinese_simplified luncheon2_kenshin_menu_f1320975:
@@ -19474,7 +19474,7 @@ translate chinese_simplified luncheon2_kenshin_menu_f1320975:
 translate chinese_simplified luncheon2_kenshin_menu_58ed5193:
 
     # kenshin blush "WHAAAT?" with vpunch
-    kenshin blush "WHAAAT?" with vpunch
+    kenshin blush "什么？！" with vpunch
 
 # game/BKchapter2.rpy:9729
 translate chinese_simplified luncheon2_kenshin_menu_0d13e60e:
@@ -19486,13 +19486,13 @@ translate chinese_simplified luncheon2_kenshin_menu_0d13e60e:
 translate chinese_simplified luncheon2_kenshin_menu_f8594d37:
 
     # kenshin "I am a soldier, you bufoon, not a flimsy debutante! I have no time for men or women in my life!" with vpunch
-    kenshin "I am a soldier, you bufoon, not a flimsy debutante! I have no time for men or women in my life!" with vpunch
+    kenshin "我是个军人，你这个蠢货，不是什么轻浮的社交名媛！我这辈子没空搭理男人女人！" with vpunch
 
 # game/BKchapter2.rpy:9733
 translate chinese_simplified luncheon2_kenshin_menu_55f36fe0:
 
     # "She's shaking, and she pumps her fist at you with righteous anger."
-    "She's shaking, and she pumps her fist at you with righteous anger."
+    "她浑身颤抖，义愤填膺地向你挥舞着拳头。"
 
 # game/BKchapter2.rpy:9735
 translate chinese_simplified luncheon2_kenshin_menu_dade13d9:
@@ -19504,7 +19504,7 @@ translate chinese_simplified luncheon2_kenshin_menu_dade13d9:
 translate chinese_simplified luncheon2_kenshin_menu_edf7f3f4:
 
     # "She suddenly realizes other people are staring at you both. She blushes again."
-    "She suddenly realizes other people are staring at you both. She blushes again."
+    "她突然意识到其他人都在盯着你们俩看，脸又红了。"
 
 # game/BKchapter2.rpy:9739
 translate chinese_simplified luncheon2_kenshin_menu_b5df5ab3:
@@ -19516,7 +19516,7 @@ translate chinese_simplified luncheon2_kenshin_menu_b5df5ab3:
 translate chinese_simplified luncheon2_kenshin_menu_8553a8a8:
 
     # "Without so much as bowing goodbye, she suddenly turns around, and she rushes out of the room."
-    "Without so much as bowing goodbye, she suddenly turns around, and she rushes out of the room."
+    "她连鞠躬道别都没做，突然转身，冲出了房间。"
 
 # game/BKchapter2.rpy:9745
 translate chinese_simplified luncheon2_kenshin_menu_b157c08b:
@@ -19546,7 +19546,7 @@ translate chinese_simplified luncheon2_kenshin_menu_1ed5c451:
 translate chinese_simplified luncheon2_kenshin_menu_6eec22db:
 
     # "The flow of courtiers of all stripes coming to greet the Princess is unceasing, but you also notice how other groups hang separately around other public figures. A handful of them draw almost as much attention to themselves as the Royal Heiress."
-    "The flow of courtiers of all stripes coming to greet the Princess is unceasing, but you also notice how other groups hang separately around other public figures. A handful of them draw almost as much attention to themselves as the Royal Heiress."
+    "前来迎接公主的各色侍臣络绎不绝，但你也会注意到，其他一些群体则各自围绕着其他公众人物。其中一些人几乎和这位王室继承人一样引人注目。"
 
 # game/BKchapter2.rpy:9762
 translate chinese_simplified luncheon2_kenshin_menu_d754b773:
@@ -19558,13 +19558,13 @@ translate chinese_simplified luncheon2_kenshin_menu_d754b773:
 translate chinese_simplified luncheon2_kenshin_menu_5b3459f6:
 
     # "An elderly lady with a face covered with boils overhears you."
-    "An elderly lady with a face covered with boils overhears you."
+    "一位脸上长满脓疮的老妇人无意中听到了你们的对话。"
 
 # game/BKchapter2.rpy:9766
 translate chinese_simplified luncheon2_kenshin_menu_dd26abfa:
 
     # "Duchess" "My darling boy, you really don't know who they are, do you? You must be new to the Kingdom..."
-    "Duchess" "我的宝贝儿子，你真的不知道他们是谁，对吗？你一定是刚来到王国不久……"
+    "公爵夫人" "我的宝贝儿子，你真的不知道他们是谁，对吗？你一定是刚来到王国不久……"
 
 # game/BKchapter2.rpy:9768
 translate chinese_simplified luncheon2_kenshin_menu_3f54beab:
@@ -19576,7 +19576,7 @@ translate chinese_simplified luncheon2_kenshin_menu_3f54beab:
 translate chinese_simplified luncheon2_kenshin_menu_fcd2468c:
 
     # "Duchess" "A little country bumpkin, how adorable! A minor noble from one of the lesser cities in Xeros, no doubt... You must be starstruck to be standing among Zan's elite! This is the real deal!"
-    "Duchess" "真是个乡巴佬，太可爱了！想必是泽罗斯某个小城邦里的小贵族吧……能站在赞恩的精英阶层中间，你一定激动得像个追星族吧！这可是真材实料！"
+    "公爵夫人" "真是个乡巴佬，太可爱了！想必是泽罗斯某个小城邦里的小贵族吧……能站在赞恩的精英阶层中间，你一定激动得像个追星族吧！这可是真材实料！"
 
 # game/BKchapter2.rpy:9772
 translate chinese_simplified luncheon2_kenshin_menu_4eba0cef:
@@ -19588,19 +19588,19 @@ translate chinese_simplified luncheon2_kenshin_menu_4eba0cef:
 translate chinese_simplified luncheon2_kenshin_menu_86bbc9e6:
 
     # "Duchess" "But you're in luck, because I know {i}everyone{/i} worth knowing in the City of Jade."
-    "Duchess" "但你运气不错，因为我认识翡翠城里所有值得认识的人。"
+    "公爵夫人" "但你运气不错，因为我认识翡翠城里所有值得认识的人。"
 
 # game/BKchapter2.rpy:9776
 translate chinese_simplified luncheon2_kenshin_menu_5549e0a6:
 
     # "She nods towards an athletic gentleman with piercing blue eyes, having a quiet discussion with a group of courtiers."
-    "She nods towards an athletic gentleman with piercing blue eyes, having a quiet discussion with a group of courtiers."
+    "她朝一位身材健硕、目光炯炯的蓝眼睛绅士点了点头，他正与一群朝臣低声交谈。"
 
 # game/BKchapter2.rpy:9778
 translate chinese_simplified luncheon2_kenshin_menu_d6264b90:
 
     # "Duchess" "This is Lord Dukal, one of the most influential men in the city. He commands a lot of loyalty within the young people of the upper class, and speaks for many of them at Court."
-    "Duchess" "这位是杜卡尔勋爵，他是城中最有影响力的人物之一。他在上层阶级的年轻人中拥有极高的威望，并在朝廷中代表他们中的许多人发声。"
+    "公爵夫人" "这位是杜卡尔勋爵，他是城中最有影响力的人物之一。他在上层阶级的年轻人中拥有极高的威望，并在朝廷中代表他们中的许多人发声。"
 
 # game/BKchapter2.rpy:9780
 translate chinese_simplified luncheon2_kenshin_menu_e40e69b8:
@@ -19612,19 +19612,19 @@ translate chinese_simplified luncheon2_kenshin_menu_e40e69b8:
 translate chinese_simplified luncheon2_kenshin_menu_4b18fd90:
 
     # "She chuckles."
-    "She chuckles."
+    "她轻笑了一声。"
 
 # game/BKchapter2.rpy:9784
 translate chinese_simplified luncheon2_kenshin_menu_0eff8859:
 
     # "Duchess" "Oh no, far from it. He's one of the last survivors of the former dynasty."
-    "Duchess" "不，远非如此。他是前王朝最后的幸存者之一。"
+    "公爵夫人" "不，远非如此。他是前王朝最后的幸存者之一。"
 
 # game/BKchapter2.rpy:9786
 translate chinese_simplified luncheon2_kenshin_menu_c23a45f8:
 
     # "Duchess" "A distant cousin of the ruling family, he was too young and unimportant at the time of the purge. And now, it's too late for King Pharo to correct this particular mistake... Not that he has the backbone anymore."
-    "Duchess" "作为统治家族的远房表亲，他在清洗运动发生时年纪尚小，地位也微不足道。如今，法老王想要纠正这个错误已经太迟了……当然，他也没那个胆量了。"
+    "公爵夫人" "作为统治家族的远房表亲，他在清洗运动发生时年纪尚小，地位也微不足道。如今，法老王想要纠正这个错误已经太迟了……当然，他也没那个胆量了。"
 
 # game/BKchapter2.rpy:9788
 translate chinese_simplified luncheon2_kenshin_menu_1631b9b4:
@@ -19636,13 +19636,13 @@ translate chinese_simplified luncheon2_kenshin_menu_1631b9b4:
 translate chinese_simplified luncheon2_kenshin_menu_3db4961b:
 
     # "Duchess" "Why, yes, has no one told you how the current dynasty came to power? There was a lot of bloodshed when King Pharo took the throne..."
-    "Duchess" "没错，难道没人告诉过你现在的王朝是怎么上台的吗？法老王登基时，可是血流成河……"
+    "公爵夫人" "没错，难道没人告诉过你现在的王朝是怎么上台的吗？法老王登基时，可是血流成河……"
 
 # game/BKchapter2.rpy:9792
 translate chinese_simplified luncheon2_kenshin_menu_289551ed:
 
     # "Duchess" "Well, some would say 'usurped'. But I am not one to gossip... *wink*"
-    "Duchess" "嗯，有些人会说是“篡位”。但我可不是爱嚼舌根的人……😉"
+    "公爵夫人" "嗯，有些人会说是“篡位”。但我可不是爱嚼舌根的人……😉"
 
 # game/BKchapter2.rpy:9794
 translate chinese_simplified luncheon2_kenshin_menu_9bcdbe90:
@@ -19654,13 +19654,13 @@ translate chinese_simplified luncheon2_kenshin_menu_9bcdbe90:
 translate chinese_simplified luncheon2_kenshin_menu_62bbb51c:
 
     # "Duchess" "Well, he's still old Zanic nobility. Some foolish people would even say he has as much right to the throne as Princess Kurohime, Arios bless her... Some even took to calling him 'Prince Dukal'."
-    "Duchess" "嗯，他毕竟还是古老的扎尼克贵族。有些愚蠢的人甚至说他跟黑姬公主（愿艾瑞斯保佑她）一样有资格继承王位……有些人甚至称他为“杜卡尔王子”。"
+    "公爵夫人" "嗯，他毕竟还是古老的扎尼克贵族。有些愚蠢的人甚至说他跟黑姬公主（愿艾瑞斯保佑她）一样有资格继承王位……有些人甚至称他为“杜卡尔王子”。"
 
 # game/BKchapter2.rpy:9798
 translate chinese_simplified luncheon2_kenshin_menu_b51f4e8d:
 
     # "Duchess" "A good way to end up with your tongue torn out in a torture cell, if you ask me."
-    "Duchess" "依我看，这样下去很容易在刑讯室里被割掉舌头。"
+    "公爵夫人" "依我看，这样下去很容易在刑讯室里被割掉舌头。"
 
 # game/BKchapter2.rpy:9800
 translate chinese_simplified luncheon2_kenshin_menu_c419f9f4:
@@ -19672,19 +19672,19 @@ translate chinese_simplified luncheon2_kenshin_menu_c419f9f4:
 translate chinese_simplified luncheon2_kenshin_menu_b4dbdbad:
 
     # "You show her a tall, thin man in elegant black robes, with a long black beard with streaks of grey, surrounded by mages and scholars. He looks frail and sickly."
-    "You show her a tall, thin man in elegant black robes, with a long black beard with streaks of grey, surrounded by mages and scholars. He looks frail and sickly."
+    "你给她看一个身材高瘦、身穿优雅黑色长袍、留着夹杂着灰白长须的男子，他周围环绕着法师和学者。他看起来虚弱不堪，病恹恹的。"
 
 # game/BKchapter2.rpy:9804
 translate chinese_simplified luncheon2_kenshin_menu_1bfa3101:
 
     # "Duchess" "Why, this is Lord Henso, of course. A close advisor to the King, and the most skilled astronomer at Court. He was a most handsome man in his prime..."
-    "Duchess" "当然，这位是亨索勋爵。他是国王的亲信顾问，也是宫廷中最杰出的天文学家。他年轻时是一位非常英俊的男子……"
+    "公爵夫人" "当然，这位是亨索勋爵。他是国王的亲信顾问，也是宫廷中最杰出的天文学家。他年轻时是一位非常英俊的男子……"
 
 # game/BKchapter2.rpy:9806
 translate chinese_simplified luncheon2_kenshin_menu_06398373:
 
     # "She sighs."
-    "She sighs."
+    "她叹了口气。"
 
 # game/BKchapter2.rpy:9808
 translate chinese_simplified luncheon2_kenshin_menu_6be85ead:
@@ -19696,7 +19696,7 @@ translate chinese_simplified luncheon2_kenshin_menu_6be85ead:
 translate chinese_simplified luncheon2_kenshin_menu_b3abd613:
 
     # "You suddenly remember Homura's last name: Lady Henso."
-    "You suddenly remember Homura's last name: Lady Henso."
+    "你突然想起焰的姓氏：亨索夫人。"
 
 # game/BKchapter2.rpy:9812
 translate chinese_simplified luncheon2_kenshin_menu_d59c8d2e:
@@ -19708,31 +19708,31 @@ translate chinese_simplified luncheon2_kenshin_menu_d59c8d2e:
 translate chinese_simplified luncheon2_kenshin_menu_0c95399b:
 
     # "Duchess" "Have you, now? No surprise here, this is one of the oldest and most respected families in the city."
-    "Duchess" "现在你知道了？这并不奇怪，这是这座城市历史最悠久、最受尊敬的家族之一。"
+    "公爵夫人" "现在你知道了？这并不奇怪，这是这座城市历史最悠久、最受尊敬的家族之一。"
 
 # game/BKchapter2.rpy:9816
 translate chinese_simplified luncheon2_kenshin_menu_994afee8:
 
     # "Duchess" "Like all of the Magic Guild, they remained neutral during the upheaval, so they got through the change of dynasty unscathed."
-    "Duchess" "和所有魔法公会成员一样，他们在动荡时期保持中立，因此毫发无损地度过了王朝更迭。"
+    "公爵夫人" "和所有魔法公会成员一样，他们在动荡时期保持中立，因此毫发无损地度过了王朝更迭。"
 
 # game/BKchapter2.rpy:9818
 translate chinese_simplified luncheon2_kenshin_menu_30769548:
 
     # "Duchess" "Not to say that Lord Henso didn't have his share of heartache, though..."
-    "Duchess" "当然，这并不意味着亨索勋爵就没有经历过心碎的时刻……"
+    "公爵夫人" "当然，这并不意味着亨索勋爵就没有经历过心碎的时刻……"
 
 # game/BKchapter2.rpy:9820
 translate chinese_simplified luncheon2_kenshin_menu_a8e62d8c:
 
     # "Next, she points at a small, fat man by the buffet, in passionate discussion with a group of merchants."
-    "Next, she points at a small, fat man by the buffet, in passionate discussion with a group of merchants."
+    "接着，她指着自助餐台旁一个身材矮胖的男人，他正与一群商贩热烈地讨论着什么。"
 
 # game/BKchapter2.rpy:9822
 translate chinese_simplified luncheon2_kenshin_menu_1b9c63df:
 
     # "Duchess" "And this is Lord Kosmo the Elder. He is probably the richest man in this room, although many despise him for how he made his fortune. There's no business too dirty for this man."
-    "Duchess" "这位是老科斯莫勋爵。他可能是这屋子里最富有的人，尽管许多人鄙视他发家致富的手段。对他来说，没有哪桩生意是肮脏的。"
+    "公爵夫人" "这位是老科斯莫勋爵。他可能是这屋子里最富有的人，尽管许多人鄙视他发家致富的手段。对他来说，没有哪桩生意是肮脏的。"
 
 # game/BKchapter2.rpy:9824
 translate chinese_simplified luncheon2_kenshin_menu_21b150c6:
@@ -19744,13 +19744,13 @@ translate chinese_simplified luncheon2_kenshin_menu_21b150c6:
 translate chinese_simplified luncheon2_kenshin_menu_5958f4f1:
 
     # "Duchess" "Yes. Not an old or respected name by any means, but money commands its own loyalty."
-    "Duchess" "是的。这算不上什么历史悠久或受人尊敬的名号，但金钱自有其威慑力。"
+    "公爵夫人" "是的。这算不上什么历史悠久或受人尊敬的名号，但金钱自有其威慑力。"
 
 # game/BKchapter2.rpy:9828
 translate chinese_simplified luncheon2_kenshin_menu_48051032:
 
     # "Duchess" "I hear his only son is acting up... Too bad, because he had plans for him. He thinks he could forge an alliance with the King..."
-    "Duchess" "我听说他唯一的儿子最近很叛逆……真可惜，因为他原本对他寄予厚望。他以为儿子能和国王结盟……"
+    "公爵夫人" "我听说他唯一的儿子最近很叛逆……真可惜，因为他原本对他寄予厚望。他以为儿子能和国王结盟……"
 
 # game/BKchapter2.rpy:9830
 translate chinese_simplified luncheon2_kenshin_menu_9261172e:
@@ -19762,19 +19762,19 @@ translate chinese_simplified luncheon2_kenshin_menu_9261172e:
 translate chinese_simplified luncheon2_kenshin_menu_699ede47:
 
     # "Duchess" "Why, marriage of course!"
-    "Duchess" "当然是结婚啦！"
+    "公爵夫人" "当然是结婚啦！"
 
 # game/BKchapter2.rpy:9834
 translate chinese_simplified luncheon2_kenshin_menu_c231354c:
 
     # "Duchess" "The Princess is only the most coveted bachelorette in all of Xeros..."
-    "Duchess" "公主是整个泽罗斯大陆上最令人垂涎的单身女郎……"
+    "公爵夫人" "公主是整个泽罗斯大陆上最令人垂涎的单身女郎……"
 
 # game/BKchapter2.rpy:9836
 translate chinese_simplified luncheon2_kenshin_menu_dd6882a3:
 
     # "Duchess" "But whichever fool ends up marrying her is in for a disappointment."
-    "Duchess" "但无论哪个傻瓜最终娶了她，都会失望的。"
+    "公爵夫人" "但无论哪个傻瓜最终娶了她，都会失望的。"
 
 # game/BKchapter2.rpy:9838
 translate chinese_simplified luncheon2_kenshin_menu_fec1fe3c_1:
@@ -19786,37 +19786,37 @@ translate chinese_simplified luncheon2_kenshin_menu_fec1fe3c_1:
 translate chinese_simplified luncheon2_kenshin_menu_74e717be:
 
     # "She chuckles again."
-    "She chuckles again."
+    "她又轻笑了一声。"
 
 # game/BKchapter2.rpy:9842
 translate chinese_simplified luncheon2_kenshin_menu_43b92fed:
 
     # "Duchess" "Well, for starters, this girl Kurohime is likely to be as boring a bride as you could imagine... I know a frigid dove when I see one!"
-    "Duchess" "首先，这个名叫黑姬的女孩很可能是你想象中最无趣的新娘……我一眼就能看出她是冷若冰霜的新娘！"
+    "公爵夫人" "首先，这个名叫黑姬的女孩很可能是你想象中最无趣的新娘……我一眼就能看出她是冷若冰霜的新娘！"
 
 # game/BKchapter2.rpy:9844
 translate chinese_simplified luncheon2_kenshin_menu_3b8df115:
 
     # "Duchess" "I wasn't anything like her in my day... *wink*"
-    "Duchess" "我当年可不像她那样……😉"
+    "公爵夫人" "我当年可不像她那样……😉"
 
 # game/BKchapter2.rpy:9846
 translate chinese_simplified luncheon2_kenshin_menu_e97c52dd:
 
     # "She has a worrisome glint in her eye, and you hope the old hag is not going to make a move on you."
-    "She has a worrisome glint in her eye, and you hope the old hag is not going to make a move on you."
+    "她眼神中闪过一丝令人担忧的光芒，你希望这个老巫婆不会对你下手。"
 
 # game/BKchapter2.rpy:9848
 translate chinese_simplified luncheon2_kenshin_menu_388ca18e:
 
     # "Duchess" "But this is nothing worth mentioning. Only the plebs marry for lust or love."
-    "Duchess" "但这没什么值得一提的。只有平民百姓才会为了欲望或爱情而结婚。"
+    "公爵夫人" "但这没什么值得一提的。只有平民百姓才会为了欲望或爱情而结婚。"
 
 # game/BKchapter2.rpy:9850
 translate chinese_simplified luncheon2_kenshin_menu_c51419ba:
 
     # "Duchess" "What I meant is, whoever ends up marrying her is unlikely to keep the spoils for very long..."
-    "Duchess" "我的意思是，不管是谁最终娶了她，都不太可能长久地占有这份财富……"
+    "公爵夫人" "我的意思是，不管是谁最终娶了她，都不太可能长久地占有这份财富……"
 
 # game/BKchapter2.rpy:9852
 translate chinese_simplified luncheon2_kenshin_menu_8b2675fe:
@@ -19828,163 +19828,163 @@ translate chinese_simplified luncheon2_kenshin_menu_8b2675fe:
 translate chinese_simplified luncheon2_kenshin_menu_ee7622fc:
 
     # "Duchess" "Well, some say the Pharo dynasty will not survive its first King. Besides..."
-    "Duchess" "有人说，法老王朝不会在第一位国王之后延续下去。此外……"
+    "公爵夫人" "有人说，法老王朝不会在第一位国王之后延续下去。此外……"
 
 # game/BKchapter2.rpy:9856
 translate chinese_simplified luncheon2_kenshin_menu_6e4da1a1:
 
     # "She spots a knight walking towards you, and interrupts herself."
-    "She spots a knight walking towards you, and interrupts herself."
+    "她看到一个骑士朝你走来，便打断了自己的说话。"
 
 # game/BKchapter2.rpy:9858
 translate chinese_simplified luncheon2_kenshin_menu_61bdac53:
 
     # "Duchess" "But look, my young lad, it was a pleasure talking to you. Now, I really need to talk to Lady Foozia about her new gardening book..."
-    "Duchess" "不过，小伙子，跟你聊天真愉快。现在，我真的得跟福齐亚夫人谈谈她的新园艺书了……"
+    "公爵夫人" "不过，小伙子，跟你聊天真愉快。现在，我真的得跟福齐亚夫人谈谈她的新园艺书了……"
 
 # game/BKchapter2.rpy:9860
 translate chinese_simplified luncheon2_kenshin_menu_09d769bd:
 
     # "Duchess" "We'll have a more private chat another time, right? *wink*"
-    "Duchess" "我们下次再私下聊吧？😉"
+    "公爵夫人" "我们下次再私下聊吧？😉"
 
 # game/BKchapter2.rpy:9862
 translate chinese_simplified luncheon2_kenshin_menu_84ed13b5:
 
     # "She gives you pat on the buttocks as she goes, and you freeze. Fortunately, the old harpy doesn't push it and leaves, chuckling as she goes."
-    "She gives you pat on the buttocks as she goes, and you freeze. Fortunately, the old harpy doesn't push it and leaves, chuckling as she goes."
+    "她边走边拍了拍你的屁股，你顿时僵住了。幸好，那个老妖婆没有追究，笑着离开了。"
 
 # game/BKchapter2.rpy:9868
 translate chinese_simplified luncheon2_kenshin_menu_0bed37cb:
 
     # "Heading towards the kitchen, you position yourself to be able to intercept both conversations and food platters."
-    "Heading towards the kitchen, you position yourself to be able to intercept both conversations and food platters."
+    "你走向厨房，占据有利位置，以便能够同时听到谈话和看到餐盘。"
 
 # game/BKchapter2.rpy:9870
 translate chinese_simplified luncheon2_kenshin_menu_3c2dd3d1:
 
     # "Page" "... I don't care if you believe it or not, this is what the royal guard told me."
-    "Page" "……我不在乎你信不信，这是皇家卫队告诉我的。"
+    "页" "……我不在乎你信不信，这是皇家卫队告诉我的。"
 
 # game/BKchapter2.rpy:9872
 translate chinese_simplified luncheon2_kenshin_menu_4ebb9e99:
 
     # "Manservant" "That doesn't make sense. He was in his cups."
-    "Manservant" "这说不通。他当时喝醉了。"
+    "男仆" "这说不通。他当时喝醉了。"
 
 # game/BKchapter2.rpy:9874
 translate chinese_simplified luncheon2_kenshin_menu_8cd28632:
 
     # "Page" "'Course he was, otherwise he wouldn't have said anything... But he had no reason to lie. He said they had evidence."
-    "Page" "他当然有，否则他不会说什么……但他没有理由撒谎。他说他们有证据。"
+    "页" "他当然有，否则他不会说什么……但他没有理由撒谎。他说他们有证据。"
 
 # game/BKchapter2.rpy:9876
 translate chinese_simplified luncheon2_kenshin_menu_be3b51a5:
 
     # "Maid" "Evidence? Against Commander Uesugi? I can't believe that."
-    "Maid" "证据？针对上杉司令官的证据？我简直不敢相信。"
+    "女佣" "证据？针对上杉司令官的证据？我简直不敢相信。"
 
 # game/BKchapter2.rpy:9878
 translate chinese_simplified luncheon2_kenshin_menu_c6e38311:
 
     # "Page" "Well, the date doesn't fall far from the tree."
-    "Page" "嗯，这日期跟它的父母很接近。"
+    "页" "嗯，这日期跟它的父母很接近。"
 
 # game/BKchapter2.rpy:9880
 translate chinese_simplified luncheon2_kenshin_menu_ae2da0d5:
 
     # "Manservant" "What do you mean?"
-    "Manservant" "你是什么意思？"
+    "男仆" "你是什么意思？"
 
 # game/BKchapter2.rpy:9882
 translate chinese_simplified luncheon2_kenshin_menu_3bcb0c09:
 
     # "Maid" "Like father, like daughter..."
-    "Maid" "有其父必有其女……"
+    "女佣" "有其父必有其女……"
 
 # game/BKchapter2.rpy:9884
 translate chinese_simplified luncheon2_kenshin_menu_610c24c1:
 
     # "Page" "Her dad was Commander of the Knights too, but he deserted suddenly, abandoning King and family."
-    "Page" "她的父亲也曾是骑士团的指挥官，但他突然叛逃，抛弃了国王和家人。"
+    "页" "她的父亲也曾是骑士团的指挥官，但他突然叛逃，抛弃了国王和家人。"
 
 # game/BKchapter2.rpy:9886
 translate chinese_simplified luncheon2_kenshin_menu_8179e9da:
 
     # "Maid" "Lady Kenshin was just a babe."
-    "Maid" "剑心夫人当时还是个小姑娘。"
+    "女佣" "剑心夫人当时还是个小姑娘。"
 
 # game/BKchapter2.rpy:9888
 translate chinese_simplified luncheon2_kenshin_menu_0e67fbf0:
 
     # "Manservant" "He ran away, just like that?"
-    "Manservant" "他就这样跑了？"
+    "男仆" "他就这样跑了？"
 
 # game/BKchapter2.rpy:9890
 translate chinese_simplified luncheon2_kenshin_menu_57836209:
 
     # "Page" "Not just like that. I hear there was another woman..."
-    "Page" "不只是这样。我听说还有另一个女人……"
+    "页" "不只是这样。我听说还有另一个女人……"
 
 # game/BKchapter2.rpy:9892
 translate chinese_simplified luncheon2_kenshin_menu_a0799aec:
 
     # "Maid" "Some said they saw him fleeing with a baby. His bastard, no doubt..."
-    "Maid" "有人说看到他抱着个婴儿逃跑了。毫无疑问，是他的私生子……"
+    "女佣" "有人说看到他抱着个婴儿逃跑了。毫无疑问，是他的私生子……"
 
 # game/BKchapter2.rpy:9894
 translate chinese_simplified luncheon2_kenshin_menu_e44cf263:
 
     # "Manservant" "A baby? So he left the little Lady alone as a babe, but he took his bastard with him?"
-    "Manservant" "一个婴儿？所以他把小姑娘独自留下，只留下她还是个婴儿，却带走了他的私生子？"
+    "男仆" "一个婴儿？所以他把小姑娘独自留下，只留下她还是个婴儿，却带走了他的私生子？"
 
 # game/BKchapter2.rpy:9896
 translate chinese_simplified luncheon2_kenshin_menu_c83d6793:
 
     # "Page" "Ouch. That's gotta sting..."
-    "Page" "哎哟，肯定很疼……"
+    "页" "哎哟，肯定很疼……"
 
 # game/BKchapter2.rpy:9898
 translate chinese_simplified luncheon2_kenshin_menu_7ab0628f:
 
     # "Manservant" "It still doesn't have anything to do with Kenshin being a traitor."
-    "Manservant" "这仍然与剑心是否是叛徒没有任何关系。"
+    "男仆" "这仍然与剑心是否是叛徒没有任何关系。"
 
 # game/BKchapter2.rpy:9900
 translate chinese_simplified luncheon2_kenshin_menu_9487b2bd:
 
     # "Page" "Of course it does! Can't you see? She has traitor genes!"
-    "Page" "当然有！你看不出来吗？她有叛徒基因！"
+    "页" "当然有！你看不出来吗？她有叛徒基因！"
 
 # game/BKchapter2.rpy:9902
 translate chinese_simplified luncheon2_kenshin_menu_84b0902a:
 
     # "Maid" "There's no such things as traitor genes..."
-    "Maid" "根本不存在什么叛徒基因……"
+    "女佣" "根本不存在什么叛徒基因……"
 
 # game/BKchapter2.rpy:9904
 translate chinese_simplified luncheon2_kenshin_menu_aa2ace4e:
 
     # "Page" "There is! Don't you remember the story about the wife of old Lord Wittol..."
-    "Page" "有的！你不记得老维托尔勋爵妻子的故事了吗……"
+    "页" "有的！你不记得老维托尔勋爵妻子的故事了吗……"
 
 # game/BKchapter2.rpy:9906
 translate chinese_simplified luncheon2_kenshin_menu_e1a31592:
 
     # "You listen to the palace underlings bickering among themselves, until you get bored and eventually leave them to it."
-    "You listen to the palace underlings bickering among themselves, until you get bored and eventually leave them to it."
+    "你听着宫廷小喽啰们互相争吵，直到你感到无聊，最终便让他们自生自灭。"
 
 # game/BKchapter2.rpy:9912
 translate chinese_simplified luncheon2_kenshin_menu_bed703aa:
 
     # "Yawning, the Princess gives the signal that she is ready to retire to her apartments. The crowd quickly clears out, and a knight escorts you down to a carriage that takes you back to the lower city."
-    "Yawning, the Princess gives the signal that she is ready to retire to her apartments. The crowd quickly clears out, and a knight escorts you down to a carriage that takes you back to the lower city."
+    "公主打了个哈欠，示意她准备回寝宫休息。人群很快散去，一位骑士护送你上一辆马车，马车将你送回下城区。"
 
 # game/BKchapter2.rpy:9921
 translate chinese_simplified c2_kosmo_new_recruit_b7472156:
 
     # "That night."
-    "That night."
+    "那天晚上。"
 
 # game/BKchapter2.rpy:9930
 translate chinese_simplified c2_kosmo_new_recruit_deede7d2:
@@ -20002,7 +20002,7 @@ translate chinese_simplified c2_kosmo_new_recruit_f0f5953a:
 translate chinese_simplified c2_kosmo_new_recruit_44dfd9cf:
 
     # kosmo angry "UWAH!!!" with vpunch
-    kosmo angry "UWAH!!!" with vpunch
+    kosmo angry "哇！！！" with vpunch
 
 # game/BKchapter2.rpy:9940
 translate chinese_simplified c2_kosmo_new_recruit_3d221d1f:
@@ -20020,13 +20020,13 @@ translate chinese_simplified c2_kosmo_new_recruit_a0c5c4e7:
 translate chinese_simplified c2_kosmo_new_recruit_28f8b9cf:
 
     # kosmo laughing "It's called a {i}mansion{/i}! And yes, it's mine."
-    kosmo laughing "It's called a {i}mansion{/i}! And yes, it's mine."
+    kosmo laughing "它叫做豪宅！没错，它是我的。"
 
 # game/BKchapter2.rpy:9946
 translate chinese_simplified c2_kosmo_new_recruit_514c05d6:
 
     # kosmo happy "I earned it the hard way, too: my father gave it to me when I was 8."
-    kosmo happy "I earned it the hard way, too: my father gave it to me when I was 8."
+    kosmo happy "这也是我辛辛苦苦挣来的：我父亲在我 8 岁时把它送给了我。"
 
 # game/BKchapter2.rpy:9948
 translate chinese_simplified c2_kosmo_new_recruit_9f92249c:
@@ -20044,7 +20044,7 @@ translate chinese_simplified c2_kosmo_new_recruit_3281338e:
 translate chinese_simplified c2_kosmo_new_recruit_d7f86092:
 
     # kosmo angry "Grrr..."
-    kosmo angry "Grrr..."
+    kosmo angry "啊啊啊……"
 
 # game/BKchapter2.rpy:9954
 translate chinese_simplified c2_kosmo_new_recruit_f7b2988d:
@@ -20056,7 +20056,7 @@ translate chinese_simplified c2_kosmo_new_recruit_f7b2988d:
 translate chinese_simplified c2_kosmo_new_recruit_72228ea9:
 
     # kosmo happy "Why, yes, it cost me a huge sum to find you, that's for sure. I hear you're the best."
-    kosmo happy "Why, yes, it cost me a huge sum to find you, that's for sure. I hear you're the best."
+    kosmo happy "没错，为了找到你，我确实花了不少钱。我听说你是最棒的。"
 
 # game/BKchapter2.rpy:9958
 translate chinese_simplified c2_kosmo_new_recruit_55dade56:
@@ -20080,13 +20080,13 @@ translate chinese_simplified c2_kosmo_new_recruit_87294e1e:
 translate chinese_simplified c2_kosmo_new_recruit_a8f1d326:
 
     # kosmo angry "Err, I... Don't interrupt! His name is [MC.name], and..."
-    kosmo angry "Err, I... Don't interrupt! His name is [MC.name], and..."
+    kosmo angry "呃，我……别打断我！他的名字是[MC.name]，而且……"
 
 # game/BKchapter2.rpy:9968
 translate chinese_simplified c2_kosmo_new_recruit_9f7f90c2:
 
     # kosmo laughing "Why do you laugh?"
-    kosmo laughing "Why do you laugh?"
+    kosmo laughing "你为什么笑？"
 
 # game/BKchapter2.rpy:9970
 translate chinese_simplified c2_kosmo_new_recruit_08ae23bd:
@@ -20158,13 +20158,13 @@ translate chinese_simplified ninja_first_lock_884f848d:
 translate chinese_simplified c2_unlock_next_brothel_5cf11edd:
 
     # "After coursing the ninja all the way into [dis_name] district, you follow her a large, empty house, only for her to escape again."
-    "After coursing the ninja all the way into [dis_name] district, you follow her a large, empty house, only for her to escape again."
+    "在一路追赶忍者到 [dis_name] 区后，你跟着她来到一栋空荡荡的大房子里，结果她又一次逃脱了。"
 
 # game/BKchapter2.rpy:10027
 translate chinese_simplified c2_unlock_next_brothel_ae4ea423:
 
     # "You collapse on the floor, exhausted."
-    "You collapse on the floor, exhausted."
+    "你筋疲力尽地瘫倒在地。"
 
 # game/BKchapter2.rpy:10029
 translate chinese_simplified c2_unlock_next_brothel_53179f8d:
@@ -20206,7 +20206,7 @@ translate chinese_simplified c2_unlock_next_brothel_4758cebd:
 translate chinese_simplified c2_unlock_next_brothel_7510b3d0:
 
     # you "It was a figure of speech! Help me get up already!" with vpunch
-    you "It was a figure of speech! Help me get up already!" with vpunch
+    you "那是比喻！快扶我起来！" with vpunch
 
 # game/BKchapter2.rpy:10051
 translate chinese_simplified c2_unlock_next_brothel_4117268d:
@@ -20218,7 +20218,7 @@ translate chinese_simplified c2_unlock_next_brothel_4117268d:
 translate chinese_simplified c2_unlock_next_brothel_90f20cf8:
 
     # "You get up on your feet, brushing a large amount of dust from your clothes."
-    "You get up on your feet, brushing a large amount of dust from your clothes."
+    "你站起身来，拍掉衣服上的大量灰尘。"
 
 # game/BKchapter2.rpy:10057
 translate chinese_simplified c2_unlock_next_brothel_8b3e69f2:
@@ -20230,7 +20230,7 @@ translate chinese_simplified c2_unlock_next_brothel_8b3e69f2:
 translate chinese_simplified c2_unlock_next_brothel_d85df585:
 
     # suzume doubt "I know... It looks like a wealthy merchant's house, or something? There must be at least a dozen rooms..."
-    suzume doubt "I know... It looks like a wealthy merchant's house, or something? There must be at least a dozen rooms..."
+    suzume doubt "我知道……看起来像富商的宅邸之类的？至少有十几个房间吧……"
 
 # game/BKchapter2.rpy:10061
 translate chinese_simplified c2_unlock_next_brothel_65db316a:
@@ -20242,7 +20242,7 @@ translate chinese_simplified c2_unlock_next_brothel_65db316a:
 translate chinese_simplified c2_unlock_next_brothel_83f9d578:
 
     # suzume bend "Just like you, then!"
-    suzume bend "Just like you, then!"
+    suzume bend "原来跟你一样！"
 
 # game/BKchapter2.rpy:10065
 translate chinese_simplified c2_unlock_next_brothel_fff263ad:
@@ -20254,13 +20254,13 @@ translate chinese_simplified c2_unlock_next_brothel_fff263ad:
 translate chinese_simplified c2_unlock_next_brothel_4324a7e3:
 
     # suzume doubt "So you keep saying, but I don't really get the difference."
-    suzume doubt "So you keep saying, but I don't really get the difference."
+    suzume doubt "你一直这么说，但我真的不明白其中的区别。"
 
 # game/BKchapter2.rpy:10069
 translate chinese_simplified c2_unlock_next_brothel_79815838:
 
     # suzume bend "Think of all the new wives, er, whores you could have if you had a building like this!"
-    suzume bend "Think of all the new wives, er, whores you could have if you had a building like this!"
+    suzume bend "想想如果你拥有这样一栋楼，你可以娶多少新老婆，呃，妓女啊！"
 
 # game/BKchapter2.rpy:10071
 translate chinese_simplified c2_unlock_next_brothel_58b9b87f:
@@ -20272,7 +20272,7 @@ translate chinese_simplified c2_unlock_next_brothel_58b9b87f:
 translate chinese_simplified c2_unlock_next_brothel_14e07d25:
 
     # suzume doubt "Still, half the rooms here are nearly collapsed. Getting this place back up and running would cost a pretty denar."
-    suzume doubt "Still, half the rooms here are nearly collapsed. Getting this place back up and running would cost a pretty denar."
+    suzume doubt "然而，这里一半的房间都几乎坍塌了。要让这个地方重新焕发生机，得花一大笔钱。"
 
 # game/BKchapter2.rpy:10075
 translate chinese_simplified c2_unlock_next_brothel_1a8d7a90:
@@ -20290,7 +20290,7 @@ translate chinese_simplified c2_unlock_next_brothel_c1370dc8:
 translate chinese_simplified c2_unlock_next_brothel_60ffdfb1:
 
     # "You head back outside, into the busy streets of [dis_name]."
-    "You head back outside, into the busy streets of [dis_name]."
+    "你回到外面，来到了[dis_name]熙熙攘攘的街道上。"
 
 # game/BKchapter2.rpy:10084
 translate chinese_simplified c2_unlock_next_brothel_6f3e1c8d:
@@ -20302,7 +20302,7 @@ translate chinese_simplified c2_unlock_next_brothel_6f3e1c8d:
 translate chinese_simplified c2_unlock_next_brothel_90cc160c:
 
     # "Voice" "The owner? You wanna talk to Papa Freak!"
-    "Voice" "老板？你想跟怪胎爸爸谈谈吗？"
+    "嗓音" "老板？你想跟怪胎爸爸谈谈吗？"
 
 # game/BKchapter2.rpy:10088
 translate chinese_simplified c2_unlock_next_brothel_cdd9076e:
@@ -20392,7 +20392,7 @@ translate chinese_simplified c2_unlock_next_brothel_e644d151:
 translate chinese_simplified c2_unlock_next_brothel_b3cb101e:
 
     # "She leaves, whistling as she clutches a bag full of strange gizmos. You wonder how many panties it cost her."
-    "She leaves, whistling as she clutches a bag full of strange gizmos. You wonder how many panties it cost her."
+    "她吹着口哨，手里拎着一袋稀奇古怪的小玩意儿，离开了。你不禁好奇，这袋子东西花了她多少条内裤。"
 
 # game/BKchapter2.rpy:10123
 translate chinese_simplified c2_unlock_next_brothel_815f8fa2:
@@ -20404,13 +20404,13 @@ translate chinese_simplified c2_unlock_next_brothel_815f8fa2:
 translate chinese_simplified c2_meet_papa_freak_8e53351a:
 
     # "Following the girl's directions, you enter a small, congested workshop lit by a strange magical apparatus."
-    "Following the girl's directions, you enter a small, congested workshop lit by a strange magical apparatus."
+    "按照女孩的指示，你进入了一个狭小拥挤的工作室，工作室里亮着一盏奇特的魔法灯。"
 
 # game/BKchapter2.rpy:10134
 translate chinese_simplified c2_meet_papa_freak_414e1ae7:
 
     # "An old man is listening to a youngster explaining his plan."
-    "An old man is listening to a youngster explaining his plan."
+    "一位老人正在听一个年轻人解释他的计划。"
 
 # game/BKchapter2.rpy:10136
 translate chinese_simplified c2_meet_papa_freak_7d3de546:
@@ -20530,7 +20530,7 @@ translate chinese_simplified c2_meet_papa_freak_d4bea4f5:
 translate chinese_simplified c2_meet_papa_freak_f8b2cd20:
 
     # "The old man heaves a sigh."
-    "The old man heaves a sigh."
+    "老人叹了口气。"
 
 # game/BKchapter2.rpy:10177
 translate chinese_simplified c2_meet_papa_freak_be2264e1:
@@ -20602,7 +20602,7 @@ translate chinese_simplified c2_meet_papa_freak_1ab31fd4:
 translate chinese_simplified c2_meet_papa_freak_16ce6ac5:
 
     # "He squints, looking at you better."
-    "He squints, looking at you better."
+    "他眯起眼睛，仔细地打量着你。"
 
 # game/BKchapter2.rpy:10201
 translate chinese_simplified c2_meet_papa_freak_f6d93bb9:
@@ -20614,13 +20614,13 @@ translate chinese_simplified c2_meet_papa_freak_f6d93bb9:
 translate chinese_simplified c2_meet_papa_freak_cc5028b8:
 
     # papa_apprentice "Of course he is! Remember [brothel.name]? He's the owner!"
-    papa_apprentice "当然是他！还记得[妓院名称]吗？他是老板！"
+    papa_apprentice "当然是他！还记得[brothel.name]吗？他是老板！"
 
 # game/BKchapter2.rpy:10217
 translate chinese_simplified c2_meet_papa_freak_3102a351:
 
     # papa "[brothel.name]? The place where [girl1] works? With the juicy titties?"
-    papa "[妓院名称]？就是[girl1]工作的地方？就是那个胸部丰满的地方？"
+    papa "[brothel.name]？就是[girl1]工作的地方？就是那个胸部丰满的地方？"
 
 # game/BKchapter2.rpy:10219
 translate chinese_simplified c2_meet_papa_freak_cb1fbeca:
@@ -20848,7 +20848,7 @@ translate chinese_simplified c2_meet_papa_freak_478eeec7:
 translate chinese_simplified c2_meet_papa_freak_654cafef:
 
     # "Papa Freak thinks to himself for a moment."
-    "Papa Freak thinks to himself for a moment."
+    "怪老爹沉思了一会儿。"
 
 # game/BKchapter2.rpy:10295
 translate chinese_simplified c2_meet_papa_freak_64dd6ec4:
@@ -20866,7 +20866,7 @@ translate chinese_simplified c2_meet_papa_freak_19892b97:
 translate chinese_simplified c2_meet_papa_freak_5d823e6e:
 
     # papa "{size=-20}I want a night with your best whore.{/size}"
-    papa "我想和你最好的妓女共度良宵。"
+    papa "我想和你最好的妓女共度良宵。{/size}"
 
 # game/BKchapter2.rpy:10301
 translate chinese_simplified c2_meet_papa_freak_c238450e:
@@ -20878,7 +20878,7 @@ translate chinese_simplified c2_meet_papa_freak_c238450e:
 translate chinese_simplified c2_meet_papa_freak_15fca79b:
 
     # papa "{size=-14}I want a night with your best whore.{/size}"
-    papa "我想和你最好的妓女共度良宵。"
+    papa "我想和你最好的妓女共度良宵。{/size}"
 
 # game/BKchapter2.rpy:10305
 translate chinese_simplified c2_meet_papa_freak_4cba1d61:
@@ -20890,7 +20890,7 @@ translate chinese_simplified c2_meet_papa_freak_4cba1d61:
 translate chinese_simplified c2_meet_papa_freak_2dab77b0:
 
     # papa "I want a night with your best whore!" with vpunch
-    papa "I want a night with your best whore!" with vpunch
+    papa "我想和你最好的妓女共度良宵！" with vpunch
 
 # game/BKchapter2.rpy:10309
 translate chinese_simplified c2_meet_papa_freak_3e26844e:
@@ -20926,37 +20926,37 @@ translate chinese_simplified c2_meet_papa_freak_08f12975:
 translate chinese_simplified c2_meet_papa_freak_f8204dc0:
 
     # "Papa Freak then spends the better part of half-an-hour listing every service he expects in excruciating detail. You realize his request may harder to fulfill than you thought."
-    "Papa Freak then spends the better part of half-an-hour listing every service he expects in excruciating detail. You realize his request may harder to fulfill than you thought."
+    "接下来，怪老爸花了将近半个小时，极其详细地列举了他想要的每一项服务。你这才意识到，他的要求可能比你想象的更难满足。"
 
 # game/BKchapter2.rpy:10323
 translate chinese_simplified c2_meet_papa_freak_3f036dab:
 
     # "Papa Freak wants to meet a girl who has {b}at least 50 in Beauty, Body, Refinement and Charm{/b}, and is open to whoring."
-    "Papa Freak wants to meet a girl who has {b}at least 50 in Beauty, Body, Refinement and Charm{/b}, and is open to whoring."
+    "疯爸爸想认识一个在美貌、身材、气质和魅力方面至少有 50 分的女孩，并且愿意卖淫。"
 
 # game/BKchapter2.rpy:10329
 translate chinese_simplified c2_meet_papa_freak_3a022827:
 
     # "When you are ready, visit the {b}[NPC_freak.location.name]{/b} to bring Papa Freak the girl of his dreams."
-    "When you are ready, visit the {b}[NPC_freak.location.name]{/b} to bring Papa Freak the girl of his dreams."
+    "准备好后，前往 {b}[NPC_freak.location.name]{/b}，将 Papa Freak 梦寐以求的女孩带给他。"
 
 # game/BKchapter2.rpy:10342
 translate chinese_simplified visit_papa_07c43704:
 
     # "Choose a girl from your brothel to bring with you (reminder: she must have at least 50 in Beauty, Body, Refinement and Charm, and be open to whoring)"
-    "Choose a girl from your brothel to bring with you (reminder: she must have at least 50 in Beauty, Body, Refinement and Charm, and be open to whoring)"
+    "从你的妓院里挑选一个女孩带你一起去（提醒：她的美貌、身材、气质和魅力必须至少达到 50，并且愿意从事卖淫活动）。"
 
 # game/BKchapter2.rpy:10345
 translate chinese_simplified visit_papa_58d0222f:
 
     # "You cannot satisfy Papa Freak's requests, as you have no girls in your brothel."
-    "You cannot satisfy Papa Freak's requests, as you have no girls in your brothel."
+    "你无法满足疯老爹的要求，因为你的妓院里没有女孩。"
 
 # game/BKchapter2.rpy:10351
 translate chinese_simplified visit_papa_a00c8079:
 
     # "You came back to see old Papa Freak, in an attempt to convince him to sell his large house to you."
-    "You came back to see old Papa Freak, in an attempt to convince him to sell his large house to you."
+    "你回来拜访老怪人爸爸，试图说服他把他的大房子卖给你。"
 
 # game/BKchapter2.rpy:10353
 translate chinese_simplified visit_papa_5efd2bac:
@@ -20992,7 +20992,7 @@ translate chinese_simplified visit_papa_482a16c7:
 translate chinese_simplified visit_papa_4584f87a:
 
     # "Papa Freak pats [girl.name] gently on the butt, looking her up and down. He's almost drooling."
-    "Papa Freak pats [girl.name] gently on the butt, looking her up and down. He's almost drooling."
+    "怪胎爸爸轻轻拍了拍[girl.name]的屁股，上下打量着她。他几乎要流口水了。"
 
 # game/BKchapter2.rpy:10369
 translate chinese_simplified visit_papa_1dd19074:
@@ -21016,7 +21016,7 @@ translate chinese_simplified visit_papa_e8b98187:
 translate chinese_simplified visit_papa_45955282:
 
     # "[girl.fullname]'s {b}beauty{/b} is too low (50 minimum)."
-    "[girl.fullname]'s {b}beauty{/b} is too low (50 minimum)."
+    "[girl.fullname] 的 {b}beauty{/b} 太低（最低 50 分）。"
 
 # game/BKchapter2.rpy:10379
 translate chinese_simplified visit_papa_04ce3bc6_1:
@@ -21034,13 +21034,13 @@ translate chinese_simplified visit_papa_1770b1ea:
 translate chinese_simplified visit_papa_c89ddf44:
 
     # "[girl.fullname]'s {b}body{/b} is too low (50 minimum)."
-    "[girl.fullname]'s {b}body{/b} is too low (50 minimum)."
+    "[girl.fullname] 的 {b}body{/b} 太低（最低 50）。"
 
 # game/BKchapter2.rpy:10386
 translate chinese_simplified visit_papa_7a67cf37:
 
     # "[girl.name] squirms and grumbles excuses, and Papa Freak frowns."
-    "[girl.name] squirms and grumbles excuses, and Papa Freak frowns."
+    "[girl.name] 扭动着身子，咕哝着借口，爸爸怪咖皱起了眉头。"
 
 # game/BKchapter2.rpy:10388
 translate chinese_simplified visit_papa_14f9f80d:
@@ -21052,13 +21052,13 @@ translate chinese_simplified visit_papa_14f9f80d:
 translate chinese_simplified visit_papa_0ae1ac05:
 
     # "[girl.fullname]'s {b}charm{/b} is too low (50 minimum)."
-    "[girl.fullname]'s {b}charm{/b} is too low (50 minimum)."
+    "[girl.fullname] 的 {b}魅力值{/b} 太低（最低 50）。"
 
 # game/BKchapter2.rpy:10393
 translate chinese_simplified visit_papa_7a67cf37_1:
 
     # "[girl.name] squirms and grumbles excuses, and Papa Freak frowns."
-    "[girl.name] squirms and grumbles excuses, and Papa Freak frowns."
+    "[girl.name] 扭动着身子，咕哝着借口，爸爸怪咖皱起了眉头。"
 
 # game/BKchapter2.rpy:10395
 translate chinese_simplified visit_papa_56225dc6:
@@ -21070,13 +21070,13 @@ translate chinese_simplified visit_papa_56225dc6:
 translate chinese_simplified visit_papa_47b25971:
 
     # "[girl.fullname]'s {b}refinement{/b} is too low (50 minimum)."
-    "[girl.fullname]'s {b}refinement{/b} is too low (50 minimum)."
+    "[girl.fullname] 的 {b}精细度{/b} 太低（最低 50）。"
 
 # game/BKchapter2.rpy:10401
 translate chinese_simplified visit_papa_a1703523:
 
     # "Papa Freak proceeds to squeeze her breasts, rubbing her nipples through the fabric."
-    "Papa Freak proceeds to squeeze her breasts, rubbing her nipples through the fabric."
+    "怪胎爸爸开始揉捏她的乳房，隔着布料摩擦她的乳头。"
 
 # game/BKchapter2.rpy:10405
 translate chinese_simplified visit_papa_0dd4eb5a:
@@ -21154,7 +21154,7 @@ translate chinese_simplified visit_papa_a0161858:
 translate chinese_simplified visit_papa_4cc5803e:
 
     # "The next morning..."
-    "The next morning..."
+    "第二天早上……"
 
 # game/BKchapter2.rpy:10457
 translate chinese_simplified visit_papa_43ba3859:
@@ -21166,13 +21166,13 @@ translate chinese_simplified visit_papa_43ba3859:
 translate chinese_simplified visit_papa_02d01110:
 
     # "His voice shakes and his eyes almost well up."
-    "His voice shakes and his eyes almost well up."
+    "他的声音颤抖，眼眶也几乎湿润了。"
 
 # game/BKchapter2.rpy:10461
 translate chinese_simplified visit_papa_f3e60d2e:
 
     # papa "This was truly a magnificent night, thanks to young [girl.name]. I felt like a young man again."
-    papa "这真是一个美妙的夜晚，多亏了这位年轻的[女孩名字]。我感觉自己又回到了年轻时代。"
+    papa "这真是一个美妙的夜晚，多亏了这位年轻的[girl.name]。我感觉自己又回到了年轻时代。"
 
 # game/BKchapter2.rpy:10463
 translate chinese_simplified visit_papa_bb1ef379:
@@ -21214,7 +21214,7 @@ translate chinese_simplified visit_papa_99e403d1:
 translate chinese_simplified visit_papa_130063f2:
 
     # you "Yay!" with vpunch
-    you "Yay!" with vpunch
+    you "耶！" with vpunch
 
 # game/BKchapter2.rpy:10477
 translate chinese_simplified visit_papa_1c3f231a:
@@ -21226,13 +21226,13 @@ translate chinese_simplified visit_papa_1c3f231a:
 translate chinese_simplified visit_papa_31c1ce45:
 
     # "Papa Freak is happy to leave the house to you for a paltry sum, but there are repairs to do on the house. A {i}lot{/i} of repairs."
-    "Papa Freak is happy to leave the house to you for a paltry sum, but there are repairs to do on the house. A {i}lot{/i} of repairs."
+    "怪老爹很乐意以极低的价格把房子留给你，但是房子有很多地方需要维修。一大堆维修工作。"
 
 # game/BKchapter2.rpy:10485
 translate chinese_simplified visit_papa_d2b8bc61:
 
     # "You are a little shaken to learn that the total bill amounts to a whopping {b}[cost] denars{/b}."
-    "You are a little shaken to learn that the total bill amounts to a whopping {b}[cost] denars{/b}."
+    "得知总账单金额高达 {b}[cost] 第纳尔{/b}，你感到有些震惊。"
 
 # game/BKchapter2.rpy:10493
 translate chinese_simplified visit_papa_674bb85c:
@@ -21244,13 +21244,13 @@ translate chinese_simplified visit_papa_674bb85c:
 translate chinese_simplified visit_papa_e206e569:
 
     # "She recoils in disgust."
-    "She recoils in disgust."
+    "她厌恶地后退。"
 
 # game/BKchapter2.rpy:10497
 translate chinese_simplified visit_papa_521401a0:
 
     # you "[girl.name]! Behave!" with vpunch
-    you "[girl.name]! Behave!" with vpunch
+    you "[girl.name]！注意言行！" with vpunch
 
 # game/BKchapter2.rpy:10499
 translate chinese_simplified visit_papa_3708e0ea:
@@ -21274,31 +21274,31 @@ translate chinese_simplified visit_papa_ee05fb9c:
 translate chinese_simplified visit_papa_9b2de113:
 
     # "[girl.fullname] needs to accept {b}whoring{/b} to do this task."
-    "[girl.fullname] needs to accept {b}whoring{/b} to do this task."
+    "[girl.fullname] 需要接受 {b}whoring{/b} 才能完成这项任务。"
 
 # game/BKchapter2.rpy:10514
 translate chinese_simplified c3_homura_okiya3_10de18aa:
 
     # "It is the last night at your old brothel. It wasn't much, but you feel a bit of nostalgia about the place."
-    "It is the last night at your old brothel. It wasn't much, but you feel a bit of nostalgia about the place."
+    "这是你在老妓院的最后一晚。虽然没什么特别的，但你对这个地方还是有点怀念。"
 
 # game/BKchapter2.rpy:10516
 translate chinese_simplified c3_homura_okiya3_0fa62a37:
 
     # "That night, you spot a familiar face in the okiya, drinking alone among the customers."
-    "That night, you spot a familiar face in the okiya, drinking alone among the customers."
+    "当晚，你在置屋里看到一张熟悉的面孔，独自一人在顾客中喝酒。"
 
 # game/BKchapter2.rpy:10520
 translate chinese_simplified c3_homura_okiya3_8ed5b234:
 
     # homura blush "Oh... [MC.name]..."
-    homura blush "Oh... [MC.name]..."
+    homura blush "哦……[MC.name]……"
 
 # game/BKchapter2.rpy:10524
 translate chinese_simplified c3_homura_okiya3_0a11931d:
 
     # homura normal "Over here! [MC.name]!"
-    homura normal "Over here! [MC.name]!"
+    homura normal "这边！[MC.name]！"
 
 # game/BKchapter2.rpy:10528
 translate chinese_simplified c3_homura_okiya3_819293af:
@@ -21310,13 +21310,13 @@ translate chinese_simplified c3_homura_okiya3_819293af:
 translate chinese_simplified c3_homura_okiya3_5fdae4cf:
 
     # "She nods at the empty seat next to her, and you join her."
-    "She nods at the empty seat next to her, and you join her."
+    "她朝身旁的空位点点头，你便坐了下来。"
 
 # game/BKchapter2.rpy:10532
 translate chinese_simplified c3_homura_okiya3_5f6b7d8d:
 
     # homura normal "So... I hear you are moving?"
-    homura normal "So... I hear you are moving?"
+    homura normal "听说你要搬家了？"
 
 # game/BKchapter2.rpy:10534
 translate chinese_simplified c3_homura_okiya3_8b82c4d6:
@@ -21352,7 +21352,7 @@ translate chinese_simplified c3_homura_okiya3_0d085320:
 translate chinese_simplified c3_homura_okiya3_3af13c7f:
 
     # "You notice that she is drinking tea this time."
-    "You notice that she is drinking tea this time."
+    "你注意到她这次在喝茶。"
 
 # game/BKchapter2.rpy:10546
 translate chinese_simplified c3_homura_okiya3_d9a19944:
@@ -21364,7 +21364,7 @@ translate chinese_simplified c3_homura_okiya3_d9a19944:
 translate chinese_simplified c3_homura_okiya3_59a09e1e:
 
     # homura blush "N-No, I don't want to be drunk like... Last time... *blush*"
-    homura blush "N-No, I don't want to be drunk like... Last time... *blush*"
+    homura blush "不，我不想像上次那样喝醉……*脸红*"
 
 # game/BKchapter2.rpy:10551
 translate chinese_simplified c3_homura_okiya3_7bfb1d53:
@@ -21382,31 +21382,31 @@ translate chinese_simplified c3_homura_okiya3_26e794a2:
 translate chinese_simplified c3_homura_okiya3_a8e46c7a:
 
     # "She glances around, taking in the view of scantily-clad girls flirting with drunk and rowdy customers."
-    "She glances around, taking in the view of scantily-clad girls flirting with drunk and rowdy customers."
+    "她环顾四周，看到衣着暴露的女孩们与醉酒喧闹的顾客调情。"
 
 # game/BKchapter2.rpy:10557
 translate chinese_simplified c3_homura_okiya3_4afa8157:
 
     # homura sad "Well... I suppose working in a place like this, you might lose perspective on this..."
-    homura sad "Well... I suppose working in a place like this, you might lose perspective on this..."
+    homura sad "嗯……我想在这种地方工作，可能会让人对这件事失去正确的认识……"
 
 # game/BKchapter2.rpy:10559
 translate chinese_simplified c3_homura_okiya3_57c2c7d3:
 
     # "You both sit silent for an awkward moment. She pouts for a little while, staring at her drink, but after a while, she relaxes her shoulders a little and seems to let go."
-    "You both sit silent for an awkward moment. She pouts for a little while, staring at her drink, but after a while, she relaxes her shoulders a little and seems to let go."
+    "两人沉默了一会儿，气氛有些尴尬。她嘟着嘴，盯着自己的饮料看了一会儿，但过了一会儿，她放松了肩膀，似乎释然了。"
 
 # game/BKchapter2.rpy:10561
 translate chinese_simplified c3_homura_okiya3_6934a91d:
 
     # "You try to lighten up the mood by broaching a different subject."
-    "You try to lighten up the mood by broaching a different subject."
+    "你试图通过谈论其他话题来缓和气氛。"
 
 # game/BKchapter2.rpy:10564
 translate chinese_simplified c3_homura_okiya3_5c0a2c9d:
 
     # homura normal "I'm grateful you reacted like you did... You're a true gentleman."
-    homura normal "I'm grateful you reacted like you did... You're a true gentleman."
+    homura normal "我很感激你的反应……你真是个绅士。"
 
 # game/BKchapter2.rpy:10566
 translate chinese_simplified c3_homura_okiya3_fc692cae:
@@ -21430,7 +21430,7 @@ translate chinese_simplified c3_homura_okiya3_bd31fcd0:
 translate chinese_simplified c3_homura_okiya3_f9bf4a5c:
 
     # homura sad "Well, no, but I'm getting better at avoiding them. I have been feigning illness recently, so now I manage to sneak in and out without anyone noticing."
-    homura sad "Well, no, but I'm getting better at avoiding them. I have been feigning illness recently, so now I manage to sneak in and out without anyone noticing."
+    homura sad "嗯，没有，但我现在越来越擅长躲避他们了。我最近一直在装病，所以现在我可以偷偷溜进去又溜出去，不被人发现。"
 
 # game/BKchapter2.rpy:10576
 translate chinese_simplified c3_homura_okiya3_e8374cad:
@@ -21442,7 +21442,7 @@ translate chinese_simplified c3_homura_okiya3_e8374cad:
 translate chinese_simplified c3_homura_okiya3_ce989516:
 
     # homura normal "Mostly, I walk around in the forest West of Zan by myself, enjoying nature..."
-    homura normal "Mostly, I walk around in the forest West of Zan by myself, enjoying nature..."
+    homura normal "我大多时候独自一人在赞恩西部的森林里散步，享受大自然……"
 
 # game/BKchapter2.rpy:10582
 translate chinese_simplified c3_homura_okiya3_d8b82e71:
@@ -21466,13 +21466,13 @@ translate chinese_simplified c3_homura_okiya3_9138688d:
 translate chinese_simplified c3_homura_okiya3_3c4a2500:
 
     # "You have a flashback to the night you spent together. She guesses your thoughts."
-    "You have a flashback to the night you spent together. She guesses your thoughts."
+    "你回想起你们共度的那个夜晚。她猜到了你在想什么。"
 
 # game/BKchapter2.rpy:10591
 translate chinese_simplified c3_homura_okiya3_bf54f35b:
 
     # homura blush "Err... Thank you for saying that? *blush*"
-    homura blush "Err... Thank you for saying that? *blush*"
+    homura blush "呃……谢谢你这么说？*脸红*"
 
 # game/BKchapter2.rpy:10594
 translate chinese_simplified c3_homura_okiya3_2cedfc10:
@@ -21490,19 +21490,19 @@ translate chinese_simplified c3_homura_okiya3_40f72e80:
 translate chinese_simplified c3_homura_okiya3_a33453d0:
 
     # homura normal "Just because I'm small doesn't mean I don't pack a punch!"
-    homura normal "Just because I'm small doesn't mean I don't pack a punch!"
+    homura normal "虽然我个子小，但这并不代表我没有力量！"
 
 # game/BKchapter2.rpy:10600
 translate chinese_simplified c3_homura_okiya3_5bd1a38e:
 
     # "You both laugh and have a toast to that."
-    "You both laugh and have a toast to that."
+    "你们俩都笑了，并为此举杯庆祝。"
 
 # game/BKchapter2.rpy:10605
 translate chinese_simplified c3_homura_okiya3_9d22004d:
 
     # homura surprise "Say, [MC.name], where do you stand on your secret investigation? Hunting the mysterious ninjas around the city?"
-    homura surprise "Say, [MC.name], where do you stand on your secret investigation? Hunting the mysterious ninjas around the city?"
+    homura surprise "[MC.name]，你的秘密调查进展如何？追捕在城市里活动的神秘忍者？"
 
 # game/BKchapter2.rpy:10607
 translate chinese_simplified c3_homura_okiya3_951262f6:
@@ -21514,7 +21514,7 @@ translate chinese_simplified c3_homura_okiya3_951262f6:
 translate chinese_simplified c3_homura_okiya3_e82b9b2d:
 
     # homura surprise "So, I hope your work for the Princess is going well... But I know better than to pry. You made it clear it's a secret."
-    homura surprise "So, I hope your work for the Princess is going well... But I know better than to pry. You made it clear it's a secret."
+    homura surprise "所以，我希望你为公主殿下所做的工作进展顺利……但我知道不该多嘴。你已经明确表示这是个秘密。"
 
 # game/BKchapter2.rpy:10612
 translate chinese_simplified c3_homura_okiya3_5448969e:
@@ -21526,7 +21526,7 @@ translate chinese_simplified c3_homura_okiya3_5448969e:
 translate chinese_simplified c3_homura_okiya3_d1b60954:
 
     # homura normal "Well, if at any point you become stuck, you can rely on me. I hear a lot of gossip at court, and I can find various ways to help you."
-    homura normal "Well, if at any point you become stuck, you can rely on me. I hear a lot of gossip at court, and I can find various ways to help you."
+    homura normal "如果你遇到任何困难，都可以依靠我。我在法庭上听到了很多传闻，我可以找到各种方法来帮助你。"
 
 # game/BKchapter2.rpy:10616
 translate chinese_simplified c3_homura_okiya3_c636150b:
@@ -21538,7 +21538,7 @@ translate chinese_simplified c3_homura_okiya3_c636150b:
 translate chinese_simplified c3_homura_okiya3_e59da49c:
 
     # homura normal "Those kudo-... kuro-... kunobichi... don't stand a chance against us! We're a team!"
-    homura normal "Those kudo-... kuro-... kunobichi... don't stand a chance against us! We're a team!"
+    homura normal "那些黑衣人……黑衣人……女野比人……根本不是我们对手！我们是一个团队！"
 
 # game/BKchapter2.rpy:10621
 translate chinese_simplified c3_homura_okiya3_ac6481e9:
@@ -21550,7 +21550,7 @@ translate chinese_simplified c3_homura_okiya3_ac6481e9:
 translate chinese_simplified c3_homura_okiya3_47b2b3ca:
 
     # homura surprise "You don't even need to tell me what it's all about. If you need help I'll answer, no questions asked."
-    homura surprise "You don't even need to tell me what it's all about. If you need help I'll answer, no questions asked."
+    homura surprise "你甚至不需要告诉我这到底是怎么回事。如果你需要帮助，我会毫不犹豫地回答。"
 
 # game/BKchapter2.rpy:10626
 translate chinese_simplified c3_homura_okiya3_a1a3ef6d:
@@ -21562,7 +21562,7 @@ translate chinese_simplified c3_homura_okiya3_a1a3ef6d:
 translate chinese_simplified c3_homura_okiya3_349afc31:
 
     # homura normal "Let's have another toast! To friendship!"
-    homura normal "Let's have another toast! To friendship!"
+    homura normal "让我们再举杯！为友谊干杯！"
 
 # game/BKchapter2.rpy:10635
 translate chinese_simplified c3_homura_okiya3_36d50f2e:
@@ -21580,7 +21580,7 @@ translate chinese_simplified c3_homura_okiya3_e4756b77:
 translate chinese_simplified c3_homura_okiya3_e83e92df:
 
     # homura normal "What was that?"
-    homura normal "What was that?"
+    homura normal "那是什么？"
 
 # game/BKchapter2.rpy:10642
 translate chinese_simplified c3_homura_okiya3_40ce1350:
@@ -21592,7 +21592,7 @@ translate chinese_simplified c3_homura_okiya3_40ce1350:
 translate chinese_simplified c3_homura_okiya3_770c7aef:
 
     # homura normal "Yes..."
-    homura normal "Yes..."
+    homura normal "是的..."
 
 # game/BKchapter2.rpy:10651
 translate chinese_simplified c3_homura_okiya3_5211c253:
@@ -21604,13 +21604,13 @@ translate chinese_simplified c3_homura_okiya3_5211c253:
 translate chinese_simplified c3_homura_okiya3_a546598b:
 
     # "She blushes."
-    "She blushes."
+    "她脸红了。"
 
 # game/BKchapter2.rpy:10655
 translate chinese_simplified c3_homura_okiya3_4116b558:
 
     # homura blush "[MC.name]... What would you like it to be, then?"
-    homura blush "[MC.name]... What would you like it to be, then?"
+    homura blush "[MC.name]……那你希望它是什么呢？"
 
 # game/BKchapter2.rpy:10660
 translate chinese_simplified c3_homura_okiya3_9860f09b:
@@ -21622,13 +21622,13 @@ translate chinese_simplified c3_homura_okiya3_9860f09b:
 translate chinese_simplified c3_homura_okiya3_ce0312d7:
 
     # "Deliberately, you place your hand on her hand. She flinches slightly, but doesn't take it away."
-    "Deliberately, you place your hand on her hand. She flinches slightly, but doesn't take it away."
+    "你故意将手放在她的手上。她微微一颤，但没有抽回你的手。"
 
 # game/BKchapter2.rpy:10664
 translate chinese_simplified c3_homura_okiya3_21f63372:
 
     # homura blush "You know, I can't say that I wouldn't like it..."
-    homura blush "You know, I can't say that I wouldn't like it..."
+    homura blush "你知道，我不能说我不喜欢它……"
 
 # game/BKchapter2.rpy:10670
 translate chinese_simplified c3_homura_okiya3_512d00fb:
@@ -21640,13 +21640,13 @@ translate chinese_simplified c3_homura_okiya3_512d00fb:
 translate chinese_simplified c3_homura_okiya3_0f51dc9d:
 
     # homura normal "Hahahaha!"
-    homura normal "Hahahaha!"
+    homura normal "哈哈哈哈！"
 
 # game/BKchapter2.rpy:10676
 translate chinese_simplified c3_homura_okiya3_04560eaa:
 
     # "She laughs heartily."
-    "She laughs heartily."
+    "她开怀大笑。"
 
 # game/BKchapter2.rpy:10678
 translate chinese_simplified c3_homura_okiya3_dbe0cfb6:
@@ -21658,7 +21658,7 @@ translate chinese_simplified c3_homura_okiya3_dbe0cfb6:
 translate chinese_simplified c3_homura_okiya3_c134dc06:
 
     # "She grabs your arm."
-    "She grabs your arm."
+    "她抓住了你的胳膊。"
 
 # game/BKchapter2.rpy:10682
 translate chinese_simplified c3_homura_okiya3_8b8fc6f7:
@@ -21676,7 +21676,7 @@ translate chinese_simplified c3_homura_okiya3_e5a41a4e:
 translate chinese_simplified c3_homura_okiya3_dfe6cb53:
 
     # "You order some platters of food from the kitchen and eat together, chatting pleasantly."
-    "You order some platters of food from the kitchen and eat together, chatting pleasantly."
+    "你们从厨房点了几盘菜，一起吃，愉快地聊天。"
 
 # game/BKchapter2.rpy:10702
 translate chinese_simplified c3_homura_okiya3_e4ed929f:
@@ -21688,7 +21688,7 @@ translate chinese_simplified c3_homura_okiya3_e4ed929f:
 translate chinese_simplified c3_homura_okiya3_a7a22e30:
 
     # homura normal "I'm just hungry you know! I don't usually have such large meals!"
-    homura normal "I'm just hungry you know! I don't usually have such large meals!"
+    homura normal "我只是饿了！我平时不怎么吃这么多！"
 
 # game/BKchapter2.rpy:10706
 translate chinese_simplified c3_homura_okiya3_59f38f85:
@@ -21700,13 +21700,13 @@ translate chinese_simplified c3_homura_okiya3_59f38f85:
 translate chinese_simplified c3_homura_okiya3_5c12753e:
 
     # homura sad "Uh, no, of course not... But my father worries about my health constantly... He has me on a diet."
-    homura sad "Uh, no, of course not... But my father worries about my health constantly... He has me on a diet."
+    homura sad "呃，不，当然不是……但我父亲一直担心我的健康……他让我节食。"
 
 # game/BKchapter2.rpy:10711
 translate chinese_simplified c3_homura_okiya3_9b123c3a:
 
     # "That answer sounded somewhat forced. You figure there must be more to it than this."
-    "That answer sounded somewhat forced. You figure there must be more to it than this."
+    "那个回答听起来有些勉强。你觉得事情肯定还有隐情。"
 
 # game/BKchapter2.rpy:10713
 translate chinese_simplified c3_homura_okiya3_52ef33a1:
@@ -21718,7 +21718,7 @@ translate chinese_simplified c3_homura_okiya3_52ef33a1:
 translate chinese_simplified c3_homura_okiya3_abbdd0c1:
 
     # homura surprise "Hey! Were you about to call me 'fat'?"
-    homura surprise "Hey! Were you about to call me 'fat'?"
+    homura surprise "嘿！你刚才是不是想说我“胖”？"
 
 # game/BKchapter2.rpy:10717
 translate chinese_simplified c3_homura_okiya3_2e72de12:
@@ -21730,13 +21730,13 @@ translate chinese_simplified c3_homura_okiya3_2e72de12:
 translate chinese_simplified c3_homura_okiya3_d9ffd0cf:
 
     # "She leans back, nonchalantly giving you a good look at her figure."
-    "She leans back, nonchalantly giving you a good look at her figure."
+    "她向后靠去，漫不经心地让你好好欣赏她的身材。"
 
 # game/BKchapter2.rpy:10721
 translate chinese_simplified c3_homura_okiya3_81d9d462:
 
     # homura sad "Tell me the truth, am I fat?"
-    homura sad "Tell me the truth, am I fat?"
+    homura sad "说实话，我胖吗？"
 
 # game/BKchapter2.rpy:10723
 translate chinese_simplified c3_homura_okiya3_604fa100:
@@ -21748,13 +21748,13 @@ translate chinese_simplified c3_homura_okiya3_604fa100:
 translate chinese_simplified c3_homura_okiya3_4c64c365:
 
     # homura normal "Hahaha! You're being honest, I can tell..."
-    homura normal "Hahaha! You're being honest, I can tell..."
+    homura normal "哈哈！看得出来你很诚实……"
 
 # game/BKchapter2.rpy:10727
 translate chinese_simplified c3_homura_okiya3_d3428c86:
 
     # "Stretching like a cat, she sighs contentedly."
-    "Stretching like a cat, she sighs contentedly."
+    "她像猫一样伸了个懒腰，满足地叹了口气。"
 
 # game/BKchapter2.rpy:10731
 translate chinese_simplified c3_homura_okiya3_2f770e86:
@@ -21778,13 +21778,13 @@ translate chinese_simplified c3_homura_okiya3_2cd8edec:
 translate chinese_simplified c3_homura_okiya3_57b0c75a:
 
     # "She looks at you with a playful smile. Her cheeks are red, even though she didn't drink."
-    "She looks at you with a playful smile. Her cheeks are red, even though she didn't drink."
+    "她带着一丝俏皮的笑容看着你。尽管她没喝酒，但她的脸颊却泛起了红晕。"
 
 # game/BKchapter2.rpy:10739
 translate chinese_simplified c3_homura_okiya3_e1882df8:
 
     # homura blush "No, I think not."
-    homura blush "No, I think not."
+    homura blush "不，我不这么认为。"
 
 # game/BKchapter2.rpy:10741
 translate chinese_simplified c3_homura_okiya3_cdd9076e:
@@ -21820,7 +21820,7 @@ translate chinese_simplified c3_homura_okiya3_af46d1f4:
 translate chinese_simplified c3_homura_okiya3_b34c7be0:
 
     # homura blush "Sure... But this time it won't be as easy for you as taking advantage of a drunk girl!"
-    homura blush "Sure... But this time it won't be as easy for you as taking advantage of a drunk girl!"
+    homura blush "当然……但这次你没那么容易占醉酒女孩的便宜了！"
 
 # game/BKchapter2.rpy:10754
 translate chinese_simplified c3_homura_okiya3_389f5c8c:
@@ -21838,31 +21838,31 @@ translate chinese_simplified c3_homura_okiya3_37f7cd0a:
 translate chinese_simplified c3_homura_okiya3_a5f64fe9:
 
     # "You eye her tea suspiciously."
-    "You eye her tea suspiciously."
+    "你狐疑地打量着她的茶。"
 
 # game/BKchapter2.rpy:10761
 translate chinese_simplified c3_homura_okiya3_70a9947e:
 
     # homura normal "Not at all!"
-    homura normal "Not at all!"
+    homura normal "一点也不！"
 
 # game/BKchapter2.rpy:10763
 translate chinese_simplified c3_homura_okiya3_1a69503d:
 
     # homura blush "I just know what I want... And I want it now..."
-    homura blush "I just know what I want... And I want it now..."
+    homura blush "我知道自己想要什么……而且我现在就想要……"
 
 # game/BKchapter2.rpy:10771
 translate chinese_simplified homura_sex_e60d2255:
 
     # "Later, in your bedroom..."
-    "Later, in your bedroom..."
+    "稍后，在你的卧室里……"
 
 # game/BKchapter2.rpy:10777
 translate chinese_simplified homura_sex_a1280a6f:
 
     # "Removing her kimono, Homura lies naked on your bed, blushing."
-    "Removing her kimono, Homura lies naked on your bed, blushing."
+    "焰脱下和服，赤身裸体地躺在你的床上，脸颊泛红。"
 
 # game/BKchapter2.rpy:10780
 translate chinese_simplified homura_sex_2230b47d:
@@ -21874,7 +21874,7 @@ translate chinese_simplified homura_sex_2230b47d:
 translate chinese_simplified homura_sex_884adc83:
 
     # homura naked "N-Not at all, believe it or not... But I guess I feel shy around you..."
-    homura naked "N-Not at all, believe it or not... But I guess I feel shy around you..."
+    homura naked "不，一点也不……信不信由你……不过，我好像在你面前会有点害羞……"
 
 # game/BKchapter2.rpy:10786
 translate chinese_simplified homura_sex_b05f99fc:
@@ -21892,7 +21892,7 @@ translate chinese_simplified homura_sex_75702150:
 translate chinese_simplified homura_sex_07e9ee64:
 
     # "You remove your clothes, and she gasps at the sight of your erect manhood."
-    "You remove your clothes, and she gasps at the sight of your erect manhood."
+    "你脱掉衣服，她看到你勃起的阴茎，倒吸了一口凉气。"
 
 # game/BKchapter2.rpy:10797
 translate chinese_simplified homura_sex_4bdf2e36:
@@ -21910,19 +21910,19 @@ translate chinese_simplified homura_sex_e4b9e215:
 translate chinese_simplified homura_sex_a228222a:
 
     # "You kiss her passionately. She kisses you back, prudently at first, then with more fervor."
-    "You kiss her passionately. She kisses you back, prudently at first, then with more fervor."
+    "你热情地吻她。她也回应你的吻，起初有些谨慎，然后变得更加热烈。"
 
 # game/BKchapter2.rpy:10805
 translate chinese_simplified homura_sex_57bf8e4f:
 
     # homura naked "Ngh, ngh..."
-    homura naked "Ngh, ngh..."
+    homura naked "嗯，嗯……"
 
 # game/BKchapter2.rpy:10807
 translate chinese_simplified homura_sex_3cb5d3d0:
 
     # "Running your hands against her naked body, you trace the length of her slender arms, her shoulders, then cup her firm breasts."
-    "Running your hands against her naked body, you trace the length of her slender arms, her shoulders, then cup her firm breasts."
+    "你用手抚摸着她裸露的身体，沿着她纤细的手臂、肩膀一路向下，然后捧住她坚挺的乳房。"
 
 # game/BKchapter2.rpy:10813
 translate chinese_simplified homura_sex_74726e81:
@@ -21934,7 +21934,7 @@ translate chinese_simplified homura_sex_74726e81:
 translate chinese_simplified homura_sex_79ec1491:
 
     # "Rubbing your palms against her perky nipples, you enjoy watching her squirm and sigh as you play with her boobs. She is very sensitive."
-    "Rubbing your palms against her perky nipples, you enjoy watching her squirm and sigh as you play with her boobs. She is very sensitive."
+    "你用手掌轻柔地摩擦她挺翘的乳头，看着她因你的抚摸而扭动身体、发出叹息，你很享受这种感觉。她非常敏感。"
 
 # game/BKchapter2.rpy:10818
 translate chinese_simplified homura_sex_941d4afc:
@@ -21964,13 +21964,13 @@ translate chinese_simplified homura_sex_95dc24f9:
 translate chinese_simplified homura_sex_e6f6f4b2:
 
     # "You place one hand on her leg, pushing her thighs open."
-    "You place one hand on her leg, pushing her thighs open."
+    "你把一只手放在她的腿上，掰开她的双腿。"
 
 # game/BKchapter2.rpy:10832
 translate chinese_simplified homura_sex_0ed3e7bb:
 
     # "You move in between her legs, taking a good look at her exposed pussy. In turn, she can't turn her gaze away from your large cock."
-    "You move in between her legs, taking a good look at her exposed pussy. In turn, she can't turn her gaze away from your large cock."
+    "你挤到她两腿之间，好好地看了看她裸露的阴部。而她也无法将目光从你硕大的阴茎上移开。"
 
 # game/BKchapter2.rpy:10834
 translate chinese_simplified homura_sex_2fafe17d:
@@ -21982,7 +21982,7 @@ translate chinese_simplified homura_sex_2fafe17d:
 translate chinese_simplified homura_sex_5a5d7481:
 
     # "Still playing with her boob, you start licking her smooth body all over."
-    "Still playing with her boob, you start licking her smooth body all over."
+    "你一边玩弄着她的乳房，一边开始舔遍她光滑的身体。"
 
 # game/BKchapter2.rpy:10840
 translate chinese_simplified homura_sex_c578e8cd:
@@ -22000,13 +22000,13 @@ translate chinese_simplified homura_sex_0feab7c8:
 translate chinese_simplified homura_sex_041d3181:
 
     # "The room gets hot, and her body is getting covered in sweat and saliva. You move up and your cock brushes against her leg, then her inner thigh, then rubs against her pussy."
-    "The room gets hot, and her body is getting covered in sweat and saliva. You move up and your cock brushes against her leg, then her inner thigh, then rubs against her pussy."
+    "房间变得闷热，她浑身汗水和唾液交织在一起。你向上移动，你的阴茎擦过她的小腿，然后是她的大腿内侧，最后摩擦着她的阴部。"
 
 # game/BKchapter2.rpy:10848
 translate chinese_simplified homura_sex_33031bb5:
 
     # "You can feel it getting moist now."
-    "You can feel it getting moist now."
+    "现在你能感觉到它开始变得湿润了。"
 
 # game/BKchapter2.rpy:10851
 translate chinese_simplified homura_sex_59edd345:
@@ -22024,7 +22024,7 @@ translate chinese_simplified homura_sex_ead8d0f4:
 translate chinese_simplified homura_sex_dc33e892:
 
     # "You push your dick inside her, slowly but firmly."
-    "You push your dick inside her, slowly but firmly."
+    "你缓慢而坚定地将你的阴茎插入她的体内。"
 
 # game/BKchapter2.rpy:10861
 translate chinese_simplified homura_sex_71c77e6a:
@@ -22036,25 +22036,25 @@ translate chinese_simplified homura_sex_71c77e6a:
 translate chinese_simplified homura_sex_98b927bf:
 
     # "Her pussy clutches your cock tight. You start moving."
-    "Her pussy clutches your cock tight. You start moving."
+    "她的阴道紧紧地包裹着你的阴茎。你开始动了起来。"
 
 # game/BKchapter2.rpy:10867
 translate chinese_simplified homura_sex_368c37f0:
 
     # homura "Oh, you're so big! Oh! OH!!!" with vpunch
-    homura "Oh, you're so big! Oh! OH!!!" with vpunch
+    homura "哦，你好大啊！哦！哦！！！" with vpunch
 
 # game/BKchapter2.rpy:10869
 translate chinese_simplified homura_sex_7052fa78:
 
     # "Her cries echo through the brothel, matched by other muffled cries coming from other rooms."
-    "Her cries echo through the brothel, matched by other muffled cries coming from other rooms."
+    "她的哭喊声在妓院里回荡，其他房间里也传来一阵阵压抑的哭喊声。"
 
 # game/BKchapter2.rpy:10873
 translate chinese_simplified homura_sex_69444012:
 
     # "Your cock slides slowly in and out of Homura's pussy. She is very tight, and you guess it must be hurting, but she seems lost in the feeling and not minding it."
-    "Your cock slides slowly in and out of Homura's pussy. She is very tight, and you guess it must be hurting, but she seems lost in the feeling and not minding it."
+    "你的阴茎缓缓地在焰的阴道里进进出出。她很紧，你猜想一定很疼，但她似乎沉浸在那种感觉中，并不在意。"
 
 # game/BKchapter2.rpy:10875
 translate chinese_simplified homura_sex_e7db36bc:
@@ -22066,7 +22066,7 @@ translate chinese_simplified homura_sex_e7db36bc:
 translate chinese_simplified homura_sex_4e6ad5fa:
 
     # "She dares to open her eyes, looking dreamily at where you two are joined. She breathes heavily with every thrust."
-    "She dares to open her eyes, looking dreamily at where you two are joined. She breathes heavily with every thrust."
+    "她鼓起勇气睁开双眼，眼神迷离地望着你们交缠的地方。每一次冲撞，她都喘息不止。"
 
 # game/BKchapter2.rpy:10881
 translate chinese_simplified homura_sex_6fae440a:
@@ -22084,25 +22084,25 @@ translate chinese_simplified homura_sex_3c9244cc:
 translate chinese_simplified homura_sex_e476df3f:
 
     # "You don't need to be told twice, and you increase your pace, fucking her more forcefully."
-    "You don't need to be told twice, and you increase your pace, fucking her more forcefully."
+    "无需别人提醒，你加快了速度，更加用力地操她。"
 
 # game/BKchapter2.rpy:10889
 translate chinese_simplified homura_sex_70df20be:
 
     # homura "Ah! AH! AAAH!" with vpunch
-    homura "Ah! AH! AAAH!" with vpunch
+    homura "啊！啊！啊啊！" with vpunch
 
 # game/BKchapter2.rpy:10891
 translate chinese_simplified homura_sex_de90f5a6:
 
     # "You feel like you are being too rough, but you can't help yourself. She doesn't seem to mind, on the contrary."
-    "You feel like you are being too rough, but you can't help yourself. She doesn't seem to mind, on the contrary."
+    "你觉得自己下手太重了，但控制不住自己。她似乎并不介意，反而很开心。"
 
 # game/BKchapter2.rpy:10893
 translate chinese_simplified homura_sex_9c6ad549:
 
     # "You notice how her petite body is perfectly shaped, thin and muscular, with not an ounce of fat outside of her protruding breasts. Just how you like it."
-    "You notice how her petite body is perfectly shaped, thin and muscular, with not an ounce of fat outside of her protruding breasts. Just how you like it."
+    "你注意到她娇小的身材比例完美，纤细而肌肉线条分明，除了丰满的胸部之外，没有一丝赘肉。正合你意。"
 
 # game/BKchapter2.rpy:10895
 translate chinese_simplified homura_sex_c8b3608c:
@@ -22114,25 +22114,25 @@ translate chinese_simplified homura_sex_c8b3608c:
 translate chinese_simplified homura_sex_c52d0ebe:
 
     # homura "Oh, [MC.name]... It's amazing... I think I will, aah... I will..." with vpunch
-    homura "Oh, [MC.name]... It's amazing... I think I will, aah... I will..." with vpunch
+    homura "哦，[MC.name]……太棒了……我想我会的，啊……我会的……" with vpunch
 
 # game/BKchapter2.rpy:10899
 translate chinese_simplified homura_sex_d03795b8:
 
     # "Unexpectedly, her pussy grips your hard cock really hard, and she explodes, bringing you over the top."
-    "Unexpectedly, her pussy grips your hard cock really hard, and she explodes, bringing you over the top."
+    "出乎意料的是，她的阴道紧紧地夹住了你坚硬的阴茎，她高潮了，让你也达到了高潮。"
 
 # game/BKchapter2.rpy:10903
 translate chinese_simplified homura_sex_a56928a7:
 
     # homura "AAAAAAH!!!" with vpunch
-    homura "AAAAAAH!!!" with vpunch
+    homura "啊啊啊啊！！！" with vpunch
 
 # game/BKchapter2.rpy:10909
 translate chinese_simplified homura_sex_4003894b:
 
     # "Unable to stop yourself, you cum a huge load inside her, as her whole body shivers uncontrollably."
-    "Unable to stop yourself, you cum a huge load inside her, as her whole body shivers uncontrollably."
+    "你无法控制自己，在她体内射出了大量的精液，她的全身不受控制地颤抖着。"
 
 # game/BKchapter2.rpy:10913
 translate chinese_simplified homura_sex_95dc24f9_1:
@@ -22162,37 +22162,37 @@ translate chinese_simplified homura_sex_aa4566da:
 translate chinese_simplified homura_sex_9f2adf96:
 
     # "Laying in each other's arms, it isn't long before you are ready for round two. And three."
-    "Laying in each other's arms, it isn't long before you are ready for round two. And three."
+    "你们相拥而眠，没过多久，就准备进行第二轮。然后是第三轮。"
 
 # game/BKchapter2.rpy:10930
 translate chinese_simplified homura_sex_f9a10c4e:
 
     # "After you are both sated, you lie together in your bed, catching your breath."
-    "After you are both sated, you lie together in your bed, catching your breath."
+    "两人尽兴之后，并肩躺在床上，喘着粗气。"
 
 # game/BKchapter2.rpy:10935
 translate chinese_simplified homura_sex_2cbed0d9:
 
     # "She sighs with contentment."
-    "She sighs with contentment."
+    "她满足地叹了口气。"
 
 # game/BKchapter2.rpy:10938
 translate chinese_simplified homura_sex_042fa262:
 
     # homura naked "Aw... I could get used to this..."
-    homura naked "Aw... I could get used to this..."
+    homura naked "啊……我真想一直这样下去……"
 
 # game/BKchapter2.rpy:10944
 translate chinese_simplified homura_sex_fb28de37:
 
     # homura naked "Just like last time... You're really something..."
-    homura naked "Just like last time... You're really something..."
+    homura naked "跟上次一样……你真是个了不起的人……"
 
 # game/BKchapter2.rpy:10947
 translate chinese_simplified homura_sex_04bc2f09:
 
     # homura naked "I've pictured this moment... But I wasn't ready."
-    homura naked "I've pictured this moment... But I wasn't ready."
+    homura naked "我曾想象过这一刻……但我还没做好准备。"
 
 # game/BKchapter2.rpy:10949
 translate chinese_simplified homura_sex_84981197:
@@ -22276,7 +22276,7 @@ translate chinese_simplified homura_sex_c3406a9a:
 translate chinese_simplified homura_sex_fd7771d2:
 
     # "She picks up the ribbon that tied her hair from the night stand, and hands it over to you."
-    "She picks up the ribbon that tied her hair from the night stand, and hands it over to you."
+    "她从床头柜上拿起扎头发的丝带，递给你。"
 
 # game/BKchapter2.rpy:10995
 translate chinese_simplified homura_sex_01c61615:
@@ -22324,7 +22324,7 @@ translate chinese_simplified homura_sex_275b4c6c:
 translate chinese_simplified homura_sex_bff3454e:
 
     # "You look at her pensively."
-    "You look at her pensively."
+    "你若有所思地看着她。"
 
 # game/BKchapter2.rpy:11014
 translate chinese_simplified homura_sex_cebf86d6:
@@ -22348,13 +22348,13 @@ translate chinese_simplified homura_sex_0f7ea385:
 translate chinese_simplified homura_mast_3f2d44a2:
 
     # "You gasp as she lays back on your bed, spreading her legs to give you a better view."
-    "You gasp as she lays back on your bed, spreading her legs to give you a better view."
+    "你倒吸一口凉气，只见她向后躺在你的床上，张开双腿让你看得更清楚。"
 
 # game/BKchapter2.rpy:11039
 translate chinese_simplified homura_mast_2549ecc5:
 
     # homura naked "[MC.name]... I've been thinking about this moment since we first met... Hmm..."
-    homura naked "[MC.name]... I've been thinking about this moment since we first met... Hmm..."
+    homura naked "[MC.name]……自从我们第一次见面以来，我就一直在想着这一刻……嗯……"
 
 # game/BKchapter2.rpy:11041
 translate chinese_simplified homura_mast_a1b2194d:
@@ -22366,7 +22366,7 @@ translate chinese_simplified homura_mast_a1b2194d:
 translate chinese_simplified homura_mast_d956e01d:
 
     # homura naked "I've touched myself many times thinking about you... But..."
-    homura naked "I've touched myself many times thinking about you... But..."
+    homura naked "我曾多次因想着你而自慰……但是……"
 
 # game/BKchapter2.rpy:11049
 translate chinese_simplified homura_mast_1acf637a:
@@ -22378,7 +22378,7 @@ translate chinese_simplified homura_mast_1acf637a:
 translate chinese_simplified homura_mast_72ab68fb:
 
     # "She starts playing with herself, still looking into your eyes. The room fills with wet noises as she toys with her moist pussy."
-    "She starts playing with herself, still looking into your eyes. The room fills with wet noises as she toys with her moist pussy."
+    "她开始自慰，目光依然注视着你。房间里充满了她玩弄自己湿润阴部时发出的湿漉漉的声音。"
 
 # game/BKchapter2.rpy:11053
 translate chinese_simplified homura_mast_2d53e333:
@@ -22396,7 +22396,7 @@ translate chinese_simplified homura_mast_d2bbf3ec:
 translate chinese_simplified homura_mast_df2e73a2:
 
     # "Her juices start running from her wet pussy."
-    "Her juices start running from her wet pussy."
+    "她的阴道湿润，汁液开始流出。"
 
 # game/BKchapter2.rpy:11061
 translate chinese_simplified homura_mast_c827be57:
@@ -22414,7 +22414,7 @@ translate chinese_simplified homura_mast_f6b99a25:
 translate chinese_simplified homura_mast_84afc533:
 
     # "She starts playing with her breasts and fingering herself, begging you to look at her. You can feel a bulge in your pants as your dick gets rock hard."
-    "She starts playing with her breasts and fingering herself, begging you to look at her. You can feel a bulge in your pants as your dick gets rock hard."
+    "她开始抚摸自己的乳房，用手指挑逗自己，恳求你看着她。你感到裤裆里鼓鼓囊囊的，阴茎也硬得像石头一样。"
 
 # game/BKchapter2.rpy:11069
 translate chinese_simplified homura_mast_c5f2cf31:
@@ -22432,7 +22432,7 @@ translate chinese_simplified homura_mast_82aae91c:
 translate chinese_simplified homura_mast_6420a8fd:
 
     # "She looks at you with an air of defiance."
-    "She looks at you with an air of defiance."
+    "她用一种挑衅的眼神看着你。"
 
 # game/BKchapter2.rpy:11076
 translate chinese_simplified homura_mast_7bbcdfc4:
@@ -22444,7 +22444,7 @@ translate chinese_simplified homura_mast_7bbcdfc4:
 translate chinese_simplified homura_mast_ad81453c:
 
     # "She fingers herself deep, now, splashing love juice over your bedsheets. Unable to resist, you slowly move closer to get a better look."
-    "She fingers herself deep, now, splashing love juice over your bedsheets. Unable to resist, you slowly move closer to get a better look."
+    "她用手指深深地抚摸着自己，爱液溅到了你的床单上。你无法抗拒，慢慢靠近，想看得更清楚些。"
 
 # game/BKchapter2.rpy:11081
 translate chinese_simplified homura_mast_209d6291:
@@ -22468,7 +22468,7 @@ translate chinese_simplified homura_mast_3d0b7a0b:
 translate chinese_simplified homura_mast_216e40ef:
 
     # "You bring your face closer between her legs, until your face is only inches from her wet cunt."
-    "You bring your face closer between her legs, until your face is only inches from her wet cunt."
+    "你将脸凑近她的双腿之间，直到你的脸距离她湿润的阴部只有几英寸。"
 
 # game/BKchapter2.rpy:11089
 translate chinese_simplified homura_mast_1046abe1:
@@ -22492,7 +22492,7 @@ translate chinese_simplified homura_mast_74441497:
 translate chinese_simplified homura_mast_758e110d:
 
     # "Love juice splashes everywhere as she cums unexpectedly, arching her back towards you. You look on with fascination."
-    "Love juice splashes everywhere as she cums unexpectedly, arching her back towards you. You look on with fascination."
+    "她突然达到高潮，爱液四处飞溅，她弓起背对着你。你着迷地看着这一切。"
 
 # game/BKchapter2.rpy:11109
 translate chinese_simplified homura_mast_a91571e9:
@@ -22504,13 +22504,13 @@ translate chinese_simplified homura_mast_a91571e9:
 translate chinese_simplified homura_mast_d9a274e3:
 
     # "She looks dreamy for a little while, almost as if she forgot your presence."
-    "She looks dreamy for a little while, almost as if she forgot your presence."
+    "她有一瞬间神情恍惚，仿佛忘记了你的存在。"
 
 # game/BKchapter2.rpy:11114
 translate chinese_simplified homura_mast_ffbcf308:
 
     # "Eventually, she looks back at you, her eyes burning with feverish intensity."
-    "Eventually, she looks back at you, her eyes burning with feverish intensity."
+    "最后，她回过头来看你，眼神中燃烧着炽热的光芒。"
 
 # game/BKchapter2.rpy:11116
 translate chinese_simplified homura_mast_21c543d6:
@@ -22528,7 +22528,7 @@ translate chinese_simplified homura_mast_3e921bde:
 translate chinese_simplified homura_bj_cd32335d:
 
     # "Still tipsy, Homura crawls on all fours towards you, then proceeds to drop your pants."
-    "Still tipsy, Homura crawls on all fours towards you, then proceeds to drop your pants."
+    "仍然有些醉意的焰四肢着地爬向你，然后开始脱你的裤子。"
 
 # game/BKchapter2.rpy:11130
 translate chinese_simplified homura_bj_a9d73903:
@@ -22540,13 +22540,13 @@ translate chinese_simplified homura_bj_a9d73903:
 translate chinese_simplified homura_bj_41716582:
 
     # homura naked "Oh!"
-    homura naked "Oh!"
+    homura naked "哦！"
 
 # game/BKchapter2.rpy:11138
 translate chinese_simplified homura_bj_f9c8afb1:
 
     # "Homura lets out a surprised scream as your cock pops out and nearly hits her."
-    "Homura lets out a surprised scream as your cock pops out and nearly hits her."
+    "你的阴茎突然弹出，差点打到焰，焰惊叫了一声。"
 
 # game/BKchapter2.rpy:11140
 translate chinese_simplified homura_bj_d4402c3a:
@@ -22564,7 +22564,7 @@ translate chinese_simplified homura_bj_7399fe10:
 translate chinese_simplified homura_bj_a603547f:
 
     # "She looks flattered."
-    "She looks flattered."
+    "她看起来很受宠若惊。"
 
 # game/BKchapter2.rpy:11146
 translate chinese_simplified homura_bj_d78d4821:
@@ -22576,7 +22576,7 @@ translate chinese_simplified homura_bj_d78d4821:
 translate chinese_simplified homura_bj_37b090f2:
 
     # "Homura starts licking the length of your shaft, shyly at first, then with increasing enthusiasm."
-    "Homura starts licking the length of your shaft, shyly at first, then with increasing enthusiasm."
+    "焰开始舔舐你的阴茎，起初有些羞涩，然后越来越热情。"
 
 # game/BKchapter2.rpy:11152
 translate chinese_simplified homura_bj_0dcb3fa6:
@@ -22588,7 +22588,7 @@ translate chinese_simplified homura_bj_0dcb3fa6:
 translate chinese_simplified homura_bj_8e7092fc:
 
     # "Her cheeks flushed from arousal and alcohol, Homura doesn't hesitate before taking your dick in her mouth."
-    "Her cheeks flushed from arousal and alcohol, Homura doesn't hesitate before taking your dick in her mouth."
+    "焰的脸颊因情欲和酒精而泛红，她毫不犹豫地将你的阴茎含入口中。"
 
 # game/BKchapter2.rpy:11159
 translate chinese_simplified homura_bj_77455967:
@@ -22600,7 +22600,7 @@ translate chinese_simplified homura_bj_77455967:
 translate chinese_simplified homura_bj_6858abca:
 
     # "She sucks on your cock with surprising strength, locking her lips around your shaft. She has some technique, you can tell it isn't her first time."
-    "She sucks on your cock with surprising strength, locking her lips around your shaft. She has some technique, you can tell it isn't her first time."
+    "她吮吸你的阴茎力道惊人，嘴唇紧紧包裹住你的阴茎。她很有技巧，看得出来这不是她第一次。"
 
 # game/BKchapter2.rpy:11163
 translate chinese_simplified homura_bj_577be9bd:
@@ -22612,7 +22612,7 @@ translate chinese_simplified homura_bj_577be9bd:
 translate chinese_simplified homura_bj_0678b9c3:
 
     # "She even tingles your balls with her right hand, playfully squeezing them."
-    "She even tingles your balls with her right hand, playfully squeezing them."
+    "她甚至会用右手轻柔地揉捏你的睾丸，让你感到一阵酥麻。"
 
 # game/BKchapter2.rpy:11167
 translate chinese_simplified homura_bj_f830fe32:
@@ -22630,7 +22630,7 @@ translate chinese_simplified homura_bj_7130c67a:
 translate chinese_simplified homura_bj_9401da37:
 
     # "You can't help but move further in, sliding your cock up and down her throat."
-    "You can't help but move further in, sliding your cock up and down her throat."
+    "你情不自禁地继续深入，将你的阴茎在她喉咙里上下滑动。"
 
 # game/BKchapter2.rpy:11175
 translate chinese_simplified homura_bj_15ee0140:
@@ -22642,7 +22642,7 @@ translate chinese_simplified homura_bj_15ee0140:
 translate chinese_simplified homura_bj_d0cf9255:
 
     # "Homura closes her eyes as you push your cock deeper inside her, yet she opens her mouth wide to accommodate you."
-    "Homura closes her eyes as you push your cock deeper inside her, yet she opens her mouth wide to accommodate you."
+    "当你将阴茎更深地插入焰的体内时，焰闭上了眼睛，但她却张大嘴巴来容纳你。"
 
 # game/BKchapter2.rpy:11179
 translate chinese_simplified homura_bj_fe422884:
@@ -22654,7 +22654,7 @@ translate chinese_simplified homura_bj_fe422884:
 translate chinese_simplified homura_bj_2fdcc2d5:
 
     # "She starts massaging your cock with her tits as well, which are bigger than you thought at first."
-    "She starts massaging your cock with her tits as well, which are bigger than you thought at first."
+    "她也开始用她的乳房按摩你的阴茎，她的乳房比你一开始想象的要大。"
 
 # game/BKchapter2.rpy:11185
 translate chinese_simplified homura_bj_a06f82e9:
@@ -22666,7 +22666,7 @@ translate chinese_simplified homura_bj_a06f82e9:
 translate chinese_simplified homura_bj_ed50199d:
 
     # "Her saliva drips down your cock as you slide up and down between her boobs. Her erotic moaning brings you closer to your limit."
-    "Her saliva drips down your cock as you slide up and down between her boobs. Her erotic moaning brings you closer to your limit."
+    "当你上下滑动，在她双乳间抽插时，她的唾液顺着你的阴茎滴落。她情欲的呻吟让你离极限越来越近。"
 
 # game/BKchapter2.rpy:11189
 translate chinese_simplified homura_bj_7bae1bbf:
@@ -22678,7 +22678,7 @@ translate chinese_simplified homura_bj_7bae1bbf:
 translate chinese_simplified homura_bj_7a52f8de:
 
     # "Homura looks up at you lewdly, while licking the sweat off your cock. Her erotic face is enough to bring you over the top."
-    "Homura looks up at you lewdly, while licking the sweat off your cock. Her erotic face is enough to bring you over the top."
+    "焰色眯眯地抬头看着你，同时舔舐着你阴茎上的汗水。她那副淫荡的表情足以让你欲火焚身。"
 
 # game/BKchapter2.rpy:11198
 translate chinese_simplified homura_bj_df7f6ae3:
@@ -22696,7 +22696,7 @@ translate chinese_simplified homura_bj_6785c758:
 translate chinese_simplified homura_bj_46e17b79:
 
     # "Homura is surprised by your cum spurting out, landing on her face and hair."
-    "Homura is surprised by your cum spurting out, landing on her face and hair."
+    "焰被你喷射出来的精液吓了一跳，精液溅到了她的脸上和头发上。"
 
 # game/BKchapter2.rpy:11210
 translate chinese_simplified homura_bj_d8bf2e90:
@@ -22708,7 +22708,7 @@ translate chinese_simplified homura_bj_d8bf2e90:
 translate chinese_simplified homura_bj_87b28d99:
 
     # "Holding your dick in her small hand, Homura strokes it slowly to make the last of your cum come out."
-    "Holding your dick in her small hand, Homura strokes it slowly to make the last of your cum come out."
+    "焰用她的小手握住你的阴茎，慢慢地抚摸着，直到你最后一滴精液流出来。"
 
 # game/BKchapter2.rpy:11214
 translate chinese_simplified homura_bj_c69f0028:
@@ -22720,7 +22720,7 @@ translate chinese_simplified homura_bj_c69f0028:
 translate chinese_simplified homura_bj_d94eb1e5:
 
     # "She spits out a bit of cum that landed in her mouth, then smiles mischievously."
-    "She spits out a bit of cum that landed in her mouth, then smiles mischievously."
+    "她吐出嘴里沾到的一点精液，然后露出了狡黠的笑容。"
 
 # game/BKchapter2.rpy:11221
 translate chinese_simplified homura_bj_5e2899a5:
@@ -22732,7 +22732,7 @@ translate chinese_simplified homura_bj_5e2899a5:
 translate chinese_simplified homura_bj_12397d7f:
 
     # "Homura is surprised as you grab her head and shove your cock back in."
-    "Homura is surprised as you grab her head and shove your cock back in."
+    "你抓住焰的头，把你的阴茎重新插进去，焰感到很惊讶。"
 
 # game/BKchapter2.rpy:11225
 translate chinese_simplified homura_bj_5c5fbe18:
@@ -22744,7 +22744,7 @@ translate chinese_simplified homura_bj_5c5fbe18:
 translate chinese_simplified homura_bj_31099581:
 
     # "Your cum spurts out like a geyser, filling her mouth."
-    "Your cum spurts out like a geyser, filling her mouth."
+    "你的精液像喷泉一样喷涌而出，灌满了她的嘴。"
 
 # game/BKchapter2.rpy:11231
 translate chinese_simplified homura_bj_a56f98b5:
@@ -22756,7 +22756,7 @@ translate chinese_simplified homura_bj_a56f98b5:
 translate chinese_simplified homura_bj_92c01b53:
 
     # "Homura struggles to keep your cock in her mouth, and ends up coughing and spitting cum on the bedsheets."
-    "Homura struggles to keep your cock in her mouth, and ends up coughing and spitting cum on the bedsheets."
+    "焰努力想把你的阴茎含在嘴里，结果咳嗽着把精液吐到了床单上。"
 
 # game/BKchapter2.rpy:11235
 translate chinese_simplified homura_bj_9872b2dd:
@@ -22768,5 +22768,5 @@ translate chinese_simplified homura_bj_9872b2dd:
 translate chinese_simplified homura_bj_5285c564:
 
     # "Watching Homura panting, with cum dripping down her expensive kimono, you wonder if you went too far."
-    "Watching Homura panting, with cum dripping down her expensive kimono, you wonder if you went too far."
+    "看着焰气喘吁吁，精液顺着她昂贵的和服滴落，你开始怀疑自己是不是做得太过分了。"
 

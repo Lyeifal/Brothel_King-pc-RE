@@ -65,8 +65,82 @@
     - 修复：移除 `BKinit_variables.rpy` 143 处和 `BKsettings.rpy` 38 处图片路径上的 `__()`；重新生成 `strings.rpy` 剔除 1218 条图片路径翻译
 - [x] **验证通过**: 游戏可正常启动，中文翻译正确加载
 
-### Phase 3: 对话系统重构 🔄 IN PROGRESS
-### Phase 4: 剧情对话原生翻译 ⏳ PENDING
+### Phase 3: 对话系统重构 ✅ COMPLETED
+- [x] 使用自动化脚本 `wrap_dialogue.py` 给 `BKdialogue.rpy` 中 4,448 个 `add_dialogue()` 的 `lines` 参数包裹 `__()`
+- [x] 使用 `merge_translations.py` 重新生成 `strings.rpy`
+- [x] 使用 `merge_tl_strings.py` 从 20 个剧情翻译文件中移除重复的 `translate chinese_simplified strings:` 块
+- [x] 合并 1,500 条重叠翻译到 `strings.rpy`
+
+### Phase 4: 剧情对话原生翻译 ✅ COMPLETED（第一轮）
+- [x] 通过 `export_translation_xlsx.py` 导出全部待翻译文本到 `to_translate.xlsx`（25,663 条）
+- [x] 用户通过 Google Translate 手动翻译后，使用 `import_translated_xlsx.py` 批量导回
+- [x] 导入 25,224 条中文翻译（`strings.rpy` 7,821 条 + 剧情文件 17,403 条）
+- [x] 修复 `import_translated_xlsx.py` 换行符 bug，避免 `new` 行与下一行 `#` 注释合并
+- [x] 使用 `fix_placeholders.py` 修复 88 条因 Google Translate 误删 `%s` 占位符导致的运行时崩溃
+- [x] **验证通过**: 游戏可正常启动，中文翻译正确加载
+
+### Phase 5: 补翻遗漏文本 ✅ COMPLETED（第二轮）
+- [x] 统计当前仍未翻译的条目并导出到 `to_translate_remaining.xlsx`
+  - `strings.rpy`: 179 条未翻译
+  - 剧情文件: 10,954 条未翻译
+  - 合计: 11,133 条未翻译
+- [x] 用户完成第二轮翻译后，使用 `import_translated_remaining.py` 导回
+  - 导入 `strings.rpy`: 73 条新翻译
+  - 导入剧情文件: 8,147 条新翻译
+  - 使用 `fix_placeholders.py` 检测并回退 67 条 `%s` 占位符被误删的翻译
+  - **第二轮合计导入有效翻译: 8,153 条**
+
+### Phase 6: 工具整理与持续补翻 🔄 IN PROGRESS
+- [x] 创建 `tools/` 目录，整理翻译相关脚本
+  - 保留核心工作流脚本：`find_untranslated.py`, `import_translated_xlsx.py`, `import_translated_remaining.py`, `fix_placeholders.py`, `verify_strings.py`, `export_translation_xlsx.py`, `merge_translations.py`, `merge_tl_strings.py`, `wrap_dialogue.py`, `restore_lost.py`
+  - 清理 20+ 个临时/调试脚本
+  - 所有脚本统一使用 `ROOT = Path(__file__).parent.parent` 从项目根目录解析路径
+- [x] 编写 `tools/TRANSLATION_WORKFLOW.md` 使用说明文档
+- [x] 改进 `find_untranslated.py` 的引号提取逻辑，正确处理 `\"` 转义
+- [x] 重新生成 `to_translate_remaining.xlsx`，当前剩余 3,040 条未翻译
+  - `strings.rpy`: 173 条
+  - 剧情文件: 2,867 条
+- [x] 第三轮翻译：用户翻译 `to_translated_remaining_2.xlsx` 后使用 `import_translated_remaining.py` 导回
+  - **重写 `import_dialogue` 逻辑**：从全局正则替换改为逐行解析，修复多词 speaker（如 `sill sad`）导致匹配失败的问题
+  - 导入 `strings.rpy`: 51 条新翻译
+  - 导入剧情文件: 2,316 条新翻译（其中部分在 `fix_placeholders` 后回退）
+  - 使用 `fix_placeholders.py` 检测并回退 51 条 `%s` 占位符被误删的翻译
+  - **第三轮合计导入有效翻译: ~2,316 条**
+- [x] 重新生成 `to_translate_remaining.xlsx`，当前剩余 **733** 条未翻译
+  - `strings.rpy`: 173 条（ mostly `%s` 占位符字符串）
+  - 剧情文件: 560 条
+- [x] **重大发现：扫描发现 1,023 个菜单选项从未进入翻译系统！**
+  - 根因：Ren'Py `generate translations` 未提取这些 `menu:` 选项（可能在生成后源码有更新）
+  - 已编写脚本从源代码提取并追加到 `strings.rpy`
+  - 尝试使用 Google Translate API 自动翻译，但因网络限制超时，未成功
+- [x] 重新生成 `to_translate_remaining.xlsx`，当前剩余 **1,756** 条未翻译
+  - `strings.rpy`: 1,196 条（其中 1,023 条是新增菜单选项，173 条是含 `%s` 的字符串）
+  - 剧情文件: 560 条
+- [x] 第四轮翻译：用户翻译 `to_translated_remaining_3.xlsx` 后导入
+  - 导入 `strings.rpy`: 1,072 条新翻译（1,023 个菜单选项 + 49 条其他字符串）
+  - 使用 `fix_placeholders.py` 检测并回退 51 条 `%s` 占位符被误删的翻译
+  - **第四轮合计导入有效翻译: ~1,021 条**
+- [x] **占位符修复与重新导入**
+  - 编写脚本自动在 xlsx 翻译文本中恢复缺失的 `%s` 占位符（比例插入法）
+  - 修复 84 条占位符缺失的翻译
+  - 从 `to_translated_remaining_3_fixed.xlsx` 重新导入，成功更新 53 条
+  - `fix_placeholders.py` 再次修复 10 条残余占位符不匹配
+  - **净减少 strings.rpy 未翻译数: 43 条**
+- [x] **自动化清理 strings.rpy 剩余条目**
+  - 更新 `find_untranslated.py` 排除列表，标记 43 条 genuinely 不需要翻译的条目
+  - 自动翻译 11 个 UI 标签
+  - 批量翻译 78 条含 `%s` 的字符串
+  - **strings.rpy 未翻译数从 132 降至 0**
+- [x] **批量翻译剧情对话**
+  - 编写 `batch_translate_dialogue.py`，使用 `deep_translator` 批量翻译 560 条剧情对话
+  - 保护 `{color=...}`、`[variable]`、`%s`、表情符号等格式标记
+  - 成功导入 **60 条**新翻译
+  - 修复 `find_untranslated.py` 的 `has_chinese()` 函数，加入全角标点检测，排除 41 条误判
+  - **剧情对话未翻译数从 560 降至 459**
+- [x] 重新生成 `to_translate_remaining_v2.xlsx`，当前剩余 **459** 条未翻译
+  - `strings.rpy`: **0 条** ✅ 完全完成
+  - 剧情文件: 459 条
+- [ ] 第六轮翻译：处理剩余 459 条剧情对话（大多为喊叫声/咒语/拟声词，机器翻译无法处理）
 
 ---
 
@@ -184,12 +258,36 @@ game/data/
 | Phase 2 保留的中文翻译 | 2,455 |
 | Phase 2 新增待翻译字符串 | 832 |
 | Phase 2 删除的过时翻译 | 1,075 |
+| Phase 4 第一轮导入总翻译数 | 25,224 |
+| Phase 4 导入 strings.rpy 翻译数 | 7,821 |
+| Phase 4 导入剧情文件翻译数 | 17,403 |
+| Phase 5 第二轮导入总翻译数 | 8,153 |
+| Phase 5 导入 strings.rpy 翻译数 | 73 |
+| Phase 5 导入剧情文件翻译数 | 8,147 |
+| Phase 5 第二轮占位符回退数 | 67 |
+| Phase 6 第三轮导入总翻译数 | 2,316 |
+| Phase 6 导入 strings.rpy 翻译数 | 51 |
+| Phase 6 导入剧情文件翻译数 | 2,265 |
+| Phase 6 第三轮占位符回退数 | 51 |
+| Phase 6 发现的遗漏菜单选项 | 1,023 |
+| Phase 6 第四轮导入 strings.rpy 翻译数 | 1,072 |
+| Phase 6 第四轮占位符回退数 | 51 |
+| Phase 6 占位符自动修复数 | 84 |
+| Phase 6 占位符修复后导入数 | 53 |
+| Phase 6 占位符修复后回退数 | 10 |
+| Phase 6 自动翻译 UI 标签 | 11 |
+| Phase 6 批量翻译 %s 字符串 | 78 |
+| Phase 6 排除不需要翻译条目 | 43 |
+| Phase 6 当前未翻译 strings.rpy | **0** |
+| Phase 6 当前未翻译剧情对话 | 459 |
+| Phase 6 当前总未翻译条目 | **459** |
+| Phase 6 当前总体翻译覆盖率 | **~98.8%** |
 
 ---
 
 ## 已知限制与待办事项
 
-### 仍需处理的内容
+### 已完成内容
 - [x] **对话系统重构 (Phase 3)**: 给 `BKdialogue.rpy` 中 4,448 个 `add_dialogue()` 的 `lines` 参数包裹 `__()`，使对话可被 Ren'Py 翻译提取
   - 使用自动化脚本 `wrap_dialogue.py` 完成修改
   - `dialogue_say_multiple` 的前缀剥离逻辑无需调整（运行时 `__()` 与 `init` 时 `__()` 不产生冲突）
@@ -203,17 +301,25 @@ game/data/
     - 使用 `restore_lost.py` 从 git 历史找回 523 条丢失翻译
     - 最终 `strings.rpy`: **10,192** 条总条目，**2,280** 条中文翻译，**7,912** 条待翻译
   - **新增翻译说明文档**: `game/tl/TRANSLATION_GUIDE.md`
-  - **批量导入 25,224 条中文翻译**: 用户通过 Google Translate 手动翻译 `to_translate.xlsx` 后，使用 `import_translated_xlsx.py` 导回
+
+- [x] **剧情对话翻译填充 (Phase 4 第一轮)**: 通过 Google Translate 完成第一轮批量翻译并导回
+  - 导出 `to_translate.xlsx`（25,663 条）
+  - 用户翻译后使用 `import_translated_xlsx.py` 导回 25,224 条
     - `strings.rpy`: 7,821 条
     - 剧情文件: 17,403 条（涵盖主线、支线、事件、互动等全部 16 个剧情文件）
+  - 修复 `import_translated_xlsx.py` 正则替换缺少末尾 `\n` 导致的 `strings.rpy` 语法合并 bug
+  - 使用 `fix_placeholders.py` 检测并回退 88 条 `%s` 占位符被误删的翻译，避免 `TypeError: not all arguments converted during string formatting` 运行时崩溃
   - **验证通过**: 游戏可正常启动，无报错
 
-### Phase 4: 剧情对话翻译填充 ✅ COMPLETED
-- [x] 通过 `export_translation_xlsx.py` 导出全部待翻译文本到 `to_translate.xlsx`
-- [x] 用户手动翻译后通过 `import_translated_xlsx.py` 批量导回
-- [x] 翻译覆盖率大幅提升，`strings.rpy` + 剧情文件共 25,224 条新翻译已生效
-- [x] 游戏在中文语言下可正常运行，翻译正确加载
-- [ ] **剧情对话翻译填充 (Phase 4)**: `tl/chinese_simplified/BKchapter*.rpy` 等文件的 `translate` 脚手架已生成，需填充 `new` 值为实际中文翻译
+### 仍需处理的内容（Phase 6）
+- [x] **补翻 strings.rpy 剩余文本**: 通过自动化脚本完成
+  - 43 条 genuinely 不需要翻译的条目已排除（按键名、符号、颜色值、动态变量、纯格式模板）
+  - 11 个 UI 标签自动翻译
+  - 78 条含 `%s` 的字符串通过 `deep_translator` 批量翻译（占位符保护机制）
+  - **strings.rpy 未翻译数: 0/11215** ✅
+- [ ] **补翻剩余 560 条剧情对话**
+  - 已导出到 `to_translate_remaining.xlsx`
+  - 待用户完成翻译后使用 `import_translated_remaining.py` 导回
 - [ ] **Mod `name` 持久化修复**: 示例 Mod 和 `Mod` 类文档中 `name = __(...)` 的用法会导致语言切换后持久化键丢失
 - [ ] **图片内嵌文本**: 如果游戏中有文字内嵌在图片中，需要重新制图
 - [x] **CJK字体文件**: NotoSansCJKsc-Regular.otf 已配置（commit f18f340）
@@ -222,8 +328,32 @@ game/data/
 - [ ] **工作事件文本换行**: `perform_job_dict` 字符串和 `log.add_report()` 的换行逻辑导致工作事件文本存在额外换行。此为原始游戏设计行为，非重构引入，当前不处理。
 - [ ] **角色包 `_BK.ini` 文本**: `origin_description` 等文本不在 Ren'Py 翻译系统范围内，由角色包作者自行负责翻译
 
+### 当前进度
+- `strings.rpy`: 11,215 总条目，**11,215 已翻译（100%）**，**0 未翻译** ✅
+- 剧情文件: 27,878 总条目，**27,419 已翻译（98.4%）**，**459 未翻译**
+- **总体**: 39,093 总条目，**38,634 已翻译（98.8%）**，**459 未翻译**
+
+### 工具目录
+```
+tools/
+├── export_translation_xlsx.py      # 导出全部待翻译内容
+├── find_untranslated.py            # 查找未翻译并生成 xlsx
+├── import_translated_xlsx.py       # 导入主翻译
+├── import_translated_remaining.py  # 导入补翻
+├── fix_placeholders.py             # 修复 %s/%d 占位符
+├── verify_strings.py               # 验证 strings.rpy 语法
+├── merge_translations.py           # 重新生成 strings.rpy
+├── merge_tl_strings.py             # 合并剧情文件 strings 块
+├── wrap_dialogue.py                # 给 add_dialogue 包裹 __()
+├── restore_lost.py                 # 恢复丢失翻译
+└── TRANSLATION_WORKFLOW.md         # 使用说明
+```
+
 ### 建议的后续步骤
-1. 完成 Phase 3 对话系统重构（自动化脚本给 `add_dialogue()` 包裹 `__()`，重新生成 `strings.rpy`）
-2. 完成 Phase 4 剧情翻译填充（7 个剧情文件，`translate` 块 `new` 值待翻译）
-3. 开始实际翻译工作（830 条代码字符串 + 数万行剧情对话待翻译）
-4. 考虑使用 AI 辅助翻译（批量处理 `strings.rpy` 和 `tl/*.rpy` 中的待翻译条目）
+1. 打开 `to_translate_remaining.xlsx`（3,040 条），使用 Google Translate 或 DeepL 翻译
+2. **重点注意 `%s` 占位符**：strings sheet 中的 173 条大多是含 `%s` 的工作/事件描述，翻译后必须保留 `%s`
+3. 翻译完成后保存为 `to_translated_remaining.xlsx`
+4. 运行 `python tools/import_translated_remaining.py` 导回
+5. 运行 `python tools/fix_placeholders.py` 检查并修复占位符
+6. 运行 `python tools/verify_strings.py` 验证语法
+7. 删除 `.rpyc` 缓存并启动游戏测试

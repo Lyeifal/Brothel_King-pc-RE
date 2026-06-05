@@ -4,13 +4,13 @@
 translate chinese_simplified city_rape_28dc46b8:
 
     # "Making your way through the [loc], you suddenly hear something."
-    "Making your way through the [loc], you suddenly hear something."
+    "当你穿过[loc]时，你突然听到一些声音。"
 
 # game/BKcity_events.rpy:24
 translate chinese_simplified city_rape_795cacf6:
 
     # "Listening intently, you hear muffled screams coming from a dark corner. You rush towards the source..."
-    "Listening intently, you hear muffled screams coming from a dark corner. You rush towards the source..."
+    "你侧耳倾听，听到黑暗角落里传来压抑的尖叫声。你立刻朝声音的来源冲去……"
 
 # game/BKcity_events.rpy:33
 translate chinese_simplified city_rape_69107b8c:
@@ -22,7 +22,7 @@ translate chinese_simplified city_rape_69107b8c:
 translate chinese_simplified city_rape_6081d6b6:
 
     # "A poor girl is being raped mercilessly by a disgusting monster."
-    "A poor girl is being raped mercilessly by a disgusting monster."
+    "一个可怜的女孩正被一个令人作呕的怪物残忍地强奸。"
 
 # game/BKcity_events.rpy:37
 translate chinese_simplified city_rape_956cf43e:
@@ -34,13 +34,13 @@ translate chinese_simplified city_rape_956cf43e:
 translate chinese_simplified city_rape_df1322d0:
 
     # "It seems the evil beast wants to impregnate this poor lass with his cursed semen."
-    "It seems the evil beast wants to impregnate this poor lass with his cursed semen."
+    "看来这头邪恶的野兽想要用它那被诅咒的精液让这个可怜的姑娘怀孕。"
 
 # game/BKcity_events.rpy:48
 translate chinese_simplified city_rape_fae09fc1:
 
     # "You ready your weapon."
-    "You ready your weapon."
+    "你已准备好武器。"
 
 # game/BKcity_events.rpy:50
 translate chinese_simplified city_rape_837365c4:
@@ -52,31 +52,31 @@ translate chinese_simplified city_rape_837365c4:
 translate chinese_simplified city_rape_fea121be:
 
     # "The monster turns to face you and roars threateningly."
-    "The monster turns to face you and roars threateningly."
+    "怪物转过身来面对你，发出威胁的咆哮。"
 
 # game/BKcity_events.rpy:64
 translate chinese_simplified city_rape_a343a597:
 
     # "Charging at the monster with your sword drawn, you slice off a couple of tentacles that try to stop you."
-    "Charging at the monster with your sword drawn, you slice off a couple of tentacles that try to stop you."
+    "你拔出剑冲向怪物，砍断了几条试图阻止你的触手。"
 
 # game/BKcity_events.rpy:80
 translate chinese_simplified city_rape_8abaafca:
 
     # "The monster roars in pain, rearing its ugly head towards you. You meet it with all your strength and a metal-clad gauntlet."
-    "The monster roars in pain, rearing its ugly head towards you. You meet it with all your strength and a metal-clad gauntlet."
+    "怪物痛苦地咆哮着，抬起丑陋的头颅朝你走来。你用尽全力，戴着金属护手迎战它。"
 
 # game/BKcity_events.rpy:89
 translate chinese_simplified city_rape_c9b371e3:
 
     # "You punch the monster square in what you think is his stupid face, although you're not quite sure."
-    "You punch the monster square in what you think is his stupid face, although you're not quite sure."
+    "你一拳打在怪物脸上，你觉得那是它愚蠢的脸，虽然你也不太确定。"
 
 # game/BKcity_events.rpy:94
 translate chinese_simplified city_rape_28fb9dab:
 
     # "The monster is stunned and falls flat on the ground in a cloud of dust. The girl screams."
-    "The monster is stunned and falls flat on the ground in a cloud of dust. The girl screams."
+    "怪物惊呆了，扬起一阵尘土，重重地摔在地上。女孩尖叫起来。"
 
 # game/BKcity_events.rpy:98
 translate chinese_simplified city_rape_61cbe017:
@@ -106,13 +106,13 @@ translate chinese_simplified city_rape_fb02adf5:
 translate chinese_simplified city_rape_3b16f6a2:
 
     # "Moving with lighting speed, you aim for weak spots on the creature's bloated body."
-    "Moving with lighting speed, you aim for weak spots on the creature's bloated body."
+    "你以闪电般的速度移动，瞄准这生物臃肿身体上的弱点。"
 
 # game/BKcity_events.rpy:129
 translate chinese_simplified city_rape_004738f9:
 
     # "In a matter of seconds, the monster falls into the dirt, lifeless."
-    "In a matter of seconds, the monster falls into the dirt, lifeless."
+    "短短几秒钟，怪物就倒在了泥土里，没了气息。"
 
 # game/BKcity_events.rpy:131
 translate chinese_simplified city_rape_bac50fb6:
@@ -124,25 +124,25 @@ translate chinese_simplified city_rape_bac50fb6:
 translate chinese_simplified city_rape_a9baabcd:
 
     # "You have earned prestige."
-    "You have earned prestige."
+    "你赢得了声望。"
 
 # game/BKcity_events.rpy:147
 translate chinese_simplified city_rape_e9965350:
 
     # "The beast braces for your attack and parries your blow."
-    "The beast braces for your attack and parries your blow."
+    "野兽严阵以待，挡下了你的攻击。"
 
 # game/BKcity_events.rpy:159
 translate chinese_simplified city_rape_9fb8dc99:
 
     # "The beast hits you to the side, bruising your ribs through your armor and sending you crashing into a wall."
-    "The beast hits you to the side, bruising your ribs through your armor and sending you crashing into a wall."
+    "野兽将你撞向侧面，隔着盔甲也撞伤了你的肋骨，把你撞到墙上。"
 
 # game/BKcity_events.rpy:163
 translate chinese_simplified city_rape_abcf6f33:
 
     # "Before you can get back to your feet, the beast grabs its unfortunate victim and runs off into the night."
-    "Before you can get back to your feet, the beast grabs its unfortunate victim and runs off into the night."
+    "你还没来得及站起来，那野兽就抓住了它不幸的受害者，逃进了夜色中。"
 
 # game/BKcity_events.rpy:169
 translate chinese_simplified city_rape_036f648a:
@@ -154,13 +154,13 @@ translate chinese_simplified city_rape_036f648a:
 translate chinese_simplified city_rape_9e384a5b:
 
     # "You are wounded and lose your remaining actions for the day."
-    "You are wounded and lose your remaining actions for the day."
+    "你受伤了，当天剩余的行动次数全部失效。"
 
 # game/BKcity_events.rpy:179
 translate chinese_simplified city_rape_b0a90d75:
 
     # "You lift your staff high in the air."
-    "You lift your staff high in the air."
+    "你高高举起你的棍子。"
 
 # game/BKcity_events.rpy:183
 translate chinese_simplified city_rape_9ac4bedd:
@@ -190,13 +190,13 @@ translate chinese_simplified city_rape_c3acfded:
 translate chinese_simplified city_rape_44dd620e:
 
     # "The monster hears you as you start your incantation, and turns to face you."
-    "The monster hears you as you start your incantation, and turns to face you."
+    "当你开始念咒时，怪物听到了，转过身来面对你。"
 
 # game/BKcity_events.rpy:209
 translate chinese_simplified city_rape_a160ff8c:
 
     # "The monster is hit squarely by a powerful bolt of lightning, sending it crashing into the alley's wall."
-    "The monster is hit squarely by a powerful bolt of lightning, sending it crashing into the alley's wall."
+    "一道强力闪电正中怪物，将其击飞撞到巷子的墙上。"
 
 # game/BKcity_events.rpy:213
 translate chinese_simplified city_rape_8bfd5117:
@@ -208,7 +208,7 @@ translate chinese_simplified city_rape_8bfd5117:
 translate chinese_simplified city_rape_4d07f4ed:
 
     # "The monster curls up and whines as you approach menacingly, staff in hand. It is defeated."
-    "The monster curls up and whines as you approach menacingly, staff in hand. It is defeated."
+    "当你手持法杖，气势汹汹地靠近时，怪物蜷缩起来发出呜咽声。它被击败了。"
 
 # game/BKcity_events.rpy:221
 translate chinese_simplified city_rape_a2fbc6f3:
@@ -220,7 +220,7 @@ translate chinese_simplified city_rape_a2fbc6f3:
 translate chinese_simplified city_rape_cde27e5c:
 
     # "The monster freezes in its track, and just stands there hazily looking at you."
-    "The monster freezes in its track, and just stands there hazily looking at you."
+    "怪物愣在原地，呆呆地站在那里看着你。"
 
 # game/BKcity_events.rpy:229
 translate chinese_simplified city_rape_463a3e6f:
@@ -250,13 +250,13 @@ translate chinese_simplified city_rape_c1f8088e:
 translate chinese_simplified city_rape_c02efa77:
 
     # "A great ball of lightning falls from the sky, frying the monster where he stands."
-    "A great ball of lightning falls from the sky, frying the monster where he stands."
+    "一道巨大的闪电从天而降，将怪物当场烤焦。"
 
 # game/BKcity_events.rpy:253
 translate chinese_simplified city_rape_cd195c41:
 
     # "The girl screams in terror as her hair curls and stands out on end. Luckily, she is unharmed."
-    "The girl screams in terror as her hair curls and stands out on end. Luckily, she is unharmed."
+    "女孩惊恐地尖叫起来，头发卷曲竖起。幸运的是，她毫发无损。"
 
 # game/BKcity_events.rpy:255
 translate chinese_simplified city_rape_60b7ab26:
@@ -274,7 +274,7 @@ translate chinese_simplified city_rape_a2fbc6f3_1:
 translate chinese_simplified city_rape_660b4123:
 
     # "The beast whines and roars in vain as the fabric of space and time distorts and it is pulled back to its original dimension. Within a few seconds, it vanishes into thin air."
-    "The beast whines and roars in vain as the fabric of space and time distorts and it is pulled back to its original dimension. Within a few seconds, it vanishes into thin air."
+    "那野兽徒劳地哀嚎咆哮，时空结构扭曲，它被拉回了原本的维度。短短几秒钟，它便消失得无影无踪。"
 
 # game/BKcity_events.rpy:271
 translate chinese_simplified city_rape_f234f69e_1:
@@ -286,7 +286,7 @@ translate chinese_simplified city_rape_f234f69e_1:
 translate chinese_simplified city_rape_a9baabcd_1:
 
     # "You have earned prestige."
-    "You have earned prestige."
+    "你赢得了声望。"
 
 # game/BKcity_events.rpy:283
 translate chinese_simplified city_rape_fa1760f7:
@@ -304,25 +304,25 @@ translate chinese_simplified city_rape_e29b3f0b:
 translate chinese_simplified city_rape_49436318:
 
     # "The creature rushes towards you and viciously slams you off your feet. Your staff lands several feet away from you."
-    "The creature rushes towards you and viciously slams you off your feet. Your staff lands several feet away from you."
+    "那怪物朝你猛扑过来，狠狠地把你摔倒在地。你的法杖落在几英尺外。"
 
 # game/BKcity_events.rpy:297
 translate chinese_simplified city_rape_1bb2b3de:
 
     # "As you try frantically to reach for your staff, the beast seizes its victim and disappears into the night, uninterested in a fight."
-    "As you try frantically to reach for your staff, the beast seizes its victim and disappears into the night, uninterested in a fight."
+    "当你拼命想抓住你的法杖时，那野兽抓住了它的猎物，消失在夜色中，对战斗毫无兴趣。"
 
 # game/BKcity_events.rpy:303
 translate chinese_simplified city_rape_9e384a5b_1:
 
     # "You are wounded and lose your remaining actions for the day."
-    "You are wounded and lose your remaining actions for the day."
+    "你受伤了，当天剩余的行动次数全部失效。"
 
 # game/BKcity_events.rpy:311
 translate chinese_simplified city_rape_7bc3e35c:
 
     # "The beast has now noticed you, and glares at you with murderous eyes..."
-    "The beast has now noticed you, and glares at you with murderous eyes..."
+    "那野兽已经注意到你了，它正用充满杀意的眼神瞪着你……"
 
 # game/BKcity_events.rpy:313
 translate chinese_simplified city_rape_612d9431:
@@ -334,19 +334,19 @@ translate chinese_simplified city_rape_612d9431:
 translate chinese_simplified city_rape_8c0db1f9:
 
     # "You hightail it while you still can, ignoring the screams of the poor girl you leave behind."
-    "You hightail it while you still can, ignoring the screams of the poor girl you leave behind."
+    "你趁还能逃的时候赶紧逃走，全然不顾身后可怜女孩的尖叫声。"
 
 # game/BKcity_events.rpy:325
 translate chinese_simplified city_rape_a9b4658c:
 
     # "As the beast roars, you almost feel as if it is mocking you."
-    "As the beast roars, you almost feel as if it is mocking you."
+    "当野兽咆哮时，你几乎感觉它像是在嘲笑你。"
 
 # game/BKcity_events.rpy:337
 translate chinese_simplified city_monster_menu_6c123776:
 
     # you "Now, this knocked out monster... What should I do with it?" nointeract
-    you "Now, this knocked out monster... What should I do with it?" nointeract
+    you "现在，这只昏迷的怪物……我该怎么处置它呢？" nointeract
 
 # game/BKcity_events.rpy:341
 translate chinese_simplified city_monster_menu_88539a28:
@@ -364,7 +364,7 @@ translate chinese_simplified city_monster_menu_7fa4cb7f:
 translate chinese_simplified city_monster_menu_c964ce72:
 
     # "After sending the girl off, you drag the submissive monster to the farm. This consumes all your remaining actions."
-    "After sending the girl off, you drag the submissive monster to the farm. This consumes all your remaining actions."
+    "送走女孩后，你把顺从的怪物拖到农场。这会消耗你所有剩余的行动点数。"
 
 # game/BKcity_events.rpy:361
 translate chinese_simplified city_monster_menu_f2a54552:
@@ -376,7 +376,7 @@ translate chinese_simplified city_monster_menu_f2a54552:
 translate chinese_simplified city_monster_menu_5763083e:
 
     # "You sell [mn.name] the monster to Willow for [price] gold."
-    "You sell [mn.name] the monster to Willow for [price] gold."
+    "你以 [price] 金币的价格将怪物 [mn.name] 卖给 Willow。"
 
 # game/BKcity_events.rpy:373
 translate chinese_simplified city_monster_menu_6971486e:
@@ -394,7 +394,7 @@ translate chinese_simplified city_monster_menu_72d8c12b:
 translate chinese_simplified city_monster_menu_a1280571:
 
     # "You can't bring yourself to kill off a wounded opponent."
-    "You can't bring yourself to kill off a wounded opponent."
+    "你下不了手杀死一个受伤的对手。"
 
 # game/BKcity_events.rpy:405
 translate chinese_simplified city_monster_menu_6a46223a:
@@ -406,19 +406,19 @@ translate chinese_simplified city_monster_menu_6a46223a:
 translate chinese_simplified city_monster_menu_ac479bb5:
 
     # "You're not sure if the monster understood you, but it retreats into the night swiftly to nurse its wounds."
-    "You're not sure if the monster understood you, but it retreats into the night swiftly to nurse its wounds."
+    "你不确定这怪物是否听懂了你的话，但它迅速遁入夜色中疗伤。"
 
 # game/BKcity_events.rpy:415
 translate chinese_simplified city_monster_menu_a9baabcd:
 
     # "You have earned prestige."
-    "You have earned prestige."
+    "你赢得了声望。"
 
 # game/BKcity_events.rpy:428
 translate chinese_simplified city_impress_daff885e:
 
     # "Walking through the [loc], you run into a party of women adventurers."
-    "Walking through the [loc], you run into a party of women adventurers."
+    "穿过[loc]时，你遇到了一群女冒险者。"
 
 # game/BKcity_events.rpy:446
 translate chinese_simplified city_impress_2ac65c34:
@@ -454,7 +454,7 @@ translate chinese_simplified city_impress_d84bfeb9:
 translate chinese_simplified city_impress_a762f9b4:
 
     # "You take off your shirt and start doing a few push ups and abs flexes. You decide to impress them with a backflip."
-    "You take off your shirt and start doing a few push ups and abs flexes. You decide to impress them with a backflip."
+    "你脱掉上衣，开始做几个俯卧撑和腹肌训练。你决定用一个后空翻来给他们留下深刻印象。"
 
 # game/BKcity_events.rpy:492
 translate chinese_simplified city_impress_9db62c4b:
@@ -484,7 +484,7 @@ translate chinese_simplified city_impress_1cd7b566:
 translate chinese_simplified city_impress_b1056eb7:
 
     # "Taking off your shirt, you perform a series of moves and flips, showing off your toned body and muscles."
-    "Taking off your shirt, you perform a series of moves and flips, showing off your toned body and muscles."
+    "你脱掉上衣，做了一系列动作和翻滚动作，展示你健美的身材和肌肉。"
 
 # game/BKcity_events.rpy:513
 translate chinese_simplified city_impress_0fff7e2b:
@@ -520,7 +520,7 @@ translate chinese_simplified city_impress_fb1754e7:
 translate chinese_simplified city_impress_6ef50743:
 
     # "Ripping off your shirt, you easily lift one of the girls on your shoulder."
-    "Ripping off your shirt, you easily lift one of the girls on your shoulder."
+    "你一把扯掉衬衫，轻松地把其中一个女孩扛到肩上。"
 
 # game/BKcity_events.rpy:534
 translate chinese_simplified city_impress_53ef784c:
@@ -556,13 +556,13 @@ translate chinese_simplified city_impress_48b7d138:
 translate chinese_simplified city_impress_4a22364e:
 
     # "Stripping to your underwear, you demonstrate a series of spectacular martial arts moves."
-    "Stripping to your underwear, you demonstrate a series of spectacular martial arts moves."
+    "你脱到只剩内衣，向众人展示了一系列精彩的武术动作。"
 
 # game/BKcity_events.rpy:554
 translate chinese_simplified city_impress_6c5af145:
 
     # "The girls watch you with rapture, their eyes glistening with lust."
-    "The girls watch you with rapture, their eyes glistening with lust."
+    "女孩们如痴如醉地看着你，她们的眼中闪烁着欲望的光芒。"
 
 # game/BKcity_events.rpy:556
 translate chinese_simplified city_impress_0e53cc21:
@@ -586,7 +586,7 @@ translate chinese_simplified city_impress_1de6010c:
 translate chinese_simplified city_impress_1825b68f:
 
     # "You simply strip to your underwear, and show the girls your perfect muscular body. Their jaws drop in awe."
-    "You simply strip to your underwear, and show the girls your perfect muscular body. Their jaws drop in awe."
+    "你只需脱到只剩内裤，向女孩们展示你完美的肌肉身材。她们都会惊叹不已。"
 
 # game/BKcity_events.rpy:570
 translate chinese_simplified city_impress_f75b081d:
@@ -640,7 +640,7 @@ translate chinese_simplified city_impress_29c5be5e:
 translate chinese_simplified city_impress_dadddaff:
 
     # "You start chatting up the girls."
-    "You start chatting up the girls."
+    "你开始和女孩们搭讪。"
 
 # game/BKcity_events.rpy:601
 translate chinese_simplified city_impress_7fef2142:
@@ -808,13 +808,13 @@ translate chinese_simplified city_impress_18b34c32:
 translate chinese_simplified city_impress_c55b17d5:
 
     # "That could have gone better."
-    "That could have gone better."
+    "本来可以做得更好。"
 
 # game/BKcity_events.rpy:721
 translate chinese_simplified city_impress_a8fab31f:
 
     # "Before you have a chance to express agreement or disagreement, the woman shoves her clothing to the side and proceeds to milk you for all you're worth, right here in the [loc]."
-    "Before you have a chance to express agreement or disagreement, the woman shoves her clothing to the side and proceeds to milk you for all you're worth, right here in the [loc]."
+    "在你还没来得及表示同意或不同意之前，这个女人就把衣服扔到一边，然后开始榨干你所有的钱财，就在这里[loc]。"
 
 # game/BKcity_events.rpy:725
 translate chinese_simplified city_impress_58e8061b:
@@ -844,19 +844,19 @@ translate chinese_simplified city_impress_a46b4173:
 translate chinese_simplified city_impress_a9baabcd:
 
     # "You have earned prestige."
-    "You have earned prestige."
+    "你赢得了声望。"
 
 # game/BKcity_events.rpy:755
 translate chinese_simplified city_impress_93d2c2ea:
 
     # "Before you know it, a couple of girls are running their hands and mouths all over your body."
-    "Before you know it, a couple of girls are running their hands and mouths all over your body."
+    "还没反应过来，就有几个女孩用手和嘴在你身上到处游走。"
 
 # game/BKcity_events.rpy:759
 translate chinese_simplified city_impress_8086c3f7:
 
     # "They play with and each other and hungrily wait for you to cum all over them."
-    "They play with and each other and hungrily wait for you to cum all over them."
+    "她们互相嬉戏，饥渴地等待你把精液射在她们身上。"
 
 # game/BKcity_events.rpy:761
 translate chinese_simplified city_impress_f2241653:
@@ -874,13 +874,13 @@ translate chinese_simplified city_impress_4f0b1f1d:
 translate chinese_simplified city_impress_a9baabcd_1:
 
     # "You have earned prestige."
-    "You have earned prestige."
+    "你赢得了声望。"
 
 # game/BKcity_events.rpy:787
 translate chinese_simplified city_impress_b485c9ae:
 
     # "Three of the girls surround you and hungrily grab your manhood."
-    "Three of the girls surround you and hungrily grab your manhood."
+    "三个女孩围住你，贪婪地抓住你的命根子。"
 
 # game/BKcity_events.rpy:789
 translate chinese_simplified city_impress_45fcdc80:
@@ -904,19 +904,19 @@ translate chinese_simplified city_impress_6b277130:
 translate chinese_simplified city_impress_55d3ab7e:
 
     # "Today is a good day..."
-    "Today is a good day..."
+    "今天是个好日子……"
 
 # game/BKcity_events.rpy:809
 translate chinese_simplified city_impress_a9baabcd_2:
 
     # "You have earned prestige."
-    "You have earned prestige."
+    "你赢得了声望。"
 
 # game/BKcity_events.rpy:825
 translate chinese_simplified city_impress_1e1a8a90:
 
     # "All the girls bend to your will, letting you fuck them all for hours on end."
-    "All the girls bend to your will, letting you fuck them all for hours on end."
+    "所有女孩都听从你的摆布，让你和她们连续几个小时发生性关系。"
 
 # game/BKcity_events.rpy:829
 translate chinese_simplified city_impress_8b4ef274:
@@ -946,19 +946,19 @@ translate chinese_simplified city_impress_1831fa09:
 translate chinese_simplified city_impress_e9410bdc:
 
     # "You have a hard time leaving..."
-    "You have a hard time leaving..."
+    "你很难离开……"
 
 # game/BKcity_events.rpy:859
 translate chinese_simplified city_impress_efb088bc:
 
     # "You have earned a lot of prestige. You are exhausted and can no longer act today."
-    "You have earned a lot of prestige. You are exhausted and can no longer act today."
+    "你已经赢得了很高的声望。你精疲力竭，今天无法再采取行动了。"
 
 # game/BKcity_events.rpy:868
 translate chinese_simplified city_impress_7648ac44:
 
     # "You have received a prestige boost from your [spent_AP] spent AP."
-    "You have received a prestige boost from your [spent_AP] spent AP."
+    "您已从花费的 [spent_AP] 点 AP 中获得声望提升。"
 
 # game/BKcity_events.rpy:871
 translate chinese_simplified city_impress_c749dbaa:
@@ -976,7 +976,7 @@ translate chinese_simplified city_impress_16e83859:
 translate chinese_simplified city_slave_98472443:
 
     # "Wandering around the [loc], you hear a familiar voice."
-    "Wandering around the [loc], you hear a familiar voice."
+    "在[loc]附近闲逛时，你听到一个熟悉的声音。"
 
 # game/BKcity_events.rpy:895
 translate chinese_simplified city_slave_41f096b7:
@@ -1036,7 +1036,7 @@ translate chinese_simplified city_slave_03b23db1:
 translate chinese_simplified city_slave_40fc8fdc:
 
     # "You approach the bound slave. She gives you an indifferent look."
-    "You approach the bound slave. She gives you an indifferent look."
+    "你走向被捆绑的奴隶。她冷漠地看了你一眼。"
 
 # game/BKcity_events.rpy:940
 translate chinese_simplified city_slave_e4bdc8ff:
@@ -1054,7 +1054,7 @@ translate chinese_simplified city_slave_d170ee15:
 translate chinese_simplified city_slave_86661eb6:
 
     # "You give her a long lecture on the duties of a proper slave."
-    "You give her a long lecture on the duties of a proper slave."
+    "你给她上了一堂关于合格奴隶职责的长篇大论。"
 
 # game/BKcity_events.rpy:953
 translate chinese_simplified city_slave_f24b61f7:
@@ -1066,7 +1066,7 @@ translate chinese_simplified city_slave_f24b61f7:
 translate chinese_simplified city_slave_d4353c3c:
 
     # "You gently explain that being a slave is not the end of the world."
-    "You gently explain that being a slave is not the end of the world."
+    "你温和地解释说，当奴隶并不是世界末日。"
 
 # game/BKcity_events.rpy:961
 translate chinese_simplified city_slave_ae26c544:
@@ -1078,7 +1078,7 @@ translate chinese_simplified city_slave_ae26c544:
 translate chinese_simplified city_slave_3f38a025:
 
     # "She sobs."
-    "She sobs."
+    "她啜泣着。"
 
 # game/BKcity_events.rpy:965
 translate chinese_simplified city_slave_4780975b:
@@ -1114,7 +1114,7 @@ translate chinese_simplified city_slave_8b40cafb:
 translate chinese_simplified city_slave_d6149901:
 
     # "Sitting down next to her, you tell her about your life as a brothel owner. You tell her all about your girls, their lives, where they came from, and how they cope with their situation now."
-    "Sitting down next to her, you tell her about your life as a brothel owner. You tell her all about your girls, their lives, where they came from, and how they cope with their situation now."
+    "你坐在她旁边，向她讲述你作为妓院老板的生活。你把所有关于你的女孩们的事情都告诉她，她们的生活，她们的出身，以及她们现在是如何应对困境的。"
 
 # game/BKcity_events.rpy:983
 translate chinese_simplified city_slave_a4ad0d8a:
@@ -1126,7 +1126,7 @@ translate chinese_simplified city_slave_a4ad0d8a:
 translate chinese_simplified city_slave_ab75b130:
 
     # "As she listens to you, a glimmer of hope appears in her eyes."
-    "As she listens to you, a glimmer of hope appears in her eyes."
+    "她听着你的话，眼中闪过一丝希望。"
 
 # game/BKcity_events.rpy:989
 translate chinese_simplified city_slave_6fb22144:
@@ -1168,7 +1168,7 @@ translate chinese_simplified city_slave_190538b3:
 translate chinese_simplified city_slave_0769663a:
 
     # "You tell her vivid details about the life of some of the famous sex slaves of Zan, explaining how they leveraged their situation to become legends in their own right."
-    "You tell her vivid details about the life of some of the famous sex slaves of Zan, explaining how they leveraged their situation to become legends in their own right."
+    "你向她生动地讲述了赞国一些著名性奴的生活细节，解释了她们如何利用自己的处境成为传奇人物。"
 
 # game/BKcity_events.rpy:1007
 translate chinese_simplified city_slave_4b50ad06:
@@ -1186,7 +1186,7 @@ translate chinese_simplified city_slave_18ecba08:
 translate chinese_simplified city_slave_d2f41821:
 
     # "She looks at you, eyes open wide in amazement."
-    "She looks at you, eyes open wide in amazement."
+    "她看着你，眼睛睁得大大的，满脸惊讶。"
 
 # game/BKcity_events.rpy:1012
 translate chinese_simplified city_slave_f64ae40a:
@@ -1228,7 +1228,7 @@ translate chinese_simplified city_slave_ade99e4d:
 translate chinese_simplified city_slave_dc65289a:
 
     # "You approach the bound girl, and swiftly cut a lock of her hair with your knife."
-    "You approach the bound girl, and swiftly cut a lock of her hair with your knife."
+    "你走近被绑的女孩，迅速用刀割下一缕她的头发。"
 
 # game/BKcity_events.rpy:1034
 translate chinese_simplified city_slave_9adcdda3:
@@ -1240,7 +1240,7 @@ translate chinese_simplified city_slave_9adcdda3:
 translate chinese_simplified city_slave_64a33bef:
 
     # "Holding the lock of hair firmly in your palm, you start incanting."
-    "Holding the lock of hair firmly in your palm, you start incanting."
+    "你紧紧握住那缕头发，开始念咒。"
 
 # game/BKcity_events.rpy:1044
 translate chinese_simplified city_slave_dc474f7c:
@@ -1264,7 +1264,7 @@ translate chinese_simplified city_slave_d4036871:
 translate chinese_simplified city_slave_613e7676:
 
     # "She resists your attempt."
-    "She resists your attempt."
+    "她拒绝了你的尝试。"
 
 # game/BKcity_events.rpy:1056
 translate chinese_simplified city_slave_8ac66e62:
@@ -1300,13 +1300,13 @@ translate chinese_simplified city_slave_d919dde5:
 translate chinese_simplified city_slave_1cb9453f:
 
     # "She looks lost. Trying to elicit a reaction, you pinch her breast."
-    "She looks lost. Trying to elicit a reaction, you pinch her breast."
+    "她看起来很迷茫。为了引起她的反应，你捏了捏她的胸部。"
 
 # game/BKcity_events.rpy:1072
 translate chinese_simplified city_slave_493c83fa:
 
     # "She shivers, but she doesn't fight you."
-    "She shivers, but she doesn't fight you."
+    "她瑟瑟发抖，但没有反抗你。"
 
 # game/BKcity_events.rpy:1074
 translate chinese_simplified city_slave_ad5b4a5f:
@@ -1360,7 +1360,7 @@ translate chinese_simplified city_slave_256ac5e8:
 translate chinese_simplified city_slave_8ddcc16e:
 
     # "The girl looks up to you with bewildered eyes. It's like she notices you for the first time."
-    "The girl looks up to you with bewildered eyes. It's like she notices you for the first time."
+    "女孩仰头看着你，眼神中充满了困惑。仿佛她第一次注意到你似的。"
 
 # game/BKcity_events.rpy:1098
 translate chinese_simplified city_slave_f950481d:
@@ -1378,7 +1378,7 @@ translate chinese_simplified city_slave_bcd6f635:
 translate chinese_simplified city_slave_c1dacd9f:
 
     # "The hair in your palm whitens and the smell of sulfur floats in the air."
-    "The hair in your palm whitens and the smell of sulfur floats in the air."
+    "手掌上的毛发变白，空气中弥漫着硫磺的气味。"
 
 # game/BKcity_events.rpy:1110
 translate chinese_simplified city_slave_91a39f4f:
@@ -1390,7 +1390,7 @@ translate chinese_simplified city_slave_91a39f4f:
 translate chinese_simplified city_slave_3db876d9:
 
     # "A dark halo surrounds the girl and seems to penetrate beneath her skin. She shivers uncontrollably."
-    "A dark halo surrounds the girl and seems to penetrate beneath her skin. She shivers uncontrollably."
+    "女孩周身笼罩着一层黑色的光晕，似乎渗入了她的皮肤之下。她止不住地颤抖起来。"
 
 # game/BKcity_events.rpy:1116
 translate chinese_simplified city_slave_78be7583:
@@ -1402,7 +1402,7 @@ translate chinese_simplified city_slave_78be7583:
 translate chinese_simplified city_slave_4c003d45:
 
     # "Her chains jingle as her tits seem to grow larger. Her nipples stand firmly erect, and juice starts running along her thighs."
-    "Her chains jingle as her tits seem to grow larger. Her nipples stand firmly erect, and juice starts running along her thighs."
+    "她的锁链叮当作响，乳房似乎也越来越大。她的乳头坚挺挺立，汁液顺着大腿流了下来。"
 
 # game/BKcity_events.rpy:1120
 translate chinese_simplified city_slave_171152c2:
@@ -1414,7 +1414,7 @@ translate chinese_simplified city_slave_171152c2:
 translate chinese_simplified city_slave_f53cddb0:
 
     # "She trembles as a strong orgasm washes over her."
-    "She trembles as a strong orgasm washes over her."
+    "一股强烈的性高潮席卷而来，她浑身颤抖。"
 
 # game/BKcity_events.rpy:1126
 translate chinese_simplified city_slave_1d713ca3:
@@ -1456,7 +1456,7 @@ translate chinese_simplified city_slave_aa59c0b5:
 translate chinese_simplified city_slave_ad7409c3:
 
     # "The slave trainer looks down."
-    "The slave trainer looks down."
+    "奴隶训练员低下了头。"
 
 # game/BKcity_events.rpy:1165
 translate chinese_simplified city_slave_b0d1501d:
@@ -1480,7 +1480,7 @@ translate chinese_simplified city_slave_a8201bf0:
 translate chinese_simplified city_slave_a9baabcd:
 
     # "You have earned prestige."
-    "You have earned prestige."
+    "你赢得了声望。"
 
 # game/BKcity_events.rpy:1189
 translate chinese_simplified city_slave_1f77043b:
@@ -1516,7 +1516,7 @@ translate chinese_simplified city_slave_311afc8c:
 translate chinese_simplified city_slave_a9baabcd_1:
 
     # "You have earned prestige."
-    "You have earned prestige."
+    "你赢得了声望。"
 
 # game/BKcity_events.rpy:1236
 translate chinese_simplified city_slave_b250f193:
@@ -1576,7 +1576,7 @@ translate chinese_simplified city_slave_4d802672:
 translate chinese_simplified city_slave_9d371e26:
 
     # "You come and go for a while. You can tell she is starting to enjoy it."
-    "You come and go for a while. You can tell she is starting to enjoy it."
+    "你时不时来来去去。看得出来她开始享受这种生活了。"
 
 # game/BKcity_events.rpy:1284
 translate chinese_simplified city_slave_f5e822a4:
@@ -1594,7 +1594,7 @@ translate chinese_simplified city_slave_340bb775:
 translate chinese_simplified city_slave_a8f91e1b:
 
     # "You increase your pace."
-    "You increase your pace."
+    "你加快了脚步。"
 
 # game/BKcity_events.rpy:1302
 translate chinese_simplified city_slave_46143a51:
@@ -1630,31 +1630,31 @@ translate chinese_simplified city_slave_6c6ac6f8:
 translate chinese_simplified city_slave_3aa91c80:
 
     # "You shoot your load inside her mouth, and she gulps it down with a hiccup."
-    "You shoot your load inside her mouth, and she gulps it down with a hiccup."
+    "你把精液射进她嘴里，她打了个嗝，把它吞了下去。"
 
 # game/BKcity_events.rpy:1329
 translate chinese_simplified city_slave_e4ddfa39:
 
     # "Pulling out, you spread white cum all over her face."
-    "Pulling out, you spread white cum all over her face."
+    "你拔出阴茎，白色的精液溅了她一脸。"
 
 # game/BKcity_events.rpy:1333
 translate chinese_simplified city_slave_b9cb6847:
 
     # "You cum buckets inside her, and her body shakes in a massive orgasm."
-    "You cum buckets inside her, and her body shakes in a massive orgasm."
+    "你把精液射进她体内，她的身体在巨大的性高潮中颤抖。"
 
 # game/BKcity_events.rpy:1335
 translate chinese_simplified city_slave_652cb634:
 
     # "Pulling out, you shoot your last load over her body."
-    "Pulling out, you shoot your last load over her body."
+    "你抽出阴茎，将最后一股精液射在她身上。"
 
 # game/BKcity_events.rpy:1339
 translate chinese_simplified city_slave_b4ca92e6:
 
     # "She seems lost in the feeling of her two holes being raped."
-    "She seems lost in the feeling of her two holes being raped."
+    "她似乎沉浸在两个洞被强奸的感觉中。"
 
 # game/BKcity_events.rpy:1341
 translate chinese_simplified city_slave_45586e61:
@@ -1684,7 +1684,7 @@ translate chinese_simplified city_slave_20f91c9b:
 translate chinese_simplified city_slave_52216f2d:
 
     # "Trembling with pleasure, the girl collapses in a pool of bodily fluids."
-    "Trembling with pleasure, the girl collapses in a pool of bodily fluids."
+    "女孩欣喜若狂，颤抖着倒在一滩体液中。"
 
 # game/BKcity_events.rpy:1366
 translate chinese_simplified city_slave_15f2cc69:
@@ -1714,7 +1714,7 @@ translate chinese_simplified city_slave_34169bac:
 translate chinese_simplified city_slave_51a349cb:
 
     # "You have earned prestige. Some of your girls have increased their [act] stat."
-    "You have earned prestige. Some of your girls have increased their [act] stat."
+    "你获得了声望。你的一些女孩的[act]属性有所提升。"
 
 # game/BKcity_events.rpy:1401
 translate chinese_simplified city_slave_50201891:
@@ -1792,7 +1792,7 @@ translate chinese_simplified city_slave_28ffc30e:
 translate chinese_simplified city_slave_3d8c5057:
 
     # "She licks the cum off her lips, giving you a salacious look."
-    "She licks the cum off her lips, giving you a salacious look."
+    "她舔掉嘴唇上的精液，露出淫荡的眼神。"
 
 # game/BKcity_events.rpy:1472
 translate chinese_simplified city_slave_0ab5aa90:
@@ -1804,19 +1804,19 @@ translate chinese_simplified city_slave_0ab5aa90:
 translate chinese_simplified city_slave_a9046625:
 
     # "You have earned prestige. Some of your girls have increased their sex stats.\nYou have expended all your actions for the day."
-    "You have earned prestige. Some of your girls have increased their sex stats.\nYou have expended all your actions for the day."
+    "你获得了声望。你的一些女孩的性能力值提高了。你今天的行动次数已用完。"
 
 # game/BKcity_events.rpy:1483
 translate chinese_simplified city_slave_c271f3ee:
 
     # "You have received a prestige boost from your [MC.interactions] spent AP."
-    "You have received a prestige boost from your [MC.interactions] spent AP."
+    "你通过消耗[MC.interactions] AP获得了声望提升。"
 
 # game/BKcity_events.rpy:1509
 translate chinese_simplified city_gamble_7d17a49f:
 
     # "You are strolling around the [loc], daydreaming, when you hear someone call out to you."
-    "You are strolling around the [loc], daydreaming, when you hear someone call out to you."
+    "你正在[loc]闲逛，发呆，这时你听到有人叫你。"
 
 # game/BKcity_events.rpy:1529
 translate chinese_simplified city_gamble_8d2c768a:
@@ -1828,7 +1828,7 @@ translate chinese_simplified city_gamble_8d2c768a:
 translate chinese_simplified city_gamble_82f4a93b:
 
     # "A cute, innocent-looking girl is challenging you to a popular game."
-    "A cute, innocent-looking girl is challenging you to a popular game."
+    "一个看起来可爱、天真无邪的女孩向你发起了一项热门游戏的挑战。"
 
 # game/BKcity_events.rpy:1540
 translate chinese_simplified city_gamble_8c163964:
@@ -1846,7 +1846,7 @@ translate chinese_simplified city_gamble_b749aeee:
 translate chinese_simplified city_gamble_1c754eb2:
 
     # "You win the first few games, making quite a bit of money."
-    "You win the first few games, making quite a bit of money."
+    "你赢得了前几场比赛，赚了不少钱。"
 
 # game/BKcity_events.rpy:1548
 translate chinese_simplified city_gamble_31ca0d2f:
@@ -1864,13 +1864,13 @@ translate chinese_simplified city_gamble_bd16486a:
 translate chinese_simplified city_gamble_19359337:
 
     # "You keep playing, but your luck runs out somehow."
-    "You keep playing, but your luck runs out somehow."
+    "你继续玩下去，但你的好运却不知何故用完了。"
 
 # game/BKcity_events.rpy:1556
 translate chinese_simplified city_gamble_7de57ce5:
 
     # "Before you know it, your gains have been wiped out, and the girl is sitting in front of a pile of gold."
-    "Before you know it, your gains have been wiped out, and the girl is sitting in front of a pile of gold."
+    "不知不觉中，你的收益化为乌有，而那个女孩正坐在成堆的金子前。"
 
 # game/BKcity_events.rpy:1558
 translate chinese_simplified city_gamble_b65f8599:
@@ -1894,7 +1894,7 @@ translate chinese_simplified city_gamble_d6d23918:
 translate chinese_simplified city_gamble_5517eeab:
 
     # "Suddenly, you realize that sweet, innocent girl is not so innocent after all. She must be an experienced gambler. She's been playing you for a fool from the beginning."
-    "Suddenly, you realize that sweet, innocent girl is not so innocent after all. She must be an experienced gambler. She's been playing you for a fool from the beginning."
+    "突然间，你意识到那个甜美无辜的女孩其实并不那么天真。她一定是个老练的赌徒，从一开始就把你当傻子耍。"
 
 # game/BKcity_events.rpy:1565
 translate chinese_simplified city_gamble_ff747cb2:
@@ -1912,19 +1912,19 @@ translate chinese_simplified city_gamble_fbf8a65d:
 translate chinese_simplified city_gamble_d57674e3:
 
     # "Concentrating on her facial expressions and body language, you begin to understand her winning strategy."
-    "Concentrating on her facial expressions and body language, you begin to understand her winning strategy."
+    "通过观察她的面部表情和肢体语言，你就能开始了解她的制胜策略。"
 
 # game/BKcity_events.rpy:1588
 translate chinese_simplified city_gamble_5c9dccc1:
 
     # "Putting this to your advantage, you manage to regain the edge and make up for your losses."
-    "Putting this to your advantage, you manage to regain the edge and make up for your losses."
+    "利用这一点，你就能重新夺回优势，弥补损失。"
 
 # game/BKcity_events.rpy:1590
 translate chinese_simplified city_gamble_cef78f8d:
 
     # "The girl looks unassured now, and she is losing her composure."
-    "The girl looks unassured now, and she is losing her composure."
+    "女孩现在显得很没自信，她正在失去镇定。"
 
 # game/BKcity_events.rpy:1594
 translate chinese_simplified city_gamble_de6b3fac:
@@ -1936,7 +1936,7 @@ translate chinese_simplified city_gamble_de6b3fac:
 translate chinese_simplified city_gamble_b2168319:
 
     # "She bets all of her remaining credit on her next move."
-    "She bets all of her remaining credit on her next move."
+    "她把剩余的所有信用额度都押在了下一步行动上。"
 
 # game/BKcity_events.rpy:1598
 translate chinese_simplified city_gamble_fcae88b9:
@@ -1960,13 +1960,13 @@ translate chinese_simplified city_gamble_f31f9295:
 translate chinese_simplified city_gamble_e977888f:
 
     # "You try to focus and observe her play feverishly, looking for a weakness."
-    "You try to focus and observe her play feverishly, looking for a weakness."
+    "你努力集中注意力，仔细观察她的比赛，寻找她的弱点。"
 
 # game/BKcity_events.rpy:1612
 translate chinese_simplified city_gamble_a75181bc:
 
     # "But she remains unpredictable. Your losses pile up."
-    "But she remains unpredictable. Your losses pile up."
+    "但她依然难以捉摸。你的损失不断累积。"
 
 # game/BKcity_events.rpy:1614
 translate chinese_simplified city_gamble_becd0c06:
@@ -1990,7 +1990,7 @@ translate chinese_simplified city_gamble_2cb9dcbb:
 translate chinese_simplified city_gamble_d4c4c437:
 
     # "Beaming with self-content, the girl gets up to buy herself a drink with your hard-earned money."
-    "Beaming with self-content, the girl gets up to buy herself a drink with your hard-earned money."
+    "女孩满脸得意，起身用你辛苦挣来的钱给自己买了一杯饮料。"
 
 # game/BKcity_events.rpy:1634
 translate chinese_simplified city_gamble_1a3f7fa9:
@@ -2002,13 +2002,13 @@ translate chinese_simplified city_gamble_1a3f7fa9:
 translate chinese_simplified city_gamble_56297960:
 
     # "Muttering a spell, you draw the shape of a pentagram into the air over the game table."
-    "Muttering a spell, you draw the shape of a pentagram into the air over the game table."
+    "你低声念着咒语，在游戏桌上方画出一个五芒星的形状。"
 
 # game/BKcity_events.rpy:1642
 translate chinese_simplified city_gamble_2dbfeada:
 
     # "The table glows faintly, the halo receding just in time for her to return to the table."
-    "The table glows faintly, the halo receding just in time for her to return to the table."
+    "桌子发出微弱的光芒，光晕在她回到桌边之前就消退了。"
 
 # game/BKcity_events.rpy:1646
 translate chinese_simplified city_gamble_72e8fbb8:
@@ -2032,7 +2032,7 @@ translate chinese_simplified city_gamble_b9e6afb2:
 translate chinese_simplified city_gamble_40e5a4b3:
 
     # "The next few minutes see you winning round after round. The girl looks increasingly frustrated."
-    "The next few minutes see you winning round after round. The girl looks increasingly frustrated."
+    "接下来的几分钟里，你连赢几局。女孩看起来越来越沮丧。"
 
 # game/BKcity_events.rpy:1656
 translate chinese_simplified city_gamble_d4f15bd0:
@@ -2044,7 +2044,7 @@ translate chinese_simplified city_gamble_d4f15bd0:
 translate chinese_simplified city_gamble_b3d16850:
 
     # "Your luck doesn't run out, however, and before long she has used up all her credit."
-    "Your luck doesn't run out, however, and before long she has used up all her credit."
+    "然而，你的好运并没有用完，不久之后，她就把所有的信用额度都用光了。"
 
 # game/BKcity_events.rpy:1660
 translate chinese_simplified city_gamble_7ed54380:
@@ -2062,19 +2062,19 @@ translate chinese_simplified city_gamble_6f00c98e:
 translate chinese_simplified city_gamble_93270bbf:
 
     # "You wait for her to look away so that you can cast your spell undetected."
-    "You wait for her to look away so that you can cast your spell undetected."
+    "你等她移开视线，这样你就可以在不被察觉的情况下施法。"
 
 # game/BKcity_events.rpy:1668
 translate chinese_simplified city_gamble_7dfa2122:
 
     # "While she is busy counting her gold with a satisfied look on her face, your start muttering a few words, raising your hand towards the game."
-    "While she is busy counting her gold with a satisfied look on her face, your start muttering a few words, raising your hand towards the game."
+    "当她脸上带着满意的表情忙着数金币时，你开始低声念叨着什么，并举起手去玩游戏。"
 
 # game/BKcity_events.rpy:1670
 translate chinese_simplified city_gamble_c85b6ff4:
 
     # "The words don't come easily, however, and you have a hard time harnessing magical energy while doing your best to look casual."
-    "The words don't come easily, however, and you have a hard time harnessing magical energy while doing your best to look casual."
+    "然而，这些话并不容易说出口，而且你还得努力装作若无其事，才能驾驭魔法能量。"
 
 # game/BKcity_events.rpy:1674
 translate chinese_simplified city_gamble_9dc3e641:
@@ -2104,7 +2104,7 @@ translate chinese_simplified city_gamble_6878d040:
 translate chinese_simplified city_gamble_fa8448bd:
 
     # "You fail to cast your spell. Your luck just goes from bad to worse, and you end up with heavy losses."
-    "You fail to cast your spell. Your luck just goes from bad to worse, and you end up with heavy losses."
+    "你的魔法失败了。你的运气每况愈下，最终损失惨重。"
 
 # game/BKcity_events.rpy:1695
 translate chinese_simplified city_gamble_d192838d:
@@ -2116,7 +2116,7 @@ translate chinese_simplified city_gamble_d192838d:
 translate chinese_simplified city_gamble_dfd842f8:
 
     # "The girl makes a show of looking disappointed."
-    "The girl makes a show of looking disappointed."
+    "女孩装出一副失望的样子。"
 
 # game/BKcity_events.rpy:1699
 translate chinese_simplified city_gamble_fbd1f22d:
@@ -2128,7 +2128,7 @@ translate chinese_simplified city_gamble_fbd1f22d:
 translate chinese_simplified city_gamble_04964a88:
 
     # "You have lost %(loss)d gold."
-    "You have lost %(loss)d gold."
+    "您损失了 %(loss)d 金币。"
 
 # game/BKcity_events.rpy:1726
 translate chinese_simplified city_gamble_963ed26a:
@@ -2140,7 +2140,7 @@ translate chinese_simplified city_gamble_963ed26a:
 translate chinese_simplified city_gamble_f1b8b9a3:
 
     # "She looks at you with teary eyes."
-    "She looks at you with teary eyes."
+    "她含着泪看着你。"
 
 # game/BKcity_events.rpy:1732
 translate chinese_simplified city_gamble_3771127e:
@@ -2152,13 +2152,13 @@ translate chinese_simplified city_gamble_3771127e:
 translate chinese_simplified city_gamble_b1b89f60:
 
     # "You have earned %(gain)d gold."
-    "You have earned %(gain)d gold."
+    "您已获得 %(gain)d 金币。"
 
 # game/BKcity_events.rpy:1750
 translate chinese_simplified city_gamble_3a3405b9:
 
     # "She looks at you with panicked eyes."
-    "She looks at you with panicked eyes."
+    "她惊恐地看着你。"
 
 # game/BKcity_events.rpy:1752
 translate chinese_simplified city_gamble_41ab9b9e:
@@ -2176,7 +2176,7 @@ translate chinese_simplified city_gamble_d8259c57:
 translate chinese_simplified city_gamble_c6c7993a:
 
     # "She opens her purse. A mite flies out, but otherwise it is completely empty."
-    "She opens her purse. A mite flies out, but otherwise it is completely empty."
+    "她打开钱包，一只螨虫飞了出来，除此之外，钱包里空空如也。"
 
 # game/BKcity_events.rpy:1758
 translate chinese_simplified city_gamble_3c7d3a1e:
@@ -2200,7 +2200,7 @@ translate chinese_simplified city_gamble_4b439b96:
 translate chinese_simplified city_gamble_ef9737fb:
 
     # "Tears run along her cheeks."
-    "Tears run along her cheeks."
+    "泪水顺着她的脸颊滑落。"
 
 # game/BKcity_events.rpy:1768
 translate chinese_simplified city_gamble_75088c84:
@@ -2218,7 +2218,7 @@ translate chinese_simplified city_gamble_491bbda7:
 translate chinese_simplified city_gamble_24e6b6dd:
 
     # "She gives you a strange, devious look."
-    "She gives you a strange, devious look."
+    "她给了你一个奇怪而狡黠的眼神。"
 
 # game/BKcity_events.rpy:1774
 translate chinese_simplified city_gamble_c3e3c1f2:
@@ -2242,7 +2242,7 @@ translate chinese_simplified city_gamble_a46ec1aa:
 translate chinese_simplified city_gamble_c2182a64:
 
     # "Pushing your dick inside her firm, slender body, you begin to pump in and out of her with rhythm."
-    "Pushing your dick inside her firm, slender body, you begin to pump in and out of her with rhythm."
+    "你把阴茎插入她紧致纤细的身体里，开始有节奏地抽插。"
 
 # game/BKcity_events.rpy:1792
 translate chinese_simplified city_gamble_0ec82c53:
@@ -2260,13 +2260,13 @@ translate chinese_simplified city_gamble_d89d6d72:
 translate chinese_simplified city_gamble_4736b5fc:
 
     # "Increasing your pace, you fuck her harder and harder."
-    "Increasing your pace, you fuck her harder and harder."
+    "你加快速度，越来越用力地操她。"
 
 # game/BKcity_events.rpy:1798
 translate chinese_simplified city_gamble_1342b6c9:
 
     # "Her screams of passion fill the room as her juices drip down from her pussy."
-    "Her screams of passion fill the room as her juices drip down from her pussy."
+    "她情欲的尖叫声充满了房间，她的汁液从她的阴部滴落下来。"
 
 # game/BKcity_events.rpy:1802
 translate chinese_simplified city_gamble_d07cca1a:
@@ -2290,13 +2290,13 @@ translate chinese_simplified city_gamble_03cd20eb:
 translate chinese_simplified city_gamble_be5e7738:
 
     # "She screams in delight as a powerful orgasm rocks her body back and forth."
-    "She screams in delight as a powerful orgasm rocks her body back and forth."
+    "强烈的性高潮让她身体摇晃，她发出愉悦的尖叫。"
 
 # game/BKcity_events.rpy:1820
 translate chinese_simplified city_gamble_cd6b38b6:
 
     # "You come loads inside of her, and she squeezes you dry with her tight hole."
-    "You come loads inside of her, and she squeezes you dry with her tight hole."
+    "你射了很多精液在她体内，她用她紧致的穴口把你榨干了。"
 
 # game/BKcity_events.rpy:1822
 translate chinese_simplified city_gamble_a1e9c257:
@@ -2308,7 +2308,7 @@ translate chinese_simplified city_gamble_a1e9c257:
 translate chinese_simplified city_gamble_a9baabcd:
 
     # "You have earned prestige."
-    "You have earned prestige."
+    "你赢得了声望。"
 
 # game/BKcity_events.rpy:1837
 translate chinese_simplified city_gamble_995a6198:
@@ -2326,7 +2326,7 @@ translate chinese_simplified city_gamble_48a2c215:
 translate chinese_simplified city_gamble_04964a88_1:
 
     # "You have lost %(loss)d gold."
-    "You have lost %(loss)d gold."
+    "您损失了 %(loss)d 金币。"
 
 # game/BKcity_events.rpy:1863
 translate chinese_simplified city_gamble_cfb1a132:
@@ -2344,7 +2344,7 @@ translate chinese_simplified city_gamble_dba13d1b:
 translate chinese_simplified city_thief_b71bafed:
 
     # "As you pass a group of people near the [loc], you suddenly hear a scream."
-    "As you pass a group of people near the [loc], you suddenly hear a scream."
+    "当你经过[loc]附近的一群人时，你突然听到一声尖叫。"
 
 # game/BKcity_events.rpy:1902
 translate chinese_simplified city_thief_280c7553:
@@ -2356,19 +2356,19 @@ translate chinese_simplified city_thief_280c7553:
 translate chinese_simplified city_thief_877ebc36:
 
     # "You see a sneaky cutpurse running down the street, holding the woman's belongings."
-    "You see a sneaky cutpurse running down the street, holding the woman's belongings."
+    "你看到一个鬼鬼祟祟的小偷沿着街道奔跑，手里拿着女人的财物。"
 
 # game/BKcity_events.rpy:1919
 translate chinese_simplified city_thief_9ef2b7a3:
 
     # "You bolt after the thieving scum, quickly catching up thanks to your superior training."
-    "You bolt after the thieving scum, quickly catching up thanks to your superior training."
+    "你紧追着偷窃的恶棍，凭借着你出色的训练，很快就追上了他们。"
 
 # game/BKcity_events.rpy:1921
 translate chinese_simplified city_thief_7f383b19:
 
     # "Desperate to escape you, the thief starts climbing a building, heading towards the roof."
-    "Desperate to escape you, the thief starts climbing a building, heading towards the roof."
+    "为了摆脱你，窃贼开始攀爬建筑物，向屋顶进发。"
 
 # game/BKcity_events.rpy:1923
 translate chinese_simplified city_thief_addf0ba7:
@@ -2380,25 +2380,25 @@ translate chinese_simplified city_thief_addf0ba7:
 translate chinese_simplified city_thief_27600d3e:
 
     # "Grabbing a rock from the ground, you expertly throw it as the wretch reaches for the top."
-    "Grabbing a rock from the ground, you expertly throw it as the wretch reaches for the top."
+    "你从地上捡起一块石头，熟练地扔了出去，而那个可怜虫正伸手去够顶端。"
 
 # game/BKcity_events.rpy:1935
 translate chinese_simplified city_thief_861e46bf:
 
     # "The thief falls down with a scream, and lays there, passed out. You recover the woman's purse."
-    "The thief falls down with a scream, and lays there, passed out. You recover the woman's purse."
+    "小偷惨叫一声倒地，昏迷不醒。你找回了女人的钱包。"
 
 # game/BKcity_events.rpy:1939
 translate chinese_simplified city_thief_e8a36dec:
 
     # "You start running after the wicked thief, but the wretch is very fast."
-    "You start running after the wicked thief, but the wretch is very fast."
+    "你开始追赶那个邪恶的小偷，但这个家伙跑得非常快。"
 
 # game/BKcity_events.rpy:1941
 translate chinese_simplified city_thief_cee55968:
 
     # "You manage to keep up for a while, but you can feel your stamina running out."
-    "You manage to keep up for a while, but you can feel your stamina running out."
+    "你勉强跟上了一阵子，但你能感觉到自己的体力正在逐渐耗尽。"
 
 # game/BKcity_events.rpy:1943
 translate chinese_simplified city_thief_48a2c215:
@@ -2410,73 +2410,73 @@ translate chinese_simplified city_thief_48a2c215:
 translate chinese_simplified city_thief_19de95e8:
 
     # "You finally give up on the chase, completely out of breath."
-    "You finally give up on the chase, completely out of breath."
+    "你最终放弃了追逐，气喘吁吁。"
 
 # game/BKcity_events.rpy:1955
 translate chinese_simplified city_thief_9bb30149:
 
     # "Trying to keep the thief within your view, you start chanting the words of a powerful weakening spell."
-    "Trying to keep the thief within your view, you start chanting the words of a powerful weakening spell."
+    "为了不让窃贼继续待在你的视线范围内，你开始念诵一个威力强大的削弱咒语。"
 
 # game/BKcity_events.rpy:1961
 translate chinese_simplified city_thief_040f5609:
 
     # "You can see the thief running desperately down the street, then suddenly falling flat on the pavement, legs shaking uncontrollably."
-    "You can see the thief running desperately down the street, then suddenly falling flat on the pavement, legs shaking uncontrollably."
+    "你可以看到小偷拼命地沿着街道奔跑，然后突然重重地摔倒在人行道上，双腿不受控制地颤抖着。"
 
 # game/BKcity_events.rpy:1963
 translate chinese_simplified city_thief_a47c8b71:
 
     # "The wretch still tries to flee, creeping forward at an agonizing pace."
-    "The wretch still tries to flee, creeping forward at an agonizing pace."
+    "那可怜的家伙仍在试图逃跑，以令人痛苦的速度向前爬行。"
 
 # game/BKcity_events.rpy:1965
 translate chinese_simplified city_thief_797a1b58:
 
     # "You leisurely walk up to the thief, whistling a popular bard song."
-    "You leisurely walk up to the thief, whistling a popular bard song."
+    "你悠闲地走到小偷面前，吹着一首流行的吟游诗人歌曲。"
 
 # game/BKcity_events.rpy:1967
 translate chinese_simplified city_thief_baf8d032:
 
     # "The thief sees you and begs for mercy as you loom close."
-    "The thief sees you and begs for mercy as you loom close."
+    "小偷看见你，在你靠近时乞求饶命。"
 
 # game/BKcity_events.rpy:1971
 translate chinese_simplified city_thief_743a7ae0:
 
     # "Still whistling, you answer with a powerful blow to the the head. The skull gives in with a nasty crack."
-    "Still whistling, you answer with a powerful blow to the the head. The skull gives in with a nasty crack."
+    "你一边吹着口哨，一边用重击回应他的头部。头骨发出一声刺耳的碎裂声。"
 
 # game/BKcity_events.rpy:1973
 translate chinese_simplified city_thief_68537d33:
 
     # "You then retrieve the woman's belongings."
-    "You then retrieve the woman's belongings."
+    "然后你取回了这名女子的物品。"
 
 # game/BKcity_events.rpy:1977
 translate chinese_simplified city_thief_667e9dcc:
 
     # "You reach down and recover the woman's purse from the ground. You then snap your fingers, and the thug's limbs stop shaking."
-    "You reach down and recover the woman's purse from the ground. You then snap your fingers, and the thug's limbs stop shaking."
+    "你弯腰从地上捡起女人的钱包。然后你打了个响指，恶棍的四肢停止了颤抖。"
 
 # game/BKcity_events.rpy:1979
 translate chinese_simplified city_thief_4ce8bb4b:
 
     # "Swearing, the rascal jumps up and hightails it, as if a demon was giving chase."
-    "Swearing, the rascal jumps up and hightails it, as if a demon was giving chase."
+    "那家伙一边咒骂，一边跳起来拔腿就跑，仿佛被恶魔追赶一般。"
 
 # game/BKcity_events.rpy:1983
 translate chinese_simplified city_thief_00ef219e:
 
     # "You try to keep the thief in focus, but the constant leaping and dodging makes it too hard to aim a spell."
-    "You try to keep the thief in focus, but the constant leaping and dodging makes it too hard to aim a spell."
+    "你试图将目标锁定在盗贼身上，但他不断跳跃和闪避，让你很难瞄准施法。"
 
 # game/BKcity_events.rpy:1987
 translate chinese_simplified city_thief_34c6d5bd:
 
     # "You curse as the thief finally disappears from your sight, hidden by a passing carriage."
-    "You curse as the thief finally disappears from your sight, hidden by a passing carriage."
+    "你咒骂着，看着窃贼终于消失在你的视线中，被一辆经过的马车挡住了去路。"
 
 # game/BKcity_events.rpy:1993
 translate chinese_simplified city_thief_7a5c01cf:
@@ -2488,7 +2488,7 @@ translate chinese_simplified city_thief_7a5c01cf:
 translate chinese_simplified city_thief_2feec416:
 
     # "You watch with indifference as the thief expertly makes way through the crowd and vanishes from your sight."
-    "You watch with indifference as the thief expertly makes way through the crowd and vanishes from your sight."
+    "你漠然地看着窃贼熟练地穿过人群，消失在你的视线中。"
 
 # game/BKcity_events.rpy:2002
 translate chinese_simplified city_thief_071d6883:
@@ -2500,7 +2500,7 @@ translate chinese_simplified city_thief_071d6883:
 translate chinese_simplified city_thief_75863963:
 
     # "She smiles gratefully at you, and hands you a pouch of gold for your trouble."
-    "She smiles gratefully at you, and hands you a pouch of gold for your trouble."
+    "她感激地对你微笑，并递给你一袋金子作为感谢。"
 
 # game/BKcity_events.rpy:2008
 translate chinese_simplified city_thief_f61cb9b5:
@@ -2524,25 +2524,25 @@ translate chinese_simplified city_thief_7596837c:
 translate chinese_simplified city_thief_b1b89f60:
 
     # "You have earned %(gain)d gold."
-    "You have earned %(gain)d gold."
+    "您已获得 %(gain)d 金币。"
 
 # game/BKcity_events.rpy:2033
 translate chinese_simplified city_thief_a2a181ca:
 
     # "The thief disappears into a side street, heading for one of the gates leading to the slums."
-    "The thief disappears into a side street, heading for one of the gates leading to the slums."
+    "小偷消失在一条小巷里，朝着通往贫民窟的其中一个大门走去。"
 
 # game/BKcity_events.rpy:2039
 translate chinese_simplified city_thief_981f219b:
 
     # "You shrug and step back towards the [loc], the sound of the woman's distraught cries echoing in your ears."
-    "You shrug and step back towards the [loc], the sound of the woman's distraught cries echoing in your ears."
+    "你耸耸肩，向[loc]方向退去，耳边回荡着女人悲痛欲绝的哭喊声。"
 
 # game/BKcity_events.rpy:2050
 translate chinese_simplified city_wrestle_72ab9f57:
 
     # "You meet a group of sellswords sitting around a few tables, in a dodgy corner of the [loc]."
-    "You meet a group of sellswords sitting around a few tables, in a dodgy corner of the [loc]."
+    "你遇到一群雇佣兵围坐在几张桌子旁，在一个破旧的角落里。"
 
 # game/BKcity_events.rpy:2068
 translate chinese_simplified city_wrestle_c22c192b:
@@ -2560,7 +2560,7 @@ translate chinese_simplified city_wrestle_5a52de6c:
 translate chinese_simplified city_wrestle_1bd940ab:
 
     # "A crowd of mercenaries and idlers watches you with interest as they await for your response."
-    "A crowd of mercenaries and idlers watches you with interest as they await for your response."
+    "一群雇佣兵和闲散人员饶有兴趣地注视着你，等待你的回应。"
 
 # game/BKcity_events.rpy:2086
 translate chinese_simplified city_wrestle_74709d0e:
@@ -2572,43 +2572,43 @@ translate chinese_simplified city_wrestle_74709d0e:
 translate chinese_simplified city_wrestle_f32dd71d:
 
     # "The crowd cheers and jeers as you sit down in front of the seasoned veteran."
-    "The crowd cheers and jeers as you sit down in front of the seasoned veteran."
+    "当你坐在这位经验丰富的老将面前时，人群中爆发出欢呼和嘘声。"
 
 # game/BKcity_events.rpy:2090
 translate chinese_simplified city_wrestle_1dab431f:
 
     # "One of the men fires his gun in the air to give the starting signal."
-    "One of the men fires his gun in the air to give the starting signal."
+    "其中一名男子向空中鸣枪示意比赛开始。"
 
 # game/BKcity_events.rpy:2096
 translate chinese_simplified city_wrestle_cc787f6f:
 
     # "Your muscles tighten up as you prepare to resist your opponent."
-    "Your muscles tighten up as you prepare to resist your opponent."
+    "当你准备抵抗对手时，你的肌肉会变得紧绷。"
 
 # game/BKcity_events.rpy:2105
 translate chinese_simplified city_wrestle_f987c652:
 
     # "For a while, it looks like you are locked down and losing inch by inch to your adversary."
-    "For a while, it looks like you are locked down and losing inch by inch to your adversary."
+    "一段时间内，你似乎被困住了，正在一点一点地败给对手。"
 
 # game/BKcity_events.rpy:2107
 translate chinese_simplified city_wrestle_2d814530:
 
     # "However, you are simply waiting for him to exhaust his energy."
-    "However, you are simply waiting for him to exhaust his energy."
+    "然而，你只是在等他耗尽精力。"
 
 # game/BKcity_events.rpy:2109
 translate chinese_simplified city_wrestle_82789ed4:
 
     # "Sweat is beading off his face as he tries desperately to push through the last few inches."
-    "Sweat is beading off his face as he tries desperately to push through the last few inches."
+    "汗珠从他脸上滚落，他拼命地想要冲过最后几英寸。"
 
 # game/BKcity_events.rpy:2111
 translate chinese_simplified city_wrestle_0ff91404:
 
     # "You suddenly fight him off with all your strength, however, and slam his hand down on the table so strongly that the drinks spill."
-    "You suddenly fight him off with all your strength, however, and slam his hand down on the table so strongly that the drinks spill."
+    "然而，你突然用尽全力反抗他，用力将他的手拍在桌子上，以至于饮料洒了出来。"
 
 # game/BKcity_events.rpy:2119
 translate chinese_simplified city_wrestle_50310af9:
@@ -2620,13 +2620,13 @@ translate chinese_simplified city_wrestle_50310af9:
 translate chinese_simplified city_wrestle_f7ba7de8:
 
     # "Both of your arms are locked in a tight grip. For a while, it's hard to tell who's winning or losing."
-    "Both of your arms are locked in a tight grip. For a while, it's hard to tell who's winning or losing."
+    "你们的双臂紧紧相握。一时之间，很难分辨谁胜谁负。"
 
 # game/BKcity_events.rpy:2125
 translate chinese_simplified city_wrestle_9002ecf7:
 
     # "However, you can feel your stamina slowly draining out. Your arm starts to shake. Your opponent is grinning now."
-    "However, you can feel your stamina slowly draining out. Your arm starts to shake. Your opponent is grinning now."
+    "然而，你感觉自己的体力正在慢慢耗尽。你的手臂开始颤抖。你的对手此刻正咧嘴笑着。"
 
 # game/BKcity_events.rpy:2127
 translate chinese_simplified city_wrestle_d95d8254:
@@ -2638,7 +2638,7 @@ translate chinese_simplified city_wrestle_d95d8254:
 translate chinese_simplified city_wrestle_bce48510:
 
     # "With a final thump, the mercenary pushes your hand down onto the table. You are defeated."
-    "With a final thump, the mercenary pushes your hand down onto the table. You are defeated."
+    "随着一声闷响，雇佣兵将你的手按在桌子上。你战败了。"
 
 # game/BKcity_events.rpy:2135
 translate chinese_simplified city_wrestle_5ee7ff9d:
@@ -2656,7 +2656,7 @@ translate chinese_simplified city_wrestle_3e8a4b55:
 translate chinese_simplified city_wrestle_b2bea753:
 
     # "The crowd erupts into loud laughter at your jest. The warrior's eyes narrow."
-    "The crowd erupts into loud laughter at your jest. The warrior's eyes narrow."
+    "你的玩笑引得人群哄堂大笑。战士眯起了眼睛。"
 
 # game/BKcity_events.rpy:2145
 translate chinese_simplified city_wrestle_141f5b86:
@@ -2668,13 +2668,13 @@ translate chinese_simplified city_wrestle_141f5b86:
 translate chinese_simplified city_wrestle_cd163e53:
 
     # "Sitting down in front of him and getting ready, you give him a wink."
-    "Sitting down in front of him and getting ready, you give him a wink."
+    "你坐在他对面，做好准备，然后朝他眨了眨眼。"
 
 # game/BKcity_events.rpy:2155
 translate chinese_simplified city_wrestle_0fc6b13e:
 
     # "As the contest begins, you keep poking fun at your opponent."
-    "As the contest begins, you keep poking fun at your opponent."
+    "比赛开始后，你不断取笑你的对手。"
 
 # game/BKcity_events.rpy:2157
 translate chinese_simplified city_wrestle_65ee0a62:
@@ -2710,13 +2710,13 @@ translate chinese_simplified city_wrestle_129cdef2:
 translate chinese_simplified city_wrestle_36a2ce18:
 
     # "The mercenaries laugh louder with each of your jokes, and taunt the poor bastard. He seems to be completely losing his concentration."
-    "The mercenaries laugh louder with each of your jokes, and taunt the poor bastard. He seems to be completely losing his concentration."
+    "你的每一句玩笑，雇佣兵们都笑得更大声，还嘲笑那个可怜的家伙。他似乎完全无法集中注意力了。"
 
 # game/BKcity_events.rpy:2171
 translate chinese_simplified city_wrestle_dc656e1f:
 
     # "That's when you decide to make your push. Piling up against his arm, you send it flying into the table."
-    "That's when you decide to make your push. Piling up against his arm, you send it flying into the table."
+    "这时你决定发起进攻。你猛地撞向他的手臂，把他撞飞到桌子上。"
 
 # game/BKcity_events.rpy:2177
 translate chinese_simplified city_wrestle_0c5f398c:
@@ -2734,7 +2734,7 @@ translate chinese_simplified city_wrestle_19079579:
 translate chinese_simplified city_wrestle_b9943a91:
 
     # "Even as you try to get into his head, his superior strength threatens to overwhelm you. Beads of sweat start running into your eyes. This is going poorly."
-    "Even as you try to get into his head, his superior strength threatens to overwhelm you. Beads of sweat start running into your eyes. This is going poorly."
+    "你试图揣摩他的心思，但他压倒性的力量却让你几乎招架不住。汗珠开始渗入你的眼眶。情况不妙。"
 
 # game/BKcity_events.rpy:2185
 translate chinese_simplified city_wrestle_ce6831c7:
@@ -2752,7 +2752,7 @@ translate chinese_simplified city_wrestle_422a594d:
 translate chinese_simplified city_wrestle_0ac056e2:
 
     # "With a thunderous grunt, the warrior slams your arm down on the table. It hurts like hell."
-    "With a thunderous grunt, the warrior slams your arm down on the table. It hurts like hell."
+    "战士发出一声雷鸣般的低吼，将你的手臂重重地摔在桌子上。疼得要命。"
 
 # game/BKcity_events.rpy:2195
 translate chinese_simplified city_wrestle_8a556914:
@@ -2782,13 +2782,13 @@ translate chinese_simplified city_wrestle_fb565e36:
 translate chinese_simplified city_wrestle_a6a9279d:
 
     # "The mercenaries scoff and jeer, calling you a coward and all sorts of unpleasant names as you pitifully make your way back to [dis]."
-    "The mercenaries scoff and jeer, calling you a coward and all sorts of unpleasant names as you pitifully make your way back to [dis]."
+    "雇佣兵们嘲笑你，骂你是懦夫，还用各种难听的话辱骂你，而你则可怜兮兮地返回[dis]。"
 
 # game/BKcity_events.rpy:2225
 translate chinese_simplified city_wrestle_5a884e0e:
 
     # "The crowd roars and erupts in applause as the warrior gives you a dejected look."
-    "The crowd roars and erupts in applause as the warrior gives you a dejected look."
+    "人群发出雷鸣般的欢呼声和热烈的掌声，而战士却沮丧地看着你。"
 
 # game/BKcity_events.rpy:2227
 translate chinese_simplified city_wrestle_a48d4343:
@@ -2806,7 +2806,7 @@ translate chinese_simplified city_wrestle_0043fb82:
 translate chinese_simplified city_wrestle_b1b89f60:
 
     # "You have earned %(gain)d gold."
-    "You have earned %(gain)d gold."
+    "您已获得 %(gain)d 金币。"
 
 # game/BKcity_events.rpy:2245
 translate chinese_simplified city_wrestle_bc99f824:
@@ -2818,13 +2818,13 @@ translate chinese_simplified city_wrestle_bc99f824:
 translate chinese_simplified city_wrestle_04964a88:
 
     # "You have lost %(loss)d gold."
-    "You have lost %(loss)d gold."
+    "你损失了 %(loss)d 金币。"
 
 # game/BKcity_events.rpy:2274
 translate chinese_simplified city_cat_8af25751:
 
     # "While walking around the [loc], minding your own business, you hear a young woman call you."
-    "While walking around the [loc], minding your own business, you hear a young woman call you."
+    "当你在[loc]附近闲逛，做着自己的事时，你听到一个年轻女子叫你。"
 
 # game/BKcity_events.rpy:2294
 translate chinese_simplified city_cat_ea6e8d15:
@@ -2932,13 +2932,13 @@ translate chinese_simplified city_cat_d801513d:
 translate chinese_simplified city_cat_11aa6670:
 
     # "You spend an hour searching high and low for the kitty."
-    "You spend an hour searching high and low for the kitty."
+    "你花了一个小时到处寻找那只小猫。"
 
 # game/BKcity_events.rpy:2354
 translate chinese_simplified city_cat_7b1d55c6:
 
     # "Finally, you see the cat, lazily curling into a ball on the edge of a rooftop."
-    "Finally, you see the cat, lazily curling into a ball on the edge of a rooftop."
+    "最后，你看到那只猫懒洋洋地蜷成一团，趴在屋顶边缘。"
 
 # game/BKcity_events.rpy:2356
 translate chinese_simplified city_cat_bb49702d:
@@ -2956,7 +2956,7 @@ translate chinese_simplified city_cat_fc9aa7de:
 translate chinese_simplified city_cat_aa939283:
 
     # "Your yelling startles the cat, who hisses at you before jumping from the roof into a side street and running off."
-    "Your yelling startles the cat, who hisses at you before jumping from the roof into a side street and running off."
+    "你的喊叫声惊吓了猫，它朝你发出嘶嘶声，然后从屋顶跳到一条小街上跑开了。"
 
 # game/BKcity_events.rpy:2371
 translate chinese_simplified city_cat_99f689a2:
@@ -2968,7 +2968,7 @@ translate chinese_simplified city_cat_99f689a2:
 translate chinese_simplified city_cat_777b91ba:
 
     # "The strange girl runs after her pet, leaving you standing there with a dumbfounded look on your face."
-    "The strange girl runs after her pet, leaving you standing there with a dumbfounded look on your face."
+    "奇怪的女孩追着她的宠物跑去，留下你呆呆地站在那里，一脸茫然。"
 
 # game/BKcity_events.rpy:2383
 translate chinese_simplified city_cat_9e0ced25:
@@ -2980,7 +2980,7 @@ translate chinese_simplified city_cat_9e0ced25:
 translate chinese_simplified city_cat_4cff14e4:
 
     # "The kitty gives you a lascivious look and yawns. She lazily stretches her limbs, then jumps down at your feet with effortless grace."
-    "The kitty gives you a lascivious look and yawns. She lazily stretches her limbs, then jumps down at your feet with effortless grace."
+    "小猫用一种挑逗的眼神看着你，打了个哈欠。她懒洋洋地伸了个懒腰，然后轻盈地跳到你的脚边。"
 
 # game/BKcity_events.rpy:2389
 translate chinese_simplified city_cat_c969d1cf:
@@ -2992,7 +2992,7 @@ translate chinese_simplified city_cat_c969d1cf:
 translate chinese_simplified city_cat_71f73778:
 
     # "Doing your best impersonation of a cat's meow, you call out to the cat in her own language."
-    "Doing your best impersonation of a cat's meow, you call out to the cat in her own language."
+    "你尽力模仿猫的叫声，用猫自己的语言呼唤它。"
 
 # game/BKcity_events.rpy:2399
 translate chinese_simplified city_cat_575dc3c9:
@@ -3004,13 +3004,13 @@ translate chinese_simplified city_cat_575dc3c9:
 translate chinese_simplified city_cat_8db54dc5:
 
     # "Yuna raises her head and looks at you with great curiosity."
-    "Yuna raises her head and looks at you with great curiosity."
+    "尤娜抬起头，充满好奇地看着你。"
 
 # game/BKcity_events.rpy:2405
 translate chinese_simplified city_cat_b2cc1a33:
 
     # "She leaps down into your ready arms. You give her a pat on the head, and she starts purring. You gently put her on the ground."
-    "She leaps down into your ready arms. You give her a pat on the head, and she starts purring. You gently put her on the ground."
+    "她纵身跃入你张开的双臂。你轻轻拍了拍她的头，她开始发出呼噜声。你温柔地把她放在地上。"
 
 # game/BKcity_events.rpy:2407
 translate chinese_simplified city_cat_6b6728e4:
@@ -3034,7 +3034,7 @@ translate chinese_simplified city_cat_9df3ba9f:
 translate chinese_simplified city_cat_b61348fb:
 
     # "She looks at you expectantly."
-    "She looks at you expectantly."
+    "她满怀期待地看着你。"
 
 # game/BKcity_events.rpy:2428
 translate chinese_simplified city_cat_332f1f8f:
@@ -3052,7 +3052,7 @@ translate chinese_simplified city_cat_fba7a045:
 translate chinese_simplified city_cat_a8912ef4:
 
     # "Holding the lock of hair firmly, you start chanting."
-    "Holding the lock of hair firmly, you start chanting."
+    "你紧紧抓住那缕头发，开始念诵咒语。"
 
 # game/BKcity_events.rpy:2440
 translate chinese_simplified city_cat_4f7a97bf:
@@ -3070,7 +3070,7 @@ translate chinese_simplified city_cat_a0517fa6:
 translate chinese_simplified city_cat_25f7a449:
 
     # "You are startled to hear a barking noise in the distance, closing in fast."
-    "You are startled to hear a barking noise in the distance, closing in fast."
+    "你被远处传来的犬吠声吓了一跳，而且声音越来越近。"
 
 # game/BKcity_events.rpy:2448
 translate chinese_simplified city_cat_e770ceee:
@@ -3088,7 +3088,7 @@ translate chinese_simplified city_cat_8ad8d44f:
 translate chinese_simplified city_cat_335bf053:
 
     # "A pack of flea-ridden street dogs appears down the street, charging in your direction."
-    "A pack of flea-ridden street dogs appears down the street, charging in your direction."
+    "一群浑身跳蚤的流浪狗出现在街上，朝你冲过来。"
 
 # game/BKcity_events.rpy:2458
 translate chinese_simplified city_cat_8e328a26:
@@ -3100,7 +3100,7 @@ translate chinese_simplified city_cat_8e328a26:
 translate chinese_simplified city_cat_7b5d8682:
 
     # "The girl jumps and runs away with feline agility. You ponder whether or not to follow her, but your reflexion is cut short by dozens of paws bumping you to the ground as the dogs proceeds to lick you mercilessly."
-    "The girl jumps and runs away with feline agility. You ponder whether or not to follow her, but your reflexion is cut short by dozens of paws bumping you to the ground as the dogs proceeds to lick you mercilessly."
+    "女孩像猫一样敏捷地跳起来跑开了。你犹豫着要不要跟上去，但你的思绪还没来得及反应，就被几十只爪子撞倒在地，狗狗们开始毫不留情地舔舐你。"
 
 # game/BKcity_events.rpy:2468
 translate chinese_simplified city_cat_5ae7d7af:
@@ -3112,7 +3112,7 @@ translate chinese_simplified city_cat_5ae7d7af:
 translate chinese_simplified city_cat_8bae13a6:
 
     # "You have got fleas."
-    "You have got fleas."
+    "你身上有跳蚤。"
 
 # game/BKcity_events.rpy:2478
 translate chinese_simplified city_cat_1d82668c:
@@ -3124,7 +3124,7 @@ translate chinese_simplified city_cat_1d82668c:
 translate chinese_simplified city_cat_63a801bd:
 
     # "Long minutes pass by. The girl gives you an inquisitive look."
-    "Long minutes pass by. The girl gives you an inquisitive look."
+    "时间一分一秒地过去。女孩好奇地看着你。"
 
 # game/BKcity_events.rpy:2484
 translate chinese_simplified city_cat_49eb5da7:
@@ -3154,7 +3154,7 @@ translate chinese_simplified city_cat_91fdb66f:
 translate chinese_simplified city_cat_fd86ec75:
 
     # "A cute, slender cat is lazily walking towards you."
-    "A cute, slender cat is lazily walking towards you."
+    "一只可爱苗条的猫正懒洋洋地向你走来。"
 
 # game/BKcity_events.rpy:2513
 translate chinese_simplified city_cat_4643c4be:
@@ -3172,7 +3172,7 @@ translate chinese_simplified city_cat_852da9ef:
 translate chinese_simplified city_cat_7eea6700:
 
     # "As if appearing from thin air, the courtyard now fills with cats."
-    "As if appearing from thin air, the courtyard now fills with cats."
+    "仿佛凭空出现一般，院子里现在挤满了猫。"
 
 # game/BKcity_events.rpy:2538
 translate chinese_simplified city_cat_9d58bf54:
@@ -3184,7 +3184,7 @@ translate chinese_simplified city_cat_9d58bf54:
 translate chinese_simplified city_cat_2b93463b:
 
     # "A herd of cats has answered your call. They gather at your feet and start purring, rubbing themselves against your legs."
-    "A herd of cats has answered your call. They gather at your feet and start purring, rubbing themselves against your legs."
+    "一群猫回应了你的呼唤。它们聚集在你脚边，开始发出呼噜声，用身体蹭你的腿。"
 
 # game/BKcity_events.rpy:2544
 translate chinese_simplified city_cat_91fdb66f_1:
@@ -3196,7 +3196,7 @@ translate chinese_simplified city_cat_91fdb66f_1:
 translate chinese_simplified city_cat_aeeb291c:
 
     # "A cute, regal-looking cat come out of a bush and walks leisurely towards you."
-    "A cute, regal-looking cat come out of a bush and walks leisurely towards you."
+    "一只可爱、外表高贵的猫从灌木丛中走出来，悠闲地向你走来。"
 
 # game/BKcity_events.rpy:2550
 translate chinese_simplified city_cat_3416a6ed:
@@ -3220,13 +3220,13 @@ translate chinese_simplified city_cat_e6a510b8:
 translate chinese_simplified city_cat_d18dd64e:
 
     # "Ignoring her, you hasten to walk away from the deranged girl."
-    "Ignoring her, you hasten to walk away from the deranged girl."
+    "你不理会她，赶紧离开这个精神错乱的女孩。"
 
 # game/BKcity_events.rpy:2580
 translate chinese_simplified city_cat_bc08d581:
 
     # "Yuna rubs herself against the girl's legs and starts purring with a noise rivalling a snoring dragon."
-    "Yuna rubs herself against the girl's legs and starts purring with a noise rivalling a snoring dragon."
+    "尤娜用身体蹭着女孩的腿，开始发出如同巨龙打鼾般的呼噜声。"
 
 # game/BKcity_events.rpy:2584
 translate chinese_simplified city_cat_e4f211b5:
@@ -3262,7 +3262,7 @@ translate chinese_simplified city_cat_3d687d5f:
 translate chinese_simplified city_cat_1a608fa9:
 
     # "You walk the girl and her cat back to their place."
-    "You walk the girl and her cat back to their place."
+    "你送女孩和她的猫回到她们家。"
 
 # game/BKcity_events.rpy:2613
 translate chinese_simplified city_cat_af7a0f21:
@@ -3292,7 +3292,7 @@ translate chinese_simplified city_cat_1264adb3:
 translate chinese_simplified city_cat_95cc9628:
 
     # "Turning to look at the cat, you gasp in amazement."
-    "Turning to look at the cat, you gasp in amazement."
+    "你转头看向那只猫，惊讶地倒吸了一口气。"
 
 # game/BKcity_events.rpy:2637
 translate chinese_simplified city_cat_e01181ea:
@@ -3304,7 +3304,7 @@ translate chinese_simplified city_cat_e01181ea:
 translate chinese_simplified city_cat_67d4bb67:
 
     # "A very human, very sexy, and very naked Yuna is looking at you with hungry eyes."
-    "A very human, very sexy, and very naked Yuna is looking at you with hungry eyes."
+    "一个非常人性化、非常性感、一丝不挂的尤娜正用饥渴的眼神看着你。"
 
 # game/BKcity_events.rpy:2643
 translate chinese_simplified city_cat_2d912c92:
@@ -3328,7 +3328,7 @@ translate chinese_simplified city_cat_52d8142e:
 translate chinese_simplified city_cat_eb44d7e6:
 
     # "You do not waste time giving her an answer. Soon, the air is filled with the wet sound of your love-making."
-    "You do not waste time giving her an answer. Soon, the air is filled with the wet sound of your love-making."
+    "你没有浪费时间给她答复。很快，空气中充满了你们缠绵交缠的湿润声响。"
 
 # game/BKcity_events.rpy:2653
 translate chinese_simplified city_cat_390b9719:
@@ -3340,7 +3340,7 @@ translate chinese_simplified city_cat_390b9719:
 translate chinese_simplified city_cat_65feaf5f:
 
     # "You both enjoy it tremendously. It isn't long before climax..."
-    "You both enjoy it tremendously. It isn't long before climax..."
+    "你们俩都非常享受。很快就达到了高潮……"
 
 # game/BKcity_events.rpy:2661
 translate chinese_simplified city_cat_852ecace:
@@ -3358,7 +3358,7 @@ translate chinese_simplified city_cat_6fb426dd:
 translate chinese_simplified city_cat_a9baabcd:
 
     # "You have earned prestige."
-    "You have earned prestige."
+    "你赢得了声望。"
 
 # game/BKcity_events.rpy:2684
 translate chinese_simplified city_cat_e01181ea_1:
@@ -3370,13 +3370,13 @@ translate chinese_simplified city_cat_e01181ea_1:
 translate chinese_simplified city_cat_c235fa2b:
 
     # "A very human-like, very sexy, and very naked Yuna is looking at you with hungry eyes."
-    "A very human-like, very sexy, and very naked Yuna is looking at you with hungry eyes."
+    "一个非常像人类、非常性感、而且一丝不挂的尤娜正用饥渴的眼神看着你。"
 
 # game/BKcity_events.rpy:2690
 translate chinese_simplified city_cat_80d93bbb:
 
     # "But it isn't all... You feel a hand reach down your crotch, freeing your dick from your pants."
-    "But it isn't all... You feel a hand reach down your crotch, freeing your dick from your pants."
+    "但这还不是全部……你感觉一只手伸进你的胯部，将你的阴茎从裤子里解放出来。"
 
 # game/BKcity_events.rpy:2694
 translate chinese_simplified city_cat_9bb965a8:
@@ -3388,7 +3388,7 @@ translate chinese_simplified city_cat_9bb965a8:
 translate chinese_simplified city_cat_05aae2b0:
 
     # "It seems like you have little choice but to oblige..."
-    "It seems like you have little choice but to oblige..."
+    "看来你别无选择，只能答应……"
 
 # game/BKcity_events.rpy:2706
 translate chinese_simplified city_cat_58566848:
@@ -3430,7 +3430,7 @@ translate chinese_simplified city_cat_030686f5:
 translate chinese_simplified city_cat_5db132a6:
 
     # "You blow a thick load of cum into the catgirl's pussy."
-    "You blow a thick load of cum into the catgirl's pussy."
+    "你将一大股精液射入猫女的阴道里。"
 
 # game/BKcity_events.rpy:2736
 translate chinese_simplified city_cat_4d7e7ccf:
@@ -3460,7 +3460,7 @@ translate chinese_simplified city_cat_91734fa9:
 translate chinese_simplified city_cat_3d4288ab:
 
     # "Your cock is still fully erect. These two pussycat sluts are just too damn sexy."
-    "Your cock is still fully erect. These two pussycat sluts are just too damn sexy."
+    "你的鸡巴还完全勃起着。这两个小骚货真是太他妈性感了。"
 
 # game/BKcity_events.rpy:2766
 translate chinese_simplified city_cat_8f9a1c62:
@@ -3472,13 +3472,13 @@ translate chinese_simplified city_cat_8f9a1c62:
 translate chinese_simplified city_cat_47128241:
 
     # "You start fucking her, pumping in and out with your large cock, drilling deep into her tight cunt."
-    "You start fucking her, pumping in and out with your large cock, drilling deep into her tight cunt."
+    "你开始操她，用你粗大的阴茎在她紧致的阴道里抽插，深深地插入她。"
 
 # game/BKcity_events.rpy:2770
 translate chinese_simplified city_cat_62f43f09:
 
     # "It isn't long before you are ready to cum a second time."
-    "It isn't long before you are ready to cum a second time."
+    "没过多久，你就会准备第二次射精。"
 
 # game/BKcity_events.rpy:2772
 translate chinese_simplified city_cat_3714e19b:
@@ -3502,7 +3502,7 @@ translate chinese_simplified city_cat_9a2e12a9:
 translate chinese_simplified city_cat_69bf38ed:
 
     # "You pull out as you cum, spurting semen all over the girl's pussy."
-    "You pull out as you cum, spurting semen all over the girl's pussy."
+    "你射精时拔了出来，精液喷溅到女孩的阴道上。"
 
 # game/BKcity_events.rpy:2796
 translate chinese_simplified city_cat_85f5b86f:
@@ -3520,67 +3520,67 @@ translate chinese_simplified city_cat_914e2d9f:
 translate chinese_simplified city_cat_1c7fd903:
 
     # "The two girls kneel at your feet, and hungrily lap every last drop from your shaft, then sharing a mouthful of semen in a passionate kiss."
-    "The two girls kneel at your feet, and hungrily lap every last drop from your shaft, then sharing a mouthful of semen in a passionate kiss."
+    "两个女孩跪在你脚边，贪婪地舔舐着你阴茎上的每一滴精液，然后热情地接吻，分享着嘴里的精液。"
 
 # game/BKcity_events.rpy:2806
 translate chinese_simplified city_cat_1f30e4d6:
 
     # "It is already nightfall when you leave the two napping catgirls, covered your with sticky semen and purring in their sleep."
-    "It is already nightfall when you leave the two napping catgirls, covered your with sticky semen and purring in their sleep."
+    "当你离开时，夜幕已经降临，两只猫女正在酣睡，身上沾满了黏糊糊的精液，睡梦中发出咕噜声。"
 
 # game/BKcity_events.rpy:2814
 translate chinese_simplified city_cat_fcfe1e89:
 
     # "You have earned prestige. You have no remaining actions for the day."
-    "You have earned prestige. You have no remaining actions for the day."
+    "你已获得声望。你今日已无剩余行动项。"
 
 # game/BKcity_events.rpy:2817
 translate chinese_simplified city_cat_c271f3ee:
 
     # "You have received a prestige boost from your [MC.interactions] spent AP."
-    "You have received a prestige boost from your [MC.interactions] spent AP."
+    "你通过消耗[MC.interactions] AP获得了声望提升。"
 
 # game/BKcity_events.rpy:2823
 translate chinese_simplified city_cat_9ae56eb3:
 
     # "Sighing, you walk back towards the [loc], cursing the unfathomable stupidity of furry animals."
-    "Sighing, you walk back towards the [loc], cursing the unfathomable stupidity of furry animals."
+    "你叹了口气，走回[loc]，咒骂着毛茸茸的动物们不可思议的愚蠢。"
 
 # game/BKcity_events.rpy:2834
 translate chinese_simplified city_secret_7a223c83:
 
     # "As you turn into an alley near the [loc], you notice a shady figure standing in a dark corner."
-    "As you turn into an alley near the [loc], you notice a shady figure standing in a dark corner."
+    "当你拐进[loc]附近的一条小巷时，你注意到一个可疑的身影站在黑暗的角落里。"
 
 # game/BKcity_events.rpy:2852
 translate chinese_simplified city_secret_2d86ee51:
 
     # "You instinctively retreat in the shadows to observe. You want to figure out what's going on before showing yourself."
-    "You instinctively retreat in the shadows to observe. You want to figure out what's going on before showing yourself."
+    "你本能地躲到阴影里观察。你想在现身之前弄清楚发生了什么。"
 
 # game/BKcity_events.rpy:2854
 translate chinese_simplified city_secret_767f2603:
 
     # "The man isn't paying attention to his surroundings, anyway. He is fiddling with some sort of mechanism on the wall."
-    "The man isn't paying attention to his surroundings, anyway. He is fiddling with some sort of mechanism on the wall."
+    "那人根本没注意周围的环境，他正在摆弄墙上的某种机关。"
 
 # game/BKcity_events.rpy:2860
 translate chinese_simplified city_secret_bd254d44:
 
     # "You hear a slow rumble, then a heavy thump. The man steps back from the wall, and looks around cautiously. He then walks away, trying to look casual."
-    "You hear a slow rumble, then a heavy thump. The man steps back from the wall, and looks around cautiously. He then walks away, trying to look casual."
+    "你听到一阵缓慢的隆隆声，然后是一声沉闷的砰然声。那人从墙边退后一步，谨慎地环顾四周。然后他若无其事地走开了。"
 
 # game/BKcity_events.rpy:2862
 translate chinese_simplified city_secret_c29ec78b:
 
     # "Once you are sure he is gone, you walk up to the place where he was standing."
-    "Once you are sure he is gone, you walk up to the place where he was standing."
+    "确定他已经离开后，你走到他刚才站的地方。"
 
 # game/BKcity_events.rpy:2866
 translate chinese_simplified city_secret_86b6b0a5:
 
     # "Looking at the wall, you see nothing at first. Upon close examination, thin lines seem to mark the shape of a secret door. If there is an opening mechanism, however, you don't see it."
-    "Looking at the wall, you see nothing at first. Upon close examination, thin lines seem to mark the shape of a secret door. If there is an opening mechanism, however, you don't see it."
+    "乍一看，墙上什么也看不见。仔细观察，会发现一些细线似乎勾勒出一扇暗门的形状。但如果真有开启机关，你却找不到。"
 
 # game/BKcity_events.rpy:2877
 translate chinese_simplified city_secret_e8730471:
@@ -3592,7 +3592,7 @@ translate chinese_simplified city_secret_e8730471:
 translate chinese_simplified city_secret_8db41ea1:
 
     # "Taking the measure of the wall and its resistance before making your move, you take a step back."
-    "Taking the measure of the wall and its resistance before making your move, you take a step back."
+    "在采取行动之前，先测量一下墙壁及其阻力，然后后退一步。"
 
 # game/BKcity_events.rpy:2881
 translate chinese_simplified city_secret_73032446:
@@ -3604,13 +3604,13 @@ translate chinese_simplified city_secret_73032446:
 translate chinese_simplified city_secret_243d4c23:
 
     # "Using all your strength, you dash your shoulder into the door."
-    "Using all your strength, you dash your shoulder into the door."
+    "你用尽全力，用肩膀猛撞门。"
 
 # game/BKcity_events.rpy:2895
 translate chinese_simplified city_secret_ec07890f:
 
     # "The lock snaps with a cracking sound, and the battered door slams open before you. You barely avoid falling down a steep stairway right behind the door."
-    "The lock snaps with a cracking sound, and the battered door slams open before you. You barely avoid falling down a steep stairway right behind the door."
+    "锁扣咔嚓一声断裂，破旧的大门在你面前砰地一声打开。你险些从门后的陡峭楼梯上摔下去。"
 
 # game/BKcity_events.rpy:2897
 translate chinese_simplified city_secret_2ed6fda0:
@@ -3622,25 +3622,25 @@ translate chinese_simplified city_secret_2ed6fda0:
 translate chinese_simplified city_secret_fe2f02f7:
 
     # you "Ouch!!!" with vpunch
-    you "Ouch!!!" with vpunch
+    you "哎哟！！！" with vpunch
 
 # game/BKcity_events.rpy:2905
 translate chinese_simplified city_secret_ab58b721:
 
     # "You slam into the wall, doing no visible damage, except to your shoulder and pride."
-    "You slam into the wall, doing no visible damage, except to your shoulder and pride."
+    "你猛地撞到墙上，除了肩膀和自尊心受损外，没有造成任何明显的伤害。"
 
 # game/BKcity_events.rpy:2913
 translate chinese_simplified city_secret_2641943b:
 
     # "Stepping back, you take a pouch from your belt."
-    "Stepping back, you take a pouch from your belt."
+    "你后退一步，从腰带上取下一个小袋。"
 
 # game/BKcity_events.rpy:2915
 translate chinese_simplified city_secret_bcfb6305:
 
     # "You take a handful of silver dust from the pouch, which you spread on the wall before you."
-    "You take a handful of silver dust from the pouch, which you spread on the wall before you."
+    "你从袋子里抓出一把银粉，撒在你面前的墙上。"
 
 # game/BKcity_events.rpy:2917
 translate chinese_simplified city_secret_69e68765:
@@ -3658,25 +3658,25 @@ translate chinese_simplified city_secret_7fbf3529:
 translate chinese_simplified city_secret_6e4d077d:
 
     # "The silver powder shines with incandescent light, illuminating the wall's surface."
-    "The silver powder shines with incandescent light, illuminating the wall's surface."
+    "银粉闪耀着白炽灯光，照亮了墙面。"
 
 # game/BKcity_events.rpy:2931
 translate chinese_simplified city_secret_43c514fe:
 
     # "Eventually the light recedes, except over the right side of the wall, where it delineates a hidden runic seal."
-    "Eventually the light recedes, except over the right side of the wall, where it delineates a hidden runic seal."
+    "最终，光线渐渐消失，只有墙壁右侧留有余光，勾勒出一个隐藏的符文封印。"
 
 # game/BKcity_events.rpy:2937
 translate chinese_simplified city_secret_98a43605:
 
     # "Easily deciphering the rune, you apply pressure on the correct spot. The wall slides open, revealing a dark staircase."
-    "Easily deciphering the rune, you apply pressure on the correct spot. The wall slides open, revealing a dark staircase."
+    "你轻松解读了符文，然后按压正确的位置。墙壁滑开，露出一条黑暗的楼梯。"
 
 # game/BKcity_events.rpy:2941
 translate chinese_simplified city_secret_807c93c3:
 
     # "A sudden gust of wind clears out all of the silver dust. Cursing, you reach inside your pouch, but there is not enough powder left."
-    "A sudden gust of wind clears out all of the silver dust. Cursing, you reach inside your pouch, but there is not enough powder left."
+    "一阵突如其来的狂风吹散了所有的银粉。你咒骂着，伸手探入口袋，却发现粉末已经不够了。"
 
 # game/BKcity_events.rpy:2945
 translate chinese_simplified city_secret_6e5f3372:
@@ -3688,7 +3688,7 @@ translate chinese_simplified city_secret_6e5f3372:
 translate chinese_simplified city_secret_74964b19:
 
     # "You don't see any easy way to open it."
-    "You don't see any easy way to open it."
+    "你找不到任何简单的打开方法。"
 
 # game/BKcity_events.rpy:2954
 translate chinese_simplified city_secret_ea9cc5de:
@@ -3700,31 +3700,31 @@ translate chinese_simplified city_secret_ea9cc5de:
 translate chinese_simplified city_secret_5185d497:
 
     # "You carefully follow the steps down, eventually reaching a dark cellar."
-    "You carefully follow the steps down, eventually reaching a dark cellar."
+    "你小心翼翼地沿着台阶往下走，最终到达了一个黑暗的地窖。"
 
 # game/BKcity_events.rpy:2979
 translate chinese_simplified city_secret_42cfde6a:
 
     # "The place is eerily quiet as you move about and search the rooms."
-    "The place is eerily quiet as you move about and search the rooms."
+    "当你走动并搜索房间时，会发现这里异常安静。"
 
 # game/BKcity_events.rpy:2981
 translate chinese_simplified city_secret_a07d688a:
 
     # "There isn't much to be found in this labyrinth. You decide to follow some footprints in the dust."
-    "There isn't much to be found in this labyrinth. You decide to follow some footprints in the dust."
+    "这座迷宫里没什么可发现的。你决定循着尘土中的脚印前进。"
 
 # game/BKcity_events.rpy:2983
 translate chinese_simplified city_secret_9adee427:
 
     # "The trail leads you to a chest, which looks like it was used recently."
-    "The trail leads you to a chest, which looks like it was used recently."
+    "沿着小路走，你会发现一个箱子，看起来像是最近被使用过的。"
 
 # game/BKcity_events.rpy:2985
 translate chinese_simplified city_secret_a09bde46:
 
     # "Inside, you find something that could be of use to you."
-    "Inside, you find something that could be of use to you."
+    "里面装着一些可能对你有用的东西。"
 
 # game/BKcity_events.rpy:2997
 translate chinese_simplified city_secret_3d687d5f:
@@ -3736,25 +3736,25 @@ translate chinese_simplified city_secret_3d687d5f:
 translate chinese_simplified city_secret_8a1ad209:
 
     # "You emerge into a candle-lit room, full of intriguing contraptions."
-    "You emerge into a candle-lit room, full of intriguing contraptions."
+    "你走进一间烛光摇曳的房间，里面摆满了各种奇特的装置。"
 
 # game/BKcity_events.rpy:3005
 translate chinese_simplified city_secret_d4e1d540:
 
     # "You can hear muffled moans coming from a corner of the room."
-    "You can hear muffled moans coming from a corner of the room."
+    "可以听到房间角落里传来压抑的呻吟声。"
 
 # game/BKcity_events.rpy:3015
 translate chinese_simplified city_secret_b4151c49:
 
     # "You see a girl there, bound and gagged. She sees you, but doesn't seem to react to your presence."
-    "You see a girl there, bound and gagged. She sees you, but doesn't seem to react to your presence."
+    "你看到那里有个女孩，被捆绑着，嘴也被堵住了。她看到了你，但似乎对你的存在没有任何反应。"
 
 # game/BKcity_events.rpy:3017
 translate chinese_simplified city_secret_0e568b0c:
 
     # "The air is thick with the smell of moisture and semen."
-    "The air is thick with the smell of moisture and semen."
+    "空气中弥漫着潮湿和精液的气味。"
 
 # game/BKcity_events.rpy:3019
 translate chinese_simplified city_secret_d5dec428:
@@ -3766,13 +3766,13 @@ translate chinese_simplified city_secret_d5dec428:
 translate chinese_simplified city_secret_b751bc5d:
 
     # "She ignores you, instead concentrating on something that's happening to her."
-    "She ignores you, instead concentrating on something that's happening to her."
+    "她不理你，而是专注于发生在自己身上的事情。"
 
 # game/BKcity_events.rpy:3027
 translate chinese_simplified city_secret_ecf3532f:
 
     # "You can hear the vibration of a sex toy, plugged deep inside the girl."
-    "You can hear the vibration of a sex toy, plugged deep inside the girl."
+    "你可以听到插入女孩体内深处的性玩具的震动声。"
 
 # game/BKcity_events.rpy:3031
 translate chinese_simplified city_secret_14e020c1:
@@ -3784,13 +3784,13 @@ translate chinese_simplified city_secret_14e020c1:
 translate chinese_simplified city_secret_1a1e27d3:
 
     # "She reaches a quiet orgasm as you watch, apparently the latest in a long series."
-    "She reaches a quiet orgasm as you watch, apparently the latest in a long series."
+    "在你注视下，她悄无声息地达到了性高潮，这显然是她一系列性高潮中的最新一次。"
 
 # game/BKcity_events.rpy:3037
 translate chinese_simplified city_secret_562e0d6a:
 
     # "You notice something unexpected, shoved into one of the girl's slutty holes."
-    "You notice something unexpected, shoved into one of the girl's slutty holes."
+    "你注意到一个意想不到的东西，被塞进了女孩的某个淫荡的洞穴里。"
 
 # game/BKcity_events.rpy:3039
 translate chinese_simplified city_secret_7c244c01:
@@ -3802,7 +3802,7 @@ translate chinese_simplified city_secret_7c244c01:
 translate chinese_simplified city_secret_ecda54b4:
 
     # "You retrieve the item. It could be useful, after Sill gives it a good washing."
-    "You retrieve the item. It could be useful, after Sill gives it a good washing."
+    "你取回了那件物品。希尔好好清洗一番后，它或许还有用。"
 
 # game/BKcity_events.rpy:3061
 translate chinese_simplified city_secret_3d687d5f_1:
@@ -3814,19 +3814,19 @@ translate chinese_simplified city_secret_3d687d5f_1:
 translate chinese_simplified city_secret_e9413567:
 
     # "There's nothing more you can do. Grumbling, you head back towards the [loc]."
-    "There's nothing more you can do. Grumbling, you head back towards the [loc]."
+    "你已经无能为力了。你一边抱怨，一边往[loc]方向走去。"
 
 # game/BKcity_events.rpy:3080
 translate chinese_simplified city_gypsy_133717b4:
 
     # "Strolling around the [loc], you meet a lone girl in exotic clothes, with a worried look on her face."
-    "Strolling around the [loc], you meet a lone girl in exotic clothes, with a worried look on her face."
+    "在[loc]附近闲逛时，你遇到一个穿着异国风情服装的孤独女孩，脸上带着担忧的神情。"
 
 # game/BKcity_events.rpy:3123
 translate chinese_simplified city_gypsy_81b477d7:
 
     # ev_girl2 "Hey, you! [nickname]!"
-    ev_girl2 "嘿，你！[昵称]！"
+    ev_girl2 "嘿，你！[nickname]！"
 
 # game/BKcity_events.rpy:3125
 translate chinese_simplified city_gypsy_ac3493fd:
@@ -3838,13 +3838,13 @@ translate chinese_simplified city_gypsy_ac3493fd:
 translate chinese_simplified city_gypsy_787b1498:
 
     # ev_girl2 "Yes! [nickname]! I need your help. Please?"
-    ev_girl2 "是的！[昵称]！我需要你的帮助。拜托了？"
+    ev_girl2 "是的！[nickname]！我需要你的帮助。拜托了？"
 
 # game/BKcity_events.rpy:3129
 translate chinese_simplified city_gypsy_8184bfec:
 
     # "You look at her with suspicion. She has an exotic look about her. She doesn't look like she's from around here."
-    "You look at her with suspicion. She has an exotic look about her. She doesn't look like she's from around here."
+    "你用怀疑的目光打量她。她长相很异域风情，不像是本地人。"
 
 # game/BKcity_events.rpy:3131
 translate chinese_simplified city_gypsy_1d6c2446:
@@ -3856,7 +3856,7 @@ translate chinese_simplified city_gypsy_1d6c2446:
 translate chinese_simplified city_gypsy_407a8e5e:
 
     # "You can see her wagon down in a small street. It's in a sorry state, stuck in the mud with a broken wheel."
-    "You can see her wagon down in a small street. It's in a sorry state, stuck in the mud with a broken wheel."
+    "你可以看到她的马车倒在一条小街上。它状况很糟糕，陷在泥里，车轮也坏了。"
 
 # game/BKcity_events.rpy:3135
 translate chinese_simplified city_gypsy_94fc1c7e:
@@ -3904,13 +3904,13 @@ translate chinese_simplified city_gypsy_cb4959c6:
 translate chinese_simplified city_gypsy_60fce3e9:
 
     # "You try to fix the broken cart to the best of your ability, but you're not sure it can hold together."
-    "You try to fix the broken cart to the best of your ability, but you're not sure it can hold together."
+    "你尽力修理破损的推车，但你不确定它能否继续使用下去。"
 
 # game/BKcity_events.rpy:3160
 translate chinese_simplified city_gypsy_e9054f2d:
 
     # "Now you must pull the cart out of the mud. This requires some heavy lifting."
-    "Now you must pull the cart out of the mud. This requires some heavy lifting."
+    "现在你必须把手推车从泥里拉出来。这需要费点力气。"
 
 # game/BKcity_events.rpy:3162
 translate chinese_simplified city_gypsy_fa73f4ec:
@@ -3922,7 +3922,7 @@ translate chinese_simplified city_gypsy_fa73f4ec:
 translate chinese_simplified city_gypsy_d2cb010c:
 
     # "The cart is too heavy, and your hands slip. You fall down in the mud, cursing."
-    "The cart is too heavy, and your hands slip. You fall down in the mud, cursing."
+    "手推车太重了，你的手滑了一下，摔倒在泥里，咒骂着。"
 
 # game/BKcity_events.rpy:3176
 translate chinese_simplified city_gypsy_c445c883:
@@ -3946,13 +3946,13 @@ translate chinese_simplified city_gypsy_6ed7ba4d:
 translate chinese_simplified city_gypsy_da9c56eb:
 
     # "You push the cart with all your strength, trying different angles to get it unstuck."
-    "You push the cart with all your strength, trying different angles to get it unstuck."
+    "你使出浑身力气推着购物车，尝试不同的角度，想把它弄出来。"
 
 # game/BKcity_events.rpy:3192
 translate chinese_simplified city_gypsy_0a2a8633:
 
     # "The wagon rocks back and forth, and you hear the sound of broken glass coming from the inside."
-    "The wagon rocks back and forth, and you hear the sound of broken glass coming from the inside."
+    "马车摇晃不定，车厢内传来玻璃破碎的声音。"
 
 # game/BKcity_events.rpy:3194
 translate chinese_simplified city_gypsy_607c39b0:
@@ -3964,7 +3964,7 @@ translate chinese_simplified city_gypsy_607c39b0:
 translate chinese_simplified city_gypsy_2393573f:
 
     # "After a few minutes, however, your efforts are rewarded. The cart rolls grudgingly out of the mud."
-    "After a few minutes, however, your efforts are rewarded. The cart rolls grudgingly out of the mud."
+    "然而，几分钟后，你的努力得到了回报。手推车不情愿地从泥泞中滚了出来。"
 
 # game/BKcity_events.rpy:3202
 translate chinese_simplified city_gypsy_527330c6:
@@ -3982,13 +3982,13 @@ translate chinese_simplified city_gypsy_f7f10345:
 translate chinese_simplified city_gypsy_a35326b2:
 
     # "It looks like the cart's damaged wheel can hold long enough to make it to the market."
-    "It looks like the cart's damaged wheel can hold long enough to make it to the market."
+    "看起来这辆手推车的破损车轮还能撑到市场。"
 
 # game/BKcity_events.rpy:3214
 translate chinese_simplified city_gypsy_b06d6038:
 
     # "Using your considerable might, you lift the cart off the ground and safely put it back on the pavement."
-    "Using your considerable might, you lift the cart off the ground and safely put it back on the pavement."
+    "你用尽全力将手推车抬离地面，然后安全地放回人行道上。"
 
 # game/BKcity_events.rpy:3216
 translate chinese_simplified city_gypsy_4f4b8598:
@@ -4030,7 +4030,7 @@ translate chinese_simplified city_gypsy_149b5791:
 translate chinese_simplified city_gypsy_85f3ffa9:
 
     # "You walk back to the main street near the [loc], and start telling people about the fortune teller."
-    "You walk back to the main street near the [loc], and start telling people about the fortune teller."
+    "你走回[loc]附近的主街，开始向人们讲述算命先生的事。"
 
 # game/BKcity_events.rpy:3240
 translate chinese_simplified city_gypsy_f111166d:
@@ -4042,7 +4042,7 @@ translate chinese_simplified city_gypsy_f111166d:
 translate chinese_simplified city_gypsy_58d67c08:
 
     # "Most people ignore you, however, until you run into a group of Arios worshippers."
-    "Most people ignore you, however, until you run into a group of Arios worshippers."
+    "然而，大多数人都会忽略你，直到你遇到一群 Arios 的信徒。"
 
 # game/BKcity_events.rpy:3250
 translate chinese_simplified city_gypsy_daef8ba2:
@@ -4054,7 +4054,7 @@ translate chinese_simplified city_gypsy_daef8ba2:
 translate chinese_simplified city_gypsy_e1fe1bd6:
 
     # "You get into an argument with the man, while a crowd of curious onlookers gathers around you."
-    "You get into an argument with the man, while a crowd of curious onlookers gathers around you."
+    "你和那名男子发生了争执，一群好奇的旁观者聚集在你周围。"
 
 # game/BKcity_events.rpy:3254
 translate chinese_simplified city_gypsy_5cb7c6d8:
@@ -4066,7 +4066,7 @@ translate chinese_simplified city_gypsy_5cb7c6d8:
 translate chinese_simplified city_gypsy_209f759c:
 
     # "The crowd roars in agreement. Things are starting to look nasty as the man becomes more threatening."
-    "The crowd roars in agreement. Things are starting to look nasty as the man becomes more threatening."
+    "人群发出震耳欲聋的赞同声。随着那人变得越来越具有威胁性，事态开始变得糟糕起来。"
 
 # game/BKcity_events.rpy:3258
 translate chinese_simplified city_gypsy_b7762874:
@@ -4078,7 +4078,7 @@ translate chinese_simplified city_gypsy_b7762874:
 translate chinese_simplified city_gypsy_3803a96a:
 
     # "You flash your weapon, and the crowd takes a step back. Before they can react, you jump into a side street and make your escape."
-    "You flash your weapon, and the crowd takes a step back. Before they can react, you jump into a side street and make your escape."
+    "你亮出武器，人群不由自主地后退了一步。趁他们还没反应过来，你跳进一条小巷，逃之夭夭。"
 
 # game/BKcity_events.rpy:3266
 translate chinese_simplified city_gypsy_3599bd33:
@@ -4090,19 +4090,19 @@ translate chinese_simplified city_gypsy_3599bd33:
 translate chinese_simplified city_gypsy_12d9bfd1:
 
     # "You don't have much success at first, but with time, you are able to send a few customers her way."
-    "You don't have much success at first, but with time, you are able to send a few customers her way."
+    "起初你并没有取得多大成功，但随着时间的推移，你能够给她介绍一些客户。"
 
 # game/BKcity_events.rpy:3274
 translate chinese_simplified city_gypsy_524e7104:
 
     # "You hope it will be enough for her to make ends meet."
-    "You hope it will be enough for her to make ends meet."
+    "你希望这笔钱足够她维持生计。"
 
 # game/BKcity_events.rpy:3278
 translate chinese_simplified city_gypsy_e68988da:
 
     # "After an hour or so, you come back to the wagon. You run into one of the customers, exiting the broken wagon with a large smile on his face."
-    "After an hour or so, you come back to the wagon. You run into one of the customers, exiting the broken wagon with a large smile on his face."
+    "大约过了一个小时，你回到马车旁。你碰巧遇到一位顾客，他正面带笑容地从破旧的马车里出来。"
 
 # game/BKcity_events.rpy:3282
 translate chinese_simplified city_gypsy_bc350c26:
@@ -4120,19 +4120,19 @@ translate chinese_simplified city_gypsy_aabe3f92:
 translate chinese_simplified city_gypsy_47e4dbd6:
 
     # "She looks a bit uneasy and straightens her clothes as she speaks."
-    "She looks a bit uneasy and straightens her clothes as she speaks."
+    "她看起来有些不安，一边说话一边整理衣服。"
 
 # game/BKcity_events.rpy:3292
 translate chinese_simplified city_gypsy_30a179bc:
 
     # "Using your great people skills, you quickly convince a few passersby to listen to you."
-    "Using your great people skills, you quickly convince a few passersby to listen to you."
+    "你凭借出色的人际交往能力，很快说服了几位路人听你讲话。"
 
 # game/BKcity_events.rpy:3294
 translate chinese_simplified city_gypsy_82dfb4ae:
 
     # "The crowd grows even larger when a bunch of sailors come to listen, fresh off their ship."
-    "The crowd grows even larger when a bunch of sailors come to listen, fresh off their ship."
+    "当一群刚下船的水手前来聆听时，人群变得更加拥挤。"
 
 # game/BKcity_events.rpy:3296
 translate chinese_simplified city_gypsy_6ac98a16:
@@ -4144,13 +4144,13 @@ translate chinese_simplified city_gypsy_6ac98a16:
 translate chinese_simplified city_gypsy_ccb1a892:
 
     # "People pour into the alley, eager to get their fortune told."
-    "People pour into the alley, eager to get their fortune told."
+    "人们涌入巷子里，急于算命。"
 
 # game/BKcity_events.rpy:3302
 translate chinese_simplified city_gypsy_e0991a37:
 
     # "You come back to the girl's wagon after a while, happy with the business you sent her way."
-    "You come back to the girl's wagon after a while, happy with the business you sent her way."
+    "过了一会儿，你回到女孩的马车旁，对你给她带来的生意很满意。"
 
 # game/BKcity_events.rpy:3306
 translate chinese_simplified city_gypsy_f9264ca4:
@@ -4162,7 +4162,7 @@ translate chinese_simplified city_gypsy_f9264ca4:
 translate chinese_simplified city_gypsy_6bce16ef:
 
     # "She hugs you and kisses your cheek."
-    "She hugs you and kisses your cheek."
+    "她拥抱你，亲吻你的脸颊。"
 
 # game/BKcity_events.rpy:3310
 translate chinese_simplified city_gypsy_f75186ef:
@@ -4186,7 +4186,7 @@ translate chinese_simplified city_gypsy_ba785b70:
 translate chinese_simplified city_gypsy_930f560c:
 
     # "You go back to the [loc]."
-    "You go back to the [loc]."
+    "你回到[loc]。"
 
 # game/BKcity_events.rpy:3344
 translate chinese_simplified city_gypsy_60b73731:
@@ -4198,7 +4198,7 @@ translate chinese_simplified city_gypsy_60b73731:
 translate chinese_simplified city_gypsy_7d532edc:
 
     # "The girl rummages through her wagon for a minute, then comes out, holding a dusty item."
-    "The girl rummages through her wagon for a minute, then comes out, holding a dusty item."
+    "女孩在她的马车里翻找了一会儿，然后出来，手里拿着一件沾满灰尘的物品。"
 
 # game/BKcity_events.rpy:3348
 translate chinese_simplified city_gypsy_16a968c2:
@@ -4216,7 +4216,7 @@ translate chinese_simplified city_gypsy_3d687d5f:
 translate chinese_simplified city_gypsy_8c372b81:
 
     # "She leans into your ear and whispers."
-    "She leans into your ear and whispers."
+    "她凑到你耳边低语。"
 
 # game/BKcity_events.rpy:3369
 translate chinese_simplified city_gypsy_4dc9a6cd:
@@ -4246,13 +4246,13 @@ translate chinese_simplified city_gypsy_106d629b:
 translate chinese_simplified city_gypsy_384154a6:
 
     # "Her eyes are glistening with lust. You can't hold back much longer."
-    "Her eyes are glistening with lust. You can't hold back much longer."
+    "她眼中闪烁着欲望的光芒。你再也无法抑制自己的欲望了。"
 
 # game/BKcity_events.rpy:3409
 translate chinese_simplified city_gypsy_380348d4:
 
     # "She screams with delight as you proceed to cum all over her face."
-    "She screams with delight as you proceed to cum all over her face."
+    "当你把精液射到她脸上时，她发出愉悦的尖叫。"
 
 # game/BKcity_events.rpy:3413
 translate chinese_simplified city_gypsy_929d633d:
@@ -4288,13 +4288,13 @@ translate chinese_simplified city_gypsy_d12156fb:
 translate chinese_simplified city_gypsy_87a82292:
 
     # "You cum hard thanks to the girl's expert technique, and she looks with satisfaction at your spurting cock."
-    "You cum hard thanks to the girl's expert technique, and she looks with satisfaction at your spurting cock."
+    "多亏了女孩娴熟的技巧，你射精了，她满意地看着你喷射的阴茎。"
 
 # game/BKcity_events.rpy:3439
 translate chinese_simplified city_gypsy_5f2e05d3:
 
     # "The girl gently licks the cum off your shaft while you take a short rest."
-    "The girl gently licks the cum off your shaft while you take a short rest."
+    "当你稍作休息时，女孩温柔地舔舐掉你阴茎上的精液。"
 
 # game/BKcity_events.rpy:3443
 translate chinese_simplified city_gypsy_c380fa0a:
@@ -4324,7 +4324,7 @@ translate chinese_simplified city_gypsy_3d687d5f_1:
 translate chinese_simplified city_rob_22642a73:
 
     # "As you pass through one of the [loc]'s less reputable parts, you see a woman barring your way."
-    "As you pass through one of the [loc]'s less reputable parts, you see a woman barring your way."
+    "当你经过[loc]一个不太体面的地区时，你会看到一个女人挡住了你的去路。"
 
 # game/BKcity_events.rpy:3500
 translate chinese_simplified city_rob_ee0d4625:
@@ -4342,7 +4342,7 @@ translate chinese_simplified city_rob_a4d44ee9:
 translate chinese_simplified city_rob_f98fd8d4:
 
     # "The woman is armed, and casually pointing her weapon at you."
-    "The woman is armed, and casually pointing her weapon at you."
+    "那名女子持有武器，并漫不经心地用枪指着你。"
 
 # game/BKcity_events.rpy:3508
 translate chinese_simplified city_rob_27314a95:
@@ -4354,7 +4354,7 @@ translate chinese_simplified city_rob_27314a95:
 translate chinese_simplified city_rob_1ea17f50:
 
     # "You are not going to let yourself be pushed over by a girl."
-    "You are not going to let yourself be pushed over by a girl."
+    "你不会让自己被一个女孩轻易摆布的。"
 
 # game/BKcity_events.rpy:3525
 translate chinese_simplified city_rob_343b1821:
@@ -4366,7 +4366,7 @@ translate chinese_simplified city_rob_343b1821:
 translate chinese_simplified city_rob_0bc7db9d:
 
     # "She laughs."
-    "She laughs."
+    "她笑了。"
 
 # game/BKcity_events.rpy:3537
 translate chinese_simplified city_rob_30edc188:
@@ -4378,13 +4378,13 @@ translate chinese_simplified city_rob_30edc188:
 translate chinese_simplified city_rob_0d497728:
 
     # "She takes an attack stance. You reach for your weapon."
-    "She takes an attack stance. You reach for your weapon."
+    "她摆出攻击姿态。你伸手去摸武器。"
 
 # game/BKcity_events.rpy:3545
 translate chinese_simplified city_rob_1cf9a909:
 
     # "With lightning speed, the woman leaps in the air above you."
-    "With lightning speed, the woman leaps in the air above you."
+    "女人以闪电般的速度跃到你上方的空中。"
 
 # game/BKcity_events.rpy:3547
 translate chinese_simplified city_rob_281147bb:
@@ -4396,7 +4396,7 @@ translate chinese_simplified city_rob_281147bb:
 translate chinese_simplified city_rob_9f0ea931:
 
     # "You have no time to react before she clubs you on the head with the blunt of her weapon. You fall down in the dirt, nearly passing out."
-    "You have no time to react before she clubs you on the head with the blunt of her weapon. You fall down in the dirt, nearly passing out."
+    "你还没来得及反应，她就用武器的钝端猛击你的头部。你倒在地上，几乎昏了过去。"
 
 # game/BKcity_events.rpy:3555
 translate chinese_simplified city_rob_7d3fb1b2:
@@ -4414,7 +4414,7 @@ translate chinese_simplified city_rob_264126d8:
 translate chinese_simplified city_rob_ca8c1ab5:
 
     # "She swiftly liberates your purse from your belt."
-    "She swiftly liberates your purse from your belt."
+    "她迅速地从你的腰带上取下了钱包。"
 
 # game/BKcity_events.rpy:3567
 translate chinese_simplified city_rob_4a0f2c55:
@@ -4426,19 +4426,19 @@ translate chinese_simplified city_rob_4a0f2c55:
 translate chinese_simplified city_rob_e814e33f:
 
     # "When you come back to your senses, she's long gone."
-    "When you come back to your senses, she's long gone."
+    "当你回过神来时，她早已远去。"
 
 # game/BKcity_events.rpy:3587
 translate chinese_simplified city_rob_04964a88:
 
     # "You have lost %(loss)d gold."
-    "You have lost %(loss)d gold."
+    "你损失了 %(loss)d 金币。"
 
 # game/BKcity_events.rpy:3592
 translate chinese_simplified city_rob_3ae276c8:
 
     # "She takes a second look at you."
-    "She takes a second look at you."
+    "她又看了你一眼。"
 
 # game/BKcity_events.rpy:3594
 translate chinese_simplified city_rob_dd019ae4:
@@ -4468,7 +4468,7 @@ translate chinese_simplified city_rob_39b396c2:
 translate chinese_simplified city_rob_efb96f01:
 
     # "You push past her and make your way back to the [loc]."
-    "You push past her and make your way back to the [loc]."
+    "你推开她，返回[loc]。"
 
 # game/BKcity_events.rpy:3610
 translate chinese_simplified city_rob_2da2f8a4:
@@ -4480,13 +4480,13 @@ translate chinese_simplified city_rob_2da2f8a4:
 translate chinese_simplified city_rob_890e88c2:
 
     # "In one fell swoop, you draw your sword and smash her weapon out of her hands."
-    "In one fell swoop, you draw your sword and smash her weapon out of her hands."
+    "你一举拔剑，将她的武器从她手中打落。"
 
 # game/BKcity_events.rpy:3628
 translate chinese_simplified city_rob_310ab429:
 
     # "She squeals and looks at her empty hands in disbelief."
-    "She squeals and looks at her empty hands in disbelief."
+    "她尖叫一声，难以置信地看着自己空空如也的双手。"
 
 # game/BKcity_events.rpy:3630
 translate chinese_simplified city_rob_4f4dae69:
@@ -4498,7 +4498,7 @@ translate chinese_simplified city_rob_4f4dae69:
 translate chinese_simplified city_rob_1d846d90:
 
     # "You point your weapon at her throat."
-    "You point your weapon at her throat."
+    "你用武器指着她的喉咙。"
 
 # game/BKcity_events.rpy:3634
 translate chinese_simplified city_rob_adaac038:
@@ -4522,7 +4522,7 @@ translate chinese_simplified city_rob_dae0ec55:
 translate chinese_simplified city_rob_f609fb29:
 
     # "You take a good look at her. She's got a nice figure."
-    "You take a good look at her. She's got a nice figure."
+    "你仔细看看她，身材真好。"
 
 # game/BKcity_events.rpy:3646
 translate chinese_simplified city_rob_5d1f9b1a:
@@ -4546,7 +4546,7 @@ translate chinese_simplified city_rob_29eb521d:
 translate chinese_simplified city_rob_a0830602:
 
     # "You decide to charm your way out of this."
-    "You decide to charm your way out of this."
+    "你决定用魅力摆脱困境。"
 
 # game/BKcity_events.rpy:3662
 translate chinese_simplified city_rob_4dd3fc1e:
@@ -4588,7 +4588,7 @@ translate chinese_simplified city_rob_f1dad0a2:
 translate chinese_simplified city_rob_54730e63:
 
     # "Her eyes narrow. She raises her weapon and points it at your face."
-    "Her eyes narrow. She raises her weapon and points it at your face."
+    "她眯起眼睛，举起武器，指向你的脸。"
 
 # game/BKcity_events.rpy:3688
 translate chinese_simplified city_rob_0cee55a9:
@@ -4612,7 +4612,7 @@ translate chinese_simplified city_rob_808e866c:
 translate chinese_simplified city_rob_aa255b8d:
 
     # "You reluctantly hand over all your gold."
-    "You reluctantly hand over all your gold."
+    "你很不情愿地交出了所有的黄金。"
 
 # game/BKcity_events.rpy:3700
 translate chinese_simplified city_rob_19cd19c7:
@@ -4624,7 +4624,7 @@ translate chinese_simplified city_rob_19cd19c7:
 translate chinese_simplified city_rob_04964a88_1:
 
     # "You have lost %(loss)d gold."
-    "You have lost %(loss)d gold."
+    "你损失了 %(loss)d 金币。"
 
 # game/BKcity_events.rpy:3718
 translate chinese_simplified city_rob_3badc2a5:
@@ -4690,7 +4690,7 @@ translate chinese_simplified city_rob_69cf745b:
 translate chinese_simplified city_rob_f02a6c95:
 
     # "You head back to the [loc] without incident."
-    "You head back to the [loc] without incident."
+    "你平安返回[loc]。"
 
 # game/BKcity_events.rpy:3752
 translate chinese_simplified city_rob_3c8f2fe4:
@@ -4738,7 +4738,7 @@ translate chinese_simplified city_rob_7cfbceb6:
 translate chinese_simplified city_rob_de534082:
 
     # "You take a knee."
-    "You take a knee."
+    "你单膝跪地。"
 
 # game/BKcity_events.rpy:3776
 translate chinese_simplified city_rob_04736b7f:
@@ -4780,19 +4780,19 @@ translate chinese_simplified city_rob_8ad91dba:
 translate chinese_simplified city_rob_5a0ab639:
 
     # "You offer your arm. She looks on hesitantly."
-    "You offer your arm. She looks on hesitantly."
+    "你伸出手臂扶她。她犹豫地看着你。"
 
 # game/BKcity_events.rpy:3796
 translate chinese_simplified city_rob_13cec699:
 
     # "Eventually, she smiles and sheathes her weapon. She takes your arm and you lead her away from the [loc]."
-    "Eventually, she smiles and sheathes her weapon. She takes your arm and you lead her away from the [loc]."
+    "最后，她露出笑容，收起了武器。她挽着你的胳膊，你带着她离开了[loc]。"
 
 # game/BKcity_events.rpy:3805
 translate chinese_simplified city_rob_e25d6411:
 
     # "You decide it's best to avoid a confrontation."
-    "You decide it's best to avoid a confrontation."
+    "你决定最好避免冲突。"
 
 # game/BKcity_events.rpy:3809
 translate chinese_simplified city_rob_a9d9bd91:
@@ -4810,7 +4810,7 @@ translate chinese_simplified city_rob_fdc59ac9:
 translate chinese_simplified city_rob_04964a88_2:
 
     # "You have lost %(loss)d gold."
-    "You have lost %(loss)d gold."
+    "你损失了 %(loss)d 金币。"
 
 # game/BKcity_events.rpy:3842
 translate chinese_simplified city_rob_da6db8c0:
@@ -4840,7 +4840,7 @@ translate chinese_simplified city_rob_8148c643:
 translate chinese_simplified city_rob_369f454d:
 
     # "You keep teasing and fucking her in different positions until she reaches her limit."
-    "You keep teasing and fucking her in different positions until she reaches her limit."
+    "你不断挑逗她，变换各种姿势和她做爱，直到她达到极限。"
 
 # game/BKcity_events.rpy:3856
 translate chinese_simplified city_rob_70db8e4f:
@@ -4852,7 +4852,7 @@ translate chinese_simplified city_rob_70db8e4f:
 translate chinese_simplified city_rob_a185120a:
 
     # "She squirts like a fountain as she cums once more. Exhausted, she falls to the floor in a pool of bodily fluids."
-    "She squirts like a fountain as she cums once more. Exhausted, she falls to the floor in a pool of bodily fluids."
+    "她再次达到高潮，像喷泉一样喷涌而出。精疲力竭的她倒在地上，身下是一滩体液。"
 
 # game/BKcity_events.rpy:3868
 translate chinese_simplified city_rob_f0349cbd:
@@ -4864,55 +4864,55 @@ translate chinese_simplified city_rob_f0349cbd:
 translate chinese_simplified city_rob_b21c27d9:
 
     # "You let her rest for a while at the brothel, then send her on her way."
-    "You let her rest for a while at the brothel, then send her on her way."
+    "你让她在妓院休息一会儿，然后送她离开。"
 
 # game/BKcity_events.rpy:3883
 translate chinese_simplified city_rob_03eece81:
 
     # "After you have your way with her, you have her thrown out into the street, naked and reeking of semen."
-    "After you have your way with her, you have her thrown out into the street, naked and reeking of semen."
+    "在和她发生关系之后，你把她赤身裸体地扔到街上，让她浑身散发着精液的恶臭。"
 
 # game/BKcity_events.rpy:3885
 translate chinese_simplified city_rob_a9baabcd:
 
     # "You have earned prestige."
-    "You have earned prestige."
+    "你赢得了声望。"
 
 # game/BKcity_events.rpy:3891
 translate chinese_simplified city_rob_fd3aa280:
 
     # "You make your escape while she lays there sleeping."
-    "You make your escape while she lays there sleeping."
+    "趁她熟睡时，你逃走了。"
 
 # game/BKcity_events.rpy:3893
 translate chinese_simplified city_rob_a9baabcd_1:
 
     # "You have earned prestige."
-    "You have earned prestige."
+    "你赢得了声望。"
 
 # game/BKcity_events.rpy:3906
 translate chinese_simplified city_ambush_e2c1b18e:
 
     # "Walking through the [loc] looking for a shortcut, you suddenly get a sinking feeling in your stomach."
-    "Walking through the [loc] looking for a shortcut, you suddenly get a sinking feeling in your stomach."
+    "穿过[loc]寻找捷径时，你突然感到胃里一阵翻腾。"
 
 # game/BKcity_events.rpy:3926
 translate chinese_simplified city_ambush_334cf4ff:
 
     # "You hear a commotion, and turn to see a vicious thug rushing towards you."
-    "You hear a commotion, and turn to see a vicious thug rushing towards you."
+    "你听到一阵骚动，转头看到一个凶狠的恶棍朝你冲过来。"
 
 # game/BKcity_events.rpy:3934
 translate chinese_simplified city_ambush_6f7c2d10:
 
     # "It's an ambush!"
-    "It's an ambush!"
+    "这是个埋伏！"
 
 # game/BKcity_events.rpy:3946
 translate chinese_simplified city_ambush_12bd2f28:
 
     # "You won't give up without a fight."
-    "You won't give up without a fight."
+    "你不会不战而降。"
 
 # game/BKcity_events.rpy:3950
 translate chinese_simplified city_ambush_fd39755e:
@@ -4924,25 +4924,25 @@ translate chinese_simplified city_ambush_fd39755e:
 translate chinese_simplified city_ambush_73e99845:
 
     # "You exchange quick blows with the ruffian, matching each of his assaults with an attack of your own."
-    "You exchange quick blows with the ruffian, matching each of his assaults with an attack of your own."
+    "你与恶棍展开快速的攻防对攻，以牙还牙，以一击制胜。"
 
 # game/BKcity_events.rpy:3982
 translate chinese_simplified city_ambush_155ea4f8:
 
     # "Your last blow is enough to make your opponent lose his footing momentarily. Seeing an opening, you plunge and strike a deadly blow."
-    "Your last blow is enough to make your opponent lose his footing momentarily. Seeing an opening, you plunge and strike a deadly blow."
+    "你的最后一击足以让对手瞬间失去平衡。你抓住机会，猛扑过去，给予致命一击。"
 
 # game/BKcity_events.rpy:3992
 translate chinese_simplified city_ambush_d2daa834:
 
     # "Bandit" "Aaargh!!!"
-    "Bandit" "啊啊啊！！！"
+    "土匪" "啊啊啊！！！"
 
 # game/BKcity_events.rpy:3994
 translate chinese_simplified city_ambush_f134b62c:
 
     # "You opponent falls flat into the dirt, lifeless. The rest of the scum scatters in fear."
-    "You opponent falls flat into the dirt, lifeless. The rest of the scum scatters in fear."
+    "你的对手重重地倒在地上，一动不动。其余的喽啰吓得四散奔逃。"
 
 # game/BKcity_events.rpy:3998
 translate chinese_simplified city_ambush_608c2c15:
@@ -4954,13 +4954,13 @@ translate chinese_simplified city_ambush_608c2c15:
 translate chinese_simplified city_ambush_7e9b4a3d:
 
     # "You escape unscathed and reach the relative safety of the [loc]."
-    "You escape unscathed and reach the relative safety of the [loc]."
+    "你毫发无损地逃脱，到达了相对安全的[loc]。"
 
 # game/BKcity_events.rpy:4020
 translate chinese_simplified city_ambush_9bb797a1:
 
     # "You dodge an incoming blow and barely manage to parry another one."
-    "You dodge an incoming blow and barely manage to parry another one."
+    "你躲过了一次攻击，勉强挡住了另一次攻击。"
 
 # game/BKcity_events.rpy:4022
 translate chinese_simplified city_ambush_6e12d02c:
@@ -4972,7 +4972,7 @@ translate chinese_simplified city_ambush_6e12d02c:
 translate chinese_simplified city_ambush_a1f47868:
 
     # "As you prepare to retaliate, however, an unseen opponent hits you from behind with a sap."
-    "As you prepare to retaliate, however, an unseen opponent hits you from behind with a sap."
+    "然而，当你准备反击时，一个看不见的对手从背后用棍子击中了你。"
 
 # game/BKcity_events.rpy:4030
 translate chinese_simplified city_ambush_666400aa:
@@ -4984,19 +4984,19 @@ translate chinese_simplified city_ambush_666400aa:
 translate chinese_simplified city_ambush_16f34bd0:
 
     # "You see stars and fall down on the ground. Everything turns to black."
-    "You see stars and fall down on the ground. Everything turns to black."
+    "你眼前出现星星，然后倒在地上。眼前一片漆黑。"
 
 # game/BKcity_events.rpy:4044
 translate chinese_simplified city_ambush_123ca023:
 
     # "You wake hours later, with a crippling headache and an empty purse."
-    "You wake hours later, with a crippling headache and an empty purse."
+    "几个小时后你醒来，头痛欲裂，钱包却空空如也。"
 
 # game/BKcity_events.rpy:4056
 translate chinese_simplified city_ambush_b73ae8cf:
 
     # "You have lost %(loss)d gold. You are wounded and lose your remaining actions for the day."
-    "You have lost %(loss)d gold. You are wounded and lose your remaining actions for the day."
+    "你损失了 %(loss)d 金币。你受伤了，并且失去了今天剩余的所有行动机会。"
 
 # game/BKcity_events.rpy:4067
 translate chinese_simplified city_ambush_c89cbe27:
@@ -5008,13 +5008,13 @@ translate chinese_simplified city_ambush_c89cbe27:
 translate chinese_simplified city_ambush_60b31a61:
 
     # "Staff in hand, you stand amongst your opponents, reciting the words of a powerful spell."
-    "Staff in hand, you stand amongst your opponents, reciting the words of a powerful spell."
+    "你手持法杖，站在对手中间，念诵着强大的咒语。"
 
 # game/BKcity_events.rpy:4079
 translate chinese_simplified city_ambush_784dff99:
 
     # "A whirlwind of magic engulfs you, blinding your opponents."
-    "A whirlwind of magic engulfs you, blinding your opponents."
+    "一股魔法旋风将你席卷，使你的对手目盲。"
 
 # game/BKcity_events.rpy:4081
 translate chinese_simplified city_ambush_6b56f577:
@@ -5026,7 +5026,7 @@ translate chinese_simplified city_ambush_6b56f577:
 translate chinese_simplified city_ambush_8f83324b:
 
     # "Chain lightning strikes all around you. Your opponent is hit and burnt to a crisp."
-    "Chain lightning strikes all around you. Your opponent is hit and burnt to a crisp."
+    "连锁闪电在你周围袭来。你的对手被击中并烧成焦炭。"
 
 # game/BKcity_events.rpy:4108
 translate chinese_simplified city_ambush_99d30435:
@@ -5038,7 +5038,7 @@ translate chinese_simplified city_ambush_99d30435:
 translate chinese_simplified city_ambush_ad1f7aea:
 
     # "Overwhelmed with shock and awe, the surviving bandits scatter in all directions, running for their lives."
-    "Overwhelmed with shock and awe, the surviving bandits scatter in all directions, running for their lives."
+    "幸存的匪徒们惊愕不已，四散奔逃，拼命求生。"
 
 # game/BKcity_events.rpy:4112
 translate chinese_simplified city_ambush_1f90cc0b:
@@ -5050,13 +5050,13 @@ translate chinese_simplified city_ambush_1f90cc0b:
 translate chinese_simplified city_ambush_dc842bb3:
 
     # "You return to the [loc] without further incident."
-    "You return to the [loc] without further incident."
+    "你顺利返回[loc]，没有发生其他意外。"
 
 # game/BKcity_events.rpy:4122
 translate chinese_simplified city_ambush_06fdb63b:
 
     # you "KA!!!"
-    you "KA!!!"
+    you "嘎！！！"
 
 # game/BKcity_events.rpy:4124
 translate chinese_simplified city_ambush_38d3feab:
@@ -5074,7 +5074,7 @@ translate chinese_simplified city_ambush_a634c3b3:
 translate chinese_simplified city_ambush_7e6d9cc5:
 
     # "Before you get a chance to finish your incantation, however, your opponent is upon you."
-    "Before you get a chance to finish your incantation, however, your opponent is upon you."
+    "然而，在你完成咒语之前，你的对手已经逼近你了。"
 
 # game/BKcity_events.rpy:4138
 translate chinese_simplified city_ambush_2537f429:
@@ -5086,7 +5086,7 @@ translate chinese_simplified city_ambush_2537f429:
 translate chinese_simplified city_ambush_74f77e89:
 
     # "The rogue hits you in the stomach, knocking you right out of breath."
-    "The rogue hits you in the stomach, knocking you right out of breath."
+    "恶棍一拳打在你肚子上，把你打得喘不过气来。"
 
 # game/BKcity_events.rpy:4144
 translate chinese_simplified city_ambush_83f807e5:
@@ -5098,7 +5098,7 @@ translate chinese_simplified city_ambush_83f807e5:
 translate chinese_simplified city_ambush_39753097:
 
     # "The thugs kick your staff out of your hands, and proceed to give a good old-fashioned beating."
-    "The thugs kick your staff out of your hands, and proceed to give a good old-fashioned beating."
+    "恶棍们一脚踢掉你手中的棍子，然后对你进行了一顿老式的毒打。"
 
 # game/BKcity_events.rpy:4168
 translate chinese_simplified city_ambush_4777ce1d:
@@ -5110,7 +5110,7 @@ translate chinese_simplified city_ambush_4777ce1d:
 translate chinese_simplified city_ambush_c1b11258:
 
     # "They keep going until you have no fight left inside of you."
-    "They keep going until you have no fight left inside of you."
+    "他们会一直打下去，直到你再也没有任何反抗的余力。"
 
 # game/BKcity_events.rpy:4176
 translate chinese_simplified city_ambush_ba73a5fa:
@@ -5122,7 +5122,7 @@ translate chinese_simplified city_ambush_ba73a5fa:
 translate chinese_simplified city_ambush_d9d7a526:
 
     # "They leave you crumpled on the floor in a sorry state, with an empty purse and an empty bladder."
-    "They leave you crumpled on the floor in a sorry state, with an empty purse and an empty bladder."
+    "他们会让你狼狈地瘫倒在地，钱包空空，膀胱也空空如也。"
 
 # game/BKcity_events.rpy:4182
 translate chinese_simplified city_ambush_e37b1b31:
@@ -5134,7 +5134,7 @@ translate chinese_simplified city_ambush_e37b1b31:
 translate chinese_simplified city_ambush_b73ae8cf_1:
 
     # "You have lost %(loss)d gold. You are wounded and lose your remaining actions for the day."
-    "You have lost %(loss)d gold. You are wounded and lose your remaining actions for the day."
+    "你损失了 %(loss)d 金币。你受伤了，并且失去了今天剩余的所有行动机会。"
 
 # game/BKcity_events.rpy:4209
 translate chinese_simplified city_ambush_de5538e6:
@@ -5146,7 +5146,7 @@ translate chinese_simplified city_ambush_de5538e6:
 translate chinese_simplified city_ambush_2bb7d284:
 
     # "You run away as quickly as possible, dodging throwing knives and arrows."
-    "You run away as quickly as possible, dodging throwing knives and arrows."
+    "你拼命逃跑，躲避飞刀和箭矢。"
 
 # game/BKcity_events.rpy:4217
 translate chinese_simplified city_ambush_addf0ba7:
@@ -5158,7 +5158,7 @@ translate chinese_simplified city_ambush_addf0ba7:
 translate chinese_simplified city_ambush_368e7679:
 
     # "The bandits are hot on your trail. You have to find a way to throw them off."
-    "The bandits are hot on your trail. You have to find a way to throw them off."
+    "强盗们紧追不舍，你必须想办法甩掉他们。"
 
 # game/BKcity_events.rpy:4221
 translate chinese_simplified city_ambush_027edb5f:
@@ -5170,7 +5170,7 @@ translate chinese_simplified city_ambush_027edb5f:
 translate chinese_simplified city_ambush_19fc3801:
 
     # "Reaching for your purse, you start throwing denars into the air."
-    "Reaching for your purse, you start throwing denars into the air."
+    "你伸手去掏钱包，开始把第纳尔扔向空中。"
 
 # game/BKcity_events.rpy:4227
 translate chinese_simplified city_ambush_0a1db7f4:
@@ -5182,7 +5182,7 @@ translate chinese_simplified city_ambush_0a1db7f4:
 translate chinese_simplified city_ambush_33b60461:
 
     # "As expected, the men soon give up on their pursuit, stopping to gather the gold you've left behind."
-    "As expected, the men soon give up on their pursuit, stopping to gather the gold you've left behind."
+    "不出所料，这些人很快放弃了追捕，停下来收集你留下的黄金。"
 
 # game/BKcity_events.rpy:4235
 translate chinese_simplified city_ambush_3599bd33:
@@ -5194,13 +5194,13 @@ translate chinese_simplified city_ambush_3599bd33:
 translate chinese_simplified city_ambush_04964a88:
 
     # "You have lost %(loss)d gold."
-    "You have lost %(loss)d gold."
+    "您损失了 %(loss)d 金币。"
 
 # game/BKcity_events.rpy:4260
 translate chinese_simplified city_mob_533141a1:
 
     # "After an uneventful visit to the [loc], you find a large mob barring the road on your way back."
-    "After an uneventful visit to the [loc], you find a large mob barring the road on your way back."
+    "在对[loc]进行了一次平静的访问后，你发现回程路上有一大群暴徒挡住了道路。"
 
 # game/BKcity_events.rpy:4278
 translate chinese_simplified city_mob_cd39c36d:
@@ -5218,13 +5218,13 @@ translate chinese_simplified city_mob_35eba98f:
 translate chinese_simplified city_mob_853d1124:
 
     # "The crowd cheers frantically. You try to push through, but the mob is unwilling to let you pass."
-    "The crowd cheers frantically. You try to push through, but the mob is unwilling to let you pass."
+    "人群疯狂欢呼。你试图挤过去，但暴徒们不让你通过。"
 
 # game/BKcity_events.rpy:4286
 translate chinese_simplified city_mob_e07c58f0:
 
     # "Somebody grabs you by the collar."
-    "Somebody grabs you by the collar."
+    "有人揪住了你的衣领。"
 
 # game/BKcity_events.rpy:4288
 translate chinese_simplified city_mob_b510dc91:
@@ -5236,19 +5236,19 @@ translate chinese_simplified city_mob_b510dc91:
 translate chinese_simplified city_mob_6c748b57:
 
     # man "He's one of the brothel owners! The scum of [place]!!!"
-    man "他竟然是妓院老板之一！真是[地方]的渣滓！！！"
+    man "他竟然是妓院老板之一！真是[place]的渣滓！！！"
 
 # game/BKcity_events.rpy:4294
 translate chinese_simplified city_mob_b7447831:
 
     # "An angry chatter emerges from the crowd. People are blocking your way on every side, some trying to get ahold of you."
-    "An angry chatter emerges from the crowd. People are blocking your way on every side, some trying to get ahold of you."
+    "人群中传来一阵愤怒的叫喊声。人们从四面八方挡住了你的去路，有些人还试图抓住你。"
 
 # game/BKcity_events.rpy:4296
 translate chinese_simplified city_mob_747efbfb:
 
     # "You push back desperately. They are too many for you to fight them off, however."
-    "You push back desperately. They are too many for you to fight them off, however."
+    "你拼命反抗，但人太多，你根本无法抵挡。"
 
 # game/BKcity_events.rpy:4298
 translate chinese_simplified city_mob_6dc22a32:
@@ -5272,7 +5272,7 @@ translate chinese_simplified city_mob_6527bb82:
 translate chinese_simplified city_mob_bc5fe762:
 
     # "Waving your hand in front of him, you cast a minor controlling spell."
-    "Waving your hand in front of him, you cast a minor controlling spell."
+    "你朝他挥了挥手，施放了一个小型控制法术。"
 
 # game/BKcity_events.rpy:4317
 translate chinese_simplified city_mob_b6e89e07:
@@ -5290,7 +5290,7 @@ translate chinese_simplified city_mob_7c0d9d13:
 translate chinese_simplified city_mob_c30de29a:
 
     # "The crowd wavers in surprise. Some people question the man's judgement."
-    "The crowd wavers in surprise. Some people question the man's judgement."
+    "人群中一片惊愕，有些人质疑这名男子的判断。"
 
 # game/BKcity_events.rpy:4331
 translate chinese_simplified city_mob_7abda4d9:
@@ -5302,7 +5302,7 @@ translate chinese_simplified city_mob_7abda4d9:
 translate chinese_simplified city_mob_918b6e4a:
 
     # "People grumble and curse, but they respect the elder's command. They reluctantly let you go, and you make it out more or less unharmed."
-    "People grumble and curse, but they respect the elder's command. They reluctantly let you go, and you make it out more or less unharmed."
+    "人们抱怨咒骂，但还是尊重了长者的命令。他们不情愿地放你走了，你也基本毫发无损地脱身了。"
 
 # game/BKcity_events.rpy:4339
 translate chinese_simplified city_mob_304746b8:
@@ -5314,7 +5314,7 @@ translate chinese_simplified city_mob_304746b8:
 translate chinese_simplified city_mob_1b1b8f26:
 
     # "Stepping on a nearby crate, you turn to face the angry crowd."
-    "Stepping on a nearby crate, you turn to face the angry crowd."
+    "你踩到附近的一个板条箱，转身面对愤怒的人群。"
 
 # game/BKcity_events.rpy:4348
 translate chinese_simplified city_mob_4aa1c879:
@@ -5332,7 +5332,7 @@ translate chinese_simplified city_mob_20e93590:
 translate chinese_simplified city_mob_db0ad6cd:
 
     # "The crowd grumbles menacingly."
-    "The crowd grumbles menacingly."
+    "人群发出充满威胁的低语声。"
 
 # game/BKcity_events.rpy:4360
 translate chinese_simplified city_mob_ffa329fc:
@@ -5350,7 +5350,7 @@ translate chinese_simplified city_mob_9e4730f3:
 translate chinese_simplified city_mob_315ed600:
 
     # "People mutter in agreement. The elder steps forward to confront you."
-    "People mutter in agreement. The elder steps forward to confront you."
+    "人们低声附和。长者走上前来与你对峙。"
 
 # game/BKcity_events.rpy:4366
 translate chinese_simplified city_mob_5f1322bd:
@@ -5374,7 +5374,7 @@ translate chinese_simplified city_mob_924122b6:
 translate chinese_simplified city_mob_b0ccecda:
 
     # "The crowd is warming up to your argument."
-    "The crowd is warming up to your argument."
+    "观众们开始逐渐接受你的观点。"
 
 # game/BKcity_events.rpy:4374
 translate chinese_simplified city_mob_af0457ee:
@@ -5386,7 +5386,7 @@ translate chinese_simplified city_mob_af0457ee:
 translate chinese_simplified city_mob_9577fc55:
 
     # "Men in the crowd start to show approval. The elder is struggling to find arguments, but the mob isn't listening to him anymore."
-    "Men in the crowd start to show approval. The elder is struggling to find arguments, but the mob isn't listening to him anymore."
+    "人群中的男人们开始表示赞同。长者努力想找到反驳的理由，但暴民们已经不再听他的了。"
 
 # game/BKcity_events.rpy:4378
 translate chinese_simplified city_mob_d82dedae:
@@ -5398,7 +5398,7 @@ translate chinese_simplified city_mob_d82dedae:
 translate chinese_simplified city_mob_8220b2d2:
 
     # "The crowd cheers and applauds your speech. The elder steps back, looking dejected."
-    "The crowd cheers and applauds your speech. The elder steps back, looking dejected."
+    "人群为你的演讲欢呼鼓掌。老人垂头丧气地后退一步。"
 
 # game/BKcity_events.rpy:4388
 translate chinese_simplified city_mob_e4deca1f:
@@ -5410,7 +5410,7 @@ translate chinese_simplified city_mob_e4deca1f:
 translate chinese_simplified city_mob_64c93e8c:
 
     # you "My establishment is not a whorehouse! It is a reputable [cover], and I am a lawful citizen!"
-    you "我的店不是妓院！它是一家信誉良好的[掩护机构]，而且我是守法公民！"
+    you "我的店不是妓院！它是一家信誉良好的[cover]，而且我是守法公民！"
 
 # game/BKcity_events.rpy:4392
 translate chinese_simplified city_mob_1fbc1693:
@@ -5422,7 +5422,7 @@ translate chinese_simplified city_mob_1fbc1693:
 translate chinese_simplified city_mob_97c895b4:
 
     # "Other witnesses come out of the crowd. Accusations fly. No one seems to believe you."
-    "Other witnesses come out of the crowd. Accusations fly. No one seems to believe you."
+    "其他目击者也从人群中走了出来。指责声四起。似乎没有人相信你。"
 
 # game/BKcity_events.rpy:4396
 translate chinese_simplified city_mob_cb8bc9d2:
@@ -5434,7 +5434,7 @@ translate chinese_simplified city_mob_cb8bc9d2:
 translate chinese_simplified city_mob_f99b3da1:
 
     # "Your cries of protest are drowned by angry booing and jeering."
-    "Your cries of protest are drowned by angry booing and jeering."
+    "你的抗议呼声被愤怒的嘘声和嘲笑声淹没了。"
 
 # game/BKcity_events.rpy:4402
 translate chinese_simplified city_mob_3be50249:
@@ -5452,13 +5452,13 @@ translate chinese_simplified city_mob_0a5f47cd:
 translate chinese_simplified city_mob_eff675e3:
 
     # "Opening your pouch, you throw a fistful of gold in the air."
-    "Opening your pouch, you throw a fistful of gold in the air."
+    "你打开钱袋，抓起一把金子扔向空中。"
 
 # game/BKcity_events.rpy:4416
 translate chinese_simplified city_mob_cbb9609b:
 
     # "Forgetting all about heretics and righteousness, the crowd erupts into a massive brawl, trying to grab some of the money."
-    "Forgetting all about heretics and righteousness, the crowd erupts into a massive brawl, trying to grab some of the money."
+    "人群忘记了异端邪说和正义，爆发了一场大规模的混战，试图抢夺一些钱财。"
 
 # game/BKcity_events.rpy:4418
 translate chinese_simplified city_mob_00a55a35:
@@ -5470,25 +5470,25 @@ translate chinese_simplified city_mob_00a55a35:
 translate chinese_simplified city_mob_56f56aa2:
 
     # "The man is unable to restore order. He gives you a murderous look. You wink at him and elbow your way out of the crowd, safely retreating towards the [loc]."
-    "The man is unable to restore order. He gives you a murderous look. You wink at him and elbow your way out of the crowd, safely retreating towards the [loc]."
+    "那人无法恢复秩序。他恶狠狠地瞪了你一眼。你朝他眨了眨眼，用胳膊肘挤出人群，安全地退回到[loc]。"
 
 # game/BKcity_events.rpy:4436
 translate chinese_simplified city_mob_04964a88:
 
     # "You have lost %(loss)d gold."
-    "You have lost %(loss)d gold."
+    "您损失了 %(loss)d 金币。"
 
 # game/BKcity_events.rpy:4456
 translate chinese_simplified city_mob_e57edd9b:
 
     # "Deprived of a scapegoat, the mob instead corners a group of women pilgrims."
-    "Deprived of a scapegoat, the mob instead corners a group of women pilgrims."
+    "由于没有替罪羊，暴徒们转而围攻了一群女朝圣者。"
 
 # game/BKcity_events.rpy:4474
 translate chinese_simplified city_mob_d90b21cb:
 
     # "They rape them mercilessly, accusing them of withcraft."
-    "They rape them mercilessly, accusing them of withcraft."
+    "他们残忍地强奸她们，并指控她们使用巫术。"
 
 # game/BKcity_events.rpy:4476
 translate chinese_simplified city_mob_8874c0e7:
@@ -5500,13 +5500,13 @@ translate chinese_simplified city_mob_8874c0e7:
 translate chinese_simplified city_mob_ce040dd1:
 
     # "You retreat to the safety of the [loc]."
-    "You retreat to the safety of the [loc]."
+    "你退守到安全的[loc]。"
 
 # game/BKcity_events.rpy:4492
 translate chinese_simplified city_mob_a20e77e1:
 
     # "The angry mob starts beating you, spitting on you and ripping at your clothing as you do your best to escape."
-    "The angry mob starts beating you, spitting on you and ripping at your clothing as you do your best to escape."
+    "愤怒的暴徒开始殴打你、向你吐口水、撕扯你的衣服，而你则拼命挣扎着想要逃跑。"
 
 # game/BKcity_events.rpy:4510
 translate chinese_simplified city_mob_b347d1cf:
@@ -5518,7 +5518,7 @@ translate chinese_simplified city_mob_b347d1cf:
 translate chinese_simplified city_mob_fa2bb8a9:
 
     # "Protecting yourself the best you can, you barely make it through to the other side of the crowd."
-    "Protecting yourself the best you can, you barely make it through to the other side of the crowd."
+    "你竭尽全力保护自己，却仍然难以挤过人群。"
 
 # game/BKcity_events.rpy:4518
 translate chinese_simplified city_mob_19abe4ab:
@@ -5530,19 +5530,19 @@ translate chinese_simplified city_mob_19abe4ab:
 translate chinese_simplified city_mob_a6a55e78:
 
     # "You run off as fast as you can, followed by curses and rotten fruits thrown by the angry mob."
-    "You run off as fast as you can, followed by curses and rotten fruits thrown by the angry mob."
+    "你拼命逃跑，身后是愤怒的暴民们的咒骂和扔来的烂水果。"
 
 # game/BKcity_events.rpy:4522
 translate chinese_simplified city_mob_10e49672:
 
     # "You do not stop running until you have reached the safety of your brothel."
-    "You do not stop running until you have reached the safety of your brothel."
+    "直到安全抵达妓院之前，你都不能停止奔跑。"
 
 # game/BKcity_events.rpy:4524
 translate chinese_simplified city_mob_9f1c09dd:
 
     # "Pausing to catch your breath and lick your wounds, you notice your purse is missing."
-    "Pausing to catch your breath and lick your wounds, you notice your purse is missing."
+    "你停下来喘口气，舔舐伤口，却发现钱包不见了。"
 
 # game/BKcity_events.rpy:4526
 translate chinese_simplified city_mob_0b364580:
@@ -5554,7 +5554,7 @@ translate chinese_simplified city_mob_0b364580:
 translate chinese_simplified city_mob_a490fd10:
 
     # "You have lost %(loss)d gold. You are tired and lose your remaining actions for the day."
-    "You have lost %(loss)d gold. You are tired and lose your remaining actions for the day."
+    "你损失了 %(loss)d 金币。你很疲惫，今天的剩余行动次数全部清零。"
 
 # game/BKcity_events.rpy:4589
 translate chinese_simplified city_none_e589ac84:
@@ -5566,13 +5566,13 @@ translate chinese_simplified city_none_e589ac84:
 translate chinese_simplified city_gossip_c4c8a8d4:
 
     # "On your way through the [loc], you overhear [text1] from [actor]."
-    "On your way through the [loc], you overhear [text1] from [actor]."
+    "在穿过[loc]时，你无意中听到[actor]说了[text1]。"
 
 # game/BKcity_events.rpy:4619
 translate chinese_simplified city_luck_7fab135b:
 
     # "Strolling around the [loc], you notice something shiny on the ground."
-    "Strolling around the [loc], you notice something shiny on the ground."
+    "在[loc]附近闲逛时，你注意到地上有闪闪发光的东西。"
 
 # game/BKcity_events.rpy:4621
 translate chinese_simplified city_luck_6eae37c9:
@@ -5584,7 +5584,7 @@ translate chinese_simplified city_luck_6eae37c9:
 translate chinese_simplified city_luck_d5210ceb:
 
     # "You have received %(gain)d gold."
-    "You have received %(gain)d gold."
+    "您已获得 %(gain)d 金币。"
 
 # game/BKcity_events.rpy:4629
 translate chinese_simplified city_luck_856d3e40:
@@ -5596,7 +5596,7 @@ translate chinese_simplified city_luck_856d3e40:
 translate chinese_simplified city_luck_266a6db4:
 
     # "Someone seems to be looking for their lost belongings."
-    "Someone seems to be looking for their lost belongings."
+    "似乎有人在寻找丢失的物品。"
 
 # game/BKcity_events.rpy:4633
 translate chinese_simplified city_luck_012a58c6:
@@ -5638,7 +5638,7 @@ translate chinese_simplified city_luck_6218b925:
 translate chinese_simplified city_luck_af655f88:
 
     # "You gave back %(gain)d gold."
-    "You gave back %(gain)d gold."
+    "你归还了 %(gain)d 金币。"
 
 # game/BKcity_events.rpy:4659
 translate chinese_simplified city_luck_d5448762:
@@ -5650,43 +5650,43 @@ translate chinese_simplified city_luck_d5448762:
 translate chinese_simplified slave_beach_event_f54a88e7:
 
     # "By the [loc] is a long stretch of white sand where the people of [dis] come to relax. As you pass by, you spot a familiar sight."
-    "By the [loc] is a long stretch of white sand where the people of [dis] come to relax. As you pass by, you spot a familiar sight."
+    "在[loc]附近有一片绵长的白色沙滩，[dis]的人们会来这里休闲放松。当你路过时，你会看到一个熟悉的景象。"
 
 # game/BKcity_events.rpy:4711
 translate chinese_simplified slave_beach_event_d8076f8d:
 
     # "You remember that today is her day off."
-    "You remember that today is her day off."
+    "你记得今天是她休息日。"
 
 # game/BKcity_events.rpy:4713
 translate chinese_simplified slave_beach_event_b86cad14:
 
     # you "Hey, if it isn't [girl.name]. What's up?"
-    you "嘿，这不是[女孩名字]吗？怎么了？"
+    you "嘿，这不是[girl.name]吗？怎么了？"
 
 # game/BKcity_events.rpy:4718
 translate chinese_simplified slave_beach_event_125c68e8:
 
     # "You chat amiably with [girl.name] for a few minutes. She seems pleased."
-    "You chat amiably with [girl.name] for a few minutes. She seems pleased."
+    "你和[girl.name]愉快地聊了几分钟。她看起来很高兴。"
 
 # game/BKcity_events.rpy:4722
 translate chinese_simplified slave_beach_event_74494c95:
 
     # "You talk with [girl.name] about odds and ends. She relaxes a little."
-    "You talk with [girl.name] about odds and ends. She relaxes a little."
+    "你和[girl.name]聊些零碎的事情。她放松了一些。"
 
 # game/BKcity_events.rpy:4726
 translate chinese_simplified slave_beach_event_7b34cb37:
 
     # "Frowning, you scold [girl.name] on principle for her careless attitude. She looks down."
-    "Frowning, you scold [girl.name] on principle for her careless attitude. She looks down."
+    "你皱着眉头，出于原则训斥了[girl.name]，责怪她粗心大意。她低下了头。"
 
 # game/BKcity_events.rpy:4729
 translate chinese_simplified slave_beach_event_3202ba13:
 
     # "Looking at [girl.name], you notice that she looks really hot in her tight beach wear... This gives you a few ideas."
-    "Looking at [girl.name], you notice that she looks really hot in her tight beach wear... This gives you a few ideas."
+    "看着[girl.name]，你注意到她穿着紧身沙滩装看起来非常性感……这让你产生了一些想法。"
 
 # game/BKcity_events.rpy:4731
 translate chinese_simplified slave_beach_event_693314da:
@@ -5716,13 +5716,13 @@ translate chinese_simplified slave_beach_event_dfcfefd5:
 translate chinese_simplified slave_beach_event_3f65e064:
 
     # "She recoils in horror. You wonder what happened."
-    "She recoils in horror. You wonder what happened."
+    "她惊恐地后退。你想知道发生了什么事。"
 
 # game/BKcity_events.rpy:4749
 translate chinese_simplified slave_beach_event_c752d3f7:
 
     # "You remember she hates oil. Damn."
-    "You remember she hates oil. Damn."
+    "你记得她讨厌石油。真糟糕。"
 
 # game/BKcity_events.rpy:4754
 translate chinese_simplified slave_beach_event_6363db8b:
@@ -5752,7 +5752,7 @@ translate chinese_simplified slave_beach_event_5473c3ac:
 translate chinese_simplified slave_beach_event_f6634f7e:
 
     # "She lays down on her back as you warm the oil between your hands. As you start rubbing it on her exposed skin, you feel some warmth in your pants."
-    "She lays down on her back as you warm the oil between your hands. As you start rubbing it on her exposed skin, you feel some warmth in your pants."
+    "她仰面躺下，你用双手搓热精油。当你开始将精油涂抹在她裸露的肌肤上时，你感到裤裆里一阵燥热。"
 
 # game/BKcity_events.rpy:4773
 translate chinese_simplified slave_beach_event_d104f8c5:
@@ -5764,13 +5764,13 @@ translate chinese_simplified slave_beach_event_d104f8c5:
 translate chinese_simplified slave_beach_event_79dc27c9:
 
     # "Running your hands against her arms, back, then thighs, you turn the oiling into a veritable massage. She doesn't stop you."
-    "Running your hands against her arms, back, then thighs, you turn the oiling into a veritable massage. She doesn't stop you."
+    "你用手抚摸她的手臂、背部，然后是大腿，把涂抹精油变成了一场真正的按摩。她没有阻止你。"
 
 # game/BKcity_events.rpy:4779
 translate chinese_simplified slave_beach_event_4592937c:
 
     # "You can feel her muscles relax under your experienced hands, as you inch closer to her erogenous parts. Perhaps you could push your luck further?"
-    "You can feel her muscles relax under your experienced hands, as you inch closer to her erogenous parts. Perhaps you could push your luck further?"
+    "当你的手法娴熟，逐渐靠近她的敏感部位时，你能感觉到她的肌肉在你手中放松下来。或许你可以再进一步？"
 
 # game/BKcity_events.rpy:4786
 translate chinese_simplified slave_beach_event_11fdb519_1:
@@ -5782,37 +5782,37 @@ translate chinese_simplified slave_beach_event_11fdb519_1:
 translate chinese_simplified slave_beach_event_47dc25c3:
 
     # "Pretending you're still massaging her, you bring your hands closer and closer to her buttocks. She says nothing, although you can feel some tension build up."
-    "Pretending you're still massaging her, you bring your hands closer and closer to her buttocks. She says nothing, although you can feel some tension build up."
+    "你假装还在给她按摩，双手越来越靠近她的臀部。她一言不发，但你能感觉到她有些紧张。"
 
 # game/BKcity_events.rpy:4809
 translate chinese_simplified slave_beach_event_c3c3d77f:
 
     # "After pouring more oil on her backside, you suddenly squeeze both of her ass cheeks, bringing her swimsuit upwards so it looks like a thong."
-    "After pouring more oil on her backside, you suddenly squeeze both of her ass cheeks, bringing her swimsuit upwards so it looks like a thong."
+    "在她臀部倒了更多油之后，你突然捏住她的两瓣屁股，把她的泳衣向上提拉，使它看起来像一条丁字裤。"
 
 # game/BKcity_events.rpy:4814
 translate chinese_simplified slave_beach_event_77de4c0a:
 
     # "As you massage her back, you untie her top, as if by accident. She doesn't react, although you can feel her tense up a little."
-    "As you massage her back, you untie her top, as if by accident. She doesn't react, although you can feel her tense up a little."
+    "你一边给她按摩背部，一边假装不小心解开了她的上衣。她没有反应，但你能感觉到她身体微微一僵。"
 
 # game/BKcity_events.rpy:4816
 translate chinese_simplified slave_beach_event_26483073:
 
     # "Sliding your oily hands around her, you reach for her tits and softly rub her mounds, lightly brushing against her nipples."
-    "Sliding your oily hands around her, you reach for her tits and softly rub her mounds, lightly brushing against her nipples."
+    "你用沾满油污的手在她身上游走，伸手去摸她的乳房，轻轻地揉搓她的乳房，轻轻地拂过她的乳头。"
 
 # game/BKcity_events.rpy:4821
 translate chinese_simplified slave_beach_event_e99b823d:
 
     # "Spreading her legs apart under the guise of the massage, you rub the insides of her thighs, inching your way up. She doesn't resist, seemingly waiting to see where this goes next."
-    "Spreading her legs apart under the guise of the massage, you rub the insides of her thighs, inching your way up. She doesn't resist, seemingly waiting to see where this goes next."
+    "你假装给她按摩，让她双腿分开，然后开始揉搓她的大腿内侧，一点一点地向上移动。她没有反抗，似乎在等着看接下来会发生什么。"
 
 # game/BKcity_events.rpy:4823
 translate chinese_simplified slave_beach_event_c88763ca:
 
     # "Casually, you then push her swimsuit's crotch aside, sliding a couple of fingers inside her."
-    "Casually, you then push her swimsuit's crotch aside, sliding a couple of fingers inside her."
+    "然后你漫不经心地将她泳衣的裆部推到一边，将两根手指滑入她的体内。"
 
 # game/BKcity_events.rpy:4827
 translate chinese_simplified slave_beach_event_721fea8a:
@@ -5824,25 +5824,25 @@ translate chinese_simplified slave_beach_event_721fea8a:
 translate chinese_simplified slave_beach_event_39c46cf2:
 
     # "She breathes heavily and her eyes get glassy, but she doesn't stop you as you keep touching her."
-    "She breathes heavily and her eyes get glassy, but she doesn't stop you as you keep touching her."
+    "她呼吸急促，眼神迷离，但你继续触摸她时，她并没有阻止你。"
 
 # game/BKcity_events.rpy:4849
 translate chinese_simplified slave_beach_event_abd95a48:
 
     # "Moving her swimsuit out of the way, you spread her buttcheeks and expose her gaping asshole. She gasps as you spit in it, using your saliva to continue the massage."
-    "Moving her swimsuit out of the way, you spread her buttcheeks and expose her gaping asshole. She gasps as you spit in it, using your saliva to continue the massage."
+    "你拨开她的泳衣，掰开她的臀瓣，露出她张开的肛门。你往她肛门里吐了口唾沫，她倒吸一口凉气，你用唾液继续按摩。"
 
 # game/BKcity_events.rpy:4852
 translate chinese_simplified slave_beach_event_255fd0af:
 
     # "Sand gets on her exposed tits as you proceed to fondle them, playfully pinching her nipples. She moans harder every time you do it."
-    "Sand gets on her exposed tits as you proceed to fondle them, playfully pinching her nipples. She moans harder every time you do it."
+    "当你开始爱抚她裸露的乳房，并顽皮地捏着她的乳头时，沙子沾到了上面。你每次这样做，她都会发出更响亮的呻吟。"
 
 # game/BKcity_events.rpy:4855
 translate chinese_simplified slave_beach_event_a9b98d2f:
 
     # "Her love juice starts pouring out as you pump two, then three fingers inside her. She arches her butt towards you, as if trying to invite your hand deeper inside her."
-    "Her love juice starts pouring out as you pump two, then three fingers inside her. She arches her butt towards you, as if trying to invite your hand deeper inside her."
+    "当你用两根手指、三根手指探入她体内时，她的爱液开始涌出。她拱起臀部，仿佛在邀请你的手更深入地探入。"
 
 # game/BKcity_events.rpy:4857
 translate chinese_simplified slave_beach_event_28be6530:
@@ -5854,25 +5854,25 @@ translate chinese_simplified slave_beach_event_28be6530:
 translate chinese_simplified slave_beach_event_f853db99:
 
     # "She loves this and moans louder and louder, enjoying herself tremendously."
-    "She loves this and moans louder and louder, enjoying herself tremendously."
+    "她很喜欢这样，呻吟声越来越大，非常享受。"
 
 # game/BKcity_events.rpy:4865
 translate chinese_simplified slave_beach_event_6adefaa7:
 
     # "She grits her teeth, weakly fighting your touch, confused by how it makes her feel."
-    "She grits her teeth, weakly fighting your touch, confused by how it makes her feel."
+    "她咬紧牙关，无力地抵抗着你的触碰，对这种感觉感到困惑。"
 
 # game/BKcity_events.rpy:4871
 translate chinese_simplified slave_beach_event_7859f076:
 
     # "Under the hot sun, she seems lost in the sensations that wash over her. The fact that other people may see you increases her arousal. She cannot get enough of this, and her breathing intensifies as you increase your pace."
-    "Under the hot sun, she seems lost in the sensations that wash over her. The fact that other people may see you increases her arousal. She cannot get enough of this, and her breathing intensifies as you increase your pace."
+    "在烈日下，她似乎沉浸在各种感官刺激之中。想到可能会有其他人看到你，反而更加激发了她的欲望。她欲罢不能，随着你加快速度，她的呼吸也愈发急促。"
 
 # game/BKcity_events.rpy:4881
 translate chinese_simplified slave_beach_event_23b03eb3:
 
     # "You can see she is enjoying herself too much, and decide it's time to bring this massage to a happy ending."
-    "You can see she is enjoying herself too much, and decide it's time to bring this massage to a happy ending."
+    "你可以看出她太享受了，于是决定是时候让这次按摩以一个愉快的结局收尾了。"
 
 # game/BKcity_events.rpy:4888
 translate chinese_simplified slave_beach_event_8a41b161:
@@ -5884,13 +5884,13 @@ translate chinese_simplified slave_beach_event_8a41b161:
 translate chinese_simplified slave_beach_event_00dded58:
 
     # "Love juice squirts out of her pussy as you expertly drive her to orgasm. Her whole body shakes, then she falls over the beach towel like a ragdoll, spent."
-    "Love juice squirts out of her pussy as you expertly drive her to orgasm. Her whole body shakes, then she falls over the beach towel like a ragdoll, spent."
+    "当你熟练地让她达到高潮时，爱液从她的阴道里喷涌而出。她全身颤抖，然后像个破布娃娃一样瘫倒在沙滩巾上，精疲力竭。"
 
 # game/BKcity_events.rpy:4906
 translate chinese_simplified slave_beach_event_2d7049c8:
 
     # "She is almost about to cum, and you decide to stop here, to teach her a lesson."
-    "She is almost about to cum, and you decide to stop here, to teach her a lesson."
+    "她快要达到高潮了，你决定就此打住，给她一个教训。"
 
 # game/BKcity_events.rpy:4908
 translate chinese_simplified slave_beach_event_36104a17:
@@ -5902,13 +5902,13 @@ translate chinese_simplified slave_beach_event_36104a17:
 translate chinese_simplified slave_beach_event_255c6ada:
 
     # "Her face is flushed, and love juice drips down her thighs. It seems like she loves being pushed to the brink."
-    "Her face is flushed, and love juice drips down her thighs. It seems like she loves being pushed to the brink."
+    "她脸颊绯红，爱液顺着大腿滴落。看来她很享受被逼到极限的感觉。"
 
 # game/BKcity_events.rpy:4916
 translate chinese_simplified slave_beach_event_ada9ca75:
 
     # "She is livid, and she looks like she's about to burst into tears. It looks like she hates being denied orgasm like that."
-    "She is livid, and she looks like she's about to burst into tears. It looks like she hates being denied orgasm like that."
+    "她怒不可遏，看起来快要哭出来了。她似乎很痛恨这种被剥夺性高潮的方式。"
 
 # game/BKcity_events.rpy:4927
 translate chinese_simplified slave_beach_event_5a190256:
@@ -5920,7 +5920,7 @@ translate chinese_simplified slave_beach_event_5a190256:
 translate chinese_simplified slave_beach_event_cc252f77:
 
     # "[girl.fullname]'s {b}[stat1]{/b} and {b}[stat2]{/b} have increased."
-    "[girl.fullname]'s {b}[stat1]{/b} and {b}[stat2]{/b} have increased."
+    "[girl.fullname] 的 {b}[stat1]{/b} 和 {b}[stat2]{/b} 均有所增加。"
 
 # game/BKcity_events.rpy:4938
 translate chinese_simplified slave_beach_event_48a2c215:
@@ -5932,19 +5932,19 @@ translate chinese_simplified slave_beach_event_48a2c215:
 translate chinese_simplified slave_beach_event_4c934cd5:
 
     # "Disappointed, you take your leave."
-    "Disappointed, you take your leave."
+    "你失望地离开了。"
 
 # game/BKcity_events.rpy:4945
 translate chinese_simplified slave_beach_event_5b968ef8:
 
     # "Satisfied with your little massage session, you dry your hands and take your leave. As [girl.name] says goodbye, her face is flushed and she looks flustered. Her sensitivity has increased."
-    "Satisfied with your little massage session, you dry your hands and take your leave. As [girl.name] says goodbye, her face is flushed and she looks flustered. Her sensitivity has increased."
+    "你对自己的按摩服务很满意，擦干双手准备离开。女孩道别时，脸颊绯红，显得有些慌乱。她的敏感度似乎提高了。"
 
 # game/BKcity_events.rpy:4952
 translate chinese_simplified slave_beach_event_4c934cd5_1:
 
     # "Disappointed, you take your leave."
-    "Disappointed, you take your leave."
+    "你失望地离开了。"
 
 # game/BKcity_events.rpy:4957
 translate chinese_simplified slave_beach_event_0ae096ea:
@@ -5968,7 +5968,7 @@ translate chinese_simplified slave_beach_event_ebd18616:
 translate chinese_simplified slave_beach_event_c7ec28eb:
 
     # "She pushes you away with surprising strength and runs off the beach."
-    "She pushes you away with surprising strength and runs off the beach."
+    "她用惊人的力量推开你，跑出了海滩。"
 
 # game/BKcity_events.rpy:4978
 translate chinese_simplified slave_beach_event_f21ba248:
@@ -5980,13 +5980,13 @@ translate chinese_simplified slave_beach_event_f21ba248:
 translate chinese_simplified slave_beach_event_cac033de:
 
     # "Before she has a chance to change her mind, you push her down and get yourself ready."
-    "Before she has a chance to change her mind, you push her down and get yourself ready."
+    "在她有机会改变主意之前，你把她推倒在地，然后做好准备。"
 
 # game/BKcity_events.rpy:4992
 translate chinese_simplified slave_beach_event_aab7e42f:
 
     # "She darts away from you, leaving you looking stupid with a useless boner."
-    "She darts away from you, leaving you looking stupid with a useless boner."
+    "她迅速离开你，留下你尴尬地勃起，一副傻乎乎的样子。"
 
 # game/BKcity_events.rpy:4996
 translate chinese_simplified slave_beach_event_1f40409e:
@@ -5998,13 +5998,13 @@ translate chinese_simplified slave_beach_event_1f40409e:
 translate chinese_simplified slave_beach_event_82c4f436:
 
     # girl.char "What are you talking about? Who cares about people watching? Do me now!" with vpunch
-    girl.char "What are you talking about? Who cares about people watching? Do me now!" with vpunch
+    girl.char "你在说什么？谁在乎别人看？现在就来！" with vpunch
 
 # game/BKcity_events.rpy:5001
 translate chinese_simplified slave_beach_event_b891e11a:
 
     # "She pushes you down in the sand, almost ripping your pants off."
-    "She pushes you down in the sand, almost ripping your pants off."
+    "她把你推倒在沙滩上，差点把你的裤子撕下来。"
 
 # game/BKcity_events.rpy:5006
 translate chinese_simplified slave_beach_event_71c0b1b5:
@@ -6016,19 +6016,19 @@ translate chinese_simplified slave_beach_event_71c0b1b5:
 translate chinese_simplified slave_beach_event_cbebd128:
 
     # "Surprised but aroused by her request, you waste no time before moving on her."
-    "Surprised but aroused by her request, you waste no time before moving on her."
+    "你对她的请求感到惊讶，但也被她激起了兴趣，于是立即对她展开行动。"
 
 # game/BKcity_events.rpy:5015
 translate chinese_simplified slave_beach_event_2551903f:
 
     # "You take her hand and lead her behind a large boulder. As soon as you're hidden from the crowd, your hands are all over her."
-    "You take her hand and lead her behind a large boulder. As soon as you're hidden from the crowd, your hands are all over her."
+    "你牵起她的手，把她带到一块大石头后面。一旦躲开人群，你的手就对她上下其手。"
 
 # game/BKcity_events.rpy:5022
 translate chinese_simplified slave_beach_event_a56ec551:
 
     # "She turns away from you, blushing, hugging her knees and legs tightly pressed together. You know better than to make a scene here."
-    "She turns away from you, blushing, hugging her knees and legs tightly pressed together. You know better than to make a scene here."
+    "她转过身去，脸颊绯红，双手抱膝，双腿紧紧并拢。你知道在这里不该闹出什么动静。"
 
 # game/BKcity_events.rpy:5051
 translate chinese_simplified slave_beach_event_e37339ef:
@@ -6052,43 +6052,43 @@ translate chinese_simplified slave_beach_event_5e0b0700:
 translate chinese_simplified slave_beach_event_888233e3:
 
     # "Obeying your order, she kneels down and opens her mouth, sticking her tongue out. You hold her chin as you push your cock inside."
-    "Obeying your order, she kneels down and opens her mouth, sticking her tongue out. You hold her chin as you push your cock inside."
+    "她遵照你的命令跪下，张开嘴，伸出舌头。你捏住她的下巴，将阴茎插入她的口中。"
 
 # game/BKcity_events.rpy:5111
 translate chinese_simplified slave_beach_event_f8b0a17f:
 
     # "Not waiting for her final answer, you move her swimsuit out of the way and insert your cock between her tits."
-    "Not waiting for her final answer, you move her swimsuit out of the way and insert your cock between her tits."
+    "你不等她给出最终答复，就把她的泳衣移开，把你的阴茎插入她的双乳之间。"
 
 # game/BKcity_events.rpy:5114
 translate chinese_simplified slave_beach_event_04e79480:
 
     # "As you lay down on the sand, she moves on top of you and lowers herself on your dick."
-    "As you lay down on the sand, she moves on top of you and lowers herself on your dick."
+    "当你躺在沙滩上时，她爬到你身上，然后缓缓地坐到你的阴茎上。"
 
 # game/BKcity_events.rpy:5117
 translate chinese_simplified slave_beach_event_ff2351ec:
 
     # "Pushing her on all fours, you move her swimsuit out of the way and place your cock at the entrance of her pussy."
-    "Pushing her on all fours, you move her swimsuit out of the way and place your cock at the entrance of her pussy."
+    "你把她推到四肢着地上，拨开她的泳衣，把你的阴茎放在她的阴道口。"
 
 # game/BKcity_events.rpy:5120
 translate chinese_simplified slave_beach_event_e8b44802:
 
     # "Holding her ankles, you push her back in the sand and spread her legs. Your cock quickly finds the entrance of her womb, shoving aside her swimsuit."
-    "Holding her ankles, you push her back in the sand and spread her legs. Your cock quickly finds the entrance of her womb, shoving aside her swimsuit."
+    "你抓住她的脚踝，把她推倒在沙滩上，分开她的双腿。你的阴茎迅速找到她子宫的入口，拨开她的泳衣。"
 
 # game/BKcity_events.rpy:5123
 translate chinese_simplified slave_beach_event_a8db2b45:
 
     # "Holding her from behind, you drag her panties down and push your cock inside her."
-    "Holding her from behind, you drag her panties down and push your cock inside her."
+    "你从后面抱住她，把她的内裤拉下来，然后把你的阴茎插进她的身体里。"
 
 # game/BKcity_events.rpy:5126
 translate chinese_simplified slave_beach_event_8f2a8204:
 
     # "Falling down on top of her, you furiously get rid of her thin swimsuit. She moans as you enter her."
-    "Falling down on top of her, you furiously get rid of her thin swimsuit. She moans as you enter her."
+    "你扑倒在她身上，粗暴地扯掉她单薄的泳衣。你进入她身体的那一刻，她发出呻吟。"
 
 # game/BKcity_events.rpy:5130
 translate chinese_simplified slave_beach_event_292c7391:
@@ -6100,13 +6100,13 @@ translate chinese_simplified slave_beach_event_292c7391:
 translate chinese_simplified slave_beach_event_0cecfc03:
 
     # "You feel some resistance inside, and then something tears. A trickle of blood running down your shaft confirms that she is no longer a virgin."
-    "You feel some resistance inside, and then something tears. A trickle of blood running down your shaft confirms that she is no longer a virgin."
+    "你感到体内一阵阻力，然后有什么东西撕裂了。一滴鲜血顺着你的阴茎流下，证实她已不再是处女。"
 
 # game/BKcity_events.rpy:5145
 translate chinese_simplified slave_beach_event_de6a410f:
 
     # "A crowd quickly gathers. [girl.name] blushes but makes no effort to stop you."
-    "A crowd quickly gathers. [girl.name] blushes but makes no effort to stop you."
+    "人群迅速聚集起来。[girl.name]脸红了，但并没有阻止你。"
 
 # game/BKcity_events.rpy:5147
 translate chinese_simplified slave_beach_event_5ff1ca2e:
@@ -6118,7 +6118,7 @@ translate chinese_simplified slave_beach_event_5ff1ca2e:
 translate chinese_simplified slave_beach_event_95a28545:
 
     # "You mercilessly use her for your own pleasure, coming and going until you feel close to bursting."
-    "You mercilessly use her for your own pleasure, coming and going until you feel close to bursting."
+    "你无情地利用她来满足自己的欲望，来来往往，直到你感觉快要崩溃为止。"
 
 # game/BKcity_events.rpy:5153
 translate chinese_simplified slave_beach_event_9ce6fdb2:
@@ -6136,7 +6136,7 @@ translate chinese_simplified slave_beach_event_71bc82a6:
 translate chinese_simplified slave_beach_event_47645da3:
 
     # "Grabbing her hair, you push your cock deep inside her mouth before releasing a geyser of cum."
-    "Grabbing her hair, you push your cock deep inside her mouth before releasing a geyser of cum."
+    "你抓住她的头发，将阴茎深深插入她的口中，然后喷射出一股精液。"
 
 # game/BKcity_events.rpy:5174
 translate chinese_simplified slave_beach_event_da2af5af:
@@ -6148,7 +6148,7 @@ translate chinese_simplified slave_beach_event_da2af5af:
 translate chinese_simplified slave_beach_event_4081e2d5:
 
     # "She chokes on your cock and starts spitting cum all over her body and swimsuit."
-    "She chokes on your cock and starts spitting cum all over her body and swimsuit."
+    "她被你的阴茎噎住了，精液开始喷溅到她全身和泳衣上。"
 
 # game/BKcity_events.rpy:5180
 translate chinese_simplified slave_beach_event_198e6936:
@@ -6160,7 +6160,7 @@ translate chinese_simplified slave_beach_event_198e6936:
 translate chinese_simplified slave_beach_event_795f8948:
 
     # "Lifting her chin, you look straight into her eyes as you bring yourself over the limit, exploding all over her face."
-    "Lifting her chin, you look straight into her eyes as you bring yourself over the limit, exploding all over her face."
+    "你抬起她的下巴，直视着她的眼睛，然后突破极限，在她脸上爆发。"
 
 # game/BKcity_events.rpy:5189
 translate chinese_simplified slave_beach_event_831759f8:
@@ -6172,7 +6172,7 @@ translate chinese_simplified slave_beach_event_831759f8:
 translate chinese_simplified slave_beach_event_5cf32175:
 
     # "Sticky white cum drips down her face as you make sure to wipe the last drops on her forehead. She looks dazed."
-    "Sticky white cum drips down her face as you make sure to wipe the last drops on her forehead. She looks dazed."
+    "黏稠的白色精液顺着她的脸颊滴落，你小心翼翼地擦掉她额头上最后一滴。她看起来神情恍惚。"
 
 # game/BKcity_events.rpy:5195
 translate chinese_simplified slave_beach_event_063eacfd:
@@ -6184,7 +6184,7 @@ translate chinese_simplified slave_beach_event_063eacfd:
 translate chinese_simplified slave_beach_event_00ef63b5:
 
     # "Wrapping your dick inside a lock of her hair, you rub against her silky soft curls until you are ready to cum."
-    "Wrapping your dick inside a lock of her hair, you rub against her silky soft curls until you are ready to cum."
+    "你用一缕头发包裹住你的阴茎，摩擦她丝滑柔软的卷发，直到你快要射精。"
 
 # game/BKcity_events.rpy:5204
 translate chinese_simplified slave_beach_event_ba1ded7a:
@@ -6196,7 +6196,7 @@ translate chinese_simplified slave_beach_event_ba1ded7a:
 translate chinese_simplified slave_beach_event_4606b25e:
 
     # "Thick white cum bursts out of your cock, and you leisurely spread it all over her soft hair, until it is completely soaked."
-    "Thick white cum bursts out of your cock, and you leisurely spread it all over her soft hair, until it is completely soaked."
+    "浓稠的白色精液从你的阴茎中喷涌而出，你悠闲地将它涂抹在她柔软的头发上，直到头发完全湿透。"
 
 # game/BKcity_events.rpy:5210
 translate chinese_simplified slave_beach_event_5a2909b8:
@@ -6208,7 +6208,7 @@ translate chinese_simplified slave_beach_event_5a2909b8:
 translate chinese_simplified slave_beach_event_c54783b0:
 
     # "Aiming your dick at her tits, you instruct her to squeeze them tight together before exploding all over her."
-    "Aiming your dick at her tits, you instruct her to squeeze them tight together before exploding all over her."
+    "你把阴茎对准她的乳房，让她紧紧地夹住它们，然后射在她身上。"
 
 # game/BKcity_events.rpy:5219
 translate chinese_simplified slave_beach_event_f5b6bc2f:
@@ -6220,7 +6220,7 @@ translate chinese_simplified slave_beach_event_f5b6bc2f:
 translate chinese_simplified slave_beach_event_67bf8a92:
 
     # "She looks at her soiled mounds strangely, absent-mindedly rubbing them together as the cum runs down her chest."
-    "She looks at her soiled mounds strangely, absent-mindedly rubbing them together as the cum runs down her chest."
+    "她奇怪地看着自己沾满精液的阴部，心不在焉地揉搓着，精液顺着她的胸口流了下来。"
 
 # game/BKcity_events.rpy:5225
 translate chinese_simplified slave_beach_event_004f83c6:
@@ -6232,7 +6232,7 @@ translate chinese_simplified slave_beach_event_004f83c6:
 translate chinese_simplified slave_beach_event_5db0bde8:
 
     # "You cum hard all over her, covering her with sticky semen."
-    "You cum hard all over her, covering her with sticky semen."
+    "你猛烈地射精，精液黏稠地覆盖了她全身。"
 
 # game/BKcity_events.rpy:5232
 translate chinese_simplified slave_beach_event_a3d34740:
@@ -6256,13 +6256,13 @@ translate chinese_simplified slave_beach_event_6a7bf726:
 translate chinese_simplified slave_beach_event_4b744439:
 
     # "[girl.fullname]'s {b}service{/b} skill has increased."
-    "[girl.fullname]'s {b}service{/b} skill has increased."
+    "[girl.fullname] 的 {b}服务{/b} 技能有所提升。"
 
 # game/BKcity_events.rpy:5246
 translate chinese_simplified slave_beach_event_5f0536be:
 
     # "You fuck her with abandon, and she moans louder and louder with every thrust."
-    "You fuck her with abandon, and she moans louder and louder with every thrust."
+    "你肆意地操她，她随着每一次抽插发出越来越大的呻吟声。"
 
 # game/BKcity_events.rpy:5248
 translate chinese_simplified slave_beach_event_107c173f:
@@ -6274,7 +6274,7 @@ translate chinese_simplified slave_beach_event_107c173f:
 translate chinese_simplified slave_beach_event_e5349557:
 
     # "You feel close to your limit and decide not to delay the inevitable any longer."
-    "You feel close to your limit and decide not to delay the inevitable any longer."
+    "你感觉自己快要达到极限了，决定不再拖延不可避免的事情。"
 
 # game/BKcity_events.rpy:5252
 translate chinese_simplified slave_beach_event_c7922447:
@@ -6292,7 +6292,7 @@ translate chinese_simplified slave_beach_event_0fbb58dc:
 translate chinese_simplified slave_beach_event_abc1e59b:
 
     # "Ramming your cock deeper inside her, you release a huge wad of cum as you hit her cervix. Her body arches back as she takes it all in."
-    "Ramming your cock deeper inside her, you release a huge wad of cum as you hit her cervix. Her body arches back as she takes it all in."
+    "你将阴茎更深地插入她的体内，撞击到她的子宫颈时，你释放出一大股精液。她弓起身体，承受着这一切。"
 
 # game/BKcity_events.rpy:5274
 translate chinese_simplified slave_beach_event_6e03b3c5:
@@ -6304,7 +6304,7 @@ translate chinese_simplified slave_beach_event_6e03b3c5:
 translate chinese_simplified slave_beach_event_51a34b98:
 
     # "She clings to you as your throbbing cock keeps pumping hot semen inside her."
-    "She clings to you as your throbbing cock keeps pumping hot semen inside her."
+    "她紧紧地抱着你，你的勃起阴茎不断地将滚烫的精液射入她的体内。"
 
 # game/BKcity_events.rpy:5282
 translate chinese_simplified slave_beach_event_a4604e4c:
@@ -6316,7 +6316,7 @@ translate chinese_simplified slave_beach_event_a4604e4c:
 translate chinese_simplified slave_beach_event_2e26bc9b:
 
     # "You withdraw as you feel about to cum, spurting white semen all over her gaping pussy."
-    "You withdraw as you feel about to cum, spurting white semen all over her gaping pussy."
+    "你感觉快要射精时抽出阴茎，白色的精液喷洒在她张开的阴道上。"
 
 # game/BKcity_events.rpy:5293
 translate chinese_simplified slave_beach_event_6e03b3c5_1:
@@ -6328,7 +6328,7 @@ translate chinese_simplified slave_beach_event_6e03b3c5_1:
 translate chinese_simplified slave_beach_event_bc93318d:
 
     # "She watches in a daze as hot cum flows out of her pussy."
-    "She watches in a daze as hot cum flows out of her pussy."
+    "她呆呆地看着滚烫的精液从她的阴道里流出来。"
 
 # game/BKcity_events.rpy:5301
 translate chinese_simplified slave_beach_event_9d3f5943:
@@ -6340,7 +6340,7 @@ translate chinese_simplified slave_beach_event_9d3f5943:
 translate chinese_simplified slave_beach_event_6d35652f:
 
     # "Popping your cock out of her, you explode all over her smooth belly."
-    "Popping your cock out of her, you explode all over her smooth belly."
+    "你从她体内抽出阴茎，精液喷洒在她光滑的小腹上。"
 
 # game/BKcity_events.rpy:5310
 translate chinese_simplified slave_beach_event_3041fa8c:
@@ -6352,7 +6352,7 @@ translate chinese_simplified slave_beach_event_3041fa8c:
 translate chinese_simplified slave_beach_event_37e819ad:
 
     # "More cum spurts out, smearing her body and swimsuit."
-    "More cum spurts out, smearing her body and swimsuit."
+    "更多精液喷涌而出，沾满了她的身体和泳衣。"
 
 # game/BKcity_events.rpy:5316
 translate chinese_simplified slave_beach_event_5d204b66:
@@ -6364,13 +6364,13 @@ translate chinese_simplified slave_beach_event_5d204b66:
 translate chinese_simplified slave_beach_event_8a001466:
 
     # "[girl.fullname]'s {b}sex{/b} skill has increased."
-    "[girl.fullname]'s {b}sex{/b} skill has increased."
+    "[girl.fullname]的{b}性{/b}技能提升了。"
 
 # game/BKcity_events.rpy:5326
 translate chinese_simplified slave_beach_event_01ea3072:
 
     # "Disappointed, you go back to your other business."
-    "Disappointed, you go back to your other business."
+    "你失望地回到自己的工作岗位。"
 
 # game/BKcity_events.rpy:5330
 translate chinese_simplified slave_beach_event_7b8f473b:
@@ -6430,7 +6430,7 @@ translate chinese_simplified slave_beach_event_fdde360c:
 translate chinese_simplified slave_beach_event_30ebcc9d:
 
     # "She leaves with her head held up high before you have a chance to object."
-    "She leaves with her head held up high before you have a chance to object."
+    "在你还没来得及反对之前，她就昂首挺胸地离开了。"
 
 # game/BKcity_events.rpy:5393
 translate chinese_simplified slave_beach_event_4ee40f29:
@@ -6466,7 +6466,7 @@ translate chinese_simplified slave_beach_event_0cd402a4:
 translate chinese_simplified slave_beach_event_c550eaaf:
 
     # "Dude" "Sweet! I want her to suck my dick... Is it cool?"
-    "Dude" "太棒了！我想让她给我口交……可以吗？"
+    "哥们" "太棒了！我想让她给我口交……可以吗？"
 
 # game/BKcity_events.rpy:5414
 translate chinese_simplified slave_beach_event_e836a702:
@@ -6508,19 +6508,19 @@ translate chinese_simplified slave_beach_event_50a53d71:
 translate chinese_simplified slave_beach_event_c64f1079:
 
     # "[girl.name] kneels in front of the man, lowering his trunks. His erect shaft pops out, almost hitting her in the face."
-    "[girl.name] kneels in front of the man, lowering his trunks. His erect shaft pops out, almost hitting her in the face."
+    "[girl.name]跪在男人面前，拉下他的短裤。他勃起的阴茎弹了出来，差点打到她的脸。"
 
 # game/BKcity_events.rpy:5445
 translate chinese_simplified slave_beach_event_a9b8e8b4:
 
     # "Dude" "Oh, this is my lucky day..."
-    "Dude" "哦，今天真是我的幸运日……"
+    "哥们" "哦，今天真是我的幸运日……"
 
 # game/BKcity_events.rpy:5448
 translate chinese_simplified slave_beach_event_841402fd:
 
     # "The customer moves on [girl.name]. She moans softly as his hands reach inside her swimsuit and fondle her privates."
-    "The customer moves on [girl.name]. She moans softly as his hands reach inside her swimsuit and fondle her privates."
+    "顾客走向[girl.name]。当他的手伸进她的泳衣里抚摸她的私处时，她轻轻呻吟了一声。"
 
 # game/BKcity_events.rpy:5449
 translate chinese_simplified slave_beach_event_bac2af43:
@@ -6532,7 +6532,7 @@ translate chinese_simplified slave_beach_event_bac2af43:
 translate chinese_simplified slave_beach_event_061b0610:
 
     # "Grinning from ear to ear, the customer grabs her butt and bends her forward, pushing his hard cock against her butthole."
-    "Grinning from ear to ear, the customer grabs her butt and bends her forward, pushing his hard cock against her butthole."
+    "顾客咧嘴一笑，抓住她的臀部，将她向前弯腰，把坚硬的阴茎抵住她的肛门。"
 
 # game/BKcity_events.rpy:5454
 translate chinese_simplified slave_beach_event_64a4be4e:
@@ -6544,13 +6544,13 @@ translate chinese_simplified slave_beach_event_64a4be4e:
 translate chinese_simplified slave_beach_event_65ebfa4c:
 
     # "The customers" "Hurray!!!"
-    "The customers" "Hurray!!!"
+    "顾客" "Hurray!!!"
 
 # game/BKcity_events.rpy:5459
 translate chinese_simplified slave_beach_event_5c691dae:
 
     # "The three men eagerly jump on [girl.name], and she squeals as they start grabbing and rubbing her private parts."
-    "The three men eagerly jump on [girl.name], and she squeals as they start grabbing and rubbing her private parts."
+    "三个男人迫不及待地扑向[girl.name]，当他们开始抓挠和揉搓她的私处时，她发出尖叫。"
 
 # game/BKcity_events.rpy:5474
 translate chinese_simplified slave_beach_event_59a50666:
@@ -6562,49 +6562,49 @@ translate chinese_simplified slave_beach_event_59a50666:
 translate chinese_simplified slave_beach_event_0affd0ff:
 
     # "[girl.name] uses her mouth to pleasure the customer, taking her time to bring him to a perfect climax."
-    "[girl.name] uses her mouth to pleasure the customer, taking her time to bring him to a perfect climax."
+    "[girl.name] 用她的嘴取悦顾客，慢慢地让他达到完美的性高潮。"
 
 # game/BKcity_events.rpy:5482
 translate chinese_simplified slave_beach_event_45f08dcb:
 
     # "[girl.name] uses her hands to pleasure the customer, taking her time to bring him to a perfect climax."
-    "[girl.name] uses her hands to pleasure the customer, taking her time to bring him to a perfect climax."
+    "[girl.name] 用双手取悦顾客，慢慢地让他达到完美的性高潮。"
 
 # game/BKcity_events.rpy:5484
 translate chinese_simplified slave_beach_event_a7c8b3d0:
 
     # "[girl.name] uses her tits to pleasure the customer, taking her time to bring him to a perfect climax."
-    "[girl.name] uses her tits to pleasure the customer, taking her time to bring him to a perfect climax."
+    "[girl.name] 用她的乳房取悦顾客，慢慢地让他达到完美的性高潮。"
 
 # game/BKcity_events.rpy:5486
 translate chinese_simplified slave_beach_event_2f8c7a7b:
 
     # "[girl.name] masturbates in front of the customer, looking him in the eye as he brings himself off."
-    "[girl.name] masturbates in front of the customer, looking him in the eye as he brings himself off."
+    "[girl.name] 在顾客面前自慰，一边看着他一边自慰射精。"
 
 # game/BKcity_events.rpy:5488
 translate chinese_simplified slave_beach_event_a3debe29:
 
     # "[girl.name] uses her mouth and hands to pleasure the customer, taking her time to bring him to a perfect climax."
-    "[girl.name] uses her mouth and hands to pleasure the customer, taking her time to bring him to a perfect climax."
+    "[girl.name] 用她的嘴和手取悦顾客，慢慢地让他达到完美的性高潮。"
 
 # game/BKcity_events.rpy:5490
 translate chinese_simplified slave_beach_event_a7325ce9:
 
     # "Dude" "Oh, man... I will not stand... this aggression... Man..."
-    "Dude" "哦，天哪……我绝不能容忍……这种侵略……天哪……"
+    "哥们" "哦，天哪……我绝不能容忍……这种侵略……天哪……"
 
 # game/BKcity_events.rpy:5493
 translate chinese_simplified slave_beach_event_97a15c09:
 
     # "The man starts fucking [girl.name] wildly and she does her best to give him a good time."
-    "The man starts fucking [girl.name] wildly and she does her best to give him a good time."
+    "男人开始疯狂地和[girl.name]做爱，而她也尽力让他感到快乐。"
 
 # game/BKcity_events.rpy:5496
 translate chinese_simplified slave_beach_event_67a2ab6d:
 
     # "She yelps with pain as he enters her, forcing her hymen open. She is no longer a virgin."
-    "She yelps with pain as he enters her, forcing her hymen open. She is no longer a virgin."
+    "他进入她身体的那一刻，她疼得尖叫起来，处女膜被强行撑开。她不再是处女了。"
 
 # game/BKcity_events.rpy:5499
 translate chinese_simplified slave_beach_event_d1de2594:
@@ -6616,7 +6616,7 @@ translate chinese_simplified slave_beach_event_d1de2594:
 translate chinese_simplified slave_beach_event_fb7cd5b5:
 
     # "The guy fucks [girl.name]'s ass with abandon, spitting inside her crack to lubricate. She takes it all in stride."
-    "The guy fucks [girl.name]'s ass with abandon, spitting inside her crack to lubricate. She takes it all in stride."
+    "那男的肆意地操着[girl.name]的屁股，还往她屁股缝里吐口水润滑。她全然不觉。"
 
 # game/BKcity_events.rpy:5504
 translate chinese_simplified slave_beach_event_dff03954:
@@ -6628,7 +6628,7 @@ translate chinese_simplified slave_beach_event_dff03954:
 translate chinese_simplified slave_beach_event_1686205b:
 
     # "The men fuck her eagerly, and she does her best to make sure all of them are having fun."
-    "The men fuck her eagerly, and she does her best to make sure all of them are having fun."
+    "男人们都迫不及待地和她做爱，而她也尽力确保他们每个人都玩得开心。"
 
 # game/BKcity_events.rpy:5511
 translate chinese_simplified slave_beach_event_afefac09:
@@ -6646,19 +6646,19 @@ translate chinese_simplified slave_beach_event_00417ccb:
 translate chinese_simplified slave_beach_event_47f929f9:
 
     # "One of the men decides to fuck her ass while she uses the rest of her body to pleasure the others."
-    "One of the men decides to fuck her ass while she uses the rest of her body to pleasure the others."
+    "其中一名男子决定操她的屁股，而她则用身体的其他部分取悦其他人。"
 
 # game/BKcity_events.rpy:5520
 translate chinese_simplified slave_beach_event_7ff63124:
 
     # "She uses her whore body and her skills to the max to help the customers reach climax."
-    "She uses her whore body and her skills to the max to help the customers reach climax."
+    "她充分利用自己放荡的身体和技巧，帮助顾客达到性高潮。"
 
 # game/BKcity_events.rpy:5522
 translate chinese_simplified slave_beach_event_323a8633:
 
     # "Dude" "Awesome..."
-    "Dude" "惊人的..."
+    "哥们" "惊人的..."
 
 # game/BKcity_events.rpy:5524
 translate chinese_simplified slave_beach_event_85bafe9e:
@@ -6682,85 +6682,85 @@ translate chinese_simplified slave_beach_event_b3717b26:
 translate chinese_simplified slave_beach_event_f33411fa:
 
     # "After having their way with her, the group looks like they're about to cum already."
-    "After having their way with her, the group looks like they're about to cum already."
+    "在和她发生关系后，这群人看起来已经快要射精了。"
 
 # game/BKcity_events.rpy:5544
 translate chinese_simplified slave_beach_event_f99320fc:
 
     # "After a while, the man looks like he's about to reach his limit."
-    "After a while, the man looks like he's about to reach his limit."
+    "过了一会儿，这个人看起来好像快要达到极限了。"
 
 # game/BKcity_events.rpy:5553
 translate chinese_simplified slave_beach_event_5efb3fe9:
 
     # "The [cust] decide[ending] to unload all over her face. She gives out a squeal as she receives it."
-    "The [cust] decide[ending] to unload all over her face. She gives out a squeal as she receives it."
+    "顾客决定把精液全部射到她脸上。她被射中时发出了一声尖叫。"
 
 # game/BKcity_events.rpy:5558
 translate chinese_simplified slave_beach_event_add1c94c:
 
     # "The [cust] want[ending] to cum in her mouth, and she complies. Doing her best not to gag, she swallows a flow of smelly cum."
-    "The [cust] want[ending] to cum in her mouth, and she complies. Doing her best not to gag, she swallows a flow of smelly cum."
+    "顾客想把精液射进她嘴里，她照做了。她努力不让自己作呕，吞下了一大股散发着恶臭的精液。"
 
 # game/BKcity_events.rpy:5563
 translate chinese_simplified slave_beach_event_a7da3295:
 
     # "The [cust] end[ending] up jerking off in her hair, covering it with sticky cum."
-    "The [cust] end[ending] up jerking off in her hair, covering it with sticky cum."
+    "最后，那个顾客对着她的头发自慰，把她的头发弄得黏糊糊的。"
 
 # game/BKcity_events.rpy:5568
 translate chinese_simplified slave_beach_event_bf1f422c:
 
     # "The [cust] get[ending] ready to cover her face and hair with cum, and she squeals as it shoots all over her face."
-    "The [cust] get[ending] ready to cover her face and hair with cum, and she squeals as it shoots all over her face."
+    "顾客准备用精液涂满她的脸和头发，当精液喷射到她脸上时，她尖叫起来。"
 
 # game/BKcity_events.rpy:5573
 translate chinese_simplified slave_beach_event_aafba0af:
 
     # "The [cust] cum[ending] all over her body and swimsuit, until she is covered with sticky semen."
-    "The [cust] cum[ending] all over her body and swimsuit, until she is covered with sticky semen."
+    "精液喷洒在她全身和泳衣上，直到她全身都沾满了粘稠的精液。"
 
 # game/BKcity_events.rpy:5578
 translate chinese_simplified slave_beach_event_f23d0bd3:
 
     # "The [cust] want[ending] to cum inside, and she moans as her pussy fills up to the brim with hot white semen."
-    "The [cust] want[ending] to cum inside, and she moans as her pussy fills up to the brim with hot white semen."
+    "她想要射在里面，当她的阴道被滚烫的白色精液灌满时，她呻吟着。"
 
 # game/BKcity_events.rpy:5583
 translate chinese_simplified slave_beach_event_16504c6e:
 
     # "It's creampie time! The [cust] jerk[ending] off and cum[ending] all over her gaping hole."
-    "It's creampie time! The [cust] jerk[ending] off and cum[ending] all over her gaping hole."
+    "是时候来一发奶油派了！顾客撸管射精，精液喷洒在她张开的洞里。"
 
 # game/BKcity_events.rpy:5588
 translate chinese_simplified slave_beach_event_d10ce105:
 
     # "Overwhelmed, the [cust] cannot endure anymore and cums hard."
-    "Overwhelmed, the [cust] cannot endure anymore and cums hard."
+    "顾客再也无法忍受，猛烈地射精了。"
 
 # game/BKcity_events.rpy:5592
 translate chinese_simplified slave_beach_event_33fb437a:
 
     # "While they were going at it, a line of would-be customers has formed by your improvised stall."
-    "While they were going at it, a line of would-be customers has formed by your improvised stall."
+    "就在他们忙着的时候，你的临时摊位前已经排起了长队。"
 
 # game/BKcity_events.rpy:5611
 translate chinese_simplified slave_beach_event_19352ab1:
 
     # "She ends up serving a total of [nb] customers."
-    "She ends up serving a total of [nb] customers."
+    "她最终服务了总共 [nb] 位顾客。"
 
 # game/BKcity_events.rpy:5623
 translate chinese_simplified slave_beach_event_7335c319:
 
     # "The customers brought in [tip] gold. You gave [girl.name] [upk] gold for upkeep."
-    "The customers brought in [tip] gold. You gave [girl.name] [upk] gold for upkeep."
+    "顾客们带来了[tip]金币。你给了[girl.name] [upk]金币用于维护。"
 
 # game/BKcity_events.rpy:5625
 translate chinese_simplified slave_beach_event_3db5f193:
 
     # "The customers brought in [tip] gold. It was all profit, since you deprived [girl.name] of her rightful upkeep."
-    "The customers brought in [tip] gold. It was all profit, since you deprived [girl.name] of her rightful upkeep."
+    "顾客们带来了[tip]黄金。这全是利润，因为你剥夺了[girl.name]应有的生活保障。"
 
 # game/BKcity_events.rpy:5633
 translate chinese_simplified slave_beach_event_5d996cc8:
@@ -6784,13 +6784,13 @@ translate chinese_simplified slave_beach_event_41dee3d2:
 translate chinese_simplified slave_beach_event_7bafea4a:
 
     # "You realize she is in no shape to serve customers now. Frustrated, you tell her to pack her things and go back to the brothel."
-    "You realize she is in no shape to serve customers now. Frustrated, you tell her to pack her things and go back to the brothel."
+    "你意识到她现在根本没法接待客人。你很失望，让她收拾东西回妓院去。"
 
 # game/BKcity_events.rpy:5658
 translate chinese_simplified slave_beach_event_dc0306da:
 
     # "Let down, the men scatter and grumble something about false advertising... Your brothel has lost reputation."
-    "Let down, the men scatter and grumble something about false advertising... Your brothel has lost reputation."
+    "失望之余，男人们四散而逃，抱怨着虚假宣传……你们妓院的名声受损了。"
 
 # game/BKcity_events.rpy:5663
 translate chinese_simplified slave_beach_event_2666d939:

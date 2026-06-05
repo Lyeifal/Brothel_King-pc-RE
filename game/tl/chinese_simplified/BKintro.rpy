@@ -4,7 +4,7 @@
 translate chinese_simplified intro_bf81a46e:
 
     # sill unknown "Master!"
-    sill unknown "Master!"
+    sill unknown "掌握！"
 
 # game/BKintro.rpy:46
 translate chinese_simplified intro_f925164c:
@@ -22,7 +22,7 @@ translate chinese_simplified intro_0ba2a2d5:
 translate chinese_simplified intro_940d07b2:
 
     # sill happy "Yes, Master! Finally, you're awake."
-    sill happy "Yes, Master! Finally, you're awake."
+    sill happy "是的，主人！您终于醒了。"
 
 # game/BKintro.rpy:68
 translate chinese_simplified intro_f8993d61:
@@ -34,37 +34,37 @@ translate chinese_simplified intro_f8993d61:
 translate chinese_simplified intro_3e8000ce:
 
     # "It seems your long trip across Xeros is coming to an end."
-    "It seems your long trip across Xeros is coming to an end."
+    "看来你穿越泽罗斯的漫长旅程即将结束。"
 
 # game/BKintro.rpy:78
 translate chinese_simplified intro_382389e0:
 
     # "On the other side of this valley is the city of Zan, jewel of the Eastern coast."
-    "On the other side of this valley is the city of Zan, jewel of the Eastern coast."
+    "山谷的另一边是赞城，它是东海岸的明珠。"
 
 # game/BKintro.rpy:79
 translate chinese_simplified intro_b835ebb1:
 
     # "Already the most powerful city in Xeros by far, Zan grows by the day with the arrival of travelers and migrants from all over the continent, and beyond."
-    "Already the most powerful city in Xeros by far, Zan grows by the day with the arrival of travelers and migrants from all over the continent, and beyond."
+    "赞城已经是泽罗斯大陆上最强大的城市，随着来自大陆各地乃至更远地区的旅行者和移民的到来，赞城每天都在发展壮大。"
 
 # game/BKintro.rpy:81
 translate chinese_simplified intro_d214e7dc:
 
     # "You are one of them, lured by stories of the riches and pleasures that can only be had in the 'City of Jade'..."
-    "You are one of them, lured by stories of the riches and pleasures that can only be had in the 'City of Jade'..."
+    "你也是其中之一，被“翡翠城”里才能获得的财富和享乐的故事所吸引……"
 
 # game/BKintro.rpy:82
 translate chinese_simplified intro_af45c227:
 
     # "But you didn't set out to become just another faceless adventurer lost in the mean streets of the city-state."
-    "But you didn't set out to become just another faceless adventurer lost in the mean streets of the city-state."
+    "但你并非一开始就想成为迷失在城邦险恶街道上的又一个默默无闻的冒险者。"
 
 # game/BKintro.rpy:84
 translate chinese_simplified intro_a7ddb8ce:
 
     # "You set out...{w=1.0} {b}{color=[c_darkred]}to become a King!{/color}{/b}{w=1.0}{nw}"
-    "You set out...{w=1.0} {b}{color=[c_darkred]}to become a King!{/color}{/b}{w=1.0}{nw}"
+    "你出发了……{w=1.0} {b}{color=[c_darkred]}成为国王！{/color}{/b}{w=1.0}{nw}"
 
 # game/BKintro.rpy:93
 translate chinese_simplified intro_0ae9bcd0:
@@ -76,31 +76,31 @@ translate chinese_simplified intro_0ae9bcd0:
 translate chinese_simplified intro_878e77af:
 
     # "Sill was your first slave."
-    "Sill was your first slave."
+    "希尔是你的第一个奴隶。"
 
 # game/BKintro.rpy:117
 translate chinese_simplified intro_060f737b:
 
     # "Her parents sold her to you with their last good horse to repay a gambling debt."
-    "Her parents sold her to you with their last good horse to repay a gambling debt."
+    "她的父母为了偿还赌债，把她和他们最后一匹好马一起卖给了你。"
 
 # game/BKintro.rpy:123
 translate chinese_simplified intro_9bb93857:
 
     # "You trained her to follow your every whim and desire, and taught her about the world. You are the only family she has now."
-    "You trained her to follow your every whim and desire, and taught her about the world. You are the only family she has now."
+    "你把她训练成对你言听计从，并教她认识这个世界。现在，你是她唯一的家人了。"
 
 # game/BKintro.rpy:125
 translate chinese_simplified intro_540be635:
 
     # "You sold all of your slaves in a hurry before starting your journey, but somehow you couldn't let go of Sill."
-    "You sold all of your slaves in a hurry before starting your journey, but somehow you couldn't let go of Sill."
+    "在启程之前，你匆匆卖掉了所有的奴隶，但不知为何，你却舍不得希尔。"
 
 # game/BKintro.rpy:130
 translate chinese_simplified intro_982a6218:
 
     # you "Why did I keep her already?" nointeract
-    you "Why did I keep her already?" nointeract
+    you "我为什么当时就把她留下了？" nointeract
 
 # game/BKintro.rpy:136
 translate chinese_simplified intro_3ac23432:
@@ -124,13 +124,13 @@ translate chinese_simplified intro_b0e996dc:
 translate chinese_simplified intro_f929963c:
 
     # you "Besides, we have some good memories... Like that time..." nointeract
-    you "Besides, we have some good memories... Like that time..." nointeract
+    you "此外，我们还有一些美好的回忆……比如那段时光……" nointeract
 
 # game/BKintro.rpy:178
 translate chinese_simplified sill_first_time_f71df0c8:
 
     # sill past "Oh! Master! Oh!"
-    sill past "Oh! Master! Oh!"
+    sill past "哦！主人！哦！"
 
 # game/BKintro.rpy:180
 translate chinese_simplified sill_first_time_763b469c:
@@ -154,7 +154,7 @@ translate chinese_simplified sill_first_time_11b5e0e6:
 translate chinese_simplified sill_public_48776f53:
 
     # sill past "Mahhher... Thehe ahe childhhen... Mmmh... coming..."
-    sill past "Mahhher... Thehe ahe childhhen... Mmmh... coming..."
+    sill past "Mahhher...孩子啊...嗯...来了..."
 
 # game/BKintro.rpy:206
 translate chinese_simplified sill_public_d3c22f00:
@@ -178,7 +178,7 @@ translate chinese_simplified sill_public_c6cdb8e4:
 translate chinese_simplified sill_spank_e4ce544c:
 
     # sill past "What's... What's going on?"
-    sill past "What's... What's going on?"
+    sill past "怎么回事？到底发生了什么？"
 
 # game/BKintro.rpy:229
 translate chinese_simplified sill_spank_daa03f08:
@@ -220,7 +220,7 @@ translate chinese_simplified sill_spank_dc795e73:
 translate chinese_simplified resume_intro_131476a8:
 
     # sill happy "...and that's how the Pharo dynasty rose to power in Zan, or so the innkeeper said. Fascinating story, isn't it, Master?"
-    sill happy "...and that's how the Pharo dynasty rose to power in Zan, or so the innkeeper said. Fascinating story, isn't it, Master?"
+    sill happy "……客栈老板是这么说的，法老王朝就是这样在赞城崛起的。真是个引人入胜的故事，不是吗，师傅？"
 
 # game/BKintro.rpy:265
 translate chinese_simplified resume_intro_24353786:
@@ -232,7 +232,7 @@ translate chinese_simplified resume_intro_24353786:
 translate chinese_simplified resume_intro_05abe805:
 
     # sill sad "Master? Were you listening?"
-    sill sad "Master? Were you listening?"
+    sill sad "主人？您在听吗？"
 
 # game/BKintro.rpy:269
 translate chinese_simplified resume_intro_a832ca80:
@@ -244,37 +244,37 @@ translate chinese_simplified resume_intro_a832ca80:
 translate chinese_simplified resume_intro_daf95156:
 
     # sill happy "Look, Master! We've reached the outer wall!"
-    sill happy "Look, Master! We've reached the outer wall!"
+    sill happy "主人，看！我们已经到达外墙了！"
 
 # game/BKintro.rpy:279
 translate chinese_simplified resume_intro_b98dd8c2:
 
     # "Zan is well protected from outside dangers by a series of moats, walls and garrisons."
-    "Zan is well protected from outside dangers by a series of moats, walls and garrisons."
+    "赞城有护城河、城墙和驻军，抵御外敌入侵。"
 
 # game/BKintro.rpy:280
 translate chinese_simplified resume_intro_c88e3e01:
 
     # "The city has never fallen before any foe, even during the time of the Goliath invasion."
-    "The city has never fallen before any foe, even during the time of the Goliath invasion."
+    "即使在歌利亚入侵时期，这座城市也从未被任何敌人攻陷过。"
 
 # game/BKintro.rpy:281
 translate chinese_simplified resume_intro_cb58d8be:
 
     # "That is not to say that Zan is a peaceful city, however. Its rulers are constantly brought down by plots and internal strife."
-    "That is not to say that Zan is a peaceful city, however. Its rulers are constantly brought down by plots and internal strife."
+    "但这并不意味着赞城是一座和平的城市。它的统治者经常因阴谋和内乱而垮台。"
 
 # game/BKintro.rpy:282
 translate chinese_simplified resume_intro_90cd0a74:
 
     # "A perfect place for an adventurous soul to make a fresh start..."
-    "A perfect place for an adventurous soul to make a fresh start..."
+    "对于热爱冒险的人来说，这里是重新开始的完美之地……"
 
 # game/BKintro.rpy:288
 translate chinese_simplified resume_intro_c143bd20:
 
     # "A guard is staring at you, frowning. He barely glanced at Sill."
-    "A guard is staring at you, frowning. He barely glanced at Sill."
+    "一名警卫正皱着眉头盯着你，几乎没看希尔一眼。"
 
 # game/BKintro.rpy:290
 translate chinese_simplified resume_intro_076bb3ac:
@@ -292,13 +292,13 @@ translate chinese_simplified resume_intro_5a1a4c43:
 translate chinese_simplified resume_intro_3f917070:
 
     # sill happy "I am but a slave, sir. My name is..."
-    sill happy "I am but a slave, sir. My name is..."
+    sill happy "我只是个奴隶，先生。我的名字是……"
 
 # game/BKintro.rpy:298
 translate chinese_simplified resume_intro_4641be11:
 
     # guard "Silence, slave! No one cares who you are." with vpunch
-    guard "Silence, slave! No one cares who you are." with vpunch
+    guard "闭嘴，奴隶！没人关心你是谁。" with vpunch
 
 # game/BKintro.rpy:300
 translate chinese_simplified resume_intro_bfbe5329:
@@ -310,7 +310,7 @@ translate chinese_simplified resume_intro_bfbe5329:
 translate chinese_simplified resume_intro_39c9ff75:
 
     # you "I am..." nointeract
-    you "I am..." nointeract
+    you "我是..." nointeract
 
 # game/BKintro.rpy:309
 translate chinese_simplified resume_intro_40b7dd80:
@@ -322,31 +322,31 @@ translate chinese_simplified resume_intro_40b7dd80:
 translate chinese_simplified resume_intro_32916bc6:
 
     # "For years you have battled hordes of humans and monsters, far away North in the Holy Lands."
-    "For years you have battled hordes of humans and monsters, far away North in the Holy Lands."
+    "多年来，你一直在遥远的北方圣地与成群的人类和怪物作战。"
 
 # game/BKintro.rpy:314
 translate chinese_simplified resume_intro_c7b8da35:
 
     # "You fought side by side with great knights and lowly sellswords. In the heat of battle, peasants and highborns were comrades."
-    "You fought side by side with great knights and lowly sellswords. In the heat of battle, peasants and highborns were comrades."
+    "你曾与伟大的骑士和卑微的雇佣兵并肩作战。在激烈的战斗中，平民和贵族都是战友。"
 
 # game/BKintro.rpy:315
 translate chinese_simplified resume_intro_2fd78af9:
 
     # "Battles were won, and battles were lost, always at a dear cost. Most of your friends ended up dead or missing."
-    "Battles were won, and battles were lost, always at a dear cost. Most of your friends ended up dead or missing."
+    "战斗有胜有败，但总是付出惨重的代价。你的大多数朋友最终都战死沙场或下落不明。"
 
 # game/BKintro.rpy:316
 translate chinese_simplified resume_intro_0cdfd5f0:
 
     # "You have grown tired of the constant fighting and senseless bloodshed. This is not your calling anymore."
-    "You have grown tired of the constant fighting and senseless bloodshed. This is not your calling anymore."
+    "你已经厌倦了无休止的争斗和无谓的流血。这不再是你的使命。"
 
 # game/BKintro.rpy:317
 translate chinese_simplified resume_intro_bc90bf67:
 
     # "Still, your set of skills is always in demand in Xeros. Time will tell if life in Zan will allow you to put your swords down for good..."
-    "Still, your set of skills is always in demand in Xeros. Time will tell if life in Zan will allow you to put your swords down for good..."
+    "不过，你的技能在泽罗斯依然很抢手。至于赞恩的生活是否能让你彻底放下刀剑，时间会给出答案……"
 
 # game/BKintro.rpy:322
 translate chinese_simplified resume_intro_f1792448:
@@ -370,49 +370,49 @@ translate chinese_simplified resume_intro_38823c50:
 translate chinese_simplified resume_intro_474b9df7:
 
     # "Educated with the best minds of Karkyr to become a battlemage, you used the gold from an inheritance to buy off your years of service, and set out for the Western territories for fame and fortune."
-    "Educated with the best minds of Karkyr to become a battlemage, you used the gold from an inheritance to buy off your years of service, and set out for the Western territories for fame and fortune."
+    "你师从卡尔基尔最杰出的人才，成为一名战斗法师，用继承的金币赎回了多年的服役，然后前往西部领土追求名利。"
 
 # game/BKintro.rpy:339
 translate chinese_simplified resume_intro_02b79417:
 
     # "There, you found your place as the court wizard of one Prince Arkin, a powerful border lord."
-    "There, you found your place as the court wizard of one Prince Arkin, a powerful border lord."
+    "在那里，你成为了强大的边境领主阿尔金王子的宫廷巫师。"
 
 # game/BKintro.rpy:340
 translate chinese_simplified resume_intro_533bdca3:
 
     # "The hundred warring Princes in Westmarch are always in need of a wizard for counsel enchants, and healing. And sometimes, for more underhanded duties as well... For the powers of life and death are woven into the fabric of magic itself, and a potent spellcaster can easily wield both."
-    "The hundred warring Princes in Westmarch are always in need of a wizard for counsel enchants, and healing. And sometimes, for more underhanded duties as well... For the powers of life and death are woven into the fabric of magic itself, and a potent spellcaster can easily wield both."
+    "西境的百位交战诸侯总是需要法师提供建议、施放魔法和治疗。有时，他们也需要做一些更见不得光的事情……因为生死之力就蕴藏在魔法的本质之中，而强大的施法者可以轻易地驾驭这两者。"
 
 # game/BKintro.rpy:341
 translate chinese_simplified resume_intro_6da822d1:
 
     # "The Prince had a beautiful wife... And a jealous, suspicious mind."
-    "The Prince had a beautiful wife... And a jealous, suspicious mind."
+    "王子有一位美丽的妻子……但他心地善良，嫉妒心强，疑心重重。"
 
 # game/BKintro.rpy:342
 translate chinese_simplified resume_intro_a7664ff3:
 
     # "Somehow, he got it into his thick head that you had been sleeping with his wife, using spells to bypass the guards posted by her chambers."
-    "Somehow, he got it into his thick head that you had been sleeping with his wife, using spells to bypass the guards posted by her chambers."
+    "不知怎么的，他固执地认为你和他的妻子有染，还用魔法绕过了她房间门口的守卫。"
 
 # game/BKintro.rpy:343
 translate chinese_simplified resume_intro_8c49142b:
 
     # "You got word of this madness a few hours before he planned to have you arrested and burnt at the stake. You escaped swiftly with Sill and what little valuables you could carry."
-    "You got word of this madness a few hours before he planned to have you arrested and burnt at the stake. You escaped swiftly with Sill and what little valuables you could carry."
+    "在你得知这个疯狂计划几个小时后，他就要逮捕你并将你绑在火刑柱上烧死。你带着希尔和你能带上的少量贵重物品迅速逃走了。"
 
 # game/BKintro.rpy:344
 translate chinese_simplified resume_intro_e67ddf32:
 
     # "Not forgetting to pay a last visit to the Princess on your way out, of course..."
-    "Not forgetting to pay a last visit to the Princess on your way out, of course..."
+    "当然，离开前别忘了最后拜访一下公主……"
 
 # game/BKintro.rpy:345
 translate chinese_simplified resume_intro_30c09359:
 
     # "Zan seems like a good place for you to lay low for a while, and leave that nasty business of stakes and pyres behind."
-    "Zan seems like a good place for you to lay low for a while, and leave that nasty business of stakes and pyres behind."
+    "赞恩似乎是个适合你暂时隐居的好地方，让你远离那些肮脏的火刑和焚尸火刑。"
 
 # game/BKintro.rpy:350
 translate chinese_simplified resume_intro_8ce983bf:
@@ -424,7 +424,7 @@ translate chinese_simplified resume_intro_8ce983bf:
 translate chinese_simplified resume_intro_0a68ea71:
 
     # "He spits."
-    "He spits."
+    "他吐了口唾沫。"
 
 # game/BKintro.rpy:354
 translate chinese_simplified resume_intro_3de00e30:
@@ -448,55 +448,55 @@ translate chinese_simplified resume_intro_4126abbe:
 translate chinese_simplified resume_intro_052a4d9a:
 
     # "A native of Borgo, the harbor city, you grew up on the docks, buying and selling all kinds of legal and less legal merchandise from overseas for a profit."
-    "A native of Borgo, the harbor city, you grew up on the docks, buying and selling all kinds of legal and less legal merchandise from overseas for a profit."
+    "你出生于港口城市博尔戈，从小在码头长大，靠买卖各种合法或不合法的海外商品牟利。"
 
 # game/BKintro.rpy:369
 translate chinese_simplified resume_intro_fdaf4f4d:
 
     # "Before long, you decided to venture into the wild world, to see for yourself the wonders sailors and travelers had been mumbling about in their cups."
-    "Before long, you decided to venture into the wild world, to see for yourself the wonders sailors and travelers had been mumbling about in their cups."
+    "不久之后，你决定冒险进入这个充满野性的世界，亲眼看看水手和旅行者们在杯中喃喃自语的奇观。"
 
 # game/BKintro.rpy:370
 translate chinese_simplified resume_intro_509ca17e:
 
     # "You went to the furthest corners of Xeros and back, and even sailed the Blood Sea. But your latest trip was nearly your last."
-    "You went to the furthest corners of Xeros and back, and even sailed the Blood Sea. But your latest trip was nearly your last."
+    "你曾到过泽罗斯大陆最遥远的角落，又返回故乡，甚至还航行过血海。但你最近一次的旅程几乎成了你的最后一次。"
 
 # game/BKintro.rpy:371
 translate chinese_simplified resume_intro_58c304ed:
 
     # "Your party had set out for the legendary Southern land of Hokoma, roaming through scorching desert and sweltering jungles."
-    "Your party had set out for the legendary Southern land of Hokoma, roaming through scorching desert and sweltering jungles."
+    "你们一行人启程前往传说中的南方大陆霍科马，穿越酷热的沙漠和闷热的丛林。"
 
 # game/BKintro.rpy:372
 translate chinese_simplified resume_intro_d0a005e0:
 
     # "Your aim was to negotiate with native tribes for the rarest spices and magical ingredients, to exchange for cheap trinkets."
-    "Your aim was to negotiate with native tribes for the rarest spices and magical ingredients, to exchange for cheap trinkets."
+    "你的目标是与当地部落谈判，获取最稀有的香料和魔法材料，以换取廉价的小饰品。"
 
 # game/BKintro.rpy:373
 translate chinese_simplified resume_intro_7539a6ae:
 
     # "Amazingly, you made it to Hokoma with only a few casualties, and most of your wares still intact."
-    "Amazingly, you made it to Hokoma with only a few casualties, and most of your wares still intact."
+    "令人惊讶的是，你们只伤亡寥寥，而且大部分货物都完好无损地到达了霍科马。"
 
 # game/BKintro.rpy:374
 translate chinese_simplified resume_intro_543e9649:
 
     # "But on the way back through the jungles, as you were busy dreaming of the riches you were sure to obtain back in Borgo, your party got ambushed and slaughtered by a ferocious headhunting tribe."
-    "But on the way back through the jungles, as you were busy dreaming of the riches you were sure to obtain back in Borgo, your party got ambushed and slaughtered by a ferocious headhunting tribe."
+    "但在穿越丛林返回的途中，当你们正忙着梦想着回到博尔戈后一定会获得的财富时，你们一行人遭到一个凶猛的猎头部落的伏击和屠杀。"
 
 # game/BKintro.rpy:376
 translate chinese_simplified resume_intro_40919227:
 
     # "You and Sill barely made it out with your lives, losing all of your stock while escaping."
-    "You and Sill barely made it out with your lives, losing all of your stock while escaping."
+    "你和希尔侥幸活了下来，但在逃亡过程中损失了所有财产。"
 
 # game/BKintro.rpy:377
 translate chinese_simplified resume_intro_7b27127e:
 
     # "Returning to Borgo empty-handed to face your creditors didn't seem like the brightest idea. So instead, you decided to head for Zan, and use your business acumen to rebuild from there."
-    "Returning to Borgo empty-handed to face your creditors didn't seem like the brightest idea. So instead, you decided to head for Zan, and use your business acumen to rebuild from there."
+    "空手而归，回到博尔戈去面对债主，这显然不是个明智之举。所以，你决定前往赞恩，运用你的商业才能，从那里重新开始。"
 
 # game/BKintro.rpy:383
 translate chinese_simplified resume_intro_74809783:
@@ -520,7 +520,7 @@ translate chinese_simplified resume_intro2_b7df2a5a:
 translate chinese_simplified resume_intro2_4bf8fadb:
 
     # you "Me?" nointeract
-    you "Me?" nointeract
+    you "我？" nointeract
 
 # game/BKintro.rpy:401
 translate chinese_simplified resume_intro2_4fb17e63:
@@ -532,7 +532,7 @@ translate chinese_simplified resume_intro2_4fb17e63:
 translate chinese_simplified resume_intro2_f126af47:
 
     # "He spits on the ground."
-    "He spits on the ground."
+    "他朝地上吐了口唾沫。"
 
 # game/BKintro.rpy:408
 translate chinese_simplified resume_intro2_4708be52:
@@ -550,7 +550,7 @@ translate chinese_simplified resume_intro2_32b8a21b:
 translate chinese_simplified resume_intro2_81fcfecc:
 
     # "Please take a moment to review your choices now. You won't be able to change them after this point."
-    "Please take a moment to review your choices now. You won't be able to change them after this point."
+    "请花点时间确认一下您的选择。之后您将无法更改。"
 
 # game/BKintro.rpy:422
 translate chinese_simplified resume_intro2_3075dc9d:
@@ -562,19 +562,19 @@ translate chinese_simplified resume_intro2_3075dc9d:
 translate chinese_simplified resume_intro2_99b3765e:
 
     # sill sad "Aw, what a bully..."
-    sill sad "Aw, what a bully..."
+    sill sad "哎，真是个恶霸……"
 
 # game/BKintro.rpy:428
 translate chinese_simplified resume_intro2_def9a5b2:
 
     # "You lead the horses through the gate, and leave the carriage and animals at the nearby stables."
-    "You lead the horses through the gate, and leave the carriage and animals at the nearby stables."
+    "你牵着马穿过大门，把马车和牲畜留在附近的马厩里。"
 
 # game/BKintro.rpy:430
 translate chinese_simplified resume_intro2_5508145a:
 
     # "With Sill following you, you step forward decisively, into the dark streets of Zan."
-    "With Sill following you, you step forward decisively, into the dark streets of Zan."
+    "希尔跟在你身后，你果断地向前迈步，走进赞城黑暗的街道。"
 
 # game/BKintro.rpy:439
 translate chinese_simplified resume_intro2_becd0c06:
@@ -598,13 +598,13 @@ translate chinese_simplified resume_intro2_0568131e:
 translate chinese_simplified resume_intro2_e40f6f18:
 
     # sill sad "Yes Master, *pants*, I'm doing the best I can... *pants*"
-    sill sad "Yes Master, *pants*, I'm doing the best I can... *pants*"
+    sill sad "是的，主人，*喘气*，我已经尽力了……*喘气*"
 
 # game/BKintro.rpy:453
 translate chinese_simplified resume_intro2_f0c16af5:
 
     # "Sill is carrying all your equipment and luggage. She's never been too strong, so she is nearly crumbling under its weight."
-    "Sill is carrying all your equipment and luggage. She's never been too strong, so she is nearly crumbling under its weight."
+    "希尔背负着你所有的装备和行李。她本来就不太强壮，现在几乎要被压垮了。"
 
 # game/BKintro.rpy:456
 translate chinese_simplified resume_intro2_5de258a0:
@@ -616,7 +616,7 @@ translate chinese_simplified resume_intro2_5de258a0:
 translate chinese_simplified resume_intro2_67705f15:
 
     # kuro "Aaaaaaah!" with vpunch
-    kuro "Aaaaaaah!" with vpunch
+    kuro "啊啊啊啊！" with vpunch
 
 # game/BKintro.rpy:464
 translate chinese_simplified resume_intro2_cf35385d:
@@ -628,13 +628,13 @@ translate chinese_simplified resume_intro2_cf35385d:
 translate chinese_simplified resume_intro2_96d4e3af:
 
     # "In a dark alley on the side of the plaza, a woman is standing with her back to the wall. Two men are blocking her way out."
-    "In a dark alley on the side of the plaza, a woman is standing with her back to the wall. Two men are blocking her way out."
+    "在广场旁一条昏暗的小巷里，一个女人背靠着墙站着。两个男人挡住了她的去路。"
 
 # game/BKintro.rpy:476
 translate chinese_simplified resume_intro2_130943ef:
 
     # "Charging in the back alley without a moment of hesitation, you reach the men just as they're closing in on the helpless woman."
-    "Charging in the back alley without a moment of hesitation, you reach the men just as they're closing in on the helpless woman."
+    "你毫不犹豫地冲进后巷，就在那些男人即将围住无助的女人时赶到了他们面前。"
 
 # game/BKintro.rpy:479
 translate chinese_simplified resume_intro2_b9ca7b9f:
@@ -712,7 +712,7 @@ translate chinese_simplified resume_intro2_ee6ec26a_1:
 translate chinese_simplified resume_intro2_e2d41a8f:
 
     # "You take a derisive look at the two henchmen."
-    "You take a derisive look at the two henchmen."
+    "你轻蔑地看了那两个喽啰一眼。"
 
 # game/BKintro.rpy:533
 translate chinese_simplified resume_intro2_0450b8ad:
@@ -934,7 +934,7 @@ translate chinese_simplified resume_intro3_882c8269:
 translate chinese_simplified resume_intro3_d423ad70:
 
     # "You dodge the first thug and shove him to the side, before slicing up and severing the arm of the second thug clean off."
-    "You dodge the first thug and shove him to the side, before slicing up and severing the arm of the second thug clean off."
+    "你躲过第一个恶棍，把他推到一边，然后砍断第二个恶棍的手臂。"
 
 # game/BKintro.rpy:651
 translate chinese_simplified resume_intro3_b6b6e8fe:
@@ -946,7 +946,7 @@ translate chinese_simplified resume_intro3_b6b6e8fe:
 translate chinese_simplified resume_intro3_bf2dea4c:
 
     # "Before he can recover from the pain, you plunge your second blade in his throat."
-    "Before he can recover from the pain, you plunge your second blade in his throat."
+    "在他还没从疼痛中缓过神来之前，你又将第二把刀刺入他的喉咙。"
 
 # game/BKintro.rpy:658
 translate chinese_simplified resume_intro3_65a36caa:
@@ -958,7 +958,7 @@ translate chinese_simplified resume_intro3_65a36caa:
 translate chinese_simplified resume_intro3_c034af85:
 
     # "The bandit coughs bubbles of blood as life drains out of his eyes."
-    "The bandit coughs bubbles of blood as life drains out of his eyes."
+    "强盗咳出一口血泡，双眼渐渐失去光彩。"
 
 # game/BKintro.rpy:668
 translate chinese_simplified resume_intro3_a2fbc6f3:
@@ -970,13 +970,13 @@ translate chinese_simplified resume_intro3_a2fbc6f3:
 translate chinese_simplified resume_intro3_a40fe476:
 
     # thug2 "AAAAAAAAARRRRRRRRHHHHHHHHH!!!"
-    thug2 "AAAAAAAAARRRRRRRRHHHHHHHHHH!!!"
+    thug2 "啊啊啊啊啊啊啊啊！！！"
 
 # game/BKintro.rpy:684
 translate chinese_simplified resume_intro3_09425a4b:
 
     # "A bolt of lightning thunders down from the dark skies, striking one thug and blinding the other one."
-    "A bolt of lightning thunders down from the dark skies, striking one thug and blinding the other one."
+    "一道闪电从漆黑的夜空中劈下，击中了一个恶棍，使另一个恶棍失明。"
 
 # game/BKintro.rpy:687
 translate chinese_simplified resume_intro3_c7346051:
@@ -988,7 +988,7 @@ translate chinese_simplified resume_intro3_c7346051:
 translate chinese_simplified resume_intro3_e7dfe71e:
 
     # "The fool burnt to a crisp. He didn't stand a chance."
-    "The fool burnt to a crisp. He didn't stand a chance."
+    "那个傻瓜被烧成了焦炭。他毫无生还的可能。"
 
 # game/BKintro.rpy:699
 translate chinese_simplified resume_intro3_1313268c:
@@ -1006,7 +1006,7 @@ translate chinese_simplified resume_intro3_94f2e604:
 translate chinese_simplified resume_intro3_71362c76:
 
     # "Before the thug could get close, he was engulfed in flames."
-    "Before the thug could get close, he was engulfed in flames."
+    "恶棍还没来得及靠近，就被火焰吞噬了。"
 
 # game/BKintro.rpy:714
 translate chinese_simplified resume_intro3_11198b56:
@@ -1066,7 +1066,7 @@ translate chinese_simplified resume_intro3_455ad294:
 translate chinese_simplified resume_intro3_dd8ea13a:
 
     # "The surviving thug turns tail and runs for his life."
-    "The surviving thug turns tail and runs for his life."
+    "幸存的恶棍转身就跑，拼命逃命。"
 
 # game/BKintro.rpy:765
 translate chinese_simplified resume_intro3_b48937e9:
@@ -1102,7 +1102,7 @@ translate chinese_simplified resume_intro3_2d73c6bc:
 translate chinese_simplified resume_intro3_318843c0:
 
     # sill happy "Yes! Master is the best!"
-    sill happy "Yes! Master is the best!"
+    sill happy "没错！师父最棒了！"
 
 # game/BKintro.rpy:786
 translate chinese_simplified resume_intro3_fe3dcf1c:
@@ -1144,7 +1144,7 @@ translate chinese_simplified resume_intro3_ea211000:
 translate chinese_simplified resume_intro3_37d7d16a:
 
     # "Without a word, the lady bows politely, and bolts past you and Sill, disappearing into the night."
-    "Without a word, the lady bows politely, and bolts past you and Sill, disappearing into the night."
+    "那位女士一言不发，礼貌地鞠了一躬，然后飞快地从你和希尔身边跑过，消失在夜色中。"
 
 # game/BKintro.rpy:805
 translate chinese_simplified resume_intro3_f257587b:
@@ -1174,7 +1174,7 @@ translate chinese_simplified resume_intro3_7c928c6e:
 translate chinese_simplified resume_intro3_337f8f73:
 
     # "*knock* *knock* *knock*"
-    "*knock* *knock* *knock*"
+    "*咚咚* *咚咚*"
 
 # game/BKintro.rpy:826
 translate chinese_simplified resume_intro3_a20cefa7:
@@ -1306,7 +1306,7 @@ translate chinese_simplified resume_intro3_cd78e6c7:
 translate chinese_simplified resume_intro3_9c1aa295:
 
     # sill sad "Wait! Don't leave us hanging there!"
-    sill sad "Wait! Don't leave us hanging there!"
+    sill sad "等等！别让我们干等着！"
 
 # game/BKintro.rpy:895
 translate chinese_simplified resume_intro3_fe43fc3c:
@@ -1702,7 +1702,7 @@ translate chinese_simplified shortcut_302aee0c:
 translate chinese_simplified resume_intro4_df704b47:
 
     # sill sad "Respectfully, Master, I don't think..."
-    sill sad "Respectfully, Master, I don't think..."
+    sill sad "恕我直言，主人，我认为……"
 
 # game/BKintro.rpy:1176
 translate chinese_simplified resume_intro4_35e59458:
@@ -1750,7 +1750,7 @@ translate chinese_simplified resume_intro4_41bd9cc6:
 translate chinese_simplified resume_intro4_08b0bc52:
 
     # "He gets up and moves closer to Sill."
-    "He gets up and moves closer to Sill."
+    "他起身走向希尔。"
 
 # game/BKintro.rpy:1194
 translate chinese_simplified resume_intro4_b874a3e5:
@@ -1768,7 +1768,7 @@ translate chinese_simplified resume_intro4_59904d12:
 translate chinese_simplified resume_intro4_ef5e5c01:
 
     # "He starts fondling Sill's ass over her kimono."
-    "He starts fondling Sill's ass over her kimono."
+    "他隔着和服开始抚摸希尔的臀部。"
 
 # game/BKintro.rpy:1203
 translate chinese_simplified resume_intro4_61116746:
@@ -1780,7 +1780,7 @@ translate chinese_simplified resume_intro4_61116746:
 translate chinese_simplified resume_intro4_6cdecb9c:
 
     # sill "He's... He's touching my butt!" nointeract
-    sill "He's... He's touching my butt!" nointeract
+    sill "他……他摸我的屁股！" nointeract
 
 # game/BKintro.rpy:1214
 translate chinese_simplified resume_intro4_6e700cd0:
@@ -1816,7 +1816,7 @@ translate chinese_simplified resume_intro4_7ec7c7e2:
 translate chinese_simplified resume_intro4_6df17d62:
 
     # "He looks pissed."
-    "He looks pissed."
+    "他看起来很生气。"
 
 # game/BKintro.rpy:1226
 translate chinese_simplified resume_intro4_ba1c6644:
@@ -1840,7 +1840,7 @@ translate chinese_simplified resume_intro4_764c0eb3:
 translate chinese_simplified resume_intro4_d053065e:
 
     # "His voice is cold."
-    "His voice is cold."
+    "他的声音很冷。"
 
 # game/BKintro.rpy:1236
 translate chinese_simplified resume_intro4_d1e09cfa:
@@ -1852,7 +1852,7 @@ translate chinese_simplified resume_intro4_d1e09cfa:
 translate chinese_simplified resume_intro4_bf9b3bb7:
 
     # maid blush "Understood, Master."
-    maid blush "Understood, Master."
+    maid blush "明白了，主人。"
 
 # game/BKintro.rpy:1241
 translate chinese_simplified resume_intro4_c952ccef:
@@ -1864,13 +1864,13 @@ translate chinese_simplified resume_intro4_c952ccef:
 translate chinese_simplified resume_intro4_e41a3957:
 
     # "He leaves, almost slamming the door on his way out."
-    "He leaves, almost slamming the door on his way out."
+    "他离开了，出门时几乎是砰地一声关上了门。"
 
 # game/BKintro.rpy:1247
 translate chinese_simplified resume_intro4_22811f21:
 
     # maid blush "Master..."
-    maid blush "Master..."
+    maid blush "掌握..."
 
 # game/BKintro.rpy:1255
 translate chinese_simplified resume_intro4_ea23c534:
@@ -1912,7 +1912,7 @@ translate chinese_simplified resume_intro4_6e763379:
 translate chinese_simplified resume_intro4_734f0926:
 
     # sill naked "Master... Aaaah... You're always looking out for me..."
-    sill naked "Master... Aaaah... You're always looking out for me..."
+    sill naked "主人……啊……您总是这么关心我……"
 
 # game/BKintro.rpy:1278
 translate chinese_simplified resume_intro4_fa8dca53:
@@ -1990,7 +1990,7 @@ translate chinese_simplified resume_intro4_7f1aad4d:
 translate chinese_simplified resume_intro4_5334fa08:
 
     # "And so went the rest of the night..."
-    "And so went the rest of the night..."
+    "就这样，剩下的夜晚过去了……"
 
 # game/BKintro.rpy:1341
 translate chinese_simplified resume_intro4_969bde33:
@@ -2050,7 +2050,7 @@ translate chinese_simplified resume_intro4_ed509234:
 translate chinese_simplified resume_intro4_aea13249:
 
     # "He squeezes her breast before letting go."
-    "He squeezes her breast before letting go."
+    "他捏了捏她的乳房才松手。"
 
 # game/BKintro.rpy:1363
 translate chinese_simplified resume_intro4_3d9d8572:
@@ -2104,7 +2104,7 @@ translate chinese_simplified resume_intro4_d427d525:
 translate chinese_simplified resume_intro4_0bce19d5:
 
     # sill sad "Whaaat?"
-    sill sad "Whaaat?"
+    sill sad "什么？"
 
 # game/BKintro.rpy:1390
 translate chinese_simplified resume_intro4_e5fa45e6:
@@ -2134,7 +2134,7 @@ translate chinese_simplified resume_intro4_09f61142:
 translate chinese_simplified resume_intro4_fa9db4f4:
 
     # sill happy "Finally..."
-    sill happy "Finally..."
+    sill happy "最后..."
 
 # game/BKintro.rpy:1407
 translate chinese_simplified resume_intro4_1825586e:
@@ -2158,7 +2158,7 @@ translate chinese_simplified resume_intro4_d636b6d0:
 translate chinese_simplified resume_intro4_e78cc42c:
 
     # "Ignoring her, you fall into a long, deep sleep..."
-    "Ignoring her, you fall into a long, deep sleep..."
+    "你不理会她，沉沉睡去……"
 
 # game/BKintro.rpy:1430
 translate chinese_simplified resume_intro4_364f147e:
@@ -2194,7 +2194,7 @@ translate chinese_simplified resume_intro4_71eb0bcc:
 translate chinese_simplified resume_intro4_2ca291d1:
 
     # "He squeezes her butt and whispers in her ear."
-    "He squeezes her butt and whispers in her ear."
+    "他捏了捏她的屁股，在她耳边低语。"
 
 # game/BKintro.rpy:1444
 translate chinese_simplified resume_intro4_26710218:
@@ -2236,7 +2236,7 @@ translate chinese_simplified resume_intro4_6e011257:
 translate chinese_simplified resume_intro4_7f3dc2fb:
 
     # maid blush "Of course, Master Gio."
-    maid blush "Of course, Master Gio."
+    maid blush "当然，乔大师。"
 
 # game/BKintro.rpy:1460
 translate chinese_simplified resume_intro4_542ee343:
@@ -2278,7 +2278,7 @@ translate chinese_simplified resume_intro4_8c27cb79:
 translate chinese_simplified resume_intro4_62690a11:
 
     # maid blush "What do you request of me, Master [MC.name]?"
-    maid blush "What do you request of me, Master [MC.name]?"
+    maid blush "主人[MC.name]，您有什么要求？"
 
 # game/BKintro.rpy:1488
 translate chinese_simplified resume_intro4_5168dba1:
@@ -2290,7 +2290,7 @@ translate chinese_simplified resume_intro4_5168dba1:
 translate chinese_simplified resume_intro4_aba47eef:
 
     # maid blush "Hmmm... It's already hard, my lord... Were you waiting for this?"
-    maid blush "Hmmm... It's already hard, my lord... Were you waiting for this?"
+    maid blush "嗯……大人，这已经够难了……您一直在等这一刻吗？"
 
 # game/BKintro.rpy:1499
 translate chinese_simplified resume_intro4_1aba24d5:
@@ -2314,13 +2314,13 @@ translate chinese_simplified resume_intro4_50f1cc6d:
 translate chinese_simplified resume_intro4_63a92497:
 
     # "You come all over her face and hair. She engulfs your shaft in her mouth as you keep cumming, trying to make sure to drink some of it."
-    "You come all over her face and hair. She engulfs your shaft in her mouth as you keep cumming, trying to make sure to drink some of it."
+    "你射得她满脸满头都是，头发也沾满了精液。你继续射精，她用嘴含住你的阴茎，努力想喝下一些。"
 
 # game/BKintro.rpy:1514
 translate chinese_simplified resume_intro4_37ae563d:
 
     # "She makes wet noises, swallowing your hot cum eagerly."
-    "She makes wet noises, swallowing your hot cum eagerly."
+    "她发出湿漉漉的声音，急切地吞咽着你滚烫的精液。"
 
 # game/BKintro.rpy:1516
 translate chinese_simplified resume_intro4_62e88945:
@@ -2332,7 +2332,7 @@ translate chinese_simplified resume_intro4_62e88945:
 translate chinese_simplified resume_intro4_767f64a7:
 
     # "Instead of answering, you push her hard against the wall."
-    "Instead of answering, you push her hard against the wall."
+    "你没有回答，而是用力把她推到墙上。"
 
 # game/BKintro.rpy:1531
 translate chinese_simplified resume_intro4_28a1b85c:
@@ -2344,13 +2344,13 @@ translate chinese_simplified resume_intro4_28a1b85c:
 translate chinese_simplified resume_intro4_30ec90e7:
 
     # "Ripping her panties aside, you lift her legs up and start fucking her raw."
-    "Ripping her panties aside, you lift her legs up and start fucking her raw."
+    "你一把扯下她的内裤，抬起她的双腿，开始粗暴地操她。"
 
 # game/BKintro.rpy:1539
 translate chinese_simplified resume_intro4_187c78f5:
 
     # maid blush "Aaaaaah!"
-    maid blush "Aaaaaah!"
+    maid blush "啊啊啊！"
 
 # game/BKintro.rpy:1541
 translate chinese_simplified resume_intro4_2e8a9f9d:
@@ -2368,7 +2368,7 @@ translate chinese_simplified resume_intro4_cbdd44d1:
 translate chinese_simplified resume_intro4_dda3120a:
 
     # "Even though you've just started shoving your dick in her, she is already completely wet."
-    "Even though you've just started shoving your dick in her, she is already completely wet."
+    "即使你才刚开始把你的阴茎插入她的阴道，她也已经完全湿透了。"
 
 # game/BKintro.rpy:1548
 translate chinese_simplified resume_intro4_c01a8461:
@@ -2392,7 +2392,7 @@ translate chinese_simplified resume_intro4_337b166e:
 translate chinese_simplified resume_intro4_fb4fb000:
 
     # "You start fucking her faster and faster."
-    "You start fucking her faster and faster."
+    "你开始越来越快地操她。"
 
 # game/BKintro.rpy:1560
 translate chinese_simplified resume_intro4_60ef8449:
@@ -2422,13 +2422,13 @@ translate chinese_simplified resume_intro4_1de93956:
 translate chinese_simplified maid_fuck_85e28c35:
 
     # maid blush "Ooooh my lord... You're so... big..."
-    maid blush "Ooooh my lord... You're so... big..."
+    maid blush "我的天哪……你真……大……"
 
 # game/BKintro.rpy:1586
 translate chinese_simplified maid_fuck_b95940b1:
 
     # "It's hard to believe how wet she is. You can slide in and out of her with ease, even though she is very tight."
-    "It's hard to believe how wet she is. You can slide in and out of her with ease, even though she is very tight."
+    "难以置信她竟然这么湿润。虽然她很紧，但你可以轻松地进出。"
 
 # game/BKintro.rpy:1589
 translate chinese_simplified maid_fuck_f275574b:
@@ -2488,13 +2488,13 @@ translate chinese_simplified maid_fuck_43276370:
 translate chinese_simplified maid_fuck_16759eaf:
 
     # "Meanwhile, in Gio's room..."
-    "Meanwhile, in Gio's room..."
+    "与此同时，在乔的房间里……"
 
 # game/BKintro.rpy:1627
 translate chinese_simplified maid_fuck_2151bd44:
 
     # sill naked "Ahaaaaaahh!!!"
-    sill naked "Ahaaaaaahh!!!"
+    sill naked "啊啊啊啊啊！！！"
 
 # game/BKintro.rpy:1635
 translate chinese_simplified maid_fuck_185ca774:
@@ -2548,7 +2548,7 @@ translate chinese_simplified maid_fuck_c99a2233:
 translate chinese_simplified maid_fuck_23e2d648:
 
     # "And so the night went..."
-    "And so the night went..."
+    "夜就这样过去了……"
 
 # game/BKintro.rpy:1672
 translate chinese_simplified day1_b2bda7b4:
@@ -2566,43 +2566,43 @@ translate chinese_simplified day1_1ce4e059:
 translate chinese_simplified day1_9a445343:
 
     # "For centuries, slave traders from all of Xeros have converged on Zan to buy and sell the finest slaves on the continent."
-    "For centuries, slave traders from all of Xeros have converged on Zan to buy and sell the finest slaves on the continent."
+    "几个世纪以来，来自泽罗斯各地的奴隶贩子都聚集到赞恩，买卖这片大陆上最优秀的奴隶。"
 
 # game/BKintro.rpy:1687
 translate chinese_simplified day1_c2cf335b:
 
     # "They are used for most everyday tasks and are expected to provide all kinds of services... They are what their masters want them to be."
-    "They are used for most everyday tasks and are expected to provide all kinds of services... They are what their masters want them to be."
+    "它们被用于大多数日常任务，并被期望提供各种各样的服务……它们就是主人想要它们成为的样子。"
 
 # game/BKintro.rpy:1692
 translate chinese_simplified day1_5f51ff31:
 
     # "Slaves cannot address free people unless spoken to. And, most importantly, slaves can never raise a hand against their betters. This is a very grave offense."
-    "Slaves cannot address free people unless spoken to. And, most importantly, slaves can never raise a hand against their betters. This is a very grave offense."
+    "奴隶未经允许不得与自由人交谈。而且，最重要的是，奴隶绝不能对比自己地位高的人动手动脚。这是极其严重的罪行。"
 
 # game/BKintro.rpy:1697
 translate chinese_simplified day1_72ad0be5:
 
     # "Which is why warriors are usually free men and women, except for some of the pitfighters who fight against monsters or other slaves."
-    "Which is why warriors are usually free men and women, except for some of the pitfighters who fight against monsters or other slaves."
+    "因此，战士通常都是自由的男女，只有一些与怪物或其他奴隶战斗的角斗士除外。"
 
 # game/BKintro.rpy:1702
 translate chinese_simplified day1_8a42127a:
 
     # "But of course the most sought after are the sex slaves."
-    "But of course the most sought after are the sex slaves."
+    "当然，最抢手的还是性奴。"
 
 # game/BKintro.rpy:1706
 translate chinese_simplified day1_cc193216:
 
     # "Girls from all over Xeros born, sold, or coerced into slavery, are trained to become perfect sex kittens."
-    "Girls from all over Xeros born, sold, or coerced into slavery, are trained to become perfect sex kittens."
+    "来自 Xeros 各地的女孩，无论是出生、被贩卖还是被胁迫成为奴隶，都被训练成完美的性感小猫。"
 
 # game/BKintro.rpy:1714
 translate chinese_simplified day1_c83441be:
 
     # "Some are trained the hard way, until they're broken into submission."
-    "Some are trained the hard way, until they're broken into submission."
+    "有些人经过艰苦的训练，直到被彻底驯服。"
 
 # game/BKintro.rpy:1722
 translate chinese_simplified day1_9f141516:
@@ -2614,19 +2614,19 @@ translate chinese_simplified day1_9f141516:
 translate chinese_simplified day1_7e162e3d:
 
     # "All learn to do their Master's bidding, no matter what."
-    "All learn to do their Master's bidding, no matter what."
+    "所有人都学会了无论如何都要执行主人的命令。"
 
 # game/BKintro.rpy:1730
 translate chinese_simplified day1_eccb8c3a:
 
     # "It is a powerful bond: only the Master can set them free."
-    "It is a powerful bond: only the Master can set them free."
+    "这是一种强大的束缚：只有主人才能解救他们。"
 
 # game/BKintro.rpy:1734
 translate chinese_simplified day1_dd055048:
 
     # "Zan has the most bustling slave market in all of Xeros..."
-    "Zan has the most bustling slave market in all of Xeros..."
+    "赞恩拥有泽罗斯大陆上最繁荣的奴隶市场……"
 
 # game/BKintro.rpy:1738
 translate chinese_simplified day1_af50d3de:
@@ -2644,7 +2644,7 @@ translate chinese_simplified day1_b1242d20:
 translate chinese_simplified day1_d3cc46dd:
 
     # sill sad "Master! Someone tried to grab my breast! Hey, I'm not for sale!"
-    sill sad "Master! Someone tried to grab my breast! Hey, I'm not for sale!"
+    sill sad "主人！有人想摸我的胸！喂，我可不是用来卖的！"
 
 # game/BKintro.rpy:1744
 translate chinese_simplified day1_fe0ce7f4:
@@ -2692,7 +2692,7 @@ translate chinese_simplified slavemarket_first_time_5844e0b2:
 translate chinese_simplified slavemarket_first_time_d20878d5:
 
     # sill happy "Ahem."
-    sill happy "Ahem."
+    sill happy "嗯。"
 
 # game/BKintro.rpy:1800
 translate chinese_simplified slavemarket_first_time_024e8571:
@@ -2716,7 +2716,7 @@ translate chinese_simplified slavemarket_first_time_bfd49cfe:
 translate chinese_simplified slavemarket_first_time_0da19645:
 
     # sill sad "Whaaaat? Master, no!!!"
-    sill sad "Whaaaat? Master, no!!!"
+    sill sad "什么？主人，不要！！！"
 
 # game/BKintro.rpy:1808
 translate chinese_simplified slavemarket_first_time_a48092dd:
@@ -2752,7 +2752,7 @@ translate chinese_simplified slavemarket_first_time_8f42f826:
 translate chinese_simplified slavemarket_first_time_f5cfa24a:
 
     # "The list goes on and on and Sill looks aghast."
-    "The list goes on and on and Sill looks aghast."
+    "名单还在不断增加，希尔看起来十分震惊。"
 
 # game/BKintro.rpy:1823
 translate chinese_simplified slavemarket_first_time_bdd56139:
@@ -2764,13 +2764,13 @@ translate chinese_simplified slavemarket_first_time_bdd56139:
 translate chinese_simplified slavemarket_first_time_38e75056:
 
     # "Gio starts inspecting the slave you just bought."
-    "Gio starts inspecting the slave you just bought."
+    "乔开始检查你刚买的奴隶。"
 
 # game/BKintro.rpy:1827
 translate chinese_simplified slavemarket_first_time_3cf3b2a1:
 
     # "He fondles her butt and pinches her nipples."
-    "He fondles her butt and pinches her nipples."
+    "他抚摸她的臀部，捏她的乳头。"
 
 # game/BKintro.rpy:1831
 translate chinese_simplified slavemarket_first_time_59a50666:
@@ -2794,7 +2794,7 @@ translate chinese_simplified slavemarket_first_time_b16b0edb:
 translate chinese_simplified slavemarket_first_time_d9935f34:
 
     # "[girl.name] slaps Gio's hands off."
-    "[girl.name] slaps Gio's hands off."
+    "[girl.name] 打掉了 Gio 的手。"
 
 # game/BKintro.rpy:1840
 translate chinese_simplified slavemarket_first_time_e2e2d9ef:
@@ -2998,13 +2998,13 @@ translate chinese_simplified districts_first_time_d598cb46:
 translate chinese_simplified districts_first_time_slums_4276900c:
 
     # "The Slums are located on the outskirts of Zan, beyond the defensive wall. It is home to the Zani rabble: new arrivals, refugees, paupers, spice addicts... It is also rumored to host the hideout of the Thieves Guild, and a temple of the Goddess Shalia."
-    "The Slums are located on the outskirts of Zan, beyond the defensive wall. It is home to the Zani rabble: new arrivals, refugees, paupers, spice addicts... It is also rumored to host the hideout of the Thieves Guild, and a temple of the Goddess Shalia."
+    "贫民窟位于赞城郊外，防御墙之外。这里是赞城乌合之众的家园：新来者、难民、穷人、香料瘾君子……据说这里也是盗贼公会的藏身之处，以及莎莉娅女神的神庙所在地。"
 
 # game/BKintro.rpy:1953
 translate chinese_simplified districts_first_time_slums_1054b62c:
 
     # "This is a poor place to start a business, but Gio didn't leave you much of a choice."
-    "This is a poor place to start a business, but Gio didn't leave you much of a choice."
+    "这里不是创业的好地方，但乔也没给你留下多少选择。"
 
 # game/BKintro.rpy:1962
 translate chinese_simplified brothel_first_time_dd9d0132:
@@ -3028,7 +3028,7 @@ translate chinese_simplified brothel_first_time_bf822476:
 translate chinese_simplified brothel_first_time_7734c789:
 
     # sill sad "What's... What's that smell?"
-    sill sad "What's... What's that smell?"
+    sill sad "这是……这是什么味道？"
 
 # game/BKintro.rpy:1974
 translate chinese_simplified brothel_first_time_96ee95ff:
@@ -3088,7 +3088,7 @@ translate chinese_simplified brothel_first_time_7466a9f9:
 translate chinese_simplified brothel_first_time_2dadbc9f:
 
     # sill "Grrr..." with vpunch
-    sill "Grrr..." with vpunch
+    sill "啊啊啊……" with vpunch
 
 # game/BKintro.rpy:2000
 translate chinese_simplified brothel_first_time_78dc5ba9:
@@ -3148,19 +3148,19 @@ translate chinese_simplified brothel_first_time_9e574b33:
 translate chinese_simplified brothel_first_time_f131db99:
 
     # "Gio looks nervous as you start fiddling with your scabbard."
-    "Gio looks nervous as you start fiddling with your scabbard."
+    "当你开始摆弄剑鞘时，乔看起来很紧张。"
 
 # game/BKintro.rpy:2024
 translate chinese_simplified brothel_first_time_631c3156:
 
     # "Gio looks nervous as you start muttering a curse."
-    "Gio looks nervous as you start muttering a curse."
+    "当你开始低声咒骂时，乔看起来很紧张。"
 
 # game/BKintro.rpy:2028
 translate chinese_simplified brothel_first_time_d169b374:
 
     # "Gio looks nervous as you start eyeing your pet dragon."
-    "Gio looks nervous as you start eyeing your pet dragon."
+    "当你开始盯着你的宠物龙看时，吉奥显得很紧张。"
 
 # game/BKintro.rpy:2030
 translate chinese_simplified brothel_first_time_c0e03f4b:
@@ -3280,7 +3280,7 @@ translate chinese_simplified main_first_time_f76e2db9:
 translate chinese_simplified main_first_time_a4cfd4ac:
 
     # gio "The [room.name] is in order now."
-    gio "[房间名称] 现在一切就绪。"
+    gio "[room.name] 现在一切就绪。"
 
 # game/BKintro.rpy:2131
 translate chinese_simplified main_first_time_1da6dcb3:
@@ -3334,7 +3334,7 @@ translate chinese_simplified main_first_time_08f8ec6f:
 translate chinese_simplified main_first_time_f80f4ef0:
 
     # sill sad "Ew! Master! Not that name again!"
-    sill sad "Ew! Master! Not that name again!"
+    sill sad "呃！主人！怎么又是这个名字！"
 
 # game/BKintro.rpy:2159
 translate chinese_simplified main_first_time_5ff492db:
@@ -3358,7 +3358,7 @@ translate chinese_simplified main_first_time_f3dce340:
 translate chinese_simplified main_first_time_b715d5ea:
 
     # sill happy "While the workers were busy, I went over the old accounting books."
-    sill happy "While the workers were busy, I went over the old accounting books."
+    sill happy "趁着工人们忙碌的时候，我翻阅了旧的会计账簿。"
 
 # game/BKintro.rpy:2167
 translate chinese_simplified main_first_time_cbb9dfcd:

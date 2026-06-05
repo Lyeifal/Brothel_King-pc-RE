@@ -35,7 +35,16 @@ game/girls/*
 !game/girls/YOUR GIRL FOLDERS GO HERE.txt
 
 # Translation work-in-progress exports
-game/tl/chinese_simplified/to_translate.txt
-game/tl/chinese_simplified/translated.txt
-game/tl/chinese_simplified/to_translate.docx
-game/tl/chinese_simplified/to_translated.docx
+*.xlsx
+*.docx
+*.txt
+!faq.txt
+!tools/README.md
+!tools/_concat_report.txt
+
+# Backup files
+*.backup
+*.placeholders_backup
+
+# Archive
+tools/archive/

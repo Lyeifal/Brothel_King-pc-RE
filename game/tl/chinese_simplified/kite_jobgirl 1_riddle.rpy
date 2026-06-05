@@ -82,7 +82,7 @@ translate chinese_simplified jobgirl_0_40026f0e:
 translate chinese_simplified jobgirl_0_ff7e51d1:
 
     # jobgirl "Hey!!!" with vpunch
-    jobgirl "Hey!!!" with vpunch
+    jobgirl "嘿！！！" with vpunch
 
 # game/kite_jobgirl 1_riddle.rpy:55
 translate chinese_simplified jobgirl_0_b6422fd5:
@@ -226,13 +226,13 @@ translate chinese_simplified jobgirl_0_2d699523:
 translate chinese_simplified jobgirl_0_652f84f7:
 
     # "You both laugh. You feel more relaxed and spend some time chatting."
-    "You both laugh. You feel more relaxed and spend some time chatting."
+    "你们俩都笑了。你们感觉放松多了，于是聊了一会儿天。"
 
 # game/kite_jobgirl 1_riddle.rpy:113
 translate chinese_simplified jobgirl_0_3c253c15:
 
     # "You learn that Scarlet lives here in Zan, in a tiny house near the plaza. She spends a lot of time running short quests."
-    "You learn that Scarlet lives here in Zan, in a tiny house near the plaza. She spends a lot of time running short quests."
+    "你得知斯嘉丽就住在赞恩，广场附近的一间小房子里。她经常做些小任务。"
 
 # game/kite_jobgirl 1_riddle.rpy:115
 translate chinese_simplified jobgirl_0_d87b5c63:
@@ -250,7 +250,7 @@ translate chinese_simplified jobgirl_0_0b17a876:
 translate chinese_simplified jobgirl_0_ab1bcec7:
 
     # "One hour passes by while your conversation with Scarlet goes on."
-    "One hour passes by while your conversation with Scarlet goes on."
+    "你和斯嘉丽的谈话持续了一个小时。"
 
 # game/kite_jobgirl 1_riddle.rpy:121
 translate chinese_simplified jobgirl_0_6e182e58:
@@ -274,13 +274,13 @@ translate chinese_simplified jobgirl_0_2eecd061:
 translate chinese_simplified jobgirl_1_69893b10:
 
     # "You reach the posting board plaza looking for some more quests for your girls, when you notice Scarlet sitting on a bench nearby."
-    "You reach the posting board plaza looking for some more quests for your girls, when you notice Scarlet sitting on a bench nearby."
+    "你来到公告栏广场，想为你的女孩们找些新的任务，这时你注意到斯嘉丽坐在附近的长椅上。"
 
 # game/kite_jobgirl 1_riddle.rpy:153
 translate chinese_simplified jobgirl_1_1df7e374:
 
     # "She's totally absorbed in reading what seems to be an old scroll. "
-    "She's totally absorbed in reading what seems to be an old scroll. "
+    "她全神贯注地阅读着一卷看似古老的卷轴。"
 
 # game/kite_jobgirl 1_riddle.rpy:155
 translate chinese_simplified jobgirl_1_9237eaae:
@@ -340,7 +340,7 @@ translate chinese_simplified jobgirl_1_01f31afe:
 translate chinese_simplified jobgirl_1_a11e0574:
 
     # "She hands the scroll to you. The paper seems very old, the text is written in an old form of Xeros's common language, something you can handle easily."
-    "She hands the scroll to you. The paper seems very old, the text is written in an old form of Xeros's common language, something you can handle easily."
+    "她把卷轴递给你。纸张看起来很古老，上面的文字是用古老的泽罗斯通用语言写成的，你可以轻松辨认。"
 
 # game/kite_jobgirl 1_riddle.rpy:179
 translate chinese_simplified jobgirl_1_8eeca005:
@@ -358,7 +358,7 @@ translate chinese_simplified jobgirl_1_ef54aa95:
 translate chinese_simplified jobgirl_1_08609b58:
 
     # you "This is... a riddle?!" with vpunch
-    you "This is... a riddle?!" with vpunch
+    you "这是……一个谜语？！" with vpunch
 
 # game/kite_jobgirl 1_riddle.rpy:193
 translate chinese_simplified jobgirl_1_ff29c8e9:
@@ -376,7 +376,7 @@ translate chinese_simplified jobgirl_1_88f710f4:
 translate chinese_simplified jobgirl_1_e66271c6:
 
     # jobgirl "H-how did you know that?" with vpunch
-    jobgirl "H-how did you know that?" with vpunch
+    jobgirl "你……你怎么知道的？" with vpunch
 
 # game/kite_jobgirl 1_riddle.rpy:201
 translate chinese_simplified jobgirl_1_158567a6:
@@ -472,7 +472,7 @@ translate chinese_simplified jobgirl_1_5a80f950:
 translate chinese_simplified jobgirl_1_9339a2bb:
 
     # "The girl approaches your face and gives you a soft kiss on the cheek."
-    "The girl approaches your face and gives you a soft kiss on the cheek."
+    "女孩凑近你的脸，轻轻地吻了吻你的脸颊。"
 
 # game/kite_jobgirl 1_riddle.rpy:241
 translate chinese_simplified jobgirl_1_e2023b8c:
@@ -526,7 +526,7 @@ translate chinese_simplified jobgirl_1_9f5140a9:
 translate chinese_simplified jobgirl_1_6cec30bc:
 
     # "She gives you a small bag of coins."
-    "She gives you a small bag of coins."
+    "她给了你一小袋硬币。"
 
 # game/kite_jobgirl 1_riddle.rpy:267
 translate chinese_simplified jobgirl_1_32438381:
@@ -550,7 +550,7 @@ translate chinese_simplified jobgirl_1_cb6f8254:
 translate chinese_simplified jobgirl_1_122907e2:
 
     # jobgirl "Hey, what are you blabbing about!!! I'm not stupid, you know?" with vpunch
-    jobgirl "Hey, what are you blabbing about!!! I'm not stupid, you know?" with vpunch
+    jobgirl "喂，你在胡说八道些什么？！我又不傻，你知道吗？" with vpunch
 
 # game/kite_jobgirl 1_riddle.rpy:279
 translate chinese_simplified jobgirl_1_97de1fba:
@@ -562,7 +562,7 @@ translate chinese_simplified jobgirl_1_97de1fba:
 translate chinese_simplified jobgirl_1_7f5196db:
 
     # "She stares at you, giving you the impression she's a bit resentful, so you wield your best smile, hoping she'll calm down a little and forgive you."
-    "She stares at you, giving you the impression she's a bit resentful, so you wield your best smile, hoping she'll calm down a little and forgive you."
+    "她盯着你看，让你觉得她有点怨恨，所以你挤出一个灿烂的笑容，希望她能冷静下来原谅你。"
 
 # game/kite_jobgirl 1_riddle.rpy:283
 translate chinese_simplified jobgirl_1_50345bb6:
@@ -574,13 +574,13 @@ translate chinese_simplified jobgirl_1_50345bb6:
 translate chinese_simplified jobgirl_1_be4c75ed:
 
     # jobgirl "Now tell me what the answer is, or I'll never be able to sleep again!" with vpunch
-    jobgirl "Now tell me what the answer is, or I'll never be able to sleep again!" with vpunch
+    jobgirl "现在告诉我答案，否则我以后都睡不着觉了！" with vpunch
 
 # game/kite_jobgirl 1_riddle.rpy:287
 translate chinese_simplified jobgirl_1_a898ce2d:
 
     # "Now that she mentions it you notice she looks tired and drowsy. She probably hasn't slept since getting the scroll, trying to solve the riddle!"
-    "Now that she mentions it you notice she looks tired and drowsy. She probably hasn't slept since getting the scroll, trying to solve the riddle!"
+    "她这么一说，你才注意到她看起来很疲惫，昏昏欲睡。她可能自从拿到卷轴，为了解开谜题就没睡过觉了！"
 
 # game/kite_jobgirl 1_riddle.rpy:289
 translate chinese_simplified jobgirl_1_8c4f26bc:
@@ -592,13 +592,13 @@ translate chinese_simplified jobgirl_1_8c4f26bc:
 translate chinese_simplified jobgirl_1_872b1a72:
 
     # "You don't want her to be mad at you, right? Try again!"
-    "You don't want her to be mad at you, right? Try again!"
+    "你不想让她生你的气，对吧？再试一次！"
 
 # game/kite_jobgirl 1_riddle.rpy:305
 translate chinese_simplified jobgirl_1_fc3f2391:
 
     # "Don't you know it? Molise doesn't exist! Try again!"
-    "Don't you know it? Molise doesn't exist! Try again!"
+    "你不知道吗？莫利塞这个地方根本不存在！再想想！"
 
 # game/kite_jobgirl 1_riddle.rpy:319
 translate chinese_simplified jobgirl_1_81710e34:
@@ -610,7 +610,7 @@ translate chinese_simplified jobgirl_1_81710e34:
 translate chinese_simplified jobgirl_1_142446ee:
 
     # jobgirl "Which one?" with vpunch
-    jobgirl "Which one?" with vpunch
+    jobgirl "哪一个？" with vpunch
 
 # game/kite_jobgirl 1_riddle.rpy:325
 translate chinese_simplified jobgirl_1_34be61d7:
@@ -628,7 +628,7 @@ translate chinese_simplified jobgirl_1_b05b0c24:
 translate chinese_simplified jobgirl_1_dc695aec:
 
     # "She doesn't look very convinced."
-    "She doesn't look very convinced."
+    "她看起来不太相信。"
 
 # game/kite_jobgirl 1_riddle.rpy:331
 translate chinese_simplified jobgirl_1_31c7da47:
@@ -676,19 +676,19 @@ translate chinese_simplified jobgirl_1_e3008a1d:
 translate chinese_simplified jobgirl_1_ae55d497:
 
     # "Lost for a moment in her thoughts and plans, she suddenly sprints to take her leave, but..."
-    "Lost for a moment in her thoughts and plans, she suddenly sprints to take her leave, but..."
+    "她一时沉浸在自己的思绪和计划中，突然间，她拔腿就跑，想要离开，但是……"
 
 # game/kite_jobgirl 1_riddle.rpy:362
 translate chinese_simplified jobgirl_1_f5bbb1db:
 
     # "She miscalculated the distance between you and her. She ends up falling right in your arms."
-    "She miscalculated the distance between you and her. She ends up falling right in your arms."
+    "她误判了你和她之间的距离，结果一头栽进了你的怀里。"
 
 # game/kite_jobgirl 1_riddle.rpy:367
 translate chinese_simplified jobgirl_1_959d16f5:
 
     # "You almost fall back but manage to stand; she's light but quite energetic." with vpunch
-    "You almost fall back but manage to stand; she's light but quite energetic." with vpunch
+    "你差点向后倒去，但还是站了起来；她身轻如燕，却精力充沛。" with vpunch
 
 # game/kite_jobgirl 1_riddle.rpy:371
 translate chinese_simplified jobgirl_1_2a22fab1:
@@ -700,7 +700,7 @@ translate chinese_simplified jobgirl_1_2a22fab1:
 translate chinese_simplified jobgirl_1_67aed4eb:
 
     # "You look at her beautiful blue eyes, down to her pink lips and white skinned neck, until you stare at her cleavage. Can't avoid to look at her breasts since the feeling of them pushing on your chest is raising your heartbeat."
-    "You look at her beautiful blue eyes, down to her pink lips and white skinned neck, until you stare at her cleavage. Can't avoid to look at her breasts since the feeling of them pushing on your chest is raising your heartbeat."
+    "你目光从她美丽的蓝眼睛一路向下，落在她粉嫩的嘴唇和白皙的脖颈上，直到你的视线最终停留在她的乳沟。你无法移开视线，因为她丰满的胸部挤压着你的胸膛，让你的心跳加速。"
 
 # game/kite_jobgirl 1_riddle.rpy:379
 translate chinese_simplified jobgirl_1_a014484f:
@@ -712,7 +712,7 @@ translate chinese_simplified jobgirl_1_a014484f:
 translate chinese_simplified jobgirl_1_4542b940:
 
     # "The girl is so embarrassed that she can't help but stare down. She blushes so much that her face seems about to catch fire."
-    "The girl is so embarrassed that she can't help but stare down. She blushes so much that her face seems about to catch fire."
+    "女孩羞得不行，忍不住低下了头。她脸红得像要烧起来似的。"
 
 # game/kite_jobgirl 1_riddle.rpy:385
 translate chinese_simplified jobgirl_1_d068f1b1:
@@ -736,7 +736,7 @@ translate chinese_simplified jobgirl_1_4d7929c8:
 translate chinese_simplified jobgirl_1_8a04707c:
 
     # "She leaves your arms and steps back a little."
-    "She leaves your arms and steps back a little."
+    "她离开你的怀抱，后退了几步。"
 
 # game/kite_jobgirl 1_riddle.rpy:405
 translate chinese_simplified jobgirl_1_db682ddc:
@@ -754,7 +754,7 @@ translate chinese_simplified jobgirl_1_9432b3ca:
 translate chinese_simplified jobgirl_1_f0fca549:
 
     # "At your words she looks at her cleavage and naively pulls her top down a little."
-    "At your words she looks at her cleavage and naively pulls her top down a little."
+    "听到你的话，她看了看自己的乳沟，天真地把上衣往下拉了一点。"
 
 # game/kite_jobgirl 1_riddle.rpy:415
 translate chinese_simplified jobgirl_1_02829207:
@@ -766,7 +766,7 @@ translate chinese_simplified jobgirl_1_02829207:
 translate chinese_simplified jobgirl_1_53973358:
 
     # you "Wow!" with vpunch
-    you "Wow!" with vpunch
+    you "哇！" with vpunch
 
 # game/kite_jobgirl 1_riddle.rpy:421
 translate chinese_simplified jobgirl_1_b91e6759:
@@ -778,7 +778,7 @@ translate chinese_simplified jobgirl_1_b91e6759:
 translate chinese_simplified jobgirl_1_f53be934:
 
     # jobgirl "EH! Don't stare!" with vpunch
-    jobgirl "EH! Don't stare!" with vpunch
+    jobgirl "哎！别盯着看！" with vpunch
 
 # game/kite_jobgirl 1_riddle.rpy:428
 translate chinese_simplified jobgirl_1_7ff6596b:
@@ -802,7 +802,7 @@ translate chinese_simplified jobgirl_1_be443405:
 translate chinese_simplified jobgirl_1_2ffedf70:
 
     # "She blushes a little."
-    "She blushes a little."
+    "她脸颊微微泛红。"
 
 # game/kite_jobgirl 1_riddle.rpy:438
 translate chinese_simplified jobgirl_1_9483edbf:
@@ -820,13 +820,13 @@ translate chinese_simplified jobgirl_1_dc9ba118:
 translate chinese_simplified jobgirl_1_47405369:
 
     # "Without saying a word, you look at her while gently holding her close to you."
-    "Without saying a word, you look at her while gently holding her close to you."
+    "你一言不发，温柔地将她搂在怀里，凝视着她。"
 
 # game/kite_jobgirl 1_riddle.rpy:448
 translate chinese_simplified jobgirl_1_0e5ec6f6:
 
     # "After a long moment she timidly steps away, a little embarrassed."
-    "After a long moment she timidly steps away, a little embarrassed."
+    "过了好一会儿，她有些不好意思地怯生生地走开了。"
 
 # game/kite_jobgirl 1_riddle.rpy:455
 translate chinese_simplified jobgirl_1_9bb41fd5:
@@ -850,7 +850,7 @@ translate chinese_simplified jobgirl_1_53995d81:
 translate chinese_simplified jobgirl_1_f802f622:
 
     # "You look at each other for a long moment."
-    "You look at each other for a long moment."
+    "你们对视了许久。"
 
 # game/kite_jobgirl 1_riddle.rpy:466
 translate chinese_simplified jobgirl_1_c3740cf6:

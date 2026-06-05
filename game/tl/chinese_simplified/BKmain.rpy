@@ -28,25 +28,25 @@ translate chinese_simplified slavemarket_5ea722bf:
 translate chinese_simplified slavemarket_ea2de983:
 
     # headhunter strip1 "Get [game.headhunter_discount] denars off yer first contract!"
-    headhunter strip1 "Get [game.headhunter_discount] denars off yer first contract!"
+    headhunter strip1 "首次签约即可获得 [game.headhunter_discount] 第纳尔折扣！"
 
 # game/BKmain.rpy:46
 translate chinese_simplified slavemarket_b81bb1bc:
 
     # headhunter strip1 "Them cheapo slaves here won't work and always give ya lip!"
-    headhunter strip1 "Them cheapo slaves here won't work and always give ya lip!"
+    headhunter strip1 "这里那些廉价奴隶不干活，还总是顶嘴！"
 
 # game/BKmain.rpy:49
 translate chinese_simplified slavemarket_5273d4d6:
 
     # headhunter strip1 "A real shame, I tell ya! That ain't a problem with {i}our{/i} booty, mate!"
-    headhunter strip1 "A real shame, I tell ya! That ain't a problem with {i}our{/i} booty, mate!"
+    headhunter strip1 "真是太可惜了，伙计！但这可不是我们屁股的问题，伙计！"
 
 # game/BKmain.rpy:52
 translate chinese_simplified slavemarket_54b85e75:
 
     # headhunter strip2 "So don't ferget to cum... *cough*{i}come{/i} and visit me, arrh!"
-    headhunter strip2 "So don't ferget to cum... *cough*{i}come{/i} and visit me, arrh!"
+    headhunter strip2 "所以别忘了射精……*咳嗽*{i}来找我，啊！{/i}"
 
 # game/BKmain.rpy:91
 translate chinese_simplified slavemarket_loop_5ff14834:
@@ -82,37 +82,37 @@ translate chinese_simplified slavemarket_loop_f1276e29:
 translate chinese_simplified visit_district_db977216:
 
     # "You have not discovered this location yet."
-    "You have not discovered this location yet."
+    "您尚未发现此地点。"
 
 # game/BKmain.rpy:393
 translate chinese_simplified brothel_loop_9d312b74:
 
     # sill sad "*pant* *pant* It is done, Master... I'm so tired... *pant*"
-    sill sad "*pant* *pant* It is done, Master... I'm so tired... *pant*"
+    sill sad "（喘气）（喘气）好了，主人……我好累……（喘气）"
 
 # game/BKmain.rpy:396
 translate chinese_simplified brothel_loop_a6dda680:
 
     # sill happy "Yes Master, I will get some supplies and work on it right away!"
-    sill happy "Yes Master, I will get some supplies and work on it right away!"
+    sill happy "遵命，师傅，我这就去准备材料，马上开始动手！"
 
 # game/BKmain.rpy:488
 translate chinese_simplified farm_loop_351f869c:
 
     # gizel upset "[MC.name]! One of your good-for-nothing sluts has hurt my babies! If you don't act quickly, I'm going to have to retire it."
-    gizel upset "[MC.name]! One of your good-for-nothing sluts has hurt my babies! If you don't act quickly, I'm going to have to retire it."
+    gizel upset "[MC.name]！你手下那个没用的贱货竟然伤害了我的孩子！如果你再不采取行动，我就要把它退役了。"
 
 # game/BKmain.rpy:505
 translate chinese_simplified farm_loop_46f371fe:
 
     # gizel normal "Fine, let's use this to get the poor bastard back on its feet. Or tentacles. Whatever."
-    gizel normal "Fine, let's use this to get the poor bastard back on its feet. Or tentacles. Whatever."
+    gizel normal "好吧，我们就用这个让这可怜的家伙重新站起来。或者用触手也行。随便吧。"
 
 # game/BKmain.rpy:512
 translate chinese_simplified farm_loop_ff2eb741:
 
     # "[mn.name] (level [mn.level] [mn.type]) has been healed."
-    "[mn.name] (level [mn.level] [mn.type]) has been healed."
+    "[mn.name]（等级 [mn.level] [mn.type]）已被治愈。"
 
 # game/BKmain.rpy:515
 translate chinese_simplified farm_loop_ce1b337e:
@@ -130,7 +130,7 @@ translate chinese_simplified farm_loop_84bab26c:
 translate chinese_simplified farm_loop_9b8e87a8:
 
     # gizel surprise "Whaaat??? My baby? No!!! I'm really sending it to a farm up-country, so they can rest in leisure! I wouldn't kill one of my sweet minions!!! Are you mad?"
-    gizel surprise "Whaaat??? My baby? No!!! I'm really sending it to a farm up-country, so they can rest in leisure! I wouldn't kill one of my sweet minions!!! Are you mad?"
+    gizel surprise "什么？！我的宝贝？不！！！我真的要把它送到乡下的农场去，让它好好休息！我怎么可能杀掉我可爱的小家伙们！！！你疯了吗？"
 
 # game/BKmain.rpy:527
 translate chinese_simplified farm_loop_dab63749:
@@ -142,7 +142,7 @@ translate chinese_simplified farm_loop_dab63749:
 translate chinese_simplified farm_loop_3365e663:
 
     # "[mn.name] (level [mn.level] [mn.type]) has been retired."
-    "[mn.name] (level [mn.level] [mn.type]) has been retired."
+    "[mn.name]（级别 [mn.level] [mn.type]）已停用。"
 
 # game/BKmain.rpy:618
 translate chinese_simplified farm_loop_a42c33ca:
@@ -160,13 +160,13 @@ translate chinese_simplified farm_loop_439b5ef7:
 translate chinese_simplified farm_loop_ff2eb741_1:
 
     # "[mn.name] (level [mn.level] [mn.type]) has been healed."
-    "[mn.name] (level [mn.level] [mn.type]) has been healed."
+    "[mn.name]（等级 [mn.level] [mn.type]）已被治愈。"
 
 # game/BKmain.rpy:706
 translate chinese_simplified farm_loop_bc1a89dd:
 
     # gizel normal "There are no items you can use on minions at the moment."
-    gizel normal "There are no items you can use on minions at the moment."
+    gizel normal "目前没有任何物品可以用于小兵。"
 
 # game/BKmain.rpy:712
 translate chinese_simplified farm_loop_a42c33ca_1:
@@ -184,61 +184,61 @@ translate chinese_simplified farm_loop_439b5ef7_1:
 translate chinese_simplified farm_loop_8ef8f487:
 
     # gizel upset "You can't sell that girl again! The slavemarket won't allow it!"
-    gizel upset "You can't sell that girl again! The slavemarket won't allow it!"
+    gizel upset "你不能再把那个女孩卖掉了！奴隶市场不会允许的！"
 
 # game/BKmain.rpy:942
 translate chinese_simplified main_d95731c8:
 
     # "The headhunter is back with your prize!"
-    "The headhunter is back with your prize!"
+    "猎头带着你的奖品回来了！"
 
 # game/BKmain.rpy:1009
 translate chinese_simplified girls_first_time_72fbcafe:
 
     # sill sad "We didn't buy any slaves, Master. Are you planning to have me do all the work?!"
-    sill sad "We didn't buy any slaves, Master. Are you planning to have me do all the work?!"
+    sill sad "主人，我们没有买奴隶。您打算让我包揽所有工作吗？！"
 
 # game/BKmain.rpy:1011
 translate chinese_simplified girls_first_time_a90f2671:
 
     # sill sad "*shuffles away* I'll just leave you to it, Master. Please ask me later if you have any questions."
-    sill sad "*shuffles away* I'll just leave you to it, Master. Please ask me later if you have any questions."
+    sill sad "*悄悄走开* 我就不打扰您了，主人。如果您有任何问题，请稍后再问我。"
 
 # game/BKmain.rpy:1012
 translate chinese_simplified girls_first_time_faba9c36:
 
     # "Press the '?' button in the top right corner to obtain information on the game or your current screen."
-    "Press the '?' button in the top right corner to obtain information on the game or your current screen."
+    "按右上角的“？”按钮，获取有关游戏或当前屏幕的信息。"
 
 # game/BKmain.rpy:1018
 translate chinese_simplified girls_first_time_9315b88f:
 
     # sill happy "Let's meet your girl, and assign her to her new job."
-    sill happy "Let's meet your girl, and assign her to her new job."
+    sill happy "让我们来见见你的女同事，并安排她上新工作。"
 
 # game/BKmain.rpy:1035
 translate chinese_simplified girls_first_time_8f283a08:
 
     # girl.char "What do you want me to do, Master?" nointeract
-    girl.char "What do you want me to do, Master?" nointeract
+    girl.char "主人，您想让我做什么？" nointeract
 
 # game/BKmain.rpy:1066
 translate chinese_simplified girls_first_time_07129470:
 
     # sill sad "You cannot make her a whore in her current state, you know. She'll run away or harm a customer."
-    sill sad "You cannot make her a whore in her current state, you know. She'll run away or harm a customer."
+    sill sad "你知道，以她现在的状态，你不可能让她去做妓女。她要么会逃跑，要么会伤害客人。"
 
 # game/BKmain.rpy:1070
 translate chinese_simplified girls_first_time_ace77a87:
 
     # sill happy "Would you like to learn more about training your girls to become whores?"
-    sill happy "Would you like to learn more about training your girls to become whores?"
+    sill happy "你想了解更多关于如何训练你的女孩成为妓女的信息吗？"
 
 # game/BKmain.rpy:1079
 translate chinese_simplified girls_first_time_4db6f161:
 
     # "You can access the help menu at any time by clicking the '?' button in the upper-right corner."
-    "You can access the help menu at any time by clicking the '?' button in the upper-right corner."
+    "您可随时点击右上角的“？”按钮访问帮助菜单。"
 
 # game/BKmain.rpy:1084
 translate chinese_simplified girls_first_time_9dd554bc:
@@ -256,7 +256,7 @@ translate chinese_simplified girls_first_time_842c7512:
 translate chinese_simplified girls_first_time_faba9c36_1:
 
     # "Press the '?' button in the top right corner to obtain information on the game or your current screen."
-    "Press the '?' button in the top right corner to obtain information on the game or your current screen."
+    "按右上角的“？”按钮，获取有关游戏或当前屏幕的信息。"
 
 # game/BKmain.rpy:1097
 translate chinese_simplified girls_first_time_91b13b14:
@@ -274,25 +274,25 @@ translate chinese_simplified girls_first_time_12c339c3:
 translate chinese_simplified girls_first_time_faba9c36_2:
 
     # "Press the '?' button in the top right corner to obtain information on the game or your current screen."
-    "Press the '?' button in the top right corner to obtain information on the game or your current screen."
+    "按右上角的“？”按钮，获取有关游戏或当前屏幕的信息。"
 
 # game/BKmain.rpy:1228
 translate chinese_simplified girls_loop_07129470:
 
     # sill sad "You cannot make her a whore in her current state, you know. She'll run away or harm a customer."
-    sill sad "You cannot make her a whore in her current state, you know. She'll run away or harm a customer."
+    sill sad "你知道，以她现在的状态，你不可能让她去做妓女。她要么会逃跑，要么会伤害客人。"
 
 # game/BKmain.rpy:1233
 translate chinese_simplified girls_loop_ace77a87:
 
     # sill happy "Would you like to learn more about training your girls to become whores?"
-    sill happy "Would you like to learn more about training your girls to become whores?"
+    sill happy "你想了解更多关于如何训练你的女孩成为妓女的信息吗？"
 
 # game/BKmain.rpy:1242
 translate chinese_simplified girls_loop_4db6f161:
 
     # "You can access the help menu at any time by clicking the '?' button in the upper-right corner."
-    "You can access the help menu at any time by clicking the '?' button in the upper-right corner."
+    "您可随时点击右上角的“？”按钮访问帮助菜单。"
 
 # game/BKmain.rpy:1248
 translate chinese_simplified girls_loop_477ddccc:
@@ -304,61 +304,61 @@ translate chinese_simplified girls_loop_477ddccc:
 translate chinese_simplified girls_loop_2462b0f0:
 
     # "You cannot send her to the master bedroom because she is away on a [girl.assignment.type]."
-    "You cannot send her to the master bedroom because she is away on a [girl.assignment.type]."
+    "你不能把她送到主卧室，因为她外出执行[girl.assignment.type]任务。"
 
 # game/BKmain.rpy:1273
 translate chinese_simplified girls_loop_fddbc514:
 
     # "You cannot send her to the master bedroom because she is away."
-    "You cannot send her to the master bedroom because she is away."
+    "你不能让她去主卧，因为她不在家。"
 
 # game/BKmain.rpy:1280
 translate chinese_simplified girls_loop_f7ec5341:
 
     # "You cannot send her to your room, as it is full.{w=1.0}{nw}"
-    "You cannot send her to your room, as it is full.{w=1.0}{nw}"
+    "你不能让她去你的房间，因为房间满了。"
 
 # game/BKmain.rpy:1300
 translate chinese_simplified assign_job_exit_07129470:
 
     # sill sad "You cannot make her a whore in her current state, you know. She'll run away or harm a customer."
-    sill sad "You cannot make her a whore in her current state, you know. She'll run away or harm a customer."
+    sill sad "你知道，以她现在的状态，你不可能让她去做妓女。她要么会逃跑，要么会伤害客人。"
 
 # game/BKmain.rpy:1305
 translate chinese_simplified assign_job_exit_ace77a87:
 
     # sill happy "Would you like to learn more about training your girls to become whores?"
-    sill happy "Would you like to learn more about training your girls to become whores?"
+    sill happy "你想了解更多关于如何训练你的女孩成为妓女的信息吗？"
 
 # game/BKmain.rpy:1314
 translate chinese_simplified assign_job_exit_4db6f161:
 
     # "You can access the help menu at any time by clicking the '?' button in the upper-right corner."
-    "You can access the help menu at any time by clicking the '?' button in the upper-right corner."
+    "您可随时点击右上角的“？”按钮访问帮助菜单。"
 
 # game/BKmain.rpy:1323
 translate chinese_simplified assign_job_exit_a6318bf2:
 
     # sill sad "Master, [girl.name] is still too weak and needs more rest. She will resume work as a {b}[girl.job]{/b} when she recovers."
-    sill sad "Master, [girl.name] is still too weak and needs more rest. She will resume work as a {b}[girl.job]{/b} when she recovers."
+    sill sad "主人，[girl.name] 身体还很虚弱，需要更多休息。等她康复后，就会恢复担任{b}[girl.job]{/b}的工作。"
 
 # game/BKmain.rpy:1330
 translate chinese_simplified assign_job_exit_dff0ed7b:
 
     # sill happy "[girl.name] is away on a [girl.assignment.type]. She will resume work as a {b}[girl.job]{/b} after she comes back."
-    sill happy "[girl.name] is away on a [girl.assignment.type]. She will resume work as a {b}[girl.job]{/b} after she comes back."
+    sill happy "[girl.name] 正在执行 [girl.assignment.type] 任务。她回来后将恢复担任 {b}[girl.job]{/b} 的工作。"
 
 # game/BKmain.rpy:1332
 translate chinese_simplified assign_job_exit_53094c57:
 
     # sill happy "[girl.name] is away. She will resume work as a {b}[girl.job]{/b} after she comes back."
-    sill happy "[girl.name] is away. She will resume work as a {b}[girl.job]{/b} after she comes back."
+    sill happy "[girl.name] 暂时不在。她回来后将恢复担任 {b}[girl.job]{/b} 的工作。"
 
 # game/BKmain.rpy:1423
 translate chinese_simplified assign_job_exit_1761bc43:
 
     # sill sad "Master, she cannot progress further until she ranks up."
-    sill sad "Master, she cannot progress further until she ranks up."
+    sill sad "主人，她必须提升等级才能继续前进。"
 
 # game/BKmain.rpy:1430
 translate chinese_simplified assign_job_exit_ccd530c3:
@@ -370,7 +370,7 @@ translate chinese_simplified assign_job_exit_ccd530c3:
 translate chinese_simplified assign_job_exit_e8a6fe50:
 
     # sill "Master, you need [cost] gold to rank up this slave."
-    sill "主人，您需要[费用]金币才能提升这个奴隶的等级。"
+    sill "主人，您需要[cost]金币才能提升这个奴隶的等级。"
 
 # game/BKmain.rpy:1739
 translate chinese_simplified shop_79838e38:
@@ -412,7 +412,7 @@ translate chinese_simplified visit_merchant_loop_f3fd82b7:
 translate chinese_simplified visit_merchant_loop_f08644af:
 
     # right_focus.char "[text1]"
-    right_focus.char "[文本1]"
+    right_focus.char "[text1]"
 
 # game/BKmain.rpy:2150
 translate chinese_simplified postings_94bb5e4e:
@@ -484,5 +484,5 @@ translate chinese_simplified postings_1fa51d9f:
 translate chinese_simplified postings_75b55ded:
 
     # "You do not have any girl available at the moment."
-    "You do not have any girl available at the moment."
+    "你目前没有合适的女孩。"
 

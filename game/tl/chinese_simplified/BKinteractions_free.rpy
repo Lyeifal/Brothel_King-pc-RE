@@ -4,13 +4,13 @@
 translate chinese_simplified free_girl_interact_a16803aa:
 
     # "System" "Label: {color=[c_red]}[city_label]{/color} doesn't exist (Custom girl: {color=[c_red]}[girl.path]{/color})."
-    "System" "标签：{color=[c_red]}[city_label]{/color} 不存在（自定义女孩：{color=[c_red]}[girl.path]{/color}）。"
+    "系统" "标签：{color=[c_red]}[city_label]{/color} 不存在（自定义女孩：{color=[c_red]}[girl.path]{/color}）。"
 
 # game/BKinteractions_free.rpy:28
 translate chinese_simplified free_girl_interact_cb168c77:
 
     # "You do not have any interactions left for today."
-    "You do not have any interactions left for today."
+    "您今天已没有剩余的互动次数。"
 
 # game/BKinteractions_free.rpy:62
 translate chinese_simplified free_girl_talk_e589ac84:
@@ -46,7 +46,7 @@ translate chinese_simplified free_girl_talk_37f1d822:
 translate chinese_simplified free_chat_small_talk_4e6ead66:
 
     # you "[text1]"
-    you "[文本1]"
+    you "[text1]"
 
 # game/BKinteractions_free.rpy:216
 translate chinese_simplified free_chat_life_d4054e47:
@@ -88,61 +88,61 @@ translate chinese_simplified free_chat_dislikes_7cc4a8c3:
 translate chinese_simplified free_joke_harmless_9f482d04:
 
     # you "[joke]"
-    you "[开玩笑]"
+    you "[joke]"
 
 # game/BKinteractions_free.rpy:296
 translate chinese_simplified free_joke_adult_9f482d04:
 
     # you "[joke]"
-    you "[开玩笑]"
+    you "[joke]"
 
 # game/BKinteractions_free.rpy:308
 translate chinese_simplified free_joke_dark_9f482d04:
 
     # you "[joke]"
-    you "[开玩笑]"
+    you "[joke]"
 
 # game/BKinteractions_free.rpy:320
 translate chinese_simplified free_joke_mean_9f482d04:
 
     # you "[joke]"
-    you "[开玩笑]"
+    you "[joke]"
 
 # game/BKinteractions_free.rpy:331
 translate chinese_simplified free_touch_hand_4ba8cd0a:
 
     # "You lightly grab her hand, brushing your fingers against her skin."
-    "You lightly grab her hand, brushing your fingers against her skin."
+    "你轻轻握住她的手，手指拂过她的肌肤。"
 
 # game/BKinteractions_free.rpy:341
 translate chinese_simplified free_touch_kiss_4730e528:
 
     # "Bringing your face closer, you lean in to kiss her."
-    "Bringing your face closer, you lean in to kiss her."
+    "你凑近她的脸，俯身吻了她。"
 
 # game/BKinteractions_free.rpy:352
 translate chinese_simplified free_touch_ass_f3ff0791:
 
     # "*smack*" with vpunch
-    "*smack*" with vpunch
+    "*啪*" with vpunch
 
 # game/BKinteractions_free.rpy:362
 translate chinese_simplified free_touch_breasts_72997f94:
 
     # "You brush your hands against her tits, lightly touching her nipples."
-    "You brush your hands against her tits, lightly touching her nipples."
+    "你用手轻轻拂过她的胸部，轻轻触碰她的乳头。"
 
 # game/BKinteractions_free.rpy:372
 translate chinese_simplified free_touch_pussy_da057d9a:
 
     # "Pressing her body close, you lower your hand between her thighs."
-    "Pressing her body close, you lower your hand between her thighs."
+    "你将她紧紧贴在身上，然后把手伸到她的大腿之间。"
 
 # game/BKinteractions_free.rpy:468
 translate chinese_simplified free_play_8ef1b8f4:
 
     # "Taking her by the hand, you lead her around a corner."
-    "Taking her by the hand, you lead her around a corner."
+    "你牵着她的手，领着她绕过街角。"
 
 # game/BKinteractions_free.rpy:470
 translate chinese_simplified free_play_a784fb2c:
@@ -166,31 +166,31 @@ translate chinese_simplified free_play_030686f5:
 translate chinese_simplified free_play_a5a00ee0:
 
     # "You have taken [girl.name]'s virginity... You earn extra prestige."
-    "You have taken [girl.name]'s virginity... You earn extra prestige."
+    "你夺走了[girl.name]的童贞……你获得了额外的声望。"
 
 # game/BKinteractions_free.rpy:533
 translate chinese_simplified free_flirt_beauty_f0a506af:
 
     # you "[compliment]"
-    you "[赞扬]"
+    you "[compliment]"
 
 # game/BKinteractions_free.rpy:545
 translate chinese_simplified free_flirt_body_f0a506af:
 
     # you "[compliment]"
-    you "[赞扬]"
+    you "[compliment]"
 
 # game/BKinteractions_free.rpy:557
 translate chinese_simplified free_flirt_mind_f0a506af:
 
     # you "[compliment]"
-    you "[赞扬]"
+    you "[compliment]"
 
 # game/BKinteractions_free.rpy:569
 translate chinese_simplified free_flirt_spirit_f0a506af:
 
     # you "[compliment]"
-    you "[赞扬]"
+    you "[compliment]"
 
 # game/BKinteractions_free.rpy:587
 translate chinese_simplified free_flirt_sex_experience_69427b10:
@@ -232,19 +232,19 @@ translate chinese_simplified free_flirt_sex_experience_47894835:
 translate chinese_simplified free_flirt_sex_tastes_be9561ba:
 
     # "She tells you that she is interested in [text1]"
-    "She tells you that she is interested in [text1]"
+    "她告诉你她对[text1]感兴趣"
 
 # game/BKinteractions_free.rpy:686
 translate chinese_simplified free_flirt_sex_tastes_3ac8bfbc:
 
     # "You have discovered [girl.name]'s fixation with [fix.name]."
-    "You have discovered [girl.name]'s fixation with [fix.name]."
+    "你发现了[girl.name]对[fix.name]的迷恋。"
 
 # game/BKinteractions_free.rpy:693
 translate chinese_simplified free_flirt_sex_tastes_be25caff:
 
     # "She blushes as she whispers something to you."
-    "She blushes as she whispers something to you."
+    "她脸红了，低声跟你说了些什么。"
 
 # game/BKinteractions_free.rpy:702
 translate chinese_simplified free_flirt_sex_tastes_f183114b:
@@ -262,19 +262,19 @@ translate chinese_simplified free_flirt_sex_tastes_d95c40a6:
 translate chinese_simplified free_flirt_sex_tastes_93b10a0e:
 
     # "She tells you that [fix.name] disturbs her. It creeps her out."
-    "She tells you that [fix.name] disturbs her. It creeps her out."
+    "她告诉你，[fix.name]让她感到不安，让她毛骨悚然。"
 
 # game/BKinteractions_free.rpy:721
 translate chinese_simplified free_flirt_sex_tastes_2c0cf15f:
 
     # "You have discovered [girl.name]'s disgust for [fix.name]."
-    "You have discovered [girl.name]'s disgust for [fix.name]."
+    "你发现了[girl.name]对[fix.name]的厌恶。"
 
 # game/BKinteractions_free.rpy:729
 translate chinese_simplified free_flirt_sex_tastes_be25caff_1:
 
     # "She blushes as she whispers something to you."
-    "She blushes as she whispers something to you."
+    "她脸红了，低声跟你说了些什么。"
 
 # game/BKinteractions_free.rpy:735
 translate chinese_simplified free_flirt_sex_tastes_fa9f12d0:
@@ -298,7 +298,7 @@ translate chinese_simplified free_flirt_sex_tastes_0bf58f12:
 translate chinese_simplified free_give_gold_a74bdb77:
 
     # you "I want you to have this." nointeract
-    you "I want you to have this." nointeract
+    you "我希望你拥有这个。" nointeract
 
 # game/BKinteractions_free.rpy:923
 translate chinese_simplified free_offer_job_f1898032:
@@ -448,7 +448,7 @@ translate chinese_simplified free_offer_job_b564aa9d:
 translate chinese_simplified free_offer_job_d9a1f9ff:
 
     # "[girl.fullname] has become one of your girls. She will obey you as her Master for the duration of her contract."
-    "[girl.fullname] has become one of your girls. She will obey you as her Master for the duration of her contract."
+    "[girl.fullname] 已成为你的女孩之一。在契约有效期内，她将服从你这位主人。"
 
 # game/BKinteractions_free.rpy:1036
 translate chinese_simplified free_girl_friend_4932d6c2:
@@ -496,7 +496,7 @@ translate chinese_simplified free_girl_friend_d163c101:
 translate chinese_simplified free_girl_friend_18df221b:
 
     # "You and [girl.fullname] are now friends."
-    "You and [girl.fullname] are now friends."
+    "你和[girl.fullname]现在是朋友了。"
 
 # game/BKinteractions_free.rpy:1098
 translate chinese_simplified free_girl_love_interest_30b2e2bd:
@@ -508,7 +508,7 @@ translate chinese_simplified free_girl_love_interest_30b2e2bd:
 translate chinese_simplified free_girl_love_interest_f9f9e0e2:
 
     # "She looks at you with some intensity, then turns her head away."
-    "She looks at you with some intensity, then turns her head away."
+    "她目光灼灼地看着你，然后转过头去。"
 
 # game/BKinteractions_free.rpy:1106
 translate chinese_simplified free_girl_love_interest_7afc2f4f:
@@ -520,7 +520,7 @@ translate chinese_simplified free_girl_love_interest_7afc2f4f:
 translate chinese_simplified free_girl_love_interest_49509bfb:
 
     # "You may now bring [girl.fullname] {b}flowers{/b} to express your interest."
-    "You may now bring [girl.fullname] {b}flowers{/b} to express your interest."
+    "您现在可以送[girl.fullname]{b}鲜花{/b}来表达您的好感。"
 
 # game/BKinteractions_free.rpy:1131
 translate chinese_simplified free_girl_girlfriend_f7432d7f:
@@ -550,7 +550,7 @@ translate chinese_simplified free_girl_girlfriend_d9a9b5f7_1:
 translate chinese_simplified free_girl_girlfriend_0ee8c7a2:
 
     # girl.char "Do you remember what is my [_type] [thing]?"
-    girl.char "你还记得我的[_type] [东西]是什么吗？"
+    girl.char "你还记得我的[_type] [_type]是什么吗？"
 
 # game/BKinteractions_free.rpy:1296
 translate chinese_simplified free_girl_girlfriend_d9a9b5f7_2:
@@ -562,7 +562,7 @@ translate chinese_simplified free_girl_girlfriend_d9a9b5f7_2:
 translate chinese_simplified free_girl_girlfriend_a7e1a2bd:
 
     # "She leans closer to you."
-    "She leans closer to you."
+    "她向你靠近了一些。"
 
 # game/BKinteractions_free.rpy:1309
 translate chinese_simplified free_girl_girlfriend_d21337ea:
@@ -574,7 +574,7 @@ translate chinese_simplified free_girl_girlfriend_d21337ea:
 translate chinese_simplified free_girl_girlfriend_bd20dafe:
 
     # "You may now have extra 'fun' with [girl.fullname]."
-    "You may now have extra 'fun' with [girl.fullname]."
+    "你现在可以和[girl.fullname]一起享受额外的“乐趣”了。"
 
 # game/BKinteractions_free.rpy:1339
 translate chinese_simplified free_girl_girlfriend_7901316a:
@@ -592,41 +592,41 @@ translate chinese_simplified free_girl_girlfriend_7a9a86f9:
 translate chinese_simplified free_girl_job_request_09b64180:
 
     # "[girl.name] rushes to you, looking worried."
-    "[girl.name] rushes to you, looking worried."
+    "[girl.name] 焦急地跑向你。"
 
 # game/BKinteractions_free.rpy:1361
 translate chinese_simplified free_girl_job_request_6e831c52:
 
     # "You can now offer [girl.fullname] a job."
-    "You can now offer [girl.fullname] a job."
+    "你现在可以给[girl.fullname]提供一份工作了。"
 
 # game/BKinteractions_free.rpy:1370
 translate chinese_simplified free_try_interact_5a0b5e85:
 
     # "You can only give a girl money once per day."
-    "You can only give a girl money once per day."
+    "你每天只能给女孩一次钱。"
 
 # game/BKinteractions_free.rpy:1373
 translate chinese_simplified free_try_interact_282713e1:
 
     # "You can only give a girl one present per day."
-    "You can only give a girl one present per day."
+    "你每天只能送女孩一份礼物。"
 
 # game/BKinteractions_free.rpy:1377
 translate chinese_simplified free_try_interact_1e166279:
 
     # "You cannot offer her work as long as your brothel is full."
-    "You cannot offer her work as long as your brothel is full."
+    "只要你的妓院客满，你就不能给她提供工作。"
 
 # game/BKinteractions_free.rpy:1380
 translate chinese_simplified free_try_interact_3e97d836:
 
     # "You cannot offer her work again today."
-    "You cannot offer her work again today."
+    "今天你不能再给她提供工作机会了。"
 
 # game/BKinteractions_free.rpy:1383
 translate chinese_simplified free_try_interact_d2a06ca2:
 
     # "You cannot do the same action with a girl more than 3 times a day."
-    "You cannot do the same action with a girl more than 3 times a day."
+    "一天之内，你不能对同一个女孩做同样的动作超过3次。"
 

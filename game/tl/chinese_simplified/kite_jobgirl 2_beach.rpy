@@ -4,7 +4,7 @@
 translate chinese_simplified jobgirl_beach_1_5c25899c:
 
     # "You wake up early this morning; it is a hot sunny day, and you are in desperate need of fresh air."
-    "You wake up early this morning; it is a hot sunny day, and you are in desperate need of fresh air."
+    "今天早上你醒得很早；天气炎热晴朗，你非常需要呼吸新鲜空气。"
 
 # game/kite_jobgirl 2_beach.rpy:27
 translate chinese_simplified jobgirl_beach_1_3d14c82c:
@@ -16,7 +16,7 @@ translate chinese_simplified jobgirl_beach_1_3d14c82c:
 translate chinese_simplified jobgirl_beach_1_668ea459:
 
     # "You suddenly remember something."
-    "You suddenly remember something."
+    "你突然想起了一件事。"
 
 # game/kite_jobgirl 2_beach.rpy:31
 translate chinese_simplified jobgirl_beach_1_9eebc757:
@@ -28,7 +28,7 @@ translate chinese_simplified jobgirl_beach_1_9eebc757:
 translate chinese_simplified jobgirl_beach_1_008557ff:
 
     # sill sad "Master, *pant*, I'm making breakfast, what do you need? *pant*"
-    sill sad "Master, *pant*, I'm making breakfast, what do you need? *pant*"
+    sill sad "主人，*喘气*，我在做早餐，您需要什么？*喘气*"
 
 # game/kite_jobgirl 2_beach.rpy:43
 translate chinese_simplified jobgirl_beach_1_d75d39bc:
@@ -46,7 +46,7 @@ translate chinese_simplified jobgirl_beach_1_b33464e5:
 translate chinese_simplified jobgirl_beach_1_527bea44:
 
     # sill happy "You said you wanted to make sure she wasn't going to drown, right? Don't worry, she's an excellent swimmer."
-    sill happy "You said you wanted to make sure she wasn't going to drown, right? Don't worry, she's an excellent swimmer."
+    sill happy "你说你想确保她不会溺水，对吧？别担心，她游泳很棒。"
 
 # game/kite_jobgirl 2_beach.rpy:49
 translate chinese_simplified jobgirl_beach_1_9735274c:
@@ -94,7 +94,7 @@ translate chinese_simplified jobgirl_beach_1_472c9bf5:
 translate chinese_simplified jobgirl_beach_1_1b78ddc6:
 
     # sill sad "Master, that's terrible!!!"
-    sill sad "Master, that's terrible!!!"
+    sill sad "师父，太糟糕了！！！"
 
 # game/kite_jobgirl 2_beach.rpy:65
 translate chinese_simplified jobgirl_beach_1_a577ad0e:
@@ -118,7 +118,7 @@ translate chinese_simplified jobgirl_beach_1_bfd08253:
 translate chinese_simplified jobgirl_beach_1_af8155b7:
 
     # sill sad "Master! Hey! Master!"
-    sill sad "Master! Hey! Master!"
+    sill sad "主人！嘿！主人！"
 
 # game/kite_jobgirl 2_beach.rpy:77
 translate chinese_simplified jobgirl_beach_1_1be08bd5:
@@ -130,7 +130,7 @@ translate chinese_simplified jobgirl_beach_1_1be08bd5:
 translate chinese_simplified jobgirl_beach_1_aa594212:
 
     # sill happy "Still, it's nice to see Master [MC.name] cares so much about his lifeguard exam."
-    sill happy "Still, it's nice to see Master [MC.name] cares so much about his lifeguard exam."
+    sill happy "不过，很高兴看到[MC.name]少爷如此重视他的救生员考试。"
 
 # game/kite_jobgirl 2_beach.rpy:81
 translate chinese_simplified jobgirl_beach_1_ba73d4ce:
@@ -142,13 +142,13 @@ translate chinese_simplified jobgirl_beach_1_ba73d4ce:
 translate chinese_simplified jobgirl_beach_1_58ccc8f3:
 
     # "('Lifeguard' duty: Visit the {b}beach{/b} to track the adventurer.)"
-    "('Lifeguard' duty: Visit the {b}beach{/b} to track the adventurer.)"
+    "（“救生员”职责：前往{b}海滩{/b}追踪冒险者。）"
 
 # game/kite_jobgirl 2_beach.rpy:124
 translate chinese_simplified jobgirl_beach_2_c8a0fc9a:
 
     # "You head for the location indicated by Sill. You don't know what to expect once there, but you start fantasizing about the redhead adventurer. You still have in mind how things went when she asked for your help with that stupid riddle."
-    "You head for the location indicated by Sill. You don't know what to expect once there, but you start fantasizing about the redhead adventurer. You still have in mind how things went when she asked for your help with that stupid riddle."
+    "你前往希尔指点的地点。你不知道到了那里会发生什么，但你开始幻想那位红发女冒险家。你仍然记得她请你帮忙解那个愚蠢谜题时的情景。"
 
 # game/kite_jobgirl 2_beach.rpy:126
 translate chinese_simplified jobgirl_beach_2_09323470:
@@ -172,13 +172,13 @@ translate chinese_simplified jobgirl_beach_2_b8a37839:
 translate chinese_simplified jobgirl_beach_2_b1993080:
 
     # "You think about her the whole time, until you arrive at the beach. You have to concentrate, otherwise you will not find the spot Sill showed you."
-    "You think about her the whole time, until you arrive at the beach. You have to concentrate, otherwise you will not find the spot Sill showed you."
+    "你一路都在想着她，直到到达海滩。你必须集中注意力，否则就找不到希尔带你去的那个地方了。"
 
 # game/kite_jobgirl 2_beach.rpy:134
 translate chinese_simplified jobgirl_beach_2_715bc24e:
 
     # "You start looking for the place where you expect to find the adventurer."
-    "You start looking for the place where you expect to find the adventurer."
+    "你开始寻找你认为会遇到冒险者的地方。"
 
 # game/kite_jobgirl 2_beach.rpy:136
 translate chinese_simplified jobgirl_beach_2_fd46cb7f:
@@ -196,13 +196,13 @@ translate chinese_simplified jobgirl_beach_2_f4617725:
 translate chinese_simplified jobgirl_beach_2_6024f7de:
 
     # "You approach her with a calm pace, in order to gather your thoughts, calm down and control your little friend that is threatening to pop out of your trunks."
-    "You approach her with a calm pace, in order to gather your thoughts, calm down and control your little friend that is threatening to pop out of your trunks."
+    "你迈着沉稳的步伐走向她，以便整理思绪，冷静下来，控制住你那随时可能从你的裤子里蹦出来的小家伙。"
 
 # game/kite_jobgirl 2_beach.rpy:146
 translate chinese_simplified jobgirl_beach_2_384b5b4c:
 
     # "Next to her, another girl is taking a sunbath. You give a fast look at her: black hair, fair skin, eyeglasses, gorgeous body..."
-    "Next to her, another girl is taking a sunbath. You give a fast look at her: black hair, fair skin, eyeglasses, gorgeous body..."
+    "她旁边，另一个女孩正在晒日光浴。你飞快地瞥了她一眼：黑发，白皙的皮肤，戴着眼镜，身材曼妙……"
 
 # game/kite_jobgirl 2_beach.rpy:148
 translate chinese_simplified jobgirl_beach_2_21728aa7:
@@ -220,7 +220,7 @@ translate chinese_simplified jobgirl_beach_2_aa707485:
 translate chinese_simplified jobgirl_beach_2_672893ba:
 
     # "As you approach, the girl notices you and immediately jumps off her beach bed to greet you."
-    "As you approach, the girl notices you and immediately jumps off her beach bed to greet you."
+    "当你走近时，女孩注意到你，立即从沙滩床上跳下来迎接你。"
 
 # game/kite_jobgirl 2_beach.rpy:159
 translate chinese_simplified jobgirl_beach_2_1dfd57dd:
@@ -262,7 +262,7 @@ translate chinese_simplified jobgirl_beach_2_6312bad6:
 translate chinese_simplified jobgirl_beach_2_9f140641:
 
     # "She pushes you away gently, like last time."
-    "She pushes you away gently, like last time."
+    "她像上次一样，轻轻地推开了你。"
 
 # game/kite_jobgirl 2_beach.rpy:172
 translate chinese_simplified jobgirl_beach_2_6076fbef:
@@ -292,7 +292,7 @@ translate chinese_simplified jobgirl_beach_2_2b6d4bd1:
 translate chinese_simplified jobgirl_beach_2_0da2b9fc:
 
     # "The redhead girl blushes intensely, her cheeks getting almost as red as her hair."
-    "The redhead girl blushes intensely, her cheeks getting almost as red as her hair."
+    "红发女孩脸颊绯红，几乎和头发一样红了。"
 
 # game/kite_jobgirl 2_beach.rpy:186
 translate chinese_simplified jobgirl_beach_2_3a6c996e:
@@ -358,7 +358,7 @@ translate chinese_simplified jobgirl_beach_2_ede4eeee:
 translate chinese_simplified jobgirl_beach_2_3602d3f3:
 
     # "She gives you a quick kiss on the cheek."
-    "She gives you a quick kiss on the cheek."
+    "她迅速地在你脸颊上亲了一下。"
 
 # game/kite_jobgirl 2_beach.rpy:208
 translate chinese_simplified jobgirl_beach_2_dcfe4a5e:
@@ -370,7 +370,7 @@ translate chinese_simplified jobgirl_beach_2_dcfe4a5e:
 translate chinese_simplified jobgirl_beach_2_16c6a3c9:
 
     # "She runs for the sea like a hurricane, trampling everybody along the way. Anika shakes her head, then tries to catch up with her, apologizing to the bystanders for her friend's behavior."
-    "She runs for the sea like a hurricane, trampling everybody along the way. Anika shakes her head, then tries to catch up with her, apologizing to the bystanders for her friend's behavior."
+    "她像飓风般朝着大海奔去，一路横冲直撞。阿妮卡摇了摇头，然后试图追上她，并为朋友的行为向旁观者道歉。"
 
 # game/kite_jobgirl 2_beach.rpy:214
 translate chinese_simplified jobgirl_beach_2_d6b345cd:
@@ -382,7 +382,7 @@ translate chinese_simplified jobgirl_beach_2_d6b345cd:
 translate chinese_simplified jobgirl_beach_2_9b44f4f3:
 
     # "You follow them to have a good time in the water."
-    "You follow them to have a good time in the water."
+    "你跟着他们一起在水里玩得很开心。"
 
 # game/kite_jobgirl 2_beach.rpy:222
 translate chinese_simplified jobgirl_beach_2_1b6c9bb9:
@@ -400,25 +400,25 @@ translate chinese_simplified jobgirl_beach_2_97435acc:
 translate chinese_simplified jobgirl_beach_2_02c930f5:
 
     # "The girls enjoy swimming and playing in the water. Soon, water droplets shine over their skin, as the sunlight approaching noon intensifies. You are fascinated by their beauty."
-    "The girls enjoy swimming and playing in the water. Soon, water droplets shine over their skin, as the sunlight approaching noon intensifies. You are fascinated by their beauty."
+    "女孩们在水中游泳嬉戏，玩得不亦乐乎。随着临近中午的阳光越来越强烈，水珠在她们的肌肤上闪闪发光。你被她们的美丽深深吸引。"
 
 # game/kite_jobgirl 2_beach.rpy:227
 translate chinese_simplified jobgirl_beach_2_1388a312:
 
     # "On second inspection, Anika is just as hot as Scarlet, although a lot more subtle. Scarlet is so cute, energetic and carefree, but Anika has an even bigger rack, and she's got a perverted look about her. Maybe it's the glasses."
-    "On second inspection, Anika is just as hot as Scarlet, although a lot more subtle. Scarlet is so cute, energetic and carefree, but Anika has an even bigger rack, and she's got a perverted look about her. Maybe it's the glasses."
+    "仔细一看，阿妮卡和斯嘉丽一样性感，只是风格更加含蓄。斯嘉丽可爱、活泼、无忧无虑，但阿妮卡的身材更胜一筹，而且她看起来有点儿放荡不羁。也许是眼镜的缘故吧。"
 
 # game/kite_jobgirl 2_beach.rpy:228
 translate chinese_simplified jobgirl_beach_2_732b8c33:
 
     # "It would be hard for anyone to choose between them if asked to. They would choose both in an instant, if given the chance."
-    "It would be hard for anyone to choose between them if asked to. They would choose both in an instant, if given the chance."
+    "如果被问及此事，任何人都很难在他们之间做出选择。如果给他们机会，他们会毫不犹豫地两个都选。"
 
 # game/kite_jobgirl 2_beach.rpy:229
 translate chinese_simplified jobgirl_beach_2_edc1e1a3:
 
     # "...at least, {i}you{/i} would!"
-    "...at least, {i}you{/i} would!"
+    "至少，{i}你{/i}会！"
 
 # game/kite_jobgirl 2_beach.rpy:231
 translate chinese_simplified jobgirl_beach_2_aefff77e:
@@ -430,7 +430,7 @@ translate chinese_simplified jobgirl_beach_2_aefff77e:
 translate chinese_simplified jobgirl_beach_2_234633da:
 
     # jobgirl "Oh no! I hate it! NNuoahahah! Pleaseeahah stop! uhnaaahahah!! Eek! I'm losing my top!" with vpunch
-    jobgirl "Oh no! I hate it! NNuoahahah! Pleaseeahah stop! uhnaaahahah!! Eek! I'm losing my top!" with vpunch
+    jobgirl "哦不！我讨厌这样！啊啊啊啊！求求你停下来！啊啊啊啊啊！！哎呀！我的上衣要掉了！" with vpunch
 
 # game/kite_jobgirl 2_beach.rpy:235
 translate chinese_simplified jobgirl_beach_2_5d6d132b:
@@ -442,19 +442,19 @@ translate chinese_simplified jobgirl_beach_2_5d6d132b:
 translate chinese_simplified jobgirl_beach_2_c921b8d3:
 
     # "(Visit the {b}beach{/b} again after some time to progress your relationship.)"
-    "(Visit the {b}beach{/b} again after some time to progress your relationship.)"
+    "（过一段时间再去{b}海滩{/b}，有助于增进你们的关系。）"
 
 # game/kite_jobgirl 2_beach.rpy:255
 translate chinese_simplified jobgirl_beach_3_8ca932be:
 
     # "Another day at the beach with Scarlet and Anika."
-    "Another day at the beach with Scarlet and Anika."
+    "和 Scarlet、Anika 又在海滩上度过了一天。"
 
 # game/kite_jobgirl 2_beach.rpy:256
 translate chinese_simplified jobgirl_beach_3_b396cc55:
 
     # "After an hour spent playing and swimming in the sea, you head back to the shore. The girls dry themselves and lay down their towels under the sun."
-    "After an hour spent playing and swimming in the sea, you head back to the shore. The girls dry themselves and lay down their towels under the sun."
+    "在海里玩耍游泳一个小时后，你们返回岸边。女孩们擦干身体，把毛巾铺在阳光下。"
 
 # game/kite_jobgirl 2_beach.rpy:260
 translate chinese_simplified jobgirl_beach_3_22406422:
@@ -484,7 +484,7 @@ translate chinese_simplified jobgirl_beach_3_4d92bc5c:
 translate chinese_simplified jobgirl_beach_3_c0767fa7:
 
     # "Before she can notice something is going on under your trunks, you take a towel and wrap it around your abdomen."
-    "Before she can notice something is going on under your trunks, you take a towel and wrap it around your abdomen."
+    "在她注意到你泳裤下发生了什么之前，你拿了一条毛巾裹住你的腹部。"
 
 # game/kite_jobgirl 2_beach.rpy:276
 translate chinese_simplified jobgirl_beach_3_28d90e5d:
@@ -526,13 +526,13 @@ translate chinese_simplified jobgirl_beach_3_0fb1bda5:
 translate chinese_simplified jobgirl_beach_3_58c4fbec:
 
     # "You take your coin purse and head towards the direction Anika indicated."
-    "You take your coin purse and head towards the direction Anika indicated."
+    "你拿起零钱包，朝着阿妮卡指的方向走去。"
 
 # game/kite_jobgirl 2_beach.rpy:292
 translate chinese_simplified jobgirl_beach_3_f99524ad:
 
     # "The kiosk for cool drinks is not so far; you order two cocktails for the girls."
-    "The kiosk for cool drinks is not so far; you order two cocktails for the girls."
+    "卖冷饮的小亭子不远，你给女孩们点了两杯鸡尾酒。"
 
 # game/kite_jobgirl 2_beach.rpy:296
 translate chinese_simplified jobgirl_beach_3_72179799:
@@ -544,31 +544,31 @@ translate chinese_simplified jobgirl_beach_3_72179799:
 translate chinese_simplified jobgirl_beach_3_a357db74:
 
     # "You come back with the drinks, and when everyone has his own in hand you make a happy toast for the good day you're having. Anika looks pleased about the drink you chose for yourself, while Scarlet seems a little disappointed."
-    "You come back with the drinks, and when everyone has his own in hand you make a happy toast for the good day you're having. Anika looks pleased about the drink you chose for yourself, while Scarlet seems a little disappointed."
+    "你端着饮料回来，等大家都拿到自己的饮料后，你兴高采烈地举杯庆祝这美好的一天。安妮卡对你给自己选的饮料看起来很满意，而斯嘉丽则显得有些失望。"
 
 # game/kite_jobgirl 2_beach.rpy:308
 translate chinese_simplified jobgirl_beach_3_797e37a5:
 
     # "You come back with the drinks, and when everyone has his own in hand you make a happy toast for the good day you're having. Both girls are happy you took the same cocktail for everyone."
-    "You come back with the drinks, and when everyone has his own in hand you make a happy toast for the good day you're having. Both girls are happy you took the same cocktail for everyone."
+    "你端着饮料回来，等每个人都拿到自己的那杯后，你兴高采烈地举杯庆祝这美好的一天。两个女孩都很高兴你给大家点了同样的鸡尾酒。"
 
 # game/kite_jobgirl 2_beach.rpy:312
 translate chinese_simplified jobgirl_beach_3_a00474e7:
 
     # "You come back with the drinks, and when everyone has his own in hand you make a happy toast for the good day you're having. Anika looks a little displeased about the drink you chose for yourself, while Scarlet seems pleased you took her advice concerning alcohol."
-    "You come back with the drinks, and when everyone has his own in hand you make a happy toast for the good day you're having. Anika looks a little displeased about the drink you chose for yourself, while Scarlet seems pleased you took her advice concerning alcohol."
+    "你端着酒回来，等大家都拿到酒后，你兴高采烈地举杯庆祝这美好的一天。安妮卡似乎对你给自己选的酒有点不满意，而斯嘉丽则很高兴你听从了她关于喝酒的建议。"
 
 # game/kite_jobgirl 2_beach.rpy:318
 translate chinese_simplified jobgirl_beach_3_80fda2cc:
 
     # "After the toast and some more fun in the water, you spend the rest of the day getting some more tan and chatting about various gossips."
-    "After the toast and some more fun in the water, you spend the rest of the day getting some more tan and chatting about various gossips."
+    "祝酒之后，大家又在水中玩了一会儿，剩下的时间你们就用来晒日光浴和聊各种八卦。"
 
 # game/kite_jobgirl 2_beach.rpy:320
 translate chinese_simplified jobgirl_beach_3_dadac91e:
 
     # "Most of the conversations are about Scarlet's latest quests. You learn she lives right next to the posting board in order to get the best jobs first. But she also likes to help newbies getting jobs."
-    "Most of the conversations are about Scarlet's latest quests. You learn she lives right next to the posting board in order to get the best jobs first. But she also likes to help newbies getting jobs."
+    "大部分对话都围绕着斯嘉丽最近的任务展开。你会了解到，为了第一时间抢到最好的工作，她就住在公告栏旁边。不过，她也很乐意帮助新手找到工作。"
 
 # game/kite_jobgirl 2_beach.rpy:324
 translate chinese_simplified jobgirl_beach_3_187f7c67:
@@ -580,7 +580,7 @@ translate chinese_simplified jobgirl_beach_3_187f7c67:
 translate chinese_simplified jobgirl_beach_3_540cfe9d:
 
     # "The time goes by, soon the sun starts setting over the horizon. You start packing your things and get ready to head home."
-    "The time goes by, soon the sun starts setting over the horizon. You start packing your things and get ready to head home."
+    "时间一分一秒地过去，太阳很快就要落山了。你开始收拾行李，准备回家。"
 
 # game/kite_jobgirl 2_beach.rpy:328
 translate chinese_simplified jobgirl_beach_3_72b8161f:
@@ -634,31 +634,31 @@ translate chinese_simplified jobgirl_beach_3_090ef040:
 translate chinese_simplified jobgirl_beach_3_aa235491:
 
     # "Before you part with the girls, they promise you that you will soon spend another day together, as long as you let them know when you have free time again."
-    "Before you part with the girls, they promise you that you will soon spend another day together, as long as you let them know when you have free time again."
+    "在和女孩们告别之前，她们向你保证，只要你下次有空的时候告诉她们，你们很快就会再一起度过一天。"
 
 # game/kite_jobgirl 2_beach.rpy:346
 translate chinese_simplified jobgirl_beach_3_dbff6cc1:
 
     # "(Keep visiting the {b}beach{/b} to meet Scarlet and Anika again.)"
-    "(Keep visiting the {b}beach{/b} to meet Scarlet and Anika again.)"
+    "（请继续前往{b}海滩{/b}与斯嘉丽和阿妮卡再次相遇。）"
 
 # game/kite_jobgirl 2_beach.rpy:352
 translate chinese_simplified jobgirl_beach_3_97279f4c:
 
     # "You have spent all your actions for the day."
-    "You have spent all your actions for the day."
+    "你今天的行动次数已用完。"
 
 # game/kite_jobgirl 2_beach.rpy:354
 translate chinese_simplified jobgirl_beach_3_2502efd3:
 
     # "Keep visiting the {b}beach{/b} after some time to meet the girls again."
-    "Keep visiting the {b}beach{/b} after some time to meet the girls again."
+    "过一段时间再去{b}海滩{/b}，再次与女孩们见面。"
 
 # game/kite_jobgirl 2_beach.rpy:369
 translate chinese_simplified jobgirl_beach_4_d3e5498d:
 
     # "This morning, you are ready for another day at the beach; Anika sent you a letter inviting you to join the girls again at the same place, writing they will wait for you."
-    "This morning, you are ready for another day at the beach; Anika sent you a letter inviting you to join the girls again at the same place, writing they will wait for you."
+    "今天早上，你准备好去海滩玩一天了；阿妮卡给你写了一封信，邀请你再次和女孩们在同一个地方见面，信中说她们会等你。"
 
 # game/kite_jobgirl 2_beach.rpy:371
 translate chinese_simplified jobgirl_beach_4_eb1caf89:
@@ -670,13 +670,13 @@ translate chinese_simplified jobgirl_beach_4_eb1caf89:
 translate chinese_simplified jobgirl_beach_4_76676073:
 
     # "You leave your instructions for the day with Sill, then head to the beach. You worked hard lately, so you feel you need and deserve a day off."
-    "You leave your instructions for the day with Sill, then head to the beach. You worked hard lately, so you feel you need and deserve a day off."
+    "你把今天的工作安排告诉了希尔，然后就去海滩了。你最近工作很辛苦，所以你觉得你需要也应该休息一天。"
 
 # game/kite_jobgirl 2_beach.rpy:375
 translate chinese_simplified jobgirl_beach_4_cdf7da87:
 
     # "Soon, you arrive at your now usual place, where you find Anika. Scarlet is nowhere in sight."
-    "Soon, you arrive at your now usual place, where you find Anika. Scarlet is nowhere in sight."
+    "很快，你到达了你现在常去的地方，在那里你找到了阿妮卡。斯嘉丽却不见踪影。"
 
 # game/kite_jobgirl 2_beach.rpy:381
 translate chinese_simplified jobgirl_beach_4_45e8c885:
@@ -694,7 +694,7 @@ translate chinese_simplified jobgirl_beach_4_a5dd69f1:
 translate chinese_simplified jobgirl_beach_4_d3a1250d:
 
     # "Anika is laying down on her belly; her huge tits are almost bursting out of her swimsuit. She seems to notice what you are looking at and smiles mischievously."
-    "Anika is laying down on her belly; her huge tits are almost bursting out of her swimsuit. She seems to notice what you are looking at and smiles mischievously."
+    "阿妮卡趴在泳衣上，她那对丰满的乳房几乎要撑破泳衣。她似乎注意到了你的目光，露出了狡黠的笑容。"
 
 # game/kite_jobgirl 2_beach.rpy:387
 translate chinese_simplified jobgirl_beach_4_7c832451:
@@ -730,7 +730,7 @@ translate chinese_simplified jobgirl_beach_4_c1e3bd60:
 translate chinese_simplified jobgirl_beach_4_09f76194:
 
     # you "What?!?" with vpunch
-    you "What?!?" with vpunch
+    you "什么？！？" with vpunch
 
 # game/kite_jobgirl 2_beach.rpy:399
 translate chinese_simplified jobgirl_beach_4_57406f2d:
@@ -742,13 +742,13 @@ translate chinese_simplified jobgirl_beach_4_57406f2d:
 translate chinese_simplified jobgirl_beach_4_ab05f6a3:
 
     # "While talking she changes position on her chair, getting on all fours. You can clearly see her huge breasts waving back and forth. She raises her butt and shakes it seductively."
-    "While talking she changes position on her chair, getting on all fours. You can clearly see her huge breasts waving back and forth. She raises her butt and shakes it seductively."
+    "说话间，她变换了椅子上的姿势，四肢着地。你可以清楚地看到她丰满的乳房随着动作上下晃动。她抬起臀部，性感地扭动着。"
 
 # game/kite_jobgirl 2_beach.rpy:406
 translate chinese_simplified jobgirl_beach_4_32643d34:
 
     # "If not for her swimsuit, you could clearly see her cunt. You realize that she's teasing you, but you're not sure if she really wants it, or she's testing you. Maybe she's got ulterior motives."
-    "If not for her swimsuit, you could clearly see her cunt. You realize that she's teasing you, but you're not sure if she really wants it, or she's testing you. Maybe she's got ulterior motives."
+    "要不是她穿着泳衣，你肯定能清楚地看到她的私处。你意识到她在挑逗你，但你不确定她是不是真的想要，还是只是在试探你。或许她另有所图。"
 
 # game/kite_jobgirl 2_beach.rpy:410
 translate chinese_simplified jobgirl_beach_4_8ad80c75:
@@ -802,7 +802,7 @@ translate chinese_simplified jobgirl_beach_4_1ec6a1f3:
 translate chinese_simplified jobgirl_beach_4_0bb5da97:
 
     # "She gets closer, flashing her boobs to you. You start sweating a lot, and not because of the sun."
-    "She gets closer, flashing her boobs to you. You start sweating a lot, and not because of the sun."
+    "她走近你，故意露出胸部。你开始大量出汗，但不是因为太阳晒的。"
 
 # game/kite_jobgirl 2_beach.rpy:442
 translate chinese_simplified jobgirl_beach_4_ec330307:
@@ -814,13 +814,13 @@ translate chinese_simplified jobgirl_beach_4_ec330307:
 translate chinese_simplified jobgirl_beach_4_5b046348:
 
     # "What do you want to do?"
-    "What do you want to do?"
+    "你想让我做什么？"
 
 # game/kite_jobgirl 2_beach.rpy:463
 translate chinese_simplified jobgirl_beach_4_0ebc0ddb:
 
     # "Staring at her tits you feel your cock getting harder and harder, even knowing you're in a public and open place, you can't resist anymore."
-    "Staring at her tits you feel your cock getting harder and harder, even knowing you're in a public and open place, you can't resist anymore."
+    "盯着她的乳房，你感觉自己的阴茎越来越硬，即使明知身处公共场所，你也无法抗拒。"
 
 # game/kite_jobgirl 2_beach.rpy:465
 translate chinese_simplified jobgirl_beach_4_a8a70c4e:
@@ -850,7 +850,7 @@ translate chinese_simplified jobgirl_beach_4_3260a7c0:
 translate chinese_simplified jobgirl_beach_4_07cdf5c5:
 
     # "She smiles seductively and stares at your full erect cock, while you start stroking a few centimeters from her chest."
-    "She smiles seductively and stares at your full erect cock, while you start stroking a few centimeters from her chest."
+    "她露出诱人的微笑，盯着你完全勃起的阴茎，而你开始抚摸距离她胸部几厘米的地方。"
 
 # game/kite_jobgirl 2_beach.rpy:481
 translate chinese_simplified jobgirl_beach_4_4eea914d:
@@ -862,7 +862,7 @@ translate chinese_simplified jobgirl_beach_4_4eea914d:
 translate chinese_simplified jobgirl_beach_4_9cadf97a:
 
     # "You raise the pace of your strokes while you imagine the scene she describes. It almost feels like she's doing it for real!"
-    "You raise the pace of your strokes while you imagine the scene she describes. It almost feels like she's doing it for real!"
+    "你一边加快划水速度，一边想象着她描述的场景。感觉就像她真的在做这件事一样！"
 
 # game/kite_jobgirl 2_beach.rpy:485
 translate chinese_simplified jobgirl_beach_4_289c8904:
@@ -892,7 +892,7 @@ translate chinese_simplified jobgirl_beach_4_ab5ae628:
 translate chinese_simplified jobgirl_beach_4_059ed46a:
 
     # "She's whispering in your ear, her voice is a natural aphrodisiac to you. You can't take it any longer, feeling you're almost ready to cum."
-    "She's whispering in your ear, her voice is a natural aphrodisiac to you. You can't take it any longer, feeling you're almost ready to cum."
+    "她在你耳边轻声细语，她的声音对你来说就像天然的催情剂。你再也无法忍受，感觉自己快要达到高潮了。"
 
 # game/kite_jobgirl 2_beach.rpy:495
 translate chinese_simplified jobgirl_beach_4_3d0673d9:
@@ -910,25 +910,25 @@ translate chinese_simplified jobgirl_beach_4_461b7b57:
 translate chinese_simplified jobgirl_beach_4_d70654a4:
 
     # you "Hun!" with vpunch
-    you "Hun!" with vpunch
+    you "哼！" with vpunch
 
 # game/kite_jobgirl 2_beach.rpy:505
 translate chinese_simplified jobgirl_beach_4_dd94373b:
 
     # you "Here!" with vpunch
-    you "Here!" with vpunch
+    you "这里！" with vpunch
 
 # game/kite_jobgirl 2_beach.rpy:507
 translate chinese_simplified jobgirl_beach_4_f8d21186:
 
     # you "Take this!" with vpunch
-    you "Take this!" with vpunch
+    you "拿着！" with vpunch
 
 # game/kite_jobgirl 2_beach.rpy:509
 translate chinese_simplified jobgirl_beach_4_e5edcb65:
 
     # "You unload your semen all over her breasts; she moans a little when she feels it on her skin."
-    "You unload your semen all over her breasts; she moans a little when she feels it on her skin."
+    "你将精液射在她胸部；当她感觉到精液沾到皮肤上时，她轻轻呻吟了一声。"
 
 # game/kite_jobgirl 2_beach.rpy:513
 translate chinese_simplified jobgirl_beach_4_cd31aed5:
@@ -940,7 +940,7 @@ translate chinese_simplified jobgirl_beach_4_cd31aed5:
 translate chinese_simplified jobgirl_beach_4_589daf60:
 
     # "You notice she got wet down there, she must have enjoyed the moment as much as you did. Then you realize her fingers are a little wet too: she masturbated while you were 'concentrated' without you even noticing that."
-    "You notice she got wet down there, she must have enjoyed the moment as much as you did. Then you realize her fingers are a little wet too: she masturbated while you were 'concentrated' without you even noticing that."
+    "你注意到她下面湿了，看来她和你一样享受那一刻。然后你意识到她的手指也有些湿润：在你“专注”的时候，她竟然自慰了，而你却浑然不觉。"
 
 # game/kite_jobgirl 2_beach.rpy:521
 translate chinese_simplified jobgirl_beach_4_e972644d:
@@ -952,7 +952,7 @@ translate chinese_simplified jobgirl_beach_4_e972644d:
 translate chinese_simplified jobgirl_beach_4_c0d60bdf:
 
     # "She heads to the showers, her sexy walk accentuating the beauty of her thighs and butt. Even though you came a few seconds ago, your bulge raises up again."
-    "She heads to the showers, her sexy walk accentuating the beauty of her thighs and butt. Even though you came a few seconds ago, your bulge raises up again."
+    "她走向淋浴间，性感的步伐更衬托出她优美的大腿和臀部曲线。尽管你几秒钟前才射精，你的下身却又再次隆起。"
 
 # game/kite_jobgirl 2_beach.rpy:525
 translate chinese_simplified jobgirl_beach_4_d246fb15:
@@ -964,31 +964,31 @@ translate chinese_simplified jobgirl_beach_4_d246fb15:
 translate chinese_simplified jobgirl_beach_4_e84d2074:
 
     # "Anika dashes into the locker room, she seems very amused. And she's very fast too! You decide to take some more time to make her wait a bit, then you enter the room. By the sound of the running water, she must be taking her shower already."
-    "Anika dashes into the locker room, she seems very amused. And she's very fast too! You decide to take some more time to make her wait a bit, then you enter the room. By the sound of the running water, she must be taking her shower already."
+    "阿妮卡冲进更衣室，看起来兴致勃勃。而且她速度也很快！你决定再等一会儿，让她等等，然后才走进房间。听水声，她应该已经在洗澡了。"
 
 # game/kite_jobgirl 2_beach.rpy:535
 translate chinese_simplified jobgirl_beach_4_eaf0cfac:
 
     # "In the steam of the hot water you find her gorgeous silhouette."
-    "In the steam of the hot water you find her gorgeous silhouette."
+    "在热水的蒸汽中，可以看到她曼妙的身影。"
 
 # game/kite_jobgirl 2_beach.rpy:539
 translate chinese_simplified jobgirl_beach_4_6e98de8f:
 
     # "She stares at you, especially at your full erect cock after you take off your trunks. Her expression full of lust inviting you to join her immediately without saying a word."
-    "She stares at you, especially at your full erect cock after you take off your trunks. Her expression full of lust inviting you to join her immediately without saying a word."
+    "她盯着你看，尤其是在你脱下泳裤后，目光更是直直地落在你勃起的阴茎上。她脸上充满欲望的表情，仿佛在邀请你立刻加入她，一句话也没说。"
 
 # game/kite_jobgirl 2_beach.rpy:541
 translate chinese_simplified jobgirl_beach_4_f6b4ab8c:
 
     # "You approach her quickly, then you put your hands on her hips and gently force her to bend over. Without wasting time your cock enters her pussy, without any resistance."
-    "You approach her quickly, then you put your hands on her hips and gently force her to bend over. Without wasting time your cock enters her pussy, without any resistance."
+    "你迅速靠近她，然后双手放在她的臀部，轻轻地让她弯下腰。你的阴茎毫不犹豫地进入了她的阴道，她没有丝毫抵抗。"
 
 # game/kite_jobgirl 2_beach.rpy:547
 translate chinese_simplified jobgirl_beach_4_2e70ba12:
 
     # "She starts moaning at the pace of your strokes."
-    "She starts moaning at the pace of your strokes."
+    "她开始随着你的抽插节奏呻吟。"
 
 # game/kite_jobgirl 2_beach.rpy:551
 translate chinese_simplified jobgirl_beach_4_2f71bae3:
@@ -1000,13 +1000,13 @@ translate chinese_simplified jobgirl_beach_4_2f71bae3:
 translate chinese_simplified jobgirl_beach_4_43d05a7a:
 
     # "The squishing sound of your dick coming in and out her cunt stands even above the showering water falling on your bodies and the ground."
-    "The squishing sound of your dick coming in and out her cunt stands even above the showering water falling on your bodies and the ground."
+    "你的阴茎在她阴道里进进出出时发出的啪啪声，甚至盖过了淋浴水落在你们身体和地面上的声音。"
 
 # game/kite_jobgirl 2_beach.rpy:555
 translate chinese_simplified jobgirl_beach_4_f37e6ee0:
 
     # "She moans louder when you start stimulating her sensitive spots inside her vagina."
-    "She moans louder when you start stimulating her sensitive spots inside her vagina."
+    "当你开始刺激她阴道内的敏感点时，她会发出更大的呻吟声。"
 
 # game/kite_jobgirl 2_beach.rpy:557
 translate chinese_simplified jobgirl_beach_4_785d0630:
@@ -1036,43 +1036,43 @@ translate chinese_simplified jobgirl_beach_4_0f5dc5cd:
 translate chinese_simplified jobgirl_beach_4_5ea34c6c:
 
     # "You feel her cunt wrapping tighter around your cock, feeling like she's sucking it with her pussy; you make a last effort to hit her cervix with your final thrusts."
-    "You feel her cunt wrapping tighter around your cock, feeling like she's sucking it with her pussy; you make a last effort to hit her cervix with your final thrusts."
+    "你感觉她的阴道紧紧地包裹着你的阴茎，感觉就像她用阴道在吸吮它；你做最后的努力，用最后的冲刺击中她的子宫颈。"
 
 # game/kite_jobgirl 2_beach.rpy:569
 translate chinese_simplified jobgirl_beach_4_676a8210:
 
     # you "Uhn!" with vpunch
-    you "Uhn!" with vpunch
+    you "嗯！" with vpunch
 
 # game/kite_jobgirl 2_beach.rpy:571
 translate chinese_simplified jobgirl_beach_4_596a8653:
 
     # anika "Oh gods!" with vpunch
-    anika "Oh gods!" with vpunch
+    anika "我的天哪！" with vpunch
 
 # game/kite_jobgirl 2_beach.rpy:575
 translate chinese_simplified jobgirl_beach_4_9890c4d1:
 
     # you "So tight!" with vpunch
-    you "So tight!" with vpunch
+    you "好紧！" with vpunch
 
 # game/kite_jobgirl 2_beach.rpy:577
 translate chinese_simplified jobgirl_beach_4_7706caa4:
 
     # anika "Yes! Yes! Deeper!" with vpunch
-    anika "Yes! Yes! Deeper!" with vpunch
+    anika "是的！是的！更深！" with vpunch
 
 # game/kite_jobgirl 2_beach.rpy:581
 translate chinese_simplified jobgirl_beach_4_319db9e6:
 
     # "With such strong stimulations, she can't take it anymore."
-    "With such strong stimulations, she can't take it anymore."
+    "受到如此强烈的刺激，她再也承受不住了。"
 
 # game/kite_jobgirl 2_beach.rpy:583
 translate chinese_simplified jobgirl_beach_4_8c0c72cc:
 
     # anika "Oh gods! W-what are you- Ahn, ahn, d-doing... d-don't stop! Don't you dare stop now! Mmh aaah! I'm... I'm... Aaaahum! Ah!" with vpunch
-    anika "Oh gods! W-what are you- Ahn, ahn, d-doing... d-don't stop! Don't you dare stop now! Mmh aaah! I'm... I'm... Aaaahum! Ah!" with vpunch
+    anika "我的天哪！你、你在干什么……啊，啊，你、你在做什么……别停！你现在可别停！嗯……啊！我……我……啊啊啊！啊！" with vpunch
 
 # game/kite_jobgirl 2_beach.rpy:591
 translate chinese_simplified jobgirl_beach_4_53087f6f:
@@ -1108,7 +1108,7 @@ translate chinese_simplified jobgirl_beach_4_7fcf7ee3:
 translate chinese_simplified jobgirl_beach_4_14d74d88:
 
     # you "Urgh!" with vpunch
-    you "Urgh!" with vpunch
+    you "呃！" with vpunch
 
 # game/kite_jobgirl 2_beach.rpy:608
 translate chinese_simplified jobgirl_beach_4_7c939ccc:
@@ -1120,7 +1120,7 @@ translate chinese_simplified jobgirl_beach_4_7c939ccc:
 translate chinese_simplified jobgirl_beach_4_dc05eba1:
 
     # "A few instants before you ejaculate, you pull your cock out of her, then shoot your load on her buttocks."
-    "A few instants before you ejaculate, you pull your cock out of her, then shoot your load on her buttocks."
+    "在你射精前的一瞬间，你把阴茎从她体内抽出，然后把精液射到她的臀部上。"
 
 # game/kite_jobgirl 2_beach.rpy:616
 translate chinese_simplified jobgirl_beach_4_7fb3b3ac:
@@ -1138,7 +1138,7 @@ translate chinese_simplified jobgirl_beach_4_79867d82:
 translate chinese_simplified jobgirl_beach_4_1a87d5c7:
 
     # "Anika takes a moment to recover, then she puts her swimsuit on. Her expression is quite unreadable."
-    "Anika takes a moment to recover, then she puts her swimsuit on. Her expression is quite unreadable."
+    "阿妮卡缓了一会儿，然后穿上泳衣。她的表情难以捉摸。"
 
 # game/kite_jobgirl 2_beach.rpy:629
 translate chinese_simplified jobgirl_beach_4_300ce520:
@@ -1240,19 +1240,19 @@ translate chinese_simplified jobgirl_beach_4_c01c48f1:
 translate chinese_simplified jobgirl_beach_4_8b310ff0:
 
     # "You reflect on Anika's words and imagine Scarlet spending her time at the posting corner, looking for a quest, or somewhere out in the countryside."
-    "You reflect on Anika's words and imagine Scarlet spending her time at the posting corner, looking for a quest, or somewhere out in the countryside."
+    "你回想起阿尼卡的话，想象着斯嘉丽在告示牌旁寻找任务，或者在乡间某个地方消磨时光。"
 
 # game/kite_jobgirl 2_beach.rpy:663
 translate chinese_simplified jobgirl_beach_4_8e01e8b6:
 
     # "Then you realize that the average man she can meet in her life is the classic improvised adventurer, a guy who barely knows how to handle a weapon, less much how to deal with a woman."
-    "Then you realize that the average man she can meet in her life is the classic improvised adventurer, a guy who barely knows how to handle a weapon, less much how to deal with a woman."
+    "然后你就会意识到，她一生中遇到的普通男人都是典型的即兴冒险家，一个几乎不知道如何使用武器，更别提如何与女人相处的家伙。"
 
 # game/kite_jobgirl 2_beach.rpy:664
 translate chinese_simplified jobgirl_beach_4_f8acb32a:
 
     # "This, when she's lucky; otherwise the choice is among bandits, ruffians and other infamous adventurers."
-    "This, when she's lucky; otherwise the choice is among bandits, ruffians and other infamous adventurers."
+    "这还得看她运气如何；否则，她只能在强盗、恶棍和其他臭名昭著的冒险者之间做出选择。"
 
 # game/kite_jobgirl 2_beach.rpy:666
 translate chinese_simplified jobgirl_beach_4_895370b8:
@@ -1312,7 +1312,7 @@ translate chinese_simplified jobgirl_beach_4_7ad44b48:
 translate chinese_simplified jobgirl_beach_4_8f067d54:
 
     # "She stares at your crotch for a moment; you follow her eyes and see your little friend taking new vigor, almost ready for another round."
-    "She stares at your crotch for a moment; you follow her eyes and see your little friend taking new vigor, almost ready for another round."
+    "她盯着你的胯部看了一会儿；你顺着她的目光看去，发现你的小兄弟又恢复了活力，几乎准备进行下一轮了。"
 
 # game/kite_jobgirl 2_beach.rpy:686
 translate chinese_simplified jobgirl_beach_4_5e015473:
@@ -1324,7 +1324,7 @@ translate chinese_simplified jobgirl_beach_4_5e015473:
 translate chinese_simplified jobgirl_beach_4_76eba428:
 
     # "She kisses you passionately, making your bulge even harder."
-    "She kisses you passionately, making your bulge even harder."
+    "她热情地吻你，让你的下身更加坚挺。"
 
 # game/kite_jobgirl 2_beach.rpy:692
 translate chinese_simplified jobgirl_beach_4_b8ded712:
@@ -1336,7 +1336,7 @@ translate chinese_simplified jobgirl_beach_4_b8ded712:
 translate chinese_simplified jobgirl_beach_4_541b9a18:
 
     # "You take a long shower, lost in thoughts on what happened with Anika and what little you've learned about her redhead friend."
-    "You take a long shower, lost in thoughts on what happened with Anika and what little you've learned about her redhead friend."
+    "你洗了个很长的澡，思绪万千，想着阿尼卡身上发生的事情，以及你对她那位红发朋友的一点点了解。"
 
 # game/kite_jobgirl 2_beach.rpy:698
 translate chinese_simplified jobgirl_beach_4_0132edf3:
@@ -1354,7 +1354,7 @@ translate chinese_simplified jobgirl_beach_4_c2530b10:
 translate chinese_simplified jobgirl_beach_4_4f46d208:
 
     # "After a while you leave the locker room and go back home. Without the two girls around, you find no reason to stay here longer."
-    "After a while you leave the locker room and go back home. Without the two girls around, you find no reason to stay here longer."
+    "过了一会儿，你离开了更衣室，回家了。没有了那两个女孩在身边，你觉得没有理由再待在这里了。"
 
 # game/kite_jobgirl 2_beach.rpy:711
 translate chinese_simplified jobgirl_beach_4_b22a6a6f:
@@ -1480,7 +1480,7 @@ translate chinese_simplified jobgirl_beach_4_039a4bd4:
 translate chinese_simplified jobgirl_beach_4_6256df33:
 
     # "You stay for a while then take your leave. You're still a bit upset about how Anika tried to seduce you on the beach."
-    "You stay for a while then take your leave. You're still a bit upset about how Anika tried to seduce you on the beach."
+    "你待了一会儿就离开了。你仍然对安妮卡在海滩上试图勾引你的事情感到有些恼火。"
 
 # game/kite_jobgirl 2_beach.rpy:761
 translate chinese_simplified jobgirl_beach_4_a0d34c49:
@@ -1498,25 +1498,25 @@ translate chinese_simplified jobgirl_beach_4_6c535603:
 translate chinese_simplified jobgirl_beach_4_72ed4b3a:
 
     # "You leave the beach and go home."
-    "You leave the beach and go home."
+    "你离开海滩，回家了。"
 
 # game/kite_jobgirl 2_beach.rpy:769
 translate chinese_simplified jobgirl_beach_4_9921b5ed:
 
     # "(Visit the {b}beach{/b} one more time.)"
-    "(Visit the {b}beach{/b} one more time.)"
+    "（再去一次{b}海滩{/b}。）"
 
 # game/kite_jobgirl 2_beach.rpy:783
 translate chinese_simplified jobgirl_beach_5_93395bd2:
 
     # "You have some free time today, so you decide to head to the beach again; hopefully you will find Scarlet there, even if you didn't send her any message you bet she's enjoying the warm sun of this beautiful day."
-    "You have some free time today, so you decide to head to the beach again; hopefully you will find Scarlet there, even if you didn't send her any message you bet she's enjoying the warm sun of this beautiful day."
+    "你今天有一些空闲时间，所以决定再去海滩；希望你能在那里找到斯嘉丽，即使你没有给她发任何消息，你也相信她正在享受这美好一天的温暖阳光。"
 
 # game/kite_jobgirl 2_beach.rpy:791
 translate chinese_simplified jobgirl_beach_5_53a329ce:
 
     # "Your guess was right. She's standing at the same place, looking in the distance. You spot in that direction Anika waving her hand to say goodbye."
-    "Your guess was right. She's standing at the same place, looking in the distance. You spot in that direction Anika waving her hand to say goodbye."
+    "你的猜测是对的。她还站在原地，望着远方。你看到阿妮卡朝那个方向挥手告别。"
 
 # game/kite_jobgirl 2_beach.rpy:795
 translate chinese_simplified jobgirl_beach_5_9b0355b3:
@@ -1534,7 +1534,7 @@ translate chinese_simplified jobgirl_beach_5_9ea36b2d:
 translate chinese_simplified jobgirl_beach_5_71aa7a47:
 
     # "She makes an inquiring expression when you name her friend; but at the same time she seems amused by the situation. You don't have a good feeling about this, like a mouse being played by a cat before it's eaten."
-    "She makes an inquiring expression when you name her friend; but at the same time she seems amused by the situation. You don't have a good feeling about this, like a mouse being played by a cat before it's eaten."
+    "当你说出她朋友的名字时，她露出疑惑的表情；但同时，她似乎也觉得这情景很有趣。你对此感到不安，就像老鼠在被猫吃掉之前被猫戏弄一样。"
 
 # game/kite_jobgirl 2_beach.rpy:801
 translate chinese_simplified jobgirl_beach_5_d371bff3:
@@ -1576,25 +1576,25 @@ translate chinese_simplified jobgirl_beach_5_c5180b86:
 translate chinese_simplified jobgirl_beach_5_93579075:
 
     # "She suddenly stands up with a jump, visibly angry."
-    "She suddenly stands up with a jump, visibly angry."
+    "她突然猛地站了起来，明显很生气。"
 
 # game/kite_jobgirl 2_beach.rpy:819
 translate chinese_simplified jobgirl_beach_5_924d862c:
 
     # jobgirl "CALM DOWN MY ASS! DON'T YOU DARE TELL ME TO CALM DOWN!" with vpunch
-    jobgirl "CALM DOWN MY ASS! DON'T YOU DARE TELL ME TO CALM DOWN!" with vpunch
+    jobgirl "冷静个屁！你敢叫我冷静试试！" with vpunch
 
 # game/kite_jobgirl 2_beach.rpy:821
 translate chinese_simplified jobgirl_beach_5_7d3e1c67:
 
     # "For a whole minute she beats you blind with words. At first, some people around you got curious to see what was going on, then they got afraid of her temper and ran away."
-    "For a whole minute she beats you blind with words. At first, some people around you got curious to see what was going on, then they got afraid of her temper and ran away."
+    "她用言语狠狠地羞辱了你整整一分钟。起初，周围有些人好奇地想看看发生了什么事，后来他们被她的脾气吓到了，纷纷逃走了。"
 
 # game/kite_jobgirl 2_beach.rpy:823
 translate chinese_simplified jobgirl_beach_5_0f195874:
 
     # "When she finally stops yelling at you, the beach around you is deserted. Finally you manage to talk to her."
-    "When she finally stops yelling at you, the beach around you is deserted. Finally you manage to talk to her."
+    "当她终于停止对你大喊大叫时，周围的海滩空无一人。你终于鼓起勇气和她交谈起来。"
 
 # game/kite_jobgirl 2_beach.rpy:825
 translate chinese_simplified jobgirl_beach_5_f295262b:
@@ -1618,7 +1618,7 @@ translate chinese_simplified jobgirl_beach_5_72675493:
 translate chinese_simplified jobgirl_beach_5_509dac61:
 
     # "You take a look around; nobody in sight."
-    "You take a look around; nobody in sight."
+    "你环顾四周，却不见人影。"
 
 # game/kite_jobgirl 2_beach.rpy:833
 translate chinese_simplified jobgirl_beach_5_a75b4ccc:
@@ -1678,25 +1678,25 @@ translate chinese_simplified jobgirl_beach_5_22353f92:
 translate chinese_simplified jobgirl_beach_5_aaac2019:
 
     # "You grab a towel and cover her shoulders with it. Looking at her face, you bet her cheeks can't get any more red, and not for the sun: she is so embarrassed that you can feel her trembling."
-    "You grab a towel and cover her shoulders with it. Looking at her face, you bet her cheeks can't get any more red, and not for the sun: she is so embarrassed that you can feel her trembling."
+    "你抓起一条毛巾盖住她的肩膀。看着她的脸，你敢肯定她的脸颊已经红透了，而且不是因为阳光：她羞得浑身发抖。"
 
 # game/kite_jobgirl 2_beach.rpy:852
 translate chinese_simplified jobgirl_beach_5_58299db6:
 
     # "You decide it is time to push it a little further and give her a sudden kiss."
-    "You decide it is time to push it a little further and give her a sudden kiss."
+    "你决定更进一步，突然吻了她。"
 
 # game/kite_jobgirl 2_beach.rpy:854
 translate chinese_simplified jobgirl_beach_5_eacd151b:
 
     # jobgirl "!!!" with vpunch
-    jobgirl "!!!" with vpunch
+    jobgirl "！！！" with vpunch
 
 # game/kite_jobgirl 2_beach.rpy:856
 translate chinese_simplified jobgirl_beach_5_dcc4fc30:
 
     # "She doesn't put up any resistance but stays rigid, shocked by your audacity. You end the kiss before she can react. Better to only make a short step this time, you think to yourself."
-    "She doesn't put up any resistance but stays rigid, shocked by your audacity. You end the kiss before she can react. Better to only make a short step this time, you think to yourself."
+    "她没有反抗，只是僵硬地站在那里，被你的大胆举动震惊了。你趁她还没反应过来就结束了这个吻。你心想，这次最好只迈一小步。"
 
 # game/kite_jobgirl 2_beach.rpy:858
 translate chinese_simplified jobgirl_beach_5_2d2fcad4:
@@ -1708,19 +1708,19 @@ translate chinese_simplified jobgirl_beach_5_2d2fcad4:
 translate chinese_simplified jobgirl_beach_5_6e0c029d:
 
     # "You turn around and leave; you look back a couple of times to see her reaction: at first she stays frozen where you left her, then her legs lose strength and she falls on her knees on the soft sand."
-    "You turn around and leave; you look back a couple of times to see her reaction: at first she stays frozen where you left her, then her legs lose strength and she falls on her knees on the soft sand."
+    "你转身离开；你回头看了好几眼，想看看她的反应：起初她僵立在你离开的地方，然后她的腿失去了力气，跪倒在柔软的沙滩上。"
 
 # game/kite_jobgirl 2_beach.rpy:866
 translate chinese_simplified jobgirl_beach_5_940f37b7:
 
     # "Now you are curious how your next meeting will be, and when..."
-    "Now you are curious how your next meeting will be, and when..."
+    "现在您一定很好奇下次会议会是什么样子，以及何时举行……"
 
 # game/kite_jobgirl 2_beach.rpy:876
 translate chinese_simplified jobgirl_beach_5_ee37af5d:
 
     # "You luckily find her sunbathing; when you approach she raises her hand to greet you loudly."
-    "You luckily find her sunbathing; when you approach she raises her hand to greet you loudly."
+    "你很幸运地发现她正在晒日光浴；当你走近时，她举起手大声地向你打招呼。"
 
 # game/kite_jobgirl 2_beach.rpy:880
 translate chinese_simplified jobgirl_beach_5_fa4cbe22:
@@ -1762,7 +1762,7 @@ translate chinese_simplified jobgirl_beach_5_cd573737:
 translate chinese_simplified jobgirl_beach_5_52e064b1:
 
     # "You start to massage her whole back from her neck to her spine."
-    "You start to massage her whole back from her neck to her spine."
+    "你开始从她的脖子到脊椎按摩她的整个背部。"
 
 # game/kite_jobgirl 2_beach.rpy:900
 translate chinese_simplified jobgirl_beach_5_821c5fba:
@@ -1834,7 +1834,7 @@ translate chinese_simplified jobgirl_beach_5_74e562d3:
 translate chinese_simplified jobgirl_beach_5_22f3d2ca:
 
     # "You can't see her face but you're sure you can feel the heat of her cheeks blushing."
-    "You can't see her face but you're sure you can feel the heat of her cheeks blushing."
+    "你虽然看不到她的脸，但你肯定能感觉到她脸颊发烫。"
 
 # game/kite_jobgirl 2_beach.rpy:926
 translate chinese_simplified jobgirl_beach_5_120f31f3:
@@ -1984,7 +1984,7 @@ translate chinese_simplified jobgirl_beach_5_a1fb2a78:
 translate chinese_simplified jobgirl_beach_5_8f96c736:
 
     # "You keep talking more while you gather your things and leave the beach together, until you go separate ways to go back home."
-    "You keep talking more while you gather your things and leave the beach together, until you go separate ways to go back home."
+    "你们一边收拾东西一边聊天，然后一起离开海滩，直到最后分道扬镳，各自回家。"
 
 # game/kite_jobgirl 2_beach.rpy:984
 translate chinese_simplified jobgirl_beach_5_7afea309:
@@ -1996,19 +1996,19 @@ translate chinese_simplified jobgirl_beach_5_7afea309:
 translate chinese_simplified jobgirl_beach_5_a3920a6d:
 
     # "You do what she asks. Then you feel her soft lips touching yours, and slowly, she gives you a shy kiss."
-    "You do what she asks. Then you feel her soft lips touching yours, and slowly, she gives you a shy kiss."
+    "你照她说的做了。然后你感觉到她柔软的嘴唇触碰到了你的嘴唇，慢慢地，她羞涩地吻了你。"
 
 # game/kite_jobgirl 2_beach.rpy:988
 translate chinese_simplified jobgirl_beach_5_02a035c2:
 
     # "You feel a lovely sensation, this innocent kiss is quite rare for you. Women you kiss usually put more passion, or even sluttyness in their kisses; this one is something completely different. Like pure water dropping from a mountain spring."
-    "You feel a lovely sensation, this innocent kiss is quite rare for you. Women you kiss usually put more passion, or even sluttyness in their kisses; this one is something completely different. Like pure water dropping from a mountain spring."
+    "你感到一种美妙的感觉，这种纯真的吻对你来说十分难得。你以往亲吻的女性，她们的吻通常都充满激情，甚至有些放荡；而这个吻却截然不同，如同山泉水般清澈甘甜。"
 
 # game/kite_jobgirl 2_beach.rpy:990
 translate chinese_simplified jobgirl_beach_5_1ba3995b:
 
     # "When she moves away, you still keep your eyes closed for a moment, lost in that sweet sensation."
-    "When she moves away, you still keep your eyes closed for a moment, lost in that sweet sensation."
+    "当她走开时，你仍然闭着眼睛，沉浸在那甜蜜的感觉中片刻。"
 
 # game/kite_jobgirl 2_beach.rpy:992
 translate chinese_simplified jobgirl_beach_5_85909c62:
@@ -2020,7 +2020,7 @@ translate chinese_simplified jobgirl_beach_5_85909c62:
 translate chinese_simplified jobgirl_beach_5_142d68a2:
 
     # "She turns away and leaves."
-    "She turns away and leaves."
+    "她转身离开了。"
 
 # game/kite_jobgirl 2_beach.rpy:998
 translate chinese_simplified jobgirl_beach_5_6ccd9795:

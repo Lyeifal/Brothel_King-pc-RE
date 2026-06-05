@@ -4,7 +4,7 @@
 translate chinese_simplified slave_first_meet_0c98ab5a:
 
     # "You came to visit [girl.fullname] for the first time."
-    "You came to visit [girl.fullname] for the first time."
+    "你第一次来拜访[girl.fullname]。"
 
 # game/BKinteractions.rpy:26
 translate chinese_simplified slave_first_meet_27e50de3:
@@ -28,7 +28,7 @@ translate chinese_simplified slave_first_meet_f8240970:
 translate chinese_simplified slave_first_meet_71ebebd2:
 
     # "You slap her across the face. She looks at you in shock."
-    "You slap her across the face. She looks at you in shock."
+    "你扇了她一巴掌。她震惊地看着你。"
 
 # game/BKinteractions.rpy:60
 translate chinese_simplified slave_first_meet_afc035e4:
@@ -46,7 +46,7 @@ translate chinese_simplified slave_first_meet_d3cc8296:
 translate chinese_simplified fight_attempt_4ad79042:
 
     # "[girl.name] throws herself at you, but the magical bind holding her is just too strong. She is jolted by a surge of magical energy, and crumbles to the [text1], winded."
-    "[girl.name] throws herself at you, but the magical bind holding her is just too strong. She is jolted by a surge of magical energy, and crumbles to the [text1], winded."
+    "[girl.name] 向你扑来，但束缚她的魔法太过强大。一股魔法能量涌入，她猛地一震，气喘吁吁地倒在了[text1]上。"
 
 # game/BKinteractions.rpy:108
 translate chinese_simplified fight_attempt_c6b9d571:
@@ -58,7 +58,7 @@ translate chinese_simplified fight_attempt_c6b9d571:
 translate chinese_simplified fight_attempt_2f8a4273:
 
     # "She struggles and pushes you away. You try to force her but she kicks you in the groin and escapes [text1]."
-    "She struggles and pushes you away. You try to force her but she kicks you in the groin and escapes [text1]."
+    "她挣扎着推开你。你试图强迫她，但她踢了你的下体，然后逃走了[text1]。"
 
 # game/BKinteractions.rpy:128
 translate chinese_simplified fight_attempt_3149cc65:
@@ -70,19 +70,19 @@ translate chinese_simplified fight_attempt_3149cc65:
 translate chinese_simplified fight_attempt_5e68fac8:
 
     # "She is no match for you. Restraining her, you shove her on the bed then slam the door shut."
-    "She is no match for you. Restraining her, you shove her on the bed then slam the door shut."
+    "她根本不是你的对手。你制服了她，把她推到床上，然后砰地一声关上了门。"
 
 # game/BKinteractions.rpy:133
 translate chinese_simplified fight_attempt_18c556bb:
 
     # "She is no match for you. Restraining her, you force her into submission."
-    "She is no match for you. Restraining her, you force her into submission."
+    "她根本不是你的对手。你制服了她，迫使她屈服。"
 
 # game/BKinteractions.rpy:166
 translate chinese_simplified slave_fear_test_307644d3:
 
     # "You tell her it's all right, nothing bad will happen to her, and you repeat your question slowly."
-    "You tell her it's all right, nothing bad will happen to her, and you repeat your question slowly."
+    "你告诉她没事的，她不会有事的，然后慢慢地重复你的问题。"
 
 # game/BKinteractions.rpy:175
 translate chinese_simplified slave_fear_test_3e476c8f:
@@ -118,7 +118,7 @@ translate chinese_simplified slave_naked_menu_078935c2:
 translate chinese_simplified slave_naked_menu_ee284995:
 
     # "[girl.name] will remain naked until you tell her otherwise."
-    "[girl.name] will remain naked until you tell her otherwise."
+    "[girl.name] 将一直保持裸体状态，直到你告诉她别这样为止。"
 
 # game/BKinteractions.rpy:213
 translate chinese_simplified slave_naked_menu_0e5140be:
@@ -148,13 +148,13 @@ translate chinese_simplified slave_naked_menu_fbf00f5d:
 translate chinese_simplified slave_naked_menu_95fdcba5:
 
     # "[girl.name] will remain naked for the rest of the day."
-    "[girl.name] will remain naked for the rest of the day."
+    "[girl.name] 将在当天剩余时间里保持裸体状态。"
 
 # game/BKinteractions.rpy:278
 translate chinese_simplified slave_beg_9bb09cb7:
 
     # "You scoff."
-    "You scoff."
+    "你嗤之以鼻。"
 
 # game/BKinteractions.rpy:280
 translate chinese_simplified slave_beg_a03b0f83:
@@ -166,7 +166,7 @@ translate chinese_simplified slave_beg_a03b0f83:
 translate chinese_simplified slave_beg_e46101d0:
 
     # "You pause for a second."
-    "You pause for a second."
+    "你停顿了一下。"
 
 # game/BKinteractions.rpy:289
 translate chinese_simplified slave_beg_84a9d791:
@@ -178,7 +178,7 @@ translate chinese_simplified slave_beg_84a9d791:
 translate chinese_simplified slave_beg_46582dbe:
 
     # "You take a good look at her, she's a mess. You decide to give her a break."
-    "You take a good look at her, she's a mess. You decide to give her a break."
+    "你仔细看了看她，她狼狈不堪。你决定给她一次机会。"
 
 # game/BKinteractions.rpy:298
 translate chinese_simplified slave_beg_7b33a8a4:
@@ -190,19 +190,19 @@ translate chinese_simplified slave_beg_7b33a8a4:
 translate chinese_simplified slave_interact_f4fb5b2b:
 
     # "System" "Label: {color=[c_red]}[girl.story]{/color} doesn't exist (Custom girl: {color=[c_red]}[girl.path]{/color})."
-    "System" "标签：{color=[c_red]}[girl.story]{/color} 不存在（自定义女孩：{color=[c_red]}[girl.path]{/color}）。"
+    "系统" "标签：{color=[c_red]}[girl.story]{/color} 不存在（自定义女孩：{color=[c_red]}[girl.path]{/color}）。"
 
 # game/BKinteractions.rpy:328
 translate chinese_simplified slave_interact_menu_20dd36e6:
 
     # "[girl.fullname] is away. You can't interact with her."
-    "[girl.fullname] is away. You can't interact with her."
+    "[girl.fullname] 不在。您无法与她互动。"
 
 # game/BKinteractions.rpy:427
 translate chinese_simplified slave_chat_init_821bd6e2:
 
     # "She looks frightened."
-    "She looks frightened."
+    "她看起来很害怕。"
 
 # game/BKinteractions.rpy:489
 translate chinese_simplified slave_chat_slave_life_b0ecb5e5:
@@ -262,7 +262,7 @@ translate chinese_simplified slave_chat_customers_9027a814:
 translate chinese_simplified slave_chat_other_girls_20cc9eac:
 
     # girl.char "I really like [inter.other_girl.fullname][text1]. [comment] She's like a sister to me."
-    girl.char "我真的很喜欢[inter.other_girl.fullname][text1]。[评论]她就像我的亲妹妹一样。"
+    girl.char "我真的很喜欢[inter.other_girl.fullname][text1]。[inter.other_girl.fullname]她就像我的亲妹妹一样。"
 
 # game/BKinteractions.rpy:643
 translate chinese_simplified slave_chat_other_girls_868fe6b0:
@@ -334,7 +334,7 @@ translate chinese_simplified slave_chat_other_girls_973b006d:
 translate chinese_simplified slave_chat_well_being_10fbcf2f:
 
     # "She doesn't answer, but her eyes are red from crying her heart out for many a sleepless night. She clearly feels horrible here."
-    "She doesn't answer, but her eyes are red from crying her heart out for many a sleepless night. She clearly feels horrible here."
+    "她没有回答，但她的眼睛因为连续多个不眠之夜的哭泣而通红。她显然在这里感觉糟透了。"
 
 # game/BKinteractions.rpy:776
 translate chinese_simplified slave_chat_well_being_b0ecb5e5:
@@ -418,7 +418,7 @@ translate chinese_simplified slave_chat_tastes_bea770f7:
 translate chinese_simplified slave_chat_tastes_a56a4d9b:
 
     # "She mumbles something, but you can't hear her. She almost bursts into tears as you insist. It's useless."
-    "She mumbles something, but you can't hear her. She almost bursts into tears as you insist. It's useless."
+    "她嘟囔了几句，但你听不见。你坚持不懈，她几乎要哭出来。但一切都是徒劳。"
 
 # game/BKinteractions.rpy:906
 translate chinese_simplified slave_chat_tastes_b8bca4cc:
@@ -430,61 +430,61 @@ translate chinese_simplified slave_chat_tastes_b8bca4cc:
 translate chinese_simplified slave_chat_tastes_46f4f913:
 
     # "She is more relaxed around you now. She tells you a little about her tastes."
-    "She is more relaxed around you now. She tells you a little about her tastes."
+    "她现在在你面前更放松了，也跟你聊起了她的一些喜好。"
 
 # game/BKinteractions.rpy:917
 translate chinese_simplified slave_chat_tastes_e042d888:
 
     # "She's comfortable around you. She tells you about her tastes as you share a cup of tea."
-    "She's comfortable around you. She tells you about her tastes as you share a cup of tea."
+    "她和你在一起很自在。你们一起喝茶的时候，她会跟你聊起她的喜好。"
 
 # game/BKinteractions.rpy:923
 translate chinese_simplified slave_chat_tastes_a1410893:
 
     # "She blushes as you sit by her side and start talking in depth about what she likes."
-    "She blushes as you sit by her side and start talking in depth about what she likes."
+    "当你坐在她身边，开始深入探讨她喜欢什么时，她脸红了。"
 
 # game/BKinteractions.rpy:929
 translate chinese_simplified slave_chat_tastes_0a374176:
 
     # "She sits on your lap and throws her arms around you, telling you all about what she likes."
-    "She sits on your lap and throws her arms around you, telling you all about what she likes."
+    "她坐在你的腿上，张开双臂抱住你，告诉你她喜欢什么。"
 
 # game/BKinteractions.rpy:994
 translate chinese_simplified slave_chat_tastes_be25caff:
 
     # "She blushes as she whispers something to you."
-    "She blushes as she whispers something to you."
+    "她脸红了，低声跟你说了些什么。"
 
 # game/BKinteractions.rpy:1007
 translate chinese_simplified slave_chat_tastes_be25caff_1:
 
-    # "She blushes as she whispers something to you."
-    "She blushes as she whispers something to you."
+    # "她脸红了，低声跟你说了些什么。"
+    "她脸红了，低声说出了食物。"
 
 # game/BKinteractions.rpy:1024
 translate chinese_simplified slave_chat_tastes_6cfd37d9:
 
     # "She tells you that she loves [fix_desc]"
-    "She tells you that she loves [fix_desc]"
+    "她告诉你她爱[fix_desc]"
 
 # game/BKinteractions.rpy:1028
 translate chinese_simplified slave_chat_tastes_3ac8bfbc:
 
     # "You have discovered [girl.name]'s fixation with [fix.name]."
-    "You have discovered [girl.name]'s fixation with [fix.name]."
+    "你发现了[girl.name]对[fix.name]的迷恋。"
 
 # game/BKinteractions.rpy:1040
 translate chinese_simplified slave_chat_tastes_3f2466f8:
 
     # "She tells you that she really hates [fix_desc] It creeps her out."
-    "She tells you that she really hates [fix_desc] It creeps her out."
+    "她告诉你她真的很讨厌[fix_desc]，它让她感到毛骨悚然。"
 
 # game/BKinteractions.rpy:1044
 translate chinese_simplified slave_chat_tastes_2c0cf15f:
 
     # "You have discovered [girl.name]'s disgust for [fix.name]."
-    "You have discovered [girl.name]'s disgust for [fix.name]."
+    "你发现了[girl.name]对[fix.name]的厌恶。"
 
 # game/BKinteractions.rpy:1053
 translate chinese_simplified slave_chat_tastes_743d9504:
@@ -496,7 +496,7 @@ translate chinese_simplified slave_chat_tastes_743d9504:
 translate chinese_simplified slave_chat_tastes_5998fc4a:
 
     # "You slap her across the face." with vpunch
-    "You slap her across the face." with vpunch
+    "你扇了她一巴掌。" with vpunch
 
 # game/BKinteractions.rpy:1062
 translate chinese_simplified slave_chat_tastes_f27b665a:
@@ -508,7 +508,7 @@ translate chinese_simplified slave_chat_tastes_f27b665a:
 translate chinese_simplified slave_chat_origins_0d8fa5c8:
 
     # "She rolls her eyes."
-    "She rolls her eyes."
+    "她翻了个白眼。"
 
 # game/BKinteractions.rpy:1084
 translate chinese_simplified slave_chat_origins_71bc563a:
@@ -520,7 +520,7 @@ translate chinese_simplified slave_chat_origins_71bc563a:
 translate chinese_simplified slave_chat_origins_06398373:
 
     # "She sighs."
-    "She sighs."
+    "她叹了口气。"
 
 # game/BKinteractions.rpy:1088
 translate chinese_simplified slave_chat_origins_cb218fe8:
@@ -532,7 +532,7 @@ translate chinese_simplified slave_chat_origins_cb218fe8:
 translate chinese_simplified slave_chat_origins_9c8a9afb:
 
     # "Her mood darkens."
-    "Her mood darkens."
+    "她的情绪变得阴沉起来。"
 
 # game/BKinteractions.rpy:1092
 translate chinese_simplified slave_chat_origins_77d129e6:
@@ -544,7 +544,7 @@ translate chinese_simplified slave_chat_origins_77d129e6:
 translate chinese_simplified slave_chat_origins_cd2cdcd3:
 
     # "She gets tearful, and she looks down."
-    "She gets tearful, and she looks down."
+    "她眼眶湿润，低下了头。"
 
 # game/BKinteractions.rpy:1096
 translate chinese_simplified slave_chat_origins_1b02f428:
@@ -562,7 +562,7 @@ translate chinese_simplified slave_chat_origins_743d9504:
 translate chinese_simplified slave_chat_origins_5998fc4a:
 
     # "You slap her across the face." with vpunch
-    "You slap her across the face." with vpunch
+    "你扇了她一巴掌。" with vpunch
 
 # game/BKinteractions.rpy:1134
 translate chinese_simplified slave_chat_origins_f27b665a:
@@ -610,13 +610,13 @@ translate chinese_simplified slave_train_sex_acts_4f7088ff:
 translate chinese_simplified slave_train_sex_acts_f697fa38:
 
     # "You call Sill over to [girl.name]'s room."
-    "You call Sill over to [girl.name]'s room."
+    "你叫希尔到[girl.name]的房间来。"
 
 # game/BKinteractions.rpy:1241
 translate chinese_simplified slave_train_sex_acts_1ea015b7:
 
     # sill happy "Yes, Master [MC.name]?"
-    sill happy "Yes, Master [MC.name]?"
+    sill happy "是的，主人[MC.name]？"
 
 # game/BKinteractions.rpy:1242
 translate chinese_simplified slave_train_sex_acts_661101f1:
@@ -628,67 +628,67 @@ translate chinese_simplified slave_train_sex_acts_661101f1:
 translate chinese_simplified slave_train_sex_acts_538868c1:
 
     # "You call Sill over, and ask her to fetch a security guard."
-    "You call Sill over, and ask her to fetch a security guard."
+    "你叫希尔过来，让她去叫个保安。"
 
 # game/BKinteractions.rpy:1247
 translate chinese_simplified slave_train_sex_acts_ae4d436d:
 
     # "You call Sill over, and ask her to fetch a random vagrant off the street."
-    "You call Sill over, and ask her to fetch a random vagrant off the street."
+    "你叫希尔过来，让她从街上随便带一个流浪汉过来。"
 
 # game/BKinteractions.rpy:1248
 translate chinese_simplified slave_train_sex_acts_d2c91b4c:
 
     # sill happy "All right. What for, Master [MC.name]?"
-    sill happy "All right. What for, Master [MC.name]?"
+    sill happy "好的。有什么事吗，[MC.name] 主人？"
 
 # game/BKinteractions.rpy:1249
 translate chinese_simplified slave_train_sex_acts_7c69242a:
 
     # you "The lucky sod and I are going to fuck this girl silly. [girl.name], get yourself ready!"
-    you "我和那个幸运的家伙要好好“玩弄”一下这个女孩。[女孩名字]，准备好！"
+    you "我和那个幸运的家伙要好好“玩弄”一下这个女孩。[girl.name]，准备好！"
 
 # game/BKinteractions.rpy:1262
 translate chinese_simplified slave_train_sex_acts_3faa2ddc:
 
     # "She accepts your orders."
-    "She accepts your orders."
+    "她接受你的订单。"
 
 # game/BKinteractions.rpy:1265
 translate chinese_simplified slave_train_sex_acts_a90650c2:
 
     # "She moves to position herself where you want her."
-    "She moves to position herself where you want her."
+    "她会移动到你希望她出现的地方。"
 
 # game/BKinteractions.rpy:1274
 translate chinese_simplified slave_train_sex_acts_df180724:
 
     # "She resists you."
-    "She resists you."
+    "她反抗你。"
 
 # game/BKinteractions.rpy:1289
 translate chinese_simplified slave_train_sex_acts_cbaff687:
 
     # "You ignore her complaints and gesture for her to move to the bed."
-    "You ignore her complaints and gesture for her to move to the bed."
+    "你无视她的抱怨，示意她移步到床上。"
 
 # game/BKinteractions.rpy:1300
 translate chinese_simplified slave_train_sex_acts_99742c96:
 
     # "She refuses you."
-    "She refuses you."
+    "她拒绝你。"
 
 # game/BKinteractions.rpy:1352
 translate chinese_simplified slave_remove_fixation_8a1b364c:
 
     # "[girl.name] was pushed too hard, she hates [fix.name] with all her heart now. You cannot do anything about it."
-    "[girl.name] was pushed too hard, she hates [fix.name] with all her heart now. You cannot do anything about it."
+    "[girl.name] 被逼得太紧了，现在她恨透了 [fix.name]。你对此无能为力。"
 
 # game/BKinteractions.rpy:1365
 translate chinese_simplified slave_remove_fixation_44008d8e:
 
     # "[girl.fullname] isn't comfortable enough with any of the required sex acts to try to remove this fixation."
-    "[girl.fullname] isn't comfortable enough with any of the required sex acts to try to remove this fixation."
+    "[girl.fullname] 对任何必要的性行为都感到不自在，所以无法尝试消除这种性执念。"
 
 # game/BKinteractions.rpy:1379
 translate chinese_simplified slave_remove_fixation_70c73ec2:
@@ -748,25 +748,25 @@ translate chinese_simplified slave_remove_fixation_62a43486:
 translate chinese_simplified slave_remove_fixation_248c9578:
 
     # "[girl.name] pushes you back, curls up and starts sobbing uncontrollably. You cannot get anything more out of her."
-    "[girl.name] pushes you back, curls up and starts sobbing uncontrollably. You cannot get anything more out of her."
+    "[girl.name] 推开你，蜷缩起身子，开始止不住地哭泣。你再也无法从她口中得到任何信息。"
 
 # game/BKinteractions.rpy:1486
 translate chinese_simplified slave_remove_fixation_836fed3d:
 
     # "[girl.name] is still very reluctant, but you could show her a thing or two."
-    "[girl.name] is still very reluctant, but you could show her a thing or two."
+    "[girl.name] 仍然很不情愿，但你可以教她一些东西。"
 
 # game/BKinteractions.rpy:1494
 translate chinese_simplified slave_remove_fixation_78c39577:
 
     # "[girl.name] is getting used to [text1] Her progress is encouraging."
-    "[girl.name] is getting used to [text1] Her progress is encouraging."
+    "[girl.name] 正在逐渐适应 [text1]。她的进步令人鼓舞。"
 
 # game/BKinteractions.rpy:1498
 translate chinese_simplified slave_remove_fixation_87870cd5:
 
     # "[girl.name] did very well today. [text1] is beginning to feel almost normal to her."
-    "[girl.name] did very well today. [text1] is beginning to feel almost normal to her."
+    "[girl.name] 今天表现得很好。[text1] 她感觉快要恢复正常了。"
 
 # game/BKinteractions.rpy:1515
 translate chinese_simplified slave_train_lecture_96a226f4:
@@ -778,73 +778,73 @@ translate chinese_simplified slave_train_lecture_96a226f4:
 translate chinese_simplified slave_train_lecture_c9082620:
 
     # "You feel inspired today, and give her one of the most impassioned lecture you are capable of."
-    "You feel inspired today, and give her one of the most impassioned lecture you are capable of."
+    "你今天灵感迸发，于是向她发表了一番你所能做到的最热情洋溢的演讲。"
 
 # game/BKinteractions.rpy:1527
 translate chinese_simplified slave_train_lecture_d14636f7:
 
     # "You haven't really prepared anything for this lesson, and it shows."
-    "You haven't really prepared anything for this lesson, and it shows."
+    "你根本没为这节课做任何准备，这一点显而易见。"
 
 # game/BKinteractions.rpy:1529
 translate chinese_simplified slave_train_lecture_8d0c5ac2:
 
     # "You give her the usual speech about the merits of [act_desc]."
-    "You give her the usual speech about the merits of [act_desc]."
+    "你向她发表了关于[act_desc]优点的惯常讲话。"
 
 # game/BKinteractions.rpy:1534
 translate chinese_simplified slave_train_lecture_10372d4e:
 
     # "She listens intently, because she admires you."
-    "She listens intently, because she admires you."
+    "她认真地听着，因为她很欣赏你。"
 
 # game/BKinteractions.rpy:1536
 translate chinese_simplified slave_train_lecture_a1086925:
 
     # "She listens carefully, because she fears you."
-    "She listens carefully, because she fears you."
+    "她仔细聆听，因为她害怕你。"
 
 # game/BKinteractions.rpy:1541
 translate chinese_simplified slave_train_lecture_10ab542b:
 
     # "You have made good progress. She is now more knowledgeable and relaxed about [act_desc]."
-    "You have made good progress. She is now more knowledgeable and relaxed about [act_desc]."
+    "你取得了很好的进展。她现在对[act_desc]有了更深入的了解，也更放松了。"
 
 # game/BKinteractions.rpy:1544
 translate chinese_simplified slave_train_lecture_dff768af:
 
     # "You have made some progress. She is now a little more relaxed about [act_desc]."
-    "You have made some progress. She is now a little more relaxed about [act_desc]."
+    "你已经取得了一些进展。她现在对[act_desc]这件事稍微放松了一些。"
 
 # game/BKinteractions.rpy:1547
 translate chinese_simplified slave_train_lecture_5a84a178:
 
     # "She politely hears you out, but it doesn't seem to change her mind. She feels the same about [act_desc]."
-    "She politely hears you out, but it doesn't seem to change her mind. She feels the same about [act_desc]."
+    "她礼貌地听你解释，但似乎并没有改变她的想法。她对[act_desc]的看法也一样。"
 
 # game/BKinteractions.rpy:1560
 translate chinese_simplified slave_train_obedience_0a9fac1e:
 
     # "You start with giving [girl.name] simple orders around the house."
-    "You start with giving [girl.name] simple orders around the house."
+    "你先给[girl.name]下达一些简单的家务指令。"
 
 # game/BKinteractions.rpy:1571
 translate chinese_simplified slave_train_obedience_c19afc70:
 
     # "You give her a few more menial chores. You observe her as she carries out her tasks."
-    "You give her a few more menial chores. You observe her as she carries out her tasks."
+    "你给她安排了一些杂务。你观察她完成工作的情况。"
 
 # game/BKinteractions.rpy:1585
 translate chinese_simplified slave_train_obedience_c39134c6:
 
     # "She follows your instructions carefully, doing her best to impress you."
-    "She follows your instructions carefully, doing her best to impress you."
+    "她认真地按照你的指示去做，尽力给你留下好印象。"
 
 # game/BKinteractions.rpy:1590
 translate chinese_simplified slave_train_obedience_f1397a6f:
 
     # "She grumbles and drags her feet as she goes about her business. You inspect her work when she is finished. It's sloppy."
-    "She grumbles and drags her feet as she goes about her business. You inspect her work when she is finished. It's sloppy."
+    "她一边嘟囔着，一边拖着脚步做事。你等她干完活后检查她的工作，发现很马虎。"
 
 # game/BKinteractions.rpy:1602
 translate chinese_simplified slave_train_obedience_80a8e70b:
@@ -862,7 +862,7 @@ translate chinese_simplified slave_train_obedience_5f4a6c8f:
 translate chinese_simplified slave_train_obedience_764b847f:
 
     # "You nod and send her back to her room."
-    "You nod and send her back to her room."
+    "你点点头，送她回房间。"
 
 # game/BKinteractions.rpy:1614
 translate chinese_simplified slave_train_obedience_af9de7d2:
@@ -874,25 +874,25 @@ translate chinese_simplified slave_train_obedience_af9de7d2:
 translate chinese_simplified slave_train_constitution_424ba973:
 
     # "You ask [girl.name] to do a few simple exercises."
-    "You ask [girl.name] to do a few simple exercises."
+    "你让[girl.name]做一些简单的练习。"
 
 # game/BKinteractions.rpy:1636
 translate chinese_simplified slave_train_constitution_fcae42b6:
 
     # "You give her a few more physical feats to achieve. You follow her and advise her as she carries out her tasks."
-    "You give her a few more physical feats to achieve. You follow her and advise her as she carries out her tasks."
+    "你给她布置了一些新的体能挑战。你在她执行任务的过程中全程跟踪并给予指导。"
 
 # game/BKinteractions.rpy:1650
 translate chinese_simplified slave_train_constitution_3f7a8014:
 
     # "She follows your training instructions carefully, progressing thanks to your advice."
-    "She follows your training instructions carefully, progressing thanks to your advice."
+    "她认真遵循你的训练指导，并在你的建议下取得了进步。"
 
 # game/BKinteractions.rpy:1655
 translate chinese_simplified slave_train_constitution_5bca5e8f:
 
     # "She struggles with the task and is out of breath within a few minutes. She implores you to let her rest."
-    "She struggles with the task and is out of breath within a few minutes. She implores you to let her rest."
+    "她做起来很吃力，几分钟后就气喘吁吁。她恳求你让她休息。"
 
 # game/BKinteractions.rpy:1667
 translate chinese_simplified slave_train_constitution_80a8e70b:
@@ -910,7 +910,7 @@ translate chinese_simplified slave_train_constitution_9b679244:
 translate chinese_simplified slave_train_constitution_764b847f:
 
     # "You nod and send her back to her room."
-    "You nod and send her back to her room."
+    "你点点头，送她回房间。"
 
 # game/BKinteractions.rpy:1681
 translate chinese_simplified slave_train_constitution_af9de7d2:
@@ -922,43 +922,43 @@ translate chinese_simplified slave_train_constitution_af9de7d2:
 translate chinese_simplified slave_train_05a1f5a9:
 
     # "[text1]she starts removing her clothes."
-    "[text1]she starts removing her clothes."
+    "她开始脱衣服。"
 
 # game/BKinteractions.rpy:1725
 translate chinese_simplified slave_train_a09e58bd:
 
     # "[text1]she gets on her knees to service you."
-    "[text1]she gets on her knees to service you."
+    "[text1]她跪下来为你服务。"
 
 # game/BKinteractions.rpy:1727
 translate chinese_simplified slave_train_6cb826a9:
 
     # "[text1]she strips down and lies down on the bed with her legs spread out."
-    "[text1]she strips down and lies down on the bed with her legs spread out."
+    "[text1]她脱光衣服，双腿张开躺在床上。"
 
 # game/BKinteractions.rpy:1729
 translate chinese_simplified slave_train_108f9a3d:
 
     # "[text1]she removes her skirt and underwear, turning around and bending over, raising her buttocks towards you."
-    "[text1]she removes her skirt and underwear, turning around and bending over, raising her buttocks towards you."
+    "[text1]她脱下裙子和内裤，转身弯腰，把臀部抬向你。"
 
 # game/BKinteractions.rpy:1731
 translate chinese_simplified slave_train_87afe0e2:
 
     # "[text1]she strips naked and positions herself on all fours, waiting for your next move."
-    "[text1]she strips naked and positions herself on all fours, waiting for your next move."
+    "[text1]她脱光衣服，四肢着地，等待你的下一步行动。"
 
 # game/BKinteractions.rpy:1733
 translate chinese_simplified slave_train_4177c3d9:
 
     # "[text1]she strips down with Sill's help, and the two start fondling each other."
-    "[text1]she strips down with Sill's help, and the two start fondling each other."
+    "[text1]在希尔的帮助下，她脱光了衣服，两人开始互相爱抚。"
 
 # game/BKinteractions.rpy:1735
 translate chinese_simplified slave_train_d526b941:
 
     # "[text1]she strips naked as you and the other guy remove your clothes."
-    "[text1]she strips naked as you and the other guy remove your clothes."
+    "[text1]当你和另一个男人脱衣服时，她也脱光了衣服。"
 
 # game/BKinteractions.rpy:1851
 translate chinese_simplified slave_advanced_training_e589ac84:
@@ -976,13 +976,13 @@ translate chinese_simplified slave_advanced_training_e589ac84_1:
 translate chinese_simplified slave_advanced_training_cfcd6460:
 
     # "You have discovered one of [girl.fullname]'s fixations: {b}[fix.name]{/b}. You can use it to accelerate her training."
-    "You have discovered one of [girl.fullname]'s fixations: {b}[fix.name]{/b}. You can use it to accelerate her training."
+    "你发现了[girl.fullname]的一个执念：{b}[fix.name]{/b}。你可以利用它来加速她的训练。"
 
 # game/BKinteractions.rpy:1874
 translate chinese_simplified slave_advanced_training_cdeeb7c3:
 
     # "Because [girl.name] loves {b}[fix.name]{/b}, she has progressed faster."
-    "Because [girl.name] loves {b}[fix.name]{/b}, she has progressed faster."
+    "因为[girl.name]喜欢{b}[fix.name]{/b}，所以她进步很快。"
 
 # game/BKinteractions.rpy:1880
 translate chinese_simplified slave_advanced_training_e589ac84_2:
@@ -994,31 +994,31 @@ translate chinese_simplified slave_advanced_training_e589ac84_2:
 translate chinese_simplified slave_advanced_training_47722ac0:
 
     # "You have discovered one of [girl.fullname]'s phobias: {b}[fix.name]{/b}. Perhaps you can put that information to good use."
-    "You have discovered one of [girl.fullname]'s phobias: {b}[fix.name]{/b}. Perhaps you can put that information to good use."
+    "你发现了[girl.fullname]的其中一种恐惧症：{b}[fix.name]{/b}。或许你可以好好利用这条信息。"
 
 # game/BKinteractions.rpy:1897
 translate chinese_simplified slave_advanced_training_9e16c264:
 
     # "Because [girl.name] hates {b}[fix.name]{/b}, her progress has been slowed."
-    "Because [girl.name] hates {b}[fix.name]{/b}, her progress has been slowed."
+    "因为[girl.name]讨厌{b}[fix.name]{/b}，所以她的进步速度变慢了。"
 
 # game/BKinteractions.rpy:1908
 translate chinese_simplified slave_advanced_training_f0742fc4:
 
     # "She moves on with her training."
-    "She moves on with her training."
+    "她继续进行训练。"
 
 # game/BKinteractions.rpy:1921
 translate chinese_simplified slave_do_4120bcbf:
 
     # "Taking off her clothes, she stands completely nude for your attention."
-    "Taking off her clothes, she stands completely nude for your attention."
+    "她脱掉衣服，一丝不挂地站在那里，供你欣赏。"
 
 # game/BKinteractions.rpy:1924
 translate chinese_simplified slave_do_3a772807:
 
     # "She is shaking with fear and shame, desperately trying to hide her private parts."
-    "She is shaking with fear and shame, desperately trying to hide her private parts."
+    "她因恐惧和羞耻而浑身颤抖，拼命地想要遮掩自己的私处。"
 
 # game/BKinteractions.rpy:1928
 translate chinese_simplified slave_do_7f1cfead:
@@ -1030,79 +1030,79 @@ translate chinese_simplified slave_do_7f1cfead:
 translate chinese_simplified slave_do_05ee79e1:
 
     # "You order her to remove her hands from covering her breasts, and she complies grudgingly. She looks very unhappy as you contemplate her assets."
-    "You order her to remove her hands from covering her breasts, and she complies grudgingly. She looks very unhappy as you contemplate her assets."
+    "你命令她放下捂着胸部的手，她不情愿地照做了。当你打量她的身材时，她看起来很不高兴。"
 
 # game/BKinteractions.rpy:1934
 translate chinese_simplified slave_do_19952fbb:
 
     # "She takes some convincing, but eventually she stops covering her body and stands there with her hands behind her back. You move in close to inspect her."
-    "She takes some convincing, but eventually she stops covering her body and stands there with her hands behind her back. You move in close to inspect her."
+    "你费了一番口舌才说服她，她最终停止遮掩身体，双手背在身后站在那里。你走近她仔细打量。"
 
 # game/BKinteractions.rpy:1937
 translate chinese_simplified slave_do_a33505ca:
 
     # "She doesn't make a fuss, letting you get an eyeful. It seems that she is getting used to it."
-    "She doesn't make a fuss, letting you get an eyeful. It seems that she is getting used to it."
+    "她没有大惊小怪，让你大饱眼福。看来她已经习惯了。"
 
 # game/BKinteractions.rpy:1940
 translate chinese_simplified slave_do_2d85c0f9:
 
     # "She seems to enjoy your gaze as she displays her assets for your inspection. She doesn't complain when you [text1]."
-    "She seems to enjoy your gaze as she displays her assets for your inspection. She doesn't complain when you [text1]."
+    "她似乎很享受你的注视，一边展示自己的身材供你欣赏。当你[text1]时，她也没有抱怨。"
 
 # game/BKinteractions.rpy:1943
 translate chinese_simplified slave_do_33960f7d:
 
     # "She likes being naked, and she moans softly as you [text1]."
-    "She likes being naked, and she moans softly as you [text1]."
+    "她喜欢裸体，当你[text1]时，她会轻轻呻吟。"
 
 # game/BKinteractions.rpy:1946
 translate chinese_simplified slave_do_e6f38861:
 
     # "She loves being naked and feeling your eyes and hands all over her. She almost reaches climax when you [text1]."
-    "She loves being naked and feeling your eyes and hands all over her. She almost reaches climax when you [text1]."
+    "她喜欢赤身裸体，感受你的目光和双手在她身上游走。当你[text1]时，她几乎达到了高潮。"
 
 # game/BKinteractions.rpy:1949
 translate chinese_simplified slave_do_9381b53b:
 
     # "Naked is how she always wants to be. Her love juices run down her legs as you [text1]."
-    "Naked is how she always wants to be. Her love juices run down her legs as you [text1]."
+    "她一直都想赤身裸体。当你[text1]时，她的爱液顺着她的大腿流淌下来。"
 
 # game/BKinteractions.rpy:1965
 translate chinese_simplified slave_do_0ebeabff:
 
     # "You push your dick into her mouth, making her service you with her mouth and tongue."
-    "You push your dick into her mouth, making her service you with her mouth and tongue."
+    "你把你的阴茎塞进她的嘴里，让她用嘴和舌头为你服务。"
 
 # game/BKinteractions.rpy:1969
 translate chinese_simplified slave_do_2af46a0e:
 
     # "You ask her to use her hands to massage and service your dick."
-    "You ask her to use her hands to massage and service your dick."
+    "你让她用手按摩和伺候你的阴茎。"
 
 # game/BKinteractions.rpy:1973
 translate chinese_simplified slave_do_5e6161b3:
 
     # "You ask her to use her naughty tits to service your dick."
-    "You ask her to use her naughty tits to service your dick."
+    "你让她用她那对性感的乳房来伺候你的鸡巴。"
 
 # game/BKinteractions.rpy:1977
 translate chinese_simplified slave_do_89b9c9d8:
 
     # "You ask her to masturbate and give you a good show while you do the same."
-    "You ask her to masturbate and give you a good show while you do the same."
+    "你让她自慰，并为你表演一番，同时你也这样做。"
 
 # game/BKinteractions.rpy:1981
 translate chinese_simplified slave_do_d4f6e564:
 
     # "You ask her to service you with her body."
-    "You ask her to service you with her body."
+    "你要求她用身体服侍你。"
 
 # game/BKinteractions.rpy:1984
 translate chinese_simplified slave_do_8f81de5c:
 
     # "She is completely clueless and unable to give you any pleasure."
-    "She is completely clueless and unable to give you any pleasure."
+    "她完全不懂事，根本无法给你带来任何快乐。"
 
 # game/BKinteractions.rpy:1988
 translate chinese_simplified slave_do_7f1cfead_1:
@@ -1114,61 +1114,61 @@ translate chinese_simplified slave_do_7f1cfead_1:
 translate chinese_simplified slave_do_fc70367c:
 
     # "She has no technique, and you quickly start to feel bored."
-    "She has no technique, and you quickly start to feel bored."
+    "她没有任何技巧，你很快就会感到无聊。"
 
 # game/BKinteractions.rpy:1994
 translate chinese_simplified slave_do_df05f864:
 
     # "She isn't very good, and you give her tips to improve her technique."
-    "She isn't very good, and you give her tips to improve her technique."
+    "她水平不太好，你给她一些建议来提高她的技术。"
 
 # game/BKinteractions.rpy:1997
 translate chinese_simplified slave_do_cf8a6b8e:
 
     # "She is starting to get better, and you both get pleasure as she [text1]."
-    "She is starting to get better, and you both get pleasure as she [text1]."
+    "她开始好转，你们俩都从她身上获得了快乐[text1]。"
 
 # game/BKinteractions.rpy:2000
 translate chinese_simplified slave_do_2b68920b:
 
     # "She gives you a great show as she [text1], making you hard in an instant."
-    "She gives you a great show as she [text1], making you hard in an instant."
+    "她给你带来精彩的表演，就像她[text1]一样，让你瞬间勃起。"
 
 # game/BKinteractions.rpy:2003
 translate chinese_simplified slave_do_42cc62f9:
 
     # "She is very good at this now, giving you a dirty, slutty look as she [text1]."
-    "She is very good at this now, giving you a dirty, slutty look as she [text1]."
+    "她现在很擅长这个，会用一种下流、放荡的眼神看着你，就像她[text1]。"
 
 # game/BKinteractions.rpy:2006
 translate chinese_simplified slave_do_cd88a4a6:
 
     # "She is a perfect slut, giving you a great show as she services you with her body."
-    "She is a perfect slut, giving you a great show as she services you with her body."
+    "她是个完美的荡妇，会用她的身体为你带来精彩的表演。"
 
 # game/BKinteractions.rpy:2009
 translate chinese_simplified slave_do_8a7782d2:
 
     # "She is a true sex goddess, instantly bringing you to your limit as she [text1]."
-    "She is a true sex goddess, instantly bringing you to your limit as she [text1]."
+    "她是一位真正的性爱女神，能瞬间让你达到极限，就像她[text1]。"
 
 # game/BKinteractions.rpy:2021
 translate chinese_simplified slave_do_b299934b:
 
     # "You waste no time and start fucking her."
-    "You waste no time and start fucking her."
+    "你毫不犹豫地开始和她做爱。"
 
 # game/BKinteractions.rpy:2024
 translate chinese_simplified slave_do_13e2cd84:
 
     # "Her pussy is completely dry. She has zero experience and just lays there, waiting for it to be over."
-    "Her pussy is completely dry. She has zero experience and just lays there, waiting for it to be over."
+    "她的阴道完全干涩。她毫无经验，只能躺在那里，等着一切结束。"
 
 # game/BKinteractions.rpy:2028
 translate chinese_simplified slave_do_f0255cff:
 
     # "Frustrated, you give up after a minute."
-    "Frustrated, you give up after a minute."
+    "你感到沮丧，一分钟后就放弃了。"
 
 # game/BKinteractions.rpy:2030
 translate chinese_simplified slave_do_bb2b10dc:
@@ -1180,55 +1180,55 @@ translate chinese_simplified slave_do_bb2b10dc:
 translate chinese_simplified slave_do_47e9cdcc:
 
     # "She has very little experience, and all she can do is lay there as you have your way with her."
-    "She has very little experience, and all she can do is lay there as you have your way with her."
+    "她几乎没有任何经验，只能躺在那里任你摆布。"
 
 # game/BKinteractions.rpy:2036
 translate chinese_simplified slave_do_7895b6b0:
 
     # "She gets a little wet, and you can fuck her a little more easily. She doesn't seem to enjoy herself much, however."
-    "She gets a little wet, and you can fuck her a little more easily. She doesn't seem to enjoy herself much, however."
+    "她有点湿润了，你也能更容易地操她。不过，她似乎并不太享受。"
 
 # game/BKinteractions.rpy:2039
 translate chinese_simplified slave_do_d8d09047:
 
     # "She is starting to feel it more, moaning as she [text1]."
-    "She is starting to feel it more, moaning as she [text1]."
+    "她开始感觉到了，呻吟着[text1]。"
 
 # game/BKinteractions.rpy:2042
 translate chinese_simplified slave_do_f3424d41:
 
     # "She is already wet when you enter her, and her screams grow louder as she [text1]."
-    "She is already wet when you enter her, and her screams grow louder as she [text1]."
+    "当你进入她时，她已经湿透了，随着她[text1]，她的尖叫声越来越大。"
 
 # game/BKinteractions.rpy:2045
 translate chinese_simplified slave_do_b3e13e2f:
 
     # "She is already very wet, and she takes initiative, screaming with pleasure as she [text1]."
-    "She is already very wet, and she takes initiative, screaming with pleasure as she [text1]."
+    "她已经湿透了，她主动出击，发出愉悦的尖叫声[text1]。"
 
 # game/BKinteractions.rpy:2048
 translate chinese_simplified slave_do_207f598f:
 
     # "She loves it when she [text1], begging you to slam your hard cock into her wet pussy."
-    "She loves it when she [text1], begging you to slam your hard cock into her wet pussy."
+    "她喜欢这样[text1]，恳求你把硬挺的阴茎插入她湿润的阴道。"
 
 # game/BKinteractions.rpy:2051
 translate chinese_simplified slave_do_61e17ef5:
 
     # "Her pussy is dripping with love juice. She is a true sex goddess, gripping your dick inside her hot, wet cunt as you give her a fierce pounding."
-    "Her pussy is dripping with love juice. She is a true sex goddess, gripping your dick inside her hot, wet cunt as you give her a fierce pounding."
+    "她的阴道里流淌着爱液。她真是个性爱女神，当你猛烈地抽插时，她湿热的阴道紧紧地包裹着你的阴茎。"
 
 # game/BKinteractions.rpy:2063
 translate chinese_simplified slave_do_e0621008:
 
     # "You push your hard dick inside her tight ass."
-    "You push your hard dick inside her tight ass."
+    "你把硬挺的阴茎插入她紧致的肛门。"
 
 # game/BKinteractions.rpy:2066
 translate chinese_simplified slave_do_3f07bf8c:
 
     # "Her asshole shuts down completely. You can't even get an inch inside. You give up after a minute, upset and frustrated."
-    "Her asshole shuts down completely. You can't even get an inch inside. You give up after a minute, upset and frustrated."
+    "她的肛门完全闭锁了。你连一寸都进不去。一分钟后，你沮丧又恼火地放弃了。"
 
 # game/BKinteractions.rpy:2070
 translate chinese_simplified slave_do_3daf2855:
@@ -1240,13 +1240,13 @@ translate chinese_simplified slave_do_3daf2855:
 translate chinese_simplified slave_do_dfd268de:
 
     # "You manage to get in with great difficulty, using a lot of lube. She complains that it hurts."
-    "You manage to get in with great difficulty, using a lot of lube. She complains that it hurts."
+    "你费了九牛二虎之力才进去，用了大量润滑剂。她抱怨说很疼。"
 
 # game/BKinteractions.rpy:2076
 translate chinese_simplified slave_do_34d95ed5:
 
     # "She relaxes a little, and you manage to get inside even though she's extremely tight."
-    "She relaxes a little, and you manage to get inside even though she's extremely tight."
+    "她稍微放松了一些，尽管她非常紧，你还是设法进入了她。"
 
 # game/BKinteractions.rpy:2077
 translate chinese_simplified slave_do_ac5a4ee4:
@@ -1258,91 +1258,91 @@ translate chinese_simplified slave_do_ac5a4ee4:
 translate chinese_simplified slave_do_a5918939:
 
     # "She is more relaxed now, and you slide in without too much trouble. She moans as you give her a good fucking."
-    "She is more relaxed now, and you slide in without too much trouble. She moans as you give her a good fucking."
+    "她现在放松多了，你很顺利地进入了她。你狠狠地操她，她发出呻吟。"
 
 # game/BKinteractions.rpy:2083
 translate chinese_simplified slave_do_b24d1ba8:
 
     # "It's becoming easier and easier to move inside her ass. She moans like a horny bitch as you [text1]."
-    "It's becoming easier and easier to move inside her ass. She moans like a horny bitch as you [text1]."
+    "在她屁股里动起来越来越容易了。当你[text1]时，她像个发情的婊子一样呻吟。"
 
 # game/BKinteractions.rpy:2086
 translate chinese_simplified slave_do_b2cb8bb3:
 
     # "Moving inside her ass is easy now, and she squeals with pleasure as you give her little asshole a pounding."
-    "Moving inside her ass is easy now, and she squeals with pleasure as you give her little asshole a pounding."
+    "现在很容易就能进入她的屁股，当你猛烈地抽插她的小屁眼时，她会发出愉悦的尖叫。"
 
 # game/BKinteractions.rpy:2089
 translate chinese_simplified slave_do_ef9e0426:
 
     # "She loves to feel your dick as you [text1], and begs you to fuck her deeper and harder."
-    "She loves to feel your dick as you [text1], and begs you to fuck her deeper and harder."
+    "她喜欢感受你的阴茎，就像你[text1]一样，并恳求你更深更用力地操她。"
 
 # game/BKinteractions.rpy:2092
 translate chinese_simplified slave_do_4fac9640:
 
     # "She cums almost immediately as you [text1]. She's a perfect anal slut now."
-    "She cums almost immediately as you [text1]. She's a perfect anal slut now."
+    "你刚一插入她就高潮了[text1]。她现在是个完美的肛交荡妇。"
 
 # game/BKinteractions.rpy:2101
 translate chinese_simplified slave_do_6b1d9859:
 
     # "You open your toolbox."
-    "You open your toolbox."
+    "你打开工具箱。"
 
 # game/BKinteractions.rpy:2106
 translate chinese_simplified slave_do_0dcf4b65:
 
     # "She cries and squirms to avoid you as you try to tie her up."
-    "She cries and squirms to avoid you as you try to tie her up."
+    "当你试图把她绑起来时，她哭喊着挣扎躲避你。"
 
 # game/BKinteractions.rpy:2110
 translate chinese_simplified slave_do_dd53f86b:
 
     # "In the end, you barely make any progress, she was too wild and afraid."
-    "In the end, you barely make any progress, she was too wild and afraid."
+    "最终，你几乎没有取得任何进展，她太狂野也太害怕了。"
 
 # game/BKinteractions.rpy:2113
 translate chinese_simplified slave_do_41646876:
 
     # "You tie her hands behind her back, and tease her a little. She cries and doesn't enjoy it at all."
-    "You tie her hands behind her back, and tease her a little. She cries and doesn't enjoy it at all."
+    "你把她的双手绑在背后，轻轻戏弄她。她哭了起来，一点也不喜欢这样。"
 
 # game/BKinteractions.rpy:2116
 translate chinese_simplified slave_do_c2c04b33:
 
     # "You tie her up and use a variety of tools on her. She is ashamed and scared, but a little turned on as well."
-    "You tie her up and use a variety of tools on her. She is ashamed and scared, but a little turned on as well."
+    "你把她绑起来，用各种工具折磨她。她既羞愧又害怕，但同时也有些兴奋。"
 
 # game/BKinteractions.rpy:2119
 translate chinese_simplified slave_do_dbb63eda:
 
     # "She is getting used to being tied up. She moans with pleasure and pain as you [text1]."
-    "She is getting used to being tied up. She moans with pleasure and pain as you [text1]."
+    "她渐渐习惯了被捆绑。当你[text1]时，她发出痛苦和快乐的呻吟。"
 
 # game/BKinteractions.rpy:2122
 translate chinese_simplified slave_do_1c90a360:
 
     # "She is starting to enjoy it more and more. She's already wet when you [text1]."
-    "She is starting to enjoy it more and more. She's already wet when you [text1]."
+    "她越来越享受了。当你[text1]的时候，她已经湿了。"
 
 # game/BKinteractions.rpy:2125
 translate chinese_simplified slave_do_d249e514:
 
     # "She suggests new ways to tie her up and cries with pleasure as you [text1]."
-    "She suggests new ways to tie her up and cries with pleasure as you [text1]."
+    "她提出了新的捆绑方式，当你[text1]时，她高兴地哭了。"
 
 # game/BKinteractions.rpy:2128
 translate chinese_simplified slave_do_22e8bb77:
 
     # "She loves pain and wants to try everything. She begs you to [text1]."
-    "She loves pain and wants to try everything. She begs you to [text1]."
+    "她喜欢痛苦，想尝试一切。她恳求你[text1]。"
 
 # game/BKinteractions.rpy:2131
 translate chinese_simplified slave_do_c0ebff62:
 
     # "She cums numerous times as you tie her up in a bizarre position and use all of your toys on her. What a kinky bitch!"
-    "She cums numerous times as you tie her up in a bizarre position and use all of your toys on her. What a kinky bitch!"
+    "你把她绑成一个奇怪的姿势，用你所有的玩具玩弄她，她高潮了好几次。真是个变态的婊子！"
 
 # game/BKinteractions.rpy:2135
 translate chinese_simplified slave_do_e3be463b:
@@ -1366,187 +1366,187 @@ translate chinese_simplified slave_do_49333d8a:
 translate chinese_simplified slave_do_2cef280f:
 
     # "[girl.name] and Sill get on top of each other."
-    "[girl.name] and Sill get on top of each other."
+    "[girl.name] 和 Sill 叠在一起。"
 
 # game/BKinteractions.rpy:2155
 translate chinese_simplified slave_do_2e211311:
 
     # "She's obviously disgusted by Sill. She won't even touch her."
-    "She's obviously disgusted by Sill. She won't even touch her."
+    "她显然很厌恶希尔，甚至都不愿意碰她。"
 
 # game/BKinteractions.rpy:2159
 translate chinese_simplified slave_do_ec1c841b:
 
     # "Sill gives her a soft kiss and gets up. You tell her to leave."
-    "Sill gives her a soft kiss and gets up. You tell her to leave."
+    "希尔轻轻吻了她一下，然后起身。你让她离开。"
 
 # game/BKinteractions.rpy:2162
 translate chinese_simplified slave_do_ac5c5a68:
 
     # "The two girls kiss and fondle each other. [girl.name] doesn't even pretend to enjoy it."
-    "The two girls kiss and fondle each other. [girl.name] doesn't even pretend to enjoy it."
+    "两个女孩亲吻抚摸对方。[girl.name] 甚至连装作享受的样子都没有。"
 
 # game/BKinteractions.rpy:2165
 translate chinese_simplified slave_do_4e5075c2:
 
     # "[girl.name] kisses Sill a little bit more passionately this time. She's slowly forgetting that she is with a girl."
-    "[girl.name] kisses Sill a little bit more passionately this time. She's slowly forgetting that she is with a girl."
+    "这次，[girl.name]吻Sill时更加热情了。她渐渐忘记了自己身边的是个女孩。"
 
 # game/BKinteractions.rpy:2168
 translate chinese_simplified slave_do_df73bb42:
 
     # "[girl.name] is now more enthusiastic about being with a girl. She enjoys [text1]."
-    "[girl.name] is now more enthusiastic about being with a girl. She enjoys [text1]."
+    "[girl.name] 现在更喜欢和女孩在一起。她喜欢[text1]。"
 
 # game/BKinteractions.rpy:2171
 translate chinese_simplified slave_do_67cba39d:
 
     # "[girl.name] has a surprise orgasm while [text1]. She is starting to understand the pleasures to be had with women."
-    "[girl.name] has a surprise orgasm while [text1]. She is starting to understand the pleasures to be had with women."
+    "[girl.name] 在 [text1] 中意外地达到了性高潮。她开始体会到与女性相处时的乐趣。"
 
 # game/BKinteractions.rpy:2174
 translate chinese_simplified slave_do_22e9c1a4:
 
     # "[girl.name] doesn't differentiate between men and women now. She fucks Sill enthusiastically, bringing her off several times."
-    "[girl.name] doesn't differentiate between men and women now. She fucks Sill enthusiastically, bringing her off several times."
+    "[girl.name] 现在对男人和女人都不加区分。她热情地和 Sill 做爱，让她高潮了好几次。"
 
 # game/BKinteractions.rpy:2177
 translate chinese_simplified slave_do_417ce18a:
 
     # "She loves [text1]. Sill and [girl.name] shake with a mutual orgasm while doing a 69."
-    "She loves [text1]. Sill and [girl.name] shake with a mutual orgasm while doing a 69."
+    "她喜欢[text1]。Sill和[girl.name]在做69式时同时达到高潮，身体颤抖。"
 
 # game/BKinteractions.rpy:2180
 translate chinese_simplified slave_do_5d77f3a8:
 
     # "She loves fucking women and is completely bisexual now. [girl.name] and Sill know each other's body perfectly now, and bring each other off numerous times."
-    "She loves fucking women and is completely bisexual now. [girl.name] and Sill know each other's body perfectly now, and bring each other off numerous times."
+    "她喜欢和女人做爱，现在完全是双性恋了。[girl.name]和Sill现在对彼此的身体了如指掌，而且已经让对方达到过多次性高潮。"
 
 # game/BKinteractions.rpy:2193
 translate chinese_simplified slave_do_923a62f2:
 
     # "You and the other dude start fondling her private parts."
-    "You and the other dude start fondling her private parts."
+    "你和另一个男人开始抚摸她的私处。"
 
 # game/BKinteractions.rpy:2199
 translate chinese_simplified slave_do_47e56bf0:
 
     # "She doesn't know how to react. She remains stiff and passive, waiting for you to finish."
-    "She doesn't know how to react. She remains stiff and passive, waiting for you to finish."
+    "她不知道该如何反应。她僵硬而被动，等着你说完。"
 
 # game/BKinteractions.rpy:2201
 translate chinese_simplified slave_do_80c3bd91:
 
     # "Disappointed, you stop and dismiss the guy. He looks pissed."
-    "Disappointed, you stop and dismiss the guy. He looks pissed."
+    "你失望地停下来，打发他走了。他看起来很生气。"
 
 # game/BKinteractions.rpy:2204
 translate chinese_simplified slave_do_05c3c073:
 
     # "She clumsily manages to bring one of you off. She isn't doing much, but it's a start."
-    "She clumsily manages to bring one of you off. She isn't doing much, but it's a start."
+    "她笨拙地设法让你们其中一个下了车。她没做什么大事，但这总算是个开始。"
 
 # game/BKinteractions.rpy:2207
 translate chinese_simplified slave_do_37f31623:
 
     # "[girl.name] takes turns sucking your and the other guy's dick, before you proceed to fuck her. She is putting more heart into it."
-    "[girl.name] takes turns sucking your and the other guy's dick, before you proceed to fuck her. She is putting more heart into it."
+    "[girl.name] 会轮流给你和另一个男人口交，然后你再操她。她更投入。"
 
 # game/BKinteractions.rpy:2210
 translate chinese_simplified slave_do_ebd18b87:
 
     # "You [text1]. [girl.name] looks more relaxed now, and it's less awkward."
-    "You [text1]. [girl.name] looks more relaxed now, and it's less awkward."
+    "你[text1].[girl.name]现在看起来更放松了，也不那么尴尬了。"
 
 # game/BKinteractions.rpy:2213
 translate chinese_simplified slave_do_5b73ce74:
 
     # "[girl.name] moans with pleasure as you [text1]."
-    "[girl.name] moans with pleasure as you [text1]."
+    "[girl.name] 在你[text1]时发出愉悦的呻吟。"
 
 # game/BKinteractions.rpy:2216
 translate chinese_simplified slave_do_3421f13e:
 
     # "[girl.name] is happy to oblige as you proceed to [text1]. She likes fooling around in a group."
-    "[girl.name] is happy to oblige as you proceed to [text1]. She likes fooling around in a group."
+    "[girl.name] 很乐意配合你进行 [text1]。她喜欢和一群人一起玩耍。"
 
 # game/BKinteractions.rpy:2219
 translate chinese_simplified slave_do_e11d4430:
 
     # "She loves it when you [text1]. It seems she loves fucking a group."
-    "She loves it when you [text1]. It seems she loves fucking a group."
+    "她喜欢你[text1]。看来她喜欢群交。"
 
 # game/BKinteractions.rpy:2222
 translate chinese_simplified slave_do_49692a5e:
 
     # "She brings you and the guy off many times, her holes dripping with cum. She begs you to bring more and more people next time. She adores group sex."
-    "She brings you and the guy off many times, her holes dripping with cum. She begs you to bring more and more people next time. She adores group sex."
+    "她让你和那个男人高潮了好几次，她的穴里都滴满了精液。她求你下次带更多的人来。她喜欢群交。"
 
 # game/BKinteractions.rpy:2250
 translate chinese_simplified slave_rape_test_c6fa7fec:
 
     # "You step forward menacingly."
-    "You step forward menacingly."
+    "你气势汹汹地向前迈了一步。"
 
 # game/BKinteractions.rpy:2260
 translate chinese_simplified slave_rape_test_b661c833:
 
     # "She looks away as you approach her, but doesn't try to stop you."
-    "She looks away as you approach her, but doesn't try to stop you."
+    "当你走近她时，她把目光移开，但并没有试图阻止你。"
 
 # game/BKinteractions.rpy:2264
 translate chinese_simplified slave_rape_test_06d35b2c:
 
     # "She blushes as she feels your hands touch her body."
-    "She blushes as she feels your hands touch her body."
+    "当她感觉到你的手触碰到她的身体时，她脸红了。"
 
 # game/BKinteractions.rpy:2271
 translate chinese_simplified slave_rape_test_e8a7d051:
 
     # "She sobs and fights you weakly as you push her on the bed."
-    "She sobs and fights you weakly as you push her on the bed."
+    "你把她推倒在床上，她呜咽着，无力地反抗着。"
 
 # game/BKinteractions.rpy:2288
 translate chinese_simplified slave_hypnotize_method_20b0102a:
 
     # "Reinforcing positive emotions works better if a girl likes you."
-    "Reinforcing positive emotions works better if a girl likes you."
+    "如果女孩喜欢你，强化积极情绪的效果会更好。"
 
 # game/BKinteractions.rpy:2292
 translate chinese_simplified slave_hypnotize_method_5792b8a6:
 
     # "Reinforcing negative emotions works better if a girl fears you."
-    "Reinforcing negative emotions works better if a girl fears you."
+    "如果女孩害怕你，那么强化她的负面情绪效果会更好。"
 
 # game/BKinteractions.rpy:2296
 translate chinese_simplified slave_hypnotize_method_abb3ca0d:
 
     # "Balanced training uses a mix of positive and negative emotions to influence your girl."
-    "Balanced training uses a mix of positive and negative emotions to influence your girl."
+    "平衡训练法结合积极和消极的情绪来影响你的女孩。"
 
 # game/BKinteractions.rpy:2333
 translate chinese_simplified slave_magic_b8269d3d:
 
     # "Listening to the sound of your voice, [girl.name] doesn't seem to hear the actual words. She stands still, looking vaguely into the distance."
-    "Listening to the sound of your voice, [girl.name] doesn't seem to hear the actual words. She stands still, looking vaguely into the distance."
+    "听着你的声音，[girl.name] 似乎并没有听清你说了什么。她站在那里，目光空洞地望着远方。"
 
 # game/BKinteractions.rpy:2336
 translate chinese_simplified slave_magic_0ebab5e3:
 
     # "You start talking with a soothing voice."
-    "You start talking with a soothing voice."
+    "你开始用舒缓的声音说话。"
 
 # game/BKinteractions.rpy:2340
 translate chinese_simplified slave_magic_a3cd644c:
 
     # "You start talking with a threatening voice."
-    "You start talking with a threatening voice."
+    "你开始用威胁的语气说话。"
 
 # game/BKinteractions.rpy:2343
 translate chinese_simplified slave_magic_782b6cc4:
 
     # "You start talking with a calm voice."
-    "You start talking with a calm voice."
+    "你开始用平静的语气说话。"
 
 # game/BKinteractions.rpy:2349
 translate chinese_simplified slave_magic_3244c8a5:
@@ -1558,7 +1558,7 @@ translate chinese_simplified slave_magic_3244c8a5:
 translate chinese_simplified slave_magic_57332bfb:
 
     # "You show her a heavy lead key."
-    "You show her a heavy lead key."
+    "你给她看了一把沉重的铅钥匙。"
 
 # game/BKinteractions.rpy:2354
 translate chinese_simplified slave_magic_5c073ccd:
@@ -1570,7 +1570,7 @@ translate chinese_simplified slave_magic_5c073ccd:
 translate chinese_simplified slave_magic_fd90911f:
 
     # "You prick a silver needle into her breast. She doesn't feel pain, but her face becomes red."
-    "You prick a silver needle into her breast. She doesn't feel pain, but her face becomes red."
+    "你用一根银针刺入她的乳房。她没有感觉到疼痛，但脸却涨红了。"
 
 # game/BKinteractions.rpy:2359
 translate chinese_simplified slave_magic_5d515b4b:
@@ -1582,7 +1582,7 @@ translate chinese_simplified slave_magic_5d515b4b:
 translate chinese_simplified slave_magic_944a4458:
 
     # "You light a stick of suave incense from the southern lands."
-    "You light a stick of suave incense from the southern lands."
+    "你点燃一根来自南方的醇香香烟。"
 
 # game/BKinteractions.rpy:2364
 translate chinese_simplified slave_magic_6fdd9ea9:
@@ -1594,7 +1594,7 @@ translate chinese_simplified slave_magic_6fdd9ea9:
 translate chinese_simplified slave_magic_d85f3a0c:
 
     # "You hold a large mirror in front of her."
-    "You hold a large mirror in front of her."
+    "你拿着一面大镜子对着她。"
 
 # game/BKinteractions.rpy:2369
 translate chinese_simplified slave_magic_7d1e9983:
@@ -1606,7 +1606,7 @@ translate chinese_simplified slave_magic_7d1e9983:
 translate chinese_simplified slave_magic_6cae0f51:
 
     # "You drop the tear of a fairy into her mouth."
-    "You drop the tear of a fairy into her mouth."
+    "你将仙女的眼泪滴入她的口中。"
 
 # game/BKinteractions.rpy:2374
 translate chinese_simplified slave_magic_5c13e2cd:
@@ -1618,7 +1618,7 @@ translate chinese_simplified slave_magic_5c13e2cd:
 translate chinese_simplified slave_magic_c30eb226:
 
     # "You show her a large, glistening gold dildo."
-    "You show her a large, glistening gold dildo."
+    "你给她看一个硕大、闪闪发光的金色假阳具。"
 
 # game/BKinteractions.rpy:2379
 translate chinese_simplified slave_magic_894885cd:
@@ -1630,7 +1630,7 @@ translate chinese_simplified slave_magic_894885cd:
 translate chinese_simplified slave_magic_c2c8e35a:
 
     # "Lifting her skirt and pushing her panties aside, you gently insert a small pearl into her anus."
-    "Lifting her skirt and pushing her panties aside, you gently insert a small pearl into her anus."
+    "你撩起她的裙子，拨开她的内裤，轻轻地将一颗小珍珠塞进她的肛门。"
 
 # game/BKinteractions.rpy:2384
 translate chinese_simplified slave_magic_83ed41b9:
@@ -1642,7 +1642,7 @@ translate chinese_simplified slave_magic_83ed41b9:
 translate chinese_simplified slave_magic_8bff543d:
 
     # "You take out a pair of silver clips from your pouch, and unceremoniously use them to pinch her nipples."
-    "You take out a pair of silver clips from your pouch, and unceremoniously use them to pinch her nipples."
+    "你从口袋里掏出一对银色夹子，毫不客气地用它们夹住她的乳头。"
 
 # game/BKinteractions.rpy:2389
 translate chinese_simplified slave_magic_8d582310:
@@ -1654,13 +1654,13 @@ translate chinese_simplified slave_magic_8d582310:
 translate chinese_simplified slave_magic_18c47f1a:
 
     # "You tell Sill to join you, ordering her to wear a magic strap-on dildo. It pulses with dark energy."
-    "You tell Sill to join you, ordering her to wear a magic strap-on dildo. It pulses with dark energy."
+    "你叫希尔过来，命令她戴上一个充满魔力的绑带式假阳具。它散发着黑暗能量。"
 
 # game/BKinteractions.rpy:2391
 translate chinese_simplified slave_magic_cd907445:
 
     # sill naked "Haaa! Master, it's moving inside..."
-    sill naked "Haaa! Master, it's moving inside..."
+    sill naked "哈！主人，它在里面动了……"
 
 # game/BKinteractions.rpy:2395
 translate chinese_simplified slave_magic_5f1c6466:
@@ -1672,25 +1672,25 @@ translate chinese_simplified slave_magic_5f1c6466:
 translate chinese_simplified slave_magic_71948c45:
 
     # "Muttering a rare spell, you summon a minor flesh elemental. Mindless, but human-like, and well-endowed... It immediately turns its attention to [girl.name]'s body."
-    "Muttering a rare spell, you summon a minor flesh elemental. Mindless, but human-like, and well-endowed... It immediately turns its attention to [girl.name]'s body."
+    "你低声念诵着一个罕见的咒语，召唤出一个低阶血肉元素生物。它没有意识，但外形似人，而且身材丰满……它立刻将注意力转向了[girl.name]的身体。"
 
 # game/BKinteractions.rpy:2418
 translate chinese_simplified slave_magic_4fd0d491:
 
     # "The winds of magic are strong. Your grip on her spirit is solid. {nw}"
-    "The winds of magic are strong. Your grip on her spirit is solid. {nw}"
+    "魔法之风强劲。你对她的灵魂掌控得牢不可破。{nw}"
 
 # game/BKinteractions.rpy:2420
 translate chinese_simplified slave_magic_f4bd06ca:
 
     # "Your grasp on her consciousness is tenuous at best. You have to make it quick. {nw}"
-    "Your grasp on her consciousness is tenuous at best. You have to make it quick. {nw}"
+    "你对她意识的掌控充其量也只是勉强维持。你必须速战速决。{nw}"
 
 # game/BKinteractions.rpy:2422
 translate chinese_simplified slave_magic_b7eb0d00:
 
     # "Her mind offers some resistance, but you endeavor to overcome it. {nw}"
-    "Her mind offers some resistance, but you endeavor to overcome it. {nw}"
+    "她的意志有些抗拒，但你努力克服了它。{nw}"
 
 # game/BKinteractions.rpy:2431
 translate chinese_simplified slave_magic_358f9a9f:
@@ -1702,13 +1702,13 @@ translate chinese_simplified slave_magic_358f9a9f:
 translate chinese_simplified slave_magic_a3f21331:
 
     # extend "[girl.name] gives you a dazed look and blushes. She fails to follow your orders, but you can feel her resistance waning."
-    extend "[女孩名字]一脸茫然，脸颊泛红。她没有听从你的命令，但你能感觉到她的抵抗正在减弱。"
+    extend "[girl.name]一脸茫然，脸颊泛红。她没有听从你的命令，但你能感觉到她的抵抗正在减弱。"
 
 # game/BKinteractions.rpy:2447
 translate chinese_simplified slave_magic_80cb4d41:
 
     # "After a few minutes, you stop the experiment, having only made little progress."
-    "After a few minutes, you stop the experiment, having only made little progress."
+    "几分钟后，你停止了实验，因为进展甚微。"
 
 # game/BKinteractions.rpy:2476
 translate chinese_simplified slave_reward_praise_489c0633:
@@ -1774,25 +1774,25 @@ translate chinese_simplified slave_reward_sex_04ac1ae7:
 translate chinese_simplified slave_reward_sex_cbaff687:
 
     # "You ignore her complaints and gesture for her to move to the bed."
-    "You ignore her complaints and gesture for her to move to the bed."
+    "你无视她的抱怨，示意她移步到床上。"
 
 # game/BKinteractions.rpy:2668
 translate chinese_simplified slave_reward_34214125:
 
     # "You tell her that you are sorry that she fell sick."
-    "You tell her that you are sorry that she fell sick."
+    "你告诉她，你很遗憾她生病了。"
 
 # game/BKinteractions.rpy:2670
 translate chinese_simplified slave_reward_28c18913:
 
     # "You tell her that you are sorry that she got hurt."
-    "You tell her that you are sorry that she got hurt."
+    "你告诉她，你很抱歉她受伤了。"
 
 # game/BKinteractions.rpy:2672
 translate chinese_simplified slave_reward_fec99e97:
 
     # "You tell her that you are happy she is learning fast."
-    "You tell her that you are happy she is learning fast."
+    "你告诉她，你很高兴她学得很快。"
 
 # game/BKinteractions.rpy:2676
 translate chinese_simplified slave_reward_d157ab7a:
@@ -1804,7 +1804,7 @@ translate chinese_simplified slave_reward_d157ab7a:
 translate chinese_simplified slave_reward_805a0c6d:
 
     # "Your reward is less effective because she has been spoiled lately."
-    "Your reward is less effective because she has been spoiled lately."
+    "因为你的奖励效果不佳，因为她最近被宠坏了。"
 
 # game/BKinteractions.rpy:2840
 translate chinese_simplified slave_punish_naked_3a762321:
@@ -1816,7 +1816,7 @@ translate chinese_simplified slave_punish_naked_3a762321:
 translate chinese_simplified slave_punish_beat_c98290fe:
 
     # "Grabbing a long metal ruler, you order her to lower her skirt."
-    "Grabbing a long metal ruler, you order her to lower her skirt."
+    "你拿起一把长长的金属尺，命令她脱下裙子。"
 
 # game/BKinteractions.rpy:2859
 translate chinese_simplified slave_punish_rape_1193c111:
@@ -1828,7 +1828,7 @@ translate chinese_simplified slave_punish_rape_1193c111:
 translate chinese_simplified slave_punish_rape_4ee33438:
 
     # "Lowering your pants, you force her to her knees."
-    "Lowering your pants, you force her to her knees."
+    "你脱下裤子，强迫她跪下。"
 
 # game/BKinteractions.rpy:2871
 translate chinese_simplified slave_punish_rape_50d2f58d:
@@ -1840,7 +1840,7 @@ translate chinese_simplified slave_punish_rape_50d2f58d:
 translate chinese_simplified slave_punish_rape_271db28f:
 
     # "You show her the bed and tell her to undress immediately."
-    "You show her the bed and tell her to undress immediately."
+    "你带她去看床，并命令她立刻脱掉衣服。"
 
 # game/BKinteractions.rpy:2874
 translate chinese_simplified slave_punish_rape_9b768928:
@@ -1852,7 +1852,7 @@ translate chinese_simplified slave_punish_rape_9b768928:
 translate chinese_simplified slave_punish_rape_27570f18:
 
     # "Grabbing her arm, you flip her around and whisper threateningly in her ear."
-    "Grabbing her arm, you flip her around and whisper threateningly in her ear."
+    "你抓住她的手臂，把她转过身，在她耳边威胁地低语。"
 
 # game/BKinteractions.rpy:2877
 translate chinese_simplified slave_punish_rape_4aebb5dc:
@@ -1864,7 +1864,7 @@ translate chinese_simplified slave_punish_rape_4aebb5dc:
 translate chinese_simplified slave_punish_rape_e6908bf3:
 
     # "Showing her the metal rack hanging from the wall, you tell her to hold her hands together so you can bind them."
-    "Showing her the metal rack hanging from the wall, you tell her to hold her hands together so you can bind them."
+    "你指着挂在墙上的金属架，让她把手放在一起，好把她的手绑起来。"
 
 # game/BKinteractions.rpy:2880
 translate chinese_simplified slave_punish_rape_db41efa1:
@@ -1876,7 +1876,7 @@ translate chinese_simplified slave_punish_rape_db41efa1:
 translate chinese_simplified slave_punish_8186df2a:
 
     # "You tell her that it's her own fault if she got sick."
-    "You tell her that it's her own fault if she got sick."
+    "你告诉她，如果她生病了，那是她自己的错。"
 
 # game/BKinteractions.rpy:2906
 translate chinese_simplified slave_punish_c910e5f3:
@@ -1888,49 +1888,49 @@ translate chinese_simplified slave_punish_c910e5f3:
 translate chinese_simplified slave_punish_698fb4d9:
 
     # "You lower her underpants and start whacking her bare ass repeatedly with the metal ruler."
-    "You lower her underpants and start whacking her bare ass repeatedly with the metal ruler."
+    "你脱下她的内裤，开始用金属尺子反复抽打她光裸的屁股。"
 
 # game/BKinteractions.rpy:3066
 translate chinese_simplified slave_punish_f4350b26:
 
     # "Your punishment is less effective because she has already been chastised enough recently."
-    "Your punishment is less effective because she has already been chastised enough recently."
+    "你的惩罚效果不佳，因为她最近已经受到了足够的惩罚。"
 
 # game/BKinteractions.rpy:3117
 translate chinese_simplified slave_rape_98f56acc:
 
     # "You remember what that she hates [text1], so you decide to force her to do it."
-    "You remember what that she hates [text1], so you decide to force her to do it."
+    "你记得她最讨厌什么[text1]，所以你决定强迫她去做。"
 
 # game/BKinteractions.rpy:3132
 translate chinese_simplified slave_rape_82edb748:
 
     # "You don't know what it is she hates about [text1], so you just try something at random, to see how she handles [fix.name]."
-    "You don't know what it is she hates about [text1], so you just try something at random, to see how she handles [fix.name]."
+    "你不知道她讨厌[text1]的什么，所以你只是随机尝试一些东西，看看她如何应对[fix.name]。"
 
 # game/BKinteractions.rpy:3138
 translate chinese_simplified slave_rape_9b162712:
 
     # "It seems you have found her weak spot. She hates [text2], crying and pleading for you to stop."
-    "It seems you have found her weak spot. She hates [text2], crying and pleading for you to stop."
+    "看来你找到了她的软肋。她恨透了[text2]，哭着哀求你停下来。"
 
 # game/BKinteractions.rpy:3147
 translate chinese_simplified slave_rape_aa0d15cf:
 
     # "Contrary to your expectations, [girl.name] seems to actually enjoy it. Does that even count as punishment?"
-    "Contrary to your expectations, [girl.name] seems to actually enjoy it. Does that even count as punishment?"
+    "与你的预期相反，[girl.name] 似乎很享受。这还能算是惩罚吗？"
 
 # game/BKinteractions.rpy:3153
 translate chinese_simplified slave_rape_2335a399:
 
     # "No, that's not it... You proceed anyway."
-    "No, that's not it... You proceed anyway."
+    "不，不是那样……你还是继续吧。"
 
 # game/BKinteractions.rpy:3180
 translate chinese_simplified slave_rape_7a90c4d6:
 
     # "Ignoring her indignant cries, you rip off her slave clothes, leaving her bare naked with her torn clothes laying in a heap on the floor."
-    "Ignoring her indignant cries, you rip off her slave clothes, leaving her bare naked with her torn clothes laying in a heap on the floor."
+    "你不顾她愤慨的哭喊，撕掉了她的奴隶服，让她赤身裸体，撕破的衣服堆在地板上。"
 
 # game/BKinteractions.rpy:3186
 translate chinese_simplified slave_rape_5ae8f1a9:
@@ -1942,139 +1942,139 @@ translate chinese_simplified slave_rape_5ae8f1a9:
 translate chinese_simplified slave_rape_a315b40c:
 
     # "She is horrified and begs you numerous times to spare her. You refuse, however, and she keeps crying all day long while hiding herself as much as possible."
-    "She is horrified and begs you numerous times to spare her. You refuse, however, and she keeps crying all day long while hiding herself as much as possible."
+    "她惊恐万分，一再哀求你饶了她。然而你拒绝了，她整日哭泣，尽可能地把自己藏起来。"
 
 # game/BKinteractions.rpy:3195
 translate chinese_simplified slave_rape_e2ec379c:
 
     # "She doesn't know what to do and tries to hide as much as possible. But she has to put up with everyone staring at her all day."
-    "She doesn't know what to do and tries to hide as much as possible. But she has to put up with everyone staring at her all day."
+    "她不知所措，只能尽量躲藏起来。但她不得不忍受所有人整天盯着她看。"
 
 # game/BKinteractions.rpy:3198
 translate chinese_simplified slave_rape_1e0bf62e:
 
     # "She complains and whines but she has to obey your orders. She grudgingly gets on with her day."
-    "She complains and whines but she has to obey your orders. She grudgingly gets on with her day."
+    "她抱怨连连，但不得不服从你的命令。她不情愿地继续一天的工作。"
 
 # game/BKinteractions.rpy:3201
 translate chinese_simplified slave_rape_cbd26cb2:
 
     # "She lowers her head and looks down, but she's also blushing. It seems she is both ashamed and a little turned on by your orders."
-    "She lowers her head and looks down, but she's also blushing. It seems she is both ashamed and a little turned on by your orders."
+    "她低下头，目光向下，但脸颊却泛起了红晕。看来她既感到羞愧，又对你的命令感到一丝兴奋。"
 
 # game/BKinteractions.rpy:3204
 translate chinese_simplified slave_rape_62b60732:
 
     # "She doesn't seem to mind much having to expose her body to strangers."
-    "She doesn't seem to mind much having to expose her body to strangers."
+    "她似乎并不太介意向陌生人暴露自己的身体。"
 
 # game/BKinteractions.rpy:3207
 translate chinese_simplified slave_rape_eb13048f:
 
     # "In spite of your threats, she is completely comfortable being naked all day, it even seems to make her hornier. She happily exposes herself to everyone, even letting perfect strangers fondle her as much as they want."
-    "In spite of your threats, she is completely comfortable being naked all day, it even seems to make her hornier. She happily exposes herself to everyone, even letting perfect strangers fondle her as much as they want."
+    "尽管你威胁她，她却毫不在意整天裸体，这似乎反而让她更加兴奋。她乐于向所有人袒露自己，甚至任由陌生人随意抚摸她。"
 
 # game/BKinteractions.rpy:3215
 translate chinese_simplified slave_rape_7a9f51a0:
 
     # "You force your dick into her mouth, going as deep as possible until she gags."
-    "You force your dick into her mouth, going as deep as possible until she gags."
+    "你强行将阴茎塞进她的嘴里，尽可能深地插入，直到她作呕。"
 
 # game/BKinteractions.rpy:3218
 translate chinese_simplified slave_rape_21926e26:
 
     # "You force her to use her hands to rub your dick."
-    "You force her to use her hands to rub your dick."
+    "你强迫她用手摩擦你的阴茎。"
 
 # game/BKinteractions.rpy:3221
 translate chinese_simplified slave_rape_c20c3828:
 
     # "You force your dick between her soft tits, moving back and forth."
-    "You force your dick between her soft tits, moving back and forth."
+    "你把你的阴茎强行插入她柔软的乳房之间，来回抽动。"
 
 # game/BKinteractions.rpy:3224
 translate chinese_simplified slave_rape_700dd1a2:
 
     # "You force her to masturbate in front of you."
-    "You force her to masturbate in front of you."
+    "你强迫她在你面前自慰。"
 
 # game/BKinteractions.rpy:3227
 translate chinese_simplified slave_rape_eb996dec:
 
     # "You use her body to pleasure yourself."
-    "You use her body to pleasure yourself."
+    "你利用她的身体来满足自己的欲望。"
 
 # game/BKinteractions.rpy:3230
 translate chinese_simplified slave_rape_d454ea0a:
 
     # "Forcing yourself on her, you push your dick hard into her tight pussy."
-    "Forcing yourself on her, you push your dick hard into her tight pussy."
+    "你强迫她，用力将阴茎插入她紧致的阴道。"
 
 # game/BKinteractions.rpy:3233
 translate chinese_simplified slave_rape_de74eb87:
 
     # "Disregarding her plea, your brutally force your cock into her tight asshole."
-    "Disregarding her plea, your brutally force your cock into her tight asshole."
+    "你不顾她的哀求，残忍地将你的阴茎强行插入她紧致的肛门。"
 
 # game/BKinteractions.rpy:3236
 translate chinese_simplified slave_rape_7b1640fe:
 
     # "Taking out a crop from your toolbag, you start spanking her hard with it."
-    "Taking out a crop from your toolbag, you start spanking her hard with it."
+    "你从工具包里掏出一根鞭子，开始狠狠地抽打她的屁股。"
 
 # game/BKinteractions.rpy:3239
 translate chinese_simplified slave_rape_d2dac8a3:
 
     # "You tell Sill to fuck her with a strap-on XXL dildo."
-    "You tell Sill to fuck her with a strap-on XXL dildo."
+    "你让希尔用超大号绑带式假阳具操她。"
 
 # game/BKinteractions.rpy:3243
 translate chinese_simplified slave_rape_ff78aebe:
 
     # "You ask a security guard to join you and fuck [girl.name]. He complies with a dumb grin on his face."
-    "You ask a security guard to join you and fuck [girl.name]. He complies with a dumb grin on his face."
+    "你叫一个保安和你一起去和[girl.name]做爱。他傻笑着答应了。"
 
 # game/BKinteractions.rpy:3245
 translate chinese_simplified slave_rape_0f6ffdab:
 
     # "You send Sill to fetch a vagrant. He's only too eager to join you to fuck [girl.name]."
-    "You send Sill to fetch a vagrant. He's only too eager to join you to fuck [girl.name]."
+    "你派希尔去接一个流浪汉。他非常乐意和你一起和[girl.name]发生性关系。"
 
 # game/BKinteractions.rpy:3253
 translate chinese_simplified slave_rape_7968ae9d:
 
     # "She is horrified by this brutal rape and she cries all the tears in her body, pleading for mercy."
-    "She is horrified by this brutal rape and she cries all the tears in her body, pleading for mercy."
+    "她被这起残忍的强奸吓坏了，哭干了全身的眼泪，乞求饶命。"
 
 # game/BKinteractions.rpy:3256
 translate chinese_simplified slave_rape_7ed537b1:
 
     # "She cries and begs you to stop. You ignore her, focusing your attention on her violated body."
-    "She cries and begs you to stop. You ignore her, focusing your attention on her violated body."
+    "她哭喊着求你住手。你却置之不理，只顾着盯着她被凌辱的身体。"
 
 # game/BKinteractions.rpy:3259
 translate chinese_simplified slave_rape_66662124:
 
     # "She cries silent tears as you force her to do your bidding, bearing the shame and pain until you're finished."
-    "She cries silent tears as you force her to do your bidding, bearing the shame and pain until you're finished."
+    "当你强迫她听从你的命令时，她默默地流着泪，忍受着羞辱和痛苦，直到你完成为止。"
 
 # game/BKinteractions.rpy:3262
 translate chinese_simplified slave_rape_6ca486cc:
 
     # "As you make her pay for her misdeeds, you notice that her cries and moans are not entirely in pain."
-    "As you make her pay for her misdeeds, you notice that her cries and moans are not entirely in pain."
+    "当你让她为自己的恶行付出代价时，你注意到她的哭喊和呻吟并不完全是痛苦的。"
 
 # game/BKinteractions.rpy:3265
 translate chinese_simplified slave_rape_dc6177fa:
 
     # "Although she's making a show of complaining, it is clear she is getting off being brutally raped. She moans erotically with every movement."
-    "Although she's making a show of complaining, it is clear she is getting off being brutally raped. She moans erotically with every movement."
+    "虽然她装出一副抱怨的样子，但很明显她很享受被残忍强奸的感觉。她随着每一次动作发出淫荡的呻吟。"
 
 # game/BKinteractions.rpy:3268
 translate chinese_simplified slave_rape_195304f8:
 
     # "Even though you are supposed to be punishing her, she screams with pleasure with each of your assaults, enjoying every bit of it with perverse satisfaction. Maybe that wasn't quite what you had in mind."
-    "Even though you are supposed to be punishing her, she screams with pleasure with each of your assaults, enjoying every bit of it with perverse satisfaction. Maybe that wasn't quite what you had in mind."
+    "尽管你应该惩罚她，但她每次受到你的侵犯都会发出愉悦的尖叫，从中获得一种变态的满足感。也许这并非你所设想的那样。"
 
 # game/BKinteractions.rpy:3275
 translate chinese_simplified slave_rape_e589ac84:
@@ -2086,43 +2086,43 @@ translate chinese_simplified slave_rape_e589ac84:
 translate chinese_simplified slave_rape_403590ba:
 
     # "She has to keep masturbating while you watch and jerk off. Eventually, you bring your cock up to her and blow your load right in her face."
-    "She has to keep masturbating while you watch and jerk off. Eventually, you bring your cock up to her and blow your load right in her face."
+    "她得一边自慰一边看着你撸管。最后，你把鸡巴凑到她面前，把精液射到她脸上。"
 
 # game/BKinteractions.rpy:3285
 translate chinese_simplified slave_rape_bebff86f:
 
     # "You blow a thick load all over her, then force her to lick your dick clean."
-    "You blow a thick load all over her, then force her to lick your dick clean."
+    "你把精液射在她身上，然后强迫她舔干净你的阴茎。"
 
 # game/BKinteractions.rpy:3288
 translate chinese_simplified slave_rape_8e350a6a:
 
     # "After pounding her pussy furiously for some time, you suddenly blow a big load right into her cunt."
-    "After pounding her pussy furiously for some time, you suddenly blow a big load right into her cunt."
+    "在她阴道里疯狂抽插了一段时间后，你突然把一大股精液射进了她的阴道里。"
 
 # game/BKinteractions.rpy:3291
 translate chinese_simplified slave_rape_874b2a1a:
 
     # "You pound her butt so hard that she can barely breathe. After brutally raping her ass for a few minutes, you reach your limit, shooting a load of hot cum deep inside her asshole."
-    "You pound her butt so hard that she can barely breathe. After brutally raping her ass for a few minutes, you reach your limit, shooting a load of hot cum deep inside her asshole."
+    "你狠狠地操她的屁股，让她几乎喘不过气来。在残暴地强奸了她几分钟后，你达到了极限，将一股滚烫的精液射入她肛门深处。"
 
 # game/BKinteractions.rpy:3294
 translate chinese_simplified slave_rape_68fe06b0:
 
     # "You keep hitting her until she's got bright red marks all over her back, ass, and legs."
-    "You keep hitting her until she's got bright red marks all over her back, ass, and legs."
+    "你不停地打她，直到她的背部、臀部和腿上都布满了鲜红的伤痕。"
 
 # game/BKinteractions.rpy:3297
 translate chinese_simplified slave_rape_35951686:
 
     # "You make Sill fuck her harder and harder with the dildo until she's drooling from the pounding she gets."
-    "You make Sill fuck her harder and harder with the dildo until she's drooling from the pounding she gets."
+    "你让希尔用假阳具越来越用力地操她，直到她被猛烈抽插得口水直流。"
 
 # game/BKinteractions.rpy:3300
 translate chinese_simplified slave_rape_26680ee5:
 
     # "You rape her pussy and ass, while the other rams his dick down her throat until she chokes."
-    "You rape her pussy and ass, while the other rams his dick down her throat until she chokes."
+    "你强奸她的阴道和肛门，而另一个人则把他的阴茎塞进她的喉咙，直到她窒息。"
 
 # game/BKinteractions.rpy:3327
 translate chinese_simplified slave_master_bedroom_add_13d98316:
@@ -2134,7 +2134,7 @@ translate chinese_simplified slave_master_bedroom_add_13d98316:
 translate chinese_simplified slave_master_bedroom_add_b7144507:
 
     # "[girl.fullname] has joined the master bedroom."
-    "[girl.fullname] has joined the master bedroom."
+    "[girl.fullname] 已入住主卧室。"
 
 # game/BKinteractions.rpy:3354
 translate chinese_simplified slave_master_bedroom_remove_d58255d5:
@@ -2146,7 +2146,7 @@ translate chinese_simplified slave_master_bedroom_remove_d58255d5:
 translate chinese_simplified slave_master_bedroom_remove_2f0ec43a:
 
     # "[girl.fullname] has left the master bedroom."
-    "[girl.fullname] has left the master bedroom."
+    "[girl.fullname] 已离开主卧室。"
 
 # game/BKinteractions.rpy:3380
 translate chinese_simplified slave_clothing_naked_f23d992b:
@@ -2176,19 +2176,19 @@ translate chinese_simplified slave_allow_cust_events_41500a43:
 translate chinese_simplified slave_custom_option_0375ee28:
 
     # "System" "Label: {color=[c_red]}[custom_option_label]{/color} doesn't exist (Custom girl: {color=[c_red]}[girl.path]/_BK.ini{/color})."
-    "System" "标签：{color=[c_red]}[custom_option_label]{/color} 不存在（自定义女孩：{color=[c_red]}[girl.path]/_BK.ini{/color}）。"
+    "系统" "标签：{color=[c_red]}[custom_option_label]{/color} 不存在（自定义女孩：{color=[c_red]}[girl.path]/_BK.ini{/color}）。"
 
 # game/BKinteractions.rpy:3520
 translate chinese_simplified slave_story1_ee86aea0:
 
     # "You came to ask [girl.name] a question, but instead it looks like she wants to talk to you."
-    "You came to ask [girl.name] a question, but instead it looks like she wants to talk to you."
+    "你本来是来问[girl.name]一个问题，但看起来她反而想和你说话。"
 
 # game/BKinteractions.rpy:3522
 translate chinese_simplified slave_story1_e00bebee:
 
     # you "[girl.name]... What's wrong?"
-    you "[女孩名字]……你怎么了？"
+    you "[girl.name]……你怎么了？"
 
 # game/BKinteractions.rpy:3524
 translate chinese_simplified slave_story1_2732f726:
@@ -2224,7 +2224,7 @@ translate chinese_simplified slave_story1_2015a94a:
 translate chinese_simplified slave_story1_132223ee:
 
     # girl.char "I ran into him one day while I was [activity]."
-    girl.char "有一天我在做[活动]的时候偶然遇到了他。"
+    girl.char "有一天我在做[activity]的时候偶然遇到了他。"
 
 # game/BKinteractions.rpy:3543
 translate chinese_simplified slave_story1_f35c95cb:
@@ -2284,7 +2284,7 @@ translate chinese_simplified slave_story1_e6e43125:
 translate chinese_simplified slave_story1_440ade1c:
 
     # "She shakes her head, looking terribly sad. You figure it's better to leave the rest of this conversation for later."
-    "She shakes her head, looking terribly sad. You figure it's better to leave the rest of this conversation for later."
+    "她摇了摇头，看起来非常难过。你觉得最好还是把剩下的谈话留到以后再说。"
 
 # game/BKinteractions.rpy:3574
 translate chinese_simplified slave_story1_73184fe9:
@@ -2362,13 +2362,13 @@ translate chinese_simplified slave_story1_a90d4179:
 translate chinese_simplified slave_story1_bd8f7448:
 
     # "Tears run along her cheeks. She doesn't look ready to continue her story for now."
-    "Tears run along her cheeks. She doesn't look ready to continue her story for now."
+    "泪水顺着她的脸颊滑落。她看起来暂时还不想继续讲述她的故事。"
 
 # game/BKinteractions.rpy:3609
 translate chinese_simplified slave_story1_55e679af:
 
     # "You find [girl.fullname] looking thoughtful, gazing at the sky through a small window."
-    "You find [girl.fullname] looking thoughtful, gazing at the sky through a small window."
+    "你发现[girl.fullname]若有所思地望着天空，透过一扇小窗户凝视着。"
 
 # game/BKinteractions.rpy:3611
 translate chinese_simplified slave_story1_266b6b46:
@@ -2512,7 +2512,7 @@ translate chinese_simplified slave_story1_2f83103c:
 translate chinese_simplified slave_story1_03de4d54:
 
     # "She talks to you again about how she was betrayed by her former lover."
-    "She talks to you again about how she was betrayed by her former lover."
+    "她再次向你倾诉她如何被前男友背叛。"
 
 # game/BKinteractions.rpy:3682
 translate chinese_simplified slave_story1_ed64a472:
@@ -2548,13 +2548,13 @@ translate chinese_simplified slave_story1_2f83103c_1:
 translate chinese_simplified slave_story2_ed1ba35b:
 
     # "You find [girl.name] lost in her thoughts in her room, contemplating a small pile of gold coins on her table."
-    "You find [girl.name] lost in her thoughts in her room, contemplating a small pile of gold coins on her table."
+    "你发现[girl.name]在房间里陷入沉思，凝视着桌上的一小堆金币。"
 
 # game/BKinteractions.rpy:3713
 translate chinese_simplified slave_story2_b4040157:
 
     # "She doesn't notice your presence until you clear your throat."
-    "She doesn't notice your presence until you clear your throat."
+    "直到你清了清嗓子，她才注意到你的存在。"
 
 # game/BKinteractions.rpy:3717
 translate chinese_simplified slave_story2_1a8c2e33:
@@ -2566,7 +2566,7 @@ translate chinese_simplified slave_story2_1a8c2e33:
 translate chinese_simplified slave_story2_a625f97b:
 
     # "She is startled and moves to hide the money... But she stops in her tracks when she realizes it's you."
-    "She is startled and moves to hide the money... But she stops in her tracks when she realizes it's you."
+    "她吓了一跳，赶紧想把钱藏起来……但当她意识到是你时，她停住了脚步。"
 
 # game/BKinteractions.rpy:3721
 translate chinese_simplified slave_story2_d665dd91:
@@ -2590,7 +2590,7 @@ translate chinese_simplified slave_story2_6148ef4c:
 translate chinese_simplified slave_story2_75238450:
 
     # "You told Sill to hand the girls some petty cash for their basic needs, so this is not implausible."
-    "You told Sill to hand the girls some petty cash for their basic needs, so this is not implausible."
+    "你告诉希尔给女孩们一些零花钱以满足她们的基本需求，所以这并非不可能。"
 
 # game/BKinteractions.rpy:3735
 translate chinese_simplified slave_story2_0a8a0ca0:
@@ -2602,7 +2602,7 @@ translate chinese_simplified slave_story2_0a8a0ca0:
 translate chinese_simplified slave_story2_7c70dfbd:
 
     # "She relaxes, and gives you a weak smile."
-    "She relaxes, and gives you a weak smile."
+    "她放松下来，勉强挤出一个笑容。"
 
 # game/BKinteractions.rpy:3739
 translate chinese_simplified slave_story2_04b281fb:
@@ -2626,7 +2626,7 @@ translate chinese_simplified slave_story2_bcd8046f:
 translate chinese_simplified slave_story2_ba376f3b:
 
     # "Her eyes fill with tears."
-    "Her eyes fill with tears."
+    "她眼中噙满了泪水。"
 
 # game/BKinteractions.rpy:3752
 translate chinese_simplified slave_story2_37d71182:
@@ -2638,13 +2638,13 @@ translate chinese_simplified slave_story2_37d71182:
 translate chinese_simplified slave_story2_ee4a48ab:
 
     # "You have taken [tip] gold from her."
-    "You have taken [tip] gold from her."
+    "你从她那里拿走了[tip]金子。"
 
 # game/BKinteractions.rpy:3765
 translate chinese_simplified slave_story2_9b30127b:
 
     # "She shifts uneasily from side to side while you give her a steely gaze."
-    "She shifts uneasily from side to side while you give her a steely gaze."
+    "当你目光如炬地盯着她时，她不安地左右挪动着身体。"
 
 # game/BKinteractions.rpy:3767
 translate chinese_simplified slave_story2_f3b5e4e5:
@@ -2716,7 +2716,7 @@ translate chinese_simplified slave_story2_dae0ec55:
 translate chinese_simplified slave_story2_2a3609ce:
 
     # sill "[girl.name]! Can you please come here!" with vpunch
-    sill "[girl.name]! Can you please come here!" with vpunch
+    sill "[girl.name]！请你过来一下！" with vpunch
 
 # game/BKinteractions.rpy:3796
 translate chinese_simplified slave_story2_062d4094:
@@ -2734,7 +2734,7 @@ translate chinese_simplified slave_story2_f57f7c1a:
 translate chinese_simplified slave_story2_21ad0740:
 
     # "You find [girl.name] in the mood to talk."
-    "You find [girl.name] in the mood to talk."
+    "你发现[girl.name]有心情聊天。"
 
 # game/BKinteractions.rpy:3811
 translate chinese_simplified slave_story2_2a580215:
@@ -2776,7 +2776,7 @@ translate chinese_simplified slave_story2_edfa60c8:
 translate chinese_simplified slave_story2_7a87a962:
 
     # "Her voice breaks"
-    "Her voice breaks"
+    "她的声音哽咽了。"
 
 # game/BKinteractions.rpy:3828
 translate chinese_simplified slave_story2_807c5b18:
@@ -2890,7 +2890,7 @@ translate chinese_simplified slave_story2_78978e4a:
 translate chinese_simplified slave_story2_582e8a36:
 
     # "You have a question for [girl.name], and now seems like the right time."
-    "You have a question for [girl.name], and now seems like the right time."
+    "你有一个问题想问[girl.name]，现在似乎正是时候。"
 
 # game/BKinteractions.rpy:3889
 translate chinese_simplified slave_story2_fac602f1:
@@ -2938,7 +2938,7 @@ translate chinese_simplified slave_story2_cf745fde:
 translate chinese_simplified slave_story2_a889bc02:
 
     # "You feel this could be a warning."
-    "You feel this could be a warning."
+    "你觉得这可能是一个警告。"
 
 # game/BKinteractions.rpy:3907
 translate chinese_simplified slave_story2_d19f415a:
@@ -2950,7 +2950,7 @@ translate chinese_simplified slave_story2_d19f415a:
 translate chinese_simplified slave_story2_0bc7db9d:
 
     # "She laughs."
-    "She laughs."
+    "她笑了。"
 
 # game/BKinteractions.rpy:3913
 translate chinese_simplified slave_story2_6c367ada:
@@ -3016,7 +3016,7 @@ translate chinese_simplified slave_story2_31fe1d97:
 translate chinese_simplified slave_story2_3c5c2b7b:
 
     # "She gets teary-eyed."
-    "She gets teary-eyed."
+    "她眼眶湿润了。"
 
 # game/BKinteractions.rpy:3937
 translate chinese_simplified slave_story2_cb73fc65:
@@ -3118,7 +3118,7 @@ translate chinese_simplified slave_story2_a8fb5952_1:
 translate chinese_simplified slave_story3_72d77ea0:
 
     # "You find [girl.name] crying in her room. [text1]"
-    "You find [girl.name] crying in her room. [text1]"
+    "你发现[girl.name]在房间里哭泣。[text1]"
 
 # game/BKinteractions.rpy:4012
 translate chinese_simplified slave_story3_fc3acfb4:
@@ -3136,7 +3136,7 @@ translate chinese_simplified slave_story3_2d49bef9:
 translate chinese_simplified slave_story3_098c0275:
 
     # "She dries her tears. You wait to see if she is ready to tell you more."
-    "She dries her tears. You wait to see if she is ready to tell you more."
+    "她擦干眼泪。你等着看她是否准备好告诉你更多。"
 
 # game/BKinteractions.rpy:4018
 translate chinese_simplified slave_story3_c1da3d17:
@@ -3172,7 +3172,7 @@ translate chinese_simplified slave_story3_4ab053d4:
 translate chinese_simplified slave_story3_e26de5a5:
 
     # "Her eyes are welling with tears again. It takes a moment for her to resume her story."
-    "Her eyes are welling with tears again. It takes a moment for her to resume her story."
+    "她的眼眶再次盈满了泪水。她停顿了一会儿才继续讲述她的故事。"
 
 # game/BKinteractions.rpy:4040
 translate chinese_simplified slave_story3_4829b716:
@@ -3202,7 +3202,7 @@ translate chinese_simplified slave_story3_f8b3e170:
 translate chinese_simplified slave_story3_ab40dad9:
 
     # "You wait for her to continue."
-    "You wait for her to continue."
+    "你等着她继续说下去。"
 
 # game/BKinteractions.rpy:4052
 translate chinese_simplified slave_story3_60424f2d:
@@ -3244,7 +3244,7 @@ translate chinese_simplified slave_story3_8632caff:
 translate chinese_simplified slave_story3_74cedf28:
 
     # "She chokes."
-    "She chokes."
+    "她哽咽了。"
 
 # game/BKinteractions.rpy:4069
 translate chinese_simplified slave_story3_4e108d83:
@@ -3256,13 +3256,13 @@ translate chinese_simplified slave_story3_4e108d83:
 translate chinese_simplified slave_story3_0d9b6a20:
 
     # "She seems exhausted by the conversation. You decide to let her rest, and continue her story on another day."
-    "She seems exhausted by the conversation. You decide to let her rest, and continue her story on another day."
+    "她似乎被谈话弄得筋疲力尽。你决定让她休息，改天再继续讲她的故事。"
 
 # game/BKinteractions.rpy:4080
 translate chinese_simplified slave_story3_2f6861d3:
 
     # "You ask [girl.name] to tell you more about her kidnapping by a raiding party. She seems ready to talk now."
-    "You ask [girl.name] to tell you more about her kidnapping by a raiding party. She seems ready to talk now."
+    "你请[girl.name]详细讲述她被劫匪绑架的经过。她现在似乎愿意开口了。"
 
 # game/BKinteractions.rpy:4082
 translate chinese_simplified slave_story3_a0bf7ee4:
@@ -3280,13 +3280,13 @@ translate chinese_simplified slave_story3_7c8d0260:
 translate chinese_simplified slave_story3_bb619bb5:
 
     # "She looks furious."
-    "She looks furious."
+    "她看起来很生气。"
 
 # game/BKinteractions.rpy:4090
 translate chinese_simplified slave_story3_314433c9:
 
     # "She starts sobbing again."
-    "She starts sobbing again."
+    "她又开始啜泣起来。"
 
 # game/BKinteractions.rpy:4092
 translate chinese_simplified slave_story3_66d0daae:
@@ -3364,7 +3364,7 @@ translate chinese_simplified slave_story3_96a70992:
 translate chinese_simplified slave_story3_7b693942:
 
     # "She blushes and lowers her eyes."
-    "She blushes and lowers her eyes."
+    "她脸红了，垂下了眼帘。"
 
 # game/BKinteractions.rpy:4116
 translate chinese_simplified slave_story3_5178ed47:
@@ -3388,19 +3388,19 @@ translate chinese_simplified slave_story3_8bb00932:
 translate chinese_simplified slave_story3_98ddf7e1:
 
     # "She starts crying uncontrollably. You decide to give her a break."
-    "She starts crying uncontrollably. You decide to give her a break."
+    "她开始止不住地哭泣。你决定让她休息一会儿。"
 
 # game/BKinteractions.rpy:4131
 translate chinese_simplified slave_story3_c7383372:
 
     # "You find [girl.name] laying on her bed, looking silently at the ceiling."
-    "You find [girl.name] laying on her bed, looking silently at the ceiling."
+    "你发现[girl.name]躺在床上，默默地望着天花板。"
 
 # game/BKinteractions.rpy:4133
 translate chinese_simplified slave_story3_12508aa3:
 
     # "Even though she noticed your presence, she doesn't move from her position. She starts talking absent-mindedly."
-    "Even though she noticed your presence, she doesn't move from her position. She starts talking absent-mindedly."
+    "尽管她注意到了你的存在，但她并没有离开原来的位置，而是心不在焉地开始说话。"
 
 # game/BKinteractions.rpy:4135
 translate chinese_simplified slave_story3_5cb74dbd:
@@ -3418,7 +3418,7 @@ translate chinese_simplified slave_story3_40bb0b24:
 translate chinese_simplified slave_story3_8235cf51:
 
     # "She looks sad."
-    "She looks sad."
+    "她看起来很伤心。"
 
 # game/BKinteractions.rpy:4141
 translate chinese_simplified slave_story3_2444a762:
@@ -3652,19 +3652,19 @@ translate chinese_simplified slave_story3_bf3073f1_1:
 translate chinese_simplified slave_story4_361f1993:
 
     # "You find [girl.name] standing in front of the mirror, admiring a small night dress she bought for herself with her allowance."
-    "You find [girl.name] standing in front of the mirror, admiring a small night dress she bought for herself with her allowance."
+    "你发现[girl.name]站在镜子前，欣赏着她用零花钱给自己买的一件小睡裙。"
 
 # game/BKinteractions.rpy:4255
 translate chinese_simplified slave_story4_151763ef:
 
     # "She buries her face in the fabric, taking in the smell of the new dress."
-    "She buries her face in the fabric, taking in the smell of the new dress."
+    "她把脸埋进布料里，贪婪地嗅着新裙子的香味。"
 
 # game/BKinteractions.rpy:4257
 translate chinese_simplified slave_story4_f263b05e:
 
     # "When she lifts back her face, she is startled to see your reflection in the mirror."
-    "When she lifts back her face, she is startled to see your reflection in the mirror."
+    "当她抬起头时，惊讶地发现镜子里映出了你的身影。"
 
 # game/BKinteractions.rpy:4261
 translate chinese_simplified slave_story4_076984e2:
@@ -3682,7 +3682,7 @@ translate chinese_simplified slave_story4_44bab695:
 translate chinese_simplified slave_story4_32c32369:
 
     # "She looks embarrassed."
-    "She looks embarrassed."
+    "她看起来很尴尬。"
 
 # game/BKinteractions.rpy:4267
 translate chinese_simplified slave_story4_e9692be3:
@@ -3706,7 +3706,7 @@ translate chinese_simplified slave_story4_2cf53156:
 translate chinese_simplified slave_story4_4c9271d9:
 
     # "Your eyes narrow."
-    "Your eyes narrow."
+    "你眯起了眼睛。"
 
 # game/BKinteractions.rpy:4275
 translate chinese_simplified slave_story4_6ca15cd6:
@@ -3814,7 +3814,7 @@ translate chinese_simplified slave_story4_4e8eeb14:
 translate chinese_simplified slave_story4_f8088ea1:
 
     # "You find [girl.name] at her desk, drawing something. It looks like some kind of garment. She slips it under a book as soon as she realizes your presence."
-    "You find [girl.name] at her desk, drawing something. It looks like some kind of garment. She slips it under a book as soon as she realizes your presence."
+    "你发现[girl.name]坐在书桌前，正在画什么东西。看起来像是某种衣服。她一发现你，就把画塞到书下面去了。"
 
 # game/BKinteractions.rpy:4327
 translate chinese_simplified slave_story4_6533823a:
@@ -3850,13 +3850,13 @@ translate chinese_simplified slave_story4_c62cf67a:
 translate chinese_simplified slave_story4_030f35a5:
 
     # "You are taken aback by this question."
-    "You are taken aback by this question."
+    "你被这个问题难住了。"
 
 # game/BKinteractions.rpy:4340
 translate chinese_simplified slave_story4_ac89493c:
 
     # you "Well..." nointeract
-    you "Well..." nointeract
+    you "出色地..." nointeract
 
 # game/BKinteractions.rpy:4343
 translate chinese_simplified slave_story4_58a3dd56:
@@ -3886,7 +3886,7 @@ translate chinese_simplified slave_story4_53bc58d0:
 translate chinese_simplified slave_story4_6d09d2c3:
 
     # "You burst into a cruel laugh."
-    "You burst into a cruel laugh."
+    "你突然发出残忍的笑声。"
 
 # game/BKinteractions.rpy:4354
 translate chinese_simplified slave_story4_40d09470:
@@ -3904,7 +3904,7 @@ translate chinese_simplified slave_story4_7e61c075:
 translate chinese_simplified slave_story4_e7c72d25:
 
     # "[girl.name] looks down."
-    "[girl.name] looks down."
+    "[girl.name] 低下了头。"
 
 # game/BKinteractions.rpy:4364
 translate chinese_simplified slave_story4_01107499:
@@ -4006,13 +4006,13 @@ translate chinese_simplified slave_story4_a577ad0e:
 translate chinese_simplified slave_story4_3bbf5dbe:
 
     # "She hangs her head and falls silent."
-    "She hangs her head and falls silent."
+    "她低下头，沉默不语。"
 
 # game/BKinteractions.rpy:4400
 translate chinese_simplified slave_story4_4e2e024e:
 
     # "You hear Sill call you from another room."
-    "You hear Sill call you from another room."
+    "你听到希尔从另一个房间叫你。"
 
 # game/BKinteractions.rpy:4402
 translate chinese_simplified slave_story4_039efb21:
@@ -4024,37 +4024,37 @@ translate chinese_simplified slave_story4_039efb21:
 translate chinese_simplified slave_story4_81bf8848:
 
     # "She doesn't reply. Tears are flowing down her face. You leave and close the door softly behind you."
-    "She doesn't reply. Tears are flowing down her face. You leave and close the door softly behind you."
+    "她没有回答，泪水顺着脸颊流淌。你转身离开，轻轻地关上了门。"
 
 # game/BKinteractions.rpy:4413
 translate chinese_simplified slave_story4_2364d313:
 
     # "You find [girl.name] asleep at her desk. On it, you see several half-finished sketches of a sumptuous dress. She seems pretty good at drawing."
-    "You find [girl.name] asleep at her desk. On it, you see several half-finished sketches of a sumptuous dress. She seems pretty good at drawing."
+    "你发现[girl.name]趴在桌子上睡着了。桌子上放着几张只完成了一半的华丽礼服草图。她似乎很擅长画画。"
 
 # game/BKinteractions.rpy:4416
 translate chinese_simplified slave_story4_f7577f1b:
 
     # "You gently wake her up."
-    "You gently wake her up."
+    "你轻轻地叫醒了她。"
 
 # game/BKinteractions.rpy:4418
 translate chinese_simplified slave_story4_3b4c447c:
 
     # "You grab her by the shoulder and jerk her awake."
-    "You grab her by the shoulder and jerk her awake."
+    "你抓住她的肩膀，猛地把她拽醒。"
 
 # game/BKinteractions.rpy:4420
 translate chinese_simplified slave_story4_5cea3d47:
 
     # "You clear your throat, causing her to wake up suddenly, with a confused look on her face."
-    "You clear your throat, causing her to wake up suddenly, with a confused look on her face."
+    "你清了清嗓子，让她猛然惊醒，脸上带着困惑的表情。"
 
 # game/BKinteractions.rpy:4422
 translate chinese_simplified slave_story4_2bde40cf:
 
     # you "What's up, [girl.name]? Still dreaming about dresses?"
-    you "嘿，[女孩名字]，还在想着裙子呢？"
+    you "嘿，[girl.name]，还在想着裙子呢？"
 
 # game/BKinteractions.rpy:4424
 translate chinese_simplified slave_story4_e40f7bf8:
@@ -4078,13 +4078,13 @@ translate chinese_simplified slave_story4_20d9d73d:
 translate chinese_simplified slave_story4_cb89afdf:
 
     # "She looks like she is half-awake, half-dreaming."
-    "She looks like she is half-awake, half-dreaming."
+    "她看起来像是半梦半醒。"
 
 # game/BKinteractions.rpy:4432
 translate chinese_simplified slave_story4_d0d855aa:
 
     # "Sadness washes over her face as she continues her story."
-    "Sadness washes over her face as she continues her story."
+    "她继续讲述故事，脸上却浮现出悲伤的神色。"
 
 # game/BKinteractions.rpy:4434
 translate chinese_simplified slave_story4_5c1683ab:
@@ -4324,31 +4324,31 @@ translate chinese_simplified slave_story4_51682f98_1:
 translate chinese_simplified slave_story5_de76043b:
 
     # "As you enter [girl.name]'s room, you are surprised to find it empty."
-    "As you enter [girl.name]'s room, you are surprised to find it empty."
+    "当你走进[girl.name]的房间时，你惊讶地发现房间是空的。"
 
 # game/BKinteractions.rpy:4545
 translate chinese_simplified slave_story5_50c7ad8f:
 
     # "Immediately, you start feeling worried. After all, [girl.name] tried to run away recently."
-    "Immediately, you start feeling worried. After all, [girl.name] tried to run away recently."
+    "你立刻开始感到担心。毕竟，[girl.name]前不久曾试图离家出走。"
 
 # game/BKinteractions.rpy:4548
 translate chinese_simplified slave_story5_a0bd681a:
 
     # "You don't think [girl.name] would run away on you, but you still feel worried."
-    "You don't think [girl.name] would run away on you, but you still feel worried."
+    "你觉得[girl.name]不会离你而去，但你仍然感到担心。"
 
 # game/BKinteractions.rpy:4550
 translate chinese_simplified slave_story5_e86f4161:
 
     # "You are about to move back to the corridor and tell Sill [girl.name] is missing, when you hear some noise coming from outside."
-    "You are about to move back to the corridor and tell Sill [girl.name] is missing, when you hear some noise coming from outside."
+    "你正要回到走廊告诉希尔（女孩的名字）失踪了，这时你听到外面传来一些声音。"
 
 # game/BKinteractions.rpy:4554
 translate chinese_simplified slave_story5_6c513c51:
 
     # "The window creaks open, and you are surprised to see [girl.name] sneak in, oblivious to your presence."
-    "The window creaks open, and you are surprised to see [girl.name] sneak in, oblivious to your presence."
+    "窗户吱呀一声打开了，你惊讶地发现[girl.name]偷偷溜了进来，完全没有注意到你的存在。"
 
 # game/BKinteractions.rpy:4556
 translate chinese_simplified slave_story5_1f8d7728:
@@ -4360,7 +4360,7 @@ translate chinese_simplified slave_story5_1f8d7728:
 translate chinese_simplified slave_story5_363ccb90:
 
     # "She is shocked to see you standing there. She starts mumbling."
-    "She is shocked to see you standing there. She starts mumbling."
+    "她看到你站在那里，非常震惊，开始喃喃自语。"
 
 # game/BKinteractions.rpy:4562
 translate chinese_simplified slave_story5_d6194184:
@@ -4384,7 +4384,7 @@ translate chinese_simplified slave_story5_af3c345d:
 translate chinese_simplified slave_story5_1c7a94aa:
 
     # "She looks chastised."
-    "She looks chastised."
+    "她看起来很受责备。"
 
 # game/BKinteractions.rpy:4579
 translate chinese_simplified slave_story5_10f603c4:
@@ -4492,7 +4492,7 @@ translate chinese_simplified slave_story5_3c7ec6d4:
 translate chinese_simplified slave_story5_baec7f36:
 
     # "You find [girl.name] pacing around impatiently in her room."
-    "You find [girl.name] pacing around impatiently in her room."
+    "你发现[girl.name]在房间里焦躁地踱来踱去。"
 
 # game/BKinteractions.rpy:4627
 translate chinese_simplified slave_story5_fc93ed0c:
@@ -4696,7 +4696,7 @@ translate chinese_simplified slave_story5_3e26844e:
 translate chinese_simplified slave_story5_a8888bbd:
 
     # "[girl.name] looks restless and tired."
-    "[girl.name] looks restless and tired."
+    "[girl.name] 看起来很烦躁疲惫。"
 
 # game/BKinteractions.rpy:4702
 translate chinese_simplified slave_story5_95549195:
@@ -4714,7 +4714,7 @@ translate chinese_simplified slave_story5_b0ecb5e5:
 translate chinese_simplified slave_story5_d6ad4b86:
 
     # "You find [girl.name] by the window, contemplating the streets outside."
-    "You find [girl.name] by the window, contemplating the streets outside."
+    "你发现[girl.name]在窗边，凝视着窗外的街道。"
 
 # game/BKinteractions.rpy:4715
 translate chinese_simplified slave_story5_aa46bdbd:
@@ -4990,7 +4990,7 @@ translate chinese_simplified slave_story5_b1835c6e:
 translate chinese_simplified slave_story5_12149025:
 
     # "You remember that in most of Xeros, prisoners can be turned into slaves with little to no say if their offense is considered grave enough."
-    "You remember that in most of Xeros, prisoners can be turned into slaves with little to no say if their offense is considered grave enough."
+    "你还记得在 Xeros 的大多数地方，如果囚犯的罪行被认为足够严重，他们就会被变成奴隶，而几乎没有任何发言权。"
 
 # game/BKinteractions.rpy:4814
 translate chinese_simplified slave_story5_f966ec7d:
@@ -5014,7 +5014,7 @@ translate chinese_simplified slave_story5_d094e804:
 translate chinese_simplified slave_story5_ef1c0073:
 
     # "A chill goes down her spine at this thought."
-    "A chill goes down her spine at this thought."
+    "想到这里，她不禁脊背发凉。"
 
 # game/BKinteractions.rpy:4822
 translate chinese_simplified slave_story5_b0ecb5e5_1:
@@ -5086,7 +5086,7 @@ translate chinese_simplified slave_story5_ac707e5e:
 translate chinese_simplified slave_story5_3c5c2b7b:
 
     # "She gets teary-eyed."
-    "She gets teary-eyed."
+    "她眼眶湿润了。"
 
 # game/BKinteractions.rpy:4851
 translate chinese_simplified slave_story5_5040fe38:
@@ -5152,7 +5152,7 @@ translate chinese_simplified slave_story5_43358bbd_1:
 translate chinese_simplified slave_story6_8a06ad2f:
 
     # "You enter [girl.name]'s room, and are surprised to find her extremely agitated."
-    "You enter [girl.name]'s room, and are surprised to find her extremely agitated."
+    "你走进[girl.name]的房间，惊讶地发现她情绪非常激动。"
 
 # game/BKinteractions.rpy:4904
 translate chinese_simplified slave_story6_b5da9f96:
@@ -5176,7 +5176,7 @@ translate chinese_simplified slave_story6_3ea1180e:
 translate chinese_simplified slave_story6_d813ee49:
 
     # "She points to a plate of meat and vegetables standing on her night table. It appears she barely touched it."
-    "She points to a plate of meat and vegetables standing on her night table. It appears she barely touched it."
+    "她指着床头柜上放着的一盘肉和蔬菜。看起来她几乎没动过。"
 
 # game/BKinteractions.rpy:4912
 translate chinese_simplified slave_story6_95d5e5df:
@@ -5200,7 +5200,7 @@ translate chinese_simplified slave_story6_b2d2b1da:
 translate chinese_simplified slave_story6_e3960693:
 
     # "You start losing patience."
-    "You start losing patience."
+    "你开始失去耐心。"
 
 # game/BKinteractions.rpy:4923
 translate chinese_simplified slave_story6_e2f943f7:
@@ -5254,7 +5254,7 @@ translate chinese_simplified slave_story6_3ddb8966:
 translate chinese_simplified slave_story6_fa287a7f:
 
     # you "[girl.name], listen carefully."
-    you "[女孩名字]，仔细听。"
+    you "[girl.name]，仔细听。"
 
 # game/BKinteractions.rpy:4941
 translate chinese_simplified slave_story6_0243f0da:
@@ -5272,7 +5272,7 @@ translate chinese_simplified slave_story6_f72633f8:
 translate chinese_simplified slave_story6_fd853dfe:
 
     # "You yell in her ear at the top of your lungs. She is startled and just stands there, wordless."
-    "You yell in her ear at the top of your lungs. She is startled and just stands there, wordless."
+    "你对着她的耳朵扯着嗓子大喊。她吓了一跳，呆呆地站在那里，一句话也说不出来。"
 
 # game/BKinteractions.rpy:4944
 translate chinese_simplified slave_story6_8feb2789:
@@ -5302,7 +5302,7 @@ translate chinese_simplified slave_story6_885d8063:
 translate chinese_simplified slave_story6_de0fa5a4:
 
     # "She falls silent for a moment."
-    "She falls silent for a moment."
+    "她沉默了一会儿。"
 
 # game/BKinteractions.rpy:4953
 translate chinese_simplified slave_story6_382efbf8:
@@ -5314,7 +5314,7 @@ translate chinese_simplified slave_story6_382efbf8:
 translate chinese_simplified slave_story6_9bb09cb7:
 
     # "You scoff."
-    "You scoff."
+    "你嗤之以鼻。"
 
 # game/BKinteractions.rpy:4955
 translate chinese_simplified slave_story6_e232fb8d:
@@ -5392,7 +5392,7 @@ translate chinese_simplified slave_story6_9316a048:
 translate chinese_simplified slave_story6_8235cf51:
 
     # "She looks sad."
-    "She looks sad."
+    "她看起来很伤心。"
 
 # game/BKinteractions.rpy:4975
 translate chinese_simplified slave_story6_e62cef3c:
@@ -5470,7 +5470,7 @@ translate chinese_simplified slave_story6_e29b3f0b:
 translate chinese_simplified slave_story6_b0694956:
 
     # "She sighs heavily."
-    "She sighs heavily."
+    "她重重地叹了口气。"
 
 # game/BKinteractions.rpy:4990
 translate chinese_simplified slave_story6_7a852782:
@@ -5482,7 +5482,7 @@ translate chinese_simplified slave_story6_7a852782:
 translate chinese_simplified slave_story6_f6e45f00:
 
     # "You find [girl.name] looking with horror at one of her dresses. Upon closer inspection, you spot a small tear in the fabric."
-    "You find [girl.name] looking with horror at one of her dresses. Upon closer inspection, you spot a small tear in the fabric."
+    "你发现[girl.name]正惊恐地看着她的一件连衣裙。仔细一看，你发现布料上有一个小裂口。"
 
 # game/BKinteractions.rpy:5002
 translate chinese_simplified slave_story6_de4e2907:
@@ -5512,7 +5512,7 @@ translate chinese_simplified slave_story6_b0895277:
 translate chinese_simplified slave_story6_3a86d6ec:
 
     # "Her eyes widen with shock and horror."
-    "Her eyes widen with shock and horror."
+    "她惊恐地瞪大了眼睛。"
 
 # game/BKinteractions.rpy:5007
 translate chinese_simplified slave_story6_f2025d36:
@@ -5530,7 +5530,7 @@ translate chinese_simplified slave_story6_e3b93f05:
 translate chinese_simplified slave_story6_7a0d9b32:
 
     # "She bursts out."
-    "She bursts out."
+    "她突然爆发了。"
 
 # game/BKinteractions.rpy:5010
 translate chinese_simplified slave_story6_6bf025b7:
@@ -5764,7 +5764,7 @@ translate chinese_simplified slave_story6_8b90d45f:
 translate chinese_simplified slave_story6_1b6acf96:
 
     # "She falls silent, reflecting upon a painful memory."
-    "She falls silent, reflecting upon a painful memory."
+    "她沉默不语，陷入了一段痛苦的回忆中。"
 
 # game/BKinteractions.rpy:5065
 translate chinese_simplified slave_story6_c1da3d17:
@@ -5782,7 +5782,7 @@ translate chinese_simplified slave_story6_c9c902b6:
 translate chinese_simplified slave_story6_353bc04e:
 
     # "You find [girl.name] looking at a painting showing a picturesque landscape. She looks lost in her thoughts."
-    "You find [girl.name] looking at a painting showing a picturesque landscape. She looks lost in her thoughts."
+    "你发现[girl.name]正在欣赏一幅风景画。她似乎陷入了沉思。"
 
 # game/BKinteractions.rpy:5077
 translate chinese_simplified slave_story6_ae1e9f70:
@@ -6004,7 +6004,7 @@ translate chinese_simplified slave_story6_ef98d041:
 translate chinese_simplified slave_story6_d8057221:
 
     # "Tears creep into her eyes."
-    "Tears creep into her eyes."
+    "泪水涌上了她的眼眶。"
 
 # game/BKinteractions.rpy:5124
 translate chinese_simplified slave_story6_aeb19c3a:
@@ -6160,7 +6160,7 @@ translate chinese_simplified slave_story6_693a3c43_1:
 translate chinese_simplified slave_story7_614ac938:
 
     # "You enter [girl.name]'s room as she is busy cleaning up."
-    "You enter [girl.name]'s room as she is busy cleaning up."
+    "你走进[girl.name]的房间，她正在忙着打扫卫生。"
 
 # game/BKinteractions.rpy:5198
 translate chinese_simplified slave_story7_f907a17d:
@@ -6172,19 +6172,19 @@ translate chinese_simplified slave_story7_f907a17d:
 translate chinese_simplified slave_story7_7a42b110:
 
     # "The place looks tidy and inviting now, freshly cut flowers are disposed artfully in a vase by the window."
-    "The place looks tidy and inviting now, freshly cut flowers are disposed artfully in a vase by the window."
+    "现在这里看起来整洁又温馨，窗边的花瓶里巧妙地摆放着几束新鲜采摘的鲜花。"
 
 # game/BKinteractions.rpy:5203
 translate chinese_simplified slave_story7_39d68949:
 
     # "You take a look at the dust bin, and are surprised to see some kind of emblem sticking out. You recognize it to be a symbol of Arios."
-    "You take a look at the dust bin, and are surprised to see some kind of emblem sticking out. You recognize it to be a symbol of Arios."
+    "你瞥了一眼垃圾桶，惊讶地发现上面凸出一个标志。你认出那是艾瑞斯的标志。"
 
 # game/BKinteractions.rpy:5205
 translate chinese_simplified slave_story7_7fa8be44:
 
     # "Looking back at the wall above [girl.name]'s bed, you notice a blank space and the holes left by nails, where the symbol used to hang."
-    "Looking back at the wall above [girl.name]'s bed, you notice a blank space and the holes left by nails, where the symbol used to hang."
+    "回头看向[girl.name]床上方的墙壁，你会注意到一片空白和钉子留下的孔，那里曾经挂着一个符号。"
 
 # game/BKinteractions.rpy:5208
 translate chinese_simplified slave_story7_ff78afa7:
@@ -6304,7 +6304,7 @@ translate chinese_simplified slave_story7_ec865fec:
 translate chinese_simplified slave_story7_ac89493c:
 
     # you "Well..." nointeract
-    you "Well..." nointeract
+    you "出色地..." nointeract
 
 # game/BKinteractions.rpy:5256
 translate chinese_simplified slave_story7_33fa438a:
@@ -6430,13 +6430,13 @@ translate chinese_simplified slave_story7_108c08d8:
 translate chinese_simplified slave_story7_5ad4fd4c:
 
     # "You find [girl.name] in her neatly arranged room, sitting on her bed in a meditating posture."
-    "You find [girl.name] in her neatly arranged room, sitting on her bed in a meditating posture."
+    "你发现[girl.name]在她整洁的房间里，正坐在床上冥想。"
 
 # game/BKinteractions.rpy:5298
 translate chinese_simplified slave_story7_7c5c86cb:
 
     # "She acknowledges your presence without opening her eyes. You sit on the bed next to her."
-    "She acknowledges your presence without opening her eyes. You sit on the bed next to her."
+    "她没有睁眼，但已经察觉到你的存在。你坐在她身旁的床上。"
 
 # game/BKinteractions.rpy:5300
 translate chinese_simplified slave_story7_ece4bd18:
@@ -6598,7 +6598,7 @@ translate chinese_simplified slave_story7_6959b3d7:
 translate chinese_simplified slave_story7_51fdd291:
 
     # "[girl.name] is white as a sheet now. Her eyes are wide open. She doesn't seem ready to continue her story just now."
-    "[girl.name] is white as a sheet now. Her eyes are wide open. She doesn't seem ready to continue her story just now."
+    "[girl.name] 脸色苍白如纸，双眼睁得大大的，似乎暂时还不想继续讲她的故事。"
 
 # game/BKinteractions.rpy:5355
 translate chinese_simplified slave_story7_16b626ca:
@@ -6616,13 +6616,13 @@ translate chinese_simplified slave_story7_eb944994:
 translate chinese_simplified slave_story7_559391aa:
 
     # "You find [girl.name] in an impossible position, seemingly in the middle of a complex meditation practice."
-    "You find [girl.name] in an impossible position, seemingly in the middle of a complex meditation practice."
+    "你发现[girl.name]处于一个不可能的境地，似乎正在进行复杂的冥想练习。"
 
 # game/BKinteractions.rpy:5368
 translate chinese_simplified slave_story7_4bd884b0:
 
     # "She notices your presence and slowly assumes a more relaxed position, gesturing for you to sit close to her."
-    "She notices your presence and slowly assumes a more relaxed position, gesturing for you to sit close to her."
+    "她注意到你的到来，慢慢地放松下来，示意你坐到她身边。"
 
 # game/BKinteractions.rpy:5370
 translate chinese_simplified slave_story7_5999b59f:
@@ -6634,7 +6634,7 @@ translate chinese_simplified slave_story7_5999b59f:
 translate chinese_simplified slave_story7_0bc7db9d:
 
     # "She laughs."
-    "She laughs."
+    "她笑了。"
 
 # game/BKinteractions.rpy:5376
 translate chinese_simplified slave_story7_42b3ed1b:
@@ -7090,7 +7090,7 @@ translate chinese_simplified slave_story7_3e80261e_1:
 translate chinese_simplified slave_story8_726bca15:
 
     # "You go to [girl.name]'s room, and find her busy scribbling strange symbols on her wall with a piece of chalk."
-    "You go to [girl.name]'s room, and find her busy scribbling strange symbols on her wall with a piece of chalk."
+    "你来到[girl.name]的房间，发现她正忙着用粉笔在墙上涂涂画画奇怪的符号。"
 
 # game/BKinteractions.rpy:5556
 translate chinese_simplified slave_story8_76aed45d:
@@ -7102,13 +7102,13 @@ translate chinese_simplified slave_story8_76aed45d:
 translate chinese_simplified slave_story8_067687ba:
 
     # "You recognize crude runes among the various symbols she is drawing. It is amateurishly done, however."
-    "You recognize crude runes among the various symbols she is drawing. It is amateurishly done, however."
+    "你能在她绘制的各种符号中认出一些粗糙的符文。不过，画得确实很业余。"
 
 # game/BKinteractions.rpy:5561
 translate chinese_simplified slave_story8_52108b9e:
 
     # "It seems like some magical gibberish."
-    "It seems like some magical gibberish."
+    "这听起来像是一些莫名其妙的魔法咒语。"
 
 # game/BKinteractions.rpy:5563
 translate chinese_simplified slave_story8_6fca62d1:
@@ -7126,7 +7126,7 @@ translate chinese_simplified slave_story8_793655f1:
 translate chinese_simplified slave_story8_dd2f566a:
 
     # "She uses her piece of chalk to enclose the symbols in a big circle, then joins the signs together in the rough shape of a pentagram."
-    "She uses her piece of chalk to enclose the symbols in a big circle, then joins the signs together in the rough shape of a pentagram."
+    "她用粉笔将这些符号圈成一个大圆圈，然后将这些符号连接起来，大致形成一个五角星的形状。"
 
 # game/BKinteractions.rpy:5569
 translate chinese_simplified slave_story8_4a002dbe:
@@ -7138,7 +7138,7 @@ translate chinese_simplified slave_story8_4a002dbe:
 translate chinese_simplified slave_story8_2a185bec:
 
     # "You give her a skeptical look."
-    "You give her a skeptical look."
+    "你用怀疑的眼神看着她。"
 
 # game/BKinteractions.rpy:5573
 translate chinese_simplified slave_story8_b6355368:
@@ -7168,13 +7168,13 @@ translate chinese_simplified slave_story8_cda0c023:
 translate chinese_simplified slave_story8_bff59177:
 
     # "She lowers her voice."
-    "She lowers her voice."
+    "她压低了声音。"
 
 # game/BKinteractions.rpy:5583
 translate chinese_simplified slave_story8_e4d42c59:
 
     # girl.char "{i}She{/i} is after me. I know it."
-    girl.char "她盯上我了。我知道。"
+    girl.char "{i}她盯上我了。我知道。"
 
 # game/BKinteractions.rpy:5585
 translate chinese_simplified slave_story8_ad5d108f:
@@ -7186,7 +7186,7 @@ translate chinese_simplified slave_story8_ad5d108f:
 translate chinese_simplified slave_story8_5471e1b4:
 
     # "She doesn't answer you directly. Instead, she stands looking at her drawing with a satisfied look."
-    "She doesn't answer you directly. Instead, she stands looking at her drawing with a satisfied look."
+    "她没有直接回答你，而是站在那里，满意地看着自己的画作。"
 
 # game/BKinteractions.rpy:5589
 translate chinese_simplified slave_story8_da2430f9:
@@ -7222,7 +7222,7 @@ translate chinese_simplified slave_story8_54072934:
 translate chinese_simplified slave_story8_0bc7db9d:
 
     # "She laughs."
-    "She laughs."
+    "她笑了。"
 
 # game/BKinteractions.rpy:5603
 translate chinese_simplified slave_story8_48c07f22:
@@ -7276,7 +7276,7 @@ translate chinese_simplified slave_story8_e33ce46e:
 translate chinese_simplified slave_story8_53973358:
 
     # you "Wow!" with vpunch
-    you "Wow!" with vpunch
+    you "哇！" with vpunch
 
 # game/BKinteractions.rpy:5624
 translate chinese_simplified slave_story8_0a2b6701:
@@ -7288,7 +7288,7 @@ translate chinese_simplified slave_story8_0a2b6701:
 translate chinese_simplified slave_story8_554781da:
 
     # "She raises her voice."
-    "She raises her voice."
+    "她提高了嗓门。"
 
 # game/BKinteractions.rpy:5628
 translate chinese_simplified slave_story8_26f08e5b:
@@ -7300,7 +7300,7 @@ translate chinese_simplified slave_story8_26f08e5b:
 translate chinese_simplified slave_story8_f0a26a5f:
 
     # girl.char "A {i}cu-u-u-urse{/i}." with vpunch
-    girl.char "A {i}cu-u-u-urse{/i}." with vpunch
+    girl.char "一个{i}cu-uu-urse{/i}。" with vpunch
 
 # game/BKinteractions.rpy:5637
 translate chinese_simplified slave_story8_c7c8832f:
@@ -7330,7 +7330,7 @@ translate chinese_simplified slave_story8_a55df97f:
 translate chinese_simplified slave_story8_7c345123:
 
     # "She gives you an angry look."
-    "She gives you an angry look."
+    "她狠狠地瞪了你一眼。"
 
 # game/BKinteractions.rpy:5647
 translate chinese_simplified slave_story8_a1918715:
@@ -7366,7 +7366,7 @@ translate chinese_simplified slave_story8_9dc424ec:
 translate chinese_simplified slave_story8_ac89493c:
 
     # you "Well..." nointeract
-    you "Well..." nointeract
+    you "出色地..." nointeract
 
 # game/BKinteractions.rpy:5667
 translate chinese_simplified slave_story8_d42ed008:
@@ -7450,7 +7450,7 @@ translate chinese_simplified slave_story8_76660229:
 translate chinese_simplified slave_story8_3ae8a663:
 
     # "Approaching [girl.name]'s room, you suddenly hear an explosion."
-    "Approaching [girl.name]'s room, you suddenly hear an explosion."
+    "走到[girl.name]的房间附近时，你突然听到一声爆炸声。"
 
 # game/BKinteractions.rpy:5708
 translate chinese_simplified slave_story8_9afd1bdd:
@@ -7462,31 +7462,31 @@ translate chinese_simplified slave_story8_9afd1bdd:
 translate chinese_simplified slave_story8_bbafc366:
 
     # "You run to the scene."
-    "You run to the scene."
+    "你跑到现场。"
 
 # game/BKinteractions.rpy:5712
 translate chinese_simplified slave_story8_30f2425f:
 
     # you "[girl.name]???"
-    you "[女孩名字]???"
+    you "[girl.name]???"
 
 # game/BKinteractions.rpy:5714
 translate chinese_simplified slave_story8_943414f1:
 
     # "[girl.name]'s room is a mess of broken furniture. There is a hole in the ground and shattered glass on the floor, and the walls have been blackened by the explosion."
-    "[girl.name]'s room is a mess of broken furniture. There is a hole in the ground and shattered glass on the floor, and the walls have been blackened by the explosion."
+    "[girl.name]的房间里一片狼藉，家具破碎不堪。地上有个大洞，地板上散落着碎玻璃，墙壁也被爆炸熏黑了。"
 
 # game/BKinteractions.rpy:5716
 translate chinese_simplified slave_story8_74e8f224:
 
     # "[girl.name] is standing in the room with her eyebrows smoking and her clothes torn and burnt."
-    "[girl.name] is standing in the room with her eyebrows smoking and her clothes torn and burnt."
+    "[girl.name] 站在房间里，眉毛冒着烟，衣服破烂不堪，烧焦了。"
 
 # game/BKinteractions.rpy:5719
 translate chinese_simplified slave_story8_5fd00221:
 
     # you "[girl.name]! Poor darling! Are you all right?"
-    you "[女孩名字]！可怜的小宝贝！你还好吗？"
+    you "[girl.name]！可怜的小宝贝！你还好吗？"
 
 # game/BKinteractions.rpy:5721
 translate chinese_simplified slave_story8_57e8b959:
@@ -7510,7 +7510,7 @@ translate chinese_simplified slave_story8_25fad722:
 translate chinese_simplified slave_story8_90b25749:
 
     # "She looks a little disoriented."
-    "She looks a little disoriented."
+    "她看起来有点神情恍惚。"
 
 # game/BKinteractions.rpy:5729
 translate chinese_simplified slave_story8_085c3078:
@@ -7540,7 +7540,7 @@ translate chinese_simplified slave_story8_eb869c56:
 translate chinese_simplified slave_story8_18113c8f:
 
     # "You see a charred tome on the ground, its pages curling as they finish burning to a crisp."
-    "You see a charred tome on the ground, its pages curling as they finish burning to a crisp."
+    "你看到地上有一本烧焦的书，书页卷曲着，最终化为焦炭。"
 
 # game/BKinteractions.rpy:5740
 translate chinese_simplified slave_story8_b38e882d:
@@ -7552,13 +7552,13 @@ translate chinese_simplified slave_story8_b38e882d:
 translate chinese_simplified slave_story8_7a2f08c2:
 
     # you "Hey, [girl.name]. I don't want you endangering yourself and everyone here with your crazy experiments, you hear?"
-    you "嘿，[女孩名字]。我不希望你用你那些疯狂的实验危及自己和这里所有人的安全，听到了吗？"
+    you "嘿，[girl.name]。我不希望你用你那些疯狂的实验危及自己和这里所有人的安全，听到了吗？"
 
 # game/BKinteractions.rpy:5744
 translate chinese_simplified slave_story8_4a3f9188:
 
     # "[girl.name] looks defeated."
-    "[girl.name] looks defeated."
+    "[girl.name]看起来很沮丧。"
 
 # game/BKinteractions.rpy:5746
 translate chinese_simplified slave_story8_1eb0e7fe:
@@ -7696,7 +7696,7 @@ translate chinese_simplified slave_story8_6d81eff0:
 translate chinese_simplified slave_story8_6f0867e1:
 
     # "She shivers."
-    "She shivers."
+    "她打了个寒颤。"
 
 # game/BKinteractions.rpy:5793
 translate chinese_simplified slave_story8_597a5975:
@@ -7720,7 +7720,7 @@ translate chinese_simplified slave_story8_d253e09b:
 translate chinese_simplified slave_story8_a49f6764:
 
     # "You take a look at the charred mess that is her room and wonder if that isn't an understatement."
-    "You take a look at the charred mess that is her room and wonder if that isn't an understatement."
+    "你看着她那间被烧得一团糟的房间，不禁怀疑这是否还算是轻描淡写。"
 
 # game/BKinteractions.rpy:5801
 translate chinese_simplified slave_story8_e5d1bcd1:
@@ -7756,7 +7756,7 @@ translate chinese_simplified slave_story8_897b4a7d:
 translate chinese_simplified slave_story8_2ca2338a:
 
     # "Looking around you once again, you think that's pretty unlikely. Maybe she was more worried about preserving her living-room."
-    "Looking around you once again, you think that's pretty unlikely. Maybe she was more worried about preserving her living-room."
+    "你再次环顾四周，觉得这不太可能。或许她更担心的是如何保住自己的客厅。"
 
 # game/BKinteractions.rpy:5813
 translate chinese_simplified slave_story8_2e7c85c3:
@@ -7804,7 +7804,7 @@ translate chinese_simplified slave_story8_a1992cf2:
 translate chinese_simplified slave_story8_b71f2ff6:
 
     # "You smell the acrid smell of burning cloth."
-    "You smell the acrid smell of burning cloth."
+    "你闻到了一股刺鼻的布料烧焦的气味。"
 
 # game/BKinteractions.rpy:5829
 translate chinese_simplified slave_story8_2b4113bd:
@@ -7816,13 +7816,13 @@ translate chinese_simplified slave_story8_2b4113bd:
 translate chinese_simplified slave_story8_c6b8fbf0:
 
     # you "Aah!" with vpunch
-    you "Aah!" with vpunch
+    you "啊！" with vpunch
 
 # game/BKinteractions.rpy:5840
 translate chinese_simplified slave_story8_a1004515:
 
     # "You find [girl.name] naked on her bed with her arms and legs spread and tied to the bed poles, and a big red candle dripping hot wax in the middle of a pentagram drawn on her belly."
-    "You find [girl.name] naked on her bed with her arms and legs spread and tied to the bed poles, and a big red candle dripping hot wax in the middle of a pentagram drawn on her belly."
+    "你发现[girl.name]赤身裸体地躺在床上，四肢张开绑在床柱上，一根大红蜡烛滴着滚烫的蜡油，在她肚子上画的五角星中间。"
 
 # game/BKinteractions.rpy:5844
 translate chinese_simplified slave_story8_78f604eb:
@@ -7834,7 +7834,7 @@ translate chinese_simplified slave_story8_78f604eb:
 translate chinese_simplified slave_story8_c974b9ae:
 
     # "You quickly rush to her help, take away the candle and untie her. She sobs as she wraps herself into a bed cover."
-    "You quickly rush to her help, take away the candle and untie her. She sobs as she wraps herself into a bed cover."
+    "你赶紧上前帮忙，拿走蜡烛，解开她的绳子。她一边啜泣一边把自己裹进被子里。"
 
 # game/BKinteractions.rpy:5848
 translate chinese_simplified slave_story8_fa53c2e6:
@@ -8140,7 +8140,7 @@ translate chinese_simplified slave_story8_5d93aa35:
 translate chinese_simplified slave_story8_c050c231:
 
     # "She falls silent, and gives you a look of despair."
-    "She falls silent, and gives you a look of despair."
+    "她沉默不语，脸上露出绝望的神情。"
 
 # game/BKinteractions.rpy:5953
 translate chinese_simplified slave_story8_dae0ec55:
@@ -8308,7 +8308,7 @@ translate chinese_simplified slave_story8_a95d12af_1:
 translate chinese_simplified slave_story_help_f155281d:
 
     # "You think about what she said. Perhaps there is something you could do to help her?"
-    "You think about what she said. Perhaps there is something you could do to help her?"
+    "你仔细想了想她说过的话。或许你可以做点什么来帮助她？"
 
 # game/BKinteractions.rpy:6049
 translate chinese_simplified slave_story_help_425f99bd:
@@ -8332,7 +8332,7 @@ translate chinese_simplified slave_story_help_eb374de6:
 translate chinese_simplified slave_story_help_4146f7b9:
 
     # "You don't tell her that the ritual is quite basic and unlikely to stop a powerful curse... She's probably not cursed anyway."
-    "You don't tell her that the ritual is quite basic and unlikely to stop a powerful curse... She's probably not cursed anyway."
+    "你不会告诉她，这个仪式非常简单，不太可能解除强大的诅咒……而且她可能根本就没被诅咒。"
 
 # game/BKinteractions.rpy:6061
 translate chinese_simplified slave_story_help_5e3020af:
@@ -8356,7 +8356,7 @@ translate chinese_simplified slave_story_help_376a805b:
 translate chinese_simplified slave_story_help_1283a873:
 
     # "[girl.name] now likes and trusts you a lot more."
-    "[girl.name] now likes and trusts you a lot more."
+    "[girl.name] 现在更喜欢你、更信任你了。"
 
 # game/BKinteractions.rpy:6079
 translate chinese_simplified slave_story_help_5b1fb2fe:
@@ -8416,13 +8416,13 @@ translate chinese_simplified slave_story_help_77a3c3d9:
 translate chinese_simplified slave_story_help_e6965d4a:
 
     # "[girl.name] has lost the '[old]' trait and gained the 'Clumsy' trait."
-    "[girl.name] has lost the '[old]' trait and gained the 'Clumsy' trait."
+    "[girl.name] 失去了“旧的”特质，获得了“笨拙的”特质。"
 
 # game/BKinteractions.rpy:6109
 translate chinese_simplified slave_story_help_1283a873_1:
 
     # "[girl.name] now likes and trusts you a lot more."
-    "[girl.name] now likes and trusts you a lot more."
+    "[girl.name] 现在更喜欢你、更信任你了。"
 
 # game/BKinteractions.rpy:6113
 translate chinese_simplified slave_story_help_8c997c00:
@@ -8452,7 +8452,7 @@ translate chinese_simplified slave_story_help_d0dcbaad:
 translate chinese_simplified slave_story_help_256600c2:
 
     # "That night, [girl.fullname] has a wonderful time being fucked senseless by a disgusting monster."
-    "That night, [girl.fullname] has a wonderful time being fucked senseless by a disgusting monster."
+    "当晚，[girl.fullname] 被一个令人作呕的怪物强奸得神魂颠倒，度过了一段美好的时光。"
 
 # game/BKinteractions.rpy:6140
 translate chinese_simplified slave_story_help_a1bd9e41:
@@ -8464,7 +8464,7 @@ translate chinese_simplified slave_story_help_a1bd9e41:
 translate chinese_simplified slave_story_help_88d4be98:
 
     # "[girl.name] now likes you a lot more. Her libido has increased."
-    "[girl.name] now likes you a lot more. Her libido has increased."
+    "[girl.name] 现在更喜欢你了。她的性欲增强了。"
 
 # game/BKinteractions.rpy:6156
 translate chinese_simplified slave_story_help_8c997c00_1:
@@ -8494,7 +8494,7 @@ translate chinese_simplified slave_story_help_d0dcbaad_1:
 translate chinese_simplified slave_story_help_1af24b4b:
 
     # "You pay the magician guild to organize a little play session at the brothel that night."
-    "You pay the magician guild to organize a little play session at the brothel that night."
+    "你付钱给魔法师公会，让他们当晚在妓院安排一场小型游戏活动。"
 
 # game/BKinteractions.rpy:6185
 translate chinese_simplified slave_story_help_a1bd9e41_1:
@@ -8506,7 +8506,7 @@ translate chinese_simplified slave_story_help_a1bd9e41_1:
 translate chinese_simplified slave_story_help_28b4fcc6:
 
     # "[girl.name] now likes you a lot more. Her libido has increased"
-    "[girl.name] now likes you a lot more. Her libido has increased"
+    "[girl.name] 现在更喜欢你了。她的性欲增强了。"
 
 # game/BKinteractions.rpy:6203
 translate chinese_simplified slave_story_help_d1e5a3c0:
@@ -8542,7 +8542,7 @@ translate chinese_simplified slave_story_help_ad8aad95:
 translate chinese_simplified slave_story_help_1283a873_2:
 
     # "[girl.name] now likes and trusts you a lot more."
-    "[girl.name] now likes and trusts you a lot more."
+    "[girl.name] 现在更喜欢你、更信任你了。"
 
 # game/BKinteractions.rpy:6227
 translate chinese_simplified slave_story_help_f2d3280a:
@@ -8578,7 +8578,7 @@ translate chinese_simplified slave_story_help_ad8aad95_1:
 translate chinese_simplified slave_story_help_1283a873_3:
 
     # "[girl.name] now likes and trusts you a lot more."
-    "[girl.name] now likes and trusts you a lot more."
+    "[girl.name] 现在更喜欢你、更信任你了。"
 
 # game/BKinteractions.rpy:6247
 translate chinese_simplified slave_story_help_5eab26d0:
@@ -8608,19 +8608,19 @@ translate chinese_simplified slave_story_help_ceeafcb9:
 translate chinese_simplified slave_story_help_d4c638c1:
 
     # "[girl.name] has lost the '[old.name]' trait and gained the 'Godless' trait."
-    "[girl.name] has lost the '[old.name]' trait and gained the 'Godless' trait."
+    "[girl.name] 失去了“[old.name]”特质，获得了“无神论者”特质。"
 
 # game/BKinteractions.rpy:6298
 translate chinese_simplified slave_story_help_d15c2377:
 
     # "[girl.name] has gained the 'Godless' trait."
-    "[girl.name] has gained the 'Godless' trait."
+    "[girl.name] 获得了“无神论者”的特质。"
 
 # game/BKinteractions.rpy:6304
 translate chinese_simplified slave_story_help_1283a873_4:
 
     # "[girl.name] now likes and trusts you a lot more."
-    "[girl.name] now likes and trusts you a lot more."
+    "[girl.name] 现在更喜欢你、更信任你了。"
 
 # game/BKinteractions.rpy:6314
 translate chinese_simplified slave_story_help_c5587d71:
@@ -8650,13 +8650,13 @@ translate chinese_simplified slave_story_help_9345695f:
 translate chinese_simplified slave_story_help_fd84bc65:
 
     # "[girl.fullname] has received a common pet."
-    "[girl.fullname] has received a common pet."
+    "[girl.fullname] 收到了一只普通的宠物。"
 
 # game/BKinteractions.rpy:6331
 translate chinese_simplified slave_story_help_1283a873_5:
 
     # "[girl.name] now likes and trusts you a lot more."
-    "[girl.name] now likes and trusts you a lot more."
+    "[girl.name] 现在更喜欢你、更信任你了。"
 
 # game/BKinteractions.rpy:6334
 translate chinese_simplified slave_story_help_362d9711:
@@ -8680,25 +8680,25 @@ translate chinese_simplified slave_story_help_b80036c3:
 translate chinese_simplified slave_story_help_0b275dbe:
 
     # "You pay some shrewd lawyers from Zan's merchant guild to act on your and your slave's behalf."
-    "You pay some shrewd lawyers from Zan's merchant guild to act on your and your slave's behalf."
+    "你雇佣了赞恩商会的一些精明律师，代表你和你的奴隶处理事务。"
 
 # game/BKinteractions.rpy:6350
 translate chinese_simplified slave_story_help_8ba8627c:
 
     # "Thanks to their amazing legal skills and prodigious bad faith, they manage to convince a jury that [girl.name] was unfairly struck off her old husband's will. You receive 4000 gold as your share of the inheritance."
-    "Thanks to their amazing legal skills and prodigious bad faith, they manage to convince a jury that [girl.name] was unfairly struck off her old husband's will. You receive 4000 gold as your share of the inheritance."
+    "凭借他们高超的法律技巧和令人发指的恶意，他们成功说服陪审团，认定[girl.name]被不公正地从她前夫的遗嘱中除名。你将获得4000金币作为你的遗产份额。"
 
 # game/BKinteractions.rpy:6354
 translate chinese_simplified slave_story_help_181ee5f3:
 
     # "Unfortunately, the local authorities are left unconvinced by their arguments. Still, [girl.name] is grateful to you for trying."
-    "Unfortunately, the local authorities are left unconvinced by their arguments. Still, [girl.name] is grateful to you for trying."
+    "遗憾的是，当地政府并未被他们的解释说服。不过，[girl.name] 仍然感谢你的尝试。"
 
 # game/BKinteractions.rpy:6359
 translate chinese_simplified slave_story_help_1283a873_6:
 
     # "[girl.name] now likes and trusts you a lot more."
-    "[girl.name] now likes and trusts you a lot more."
+    "[girl.name] 现在更喜欢你、更信任你了。"
 
 # game/BKinteractions.rpy:6362
 translate chinese_simplified slave_story_help_19ec7475:
@@ -8710,7 +8710,7 @@ translate chinese_simplified slave_story_help_19ec7475:
 translate chinese_simplified slave_story_help_3f34b634:
 
     # "Her eyes shine bright at the mention of fire."
-    "Her eyes shine bright at the mention of fire."
+    "一提到火，她的眼睛就闪闪发光。"
 
 # game/BKinteractions.rpy:6364
 translate chinese_simplified slave_story_help_8a970120:
@@ -8734,7 +8734,7 @@ translate chinese_simplified slave_story_help_c595fa4c:
 translate chinese_simplified slave_story_help_ff81157f:
 
     # "She jumps into your arms, and give you a warm kiss!"
-    "She jumps into your arms, and give you a warm kiss!"
+    "她跳进你的怀里，给了你一个温暖的吻！"
 
 # game/BKinteractions.rpy:6368
 translate chinese_simplified slave_story_help_ff16b10d:
@@ -8746,13 +8746,13 @@ translate chinese_simplified slave_story_help_ff16b10d:
 translate chinese_simplified slave_story_help_6dfc27c6:
 
     # "You paid some men to set fire to [girl.name]'s family estate. You later hear that the damage was extensive."
-    "You paid some men to set fire to [girl.name]'s family estate. You later hear that the damage was extensive."
+    "你雇人放火烧了[girl.name]家的宅邸。后来你听说损失惨重。"
 
 # game/BKinteractions.rpy:6381
 translate chinese_simplified slave_story_help_1283a873_7:
 
     # "[girl.name] now likes and trusts you a lot more."
-    "[girl.name] now likes and trusts you a lot more."
+    "[girl.name] 现在更喜欢你、更信任你了。"
 
 # game/BKinteractions.rpy:6384
 translate chinese_simplified slave_story_help_46d90622:
@@ -8782,7 +8782,7 @@ translate chinese_simplified slave_story_help_c595fa4c_1:
 translate chinese_simplified slave_story_help_ff81157f_1:
 
     # "She jumps into your arms, and give you a warm kiss!"
-    "She jumps into your arms, and give you a warm kiss!"
+    "她跳进你的怀里，给了你一个温暖的吻！"
 
 # game/BKinteractions.rpy:6389
 translate chinese_simplified slave_story_help_ff16b10d_1:
@@ -8794,13 +8794,13 @@ translate chinese_simplified slave_story_help_ff16b10d_1:
 translate chinese_simplified slave_story_help_84ae1d4b:
 
     # "That evening, you use a crystal ball and conjure up a fierce firestorm in the wood reserve of [girl.name]'s family estate. You and [girl.name] look on with fascination as the fire spreads and slowly engulfs the whole property."
-    "That evening, you use a crystal ball and conjure up a fierce firestorm in the wood reserve of [girl.name]'s family estate. You and [girl.name] look on with fascination as the fire spreads and slowly engulfs the whole property."
+    "当晚，你使用水晶球，在[girl.name]家的林地保护区内召唤出一场猛烈的火灾。你和[girl.name]饶有兴致地看着大火蔓延，慢慢吞噬了整个庄园。"
 
 # game/BKinteractions.rpy:6402
 translate chinese_simplified slave_story_help_1283a873_8:
 
     # "[girl.name] now likes and trusts you a lot more."
-    "[girl.name] now likes and trusts you a lot more."
+    "[girl.name] 现在更喜欢你、更信任你了。"
 
 # game/BKinteractions.rpy:6405
 translate chinese_simplified slave_story_help_b37382f0:
@@ -8836,7 +8836,7 @@ translate chinese_simplified slave_story_help_a38221ab:
 translate chinese_simplified slave_story_help_1283a873_9:
 
     # "[girl.name] now likes and trusts you a lot more."
-    "[girl.name] now likes and trusts you a lot more."
+    "[girl.name] 现在更喜欢你、更信任你了。"
 
 # game/BKinteractions.rpy:6427
 translate chinese_simplified slave_story_help_480b3fe3:
@@ -8866,13 +8866,13 @@ translate chinese_simplified slave_story_help_1ea8568d:
 translate chinese_simplified slave_story_help_17c833cb:
 
     # "[girl.name] has lost the '[old]' trait and gained the 'Expensive' trait."
-    "[girl.name] has lost the '[old]' trait and gained the 'Expensive' trait."
+    "[girl.name] 失去了“旧的”特性，获得了“昂贵的”特性。"
 
 # game/BKinteractions.rpy:6448
 translate chinese_simplified slave_story_help_1283a873_10:
 
     # "[girl.name] now likes and trusts you a lot more."
-    "[girl.name] now likes and trusts you a lot more."
+    "[girl.name] 现在更喜欢你、更信任你了。"
 
 # game/BKinteractions.rpy:6452
 translate chinese_simplified slave_story_help_f5eef4da:
@@ -8920,13 +8920,13 @@ translate chinese_simplified slave_story_help_85ffef47:
 translate chinese_simplified slave_story_help_2a95cd6a:
 
     # "[girl.fullname] has received [text1]."
-    "[girl.fullname] has received [text1]."
+    "[girl.fullname] 收到了 [text1]。"
 
 # game/BKinteractions.rpy:6482
 translate chinese_simplified slave_story_help_1283a873_11:
 
     # "[girl.name] now likes and trusts you a lot more."
-    "[girl.name] now likes and trusts you a lot more."
+    "[girl.name] 现在更喜欢你、更信任你了。"
 
 # game/BKinteractions.rpy:6486
 translate chinese_simplified slave_story_help_7ee64702:
@@ -8956,7 +8956,7 @@ translate chinese_simplified slave_story_help_7782de0d:
 translate chinese_simplified slave_story_help_1283a873_12:
 
     # "[girl.name] now likes and trusts you a lot more."
-    "[girl.name] now likes and trusts you a lot more."
+    "[girl.name] 现在更喜欢你、更信任你了。"
 
 # game/BKinteractions.rpy:6507
 translate chinese_simplified slave_story_help_f28d2e65:
@@ -8974,19 +8974,19 @@ translate chinese_simplified slave_story_help_68d14a35:
 translate chinese_simplified slave_story_help_88d4be98_1:
 
     # "[girl.name] now likes you a lot more. Her libido has increased."
-    "[girl.name] now likes you a lot more. Her libido has increased."
+    "[girl.name] 现在更喜欢你了。她的性欲增强了。"
 
 # game/BKinteractions.rpy:6525
 translate chinese_simplified slave_story_help_90f9d026:
 
     # "You paid 1500 gold to organize the event. It generated [gold] gold in return, allowing you to break even."
-    "You paid 1500 gold to organize the event. It generated [gold] gold in return, allowing you to break even."
+    "你花费了 1500 金币举办这次活动。活动产生了 [gold] 金币的回报，使你收回了成本。"
 
 # game/BKinteractions.rpy:6527
 translate chinese_simplified slave_story_help_a110b09f:
 
     # "You paid 1500 gold to organize the event. It generated [gold] gold in return, failing to turn a profit."
-    "You paid 1500 gold to organize the event. It generated [gold] gold in return, failing to turn a profit."
+    "你花费了 1500 金币来举办这次活动。活动产生了 [gold] 金币的回报，但并未盈利。"
 
 # game/BKinteractions.rpy:6539
 translate chinese_simplified slave_story_help_b8c80ac3:
@@ -8998,7 +8998,7 @@ translate chinese_simplified slave_story_help_b8c80ac3:
 translate chinese_simplified slave_story_help_e2439411:
 
     # "[girl.name] has become a 'Pony girl'"
-    "[girl.name] has become a 'Pony girl'"
+    "[girl.name] 已经成为了一名“小马女孩”"
 
 # game/BKinteractions.rpy:6552
 translate chinese_simplified slave_story_help_59c4268a:
@@ -9022,13 +9022,13 @@ translate chinese_simplified slave_story_help_e3e40e45:
 translate chinese_simplified slave_story_help_b76dfec2:
 
     # "You paid the [text1] 750 gold to 'confiscate' the horse and turn it into a tasty meal..."
-    "You paid the [text1] 750 gold to 'confiscate' the horse and turn it into a tasty meal..."
+    "你支付了750金币来“没收”这匹马，并把它做成了一顿美味佳肴……"
 
 # game/BKinteractions.rpy:6572
 translate chinese_simplified slave_story_help_51ad11b9:
 
     # you "Voila! One horsesteak with ginger and turnips for Lady [girl.name]..."
-    you "瞧！一份姜萝卜马肉排，献给[女孩名字]小姐……"
+    you "瞧！一份姜萝卜马肉排，献给[girl.name]小姐……"
 
 # game/BKinteractions.rpy:6574
 translate chinese_simplified slave_story_help_7450aaf2:
@@ -9040,7 +9040,7 @@ translate chinese_simplified slave_story_help_7450aaf2:
 translate chinese_simplified slave_story_help_1283a873_13:
 
     # "[girl.name] now likes and trusts you a lot more."
-    "[girl.name] now likes and trusts you a lot more."
+    "[girl.name] 现在更喜欢你、更信任你了。"
 
 # game/BKinteractions.rpy:6582
 translate chinese_simplified slave_story_help_9ae5fb11:
@@ -9052,7 +9052,7 @@ translate chinese_simplified slave_story_help_9ae5fb11:
 translate chinese_simplified slave_story_help_d0fae6c4:
 
     # "She looks a little disappointed."
-    "She looks a little disappointed."
+    "她看起来有点失望。"
 
 # game/BKinteractions.rpy:6586
 translate chinese_simplified slave_story_help_5d4f74d8:
@@ -9100,7 +9100,7 @@ translate chinese_simplified slave_story_help_71a7172f:
 translate chinese_simplified slave_story_help_1283a873_14:
 
     # "[girl.name] now likes and trusts you a lot more."
-    "[girl.name] now likes and trusts you a lot more."
+    "[girl.name] 现在更喜欢你、更信任你了。"
 
 # game/BKinteractions.rpy:6617
 translate chinese_simplified slave_story_help_28b9b70b:
@@ -9124,7 +9124,7 @@ translate chinese_simplified slave_story_help_afdf9d7c:
 translate chinese_simplified slave_story_help_1283a873_15:
 
     # "[girl.name] now likes and trusts you a lot more."
-    "[girl.name] now likes and trusts you a lot more."
+    "[girl.name] 现在更喜欢你、更信任你了。"
 
 # game/BKinteractions.rpy:6636
 translate chinese_simplified slave_story_help_4de6b5e8:
@@ -9154,7 +9154,7 @@ translate chinese_simplified slave_story_help_13d4b932:
 translate chinese_simplified slave_story_help_1283a873_16:
 
     # "[girl.name] now likes and trusts you a lot more."
-    "[girl.name] now likes and trusts you a lot more."
+    "[girl.name] 现在更喜欢你、更信任你了。"
 
 # game/BKinteractions.rpy:6657
 translate chinese_simplified slave_story_help_4de6b5e8_1:
@@ -9190,19 +9190,19 @@ translate chinese_simplified slave_story_help_e704fcc2:
 translate chinese_simplified slave_story_help_1283a873_17:
 
     # "[girl.name] now likes and trusts you a lot more."
-    "[girl.name] now likes and trusts you a lot more."
+    "[girl.name] 现在更喜欢你、更信任你了。"
 
 # game/BKinteractions.rpy:6677
 translate chinese_simplified slave_story_help_117b2284:
 
     # "You paid the thieves 750 gold so that they would find and rob the renegade [girl.story_profession]."
-    "You paid the thieves 750 gold so that they would find and rob the renegade [girl.story_profession]."
+    "你付给盗贼 750 金币，让他们找到并抢劫叛徒 [girl.story_profession]。"
 
 # game/BKinteractions.rpy:6681
 translate chinese_simplified slave_story_help_df5f8af9:
 
     # "They found his house and recovered [gold] denars from his safe. You give half of it to [girl.name], and keep the rest for your trouble."
-    "They found his house and recovered [gold] denars from his safe. You give half of it to [girl.name], and keep the rest for your trouble."
+    "他们找到了他的房子，并从他的保险箱里找回了金币。你把一半给[gold]，剩下的作为你帮忙的报酬。"
 
 # game/BKinteractions.rpy:6690
 translate chinese_simplified slave_story_help_4de6b5e8_2:
@@ -9238,19 +9238,19 @@ translate chinese_simplified slave_story_help_e704fcc2_1:
 translate chinese_simplified slave_story_help_1283a873_18:
 
     # "[girl.name] now likes and trusts you a lot more."
-    "[girl.name] now likes and trusts you a lot more."
+    "[girl.name] 现在更喜欢你、更信任你了。"
 
 # game/BKinteractions.rpy:6709
 translate chinese_simplified slave_story_help_7e305561:
 
     # "You paid the guards 750 gold so that they would lock up the renegade [girl.story_profession] and steal his money."
-    "You paid the guards 750 gold so that they would lock up the renegade [girl.story_profession] and steal his money."
+    "你付给守卫 750 金币，让他们把叛徒 [girl.story_profession] 关起来，然后偷走他的钱。"
 
 # game/BKinteractions.rpy:6713
 translate chinese_simplified slave_story_help_4bfcb164:
 
     # "They found him and threw him in a dark cell for a few years on made-up charges. They recovered [gold] denars from his safe. You give half of it to [girl.name], and keep the rest for your trouble."
-    "They found him and threw him in a dark cell for a few years on made-up charges. They recovered [gold] denars from his safe. You give half of it to [girl.name], and keep the rest for your trouble."
+    "他们找到了他，捏造罪名把他关进黑暗的牢房好几年。他们从他的保险箱里搜出了[gold]第纳尔。你把一半给[girl.name]，剩下的留作你的报酬。"
 
 # game/BKinteractions.rpy:6721
 translate chinese_simplified slave_story_help_a8cea093:
@@ -9292,7 +9292,7 @@ translate chinese_simplified slave_story_help_705d3f47:
 translate chinese_simplified slave_story_help_ce6a9fc7:
 
     # "Not waiting a moment longer, you throw yourself at her, ripping her clothes off her."
-    "Not waiting a moment longer, you throw yourself at her, ripping her clothes off her."
+    "你一刻也不敢耽搁，扑向她，撕扯掉她的衣服。"
 
 # game/BKinteractions.rpy:6735
 translate chinese_simplified slave_story_help_2b5cd699:
@@ -9328,7 +9328,7 @@ translate chinese_simplified slave_story_help_bf43061a:
 translate chinese_simplified slave_story_help_c9ba68a6:
 
     # "Her love juices are flowing as she takes a constant stream of abuse. It isn't long before her moans intensify and she is about to come."
-    "Her love juices are flowing as she takes a constant stream of abuse. It isn't long before her moans intensify and she is about to come."
+    "她承受着持续不断的虐待，情欲却如泉涌般涌出。没过多久，她的呻吟声越来越大，她即将达到高潮。"
 
 # game/BKinteractions.rpy:6789
 translate chinese_simplified slave_story_help_d8279df3:
@@ -9400,13 +9400,13 @@ translate chinese_simplified slave_story_help_4ae0708d:
 translate chinese_simplified slave_story_help_98de817e:
 
     # "You keep playing with [girl.name], torturing her body and mind until she is reduced to a willing little sex pet."
-    "You keep playing with [girl.name], torturing her body and mind until she is reduced to a willing little sex pet."
+    "你不断玩弄[girl.name]，折磨她的身心，直到她沦为心甘情愿的性宠物。"
 
 # game/BKinteractions.rpy:6826
 translate chinese_simplified slave_story_help_1c195ea3:
 
     # "You have taken [girl.name]'s virginity. Her obedience has increased."
-    "You have taken [girl.name]'s virginity. Her obedience has increased."
+    "你夺走了[girl.name]的贞操。她的顺从度提高了。"
 
 # game/BKinteractions.rpy:6829
 translate chinese_simplified slave_story_help_dc7aec1e:
@@ -9424,7 +9424,7 @@ translate chinese_simplified slave_story_help_c5083d48:
 translate chinese_simplified slave_story_help_cb32b29c:
 
     # "[girl.name] now likes you a lot more. Her obedience skill has increased a lot."
-    "[girl.name] now likes you a lot more. Her obedience skill has increased a lot."
+    "[girl.name] 现在更喜欢你了。她的服从能力也大大提高了。"
 
 # game/BKinteractions.rpy:6845
 translate chinese_simplified slave_story_help_4a487bd2:
@@ -9436,7 +9436,7 @@ translate chinese_simplified slave_story_help_4a487bd2:
 translate chinese_simplified slave_story_help_255789cd:
 
     # "She recognizes the threat in your voice, and becomes more guarded."
-    "She recognizes the threat in your voice, and becomes more guarded."
+    "她听出了你语气中的威胁，变得更加警惕。"
 
 # game/BKinteractions.rpy:6849
 translate chinese_simplified slave_story_help_f7afcfa2:
