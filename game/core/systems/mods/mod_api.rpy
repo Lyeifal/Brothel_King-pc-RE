@@ -46,6 +46,21 @@ init -3 python:
             """Register a custom New Game+ setting."""
             return ngp_registry.register_ngp(setting_id, ngp_setting, category=category)
 
+        def register_scenario(self, scenario):
+            """EN: Register a community-created Scenario.
+               ZH: 注册一个社区创作的剧本。"""
+            return scenario_registry.register(scenario)
+
+        def register_origin(self, origin):
+            """EN: Register a player origin for Sandbox mode.
+               ZH: 注册一个沙盒模式的玩家出身。"""
+            return origin_registry.register(origin)
+
+        def register_game_mode(self, mode):
+            """EN: Register a custom game mode.
+               ZH: 注册一个自定义游戏模式。"""
+            return gamemode_registry.register(mode)
+
         # --- Hook Wrappers ---
 
         def hook(self, hook_name, callback, mod=None):

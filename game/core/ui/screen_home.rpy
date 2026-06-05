@@ -30,6 +30,9 @@ screen right_menu():
                     # Count of girls in farm
                     if farm.active:
                         text __("In farm: {b}{size=+4}") + str(len(farm.girls)) + "{/size}{/b} /" + str(farm.pens) size res_font(12)
+                    # Count of girls in courtyard
+                    if len(courtyard.girls) > 0:
+                        text __("In courtyard: {b}{size=+4}") + str(len(courtyard.girls)) + "{/size}{/b} /" + str(courtyard.MAX_CAPACITY) size res_font(12)
 
         # Right menu frame
 
@@ -63,6 +66,9 @@ screen right_menu():
                 $ rows += 1
             if game.goals_reached() and (game.chapter != 1 or not story_mode or debug_mode):
                 $ rows += 1
+            ## EN: BK Evolution — add room for courtyard and auction buttons.
+            ## ZH: BK Evolution — 为别院和拍卖按钮增加空间。
+            $ rows += 2
 
 
             # Generate a grid of 2 columns and x rows for the right menu
@@ -104,6 +110,12 @@ screen right_menu():
                 # Shop Alert and Button
 
                 use right_menu_shop
+
+                # Courtyard Alert and Button
+                use right_menu_courtyard
+
+                # Auction House Alert and Button
+                use right_menu_auction
 
                 # Postings Alert and Button
 
@@ -411,6 +423,33 @@ screen right_menu_advance():
 
                     tooltip __("Advance to the next game chapter, at the cost of %s gold.") % '{:,}'.format(blist[game.chapter+1].cost)
 
+
+################
+## Home - Right menu - Display Courtyard button (BK Evolution)
+################
+
+screen right_menu_courtyard():
+
+    hbox xalign 1.0 spacing 20:
+        text ""
+
+        textbutton _("Courtyard") style_group "rm":
+            action Show("courtyard")
+            tooltip __("Manage girls housed in the Courtyard.")
+
+
+################
+## Home - Right menu - Display Auction House button (BK Evolution)
+################
+
+screen right_menu_auction():
+
+    hbox xalign 1.0 spacing 20:
+        text ""
+
+        textbutton _("Auction") style_group "rm":
+            action Show("auction_house")
+            tooltip __("Visit the Auction House to buy or sell girls.")
 
 
 init -2:

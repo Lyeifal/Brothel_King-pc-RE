@@ -17,6 +17,7 @@ label start:
 
     $ debug_mode = False
     $ story_mode = True
+    $ game_mode = None  ## EN: Will be set to "story", "sandbox", or "scenario". ZH: 将设置为 "story"、"sandbox" 或 "scenario"。
     $ starting_chapter = 1
     $ enemy_general = None
     $ unlocked_shops = []
@@ -63,7 +64,86 @@ label start:
             "No story mode (Test)" if persistent.new_game_plus:
                 $ story_mode = False
 
+    ## EN: Select game mode before proceeding.
+    ## ZH: 在继续之前选择游戏模式。
+    call select_game_mode() from _call_select_game_mode
+
     jump start_no_intro
+
+
+label select_game_mode():
+    """
+    EN: Present game mode selection to the player.
+        Sets global game_mode and configures the active GameMode instance.
+    ZH: 向玩家展示游戏模式选择。
+        设置全局 game_mode 并配置激活的 GameMode 实例。
+    """
+    scene black with fade
+
+    call screen game_mode_select
+
+    ## EN: game_mode is set by the screen's Return() action.
+    ## ZH: game_mode 由屏幕的 Return() 动作设置。
+    $ story_mode = (game_mode == GameMode.MODE_STORY)
+
+    ## EN: If sandbox mode, prompt for origin selection.
+    ## ZH: 如果是沙盒模式，提示选择出身。
+    if game_mode == GameMode.MODE_SANDBOX:
+        call select_origin() from _call_select_origin
+
+    ## EN: If scenario mode, prompt for scenario selection.
+    ## ZH: 如果是剧本模式，提示选择剧本。
+    if game_mode == GameMode.MODE_SCENARIO:
+        call select_scenario() from _call_select_scenario
+
+    return
+
+
+label select_origin():
+    """
+    EN: Present origin selection for Sandbox mode.
+    ZH: 为沙盒模式展示出身选择。
+    """
+    scene black with fade
+
+    $ _selected_origin_id = None
+    call screen origin_select
+
+    ## EN: Set the selected origin on the sandbox mode instance.
+    ## ZH: 在沙盒模式实例上设置选中的出身。
+    python:
+        _sandbox = gamemode_registry.get(GameMode.MODE_SANDBOX)
+        if _sandbox and _selected_origin_id:
+            _sandbox.set_origin(origin_registry.get(_selected_origin_id))
+
+    return
+
+
+label select_scenario():
+    """
+    EN: Present scenario selection for Scenario mode.
+        Falls back to sandbox if no scenarios are installed.
+    ZH: 为剧本模式展示剧本选择。
+        如果没有安装剧本则回退到沙盒模式。
+    """
+    scene black with fade
+
+    $ _selected_scenario_id = None
+    call screen scenario_select
+
+    ## EN: If the screen fell back to sandbox, _selected_scenario_id is None.
+    ## ZH: 如果屏幕回退到沙盒模式，_selected_scenario_id 为 None。
+    if _selected_scenario_id:
+        python:
+            _sc = scenario_registry.get(_selected_scenario_id)
+            _scenario_mode = gamemode_registry.get(GameMode.MODE_SCENARIO)
+            if _sc and _scenario_mode:
+                _scenario_mode.set_scenario(_sc)
+    else:
+        $ game_mode = GameMode.MODE_SANDBOX
+        $ story_mode = False
+
+    return
 
 
 label start_no_intro:
@@ -155,6 +235,14 @@ label init_game(quick=False):
 
         game = Game()
         calendar = Calendar()
+
+        ## EN: Bind the selected game mode to the Game instance.
+        ## ZH: 将选中的游戏模式绑定到 Game 实例。
+        if game_mode:
+            _mode_obj = gamemode_registry.get(game_mode)
+            if _mode_obj:
+                game.game_mode = _mode_obj
+                _mode_obj.on_game_start(game)
 
         # CHEATS #
 
@@ -698,11 +786,20 @@ label init_game(quick=False):
 
 
     # SELECT GOAL CHANNELS
+    ## EN: Use the new GameMode system if available, fall back to story_mode flag.
+    ## ZH: 优先使用新的 GameMode 系统，回退到 story_mode 标志。
 
-    if story_mode:
-        $ game.goal_channels = goal_channels
-    else:
-        $ game.goal_channels = goal_channels_no_story
+    python:
+        _mode = None
+        if game_mode:
+            _mode = gamemode_registry.get(game_mode)
+        if _mode:
+            game.game_mode = _mode
+            game.goal_channels = _mode.get_goal_channels()
+        elif story_mode:
+            game.goal_channels = goal_channels
+        else:
+            game.goal_channels = goal_channels_no_story
 
 
     # EVENT DICTIONARY (Events need to be added to the game with 'story_add_event' in order to proc)
@@ -914,7 +1011,13 @@ label init_events(chapter=1):
         mizuki_questW = Quest("quest", name = __('Investigate Mizuki: Westmarch'), main_stat = 'Obedience', second_stat = 'Charm', other_stats = None, tags = 'Story', description = __("Explore Westmarch to discover the story of Mizuki"), sound = s_mystery, commit_label = "mizuki_w_go", return_label = "mizuki_w_back")
         mizuki_questW.set_to(2, Picture(path="resources/characters/npc/Kunoichi/Mizuki/intro.webp"), duration = 14, special = "Story", requirements = [("Obedience", 75)], pos_traits=None, neg_trait=None, gold=0, xp=1250, rep=15)
         
-        if story_mode and not debug_mode:
+        ## EN: Use GameMode's story lock check if available.
+        ## ZH: 优先使用 GameMode 的剧情锁定检查。
+        _use_story_mode = story_mode
+        if game.game_mode:
+            _use_story_mode = game.game_mode.is_story_locked()
+
+        if _use_story_mode and not debug_mode:
             # TUTORIAL #
             daily_events.append(event_dict["zodiac_intro"])
             

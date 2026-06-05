@@ -43,6 +43,10 @@ init -2 python:
 #            self.set_difficulty("normal")
             self.__filesdict_timestamp = datetime.datetime.now() #<Chris12 AutoRepair />
 
+            ## EN: Active game mode (story, sandbox, scenario).
+            ## ZH: 当前激活的游戏模式（剧情、沙盒、剧本）。
+            self.game_mode = None
+
             self.cheats = False
             self.achievements = True
             self.trainers = []
@@ -1911,6 +1915,10 @@ init -2 python:
 
             self.reason = ""
             self.satisfaction = self.get_effect("change", "overall customer satisfaction")
+
+            ## EN: BK Evolution — customer affix system (personality + wealth tier + mood).
+            ## ZH: BK Evolution — 顾客词缀系统（性格+财富等级+心情）。
+            self.affixes = None
             self.service_dict = {"entertained" : 0, "laid" : 0, "both" : 0, "favorite entertainment" : 0, "favorite sex act" : 0, "extra" : 0} # Extra is earned with the right trait or bis/group sex
             self.got_entertainment = None
             self.got_sex_act = None
@@ -2072,6 +2080,14 @@ init -2 python:
             self.diff = self.pop.diff + dice(self.pop.range + 1) - 1 ## Varies up to +10 to +40 (maximum rank)
             self.defense = 2 * (self.rank-2) + dice(self.rank+2) # from -1 to 13 defense depending on rank
 
+            ## EN: Generate BK Evolution affixes and apply modifiers.
+            ## ZH: 生成 BK Evolution 词缀并应用修正。
+            try:
+                self.affixes = generate_customer_affixes(pop_rank=self.pop.rank)
+                self.affixes.apply_to_customer(self)
+            except:
+                self.affixes = None
+
             self.set_budgets()
 
             if dice(100) <= 2 * self.get_effect("boost", "crazy") + self.get_effect("change", "crazy"):
@@ -2141,6 +2157,11 @@ init -2 python:
             elif d == 1:
                 self.adjective = __("poor ")
                 mod = 0.5
+
+            ## EN: Apply BK Evolution affix budget multiplier if available.
+            ## ZH: 如可用，应用 BK Evolution 词缀预算倍率。
+            if self.affixes:
+                mod *= self.affixes.get_budget_multiplier()
 
             self.ent_budget = int((self.diff * mod  + self.get_effect("change", "job customer budget")) * self.get_effect("boost", "job customer budget") * brothel.get_adv_budget())
             self.wh_budget = int((self.diff * 3 * mod + self.get_effect("change", "whore customer budget")) * self.get_effect("boost", "whore customer budget") * brothel.get_adv_budget())

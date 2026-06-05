@@ -8376,14 +8376,18 @@ label acquire_girl(girl, price=0, context="generic", can_follow=True):
             else:
                 sill sad "Sorry Master, I'm afraid you don't have room in your brothel for another girl."
 
-                if brothel.bedrooms < brothel.get_maxbedrooms() or (farm.active and farm.has_room()) or (farm.active and farm.pens < farm.get_pen_limit()):
+                ## EN: Check if brothel is at the 24-girl working cap (regardless of bedrooms).
+                ## ZH: 检查青楼是否已达 24 人工作上限（与卧室数无关）。
+                $ _at_working_cap = (len(MC.girls) >= 24)
+
+                if brothel.bedrooms < brothel.get_maxbedrooms() or (farm.active and farm.has_room()) or (farm.active and farm.pens < farm.get_pen_limit()) or (_at_working_cap and courtyard.can_add_girl()):
                     $ price1 = brothel.get_room_price()
                     $ price2 = farm.get_pen_cost()
 
                     menu:
                         sill "Sorry Master, I'm afraid you don't have room in your brothel for another girl."
 
-                        "Add a new room to your brothel ([price1] gold)" if brothel.bedrooms < brothel.get_maxbedrooms() and MC.gold >= (price + price1):
+                        "Add a new room to your brothel ([price1] gold)" if brothel.bedrooms < brothel.get_maxbedrooms() and MC.gold >= (price + price1) and not _at_working_cap:
                             if brothel.add_room():
                                 $ result = True
 
@@ -8399,6 +8403,9 @@ label acquire_girl(girl, price=0, context="generic", can_follow=True):
                             if text1:
                                 gizel normal "[text1]"
 
+                        "Send her to the Courtyard" if _at_working_cap and courtyard.can_add_girl():
+                            $ result = "courtyard"
+
                         "Cancel":
                             pass
     else:
@@ -8407,7 +8414,10 @@ label acquire_girl(girl, price=0, context="generic", can_follow=True):
     # 2. Transfer girl from giver to taker
 
     if result:
-        $ MC.girls.append(girl)
+        ## EN: Only add to active roster if not going to farm or courtyard.
+        ## ZH: 若非送到农场或别院，则加入活跃名单。
+        if result not in ("farm", "courtyard"):
+            $ MC.girls.append(girl)
         $ girl.init_after_acquire(refresh_pics=False)
 
         if context == "free":
@@ -8435,6 +8445,13 @@ label acquire_girl(girl, price=0, context="generic", can_follow=True):
         if result == "farm":
             $ farm.programs[girl] = FarmProgram(girl)
             call send_to_farm(girl, can_beg=False, can_cancel=False, can_follow=can_follow) from _call_send_to_farm_4
+
+        elif result == "courtyard":
+            ## EN: Move girl to courtyard instead of active brothel roster.
+            ## ZH: 将女孩移到别院而非青楼活跃名单。
+            python:
+                courtyard.add_girl(girl)
+                notify_list.append((girl.name + __(" has been moved to the Courtyard.")), col="green")
 
         hide screen girl_profile
         hide screen girl_stats
