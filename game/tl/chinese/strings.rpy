@@ -4356,67 +4356,67 @@ translate chinese strings:
     old "NO, not %s!!! Don't touch me, I HATE it!!! *horrified*"
     new ""
 
-    old "NPC/Misc/princess/princess fucked1.gif"
+    old "resources/characters/npc/Misc/princess/princess fucked1.gif"
     new ""
 
-    old "NPC/Misc/princess/princess fucked10.gif"
+    old "resources/characters/npc/Misc/princess/princess fucked10.gif"
     new ""
 
-    old "NPC/Misc/princess/princess fucked11.gif"
+    old "resources/characters/npc/Misc/princess/princess fucked11.gif"
     new ""
 
-    old "NPC/Misc/princess/princess fucked12.gif"
+    old "resources/characters/npc/Misc/princess/princess fucked12.gif"
     new ""
 
-    old "NPC/Misc/princess/princess fucked13.gif"
+    old "resources/characters/npc/Misc/princess/princess fucked13.gif"
     new ""
 
-    old "NPC/Misc/princess/princess fucked14.gif"
+    old "resources/characters/npc/Misc/princess/princess fucked14.gif"
     new ""
 
-    old "NPC/Misc/princess/princess fucked15.gif"
+    old "resources/characters/npc/Misc/princess/princess fucked15.gif"
     new ""
 
-    old "NPC/Misc/princess/princess fucked16.gif"
+    old "resources/characters/npc/Misc/princess/princess fucked16.gif"
     new ""
 
-    old "NPC/Misc/princess/princess fucked17.gif"
+    old "resources/characters/npc/Misc/princess/princess fucked17.gif"
     new ""
 
-    old "NPC/Misc/princess/princess fucked18.gif"
+    old "resources/characters/npc/Misc/princess/princess fucked18.gif"
     new ""
 
-    old "NPC/Misc/princess/princess fucked19.gif"
+    old "resources/characters/npc/Misc/princess/princess fucked19.gif"
     new ""
 
-    old "NPC/Misc/princess/princess fucked2.gif"
+    old "resources/characters/npc/Misc/princess/princess fucked2.gif"
     new ""
 
-    old "NPC/Misc/princess/princess fucked20.gif"
+    old "resources/characters/npc/Misc/princess/princess fucked20.gif"
     new ""
 
-    old "NPC/Misc/princess/princess fucked21.gif"
+    old "resources/characters/npc/Misc/princess/princess fucked21.gif"
     new ""
 
-    old "NPC/Misc/princess/princess fucked3.gif"
+    old "resources/characters/npc/Misc/princess/princess fucked3.gif"
     new ""
 
-    old "NPC/Misc/princess/princess fucked4.gif"
+    old "resources/characters/npc/Misc/princess/princess fucked4.gif"
     new ""
 
-    old "NPC/Misc/princess/princess fucked5.gif"
+    old "resources/characters/npc/Misc/princess/princess fucked5.gif"
     new ""
 
-    old "NPC/Misc/princess/princess fucked6.gif"
+    old "resources/characters/npc/Misc/princess/princess fucked6.gif"
     new ""
 
-    old "NPC/Misc/princess/princess fucked7.gif"
+    old "resources/characters/npc/Misc/princess/princess fucked7.gif"
     new ""
 
-    old "NPC/Misc/princess/princess fucked8.gif"
+    old "resources/characters/npc/Misc/princess/princess fucked8.gif"
     new ""
 
-    old "NPC/Misc/princess/princess fucked9.gif"
+    old "resources/characters/npc/Misc/princess/princess fucked9.gif"
     new ""
 
     old "Naked"
@@ -6993,259 +6993,259 @@ translate chinese strings:
     old "UI settings"
     new ""
 
-    old "UI/Powers/Evil spell.webp"
+    old "resources/ui/Powers/Evil spell.webp"
     new ""
 
-    old "UI/Powers/orb_blue.webp"
+    old "resources/ui/Powers/orb_blue.webp"
     new ""
 
-    old "UI/Powers/orb_green.webp"
+    old "resources/ui/Powers/orb_green.webp"
     new ""
 
-    old "UI/Powers/orb_purple.webp"
+    old "resources/ui/Powers/orb_purple.webp"
     new ""
 
-    old "UI/Powers/orb_red.webp"
+    old "resources/ui/Powers/orb_red.webp"
     new ""
 
-    old "UI/Powers/orb_yellow.webp"
+    old "resources/ui/Powers/orb_yellow.webp"
     new ""
 
-    old "UI/al_evil.webp"
+    old "resources/ui/al_evil.webp"
     new ""
 
-    old "UI/al_good.webp"
+    old "resources/ui/al_good.webp"
     new ""
 
-    old "UI/al_neutral.webp"
+    old "resources/ui/al_neutral.webp"
     new ""
 
-    old "UI/arios.webp"
+    old "resources/ui/arios.webp"
     new ""
 
-    old "UI/none.webp"
+    old "resources/ui/none.webp"
     new ""
 
-    old "UI/powers/supercharge/card_supercharge/sc_1.webp"
+    old "resources/ui/powers/supercharge/card_supercharge/sc_1.webp"
     new ""
 
-    old "UI/powers/supercharge/card_supercharge/sc_10.webp"
+    old "resources/ui/powers/supercharge/card_supercharge/sc_10.webp"
     new ""
 
-    old "UI/powers/supercharge/card_supercharge/sc_11.webp"
+    old "resources/ui/powers/supercharge/card_supercharge/sc_11.webp"
     new ""
 
-    old "UI/powers/supercharge/card_supercharge/sc_12.webp"
+    old "resources/ui/powers/supercharge/card_supercharge/sc_12.webp"
     new ""
 
-    old "UI/powers/supercharge/card_supercharge/sc_13.webp"
+    old "resources/ui/powers/supercharge/card_supercharge/sc_13.webp"
     new ""
 
-    old "UI/powers/supercharge/card_supercharge/sc_14.webp"
+    old "resources/ui/powers/supercharge/card_supercharge/sc_14.webp"
     new ""
 
-    old "UI/powers/supercharge/card_supercharge/sc_15.webp"
+    old "resources/ui/powers/supercharge/card_supercharge/sc_15.webp"
     new ""
 
-    old "UI/powers/supercharge/card_supercharge/sc_16.webp"
+    old "resources/ui/powers/supercharge/card_supercharge/sc_16.webp"
     new ""
 
-    old "UI/powers/supercharge/card_supercharge/sc_17.webp"
+    old "resources/ui/powers/supercharge/card_supercharge/sc_17.webp"
     new ""
 
-    old "UI/powers/supercharge/card_supercharge/sc_18.webp"
+    old "resources/ui/powers/supercharge/card_supercharge/sc_18.webp"
     new ""
 
-    old "UI/powers/supercharge/card_supercharge/sc_19.webp"
+    old "resources/ui/powers/supercharge/card_supercharge/sc_19.webp"
     new ""
 
-    old "UI/powers/supercharge/card_supercharge/sc_2.webp"
+    old "resources/ui/powers/supercharge/card_supercharge/sc_2.webp"
     new ""
 
-    old "UI/powers/supercharge/card_supercharge/sc_20.webp"
+    old "resources/ui/powers/supercharge/card_supercharge/sc_20.webp"
     new ""
 
-    old "UI/powers/supercharge/card_supercharge/sc_21.webp"
+    old "resources/ui/powers/supercharge/card_supercharge/sc_21.webp"
     new ""
 
-    old "UI/powers/supercharge/card_supercharge/sc_22.webp"
+    old "resources/ui/powers/supercharge/card_supercharge/sc_22.webp"
     new ""
 
-    old "UI/powers/supercharge/card_supercharge/sc_23.webp"
+    old "resources/ui/powers/supercharge/card_supercharge/sc_23.webp"
     new ""
 
-    old "UI/powers/supercharge/card_supercharge/sc_24.webp"
+    old "resources/ui/powers/supercharge/card_supercharge/sc_24.webp"
     new ""
 
-    old "UI/powers/supercharge/card_supercharge/sc_25.webp"
+    old "resources/ui/powers/supercharge/card_supercharge/sc_25.webp"
     new ""
 
-    old "UI/powers/supercharge/card_supercharge/sc_26.webp"
+    old "resources/ui/powers/supercharge/card_supercharge/sc_26.webp"
     new ""
 
-    old "UI/powers/supercharge/card_supercharge/sc_27.webp"
+    old "resources/ui/powers/supercharge/card_supercharge/sc_27.webp"
     new ""
 
-    old "UI/powers/supercharge/card_supercharge/sc_28.webp"
+    old "resources/ui/powers/supercharge/card_supercharge/sc_28.webp"
     new ""
 
-    old "UI/powers/supercharge/card_supercharge/sc_29.webp"
+    old "resources/ui/powers/supercharge/card_supercharge/sc_29.webp"
     new ""
 
-    old "UI/powers/supercharge/card_supercharge/sc_3.webp"
+    old "resources/ui/powers/supercharge/card_supercharge/sc_3.webp"
     new ""
 
-    old "UI/powers/supercharge/card_supercharge/sc_30.webp"
+    old "resources/ui/powers/supercharge/card_supercharge/sc_30.webp"
     new ""
 
-    old "UI/powers/supercharge/card_supercharge/sc_31.webp"
+    old "resources/ui/powers/supercharge/card_supercharge/sc_31.webp"
     new ""
 
-    old "UI/powers/supercharge/card_supercharge/sc_32.webp"
+    old "resources/ui/powers/supercharge/card_supercharge/sc_32.webp"
     new ""
 
-    old "UI/powers/supercharge/card_supercharge/sc_33.webp"
+    old "resources/ui/powers/supercharge/card_supercharge/sc_33.webp"
     new ""
 
-    old "UI/powers/supercharge/card_supercharge/sc_34.webp"
+    old "resources/ui/powers/supercharge/card_supercharge/sc_34.webp"
     new ""
 
-    old "UI/powers/supercharge/card_supercharge/sc_35.webp"
+    old "resources/ui/powers/supercharge/card_supercharge/sc_35.webp"
     new ""
 
-    old "UI/powers/supercharge/card_supercharge/sc_36.webp"
+    old "resources/ui/powers/supercharge/card_supercharge/sc_36.webp"
     new ""
 
-    old "UI/powers/supercharge/card_supercharge/sc_4.webp"
+    old "resources/ui/powers/supercharge/card_supercharge/sc_4.webp"
     new ""
 
-    old "UI/powers/supercharge/card_supercharge/sc_5.webp"
+    old "resources/ui/powers/supercharge/card_supercharge/sc_5.webp"
     new ""
 
-    old "UI/powers/supercharge/card_supercharge/sc_6.webp"
+    old "resources/ui/powers/supercharge/card_supercharge/sc_6.webp"
     new ""
 
-    old "UI/powers/supercharge/card_supercharge/sc_7.webp"
+    old "resources/ui/powers/supercharge/card_supercharge/sc_7.webp"
     new ""
 
-    old "UI/powers/supercharge/card_supercharge/sc_8.webp"
+    old "resources/ui/powers/supercharge/card_supercharge/sc_8.webp"
     new ""
 
-    old "UI/powers/supercharge/card_supercharge/sc_9.webp"
+    old "resources/ui/powers/supercharge/card_supercharge/sc_9.webp"
     new ""
 
-    old "UI/powers/supercharge/screen_supercharge/supercharge-1.webp"
+    old "resources/ui/powers/supercharge/screen_supercharge/supercharge-1.webp"
     new ""
 
-    old "UI/powers/supercharge/screen_supercharge/supercharge-10.webp"
+    old "resources/ui/powers/supercharge/screen_supercharge/supercharge-10.webp"
     new ""
 
-    old "UI/powers/supercharge/screen_supercharge/supercharge-11.webp"
+    old "resources/ui/powers/supercharge/screen_supercharge/supercharge-11.webp"
     new ""
 
-    old "UI/powers/supercharge/screen_supercharge/supercharge-12.webp"
+    old "resources/ui/powers/supercharge/screen_supercharge/supercharge-12.webp"
     new ""
 
-    old "UI/powers/supercharge/screen_supercharge/supercharge-13.webp"
+    old "resources/ui/powers/supercharge/screen_supercharge/supercharge-13.webp"
     new ""
 
-    old "UI/powers/supercharge/screen_supercharge/supercharge-14.webp"
+    old "resources/ui/powers/supercharge/screen_supercharge/supercharge-14.webp"
     new ""
 
-    old "UI/powers/supercharge/screen_supercharge/supercharge-15.webp"
+    old "resources/ui/powers/supercharge/screen_supercharge/supercharge-15.webp"
     new ""
 
-    old "UI/powers/supercharge/screen_supercharge/supercharge-16.webp"
+    old "resources/ui/powers/supercharge/screen_supercharge/supercharge-16.webp"
     new ""
 
-    old "UI/powers/supercharge/screen_supercharge/supercharge-17.webp"
+    old "resources/ui/powers/supercharge/screen_supercharge/supercharge-17.webp"
     new ""
 
-    old "UI/powers/supercharge/screen_supercharge/supercharge-18.webp"
+    old "resources/ui/powers/supercharge/screen_supercharge/supercharge-18.webp"
     new ""
 
-    old "UI/powers/supercharge/screen_supercharge/supercharge-19.webp"
+    old "resources/ui/powers/supercharge/screen_supercharge/supercharge-19.webp"
     new ""
 
-    old "UI/powers/supercharge/screen_supercharge/supercharge-2.webp"
+    old "resources/ui/powers/supercharge/screen_supercharge/supercharge-2.webp"
     new ""
 
-    old "UI/powers/supercharge/screen_supercharge/supercharge-20.webp"
+    old "resources/ui/powers/supercharge/screen_supercharge/supercharge-20.webp"
     new ""
 
-    old "UI/powers/supercharge/screen_supercharge/supercharge-21.webp"
+    old "resources/ui/powers/supercharge/screen_supercharge/supercharge-21.webp"
     new ""
 
-    old "UI/powers/supercharge/screen_supercharge/supercharge-22.webp"
+    old "resources/ui/powers/supercharge/screen_supercharge/supercharge-22.webp"
     new ""
 
-    old "UI/powers/supercharge/screen_supercharge/supercharge-23.webp"
+    old "resources/ui/powers/supercharge/screen_supercharge/supercharge-23.webp"
     new ""
 
-    old "UI/powers/supercharge/screen_supercharge/supercharge-24.webp"
+    old "resources/ui/powers/supercharge/screen_supercharge/supercharge-24.webp"
     new ""
 
-    old "UI/powers/supercharge/screen_supercharge/supercharge-25.webp"
+    old "resources/ui/powers/supercharge/screen_supercharge/supercharge-25.webp"
     new ""
 
-    old "UI/powers/supercharge/screen_supercharge/supercharge-26.webp"
+    old "resources/ui/powers/supercharge/screen_supercharge/supercharge-26.webp"
     new ""
 
-    old "UI/powers/supercharge/screen_supercharge/supercharge-27.webp"
+    old "resources/ui/powers/supercharge/screen_supercharge/supercharge-27.webp"
     new ""
 
-    old "UI/powers/supercharge/screen_supercharge/supercharge-28.webp"
+    old "resources/ui/powers/supercharge/screen_supercharge/supercharge-28.webp"
     new ""
 
-    old "UI/powers/supercharge/screen_supercharge/supercharge-29.webp"
+    old "resources/ui/powers/supercharge/screen_supercharge/supercharge-29.webp"
     new ""
 
-    old "UI/powers/supercharge/screen_supercharge/supercharge-3.webp"
+    old "resources/ui/powers/supercharge/screen_supercharge/supercharge-3.webp"
     new ""
 
-    old "UI/powers/supercharge/screen_supercharge/supercharge-30.webp"
+    old "resources/ui/powers/supercharge/screen_supercharge/supercharge-30.webp"
     new ""
 
-    old "UI/powers/supercharge/screen_supercharge/supercharge-31.webp"
+    old "resources/ui/powers/supercharge/screen_supercharge/supercharge-31.webp"
     new ""
 
-    old "UI/powers/supercharge/screen_supercharge/supercharge-32.webp"
+    old "resources/ui/powers/supercharge/screen_supercharge/supercharge-32.webp"
     new ""
 
-    old "UI/powers/supercharge/screen_supercharge/supercharge-33.webp"
+    old "resources/ui/powers/supercharge/screen_supercharge/supercharge-33.webp"
     new ""
 
-    old "UI/powers/supercharge/screen_supercharge/supercharge-4.webp"
+    old "resources/ui/powers/supercharge/screen_supercharge/supercharge-4.webp"
     new ""
 
-    old "UI/powers/supercharge/screen_supercharge/supercharge-5.webp"
+    old "resources/ui/powers/supercharge/screen_supercharge/supercharge-5.webp"
     new ""
 
-    old "UI/powers/supercharge/screen_supercharge/supercharge-6.webp"
+    old "resources/ui/powers/supercharge/screen_supercharge/supercharge-6.webp"
     new ""
 
-    old "UI/powers/supercharge/screen_supercharge/supercharge-7.webp"
+    old "resources/ui/powers/supercharge/screen_supercharge/supercharge-7.webp"
     new ""
 
-    old "UI/powers/supercharge/screen_supercharge/supercharge-8.webp"
+    old "resources/ui/powers/supercharge/screen_supercharge/supercharge-8.webp"
     new ""
 
-    old "UI/powers/supercharge/screen_supercharge/supercharge-9.webp"
+    old "resources/ui/powers/supercharge/screen_supercharge/supercharge-9.webp"
     new ""
 
-    old "UI/powers/supercharge/screen_supercharge/supercharge-placeholder.webp"
+    old "resources/ui/powers/supercharge/screen_supercharge/supercharge-placeholder.webp"
     new ""
 
-    old "UI/shalia.webp"
+    old "resources/ui/shalia.webp"
     new ""
 
-    old "UI/trader.webp"
+    old "resources/ui/trader.webp"
     new ""
 
-    old "UI/warrior.webp"
+    old "resources/ui/warrior.webp"
     new ""
 
-    old "UI/wizard.webp"
+    old "resources/ui/wizard.webp"
     new ""
 
     old "Ultimate"
@@ -9516,22 +9516,22 @@ translate chinese strings:
     old "meet_twins"
     new ""
 
-    old "minigame/rain/heavyrain1.webp"
+    old "resources/minigame/rain/heavyrain1.webp"
     new ""
 
-    old "minigame/rain/heavyrain2.webp"
+    old "resources/minigame/rain/heavyrain2.webp"
     new ""
 
-    old "minigame/rain/heavyrain3.webp"
+    old "resources/minigame/rain/heavyrain3.webp"
     new ""
 
-    old "minigame/rain/rain1.webp"
+    old "resources/minigame/rain/rain1.webp"
     new ""
 
-    old "minigame/rain/rain2.webp"
+    old "resources/minigame/rain/rain2.webp"
     new ""
 
-    old "minigame/rain/rain3.webp"
+    old "resources/minigame/rain/rain3.webp"
     new ""
 
     old "mizuki_brothel"
