@@ -156,8 +156,8 @@ init -9 python:
         def __init__(self):
             super(SandboxMode, self).__init__(
                 mode_id=GameMode.MODE_SANDBOX,
-                name_i18n_key="Sandbox Mode",
-                description_i18n_key="Free-form gameplay. Choose your origin and forge your own path without story locks."
+                name_i18n_key="沙盒模式",
+                description_i18n_key="自由玩法。选择你的出身，在没有剧情锁定的情况下打造自己的道路。"
             )
 
             ## EN: Currently selected player origin.
@@ -228,14 +228,14 @@ init -1 python:
 
     origin_registry.register(PlayerOrigin(
         origin_id="fallen_noble",
-        name_i18n_key="Fallen Noble",
-        description_i18n_key="Once a respected aristocrat, now fallen from grace. High starting reputation but limited funds.",
+        name_i18n_key="落魄贵族",
+        description_i18n_key="曾经受人尊敬的贵族，如今落魄失势。起始声望高但资金有限。",
         icon_tag="origin_noble",
         talents=[
             OriginTalent(
                 talent_id="noble_bearing",
-                name_i18n_key="Noble Bearing",
-                description_i18n_key="Reputation gains are increased by 50%%.",
+                name_i18n_key="贵族气质",
+                description_i18n_key="声望获取增加50%%。",
                 effects=[Effect("boost", "reputation", 0.5)]
             ),
         ],
@@ -244,14 +244,14 @@ init -1 python:
 
     origin_registry.register(PlayerOrigin(
         origin_id="street_thug",
-        name_i18n_key="Street Thug",
-        description_i18n_key="Grew up in the slums. Ruthless and resourceful. Kidnapping is easier, but people trust you less.",
+        name_i18n_key="街头混混",
+        description_i18n_key="在贫民窟长大。 ruthless 且足智多谋。掳走更容易，但人们不太信任你。",
         icon_tag="origin_thug",
         talents=[
             OriginTalent(
                 talent_id="underworld_connections",
-                name_i18n_key="Underworld Connections",
-                description_i18n_key="Kidnapping success rate +20%%. Starting evil reputation +10.",
+                name_i18n_key="地下关系",
+                description_i18n_key="掳走成功率+20%%。起始邪恶声望+10。",
                 effects=[Effect("boost", "kidnap success", 0.2)]
             ),
         ],
@@ -260,14 +260,14 @@ init -1 python:
 
     origin_registry.register(PlayerOrigin(
         origin_id="merchant_family",
-        name_i18n_key="Merchant Family",
-        description_i18n_key="Born into a trading dynasty. You know how to haggle and spot a good deal.",
+        name_i18n_key="商人世家",
+        description_i18n_key="出身贸易世家。你懂得讨价还价和发现好买卖。",
         icon_tag="origin_merchant",
         talents=[
             OriginTalent(
                 talent_id="sharp_deal",
-                name_i18n_key="Sharp Deal",
-                description_i18n_key="Shop prices are reduced by 15%%.",
+                name_i18n_key="精明交易",
+                description_i18n_key="商店价格降低15%%。",
                 effects=[Effect("boost", "shop prices", -0.15)]
             ),
         ],
@@ -276,14 +276,14 @@ init -1 python:
 
     origin_registry.register(PlayerOrigin(
         origin_id="wandering_mage",
-        name_i18n_key="Wandering Mage",
-        description_i18n_key="A self-taught spellcaster seeking fortune. Girls are drawn to your mysterious aura.",
+        name_i18n_key="流浪法师",
+        description_i18n_key="一个自学成才的施法者，寻求财富。女孩们被你神秘的气质所吸引。",
         icon_tag="origin_mage",
         talents=[
             OriginTalent(
                 talent_id="arcane_charm",
-                name_i18n_key="Arcane Charm",
-                description_i18n_key="Spell learning speed +30%%. Start with an extra girl.",
+                name_i18n_key="神秘魅力",
+                description_i18n_key="法术学习速度+30%%。起始额外获得一个女孩。",
                 effects=[Effect("boost", "spell learning", 0.3)]
             ),
         ],
@@ -292,20 +292,20 @@ init -1 python:
 
     origin_registry.register(PlayerOrigin(
         origin_id="pirate_captain",
-        name_i18n_key="Pirate Captain",
-        description_i18n_key="Former captain of a privateer vessel. Exotic girls find you fascinating, but security costs are higher.",
+        name_i18n_key="海盗船长",
+        description_i18n_key="私掠船的前船长。异域女孩觉得你很有魅力，但安保成本更高。",
         icon_tag="origin_pirate",
         talents=[
             OriginTalent(
                 talent_id="exotic_allure",
-                name_i18n_key="Exotic Allure",
-                description_i18n_key="Special girl encounter rate +10%%.",
+                name_i18n_key="异域诱惑",
+                description_i18n_key="特殊女孩遭遇率+10%%。",
                 effects=[Effect("boost", "special girl chance", 0.1)]
             ),
             OriginTalent(
                 talent_id="loose_crew",
-                name_i18n_key="Loose Crew",
-                description_i18n_key="Security upkeep is increased by 20%%.",
+                name_i18n_key="散漫船员",
+                description_i18n_key="安保维护费用增加20%%。",
                 effects=[Effect("boost", "security upkeep", 0.2)]
             ),
         ],

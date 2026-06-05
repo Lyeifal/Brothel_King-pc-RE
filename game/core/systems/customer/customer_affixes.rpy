@@ -13,14 +13,14 @@ init -1 python:
     ## ============================================================
 
     CUSTOMER_COLOR_TIERS = [
-        ("white",      __("White"),      "#FFFFFF", 1.0),   # EN: Common / ZH: 普通
-        ("green",      __("Green"),      "#2ECC71", 1.2),   # EN: Uncommon / ZH: 优秀
-        ("blue",       __("Blue"),       "#3498DB", 1.5),   # EN: Rare / ZH: 稀有
-        ("purple",     __("Purple"),     "#9B59B6", 2.0),   # EN: Epic / ZH: 史诗
-        ("gold",       __("Gold"),       "#FFD700", 2.8),   # EN: Legendary / ZH: 传说
-        ("orange",     __("Orange"),     "#E67E22", 4.0),   # EN: Mythic / ZH: 神话
-        ("red",        __("Red"),        "#E74C3C", 6.0),   # EN: Divine / ZH: 神圣
-        ("iridescent", __("Iridescent"), "#FF00FF", 10.0),  # EN: Transcendent / ZH: 超凡
+        ("white",      __("白色"),      "#FFFFFF", 1.0),   # EN: Common / ZH: 普通
+        ("green",      __("绿色"),      "#2ECC71", 1.2),   # EN: Uncommon / ZH: 优秀
+        ("blue",       __("蓝色"),       "#3498DB", 1.5),   # EN: Rare / ZH: 稀有
+        ("purple",     __("紫色"),     "#9B59B6", 2.0),   # EN: Epic / ZH: 史诗
+        ("gold",       __("金色"),       "#FFD700", 2.8),   # EN: Legendary / ZH: 传说
+        ("orange",     __("橙色"),     "#E67E22", 4.0),   # EN: Mythic / ZH: 神话
+        ("red",        __("红色"),        "#E74C3C", 6.0),   # EN: Divine / ZH: 神圣
+        ("iridescent", __("彩色"), "#FF00FF", 10.0),  # EN: Transcendent / ZH: 超凡
     ]
 
     def get_tier_by_index(index):
@@ -112,28 +112,28 @@ init -1 python:
     ## EN: Default personalities.
     ## ZH: 默认性格。
     personality_registry.register(CustomerPersonality(
-        "brutal", __("Brutal"), __("Violent and demanding. Harder to satisfy but pays well."),
+        "brutal", __("残暴"), __("暴力且苛求。更难满足但付费丰厚。"),
         difficulty_mod=5, satisfaction_mod=-1, budget_mod=1.3, defense_mod=2, crazy_chance=5, color_shift=1))
     personality_registry.register(CustomerPersonality(
-        "kind", __("Kind"), __("Gentle and forgiving. Easier to satisfy but tips less."),
+        "kind", __("和蔼"), __("温和且宽容。更容易满足但小费较少。"),
         difficulty_mod=-3, satisfaction_mod=1, budget_mod=0.9, defense_mod=-1, crazy_chance=-2, color_shift=0))
     personality_registry.register(CustomerPersonality(
-        "drunkard", __("Drunkard"), __("Unpredictable. Low defense, high budget from liquid courage."),
+        "drunkard", __("酒鬼"), __("难以预测。防御低，但酒壮怂人胆，预算高。"),
         difficulty_mod=2, satisfaction_mod=0, budget_mod=1.1, defense_mod=-2, crazy_chance=3, color_shift=0))
     personality_registry.register(CustomerPersonality(
-        "noble", __("Noble"), __("Refined taste. Very demanding but extremely generous."),
+        "noble", __("贵族"), __("品味高雅。非常挑剔但极其慷慨。"),
         difficulty_mod=8, satisfaction_mod=-1, budget_mod=1.8, defense_mod=3, crazy_chance=0, color_shift=2))
     personality_registry.register(CustomerPersonality(
-        "shy", __("Shy"), __("Timid and nervous. Easy to please, modest spending."),
+        "shy", __("害羞"), __("胆小紧张。容易取悦，花费 modest。"),
         difficulty_mod=-5, satisfaction_mod=0, budget_mod=0.7, defense_mod=-3, crazy_chance=-1, color_shift=0))
     personality_registry.register(CustomerPersonality(
-        "pervert", __("Pervert"), __("Obsessed with one thing. High budget for favorites, hates everything else."),
+        "pervert", __("变态"), __("对一件事痴迷。对喜好预算高，讨厌其他一切。"),
         difficulty_mod=3, satisfaction_mod=0, budget_mod=1.2, defense_mod=0, crazy_chance=2, color_shift=1))
     personality_registry.register(CustomerPersonality(
-        "miser", __("Miser"), __("Hates spending. Low budget, but easy to satisfy."),
+        "miser", __("吝啬"), __("讨厌花钱。预算低，但容易满足。"),
         difficulty_mod=-2, satisfaction_mod=0, budget_mod=0.5, defense_mod=0, crazy_chance=0, color_shift=0))
     personality_registry.register(CustomerPersonality(
-        "celebrity", __("Celebrity"), __("Famous and flamboyant. Huge budget, draws attention."),
+        "celebrity", __("名人"), __("著名且张扬。预算巨大，引人注目。"),
         difficulty_mod=10, satisfaction_mod=-2, budget_mod=2.5, defense_mod=1, crazy_chance=1, color_shift=3))
 
 
@@ -197,25 +197,25 @@ init -1 python:
     ## EN: Default moods.
     ## ZH: 默认心情。
     mood_registry.register(CustomerMood(
-        "cheerful", __("Cheerful"), __("In a great mood. Easy to please, might tip."),
+        "cheerful", __("高兴"), __("心情很好。容易取悦，可能会给小费。"),
         satisfaction_mod=1, tip_chance=0.15, tip_multiplier=1.2, patience_mod=2, color_shift=0))
     mood_registry.register(CustomerMood(
-        "neutral", __("Neutral"), __("Nothing special. Standard behavior."),
+        "neutral", __("中性"), __("没什么特别的。标准行为。"),
         satisfaction_mod=0, tip_chance=0.05, tip_multiplier=1.0, patience_mod=0, color_shift=0))
     mood_registry.register(CustomerMood(
-        "grumpy", __("Grumpy"), __("Already annoyed. Harder to satisfy, won't tip."),
+        "grumpy", __("暴躁"), __("已经不耐烦了。更难满足，不会给小费。"),
         satisfaction_mod=-1, tip_chance=0.0, tip_multiplier=0.0, patience_mod=-2, color_shift=0))
     mood_registry.register(CustomerMood(
-        "angry", __("Angry"), __("Furious about something. Very demanding, may cause trouble."),
+        "angry", __("愤怒"), __("对某事 furious。非常苛刻，可能会惹麻烦。"),
         satisfaction_mod=-2, tip_chance=0.0, tip_multiplier=0.0, patience_mod=-4, color_shift=1))
     mood_registry.register(CustomerMood(
-        "ecstatic", __("Ecstatic"), __("Overjoyed! Extremely generous and forgiving."),
+        "ecstatic", __("狂喜"), __("欣喜若狂！极其慷慨和宽容。"),
         satisfaction_mod=3, tip_chance=0.35, tip_multiplier=2.0, patience_mod=5, color_shift=2))
     mood_registry.register(CustomerMood(
-        "depressed", __("Depressed"), __("Seeking comfort. Low expectations, but little money."),
+        "depressed", __("沮丧"), __("寻求安慰。期望低，但钱少。"),
         satisfaction_mod=0, tip_chance=0.02, tip_multiplier=0.5, patience_mod=3, color_shift=0))
     mood_registry.register(CustomerMood(
-        "lustful", __("Lustful"), __("Single-minded. High sex budget, ignores entertainment."),
+        "lustful", __("饥渴"), __("一心一意。性预算高，无视娱乐。"),
         satisfaction_mod=0, tip_chance=0.1, tip_multiplier=1.3, patience_mod=-1, color_shift=1))
 
 

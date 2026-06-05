@@ -21,13 +21,13 @@ screen game_mode_select():
             yalign 0.1
             spacing 20
 
-            text __("Choose Your Path"):
+            text __("选择你的道路"):
                 size 48
                 xalign 0.5
                 color "#FFD700"
                 outlines [(2, "#000", 0, 0)]
 
-            text __("Select a game mode to begin your journey."):
+            text __("选择一种游戏模式开始你的旅程。"):
                 size 24
                 xalign 0.5
                 color "#CCCCCC"
@@ -41,24 +41,24 @@ screen game_mode_select():
 
             use mode_card(
                 mode_id=GameMode.MODE_STORY,
-                title=__("Story Mode"),
-                desc=__("Follow the epic main storyline with chapter-based progression, narrative goals, and dramatic events. Recommended for first-time players."),
+                title=__("剧情模式"),
+                desc=__("跟随史诗般的主线剧情，包含章节推进、叙事目标和戏剧性事件。推荐给首次游玩的玩家。"),
                 color="#FF6B6B",
                 icon="mode_story"
             )
 
             use mode_card(
                 mode_id=GameMode.MODE_SANDBOX,
-                title=__("Sandbox Mode"),
-                desc=__("Forge your own path without story locks. Choose your origin and unique talents. Perfect for experienced players who want freedom."),
+                title=__("沙盒模式"),
+                desc=__("在没有剧情锁定的情况下打造你自己的道路。选择你的出身和独特天赋。适合想要自由的资深玩家。"),
                 color="#4ECDC4",
                 icon="mode_sandbox"
             )
 
             use mode_card(
                 mode_id=GameMode.MODE_SCENARIO,
-                title=__("Scenario Mode"),
-                desc=__("Play a community-created scenario with custom rules and victory conditions. New scenarios can be added via Mods."),
+                title=__("剧本模式"),
+                desc=__("游玩社区创作的剧本，包含自定义规则和胜利条件。新剧本可通过 Mod 添加。"),
                 color="#9B59B6",
                 icon="mode_scenario"
             )
@@ -106,7 +106,7 @@ screen mode_card(mode_id, title, desc, color, icon):
 
             null height 20
 
-            text __("Click to select"):
+            text __("点击选择"):
                 size 16
                 xalign 0.5
                 color "#888888"
@@ -132,13 +132,13 @@ screen origin_select():
             yalign 0.05
             spacing 15
 
-            text __("Choose Your Origin"):
+            text __("选择你的出身"):
                 size 44
                 xalign 0.5
                 color "#FFD700"
                 outlines [(2, "#000", 0, 0)]
 
-            text __("Your background determines your starting talents and bonuses."):
+            text __("你的背景决定了你的起始天赋和加成。"):
                 size 20
                 xalign 0.5
                 color "#AAAAAA"
@@ -216,7 +216,7 @@ screen origin_select():
 
                         null height 15
 
-                        text __("Talents"):
+                        text __("天赋"):
                             size 22
                             xalign 0.5
                             color "#FFD700"
@@ -242,7 +242,7 @@ screen origin_select():
 
                         if selected_origin.starting_bonus:
                             null height 15
-                            text __("Starting Bonus"):
+                            text __("起始奖励"):
                                 size 22
                                 xalign 0.5
                                 color "#FFD700"
@@ -256,12 +256,12 @@ screen origin_select():
 
                         null height 30
 
-                        textbutton __("Confirm Selection"):
+                        textbutton __("确认选择"):
                             xalign 0.5
                             action [SetVariable("_selected_origin_id", selected_origin.origin_id), Return()]
 
                     else:
-                        text __("Select an origin from the list to see details."):
+                        text __("从列表中选择一个出身以查看详情。"):
                             size 20
                             xalign 0.5
                             yalign 0.5
@@ -288,7 +288,7 @@ screen scenario_select():
             yalign 0.05
             spacing 15
 
-            text __("Select a Scenario"):
+            text __("选择剧本"):
                 size 44
                 xalign 0.5
                 color "#FFD700"
@@ -303,17 +303,17 @@ screen scenario_select():
                 yalign 0.5
                 spacing 20
 
-                text __("No scenarios are currently installed."):
+                text __("当前没有安装任何剧本。"):
                     size 28
                     xalign 0.5
                     color "#FF6B6B"
 
-                text __("Scenarios can be added via Mods. Falling back to Sandbox mode."):
+                text __("剧本可以通过 Mod 添加。将回退到沙盒模式。"):
                     size 20
                     xalign 0.5
                     color "#AAAAAA"
 
-                textbutton __("Continue"):
+                textbutton __("继续"):
                     xalign 0.5
                     action [SetVariable("game_mode", GameMode.MODE_SANDBOX), Return()]
         else:
@@ -389,7 +389,7 @@ screen scenario_select():
 
                             null height 15
 
-                            text __("Rules"):
+                            text __("规则"):
                                 size 22
                                 xalign 0.5
                                 color "#FFD700"
@@ -403,11 +403,11 @@ screen scenario_select():
 
                             null height 30
 
-                            textbutton __("Play Scenario"):
+                            textbutton __("开始剧本"):
                                 xalign 0.5
                                 action [SetVariable("_selected_scenario_id", selected_scenario.scenario_id), Return()]
                         else:
-                            text __("Select a scenario to see details."):
+                            text __("选择一个剧本以查看详情。"):
                                 size 20
                                 xalign 0.5
                                 yalign 0.5

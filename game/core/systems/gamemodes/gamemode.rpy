@@ -75,7 +75,7 @@ init -10 python:
             EN: Return list of difficulty IDs available for this mode.
             ZH: 返回此模式可用的难度 ID 列表。
             """
-            return ["very easy", "easy", "normal", "hard", "nightmare", "custom"]
+            return ["非常简单", "简单", "普通", "困难", "噩梦", "自定义"]
 
         def should_show_intro(self):
             """

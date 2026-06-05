@@ -159,8 +159,8 @@ init -1 python:
 
     special_girl_registry.register(SpecialGirlNPC(
         npc_id="lost_noble",
-        name=__("Lady Elara"),
-        description=__("A noblewoman who ran away from an arranged marriage. She wanders the city streets, unsure of her future."),
+        name=__("艾拉腊女士"),
+        description=__("一位逃离包办婚姻的贵族女子。她在城中街头徘徊，对未来感到迷茫。"),
         portrait_tag="elara_portrait",
         quest_label_prefix="quest_elara",
         min_chapter=1,
@@ -168,8 +168,8 @@ init -1 python:
 
     special_girl_registry.register(SpecialGirlNPC(
         npc_id="cursed_dancer",
-        name=__("Mirai"),
-        description=__("A dancer cursed to never stop moving. She seeks someone who can break the spell — or at least give her a stage."),
+        name=__("未来"),
+        description=__("一位被诅咒永远舞动的舞者。她在寻找能打破诅咒的人——或者至少给她一个舞台。"),
         portrait_tag="mirai_portrait",
         quest_label_prefix="quest_mirai",
         min_chapter=2,
@@ -177,8 +177,8 @@ init -1 python:
 
     special_girl_registry.register(SpecialGirlNPC(
         npc_id="ex_knight",
-        name=__("Sergeant Yrsa"),
-        description=__("A disgraced knight stripped of her rank. Proud and stubborn, she refuses to beg — but she needs work."),
+        name=__("伊尔莎军士"),
+        description=__("一位被剥夺军衔的蒙羞骑士。骄傲而固执，她拒绝乞求——但她需要工作。"),
         portrait_tag="yrsa_portrait",
         quest_label_prefix="quest_yrsa",
         min_chapter=2,

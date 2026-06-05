@@ -64,10 +64,6 @@ label start:
             "No story mode (Test)" if persistent.new_game_plus:
                 $ story_mode = False
 
-    ## EN: Select game mode before proceeding.
-    ## ZH: 在继续之前选择游戏模式。
-    call select_game_mode() from _call_select_game_mode
-
     jump start_no_intro
 
 
@@ -147,6 +143,12 @@ label select_scenario():
 
 
 label start_no_intro:
+
+    ## EN: Select game mode before initializing the game.
+    ##     This must happen here because 'jump intro' bypasses the end of label start.
+    ## ZH: 在游戏初始化之前选择游戏模式。
+    ##     这必须放在这里，因为 'jump intro' 会绕过 start 标签的末尾。
+    call select_game_mode() from _call_select_game_mode
 
     call init_game(quick=True) from _call_init_game
 

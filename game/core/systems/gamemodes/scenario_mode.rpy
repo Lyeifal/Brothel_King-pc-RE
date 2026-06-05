@@ -115,7 +115,7 @@ init -9 python:
         def from_dict(cls, data):
             return cls(
                 scenario_id=data.get("scenario_id", "unknown"),
-                name_i18n_key=data.get("name_i18n_key", "Unknown Scenario"),
+                name_i18n_key=data.get("name_i18n_key", "未知剧本"),
                 description_i18n_key=data.get("description_i18n_key", ""),
                 author=data.get("author", ""),
                 version=data.get("version", "1.0"),
@@ -168,8 +168,8 @@ init -9 python:
         def __init__(self):
             super(ScenarioMode, self).__init__(
                 mode_id=GameMode.MODE_SCENARIO,
-                name_i18n_key="Scenario Mode",
-                description_i18n_key="Play a community-created scenario with custom rules and victory conditions."
+                name_i18n_key="剧本模式",
+                description_i18n_key="游玩社区创作的剧本，包含自定义规则和胜利条件。"
             )
             self.selected_scenario = None
 

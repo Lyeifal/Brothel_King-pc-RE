@@ -435,7 +435,7 @@ screen right_menu_courtyard():
 
         textbutton _("Courtyard") style_group "rm":
             action Show("courtyard")
-            tooltip __("Manage girls housed in the Courtyard.")
+            tooltip __("管理安置在别院的女孩。")
 
 
 ################
@@ -449,7 +449,7 @@ screen right_menu_auction():
 
         textbutton _("Auction") style_group "rm":
             action Show("auction_house")
-            tooltip __("Visit the Auction House to buy or sell girls.")
+            tooltip __("访问拍卖行买卖女孩。")
 
 
 init -2:

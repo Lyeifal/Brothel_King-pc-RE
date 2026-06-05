@@ -17,8 +17,8 @@ init -9 python:
         def __init__(self):
             super(StoryMode, self).__init__(
                 mode_id=GameMode.MODE_STORY,
-                name_i18n_key="Story Mode",
-                description_i18n_key="Follow the main storyline with chapter-based progression and narrative goals."
+                name_i18n_key="剧情模式",
+                description_i18n_key="跟随主线剧情，包含章节推进和叙事目标。"
             )
 
         def on_game_start(self, game):

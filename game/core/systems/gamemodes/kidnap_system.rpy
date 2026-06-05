@@ -65,7 +65,7 @@ init -1 python:
             ## EN: Already owned.
             ## ZH: 已拥有。
             if hasattr(target, "name") and target in mc.girls:
-                return False, __("She already works for you.")
+                return False, __("她已经为你工作了。")
 
             ## EN: Need minions for the job.
             ## ZH: 需要手下执行任务。
@@ -73,19 +73,19 @@ init -1 python:
             if hasattr(mc, "get_effect"):
                 minions_available = mc.get_effect("change", "minions", randomize=False)
             if minions_available < 1:
-                return False, __("You don't have enough minions for this.")
+                return False, __("你没有足够的手下来做这件事。")
 
             ## EN: Location too secure.
             ## ZH: 地点太安全。
             if location_security >= 3:
-                return False, __("This area is too heavily guarded.")
+                return False, __("这个区域戒备太森严了。")
 
             ## EN: Need evil reputation or disguise.
             ## ZH: 需要邪恶声望或伪装。
             evil_score = getattr(mc, "evil", 0)
             has_disguise = False  ## EN: TODO: check disguise item/effect. ZH: TODO: 检查伪装物品/效果。
             if evil_score < 10 and not has_disguise:
-                return False, __("You lack the ruthlessness (or a good disguise) to pull this off.")
+                return False, __("你缺乏无情（或一个好的伪装）来做成这件事。")
 
             return True, ""
 
@@ -162,15 +162,15 @@ init -1 python:
                 girl = target
                 if not hasattr(target, "init_after_acquire"):
                     girl = get_rand_girl()
-                    girl.name = getattr(target, "name", __("Captured Girl"))
+                    girl.name = getattr(target, "name", __("被掳走的女孩"))
 
                 girl.original = False
                 girl.init_after_acquire()
                 mc.girls.append(girl)
 
-                consequences = [__("You successfully abducted [girl.name].")]
+                consequences = [__("你成功掳走了[girl.name]。")]
                 if random.random() < 0.3:
-                    consequences.append(__("A witness may have seen you..."))
+                    consequences.append(__("可能有目击者看到了你..."))
 
                 attempt = KidnapAttempt(KidnapAttempt.RESULT_SUCCESS, girl.name, consequences)
                 self.history.append(attempt)
@@ -185,14 +185,14 @@ init -1 python:
                     mc.gold -= fine
 
                 consequences = [
-                    __("You were caught by the authorities!"),
-                    __("Fined [fine] gold."),
+                    __("你被当局抓住了！"),
+                    __("罚款[fine]金币。"),
                 ]
 
                 if hasattr(mc, "reputation"):
                     rep_loss = 20
                     mc.reputation -= rep_loss
-                    consequences.append(__("Lost [rep_loss] reputation."))
+                    consequences.append(__("失去[rep_loss]声望。"))
 
                 attempt = KidnapAttempt(KidnapAttempt.RESULT_CAPTURED,
                                         getattr(target, "name", "?"), consequences)
@@ -203,7 +203,7 @@ init -1 python:
                 ## EN: Target escaped.
                 ## ZH: 目标逃脱。
                 self.notoriety += 0.5
-                consequences = [__("Your target got away.")]
+                consequences = [__("你的目标逃走了。")]
                 attempt = KidnapAttempt(KidnapAttempt.RESULT_FAILED,
                                         getattr(target, "name", "?"), consequences)
                 self.history.append(attempt)

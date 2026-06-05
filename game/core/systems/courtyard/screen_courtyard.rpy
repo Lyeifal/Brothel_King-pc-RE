@@ -24,7 +24,7 @@ screen courtyard():
             yalign 0.05
             spacing 10
 
-            text __("Courtyard"):
+            text __("别院"):
                 size 42
                 xalign 0.5
                 color "#4ECDC4"
@@ -34,11 +34,11 @@ screen courtyard():
                 xalign 0.5
                 spacing 20
 
-                text __("Girls: [len(courtyard.girls)] / [courtyard.MAX_CAPACITY]"):
+                text __("女孩: [len(courtyard.girls)] / [courtyard.MAX_CAPACITY]"):
                     size 18
                     color "#FFFFFF"
 
-                text __("Daily Upkeep: [courtyard.get_daily_upkeep()] gold"):
+                text __("每日维护: [courtyard.get_daily_upkeep()] 金币"):
                     size 18
                     color "#FFD700"
 
@@ -145,30 +145,30 @@ screen courtyard():
 
                         null height 20
 
-                        textbutton __("Return to Brothel"):
+                        textbutton __("返回青楼"):
                             xalign 0.5
                             sensitive (len(MC.girls) < 24)
                             action [Function(courtyard.move_to_brothel, selected_girl),
                                     SetScreenVariable("selected_girl", None)]
 
                         if not (len(MC.girls) < 24):
-                            text __("Brothel is at max working capacity (24)"):
+                            text __("青楼已达最大工作容量(24)"):
                                 size 14
                                 xalign 0.5
                                 color "#E74C3C"
                                 italic True
 
-                        textbutton __("Train (slow)"):
+                        textbutton __("训练(缓慢)"):
                             xalign 0.5
                             action Function(courtyard.train_girl, selected_girl, "obedience", 1)
 
-                        textbutton __("Release"):
+                        textbutton __("释放"):
                             xalign 0.5
                             action [Function(courtyard.remove_girl, selected_girl),
                                     SetScreenVariable("selected_girl", None)]
 
                 else:
-                    text __("Select a girl to manage."):
+                    text __("选择一个女孩进行管理。"):
                         size 18
                         xalign 0.5
                         yalign 0.5
@@ -188,7 +188,7 @@ screen courtyard():
                     xalign 0.5
                     yalign 0.1
 
-                    text __("Facilities"):
+                    text __("设施"):
                         size 24
                         xalign 0.5
                         color "#FFD700"
@@ -219,12 +219,12 @@ screen courtyard():
 
                             if facility.upgrade_level < facility.max_level:
                                 $ next_cost = facility.upgrade_cost.get(facility.upgrade_level + 1, 0)
-                                textbutton __("Upgrade ([next_cost] gold)"):
+                                textbutton __("升级 ([next_cost] 金币)"):
                                     xalign 0.5
                                     sensitive (MC.gold >= next_cost)
                                     action Function(facility.upgrade, MC)
                             else:
-                                text __("Max Level"):
+                                text __("最高等级"):
                                     size 13
                                     xalign 0.5
                                     color "#2ECC71"
@@ -232,7 +232,7 @@ screen courtyard():
 
         ## EN: Bottom close button.
         ## ZH: 底部关闭按钮。
-        textbutton __("Close"):
+        textbutton __("关闭"):
             xalign 0.5
             yalign 0.95
             action [Return(), Hide("courtyard")]

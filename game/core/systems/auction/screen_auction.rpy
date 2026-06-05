@@ -25,7 +25,7 @@ screen auction_house():
             yalign 0.05
             spacing 10
 
-            text __("Auction House"):
+            text __("拍卖行"):
                 size 42
                 xalign 0.5
                 color "#FFD700"
@@ -43,18 +43,18 @@ screen auction_house():
                 yalign 0.5
                 spacing 20
 
-                text __("No active auction session."):
+                text __("没有活跃的拍卖会话。"):
                     size 24
                     xalign 0.5
                     color "#FF6B6B"
 
-                textbutton __("Start New Auction"):
+                textbutton __("开始新拍卖"):
                     xalign 0.5
                     action [SetScreenVariable("current_session",
                              AuctionSession(auction_house.generate_npc_lots(4))),
                             SetScreenVariable("selected_lot", None)]
 
-                textbutton __("Sell One of My Girls"):
+                textbutton __("出售我的一个女孩"):
                     xalign 0.5
                     action Show("auction_sell_girl")
         else:
@@ -165,25 +165,25 @@ screen auction_house():
 
                             null height 10
 
-                            text __("Current Bid: {b}[selected_lot.current_bid]{/b} gold"):
+                            text __("当前出价: {b}[selected_lot.current_bid]{/b} 金币"):
                                 size 20
                                 xalign 0.5
                                 color "#FFD700"
 
                             if selected_lot.current_bidder:
-                                text __("High Bidder: [selected_lot.current_bidder]"):
+                                text __("最高出价者: [selected_lot.current_bidder]"):
                                     size 16
                                     xalign 0.5
-                                    color ({True: "#4ECDC4", False: "#E74C3C"}.get(selected_lot.current_bidder == __("You"), "#AAAAAA"))
+                                    color ({True: "#4ECDC4", False: "#E74C3C"}.get(selected_lot.current_bidder == __("你"), "#AAAAAA"))
 
                             null height 10
 
-                            text __("Reserve: [selected_lot.reserve_price] gold"):
+                            text __("保留价: [selected_lot.reserve_price] 金币"):
                                 size 16
                                 xalign 0.5
                                 color "#888888"
 
-                            text __("Increment: [selected_lot.min_increment] gold"):
+                            text __("加价幅度: [selected_lot.min_increment] 金币"):
                                 size 14
                                 xalign 0.5
                                 color "#888888"
@@ -208,25 +208,25 @@ screen auction_house():
 
                                 null height 10
 
-                                textbutton __("Place Bid"):
+                                textbutton __("出价"):
                                     xalign 0.5
                                     sensitive (bid_amount >= selected_lot.current_bid + selected_lot.min_increment and MC.gold >= bid_amount)
                                     action [Function(selected_lot.place_bid, __("You"), bid_amount, True),
                                             SetScreenVariable("bid_amount", bid_amount + selected_lot.min_increment)]
 
                                 if selected_lot.seller != "player":
-                                    textbutton __("Buy Now ([selected_lot.reserve_price] gold)"):
+                                    textbutton __("立即购买 ([selected_lot.reserve_price] 金币)"):
                                         xalign 0.5
                                         sensitive (MC.gold >= selected_lot.reserve_price)
                                         action Function(current_session.player_buy_lot, current_session.lots.index(selected_lot))
                             else:
-                                text __("Bidding is closed for this lot."):
+                                text __("此拍品的竞拍已结束。"):
                                     size 18
                                     xalign 0.5
                                     color "#888888"
 
                     else:
-                        text __("Select a lot to view details and place bids."):
+                        text __("选择一个拍品查看详情并出价。"):
                             size 18
                             xalign 0.5
                             yalign 0.5
@@ -240,14 +240,14 @@ screen auction_house():
                 yalign 0.95
                 spacing 20
 
-                textbutton __("Next Lot"):
+                textbutton __("下一个拍品"):
                     sensitive (current_session.current_lot is not None)
                     action Function(current_session.advance_lot)
 
-                textbutton __("Auto-Resolve"):
+                textbutton __("自动结拍"):
                     action Function(current_session.auto_resolve)
 
-                textbutton __("Close"):
+                textbutton __("关闭"):
                     action [Return(), Hide("auction_house")]
 
 
@@ -267,12 +267,12 @@ screen auction_sell_girl():
             yalign 0.05
             spacing 10
 
-            text __("Select a Girl to Auction"):
+            text __("选择要拍卖的女孩"):
                 size 32
                 xalign 0.5
                 color "#FFD700"
 
-            text __("Choose one of your girls to put up for auction."):
+            text __("选择你的一个女孩进行拍卖。"):
                 size 16
                 xalign 0.5
                 color "#AAAAAA"
@@ -314,12 +314,12 @@ screen auction_sell_girl():
                                     color "#FFFFFF"
                                     xalign 0.5
 
-                                text "Sell price: [girl.get_price('sell')] gold":
+                                text "出售价格: [girl.get_price('sell')] 金币":
                                     size 14
                                     color "#FFD700"
                                     xalign 0.5
 
-        textbutton __("Cancel"):
+        textbutton __("取消"):
             xalign 0.5
             yalign 0.95
             action Hide("auction_sell_girl")
