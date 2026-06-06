@@ -17,7 +17,7 @@ screen courtyard():
     frame:
         xfill True
         yfill True
-        background "bg black"
+        background c_black
 
         vbox:
             xalign 0.5
@@ -52,7 +52,7 @@ screen courtyard():
             frame:
                 xsize 360
                 ysize 520
-                background Frame("gui/frame.png", 10, 10)
+                background c_ui_dark
 
                 viewport:
                     scrollbars "vertical"
@@ -106,7 +106,7 @@ screen courtyard():
             frame:
                 xsize 340
                 ysize 520
-                background Frame("gui/frame.png", 10, 10)
+                background c_ui_dark
 
                 if selected_girl:
                     vbox:
@@ -180,7 +180,7 @@ screen courtyard():
             frame:
                 xsize 300
                 ysize 520
-                background Frame("gui/frame.png", 10, 10)
+                background c_ui_dark
 
                 vbox:
                     spacing 10

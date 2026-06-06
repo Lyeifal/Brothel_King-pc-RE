@@ -18,7 +18,7 @@ screen auction_house():
     frame:
         xfill True
         yfill True
-        background "bg black"
+        background c_black
 
         vbox:
             xalign 0.5
@@ -68,7 +68,7 @@ screen auction_house():
                 frame:
                     xsize 360
                     ysize 520
-                    background Frame("gui/frame.png", 10, 10)
+                    background c_ui_dark
 
                     viewport:
                         scrollbars "vertical"
@@ -136,7 +136,7 @@ screen auction_house():
                 frame:
                     xsize 420
                     ysize 520
-                    background Frame("gui/frame.png", 10, 10)
+                    background c_ui_dark
 
                     if selected_lot:
                         vbox:
@@ -260,7 +260,7 @@ screen auction_sell_girl():
     frame:
         xfill True
         yfill True
-        background "bg black"
+        background c_black
 
         vbox:
             xalign 0.5
@@ -282,7 +282,7 @@ screen auction_sell_girl():
             yalign 0.5
             xsize 700
             ysize 450
-            background Frame("gui/frame.png", 10, 10)
+            background c_ui_dark
 
             viewport:
                 scrollbars "vertical"

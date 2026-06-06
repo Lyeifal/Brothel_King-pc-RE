@@ -14,7 +14,7 @@ screen game_mode_select():
     frame:
         xfill True
         yfill True
-        background "bg black"
+        background c_black
 
         vbox:
             xalign 0.5
@@ -71,8 +71,8 @@ screen mode_card(mode_id, title, desc, color, icon):
     button:
         xsize 320
         ysize 400
-        background Frame("gui/frame.png", 10, 10)
-        hover_background Frame("gui/frame_hover.png", 10, 10)
+        background c_ui_dark
+        hover_background c_ui_darker
 
         action [SetVariable("game_mode", mode_id), Return()]
 
@@ -125,7 +125,7 @@ screen origin_select():
     frame:
         xfill True
         yfill True
-        background "bg black"
+        background c_black
 
         vbox:
             xalign 0.5
@@ -155,7 +155,7 @@ screen origin_select():
             frame:
                 xsize 350
                 ysize 500
-                background Frame("gui/frame.png", 10, 10)
+                background c_ui_dark
 
                 viewport:
                     scrollbars "vertical"
@@ -192,7 +192,7 @@ screen origin_select():
             frame:
                 xsize 450
                 ysize 500
-                background Frame("gui/frame.png", 10, 10)
+                background c_ui_dark
 
                 vbox:
                     spacing 15
@@ -281,7 +281,7 @@ screen scenario_select():
     frame:
         xfill True
         yfill True
-        background "bg black"
+        background c_black
 
         vbox:
             xalign 0.5
@@ -325,7 +325,7 @@ screen scenario_select():
                 frame:
                     xsize 350
                     ysize 500
-                    background Frame("gui/frame.png", 10, 10)
+                    background c_ui_dark
 
                     viewport:
                         scrollbars "vertical"
@@ -365,7 +365,7 @@ screen scenario_select():
                 frame:
                     xsize 450
                     ysize 500
-                    background Frame("gui/frame.png", 10, 10)
+                    background c_ui_dark
 
                     vbox:
                         spacing 15
