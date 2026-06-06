@@ -244,6 +244,10 @@ label init_game(quick=False):
                 game.game_mode = _mode_obj
                 _mode_obj.on_game_start(game)
 
+        ## EN: Load JSON-driven content (traits, perks, origins, events, scenarios).
+        ## ZH: 加载 JSON 驱动的内容（特质、天赋、出身、事件、剧本）。
+        DataLoader.load_all()
+
         # CHEATS #
 
         if persistent.cheats:

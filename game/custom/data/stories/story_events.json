@@ -1,0 +1,11 @@
+[
+  {
+    "label": "example_story_event",
+    "chapter": 1,
+    "type": "city",
+    "chance": 1.0,
+    "once": true,
+    "modes": ["story"],
+    "description": "这是一个示例剧情事件，请用编辑器添加真正的事件。"
+  }
+]

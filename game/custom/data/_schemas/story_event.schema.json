@@ -1,0 +1,128 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "StoryEvent",
+  "description": "EN: Definition of a story event that can trigger during gameplay.\nZH: 可在游戏过程中触发的剧情事件定义。",
+  "type": "object",
+  "required": ["label"],
+  "properties": {
+    "label": {
+      "type": "string",
+      "description": "EN: Ren'Py label name to call when event triggers.\nZH: 事件触发时调用的 Ren'Py 标签名。"
+    },
+    "chapter": {
+      "type": "integer",
+      "minimum": 0,
+      "default": 0,
+      "description": "EN: Minimum chapter required for this event.\nZH: 触发此事件所需的最低章节。"
+    },
+    "rank": {
+      "type": "integer",
+      "minimum": 0,
+      "default": 0,
+      "description": "EN: Minimum district rank required.\nZH: 所需的最低区域等级。"
+    },
+    "date": {
+      "type": "integer",
+      "minimum": 0,
+      "default": 0,
+      "description": "EN: Minimum calendar time (days) before event can trigger.\nZH: 事件可触发前的最少游戏天数。"
+    },
+    "year": {
+      "type": "integer",
+      "minimum": 0,
+      "default": 0
+    },
+    "month": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 12,
+      "default": 0
+    },
+    "day": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 31,
+      "default": 0
+    },
+    "weekday": {
+      "type": "string",
+      "enum": ["", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+      "default": ""
+    },
+    "chance": {
+      "type": "number",
+      "minimum": 0.0,
+      "maximum": 1.0,
+      "default": 1.0,
+      "description": "EN: Probability (0.0-1.0) of triggering per check.\nZH: 每次检查触发的概率(0.0-1.0)。"
+    },
+    "type": {
+      "type": "string",
+      "enum": ["any", "city", "day", "night", "morning"],
+      "default": "any",
+      "description": "EN: When the event can trigger.\nZH: 事件何时可触发。"
+    },
+    "location": {
+      "type": ["string", "null"],
+      "default": null,
+      "description": "EN: Specific location name required.\nZH: 需要的特定地点名称。"
+    },
+    "locations": {
+      "type": ["array", "null"],
+      "items": { "type": "string" },
+      "default": null
+    },
+    "seasons": {
+      "type": ["array", "null"],
+      "items": { "type": "string" },
+      "default": null
+    },
+    "min_gold": {
+      "type": "integer",
+      "default": -999999999
+    },
+    "condition": {
+      "type": ["string", "null"],
+      "default": null,
+      "description": "EN: story_flags key that must be True.\nZH: 必须为 True 的 story_flags 键。"
+    },
+    "not_condition": {
+      "type": ["string", "null"],
+      "default": null
+    },
+    "once": {
+      "type": "boolean",
+      "default": true,
+      "description": "EN: If True, event only triggers once per playthrough.\nZH: 若为 True，每局游戏只触发一次。"
+    },
+    "AP_cost": {
+      "type": "integer",
+      "minimum": 0,
+      "default": 1
+    },
+    "order": {
+      "type": "integer",
+      "default": 0,
+      "description": "EN: Lower values trigger first.\nZH: 数值小的先触发。"
+    },
+    "weight": {
+      "type": "integer",
+      "minimum": 1,
+      "default": 1
+    },
+    "modes": {
+      "type": "array",
+      "items": { "type": "string", "enum": ["story", "sandbox", "scenario"] },
+      "default": ["story"],
+      "description": "EN: Which game modes this event is active in.\nZH: 此事件在哪些游戏模式中激活。"
+    },
+    "call_args": {
+      "type": "array",
+      "default": []
+    },
+    "description": {
+      "type": "string",
+      "default": ""
+    }
+  }
+}
