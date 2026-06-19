@@ -1,0 +1,8 @@
+{
+  "thresholds": [
+    {"min": 2501, "category": "+++"},
+    {"min": 501, "category": "++"},
+    {"min": 1, "category": "+"},
+    {"min": null, "category": "-"}
+  ]
+}

@@ -1,0 +1,157 @@
+[
+  {
+    "origin_id": "fallen_noble",
+    "icon_tag": "origin_noble",
+    "talents": [
+      {
+        "talent_id": "noble_bearing",
+        "effects": [
+          {
+            "type": "boost",
+            "target": "reputation",
+            "value": 0.5
+          }
+        ],
+        "name_i18n": "贵族气质",
+        "description_i18n": "声望获取增加50%"
+      }
+    ],
+    "starting_bonus": {
+      "reputation": 30
+    },
+    "available_classes": [
+      "Warrior",
+      "Trader"
+    ],
+    "modes": [
+      "sandbox"
+    ],
+    "name_i18n": "落魄贵族",
+    "description_i18n": "曾经受人尊敬的贵族，如今落魄失势。起始声望高但资金有限。"
+  },
+  {
+    "origin_id": "street_thug",
+    "icon_tag": "origin_thug",
+    "talents": [
+      {
+        "talent_id": "underworld_connections",
+        "effects": [
+          {
+            "type": "boost",
+            "target": "kidnap success",
+            "value": 0.2
+          }
+        ],
+        "name_i18n": "地下关系",
+        "description_i18n": "掳走成功率+20%。起始邪恶声望+10。"
+      }
+    ],
+    "starting_bonus": {
+      "evil": 10
+    },
+    "available_classes": [
+      "Warrior"
+    ],
+    "modes": [
+      "sandbox"
+    ],
+    "name_i18n": "街头混混",
+    "description_i18n": "在贫民窟长大。ruthless 且足智多谋。掳走更容易，但人们不太信任你。"
+  },
+  {
+    "origin_id": "merchant_family",
+    "icon_tag": "origin_merchant",
+    "talents": [
+      {
+        "talent_id": "sharp_deal",
+        "effects": [
+          {
+            "type": "boost",
+            "target": "shop prices",
+            "value": -0.15
+          }
+        ],
+        "name_i18n": "精明交易",
+        "description_i18n": "商店价格降低15%"
+      }
+    ],
+    "starting_bonus": {
+      "gold": 500
+    },
+    "available_classes": [
+      "Trader"
+    ],
+    "modes": [
+      "sandbox"
+    ],
+    "name_i18n": "商人世家",
+    "description_i18n": "出身贸易世家。你懂得讨价还价和发现好买卖。"
+  },
+  {
+    "origin_id": "wandering_mage",
+    "icon_tag": "origin_mage",
+    "talents": [
+      {
+        "talent_id": "arcane_charm",
+        "effects": [
+          {
+            "type": "boost",
+            "target": "spell learning",
+            "value": 0.3
+          }
+        ],
+        "name_i18n": "神秘魅力",
+        "description_i18n": "法术学习速度+30%。起始额外获得一个女孩。"
+      }
+    ],
+    "starting_bonus": {},
+    "available_classes": [
+      "Wizard"
+    ],
+    "modes": [
+      "sandbox"
+    ],
+    "name_i18n": "流浪法师",
+    "description_i18n": "一个自学成才的施法者，寻求财富。女孩们被你神秘的气质所吸引。"
+  },
+  {
+    "origin_id": "pirate_captain",
+    "icon_tag": "origin_pirate",
+    "talents": [
+      {
+        "talent_id": "exotic_allure",
+        "effects": [
+          {
+            "type": "boost",
+            "target": "special girl chance",
+            "value": 0.1
+          }
+        ],
+        "name_i18n": "异域诱惑",
+        "description_i18n": "特殊女孩遭遇率+10%"
+      },
+      {
+        "talent_id": "loose_crew",
+        "effects": [
+          {
+            "type": "boost",
+            "target": "security upkeep",
+            "value": 0.2
+          }
+        ],
+        "name_i18n": "散漫船员",
+        "description_i18n": "安保维护费用增加20%"
+      }
+    ],
+    "starting_bonus": {},
+    "available_classes": [
+      "Warrior",
+      "Trader"
+    ],
+    "modes": [
+      "sandbox"
+    ],
+    "name_i18n": "海盗船长",
+    "description_i18n": "私掠船的前船长。异域女孩觉得你很有魅力，但安保成本更高。"
+  }
+]

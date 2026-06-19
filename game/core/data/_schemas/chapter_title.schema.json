@@ -1,0 +1,17 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "ChapterTitle",
+  "description": "EN: Chapter title and subtitle definition.\nZH: 章节标题和副标题定义。",
+  "type": "object",
+  "required": ["title", "subtitle"],
+  "properties": {
+    "title": {
+      "type": "string",
+      "description": "EN: Chapter display title (e.g. 'Chapter One').\nZH: 章节显示标题。"
+    },
+    "subtitle": {
+      "type": "string",
+      "description": "EN: Chapter subtitle or tagline.\nZH: 章节副标题。"
+    }
+  }
+}

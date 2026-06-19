@@ -1,0 +1,2512 @@
+{
+  "regular": [
+    {
+      "type": "Platinum",
+      "power": "chaos",
+      "target": "MC",
+      "mojo_cost": [
+        [
+          "green",
+          2
+        ],
+        [
+          "blue",
+          2
+        ],
+        [
+          "red",
+          2
+        ],
+        [
+          "yellow",
+          2
+        ]
+      ],
+      "sanity_cost": 2,
+      "name_i18n": "Summon cuddly pet",
+      "short_description_i18n": "Summon this very cute, totally normal and safe pet"
+    },
+    {
+      "type": "Platinum",
+      "power": "ritual orgy",
+      "target": "brothel",
+      "mojo_cost": [
+        [
+          "green",
+          1
+        ],
+        [
+          "blue",
+          2
+        ],
+        [
+          "red",
+          2
+        ],
+        [
+          "yellow",
+          1
+        ]
+      ],
+      "sanity_cost": 6,
+      "name_i18n": "Ritual orgy",
+      "short_description_i18n": "Instant gold generation for the brothel, high sanity cost"
+    },
+    {
+      "type": "Platinum",
+      "power": "ritual bondage",
+      "target": "all girls",
+      "effects": [
+        {
+          "dice": 1,
+          "type": "gain",
+          "target": "obedience",
+          "value": 6
+        },
+        {
+          "dice": 1,
+          "type": "gain",
+          "target": "libido",
+          "value": 6
+        }
+      ],
+      "mojo_cost": [
+        [
+          "green",
+          2
+        ],
+        [
+          "blue",
+          1
+        ],
+        [
+          "red",
+          1
+        ],
+        [
+          "yellow",
+          2
+        ]
+      ],
+      "sanity_cost": 6,
+      "name_i18n": "Ritual bondage",
+      "short_description_i18n": "Instant gain of Obedience and Libido for all girls, high sanity cost"
+    },
+    {
+      "type": "Platinum",
+      "power": "ritual violence",
+      "target": "all girls",
+      "effects": [
+        {
+          "dice": 1,
+          "type": "gain",
+          "target": "fear",
+          "value": 4
+        }
+      ],
+      "mojo_cost": [
+        [
+          "red",
+          6
+        ]
+      ],
+      "sanity_cost": 6,
+      "name_i18n": "Ritual violence",
+      "short_description_i18n": "Instant fear generation for all girls, high sanity cost"
+    },
+    {
+      "type": "Platinum",
+      "power": "perks",
+      "target": "conduit",
+      "mojo_cost": [
+        [
+          "green",
+          2
+        ],
+        [
+          "blue",
+          2
+        ],
+        [
+          "red",
+          2
+        ],
+        [
+          "yellow",
+          2
+        ]
+      ],
+      "sanity_cost": 4,
+      "name_i18n": "Forget",
+      "short_description_i18n": "Resets all perks rank C or above"
+    },
+    {
+      "type": "Gold",
+      "power": "fear boost",
+      "target": "all girls",
+      "effects": [
+        {
+          "scope": "brothel",
+          "type": "boost",
+          "target": "fear gains",
+          "value": 0.25
+        }
+      ],
+      "mojo_cost": [
+        [
+          "yellow",
+          5
+        ]
+      ],
+      "sanity_cost": 4,
+      "duration": 5,
+      "name_i18n": "Horror visions",
+      "short_description_i18n": "Fear raises faster for all girls"
+    },
+    {
+      "type": "Gold",
+      "power": "personality",
+      "target": "conduit",
+      "mojo_cost": [
+        [
+          "blue",
+          5
+        ]
+      ],
+      "sanity_cost": 4,
+      "name_i18n": "Soul change",
+      "short_description_i18n": "Alters her personality randomly"
+    },
+    {
+      "type": "Gold",
+      "power": "customer capacity",
+      "target": "brothel",
+      "effects": [
+        {
+          "scope": "brothel",
+          "type": "change",
+          "target": "job customer capacity",
+          "value": 2
+        },
+        {
+          "scope": "brothel",
+          "type": "change",
+          "target": "whore customer capacity",
+          "value": 1
+        }
+      ],
+      "mojo_cost": [
+        [
+          "green",
+          5
+        ]
+      ],
+      "sanity_cost": 3,
+      "duration": 5,
+      "name_i18n": "Unholy stamina",
+      "short_description_i18n": "Raises customer capacity for all working and whoring girls"
+    },
+    {
+      "type": "Gold",
+      "power": "negative trait",
+      "target": "conduit",
+      "mojo_cost": [
+        [
+          "blue",
+          5
+        ]
+      ],
+      "sanity_cost": 3,
+      "name_i18n": "Weak point",
+      "short_description_i18n": "Girl swaps her negative Trait for a new random one"
+    },
+    {
+      "type": "Gold",
+      "power": "slave",
+      "target": "conduit",
+      "mojo_cost": [
+        [
+          "green",
+          3
+        ]
+      ],
+      "sanity_cost": 4,
+      "name_i18n": "Brand",
+      "short_description_i18n": "Turn girl into a slave (free girls only)"
+    },
+    {
+      "type": "Gold",
+      "power": "customer satisfaction",
+      "target": "brothel",
+      "effects": [
+        {
+          "scope": "brothel",
+          "type": "increase satisfaction",
+          "target": "all jobs",
+          "value": 1
+        },
+        {
+          "scope": "brothel",
+          "type": "increase satisfaction",
+          "target": "all sex acts",
+          "value": 1
+        }
+      ],
+      "mojo_cost": [
+        [
+          "green",
+          1
+        ],
+        [
+          "blue",
+          1
+        ],
+        [
+          "red",
+          1
+        ],
+        [
+          "yellow",
+          1
+        ]
+      ],
+      "sanity_cost": 4,
+      "duration": 4,
+      "name_i18n": "Satisfaction guaranteed",
+      "short_description_i18n": "+1 satisfaction for all customers"
+    },
+    {
+      "type": "Gold",
+      "power": "energy",
+      "target": "brothel",
+      "mojo_cost": [
+        [
+          "red",
+          4
+        ]
+      ],
+      "sanity_cost": 3,
+      "name_i18n": "Dynamo",
+      "short_description_i18n": "Restores some energy for all brothel girls, depletes her energy"
+    },
+    {
+      "type": "Gold",
+      "power": "postings",
+      "target": "conduit",
+      "effects": [
+        {
+          "type": "boost",
+          "target": "quest rewards",
+          "value": 0.5
+        },
+        {
+          "type": "boost",
+          "target": "class results",
+          "value": 0.5
+        }
+      ],
+      "mojo_cost": [
+        [
+          "red",
+          1
+        ],
+        [
+          "yellow",
+          2
+        ]
+      ],
+      "sanity_cost": 3,
+      "duration": 7,
+      "activation_limit": "girl",
+      "name_i18n": "Pain is the lesson",
+      "short_description_i18n": "She will receive more gains from classes and quests"
+    },
+    {
+      "type": "Silver",
+      "power": "frenzy",
+      "target": "conduit",
+      "effects": [
+        {
+          "type": "special",
+          "target": "ignore energy",
+          "value": 1
+        }
+      ],
+      "mojo_cost": [
+        [
+          "green",
+          4
+        ]
+      ],
+      "sanity_cost": 2,
+      "duration": 3,
+      "activation_limit": "girl",
+      "name_i18n": "Frenzy",
+      "short_description_i18n": "She will be able to work without losing energy for a while, then get automatically exhausted"
+    },
+    {
+      "type": "Silver",
+      "power": "farm",
+      "target": "conduit",
+      "effects": [
+        {
+          "type": "boost",
+          "target": "farm preference increase",
+          "value": 1.0
+        },
+        {
+          "type": "boost",
+          "target": "farm fear generation",
+          "value": 1.0
+        }
+      ],
+      "mojo_cost": [
+        [
+          "green",
+          1
+        ],
+        [
+          "blue",
+          1
+        ],
+        [
+          "red",
+          1
+        ],
+        [
+          "yellow",
+          1
+        ]
+      ],
+      "sanity_cost": 2,
+      "duration": 7,
+      "activation_limit": "girl",
+      "name_i18n": "Warp farm",
+      "short_description_i18n": "Farm training and fear generation will be more efficient for her"
+    },
+    {
+      "type": "Silver",
+      "power": "leech rep",
+      "target": "other girl",
+      "mojo_cost": [
+        [
+          "blue",
+          2
+        ],
+        [
+          "red",
+          2
+        ]
+      ],
+      "sanity_cost": 2,
+      "name_i18n": "Leech reputation",
+      "short_description_i18n": "Some of her reputation will be transferred to another girl of equal or lower rank"
+    },
+    {
+      "type": "Silver",
+      "power": "hurt",
+      "target": "other girl",
+      "mojo_cost": [
+        [
+          "red",
+          3
+        ]
+      ],
+      "sanity_cost": 3,
+      "name_i18n": "Stigmata",
+      "short_description_i18n": "She will absorb the wounds from another girl and heal her"
+    },
+    {
+      "type": "Silver",
+      "power": "bisexual",
+      "target": "conduit",
+      "mojo_cost": [
+        [
+          "green",
+          2
+        ],
+        [
+          "yellow",
+          2
+        ]
+      ],
+      "sanity_cost": 2,
+      "name_i18n": "Dark fantasy: Bisexual",
+      "short_description_i18n": "Her Bisexual preference will increase"
+    },
+    {
+      "type": "Silver",
+      "power": "group",
+      "target": "conduit",
+      "mojo_cost": [
+        [
+          "blue",
+          2
+        ],
+        [
+          "red",
+          2
+        ]
+      ],
+      "sanity_cost": 2,
+      "name_i18n": "Dark fantasy: Group",
+      "short_description_i18n": "Her Group preference will increase"
+    },
+    {
+      "type": "Silver",
+      "power": "obedience",
+      "target": "conduit",
+      "effects": [
+        {
+          "type": "change",
+          "target": "obedience target",
+          "value": -30
+        },
+        {
+          "type": "change",
+          "target": "all sex acts requirements",
+          "value": -15
+        }
+      ],
+      "mojo_cost": [
+        [
+          "yellow",
+          3
+        ]
+      ],
+      "sanity_cost": 3,
+      "duration": 3,
+      "activation_limit": "girl",
+      "name_i18n": "Blind obedience",
+      "short_description_i18n": "She is less likely to refuse working or training"
+    },
+    {
+      "type": "Silver",
+      "power": "leech xp",
+      "target": "all girls",
+      "mojo_cost": [
+        [
+          "green",
+          2
+        ],
+        [
+          "yellow",
+          2
+        ]
+      ],
+      "sanity_cost": 2,
+      "name_i18n": "Leech xp",
+      "short_description_i18n": "Share some XP with all girls of lesser level"
+    },
+    {
+      "type": "Silver",
+      "power": "leech jp",
+      "target": "all girls",
+      "mojo_cost": [
+        [
+          "blue",
+          2
+        ],
+        [
+          "red",
+          2
+        ]
+      ],
+      "sanity_cost": 2,
+      "name_i18n": "Leech jp",
+      "short_description_i18n": "Share some JP with all girls of lesser job level"
+    },
+    {
+      "type": "Bronze",
+      "power": "punish",
+      "target": "all girls",
+      "effects": [
+        {
+          "scope": "brothel",
+          "type": "boost",
+          "target": "punishment efficiency",
+          "value": 1
+        }
+      ],
+      "mojo_cost": [
+        [
+          "yellow",
+          3
+        ]
+      ],
+      "sanity_cost": 3,
+      "duration": 7,
+      "name_i18n": "Bad memories",
+      "short_description_i18n": "Punishment is more efficient on all girls"
+    },
+    {
+      "type": "Bronze",
+      "power": "normalize fear",
+      "target": "conduit",
+      "mojo_cost": [
+        [
+          "blue",
+          1
+        ],
+        [
+          "red",
+          1
+        ],
+        [
+          "yellow",
+          1
+        ]
+      ],
+      "sanity_cost": 2,
+      "name_i18n": "Apathy",
+      "short_description_i18n": "Love/Hate and Fear/Trust levels are reduced"
+    },
+    {
+      "type": "Bronze",
+      "power": "kidnap",
+      "target": "city girl",
+      "mojo_cost": [
+        [
+          "yellow",
+          3
+        ]
+      ],
+      "sanity_cost": 2,
+      "name_i18n": "Abduction",
+      "short_description_i18n": "Attempts to kidnap a free girl, may get hurt in the process",
+      "description_i18n": "She will go to the city at night and attempt capturing a free girl. Her chances improve with her defense level."
+    },
+    {
+      "type": "Bronze",
+      "power": "city love",
+      "target": "location",
+      "mojo_cost": [
+        [
+          "blue",
+          3
+        ]
+      ],
+      "sanity_cost": 2,
+      "name_i18n": "Spread the love",
+      "short_description_i18n": "Leeches all of her Love and raises Love for all girls in a given district"
+    },
+    {
+      "type": "Bronze",
+      "power": "negative fixation",
+      "target": "conduit",
+      "mojo_cost": [
+        [
+          "yellow",
+          3
+        ]
+      ],
+      "sanity_cost": 2,
+      "name_i18n": "Change fixation",
+      "short_description_i18n": "Changes a negative fixation to a random one"
+    },
+    {
+      "type": "Bronze",
+      "power": "prestige",
+      "target": "conduit",
+      "mojo_cost": [
+        [
+          "blue",
+          2
+        ]
+      ],
+      "sanity_cost": 3,
+      "name_i18n": "Summon incubus",
+      "short_description_i18n": "Summon lesser demon to fuck her, boosting a random sex skill, prestige and girl XP"
+    },
+    {
+      "type": "Bronze",
+      "power": "room capacity",
+      "target": "brothel",
+      "mojo_cost": [
+        [
+          "red",
+          3
+        ]
+      ],
+      "sanity_cost": 2,
+      "duration": 5,
+      "name_i18n": "Non Euclidean space",
+      "short_description_i18n": "Common rooms in the brothel can accomodate more customers"
+    },
+    {
+      "type": "Bronze",
+      "power": "force naked",
+      "target": "conduit",
+      "effects": [
+        {
+          "type": "special",
+          "target": "naked",
+          "value": 1
+        }
+      ],
+      "mojo_cost": [
+        [
+          "green",
+          3
+        ]
+      ],
+      "sanity_cost": 2,
+      "duration": 5,
+      "activation_limit": "girl",
+      "name_i18n": "Nature calls",
+      "short_description_i18n": "She will remain naked at all times"
+    },
+    {
+      "type": "Bronze",
+      "power": "charisma",
+      "target": "MC",
+      "effects": [
+        {
+          "type": "change",
+          "target": "charisma",
+          "value": 1
+        }
+      ],
+      "mojo_cost": [
+        [
+          "green",
+          3
+        ]
+      ],
+      "sanity_cost": 2,
+      "duration": 7,
+      "name_i18n": "Vampire smile",
+      "short_description_i18n": "+1 to Main Character Charisma"
+    },
+    {
+      "type": "Bronze",
+      "power": "speed",
+      "target": "MC",
+      "effects": [
+        {
+          "type": "change",
+          "target": "speed",
+          "value": 1
+        }
+      ],
+      "mojo_cost": [
+        [
+          "blue",
+          3
+        ]
+      ],
+      "sanity_cost": 2,
+      "duration": 7,
+      "name_i18n": "Vampire swiftness",
+      "short_description_i18n": "+1 to Main Character Speed"
+    },
+    {
+      "type": "Bronze",
+      "power": "strength",
+      "target": "MC",
+      "effects": [
+        {
+          "type": "change",
+          "target": "strength",
+          "value": 1
+        }
+      ],
+      "mojo_cost": [
+        [
+          "red",
+          3
+        ]
+      ],
+      "sanity_cost": 2,
+      "duration": 7,
+      "name_i18n": "Vampire vigor",
+      "short_description_i18n": "+1 to Main Character Strength"
+    },
+    {
+      "type": "Bronze",
+      "power": "spirit",
+      "target": "MC",
+      "effects": [
+        {
+          "type": "change",
+          "target": "spirit",
+          "value": 1
+        }
+      ],
+      "mojo_cost": [
+        [
+          "yellow",
+          3
+        ]
+      ],
+      "sanity_cost": 2,
+      "duration": 7,
+      "name_i18n": "Vampire mind",
+      "short_description_i18n": "+1 to Main Character Spirit"
+    },
+    {
+      "type": "Bronze",
+      "power": "normalize skills BBCR",
+      "target": "conduit",
+      "mojo_cost": [
+        [
+          "green",
+          3
+        ]
+      ],
+      "sanity_cost": 2,
+      "name_i18n": "Even out",
+      "short_description_i18n": "Averages out some of her skills (Beauty, Body, Charm & Refinement)",
+      "description_i18n": "Beauty, Body, Charm and Refinement skills converge on their average value"
+    },
+    {
+      "type": "Bronze",
+      "power": "normalize skills LOCS",
+      "target": "conduit",
+      "mojo_cost": [
+        [
+          "blue",
+          3
+        ]
+      ],
+      "sanity_cost": 2,
+      "name_i18n": "Even out",
+      "short_description_i18n": "Averages out some of her skills (Libido, Obedience, Constitution, Sensitivity)",
+      "description_i18n": "Libido, Obedience, Constitution and Sensitivity converge on their average value"
+    },
+    {
+      "type": "Bronze",
+      "power": "shuffle skills BBCR",
+      "target": "conduit",
+      "mojo_cost": [
+        [
+          "yellow",
+          3
+        ]
+      ],
+      "sanity_cost": 2,
+      "name_i18n": "Shuffle",
+      "short_description_i18n": "Randomly shuffles the value of some of her skills (Beauty, Body, Charm & Refinement)",
+      "description_i18n": "Beauty, Body, Charm and Refinement skill values are shuffled randomly"
+    },
+    {
+      "type": "Bronze",
+      "power": "shuffle skills LOCS",
+      "target": "conduit",
+      "mojo_cost": [
+        [
+          "red",
+          3
+        ]
+      ],
+      "sanity_cost": 2,
+      "name_i18n": "Shuffle",
+      "short_description_i18n": "Randomly shuffles the value of some of her skills (Libido, Obedience, Constitution, Sensitivity)",
+      "description_i18n": "Libido, Obedience, Constitution and Sensitivity skill values are shuffled randomly"
+    },
+    {
+      "type": "Bronze",
+      "power": "mulligan",
+      "target": "MC",
+      "mojo_cost": [
+        [
+          "green",
+          2
+        ],
+        [
+          "blue",
+          2
+        ]
+      ],
+      "sanity_cost": 1,
+      "name_i18n": "Mulligan",
+      "short_description_i18n": "Discard hand and redraw power cards"
+    },
+    {
+      "type": "Regular",
+      "power": "mojo yellow",
+      "target": "MC",
+      "mojo_cost": [
+        [
+          "green",
+          1
+        ]
+      ],
+      "sanity_cost": 3,
+      "name_i18n": "Mojo surge (yellow)",
+      "short_description_i18n": "Receive 2-6 Yellow Mojo, high sanity cost"
+    },
+    {
+      "type": "Regular",
+      "power": "mojo red",
+      "target": "MC",
+      "mojo_cost": [
+        [
+          "yellow",
+          1
+        ]
+      ],
+      "sanity_cost": 3,
+      "name_i18n": "Mojo surge (red)",
+      "short_description_i18n": "Receive 2-6 Red Mojo, high sanity cost"
+    },
+    {
+      "type": "Regular",
+      "power": "mojo blue",
+      "target": "MC",
+      "mojo_cost": [
+        [
+          "red",
+          1
+        ]
+      ],
+      "sanity_cost": 3,
+      "name_i18n": "Mojo surge (blue)",
+      "short_description_i18n": "Receive 2-6 Blue Mojo, high sanity cost"
+    },
+    {
+      "type": "Regular",
+      "power": "mojo green",
+      "target": "MC",
+      "mojo_cost": [
+        [
+          "blue",
+          1
+        ]
+      ],
+      "sanity_cost": 3,
+      "name_i18n": "Mojo surge (green)",
+      "short_description_i18n": "Receive 2-6 Green Mojo, high sanity cost"
+    },
+    {
+      "type": "Regular",
+      "power": "leech service sex",
+      "target": "other girl",
+      "mojo_cost": [
+        [
+          "green",
+          1
+        ],
+        [
+          "blue",
+          1
+        ]
+      ],
+      "sanity_cost": 2,
+      "name_i18n": "Leech skills",
+      "short_description_i18n": "Leeches some of her skills (Service & Sex) to another girl",
+      "description_i18n": "Leeches some of her service and sex skills and transfers them to a girl of equal or lower rank"
+    },
+    {
+      "type": "Regular",
+      "power": "leech anal fetish",
+      "target": "other girl",
+      "mojo_cost": [
+        [
+          "red",
+          1
+        ],
+        [
+          "yellow",
+          1
+        ]
+      ],
+      "sanity_cost": 2,
+      "name_i18n": "Leech skills",
+      "short_description_i18n": "Leeches some of her skills (Anal & Fetish) to another girl",
+      "description_i18n": "Leeches some of her anal and fetish skills and transfers them to a girl of equal or lower rank"
+    },
+    {
+      "type": "Regular",
+      "power": "service",
+      "target": "conduit",
+      "mojo_cost": [
+        [
+          "green",
+          2
+        ]
+      ],
+      "sanity_cost": 1,
+      "name_i18n": "Dark fantasy: Service",
+      "short_description_i18n": "Her Service preference will increase"
+    },
+    {
+      "type": "Regular",
+      "power": "sex",
+      "target": "conduit",
+      "mojo_cost": [
+        [
+          "blue",
+          2
+        ]
+      ],
+      "sanity_cost": 1,
+      "name_i18n": "Dark fantasy: Sex",
+      "short_description_i18n": "Her Sex preference will increase"
+    },
+    {
+      "type": "Regular",
+      "power": "anal",
+      "target": "conduit",
+      "mojo_cost": [
+        [
+          "red",
+          2
+        ]
+      ],
+      "sanity_cost": 1,
+      "name_i18n": "Dark fantasy: Anal",
+      "short_description_i18n": "Her Anal preference will increase"
+    },
+    {
+      "type": "Regular",
+      "power": "fetish",
+      "target": "conduit",
+      "mojo_cost": [
+        [
+          "yellow",
+          2
+        ]
+      ],
+      "sanity_cost": 1,
+      "name_i18n": "Dark fantasy: Fetish",
+      "short_description_i18n": "Her Fetish preference will increase"
+    },
+    {
+      "type": "Regular",
+      "power": "minion",
+      "target": "minion",
+      "mojo_cost": [
+        [
+          "red",
+          1
+        ]
+      ],
+      "sanity_cost": 1,
+      "name_i18n": "Minion training",
+      "short_description_i18n": "Shares some XP with a minion"
+    },
+    {
+      "type": "Regular",
+      "power": "obedience link",
+      "target": "other girl",
+      "mojo_cost": [
+        [
+          "green",
+          1
+        ],
+        [
+          "blue",
+          1
+        ]
+      ],
+      "sanity_cost": 1,
+      "duration": 5,
+      "name_i18n": "Connected minds",
+      "short_description_i18n": "Target another girl. Reduces her chances of refusing acts the conduit accepts"
+    },
+    {
+      "type": "Regular",
+      "power": "leech beauty body",
+      "target": "other girl",
+      "mojo_cost": [
+        [
+          "blue",
+          1
+        ],
+        [
+          "red",
+          1
+        ]
+      ],
+      "sanity_cost": 1,
+      "name_i18n": "Leech skills",
+      "short_description_i18n": "Leeches some of her skills (Beauty & Body) to another girl",
+      "description_i18n": "Leeches some of her beauty and body skills and transfers them to a girl of equal or lower rank"
+    },
+    {
+      "type": "Regular",
+      "power": "leech charm refinement",
+      "target": "other girl",
+      "mojo_cost": [
+        [
+          "green",
+          1
+        ],
+        [
+          "yellow",
+          1
+        ]
+      ],
+      "sanity_cost": 1,
+      "name_i18n": "Leech skills",
+      "short_description_i18n": "Leeches some of her skills (Charm & Refinement) to another girl",
+      "description_i18n": "Leeches some of her charm and refinement skills and transfers them to a girl of equal or lower rank"
+    },
+    {
+      "type": "Regular",
+      "power": "leech sensitivity constitution",
+      "target": "other girl",
+      "mojo_cost": [
+        [
+          "green",
+          1
+        ],
+        [
+          "red",
+          1
+        ]
+      ],
+      "sanity_cost": 1,
+      "name_i18n": "Leech skills",
+      "short_description_i18n": "Leeches some of her skills (Sensitivity & Constitution) to another girl",
+      "description_i18n": "Leeches some of her sensitivity and constitution skills and transfers them to a girl of equal or lower rank"
+    },
+    {
+      "type": "Regular",
+      "power": "leech libido obedience",
+      "target": "other girl",
+      "mojo_cost": [
+        [
+          "blue",
+          1
+        ],
+        [
+          "yellow",
+          1
+        ]
+      ],
+      "sanity_cost": 1,
+      "name_i18n": "Leech skills",
+      "short_description_i18n": "Leeches some of her skills (Libido & Obedience) to another girl",
+      "description_i18n": "Leeches some of her libido and obedience skills and transfers them to a girl of equal or lower rank"
+    },
+    {
+      "type": "Regular",
+      "power": "hypnosis",
+      "target": "conduit",
+      "effects": [
+        {
+          "type": "change",
+          "target": "hypnosis",
+          "value": 3
+        }
+      ],
+      "mojo_cost": [
+        [
+          "yellow",
+          1
+        ]
+      ],
+      "sanity_cost": 1,
+      "duration": 5,
+      "activation_limit": "girl",
+      "name_i18n": "Hallucination",
+      "short_description_i18n": "All hypnosis attempts on this girl are more likely to succeed"
+    },
+    {
+      "type": "Regular",
+      "power": "mojo trade",
+      "target": "MC",
+      "mojo_cost": [
+        [
+          "green",
+          1
+        ]
+      ],
+      "sanity_cost": 1,
+      "name_i18n": "Fearful trade",
+      "short_description_i18n": "Swaps colored mojo to purple mojo at a rate of 2 for 1"
+    },
+    {
+      "type": "Regular",
+      "power": "naked",
+      "target": "conduit",
+      "mojo_cost": [
+        [
+          "green",
+          1
+        ]
+      ],
+      "sanity_cost": 1,
+      "name_i18n": "Dark fantasy: Naked",
+      "short_description_i18n": "Her Naked preference will increase"
+    },
+    {
+      "type": "Regular",
+      "power": "security",
+      "target": "brothel",
+      "effects": [
+        {
+          "scope": "brothel",
+          "type": "special",
+          "target": "demon security",
+          "value": 1
+        },
+        {
+          "scope": "brothel",
+          "type": "change",
+          "target": "security",
+          "value": 1
+        }
+      ],
+      "mojo_cost": [
+        [
+          "red",
+          1
+        ]
+      ],
+      "sanity_cost": 1,
+      "duration": 5,
+      "name_i18n": "Oni",
+      "short_description_i18n": "Raises brothel security"
+    },
+    {
+      "type": "Regular",
+      "power": "maintenance",
+      "target": "brothel",
+      "effects": [
+        {
+          "scope": "brothel",
+          "type": "special",
+          "target": "demon maintenance",
+          "value": 1
+        },
+        {
+          "scope": "brothel",
+          "type": "change",
+          "target": "maintenance",
+          "value": 1
+        }
+      ],
+      "mojo_cost": [
+        [
+          "yellow",
+          1
+        ]
+      ],
+      "sanity_cost": 1,
+      "duration": 5,
+      "name_i18n": "Haniwa",
+      "short_description_i18n": "Raises brothel maintenance"
+    },
+    {
+      "type": "Regular",
+      "power": "advertising",
+      "target": "brothel",
+      "effects": [
+        {
+          "scope": "brothel",
+          "type": "special",
+          "target": "demon advertising",
+          "value": 1
+        },
+        {
+          "scope": "brothel",
+          "type": "change",
+          "target": "advertising",
+          "value": 1
+        }
+      ],
+      "mojo_cost": [
+        [
+          "green",
+          1
+        ]
+      ],
+      "sanity_cost": 1,
+      "duration": 5,
+      "name_i18n": "Demonette",
+      "short_description_i18n": "Raises brothel advertising"
+    }
+  ],
+  "super": [
+    {
+      "type": "Platinum",
+      "power": "chaos",
+      "target": "MC",
+      "mojo_cost": [
+        [
+          "green",
+          5
+        ],
+        [
+          "blue",
+          5
+        ],
+        [
+          "red",
+          5
+        ],
+        [
+          "yellow",
+          5
+        ]
+      ],
+      "sanity_cost": 666,
+      "name_i18n": "Summon cuddly pet",
+      "short_description_i18n": "Summon this absolutely adorable and utterly HARMLESS not-at-all evil pet. Pinky swear."
+    },
+    {
+      "type": "Platinum",
+      "power": "ritual orgy",
+      "target": "brothel",
+      "mojo_cost": [
+        [
+          "green",
+          2
+        ],
+        [
+          "blue",
+          3
+        ],
+        [
+          "red",
+          3
+        ],
+        [
+          "yellow",
+          2
+        ]
+      ],
+      "sanity_cost": 666,
+      "name_i18n": "Ritual orgy",
+      "short_description_i18n": "Large gold generation for the brothel, instant loss of sanity."
+    },
+    {
+      "type": "Platinum",
+      "power": "ritual bondage",
+      "target": "all girls",
+      "effects": [
+        {
+          "dice": 2,
+          "type": "gain",
+          "target": "obedience",
+          "value": 6
+        },
+        {
+          "dice": 2,
+          "type": "gain",
+          "target": "libido",
+          "value": 6
+        }
+      ],
+      "mojo_cost": [
+        [
+          "green",
+          3
+        ],
+        [
+          "blue",
+          2
+        ],
+        [
+          "red",
+          2
+        ],
+        [
+          "yellow",
+          3
+        ]
+      ],
+      "sanity_cost": 666,
+      "name_i18n": "Ritual bondage",
+      "short_description_i18n": "Large gain of Obedience and Libido for all girls, instant loss of sanity."
+    },
+    {
+      "type": "Platinum",
+      "power": "ritual violence",
+      "target": "all girls",
+      "effects": [
+        {
+          "dice": 2,
+          "type": "gain",
+          "target": "fear",
+          "value": 4
+        }
+      ],
+      "mojo_cost": [
+        [
+          "red",
+          10
+        ]
+      ],
+      "sanity_cost": 666,
+      "name_i18n": "Ritual violence",
+      "short_description_i18n": "Fear generation for all girls with a large mojo yield, instant loss of sanity."
+    },
+    {
+      "type": "Platinum",
+      "power": "perks",
+      "target": "conduit",
+      "mojo_cost": [
+        [
+          "green",
+          4
+        ],
+        [
+          "blue",
+          4
+        ],
+        [
+          "red",
+          4
+        ],
+        [
+          "yellow",
+          4
+        ]
+      ],
+      "sanity_cost": 6,
+      "name_i18n": "Forget",
+      "short_description_i18n": "Reset all perks and perk trees."
+    },
+    {
+      "type": "Gold",
+      "power": "fear boost",
+      "target": "all girls",
+      "effects": [
+        {
+          "scope": "brothel",
+          "type": "boost",
+          "target": "fear gains",
+          "value": 0.25
+        },
+        {
+          "scope": "brothel",
+          "type": "special",
+          "target": "fear interactions",
+          "value": 1
+        }
+      ],
+      "mojo_cost": [
+        [
+          "yellow",
+          10
+        ]
+      ],
+      "sanity_cost": 5,
+      "duration": 10,
+      "name_i18n": "Horror visions",
+      "short_description_i18n": "Regular MC interactions generate Fear. Fear raises faster for all girls. Lasts 10 days."
+    },
+    {
+      "type": "Gold",
+      "power": "personality",
+      "target": "conduit",
+      "mojo_cost": [
+        [
+          "blue",
+          10
+        ]
+      ],
+      "sanity_cost": 5,
+      "name_i18n": "Soul change",
+      "short_description_i18n": "Alters her personality, you can influence the outcome."
+    },
+    {
+      "type": "Gold",
+      "power": "customer capacity",
+      "target": "brothel",
+      "effects": [
+        {
+          "scope": "brothel",
+          "type": "change",
+          "target": "job customer capacity",
+          "value": 2
+        },
+        {
+          "scope": "brothel",
+          "type": "change",
+          "target": "whore customer capacity",
+          "value": 1
+        }
+      ],
+      "mojo_cost": [
+        [
+          "green",
+          10
+        ]
+      ],
+      "sanity_cost": 5,
+      "duration": 10,
+      "name_i18n": "Unholy stamina",
+      "short_description_i18n": "Raises customer capacity for all working and whoring girls"
+    },
+    {
+      "type": "Gold",
+      "power": "negative trait",
+      "target": "conduit",
+      "mojo_cost": [
+        [
+          "blue",
+          10
+        ]
+      ],
+      "sanity_cost": 5,
+      "name_i18n": "Weak point",
+      "short_description_i18n": "Girl swaps her negative Trait for a new one, you can influence the outcome"
+    },
+    {
+      "type": "Gold",
+      "power": "slave",
+      "target": "all girls",
+      "mojo_cost": [
+        [
+          "green",
+          9
+        ]
+      ],
+      "sanity_cost": 6,
+      "name_i18n": "Brand",
+      "short_description_i18n": "Turn all free girls in the brothel or farm into slaves"
+    },
+    {
+      "type": "Gold",
+      "power": "customer satisfaction",
+      "target": "brothel",
+      "effects": [
+        {
+          "scope": "brothel",
+          "type": "increase satisfaction",
+          "target": "all jobs",
+          "value": 2
+        },
+        {
+          "scope": "brothel",
+          "type": "increase satisfaction",
+          "target": "all sex acts",
+          "value": 2
+        }
+      ],
+      "mojo_cost": [
+        [
+          "green",
+          2
+        ],
+        [
+          "blue",
+          2
+        ],
+        [
+          "red",
+          2
+        ],
+        [
+          "yellow",
+          2
+        ]
+      ],
+      "sanity_cost": 5,
+      "duration": 7,
+      "name_i18n": "Satisfaction guaranteed",
+      "short_description_i18n": "+2 satisfaction for all customers"
+    },
+    {
+      "type": "Gold",
+      "power": "energy",
+      "target": "brothel",
+      "mojo_cost": [
+        [
+          "red",
+          8
+        ]
+      ],
+      "sanity_cost": 5,
+      "name_i18n": "Dynamo",
+      "short_description_i18n": "Restores her max energy level to all brothel girls, exhausts and hurts her"
+    },
+    {
+      "type": "Gold",
+      "power": "postings",
+      "target": "all girls",
+      "effects": [
+        {
+          "scope": "brothel",
+          "type": "boost",
+          "target": "quest rewards",
+          "value": 0.5
+        },
+        {
+          "scope": "brothel",
+          "type": "boost",
+          "target": "class results",
+          "value": 0.5
+        }
+      ],
+      "mojo_cost": [
+        [
+          "red",
+          2
+        ],
+        [
+          "yellow",
+          4
+        ]
+      ],
+      "sanity_cost": 6,
+      "duration": 7,
+      "name_i18n": "Pain is the lesson",
+      "short_description_i18n": "All girls will receive more gains from classes and quests"
+    },
+    {
+      "type": "Silver",
+      "power": "frenzy",
+      "target": "conduit",
+      "effects": [
+        {
+          "type": "special",
+          "target": "ignore energy",
+          "value": 1
+        }
+      ],
+      "mojo_cost": [
+        [
+          "green",
+          8
+        ]
+      ],
+      "sanity_cost": 4,
+      "duration": 7,
+      "activation_limit": "girl",
+      "name_i18n": "Frenzy",
+      "short_description_i18n": "She will be able to work without losing energy for a while, then get automatically exhausted"
+    },
+    {
+      "type": "Silver",
+      "power": "farm",
+      "target": "all girls",
+      "effects": [
+        {
+          "scope": "farm",
+          "type": "boost",
+          "target": "farm preference increase",
+          "value": 1.0
+        },
+        {
+          "scope": "farm",
+          "type": "boost",
+          "target": "farm fear generation",
+          "value": 1.0
+        }
+      ],
+      "mojo_cost": [
+        [
+          "green",
+          2
+        ],
+        [
+          "blue",
+          2
+        ],
+        [
+          "red",
+          2
+        ],
+        [
+          "yellow",
+          2
+        ]
+      ],
+      "sanity_cost": 4,
+      "duration": 7,
+      "name_i18n": "Warp farm",
+      "short_description_i18n": "Farm training and fear generation will be more efficient for all girls"
+    },
+    {
+      "type": "Silver",
+      "power": "leech rep",
+      "target": "other girl",
+      "mojo_cost": [
+        [
+          "blue",
+          4
+        ],
+        [
+          "red",
+          4
+        ]
+      ],
+      "sanity_cost": 4,
+      "name_i18n": "Leech reputation",
+      "short_description_i18n": "All of her reputation will be transferred to another girl of lower or similar rank"
+    },
+    {
+      "type": "Silver",
+      "power": "hurt",
+      "target": "all girls",
+      "mojo_cost": [
+        [
+          "red",
+          7
+        ]
+      ],
+      "sanity_cost": 5,
+      "name_i18n": "Stigmata",
+      "short_description_i18n": "She will absorb wounds from all girls and heal them"
+    },
+    {
+      "type": "Silver",
+      "power": "bisexual",
+      "target": "conduit",
+      "mojo_cost": [
+        [
+          "green",
+          4
+        ],
+        [
+          "yellow",
+          4
+        ]
+      ],
+      "sanity_cost": 3,
+      "name_i18n": "Dark fantasy: Bisexual",
+      "short_description_i18n": "Her Bisexual preference will increase (larger effect)"
+    },
+    {
+      "type": "Silver",
+      "power": "group",
+      "target": "conduit",
+      "mojo_cost": [
+        [
+          "green",
+          4
+        ],
+        [
+          "yellow",
+          4
+        ]
+      ],
+      "sanity_cost": 3,
+      "name_i18n": "Dark fantasy: Group",
+      "short_description_i18n": "Her Group preference will increase (larger effect)"
+    },
+    {
+      "type": "Silver",
+      "power": "obedience",
+      "target": "conduit",
+      "effects": [
+        {
+          "type": "change",
+          "target": "obedience target",
+          "value": -70
+        },
+        {
+          "type": "change",
+          "target": "all sex acts requirements",
+          "value": -35
+        },
+        {
+          "type": "special",
+          "target": "minimum preference",
+          "value": "very reluctant"
+        }
+      ],
+      "mojo_cost": [
+        [
+          "yellow",
+          6
+        ]
+      ],
+      "sanity_cost": 5,
+      "duration": 3,
+      "activation_limit": "girl",
+      "name_i18n": "Blind obedience",
+      "short_description_i18n": "She is a lot less likely to refuse working, training or whoring"
+    },
+    {
+      "type": "Silver",
+      "power": "leech xp",
+      "target": "all girls",
+      "mojo_cost": [
+        [
+          "green",
+          4
+        ],
+        [
+          "yellow",
+          4
+        ]
+      ],
+      "sanity_cost": 3,
+      "name_i18n": "Leech xp",
+      "short_description_i18n": "Share more XP with all girls of lesser level"
+    },
+    {
+      "type": "Silver",
+      "power": "leech jp",
+      "target": "all girls",
+      "mojo_cost": [
+        [
+          "blue",
+          4
+        ],
+        [
+          "red",
+          4
+        ]
+      ],
+      "sanity_cost": 3,
+      "name_i18n": "Leech jp",
+      "short_description_i18n": "Share more JP with all girls of lesser job level"
+    },
+    {
+      "type": "Bronze",
+      "power": "punish",
+      "target": "all girls",
+      "effects": [
+        {
+          "scope": "brothel",
+          "type": "boost",
+          "target": "punishment efficiency",
+          "value": 3
+        }
+      ],
+      "mojo_cost": [
+        [
+          "red",
+          3
+        ],
+        [
+          "yellow",
+          3
+        ]
+      ],
+      "sanity_cost": 4,
+      "duration": 7,
+      "name_i18n": "Worse memories",
+      "short_description_i18n": "Punishment is a lot more efficient on all girls."
+    },
+    {
+      "type": "Bronze",
+      "power": "normalize fear",
+      "target": "conduit",
+      "mojo_cost": [
+        [
+          "blue",
+          2
+        ],
+        [
+          "red",
+          2
+        ],
+        [
+          "yellow",
+          2
+        ]
+      ],
+      "sanity_cost": 4,
+      "name_i18n": "Apathy",
+      "short_description_i18n": "Love/Hate and Fear/Trust levels are set back to zero"
+    },
+    {
+      "type": "Bronze",
+      "power": "kidnap",
+      "target": "city girl",
+      "mojo_cost": [
+        [
+          "yellow",
+          6
+        ]
+      ],
+      "sanity_cost": 4,
+      "name_i18n": "Abduction",
+      "short_description_i18n": "Attempts to kidnap a free girl, may get hurt in the process. Higher success chances",
+      "description_i18n": "She will go to the city at night and attempt capturing a free girl. Her chances improve with her defense level (supercharged: higher chance of success)."
+    },
+    {
+      "type": "Bronze",
+      "power": "city love",
+      "target": "district",
+      "mojo_cost": [
+        [
+          "blue",
+          6
+        ]
+      ],
+      "sanity_cost": 4,
+      "name_i18n": "Spread the love",
+      "short_description_i18n": "Leeches all of her Love and raises Love for all girls in the city"
+    },
+    {
+      "type": "Bronze",
+      "power": "negative fixation",
+      "target": "conduit",
+      "mojo_cost": [
+        [
+          "blue",
+          3
+        ],
+        [
+          "red",
+          3
+        ],
+        [
+          "yellow",
+          3
+        ]
+      ],
+      "sanity_cost": 4,
+      "name_i18n": "Remove fixation",
+      "short_description_i18n": "Removes her negative fixation instantly. Exhausts her"
+    },
+    {
+      "type": "Bronze",
+      "power": "prestige",
+      "target": "conduit",
+      "mojo_cost": [
+        [
+          "blue",
+          5
+        ]
+      ],
+      "sanity_cost": 6,
+      "name_i18n": "Summon incubus",
+      "short_description_i18n": "Summon large demon to fuck her, boosting two random sex skills, prestige and girl XP even more"
+    },
+    {
+      "type": "Bronze",
+      "power": "room capacity",
+      "target": "brothel",
+      "mojo_cost": [
+        [
+          "red",
+          6
+        ]
+      ],
+      "sanity_cost": 4,
+      "duration": 5,
+      "name_i18n": "Non Euclidean space",
+      "short_description_i18n": "Common rooms in the brothel can accomodate a lot more customers"
+    },
+    {
+      "type": "Bronze",
+      "power": "force naked",
+      "target": "conduit",
+      "effects": [
+        {
+          "type": "special",
+          "target": "naked",
+          "value": 1
+        },
+        {
+          "type": "change",
+          "target": "beauty",
+          "value": 5
+        },
+        {
+          "type": "change",
+          "target": "body",
+          "value": 5
+        },
+        {
+          "type": "change",
+          "target": "charm",
+          "value": 5
+        },
+        {
+          "type": "change",
+          "target": "refinement",
+          "value": 5
+        }
+      ],
+      "mojo_cost": [
+        [
+          "green",
+          6
+        ]
+      ],
+      "sanity_cost": 3,
+      "duration": 10,
+      "activation_limit": "girl",
+      "name_i18n": "Nature calls",
+      "short_description_i18n": "She will remain naked at all times. Temporary boost to main skills"
+    },
+    {
+      "type": "Bronze",
+      "power": "charisma",
+      "target": "MC",
+      "effects": [
+        {
+          "type": "change",
+          "target": "charisma",
+          "value": 2
+        }
+      ],
+      "mojo_cost": [
+        [
+          "green",
+          6
+        ]
+      ],
+      "sanity_cost": 3,
+      "duration": 7,
+      "name_i18n": "Vampire smile",
+      "short_description_i18n": "+2 to Main Character Charisma"
+    },
+    {
+      "type": "Bronze",
+      "power": "speed",
+      "target": "MC",
+      "effects": [
+        {
+          "type": "change",
+          "target": "speed",
+          "value": 2
+        }
+      ],
+      "mojo_cost": [
+        [
+          "blue",
+          6
+        ]
+      ],
+      "sanity_cost": 3,
+      "duration": 7,
+      "name_i18n": "Vampire swiftness",
+      "short_description_i18n": "+2 to Main Character Speed"
+    },
+    {
+      "type": "Bronze",
+      "power": "strength",
+      "target": "MC",
+      "effects": [
+        {
+          "type": "change",
+          "target": "strength",
+          "value": 2
+        }
+      ],
+      "mojo_cost": [
+        [
+          "red",
+          6
+        ]
+      ],
+      "sanity_cost": 3,
+      "duration": 7,
+      "name_i18n": "Vampire vigor",
+      "short_description_i18n": "+2 to Main Character Strength"
+    },
+    {
+      "type": "Bronze",
+      "power": "spirit",
+      "target": "MC",
+      "effects": [
+        {
+          "type": "change",
+          "target": "spirit",
+          "value": 2
+        }
+      ],
+      "mojo_cost": [
+        [
+          "yellow",
+          6
+        ]
+      ],
+      "sanity_cost": 3,
+      "duration": 7,
+      "name_i18n": "Vampire mind",
+      "short_description_i18n": "+2 to Main Character Spirit"
+    },
+    {
+      "type": "Bronze",
+      "power": "normalize skills BBCR",
+      "target": "conduit",
+      "mojo_cost": [
+        [
+          "green",
+          6
+        ]
+      ],
+      "sanity_cost": 2,
+      "name_i18n": "Even out",
+      "short_description_i18n": "Averages out Beauty, Body, Charm & Refinement skills + permanent skill boost",
+      "description_i18n": "Beauty, Body, Charm and Refinement skills converge on their average value, then receive a permanent boost."
+    },
+    {
+      "type": "Bronze",
+      "power": "normalize skills LOCS",
+      "target": "conduit",
+      "mojo_cost": [
+        [
+          "blue",
+          6
+        ]
+      ],
+      "sanity_cost": 2,
+      "name_i18n": "Even out",
+      "short_description_i18n": "Averages out Libido, Obedience, Constitution, Sensitivity skills + permanent skill boost",
+      "description_i18n": "Libido, Obedience, Constitution and Sensitivity skills converge on their average value, then receive a permanent boost."
+    },
+    {
+      "type": "Bronze",
+      "power": "shuffle skills BBCR",
+      "target": "conduit",
+      "mojo_cost": [
+        [
+          "yellow",
+          6
+        ]
+      ],
+      "sanity_cost": 2,
+      "name_i18n": "Shuffle",
+      "short_description_i18n": "Randomly shuffles the value of some of her skills (Beauty, Body, Charm & Refinement), receiving a permanent boost",
+      "description_i18n": "Beauty, Body, Charm and Refinement skill values are shuffled randomly, receiving a permanent boost"
+    },
+    {
+      "type": "Bronze",
+      "power": "shuffle skills LOCS",
+      "target": "conduit",
+      "mojo_cost": [
+        [
+          "red",
+          6
+        ]
+      ],
+      "sanity_cost": 2,
+      "name_i18n": "Shuffle",
+      "short_description_i18n": "Randomly shuffles the value of some of her skills (Libido, Obedience, Constitution, Sensitivity), receiving a permanent boost",
+      "description_i18n": "Libido, Obedience, Constitution and Sensitivity skill values are shuffled randomly, receiving a permanent boost"
+    },
+    {
+      "type": "Bronze",
+      "power": "mulligan",
+      "target": "MC",
+      "effects": [
+        {
+          "type": "change",
+          "target": "evil power cards",
+          "value": 2
+        }
+      ],
+      "mojo_cost": [
+        [
+          "green",
+          3
+        ],
+        [
+          "blue",
+          3
+        ]
+      ],
+      "sanity_cost": 2,
+      "name_i18n": "Mulligan",
+      "short_description_i18n": "Discard hand and redraw with +2 extra cards"
+    },
+    {
+      "type": "Regular",
+      "power": "mojo yellow",
+      "target": "MC",
+      "mojo_cost": [
+        [
+          "green",
+          2
+        ]
+      ],
+      "sanity_cost": 5,
+      "name_i18n": "Mojo surge (yellow)",
+      "short_description_i18n": "Receive 4-12 Yellow Mojo, very high sanity cost"
+    },
+    {
+      "type": "Regular",
+      "power": "mojo red",
+      "target": "MC",
+      "mojo_cost": [
+        [
+          "yellow",
+          2
+        ]
+      ],
+      "sanity_cost": 5,
+      "name_i18n": "Mojo surge (red)",
+      "short_description_i18n": "Receive 4-12 Red Mojo, very high sanity cost"
+    },
+    {
+      "type": "Regular",
+      "power": "mojo blue",
+      "target": "MC",
+      "mojo_cost": [
+        [
+          "red",
+          2
+        ]
+      ],
+      "sanity_cost": 5,
+      "name_i18n": "Mojo surge (blue)",
+      "short_description_i18n": "Receive 4-12 Blue Mojo, very high sanity cost"
+    },
+    {
+      "type": "Regular",
+      "power": "mojo green",
+      "target": "MC",
+      "mojo_cost": [
+        [
+          "blue",
+          2
+        ]
+      ],
+      "sanity_cost": 5,
+      "name_i18n": "Mojo surge (green)",
+      "short_description_i18n": "Receive 4-12 Green Mojo, very high sanity cost"
+    },
+    {
+      "type": "Regular",
+      "power": "leech service sex",
+      "target": "other girl",
+      "mojo_cost": [
+        [
+          "green",
+          2
+        ],
+        [
+          "blue",
+          2
+        ]
+      ],
+      "sanity_cost": 3,
+      "name_i18n": "Leech skills",
+      "short_description_i18n": "Leeches some of her skills (Service & Sex) to another girl (larger effect)",
+      "description_i18n": "Leeches more of her service and sex skills and transfers them to a girl of equal or lower rank"
+    },
+    {
+      "type": "Regular",
+      "power": "leech anal fetish",
+      "target": "other girl",
+      "mojo_cost": [
+        [
+          "red",
+          2
+        ],
+        [
+          "yellow",
+          2
+        ]
+      ],
+      "sanity_cost": 3,
+      "name_i18n": "Leech skills",
+      "short_description_i18n": "Leeches some of her skills (Anal & Fetish) to another girl (larger effect)",
+      "description_i18n": "Leeches more of her anal and fetish skills and transfers them to a girl of equal or lower rank"
+    },
+    {
+      "type": "Regular",
+      "power": "service",
+      "target": "conduit",
+      "mojo_cost": [
+        [
+          "green",
+          4
+        ]
+      ],
+      "sanity_cost": 2,
+      "name_i18n": "Dark fantasy: Service",
+      "short_description_i18n": "Her Service preference will increase (larger effect)"
+    },
+    {
+      "type": "Regular",
+      "power": "sex",
+      "target": "conduit",
+      "mojo_cost": [
+        [
+          "blue",
+          4
+        ]
+      ],
+      "sanity_cost": 2,
+      "name_i18n": "Dark fantasy: Sex",
+      "short_description_i18n": "Her Sex preference will increase (larger effect)"
+    },
+    {
+      "type": "Regular",
+      "power": "anal",
+      "target": "conduit",
+      "mojo_cost": [
+        [
+          "red",
+          4
+        ]
+      ],
+      "sanity_cost": 2,
+      "name_i18n": "Dark fantasy: Anal",
+      "short_description_i18n": "Her Anal preference will increase (larger effect)"
+    },
+    {
+      "type": "Regular",
+      "power": "fetish",
+      "target": "conduit",
+      "mojo_cost": [
+        [
+          "yellow",
+          4
+        ]
+      ],
+      "sanity_cost": 2,
+      "name_i18n": "Dark fantasy: Fetish",
+      "short_description_i18n": "Her Fetish preference will increase (larger effect)"
+    },
+    {
+      "type": "Regular",
+      "power": "minion",
+      "target": "minion type",
+      "mojo_cost": [
+        [
+          "blue",
+          1
+        ],
+        [
+          "red",
+          2
+        ]
+      ],
+      "sanity_cost": 4,
+      "name_i18n": "Minion training",
+      "short_description_i18n": "Shares XP with all minions of the same type"
+    },
+    {
+      "type": "Regular",
+      "power": "obedience link",
+      "target": "other girl",
+      "mojo_cost": [
+        [
+          "green",
+          2
+        ],
+        [
+          "blue",
+          2
+        ]
+      ],
+      "sanity_cost": 1,
+      "duration": 5,
+      "name_i18n": "Connected minds",
+      "short_description_i18n": "Target another girl. She will have the same chances of accepting acts the conduit accepts"
+    },
+    {
+      "type": "Regular",
+      "power": "leech beauty body",
+      "target": "other girl",
+      "mojo_cost": [
+        [
+          "blue",
+          2
+        ],
+        [
+          "red",
+          2
+        ]
+      ],
+      "sanity_cost": 1,
+      "name_i18n": "Leech skills",
+      "short_description_i18n": "Leeches some of her skills (Beauty & Body) to another girl (larger effect)",
+      "description_i18n": "Leeches more of her beauty and body skills and transfers them to a girl of equal or lower rank"
+    },
+    {
+      "type": "Regular",
+      "power": "leech charm refinement",
+      "target": "other girl",
+      "mojo_cost": [
+        [
+          "green",
+          2
+        ],
+        [
+          "yellow",
+          2
+        ]
+      ],
+      "sanity_cost": 1,
+      "name_i18n": "Leech skills",
+      "short_description_i18n": "Leeches some of her skills (Charm & Refinement) to another girl (larger effect)",
+      "description_i18n": "Leeches more of her charm and refinement skills and transfers them to a girl of equal or lower rank"
+    },
+    {
+      "type": "Regular",
+      "power": "leech sensitivity constitution",
+      "target": "other girl",
+      "mojo_cost": [
+        [
+          "green",
+          2
+        ],
+        [
+          "red",
+          2
+        ]
+      ],
+      "sanity_cost": 1,
+      "name_i18n": "Leech skills",
+      "short_description_i18n": "Leeches some of her skills (Sensitivity & Constitution) to another girl",
+      "description_i18n": "Leeches more of her sensitivity and constitution skills and transfers them to a girl of equal or lower rank (larger effect)"
+    },
+    {
+      "type": "Regular",
+      "power": "leech libido obedience",
+      "target": "other girl",
+      "mojo_cost": [
+        [
+          "blue",
+          2
+        ],
+        [
+          "yellow",
+          2
+        ]
+      ],
+      "sanity_cost": 1,
+      "name_i18n": "Leech skills",
+      "short_description_i18n": "Leeches some of her skills (Libido & Obedience) to another girl (larger effect)",
+      "description_i18n": "Leeches more of her libido and obedience skills and transfers them to a girl of equal or lower rank"
+    },
+    {
+      "type": "Regular",
+      "power": "hypnosis",
+      "target": "all girls",
+      "effects": [
+        {
+          "scope": "brothel",
+          "type": "change",
+          "target": "hypnosis",
+          "value": 3
+        }
+      ],
+      "mojo_cost": [
+        [
+          "yellow",
+          3
+        ]
+      ],
+      "sanity_cost": 2,
+      "duration": 5,
+      "name_i18n": "Hallucination",
+      "short_description_i18n": "All hypnosis attempts on all girls are more likely to succeed"
+    },
+    {
+      "type": "Regular",
+      "power": "mojo trade",
+      "target": "MC",
+      "mojo_cost": [
+        [
+          "green",
+          3
+        ]
+      ],
+      "sanity_cost": 2,
+      "name_i18n": "Fearful trade",
+      "short_description_i18n": "Swaps colored mojo to purple mojo at a rate of 3 for 2"
+    },
+    {
+      "type": "Regular",
+      "power": "naked",
+      "target": "conduit",
+      "mojo_cost": [
+        [
+          "green",
+          2
+        ]
+      ],
+      "sanity_cost": 2,
+      "name_i18n": "Dark fantasy: Naked",
+      "short_description_i18n": "Her Naked preference will increase (larger effect)"
+    },
+    {
+      "type": "Regular",
+      "power": "security",
+      "target": "brothel",
+      "effects": [
+        {
+          "scope": "brothel",
+          "type": "special",
+          "target": "demon security",
+          "value": 1
+        },
+        {
+          "scope": "brothel",
+          "type": "change",
+          "target": "security",
+          "value": 1
+        }
+      ],
+      "mojo_cost": [
+        [
+          "blue",
+          1
+        ],
+        [
+          "red",
+          1
+        ]
+      ],
+      "sanity_cost": 2,
+      "duration": 10,
+      "name_i18n": "Oni",
+      "short_description_i18n": "Raises brothel security"
+    },
+    {
+      "type": "Regular",
+      "power": "maintenance",
+      "target": "brothel",
+      "effects": [
+        {
+          "scope": "brothel",
+          "type": "special",
+          "target": "demon maintenance",
+          "value": 1
+        },
+        {
+          "scope": "brothel",
+          "type": "change",
+          "target": "maintenance",
+          "value": 1
+        }
+      ],
+      "mojo_cost": [
+        [
+          "blue",
+          1
+        ],
+        [
+          "yellow",
+          1
+        ]
+      ],
+      "sanity_cost": 2,
+      "duration": 10,
+      "name_i18n": "Haniwa",
+      "short_description_i18n": "Raises brothel maintenance"
+    },
+    {
+      "type": "Regular",
+      "power": "advertising",
+      "target": "brothel",
+      "effects": [
+        {
+          "scope": "brothel",
+          "type": "special",
+          "target": "demon advertising",
+          "value": 1
+        },
+        {
+          "scope": "brothel",
+          "type": "change",
+          "target": "advertising",
+          "value": 1
+        }
+      ],
+      "mojo_cost": [
+        [
+          "green",
+          1
+        ],
+        [
+          "blue",
+          1
+        ]
+      ],
+      "sanity_cost": 2,
+      "duration": 10,
+      "name_i18n": "Demonette",
+      "short_description_i18n": "Raises brothel advertising"
+    }
+  ]
+}

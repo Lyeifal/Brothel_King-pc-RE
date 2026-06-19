@@ -1,0 +1,50 @@
+{
+  "pref_response_i18n": {
+    "modest refuses": "Me, %s? NO!!! Don't!!! Don't do that to me! *horrified*",
+    "modest very reluctant": "Wait, %s? This is outrageous! It's disgusting, it's dirty... Please stop! *scared*",
+    "modest reluctant": "No, don't look at me... It's not right, %s... I feel so ashamed... *embarrassed*",
+    "modest a little reluctant": "I don't really want to do this, %s... It's wrong... Aaah! *shy*",
+    "modest indifferent": "Oh, making me do this, %s again... You're such a pervert... *blush*",
+    "modest a little interested": "Mmmh, it's like I'm getting used to %s... Wait, I didn't mean that! *panic*",
+    "modest interested": "Ah, %s... It's not so bad... Mmmh... *flushed*",
+    "modest very interested": "Oh, I think I love %s... I feel like a slut... *moan*",
+    "modest fascinated": "I can't believe it, %s feels so good... Look at me! I've become a dirty, dirty bitch! *cumming*",
+    "lewd refuses": "NO, not %s!!! Don't touch me, I HATE it!!! *horrified*",
+    "lewd very reluctant": "I told you I hate %s... Why do I have to keep doing this? Ah!!! *ashamed*",
+    "lewd reluctant": "You know I don't like %s... Don't look at me... Ahaa! *embarrassed*",
+    "lewd a little reluctant": "You're doing perverted things to me again, %s... It makes me feel strange... *shy*",
+    "lewd indifferent": "Mmmh, %s... *blush*",
+    "lewd a little interested": "Oh, %s, that's good... *licks her lips*",
+    "lewd interested": "Mmmh, %s... I feel wet already... *flushed*",
+    "lewd very interested": "Oh, %s, it makes me so horny... I get so wet when being watched... Aaaah!!! *moan*",
+    "lewd fascinated": "Oh... I'm about to come already! Ahaaa, %s is the best!!! *cumming*"
+  },
+  "long_act_description_i18n": {
+    "naked": "being naked",
+    "service": "giving service",
+    "sex": "having sex",
+    "anal": "anal sex",
+    "fetish": "kinky sex",
+    "bisexual": "sex with a woman",
+    "group": "group sex",
+    "action naked": "Nudity",
+    "action service": "Service",
+    "action sex": "Sex",
+    "action anal": "Anal sex",
+    "action fetish": "Fetish",
+    "action bisexual": "Lesbian sex",
+    "action group": "Group sex"
+  },
+  "experienced_description_i18n": {
+    "very experienced": "Extensive",
+    "experienced": "Advanced",
+    "average": "Some",
+    "inexperienced": "Basic",
+    "very inexperienced": "None",
+    "very experienced ttip": "{size=-1}{color=[c_orange]}A sex slave for years, she has known several masters and received extensive sexual training.{/color}",
+    "experienced ttip": "{size=-1}{color=[c_green]}She has been a sex slave for many months now, and has received various forms of training.{/color}",
+    "average ttip": "{size=-1}{color=[c_yellow]}She has been a sex slave for a few months already, and has received some sexual training.{/color}",
+    "inexperienced ttip": "{color=[c_lightred]}She became a sex slave only recently, and still has a lot to learn.{/color}",
+    "very inexperienced ttip": "{color=[c_red]}Fresh off the slave caravan, she has never been trained for sex. Who knows how she will react?{/color}"
+  }
+}

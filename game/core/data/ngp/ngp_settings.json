@@ -1,0 +1,595 @@
+[
+  {
+    "name": "starting chapter",
+    "type": "int",
+    "values": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "cost": [
+      20,
+      30,
+      40,
+      50,
+      60,
+      70
+    ],
+    "category": "resources",
+    "label_i18n": "Headstart",
+    "ttip_i18n": "The chapter you will start the game at. Not compatible with challenges such as the free girl challenge."
+  },
+  {
+    "name": "starting gold",
+    "type": "gold",
+    "values": [
+      5,
+      15,
+      100,
+      999
+    ],
+    "cost": [
+      2,
+      3,
+      4,
+      5
+    ],
+    "category": "resources",
+    "label_i18n": "Savings",
+    "ttip_i18n": "The amount of money you will start the game with (default: {image=img_gold} [starting_gold])."
+  },
+  {
+    "name": "starting resources",
+    "type": "resources",
+    "values": [
+      20,
+      10,
+      5
+    ],
+    "cost": [
+      15,
+      20,
+      25
+    ],
+    "category": "resources",
+    "label_i18n": "Resourceful",
+    "ttip_i18n": "Start the game with extra resources."
+  },
+  {
+    "name": "extractors Mk I",
+    "type": "int",
+    "values": [
+      1,
+      2,
+      3
+    ],
+    "cost": [
+      25,
+      50,
+      75
+    ],
+    "category": "resources",
+    "label_i18n": "Capitalist I",
+    "ttip_i18n": "Start the game with resource extractors Mk I."
+  },
+  {
+    "name": "extractors Mk II",
+    "type": "int",
+    "values": [
+      1,
+      2,
+      3
+    ],
+    "cost": [
+      35,
+      70,
+      105
+    ],
+    "category": "resources",
+    "label_i18n": "Capitalist II",
+    "ttip_i18n": "Start the game with resource extractors Mk II."
+  },
+  {
+    "name": "farm",
+    "type": "bool",
+    "values": null,
+    "cost": 10,
+    "category": "girls",
+    "label_i18n": "Farm key",
+    "ttip_i18n": "Unlock Gizel and the Farm from the beginning of the game."
+  },
+  {
+    "name": "carpenter",
+    "type": "bool",
+    "values": null,
+    "cost": 10,
+    "category": "girls",
+    "label_i18n": "Carpenter wagon",
+    "ttip_i18n": "Unlock Iulia the Carpenter from the beginning of the game."
+  },
+  {
+    "name": "minion merchants",
+    "type": "bool",
+    "values": null,
+    "cost": 25,
+    "category": "girls",
+    "label_i18n": "Merchant connections (minions)",
+    "ttip_i18n": "Unlock Stella, Goldie, Willow and Gina from the beginning of the game."
+  },
+  {
+    "name": "item merchants",
+    "type": "bool",
+    "values": null,
+    "cost": 100,
+    "category": "girls",
+    "label_i18n": "Merchant connections (items)",
+    "ttip_i18n": "Unlock Riche, Ramias, Gurigura, Katryn, the twins and the Giftshop girl from the beginning of the game."
+  },
+  {
+    "name": "all trainers",
+    "type": "bool",
+    "values": null,
+    "cost": 100,
+    "category": "girls",
+    "label_i18n": "All trainers",
+    "ttip_i18n": "Unlock all trainers from the beginning of the game."
+  },
+  {
+    "name": "strength",
+    "type": "plus",
+    "values": [
+      1,
+      2,
+      3
+    ],
+    "cost": [
+      15,
+      30,
+      45
+    ],
+    "category": "MC",
+    "label_i18n": "Strong",
+    "ttip_i18n": "Increase your character's Strength and Strength maximum beyond its base value (up to +3)."
+  },
+  {
+    "name": "spirit",
+    "type": "plus",
+    "values": [
+      1,
+      2,
+      3
+    ],
+    "cost": [
+      15,
+      30,
+      45
+    ],
+    "category": "MC",
+    "label_i18n": "Wise",
+    "ttip_i18n": "Increase your character's Spirit and Spirit maximum beyond its base value (up to +3)."
+  },
+  {
+    "name": "charisma",
+    "type": "plus",
+    "values": [
+      1,
+      2,
+      3
+    ],
+    "cost": [
+      15,
+      30,
+      45
+    ],
+    "category": "MC",
+    "label_i18n": "Funny",
+    "ttip_i18n": "Increase your character's Charisma and Charisma maximum beyond its base value (up to +3)."
+  },
+  {
+    "name": "speed",
+    "type": "plus",
+    "values": [
+      1,
+      2,
+      3
+    ],
+    "cost": [
+      30,
+      60,
+      90
+    ],
+    "category": "MC",
+    "label_i18n": "Quick",
+    "ttip_i18n": "Increase your character's Speed and Speed maximum beyond its base value (up to +3)."
+  },
+  {
+    "name": "good alignment",
+    "type": "bool",
+    "values": null,
+    "cost": 5,
+    "category": "MC",
+    "label_i18n": "Nice guy",
+    "ttip_i18n": "Start the game as a good person."
+  },
+  {
+    "name": "evil alignment",
+    "type": "bool",
+    "values": null,
+    "cost": 5,
+    "category": "MC",
+    "label_i18n": "Bad boy",
+    "ttip_i18n": "Start the game as an evil person."
+  },
+  {
+    "name": "polytheist",
+    "type": "bool",
+    "values": null,
+    "cost": 15,
+    "category": "misc",
+    "label_i18n": "Polytheist",
+    "ttip_i18n": "Unlock all deities and atheist story lines."
+  },
+  {
+    "name": "multiclass",
+    "type": "",
+    "values": null,
+    "cost": 0,
+    "category": "misc",
+    "label_i18n": "Multiclass",
+    "ttip_i18n": ""
+  },
+  {
+    "name": "new events",
+    "type": "",
+    "values": null,
+    "cost": 0,
+    "category": "misc",
+    "label_i18n": "New events",
+    "ttip_i18n": ""
+  },
+  {
+    "name": "love generation",
+    "type": "boost",
+    "values": [
+      0.25,
+      0.5,
+      1.0
+    ],
+    "cost": [
+      10,
+      25,
+      50
+    ],
+    "category": "misc",
+    "label_i18n": "Gangster of love",
+    "ttip_i18n": "Gain love faster with slaves and free girls. Some people call you 'Maurice'."
+  },
+  {
+    "name": "fear generation",
+    "type": "boost",
+    "values": [
+      0.25,
+      0.5,
+      1.0
+    ],
+    "cost": [
+      5,
+      15,
+      30
+    ],
+    "category": "misc",
+    "label_i18n": "Actual gangster",
+    "ttip_i18n": "Gain fear faster with slaves."
+  },
+  {
+    "name": "xp generation",
+    "type": "boost",
+    "values": [
+      0.25,
+      0.5,
+      1.0
+    ],
+    "cost": [
+      5,
+      15,
+      45
+    ],
+    "category": "misc",
+    "label_i18n": "XP trainer",
+    "ttip_i18n": "Girls will gain XP faster."
+  },
+  {
+    "name": "jp generation",
+    "type": "boost",
+    "values": [
+      0.25,
+      0.5,
+      1.0
+    ],
+    "cost": [
+      5,
+      10,
+      30
+    ],
+    "category": "misc",
+    "label_i18n": "JP trainer",
+    "ttip_i18n": "Girls will gain JP faster."
+  },
+  {
+    "name": "prestige generation",
+    "type": "boost",
+    "values": [
+      0.25,
+      0.5,
+      1.0
+    ],
+    "cost": [
+      5,
+      15,
+      45
+    ],
+    "category": "misc",
+    "label_i18n": "Prestigious",
+    "ttip_i18n": "MC will earn Prestige faster."
+  },
+  {
+    "name": "training efficiency",
+    "type": "boost",
+    "values": [
+      0.5,
+      1.0,
+      2.0
+    ],
+    "cost": [
+      15,
+      30,
+      60
+    ],
+    "category": "misc",
+    "label_i18n": "Experienced",
+    "ttip_i18n": "Train your girls significantly faster."
+  },
+  {
+    "name": "tax reduction",
+    "type": "boost",
+    "values": [
+      0.15,
+      0.3,
+      0.5
+    ],
+    "cost": [
+      50,
+      100,
+      150
+    ],
+    "category": "misc",
+    "label_i18n": "Tax evasion",
+    "ttip_i18n": "Reduce your taxes thanks to the judicious application of offshore finance, political donations and elaborate voodoo curses."
+  },
+  {
+    "name": "free girl",
+    "type": "dispenser",
+    "values": null,
+    "cost": [
+      5,
+      20,
+      40
+    ],
+    "category": "misc",
+    "label_i18n": "Young chemist",
+    "ttip_i18n": "Produce Potions of Seduction (raises the relationship level with any free girl by one step)."
+  },
+  {
+    "name": "virginity",
+    "type": "dispenser",
+    "values": null,
+    "cost": [
+      10,
+      50,
+      100
+    ],
+    "category": "misc",
+    "label_i18n": "Young surgeon",
+    "ttip_i18n": "Produce Balms of Restoration (restores a girl's virginity)."
+  },
+  {
+    "name": "sanity",
+    "type": "dispenser",
+    "values": null,
+    "cost": [
+      10,
+      50,
+      100
+    ],
+    "category": "misc",
+    "label_i18n": "Young therapist",
+    "ttip_i18n": "Produce Incense of Bliss (restores some of a girl's sanity)."
+  },
+  {
+    "name": "interactions",
+    "type": "dispenser",
+    "values": null,
+    "cost": [
+      5,
+      20,
+      40
+    ],
+    "category": "misc",
+    "label_i18n": "Young drug lord",
+    "ttip_i18n": "Produce Magic Powder (regain all AP)."
+  },
+  {
+    "name": "perks",
+    "type": "dispenser",
+    "values": null,
+    "cost": [
+      25,
+      100,
+      250
+    ],
+    "category": "misc",
+    "label_i18n": "Wyvern nest",
+    "ttip_i18n": "Produce Wyvern eggs (+1 Perk points)."
+  },
+  {
+    "name": "autorest",
+    "type": "bool",
+    "values": null,
+    "cost": 10,
+    "category": "misc",
+    "label_i18n": "Autorest",
+    "ttip_i18n": "Receive a Vitals Scanner from the beginning of the game, allowing you to use autorest."
+  },
+  {
+    "name": "personality",
+    "type": "item",
+    "values": null,
+    "cost": [
+      10,
+      20
+    ],
+    "category": "misc",
+    "label_i18n": "Personality reader",
+    "ttip_i18n": "Receive additional information on a girl's personality in your journal."
+  },
+  {
+    "name": "taste",
+    "type": "item",
+    "values": null,
+    "cost": [
+      5,
+      15
+    ],
+    "category": "misc",
+    "label_i18n": "Taste reader",
+    "ttip_i18n": "Receive additional information on a girl's tastes in your journal."
+  },
+  {
+    "name": "fixation",
+    "type": "item",
+    "values": null,
+    "cost": [
+      5,
+      25
+    ],
+    "category": "misc",
+    "label_i18n": "Fixation reader",
+    "ttip_i18n": "Receive additional information on a girl's sexual preferences in your journal."
+  },
+  {
+    "name": "naturist frequency",
+    "type": "boost",
+    "values": [
+      8,
+      16,
+      32
+    ],
+    "cost": [
+      5,
+      10,
+      20
+    ],
+    "category": "misc",
+    "label_i18n": "Hippie",
+    "ttip_i18n": "Increase the frequency of the 'Naturist' trait for all girls."
+  },
+  {
+    "name": "portal",
+    "type": "special",
+    "values": null,
+    "cost": 0,
+    "category": "misc",
+    "label_i18n": "Portal",
+    "ttip_i18n": "Unlock the girl portal early."
+  },
+  {
+    "name": "preferences1",
+    "type": "pref",
+    "values": [
+      125,
+      250,
+      500
+    ],
+    "cost": [
+      5,
+      15,
+      30
+    ],
+    "category": "misc",
+    "label_i18n": "Naked/Service preferences",
+    "ttip_i18n": "Increase base sexual preferences for Naked and Service for all girls."
+  },
+  {
+    "name": "preferences2",
+    "type": "pref",
+    "values": [
+      125,
+      250,
+      500
+    ],
+    "cost": [
+      10,
+      25,
+      50
+    ],
+    "category": "misc",
+    "label_i18n": "Sex/Anal preferences",
+    "ttip_i18n": "Increase base sexual preferences for Sex and Anal for all girls."
+  },
+  {
+    "name": "preferences3",
+    "type": "pref",
+    "values": [
+      125,
+      250,
+      500
+    ],
+    "cost": [
+      15,
+      35,
+      70
+    ],
+    "category": "misc",
+    "label_i18n": "Fetish/Bisexual/Group preferences",
+    "ttip_i18n": "Increase base sexual preferences for Fetish, Bisexual and Group for all girls."
+  },
+  {
+    "name": "girl",
+    "type": "girl rank",
+    "values": [
+      2,
+      3,
+      4
+    ],
+    "cost": [
+      50,
+      100,
+      200
+    ],
+    "category": "girls",
+    "label_i18n": "Starting girl",
+    "ttip_i18n": "Receive a free girl at the start with random stats."
+  },
+  {
+    "name": "free girl challenge",
+    "type": "bool",
+    "values": null,
+    "cost": 50,
+    "category": "misc",
+    "label_i18n": "Free girl challenge",
+    "ttip_i18n": "Receive a new girl at the start of each month. The slavemarket will become inaccessible. Worth 100 crystals if you complete the game."
+  },
+  {
+    "name": "training challenge",
+    "type": "bool",
+    "values": null,
+    "cost": 50,
+    "category": "misc",
+    "label_i18n": "No training challenge",
+    "ttip_i18n": "The Farm becomes much more efficient, but you can no longer personally train your girls. Worth 200 crystals if you complete the game."
+  }
+]

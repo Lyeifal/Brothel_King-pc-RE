@@ -1,0 +1,26 @@
+{
+  "log_event_dict_i18n": {
+    "level": {
+      "color_key": "special",
+      "template_i18n": "%s has gained a new level."
+    },
+    "job_up": {
+      "color_key": "special",
+      "template_i18n": "%s has increased her %s skill."
+    },
+    "rank": {
+      "color_key": "special",
+      "template_i18n": "%s is ready to reach a new rank."
+    }
+  },
+  "attraction_dict_i18n": {
+    "beauty_good": "was very beautiful",
+    "body_good": "had a perfect body",
+    "charm_good": "had great charm",
+    "refinement_good": "was really refined",
+    "beauty_bad": "was ugly",
+    "body_bad": "was plain looking",
+    "charm_bad": "was a bore",
+    "refinement_bad": "was clumsy"
+  }
+}

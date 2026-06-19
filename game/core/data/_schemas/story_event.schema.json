@@ -1,0 +1,109 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "StoryEvent",
+  "description": "EN: Story event definition for event_dict.\nZH: event_dict 的剧情事件定义。",
+  "type": "object",
+  "required": ["label"],
+  "properties": {
+    "label": {
+      "type": "string",
+      "description": "EN: Ren'Py label to call when event triggers.\nZH: 事件触发时调用的 Ren'Py 标签。"
+    },
+    "chapter": {
+      "type": "integer",
+      "default": 0,
+      "description": "EN: Minimum chapter required for event to trigger.\nZH: 事件触发所需的最低章节。"
+    },
+    "rank": {
+      "type": "integer",
+      "default": 0
+    },
+    "date": {
+      "type": "integer",
+      "default": 0
+    },
+    "year": {
+      "type": "integer",
+      "default": 0
+    },
+    "month": {
+      "type": "integer",
+      "default": 0
+    },
+    "day": {
+      "type": "integer",
+      "default": 0
+    },
+    "weekday": {
+      "type": "string",
+      "default": ""
+    },
+    "chance": {
+      "type": "number",
+      "default": 1.0
+    },
+    "type": {
+      "type": "string",
+      "default": "any",
+      "description": "EN: Event type: any, city, day, night, morning.\nZH: 事件类型。"
+    },
+    "location": {
+      "type": ["string", "null"],
+      "default": null
+    },
+    "locations": {
+      "type": ["array", "string", "null"],
+      "default": null
+    },
+    "seasons": {
+      "type": ["array", "null"],
+      "default": null
+    },
+    "min_gold": {
+      "type": "integer",
+      "default": -999999999
+    },
+    "condition": {
+      "type": ["string", "null"],
+      "default": null
+    },
+    "not_condition": {
+      "type": ["string", "null"],
+      "default": null
+    },
+    "condition_func": {
+      "type": ["string", "null"],
+      "default": null,
+      "description": "EN: Name of a function (no args) returning bool.\nZH: 返回布尔值的函数名（无参数）。"
+    },
+    "room": {
+      "type": ["string", "null"],
+      "default": null
+    },
+    "once": {
+      "type": "boolean",
+      "default": true
+    },
+    "AP_cost": {
+      "type": "integer",
+      "default": 1
+    },
+    "order": {
+      "type": "integer",
+      "default": 0
+    },
+    "weight": {
+      "type": "integer",
+      "default": 1
+    },
+    "modes": {
+      "type": ["string", "array", "null"],
+      "default": null,
+      "description": "EN: Game mode filter: null=all, 'story', ['story','scenario'].\nZH: 游戏模式过滤器。"
+    },
+    "call_args": {
+      "type": ["array", "null"],
+      "default": null
+    }
+  }
+}

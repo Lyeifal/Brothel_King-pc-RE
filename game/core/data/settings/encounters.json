@@ -1,0 +1,636 @@
+{
+  "_description": "City encounter data: population names, encounter probabilities, and encounter pictures. pop_name_dict values are translatable text (_i18n). encounters and encounter_pics are code data (no _i18n).",
+  "pop_name_dict_i18n": {
+    "M beggars": [
+      "vagrant",
+      "shabby-looking guy",
+      "beggar",
+      "street wanderer"
+    ],
+    "M thugs": [
+      "ruffian",
+      "thug",
+      "bandit",
+      "petty thief",
+      "rogue",
+      "burglar"
+    ],
+    "M laborers": [
+      "laborer",
+      "worker",
+      "street peddler",
+      "servant",
+      "peasant"
+    ],
+    "M sailors": [
+      "pirate",
+      "sailor",
+      "docker",
+      "shipmate",
+      "ol' seadog",
+      "mariner"
+    ],
+    "M commoners": [
+      "commoner",
+      "overseer",
+      "clerk",
+      "trader",
+      "guard",
+      "builder",
+      "acolyte"
+    ],
+    "M craftsmen": [
+      "craftsman",
+      "artisan",
+      "blacksmith",
+      "carpenter",
+      "artificer",
+      "mason"
+    ],
+    "M bourgeois": [
+      "merchant",
+      "bookkeeper",
+      "herborist",
+      "shopkeeper",
+      "innkeeper",
+      "priest",
+      "squire"
+    ],
+    "M guild members": [
+      "guild member",
+      "inventor",
+      "illusionist",
+      "slave trader",
+      "spice trader",
+      "guard officer"
+    ],
+    "M patricians": [
+      "patrician",
+      "landowner",
+      "banker",
+      "city official",
+      "knight",
+      "bishop"
+    ],
+    "M aristocrats": [
+      "aristocrat",
+      "lord",
+      "gentleman",
+      "court wizard",
+      "courtier",
+      "governor",
+      "guild master"
+    ],
+    "M nobles": [
+      "noble",
+      "count",
+      "highborn",
+      "knight commander",
+      "baron",
+      "earl",
+      "viscount",
+      "cardinal"
+    ],
+    "M royals": [
+      "marquess",
+      "prince",
+      "viceroy",
+      "duke",
+      "patriarch",
+      "sultan"
+    ],
+    "F beggars": [
+      "female vagrant",
+      "shabby-looking gal",
+      "beggaress",
+      "street girl"
+    ],
+    "F thugs": [
+      "female ruffian",
+      "female thug",
+      "lady bandit",
+      "female thief",
+      "female rogue",
+      "old hag"
+    ],
+    "F laborers": [
+      "female laborer",
+      "female worker",
+      "woman peddler",
+      "woman servant",
+      "female peasant"
+    ],
+    "F sailors": [
+      "lady pirate",
+      "female sailor",
+      "dockgirl",
+      "lady shipmate",
+      "ship's nurse",
+      "female mariner"
+    ],
+    "F commoners": [
+      "commoner lady",
+      "female overseer",
+      "woman clerk",
+      "female trader",
+      "female guard",
+      "nun"
+    ],
+    "F craftsmen": [
+      "craftswoman",
+      "female artisan",
+      "woman blacksmith",
+      "carpentress",
+      "female mason"
+    ],
+    "F bourgeois": [
+      "female merchant",
+      "lady bookkeeper",
+      "lady herborist",
+      "woman shopkeeper",
+      "female innkeeper",
+      "priestess",
+      "lady squire"
+    ],
+    "F guild members": [
+      "guild member",
+      "girl inventor",
+      "female illusionist",
+      "slave trader",
+      "woman spice trader",
+      "female guard officer"
+    ],
+    "F patricians": [
+      "matron",
+      "woman landowner",
+      "woman banker",
+      "lady official",
+      "lady knight",
+      "lady bishop"
+    ],
+    "F aristocrats": [
+      "aristocrat",
+      "fair lady",
+      "gentlewoman",
+      "court sorceress",
+      "lady courtier",
+      "lady governor",
+      "guild mistress"
+    ],
+    "F nobles": [
+      "noble lady",
+      "countess",
+      "highborn lady",
+      "holy priestess",
+      "baroness",
+      "viscountess",
+      "lady cardinal"
+    ],
+    "F royals": [
+      "marchioness",
+      "princess",
+      "queen consort",
+      "duchess",
+      "matriarch",
+      "sultana"
+    ]
+  },
+  "encounters": [
+    [
+      "none",
+      10
+    ],
+    [
+      "gossip",
+      30
+    ],
+    [
+      "ambush",
+      5
+    ],
+    [
+      "rob",
+      5
+    ],
+    [
+      "luck",
+      15
+    ],
+    [
+      "mob",
+      5
+    ],
+    [
+      [
+        "rape",
+        "impress",
+        "slave"
+      ],
+      10
+    ],
+    [
+      [
+        "gamble",
+        "thief",
+        "wrestle"
+      ],
+      10
+    ],
+    [
+      [
+        "cat",
+        "secret",
+        "gypsy"
+      ],
+      10
+    ]
+  ],
+  "encounter_pics": {
+    "rape": [
+      "monster1.webp",
+      "monster2.webp",
+      "monster3.webp",
+      "monster4.webp",
+      "monster5.webp",
+      "monster6.webp",
+      "monster7.webp",
+      "monster8.webp",
+      "monster9.webp",
+      "monster10.webp"
+    ],
+    "impress": "impress0.webp",
+    "impress1": [
+      "impress1_1.webp",
+      "impress1_2.webp",
+      "impress1_3.webp",
+      "impress1_4.webp",
+      "impress1_5.webp",
+      "impress1_6.webp",
+      "impress1_7.webp",
+      "impress1_8.webp",
+      "impress1_9.webp",
+      "impress1_10.webp"
+    ],
+    "impress2": [
+      "impress2_1.webp",
+      "impress2_2.webp"
+    ],
+    "impress3": [
+      "impress3_1.webp",
+      "impress3_2.webp",
+      "impress3_3.webp"
+    ],
+    "impress4": "impress4.webp",
+    "slave": [
+      "slave1.webp",
+      "slave2.webp",
+      "slave3.webp",
+      "slave4.webp",
+      "slave5.webp",
+      "slave6.webp",
+      "slave7.webp",
+      "slave8.webp",
+      "slave9.webp",
+      "slave10.webp"
+    ],
+    "slave_service": [
+      [
+        "slave service1.webp",
+        "slave service2.webp",
+        "slave service3.webp",
+        "slave service4.webp"
+      ],
+      [
+        "slave service5.webp",
+        "slave service6.webp",
+        "slave service7.webp",
+        "slave service8.webp"
+      ]
+    ],
+    "slave_sex": [
+      [
+        "slave sex1.webp",
+        "slave sex2.webp",
+        "slave sex3.webp",
+        "slave sex4.webp"
+      ],
+      [
+        "slave sex5.webp",
+        "slave sex6.webp",
+        "slave sex7.webp",
+        "slave sex8.webp"
+      ]
+    ],
+    "slave_anal": [
+      [
+        "slave anal1.webp",
+        "slave anal2.webp",
+        "slave anal3.webp",
+        "slave anal4.webp"
+      ],
+      [
+        "slave anal5.webp",
+        "slave anal6.webp",
+        "slave anal7.webp",
+        "slave anal8.webp"
+      ]
+    ],
+    "slave_fetish": [
+      [
+        "slave fetish1.webp",
+        "slave fetish2.webp",
+        "slave fetish3.webp",
+        "slave fetish4.webp"
+      ],
+      [
+        "slave fetish5.webp",
+        "slave fetish6.webp",
+        "slave fetish7.webp",
+        "slave fetish8.webp"
+      ]
+    ],
+    "slave_success": [
+      "slave service9.webp",
+      "slave service10.webp",
+      "slave service11.webp",
+      "slave service12.webp"
+    ],
+    "gamble": [
+      [
+        "gambler1_1.webp",
+        "gambler1_2.webp",
+        "gambler1_3.webp"
+      ],
+      [
+        "gambler2_1.webp",
+        "gambler2_2.webp",
+        "gambler2_3.webp"
+      ],
+      [
+        "gambler3_1.webp",
+        "gambler3_2.webp",
+        "gambler3_3.webp"
+      ],
+      [
+        "gambler4_1.webp",
+        "gambler4_2.webp",
+        "gambler4_3.webp"
+      ],
+      [
+        "gambler5_1.webp",
+        "gambler5_2.webp",
+        "gambler5_3.webp"
+      ],
+      [
+        "gambler6_1.webp",
+        "gambler6_2.webp",
+        "gambler6_3.webp"
+      ],
+      [
+        "gambler7_1.webp",
+        "gambler7_2.webp",
+        "gambler7_3.webp"
+      ],
+      [
+        "gambler8_1.webp",
+        "gambler8_2.webp",
+        "gambler8_3.webp"
+      ],
+      [
+        "gambler9_1.webp",
+        "gambler9_2.webp",
+        "gambler9_3.webp"
+      ]
+    ],
+    "thief": [
+      "thief1.webp",
+      "thief2.webp",
+      "thief3.webp",
+      "thief4.webp",
+      "thief5.webp",
+      "thief6.webp"
+    ],
+    "wrestle": [
+      "arm wrestling1.webp",
+      "arm wrestling2.webp",
+      "arm wrestling3.webp",
+      "arm wrestling4.webp",
+      "arm wrestling5.webp"
+    ],
+    "cat": [
+      "cat1.webp",
+      "cat2.webp",
+      "cat3.webp",
+      "cat4.webp",
+      "cat5.webp",
+      "cat6.webp",
+      "cat7.webp",
+      "cat8.webp",
+      "cat9.webp",
+      "cat10.webp"
+    ],
+    "cat_found": [
+      "cat found.webp"
+    ],
+    "cat_sex": [
+      [
+        "catsex1_1.webp",
+        "catsex1_2.webp"
+      ],
+      [
+        "catsex2_1.webp",
+        "catsex2_2.webp"
+      ],
+      [
+        "catsex3_1.webp",
+        "catsex3_2.webp"
+      ],
+      [
+        "catsex4_1.webp",
+        "catsex4_2.webp"
+      ],
+      [
+        "catsex5_1.webp",
+        "catsex5_2.webp"
+      ],
+      [
+        "catsex6_1.webp",
+        "catsex6_2.webp"
+      ],
+      [
+        "catsex7_1.webp",
+        "catsex7_2.webp"
+      ],
+      [
+        "catsex8_1.webp",
+        "catsex8_2.webp"
+      ],
+      [
+        "catsex9_1.webp",
+        "catsex9_2.webp"
+      ],
+      [
+        "catsex10_1.webp",
+        "catsex10_2.webp"
+      ],
+      [
+        "catsex11_1.webp",
+        "catsex11_2.webp"
+      ]
+    ],
+    "cat_duo": [
+      [
+        "catduo1_1.webp",
+        "catduo1_2.webp",
+        "catduo1_3.webp",
+        "catduo1_4.webp"
+      ],
+      [
+        "catduo2_1.webp",
+        "catduo2_2.webp",
+        "catduo2_3.webp",
+        "catduo2_4.webp"
+      ],
+      [
+        "catduo3_1.webp",
+        "catduo3_2.webp",
+        "catduo3_3.webp",
+        "catduo3_4.webp"
+      ]
+    ],
+    "secret": [
+      "secret1.webp",
+      "secret2.webp",
+      "secret3.webp"
+    ],
+    "secret_empty": [
+      "secret empty1.webp",
+      "secret empty2.webp",
+      "secret empty3.webp"
+    ],
+    "secret_girl": [
+      "secret girl1.webp",
+      "secret girl2.webp",
+      "secret girl3.webp",
+      "secret girl4.webp",
+      "secret girl5.webp",
+      "secret girl6.webp",
+      "secret girl7.webp",
+      "secret girl8.webp",
+      "secret girl9.webp",
+      "secret girl10.webp"
+    ],
+    "gypsy": [
+      [
+        "gypsy1_0.webp",
+        "gypsy1_2.webp",
+        "gypsy1_3.webp"
+      ],
+      [
+        "gypsy1_1.webp",
+        "gypsy1_2.webp",
+        "gypsy1_3.webp"
+      ],
+      [
+        "gypsy2_1.webp",
+        "gypsy2_2.webp",
+        "gypsy2_3.webp"
+      ],
+      [
+        "gypsy3_1.webp",
+        "gypsy3_2.webp",
+        "gypsy3_3.webp"
+      ],
+      [
+        "gypsy4_1.webp",
+        "gypsy4_2.webp",
+        "gypsy4_3.webp"
+      ],
+      [
+        "gypsy5_1.webp",
+        "gypsy5_2.webp",
+        "gypsy5_3.webp"
+      ],
+      [
+        "gypsy6_1.webp",
+        "gypsy6_2.webp",
+        "gypsy6_3.webp"
+      ],
+      [
+        "gypsy7_1.webp",
+        "gypsy7_2.webp",
+        "gypsy7_3.webp"
+      ],
+      [
+        "gypsy8_1.webp",
+        "gypsy8_2.webp",
+        "gypsy8_3.webp"
+      ],
+      [
+        "gypsy9_1.webp",
+        "gypsy9_2.webp",
+        "gypsy9_3.webp"
+      ]
+    ],
+    "rob": [
+      [
+        "rob1_1.webp",
+        "rob1_2.webp"
+      ],
+      [
+        "rob2_1.webp",
+        "rob2_2.webp"
+      ],
+      [
+        "rob3_1.webp",
+        "rob3_2.webp"
+      ],
+      [
+        "rob4_1.webp",
+        "rob4_2.webp"
+      ],
+      [
+        "rob5_1.webp",
+        "rob5_2.webp"
+      ],
+      [
+        "rob6_1.webp",
+        "rob6_2.webp"
+      ],
+      [
+        "rob7_1.webp",
+        "rob7_2.webp"
+      ],
+      [
+        "rob8_1.webp",
+        "rob8_2.webp"
+      ],
+      [
+        "rob9_1.webp",
+        "rob9_2.webp"
+      ],
+      [
+        "rob10_1.webp",
+        "rob10_2.webp"
+      ]
+    ],
+    "ambush": [
+      "ambush1.webp",
+      "ambush2.webp",
+      "ambush3.webp",
+      "ambush4.webp",
+      "ambush5.webp",
+      "ambush6.webp"
+    ],
+    "mob": [
+      "mob1.webp",
+      "mob2.webp",
+      "mob3.webp"
+    ],
+    "mob_sex": [
+      "mob sex1.webp",
+      "mob sex2.webp",
+      "mob sex3.webp"
+    ]
+  }
+}

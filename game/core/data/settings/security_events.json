@@ -1,0 +1,26 @@
+{
+  "_description": "Security event weights and alert thresholds. All values are numeric codes, not translatable text. No _i18n suffix.",
+  "security_events": {
+    "1": [["thief", 27], ["monster", 27], ["quiet", 6]],
+    "2": [["assassin", 27], ["brawl", 27], ["quiet", 6]],
+    "3": [["raid", 27], ["siege", 27], ["quiet", 6]]
+  },
+  "alert_limits1": {
+    "1": [5, 8],
+    "2": [6, 10],
+    "3": [8, 18],
+    "4": [10, 20],
+    "5": [12, 26],
+    "6": [14, 28],
+    "7": [18, 34]
+  },
+  "alert_limits2": {
+    "1": [6, 10],
+    "2": [8, 12],
+    "3": [10, 20],
+    "4": [12, 22],
+    "5": [14, 28],
+    "6": [16, 30],
+    "7": [20, 36]
+  }
+}

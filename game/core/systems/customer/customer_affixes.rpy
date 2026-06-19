@@ -12,15 +12,29 @@ init -1 python:
     ## ZH: 颜色等级定义（白→彩）。
     ## ============================================================
 
+    ## EN: Load customer affix data from JSON (BK Evolution).
+    ## ZH: 从 JSON 加载顾客词缀数据（BK Evolution）。
+    import json as _json, os as _os
+    _ca_path = _os.path.join(renpy.config.gamedir, "core", "data", "customers", "customer_affixes.json")
+    _ca_data = {}
+    if _os.path.exists(_ca_path):
+        with open(_ca_path, 'r', encoding='utf-8') as _f:
+            _ca_data = _json.load(_f)
+        del _f
+
+    _tier_list = _ca_data.get("color_tiers", [])
     CUSTOMER_COLOR_TIERS = [
-        ("white",      __("白色"),      "#FFFFFF", 1.0),   # EN: Common / ZH: 普通
-        ("green",      __("绿色"),      "#2ECC71", 1.2),   # EN: Uncommon / ZH: 优秀
-        ("blue",       __("蓝色"),       "#3498DB", 1.5),   # EN: Rare / ZH: 稀有
-        ("purple",     __("紫色"),     "#9B59B6", 2.0),   # EN: Epic / ZH: 史诗
-        ("gold",       __("金色"),       "#FFD700", 2.8),   # EN: Legendary / ZH: 传说
-        ("orange",     __("橙色"),     "#E67E22", 4.0),   # EN: Mythic / ZH: 神话
-        ("red",        __("红色"),        "#E74C3C", 6.0),   # EN: Divine / ZH: 神圣
-        ("iridescent", __("彩色"), "#FF00FF", 10.0),  # EN: Transcendent / ZH: 超凡
+        (t["id"], __(t["name_i18n"]), t["color"], t["budget_multiplier"])
+        for t in _tier_list
+    ] if _tier_list else [
+        ("white",      __("白色"),      "#FFFFFF", 1.0),
+        ("green",      __("绿色"),      "#2ECC71", 1.2),
+        ("blue",       __("蓝色"),       "#3498DB", 1.5),
+        ("purple",     __("紫色"),     "#9B59B6", 2.0),
+        ("gold",       __("金色"),       "#FFD700", 2.8),
+        ("orange",     __("橙色"),     "#E67E22", 4.0),
+        ("red",        __("红色"),        "#E74C3C", 6.0),
+        ("iridescent", __("彩色"), "#FF00FF", 10.0),
     ]
 
     def get_tier_by_index(index):
@@ -47,12 +61,12 @@ init -1 python:
         ZH: 修改顾客行为的性格词缀。
         """
 
-        def __init__(self, affix_id, name_i18n_key, description_i18n_key,
+        def __init__(self, affix_id, name_i18n, description_i18n,
                      difficulty_mod=0, satisfaction_mod=0, budget_mod=1.0,
                      defense_mod=0, crazy_chance=0, color_shift=0):
             self.affix_id = affix_id
-            self.name_i18n_key = name_i18n_key
-            self.description_i18n_key = description_i18n_key
+            self.name_i18n = name_i18n
+            self.description_i18n = description_i18n
             self.difficulty_mod = difficulty_mod      ## EN: Added to diff. ZH: 加到难度上。
             self.satisfaction_mod = satisfaction_mod  ## EN: Flat satis bonus. ZH: 满意度 flat 加成。
             self.budget_mod = budget_mod              ## EN: Budget multiplier. ZH: 预算倍率。
@@ -61,10 +75,10 @@ init -1 python:
             self.color_shift = color_shift            ## EN: Shift color tier by N. ZH: 颜色等级偏移。
 
         def get_name(self):
-            return __(self.name_i18n_key)
+            return __(self.name_i18n)
 
         def get_description(self):
-            return __(self.description_i18n_key)
+            return __(self.description_i18n)
 
         def apply(self, customer):
             """EN: Apply this personality's modifiers to a customer.
@@ -109,32 +123,20 @@ init -1 python:
 
     personality_registry = PersonalityRegistry()
 
-    ## EN: Default personalities.
-    ## ZH: 默认性格。
-    personality_registry.register(CustomerPersonality(
-        "brutal", __("残暴"), __("暴力且苛求。更难满足但付费丰厚。"),
-        difficulty_mod=5, satisfaction_mod=-1, budget_mod=1.3, defense_mod=2, crazy_chance=5, color_shift=1))
-    personality_registry.register(CustomerPersonality(
-        "kind", __("和蔼"), __("温和且宽容。更容易满足但小费较少。"),
-        difficulty_mod=-3, satisfaction_mod=1, budget_mod=0.9, defense_mod=-1, crazy_chance=-2, color_shift=0))
-    personality_registry.register(CustomerPersonality(
-        "drunkard", __("酒鬼"), __("难以预测。防御低，但酒壮怂人胆，预算高。"),
-        difficulty_mod=2, satisfaction_mod=0, budget_mod=1.1, defense_mod=-2, crazy_chance=3, color_shift=0))
-    personality_registry.register(CustomerPersonality(
-        "noble", __("贵族"), __("品味高雅。非常挑剔但极其慷慨。"),
-        difficulty_mod=8, satisfaction_mod=-1, budget_mod=1.8, defense_mod=3, crazy_chance=0, color_shift=2))
-    personality_registry.register(CustomerPersonality(
-        "shy", __("害羞"), __("胆小紧张。容易取悦，花费 modest。"),
-        difficulty_mod=-5, satisfaction_mod=0, budget_mod=0.7, defense_mod=-3, crazy_chance=-1, color_shift=0))
-    personality_registry.register(CustomerPersonality(
-        "pervert", __("变态"), __("对一件事痴迷。对喜好预算高，讨厌其他一切。"),
-        difficulty_mod=3, satisfaction_mod=0, budget_mod=1.2, defense_mod=0, crazy_chance=2, color_shift=1))
-    personality_registry.register(CustomerPersonality(
-        "miser", __("吝啬"), __("讨厌花钱。预算低，但容易满足。"),
-        difficulty_mod=-2, satisfaction_mod=0, budget_mod=0.5, defense_mod=0, crazy_chance=0, color_shift=0))
-    personality_registry.register(CustomerPersonality(
-        "celebrity", __("名人"), __("著名且张扬。预算巨大，引人注目。"),
-        difficulty_mod=10, satisfaction_mod=-2, budget_mod=2.5, defense_mod=1, crazy_chance=1, color_shift=3))
+    ## EN: Default personalities — loaded from JSON (BK Evolution).
+    ## ZH: 默认性格 — 从 JSON 加载（BK Evolution）。
+    for _pers_item in _ca_data.get("personalities", []):
+        personality_registry.register(CustomerPersonality(
+            _pers_item["affix_id"],
+            _pers_item["name_i18n"],
+            _pers_item["description_i18n"],
+            difficulty_mod=_pers_item.get("difficulty_mod", 0),
+            satisfaction_mod=_pers_item.get("satisfaction_mod", 0),
+            budget_mod=_pers_item.get("budget_mod", 1.0),
+            defense_mod=_pers_item.get("defense_mod", 0),
+            crazy_chance=_pers_item.get("crazy_chance", 0),
+            color_shift=_pers_item.get("color_shift", 0),
+        ))
 
 
     ## ============================================================
@@ -148,12 +150,12 @@ init -1 python:
         ZH: 表示顾客当前情绪状态的心情词缀。
         """
 
-        def __init__(self, affix_id, name_i18n_key, description_i18n_key,
+        def __init__(self, affix_id, name_i18n, description_i18n,
                      satisfaction_mod=0, tip_chance=0.0, tip_multiplier=1.0,
                      patience_mod=0, color_shift=0):
             self.affix_id = affix_id
-            self.name_i18n_key = name_i18n_key
-            self.description_i18n_key = description_i18n_key
+            self.name_i18n = name_i18n
+            self.description_i18n = description_i18n
             self.satisfaction_mod = satisfaction_mod
             self.tip_chance = tip_chance
             self.tip_multiplier = tip_multiplier
@@ -194,29 +196,19 @@ init -1 python:
 
     mood_registry = MoodRegistry()
 
-    ## EN: Default moods.
-    ## ZH: 默认心情。
-    mood_registry.register(CustomerMood(
-        "cheerful", __("高兴"), __("心情很好。容易取悦，可能会给小费。"),
-        satisfaction_mod=1, tip_chance=0.15, tip_multiplier=1.2, patience_mod=2, color_shift=0))
-    mood_registry.register(CustomerMood(
-        "neutral", __("中性"), __("没什么特别的。标准行为。"),
-        satisfaction_mod=0, tip_chance=0.05, tip_multiplier=1.0, patience_mod=0, color_shift=0))
-    mood_registry.register(CustomerMood(
-        "grumpy", __("暴躁"), __("已经不耐烦了。更难满足，不会给小费。"),
-        satisfaction_mod=-1, tip_chance=0.0, tip_multiplier=0.0, patience_mod=-2, color_shift=0))
-    mood_registry.register(CustomerMood(
-        "angry", __("愤怒"), __("对某事 furious。非常苛刻，可能会惹麻烦。"),
-        satisfaction_mod=-2, tip_chance=0.0, tip_multiplier=0.0, patience_mod=-4, color_shift=1))
-    mood_registry.register(CustomerMood(
-        "ecstatic", __("狂喜"), __("欣喜若狂！极其慷慨和宽容。"),
-        satisfaction_mod=3, tip_chance=0.35, tip_multiplier=2.0, patience_mod=5, color_shift=2))
-    mood_registry.register(CustomerMood(
-        "depressed", __("沮丧"), __("寻求安慰。期望低，但钱少。"),
-        satisfaction_mod=0, tip_chance=0.02, tip_multiplier=0.5, patience_mod=3, color_shift=0))
-    mood_registry.register(CustomerMood(
-        "lustful", __("饥渴"), __("一心一意。性预算高，无视娱乐。"),
-        satisfaction_mod=0, tip_chance=0.1, tip_multiplier=1.3, patience_mod=-1, color_shift=1))
+    ## EN: Default moods — loaded from JSON (BK Evolution).
+    ## ZH: 默认心情 — 从 JSON 加载（BK Evolution）。
+    for _mood_item in _ca_data.get("moods", []):
+        mood_registry.register(CustomerMood(
+            _mood_item["affix_id"],
+            _mood_item["name_i18n"],
+            _mood_item["description_i18n"],
+            satisfaction_mod=_mood_item.get("satisfaction_mod", 0),
+            tip_chance=_mood_item.get("tip_chance", 0.0),
+            tip_multiplier=_mood_item.get("tip_multiplier", 1.0),
+            patience_mod=_mood_item.get("patience_mod", 0),
+            color_shift=_mood_item.get("color_shift", 0),
+        ))
 
 
     ## ============================================================

@@ -17,20 +17,24 @@ init -2 python:
     IT_Story = ItemType("Misc", usage = None, sound = "spell.ogg", adjectives = "misc", sellable=False, giveable=False)
     IT_Passive = ItemType("Misc", usage = "wear", slot = "misc", sound = s_equip_item, adjectives = "misc", sellable=False)
 
-    all_equipement_types = ["weapon", "dress", "ring", "necklace", "accessory", "passive"]
+    item_type_by_name = {
+        "Weapon": IT_Weapon,
+        "Dress": IT_Dress,
+        "Ring": IT_Ring,
+        "Necklace": IT_Necklace,
+        "Accessory": IT_Accessory,
+        "Toy": IT_Toy,
+        "Supplies": IT_Supplies,
+        "Food": IT_Food,
+        "Gift": IT_Gift,
+        "Flower": IT_Flower,
+        "Misc": IT_Misc,
+        "Story": IT_Story,
+        "Passive": IT_Passive,
+    }
 
-## FURNITURE TYPES ##
-# A tuple (type, description)
-
-    furniture_types = [("Decoration", "Attracts new kinds of customers to your brothel"),
-                        ("Furnishing", "Unlocks more options for attracting customers"),
-                        ("Utility", "Help with advertising, security and maintenance"),
-                        ("Comfort", "Help your girls feel more comfortable in the brothel"),
-                        ("Windows", "Influences your girl's preferences"),
-                        ("Altars", "Pray here and get results, for once"),
-                        ("Arcane", "Helps with dark rituals"),
-                        ("Gizmos", "Strange artefacts from a bygone technological age")
-                        ]
+    ## EN: all_equipement_types and furniture_types loaded from JSON in init python below.
+    ## ZH: all_equipement_types 和 furniture_types 在下面的 init python 中从 JSON 加载。
 
 
     # Item instantiating: In an effort to save memory, all common properties of items are stored once as Items, individual instance only track equipped and charges status
@@ -39,11 +43,12 @@ init -2 python:
     class Item(object):
         """This class holds common data for inanimate objects that the MC or girls can own."""
 
-        def __init__(self, name, target, type, pic = None, template = False, rank = 1, max_rank = 5, rarity = 1, charges = None, price = 10000, effects = None, description = "", adjectives = None, sound = None, hidden_effect = False, pic_dir = None, sellable="type", giveable="type", usage="type"):
+        def __init__(self, name, target, type, pic = None, template = False, rank = 1, max_rank = 5, rarity = 1, charges = None, price = 10000, effects = None, description = "", adjectives = None, sound = None, hidden_effect = False, pic_dir = None, sellable="type", giveable="type", usage="type", name_i18n=None):
 
             # Parent properties - Shared with every instance of the Item
             self.base_name = name
             self.name = name
+            self.name_i18n = name_i18n if name_i18n is not None else name
             self.target = target
             self.type = type
 
@@ -100,6 +105,58 @@ init -2 python:
                 self.sound = self.type.sound
 
             self.base_description = description
+            self.description_i18n = description
+
+        @classmethod
+        def from_dict(cls, d):
+            effects = d.get("effects", [])
+            _builtin_dict = __import__('builtins').dict
+            effects = [Effect.from_dict(e) if isinstance(e, _builtin_dict) else e for e in effects]
+            return cls(
+                name=d.get("name"),
+                target=d.get("target"),
+                type=item_type_by_name.get(d.get("type"), IT_Misc),
+                pic=d.get("pic"),
+                template=d.get("template", False),
+                rank=d.get("rank", 1),
+                max_rank=d.get("max_rank", 5),
+                rarity=d.get("rarity", 1),
+                charges=d.get("charges"),
+                price=d.get("price", 10000),
+                effects=effects,
+                description=d.get("description_i18n", d.get("description", "")),
+                adjectives=d.get("adjectives"),
+                sound=d.get("sound"),
+                hidden_effect=d.get("hidden_effect", False),
+                pic_dir=d.get("pic_dir"),
+                sellable=d.get("sellable", "type"),
+                giveable=d.get("giveable", "type"),
+                usage=d.get("usage", "type"),
+                name_i18n=d.get("name_i18n", d.get("name")),
+            )
+
+        def to_dict(self):
+            return {
+                "name": self.base_name,
+                "target": self.target,
+                "type": self.type.name,
+                "pic": self.pic.filename,
+                "template": self.template,
+                "rank": self.rank,
+                "max_rank": self.max_rank,
+                "rarity": self.rarity,
+                "charges": self.base_charges,
+                "price": self.base_price,
+                "effects": [e.to_dict() for e in self.base_effects],
+                "description": self.base_description,
+                "adjectives": self.adjectives,
+                "sound": self.sound,
+                "hidden_effect": self.hidden_effect,
+                "pic_dir": getattr(self, 'pic_dir', None),
+                "sellable": self.sellable,
+                "giveable": self.giveable,
+                "usage": self.usage,
+            }
 
         def get_instance(self): # generates a child item instance on the fly. Specify rank for template items.
             return ItemInstance(self)
@@ -149,6 +206,7 @@ init -2 python:
                 new_it = copy.deepcopy(self)
 
                 new_it.name = __("{0} {1}").format(__(quality_prefix[self.adjectives + "_" + str(target_rank)]), __(self.base_name.lower()))
+                new_it.name_i18n = new_it.name
                 new_it.price = round_int(quality_modifier[target_rank] * self.base_price)
 
                 if self.rarity in ("S", "U", "M"):
@@ -258,8 +316,10 @@ init -2 python:
                     mod = self.charges / self.parent.base_charges
                 except:
                     notify("ERROR: Couldn't calculate used charge modifier for this Item (%s)" % self.name, col=c_red)
-                
-            return round_int(self.parent.get_price(operation) * mod)
+
+            # BK Evolution: Shop economy price multiplier
+            price_mult = getattr(self, '_price_multiplier', 1.0)
+            return round_int(self.parent.get_price(operation) * mod * price_mult)
 
         def use_me(self, nb = 1): # Item instance property
             if self.charges >= nb:
@@ -272,7 +332,7 @@ init -2 python:
                     return self.charges
 
             else:
-                renpy.say("", "Not enough charges (" + str(self.charges) + ")")
+                renpy.say("", __("Not enough charges (%s)") % str(self.charges))
 
                 return "no charges"
 
@@ -687,7 +747,7 @@ screen universal_selector:
             $ sz = 16
 
             if current.job:
-                $ text1 += "\n%s" % current.job.capitalize()
+                $ text1 += "\n%s" % __(current.job.capitalize())
                 if current.job in all_jobs and current.work_whore:
                     $ text1 += __("/Whore")
                 $ sched = current.workdays[calendar.get_weekday()]
@@ -707,7 +767,7 @@ screen universal_selector:
             elif sched == 50:
                 $ text1 += __(" (half-shift)")
         else:
-            $ text1 = "{b}%s{/b}\n" % capitalize(current.name) + merchant_title[current.name]
+            $ text1 = "{b}%s{/b}\n" % capitalize(current.name) + merchant_title[current.id]
             $ col = c_darkpurple
             $ sz = 20
 
@@ -809,7 +869,7 @@ screen item_list(items, owner, counterpart, sc_prefix, search=False): # May also
 
 
                                 vbox yalign 0.5:
-                                    $ text1 = __(it.name)
+                                    $ text1 = __(it.name_i18n)
 
                                     if isinstance(it, ItemInstance):
                                         if it.charges and it.charges > 1:
@@ -978,7 +1038,7 @@ screen item_profile(it):
 
             has vbox xfill True xalign 0.5
 
-            $ text1 = __(it.name)
+            $ text1 = __(it.name_i18n)
 
             if isinstance(it, ItemInstance):
                 if it.charges and it.charges > 1 and it.usage == "use":
@@ -1100,5 +1160,25 @@ screen item_filter(filters=inventory_filters["base"]):
                         add "filter_all_unselect" xalign 0.5 yalign 0.5
                     tooltip _("Show all items.")
 
+
+init python:
+    ## EN: Load equipment types and furniture type descriptions from JSON (BK Evolution), fallback to hardcoded.
+    ## ZH: 从 JSON 加载装备类型和家具类型描述（BK Evolution），否则使用硬编码。
+    _itp_json = DataLoader.load_item_type_params()
+    if _itp_json:
+        all_equipement_types = _itp_json.get("all_equipement_types", [])
+        _ft = _itp_json.get("furniture_types", [])
+        furniture_types = [(t["type"], __(t.get("description_i18n", t["description"]))) for t in _ft]
+    else:
+        all_equipement_types = ["weapon", "dress", "ring", "necklace", "accessory", "passive"]
+        furniture_types = [("Decoration", "Attracts new kinds of customers to your brothel"),
+                            ("Furnishing", "Unlocks more options for attracting customers"),
+                            ("Utility", "Help with advertising, security and maintenance"),
+                            ("Comfort", "Help your girls feel more comfortable in the brothel"),
+                            ("Windows", "Influences your girl's preferences"),
+                            ("Altars", "Pray here and get results, for once"),
+                            ("Arcane", "Helps with dark rituals"),
+                            ("Gizmos", "Strange artefacts from a bygone technological age")
+                            ]
 
 #### END OF BK ITEMS FILE ####

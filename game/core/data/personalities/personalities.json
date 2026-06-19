@@ -1,0 +1,267 @@
+[
+  {
+    "id": "pervert",
+    "attributes": [
+      "very extravert",
+      "very lewd"
+    ],
+    "name_i18n": "pervert",
+    "description_i18n": "Wild and 'no limit' kind of girl. Curious about all sorts of sexual acts, the more perverted the better. She doesn't care for romance."
+  },
+  {
+    "id": "rebel",
+    "attributes": [
+      "very extravert",
+      "very dom"
+    ],
+    "often_stories": [
+      "slave_story5"
+    ],
+    "name_i18n": "rebel",
+    "description_i18n": "Always fighting and contradicting others, fiercely independent. She must do things of her own free will."
+  },
+  {
+    "id": "cold",
+    "attributes": [
+      "very materialist",
+      "very introvert"
+    ],
+    "name_i18n": "cold",
+    "description_i18n": "Cold and detached, she doesn't show her feelings easily. She seems strangely unconcerned about what goes on around her, and uninterested in the fate of others."
+  },
+  {
+    "id": "nerd",
+    "attributes": [
+      "very introvert",
+      "very idealist"
+    ],
+    "often_stories": [
+      "slave_story8"
+    ],
+    "name_i18n": "nerd",
+    "description_i18n": "Quiet and bookish. Rather light-headed. Always curious. She doesn't like parties, noise, and physical effort."
+  },
+  {
+    "id": "masochist",
+    "attributes": [
+      "very introvert",
+      "very sub"
+    ],
+    "name_i18n": "masochist",
+    "description_i18n": "The lower the better. She likes to be at the bottom and secretly enjoys being mistreated. Gifts and loving gestures annoy her, she feels she doesn't deserve them."
+  },
+  {
+    "id": "bimbo",
+    "attributes": [
+      "very materialist",
+      "very lewd"
+    ],
+    "name_i18n": "bimbo",
+    "description_i18n": "Vain, attention-craved, she cares about status and wealth. Loves presents and compliments. She has no qualms about using her body to get these things, too."
+  },
+  {
+    "id": "meek",
+    "attributes": [
+      "very modest",
+      "very sub"
+    ],
+    "often_stories": [
+      "slave_story4"
+    ],
+    "rarely_stories": [
+      "slave_story5",
+      "slave_story8"
+    ],
+    "name_i18n": "meek",
+    "description_i18n": "Shy, easily swayed, will cry rather than resist. Doesn't like conflict."
+  },
+  {
+    "id": "sweet",
+    "attributes": [
+      "very idealist",
+      "very extravert"
+    ],
+    "name_i18n": "sweet",
+    "description_i18n": "Lovely and sunny personality, always positive, and rather romantic. She doesn't like negativity."
+  },
+  {
+    "id": "superficial",
+    "attributes": [
+      "very extravert",
+      "very materialist"
+    ],
+    "name_i18n": "superficial",
+    "description_i18n": "Ever the socialite, she cares about being seen, preferably in the most outstanding outfit and expensive jewelry. Some call her needy and craving for attention, but she knows they're just jealous of her new shoes..."
+  },
+  {
+    "id": "holy",
+    "attributes": [
+      "very extravert",
+      "very modest"
+    ],
+    "never_stories": [
+      "slave_story7",
+      "slave_story8"
+    ],
+    "name_i18n": "holy",
+    "description_i18n": "A firebrand promoter of religion and morality, she prays every night for the salvation of her soul and tries to convert others to her beliefs. With little success so far, but she won't give up."
+  },
+  {
+    "id": "helper",
+    "attributes": [
+      "very extravert",
+      "very sub"
+    ],
+    "name_i18n": "helper",
+    "description_i18n": "Always ready to help her friends, places herself after others. Can be a bit nosy sometimes."
+  },
+  {
+    "id": "creep",
+    "attributes": [
+      "very introvert",
+      "very lewd"
+    ],
+    "name_i18n": "creep",
+    "description_i18n": "Shy and awkward around people, she is obsessed about all sorts of naughty topics that she researches in her own time. Get complaints for stalking - a lot."
+  },
+  {
+    "id": "repressed",
+    "attributes": [
+      "very introvert",
+      "very modest"
+    ],
+    "name_i18n": "repressed",
+    "description_i18n": "Raised in a very strict environment, she lives in fear of her own impulses and tries her hardest to suppress them."
+  },
+  {
+    "id": "schemer",
+    "attributes": [
+      "very introvert",
+      "very dom"
+    ],
+    "name_i18n": "schemer",
+    "description_i18n": "She likes nothing more than to scheme and make grand plans, ready to assert her dominance over all living beings... Some day. In the meantime, if she has to suck a dick... So be it."
+  },
+  {
+    "id": "prude",
+    "attributes": [
+      "very materialist",
+      "very modest"
+    ],
+    "rarely_stories": [
+      "slave_story7",
+      "slave_story8"
+    ],
+    "name_i18n": "prude",
+    "description_i18n": "She behaves like a good, Arios-fearing girl at all times. She frowns on frivolity and amoral behavior. Some think she has dirty thoughts in secret, but if so, she hides them well."
+  },
+  {
+    "id": "princess",
+    "attributes": [
+      "very dom",
+      "very materialist"
+    ],
+    "often_stories": [
+      "slave_story6"
+    ],
+    "rarely_stories": [
+      "slave_story1",
+      "slave_story2",
+      "slave_story3",
+      "slave_story5",
+      "slave_story7",
+      "slave_story8"
+    ],
+    "never_stories": [
+      "slave_story4"
+    ],
+    "name_i18n": "princess",
+    "description_i18n": "A figurative princess (or is she?), she thinks everyone ought to be at her feet and deliver on her every whim. Her behavior can be cruel, but mostly she's naive."
+  },
+  {
+    "id": "pet",
+    "attributes": [
+      "very materialist",
+      "very sub"
+    ],
+    "rarely_stories": [
+      "slave_story5",
+      "slave_story8"
+    ],
+    "name_i18n": "pet",
+    "description_i18n": "The teacher's pet. Always ready to please her master, she likes nothing more than to live in comfort at his feet. Some despise her servility, calling her unpleasant names behind her back."
+  },
+  {
+    "id": "easy",
+    "attributes": [
+      "very lewd",
+      "very idealist"
+    ],
+    "name_i18n": "easy",
+    "description_i18n": "It's not her fault, she has always attracted men, and never had the heart to turn them down. Although many call her easy, her sole purpose is to spread joy. Hopefully not STDs."
+  },
+  {
+    "id": "class president",
+    "attributes": [
+      "very modest",
+      "very idealist"
+    ],
+    "often_stories": [
+      "slave_story8"
+    ],
+    "name_i18n": "class president",
+    "description_i18n": "She must always be on top, she strives to be exemplary and despises every kind of misconduct. The high expectations she has of others mirror the harsh discipline whe puts herself through."
+  },
+  {
+    "id": "tsundere",
+    "attributes": [
+      "very idealist",
+      "very dom"
+    ],
+    "name_i18n": "tsundere",
+    "description_i18n": "Easy to anger, hard to please, she has a secret soft spot. She will put herself at risk to help others, then kick their butts for needing help in the first place."
+  },
+  {
+    "id": "loyal",
+    "attributes": [
+      "very idealist",
+      "very sub"
+    ],
+    "often_stories": [
+      "slave_story2"
+    ],
+    "name_i18n": "loyal",
+    "description_i18n": "She always follows orders, out of a sense of duty more than fear. She believes everyone must know their place, and do their best to excel at whatever task they are given. Even whores."
+  },
+  {
+    "id": "yandere",
+    "attributes": [
+      "very lewd",
+      "very dom"
+    ],
+    "rarely_stories": [
+      "slave_story3",
+      "slave_story7"
+    ],
+    "name_i18n": "yandere",
+    "description_i18n": "Very high on the hot yet neurotic scale. Loving and devoted, but also firebatshit crazy. She's ready to do anything to get her man and snuff out the competition, including... actually snuffing them."
+  },
+  {
+    "id": "masochist2",
+    "attributes": [
+      "very lewd",
+      "very sub"
+    ],
+    "name_i18n": "masochist",
+    "description_i18n": "The lower the better. She likes to be at the bottom and secretly enjoys being mistreated. Gifts and loving gestures annoy her, she feels she doesn't deserve them."
+  },
+  {
+    "id": "stubborn",
+    "attributes": [
+      "very modest",
+      "very dom"
+    ],
+    "name_i18n": "stubborn",
+    "description_i18n": "She doesn't like people who don't share her strict principles and moral values, and she doesn't take contradiction well either. A lot of fun at parties, if you like parties that end with a tavern brawl."
+  }
+]

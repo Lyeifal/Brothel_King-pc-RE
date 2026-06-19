@@ -32,7 +32,7 @@ screen auction_house():
                 outlines [(2, "#000", 0, 0)]
 
             if current_session:
-                text "[current_session.session_name] — Day [current_session.date]":
+                text _("[current_session.session_name] — Day [current_session.date]"):
                     size 18
                     xalign 0.5
                     color "#AAAAAA"
@@ -105,11 +105,11 @@ screen auction_house():
                                                 color "#FFFFFF"
                                                 bold True
 
-                                            text "Rank [lot.girl.rank] — [lot.girl.job]":
+                                            text __("Rank %s — %s") % (lot.girl.rank, __(lot.girl.job.capitalize())):
                                                 size 14
                                                 color "#BBBBBB"
 
-                                            text "Seller: [lot.seller]":
+                                            text _("Seller: [lot.seller]"):
                                                 size 13
                                                 color "#888888"
 
@@ -118,7 +118,7 @@ screen auction_house():
                                             yalign 0.5
                                             spacing 2
 
-                                            text "[lot.current_bid] gold":
+                                            text _("[lot.current_bid] gold"):
                                                 size 16
                                                 color "#FFD700"
                                                 xalign 1.0
@@ -155,11 +155,11 @@ screen auction_house():
                                 xalign 0.5
                                 spacing 15
 
-                                text "Rank [selected_lot.girl.rank]":
+                                text _("Rank [selected_lot.girl.rank]"):
                                     size 16
                                     color "#BBBBBB"
 
-                                text "Level [selected_lot.girl.level]":
+                                text _("Level [selected_lot.girl.level]"):
                                     size 16
                                     color "#BBBBBB"
 
@@ -198,7 +198,7 @@ screen auction_house():
                                     textbutton __("-"):
                                         action SetScreenVariable("bid_amount", max(selected_lot.current_bid + selected_lot.min_increment, bid_amount - selected_lot.min_increment))
 
-                                    text "[bid_amount] gold":
+                                    text _("[bid_amount] gold"):
                                         size 20
                                         yalign 0.5
                                         color "#FFFFFF"
@@ -314,7 +314,7 @@ screen auction_sell_girl():
                                     color "#FFFFFF"
                                     xalign 0.5
 
-                                text "出售价格: [girl.get_price('sell')] 金币":
+                                text _("出售价格: [girl.get_price('sell')] 金币"):
                                     size 14
                                     color "#FFD700"
                                     xalign 0.5

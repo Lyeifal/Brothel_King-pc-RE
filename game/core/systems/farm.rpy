@@ -18,19 +18,19 @@ init -2 python:
 
         def get_tooltip(self):
 
-            ttip = "The %s can hold %i minion%s (currently: %i). " % (self.name, self.rank, plural(self.rank), len(self.minions))
+            ttip = __("The %s can hold %i minion%s (currently: %i). ") % (self.name, self.rank, plural(self.rank), len(self.minions))
 
             if self.can_upgrade():
                 if self.rank > 0:
-                    ttip += "Click here to upgrade the capacity of this facility for " + str(self.get_price()) + " gold."
+                    ttip += __("Click here to upgrade the capacity of this facility for %s gold.") % str(self.get_price())
                 else:
-                    ttip += "Click here to build this facility for " + str(self.get_price()) + " gold."
+                    ttip += __("Click here to build this facility for %s gold.") % str(self.get_price())
 
             elif self.rank < 5:
-                ttip += "You cannot improve this facility until you get a higher brothel license."
+                ttip += __("You cannot improve this facility until you get a higher brothel license.")
 
             else:
-                "You cannot improve this facility further."
+                __("You cannot improve this facility further.")
 
             return ttip
 
@@ -76,28 +76,28 @@ init -2 python:
 
         def add_minion(self, mn):
             if mn.type != self.minion_type:
-                return False, "You cannot add a " + mn.type + " to the " + self.name + " (wrong minion type)."
+                return False, __("You cannot add a %s to the %s (wrong minion type).") % (mn.type, self.name)
             elif self.has_room():
                 self.minions.append(mn)
                 renpy.play(s_moo, "sound")
 #                renpy.say ("", "Adding to " + self.name)
-                return True, mn.name + ", a level " + str(mn.level) + " " + mn.type + ", has joined the farm's " + self.name + "."
+                return True, __("%s, a level %s %s, has joined the farm's %s.") % (mn.name, str(mn.level), mn.type, self.name)
             elif self.can_upgrade():
                 if self.rank > 0:
-                    renpy.say("", "The " + self.name + " is currently full.")
+                    renpy.say("", __("The %s is currently full.") % self.name)
                 else:
-                    renpy.say("", "You must build the " + self.name + " first.")
-                if renpy.call_screen("yes_no", "Do you want to upgrade " + self.name + " to rank " + str(self.rank+1) + " for " + str(self.get_price()) + " gold?"):
+                    renpy.say("", __("You must build the %s first.") % self.name)
+                if renpy.call_screen("yes_no", __("Do you want to upgrade %s to rank %s for %s gold?") % (self.name, str(self.rank+1), str(self.get_price()))):
                     if MC.gold < self.get_price() + mn.get_price("buy"):
-                        return False, "You do not have enough money to both upgrade the " + self.name + " and buy the minion."
+                        return False, __("You do not have enough money to both upgrade the %s and buy the minion.") % self.name
                     MC.gold -= self.get_price()
                     self.rank += 1
                     self.minions.append(mn)
-                    return True, "The farm's " + self.name + " has been extended and " + mn.name + ", a level " + str(mn.level) + " " + self.minion_type + ", has joined."
+                    return True, __("The farm's %s has been extended and %s, a level %s %s, has joined.") % (self.name, mn.name, str(mn.level), self.minion_type)
                 else:
                     return False, ""
             else:
-                return False, "That's impossible. The farm's " + self.name + " is full and cannot be upgraded at the moment."
+                return False, __("That's impossible. The farm's %s is full and cannot be upgraded at the moment.") % self.name
 
         def assign_minions(self): # Returns excess girls to be assigned elsewhere automatically
 
@@ -151,7 +151,7 @@ init -2 python:
                 return False, "The " + self.name + " cannot be extended any further."
             elif self.rank >= district.rank:
                 return False, "Extending the " + self.name + " further would draw too much attention to us. Perhaps once you get a higher brothel license, we can grease a few palms and extend our operation?"
-            elif renpy.call_screen("yes_no", "Do you really want to upgrade the " + self.name + " for " + str(self.get_price()) + " gold?"):
+            elif renpy.call_screen("yes_no", __("Do you really want to upgrade the ") + self.name + " for " + str(self.get_price()) + " gold?"):
                 MC.gold -= self.get_price()
                 self.rank += 1
                 renpy.play(s_gold, "sound")
@@ -185,7 +185,7 @@ init -2 python:
             for mn in self.minions:
                 mn.free = True
 
-    class Minion(object):
+    class Minion(PicHolder):
 
         def __init__(self, type, level = 0, name = "", start=False):
             self.type = type
@@ -218,9 +218,6 @@ init -2 python:
         def get_key(self):
             return (self.level, self.name)
 
-        def get_pic(self, x, y):
-            return self.pic.get(x, y)
-
         def get_random_pic(self):
 
             d = str(dice(3))
@@ -246,7 +243,7 @@ init -2 python:
 
         def get_tooltip(self):
 
-            des = "Level %i %s" % (self.level, self.type)
+            des = __("Level %i %s") % (self.level, self.type)
 
             if self.level >= 5:
                 des += " (max level)"
@@ -905,14 +902,14 @@ init -2 python:
                     descript += event_color["a little bad"] % ("There weren't enough minions available for her training, so " + girl.fullname + " worked in the farm instead")
 
                 elif self.refused:
-                    descript += event_color["bad"] % (girl.fullname + " refused to train today, so Gizel had her work around the farm instead ") + "(training mode: {i}" + self.mode + "{/i})"
+                    descript += event_color["bad"] % (__("%s refused to train today, so Gizel had her work around the farm instead ") % girl.fullname) + __("(training mode: {i}%s{/i})") % self.mode
 
                 else:
-                    descript += girl.fullname + " was held at the farm today"
+                    descript += __("%s was held at the farm today") % girl.fullname
 
                 log.add_report(descript + ", " + farm_holding_dict[self.holding].lower() + ".")
 
-                descript += ".\n" + farm_description["holding %s %s" % (self.mode, self.holding)] % (girl.name, girl.name)
+                descript += __(".\n") + farm_description["holding %s %s" % (self.mode, self.holding)] % (girl.name, girl.name)
                 act, decreased = farm_holding_stats[self.holding]
 
                 if self.mode == "gentle":
@@ -1039,7 +1036,7 @@ init -2 python:
             return change_log
 
 
-    class Farm(object):
+    class Farm(EffectBearer):
 
         def __init__(self):
             self.pens = 1
@@ -1051,7 +1048,7 @@ init -2 python:
 
             self.programs = {}
             self.knows = {"weakness" : defaultdict(bool), "reaction" : defaultdict(list), "pos_acts" : defaultdict(list), "amb_acts" : defaultdict(list), "neg_acts" : defaultdict(list), "pos_fix" : defaultdict(list), "neg_fix" : defaultdict(list)}
-            self.active = False
+            self._farm_active = False  # EN: Internal state; use .active property. ZH: 内部状态；请使用 .active 属性。
             self.powers = False
 
             self.pen_pic = Picture("pen.webp", "resources/brothels/farm/pen.webp")
@@ -1061,22 +1058,30 @@ init -2 python:
             self.effects = []
             self.effect_dict = defaultdict(list)
 
+        @property
+        def active(self):
+            """EN: Farm unlock state; backed by UnlockRegistry with fallback for save compat. ZH: 农场解锁状态；由 UnlockRegistry 支持，兼容旧存档。"""
+            if unlock_registry.is_unlocked("farm"):
+                return True
+            # Fallback for old saves that stored 'active' in __dict__
+            return self.__dict__.get('active', self._farm_active)
+
+        @active.setter
+        def active(self, value):
+            self._farm_active = value
+            if value:
+                unlock_registry.unlock("farm")
+            else:
+                unlock_registry.lock("farm")
+            # Clean up stale __dict__ key from old saves
+            self.__dict__.pop('active', None)
+
         def activate(self):
             self.active = True
             renpy.play(s_moo, "sound")
             notify("Farm unlocked!", pic="tb farm", col=c_softpurple)
 
         # Effects (farm effects apply to farm girls only)
-
-        def get_effect(self, type, target):
-            return get_effect(self, type, target)
-
-        def add_effects(self, effects, apply_boost=False, spillover=False, expires = False):
-            return add_effects(self, effects, apply_boost=apply_boost, spillover=spillover, expires=expires)
-
-        def remove_effects(self, effects):
-            remove_effects(self, effects)
-
 
         def load_pics(self):
             self.pics = []
@@ -1144,7 +1149,7 @@ init -2 python:
                 return False, "You can't expand the farm further for now. This would draw attention to us..."
             elif MC.gold < self.get_pen_cost():
                 return False, "You don't have enough gold! Stop wasting my time."
-            elif renpy.call_screen("yes_no", "Do you really want to add a pen to the farm for " + str(farm.get_pen_cost()) + " gold?"):
+            elif renpy.call_screen("yes_no", __("Do you really want to add a pen to the farm for ") + str(farm.get_pen_cost()) + " gold?"):
                 MC.gold -= self.get_pen_cost()
                 self.pens += 1
                 renpy.play(s_gold, "sound")
@@ -1390,7 +1395,7 @@ init -2 python:
             if prog.target == "no training":
                 prog.act = None
                 if debug_mode:
-                    renpy.say("", "WRONG: not in training")
+                    renpy.say("", __("WRONG: not in training"))
                 return False
             elif prog.target != "auto":
                 prog.act = prog.target

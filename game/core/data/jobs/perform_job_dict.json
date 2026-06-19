@@ -1,0 +1,587 @@
+{
+  "waitress_stats": [
+    [
+      "charm",
+      6
+    ],
+    [
+      "constitution",
+      2
+    ],
+    [
+      "body",
+      1
+    ],
+    [
+      "beauty",
+      1
+    ]
+  ],
+  "waitress_changes": [
+    [
+      [
+        "charm"
+      ],
+      100,
+      2
+    ],
+    [
+      [
+        "constitution"
+      ],
+      35,
+      1
+    ],
+    [
+      [
+        "obedience",
+        "body",
+        "beauty"
+      ],
+      15,
+      1
+    ],
+    [
+      [
+        "sensitivity"
+      ],
+      15,
+      -1
+    ]
+  ],
+  "waitress_init": "%s served drinks to %s customers.",
+  "waitress_tags": [
+    "waitress"
+  ],
+  "waitress_tags2": [
+    "maid",
+    "geisha"
+  ],
+  "dancer_stats": [
+    [
+      "body",
+      6
+    ],
+    [
+      "libido",
+      2
+    ],
+    [
+      "refinement",
+      1
+    ],
+    [
+      "charm",
+      1
+    ]
+  ],
+  "dancer_changes": [
+    [
+      [
+        "body"
+      ],
+      100,
+      2
+    ],
+    [
+      [
+        "libido"
+      ],
+      35,
+      1
+    ],
+    [
+      [
+        "constitution",
+        "refinement",
+        "charm"
+      ],
+      15,
+      1
+    ],
+    [
+      [
+        "obedience"
+      ],
+      15,
+      -1
+    ]
+  ],
+  "dancer_init": "%s danced sexily for %s customers.",
+  "dancer_tags": [
+    "dancer"
+  ],
+  "dancer_tags2": [
+    "fight"
+  ],
+  "masseuse_stats": [
+    [
+      "beauty",
+      6
+    ],
+    [
+      "sensitivity",
+      2
+    ],
+    [
+      "refinement",
+      1
+    ],
+    [
+      "body",
+      1
+    ]
+  ],
+  "masseuse_changes": [
+    [
+      [
+        "beauty"
+      ],
+      100,
+      2
+    ],
+    [
+      [
+        "sensitivity"
+      ],
+      35,
+      1
+    ],
+    [
+      [
+        "refinement",
+        "body",
+        "libido"
+      ],
+      15,
+      1
+    ],
+    [
+      [
+        "constitution"
+      ],
+      15,
+      -1
+    ]
+  ],
+  "masseuse_init": "%s gave a hot massage to %s customers.",
+  "masseuse_tags": [
+    "masseuse"
+  ],
+  "masseuse_tags2": [
+    "swim"
+  ],
+  "geisha_stats": [
+    [
+      "refinement",
+      6
+    ],
+    [
+      "obedience",
+      2
+    ],
+    [
+      "beauty",
+      1
+    ],
+    [
+      "charm",
+      1
+    ]
+  ],
+  "geisha_changes": [
+    [
+      [
+        "refinement"
+      ],
+      100,
+      2
+    ],
+    [
+      [
+        "obedience"
+      ],
+      35,
+      1
+    ],
+    [
+      [
+        "beauty",
+        "charm",
+        "sensitivity"
+      ],
+      15,
+      1
+    ],
+    [
+      [
+        "libido"
+      ],
+      15,
+      -1
+    ]
+  ],
+  "geisha_init": "%s entertained %s customers with a display of traditional arts.",
+  "geisha_tags": [
+    "geisha"
+  ],
+  "geisha_tags2": [
+    "maid",
+    "waitress",
+    "date"
+  ],
+  "waitress_very bad": "\n{color=[c_red]}%s spilled drinks everywhere and didn't even apologize. The customers thought the service was terrible and complained.",
+  "waitress_bad": "\n{color=[c_lightred]}%s was shy and clumsy. The customers grumbled that the service was bad.",
+  "waitress_average": "\n%s served everyone and chatted with the customers. They thought she was ok.",
+  "waitress_good": "\n{color=[c_lightgreen]}%s flirted with the customers as she served them drinks, making them feel welcome.",
+  "waitress_very good": "\n{color=[c_green]}%s traded rowdy jokes with the customers, flashing her goods while serving. Everyone loved her.",
+  "waitress_perfect": "\n{color=[c_orange]}%s worked without underwear today and used all of her charms to drive the customers wild. They completely fell over for her.",
+  "dancer_very bad": "\n{color=[c_red]}%s has two left feet. Her dancing was embarrassingly bad and the customers booed and threw things at her.",
+  "dancer_bad": "\n{color=[c_lightred]}%s's dance was awkward and uninteresting.",
+  "dancer_average": "\n%s danced suggestively in front of the customers.",
+  "dancer_good": "\n{color=[c_lightgreen]}The club heated up as %s danced around the stage, flashing her goods.",
+  "dancer_very good": "\n{color=[c_green]}The crowd went wild as %s danced and stripped on stage, her skin glistening with sweat as she worked the pole.",
+  "dancer_perfect": "\n{color=[c_orange]}The customers couldn't take their eyes off %s as she waved to the music, slowly and sexily stripping off, until she stood there naked and wet under their perverted gaze.",
+  "masseuse_very bad": "\n{color=[c_red]}%s clumsily went around giving back rubs, hurting some of them in the process. They grumbled and told her to go away.",
+  "masseuse_bad": "\n{color=[c_lightred]}%s tried to give customers a relaxing rub. Her technique was lacking, and the customers were left unsatisfied.",
+  "masseuse_average": "\n%s gave massages to customers in the onsen, helping them relax and feel more comfortable.",
+  "masseuse_good": "\n{color=[c_lightgreen]}%s joined the customers in the onsen, wearing only a towel, and gave them a nice massage. The customers were visibly turned on after she was done.",
+  "masseuse_very good": "\n{color=[c_green]}The towels slipped off as %s gave the customers a passionate body massage. She used her hands and tongue to turn them on while they waited for their turn.",
+  "masseuse_perfect": "\n{color=[c_orange]}%s went naked into the onsen among the customers, rubbing her body against them until they came all over her silky skin.",
+  "geisha_very bad": "\n{color=[c_red]}%s completely lacked class and came across as clumsy and ignorant. The customers complained that she was just a street girl dressed like a geisha.",
+  "geisha_bad": "\n{color=[c_lightred]}%s kept trying to act like a real geisha when serving tea; it was obvious to anyone that she was not the real thing, though, and customers quickly lost interest.",
+  "geisha_average": "\n%s played a little shamisen and chatted with the customers, helping them relax and forget their worries...",
+  "geisha_good": "\n{color=[c_lightgreen]}%s held a tea ceremony with the customers, exchanging pleasantries while she nonchalantly let her kimono slide to the side, revealing some skin.",
+  "geisha_very good": "\n{color=[c_green]}%s was the life of the party as she greeted customers by their name and complimented them. Wearing a short, revealing kimono, she brushed against their bodies, leaving them all turned on by her scent.",
+  "geisha_perfect": "\n{color=[c_orange]}%s was the epitome of the geisha, being in turn sweet, gifted, witty, and sexy as hell. She wore a see-through kimono, kinkily displaying her cleavage and thighs to drive the customers wild.",
+  "flasher": " A customer dared her to show her tits, and she proudly displayed them for everyone to see.",
+  "temptress": " She convinced the customer%s to try it.",
+  "catgirl": " She purred as she eagerly drank all the customer's cum and licked his dick clean.",
+  "virgin": " The customer was amazed that she was a virgin and paid extra.",
+  "virgin_group": " The customers were amazed that she was a virgin and paid extra.",
+  "reroll": " She barely avoided a catastrophe.",
+  "unlucky": "",
+  "lucky": "",
+  "random item": " The customer%s left something valuable.",
+  "beauty bonus": " The customer%s found her beauty stunning.",
+  "body bonus": " The customer%s loved her curves.",
+  "charm bonus": " The customer%s fell under her charm.",
+  "refinement bonus": " The customer%s loved how refined she was.",
+  "libido bonus": " The customer%s thought she was hot.",
+  "obedience bonus": " The customer%s liked how she took orders.",
+  "constitution bonus": " The customer%s thought she was fit.",
+  "sensitivity bonus": " The customer%s loved how sensitive she was.",
+  "DT_group": " The customers took turns sticking their dicks down her throat as deep as they could.",
+  "DT": " The customer was amazed that he could stick his dick so far down her throat.",
+  "bukkake": " She was fucked hard in her every hole, then the customers took turns coming all over her face.",
+  "creampie": " He came all over her pussy and belly while she moaned with pleasure.",
+  "creampie_group": " They took turns coming into her pussy until it dripped buckets of cum.",
+  "anal creampie": " He fucked her ass hard then shot a huge load in her open asshole.",
+  "anal creampie_group": " They took turns fucking and cumming in her ass until her belly was swollen with cum.",
+  "cum on face": " He moaned and came loads all over her face and hair.",
+  "cum on face_group": " They moaned, cumming loads all over her face and hair.",
+  "swallow": " She eagerly swallowed the cum as it dripped down her throat.",
+  "irrumatio": "",
+  "not satisfied": " :Pron: was disappointed that she wouldn't do what :pron: wanted.",
+  "group not satisfied": " She wouldn't do it, but they didn't mind because group %s is hot.",
+  "bisexual not satisfied": " In the end :pron: got %s, but :pron: was happy to let the girls have their way.",
+  "roll_critical failure": "\n{color=[c_red]}%s wasn't trying hard today. She barely even paid attention to what she was doing.{/color}",
+  "roll_failure": "\n%s wasn't really into it.",
+  "roll_neutral": "\n%s went about her job as usual.",
+  "roll_success": "\n%s was really motivated today.",
+  "roll_critical success": "\n{color=[c_green]}%s did everything she could to please.{/color}",
+  "bisexual_roll_critical failure": "\n{color=[c_red]}%s weren't trying hard today. They weren't paying attention to what they were doing.{/color}",
+  "bisexual_roll_failure": "\n%s weren't really into it.",
+  "bisexual_roll_neutral": "\n%s went about their job as usual.",
+  "bisexual_roll_success": "\n%s were really motivated and playful today.",
+  "bisexual_roll_critical success": "\n{color=[c_green]}%s did everything they could to please the customers and each other.{/color}",
+  "anal_stats": [
+    [
+      "anal",
+      6
+    ],
+    [
+      "constitution",
+      2
+    ],
+    [
+      "body",
+      1
+    ],
+    [
+      "sex",
+      1
+    ]
+  ],
+  "anal_changes": [
+    [
+      [
+        "anal"
+      ],
+      100,
+      2
+    ],
+    [
+      [
+        "constitution"
+      ],
+      70,
+      1
+    ],
+    [
+      [
+        "libido",
+        "obedience",
+        "body"
+      ],
+      25,
+      1
+    ],
+    [
+      [
+        "sensitivity"
+      ],
+      25,
+      -1
+    ]
+  ],
+  "anal_init": " :Pron: wanted to fuck %s in the ass.",
+  "anal_tags": [
+    "anal"
+  ],
+  "sex_stats": [
+    [
+      "sex",
+      6
+    ],
+    [
+      "libido",
+      2
+    ],
+    [
+      "beauty",
+      1
+    ],
+    [
+      "service",
+      1
+    ]
+  ],
+  "sex_changes": [
+    [
+      [
+        "sex"
+      ],
+      100,
+      2
+    ],
+    [
+      [
+        "libido"
+      ],
+      70,
+      1
+    ],
+    [
+      [
+        "sensitivity",
+        "constitution",
+        "beauty"
+      ],
+      25,
+      1
+    ],
+    [
+      [
+        "obedience"
+      ],
+      25,
+      -1
+    ]
+  ],
+  "sex_init": " :Pron: wanted to have sex with %s.",
+  "sex_tags": [
+    "sex"
+  ],
+  "service_stats": [
+    [
+      "service",
+      6
+    ],
+    [
+      "sensitivity",
+      2
+    ],
+    [
+      "charm",
+      1
+    ],
+    [
+      "fetish",
+      1
+    ]
+  ],
+  "service_changes": [
+    [
+      [
+        "service"
+      ],
+      100,
+      2
+    ],
+    [
+      [
+        "sensitivity"
+      ],
+      70,
+      1
+    ],
+    [
+      [
+        "obedience",
+        "libido",
+        "charm"
+      ],
+      25,
+      1
+    ],
+    [
+      [
+        "constitution"
+      ],
+      25,
+      -1
+    ]
+  ],
+  "service_init": " :Pron: wanted %s to give service.",
+  "service_tags": [
+    "service"
+  ],
+  "fetish_stats": [
+    [
+      "fetish",
+      6
+    ],
+    [
+      "obedience",
+      2
+    ],
+    [
+      "refinement",
+      1
+    ],
+    [
+      "anal",
+      1
+    ]
+  ],
+  "fetish_changes": [
+    [
+      [
+        "fetish"
+      ],
+      100,
+      2
+    ],
+    [
+      [
+        "obedience"
+      ],
+      70,
+      1
+    ],
+    [
+      [
+        "constitution",
+        "sensitivity",
+        "refinement"
+      ],
+      25,
+      1
+    ],
+    [
+      [
+        "libido"
+      ],
+      25,
+      -1
+    ]
+  ],
+  "fetish_init": " :Pron: had some very special requests for %s.",
+  "fetish_tags": [
+    "fetish"
+  ],
+  "whore_init": "%s came to your brothel and chose %s.",
+  "bisexual_tags": [
+    "bisexual"
+  ],
+  "group_tags": [
+    "group"
+  ],
+  "M anal_very bad": "\n{color=[c_red]}%s had a hard time and didn't like it one bit. The customer quickly lost interest and left grumbling.",
+  "M anal_bad": "\n{color=[c_lightred]}%s doesn't like it in the ass and it showed. She didn't enjoy herself and neither did the customer.",
+  "M anal_average": "\n%s moans as the customer gets his way with her ass. She's growing to enjoy anal sex.",
+  "M anal_good": "\n{color=[c_lightgreen]}%s takes it up the ass with moans of pleasure. The customer comes all over her butt with a delighted smile on his face.",
+  "M anal_very good": "\n{color=[c_green]}Looks like this girl was made for anal. %s uses her ass to work the customer's dick until it's hard as a rock, inviting him to cum and fill her up.",
+  "M anal_perfect": "\n{color=[c_orange]}%s is an anal sex goddess. She takes it up the ass with unbridled pleasure, crying out loud as the customer releases his seed deep into her belly.",
+  "M sex_very bad": "\n{color=[c_red]}%s is a terrible lay, not enjoying it one bit as the customer violates her body. The customer thought she was awful and left complaining.",
+  "M sex_bad": "\n{color=[c_lightred]}%s tries her best to give the customer a good time, but her fake cries are rather obvious. The customer left relieved but disappointed.",
+  "M sex_average": "\n%s fucks with the customer and tries a few interesting positions. She is starting to enjoy herself and some of her moans were clearly not fake.",
+  "M sex_good": "\n{color=[c_lightgreen]}After a quick bout of foreplay, %s and the customer have wild sex in various positions until he cums hard all over her body.",
+  "M sex_very good": "\n{color=[c_green]}%s is amazing and works that dick like a succubus. She reaches orgasm and cries out as the customer pumps warm cum into her.",
+  "M sex_perfect": "\n{color=[c_orange]}%s cannot get enough, screaming loudly as she enjoys being fucked through multiple orgasms and being covered in the customer's sticky cum.",
+  "M service_very bad": "\n{color=[c_red]}The customer complains that %s doesn't know how to work a dick properly. The customer leaves, upset that she didn't even manage to finish him off.",
+  "M service_bad": "\n{color=[c_lightred]}%s awkwardly tries to service the customer, but her technique is clearly lacking. He ends up masturbating while she looks on with shame.",
+  "M service_average": "\n%s does her best to service the customer, slowly developing her own technique. After teasing the customer for a while, she smiles as he releases his load on her face.",
+  "M service_good": "\n{color=[c_lightgreen]}%s uses her skills to make the customer cum quickly and repeatedly, covering her face and tits with bodily fluids.",
+  "M service_very good": "\n{color=[c_green]}%s is already wet thinking of the customer's dick as she starts sucking and licking it. It isn't long until the customer comes hard in her mouth.",
+  "M service_perfect": "\n{color=[c_orange]}%s offers the customer her body to play with and makes wet sounds as she expertly sucks him off. She savours the feeling of hot, sticky cum on her face and in her mouth, begging the customer for more.",
+  "M fetish_very bad": "\n{color=[c_red]}%s is scared and tense under the customer's touch. She is not enjoying this at all and the customer leaves completely unsatisfied.",
+  "M fetish_bad": "\n{color=[c_lightred]}%s shivers as the customer does new, weird things to her body. The customer watches her reactions with some interest at first, but the slow pace quickly bores him.",
+  "M fetish_average": "\n%s moans a little as she is blindfolded and tied up. She seems more curious than scared about what's happening to her now, and the customer has fun playing with her for a while.",
+  "M fetish_good": "\n{color=[c_lightgreen]}%s shivers with excitement as she feels the bite of the ropes in her skin. The customer teases her body until she is completely wet, begging to be fucked.",
+  "M fetish_very good": "\n{color=[c_green]}%s enjoys the mix of pleasure and pain and begs submissively for more. The customer violates her as she's tied up, bringing her to climax as he cums hard all over her.",
+  "M fetish_perfect": "\n{color=[c_orange]}%s enjoys everything the customer does to her, suggesting new, humiliating ways to tie herself up and get punished. She screams with pain and pleasure, cumming multiple times as her various holes are violated.",
+  "M bisexual_very bad": "\n{color=[c_red]}%s were clumsy and uncooperative. The customer quickly got bored and left, grumbling about a refund.",
+  "M bisexual_bad": "\n{color=[c_lightred]}It's obvious %s aren't really good at this and are just pretending. The customer fucks them one after the other, but there is no chemistry.",
+  "M bisexual_average": "\n%s slowly finger their pussies while the customer looks on with lust. He soon joins them, and they do their best to make it a memorable time.",
+  "M bisexual_good": "\n{color=[c_lightgreen]}%s are eagerly touching and teasing each other. They playfully try new ways to excite the customer, and he quickly cums as they play with each other's breasts and pussy.",
+  "M bisexual_very good": "\n{color=[c_green]}%s love cock as much as they love each other. They both work the customer's dick using their hands, mouths and bodies, making him come all over them.",
+  "M bisexual_perfect": "\n{color=[c_orange]}%s are perfect sex kittens, expertly licking each other's cunt while the customer fucks their every hole. They eagerly kiss and lick the cum from each other's mouth as he looks on with bliss.",
+  "group_very bad": "\n{color=[c_red]}With too many customers to satisfy, %s seems at a loss and doesn't know what to do. The group leaves unsatisfied and complaining.",
+  "group_bad": "\n{color=[c_lightred]}%s is kind of shy in a group. She tries to do her job but the customers find her performance rather underwhelming.",
+  "group_average": "\nThe customers take turns fucking %s. She takes it all in stride.",
+  "group_good": "\n{color=[c_lightgreen]}%s works hard to please every customer in the group, bringing them to a grand finish using her every hole. A moment they will not soon forget.",
+  "group_very good": "\n{color=[c_green]}%s is fucked long and hard by the customers and it looks like she isn't ready to stop. It looks like no matter how many times they fuck her, she always wants another dick.",
+  "group_perfect": "\n{color=[c_orange]}%s couldn't wait to have her every hole filled by the customers, not letting them rest until they have spurted their cum over every inch of her body.",
+  "F anal_very bad": "\n{color=[c_red]}%s had a hard time and didn't like it one bit. The customer quickly lost interest and left grumbling.",
+  "F anal_bad": "\n{color=[c_lightred]}%s doesn't like it in the ass and it showed. She didn't enjoy herself and neither did the customer.",
+  "F anal_average": "\n%s moans as the customer gets her way with her ass. She's growing to enjoy anal sex.",
+  "F anal_good": "\n{color=[c_lightgreen]}%s takes it up the ass with moans of pleasure. The customer pounds her butt with a delighted smile on her face.",
+  "F anal_very good": "\n{color=[c_green]}Looks like this girl was made for anal. %s uses her ass to grind against the customer's pussy until it becomes very wet, inviting her to cum together with her.",
+  "F anal_perfect": "\n{color=[c_orange]}%s is an anal sex goddess. She takes it up the ass with unbridled pleasure, crying out loud as the customer reaches her own intense orgasm.",
+  "F sex_very bad": "\n{color=[c_red]}%s is a terrible lay, not enjoying it one bit as the customer violates her body. The customer thought she was awful and left complaining.",
+  "F sex_bad": "\n{color=[c_lightred]}%s tries her best to give the customer a good time, but her fake cries are rather obvious. The customer left relieved but disappointed.",
+  "F sex_average": "\n%s fucks with the customer and tries a few interesting positions. She is starting to enjoy herself and some of her moans were clearly not fake.",
+  "F sex_good": "\n{color=[c_lightgreen]}After a quick bout of foreplay, %s and the customer have wild sex in various positions until they both cum hard.",
+  "F sex_very good": "\n{color=[c_green]}%s is amazing and works that pussy like a succubus. She reaches orgasm and cries out as the customer gushes love juice all over her.",
+  "F sex_perfect": "\n{color=[c_orange]}%s cannot get enough, screaming loudly as she enjoys being fucked through multiple orgasms and being covered in the customer's sticky love juice.",
+  "F service_very bad": "\n{color=[c_red]}The customer complains that %s doesn't know how to work a pussy properly. She leaves, upset that she didn't even manage to finish her off.",
+  "F service_bad": "\n{color=[c_lightred]}%s awkwardly tries to service the customer, but her technique is clearly lacking. The customer ends up masturbating while she looks on with shame.",
+  "F service_average": "\nShe does her best to service the customer, slowly developing her own technique. After teasing the customer for a while, %s smiles as she receives the customer's splashing love juices all over her face.",
+  "F service_good": "\n{color=[c_lightgreen]}%s uses her skills to make the customer squirt hard, covering her face and tits with bodily fluids.",
+  "F service_very good": "\n{color=[c_green]}%s is already wet thinking of the customer's pussy as she starts fingering and licking it. It isn't long until the customer comes hard from her tongue work.",
+  "F service_perfect": "\n{color=[c_orange]}%s offers the customer her body to play with and makes wet sounds as she expertly licks her out. She savours the feeling of hot, sticky love juice on her face and in her mouth, begging the customer for more.",
+  "F fetish_very bad": "\n{color=[c_red]}%s is scared and tense under the customer's touch. She is not enjoying this at all and the customer leaves completely unsatisfied.",
+  "F fetish_bad": "\n{color=[c_lightred]}%s shivers as the customer does new, weird things to her body. The customer watches her reactions with some interest at first, but the slow pace quickly bores her.",
+  "F fetish_average": "\n%s moans a little as she is blindfolded and tied up. She seems more curious than scared about what's happening to her now, and the customer has fun playing with her for a while.",
+  "F fetish_good": "\n{color=[c_lightgreen]}%s shivers with excitement as she feels the bite of the ropes in her skin. The customer teases her body until she is completely wet, begging to be fucked.",
+  "F fetish_very good": "\n{color=[c_green]}%s enjoys the mix of pleasure and pain and begs submissively for more. The customer violates her as she's tied up, bringing her to climax as she cums hard with her.",
+  "F fetish_perfect": "\n{color=[c_orange]}%s enjoys everything the customer does to her, suggesting new, humiliating ways to tie herself up and get punished. She screams with pain and pleasure, cumming multiple times as her various holes are violated.",
+  "F bisexual_very bad": "\n{color=[c_red]}%s were clumsy and uncooperative. The customer quickly got bored and left, grumbling about a refund.",
+  "F bisexual_bad": "\n{color=[c_lightred]}It's obvious %s aren't really good at this and are just pretending. The customer fucks them one after the other, but there is no chemistry.",
+  "F bisexual_average": "\n%s slowly finger their pussies while the customer looks on with lust. She soon joins them, and they do their best to make it a memorable time.",
+  "F bisexual_good": "\n{color=[c_lightgreen]}%s are eagerly touching and teasing each other. They playfully try new ways to excite the customer, and she quickly cums as they play with each other's breasts and pussies.",
+  "F bisexual_very good": "\n{color=[c_green]}%s love pussy. They both work the customer's erogenous zones using their hands, mouths and bodies, making her come again and again.",
+  "F bisexual_perfect": "\n{color=[c_orange]}%s are perfect sex kittens, expertly licking the customer's cunt and each other. They eagerly kiss and lick the love juice from each other's mouth as she looks on with bliss."
+}

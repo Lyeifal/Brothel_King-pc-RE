@@ -54,12 +54,6 @@ translate chinese_simplified chapter2_7a1b9cbf:
     # sill happy "You can now move this operation to a larger brothel. Go to the {b}city{/b} tab to set up your new quarters."
     sill happy "You can now move this operation to a larger brothel. Go to the {b}city{/b} tab to set up your new quarters."
 
-# game/BKevents.rpy:710
-translate chinese_simplified advance_to_chapter_326959e3:
-
-    # "[chosen_district.name] is the district where you are currently established. Please choose a different district."
-    "[chosen_district.name] is the district where you are currently established. Please choose a different district."
-
 # game/BKevents.rpy:804
 translate chinese_simplified advance_to_chapter_1ef7a1d7:
 
@@ -4656,12 +4650,6 @@ translate chinese_simplified contract_MC_event_5febeb5d:
     # "Unholy light bathes the scene as the head nun stands naked in a trance, singing a psalm in a foreign tongue."
     "Unholy light bathes the scene as the head nun stands naked in a trance, singing a psalm in a foreign tongue."
 
-# game/BKevents.rpy:5770
-translate chinese_simplified contract_MC_event_99df747a:
-
-    # "Demonic Voice" "{font=resources/fonts/SFBurlingtonScript.ttf}Yog-Sothoth mgah'ehye n'ghftdrnn hup mgepogg fa'ch ymg' nilgh'ri...{/font}"
-    "Demonic Voice" "{font=resources/fonts/SFBurlingtonScript.ttf}Yog-Sothoth mgah'ehye n'ghftdrnn hup mgepogg fa'ch ymg' nilgh'ri...{/font}"
-
 # game/BKevents.rpy:5774
 translate chinese_simplified contract_MC_event_43762a61:
 
@@ -4704,12 +4692,6 @@ translate chinese_simplified contract_MC_event_054e9ed3:
     # "Stepping up to the altar, you try to shake off the possession spell that links the demon and the hapless priestess."
     "Stepping up to the altar, you try to shake off the possession spell that links the demon and the hapless priestess."
 
-# game/BKevents.rpy:5832
-translate chinese_simplified contract_MC_event_f80c140c:
-
-    # you "{font=resources/fonts/SFBurlingtonScript.ttf}Nogephaii ahagl ymg' hup mgepnog, ars'hol!{/font}"
-    you "{font=resources/fonts/SFBurlingtonScript.ttf}Nogephaii ahagl ymg' hup mgepnog, ars'hol!{/font}"
-
 # game/BKevents.rpy:5834
 translate chinese_simplified contract_MC_event_0d490d53:
 
@@ -4721,12 +4703,6 @@ translate chinese_simplified contract_MC_event_c074fd88:
 
     # "The monster's image lingers for a few moments, fading out. You blink, and it's gone."
     "The monster's image lingers for a few moments, fading out. You blink, and it's gone."
-
-# game/BKevents.rpy:5839
-translate chinese_simplified contract_MC_event_c10602c0:
-
-    # you "{font=resources/fonts/SFBurlingtonScript.ttf}Nogephaii ahagl ymg', err...{/font}\nC'm'on, lady, wake up!"
-    you "{font=resources/fonts/SFBurlingtonScript.ttf}Nogephaii ahagl ymg', err...{/font}\nC'm'on, lady, wake up!"
 
 # game/BKevents.rpy:5843
 translate chinese_simplified contract_MC_event_b8f3c672:

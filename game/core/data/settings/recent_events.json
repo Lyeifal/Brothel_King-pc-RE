@@ -1,0 +1,168 @@
+{
+  "recent_event_templates_i18n": {
+    "level up": {
+      "type": "level up",
+      "action_i18n": "Earning some experience",
+      "base_description_i18n": "She has become more experienced ({color=[c_emerald]}level %s{/color}).",
+      "discipline": false
+    },
+    "rank up": {
+      "type": "rank up",
+      "action_i18n": "Earned a new rank",
+      "base_description_i18n": "She has reached {color=[c_emerald]}rank %s{/color}.",
+      "discipline": false
+    },
+    "job up": {
+      "type": "job up",
+      "action_i18n": "Increasing her job skill",
+      "base_description_i18n": "She has increased her {color=[c_emerald]}%s{/color} skills.",
+      "discipline": false
+    },
+    "good result": {
+      "type": "good result",
+      "action_i18n": "Performing well while working",
+      "base_description_i18n": "Her performance was {color=[c_emerald]}%s{/color} while working (%s).",
+      "discipline": false
+    },
+    "quest good result": {
+      "type": "quest good result",
+      "action_i18n": "Performing well on a quest",
+      "base_description_i18n": "%s",
+      "discipline": false
+    },
+    "class good result": {
+      "type": "class good result",
+      "action_i18n": "Studying hard",
+      "base_description_i18n": "%s",
+      "discipline": false
+    },
+    "new act": {
+      "type": "new act",
+      "action_i18n": "Trying something new",
+      "base_description_i18n": "She {color=[c_emerald]}accepted %s training{/color} for the first time.",
+      "discipline": false
+    },
+    "helped": {
+      "type": "helped",
+      "action_i18n": "Helping a friend",
+      "base_description_i18n": "",
+      "discipline": false
+    },
+    "exhausted": {
+      "type": "exhausted",
+      "action_i18n": "Becoming exhausted",
+      "base_description_i18n": "She pushed herself too hard and ended up {color=[c_crimson]}exhausted{/color}."
+    },
+    "sick": {
+      "type": "sick",
+      "action_i18n": "Falling sick",
+      "base_description_i18n": "She fell {color=[c_crimson]}sick{/color}."
+    },
+    "hurt": {
+      "type": "hurt",
+      "action_i18n": "Getting hurt",
+      "base_description_i18n": "She was {color=[c_crimson]}raped{/color} by %s."
+    },
+    "defended": {
+      "type": "defended",
+      "action_i18n": "Fighting a customer",
+      "base_description_i18n": "She {color=[c_emerald]}protected herself{/color} from a rapist customer."
+    },
+    "ran away": {
+      "type": "ran away",
+      "action_i18n": "Running away",
+      "base_description_i18n": "She ran away, but you brought her back.",
+      "encourage": false
+    },
+    "disobey": {
+      "type": "disobey",
+      "action_i18n": "Disobeying you",
+      "base_description_i18n": "She {color=[c_crimson]}refused to work as a %s{/color}.",
+      "encourage": false
+    },
+    "fooled around": {
+      "type": "fooled around",
+      "action_i18n": "Fooling around with customers",
+      "base_description_i18n": "She {color=[c_crimson]}accepted %s with a customer against your wishes{/color}.",
+      "encourage": false
+    },
+    "bad result": {
+      "type": "bad result",
+      "action_i18n": "Performing badly while working",
+      "base_description_i18n": "She performed {color=[c_crimson]}%sly{/color} while working (%s).",
+      "encourage": false
+    },
+    "quest bad result": {
+      "type": "quest bad result",
+      "action_i18n": "Performing badly on a quest",
+      "base_description_i18n": "%s",
+      "encourage": false
+    },
+    "class bad result": {
+      "type": "class bad result",
+      "action_i18n": "Not paying attention in school",
+      "base_description_i18n": "%s",
+      "encourage": false
+    },
+    "refused": {
+      "type": "refused",
+      "action_i18n": "Refusing training",
+      "base_description_i18n": "She {color=[c_crimson]}refused to train (%s){/color}.",
+      "encourage": false
+    },
+    "argued": {
+      "type": "argued",
+      "action_i18n": "Arguing with a rival",
+      "base_description_i18n": "",
+      "encourage": false
+    },
+    "acquired": {
+      "type": "acquired",
+      "base_description_i18n": "You have acquired %s.",
+      "encourage": false,
+      "discipline": false
+    },
+    "MC met": {
+      "type": "MC met",
+      "base_description_i18n": "You have met %s.",
+      "encourage": false,
+      "discipline": false
+    },
+    "MC friend": {
+      "type": "MC friend",
+      "base_description_i18n": "You and %s have become friends.",
+      "encourage": false,
+      "discipline": false
+    },
+    "MC flower": {
+      "type": "MC flower",
+      "base_description_i18n": "You may now give %s flowers.",
+      "encourage": false,
+      "discipline": false
+    },
+    "MC girlfriend": {
+      "type": "MC friend",
+      "base_description_i18n": "%s is now your girlfriend.",
+      "encourage": false,
+      "discipline": false
+    },
+    "MC lover": {
+      "type": "MC friend",
+      "base_description_i18n": "%s is now your lover.",
+      "encourage": false,
+      "discipline": false
+    },
+    "MC job": {
+      "type": "MC job",
+      "base_description_i18n": "You can now offer %s a job.",
+      "encourage": false,
+      "discipline": false
+    },
+    "kidnapped": {
+      "type": "kidnapped",
+      "base_description_i18n": "She has been kidnapped by %s.",
+      "encourage": false,
+      "discipline": false
+    }
+  }
+}

@@ -2204,7 +2204,7 @@ label city_wrestle:
 
         warrior "I see. Then scram, weakling."
 
-        $ dis = selected_district.name.lower()
+        $ dis = __(selected_district.name).lower()
 
         "The mercenaries scoff and jeer, calling you a coward and all sorts of unpleasant names as you pitifully make your way back to [dis]."
 
@@ -4287,7 +4287,7 @@ label city_mob:
 
     man "Wait!!! I recognize him!"
 
-    $ place = district.name.lower()
+    $ place = __(district.name).lower()
 
     man "He's one of the brothel owners! The scum of [place]!!!"
 
@@ -4695,8 +4695,8 @@ label slave_beach_event(): # Happens in Seafront, Beach, lakefront, waterfalls d
 
     $ story_flags["last beach event"] = calendar.time
 
-    $ dis = selected_district.name.lower()
-    $ loc = selected_location.name.lower()
+    $ dis = __(selected_district.name).lower()
+    $ loc = __(selected_location.name).lower()
 
     scene black with fade
     show bg beach at top with dissolve
@@ -4799,9 +4799,9 @@ label slave_beach_event(): # Happens in Seafront, Beach, lakefront, waterfalls d
 
                 if fix:
                     if girl.personality_unlock[fix] and girl.check_fix(fix) == "pos":
-                        $ narrator("You remember [girl.name] likes %s, and decide to exploit her weakness." % fix_description[fix + " description"][:-1])
+                        $ narrator(__("You remember [girl.name] likes %s, and decide to exploit her weakness.") % fix_description[fix + " description"][:-1])
                     elif girl.personality_unlock[fix] and girl.check_fix(fix) == "neg":
-                        $ narrator("You remember [girl.name] dislikes %s, but you decide to go for it anyway." % fix_description[fix + " description"][:-1])
+                        $ narrator(__("You remember [girl.name] dislikes %s, but you decide to go for it anyway.") % fix_description[fix + " description"][:-1])
 
                     if fix == "groping her ass":
                         "Pretending you're still massaging her, you bring your hands closer and closer to her buttocks. She says nothing, although you can feel some tension build up."

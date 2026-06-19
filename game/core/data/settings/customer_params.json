@@ -1,0 +1,141 @@
+{
+    "_description": "Customer preferences, advertising settings, reputation decay, tip modifiers, and XP bonus. See BK_EVOLUTION_DATA_MIGRATION.md.",
+    "customer_base_preference": {
+        "waitress": 25,
+        "dancer": 25,
+        "masseuse": 25,
+        "geisha": 25,
+        "service": 30,
+        "sex": 35,
+        "anal": 20,
+        "fetish": 15
+    },
+    "advertising_settings": {
+        "0": {
+            "reputation": 0.5,
+            "customer attraction": 0.5,
+            "min customer attraction": 0.5,
+            "max customer attraction": 0.5,
+            "customer budget": 0.5,
+            "min customer budget": 0.4,
+            "max customer budget": 0.6
+        },
+        "1": {
+            "reputation": 0.5,
+            "customer attraction": 1.0,
+            "min customer attraction": 0.5,
+            "max customer attraction": 1.5,
+            "customer budget": 0.6,
+            "min customer budget": 0.4,
+            "max customer budget": 0.8
+        },
+        "2": {
+            "reputation": 0.6,
+            "customer attraction": 1.15,
+            "min customer attraction": 0.5,
+            "max customer attraction": 1.75,
+            "customer budget": 0.7,
+            "min customer budget": 0.4,
+            "max customer budget": 1.0
+        },
+        "3": {
+            "reputation": 0.75,
+            "customer attraction": 1.3,
+            "min customer attraction": 0.5,
+            "max customer attraction": 2.1,
+            "customer budget": 0.8,
+            "min customer budget": 0.4,
+            "max customer budget": 1.2
+        },
+        "4": {
+            "reputation": 0.9,
+            "customer attraction": 1.5,
+            "min customer attraction": 0.5,
+            "max customer attraction": 2.5,
+            "customer budget": 1.0,
+            "min customer budget": 0.4,
+            "max customer budget": 1.6
+        },
+        "5": {
+            "reputation": 1.1,
+            "customer attraction": 1.75,
+            "min customer attraction": 0.5,
+            "max customer attraction": 3.0,
+            "customer budget": 1.2,
+            "min customer budget": 0.4,
+            "max customer budget": 2.0
+        },
+        "6": {
+            "reputation": 1.3,
+            "customer attraction": 2.0,
+            "min customer attraction": 0.5,
+            "max customer attraction": 3.5,
+            "customer budget": 1.5,
+            "min customer budget": 0.4,
+            "max customer budget": 2.6
+        },
+        "7": {
+            "reputation": 1.5,
+            "customer attraction": 2.5,
+            "min customer attraction": 0.5,
+            "max customer attraction": 4.5,
+            "customer budget": 2.0,
+            "min customer budget": 0.4,
+            "max customer budget": 3.6
+        }
+    },
+    "reputation_decay": {
+        "1": 0.0,
+        "2": -0.01,
+        "3": -0.02,
+        "4": -0.03,
+        "5": -0.04,
+        "6": -0.05,
+        "7": -0.06
+    },
+    "tip_result_modifier": {
+        "job very bad": 0.75,
+        "job bad": 0.9,
+        "job average": 1.0,
+        "job good": 1.2,
+        "job very good": 1.35,
+        "job perfect": 1.55,
+        "whore very bad": 0.35,
+        "whore bad": 0.7,
+        "whore average": 1.0,
+        "whore good": 1.25,
+        "whore very good": 1.5,
+        "whore perfect": 1.75
+    },
+    "tip_advertising_modifier": {
+        "anal": 1.15,
+        "sex": 1.1,
+        "service": 1.05,
+        "fetish": 1.2,
+        "waitress": 1.0,
+        "dancer": 1.0,
+        "masseuse": 1.0,
+        "geisha": 1.0
+    },
+    "tip_act_modifier": {
+        "anal": 1.15,
+        "sex": 1.1,
+        "service": 1.05,
+        "fetish": 1.2,
+        "waitress": 1.0,
+        "dancer": 1.0,
+        "masseuse": 1.0,
+        "geisha": 1.0,
+        "naked bonus": 1.05,
+        "bisexual bonus": 0.85,
+        "group bonus": 0.7
+    },
+    "xp_bonus_dict": {
+        "very bad": 0.25,
+        "bad": 0.35,
+        "average": 0.5,
+        "good": 0.65,
+        "very good": 0.75,
+        "perfect": 0.85
+    }
+}

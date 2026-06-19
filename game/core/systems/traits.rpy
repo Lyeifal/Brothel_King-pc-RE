@@ -82,6 +82,10 @@ label init_traits():
     python:
         traits_initiated = True
 
+        ## EN: Check if JSON traits are already loaded (BK Evolution).
+        ## ZH: 检查是否已从 JSON 加载特质（BK Evolution）。
+        json_traits_loaded = (len(trait_dict) > 5)
+
         ## GOLD TRAITS (for unique girls) ##
 
         gold_traits = [
@@ -249,8 +253,11 @@ label init_traits():
 
         neg_traits += custom_traits["neg"]
 
-        for trait in gold_traits + pos_traits + neg_traits:
-            trait_registry.register_trait(trait, category="gold" if trait in gold_traits else ("positive" if trait in pos_traits else "negative"))
+        ## EN: Only register hardcoded traits if JSON traits are not loaded (BK Evolution).
+        ## ZH: 仅在未从 JSON 加载特质时才注册硬编码特质（BK Evolution）。
+        if not json_traits_loaded:
+            for trait in gold_traits + pos_traits + neg_traits:
+                trait_registry.register_trait(trait, category="gold" if trait in gold_traits else ("positive" if trait in pos_traits else "negative"))
 
         ## SPECIAL TRAITS ##
 

@@ -1,0 +1,150 @@
+{
+    "_description": "Inventory filters, filter lists, and sorters. Loaded into inventory_filters, filter_list, and sorter_dict. See BK_EVOLUTION_DATA_MIGRATION.md.",
+    "inventory_filters": {
+        "base": [null, "weapon", "clothing", "trinket", "consumable", "misc"],
+        "minion_merchant": [null, "misc"],
+        "Accessory": [null, "trinket"],
+        "Flower": [null, "misc"],
+        "Weapon": [null, "weapon"],
+        "Toy": [null, "consumable"],
+        "Ring": [null, "trinket"],
+        "Gift": [null, "misc"],
+        "Dress": [null, "clothing"]
+    },
+    "filter_list": {
+        "null": [],
+        "weapon": ["hands"],
+        "clothing": ["body", "accessory"],
+        "trinket": ["finger", "neck"],
+        "consumable": ["consumable"],
+        "misc": ["misc"]
+    },
+    "sorter_dict": {
+        "alpha": {
+            "caption_i18n": "A-z",
+            "attribute": "name",
+            "tooltip_i18n": "name",
+            "reverse": false
+        },
+        "badge": {
+            "caption_i18n": "Bdg",
+            "attribute": "badge",
+            "tooltip_i18n": "badge",
+            "reverse": true
+        },
+        "price": {
+            "caption_i18n": "0-9",
+            "attribute": "price",
+            "tooltip_i18n": "price",
+            "reverse": false
+        },
+        "type": {
+            "caption_i18n": "Typ",
+            "attribute": "filter",
+            "tooltip_i18n": "item type",
+            "reverse": false
+        },
+        "level": {
+            "caption_i18n": "Lvl",
+            "attribute": "level",
+            "tooltip_i18n": "girl level",
+            "reverse": true
+        },
+        "rank": {
+            "caption_i18n": "Rk",
+            "attribute": "rank",
+            "tooltip_i18n": "slave rank",
+            "reverse": true
+        },
+        "job": {
+            "caption_i18n": "Job",
+            "attribute": "job_sort_value",
+            "tooltip_i18n": "girl job",
+            "reverse": false
+        },
+        "beauty": {
+            "caption_i18n": "Bea.",
+            "attribute": "beauty",
+            "tooltip_i18n": "Beauty",
+            "reverse": true
+        },
+        "body": {
+            "caption_i18n": "Bod.",
+            "attribute": "body",
+            "tooltip_i18n": "Body",
+            "reverse": true
+        },
+        "charm": {
+            "caption_i18n": "Cha.",
+            "attribute": "charm",
+            "tooltip_i18n": "Charm",
+            "reverse": true
+        },
+        "refinement": {
+            "caption_i18n": "Ref.",
+            "attribute": "refinement",
+            "tooltip_i18n": "Refinement",
+            "reverse": true
+        },
+        "libido": {
+            "caption_i18n": "Lib.",
+            "attribute": "libido",
+            "tooltip_i18n": "Libido",
+            "reverse": true
+        },
+        "obedience": {
+            "caption_i18n": "Obe.",
+            "attribute": "obedience",
+            "tooltip_i18n": "Obedience",
+            "reverse": true
+        },
+        "sensitivity": {
+            "caption_i18n": "Sen.",
+            "attribute": "sensitivity",
+            "tooltip_i18n": "Sensitivity",
+            "reverse": true
+        },
+        "constitution": {
+            "caption_i18n": "Con.",
+            "attribute": "constitution",
+            "tooltip_i18n": "Constitution",
+            "reverse": true
+        },
+        "service": {
+            "caption_i18n": "Serv.",
+            "attribute": "service",
+            "tooltip_i18n": "Service skill",
+            "reverse": true
+        },
+        "sex": {
+            "caption_i18n": "Sex",
+            "attribute": "sex",
+            "tooltip_i18n": "Sex skill",
+            "reverse": true
+        },
+        "anal": {
+            "caption_i18n": "Anal",
+            "attribute": "anal",
+            "tooltip_i18n": "Anal skill",
+            "reverse": true
+        },
+        "fetish": {
+            "caption_i18n": "Fet.",
+            "attribute": "fetish",
+            "tooltip_i18n": "Fetish skill",
+            "reverse": true
+        },
+        "energy": {
+            "caption_i18n": "En.",
+            "attribute": "energy",
+            "tooltip_i18n": "energy",
+            "reverse": false
+        },
+        "experience": {
+            "caption_i18n": "Tr.",
+            "attribute": "training_value",
+            "tooltip_i18n": "sexual training level",
+            "reverse": true
+        }
+    }
+}

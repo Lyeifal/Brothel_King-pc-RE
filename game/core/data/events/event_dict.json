@@ -1,0 +1,447 @@
+{
+  "zodiac_intro": {
+    "label": "zodiac_intro",
+    "type": "day",
+    "once": false
+  },
+  "new_contract": {
+    "label": "new_contract",
+    "rank": 2,
+    "day": 1,
+    "once": false,
+    "type": "morning"
+  },
+  "run_contract": {
+    "label": "run_contract",
+    "rank": 2,
+    "day": 28,
+    "once": false,
+    "type": "night"
+  },
+  "tax_check": {
+    "label": "tax_check",
+    "rank": 2,
+    "day": 15,
+    "once": false,
+    "type": "morning"
+  },
+  "tax_payment": {
+    "label": "tax_payment",
+    "rank": 2,
+    "day": 1,
+    "once": false,
+    "type": "night"
+  },
+  "advertising_intro": {
+    "label": "advertising_intro",
+    "once": false,
+    "type": "morning"
+  },
+  "bis_introduction": {
+    "label": "bis_introduction",
+    "condition": "has_bis"
+  },
+  "group_introduction": {
+    "label": "group_introduction",
+    "condition": "has_group"
+  },
+  "farm_meet_gizel": {
+    "label": "farm_meet_gizel",
+    "chapter": 1,
+    "chance": 0.5,
+    "location": "spice market",
+    "condition": null,
+    "not_condition": null,
+    "once": true
+  },
+  "farm_meet_gizel2": {
+    "label": "farm_meet_gizel2",
+    "chapter": 1,
+    "chance": 1.0,
+    "location": "junkyard",
+    "condition": null,
+    "not_condition": null,
+    "once": true
+  },
+  "farm_go_with_gizel": {
+    "label": "farm_go_with_gizel",
+    "chapter": 1,
+    "chance": 1.0,
+    "location": "farm",
+    "condition": null,
+    "not_condition": null,
+    "once": true
+  },
+  "farm_found_a_place": {
+    "label": "farm_found_a_place",
+    "chapter": 1,
+    "chance": 1.0,
+    "location": "junkyard",
+    "condition": null,
+    "not_condition": null,
+    "once": true
+  },
+  "farm_gizel_introduction": {
+    "label": "farm_gizel_introduction",
+    "chapter": 1,
+    "chance": 1.0,
+    "location": "farm",
+    "condition": null,
+    "not_condition": null,
+    "once": true
+  },
+  "farm_meet_goldie": {
+    "label": "farm_meet_goldie",
+    "chapter": 1,
+    "chance": 0.5,
+    "location": "farm",
+    "condition": null,
+    "not_condition": null,
+    "once": true,
+    "order": 1
+  },
+  "farm_meet_stella": {
+    "label": "farm_meet_stella",
+    "chapter": 2,
+    "chance": 1.0,
+    "location": "harbor",
+    "condition": null,
+    "not_condition": null,
+    "once": true,
+    "order": 1
+  },
+  "farm_meet_willow": {
+    "label": "farm_meet_willow",
+    "chapter": 1,
+    "chance": 1.0,
+    "location": "sewers",
+    "condition": null,
+    "not_condition": null,
+    "once": true,
+    "order": 1
+  },
+  "farm_meet_gina": {
+    "label": "farm_meet_gina",
+    "chapter": 1,
+    "chance": 1.0,
+    "location": "junkyard",
+    "condition": null,
+    "not_condition": null,
+    "once": true,
+    "order": 1
+  },
+  "farm_activate_goldie": {
+    "label": "farm_activate_goldie",
+    "chapter": 1,
+    "chance": 1.0,
+    "location": "farm",
+    "condition": null,
+    "not_condition": null,
+    "once": true
+  },
+  "farm_second_monster": {
+    "label": "farm_second_monster",
+    "chapter": 1,
+    "chance": 1.0,
+    "location": "farm",
+    "condition": null,
+    "not_condition": null,
+    "once": true
+  },
+  "c1_visit_watchtower": {
+    "label": "c1_visit_watchtower",
+    "chapter": 1,
+    "chance": 1.0,
+    "location": "watchtower",
+    "condition": "c1_goal_reached",
+    "min_gold": 1000,
+    "not_condition": null,
+    "once": true,
+    "modes": "story"
+  },
+  "c1_thieves_guild_tip": {
+    "label": "c1_thieves_guild_tip",
+    "chapter": 1,
+    "type": "city",
+    "chance": 0.25,
+    "not_condition": "c1_spice_market",
+    "modes": "story"
+  },
+  "c1_spice_market_25": {
+    "label": "c1_spice_market",
+    "chapter": 1,
+    "chance": 0.25,
+    "location": "spice market",
+    "condition": "c1_thieves_guild_tip",
+    "modes": "story"
+  },
+  "c1_spice_market": {
+    "label": "c1_spice_market",
+    "chapter": 1,
+    "chance": 1.0,
+    "location": "spice market",
+    "condition": "c1_thieves_guild_tip",
+    "modes": "story"
+  },
+  "c1_sewers": {
+    "label": "c1_sewers",
+    "chapter": 1,
+    "location": "sewers",
+    "condition": "c1_spice_market",
+    "modes": "story"
+  },
+  "c1_sewers_return": {
+    "label": "c1_sewers_return",
+    "chapter": 1,
+    "location": "sewers",
+    "modes": "story"
+  },
+  "c1_thieves_guild_found": {
+    "label": "c1_thieves_guild_found",
+    "chapter": 1,
+    "location": "thieves guild",
+    "not_condition": "c1_goal_reached",
+    "modes": "story"
+  },
+  "c1_ask_guild_for_help": {
+    "label": "c1_ask_guild_for_help",
+    "chapter": 1,
+    "location": "thieves guild",
+    "condition": "c1_robbed",
+    "modes": "story"
+  },
+  "c1_satella_intro": {
+    "label": "c1_satella_intro",
+    "chapter": 1,
+    "location": "thieves guild",
+    "condition": "c1_ask_guild_for_help",
+    "modes": "story"
+  },
+  "c1_captain_meeting": {
+    "label": "c1_captain_meeting",
+    "chapter": 1,
+    "location": "watchtower",
+    "condition": "c1_satella_intro",
+    "modes": "story"
+  },
+  "c2_sewer_girl_returns": {
+    "label": "c2_sewer_girl_returns",
+    "chapter": 2,
+    "modes": "story"
+  },
+  "c2_meet_carpenter": {
+    "label": "meet_carpenter",
+    "location": "gallows",
+    "modes": "story"
+  },
+  "c2_princess_visit1": {
+    "label": "c2_princess_visit1",
+    "chapter": 2,
+    "location": "stables",
+    "weekday": "Saturday",
+    "modes": "story"
+  },
+  "c2_princess_visit2": {
+    "label": "c2_princess_visit2",
+    "chapter": 2,
+    "weekday": "Monday",
+    "modes": "story"
+  },
+  "c2_gio_meeting": {
+    "label": "c2_gio_meeting",
+    "chapter": 2,
+    "location": "plaza",
+    "modes": "story"
+  },
+  "c2_suzume_forest1": {
+    "label": "c2_suzume_forest1",
+    "chapter": 2,
+    "location": "farm",
+    "modes": "story"
+  },
+  "c2_suzume_arena": {
+    "label": "c2_suzume_arena",
+    "chapter": 2,
+    "location": "arena",
+    "modes": "story"
+  },
+  "c2_suzume_forest2": {
+    "label": "c2_suzume_forest2",
+    "chapter": 2,
+    "location": "farm",
+    "modes": "story"
+  },
+  "c2_suzume_brothel": {
+    "label": "c2_suzume_brothel",
+    "chapter": 2,
+    "location": "seafront",
+    "modes": "story"
+  },
+  "c2_homura_okiya1": {
+    "label": "c2_homura_okiya1",
+    "type": "night",
+    "chapter": 2,
+    "room": "okiya",
+    "chance": 0.3,
+    "modes": "story"
+  },
+  "c2_narika_H1": {
+    "label": "c2_narika_H1",
+    "type": "night",
+    "modes": "story"
+  },
+  "c3_suzume_hint": {
+    "label": "c3_suzume_hint",
+    "type": "morning",
+    "chapter": 3,
+    "condition": "homura summoned",
+    "modes": "story"
+  },
+  "c3_narika_MU_class": {
+    "label": "c3_narika_MU_class",
+    "type": "morning",
+    "once": false,
+    "modes": "story"
+  },
+  "narika_break_test": {
+    "label": "narika_break_test",
+    "type": "night",
+    "once": false
+  },
+  "haruka_break_test": {
+    "label": "haruka_break_test",
+    "type": "morning",
+    "once": false
+  },
+  "homura_farm": {
+    "label": "homura_farm",
+    "type": "morning",
+    "once": false
+  },
+  "meet_gurigura": {
+    "label": "meet_gurigura",
+    "location": "prison",
+    "order": 1
+  },
+  "meet_ramias": {
+    "label": "meet_ramias",
+    "location": "arena",
+    "order": 1
+  },
+  "meet_katryn": {
+    "label": "meet_katryn",
+    "location": "magic university",
+    "order": 1
+  },
+  "meet_riche": {
+    "label": "meet_riche",
+    "location": "botanical garden",
+    "order": 1
+  },
+  "meet_giftgirl": {
+    "label": "meet_giftgirl",
+    "location": "exotic emporium",
+    "order": 1
+  },
+  "meet_twins": {
+    "label": "meet_twins",
+    "location": "pilgrim road",
+    "order": 1
+  },
+  "satella_first_visit": {
+    "label": "satella_first_visit",
+    "location": "thieves guild",
+    "chapter": 2
+  },
+  "satella_visit": {
+    "label": "satella_visit",
+    "location": "thieves guild",
+    "chapter": 2,
+    "once": false
+  },
+  "wood_intro": {
+    "label": "wood_intro",
+    "location": "shipyard",
+    "order": 1
+  },
+  "dye_intro": {
+    "label": "dye_intro",
+    "location": "beach",
+    "order": 1
+  },
+  "leather_intro": {
+    "label": "leather_intro",
+    "location": "stables",
+    "order": 1
+  },
+  "marble_intro": {
+    "label": "marble_intro",
+    "location": "old ruins",
+    "order": 1
+  },
+  "silk_intro": {
+    "label": "silk_intro",
+    "location": "hanging gardens",
+    "order": 1
+  },
+  "ore_intro": {
+    "label": "ore_intro",
+    "location": "guild quarter",
+    "order": 1
+  },
+  "diamond_intro": {
+    "label": "diamond_intro",
+    "location": "waterfalls",
+    "order": 1
+  },
+  "willow fight": {
+    "label": "willow_fight",
+    "chance": 0.04,
+    "once": false,
+    "room": "onsen"
+  },
+  "willow relative": {
+    "label": "willow_relative",
+    "room": "onsen"
+  },
+  "gina research": {
+    "label": "gina_research",
+    "location": "prison"
+  },
+  "jobgirl_beach": {
+    "label": "jobgirl_beach",
+    "location": "beach",
+    "once": false
+  },
+  "MU_jobgirl": {
+    "label": "MU_jobgirl",
+    "location": "Magic guild",
+    "once": false
+  },
+  "stella_invitation": {
+    "label": "stella_invitation",
+    "chance": 0.05,
+    "chapter": 4
+  },
+  "stella_secret1": {
+    "label": "stella_secret1",
+    "location": "guild quarter",
+    "condition_func": "is_first_tuesday"
+  },
+  "stella_secret2": {
+    "label": "stella_secret2",
+    "location": "guild quarter",
+    "condition_func": "is_first_tuesday",
+    "once": false
+  },
+  "slave_beach_event": {
+    "label": "slave_beach_event",
+    "locations": "beach_locations",
+    "seasons": [
+      "spring",
+      "summer"
+    ],
+    "condition_func": "slave_beach_event_happens",
+    "once": false
+  }
+}

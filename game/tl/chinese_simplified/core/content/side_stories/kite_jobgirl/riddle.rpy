@@ -154,7 +154,7 @@ translate chinese_simplified jobgirl_0_79ce8c7f:
 translate chinese_simplified jobgirl_0_685847ec:
 
     # you "Well..."
-    you "出色地..."
+    you "嗯..."
 
 # game/kite_jobgirl 1_riddle.rpy:81
 translate chinese_simplified jobgirl_0_1e288093:

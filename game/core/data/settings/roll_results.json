@@ -1,0 +1,34 @@
+{
+  "roll_dict": {
+    "1": "critical failure",
+    "2": "failure",
+    "3": "neutral",
+    "4": "neutral",
+    "5": "success",
+    "6": "critical success"
+  },
+  "result_dict": {
+    "-999": "very bad",
+    "1": "bad",
+    "6": "average",
+    "9": "good",
+    "12": "very good",
+    "15": "perfect"
+  },
+  "result_reference_templates_i18n": {
+    "very_bad": "%i: {color=%s}%s{/color}\n",
+    "bad": "%i-%i: {color=%s}%s{/color}\n",
+    "average": "%i-%i: {color=%s}%s{/color}\n",
+    "good": "%i-%i: {color=%s}%s{/color}\n",
+    "very_good": "%i-%i: {color=%s}%s{/color}\n",
+    "perfect": "%i+: {color=%s}%s{/color}\n"
+  },
+  "result_reference_labels_i18n": {
+    "very_bad": "Very bad",
+    "bad": "Bad",
+    "average": "Average",
+    "good": "Good",
+    "very_good": "Very good",
+    "perfect": "Perfect"
+  }
+}

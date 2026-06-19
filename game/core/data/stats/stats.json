@@ -1,0 +1,63 @@
+{
+  "main_stats": [
+    "Charm",
+    "Beauty",
+    "Body",
+    "Refinement",
+    "Sensitivity",
+    "Libido",
+    "Constitution",
+    "Obedience"
+  ],
+  "sex_stats": [
+    "Service",
+    "Sex",
+    "Anal",
+    "Fetish"
+  ],
+  "stat_descriptions": {
+    "Beauty": "How beautiful she looks. Affects work as a {b}masseuse{/b} and regular {b}sex{/b}. Current masseuse capacity: {b}%s{/b} customer%s.",
+    "Body": "How well-shaped and firm her body is. Affects work as a {b}dancer{/b} and {b}anal{/b} sex. Current dancer capacity: {b}%s{/b} customer%s.",
+    "Charm": "Her personality and presence. Affects work as a {b}waitress{/b} and sexual {b}service{/b}. Current waitress capacity: {b}%s{/b} customer%s.",
+    "Refinement": "How intelligent and worldly she is. Affects work as a {b}geisha{/b} and {b}fetish{/b} sex acts. Current geisha capacity: {b}%s{/b} customer%s.",
+    "Libido": "How eager for sex she is. Affects {b}dancer{/b}, {b}sex{/b} and max {b}whoring{/b} customers. Current whore capacity: {b}%s{/b} customer%s.",
+    "Sensitivity": "How sensitive she is to her body and her partners. Affects {b}masseuse{/b}, {b}service{/b} and improves customer {b}satisfaction{/b}.",
+    "Constitution": "Her stamina. Affects {b}waitress{/b}, {b}anal{/b} sex, improves her maximum {b}energy{/b} and allows her to serve {b}more customers{/b}.",
+    "Obedience": "How receptive she is to orders and servitude. Affects {b}geisha{/b}, {b}fetish{/b} sexual acts and chances of accepting {b}work{/b} or {b}training{/b}.",
+    "Service": "How good she is with handjobs, blowjobs and other sexual services.",
+    "Sex": "How good she is at regular sex.",
+    "Anal": "How good she is at anal sex.",
+    "Fetish": "How good she is at BDSM and other unusual requests."
+  },
+  "stat_short_descriptions": {
+    "Beauty": "a beautiful girl",
+    "Body": "a girl with a hot body",
+    "Charm": "a charming girl",
+    "Refinement": "a refined girl"
+  },
+  "stat_job_skills": {
+    "Beauty": "masseuse",
+    "Body": "dancer",
+    "Charm": "waitress",
+    "Refinement": "geisha",
+    "Libido": "whore"
+  },
+  "mc_stat_colors": {
+    "strength": "{color=[c_darkred]}%s{/color}",
+    "defense": "{color=[c_darkred]}%s{/color}",
+    "spirit": "{color=[c_darkblue]}%s{/color}",
+    "charisma": "{color=[c_emerald]}%s{/color}",
+    "speed": "{color=[c_lightblue]}%s{/color}"
+  },
+  "preference_colors": {
+    "refuses": "{color=#F70000}%s{/color}",
+    "very reluctant": "{color=#FF5353}%s{/color}",
+    "reluctant": "{color=#FF8E8E}%s{/color}",
+    "a little reluctant": "{color=#FFB5B5}%s{/color}",
+    "indifferent": "{color=[c_white]}%s{/color}",
+    "a little interested": "{color=#BDF4CB}%s{/color}",
+    "interested": "{color=#7CEB98}%s{/color}",
+    "very interested": "{color=#1FCB4A}%s{/color}",
+    "fascinated": "{color=[c_orange]}%s{/color}"
+  }
+}

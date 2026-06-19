@@ -1,0 +1,1242 @@
+{
+  "fixations": {
+    "stripping": {
+      "name": "stripping",
+      "acts": [
+        "naked",
+        "sex",
+        "bisexual"
+      ],
+      "step": 1,
+      "attribute": "modest",
+      "tag_list": [
+        [
+          "strip"
+        ],
+        [
+          "naked",
+          "dancer"
+        ]
+      ],
+      "description_i18n": "stripping.",
+      "action_i18n": "Make her strip",
+      "intro_i18n": "Telling %s to remove her clothes slowly and sexily, you look on as she does what she's told.",
+      "pos_reaction_i18n": "She moans as she feels the caress of her clothing rubbing against her soft skin. Looking straight into your eyes, she slowly removes her underwear last, inch by inch, making sure to give you a good show.",
+      "neg_reaction_i18n": "Whining and bitching, she reluctantly takes off her clothes, hiding her private parts in embarrassment. She looks angry and shameful."
+    },
+    "public acts": {
+      "name": "public acts",
+      "acts": [
+        "naked",
+        "service",
+        "sex",
+        "group"
+      ],
+      "step": 1,
+      "attribute": "extravert",
+      "tag_list": [
+        [
+          "public"
+        ]
+      ],
+      "not_list": [
+        "rest"
+      ],
+      "description_i18n": "doing it in public.",
+      "action_i18n": "Do it in public",
+      "intro_i18n": "You call in everyone from the brothel: girls, helpers, passersby... You tell %s that she must do it in public.",
+      "pos_reaction_i18n": "She blushes and you can see her nipples perking under her blouse. She is aroused by the thought of doing it in public.",
+      "neg_reaction_i18n": "She is indignant and complains that she can't do anything when people are watching. You ignore her."
+    },
+    "cosplay": {
+      "name": "cosplay",
+      "acts": [
+        "naked",
+        "fetish",
+        "bisexual"
+      ],
+      "step": 1,
+      "attribute": "extravert",
+      "tag_list": [
+        [
+          "cosplay"
+        ],
+        [
+          "maid",
+          "kimono"
+        ],
+        [
+          "swim",
+          "waitress",
+          "dancer"
+        ]
+      ],
+      "not_list": [
+        "naked"
+      ],
+      "cannot_have_neg": [
+        "roleplay"
+      ],
+      "description_i18n": "wearing sexy and revealing outfits.",
+      "action_i18n": "Wear a sexy outfit",
+      "intro_i18n": "You give %s a choice of uniforms she can wear.",
+      "pos_reaction_i18n": "She bites her lip, looking playful. She chooses a kinky uniform with holes for her tits, pussy and asshole.",
+      "neg_reaction_i18n": "She chooses a rather conservative and boring uniform. She doesn't enjoy having to wear it."
+    },
+    "dildos": {
+      "name": "dildos",
+      "acts": [
+        "sex",
+        "anal",
+        "bisexual"
+      ],
+      "step": 1,
+      "attribute": "introvert",
+      "tag_list": [
+        [
+          "dildo"
+        ],
+        [
+          "toy"
+        ]
+      ],
+      "description_i18n": "using sex toys while fucking.",
+      "action_i18n": "Use a dildo",
+      "intro_i18n": "You tell %s to use a dildo in her other hole while you're fucking her.",
+      "pos_reaction_i18n": "She easily slips the dildo in place. It looks like something she is used to doing a lot.",
+      "neg_reaction_i18n": "She hates it as she has to painfully force the dildo in. She doesn't enjoy it at all."
+    },
+    "vibrators": {
+      "name": "vibrators",
+      "acts": [
+        "naked",
+        "fetish",
+        "bisexual"
+      ],
+      "step": 1,
+      "attribute": "introvert",
+      "tag_list": [
+        [
+          "vibrator"
+        ],
+        [
+          "toy"
+        ]
+      ],
+      "description_i18n": "vibrators.",
+      "action_i18n": "Use a vibrator",
+      "intro_i18n": "You tell %s to use a vibrating egg while doing it.",
+      "pos_reaction_i18n": "She wastes no time in using the egg on her ready clit, bringing herself to a state of heavy arousal.",
+      "neg_reaction_i18n": "She is sensitive and uncomfortable using the egg, and complains that it feels weird."
+    },
+    "dirty sex": {
+      "name": "dirty sex",
+      "acts": [
+        "sex",
+        "fetish",
+        "group"
+      ],
+      "step": 1,
+      "attribute": "sub",
+      "tag_list": [
+        [
+          "dirty"
+        ]
+      ],
+      "description_i18n": "dirty sex",
+      "action_i18n": "Get down and dirty",
+      "intro_i18n": "You tell %s to get down in the dirt and get ready to be abused.",
+      "pos_reaction_i18n": "She seems happy to be on the ground, like a dirty bitch she is.",
+      "neg_reaction_i18n": "She hates dirt and complains that it is unhealthy."
+    },
+    "penis worship": {
+      "name": "penis worship",
+      "acts": [
+        "service",
+        "group"
+      ],
+      "step": 1,
+      "attribute": "sub",
+      "tag_list": [
+        [
+          "handjob",
+          "big"
+        ],
+        [
+          "service",
+          "big"
+        ],
+        [
+          "handjob"
+        ]
+      ],
+      "cannot_have_neg": [
+        "handjob"
+      ],
+      "description_i18n": "worshiping dicks, especially large ones.",
+      "action_i18n": "Make her rub your dick",
+      "intro_i18n": "You tell %s that she has to rub oil on your dick and pay it proper respect.",
+      "pos_reaction_i18n": "She takes a good look at your large, throbbing cock and seems happy and aroused that she can play with it. She plants a wet kiss right on the tip.",
+      "neg_reaction_i18n": "She looks away from your erect dick, still uncomfortable around a man's cock."
+    },
+    "bondage": {
+      "name": "bondage",
+      "acts": [
+        "fetish",
+        "naked"
+      ],
+      "step": 1,
+      "attribute": "sub",
+      "tag_list": [
+        [
+          "bondage"
+        ]
+      ],
+      "description_i18n": "being tied up.",
+      "action_i18n": "Tie her up",
+      "intro_i18n": "Using tight ropes and your expert knowledge of bondage as a slave master, you tie %s up in an uncomfortable and embarrassing position.",
+      "pos_reaction_i18n": "She moans with pleasure as you tie her up, loving the feel of the ropes biting her skin.",
+      "neg_reaction_i18n": "She cries and squirms as you tie her up, feeling extremely uncomfortable."
+    },
+    "oil": {
+      "name": "oil",
+      "acts": [
+        "group",
+        "anal"
+      ],
+      "step": 1,
+      "attribute": "extravert",
+      "tag_list": [
+        [
+          "wet"
+        ]
+      ],
+      "description_i18n": "being oiled-up.",
+      "action_i18n": "Oil her up",
+      "intro_i18n": "You give %s a bottle of body oil, insisting that she spreads it all over her naked body.",
+      "pos_reaction_i18n": "She oils up every nook and cranny of her body for your pleasure, playfully massaging her glistening skin while you watch.",
+      "neg_reaction_i18n": "She isn't comfortable with slippery and oily stuff, complaining that it stinks and feels revolting."
+    },
+    "wet": {
+      "name": "wet",
+      "acts": [
+        "naked",
+        "sex",
+        "bisexual"
+      ],
+      "step": 1,
+      "attribute": "extravert",
+      "tag_list": [
+        [
+          "wet"
+        ]
+      ],
+      "description_i18n": "being wet.",
+      "action_i18n": "Get her wet",
+      "intro_i18n": "You ask Sill to fetch you a bucket of cold water, which you pour straight on %s's body.",
+      "pos_reaction_i18n": "She loves being wet and moist, moaning as she slips her hands all over her body.",
+      "neg_reaction_i18n": "She looks upset and miserable like a wet kitty. She hates water."
+    },
+    "submission": {
+      "name": "submission",
+      "acts": [
+        "service",
+        "fetish",
+        "bisexual"
+      ],
+      "step": 1,
+      "attribute": "sub",
+      "tag_list": [
+        [
+          "sub"
+        ]
+      ],
+      "description_i18n": "taking a humiliating pose.",
+      "action_i18n": "Humiliate her",
+      "intro_i18n": "You tell %s to get on her knees and beg for what's going to happen.",
+      "pos_reaction_i18n": "She eagerly obeys your order, taking perverse pleasure in begging for you to abuse her.",
+      "neg_reaction_i18n": "She refuses to beg and complains that it is beneath her."
+    },
+    "femdom": {
+      "name": "femdom",
+      "acts": [
+        "bisexual",
+        "sex",
+        "service"
+      ],
+      "step": 1,
+      "attribute": "dom",
+      "tag_list": [
+        [
+          "dom"
+        ]
+      ],
+      "description_i18n": "dominating her partner.",
+      "action_i18n": "Let her dominate",
+      "intro_i18n": "You tell %s to take the lead and dominate this encounter.",
+      "pos_reaction_i18n": "She is pleased to be given the leading role. She perversely enjoys giving orders and dominating her partner.",
+      "neg_reaction_i18n": "She hesitates, then awkwardly tries to give an order in an unconvincing voice. She almost immediately reverses herself and apologises. She doesn't enjoy taking the lead at all."
+    },
+    "gags": {
+      "name": "gags",
+      "acts": [
+        "fetish",
+        "naked"
+      ],
+      "step": 1,
+      "attribute": "introvert",
+      "tag_list": [
+        [
+          "gag"
+        ],
+        [
+          "bondage"
+        ]
+      ],
+      "description_i18n": "being gagged while having sex.",
+      "action_i18n": "Gag her",
+      "intro_i18n": "You order %s to wear a large ball gag, which leaves her mouth open at all times and makes it hard to talk.",
+      "pos_reaction_i18n": "She seems oddly happy and excited as she puts on the gag and gives you a sheepish look.",
+      "neg_reaction_i18n": "Unable to control her drooling and hardly able to talk, she gives you a furious look. She seems to hate it."
+    },
+    "strap-ons": {
+      "name": "strap-ons",
+      "acts": [
+        "bisexual",
+        "group"
+      ],
+      "step": 1,
+      "attribute": "dom",
+      "tag_list": [
+        [
+          "strap-on"
+        ],
+        [
+          "lesbian"
+        ],
+        [
+          "toy"
+        ]
+      ],
+      "description_i18n": "fucking girls with a strap-on.",
+      "action_i18n": "Use a strap-on",
+      "intro_i18n": "You tell %s to fuck Sill using a strap-on dildo.",
+      "pos_reaction_i18n": "She looks triumphant as she puts on a huge black strap-on dildo, with one end up in her pussy and the other dangling in front of her. Sill gasps.",
+      "neg_reaction_i18n": "She grumbles as she puts it on, complaining that she isn't a man."
+    },
+    "roleplay": {
+      "name": "roleplay",
+      "acts": [
+        "naked",
+        "sex",
+        "fetish"
+      ],
+      "step": 1,
+      "attribute": "extravert",
+      "tag_list": [
+        [
+          "cosplay"
+        ],
+        [
+          "maid",
+          "kimono"
+        ],
+        [
+          "swim",
+          "waitress",
+          "dancer"
+        ]
+      ],
+      "cannot_have_neg": [
+        "cosplay"
+      ],
+      "description_i18n": "playing a role while fucking.",
+      "action_i18n": "Make her play a role",
+      "intro_i18n": "You tell %s that you are going to play roles: you are the city guard and she is a captured thief.",
+      "pos_reaction_i18n": "She enjoys the idea of role-playing and makes a great show of being a repentant horny thief.",
+      "neg_reaction_i18n": "She thinks it's stupid and distracting and doesn't get into it at all."
+    },
+    "plugs": {
+      "name": "plugs",
+      "acts": [
+        "naked",
+        "anal"
+      ],
+      "step": 1,
+      "attribute": "modest",
+      "tag_list": [
+        [
+          "plug"
+        ],
+        [
+          "toy"
+        ]
+      ],
+      "description_i18n": "wearing a plug inside her ass.",
+      "action_i18n": "Use anal plug",
+      "intro_i18n": "Taking out a large, glistening rubber plug, you tell %s to insert it in her ass.",
+      "pos_reaction_i18n": "She pushes the plug deep inside her ready asshole with delight, moaning seductively.",
+      "neg_reaction_i18n": "She inserts the plug with great difficulty, ashamed and in pain. It makes her very uncomfortable."
+    },
+    "enemas": {
+      "name": "enemas",
+      "acts": [
+        "group",
+        "anal"
+      ],
+      "step": 1,
+      "attribute": "materialist",
+      "tag_list": [
+        [
+          "enema"
+        ],
+        [
+          "toy"
+        ]
+      ],
+      "description_i18n": "getting an enema.",
+      "action_i18n": "Use an enema",
+      "intro_i18n": "You tell %s it's time to clean up.",
+      "pos_reaction_i18n": "As you insert the enema into her asshole and start filling her up with water, she begs you to go further and further. Soon, her belly is inflated and rounded like a balloon.",
+      "neg_reaction_i18n": "She cries with shame and horror as you fill her insides with cleansing water. She begs you to stop."
+    },
+    "beads": {
+      "name": "beads",
+      "acts": [
+        "anal"
+      ],
+      "step": 1,
+      "attribute": "introvert",
+      "tag_list": [
+        [
+          "beads"
+        ],
+        [
+          "toy"
+        ]
+      ],
+      "description_i18n": "wearing anal beads.",
+      "action_i18n": "Use anal beads",
+      "intro_i18n": "You give %s a bead necklace and explain what she should do with it.",
+      "pos_reaction_i18n": "She pushes the beads into her asshole one by one, clearly enjoying it and moaning as you watch.",
+      "neg_reaction_i18n": "She cringes and whines as she painfully pushes one or two beads inside her ass. She tells you she hates it."
+    },
+    "masturbation": {
+      "name": "masturbation",
+      "acts": [
+        "service",
+        "naked",
+        "sex"
+      ],
+      "step": 2,
+      "attribute": "extravert",
+      "tag_list": [
+        [
+          "mast"
+        ],
+        [
+          "naked"
+        ]
+      ],
+      "description_i18n": "masturbating.",
+      "action_i18n": "Make her masturbate",
+      "intro_i18n": "You tell %s to play with herself while doing it.",
+      "pos_reaction_i18n": "She enthusiastically starts playing with her clit and fingering her pussy while you watch her.",
+      "neg_reaction_i18n": "She pretends to masturbate but isn't doing anything. She doesn't enjoy it at all."
+    },
+    "fingering": {
+      "name": "fingering",
+      "acts": [
+        "naked",
+        "fetish",
+        "bisexual",
+        "group"
+      ],
+      "step": 2,
+      "attribute": "lewd",
+      "tag_list": [
+        [
+          "finger"
+        ]
+      ],
+      "description_i18n": "being fingered.",
+      "action_i18n": "Slide a finger inside her",
+      "intro_i18n": "You tell %s you will put your fingers inside her.",
+      "pos_reaction_i18n": "Her pussy welcomes you as you slide, one, then two, then three fingers inside her with ease. She moans with pleasure as you increase your pace, covering your fingers with her love juices.",
+      "neg_reaction_i18n": "Her pussy contracts and resists you as you push a single finger inside with great difficulty. Tears run down her face: she isn't enjoying this at all."
+    },
+    "handjobs": {
+      "name": "handjobs",
+      "acts": [
+        "service",
+        "group"
+      ],
+      "step": 2,
+      "attribute": "modest",
+      "tag_list": [
+        [
+          "handjob"
+        ]
+      ],
+      "description_i18n": "giving handjobs.",
+      "action_i18n": "Give a handjob",
+      "intro_i18n": "You order %s to give you a good handjob.",
+      "pos_reaction_i18n": "She loves rubbing her hands up and down your dick, watching your throbbing, hard cock with fascination.",
+      "neg_reaction_i18n": "She is mechanical and unenthusiastic. She doesn't like handjobs."
+    },
+    "cunnilingus": {
+      "name": "cunnilingus",
+      "acts": [
+        "service",
+        "bisexual"
+      ],
+      "step": 2,
+      "attribute": "introvert",
+      "tag_list": [
+        [
+          "cunnilingus"
+        ],
+        [
+          "finger"
+        ]
+      ],
+      "description_i18n": "cunnilingus.",
+      "action_i18n": "Cunnilingus",
+      "intro_i18n": "You go down between %s's legs and spread her pussy lips.",
+      "pos_reaction_i18n": "She moans wildly as you move your tongue deep inside her. Her love juices splash out, betraying her pleasure.",
+      "neg_reaction_i18n": "She frowns and tries to close her legs, not feeling it. It seems like cunnilingus is not her thing."
+    },
+    "oral": {
+      "name": "oral",
+      "acts": [
+        "service",
+        "bisexual",
+        "group"
+      ],
+      "step": 2,
+      "tag_list": [
+        [
+          "oral"
+        ]
+      ],
+      "description_i18n": "giving oral.",
+      "action_i18n": "Oral sex",
+      "intro_i18n": "You tell %s to use her tongue and mouth to increase the pleasure.",
+      "pos_reaction_i18n": "She loves licking and sucking her partner, and she makes sure to make eye contact with you as she does it.",
+      "neg_reaction_i18n": "She gags at the taste and looks annoyed. She doesn't like giving oral."
+    },
+    "irrumatio": {
+      "name": "irrumatio",
+      "acts": [
+        "fetish"
+      ],
+      "step": 2,
+      "attribute": "sub",
+      "tag_list": [
+        [
+          "deep"
+        ],
+        [
+          "oral"
+        ]
+      ],
+      "description_i18n": "irrumatio.",
+      "action_i18n": "Irrumatio",
+      "intro_i18n": "Ordering %s to lay flat with her head hanging from the bed, you decide to fuck her mouth hard.",
+      "pos_reaction_i18n": "You shove your dick as deep and hard as you can into her mouth-pussy, and she takes it all in, seemingly enjoying having her throat raped.",
+      "neg_reaction_i18n": "She gags and coughs and cries and squirms, hating it, but you force-fuck her throat anyway."
+    },
+    "deep throat": {
+      "name": "deep throat",
+      "acts": [
+        "service",
+        "group"
+      ],
+      "step": 2,
+      "attribute": "sub",
+      "tag_list": [
+        [
+          "deep"
+        ],
+        [
+          "oral"
+        ]
+      ],
+      "cannot_have_neg": [
+        "oral"
+      ],
+      "description_i18n": "deep throat.",
+      "action_i18n": "Deep-throat",
+      "intro_i18n": "You tell %s to get ready to deep-throat you.",
+      "pos_reaction_i18n": "She has no gag reflexes and enjoys sucking your dick as far down her throat as she can.",
+      "neg_reaction_i18n": "She gags and almost throws up, begging you to stop. You ignore her."
+    },
+    "titjobs": {
+      "name": "titjobs",
+      "acts": [
+        "service",
+        "group"
+      ],
+      "step": 2,
+      "attribute": "extravert",
+      "tag_list": [
+        [
+          "titjob"
+        ]
+      ],
+      "description_i18n": "giving titjobs.",
+      "action_i18n": "Give a titjob",
+      "intro_i18n": "You order %s to use her tits to pleasure you.",
+      "pos_reaction_i18n": "She wraps your dick completely between her gorgeous tits, licking the tip as she slides her soft mounds up and down your cock.",
+      "neg_reaction_i18n": "She awkwardly tries to use her tits to rub your dick, but she is clumsy and uninterested."
+    },
+    "footjobs": {
+      "name": "footjobs",
+      "acts": [
+        "service",
+        "fetish"
+      ],
+      "step": 2,
+      "attribute": "dom",
+      "tag_list": [
+        [
+          "footjob"
+        ]
+      ],
+      "description_i18n": "giving footjobs.",
+      "action_i18n": "Give a foot job",
+      "intro_i18n": "You order %s to use her legs and feet to rub your dick.",
+      "pos_reaction_i18n": "She loves playing with your dick with her feet, giving you a good upskirt view as she brings you to your limit.",
+      "neg_reaction_i18n": "She hates it, only managing to crush your cock with her clumsy feet. You tell her to stop."
+    },
+    "double penetration": {
+      "name": "double penetration",
+      "acts": [
+        "group"
+      ],
+      "step": 2,
+      "attribute": "lewd",
+      "tag_list": [
+        [
+          "double"
+        ]
+      ],
+      "description_i18n": "being fucked in both holes.",
+      "action_i18n": "Double penetration",
+      "intro_i18n": "You ask one of your security guys to join you and %s, telling him to fuck her ass as you take the front.",
+      "pos_reaction_i18n": "She screams wildly as she gets both her front and back holes raped by fat dicks. She loves it.",
+      "neg_reaction_i18n": "She is upset and bothered that two dicks are in her at the same time. It seems to be too much for her."
+    },
+    "fisting": {
+      "name": "fisting",
+      "acts": [
+        "fetish",
+        "bisexual",
+        "anal"
+      ],
+      "step": 2,
+      "attribute": "lewd",
+      "tag_list": [
+        [
+          "fist"
+        ],
+        [
+          "finger"
+        ]
+      ],
+      "description_i18n": "being fisted.",
+      "action_i18n": "Fist her",
+      "intro_i18n": "Telling %s not to move, you decide to play around with her pussy using your bare fist.",
+      "pos_reaction_i18n": "She squeals with pleasure as you rape her wet pussy with your fist, eventually sending her into a massive squirting orgasm.",
+      "neg_reaction_i18n": "She screams with pain and begs you to stop as your fist bends her pussy in unnatural ways. She hates it."
+    },
+    "insults": {
+      "name": "insults",
+      "acts": [
+        "fetish",
+        "naked"
+      ],
+      "step": 2,
+      "attribute": "sub",
+      "tag_list": [
+        [
+          "sub"
+        ]
+      ],
+      "description_i18n": "being insulted.",
+      "action_i18n": "Insult her",
+      "intro_i18n": "You call %s names as you force her to perform, using language that would make a harbor whore blush.",
+      "pos_reaction_i18n": "She seems to love being trashed and insulted, and after only a minute, you notice that she has got completely wet.",
+      "neg_reaction_i18n": "She is shocked and unnerved by your words, unable to concentrate on what she's doing. It isn't helping."
+    },
+    "69": {
+      "name": "69",
+      "acts": [
+        "service",
+        "bisexual"
+      ],
+      "step": 2,
+      "attribute": "dom",
+      "tag_list": [
+        [
+          "69"
+        ],
+        [
+          "oral"
+        ]
+      ],
+      "cannot_have_neg": [
+        "oral"
+      ],
+      "description_i18n": "69.",
+      "action_i18n": "Do a 69",
+      "intro_i18n": "You tell %s to get into a 69 position.",
+      "pos_reaction_i18n": "She loves 69 and enjoys herself tremendously as she tends to her partner while her pussy gets licks.",
+      "neg_reaction_i18n": "She looks unhappy as she seems to despise that position. In the end, it isn't enjoyable for anyone."
+    },
+    "watersports": {
+      "name": "watersports",
+      "acts": [
+        "fetish",
+        "sex"
+      ],
+      "step": 2,
+      "attribute": "sub",
+      "tag_list": [
+        [
+          "watersports"
+        ],
+        [
+          "squirt"
+        ]
+      ],
+      "description_i18n": "watersports.",
+      "action_i18n": "Play watersports",
+      "intro_i18n": "You tell %s to get ready for some 'watersports'.",
+      "pos_reaction_i18n": "She loves peeing in front of people and being peed on. She doesn't find it shameful.",
+      "neg_reaction_i18n": "She is disgusted by bodily fluids and recoils with horror at the thought."
+    },
+    "ass-to-mouth": {
+      "name": "ass-to-mouth",
+      "acts": [
+        "anal",
+        "group"
+      ],
+      "step": 2,
+      "attribute": "sub",
+      "tag_list": [
+        [
+          "cim"
+        ],
+        [
+          "oral"
+        ]
+      ],
+      "cannot_have_neg": [
+        "oral"
+      ],
+      "description_i18n": "ass-to-mouth.",
+      "action_i18n": "Go ass-to-mouth",
+      "intro_i18n": "You decide to fuck %s in the ass before moving to her mouth.",
+      "pos_reaction_i18n": "She accepts your dick readily and licks it clean for you, not caring that it was in her ass a second ago.",
+      "neg_reaction_i18n": "She retches as you push your dick into her mouth, complaining that it is dirty and disgusting."
+    },
+    "kissing": {
+      "name": "kissing",
+      "acts": [
+        "naked",
+        "sex",
+        "bisexual"
+      ],
+      "step": 2,
+      "attribute": "idealist",
+      "tag_list": [
+        [
+          "kiss"
+        ]
+      ],
+      "description_i18n": "kissing.",
+      "action_i18n": "Kiss her",
+      "intro_i18n": "You start kissing %s.",
+      "pos_reaction_i18n": "She responds enthusiastically to your kiss, mingling her tongue with yours. She doesn't let go until the very end.",
+      "neg_reaction_i18n": "She tries to avoid you and doesn't seem to enjoy kissing at all. She is relieved when you stop."
+    },
+    "spanking": {
+      "name": "spanking",
+      "acts": [
+        "fetish",
+        "anal"
+      ],
+      "step": 2,
+      "attribute": "sub",
+      "tag_list": [
+        [
+          "spank"
+        ],
+        [
+          "sub"
+        ]
+      ],
+      "description_i18n": "spanking.",
+      "action_i18n": "Spank her",
+      "intro_i18n": "You tell %s that she's been a bad girl, and that she is going to get spanked hard.",
+      "pos_reaction_i18n": "She screams with pain and pleasure, crying tears of happiness as you give her a thorough spanking while fucking her.",
+      "neg_reaction_i18n": "You spank her and fuck her at the same time. She wriggles and tries to escape you, moaning in pain. She doesn't like it."
+    },
+    "rimming": {
+      "name": "rimming",
+      "acts": [
+        "service",
+        "fetish"
+      ],
+      "step": 2,
+      "attribute": "sub",
+      "tag_list": [
+        [
+          "rim"
+        ]
+      ],
+      "description_i18n": "rimming.",
+      "action_i18n": "Rimming",
+      "intro_i18n": "You tell %s to lick your asshole thoroughly.",
+      "pos_reaction_i18n": "She is very serious about licking you clean, pushing her tongue into your ass as she gives you a frantic handjob.",
+      "neg_reaction_i18n": "She is disgusted by the act and only timidly licks around your asshole. It tickles, but doesn't feel good in any way."
+    },
+    "fondling her boobs": {
+      "name": "fondling her boobs",
+      "short_name": "fondling",
+      "acts": [
+        "naked",
+        "sex",
+        "bisexual",
+        "group"
+      ],
+      "step": 2,
+      "tag_list": [
+        [
+          "fondle"
+        ]
+      ],
+      "description_i18n": "being fondled.",
+      "action_i18n": "Fondle her boobs",
+      "intro_i18n": "You fondle her tits and play with her nipples as %s performs for you.",
+      "pos_reaction_i18n": "She loves it when you squeeze her tits and moans sexily as you rub her erect nipples.",
+      "neg_reaction_i18n": "She doesn't like to be touched there and tenses up, making the training less enjoyable."
+    },
+    "groping her ass": {
+      "name": "groping her ass",
+      "short_name": "groping",
+      "acts": [
+        "naked",
+        "anal",
+        "bisexual",
+        "group"
+      ],
+      "step": 2,
+      "tag_list": [
+        [
+          "grope"
+        ]
+      ],
+      "description_i18n": "being groped.",
+      "action_i18n": "Grope her ass",
+      "intro_i18n": "You grope her ass and start fingering her asshole as %s performs for you.",
+      "pos_reaction_i18n": "She loves to be touched and groped and moans hornily as you shove two fingers up her butthole.",
+      "neg_reaction_i18n": "She doesn't like to be touched there and tenses up, making the training less enjoyable."
+    },
+    "lactation": {
+      "name": "lactation",
+      "acts": [
+        "naked",
+        "fetish"
+      ],
+      "step": 2,
+      "attribute": "extravert",
+      "tag_list": [
+        [
+          "lactation"
+        ],
+        [
+          "titjob"
+        ]
+      ],
+      "description_i18n": "lactation.",
+      "action_i18n": "Milk her",
+      "intro_i18n": "Groping %s's boobs, you take out a syringe filled with a strange liquid and plunge it into her nipple.",
+      "pos_reaction_i18n": "She gasps with astonishment as her tits grow larger in size. Soon, she begins to lactate uncontrollably, moaning as you milk her large breasts for all they're worth.",
+      "neg_reaction_i18n": "She yells and cries with pain as her boobs grow heavier and larger. The experience is too traumatic, however, and she fails to give you any milk."
+    },
+    "doggy style": {
+      "name": "doggy style",
+      "acts": [
+        "sex",
+        "anal"
+      ],
+      "step": 2,
+      "attribute": "lewd",
+      "tag_list": [
+        [
+          "doggy"
+        ]
+      ],
+      "description_i18n": "doggy style.",
+      "action_i18n": "Doggy style",
+      "intro_i18n": "Pushing her on all fours, you start fucking %s from behind.",
+      "pos_reaction_i18n": "She moans with pleasure as the length of your shaft runs along her most sensitive parts. She cannot get enough of it.",
+      "neg_reaction_i18n": "She grinds her teeth as she waits for you to be finished. She doesn't enjoy that position at all."
+    },
+    "cowgirl": {
+      "name": "cowgirl",
+      "acts": [
+        "sex",
+        "anal"
+      ],
+      "step": 2,
+      "attribute": "dom",
+      "tag_list": [
+        [
+          "cowgirl"
+        ]
+      ],
+      "description_i18n": "cowgirl style.",
+      "action_i18n": "Cowgirl style",
+      "intro_i18n": "You make %s ride your dick.",
+      "pos_reaction_i18n": "She likes to be on top and lovingly bounces on your dick until you both get close to your limit.",
+      "neg_reaction_i18n": "She doesn't like to be on top and stays passive as you fuck her from below."
+    },
+    "piledriver": {
+      "name": "piledriver",
+      "acts": [
+        "sex",
+        "anal"
+      ],
+      "step": 2,
+      "attribute": "materialist",
+      "tag_list": [
+        [
+          "piledriver"
+        ]
+      ],
+      "description_i18n": "piledriver.",
+      "action_i18n": "Piledriver",
+      "intro_i18n": "Pushing %s on her back and lifting her legs in the air, you plunge your hard dick inside her.",
+      "pos_reaction_i18n": "She is overwhelmed with lust and pleasure as the blood flows to her head while you pound her mercilessly.",
+      "neg_reaction_i18n": "She is confused and bothered by this new position, telling you she doesn't like it at all."
+    },
+    "spooning": {
+      "name": "spooning",
+      "acts": [
+        "sex",
+        "anal"
+      ],
+      "step": 2,
+      "attribute": "idealist",
+      "tag_list": [
+        [
+          "spoon"
+        ]
+      ],
+      "description_i18n": "spooning.",
+      "action_i18n": "Spooning",
+      "intro_i18n": "Hugging %s from behind, you slowly slide into her while caressing her body.",
+      "pos_reaction_i18n": "She loves being cradled and fucked at the same time. She relaxes completely, moaning softly, soon ready to reach orgasm.",
+      "neg_reaction_i18n": "She stays passive as you fuck her from behind, looking bored."
+    },
+    "bukkake": {
+      "name": "bukkake",
+      "acts": [
+        "bisexual",
+        "group"
+      ],
+      "step": 3,
+      "attribute": "lewd",
+      "tag_list": [
+        [
+          "buk"
+        ],
+        [
+          "cof"
+        ],
+        [
+          "cumshot"
+        ]
+      ],
+      "cannot_have_neg": [
+        "cum shower"
+      ],
+      "description_i18n": "bukkake.",
+      "action_i18n": "Bukkake",
+      "intro_i18n": "Calling a group of your security guards, you let them watch as you and Sill fuck %s. They start jerking off while watching her. As you reach your limit, you pull out and cum all over her face, quickly followed by the other men.",
+      "pos_reaction_i18n": "She shakes with a massive orgasm as she experiences a shower of cum on her face, hair and body. She gorges up on leftover cum from everyone's dick.",
+      "neg_reaction_i18n": "She tries to get away and whines as everyone cums on her face and hair. She bitterly complains about the smell and taste."
+    },
+    "cum in mouth": {
+      "name": "cum in mouth",
+      "acts": [
+        "service",
+        "anal",
+        "bisexual"
+      ],
+      "step": 3,
+      "attribute": "lewd",
+      "tag_list": [
+        [
+          "cim"
+        ],
+        [
+          "oral"
+        ]
+      ],
+      "cannot_have_neg": [
+        "oral"
+      ],
+      "description_i18n": "cum in her mouth.",
+      "action_i18n": "Cum in her mouth",
+      "intro_i18n": "You decide to use %s's mouth for a big finish.",
+      "pos_reaction_i18n": "She looks entranced as you unload a wad of semen into her ready mouth. She plays with it on her tongue, enjoying the taste and texture.",
+      "neg_reaction_i18n": "You cum a lot in her mouth, sending her into a fit of coughing. She spits it all out, complaining."
+    },
+    "cum on face": {
+      "name": "cum on face",
+      "acts": [
+        "service",
+        "sex",
+        "fetish"
+      ],
+      "step": 3,
+      "attribute": "sub",
+      "tag_list": [
+        [
+          "cof"
+        ],
+        [
+          "buk"
+        ],
+        [
+          "cumshot"
+        ]
+      ],
+      "description_i18n": "cumshots.",
+      "action_i18n": "Cum on her face",
+      "intro_i18n": "Popping your dick out, you shoot a load of semen all over %s's face.",
+      "pos_reaction_i18n": "She sighs happily as she receives load after load of your cum. She uses her hands to spread the cum all over her face, then licks her fingers.",
+      "neg_reaction_i18n": "She recoils with disgust as you shoot your load. She rushes to get a wet cloth and clean it up."
+    },
+    "cum in hair": {
+      "name": "cum in hair",
+      "acts": [
+        "service",
+        "fetish"
+      ],
+      "step": 3,
+      "attribute": "sub",
+      "tag_list": [
+        [
+          "cih",
+          "coh"
+        ],
+        [
+          "cof",
+          "buk"
+        ],
+        [
+          "cumshot"
+        ]
+      ],
+      "description_i18n": "cum in her hair.",
+      "action_i18n": "Cum in her hair",
+      "intro_i18n": "Popping your dick out, you decide to cum all over %s's soft, silky hair.",
+      "pos_reaction_i18n": "She moans as you wrap her hair around your dick and squeeze every last drop on her scalp. She enjoys being treated like a dirty cum dump.",
+      "neg_reaction_i18n": "She yells awfully as you shoot a load of semen on her hair, whining that it's gonna take ages to get it off."
+    },
+    "cum on body": {
+      "name": "cum on body",
+      "acts": [
+        "sex",
+        "anal",
+        "service"
+      ],
+      "step": 3,
+      "attribute": "dom",
+      "tag_list": [
+        [
+          "cob"
+        ],
+        [
+          "cumshot"
+        ]
+      ],
+      "description_i18n": "cum on her body.",
+      "action_i18n": "Cum on her body",
+      "intro_i18n": "You decide to cum all over %s's body.",
+      "pos_reaction_i18n": "She reaches her climax as you take out your dick and spill a load of white cum all over her soft skin.",
+      "neg_reaction_i18n": "She squirms as you shoot cum all over her body, complaining that it is sticky and smelly."
+    },
+    "cum shower": {
+      "name": "cum shower",
+      "acts": [
+        "bisexual",
+        "group"
+      ],
+      "step": 3,
+      "attribute": "sub",
+      "tag_list": [
+        [
+          "cum shower"
+        ],
+        [
+          "cob",
+          "cih"
+        ],
+        [
+          "cumshot"
+        ]
+      ],
+      "cannot_have_neg": [
+        "bukkake"
+      ],
+      "description_i18n": "getting showered with cum.",
+      "action_i18n": "Shower her with cum",
+      "intro_i18n": "Popping a special pill from the spice market, your dick starts bulging, ready to burst with huge amounts of cum. You tell %s to lay down and get ready to receive your seed.",
+      "pos_reaction_i18n": "You cum and cum buckets, until she is covered with white, sticky semen. She is enthralled by the sensation.",
+      "neg_reaction_i18n": "She squeals and cowers in fear as you cum buckets all over her body, disgusted by the smell and feel."
+    },
+    "swallowing": {
+      "name": "swallowing",
+      "acts": [
+        "service",
+        "fetish"
+      ],
+      "step": 3,
+      "attribute": "materialist",
+      "tag_list": [
+        [
+          "cim"
+        ],
+        [
+          "deep"
+        ],
+        [
+          "oral"
+        ]
+      ],
+      "cannot_have_neg": [
+        "oral",
+        "cum in mouth"
+      ],
+      "description_i18n": "swallowing cum.",
+      "action_i18n": "Make her swallow",
+      "intro_i18n": "Shoving your dick deep into %s's mouth for the big finish, you shoot loads of cum deep down her throat.",
+      "pos_reaction_i18n": "She gulps it all down with gusto, squeezing every last drop of cum out of your throbbing dick. She licks her lips sexily when you are finished.",
+      "neg_reaction_i18n": "She gets tearful and gags, trying to spit it all out as you shoot load after load. She only partly succeeds, and looks unhappy at having to drink cum."
+    },
+    "creampie": {
+      "name": "creampie",
+      "acts": [
+        "sex",
+        "anal",
+        "group"
+      ],
+      "step": 3,
+      "attribute": "extravert",
+      "tag_list": [
+        [
+          "creampie"
+        ],
+        [
+          "cin"
+        ]
+      ],
+      "description_i18n": "receiving a creampie.",
+      "action_i18n": "Creampie",
+      "intro_i18n": "Taking your dick slowly out of %s, you shoot a thick load of white cum all over her ass and pussy.",
+      "pos_reaction_i18n": "She shakes with a massive orgasm as you spurt cum all over her holes. She seems to love it.",
+      "neg_reaction_i18n": "She covers her face and begs you to stop, saying that it's creepy and disgusting."
+    },
+    "cum inside": {
+      "name": "cum inside",
+      "acts": [
+        "sex",
+        "anal"
+      ],
+      "step": 3,
+      "attribute": "introvert",
+      "tag_list": [
+        [
+          "cin"
+        ],
+        [
+          "creampie"
+        ]
+      ],
+      "description_i18n": "cum inside her.",
+      "action_i18n": "Cum inside",
+      "intro_i18n": "Not caring about the consequences, you decide to cum deep inside %s.",
+      "pos_reaction_i18n": "She reaches a blinding orgasm, moaning wildly as you unload a wad of cum deep inside her.",
+      "neg_reaction_i18n": "She screams for you to get out, but you ignore her, smearing her insides with thick, sticky cum. She cries with shame and disgust."
+    },
+    "multiple orgasms": {
+      "name": "multiple orgasms",
+      "acts": [
+        "group",
+        "bisexual"
+      ],
+      "step": 3,
+      "attribute": "lewd",
+      "tag_list": [
+        [
+          "orgasm"
+        ]
+      ],
+      "description_i18n": "having multiple orgasms.",
+      "action_i18n": "Give her multiple orgasms",
+      "intro_i18n": "Rubbing her clit with one hand, you keep the pace up until %s cannot but shake with a shattering orgasm. Giving her no moment to rest, you increase the build-up until she comes another time, and another time.",
+      "pos_reaction_i18n": "She loves it and loses her mind completely over the sensations washing over her, looking nothing but an obedient, adoring slave by the time you are finished.",
+      "neg_reaction_i18n": "She feels overtly sensitive and begs you to stop, almost in pain from excessive climaxing. She doesn't like it."
+    },
+    "denied orgasm": {
+      "name": "denied orgasm",
+      "acts": [
+        "anal",
+        "fetish",
+        "bisexual"
+      ],
+      "step": 3,
+      "attribute": "sub",
+      "tag_list": [
+        [
+          "denied"
+        ]
+      ],
+      "description_i18n": "being denied orgasm.",
+      "action_i18n": "Deny her orgasm",
+      "intro_i18n": "You decide to tease %s to the limit, not letting her reach climax.",
+      "pos_reaction_i18n": "She seems to love being teased and indefinitely denied orgasm, becoming incredibly horny and sensitive over time.",
+      "neg_reaction_i18n": "She screams with frustration and begs you to let her climax. She is upset that you won't let her."
+    },
+    "squirting": {
+      "name": "squirting",
+      "acts": [
+        "service",
+        "sex",
+        "bisexual"
+      ],
+      "step": 3,
+      "attribute": "extravert",
+      "tag_list": [
+        [
+          "squirt"
+        ],
+        [
+          "watersport",
+          "orgasm"
+        ]
+      ],
+      "description_i18n": "squirting.",
+      "action_i18n": "Make her squirt",
+      "intro_i18n": "Pushing your hand inside %s's pussy, you start rubbing the walls of her pussy, looking for her sensitive G-spot. She looks overwhelmed by the sensation.",
+      "pos_reaction_i18n": "She squirts hard, showering the room with her juice. She climaxes so hard that she can't even move afterwards.",
+      "neg_reaction_i18n": "She feels weird and gross, and begs you to take your hand out. She isn't into it at all."
+    }
+  }
+}

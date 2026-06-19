@@ -1,0 +1,23 @@
+{
+    "_description": "Archetype names and descriptions for girl backgrounds. See BK_EVOLUTION_DATA_MIGRATION.md.",
+    "archetype_list": [
+        "The Maid",
+        "The Player",
+        "The Model",
+        "The Courtesan",
+        "The Escort",
+        "The Fox",
+        "The Slut",
+        "The Bride"
+    ],
+    "archetype_description": {
+        "The Maid": "Holding her head up high even in adversity, the {b}Maid{/b} succeeds through hard work and commitment. She is the patron saint of servants and menial workers.",
+        "The Player": "Always ready to tell a compelling story or improvise a lavish dance, the {b}Player{/b} is admired for her party skills and charisma. She is the patron saint of singers, actors and other artists, accomplished or aspiring.",
+        "The Model": "Blessed with perfect natural beauty and elegance, if a little vain, the {b}Model{/b} fascinates men and women alike. She is the patron saint of the young, the pretty, and the well endowed.",
+        "The Courtesan": "The {b}Courtesan{/b} is a master of etiquette, seduction and politics, able to make anyone give in to her every whim. She is the patron saint of noble women, politicians, and other schemers.",
+        "The Escort": "Using her body and skills to great advantage, the {b}Escort{/b} is an expert at leveraging her talents for profits. She is the patron saint of fancy prostitutes, merchants, and mercenaries.",
+        "The Fox": "A mysterious figure which seems to always show on auspicious occasions, the {b}Fox{/b} is said to bring great luck to everyone she shares her bed with. She is the patron saint of travellers and hermits.",
+        "The Slut": "A much revered figure, the {b}Slut{/b} delights in experienceing sex and pleasure in all its forms, rejecting laws and morals that do not suit her. She is the patron saint of street girls, thieves, libertines, and the occasional Arios priest.",
+        "The Bride": "A harbinger of peace and prosperity, the {b}Bride{/b} is gentle and devoted. She is the patron saint of coming-of-age virgins, pregnant and married women, and widows."
+    }
+}

@@ -10,10 +10,10 @@ init -1 python:
                 creator = "Goldo",
                 version = 1.0,
                 pic = "title.png",
-                description = """Goldo's cool mod is a short and lame tutorial for modders (don't let the name fool you), demonstrating a few basic tricks for creating and managing events. After activating the mod, you can test some events by accessing the 'Help' menu in-game.\n\n{b}It is useless to install this mod for regular players.{/b}""",
+                description = __("""Goldo's cool mod is a short and lame tutorial for modders (don't let the name fool you), demonstrating a few basic tricks for creating and managing events. After activating the mod, you can test some events by accessing the 'Help' menu in-game.\n\n{b}It is useless to install this mod for regular players.{/b}"""),
 
                 ## Mod option menu (access through the Help (click on '?') menu)
-                help_prompts = [("Surprise me tomorrow", "mymod_add_surprise_event"), ("Meet me at the thieves guild", "mymod_add_meet_event")],
+                help_prompts = [(__("Surprise me tomorrow"), "mymod_add_surprise_event"), (__("Meet me at the thieves guild"), "mymod_add_meet_event")],
 
                 ## Init label: This will run when the mod is activated, allowing you to set some variables and events if necessary
                 early_label = "early_my_mod_init",
@@ -31,7 +31,7 @@ init -1 python:
 
 
 label early_my_mod_init():
-    $ register_trait(Trait('My random trait', base_description = "Random trait yo"))
+    $ register_trait(Trait(__('My random trait'), base_description = __("Random trait yo")))
 
     return
 
@@ -183,7 +183,7 @@ label mymod_justice(end_picture):
 
     play sound s_gold
     $ MC.gold += 100
-    $ notify("Gold: " + "+100", pic="img_gold_24", col=c_gold)
+    $ notify(__("Gold: +100"), pic="img_gold_24", col=c_gold)
 
     you "Thanks!"
 
@@ -205,5 +205,5 @@ screen test_mod_but():
 
     textbutton _("Test mod"):
 
-        action Function(renpy.notify, "Hey, you clicked!")
+        action Function(renpy.notify, __("Hey, you clicked!"))
         tooltip _("This is a test. Clicking this button does nothing.")

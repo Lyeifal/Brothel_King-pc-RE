@@ -1,0 +1,214 @@
+{
+  "color_tiers": [
+    {
+      "id": "white",
+      "color": "#FFFFFF",
+      "budget_multiplier": 1.0,
+      "name_i18n": "白色"
+    },
+    {
+      "id": "green",
+      "color": "#2ECC71",
+      "budget_multiplier": 1.2,
+      "name_i18n": "绿色"
+    },
+    {
+      "id": "blue",
+      "color": "#3498DB",
+      "budget_multiplier": 1.5,
+      "name_i18n": "蓝色"
+    },
+    {
+      "id": "purple",
+      "color": "#9B59B6",
+      "budget_multiplier": 2.0,
+      "name_i18n": "紫色"
+    },
+    {
+      "id": "gold",
+      "color": "#FFD700",
+      "budget_multiplier": 2.8,
+      "name_i18n": "金色"
+    },
+    {
+      "id": "orange",
+      "color": "#E67E22",
+      "budget_multiplier": 4.0,
+      "name_i18n": "橙色"
+    },
+    {
+      "id": "red",
+      "color": "#E74C3C",
+      "budget_multiplier": 6.0,
+      "name_i18n": "红色"
+    },
+    {
+      "id": "iridescent",
+      "color": "#FF00FF",
+      "budget_multiplier": 10.0,
+      "name_i18n": "彩色"
+    }
+  ],
+  "personalities": [
+    {
+      "affix_id": "brutal",
+      "difficulty_mod": 5,
+      "satisfaction_mod": -1,
+      "budget_mod": 1.3,
+      "defense_mod": 2,
+      "crazy_chance": 5,
+      "color_shift": 1,
+      "name_i18n": "残暴",
+      "description_i18n": "暴力且苛求。更难满足但付费丰厚。"
+    },
+    {
+      "affix_id": "kind",
+      "difficulty_mod": -3,
+      "satisfaction_mod": 1,
+      "budget_mod": 0.9,
+      "defense_mod": -1,
+      "crazy_chance": -2,
+      "color_shift": 0,
+      "name_i18n": "和蔼",
+      "description_i18n": "温和且宽容。更容易满足但小费较少。"
+    },
+    {
+      "affix_id": "drunkard",
+      "difficulty_mod": 2,
+      "satisfaction_mod": 0,
+      "budget_mod": 1.1,
+      "defense_mod": -2,
+      "crazy_chance": 3,
+      "color_shift": 0,
+      "name_i18n": "酒鬼",
+      "description_i18n": "难以预测。防御低，但酒壮怂人胆，预算高。"
+    },
+    {
+      "affix_id": "noble",
+      "difficulty_mod": 8,
+      "satisfaction_mod": -1,
+      "budget_mod": 1.8,
+      "defense_mod": 3,
+      "crazy_chance": 0,
+      "color_shift": 2,
+      "name_i18n": "贵族",
+      "description_i18n": "品味高雅。非常挑剔但极其慷慨。"
+    },
+    {
+      "affix_id": "shy",
+      "difficulty_mod": -5,
+      "satisfaction_mod": 0,
+      "budget_mod": 0.7,
+      "defense_mod": -3,
+      "crazy_chance": -1,
+      "color_shift": 0,
+      "name_i18n": "害羞",
+      "description_i18n": "胆小紧张。容易取悦，花费 modest。"
+    },
+    {
+      "affix_id": "pervert",
+      "difficulty_mod": 3,
+      "satisfaction_mod": 0,
+      "budget_mod": 1.2,
+      "defense_mod": 0,
+      "crazy_chance": 2,
+      "color_shift": 1,
+      "name_i18n": "变态",
+      "description_i18n": "对一件事痴迷。对喜好预算高，讨厌其他一切。"
+    },
+    {
+      "affix_id": "miser",
+      "difficulty_mod": -2,
+      "satisfaction_mod": 0,
+      "budget_mod": 0.5,
+      "defense_mod": 0,
+      "crazy_chance": 0,
+      "color_shift": 0,
+      "name_i18n": "吝啬",
+      "description_i18n": "讨厌花钱。预算低，但容易满足。"
+    },
+    {
+      "affix_id": "celebrity",
+      "difficulty_mod": 10,
+      "satisfaction_mod": -2,
+      "budget_mod": 2.5,
+      "defense_mod": 1,
+      "crazy_chance": 1,
+      "color_shift": 3,
+      "name_i18n": "名人",
+      "description_i18n": "著名且张扬。预算巨大，引人注目。"
+    }
+  ],
+  "moods": [
+    {
+      "affix_id": "cheerful",
+      "satisfaction_mod": 1,
+      "tip_chance": 0.15,
+      "tip_multiplier": 1.2,
+      "patience_mod": 2,
+      "color_shift": 0,
+      "name_i18n": "高兴",
+      "description_i18n": "心情很好。容易取悦，可能会给小费。"
+    },
+    {
+      "affix_id": "neutral",
+      "satisfaction_mod": 0,
+      "tip_chance": 0.05,
+      "tip_multiplier": 1.0,
+      "patience_mod": 0,
+      "color_shift": 0,
+      "name_i18n": "中性",
+      "description_i18n": "没什么特别的。标准行为。"
+    },
+    {
+      "affix_id": "grumpy",
+      "satisfaction_mod": -1,
+      "tip_chance": 0.0,
+      "tip_multiplier": 0.0,
+      "patience_mod": -2,
+      "color_shift": 0,
+      "name_i18n": "暴躁",
+      "description_i18n": "已经不耐烦了。更难满足，不会给小费。"
+    },
+    {
+      "affix_id": "angry",
+      "satisfaction_mod": -2,
+      "tip_chance": 0.0,
+      "tip_multiplier": 0.0,
+      "patience_mod": -4,
+      "color_shift": 1,
+      "name_i18n": "愤怒",
+      "description_i18n": "对某事 furious。非常苛刻，可能会惹麻烦。"
+    },
+    {
+      "affix_id": "ecstatic",
+      "satisfaction_mod": 3,
+      "tip_chance": 0.35,
+      "tip_multiplier": 2.0,
+      "patience_mod": 5,
+      "color_shift": 2,
+      "name_i18n": "狂喜",
+      "description_i18n": "欣喜若狂！极其慷慨和宽容。"
+    },
+    {
+      "affix_id": "depressed",
+      "satisfaction_mod": 0,
+      "tip_chance": 0.02,
+      "tip_multiplier": 0.5,
+      "patience_mod": 3,
+      "color_shift": 0,
+      "name_i18n": "沮丧",
+      "description_i18n": "寻求安慰。期望低，但钱少。"
+    },
+    {
+      "affix_id": "lustful",
+      "satisfaction_mod": 0,
+      "tip_chance": 0.1,
+      "tip_multiplier": 1.3,
+      "patience_mod": -1,
+      "color_shift": 1,
+      "name_i18n": "饥渴",
+      "description_i18n": "一心一意。性预算高，无视娱乐。"
+    }
+  ]
+}

@@ -1,0 +1,45 @@
+{
+    "shop_item_number_i18n": {
+        "shop": {"junk": "d3 + 3", "common": "d6", "rare": "d3", "exceptional": "d3 + -2"},
+        "city": {"junk": "d6", "common": "d6 + 2", "rare": "d3 + 1", "exceptional": "d3 + -1"},
+        "minion": {"minion": "d5", "item": "d4 + -1"}
+    },
+    "shop_chapter_modifiers": {
+        "1": {"junk": 0, "common": 0, "rare": 0, "exceptional": 0, "minion": 0, "item": 0},
+        "2": {"junk": 1, "common": 1, "rare": 0, "exceptional": 0, "minion": 0, "item": 0},
+        "3": {"junk": 1, "common": 2, "rare": 0, "exceptional": 0, "minion": 0, "item": 0},
+        "4": {"junk": 1, "common": 2, "rare": 1, "exceptional": 0, "minion": 0, "item": 1},
+        "5": {"junk": 2, "common": 2, "rare": 2, "exceptional": 0, "minion": 1, "item": 1},
+        "6": {"junk": 3, "common": 2, "rare": 2, "exceptional": 1, "minion": 1, "item": 1},
+        "7": {"junk": 3, "common": 3, "rare": 2, "exceptional": 1, "minion": 1, "item": 2}
+    },
+    "shop_restock_cost": {
+        "shop": {"2": 500, "3": 1000, "4": 2000, "5": 4000, "6": 8000, "7": 15000},
+        "city_merchant": {"2": 400, "3": 800, "4": 1600, "5": 3200, "6": 6400, "7": 12000},
+        "minion_merchant": {"2": 400, "3": 800, "4": 1600, "5": 3200, "6": 6400, "7": 12000}
+    },
+    "shop_upgrades": {
+        "1": [2, ["wood", 5], ["junk", 2]],
+        "2": [2, ["dye", 10], ["common", 1]],
+        "3": [2, ["leather", 15], ["junk", 3]],
+        "4": [4, ["ore", 10], ["common", 2]],
+        "5": [3, ["dye", 20], ["rare", 1]],
+        "6": [4, ["silk", 15], ["common", 3]],
+        "7": [4, ["marble", 20], ["rare", 1]],
+        "8": [5, ["silk", 30], ["exceptional", 1]],
+        "9": [6, ["diamond", 5], ["rare", 2]],
+        "10": [7, ["diamond", 15], ["exceptional", 2]]
+    },
+    "shop_chapter_price_multiplier": {
+        "1": 1.0, "2": 1.05, "3": 1.1, "4": 1.2, "5": 1.35, "6": 1.5, "7": 1.75
+    },
+    "shop_chapter_stock_bonus": {
+        "1": 0, "2": 0, "3": 1, "4": 1, "5": 2, "6": 2, "7": 3
+    },
+    "shop_time_pressure_settings": {
+        "price_growth_per_month": 0.02,
+        "max_price_multiplier": 2.0,
+        "stock_decay_per_month": 0.0,
+        "min_stock_multiplier": 1.0
+    }
+}

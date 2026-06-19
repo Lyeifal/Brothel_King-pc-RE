@@ -1,0 +1,2169 @@
+[
+  {
+    "name": "Naughty",
+    "verb": "be",
+    "effects": [
+      {
+        "type": "boost",
+        "target": "tip",
+        "value": 0.1
+      },
+      {
+        "type": "personality",
+        "target": "pervert"
+      }
+    ],
+    "archetype": "The Slut",
+    "name_i18n": "Naughty"
+  },
+  {
+    "name": "Fascinating",
+    "verb": "be",
+    "effects": [
+      {
+        "type": "change",
+        "target": "job customer capacity",
+        "value": 2
+      }
+    ],
+    "archetype": "The Courtesan",
+    "name_i18n": "Fascinating"
+  },
+  {
+    "name": "Lust",
+    "verb": "have",
+    "effects": [
+      {
+        "type": "change",
+        "target": "whore customer capacity"
+      }
+    ],
+    "archetype": "The Slut",
+    "name_i18n": "Lust"
+  },
+  {
+    "name": "Warrior",
+    "verb": "be a",
+    "effects": [
+      {
+        "type": "change",
+        "target": "defense",
+        "value": 3
+      },
+      {
+        "type": "personality",
+        "target": "rebel"
+      }
+    ],
+    "archetype": "The Bride",
+    "name_i18n": "Warrior"
+  },
+  {
+    "name": "Skilled tongue",
+    "verb": "have a",
+    "effects": [
+      {
+        "type": "increase satisfaction",
+        "target": "service"
+      },
+      {
+        "type": "increase satisfaction",
+        "target": "bisexual"
+      }
+    ],
+    "archetype": "The Fox",
+    "name_i18n": "Skilled tongue"
+  },
+  {
+    "name": "Always wet",
+    "verb": "be",
+    "effects": [
+      {
+        "type": "increase satisfaction",
+        "target": "sex"
+      },
+      {
+        "type": "increase satisfaction",
+        "target": "group"
+      }
+    ],
+    "archetype": "The Escort",
+    "name_i18n": "Always wet"
+  },
+  {
+    "name": "Tight ass",
+    "verb": "have a",
+    "effects": [
+      {
+        "type": "increase satisfaction",
+        "target": "anal"
+      },
+      {
+        "type": "increase satisfaction",
+        "target": "fetish"
+      }
+    ],
+    "archetype": "The Maid",
+    "name_i18n": "Tight ass"
+  },
+  {
+    "name": "Playful",
+    "verb": "be",
+    "effects": [
+      {
+        "type": "boost",
+        "target": "service preference increase",
+        "value": 0.15
+      },
+      {
+        "type": "boost",
+        "target": "bisexual preference increase",
+        "value": 0.15
+      },
+      {
+        "type": "change",
+        "target": "service max",
+        "value": 10,
+        "scales_with": "rank"
+      }
+    ],
+    "archetype": "The Player",
+    "name_i18n": "Playful"
+  },
+  {
+    "name": "Wild",
+    "verb": "be",
+    "effects": [
+      {
+        "type": "boost",
+        "target": "sex preference increase",
+        "value": 0.15
+      },
+      {
+        "type": "boost",
+        "target": "group preference increase",
+        "value": 0.15
+      },
+      {
+        "type": "change",
+        "target": "sex max",
+        "value": 10,
+        "scales_with": "rank"
+      }
+    ],
+    "archetype": "The Slut",
+    "name_i18n": "Wild"
+  },
+  {
+    "name": "Firm buttocks",
+    "verb": "have",
+    "effects": [
+      {
+        "type": "boost",
+        "target": "anal preference increase",
+        "value": 0.1
+      },
+      {
+        "type": "change",
+        "target": "anal max",
+        "value": 5,
+        "scales_with": "rank"
+      }
+    ],
+    "archetype": "The Model",
+    "name_i18n": "Firm buttocks"
+  },
+  {
+    "name": "Dirty mind",
+    "verb": "be",
+    "effects": [
+      {
+        "type": "boost",
+        "target": "fetish preference increase",
+        "value": 0.1
+      },
+      {
+        "type": "change",
+        "target": "fetish max",
+        "value": 5,
+        "scales_with": "rank"
+      }
+    ],
+    "archetype": "The Slut",
+    "name_i18n": "Dirty mind"
+  },
+  {
+    "name": "Magnetic",
+    "verb": "be",
+    "effects": [
+      {
+        "type": "boost",
+        "target": "income",
+        "value": 0.02
+      }
+    ],
+    "archetype": "The Model",
+    "name_i18n": "Magnetic"
+  },
+  {
+    "name": "Loose",
+    "verb": "be",
+    "effects": [
+      {
+        "type": "change",
+        "target": "train obedience target",
+        "value": -25
+      },
+      {
+        "type": "boost",
+        "target": "all sex acts preference increase",
+        "value": 0.1
+      }
+    ],
+    "archetype": "The Player",
+    "name_i18n": "Loose"
+  },
+  {
+    "name": "Dedicated",
+    "verb": "be",
+    "effects": [
+      {
+        "type": "change",
+        "target": "job obedience target",
+        "value": -25
+      },
+      {
+        "type": "boost",
+        "target": "all jp gains",
+        "value": 0.05
+      }
+    ],
+    "archetype": "The Maid",
+    "name_i18n": "Dedicated"
+  },
+  {
+    "name": "Provocative",
+    "verb": "be",
+    "effects": [
+      {
+        "type": "boost",
+        "target": "dress",
+        "value": 0.5
+      },
+      {
+        "type": "gain",
+        "target": "positive fixation",
+        "value": "cosplay"
+      }
+    ],
+    "archetype": "The Model",
+    "name_i18n": "Provocative"
+  },
+  {
+    "name": "Fashionista",
+    "verb": "be",
+    "effects": [
+      {
+        "type": "boost",
+        "target": "accessory",
+        "value": 0.25
+      },
+      {
+        "type": "boost",
+        "target": "necklace",
+        "value": 0.25
+      },
+      {
+        "type": "boost",
+        "target": "ring",
+        "value": 0.25
+      }
+    ],
+    "archetype": "The Fox",
+    "name_i18n": "Fashionista"
+  },
+  {
+    "name": "Perfectionist",
+    "verb": "be a",
+    "effects": [
+      {
+        "type": "increase satisfaction",
+        "target": "all jobs"
+      }
+    ],
+    "archetype": "The Courtesan",
+    "name_i18n": "Perfectionist"
+  },
+  {
+    "name": "Elite",
+    "verb": "be",
+    "effects": [
+      {
+        "type": "special",
+        "target": "ignore budgets"
+      }
+    ],
+    "archetype": "The Courtesan",
+    "name_i18n": "Elite"
+  },
+  {
+    "name": "Gifted",
+    "verb": "be",
+    "effects": [
+      {
+        "type": "increase satisfaction",
+        "target": "all sex acts"
+      }
+    ],
+    "archetype": "The Bride",
+    "name_i18n": "Gifted"
+  },
+  {
+    "name": "Fast learner",
+    "verb": "be a",
+    "effects": [
+      {
+        "type": "boost",
+        "target": "xp gains",
+        "value": 0.05
+      },
+      {
+        "type": "boost",
+        "target": "all jp gains",
+        "value": 0.05
+      }
+    ],
+    "archetype": "The Escort",
+    "name_i18n": "Fast learner"
+  },
+  {
+    "name": "Caster",
+    "verb": "be a",
+    "effects": [
+      {
+        "type": "special",
+        "target": "rest shield"
+      }
+    ],
+    "archetype": "The Bride",
+    "name_i18n": "Caster"
+  },
+  {
+    "name": "Driven",
+    "verb": "be",
+    "effects": [
+      {
+        "type": "boost",
+        "target": "max energy",
+        "value": 0.2
+      },
+      {
+        "type": "boost",
+        "target": "energy",
+        "value": 0.1
+      }
+    ],
+    "archetype": "The Player",
+    "name_i18n": "Driven"
+  },
+  {
+    "name": "Country girl",
+    "verb": "be a",
+    "effects": [
+      {
+        "type": "special",
+        "target": "all farm weaknesses"
+      },
+      {
+        "type": "boost",
+        "target": "farm preference increase",
+        "value": 0.5
+      }
+    ],
+    "archetype": "The Maid",
+    "name_i18n": "Country girl"
+  },
+  {
+    "name": "Noble",
+    "verb": "be a",
+    "effects": [
+      {
+        "type": "boost",
+        "target": "prestige",
+        "value": 2
+      }
+    ],
+    "archetype": "The Courtesan",
+    "name_i18n": "Noble"
+  },
+  {
+    "name": "Naturist",
+    "verb": "be a",
+    "effects": [
+      {
+        "type": "special",
+        "target": "naked"
+      }
+    ],
+    "archetype": "The Model",
+    "base_description_i18n": "She has no shame showing her naked body to perfect strangers.",
+    "name_i18n": "Naturist"
+  },
+  {
+    "name": "Vicious",
+    "verb": "be",
+    "effects": [
+      {
+        "type": "change",
+        "target": "service",
+        "value": 5
+      },
+      {
+        "type": "change",
+        "target": "sex",
+        "value": 5
+      },
+      {
+        "type": "change",
+        "target": "anal",
+        "value": 5
+      },
+      {
+        "type": "change",
+        "target": "fetish",
+        "value": 5
+      }
+    ],
+    "archetype": "The Escort",
+    "name_i18n": "Vicious"
+  },
+  {
+    "name": "Conduit",
+    "verb": "be a",
+    "effects": [
+      {
+        "type": "change",
+        "target": "mojo cost"
+      }
+    ],
+    "archetype": "The Fox",
+    "name_i18n": "Conduit"
+  },
+  {
+    "name": "Dynamo",
+    "verb": "be a",
+    "effects": [
+      {
+        "type": "boost",
+        "target": "max energy",
+        "value": 0.3
+      },
+      {
+        "type": "boost",
+        "target": "energy",
+        "value": 0.15
+      }
+    ],
+    "archetype": "The Fox",
+    "public": false,
+    "base_description_i18n": "Burns with fiery energy.",
+    "name_i18n": "Dynamo"
+  },
+  {
+    "name": "Lolita",
+    "verb": "be a",
+    "effects": [
+      {
+        "type": "boost",
+        "target": "tip",
+        "value": 2,
+        "chance": 0.2
+      }
+    ],
+    "archetype": "The Player",
+    "public": false,
+    "base_description_i18n": "She isn't actually underage, but looks like she is - and some customers love that.",
+    "name_i18n": "Lolita"
+  },
+  {
+    "name": "Ghost",
+    "verb": "be a",
+    "effects": [
+      {
+        "type": "special",
+        "target": "immune"
+      }
+    ],
+    "archetype": "The Escort",
+    "public": false,
+    "base_description_i18n": "She is a ghost, and cannot be hurt by any normal means.",
+    "name_i18n": "Ghost"
+  },
+  {
+    "name": "Stalwart",
+    "verb": "be",
+    "effects": [
+      {
+        "type": "change",
+        "target": "all skill max",
+        "value": 10,
+        "scales_with": "rank"
+      }
+    ],
+    "archetype": "The Bride",
+    "public": false,
+    "base_description_i18n": "It doesn't matter what she does, she'll train harder than anyone else.",
+    "name_i18n": "Stalwart"
+  },
+  {
+    "name": "Cute",
+    "verb": "be",
+    "effects": [
+      {
+        "type": "change",
+        "target": "beauty",
+        "value": 5,
+        "scales_with": "rank"
+      },
+      {
+        "type": "gain",
+        "target": "reputation",
+        "value": 5
+      }
+    ],
+    "archetype": "The Model",
+    "name_i18n": "Cute"
+  },
+  {
+    "name": "Long legs",
+    "verb": "have",
+    "effects": [
+      {
+        "type": "change",
+        "target": "beauty",
+        "value": 5,
+        "scales_with": "rank"
+      },
+      {
+        "type": "gain",
+        "target": "reputation",
+        "value": 5
+      }
+    ],
+    "archetype": "The Player",
+    "name_i18n": "Long legs"
+  },
+  {
+    "name": "Nice boobs",
+    "verb": "have",
+    "effects": [
+      {
+        "type": "change",
+        "target": "body",
+        "value": 5,
+        "scales_with": "rank"
+      },
+      {
+        "type": "gain",
+        "target": "reputation",
+        "value": 5
+      }
+    ],
+    "archetype": "The Escort",
+    "name_i18n": "Nice boobs"
+  },
+  {
+    "name": "Juicy ass",
+    "verb": "have a",
+    "effects": [
+      {
+        "type": "change",
+        "target": "body",
+        "value": 5,
+        "scales_with": "rank"
+      },
+      {
+        "type": "gain",
+        "target": "reputation",
+        "value": 5
+      }
+    ],
+    "archetype": "The Slut",
+    "name_i18n": "Juicy ass"
+  },
+  {
+    "name": "Sweet",
+    "verb": "be",
+    "effects": [
+      {
+        "type": "change",
+        "target": "charm",
+        "value": 5,
+        "scales_with": "rank"
+      },
+      {
+        "type": "personality",
+        "target": "sweet"
+      }
+    ],
+    "archetype": "The Bride",
+    "name_i18n": "Sweet"
+  },
+  {
+    "name": "Exotic",
+    "verb": "be",
+    "effects": [
+      {
+        "type": "change",
+        "target": "charm",
+        "value": 5,
+        "scales_with": "rank"
+      },
+      {
+        "type": "gain",
+        "target": "reputation",
+        "value": 5
+      }
+    ],
+    "archetype": "The Fox",
+    "name_i18n": "Exotic"
+  },
+  {
+    "name": "Polite",
+    "verb": "be",
+    "effects": [
+      {
+        "type": "change",
+        "target": "refinement",
+        "value": 5,
+        "scales_with": "rank"
+      },
+      {
+        "type": "gain",
+        "target": "reputation",
+        "value": 5
+      }
+    ],
+    "archetype": "The Courtesan",
+    "name_i18n": "Polite"
+  },
+  {
+    "name": "Feminine",
+    "verb": "be",
+    "effects": [
+      {
+        "type": "change",
+        "target": "refinement",
+        "value": 5,
+        "scales_with": "rank"
+      },
+      {
+        "type": "gain",
+        "target": "reputation",
+        "value": 5
+      }
+    ],
+    "archetype": "The Model",
+    "name_i18n": "Feminine"
+  },
+  {
+    "name": "Horny",
+    "verb": "be",
+    "effects": [
+      {
+        "type": "change",
+        "target": "libido",
+        "value": 5,
+        "scales_with": "rank"
+      },
+      {
+        "type": "gain",
+        "target": "reputation",
+        "value": 5
+      }
+    ],
+    "archetype": "The Slut",
+    "name_i18n": "Horny"
+  },
+  {
+    "name": "Resilient",
+    "verb": "be",
+    "effects": [
+      {
+        "type": "change",
+        "target": "constitution",
+        "value": 5,
+        "scales_with": "rank"
+      },
+      {
+        "type": "gain",
+        "target": "reputation",
+        "value": 5
+      }
+    ],
+    "archetype": "The Maid",
+    "name_i18n": "Resilient"
+  },
+  {
+    "name": "Delicate",
+    "verb": "be",
+    "effects": [
+      {
+        "type": "change",
+        "target": "sensitivity",
+        "value": 5,
+        "scales_with": "rank"
+      },
+      {
+        "type": "gain",
+        "target": "reputation",
+        "value": 5
+      }
+    ],
+    "archetype": "The Bride",
+    "name_i18n": "Delicate"
+  },
+  {
+    "name": "Meek",
+    "verb": "be",
+    "effects": [
+      {
+        "type": "change",
+        "target": "obedience",
+        "value": 5,
+        "scales_with": "rank"
+      },
+      {
+        "type": "personality",
+        "target": "meek"
+      }
+    ],
+    "archetype": "The Maid",
+    "name_i18n": "Meek"
+  },
+  {
+    "name": "Pretty eyes",
+    "verb": "have",
+    "effects": [
+      {
+        "type": "change",
+        "target": "beauty",
+        "value": 10
+      },
+      {
+        "type": "gain",
+        "target": "reputation",
+        "value": 5
+      }
+    ],
+    "archetype": "The Model",
+    "name_i18n": "Pretty eyes"
+  },
+  {
+    "name": "Firm tits",
+    "verb": "have",
+    "effects": [
+      {
+        "type": "change",
+        "target": "body",
+        "value": 10
+      },
+      {
+        "type": "gain",
+        "target": "reputation",
+        "value": 5
+      }
+    ],
+    "archetype": "The Slut",
+    "name_i18n": "Firm tits"
+  },
+  {
+    "name": "Seductive",
+    "verb": "be",
+    "effects": [
+      {
+        "type": "change",
+        "target": "charm",
+        "value": 10
+      },
+      {
+        "type": "gain",
+        "target": "reputation",
+        "value": 5
+      },
+      {
+        "type": "personality",
+        "target": "superficial"
+      }
+    ],
+    "archetype": "The Model",
+    "name_i18n": "Seductive"
+  },
+  {
+    "name": "Graceful",
+    "verb": "be",
+    "effects": [
+      {
+        "type": "change",
+        "target": "refinement",
+        "value": 10
+      },
+      {
+        "type": "gain",
+        "target": "reputation",
+        "value": 5
+      }
+    ],
+    "archetype": "The Courtesan",
+    "name_i18n": "Graceful"
+  },
+  {
+    "name": "Beautiful",
+    "verb": "be",
+    "effects": [
+      {
+        "type": "boost",
+        "target": "beauty gains",
+        "value": 0.25
+      }
+    ],
+    "archetype": "The Model",
+    "name_i18n": "Beautiful"
+  },
+  {
+    "name": "Fit",
+    "verb": "be",
+    "effects": [
+      {
+        "type": "boost",
+        "target": "body gains",
+        "value": 0.25
+      }
+    ],
+    "archetype": "The Escort",
+    "name_i18n": "Fit"
+  },
+  {
+    "name": "Charming",
+    "verb": "be",
+    "effects": [
+      {
+        "type": "boost",
+        "target": "charm gains",
+        "value": 0.25
+      }
+    ],
+    "archetype": "The Fox",
+    "name_i18n": "Charming"
+  },
+  {
+    "name": "Elegant",
+    "verb": "be",
+    "effects": [
+      {
+        "type": "boost",
+        "target": "refinement gains",
+        "value": 0.25
+      }
+    ],
+    "archetype": "The Courtesan",
+    "name_i18n": "Elegant"
+  },
+  {
+    "name": "Slutty",
+    "verb": "be",
+    "effects": [
+      {
+        "type": "boost",
+        "target": "libido gains",
+        "value": 0.25
+      }
+    ],
+    "archetype": "The Slut",
+    "name_i18n": "Slutty"
+  },
+  {
+    "name": "Athletic",
+    "verb": "be",
+    "effects": [
+      {
+        "type": "boost",
+        "target": "constitution gains",
+        "value": 0.25
+      }
+    ],
+    "archetype": "The Player",
+    "name_i18n": "Athletic"
+  },
+  {
+    "name": "Sensitive",
+    "verb": "be",
+    "effects": [
+      {
+        "type": "boost",
+        "target": "sensitivity gains",
+        "value": 0.25
+      }
+    ],
+    "archetype": "The Bride",
+    "name_i18n": "Sensitive"
+  },
+  {
+    "name": "Obedient",
+    "verb": "be",
+    "effects": [
+      {
+        "type": "boost",
+        "target": "obedience gains",
+        "value": 0.25
+      }
+    ],
+    "archetype": "The Maid",
+    "name_i18n": "Obedient"
+  },
+  {
+    "name": "Energetic",
+    "verb": "be",
+    "effects": [
+      {
+        "type": "boost",
+        "target": "max energy",
+        "value": 0.1
+      }
+    ],
+    "archetype": "The Player",
+    "name_i18n": "Energetic"
+  },
+  {
+    "name": "Tough",
+    "verb": "be",
+    "effects": [
+      {
+        "type": "boost",
+        "target": "hurt",
+        "value": -0.33
+      }
+    ],
+    "archetype": "The Maid",
+    "name_i18n": "Tough"
+  },
+  {
+    "name": "Sexy",
+    "verb": "be",
+    "effects": [
+      {
+        "type": "boost",
+        "target": "reputation gains",
+        "value": 0.2
+      }
+    ],
+    "archetype": "The Escort",
+    "name_i18n": "Sexy"
+  },
+  {
+    "name": "Humble",
+    "verb": "be",
+    "effects": [
+      {
+        "type": "boost",
+        "target": "upkeep",
+        "value": -0.2
+      }
+    ],
+    "archetype": "The Maid",
+    "name_i18n": "Humble"
+  },
+  {
+    "name": "Heavy-sleeper",
+    "verb": "be a",
+    "effects": [
+      {
+        "type": "change",
+        "target": "energy when resting",
+        "value": 12
+      }
+    ],
+    "opposite": [
+      "Insomniac"
+    ],
+    "name_i18n": "Heavy-sleeper"
+  },
+  {
+    "name": "Virgin",
+    "verb": "be a",
+    "effects": [
+      {
+        "type": "special",
+        "target": "virgin"
+      },
+      {
+        "type": "change",
+        "target": "all sex acts requirements",
+        "value": 10
+      }
+    ],
+    "archetype": "The Bride",
+    "base_description_i18n": "This girl is a virgin.",
+    "name_i18n": "Virgin"
+  },
+  {
+    "name": "Sharp",
+    "verb": "be",
+    "effects": [
+      {
+        "type": "boost",
+        "target": "xp gains",
+        "value": 0.1
+      },
+      {
+        "type": "personality",
+        "target": "nerd"
+      }
+    ],
+    "archetype": "The Fox",
+    "name_i18n": "Sharp"
+  },
+  {
+    "name": "Loyal",
+    "verb": "be",
+    "effects": [
+      {
+        "type": "boost",
+        "target": "love gains",
+        "value": 0.1
+      }
+    ],
+    "archetype": "The Bride",
+    "name_i18n": "Loyal"
+  },
+  {
+    "name": "Brave",
+    "verb": "be",
+    "effects": [
+      {
+        "type": "boost",
+        "target": "fear",
+        "value": -0.1
+      }
+    ],
+    "archetype": "The Escort",
+    "name_i18n": "Brave"
+  },
+  {
+    "name": "Strong",
+    "verb": "be",
+    "effects": [
+      {
+        "type": "change",
+        "target": "defense",
+        "value": 2
+      }
+    ],
+    "archetype": "The Player",
+    "name_i18n": "Strong"
+  },
+  {
+    "name": "Lucky",
+    "verb": "be",
+    "effects": [
+      {
+        "type": "special",
+        "target": "lucky"
+      }
+    ],
+    "archetype": "The Fox",
+    "base_description_i18n": "She's up all night...",
+    "name_i18n": "Lucky"
+  },
+  {
+    "name": "Deft",
+    "verb": "be",
+    "effects": [
+      {
+        "type": "boost",
+        "target": "waitress jp gains",
+        "value": 0.1
+      },
+      {
+        "type": "boost",
+        "target": "masseuse jp gains",
+        "value": 0.1
+      }
+    ],
+    "archetype": "The Maid",
+    "name_i18n": "Deft"
+  },
+  {
+    "name": "Nimble",
+    "verb": "be",
+    "effects": [
+      {
+        "type": "boost",
+        "target": "dancer jp gains",
+        "value": 0.1
+      },
+      {
+        "type": "boost",
+        "target": "geisha jp gains",
+        "value": 0.1
+      }
+    ],
+    "archetype": "The Player",
+    "name_i18n": "Nimble"
+  },
+  {
+    "name": "Soft skin",
+    "verb": "have",
+    "effects": [
+      {
+        "type": "boost",
+        "target": "geisha jp gains",
+        "value": 0.1
+      },
+      {
+        "type": "boost",
+        "target": "masseuse jp gains",
+        "value": 0.1
+      }
+    ],
+    "archetype": "The Courtesan",
+    "name_i18n": "Soft skin"
+  },
+  {
+    "name": "Bright",
+    "verb": "be",
+    "effects": [
+      {
+        "type": "boost",
+        "target": "waitress jp gains",
+        "value": 0.1
+      },
+      {
+        "type": "boost",
+        "target": "geisha jp gains",
+        "value": 0.1
+      }
+    ],
+    "archetype": "The Courtesan",
+    "name_i18n": "Bright"
+  },
+  {
+    "name": "Agile",
+    "verb": "be",
+    "effects": [
+      {
+        "type": "boost",
+        "target": "dancer jp gains",
+        "value": 0.1
+      },
+      {
+        "type": "boost",
+        "target": "masseuse jp gains",
+        "value": 0.1
+      }
+    ],
+    "archetype": "The Fox",
+    "name_i18n": "Agile"
+  },
+  {
+    "name": "Brisk",
+    "verb": "be",
+    "effects": [
+      {
+        "type": "boost",
+        "target": "waitress jp gains",
+        "value": 0.1
+      },
+      {
+        "type": "boost",
+        "target": "dancer jp gains",
+        "value": 0.1
+      }
+    ],
+    "archetype": "The Model",
+    "name_i18n": "Brisk"
+  },
+  {
+    "name": "Rowdy",
+    "verb": "be",
+    "effects": [
+      {
+        "type": "boost",
+        "target": "waitress jp gains",
+        "value": 0.2
+      },
+      {
+        "type": "increase satisfaction",
+        "target": "waitress"
+      },
+      {
+        "type": "increase satisfaction",
+        "target": "geisha",
+        "value": -2
+      }
+    ],
+    "opposite": [
+      "Modest",
+      "Unhurried"
+    ],
+    "archetype": "The Slut",
+    "name_i18n": "Rowdy"
+  },
+  {
+    "name": "Powerful",
+    "verb": "be",
+    "effects": [
+      {
+        "type": "boost",
+        "target": "dancer jp gains",
+        "value": 0.2
+      },
+      {
+        "type": "increase satisfaction",
+        "target": "dancer"
+      },
+      {
+        "type": "increase satisfaction",
+        "target": "masseuse",
+        "value": -2
+      }
+    ],
+    "opposite": [
+      "Modest",
+      "Unhurried"
+    ],
+    "archetype": "The Bride",
+    "name_i18n": "Powerful"
+  },
+  {
+    "name": "Unhurried",
+    "verb": "be",
+    "effects": [
+      {
+        "type": "boost",
+        "target": "masseuse jp gains",
+        "value": 0.2
+      },
+      {
+        "type": "increase satisfaction",
+        "target": "masseuse"
+      },
+      {
+        "type": "increase satisfaction",
+        "target": "waitress",
+        "value": -2
+      }
+    ],
+    "opposite": [
+      "Powerful",
+      "Rowdy"
+    ],
+    "archetype": "The Escort",
+    "name_i18n": "Unhurried"
+  },
+  {
+    "name": "Modest",
+    "verb": "be",
+    "effects": [
+      {
+        "type": "boost",
+        "target": "geisha jp gains",
+        "value": 0.2
+      },
+      {
+        "type": "increase satisfaction",
+        "target": "geisha"
+      },
+      {
+        "type": "increase satisfaction",
+        "target": "dancer",
+        "value": -2
+      },
+      {
+        "type": "personality",
+        "target": "meek"
+      }
+    ],
+    "opposite": [
+      "Rowdy",
+      "Powerful"
+    ],
+    "archetype": "The Fox",
+    "name_i18n": "Modest"
+  },
+  {
+    "name": "Sensual",
+    "verb": "be",
+    "effects": [
+      {
+        "type": "boost",
+        "target": "service jp gains",
+        "value": 0.1
+      },
+      {
+        "type": "boost",
+        "target": "sex jp gains",
+        "value": 0.1
+      },
+      {
+        "type": "personality",
+        "target": "pervert"
+      }
+    ],
+    "archetype": "The Escort",
+    "name_i18n": "Sensual"
+  },
+  {
+    "name": "Kinky",
+    "verb": "be",
+    "effects": [
+      {
+        "type": "boost",
+        "target": "anal jp gains",
+        "value": 0.1
+      },
+      {
+        "type": "boost",
+        "target": "fetish jp gains",
+        "value": 0.1
+      },
+      {
+        "type": "personality",
+        "target": "masochist"
+      }
+    ],
+    "archetype": "The Player",
+    "name_i18n": "Kinky"
+  },
+  {
+    "name": "Pervert",
+    "verb": "be a",
+    "effects": [
+      {
+        "type": "change",
+        "target": "all sex acts requirements",
+        "value": -10
+      },
+      {
+        "type": "personality",
+        "target": "pervert"
+      }
+    ],
+    "archetype": "The Slut",
+    "name_i18n": "Pervert"
+  },
+  {
+    "name": "Thief",
+    "verb": "be a",
+    "effects": [
+      {
+        "type": "special",
+        "target": "pickpocket"
+      }
+    ],
+    "archetype": "The Fox",
+    "base_description_i18n": "She may steal a little amount from the customers while seducing them. Reputation may suffer.",
+    "name_i18n": "Thief"
+  },
+  {
+    "name": "Sane",
+    "verb": "be",
+    "effects": [
+      {
+        "type": "change",
+        "target": "sanity loss"
+      }
+    ],
+    "archetype": "The Courtesan",
+    "name_i18n": "Sane"
+  },
+  {
+    "name": "Trusting",
+    "verb": "be",
+    "effects": [
+      {
+        "type": "change",
+        "target": "fear per day",
+        "chance": 0.25
+      }
+    ],
+    "archetype": "The Maid",
+    "name_i18n": "Trusting"
+  },
+  {
+    "name": "Loving",
+    "verb": "be",
+    "effects": [
+      {
+        "type": "change",
+        "target": "love per day",
+        "chance": 0.25
+      }
+    ],
+    "archetype": "The Bride",
+    "name_i18n": "Loving"
+  },
+  {
+    "name": "Plain",
+    "verb": "be",
+    "effects": [
+      {
+        "type": "change",
+        "target": "beauty",
+        "value": -10,
+        "scales_with": "rank"
+      }
+    ],
+    "opposite": "Cute",
+    "name_i18n": "Plain"
+  },
+  {
+    "name": "Scars",
+    "verb": "have",
+    "effects": [
+      {
+        "type": "change",
+        "target": "body",
+        "value": -10,
+        "scales_with": "rank"
+      }
+    ],
+    "opposite": "Nice boobs",
+    "name_i18n": "Scars"
+  },
+  {
+    "name": "Mean",
+    "verb": "be",
+    "effects": [
+      {
+        "type": "change",
+        "target": "charm",
+        "value": -10,
+        "scales_with": "rank"
+      }
+    ],
+    "opposite": "Sweet",
+    "name_i18n": "Mean"
+  },
+  {
+    "name": "Rude",
+    "verb": "be",
+    "effects": [
+      {
+        "type": "change",
+        "target": "refinement",
+        "value": -10,
+        "scales_with": "rank"
+      }
+    ],
+    "opposite": "Polite",
+    "name_i18n": "Rude"
+  },
+  {
+    "name": "Cold",
+    "verb": "be",
+    "effects": [
+      {
+        "type": "change",
+        "target": "libido",
+        "value": -10,
+        "scales_with": "rank"
+      },
+      {
+        "type": "personality",
+        "target": "cold"
+      }
+    ],
+    "opposite": "Horny",
+    "name_i18n": "Cold"
+  },
+  {
+    "name": "Weak",
+    "verb": "be",
+    "effects": [
+      {
+        "type": "change",
+        "target": "constitution",
+        "value": -10,
+        "scales_with": "rank"
+      }
+    ],
+    "opposite": "Resilient",
+    "name_i18n": "Weak"
+  },
+  {
+    "name": "Rough",
+    "verb": "be",
+    "effects": [
+      {
+        "type": "change",
+        "target": "sensitivity",
+        "value": -10,
+        "scales_with": "rank"
+      }
+    ],
+    "opposite": "Delicate",
+    "name_i18n": "Rough"
+  },
+  {
+    "name": "Defiant",
+    "verb": "be",
+    "effects": [
+      {
+        "type": "change",
+        "target": "obedience",
+        "value": -10,
+        "scales_with": "rank"
+      }
+    ],
+    "opposite": "Meek",
+    "name_i18n": "Defiant"
+  },
+  {
+    "name": "Scruffy",
+    "verb": "be",
+    "effects": [
+      {
+        "type": "boost",
+        "target": "beauty gains",
+        "value": -0.5
+      }
+    ],
+    "opposite": "Beautiful",
+    "name_i18n": "Scruffy"
+  },
+  {
+    "name": "Plump",
+    "verb": "be",
+    "effects": [
+      {
+        "type": "boost",
+        "target": "body gains",
+        "value": -0.5
+      }
+    ],
+    "opposite": "Fit",
+    "name_i18n": "Plump"
+  },
+  {
+    "name": "Timid",
+    "verb": "be",
+    "effects": [
+      {
+        "type": "boost",
+        "target": "charm gains",
+        "value": -0.5
+      }
+    ],
+    "opposite": "Charming",
+    "name_i18n": "Timid"
+  },
+  {
+    "name": "Vulgar",
+    "verb": "be",
+    "effects": [
+      {
+        "type": "boost",
+        "target": "refinement gains",
+        "value": -0.5
+      }
+    ],
+    "opposite": "Elegant",
+    "name_i18n": "Vulgar"
+  },
+  {
+    "name": "Tame",
+    "verb": "be",
+    "effects": [
+      {
+        "type": "boost",
+        "target": "libido gains",
+        "value": -0.5
+      }
+    ],
+    "opposite": "Slutty",
+    "name_i18n": "Tame"
+  },
+  {
+    "name": "Frail",
+    "verb": "be",
+    "effects": [
+      {
+        "type": "boost",
+        "target": "constitution gains",
+        "value": -0.5
+      }
+    ],
+    "opposite": "Athletic",
+    "name_i18n": "Frail"
+  },
+  {
+    "name": "Jaded",
+    "verb": "be",
+    "effects": [
+      {
+        "type": "boost",
+        "target": "sensitivity gains",
+        "value": -0.5
+      }
+    ],
+    "opposite": "Sensitive",
+    "name_i18n": "Jaded"
+  },
+  {
+    "name": "Rebellious",
+    "verb": "be",
+    "effects": [
+      {
+        "type": "boost",
+        "target": "obedience gains",
+        "value": -0.5
+      },
+      {
+        "type": "personality",
+        "target": "rebel"
+      }
+    ],
+    "opposite": "Obedient",
+    "name_i18n": "Rebellious"
+  },
+  {
+    "name": "Lazy",
+    "verb": "be",
+    "effects": [
+      {
+        "type": "boost",
+        "target": "max energy",
+        "value": -0.15
+      }
+    ],
+    "opposite": [
+      "Energetic",
+      "Driven"
+    ],
+    "name_i18n": "Lazy"
+  },
+  {
+    "name": "Insomniac",
+    "verb": "be",
+    "effects": [
+      {
+        "type": "change",
+        "target": "energy when resting",
+        "value": -12
+      }
+    ],
+    "opposite": [
+      "Heavy-sleeper"
+    ],
+    "name_i18n": "Insomniac"
+  },
+  {
+    "name": "Sickly",
+    "verb": "be",
+    "effects": [
+      {
+        "type": "boost",
+        "target": "hurt",
+        "value": 2
+      }
+    ],
+    "opposite": "Tough",
+    "name_i18n": "Sickly"
+  },
+  {
+    "name": "Homely",
+    "verb": "be",
+    "effects": [
+      {
+        "type": "boost",
+        "target": "reputation gains",
+        "value": -0.25
+      }
+    ],
+    "opposite": "Sexy",
+    "name_i18n": "Homely"
+  },
+  {
+    "name": "Expensive",
+    "verb": "be",
+    "effects": [
+      {
+        "type": "boost",
+        "target": "upkeep",
+        "value": 0.25
+      }
+    ],
+    "opposite": "Humble",
+    "name_i18n": "Expensive"
+  },
+  {
+    "name": "Slow",
+    "verb": "be",
+    "effects": [
+      {
+        "type": "boost",
+        "target": "xp gains",
+        "value": -0.25
+      }
+    ],
+    "opposite": [
+      "Fast learner",
+      "Sharp"
+    ],
+    "name_i18n": "Slow"
+  },
+  {
+    "name": "Disloyal",
+    "verb": "be",
+    "effects": [
+      {
+        "type": "boost",
+        "target": "love gains",
+        "value": -0.25
+      }
+    ],
+    "opposite": "Loyal",
+    "name_i18n": "Disloyal"
+  },
+  {
+    "name": "Fearful",
+    "verb": "be",
+    "effects": [
+      {
+        "type": "boost",
+        "target": "fear",
+        "value": 0.25
+      }
+    ],
+    "opposite": "Brave",
+    "name_i18n": "Fearful"
+  },
+  {
+    "name": "Vulnerable",
+    "verb": "be",
+    "effects": [
+      {
+        "type": "change",
+        "target": "defense",
+        "value": -2
+      }
+    ],
+    "opposite": [
+      "Strong",
+      "Warrior"
+    ],
+    "name_i18n": "Vulnerable"
+  },
+  {
+    "name": "Unlucky",
+    "verb": "be",
+    "effects": [
+      {
+        "type": "special",
+        "target": "unlucky"
+      }
+    ],
+    "opposite": "Lucky",
+    "base_description_i18n": "She shouldn't have broken that magic mirror... Increased chance of critical failure when working.",
+    "name_i18n": "Unlucky"
+  },
+  {
+    "name": "All thumbs",
+    "verb": "be",
+    "effects": [
+      {
+        "type": "boost",
+        "target": "waitress jp gains",
+        "value": -0.5
+      },
+      {
+        "type": "increase satisfaction",
+        "target": "waitress"
+      }
+    ],
+    "opposite": [
+      "Deft",
+      "Bright",
+      "Brisk",
+      "Rowdy"
+    ],
+    "name_i18n": "All thumbs"
+  },
+  {
+    "name": "Awkward",
+    "verb": "be",
+    "effects": [
+      {
+        "type": "boost",
+        "target": "dancer jp gains",
+        "value": -0.5
+      },
+      {
+        "type": "increase satisfaction",
+        "target": "dancer"
+      }
+    ],
+    "opposite": [
+      "Nimble",
+      "Agile",
+      "Brisk",
+      "Powerful"
+    ],
+    "name_i18n": "Awkward"
+  },
+  {
+    "name": "Brutal",
+    "verb": "be",
+    "effects": [
+      {
+        "type": "boost",
+        "target": "masseuse jp gains",
+        "value": -0.5
+      },
+      {
+        "type": "increase satisfaction",
+        "target": "masseuse"
+      }
+    ],
+    "opposite": [
+      "Deft",
+      "Soft skin",
+      "Agile",
+      "Unhurried"
+    ],
+    "name_i18n": "Brutal"
+  },
+  {
+    "name": "Dumb",
+    "verb": "be",
+    "effects": [
+      {
+        "type": "boost",
+        "target": "geisha jp gains",
+        "value": -0.5
+      },
+      {
+        "type": "increase satisfaction",
+        "target": "geisha"
+      }
+    ],
+    "opposite": [
+      "Nimble",
+      "Soft skin",
+      "Bright",
+      "Modest"
+    ],
+    "name_i18n": "Dumb"
+  },
+  {
+    "name": "Oafish",
+    "verb": "be",
+    "effects": [
+      {
+        "type": "boost",
+        "target": "dancer jp gains",
+        "value": -0.5
+      },
+      {
+        "type": "boost",
+        "target": "geisha jp gains",
+        "value": -0.5
+      }
+    ],
+    "opposite": [
+      "Nimble",
+      "Agile",
+      "Brisk",
+      "Soft skin",
+      "Bright"
+    ],
+    "name_i18n": "Oafish"
+  },
+  {
+    "name": "Clumsy",
+    "verb": "be",
+    "effects": [
+      {
+        "type": "boost",
+        "target": "waitress jp gains",
+        "value": -0.5
+      },
+      {
+        "type": "boost",
+        "target": "masseuse jp gains",
+        "value": -0.5
+      }
+    ],
+    "opposite": [
+      "Deft",
+      "Bright",
+      "Brisk",
+      "Rowdy",
+      "Soft skin",
+      "Agile"
+    ],
+    "name_i18n": "Clumsy"
+  },
+  {
+    "name": "Prude",
+    "verb": "be",
+    "effects": [
+      {
+        "type": "boost",
+        "target": "service jp gains",
+        "value": -0.5
+      },
+      {
+        "type": "boost",
+        "target": "sex jp gains",
+        "value": -0.5
+      }
+    ],
+    "opposite": "Naughty",
+    "name_i18n": "Prude"
+  },
+  {
+    "name": "Naive",
+    "verb": "be",
+    "effects": [
+      {
+        "type": "boost",
+        "target": "anal jp gains",
+        "value": -0.5
+      },
+      {
+        "type": "boost",
+        "target": "fetish jp gains",
+        "value": -0.5
+      }
+    ],
+    "opposite": "Kinky",
+    "name_i18n": "Naive"
+  },
+  {
+    "name": "Square",
+    "verb": "be",
+    "effects": [
+      {
+        "type": "change",
+        "target": "all sex acts requirements",
+        "value": 25
+      }
+    ],
+    "opposite": "Pervert",
+    "name_i18n": "Square"
+  },
+  {
+    "name": "Insane",
+    "verb": "be",
+    "effects": [
+      {
+        "type": "change",
+        "target": "sanity loss"
+      }
+    ],
+    "opposite": "Sane",
+    "name_i18n": "Insane"
+  },
+  {
+    "name": "Distrustful",
+    "verb": "be",
+    "effects": [
+      {
+        "type": "change",
+        "target": "fear per day",
+        "chance": 0.25
+      }
+    ],
+    "opposite": "Trusting",
+    "name_i18n": "Distrustful"
+  },
+  {
+    "name": "Spiteful",
+    "verb": "be",
+    "effects": [
+      {
+        "type": "change",
+        "target": "love per day",
+        "chance": 0.25
+      }
+    ],
+    "opposite": "Loving",
+    "name_i18n": "Spiteful"
+  },
+  {
+    "name": "Earthbound",
+    "verb": "be",
+    "effects": [
+      {
+        "type": "special",
+        "target": "bound"
+      },
+      {
+        "type": "change",
+        "target": "defense",
+        "value": 6
+      }
+    ],
+    "public": false,
+    "base_description_i18n": "Will not attack you. Deadly to everyone else.",
+    "name_i18n": "Earthbound"
+  },
+  {
+    "name": "Waterbound",
+    "verb": "be",
+    "effects": [
+      {
+        "type": "special",
+        "target": "bound"
+      },
+      {
+        "type": "change",
+        "target": "defense",
+        "value": 6
+      }
+    ],
+    "public": false,
+    "base_description_i18n": "Will not attack you. Deadly to everyone else.",
+    "name_i18n": "Waterbound"
+  },
+  {
+    "name": "Voidbound",
+    "verb": "be",
+    "effects": [
+      {
+        "type": "special",
+        "target": "bound"
+      },
+      {
+        "type": "change",
+        "target": "defense",
+        "value": 6
+      }
+    ],
+    "public": false,
+    "base_description_i18n": "Will not attack you. Deadly to everyone else.",
+    "name_i18n": "Voidbound"
+  },
+  {
+    "name": "Firebound",
+    "verb": "be",
+    "effects": [
+      {
+        "type": "special",
+        "target": "bound"
+      },
+      {
+        "type": "change",
+        "target": "defense",
+        "value": 6
+      }
+    ],
+    "public": false,
+    "base_description_i18n": "Will not attack you. Deadly to everyone else.",
+    "name_i18n": "Firebound"
+  },
+  {
+    "name": "Godless",
+    "verb": "be",
+    "effects": [
+      {
+        "type": "boost",
+        "target": "reputation gains",
+        "value": -0.2
+      }
+    ],
+    "name_i18n": "Godless"
+  },
+  {
+    "name": "Housebroken",
+    "verb": "be",
+    "effects": [
+      {
+        "type": "change",
+        "target": "job obedience target",
+        "value": -10
+      },
+      {
+        "type": "change",
+        "target": "whore obedience target",
+        "value": -10
+      }
+    ],
+    "base_description_i18n": "She lost her virginity in a brothel. This is all she knows.",
+    "name_i18n": "Housebroken"
+  },
+  {
+    "name": "Teacher's pet",
+    "verb": "be a",
+    "effects": [
+      {
+        "type": "change",
+        "target": "train obedience target",
+        "value": -20
+      },
+      {
+        "type": "boost",
+        "target": "love",
+        "value": 0.2
+      }
+    ],
+    "base_description_i18n": "Her first time was with you. You're special to her.",
+    "name_i18n": "Teacher's pet"
+  },
+  {
+    "name": "Trauma",
+    "verb": "have a",
+    "effects": [
+      {
+        "type": "change",
+        "target": "obedience",
+        "value": 15
+      },
+      {
+        "type": "change",
+        "target": "libido",
+        "value": -15
+      },
+      {
+        "type": "boost",
+        "target": "fear",
+        "value": 0.2
+      }
+    ],
+    "base_description_i18n": "She lost her virginity against her will, and has to live with the trauma.",
+    "name_i18n": "Trauma"
+  },
+  {
+    "name": "Farmgirl",
+    "verb": "be a",
+    "effects": [
+      {
+        "type": "change",
+        "target": "obedience",
+        "value": 10
+      },
+      {
+        "type": "boost",
+        "target": "farm preference increase",
+        "value": 0.25
+      }
+    ],
+    "base_description_i18n": "She has lost her virginity in the farm like a filthy animal.",
+    "name_i18n": "Farmgirl"
+  },
+  {
+    "name": "Mark of Chaos",
+    "verb": "have a",
+    "effects": [
+      {
+        "type": "boost",
+        "target": "sanity loss",
+        "value": -0.33
+      }
+    ],
+    "base_description_i18n": "She lost her virginity in a strange feverish dream, yet emerged with reinforced sanity.",
+    "name_i18n": "Mark of Chaos"
+  }
+]

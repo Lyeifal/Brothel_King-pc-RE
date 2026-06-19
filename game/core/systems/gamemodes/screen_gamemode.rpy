@@ -357,7 +357,7 @@ screen scenario_select():
                                             color "#FFFFFF"
                                             xalign 0.5
 
-                                        text "v[sc.version] by [sc.author]":
+                                        text _("v[sc.version] by [sc.author]"):
                                             size 14
                                             color "#888888"
                                             xalign 0.5
@@ -396,7 +396,7 @@ screen scenario_select():
                                 underline True
 
                             for key, val in selected_scenario.rules.items():
-                                text "[key]: [val]":
+                                text _("[key]: [val]"):
                                     size 16
                                     xalign 0.5
                                     color "#BBBBBB"

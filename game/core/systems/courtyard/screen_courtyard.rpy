@@ -90,13 +90,13 @@ screen courtyard():
                                         spacing 2
 
                                         if hasattr(girl, "mood"):
-                                            text "M: [girl.mood]":
+                                            text _("M: [girl.mood]"):
                                                 size 13
                                                 color "#FF69B4"
                                                 xalign 1.0
 
                                         if hasattr(girl, "energy"):
-                                            text "E: [girl.energy]":
+                                            text _("E: [girl.energy]"):
                                                 size 13
                                                 color "#4ECDC4"
                                                 xalign 1.0
@@ -122,7 +122,7 @@ screen courtyard():
                             bold True
 
                         if hasattr(selected_girl, "job"):
-                            text "[selected_girl.job]":
+                            text __(selected_girl.job.capitalize()):
                                 size 16
                                 xalign 0.5
                                 color "#BBBBBB"
@@ -134,12 +134,12 @@ screen courtyard():
                             spacing 15
 
                             if hasattr(selected_girl, "mood"):
-                                text "Mood: [selected_girl.mood]":
+                                text _("Mood: [selected_girl.mood]"):
                                     size 16
                                     color "#FF69B4"
 
                             if hasattr(selected_girl, "energy"):
-                                text "Energy: [selected_girl.energy]":
+                                text _("Energy: [selected_girl.energy]"):
                                     size 16
                                     color "#4ECDC4"
 

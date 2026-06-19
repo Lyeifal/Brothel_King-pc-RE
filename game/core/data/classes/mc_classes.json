@@ -1,0 +1,1142 @@
+{
+  "classes": {
+    "Warrior": {
+      "icon": "resources/ui/warrior.webp",
+      "modes": [
+        "story",
+        "sandbox"
+      ],
+      "spellbook": [
+        {
+          "pic": "strength.webp",
+          "type": "passive",
+          "level": 2,
+          "cost": 0,
+          "effects": [
+            {
+              "type": "gain",
+              "target": "strength",
+              "value": 1
+            }
+          ],
+          "name_i18n": "Heavy Lifting",
+          "description_i18n": "Pumping and Pimping."
+        },
+        {
+          "pic": "defender.webp",
+          "type": "passive",
+          "level": 3,
+          "cost": 0,
+          "effects": [
+            {
+              "type": "special",
+              "target": "defender",
+              "value": 1
+            }
+          ],
+          "name_i18n": "The Defender",
+          "description_i18n": "You will have to get past me."
+        },
+        {
+          "pic": "discipline.webp",
+          "type": "discipline",
+          "level": 4,
+          "cost": 1,
+          "effects": [
+            {
+              "scope": "brothel",
+              "type": "change",
+              "target": "train obedience target",
+              "value": -10
+            },
+            {
+              "scope": "brothel",
+              "type": "change",
+              "target": "job obedience target",
+              "value": -10
+            }
+          ],
+          "duration": "turn",
+          "name_i18n": "Discipline",
+          "description_i18n": "The pain of discipline is nothing like the pain of disappointment."
+        },
+        {
+          "pic": "spirit.webp",
+          "type": "passive",
+          "level": 6,
+          "cost": 0,
+          "effects": [
+            {
+              "type": "gain",
+              "target": "spirit",
+              "value": 1
+            }
+          ],
+          "name_i18n": "Samurai Spirit",
+          "description_i18n": "You must see it through your mind's Eye."
+        },
+        {
+          "pic": "hound.webp",
+          "type": "summon",
+          "level": 8,
+          "cost": 2,
+          "effects": [
+            {
+              "dice": true,
+              "type": "change",
+              "target": "fight challenges",
+              "value": 6
+            }
+          ],
+          "duration": "turn",
+          "name_i18n": "Summon Bloodhound",
+          "description_i18n": "Summons a ghastly bloodhound to help you with individual fights."
+        },
+        {
+          "pic": "strength.webp",
+          "type": "passive",
+          "level": 10,
+          "cost": 0,
+          "effects": [
+            {
+              "type": "gain",
+              "target": "strength",
+              "value": 1
+            }
+          ],
+          "name_i18n": "Secret technique",
+          "description_i18n": "I will find you, and I will kill you. Twice."
+        },
+        {
+          "pic": "training.webp",
+          "type": "training",
+          "level": 12,
+          "cost": 3,
+          "effects": [
+            {
+              "scales_with": "charisma",
+              "scope": "brothel",
+              "type": "boost",
+              "target": "body gains",
+              "value": 0.05
+            },
+            {
+              "scales_with": "charisma",
+              "scope": "brothel",
+              "type": "boost",
+              "target": "constitution gains",
+              "value": 0.05
+            }
+          ],
+          "duration": "turn",
+          "name_i18n": "Training Day",
+          "description_i18n": "The more you sweat in training, the less you bleed in combat."
+        },
+        {
+          "pic": "charisma.webp",
+          "type": "passive",
+          "level": 14,
+          "cost": 0,
+          "effects": [
+            {
+              "type": "gain",
+              "target": "charisma",
+              "value": 1
+            }
+          ],
+          "name_i18n": "Commanding Voice",
+          "description_i18n": "From the battlefield to the whorehouse, you've never lost that edge."
+        },
+        {
+          "pic": "phoenix.webp",
+          "type": "summon",
+          "level": 16,
+          "cost": 4,
+          "effects": [
+            {
+              "scope": "brothel",
+              "type": "boost",
+              "target": "energy when resting",
+              "value": 0.25
+            }
+          ],
+          "duration": "turn",
+          "name_i18n": "Summon Phoenix",
+          "description_i18n": "Summons a magical bird whose soothing songs help your girls relax. "
+        },
+        {
+          "pic": "strength.webp",
+          "type": "passive",
+          "level": 18,
+          "cost": 0,
+          "effects": [
+            {
+              "type": "gain",
+              "target": "strength",
+              "value": 1
+            }
+          ],
+          "name_i18n": "Eye Of The Tiger",
+          "description_i18n": "ADRIAAAAAN!!!"
+        },
+        {
+          "pic": "bear.webp",
+          "type": "summon",
+          "level": 20,
+          "cost": 5,
+          "effects": [
+            {
+              "scope": "brothel",
+              "type": "change",
+              "target": "job customer capacity",
+              "value": 2
+            },
+            {
+              "scope": "brothel",
+              "type": "change",
+              "target": "whore customer capacity",
+              "value": 1
+            }
+          ],
+          "duration": "turn",
+          "name_i18n": "Summon Bear Spirit",
+          "description_i18n": "Summons a totemic beast that infuses your girls with supernatural power."
+        },
+        {
+          "pic": "speed.webp",
+          "type": "passive",
+          "level": 22,
+          "cost": 0,
+          "effects": [
+            {
+              "type": "gain",
+              "target": "speed",
+              "value": 1
+            }
+          ],
+          "name_i18n": "Lightning Reflexes",
+          "description_i18n": "Swift like a cobra."
+        },
+        {
+          "pic": "militia.webp",
+          "type": "passive",
+          "level": 24,
+          "cost": 0,
+          "effects": [
+            {
+              "scope": "brothel",
+              "type": "boost",
+              "target": "defense",
+              "value": 2
+            }
+          ],
+          "name_i18n": "Brothel Militia",
+          "description_i18n": "Man the battlestations! Err… Should it be 'Woman the battlestations'?"
+        },
+        {
+          "pic": "defender2.webp",
+          "type": "passive",
+          "level": 25,
+          "cost": 0,
+          "effects": [
+            {
+              "type": "special",
+              "target": "defender",
+              "value": 2
+            }
+          ],
+          "name_i18n": "The Ultimate Defender",
+          "description_i18n": "It's like you can be everywhere at once."
+        }
+      ],
+      "name_i18n": "Warrior",
+      "description_i18n": "A seasoned fighter who relies on strength and martial prowess."
+    },
+    "Trader": {
+      "icon": "resources/ui/trader.webp",
+      "modes": [
+        "story",
+        "sandbox"
+      ],
+      "spellbook": [
+        {
+          "pic": "charisma.webp",
+          "type": "passive",
+          "level": 2,
+          "cost": 0,
+          "effects": [
+            {
+              "type": "gain",
+              "target": "charisma",
+              "value": 1
+            }
+          ],
+          "name_i18n": "Rogue",
+          "description_i18n": "Every day I'm hustling."
+        },
+        {
+          "pic": "haggler.webp",
+          "type": "passive",
+          "level": 3,
+          "cost": 0,
+          "effects": [
+            {
+              "scales_with": "charisma",
+              "type": "boost",
+              "target": "buy",
+              "value": -0.02
+            },
+            {
+              "scales_with": "charisma",
+              "type": "boost",
+              "target": "sell",
+              "value": 0.02
+            }
+          ],
+          "name_i18n": "The Haggler",
+          "description_i18n": "'That's it. I'm walking away now...' Better prices for girls and items."
+        },
+        {
+          "pic": "sign1.webp",
+          "type": "sign",
+          "level": 4,
+          "cost": 1,
+          "effects": [
+            {
+              "scope": "brothel",
+              "type": "boost",
+              "target": "love gains",
+              "value": 0.1
+            },
+            {
+              "scope": "brothel",
+              "type": "boost",
+              "target": "fear gains",
+              "value": 0.1
+            }
+          ],
+          "duration": "turn",
+          "name_i18n": "Sign Of Influence",
+          "description_i18n": "Trust is earned. Unless you know magic."
+        },
+        {
+          "pic": "strength.webp",
+          "type": "passive",
+          "level": 6,
+          "cost": 0,
+          "effects": [
+            {
+              "type": "gain",
+              "target": "strength",
+              "value": 1
+            }
+          ],
+          "name_i18n": "Street Fighter",
+          "description_i18n": "The mean streets of Borgo have taught you all that there is to know about street fighting. Always stab from the back."
+        },
+        {
+          "pic": "tale.webp",
+          "type": "tales",
+          "level": 8,
+          "cost": 2,
+          "effects": [
+            {
+              "scope": "brothel",
+              "type": "boost",
+              "target": "prestige",
+              "value": 0.1
+            }
+          ],
+          "duration": "turn",
+          "name_i18n": "Tall Tales",
+          "description_i18n": "Cool story bro."
+        },
+        {
+          "pic": "charisma.webp",
+          "type": "passive",
+          "level": 10,
+          "cost": 0,
+          "effects": [
+            {
+              "type": "gain",
+              "target": "charisma",
+              "value": 1
+            }
+          ],
+          "name_i18n": "Adventurer",
+          "description_i18n": "You don't always adventure far from your bed, but at least you look the part."
+        },
+        {
+          "pic": "sign2.webp",
+          "type": "sign",
+          "level": 12,
+          "cost": 3,
+          "effects": [
+            {
+              "scales_with": "charisma",
+              "scope": "brothel",
+              "type": "boost",
+              "target": "charm gains",
+              "value": 0.05
+            },
+            {
+              "scales_with": "charisma",
+              "scope": "brothel",
+              "type": "boost",
+              "target": "libido gains",
+              "value": 0.05
+            }
+          ],
+          "duration": "turn",
+          "name_i18n": "Sign Of Confidence",
+          "description_i18n": "You're gorgeous, you don't need validation from anyone, but here, have this spell just in case."
+        },
+        {
+          "pic": "spirit.webp",
+          "type": "passive",
+          "level": 14,
+          "cost": 0,
+          "effects": [
+            {
+              "type": "gain",
+              "target": "spirit",
+              "value": 1
+            }
+          ],
+          "name_i18n": "Worldly",
+          "description_i18n": "I've spent months living among the amazon tribes of the Lankan Rainforest. Wanna know how they do it?"
+        },
+        {
+          "pic": "girl.webp",
+          "type": "city",
+          "level": 16,
+          "cost": 4,
+          "effects": [
+            {
+              "scope": "city",
+              "type": "boost",
+              "target": "love gains",
+              "value": 0.3
+            }
+          ],
+          "duration": "turn",
+          "name_i18n": "Silver Tongue",
+          "description_i18n": "You can grab 'em by the pussy, you can do anything."
+        },
+        {
+          "pic": "charisma.webp",
+          "type": "passive",
+          "level": 18,
+          "cost": 0,
+          "effects": [
+            {
+              "type": "gain",
+              "target": "charisma",
+              "value": 1
+            }
+          ],
+          "name_i18n": "Smooth Criminal",
+          "description_i18n": "You've been hit by, you've been struck by..."
+        },
+        {
+          "pic": "sign3.webp",
+          "type": "sign",
+          "level": 20,
+          "cost": 5,
+          "effects": [
+            {
+              "scope": "brothel",
+              "type": "boost",
+              "target": "total upkeep",
+              "value": -0.2
+            }
+          ],
+          "duration": "turn",
+          "name_i18n": "Sign Of Greed",
+          "description_i18n": "Greed is good. At least my spellbook says so."
+        },
+        {
+          "pic": "speed.webp",
+          "type": "passive",
+          "level": 22,
+          "cost": 0,
+          "effects": [
+            {
+              "type": "gain",
+              "target": "speed",
+              "value": 1
+            }
+          ],
+          "name_i18n": "Shadowrunner",
+          "description_i18n": "You're fast. You've got the ship that made the Westmarch Run in less than twelve parsecs… Somewhere."
+        },
+        {
+          "pic": "fame.webp",
+          "type": "passive",
+          "level": 24,
+          "cost": 0,
+          "effects": [
+            {
+              "scales_with": "charisma",
+              "scope": "brothel",
+              "type": "change",
+              "target": "customers",
+              "value": 1
+            }
+          ],
+          "name_i18n": "Fame",
+          "description_i18n": "Fame, makes a man take things over!"
+        },
+        {
+          "pic": "love2.webp",
+          "type": "passive",
+          "level": 25,
+          "cost": 0,
+          "effects": [
+            {
+              "scope": "brothel",
+              "type": "change",
+              "target": "job customer capacity",
+              "value": 2
+            },
+            {
+              "scope": "brothel",
+              "type": "change",
+              "target": "whore customer capacity",
+              "value": 1
+            }
+          ],
+          "name_i18n": "The Ultimate Seducer",
+          "description_i18n": "Babe, you're so valuable to me, so valuable that I need you out here, making it count. Go girl!"
+        }
+      ],
+      "name_i18n": "Trader",
+      "description_i18n": "A cunning merchant who knows how to turn a profit."
+    },
+    "Wizard": {
+      "icon": "resources/ui/wizard.webp",
+      "modes": [
+        "story",
+        "sandbox"
+      ],
+      "spellbook": [
+        {
+          "pic": "spirit.webp",
+          "type": "passive",
+          "level": 2,
+          "cost": 0,
+          "effects": [
+            {
+              "type": "gain",
+              "target": "spirit",
+              "value": 1
+            }
+          ],
+          "name_i18n": "Inquisitive",
+          "description_i18n": "A beautiful mind. Pity about your face, though!"
+        },
+        {
+          "pic": "aura1.webp",
+          "type": "aura",
+          "level": 2,
+          "cost": 1,
+          "effects": [
+            {
+              "scope": "brothel",
+              "type": "change",
+              "target": "beauty",
+              "value": 5
+            }
+          ],
+          "duration": "turn",
+          "name_i18n": "Minor Aura: Purity",
+          "description_i18n": "Looks aren't everything, but, hey, they sell. This aura makes your girls look nicer."
+        },
+        {
+          "pic": "aura4.webp",
+          "type": "aura",
+          "level": 2,
+          "cost": 1,
+          "effects": [
+            {
+              "scope": "brothel",
+              "type": "change",
+              "target": "body",
+              "value": 5
+            }
+          ],
+          "duration": "turn",
+          "name_i18n": "Minor Aura: Provocation",
+          "description_i18n": "Shake your money-maker. Now with magic. This aura enhances your girl's body."
+        },
+        {
+          "pic": "aura2.webp",
+          "type": "aura",
+          "level": 2,
+          "cost": 1,
+          "effects": [
+            {
+              "scope": "brothel",
+              "type": "change",
+              "target": "charm",
+              "value": 5
+            }
+          ],
+          "duration": "turn",
+          "name_i18n": "Minor Aura: Mystery",
+          "description_i18n": "The air of mystery around your girls keep the patrons coming back for more. This aura boosts your girls' charm."
+        },
+        {
+          "pic": "aura3.webp",
+          "type": "aura",
+          "level": 2,
+          "cost": 1,
+          "effects": [
+            {
+              "scope": "brothel",
+              "type": "change",
+              "target": "refinement",
+              "value": 5
+            }
+          ],
+          "duration": "turn",
+          "name_i18n": "Minor Aura: Sophistication",
+          "description_i18n": "It takes a real magician to make uncouth slaves look sophisticated. This aura makes your girls more refined."
+        },
+        {
+          "pic": "sorcerer.webp",
+          "type": "passive",
+          "level": 3,
+          "cost": 0,
+          "effects": [
+            {
+              "type": "boost",
+              "target": "mana",
+              "value": 1
+            }
+          ],
+          "name_i18n": "The Sorcerer",
+          "description_i18n": "It's raining mana! Hallelujah."
+        },
+        {
+          "pic": "shield.webp",
+          "type": "shield",
+          "level": 4,
+          "cost": 2,
+          "effects": [
+            {
+              "value": 1,
+              "scope": "brothel",
+              "type": "special",
+              "target": "shield"
+            }
+          ],
+          "name_i18n": "Magic shield",
+          "description_i18n": "Protects your girls from external threats with a magic barrier. Stops the next act of aggression against one of your girls before it happens. Lasts until the next attack."
+        },
+        {
+          "pic": "halo1.webp",
+          "type": "halo",
+          "level": 5,
+          "cost": 3,
+          "effects": [
+            {
+              "scope": "brothel",
+              "type": "change",
+              "target": "libido",
+              "value": 5
+            }
+          ],
+          "duration": "turn",
+          "name_i18n": "Minor Halo: Lust",
+          "description_i18n": "It's getting hot in here… This halo boosts your girls' libido."
+        },
+        {
+          "pic": "halo3.webp",
+          "type": "halo",
+          "level": 5,
+          "cost": 3,
+          "effects": [
+            {
+              "scope": "brothel",
+              "type": "change",
+              "target": "obedience",
+              "value": 5
+            }
+          ],
+          "duration": "turn",
+          "name_i18n": "Minor Halo: Servility",
+          "description_i18n": "On your knees, maggots! This makes your girls more obedient."
+        },
+        {
+          "pic": "halo2.webp",
+          "type": "halo",
+          "level": 5,
+          "cost": 3,
+          "effects": [
+            {
+              "scope": "brothel",
+              "type": "change",
+              "target": "sensitivity",
+              "value": 5
+            }
+          ],
+          "duration": "turn",
+          "name_i18n": "Minor Halo: Sensuality",
+          "description_i18n": "Soft whispers echo into your girls' ears, making them shiver expectantly. Raises their sensitivity."
+        },
+        {
+          "pic": "halo4.webp",
+          "type": "halo",
+          "level": 5,
+          "cost": 3,
+          "effects": [
+            {
+              "scope": "brothel",
+              "type": "change",
+              "target": "constitution",
+              "value": 5
+            }
+          ],
+          "duration": "turn",
+          "name_i18n": "Minor Halo: Endurance",
+          "description_i18n": "It's like solid energy is seeping through the brisk, fragrant air. Boosts your girl's constitution."
+        },
+        {
+          "pic": "charisma.webp",
+          "type": "passive",
+          "level": 6,
+          "cost": 0,
+          "effects": [
+            {
+              "type": "gain",
+              "target": "charisma",
+              "value": 1
+            }
+          ],
+          "name_i18n": "Wise",
+          "description_i18n": "This is payback for all those times they called you a 'Wise guy'."
+        },
+        {
+          "pic": "servants.webp",
+          "type": "spell",
+          "level": 7,
+          "cost": 3,
+          "effects": [
+            {
+              "scales_with": "spirit",
+              "type": "instant",
+              "target": "dirt",
+              "value": -50
+            }
+          ],
+          "duration": "turn",
+          "name_i18n": "Magic servants",
+          "description_i18n": "In the fairy tales, they don't have the dancing dildo cabinet."
+        },
+        {
+          "pic": "heal.webp",
+          "type": "mist",
+          "level": 8,
+          "cost": 4,
+          "effects": [
+            {
+              "scope": "brothel",
+              "scales_with": "spirit",
+              "type": "instant",
+              "target": "heal",
+              "value": 1,
+              "chance": 0.5
+            }
+          ],
+          "duration": "turn",
+          "name_i18n": "Healing mist",
+          "description_i18n": "Medic! This mist has a chance to heal your girls fully."
+        },
+        {
+          "pic": "aura1b.webp",
+          "type": "aura",
+          "level": 9,
+          "cost": 5,
+          "effects": [
+            {
+              "scales_with": "spirit",
+              "scope": "brothel",
+              "type": "change",
+              "target": "beauty",
+              "value": 2
+            }
+          ],
+          "duration": "turn",
+          "name_i18n": "Major Aura: Purity",
+          "description_i18n": "Looks aren't everything, but, hey, they sell. This aura makes your girls look a lot nicer."
+        },
+        {
+          "pic": "aura4b.webp",
+          "type": "aura",
+          "level": 9,
+          "cost": 5,
+          "effects": [
+            {
+              "scales_with": "spirit",
+              "scope": "brothel",
+              "type": "change",
+              "target": "body",
+              "value": 2
+            }
+          ],
+          "duration": "turn",
+          "name_i18n": "Major Aura: Provocation",
+          "description_i18n": "Shake your money-maker. Now with magic. This aura enhances your girl's body greatly."
+        },
+        {
+          "pic": "aura2b.webp",
+          "type": "aura",
+          "level": 9,
+          "cost": 5,
+          "effects": [
+            {
+              "scales_with": "spirit",
+              "scope": "brothel",
+              "type": "change",
+              "target": "charm",
+              "value": 2
+            }
+          ],
+          "duration": "turn",
+          "name_i18n": "Major Aura: Mystery",
+          "description_i18n": "The air of mystery around your girls keep the patrons coming back for more. This aura gives a major boost to your girls' charm."
+        },
+        {
+          "pic": "aura3b.webp",
+          "type": "aura",
+          "level": 9,
+          "cost": 5,
+          "effects": [
+            {
+              "scales_with": "spirit",
+              "scope": "brothel",
+              "type": "change",
+              "target": "refinement",
+              "value": 2
+            }
+          ],
+          "duration": "turn",
+          "name_i18n": "Major Aura: Sophistication",
+          "description_i18n": "It takes a real magician to make uncouth slaves look sophisticated. This aura makes your girls a lot more refined."
+        },
+        {
+          "pic": "spirit.webp",
+          "type": "passive",
+          "level": 10,
+          "cost": 0,
+          "effects": [
+            {
+              "type": "gain",
+              "target": "spirit",
+              "value": 1
+            }
+          ],
+          "name_i18n": "Creative",
+          "description_i18n": "Now, who would have thought of using a magic wand for that..."
+        },
+        {
+          "pic": "enhanced.webp",
+          "type": "trance",
+          "level": 11,
+          "cost": 6,
+          "effects": [
+            {
+              "scales_with": "spirit",
+              "scope": "brothel",
+              "type": "boost",
+              "target": "refinement gains",
+              "value": 0.05
+            },
+            {
+              "scales_with": "charisma",
+              "scope": "brothel",
+              "type": "boost",
+              "target": "sensitivity gains",
+              "value": 0.05
+            }
+          ],
+          "duration": "turn",
+          "name_i18n": "Enhanced senses",
+          "description_i18n": "Now, did you know there is a 5th dimension? And a 6th, and a 7th, and a 13th?"
+        },
+        {
+          "pic": "doll.webp",
+          "type": "trance",
+          "level": 11,
+          "cost": 6,
+          "effects": [
+            {
+              "scales_with": "spirit",
+              "scope": "brothel",
+              "type": "boost",
+              "target": "beauty gains",
+              "value": 0.05
+            },
+            {
+              "scales_with": "charisma",
+              "scope": "brothel",
+              "type": "boost",
+              "target": "obedience gains",
+              "value": 0.05
+            }
+          ],
+          "duration": "turn",
+          "name_i18n": "Doll master",
+          "description_i18n": "I saw people sticking a needle into a voodoo doll, but never {i}there{/i}…"
+        },
+        {
+          "pic": "halo1b.webp",
+          "type": "halo",
+          "level": 12,
+          "cost": 8,
+          "effects": [
+            {
+              "scales_with": "spirit",
+              "scope": "brothel",
+              "type": "change",
+              "target": "libido",
+              "value": 2
+            }
+          ],
+          "duration": "turn",
+          "name_i18n": "Major Halo: Lust",
+          "description_i18n": "It's getting hot in here… This halo gives a large boost to your girls' libido."
+        },
+        {
+          "pic": "halo3b.webp",
+          "type": "halo",
+          "level": 12,
+          "cost": 8,
+          "effects": [
+            {
+              "scales_with": "spirit",
+              "scope": "brothel",
+              "type": "change",
+              "target": "obedience",
+              "value": 2
+            }
+          ],
+          "duration": "turn",
+          "name_i18n": "Major Halo: Servility",
+          "description_i18n": "On your knees, maggots! This makes your girls a lot more obedient."
+        },
+        {
+          "pic": "halo2b.webp",
+          "type": "halo",
+          "level": 12,
+          "cost": 8,
+          "effects": [
+            {
+              "scales_with": "spirit",
+              "scope": "brothel",
+              "type": "change",
+              "target": "sensitivity",
+              "value": 2
+            }
+          ],
+          "duration": "turn",
+          "name_i18n": "Major Halo: Sensuality",
+          "description_i18n": "Soft whispers echo into your girls' ears, making them shiver expectantly. This raises their sensitivity a lot."
+        },
+        {
+          "pic": "halo4b.webp",
+          "type": "halo",
+          "level": 12,
+          "cost": 8,
+          "effects": [
+            {
+              "scales_with": "spirit",
+              "scope": "brothel",
+              "type": "change",
+              "target": "constitution",
+              "value": 2
+            }
+          ],
+          "duration": "turn",
+          "name_i18n": "Major Halo: Endurance",
+          "description_i18n": "It's like solid energy is seeping through the brisk, fragrant air. Major boost to your girl's constitution."
+        },
+        {
+          "pic": "strength.webp",
+          "type": "passive",
+          "level": 14,
+          "cost": 0,
+          "effects": [
+            {
+              "type": "gain",
+              "target": "strength",
+              "value": 1
+            }
+          ],
+          "name_i18n": "Staff master",
+          "description_i18n": "If all else fails, you can still crack their skulls with it."
+        },
+        {
+          "pic": "hand.webp",
+          "type": "mist",
+          "level": 16,
+          "cost": 9,
+          "effects": [
+            {
+              "scope": "brothel",
+              "scales_with": "spirit",
+              "type": "gain",
+              "target": "energy",
+              "value": 5
+            }
+          ],
+          "duration": "turn",
+          "name_i18n": "Rejuvenation",
+          "description_i18n": "This soothing mist rests your girls, in addition to smelling peachy."
+        },
+        {
+          "pic": "spirit.webp",
+          "type": "passive",
+          "level": 18,
+          "cost": 0,
+          "effects": [
+            {
+              "type": "gain",
+              "target": "spirit",
+              "value": 1
+            }
+          ],
+          "name_i18n": "Mad",
+          "description_i18n": "Utter madness and devastating power. Always a great combination."
+        },
+        {
+          "pic": "fairy.webp",
+          "type": "form",
+          "level": 20,
+          "cost": 9,
+          "effects": [
+            {
+              "type": "special",
+              "target": "fairy form",
+              "value": 1
+            }
+          ],
+          "duration": "turn",
+          "name_i18n": "Fairy dust",
+          "description_i18n": "You assume the mysterious, ethereal form of the fairy people. Your spirit is used instead of your charisma."
+        },
+        {
+          "pic": "dragon.webp",
+          "type": "form",
+          "level": 20,
+          "cost": 9,
+          "effects": [
+            {
+              "type": "special",
+              "target": "dragon form",
+              "value": 1
+            }
+          ],
+          "duration": "turn",
+          "name_i18n": "Dragon soul",
+          "description_i18n": "You assume a terrifying dragon form. Your spirit is used instead of your strength."
+        },
+        {
+          "pic": "ghost.webp",
+          "type": "enchant",
+          "level": 22,
+          "cost": 10,
+          "effects": [
+            {
+              "scope": "brothel",
+              "type": "increase satisfaction",
+              "target": "all jobs",
+              "value": 1
+            },
+            {
+              "scope": "brothel",
+              "type": "increase satisfaction",
+              "target": "all sex acts",
+              "value": 1
+            }
+          ],
+          "duration": "turn",
+          "name_i18n": "Enchanted Brothel",
+          "description_i18n": "That's a kind of magic… Not the one your childhood fairy tales were referring to."
+        },
+        {
+          "pic": "speed.webp",
+          "type": "passive",
+          "level": 22,
+          "cost": 0,
+          "effects": [
+            {
+              "type": "gain",
+              "target": "speed",
+              "value": 1
+            }
+          ],
+          "name_i18n": "Swift",
+          "description_i18n": "I've got magic in my pants. I mean, they make me run faster."
+        },
+        {
+          "pic": "eye.webp",
+          "type": "passive",
+          "level": 24,
+          "cost": 0,
+          "effects": [
+            {
+              "type": "special",
+              "target": "snake eyes",
+              "value": 1
+            }
+          ],
+          "name_i18n": "The Eye",
+          "description_i18n": "Learnt that trick from a guy named Sauron. A nice fella, if a bit obsessed about jewelry.\nHypnosis attempts will always succeed."
+        },
+        {
+          "pic": "mindtrick.webp",
+          "type": "trick",
+          "level": 24,
+          "cost": 10,
+          "effects": [
+            {
+              "scope": "brothel",
+              "type": "boost",
+              "target": "job customer budget",
+              "value": 0.2
+            },
+            {
+              "scope": "brothel",
+              "type": "boost",
+              "target": "whore customer budget",
+              "value": 0.2
+            }
+          ],
+          "duration": "turn",
+          "name_i18n": "Mindtrick",
+          "description_i18n": "Learnt that trick from an old bum called Zobiwan. He was good at escorting druids, though."
+        },
+        {
+          "pic": "mass hysteria.webp",
+          "type": "passive",
+          "level": 25,
+          "cost": 0,
+          "effects": [
+            {
+              "scope": "brothel",
+              "type": "special",
+              "target": "hypnosis spillover",
+              "value": 1
+            }
+          ],
+          "name_i18n": "Mass hysteria",
+          "description_i18n": "There's stuff in the water, I'm telling ya."
+        }
+      ],
+      "name_i18n": "Wizard",
+      "description_i18n": "A master of the arcane arts, wielding powerful magic."
+    }
+  }
+}

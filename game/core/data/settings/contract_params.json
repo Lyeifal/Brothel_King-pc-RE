@@ -1,0 +1,48 @@
+{
+    "_description": "Contract system parameters. See BK_EVOLUTION_DATA_MIGRATION.md.",
+    "contract_level": {
+        "2": [1],
+        "3": [1, 2],
+        "4": [2],
+        "5": [2, 3],
+        "6": [3, 4],
+        "7": [4]
+    },
+    "contract_value": {
+        "2": 250,
+        "3": 500,
+        "4": 625,
+        "5": 1000,
+        "6": 1250,
+        "7": 1600
+    },
+    "contract_skill_limit": {
+        "2": {"easy": 75, "hard": 100},
+        "3": {"easy": 100, "hard": 125},
+        "4": {"easy": 125, "hard": 150},
+        "5": {"easy": 150, "hard": 175},
+        "6": {"easy": 175, "hard": 225},
+        "7": {"easy": 225, "hard": 275}
+    },
+    "contract_sex_limit": {
+        "2": {"easy": "a little reluctant", "hard": "indifferent"},
+        "3": {"easy": "indifferent", "hard": "a little interested"},
+        "4": {"easy": "a little interested", "hard": "interested"},
+        "5": {"easy": "interested", "hard": "very interested"},
+        "6": {"easy": "very interested", "hard": "fascinated"},
+        "7": {"easy": "very interested", "hard": "fascinated"}
+    },
+    "contract_stage_modifier": {
+        "1": 1,
+        "2": 1.5,
+        "3": 3,
+        "4": 6
+    },
+    "contract_specials": [
+        ["trait", 3],
+        ["perk", 2],
+        ["fix", 3],
+        ["farm", 1],
+        ["item", 1]
+    ]
+}

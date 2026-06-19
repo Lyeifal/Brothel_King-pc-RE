@@ -5382,12 +5382,6 @@ translate chinese_simplified slave_story6_09824579:
     # girl.char "My parents kept me sheltered from the outside world and its vices... I never knew suffering, hunger, or fear... I was spoiled and happy..."
     girl.char "父母把我保护得很好，让我远离外面的世界和其中的种种罪恶……我从未体会过痛苦、饥饿或恐惧……我被宠坏了，过得很幸福……"
 
-# game/BKinteractions.rpy:4973
-translate chinese_simplified slave_story6_9316a048:
-
-    # you "Quite a long way from being a sex slave in [district.name]..."
-    you "从在[district.name]沦为性奴到现在，真是天壤之别……"
-
 # game/BKinteractions.rpy:4974
 translate chinese_simplified slave_story6_8235cf51:
 

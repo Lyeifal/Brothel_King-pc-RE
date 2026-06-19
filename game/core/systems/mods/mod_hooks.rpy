@@ -61,7 +61,7 @@ init -4 python:
                     results.append(result)
                 except Exception as e:
                     if config.developer:
-                        renpy.log("Hook error in '%s' (mod: %s): %s" % (hook_name, mod.name if mod else "unknown", str(e)))
+                        renpy.log(__("Hook error in '%s' (mod: %s): %s") % (hook_name, mod.name if mod else "unknown", str(e)))
             return results
 
         def invoke_first(self, hook_name, *args, **kwargs):
@@ -79,7 +79,7 @@ init -4 python:
                         return result
                 except Exception as e:
                     if config.developer:
-                        renpy.log("Hook error in '%s' (mod: %s): %s" % (hook_name, mod.name if mod else "unknown", str(e)))
+                        renpy.log(__("Hook error in '%s' (mod: %s): %s") % (hook_name, mod.name if mod else "unknown", str(e)))
             return None
 
         def has_hooks(self, hook_name):

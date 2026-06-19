@@ -1,0 +1,9 @@
+{
+    "_note": "NOTE: These values double as lookup keys for game_image_dict, so _i18n suffix is NOT used here. Translation is handled by Ren'Py's textbutton display.",
+    "ev_gallery_list": [
+        "Characters",
+        "Story",
+        "Backgrounds",
+        "Misc"
+    ]
+}

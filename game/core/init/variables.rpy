@@ -31,6 +31,7 @@ init -11:
     define persistent.pic_ignore_list = [] # Lists all picture paths that have been set to 'ignore' by the player
 
     default persistent.NGPsettings = {}
+    default persistent.meta_upgrades = {} # EN: Stores cross-run meta upgrade ranks. ZH: 存储跨周目局外养成升级等级。
 
     define _greedy_rollback = False # Experimental (solves loading problems where a save rolls back too far)
 
@@ -157,8 +158,6 @@ init -3 python:
 
     diff_list = ["very easy", "easy", "normal", "hard", "insane"] # A list is needed to show the values in order
 
-    # <MIGRATED: see data/settings.rpy>
-
     diff_settings_range = {
                         "gold" : {"min" : 0.1, "max" : 5.0,  "pace" : 0.05},
                         "budget" : {"min" : 0.1, "max" : 5.0,  "pace" : 0.05},
@@ -220,7 +219,7 @@ init -3 python:
                             "security" : 1,
                         },
 
-                "hard" :  {"gold" : 0.8, #? Changed as per Chris12's suggestion (experimental)
+                "hard" :  {"gold" : 0.8,
                             "budget" : 0.9,
                             "rewards" : 0.85,
                             "resources" : 0.85,
@@ -234,7 +233,7 @@ init -3 python:
                             "satisfaction" : -1,
                             "security" : 0,
                         },
-                "insane" : {"gold" : 0.6, #? Changed as per Chris12's suggestion (experimental)
+                "insane" : {"gold" : 0.6,
                             "budget" : 0.75,
                             "rewards" : 0.6,
                             "resources" : 0.6,
@@ -384,101 +383,49 @@ init -3 python:
                     __("I've heard of something called 'NewGame+' if you reach the end of the game. Whatever could that mean?"),
                 ]
 
+    ## EN: Load loading tips from JSON (BK Evolution).
+    ## ZH: 从 JSON 加载加载画面提示（BK Evolution）。
+    _lt_json = DataLoader.load_loading_tips()
+    if _lt_json and "random_tips_i18n" in _lt_json:
+        random_tips = [__(s) for s in _lt_json["random_tips_i18n"]]
+
 
     ## MC ##
 
     all_MC_stats = ["strength", "spirit", "charisma", "speed"]
 
-    MC_playerclass_description = {
-                                "Warrior" : __("You are a Warrior. You might be young, but you have seen more than your share of bloody battles. You are stronger in fights and for protecting the brothel."),
-                                "Wizard" : __("You are a Wizard. People bend to your will, and your magic. You have access to the most spells."),
-                                "Trader" : __("You are a Rogue Trader. You've been hustling since you were a young street rat. You can make better deals and fetch the best prices.")
-                            }
-
-    MC_stat_description = {
-                            "strength" : __("This is the current strength of your character. Improves security and helps in individual fights."),
-                            "spirit" : __("This is your magic fortitude. Spirit is the source of your mana, and improves spell results during events."),
-                            "charisma" : __("This covers your character personality, looks and oratory skills. Improves results during interactions."),
-                            "speed" : __("This is your character's level of energy. Increases the number of actions you can perform.")
-                        }
-
-    god_description = {
-                        "Arios" : __("You worship Arios, god of Light and lord of the Angels. +1 to Strength."),
-                        "Shalia" : __("You worship Shalia, goddess of Shadows and ruler of the Night. +1 to Spirit."),
-                        None : __("You do not worship any god, and delight instead in the wonders of the natural world. +1 to Charisma.")
-                        }
-
-    alignment_description = {
-                            "good" : __("Your actions have shown you to be a {b}good{/b} person. Love-based interactions with your girls are more successful than fear-based ones."),
-                            "evil" : __("You are an {b}evil{/b} man, and revel in your own cruelty. Fear-based interactions with your girls are more successful than love-based ones."),
-                            "neutral" : __("You are {b}neutral{/b}, and would rather maintain balance between your own interests and those of others. Love and fear-based interactions are equally successful.")
-                            }
-
-
-
     ## INVENTORY ##
 
     MC_inventory_slots = ["hands", "accessory", "misc"]
     girl_inventory_slots = ["hands", "body", "neck", "finger", "accessory"]
-    inventory_filters = {
-                        "base" : [None, "weapon", "clothing", "trinket", "consumable", "misc"],
-                        "minion_merchant" : [None, "misc"],
-                        "Accessory" : [None, "trinket"],
-                        "Flower" : [None, "misc"],
-                        "Weapon" : [None, "weapon"],
-                        "Toy" : [None, "consumable"],
-                        "Ring" : [None, "trinket"],
-                        "Gift" : [None, "misc"],
-                        "Dress" : [None, "clothing"],
-                        }
-
-    filter_list = {
-                    None : [],
-                    "weapon" : ["hands"],
-                    "clothing" : ["body", "accessory"],
-                    "trinket" : ["finger", "neck"],
-                    "consumable" : ["consumable"],
-                    "misc" : ["misc"],
-                }
-
-    sorter_dict = { # [Caption, attribute, tooltip, reverse order]
-                    "alpha" : ["A-z", "name", "name", False],
-                    "badge" : ["Bdg", "badge", "badge", True],
-                    "price" : ["0-9", "price", "price", False],
-                    "type" : ["Typ", "filter", "item type", False],
-                    "level" : ["Lvl", "level", "girl level", True],
-                    "rank" : ["Rk", "rank", "slave rank", True],
-                    "job" : ["Job", "job_sort_value", "girl job", False],
-                    "beauty" : ["Bea.", "beauty", "Beauty", True],
-                    "body" : ["Bod.", "body", "Body", True],
-                    "charm" : ["Cha.", "charm", "Charm", True],
-                    "refinement" : ["Ref.", "refinement", "Refinement", True],
-                    "libido" : ["Lib.", "libido", "Libido", True],
-                    "obedience" : ["Obe.", "obedience", "Obedience", True],
-                    "sensitivity" : ["Sen.", "sensitivity", "Sensitivity", True],
-                    "constitution" : ["Con.", "constitution", "Constitution", True],
-                    "service" : ["Serv.", "service", "Service skill", True],
-                    "sex" : ["Sex", "sex", "Sex skill", True],
-                    "anal" : ["Anal", "anal", "Anal skill", True],
-                    "fetish" : ["Fet.", "fetish", "Fetish skill", True],
-                    "energy" : ["En.", "energy", "energy", False],
-                    "experience" : ["Tr.", "training_value", "sexual training level", True],
-                }
+    # EN: Load inventory filters, filter lists, and sorters from JSON (BK Evolution).
+    # ZH: 从 JSON 加载库存过滤器、过滤列表和排序器（BK Evolution）。
+    _inv_json = DataLoader.load_inventory_sorters()
+    if _inv_json:
+        inventory_filters = _inv_json.get("inventory_filters", {})
+        filter_list = {(None if k == "null" else k): v for k, v in _inv_json.get("filter_list", {}).items()}
+        _sorters = _inv_json.get("sorter_dict", {})
+        sorter_dict = {k: [__(v.get("caption_i18n", "")), v.get("attribute", ""), __(v.get("tooltip_i18n", "")), v.get("reverse", False)] for k, v in _sorters.items()}
+    else:
+        inventory_filters = {}
+        filter_list = {}
+        sorter_dict = {}
 
     ## RESOURCES ##
-
-    build_resources = ["wood", "leather", "dye", "marble", "ore", "silk", "diamond"]
-
-    # Exchange rates are stored as fractions for display in the resource market tab
-
-    resource_gold_value = {2 : Fraction(200, 1), 3 : Fraction(1000, 1), 4 : Fraction(4000, 1)} # This is the buy value. Sell value is 25% of buy value
-    resource_sell_discount = 0.1 # Adjust this as necessary
-
-    resource_base_exchange_rate = {
-                                    2 : {2 : Fraction(1, 3), 3 : Fraction(1, 9), 4 : Fraction(1, 81)},
-                                    3 : {2 : Fraction(1, 1), 3 : Fraction(1, 3), 4 : Fraction(1, 27)},
-                                    4 : {2 : Fraction(12, 1), 3 : Fraction(4, 1), 4 : Fraction(1, 1)},
-                                    }
+    # EN: Loaded from JSON (BK Evolution).
+    # ZH: 从 JSON 加载建筑资源参数（BK Evolution）。
+    _res_json = DataLoader.load_resource_params()
+    if _res_json:
+        build_resources = _res_json.get("build_resources", [])
+        resource_gold_value = {int(k): Fraction(*v) for k, v in _res_json.get("resource_gold_value", {}).items()}
+        resource_sell_discount = _res_json.get("resource_sell_discount", 0.1)
+        _rber = _res_json.get("resource_base_exchange_rate", {})
+        resource_base_exchange_rate = {int(outer_k): {int(inner_k): Fraction(*inner_v) for inner_k, inner_v in outer_v.items()} for outer_k, outer_v in _rber.items()}
+    else:
+        build_resources = []
+        resource_gold_value = {}
+        resource_sell_discount = 0.1
+        resource_base_exchange_rate = {}
 
 
 
@@ -488,13 +435,13 @@ init -3 python:
 
 
     ## LICENCES ##
-
-    license_dict = {
-                    0 : ("No license", "missing license.webp"),
-                    1 : ("Pimp license", "license1.webp"),
-                    2 : ("Whoremonger license", "license2.webp"),
-                    3 : ("Brothelmaster license", "license3.webp")
-                }
+    # EN: Loaded from JSON (BK Evolution).
+    # ZH: 从 JSON 加载（BK Evolution）。
+    _unlock_json = DataLoader.load_unlock_params()
+    if _unlock_json and "license_dict" in _unlock_json:
+        license_dict = {int(k): (__(v["name_i18n"]), v["pic"]) for k, v in _unlock_json["license_dict"].items()}
+    else:
+        license_dict = {}
 
 
 
@@ -512,92 +459,113 @@ init python:
                         7 : renpy.image("brothel7", im.Scale("resources/brothels/" + brothel_pics[7], config.screen_width, config.screen_height)),
                     }
 
+init 1 python:
+    # EN: Load room data from JSON (BK Evolution).
+    # ZH: 从 JSON 加载房间数据（BK Evolution）。
+    _rooms_json = DataLoader.load_rooms()
+
+    if _rooms_json and "room_pics" in _rooms_json:
+        room_pics = _rooms_json["room_pics"]
+
     # ROOMS #
 
-    room_dict = {
-                1 : Room("Basic room", 1),
-                2 : Room("+Basic room+", 2),
-                3 : Room("*Basic room*", 3),
-                4 : Room("Standard room", 4),
-                5 : Room("+Standard room+", 5),
-                6 : Room("*Standard room*", 6),
-                7 : Room("Elegant room", 7),
-                8 : Room("+Elegant room+", 8),
-                9 : Room("*Elegant room*", 9),
-                10 : Room("Noble suite", 10),
-                11 : Room("+Royal suite+", 11),
-                12 : Room("*Imperial suite*", 12)
-                }
+    if _rooms_json and "bedrooms" in _rooms_json:
+        room_dict = {int(k): Room(v["name"], v["level"], v.get("type", "bedroom"), v.get("job"), v.get("cost", 0))
+                     for k, v in _rooms_json["bedrooms"].items()}
+    else:
+        room_dict = {
+                    1 : Room("Basic room", 1),
+                    2 : Room("+Basic room+", 2),
+                    3 : Room("*Basic room*", 3),
+                    4 : Room("Standard room", 4),
+                    5 : Room("+Standard room+", 5),
+                    6 : Room("*Standard room*", 6),
+                    7 : Room("Elegant room", 7),
+                    8 : Room("+Elegant room+", 8),
+                    9 : Room("*Elegant room*", 9),
+                    10 : Room("Noble suite", 10),
+                    11 : Room("+Royal suite+", 11),
+                    12 : Room("*Imperial suite*", 12)
+                    }
 
-    common_room_dict = {
-                        "tavern" : Room("tavern", 0, "special", job = "waitress"),
-                        "strip club" : Room("strip club", 0, "special", job = "dancer"),
-                        "onsen" : Room("onsen", 0, "special", job = "masseuse"),
-                        "okiya" : Room("okiya", 0, "special", job = "geisha"),
-                        }
+    if _rooms_json and "common_rooms" in _rooms_json:
+        common_room_dict = {k: Room(v["name"], v["level"], v["type"], v.get("job"), v.get("cost", 0))
+                            for k, v in _rooms_json["common_rooms"].items()}
+    else:
+        common_room_dict = {
+                            "tavern" : Room("tavern", 0, "special", job = "waitress"),
+                            "strip club" : Room("strip club", 0, "special", job = "dancer"),
+                            "onsen" : Room("onsen", 0, "special", job = "masseuse"),
+                            "okiya" : Room("okiya", 0, "special", job = "geisha"),
+                            }
 
     for room in common_room_dict:
         for dirt_state in ("clean enough", "dusty", "dirty", "disgusting", "fire"):
             path = "resources/brothels/rooms/" + room + {"clean enough" : "", "dusty" : __("_dusty"), "dirty" : __("_dirty"), "disgusting" : __("_verydirty"), "fire" : __("_verydirty")}[dirt_state] + ".webp"
             renpy.image(room + " " + dirt_state, ProportionalScale(path, config.screen_width, config.screen_height))
 
-    master_bedrooms = {
-                        0 : Room("Single room", level=0, type="master", cost=0),
-                        1 : Room("Double room", level=1, type="master", cost=750),
-                        2 : Room("Small suite", level=2, type="master", cost=2500),
-                        3 : Room("Luxury suite", level=3, type="master", cost=7500),
-                        4 : Room("Royal suite", level=4, type="master", cost=25000),
-                        5 : Room("Royal harem", level=5, type="master", cost=75000),
+    if _rooms_json and "master_bedrooms" in _rooms_json:
+        master_bedrooms = {int(k): Room(v["name"], v["level"], v["type"], v.get("job"), v.get("cost", 0))
+                           for k, v in _rooms_json["master_bedrooms"].items()}
+    else:
+        master_bedrooms = {
+                            0 : Room("Single room", level=0, type="master", cost=0),
+                            1 : Room("Double room", level=1, type="master", cost=750),
+                            2 : Room("Small suite", level=2, type="master", cost=2500),
+                            3 : Room("Luxury suite", level=3, type="master", cost=7500),
+                            4 : Room("Royal suite", level=4, type="master", cost=25000),
+                            5 : Room("Royal harem", level=5, type="master", cost=75000),
+                            }
+
+    if _rooms_json and "common_room_keys" in _rooms_json:
+        all_common_rooms = _rooms_json["common_room_keys"]
+    else:
+        all_common_rooms = ["tavern", "strip club", "onsen", "okiya"]
+
+    if _rooms_json and "job_room_map" in _rooms_json:
+        _jrm = _rooms_json["job_room_map"]
+        job_room_dict = {k: v for k, v in _jrm.items()}
+    else:
+        job_room_dict = {"waitress" : "tavern",
+                        "dancer" : "strip club",
+                        "masseuse" : "onsen",
+                        "geisha" : "okiya",
+                        "whore" : "bedroom"
                         }
 
+    if _rooms_json and "job_room_display_name_i18n" in _rooms_json:
+        job_room_display_name = {k: __(v) for k, v in _rooms_json["job_room_display_name_i18n"].items()}
+    else:
+        job_room_display_name = {"waitress" : __("Tavern"),
+                                "dancer" : __("Strip club"),
+                                "masseuse" : __("Onsen"),
+                                "geisha" : __("Okiya"),
+                                "whore" : __("Bedroom")
+                                }
 
-#    all_common_rooms = [tavern, club, onsen, okiya]
-    all_common_rooms = ["tavern", "strip club", "onsen", "okiya"]
-    job_room_dict = {"waitress" : __("tavern"),
-                    "dancer" : __("strip club"),
-                    "masseuse" : __("onsen"),
-                    "geisha" : __("okiya"),
-                    "whore" : __("bedroom")
-                    }
-
-    room_capacity_dict = {0 : 4, 1 : 4, 2 : 6, 3 : 8, 4 : 10, 5 : 12, 6 : 14, 7 : 16}
+    if _rooms_json and "room_capacity" in _rooms_json:
+        room_capacity_dict = _rooms_json["room_capacity"]
+    else:
+        room_capacity_dict = {0 : 4, 1 : 4, 2 : 6, 3 : 8, 4 : 10, 5 : 12, 6 : 14, 7 : 16}
 
 init -4 python:
 
     ## CITY BUTTONS
-
-    location_tb = {
-                    "visit_willow" : "tb willow",
-                    "visit_goldie" : "tb goldie",
-                    "visit_watchtower" : "tb captain",
-                    "visit_gina" : "tb gina",
-                    "visit_thieves_guild" : "tb renza",
-                    "visit_stella" : "tb stella",
-                    "visit_giftgirl" : "tb giftgirl",
-                    "visit_ramias" : "tb ramias",
-                    "visit_gurigura" : "tb gurigura",
-                    "visit_riche" : "tb riche",
-                    "visit_katryn" : "tb katryn",
-                    "visit_twins" : "tb twins",
-                    "visit_bank" : "tb banker",
-                    "visit_exchange" : "tb bast",
-                    "visit_papa" : "tb papa",
-
-                    "collect_wood" : "tb wood",
-                    "collect_leather" : "tb leather",
-                    "collect_dye" : "tb dye",
-                    "collect_ore" : "tb ore",
-                    "collect_marble" : "tb marble",
-                    "collect_silk" : "tb silk",
-                    "collect_diamond" : "tb diamond",
-
-                    "c3_contact_homura" : "side homura",
-                }
+    # EN: Loaded from JSON (BK Evolution).
+    # ZH: 从 JSON 加载（BK Evolution）。
+    _loc_tb_json = DataLoader.load_location_tooltips()
+    if _loc_tb_json:
+        location_tb = _loc_tb_json.get("location_tb", {})
+        _papa = _loc_tb_json.get("papa_location", {})
+        papa_location = {k: __(v["name_i18n"]) for k, v in _papa.items()}
+    else:
+        location_tb = {}
+        papa_location = {}
 
     suzume_hints_active = False
-    papa_location = {"The Docks" : __("Seafront"), "The Warehouse" : __("Gallows")}
 
     ## FARM
+    # Fallback values; JSON override applied in init 1 below
 
     installation_price = {
                         0: 100,
@@ -606,6 +574,10 @@ init -4 python:
                         3: 1000,
                         4: 1750
                     }
+
+    farm_type_list = ["machine", "beast", "monster", "stallion"]
+    farm_inst_list = ["stables", "pig stall", "monster den", "workshop"]
+    farm_installations_dict = {"machine" : __("workshop"), "beast" : __("pig stall"), "monster" : __("monster den"), "stallion" : __("stables")}
 
     minion_xp_to_level = {
                         0: 0,
@@ -737,30 +709,15 @@ init -4 python:
                         "holding libido bad": __(" {color=[c_lightred]}As a result of spending too many hours jerking off minions, %s's technique has become more mechanical.{/color}"),
                         }
 
+    ## EN: Load farm description texts from JSON (BK Evolution), fallback to hardcoded above.
+    ## ZH: 从 JSON 加载农场描述文本（BK Evolution），否则使用上方硬编码。
+    _fd_json = DataLoader.load_farm_descriptions()
+    if _fd_json and "farm_descriptions_i18n" in _fd_json:
+        farm_description = {k: __(v) for k, v in _fd_json["farm_descriptions_i18n"].items()}
+
     farm_holding_stats = {"constitution" : ("naked", "obedience"), "obedience" : ("fetish", "libido"), "sensitivity" : ("bisexual", "constitution"), "libido" : ("service", "sensitivity")}
 
     farm_holding_tags = {"constitution" : ["run", "constitution"], "obedience" : ["obedience", "maid"], "sensitivity" : ["sensitivity"], "libido" : ["libido"]}
-
-    pref_response = {
-                    "modest refuses" : __("Me, %s? NO!!! Don't!!! Don't do that to me! *horrified*"),
-                    "modest very reluctant" : __("Wait, %s? This is outrageous! It's disgusting, it's dirty... Please stop! *scared*"),
-                    "modest reluctant": __("No, don't look at me... It's not right, %s... I feel so ashamed... *embarrassed*"),
-                    "modest a little reluctant" : __("I don't really want to do this, %s... It's wrong... Aaah! *shy*"),
-                    "modest indifferent" : __("Oh, making me do this, %s again... You're such a pervert... *blush*"),
-                    "modest a little interested" : __("Mmmh, it's like I'm getting used to %s... Wait, I didn't mean that! *panic*"),
-                    "modest interested" : __("Ah, %s... It's not so bad... Mmmh... *flushed*"),
-                    "modest very interested" : __("Oh, I think I love %s... I feel like a slut... *moan*"),
-                    "modest fascinated" : __("I can't believe it, %s feels so good... Look at me! I've become a dirty, dirty bitch! *cumming*"),
-                    "lewd refuses": __("NO, not %s!!! Don't touch me, I HATE it!!! *horrified*"),
-                    "lewd very reluctant": __("I told you I hate %s... Why do I have to keep doing this? Ah!!! *ashamed*"),
-                    "lewd reluctant": __("You know I don't like %s... Don't look at me... Ahaa! *embarrassed*"),
-                    "lewd a little reluctant": __("You're doing perverted things to me again, %s... It makes me feel strange... *shy*"),
-                    "lewd indifferent": __("Mmmh, %s... *blush*"),
-                    "lewd a little interested": __("Oh, %s, that's good... *licks her lips*"),
-                    "lewd interested": __("Mmmh, %s... I feel wet already... *flushed*"),
-                    "lewd very interested": __("Oh, %s, it makes me so horny... I get so wet when being watched... Aaaah!!! *moan*"),
-                    "lewd fascinated": __("Oh... I'm about to come already! Ahaaa, %s is the best!!! *cumming*"),
-                    }
 
     minion_adjectives = {
                         "stallion" : ["erect", "drooling", "horny", "well-built", "snorting", "bulky", "nickering", "sleazy"],
@@ -776,16 +733,40 @@ init -4 python:
                         "monster2" : ["ck", "k", "rk", "rz", "rm", "xx", "uz", "oo", "hu", "qq", "tz", "zt", "rh", "th"],
                         }
 
+    ## EN: Load farm holding parameters from JSON (BK Evolution).
+    ## ZH: 从 JSON 加载农场持有参数（BK Evolution）。
+    _fhp_json = DataLoader.load_farm_holding_params()
+    if _fhp_json:
+        if "farm_holding_dict_i18n" in _fhp_json:
+            farm_holding_dict = {k: __(v) for k, v in _fhp_json["farm_holding_dict_i18n"].items()}
+        if "farm_ttip_i18n" in _fhp_json:
+            farm_ttip = {k: __(v) for k, v in _fhp_json["farm_ttip_i18n"].items()}
+        if "farm_holding_stats" in _fhp_json:
+            farm_holding_stats = {k: tuple(v) for k, v in _fhp_json["farm_holding_stats"].items()}
+        if "farm_holding_tags" in _fhp_json:
+            farm_holding_tags = _fhp_json["farm_holding_tags"]
+
+    ## EN: Load minion parameters from JSON (BK Evolution).
+    ## ZH: 从 JSON 加载仆从参数（BK Evolution）。
+    _mp_json = DataLoader.load_minion_params()
+    if _mp_json:
+        if "minion_adjectives" in _mp_json:
+            minion_adjectives = _mp_json["minion_adjectives"]
+        if "minion_name_dict" in _mp_json:
+            minion_name_dict = _mp_json["minion_name_dict"]
+
     girl_name_dict = {"syllabs" : ["sha", "she", "shee", "shi", "wa", "ri", "ree", "ra", "ru", "ti", "ta", "ty", "ya", "yu", "sa", "so", "su", "se", "sy", "da", "de", "di", "do", "dy", "fa", "fe", "fio", "fia", "gi", "hu", "ha", "hyu", "ja", "ju", "ji", "ka", "ky", "ki", "kyo", "kyu", "la", "li", "le", "lo", "lu", "lyu", "lia", "lya", "lee", "loo", "za", "zi", "zu", "ze", "zee", "xa", "xy", "xe", "ca", "ce", "chi", "chu", "va", "vi", "vy", "ve", "bu", "be", "na", "ne", "ni", "nya", "nyu", "nee", "ma", "mu", "me", "mi", "myu", "mia", "mya"],
                       "fillers" : ["n", "r", "l", "s", "'", "", "", ""],
                       "enders" : ["n", "l", "nn", "a", "ya", "na", "ly", "", "", ""],
                       "last_syllabs" : ["jo", "sho", "to", "ya", "ma", "mi", "yo", "ko", "na", "ye", "yu", "ka", "ta", "fu", "ro", "sa", "shi", "ki", "no", "ra", "re", "tsu", "chi", "shi", "se", "n", "mu", "ne", "kyo", "ku"],
                       }
 
+    ## EN: Load girl name pools from JSON (BK Evolution).
+    ## ZH: 从 JSON 加载女孩名字池（BK Evolution）。
+    _gnp_json = DataLoader.load_girl_name_pools()
+    if _gnp_json and "girl_name_dict" in _gnp_json:
+        girl_name_dict = _gnp_json["girl_name_dict"]
 
-    farm_type_list = ["machine", "beast", "monster", "stallion"]
-    farm_inst_list = ["stables", "pig stall", "monster den", "workshop"]
-    farm_installations_dict = {"machine" : __("workshop"), "beast" : __("pig stall"), "monster" : __("monster den"), "stallion" : __("stables")}
 
     ## FEAR POWERS AND MOJO
 
@@ -808,784 +789,353 @@ init -4 python:
 
     ## CITY MERCHANTS
 
-    merchant_dict = {"Stella" : __("stallion"), "Goldie" : __("beast"), "Willow" : __("monster"), "Gina" : __("machine")}
+    ## POPULATIONS & ENCOUNTERS ##
+    # Loaded from JSON (BK Evolution)
 
-    merchant_title = {
-                    "Stella" : __("Headmaster"), "Goldie" : __("Rancher"), "Willow" : __("Monster catcher"), "Gina" : __("Weird scientist"),
-                    "Riche" : __("Florist"), "Ramias" : __("Weapon dealer"), "Gurigura" : __("Supply merchant"), "Katryn" : __("Trinket merchant"), "Gift Shop Girl" : __("Exotic emporium"), "Today" : __("Tailor"), "shop" : __("Items"),
-                    }
-
-    merchant_greetings = {
-                        "shop greeting" : __("Hi, handsome! Please take a look at my wares... *wink*"),
-                        "shop caravan" : __("A caravan has arrived, and we have new items. Check it out!"),
-                        "shop bought something" : __("You just bought the {b}%s{/b}. I'm sure you will put it to good use."),
-                        "shop no money" : __("I'm sorry, but you don't have enough gold..."),
-
-                        "Stella greeting" : __("Hmpf, look who's come here. I hope you're not going to waste my time."),
-                        "Stella bought something" : __("Fine, give me the gold, and the {b}%s{/b} is yours."),
-                        "Stella no money" : __("You ain't got the coin, pal. Get out of here."),
-
-                        "Goldie greeting" : __("How can I help you?"),
-                        "Goldie bought something" : __("Thank you! Please treat this {b}%s{/b} with care."),
-                        "Goldie no money" : __("I'm sorry, but you don't seem to have enough money right now."),
-
-                        "Willow greeting" : __("Hey, if it isn't my friendly neighbor! You'll be amazed to see what I just caught."),
-                        "Willow bought something" : __("Deal, just take the {b}%s{/b}... You're gonna have fun!"),
-                        "Willow no money" : __("Aw, you meanie, are you trying to take advantage of me? Your pouch is empty!"),
-
-                        "Gina greeting" : __("Mmh, what if I adjusted this button... No, that's not it... Sorry. How can I help you?"),
-                        "Gina bought something" : __("Sure, I didn't need this {b}%s{/b} anyway..."),
-                        "Gina no money" : __("Sorry, but this is expensive equipment. Don't touch it unless you have the coin to buy it."),
-
-                        "Riche greeting" : __("Oh, hello. *smile*"),
-                        "Riche bought something" : __("Thank you for buying {b}%ss{/b}! Come again soon!"),
-                        "Riche no money" : __("Oh, sorry... But you haven't got the gold."),
-
-                        "Ramias greeting" : __("Oh, it's you... Greetings."),
-                        "Ramias bought something" : __("Thank you. This {b}%s{/b} will not disappoint you."),
-                        "Ramias no money" : __("Hmm... It doesn't look like you have enough gold."),
-
-                        "Gurigura greeting" : __("Hiii!!! *smile*"),
-                        "Gurigura bought something" : __("{b}%s{/b}, coming right up! Thaaank yooou! Teehee."),
-                        "Gurigura no money" : __("Hey, wait a minute... You don't have enough gold, mister!"),
-
-                        "Katryn greeting" : __("Oh, hi. I hope you're not going to waste my time."),
-                        "Katryn bought something" : __("Give me the money first, and you'll get the {b}%s{/b}. Good."),
-                        "Katryn no money" : __("What the... You haven't got the gold, stupid!"),
-
-                        "Gift Shop Girl greeting" : __("Oh, hello. *smile*"),
-                        "Gift Shop Girl bought something" : __("Thank you for buying the {b}%s{/b}, dear sir."),
-                        "Gift Shop Girl no money" : __("Sorry sir... But you haven't got the gold."),
-
-                        "Today greeting" : __("Hi there, big bro! What can we help you with? *smile*"),
-                        "Yesterday greeting" : __("Ah... Hello... *blush*"),
-                        "Today bought something" : __("Thank you for buying the {b}%s{/b}, big bro! *wink*"),
-                        "Yesterday bought something" : __("Thanks."),
-                        "Today no money" : __("Hold it, bro. You don't have the gold to pay for this."),
-                        }
+    _enc_json = DataLoader.load_encounters()
+    if _enc_json:
+        if "pop_name_dict_i18n" in _enc_json:
+            pop_name_dict = {k: tuple(__(v) for v in vals) for k, vals in _enc_json["pop_name_dict_i18n"].items()}
+        if "encounters" in _enc_json:
+            def _to_tuple(val):
+                if isinstance(val, list):
+                    return tuple(_to_tuple(v) for v in val)
+                return val
+            encounters = tuple(_to_tuple(v) for v in _enc_json["encounters"])
+        if "encounter_pics" in _enc_json:
+            def _to_tuple(val):
+                if isinstance(val, list):
+                    return tuple(_to_tuple(v) for v in val)
+                return val
+            encounter_pics = {k: _to_tuple(v) for k, v in _enc_json["encounter_pics"].items()}
+    else:
+        pop_name_dict = {}
+        encounters = ()
+        encounter_pics = {}
 
 
-    shopgirl_comment = {
-                        "wood" : __("New shelf, perfect!"), "leather" : __("Great! This leather basket will fit nicely in the entrance."),
-                        "dye" : __("Nice! This freshly painted display looks sweet."), "marble" : __("Ooh, a marble counter! That's going to make all the other shopkeepers jealous, yay!"),
-                        "ore" : __("Copper-plated counter shelves are sure to draw some attention. Very nice."), "silk" : __("Ah, finally, some soft, smooth silk to hold the fragile items... And rub my face into!"),
-                        "diamond" : __("A girl's best friends... You've got style, handsome! And so does my new diamond-encrusted display... [emo_heart]")
-                        }
-
-
-
-    ## POPULATIONS ##
-
-    pop_name_dict = {
-                    "M beggars" : ("vagrant", "shabby-looking guy", "beggar", "street wanderer"),
-                    "M thugs" : ("ruffian", "thug", "bandit", "petty thief", "rogue", "burglar"),
-                    "M laborers" : ("laborer", "worker", "street peddler", "servant", "peasant"),
-                    "M sailors" : ("pirate", "sailor", "docker", "shipmate", "ol' seadog", "mariner"),
-                    "M commoners" : ("commoner", "overseer", "clerk", "trader", "guard", "builder", "acolyte"),
-                    "M craftsmen": ("craftsman", "artisan", "blacksmith", "carpenter", "artificer", "mason"),
-                    "M bourgeois" : ("merchant", "bookkeeper", "herborist", "shopkeeper", "innkeeper", "priest", "squire"),
-                    "M guild members" : ("guild member", "inventor", "illusionist", "slave trader", "spice trader", "guard officer"),
-                    "M patricians" : ("patrician", "landowner", "banker", "city official", "knight", "bishop"),
-                    "M aristocrats" : ("aristocrat", "lord", "gentleman", "court wizard", "courtier", "governor", "guild master"),
-                    "M nobles" : ("noble", "count", "highborn", "knight commander", "baron", "earl", "viscount", "cardinal"),
-                    "M royals" : ("marquess", "prince", "viceroy", "duke", "patriarch", "sultan"),
-
-                    "F beggars" : ("female vagrant", "shabby-looking gal", "beggaress", "street girl"),
-                    "F thugs" : ("female ruffian", "female thug", "lady bandit", "female thief", "female rogue", "old hag"),
-                    "F laborers" : ("female laborer", "female worker", "woman peddler", "woman servant", "female peasant"),
-                    "F sailors" : ("lady pirate", "female sailor", "dockgirl", "lady shipmate", "ship's nurse", "female mariner"),
-                    "F commoners" : ("commoner lady", "female overseer", "woman clerk", "female trader", "female guard", "nun"),
-                    "F craftsmen": ("craftswoman", "female artisan", "woman blacksmith", "carpentress", "female mason"),
-                    "F bourgeois" : ("female merchant", "lady bookkeeper", "lady herborist", "woman shopkeeper", "female innkeeper", "priestess", "lady squire"),
-                    "F guild members" : ("guild member", "girl inventor", "female illusionist", "slave trader", "woman spice trader", "female guard officer"),
-                    "F patricians" : ("matron", "woman landowner", "woman banker", "lady official", "lady knight", "lady bishop"),
-                    "F aristocrats" : ("aristocrat", "fair lady", "gentlewoman", "court sorceress", "lady courtier", "lady governor", "guild mistress"),
-                    "F nobles" : ("noble lady", "countess", "highborn lady", "holy priestess", "baroness", "viscountess", "lady cardinal"),
-                    "F royals" : ("marchioness", "princess", "queen consort", "duchess", "matriarch", "sultana")
-                    }
-
-
-
-    # Maximum difficulty for a given customer rank
-    customer_rank_dict = {
-                        1 : 40,
-                        2 : 70,
-                        3 : 110,
-                        4 : 160,
-                        5 : 1000,
-                        }
-
-    attract_pop_dict = {0 : "      ", 1 : __("A few "), 2: __("Some  "), 3 : __("Many  "), 4 : __("A lot "), 5 : __("Loads ")}
-
-    # Encounters are tuples with label (used with prefix "city_") and probability. Tuples can be used with multiple labels
-
-    encounters = (("none", 10), ("gossip", 30), ("ambush", 5), ("rob", 5), ("luck", 15), ("mob", 5), (("rape", "impress", "slave"), 10), (("gamble", "thief", "wrestle"), 10), (("cat", "secret", "gypsy"), 10))
-
-    encounter_pics = {
-                    "rape" : ("monster1.webp", "monster2.webp", "monster3.webp", "monster4.webp", "monster5.webp", "monster6.webp", "monster7.webp", "monster8.webp", "monster9.webp", "monster10.webp"),
-                    "impress" : "impress0.webp",
-                    "impress1" : ("impress1_1.webp", "impress1_2.webp", "impress1_3.webp", "impress1_4.webp", "impress1_5.webp", "impress1_6.webp", "impress1_7.webp", "impress1_8.webp", "impress1_9.webp", "impress1_10.webp"),
-                    "impress2" : ("impress2_1.webp", "impress2_2.webp"),
-                    "impress3" : ("impress3_1.webp", "impress3_2.webp", "impress3_3.webp"),
-                    "impress4" : "impress4.webp",
-                    "slave" : ("slave1.webp", "slave2.webp", "slave3.webp", "slave4.webp", "slave5.webp", "slave6.webp", "slave7.webp", "slave8.webp", "slave9.webp", "slave10.webp"),
-                    "slave_service" : (("slave service1.webp","slave service2.webp", "slave service3.webp", "slave service4.webp"), ("slave service5.webp","slave service6.webp", "slave service7.webp", "slave service8.webp")),
-                    "slave_sex" : (("slave sex1.webp","slave sex2.webp", "slave sex3.webp", "slave sex4.webp"), ("slave sex5.webp","slave sex6.webp", "slave sex7.webp", "slave sex8.webp")),
-                    "slave_anal" : (("slave anal1.webp","slave anal2.webp", "slave anal3.webp", "slave anal4.webp"), ("slave anal5.webp","slave anal6.webp", "slave anal7.webp", "slave anal8.webp")),
-                    "slave_fetish" : (("slave fetish1.webp","slave fetish2.webp", "slave fetish3.webp", "slave fetish4.webp"), ("slave fetish5.webp","slave fetish6.webp", "slave fetish7.webp", "slave fetish8.webp")),
-                    "slave_success" : ("slave service9.webp","slave service10.webp", "slave service11.webp", "slave service12.webp"),
-                    "gamble" : (("gambler1_1.webp", "gambler1_2.webp", "gambler1_3.webp"), ("gambler2_1.webp", "gambler2_2.webp", "gambler2_3.webp"), ("gambler3_1.webp", "gambler3_2.webp", "gambler3_3.webp"), ("gambler4_1.webp", "gambler4_2.webp", "gambler4_3.webp"), ("gambler5_1.webp", "gambler5_2.webp", "gambler5_3.webp"), ("gambler6_1.webp", "gambler6_2.webp", "gambler6_3.webp"), ("gambler7_1.webp", "gambler7_2.webp", "gambler7_3.webp"), ("gambler8_1.webp", "gambler8_2.webp", "gambler8_3.webp"), ("gambler9_1.webp", "gambler9_2.webp", "gambler9_3.webp")),
-                    "thief" : ("thief1.webp", "thief2.webp", "thief3.webp", "thief4.webp", "thief5.webp", "thief6.webp"),
-                    "wrestle" : ("arm wrestling1.webp", "arm wrestling2.webp", "arm wrestling3.webp", "arm wrestling4.webp", "arm wrestling5.webp"),
-                    "cat" : ("cat1.webp", "cat2.webp", "cat3.webp", "cat4.webp", "cat5.webp", "cat6.webp", "cat7.webp", "cat8.webp", "cat9.webp", "cat10.webp"),
-                    "cat_found" : ("cat found.webp",),
-                    "cat_sex" : (("catsex1_1.webp", "catsex1_2.webp"), ("catsex2_1.webp", "catsex2_2.webp"), ("catsex3_1.webp", "catsex3_2.webp"), ("catsex4_1.webp", "catsex4_2.webp"), ("catsex5_1.webp", "catsex5_2.webp"), ("catsex6_1.webp", "catsex6_2.webp"), ("catsex7_1.webp", "catsex7_2.webp"), ("catsex8_1.webp", "catsex8_2.webp"), ("catsex9_1.webp", "catsex9_2.webp"), ("catsex10_1.webp", "catsex10_2.webp"), ("catsex11_1.webp", "catsex11_2.webp")),
-                    "cat_duo" : (("catduo1_1.webp", "catduo1_2.webp", "catduo1_3.webp", "catduo1_4.webp"), ("catduo2_1.webp", "catduo2_2.webp", "catduo2_3.webp", "catduo2_4.webp"), ("catduo3_1.webp", "catduo3_2.webp", "catduo3_3.webp", "catduo3_4.webp")),
-                    "secret" : ("secret1.webp", "secret2.webp", "secret3.webp"),
-                    "secret_empty" : ("secret empty1.webp", "secret empty2.webp", "secret empty3.webp"),
-                    "secret_girl" : ("secret girl1.webp", "secret girl2.webp", "secret girl3.webp", "secret girl4.webp", "secret girl5.webp", "secret girl6.webp", "secret girl7.webp", "secret girl8.webp", "secret girl9.webp", "secret girl10.webp"),
-                    "gypsy" : (("gypsy1_0.webp", "gypsy1_2.webp", "gypsy1_3.webp"), ("gypsy1_1.webp", "gypsy1_2.webp", "gypsy1_3.webp"), ("gypsy2_1.webp", "gypsy2_2.webp", "gypsy2_3.webp"), ("gypsy3_1.webp", "gypsy3_2.webp", "gypsy3_3.webp"), ("gypsy4_1.webp", "gypsy4_2.webp", "gypsy4_3.webp"), ("gypsy5_1.webp", "gypsy5_2.webp", "gypsy5_3.webp"), ("gypsy6_1.webp", "gypsy6_2.webp", "gypsy6_3.webp"), ("gypsy7_1.webp", "gypsy7_2.webp", "gypsy7_3.webp"), ("gypsy8_1.webp", "gypsy8_2.webp", "gypsy8_3.webp"), ("gypsy9_1.webp", "gypsy9_2.webp", "gypsy9_3.webp")),
-                    "rob" : (("rob1_1.webp", "rob1_2.webp"), ("rob2_1.webp", "rob2_2.webp"), ("rob3_1.webp", "rob3_2.webp"), ("rob4_1.webp", "rob4_2.webp"), ("rob5_1.webp", "rob5_2.webp"), ("rob6_1.webp", "rob6_2.webp"), ("rob7_1.webp", "rob7_2.webp"), ("rob8_1.webp", "rob8_2.webp"), ("rob9_1.webp", "rob9_2.webp"), ("rob10_1.webp", "rob10_2.webp")),
-                    "ambush" : ("ambush1.webp", "ambush2.webp", "ambush3.webp", "ambush4.webp", "ambush5.webp", "ambush6.webp"),
-                    "mob" : ("mob1.webp", "mob2.webp", "mob3.webp"),
-                    "mob_sex" : ("mob sex1.webp", "mob sex2.webp", "mob sex3.webp"),
-                    }
-
-
-    ## WEEK DAYS ##
-
-    weekdays = ("Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday")
-    workshift_dict = {0: __("Rest"), 50: __("Half Shift"), 100: __("Full Shift")}
-    workshift_color = {0: c_emerald, 50: c_prune, 100: c_orange}
-
-    ## MC picture index
-
-    MC_class_index = {"Warrior" : 0, "Wizard" : 3, "Trader" : 6}
-
-    ## Roman numbers
-
-    roman_numbers = {1 : "I", 2 : "II", 3 : "III", 4 : "IV", 5 : "V", 6 : "VI", 7 : "VII", 8 : "VIII", 9 : "IX", 10 : "X"}
+    ## WEEK DAYS / CALENDAR / COLORS
+    # EN: Loaded from JSON (BK Evolution).
+    # ZH: 从 JSON 加载日历与颜色常量（BK Evolution）。
+    _gc_json = DataLoader.load_game_constants()
+    if _gc_json:
+        weekdays = tuple(_gc_json.get("weekdays", []))
+        workshift_color = {int(k): v for k, v in _gc_json.get("workshift_color", {}).items()}
+        MC_class_index = _gc_json.get("MC_class_index", {})
+        roman_numbers = {int(k): v for k, v in _gc_json.get("roman_numbers", {}).items()}
+    else:
+        weekdays = ()
+        workshift_color = {}
+        MC_class_index = {}
+        roman_numbers = {}
 
     ## JOBS and SEX ACTS
-
-    all_jobs = ["waitress", "dancer", "masseuse", "geisha"]
-    all_sex_acts = ["service", "sex", "anal", "fetish"]
-    extended_sex_acts = ["naked", "service", "sex", "anal", "fetish", "bisexual", "group"]
-    farm_hardcore_acts = ["beast", "monster"]
-
-    opposite_sex_acts = {
-                        "naked" : ["service", "sex", "anal", "fetish", "bisexual", "group"], # This is hardcoded for faster fixation picture search
-                        "service" : ["sex", "anal", "fetish", "bisexual", "group"],
-                        "sex" : ["service", "anal", "fetish", "bisexual", "group"],
-                        "anal" : ["service", "sex", "fetish", "bisexual", "group"],
-                        "fetish" : ["service", "sex", "anal", "bisexual", "group"],
-                        "bisexual" : ["group", ],
-                        "group" : [],
-                        None : [],
-                        }
-
-    normal_tags = ("profile", "portrait", "rest", "waitress", "dancer", "masseuse", "geisha")
-    all_farm_tags = ("big", "beast", "monster", "machine")
-
-    job_sort_value = {"whore" : 0, "waitress" : 10, "dancer" : 20, "masseuse" : 30, "geisha" : 40, None : 90, "hurt" : 80, "away" : 70, "farm" : 70}
-
-    job_color = {"whore" : c_red, "waitress" : c_lightgreen, "dancer" : c_pink, "masseuse" : c_yellow, "geisha" : c_magenta, None : c_white, "hurt" : c_red, "away" : c_lightblue, "farm" : c_brown}
-
-
-    ## STAT NAMES (SKILLS) ##
+    # EN: Loaded from JSON (BK Evolution).
+    # ZH: 从 JSON 加载（BK Evolution）。
+    _job_json = DataLoader.load_job_params()
+    if _job_json:
+        all_jobs = _job_json.get("all_jobs", [])
+        all_sex_acts = _job_json.get("all_sex_acts", [])
+        extended_sex_acts = _job_json.get("extended_sex_acts", [])
+        farm_hardcore_acts = _job_json.get("farm_hardcore_acts", [])
+        opposite_sex_acts = {(None if k == "null" else k): v for k, v in _job_json.get("opposite_sex_acts", {}).items()}
+        normal_tags = tuple(_job_json.get("normal_tags", []))
+        all_farm_tags = tuple(_job_json.get("all_farm_tags", []))
+        job_sort_value = {(None if k == "null" else k): v for k, v in _job_json.get("job_sort_value", {}).items()}
+        job_color = {(None if k == "null" else k): v for k, v in _job_json.get("job_color", {}).items()}
+    else:
+        all_jobs = []
+        all_sex_acts = []
+        extended_sex_acts = []
+        farm_hardcore_acts = []
+        opposite_sex_acts = {}
+        normal_tags = ()
+        all_farm_tags = ()
+        job_sort_value = {}
+        job_color = {}
 
 
-    gstats_main = [
-        __("Charm"),
-        __("Beauty"),
-        __("Body"),
-        __("Refinement"),
-        __("Sensitivity"),
-        __("Libido"),
-        __("Constitution"),
-        __("Obedience"),
-        ]
+    ## STAT NAMES (SKILLS) — JSON-driven (BK Evolution) ##
+    import json as _json, os as _os
+    _stats_path = _os.path.join(renpy.config.gamedir, "core", "data", "stats", "stats.json")
+    _stats_data = {}
+    if _os.path.exists(_stats_path):
+        with open(_stats_path, 'r', encoding='utf-8') as _f:
+            _stats_data = _json.load(_f)
+        del _f
 
-    gstats_sex = [
-        __("Service"),
-        __("Sex"),
-        __("Anal"),
-        __("Fetish")
-        ]
-
+    gstats_main = [__(s) for s in _stats_data.get("main_stats", ["Charm", "Beauty", "Body", "Refinement", "Sensitivity", "Libido", "Constitution", "Obedience"])]
+    gstats_sex = [__(s) for s in _stats_data.get("sex_stats", ["Service", "Sex", "Anal", "Fetish"])]
     all_skills = [s.lower() for s in gstats_main + gstats_sex]
 
-
     ## STAT DESCRIPTION ##
+    _sd = _stats_data.get("stat_descriptions", {})
+    gstats_dict = {k: __(v) for k, v in _sd.items()}
 
-    gstats_dict = {
-                    "Beauty" : __("How beautiful she looks. Affects work as a {b}masseuse{/b} and regular {b}sex{/b}. Current masseuse capacity: {b}%s{/b} customer%s."),
-                    "Body" : __("How well-shaped and firm her body is. Affects work as a {b}dancer{/b} and {b}anal{/b} sex. Current dancer capacity: {b}%s{/b} customer%s."),
-                    "Charm" : __("Her personality and presence. Affects work as a {b}waitress{/b} and sexual {b}service{/b}. Current waitress capacity: {b}%s{/b} customer%s."),
-                    "Refinement" : __("How intelligent and worldly she is. Affects work as a {b}geisha{/b} and {b}fetish{/b} sex acts. Current geisha capacity: {b}%s{/b} customer%s."),
-                    "Libido" : __("How eager for sex she is. Affects {b}dancer{/b}, {b}sex{/b} and max {b}whoring{/b} customers. Current whore capacity: {b}%s{/b} customer%s."),
-                    "Sensitivity" : __("How sensitive she is to her body and her partners. Affects {b}masseuse{/b}, {b}service{/b} and improves customer {b}satisfaction{/b}."),
-                    "Constitution" : __("Her stamina. Affects {b}waitress{/b}, {b}anal{/b} sex, improves her maximum {b}energy{/b} and allows her to serve {b}more customers{/b}."),
-                    "Obedience" : __("How receptive she is to orders and servitude. Affects {b}geisha{/b}, {b}fetish{/b} sexual acts and chances of accepting {b}work{/b} or {b}training{/b}."),
-                    "Service" : __("How good she is with handjobs, blowjobs and other sexual services."),
-                    "Sex" : __("How good she is at regular sex."),
-                    "Anal" : __("How good she is at anal sex."),
-                    "Fetish" : __("How good she is at BDSM and other unusual requests.")
-                }
+    _ssd = _stats_data.get("stat_short_descriptions", {})
+    gstats_descript = {k: __(v) for k, v in _ssd.items()}
 
-    gstats_descript = {
-                    "beauty" : __("a beautiful girl"),
-                    "body" : __("a girl with a hot body"),
-                    "charm" : __("a charming girl"),
-                    "refinement" : __("a refined girl"),
-                    }
+    _sjs = _stats_data.get("stat_job_skills", {})
+    gstat_job_skill = {k: __(v) for k, v in _sjs.items()}
 
-    gstat_job_skill = {
-                    "Beauty" : __("masseuse"),
-                    "Body" : __("dancer"),
-                    "Charm" : __("waitress"),
-                    "Refinement" : __("geisha"),
-                    "Libido" : __("whore"),
-                    }
+    _msc = _stats_data.get("mc_stat_colors", {})
+    MC_stat_color = {k: v for k, v in _msc.items()}
 
-    MC_stat_color = {
-                    "strength" : __("{color=[c_darkred]}%s{/color}"),
-                    "defense" : __("{color=[c_darkred]}%s{/color}"),
-                    "spirit" : __("{color=[c_darkblue]}%s{/color}"),
-                    "charisma" : __("{color=[c_emerald]}%s{/color}"),
-                    "speed" : __("{color=[c_lightblue]}%s{/color}"),
-                    }
+    _pc = _stats_data.get("preference_colors", {})
+    preference_color = {k: v for k, v in _pc.items()}
+    preference_color[None] = _pc.get(None, "%s")
 
-    preference_color = {
-                "refuses" : __("{color=#F70000}%s{/color}"),
-#                 "extremely reluctant" : __("{color=#FF2626}%s{/color}"),
-                "very reluctant" : __("{color=#FF5353}%s{/color}"),
-                "reluctant" : __("{color=#FF8E8E}%s{/color}"),
-                "a little reluctant" : __("{color=#FFB5B5}%s{/color}"),
-                "indifferent" : __("{color=[c_white]}%s{/color}"),
-                "a little interested" : __("{color=#BDF4CB}%s{/color}"),
-                "interested" : __("{color=#7CEB98}%s{/color}"),
-                "very interested" : __("{color=#1FCB4A}%s{/color}"),
-                "fascinated" : __("{color=[c_orange]}%s{/color}"),
-                None: __("%s"),
-                }
 
+    ## WORLD MAP (BK Evolution) ##
+    active_world_map = None
 
     ## GIRL PERSONALITIES ##
-
-#    base_interaction_limits = [-50, -15, 15, 50]
-
-    alignment_bonus = {
-                    "good_love" : 1.25,
-                    "good_fear" : 0.75,
-                    "neutral_love" : 1.0,
-                    "neutral_fear" : 1.0,
-                    "evil_love" : 0.75,
-                    "evil_fear" : 1.25
-                    }
-
-    mood_description = {
-                        "++++++" : __("She feels blessed. Her mood is {b}ecstatic{/b}"),
-                        "+++++" : __("Her mood is {b}elated{/b}"),
-                        "++++" : __("She is {b}very happy{/b}"),
-                        "+++" : __("She is {b}happy{/b}"),
-                        "++" : __("She is satisfied"),
-                        "+" : __("She is {b}content{/b}"),
-                        "0" : __("Her mood is {b}neutral{/b}"),
-                        "-" : __("She is {b}discontent{/b}"),
-                        "--" : __("She is {b}unsatisfied{/b}"),
-                        "---" : __("She is {b}unhappy{/b}"),
-                        "----" : __("She is {b}very unhappy{/b}"),
-                        "-----" : __("Her mood is {b}miserable{/b}"),
-                        "------" : __("Her life is hell. Her mood is {b}abysmal{/b}"),
-
-                        "change +++" : __(" and {b}improving fast{/b}"),
-                        "change ++" : __(" and {b}improving{/b}"),
-                        "change +" : __(" and {b}improving a little{/b}"),
-                        "no change" : __(" and {b}stable{/b}"),
-                        "change -" : __(" and {b}worsening a little{/b}"),
-                        "change --" : __(" and {b}worsening{/b}"),
-                        "change ---" : __(" and {b}worsening fast{/b}"),
-                        }
-
-    love_description = {
-                        "++++++" : __("You are everything to her. She worships you."),
-                        "+++++" : __("She adores you."),
-                        "++++" : __("She loves you."),
-                        "+++" : __("She likes you a lot."),
-                        "++" : __("She is fond of you."),
-                        "+" : __("She thinks you're all right."),
-                        "0" : __("She isn't sure how she feels about you."),
-                        "-" : __("She doesn't like you much."),
-                        "--" : __("She dislikes you."),
-                        "---" : __("She resents you."),
-                        "----" : __("She despises you."),
-                        "-----" : __("She hates you."),
-                        "------" : __("She thinks you're the worst. She wants you dead."),
-                        }
-
-    fear_description = {
-                        "++++++" : __("She lives in a world of terror, day and night. She is dead afraid of you."),
-                        "+++++" : __("You terrify her."),
-                        "++++" : __("She is very scared of you."),
-                        "+++" : __("She is scared of you."),
-                        "++" : __("She is a little scared of you."),
-                        "+" : __("She distrusts you."),
-                        "0" : __("She is on her guard around you."),
-                        "-" : __("She is nervous around you."),
-                        "--" : __("She is starting to ease up around you."),
-                        "---" : __("She is more relaxed around you. She feels confident you won't do anything bad to her."),
-                        "----" : __("She feels like she can act freely."),
-                        "-----" : __("She feels like she can do what she wants."),
-                        "------" : __("She feels like a princess, doing whatever she likes."),
-                        "M++++++" : __("Her true place is at your feet, shivering with terror and desire."),
-                        "M+++++" : __("The more you hurt her, the happier she gets."),
-                        "M++++" : __("It seems she likes being roughed up. She wants more."),
-                        "M+++" : __("She is scared of you, but strangely attracted to you."),
-                        "M---" : __("She is relaxed around you, but something feels off."),
-                        "M----" : __("Shes feels safe with you, but also bored."),
-                        "M-----" : __("She doesn't understand why you are being so nice to her."),
-                        "M------" : __("She feels that it's all too much, she doesn't deserve this. She seems distressed"),
-                        }
-
-
-
-
-    # gpersonality_attributes = ("extravert", "introvert", "idealist", "materialist", "lewd", "repressed", "dom", "sub", "very extravert", "very introvert", "very idealist", "very materialist", "very lewd", "very repressed", "very dom", "very sub")
-
-    personality_attributes = [("extravert", "introvert"), ("idealist", "materialist"), ("lewd", "modest"), ("dom", "sub")]
-
-    attribute_score_dict = { # Note: very X and X boni/mali will add up
-                            "very extravert" : {"very extravert" : 3, "extravert" : 1, "introvert" : -1, "very introvert" : -3},
-                            "extravert" : {"very extravert" : 1, "extravert" : 1, "introvert" : 0, "very introvert" : -1},
-                            "introvert" : {"very extravert" : -1, "extravert" : 0, "introvert" : 1, "very introvert" : 1},
-                            "very introvert" : {"very extravert" : -3, "extravert" : -1, "introvert" : 1, "very introvert" : 3},
-
-                            "very idealist" : {"very idealist" : 3, "idealist" : 1, "materialist" : -1, "very materialist" : -3},
-                            "idealist" : {"very idealist" : 1, "idealist" : 1, "materialist" : 0, "very materialist" : -1},
-                            "materialist" : {"very idealist" : -1, "idealist" : 0, "materialist" : 1, "very materialist" : 1},
-                            "very materialist" : {"very idealist" : -3, "idealist" : -1, "materialist" : 1, "very materialist" : 3},
-
-                            "very lewd" : {"very lewd" : 3, "lewd" : 1, "modest" : -1, "very modest" : -3},
-                            "lewd" : {"very lewd" : 1, "lewd" : 1, "modest" : 0, "very modest" : -1},
-                            "modest" : {"very lewd" : -1, "lewd" : 0, "modest" : 1, "very modest" : 1},
-                            "very modest" : {"very lewd" : -3, "lewd" : -1, "modest" : 1, "very modest" : 3},
-
-                            # The Dom/Sub table is reversed, this is on purpose
-
-                            "very dom" : {"very dom" : -3, "dom" : -1, "sub" : 1, "very sub" : 3},
-                            "dom" : {"very dom" : -1, "dom" : 0, "sub" : 1, "very sub" : 1},
-                            "sub" : {"very dom" : 1, "dom" : 1, "sub" : 0, "very sub" : -1},
-                            "very sub" : {"very dom" : 3, "dom" : 1, "sub" : -1, "very sub" : -3},
-                            }
-
-    gpersonalities_likes = {
-                            "very extravert" :  {"cute" : 1, "book" : -3, "precious" : 0, "erotica" : -1, "drinks": 3},
-                            "very introvert" :  {"cute" : -1, "book" : 3, "precious" : 0, "erotica" : 1, "drinks": -3},
-                            "very idealist" :   {"cute" : 3, "book" : 1, "precious" : -3, "erotica" : 0, "drinks": -1},
-                            "very materialist": {"cute" : -1, "book" : -3, "precious" : 3, "erotica" : 0, "drinks": 1},
-                            "very lewd" :       {"cute" : -3, "book" : -1, "precious" : 0, "erotica" : 3, "drinks": 1},
-                            "very modest" :     {"cute" : 3, "book" : 1, "precious" : 0, "erotica" : -3, "drinks": -1},
-                            "very dom" :        {"cute" : -3, "book" : -1, "precious" : 1, "erotica" : 0, "drinks": 3},
-                            "very sub" :        {"cute" : 1, "book" : 3, "precious" : -1, "erotica" : 0, "drinks": -3},
-
-                            # "meek" :            {"cute" : 4, "book" : 2, "precious" : 0, "erotica" : -2, "drinks": 2},
-                            # "nerd" :            {"cute" : 0, "book" : 4, "precious" : -2, "erotica" : 2, "drinks": 2},
-                            # "pervert" :         {"cute" : -2, "book" : 0, "precious" : 2, "erotica" : 4, "drinks": 2},
-                            # "rebel" :           {"cute" : 2, "book" : 0, "precious" : 2, "erotica" : -2, "drinks": 4},
-                            # "superficial" :     {"cute" : 2, "book" : -2, "precious" : 4, "erotica" : 2, "drinks": 0},
-                            # "cold" :            {"cute" : -2, "book" : 2, "precious" : 4, "erotica" : 0, "drinks": 2},
-                            # "masochist" :       {"cute" : 0, "book" : 2, "precious" : -2, "erotica" : 4, "drinks": 2},
-                            # "sweet" :           {"cute" : 4, "book" : 2, "precious" : 2, "erotica" : 0, "drinks": -2}
-                            }
+    # EN: Load personality and gift parameters from JSON (BK Evolution).
+    # ZH: 从 JSON 加载人格与礼物参数（BK Evolution）。
+    _pers_gift_json = DataLoader.load_personality_gift_params()
+    if _pers_gift_json:
+        alignment_bonus = _pers_gift_json.get("alignment_bonus", {})
+        personality_attributes = [tuple(x) for x in _pers_gift_json.get("personality_attributes", [])]
+        attribute_score_dict = _pers_gift_json.get("attribute_score_dict", {})
+        gpersonalities_likes = _pers_gift_json.get("gpersonalities_likes", {})
+        _gc = _pers_gift_json.get("gpersonalities_comment", {})
+        gpersonalities_comment = {k: tuple(__(x) for x in v.get("comments_i18n", [])) for k, v in _gc.items()}
+    else:
+        alignment_bonus = {}
+        personality_attributes = []
+        attribute_score_dict = {}
+        gpersonalities_likes = {}
+        gpersonalities_comment = {}
 
 init python:
-    gpersonalities = {
-                        "pervert" : Personality(name="pervert", attributes=("very extravert", "very lewd"), description="Wild and 'no limit' kind of girl. Curious about all sorts of sexual acts, the more perverted the better. She doesn't care for romance."),
-                        "rebel" : Personality(name="rebel", attributes=("very extravert", "very dom"), often_stories = ["slave_story5"], description="Always fighting and contradicting others, fiercely independent. She must do things of her own free will."),
-                        "cold" : Personality(name="cold", attributes=("very materialist", "very introvert"), description="Cold and detached, she doesn't show her feelings easily. She seems strangely unconcerned about what goes on around her, and uninterested in the fate of others."),
-                        "nerd" : Personality(name="nerd", attributes=("very introvert", "very idealist"), often_stories = ["slave_story8"], description="Quiet and bookish. Rather light-headed. Always curious. She doesn't like parties, noise, and physical effort."),
-                        "masochist" : Personality(name="masochist", attributes=("very introvert", "very sub"), description="The lower the better. She likes to be at the bottom and secretly enjoys being mistreated. Gifts and loving gestures annoy her, she feels she doesn't deserve them."),
-                        "bimbo" : Personality(name="bimbo", attributes=("very materialist", "very lewd"), description="Vain, attention-craved, she cares about status and wealth. Loves presents and compliments. She has no qualms about using her body to get these things, too."),
-                        "meek" : Personality(name="meek", attributes=("very modest", "very sub"), often_stories = ["slave_story4"], rarely_stories = ["slave_story5","slave_story8"], description="Shy, easily swayed, will cry rather than resist. Doesn't like conflict."),
-#                         "heartless" : Personality(name="heartless", attributes=("very materialist", "very dom"), description="Cold, calculating, domineering and selfish. Will always try to benefit at the expense of others."),
-                        "sweet" : Personality(name="sweet", attributes=("very idealist", "very extravert"), description="Lovely and sunny personality, always positive, and rather romantic. She doesn't like negativity."),
+    ## GIRL PERSONALITIES — JSON-driven (BK Evolution) ##
+    _pers_path = _os.path.join(renpy.config.gamedir, "core", "data", "personalities", "personalities.json")
+    _pers_data = []
+    if _os.path.exists(_pers_path):
+        with open(_pers_path, 'r', encoding='utf-8') as _f:
+            _pers_data = _json.load(_f)
+        del _f
 
-                        "superficial" : Personality(name="superficial", attributes=("very extravert", "very materialist"), description="Ever the socialite, she cares about being seen, preferably in the most outstanding outfit and expensive jewelry. Some call her needy and craving for attention, but she knows they're just jealous of her new shoes..."),
-                        "holy" : Personality(name="holy", attributes=("very extravert", "very modest"), never_stories = ["slave_story7","slave_story8"], description="A firebrand promoter of religion and morality, she prays every night for the salvation of her soul and tries to convert others to her beliefs. With little success so far, but she won't give up."),
-                        "helper" : Personality(name="helper", attributes=("very extravert", "very sub"), description="Always ready to help her friends, places herself after others. Can be a bit nosy sometimes."),
-                        "creep" : Personality(name="creep", attributes=("very introvert", "very lewd"), description="Shy and awkward around people, she is obsessed about all sorts of naughty topics that she researches in her own time. Get complaints for stalking - a lot."),
-                        "repressed" : Personality(name="repressed", attributes=("very introvert", "very modest"), description="Raised in a very strict environment, she lives in fear of her own impulses and tries her hardest to suppress them."),
-                        "schemer" : Personality(name="schemer", attributes=("very introvert", "very dom"), description="She likes nothing more than to scheme and make grand plans, ready to assert her dominance over all living beings... Some day. In the meantime, if she has to suck a dick... So be it."),
-                        "prude" : Personality(name="prude", attributes=("very materialist", "very modest"), rarely_stories = ["slave_story7","slave_story8"], description="She behaves like a good, Arios-fearing girl at all times. She frowns on frivolity and amoral behavior. Some think she has dirty thoughts in secret, but if so, she hides them well."),
-                        "princess" : Personality(name="princess", attributes=("very dom", "very materialist"), often_stories = ["slave_story6"], rarely_stories = ["slave_story1","slave_story2","slave_story3","slave_story5","slave_story7","slave_story8"], never_stories = ["slave_story4"], description="A figurative princess (or is she?), she thinks everyone ought to be at her feet and deliver on her every whim. Her behavior can be cruel, but mostly she's naive."),
-                        "pet" : Personality(name="pet", attributes=("very materialist", "very sub"), rarely_stories = ["slave_story5","slave_story8"], description="The teacher's pet. Always ready to please her master, she likes nothing more than to live in comfort at his feet. Some despise her servility, calling her unpleasant names behind her back."),
-                        "easy" : Personality(name="easy", attributes=("very lewd", "very idealist"), description="It's not her fault, she has always attracted men, and never had the heart to turn them down. Although many call her easy, her sole purpose is to spread joy. Hopefully not STDs."),
-                        "class president" : Personality(name="class president", attributes=("very modest", "very idealist"), often_stories = ["slave_story8"], description="She must always be on top, she strives to be exemplary and despises every kind of misconduct. The high expectations she has of others mirror the harsh discipline whe puts herself through."),
-                        "tsundere" : Personality(name="tsundere", attributes=("very idealist", "very dom"), description="Easy to anger, hard to please, she has a secret soft spot. She will put herself at risk to help others, then kick their butts for needing help in the first place."),
-                        "loyal" : Personality(name="loyal", attributes=("very idealist", "very sub"), often_stories = ["slave_story2"], description="She always follows orders, out of a sense of duty more than fear. She believes everyone must know their place, and do their best to excel at whatever task they are given. Even whores."),
-                        "yandere" : Personality(name="yandere", attributes=("very lewd", "very dom"), rarely_stories = ["slave_story3","slave_story7"], description="Very high on the hot yet neurotic scale. Loving and devoted, but also firebatshit crazy. She's ready to do anything to get her man and snuff out the competition, including... actually snuffing them."),
-                        "masochist2" : Personality(name="masochist", attributes=("very lewd", "very sub"), description="The lower the better. She likes to be at the bottom and secretly enjoys being mistreated. Gifts and loving gestures annoy her, she feels she doesn't deserve them."),
-                        "stubborn" : Personality(name="stubborn", attributes=("very modest", "very dom"), description="She doesn't like people who don't share her strict principles and moral values, and she doesn't take contradiction well either. A lot of fun at parties, if you like parties that end with a tavern brawl."),
-                    }
+    gpersonalities = {}
+    for _pers_item in _pers_data:
+        _pid = _pers_item.get("id")
+        if not _pid:
+            continue
+        gpersonalities[_pid] = Personality(
+            name=get_i18n(_pers_item, "name", _pid),
+            attributes=tuple(_pers_item.get("attributes", [])),
+            description=get_i18n(_pers_item, "description", ""),
+            often_stories=_pers_item.get("often_stories", []),
+            rarely_stories=_pers_item.get("rarely_stories", []),
+            never_stories=_pers_item.get("never_stories", []),
+            dialogue_personality_weight=_pers_item.get("dialogue_personality_weight", 3),
+            dialogue_attribute_weight=_pers_item.get("dialogue_attribute_weight", 1),
+        )
 
     reserved_personality_names = gpersonalities.keys()
 
-    gift_description = {
-                        "cute" : __("cute things"),
-                        "book" : __("books"),
-                        "precious" : __("precious things"),
-                        "erotica" : __("erotic things"),
-                        "drinks" : __("hard liquor")
-                    }
+    # EN: Load sex training parameters from JSON (BK Evolution).
+    # ZH: 从 JSON 加载性训练参数（BK Evolution）。
+    _sex_train_json = DataLoader.load_sex_training_params()
+    if _sex_train_json:
+        base_reluctance = _sex_train_json.get("base_reluctance", {})
+        preference_modifier = _sex_train_json.get("preference_modifier", {})
+        preference_limit = _sex_train_json.get("preference_limit", {})
+        experienced_modifiers = _sex_train_json.get("experienced_modifiers", {})
+        experienced_color = _sex_train_json.get("experienced_color", {})
+        sexual_training_value = _sex_train_json.get("sexual_training_value", {})
+    else:
+        base_reluctance = {}
+        preference_modifier = {}
+        preference_limit = {}
+        experienced_modifiers = {}
+        experienced_color = {}
+        sexual_training_value = {}
 
+    # Training prerequisites loaded from JSON (BK Evolution)
 
-    gpersonalities_comment = {
-                            "very extravert pos" : ("She's friendly.", "She's always ready to help.", "She's fun.", "She's lively."),
-                            "very introvert pos" : ("She's nice.", "She's quiet.", "She doesn't gossip.", "She's soft-spoken."),
-                            "very idealist pos" : ("She follows her dreams.", "She's smart.", "She knows a lot about everything.", "She's very clever."),
-                            "very materialist pos" : ("She's down-to-earth", "She likes the finer things in life.", "She's ambitious.", "She has great taste."),
-                            "very lewd pos" : ("She's open-minded.", "She's curious", "She knows how to party.", "She's a real party-girl."),
-                            "very modest pos" : ("She's rational.", "She keeps her head cool.", "She's stable.", "She's pure."),
-                            "very dom pos" : ("She's so confident.", "She's driven.", "She's very independent.", "She's fearless."),
-                            "very sub pos" : ("She's humble.", "She's quiet.", "She's loyal.", "She's obedient."),
-
-                            "very extravert neg" : ("She's self-absorbed.", "She's loud.", "She's self-centered.", "She won't shut up."),
-                            "very introvert neg" : ("She's no fun.", "She's aloof.", "She's unfriendly.", "She's a bore."),
-                            "very idealist neg" : ("She's nerdy.", "She's a snowflake.", "She's a snob.", "She's a nerd."),
-                            "very materialist neg" : ("She's a nasty bitch.", "She's so superficial.", "She's selfish.", "She's a cold-hearted bitch."),
-                            "very lewd neg" : ("She's a perv.", "She's depraved, even for a whore.", "She has no morals.", "She's a slut."),
-                            "very modest neg" : ("She's boring.", "She thinks she's better than us.", "She's prissy.", "She's intolerant."),
-                            "very dom neg" : ("She's arrogant.", "She's over-confident.", "She's a bully.", "She's manipulative."),
-                            "very sub neg" : ("She's a pushover.", "She whines too much.", "She's a crybaby.", "She's a loser."),
-                        }
-
-    recent_event_templates = {  # Girl events given to the player for rewarding/punishing
-
-                            # Rewardable events
-                            "level up" : GirlRecentEvent(type="level up", action="Earning some experience", base_description="She has become more experienced ({color=[c_emerald]}level %s{/color}).", discipline=False),
-                            "rank up" : GirlRecentEvent(type="rank up", action="Earned a new rank", base_description="She has reached {color=[c_emerald]}rank %s{/color}.", discipline=False),
-                            "job up" : GirlRecentEvent(type="job up", action="Increasing her job skill", base_description="She has increased her {color=[c_emerald]}%s{/color} skills.", discipline=False),
-                            "good result" : GirlRecentEvent(type="good result", action="Performing well while working", base_description="Her performance was {color=[c_emerald]}%s{/color} while working (%s).", discipline=False),
-                            "quest good result" : GirlRecentEvent(type="quest good result", action="Performing well on a quest", base_description="%s", discipline=False),
-                            "class good result" : GirlRecentEvent(type="class good result", action="Studying hard", base_description="%s", discipline=False),
-                            "new act" : GirlRecentEvent(type="new act", action="Trying something new", base_description="She {color=[c_emerald]}accepted %s training{/color} for the first time.", discipline=False),
-                            "helped" : GirlRecentEvent(type="helped", action="Helping a friend", base_description="", discipline=False), # Not implemented
-
-
-                            # Neutral events
-                            "exhausted" : GirlRecentEvent(type="exhausted", action="Becoming exhausted", base_description="She pushed herself too hard and ended up {color=[c_crimson]}exhausted{/color}."),
-                            "sick" : GirlRecentEvent(type="sick", action="Falling sick", base_description="She fell {color=[c_crimson]}sick{/color}."),
-                            "hurt" : GirlRecentEvent(type="hurt", action="Getting hurt", base_description="She was {color=[c_crimson]}raped{/color} by %s."),
-                            "defended" : GirlRecentEvent(type="defended", action="Fighting a customer", base_description="She {color=[c_emerald]}protected herself{/color} from a rapist customer."),
-
-
-                            # Punishable events
-                            "ran away" : GirlRecentEvent(type="ran away", action="Running away", base_description="She ran away, but you brought her back.", encourage=False),
-                            "disobey" : GirlRecentEvent(type="disobey", action="Disobeying you", base_description="She {color=[c_crimson]}refused to work as a %s{/color}.", encourage=False),
-                            "fooled around" : GirlRecentEvent(type="fooled around", action="Fooling around with customers", base_description="She {color=[c_crimson]}accepted %s with a customer against your wishes{/color}.", encourage=False),
-                            "bad result" : GirlRecentEvent(type="bad result", action="Performing badly while working", base_description="She performed {color=[c_crimson]}%sly{/color} while working (%s).", encourage=False),
-                            "quest bad result" : GirlRecentEvent(type="quest bad result", action="Performing badly on a quest", base_description="%s", encourage=False),
-                            "class bad result" : GirlRecentEvent(type="class bad result", action="Not paying attention in school", base_description="%s", encourage=False),
-                            "refused" : GirlRecentEvent(type="refused", action="Refusing training", base_description="She {color=[c_crimson]}refused to train (%s){/color}.", encourage=False),
-                            "argued" : GirlRecentEvent(type="argued", action="Arguing with a rival", base_description="", encourage=False), # Not implemented
-
-                            # Passive events (cannot be punished or rewarded=)
-                            "acquired" : GirlRecentEvent(type="acquired", base_description="You have acquired %s.", encourage=False, discipline=False),
-                            "MC met" : GirlRecentEvent(type="MC met", base_description="You have met %s.", encourage=False, discipline=False),
-                            "MC friend" : GirlRecentEvent(type="MC friend", base_description="You and %s have become friends.", encourage=False, discipline=False),
-                            "MC flower" : GirlRecentEvent(type="MC flower", base_description="You may now give %s flowers.", encourage=False, discipline=False),
-                            "MC girlfriend" : GirlRecentEvent(type="MC friend", base_description="%s is now your girlfriend.", encourage=False, discipline=False),
-                            "MC lover" : GirlRecentEvent(type="MC friend", base_description="%s is now your lover.", encourage=False, discipline=False),
-                            "MC job" : GirlRecentEvent(type="MC job", base_description="You can now offer %s a job.", encourage=False, discipline=False),
-                            "kidnapped" : GirlRecentEvent(type="kidnapped", base_description="She has been kidnapped by %s.", encourage=False, discipline=False),
-                        }
-
-    event_sounds = {
-                    "perk 0" : s_surprise,
-                    "perk 1" : s_ahaa,
-                    "perk 2" : s_aaah,
-                    "perk 3" : s_mmmh,
-                    }
-
-
-
-    base_reluctance = {"naked" : -375, "service" : -500, "sex" : -500, "anal" : -750, "fetish" : -750, "bisexual" : -750, "group" : -1000}
-
-    # preference_modifier multiplies with negative base_reluctance so the +/- sign is reversed
-    preference_modifier =   {
-                            "refuses" : 150, # preference <= 90% base_reluctance
-#                            "extremely reluctant" : 100, # (obsolete)
-                            "very reluctant" : 75, # preference <= 70% base_reluctance
-                            "reluctant" : 50, # preference <= 50% base_reluctance
-                            "a little reluctant" : 25, # preference <= 20% base_reluctance
-                            "indifferent" : 0, # preference <= -20% base_reluctance
-                            "a little interested" : -5, # preference = -50% base_reluctance
-                            "interested" : -15, # preference <= -70% base_reluctance
-                            "very interested" : -35, # preference <= -90% base_reluctance
-                            "fascinated" : -75 # preference > -90% base_reluctance
-                        }
-
-    # Reminder: Base reluctance is negative
-
-    preference_limit =  {
-                            "refuses" : 3.0, # preference <= 90% base_reluctance
-                            "very reluctant" : 0.9, # preference <= 70% base_reluctance
-                            "reluctant" : 0.7, # preference <= 50% base_reluctance
-                            "a little reluctant" : 0.5, # preference <= 20% base_reluctance
-                            "indifferent" : 0.2, # preference <= -20% base_reluctance
-                            "a little interested" : -0.2, # preference = -50% base_reluctance
-                            "interested" : -0.5, # preference <= -70% base_reluctance
-                            "very interested" : -0.7, # preference <= -90% base_reluctance
-                            "fascinated" : -0.9 # preference > -90% base_reluctance
-                        }
-
-    experienced_description = {
-                            "very experienced" : __("Extensive"),
-                            "experienced" : __("Advanced"),
-                            "average" : __("Some"),
-                            "inexperienced" : __("Basic"),
-                            "very inexperienced" : __("None"),
-                            "very experienced ttip" : __("{size=-1}{color=[c_orange]}A sex slave for years, she has known several masters and received extensive sexual training.{/color}"),
-                            "experienced ttip" : __("{size=-1}{color=[c_green]}She has been a sex slave for many months now, and has received various forms of training.{/color}"),
-                            "average ttip" : __("{size=-1}{color=[c_yellow]}She has been a sex slave for a few months already, and has received some sexual training.{/color}"),
-                            "inexperienced ttip" : __("{color=[c_lightred]}She became a sex slave only recently, and still has a lot to learn.{/color}"),
-                            "very inexperienced ttip" : __("{color=[c_red]}Fresh off the slave caravan, she has never been trained for sex. Who knows how she will react?{/color}"),
-                        }
-
-    experienced_modifiers = {
-                            "very experienced" : [250, 150, 75],
-                            "experienced" : [150, 75, 25],
-                            "average" : [75, 25, 0],
-                            "inexperienced" : [25, 0, -25],
-                            "very inexperienced" : [0, 0, -50],
-                        }
-
-    experienced_color = {
-                            "very experienced" : c_orange,
-                            "experienced" : c_green,
-                            "average" : c_yellow,
-                            "inexperienced" : c_lightred,
-                            "very inexperienced" : c_red,
-                        }
-
-    sexual_training_value = {
-                            "very experienced" : 1,
-                            "experienced" : 2,
-                            "average" : 3,
-                            "inexperienced" : 4,
-                            "very inexperienced" : 5,
-                        }
-
-    long_act_description = {
-                            "naked" : __("being naked"),
-                            "service" : __("giving service"),
-                            "sex" : __("having sex"),
-                            "anal" : __("anal sex"),
-                            "fetish" : __("kinky sex"),
-                            "bisexual" : __("sex with a woman"),
-                            "group" : __("group sex"),
-                            "action naked" : __("Nudity"),
-                            "action service" : __("Service"),
-                            "action sex" : __("Sex"),
-                            "action anal" : __("Anal sex"),
-                            "action fetish" : __("Fetish"),
-                            "action bisexual" : __("Lesbian sex"),
-                            "action group" : __("Group sex")
-                        }
-
-    # This filters choices for the training menu (OR clause)
-
-    training_test_dict = {
-                            "naked": [],
-                            "service": [("naked", "reluctant"), ("service", "reluctant")],
-                            "sex": [("naked", "indifferent"), ("service", "indifferent"), ("sex", "reluctant")],
-                            "anal": [("sex", "indifferent"), ("anal", "reluctant")],
-                            "fetish": [("anal", "indifferent"), ("service", "interested"), ("fetish", "reluctant")],
-                            "fetish": [("anal", "indifferent"), ("service", "interested"), ("fetish", "reluctant")],
-                            "bisexual": [("sex", "interested"), ("service", "interested"), ("bisexual", "indifferent")],
-                            "group": [("anal", "interested"), ("sex", "fascinated"), ("group", "indifferent")],
-                        }
-
-    magic_training_test_dict = { # Suggestion training is easier
-                            "naked": [],
-                            "service": [],
-                            "sex": [("naked", "reluctant"), ("service", "reluctant"), ("sex", "very reluctant")],
-                            "anal": [("sex", "reluctant"), ("anal", "very reluctant")],
-                            "fetish": [("anal", "reluctant"), ("service", "indifferent"), ("fetish", "very reluctant")],
-                            "fetish": [("anal", "reluctant"), ("service", "indifferent"), ("fetish", "very reluctant")],
-                            "bisexual": [("sex", "indifferent"), ("service", "indifferent"), ("bisexual", "reluctant")],
-                            "group": [("anal", "a little interested"), ("sex", "very interested"), ("group", "a little reluctant")],
-                        }
+    _train_json = DataLoader.load_training_tests()
+    if _train_json:
+        def _to_tuples(val):
+            if isinstance(val, list):
+                return [tuple(x) for x in val]
+            return val
+        if "training_test_dict" in _train_json:
+            training_test_dict = {k: _to_tuples(v) for k, v in _train_json["training_test_dict"].items()}
+        if "magic_training_test_dict" in _train_json:
+            magic_training_test_dict = {k: _to_tuples(v) for k, v in _train_json["magic_training_test_dict"].items()}
+    else:
+        training_test_dict = {}
+        magic_training_test_dict = {}
 
     ## MC interactions
     # The dictionary uses nested lists to retain choices order
 
     interact_dict = {
                     "chat" : ["GENERAL TOPICS", "PERSONAL TOPICS", "STORY"],
-                    "GENERAL TOPICS" : [GirlInteractionTopic("chat", "chat", "Life as a slave", "slave_chat_slave_life"),
-                                        GirlInteractionTopic("chat", "chat", "Life in the brothel", "slave_chat_brothel", condition="has_worked"),
-                                        GirlInteractionTopic("chat", "chat", "Getting along with customers", "slave_chat_customers", condition="has_worked"),
-                                        GirlInteractionTopic("chat", "chat", "Getting along with other girls", "slave_chat_other_girls", condition="other_girls"),
+                    "GENERAL TOPICS" : [GirlInteractionTopic("chat", "chat", __("Life as a slave"), "slave_chat_slave_life"),
+                                        GirlInteractionTopic("chat", "chat", __("Life in the brothel"), "slave_chat_brothel", condition="has_worked"),
+                                        GirlInteractionTopic("chat", "chat", __("Getting along with customers"), "slave_chat_customers", condition="has_worked"),
+                                        GirlInteractionTopic("chat", "chat", __("Getting along with other girls"), "slave_chat_other_girls", condition="other_girls"),
                                         ],
                     "PERSONAL TOPICS" : [
-                                        GirlInteractionTopic("chat", "chat", "Her well-being", "slave_chat_well_being"),
-                                        GirlInteractionTopic("chat", "chat", "Her feelings about you", "slave_chat_feelings"),
-                                        GirlInteractionTopic("chat", "chat", "Her tastes", "slave_chat_tastes"),
-                                        GirlInteractionTopic("chat", "chat", "Her origins", "slave_chat_origins"),
+                                        GirlInteractionTopic("chat", "chat", __("Her well-being"), "slave_chat_well_being"),
+                                        GirlInteractionTopic("chat", "chat", __("Her feelings about you"), "slave_chat_feelings"),
+                                        GirlInteractionTopic("chat", "chat", __("Her tastes"), "slave_chat_tastes"),
+                                        GirlInteractionTopic("chat", "chat", __("Her origins"), "slave_chat_origins"),
                                     ],
-                    "STORY" : [GirlInteractionTopic("chat", "story", "Hear her story again", "slave_chat_story", AP_cost=0, condition = "story")],
+                    "STORY" : [GirlInteractionTopic("chat", "story", __("Hear her story again"), "slave_chat_story", AP_cost=0, condition="story")],
 
                     "train" : ["SKILL TRAINING", "SEXUAL TRAINING", "SPECIAL TRAINING"],
-                    "SKILL TRAINING" : [GirlInteractionTopic("train", "train", "Obedience training", "slave_train_obedience", act="obedience"),
-                                        GirlInteractionTopic("train", "train", "Constitution training", "slave_train_constitution", act="constitution")],
+                    "SKILL TRAINING" : [GirlInteractionTopic("train", "train", __("Obedience training"), "slave_train_obedience", act="obedience"),
+                                        GirlInteractionTopic("train", "train", __("Constitution training"), "slave_train_constitution", act="constitution")],
                     "SEXUAL TRAINING" : [
-                                        GirlInteractionTopic("train", "train", "Naked", "slave_train_sex_acts", act="naked", advanced=True),
-                                        GirlInteractionTopic("train", "train", "Service", "slave_train_sex_acts", act="service", advanced=True),
-                                        GirlInteractionTopic("train", "train", "Sex", "slave_train_sex_acts", act="sex", advanced=True),
-                                        GirlInteractionTopic("train", "train", "Anal", "slave_train_sex_acts", act="anal", advanced=True),
-                                        GirlInteractionTopic("train", "train", "Fetish", "slave_train_sex_acts", act="fetish", advanced=True),
-                                        GirlInteractionTopic("train", "train", "Bisexual", "slave_train_sex_acts", act="bisexual", advanced=True),
-                                        GirlInteractionTopic("train", "train", "Group", "slave_train_sex_acts", act="group", advanced=True),
+                                        GirlInteractionTopic("train", "train", __("Naked"), "slave_train_sex_acts", act="naked", advanced=True),
+                                        GirlInteractionTopic("train", "train", __("Service"), "slave_train_sex_acts", act="service", advanced=True),
+                                        GirlInteractionTopic("train", "train", __("Sex"), "slave_train_sex_acts", act="sex", advanced=True),
+                                        GirlInteractionTopic("train", "train", __("Anal"), "slave_train_sex_acts", act="anal", advanced=True),
+                                        GirlInteractionTopic("train", "train", __("Fetish"), "slave_train_sex_acts", act="fetish", advanced=True),
+                                        GirlInteractionTopic("train", "train", __("Bisexual"), "slave_train_sex_acts", act="bisexual", advanced=True),
+                                        GirlInteractionTopic("train", "train", __("Group"), "slave_train_sex_acts", act="group", advanced=True),
                                     ],
-                    "SPECIAL TRAINING" : [GirlInteractionTopic("train", "train", "Free-form training", "slave_train_free_form", condition = "free-form"),
-                                          GirlInteractionTopic("train", "train", "Remove negative fixation", "slave_remove_fixation", condition="neg_fix")],
+                    "SPECIAL TRAINING" : [GirlInteractionTopic("train", "train", __("Free-form training"), "slave_train_free_form", condition="free-form"),
+                                          GirlInteractionTopic("train", "train", __("Remove negative fixation"), "slave_remove_fixation", condition="neg_fix")],
 
                     "magic" : ["MAGIC SKILL TRAINING {image=img_gold}", "MAGIC SEXUAL TRAINING {image=img_gold}", "MAGIC SKILL TRAINING {image=img_MP}", "MAGIC SEXUAL TRAINING {image=img_MP}", "CHOOSE METHOD"],
 
-                    "CHOOSE METHOD" : [GirlInteractionTopic("magic", None, "Current method", "slave_hypnotize_method", AP_cost=0), GirlInteractionTopic("magic", None, "Spend", "slave_hypnotize_driver", AP_cost=0)], # None type excludes it from girl interaction count
+                    "CHOOSE METHOD" : [GirlInteractionTopic("magic", None, __("Current method"), "slave_hypnotize_method", AP_cost=0), GirlInteractionTopic("magic", None, "Spend", "slave_hypnotize_driver", AP_cost=0)], # None type excludes it from girl interaction count
 
                     "MAGIC SKILL TRAINING {image=img_gold}" : [
-                                                GirlInteractionTopic("magic", "train", "Obedience training", "slave_magic", act="obedience", gold_cost=20, condition = "gold_driver"),
-                                                GirlInteractionTopic("magic", "train", "Sensitivity training", "slave_magic", act="sensitivity", gold_cost=20, condition = "gold_driver"),
-                                                GirlInteractionTopic("magic", "train", "Libido training", "slave_magic", act="libido", gold_cost=20, condition = "gold_driver"),
+                                                GirlInteractionTopic("magic", "train", __("Obedience training"), "slave_magic", act="obedience", gold_cost=20, condition="gold_driver"),
+                                                GirlInteractionTopic("magic", "train", __("Sensitivity training"), "slave_magic", act="sensitivity", gold_cost=20, condition="gold_driver"),
+                                                GirlInteractionTopic("magic", "train", __("Libido training"), "slave_magic", act="libido", gold_cost=20, condition="gold_driver"),
                                                 ],
                     "MAGIC SEXUAL TRAINING {image=img_gold}" : [
-                                                GirlInteractionTopic("magic", "train", "Naked", "slave_magic", act="naked", advanced=True, gold_cost=20, condition = "gold_driver"),
-                                                GirlInteractionTopic("magic", "train", "Service", "slave_magic", act="service", advanced=True, gold_cost=40, condition = "gold_driver"),
-                                                GirlInteractionTopic("magic", "train", "Sex", "slave_magic", act="sex", advanced=True, gold_cost=50, condition = "gold_driver"),
-                                                GirlInteractionTopic("magic", "train", "Anal", "slave_magic", act="anal", advanced=True, gold_cost=60, condition = "gold_driver"),
-                                                GirlInteractionTopic("magic", "train", "Fetish", "slave_magic", act="fetish", advanced=True, gold_cost=70, condition = "gold_driver"),
-                                                GirlInteractionTopic("magic", "train", "Bisexual", "slave_magic", act="bisexual", advanced=True, gold_cost=80, condition = "gold_driver"),
-                                                GirlInteractionTopic("magic", "train", "Group", "slave_magic", act="group", advanced=True, gold_cost=100, condition = "gold_driver"),
+                                                GirlInteractionTopic("magic", "train", __("Naked"), "slave_magic", act="naked", advanced=True, gold_cost=20, condition="gold_driver"),
+                                                GirlInteractionTopic("magic", "train", __("Service"), "slave_magic", act="service", advanced=True, gold_cost=40, condition="gold_driver"),
+                                                GirlInteractionTopic("magic", "train", __("Sex"), "slave_magic", act="sex", advanced=True, gold_cost=50, condition="gold_driver"),
+                                                GirlInteractionTopic("magic", "train", __("Anal"), "slave_magic", act="anal", advanced=True, gold_cost=60, condition="gold_driver"),
+                                                GirlInteractionTopic("magic", "train", __("Fetish"), "slave_magic", act="fetish", advanced=True, gold_cost=70, condition="gold_driver"),
+                                                GirlInteractionTopic("magic", "train", __("Bisexual"), "slave_magic", act="bisexual", advanced=True, gold_cost=80, condition="gold_driver"),
+                                                GirlInteractionTopic("magic", "train", __("Group"), "slave_magic", act="group", advanced=True, gold_cost=100, condition="gold_driver"),
                                                 ],
 
                     "MAGIC SKILL TRAINING {image=img_MP}" : [
-                                                GirlInteractionTopic("magic", "train", "Obedience training", "slave_magic", act="obedience", MP_cost=1, condition = "mana_driver"),
-                                                GirlInteractionTopic("magic", "train", "Sensitivity training", "slave_magic", act="sensitivity", MP_cost=1, condition = "mana_driver"),
-                                                GirlInteractionTopic("magic", "train", "Libido training", "slave_magic", act="libido", MP_cost=1, condition = "mana_driver"),
+                                                GirlInteractionTopic("magic", "train", __("Obedience training"), "slave_magic", act="obedience", MP_cost=1, condition="mana_driver"),
+                                                GirlInteractionTopic("magic", "train", __("Sensitivity training"), "slave_magic", act="sensitivity", MP_cost=1, condition="mana_driver"),
+                                                GirlInteractionTopic("magic", "train", __("Libido training"), "slave_magic", act="libido", MP_cost=1, condition="mana_driver"),
                                                 ],
                     "MAGIC SEXUAL TRAINING {image=img_MP}" : [
-                                                GirlInteractionTopic("magic", "train", "Naked", "slave_magic", act="naked", advanced=True, MP_cost=1, condition = "mana_driver"),
-                                                GirlInteractionTopic("magic", "train", "Service", "slave_magic", act="service", advanced=True, MP_cost=2, condition = "mana_driver"),
-                                                GirlInteractionTopic("magic", "train", "Sex", "slave_magic", act="sex", advanced=True, MP_cost=3, condition = "mana_driver"),
-                                                GirlInteractionTopic("magic", "train", "Anal", "slave_magic", act="anal", advanced=True, MP_cost=3, condition = "mana_driver"),
-                                                GirlInteractionTopic("magic", "train", "Fetish", "slave_magic", act="fetish", advanced=True, MP_cost=4, condition = "mana_driver"),
-                                                GirlInteractionTopic("magic", "train", "Bisexual", "slave_magic", act="bisexual", advanced=True, MP_cost=4, condition = "mana_driver"),
-                                                GirlInteractionTopic("magic", "train", "Group", "slave_magic", act="group", advanced=True, MP_cost=5, condition = "mana_driver"),
+                                                GirlInteractionTopic("magic", "train", __("Naked"), "slave_magic", act="naked", advanced=True, MP_cost=1, condition="mana_driver"),
+                                                GirlInteractionTopic("magic", "train", __("Service"), "slave_magic", act="service", advanced=True, MP_cost=2, condition="mana_driver"),
+                                                GirlInteractionTopic("magic", "train", __("Sex"), "slave_magic", act="sex", advanced=True, MP_cost=3, condition="mana_driver"),
+                                                GirlInteractionTopic("magic", "train", __("Anal"), "slave_magic", act="anal", advanced=True, MP_cost=3, condition="mana_driver"),
+                                                GirlInteractionTopic("magic", "train", __("Fetish"), "slave_magic", act="fetish", advanced=True, MP_cost=4, condition="mana_driver"),
+                                                GirlInteractionTopic("magic", "train", __("Bisexual"), "slave_magic", act="bisexual", advanced=True, MP_cost=4, condition="mana_driver"),
+                                                GirlInteractionTopic("magic", "train", __("Group"), "slave_magic", act="group", advanced=True, MP_cost=5, condition="mana_driver"),
                                                 ],
 
                     "react" : ["ENCOURAGE", "DISCIPLINE"],
                     "ENCOURAGE" : [
-                                    GirlInteractionTopic("react", "reward", "Praise her", "slave_reward_praise"),
-                                    GirlInteractionTopic("react", "reward", "Give her gold", "slave_reward_gold"),
-                                    GirlInteractionTopic("react", "reward", "Give her a gift", "slave_reward_gift"),
-                                    GirlInteractionTopic("react", "reward", "Pet her", "slave_reward_pet"),
-                                    GirlInteractionTopic("react", "reward", "Give her a day off", "slave_reward_day"),
-                                    GirlInteractionTopic("react", "reward", "Have sex with her", "slave_reward_sex"),
+                                    GirlInteractionTopic("react", "reward", __("Praise her"), "slave_reward_praise"),
+                                    GirlInteractionTopic("react", "reward", __("Give her gold"), "slave_reward_gold"),
+                                    GirlInteractionTopic("react", "reward", __("Give her a gift"), "slave_reward_gift"),
+                                    GirlInteractionTopic("react", "reward", __("Pet her"), "slave_reward_pet"),
+                                    GirlInteractionTopic("react", "reward", __("Give her a day off"), "slave_reward_day"),
+                                    GirlInteractionTopic("react", "reward", __("Have sex with her"), "slave_reward_sex"),
                                     ],
                     "DISCIPLINE" : [
-                                    GirlInteractionTopic("react", "discipline", "Scold her", "slave_punish_scold"),
-                                    GirlInteractionTopic("react", "discipline", "Remove upkeep", "slave_punish_upkeep"),
-                                    GirlInteractionTopic("react", "discipline", "Force her to go naked", "slave_punish_naked", condition = "dressed"),
-                                    GirlInteractionTopic("react", "discipline", "Beat her", "slave_punish_beat"),
-                                    GirlInteractionTopic("react", "discipline", "Rape her", "slave_punish_rape"),
-                                    GirlInteractionTopic("react", "discipline", "Send her to the farm", "slave_punish_farm", condition="farm"),
+                                    GirlInteractionTopic("react", "discipline", __("Scold her"), "slave_punish_scold"),
+                                    GirlInteractionTopic("react", "discipline", __("Remove upkeep"), "slave_punish_upkeep"),
+                                    GirlInteractionTopic("react", "discipline", __("Force her to go naked"), "slave_punish_naked", condition="dressed"),
+                                    GirlInteractionTopic("react", "discipline", __("Beat her"), "slave_punish_beat"),
+                                    GirlInteractionTopic("react", "discipline", __("Rape her"), "slave_punish_rape"),
+                                    GirlInteractionTopic("react", "discipline", __("Send her to the farm"), "slave_punish_farm", condition="farm"),
                                     ],
                     "misc" : ["CLOTHING", "CUSTOMERS", "MASTER BEDROOM", "DEBUG"],
                     "CLOTHING" : [
-                                    GirlInteractionTopic("misc", None, "Tell her to go naked", "slave_clothing_naked", AP_cost=0, condition = "can_undress"),
-                                    GirlInteractionTopic("misc", None, "Tell her to get dressed", "slave_clothing_dressed", AP_cost=0, condition = "naked"),
+                                    GirlInteractionTopic("misc", None, __("Tell her to go naked"), "slave_clothing_naked", AP_cost=0, condition="can_undress"),
+                                    GirlInteractionTopic("misc", None, __("Tell her to get dressed"), "slave_clothing_dressed", AP_cost=0, condition="naked"),
                                     ],
                     "CUSTOMERS" : [
-                                    GirlInteractionTopic("misc", None, "Forbid sex acts during job", "slave_forbid_cust_events", AP_cost=0, condition = "!forbid customer sex"),
-                                    GirlInteractionTopic("misc", None, "Allow sex acts during job", "slave_allow_cust_events", AP_cost=0, condition = "forbid customer sex"),
+                                    GirlInteractionTopic("misc", None, __("Forbid sex acts during job"), "slave_forbid_cust_events", AP_cost=0, condition="!forbid customer sex"),
+                                    GirlInteractionTopic("misc", None, __("Allow sex acts during job"), "slave_allow_cust_events", AP_cost=0, condition="forbid customer sex"),
                                     ],
                     "MASTER BEDROOM" : [
-                                        GirlInteractionTopic("misc", None, "Send her to your bedroom", "slave_master_bedroom_add", AP_cost=0, condition = "master_bedroom_add"),
-                                        GirlInteractionTopic("misc", None, "Remove her from your bedroom", "slave_master_bedroom_remove", AP_cost=0, condition = "master_bedroom_remove")
+                                        GirlInteractionTopic("misc", None, __("Send her to your bedroom"), "slave_master_bedroom_add", AP_cost=0, condition="master_bedroom_add"),
+                                        GirlInteractionTopic("misc", None, __("Remove her from your bedroom"), "slave_master_bedroom_remove", AP_cost=0, condition="master_bedroom_remove")
                                         ],
-                    "DEBUG" : [GirlInteractionTopic("misc", None, "Cheat", "interaction_cheat_menu", AP_cost=0, condition="debug_mode"),
-                        GirlInteractionTopic("misc", None, "Reset girl interactions", "interaction_cheat_girl", AP_cost=0, condition="debug_mode"),
-                        GirlInteractionTopic("misc", None, "Reset MC interactions", "interaction_cheat_MC", AP_cost=0, condition="debug_mode"),
-                        GirlInteractionTopic("misc", None, "Reveal Personality", "interaction_cheat_personality", AP_cost=0, condition="debug_mode"),
+                    "DEBUG" : [GirlInteractionTopic("misc", None, __("Cheat"), "interaction_cheat_menu", AP_cost=0, condition="debug_mode"),
+                        GirlInteractionTopic("misc", None, __("Reset girl interactions"), "interaction_cheat_girl", AP_cost=0, condition="debug_mode"),
+                        GirlInteractionTopic("misc", None, __("Reset MC interactions"), "interaction_cheat_MC", AP_cost=0, condition="debug_mode"),
+                        GirlInteractionTopic("misc", None, __("Reveal Personality"), "interaction_cheat_personality", AP_cost=0, condition="debug_mode"),
                         ],
                     }
 
 
     free_interact_dict = {
                             "chat" : ["GENERAL TOPICS", "PERSONAL TOPICS", "DEBUG"],
-                            "GENERAL TOPICS" : [GirlInteractionTopic("chat", "chat", "Small talk", "free_chat_small_talk"),
-                                                GirlInteractionTopic("chat", "chat", "Gossip", "free_chat_gossip"),
-                                                GirlInteractionTopic("chat", "chat", "Life", "free_chat_life"),# love_test=5),
-                                                GirlInteractionTopic("chat", "chat", "Love", "free_chat_love"),# love_test=5),
+                            "GENERAL TOPICS" : [GirlInteractionTopic("chat", "chat", __("Small talk"), "free_chat_small_talk"),
+                                                GirlInteractionTopic("chat", "chat", __("Gossip"), "free_chat_gossip"),
+                                                GirlInteractionTopic("chat", "chat", __("Life"), "free_chat_life"),# love_test=5),
+                                                GirlInteractionTopic("chat", "chat", __("Love"), "free_chat_love"),# love_test=5),
                                                 ],
                             "PERSONAL TOPICS" : [
-                                                GirlInteractionTopic("chat", "chat", "Her origins", "free_chat_origins", love_test=10),
-                                                GirlInteractionTopic("chat", "chat", "Her hobbies", "free_chat_hobbies", love_test=10),
-                                                GirlInteractionTopic("chat", "chat", "Likes", "free_chat_likes", love_test=10),
-                                                GirlInteractionTopic("chat", "chat", "Dislikes", "free_chat_dislikes", love_test=10),
+                                                GirlInteractionTopic("chat", "chat", __("Her origins"), "free_chat_origins", love_test=10),
+                                                GirlInteractionTopic("chat", "chat", __("Her hobbies"), "free_chat_hobbies", love_test=10),
+                                                GirlInteractionTopic("chat", "chat", __("Likes"), "free_chat_likes", love_test=10),
+                                                GirlInteractionTopic("chat", "chat", __("Dislikes"), "free_chat_dislikes", love_test=10),
                                                 ],
                             "fun" : ["JOKE", "TOUCH", "PLAY"],
                             "JOKE" : [
-                                        GirlInteractionTopic("fun", "joke", "Harmless", "free_joke_harmless", love_test=15),
-                                        GirlInteractionTopic("fun", "joke", "Adult", "free_joke_adult", love_test=15),
-                                        GirlInteractionTopic("fun", "joke", "Dark", "free_joke_dark", love_test=15),
-                                        GirlInteractionTopic("fun", "joke", "Mean", "free_joke_mean", love_test=15),
+                                        GirlInteractionTopic("fun", "joke", __("Harmless"), "free_joke_harmless", love_test=15),
+                                        GirlInteractionTopic("fun", "joke", __("Adult"), "free_joke_adult", love_test=15),
+                                        GirlInteractionTopic("fun", "joke", __("Dark"), "free_joke_dark", love_test=15),
+                                        GirlInteractionTopic("fun", "joke", __("Mean"), "free_joke_mean", love_test=15),
                                         ],
                             "TOUCH" : [
-                                        GirlInteractionTopic("fun", "touch", "Hold her hand", "free_touch_hand", love_test=40),
-                                        GirlInteractionTopic("fun", "touch", "Kiss", "free_touch_kiss", relationship_level=2),
-                                        GirlInteractionTopic("fun", "touch", "Slap her ass", "free_touch_ass", love_test=55, relationship_level=3),
-                                        GirlInteractionTopic("fun", "touch", "Touch her breasts", "free_touch_breasts", love_test=60, relationship_level=3),
-                                        GirlInteractionTopic("fun", "touch", "Touch her pussy", "free_touch_pussy", love_test=65, relationship_level=3),
+                                        GirlInteractionTopic("fun", "touch", __("Hold her hand"), "free_touch_hand", love_test=40),
+                                        GirlInteractionTopic("fun", "touch", __("Kiss"), "free_touch_kiss", relationship_level=2),
+                                        GirlInteractionTopic("fun", "touch", __("Slap her ass"), "free_touch_ass", love_test=55, relationship_level=3),
+                                        GirlInteractionTopic("fun", "touch", __("Touch her breasts"), "free_touch_breasts", love_test=60, relationship_level=3),
+                                        GirlInteractionTopic("fun", "touch", __("Touch her pussy"), "free_touch_pussy", love_test=65, relationship_level=3),
                                         ],
                             "PLAY" : [
-                                        GirlInteractionTopic("fun", "play", "Get her naked", "free_play", act="naked", relationship_level=4),
-                                        GirlInteractionTopic("fun", "play", "Ask for service", "free_play", act="service", relationship_level=4),
-                                        GirlInteractionTopic("fun", "play", "Ask for sex", "free_play", act="sex", relationship_level=4),
-                                        GirlInteractionTopic("fun", "play", "Ask for anal sex", "free_play", act="anal", relationship_level=4),
-                                        GirlInteractionTopic("fun", "play", "Ask for fetish", "free_play", act="fetish", relationship_level=4),
+                                        GirlInteractionTopic("fun", "play", __("Get her naked"), "free_play", act="naked", relationship_level=4),
+                                        GirlInteractionTopic("fun", "play", __("Ask for service"), "free_play", act="service", relationship_level=4),
+                                        GirlInteractionTopic("fun", "play", __("Ask for sex"), "free_play", act="sex", relationship_level=4),
+                                        GirlInteractionTopic("fun", "play", __("Ask for anal sex"), "free_play", act="anal", relationship_level=4),
+                                        GirlInteractionTopic("fun", "play", __("Ask for fetish"), "free_play", act="fetish", relationship_level=4),
                                         ],
                             "flirt" : ["COMPLIMENT", "SEXUAL TOPICS"],
 
                             "COMPLIMENT" : [
-                                        GirlInteractionTopic("flirt", "compliment", "Compliment her beauty", "free_flirt_beauty", relationship_level=1),
-                                        GirlInteractionTopic("flirt", "compliment", "Compliment her body", "free_flirt_body", relationship_level=1),
-                                        GirlInteractionTopic("flirt", "compliment", "Compliment her mind", "free_flirt_mind", relationship_level=1),
-                                        GirlInteractionTopic("flirt", "compliment", "Compliment her spirit", "free_flirt_spirit", relationship_level=1),
+                                        GirlInteractionTopic("flirt", "compliment", __("Compliment her beauty"), "free_flirt_beauty", relationship_level=1),
+                                        GirlInteractionTopic("flirt", "compliment", __("Compliment her body"), "free_flirt_body", relationship_level=1),
+                                        GirlInteractionTopic("flirt", "compliment", __("Compliment her mind"), "free_flirt_mind", relationship_level=1),
+                                        GirlInteractionTopic("flirt", "compliment", __("Compliment her spirit"), "free_flirt_spirit", relationship_level=1),
                                         ],
                             "SEXUAL TOPICS" : [
-                                                GirlInteractionTopic("flirt", "chat about sex", "Her sexual experience", "free_flirt_sex_experience", love_test=55),
-                                                GirlInteractionTopic("flirt", "chat about sex", "Her sexual tastes", "free_flirt_sex_tastes", love_test=55),
-                                                GirlInteractionTopic("flirt", "chat about sex", "Nudity", "free_flirt_sex_act", act="naked", love_test=55),
-                                                GirlInteractionTopic("flirt", "chat about sex", "Service", "free_flirt_sex_act", act="service", love_test=55),
-                                                GirlInteractionTopic("flirt", "chat about sex", "Sex", "free_flirt_sex_act", act="sex", love_test=55),
-                                                GirlInteractionTopic("flirt", "chat about sex", "Anal sex", "free_flirt_sex_act", act="anal", love_test=55),
-                                                GirlInteractionTopic("flirt", "chat about sex", "Fetish acts", "free_flirt_sex_act", act="fetish", love_test=55),
-                                                GirlInteractionTopic("flirt", "chat about sex", "Bisexuality", "free_flirt_sex_act", act="bisexual", love_test=55),
-                                                GirlInteractionTopic("flirt", "chat about sex", "Group sex", "free_flirt_sex_act", act="group", love_test=55),
+                                                GirlInteractionTopic("flirt", "chat about sex", __("Her sexual experience"), "free_flirt_sex_experience", love_test=55),
+                                                GirlInteractionTopic("flirt", "chat about sex", __("Her sexual tastes"), "free_flirt_sex_tastes", love_test=55),
+                                                GirlInteractionTopic("flirt", "chat about sex", __("Nudity"), "free_flirt_sex_act", act="naked", love_test=55),
+                                                GirlInteractionTopic("flirt", "chat about sex", __("Service"), "free_flirt_sex_act", act="service", love_test=55),
+                                                GirlInteractionTopic("flirt", "chat about sex", __("Sex"), "free_flirt_sex_act", act="sex", love_test=55),
+                                                GirlInteractionTopic("flirt", "chat about sex", __("Anal sex"), "free_flirt_sex_act", act="anal", love_test=55),
+                                                GirlInteractionTopic("flirt", "chat about sex", __("Fetish acts"), "free_flirt_sex_act", act="fetish", love_test=55),
+                                                GirlInteractionTopic("flirt", "chat about sex", __("Bisexuality"), "free_flirt_sex_act", act="bisexual", love_test=55),
+                                                GirlInteractionTopic("flirt", "chat about sex", __("Group sex"), "free_flirt_sex_act", act="group", love_test=55),
                                                 ],
                             "give" : ["GIVE", "OFFER"],
                             "GIVE" : [
-                                        GirlInteractionTopic("give", "gift", "Give her a present", "free_give_gift", love_test=20),
-                                        GirlInteractionTopic("give", "gold", "Give her money", "free_give_gold", love_test=20),
+                                        GirlInteractionTopic("give", "gift", __("Give her a present"), "free_give_gift", love_test=20),
+                                        GirlInteractionTopic("give", "gold", __("Give her money"), "free_give_gold", love_test=20),
                                         ],
-                            "OFFER" : [GirlInteractionTopic("give", "offer", "Offer her a job", "free_offer_job", love_test=90, relationship_level=5),],
-                            "DEBUG" : [GirlInteractionTopic("give", None, "Change love", "interaction_cheat_love", AP_cost=0, condition="debug_mode"),
-                                        GirlInteractionTopic("give", None, "Reset girl interactions", "interaction_cheat_girl", AP_cost=0, condition="debug_mode"),
-                                        GirlInteractionTopic("give", None, "Reset MC interactions", "interaction_cheat_MC", AP_cost=0, condition="debug_mode"),
-                                        GirlInteractionTopic("give", None, "Reveal Personality", "interaction_cheat_personality", AP_cost=0, condition="debug_mode"),
+                            "OFFER" : [GirlInteractionTopic("give", "offer", __("Offer her a job"), "free_offer_job", love_test=90, relationship_level=5),],
+                            "DEBUG" : [GirlInteractionTopic("give", None, __("Change love"), "interaction_cheat_love", AP_cost=0, condition="debug_mode"),
+                                        GirlInteractionTopic("give", None, __("Reset girl interactions"), "interaction_cheat_girl", AP_cost=0, condition="debug_mode"),
+                                        GirlInteractionTopic("give", None, __("Reset MC interactions"), "interaction_cheat_MC", AP_cost=0, condition="debug_mode"),
+                                        GirlInteractionTopic("give", None, __("Reveal Personality"), "interaction_cheat_personality", AP_cost=0, condition="debug_mode"),
                                         ],
                     }
 
@@ -1985,303 +1535,37 @@ init python:
 
     ## PERKS AND ARCHETYPES ##
 init -4 python:
-    archetype_list = ["The Maid", "The Player", "The Model", "The Courtesan", "The Escort", "The Fox", "The Slut", "The Bride"]
-
-    archetype_description = {
-                            "The Maid" : __("Holding her head up high even in adversity, the {b}Maid{/b} succeeds through hard work and commitment. She is the patron saint of servants and menial workers."),
-                            "The Player" : __("Always ready to tell a compelling story or improvise a lavish dance, the {b}Player{/b} is admired for her party skills and charisma. She is the patron saint of singers, actors and other artists, accomplished or aspiring."),
-                            "The Model" : __("Blessed with perfect natural beauty and elegance, if a little vain, the {b}Model{/b} fascinates men and women alike. She is the patron saint of the young, the pretty, and the well endowed."),
-                            "The Courtesan" : __("The {b}Courtesan{/b} is a master of etiquette, seduction and politics, able to make anyone give in to her every whim. She is the patron saint of noble women, politicians, and other schemers."),
-
-                            "The Escort" : __("Using her body and skills to great advantage, the {b}Escort{/b} is an expert at leveraging her talents for profits. She is the patron saint of fancy prostitutes, merchants, and mercenaries."),
-                            "The Fox" : __("A mysterious figure which seems to always show on auspicious occasions, the {b}Fox{/b} is said to bring great luck to everyone she shares her bed with. She is the patron saint of travellers and hermits."),
-                            "The Slut" : __("A much revered figure, the {b}Slut{/b} delights in experienceing sex and pleasure in all its forms, rejecting laws and morals that do not suit her. She is the patron saint of street girls, thieves, libertines, and the occasional Arios priest."),
-                            "The Bride" : __("A harbinger of peace and prosperity, the {b}Bride{/b} is gentle and devoted. She is the patron saint of coming-of-age virgins, pregnant and married women, and widows.")
-                        }
-
-    ## GOSSIP ##
-
-    generic_gossip = [
-                        __("I don't understand how the magicians can carry on their experiments in broad daylight. The church of Arios zealots hate magic-users with a passion. But they haven't moved to shut them down..."),
-                        __("Taxes on rice, grain, vegetables, meat... Soon they'll tax water from the puddles! What's a man to eat?"),
-                        __("Zan has been consumed by lust, greed and corruption for as long as I can remember, but seems these days we've reached new lows."),
-                        __("Not everyone in the Guard is a flat-out jerk. I know a guy who's all right. They are few and far between, though."),
-                        __("The royals sit all high and mighty far away from us people. They let the guards rob us blind but when a thief shows up, she never gets caught. Where's the justice in that?"),
-                        __("You'd think the thieves would leave poor folks like us alone. But no sir, if you have nothing, they'll still pry it from your cold dead hands."),
-                        __("The guards steal so much from us poor folks that there's hardly anything left for the thieves."),
-                        __("*lowering her tone* Heard of Shalia, the dark goddess? They say she's got a temple in the slums, in this very city. It gives me the creeps."),
-                        __("There's a temple to Shalia somewhere in the city. I expect it's hard to find, though, her supporters rarely come out in the open."),
-                        __("Arios damn that Shalia bitch and her secret temple! A vile goddess like her has no place in this city. We're upstanding folks of the Light, are we not?"),
-                        __("I heard Shalia is not at all what she's cracked up to be. You hear of sacrifices, virgin blood... That's nonsense. Her followers like secrecy, but they're into much more mundane things, such as lifting your purse."),
-                        __("Shalia followers eat little children's hearts for breakfast. That's what my Ma' said."),
-                        __("With all the crooked politicians and scheming thieves crawling in this city, you'd wonder why they didn't build a Cathedra to Shalia instead!"),
-                        __("When he was little, my brother was always lonely, brooding, plotting revenge on the kids who bullied him. We used to joke that he was our own little Shalia apostle!"),
-                        __("Shalia is a craven goddess, that's what she is. A proper god has his followers out in the open."),
-                        __("Some say Shalia's beauty itself is a weapon she uses in her schemes..."),
-                        __("People are dumb enough to believe Arios is better because he is the god of light. But who wants light to be shone on all their thoughts and secrets? Shalia has just as important a role..."),
-                        __("Someone told me he's seen a Shalia shrine in the slums. But he wouldn't tell me where it is."),
-                        __("Zan is full of dirty secrets and dark corners. One must watch their step - it's easy to anger the wrong person, and hard to gain anyone's trust."),
-                        __("There are three ways to make people in Zan part with their money: pussy, spice, or a sharp knife."),
-                        __("I've seen an incredible fight at the arena! Cyntia's a slave, but she's got style."),
-                        __("I can't believe people enjoy watching fights to the death in the arena. If you needed further proof this place is barbaric, there, you have it."),
-                        __("I don't care about the deaths in the arena. Most of the time it's just monsters and slaves. All in good fun!"),
-                        __("People bet heavily on the arena fights. There's some good money to be had, if you know who to support."),
-                        __("Lots of adventurers try their luck in the arena. Many end up cripples or worse after just a few fights. But Cyntia's endured."),
-                        __("I don't watch the fights, too gory. I just bet on them. But lately, I've been out of luck."),
-                        __("Someone told me he had a trick so that he'd always win his bets in the arena. I didn't believe him at first, but he won five fights in a row!"),
-                        __("The gladiators of the arena in their shining gold armor, covering themselves with glory and blood! Isn't that a tremendous sight?"),
-                        __("The League of Freethinkers draws merchants and scoundrels alike from faraway lands. I wouldn't trust any of them, that's for sure."),
-                        __("If you want a quick way to make money, you could do worse than throw your lot with the League of Freethinkers. They offer some juicy rewards for enterprising individuals, and you don't even need to stab anybody. I got paid a whole purse of gold for a piece of rock I found in the ruins!"),
-                        __("The League of Freethinkers prefers to advance their goals by maneuvering rather than violence, but they've been known to use both."),
-                        __("There is no master of the League of Freethinkers. The intendant only deals with the paperwork, but all members are considered equals."),
-                        __("How can the League of Freethinkers be leader-less? There must be someone pulling their strings from the shadows."),
-                        __("I'm offended that some of those upstarts at the League of Freethinkers are getting so rich, when so many of our own true blue-blooded nobles are facing ruin."),
-                        __("The League of Freethinkers is shunned by many of the nobles and courtiers because it takes commoners in, but they have started some of the most profitable enterprises in the city."),
-                        __("Ever heard of the Brotherhood? They say they'll defend the common people against the nobles and high-borns. Such nonsense."),
-                        __("I've heard of a secret political organization called the Brotherhood. I have no idea who they are or what they do, but they're rumored to have enormous power in the city."),
-                        __("Some crazy jerk got my friend all worked up about 'sticking it to the royals', and 'taking back what's rightfully ours'. I begged my friend not to listen to such drivel, but now she's been arrested by the king's guard, and they suspect me as well..."),
-                        __("Brother, you should not toil and suffer so that a few high-born loafers can hold banquets and orgies all day and all night. If you joined the Brotherhood, you could put an end to this... But hush, someone's coming."),
-                        __("This woman claimed the Brotherhood will rise to help the little people. But I know the truth of it: within a few months, they'd put themselves and their relatives in all the powerful positions, and they'd be no better than King Pharo."),
-                        __("King Pharo is our rightful leader chosen by the gods themselves. It is heresy to question the place of our betters: let us talk no more of that so-called 'Brotherhood'."),
-                        __("Magicians are vermin who deserve nothing but ruin. They spoil our beloved city with their godless experiments. I wish the King had enough sense to make them all hang."),
-                        __("What's wrong with a little magic? It's not perversion, or a scam. People are afraid of things they don't understand, that's all. I dabble in magic myself, did you know? Here's an ointment you could buy for cheap..."),
-                        __("Magicians have long been established in Zan without too much trouble. But their conflict with the church of Arios is starting to pull at the seams."),
-                        __("A priest of Arios himself told me that wizards consort with demons and plot Zan's ruin. Something must be done."),
-                        __("Those magicians are just rich, spoiled brats toying with forces they don't understand. I don't like those bigots from the Cathedra, but they have a point."),
-                        __("Heresy of not, the mages are contributing good money to our city's finances. If every questionable practice was banned in this city, there wouldn't be much left of Zan."),
-                        __("Monsters have been spotted in Zan. I myself saw a three-headed wolf raping a young girl in a dark alley. What has this city come to?"),
-                        __("Sorcerers are responsible for the monsters plague in this city, who else? They should throw the lot of them in a dark cell with their pets, and throw away the key."),
-                        __("I don't buy it. Wizards have enough trouble as it is with the Light priests. Why would they release monsters in the streets and make their situation worse?"),
-                        __("Monsters roam the streets at night. No one should stay out late these days, especially young, beautiful girls."),
-                        __("An entire patrol wiped out near the Gardens? This monster problem is getting out of hand!"),
-                        __("The Cathedra is a nice enough looking building from outside, but you wouldn't like what goes on inside, believe me."),
-                        __("The High Priestess has advocated for the complete removal of magic from the city. She'll have her way; she always does."),
-                        __("I remember the times before the war, when the Grandmaster was heading the Arios cult... These were gentler days, I tell you."),
-                        __("Ever since the Grandmaster left for the Holy war, the High Priestess has been consolidating her power in the city. I don't think she wants him to come back."),
-                        __("Heard any news from the war in the Holy lands? They told me it's not going well. The heretics are resisting us at every step, but surely Arios won't let his flock down."),
-                        __("The Arios priests want to impose their cult on the rest of the city, plain and simple. Don't be fooled by the bitch priestesses' righteous sermons."),
-                        __("A friend of mine became a nun of Arios, but she had a change of heart and ran away a week ago. I don't know what happened."),
-                        __("I can't stand those upright do-gooders from the Arios church. I'm sure they're hiding something."),
-                        __("They say a lot of Arios priestesses used to be hookers, before they converted. I don't know why. But it's kind of turning me on."),
-                        __("Arios is the god of Light and Strength. May His Light guide us towards good deeds, and His Strength support our arms when the time comes to strike down evil."),
-                        __("The true teachings of Arios are a thing of beauty. Don't listen to those priests, all they know how to do is spout nonsense. Find the Light of Arios within your heart."),
-                        __("They say demons roam the streets. I say it's nothing compared to what goes on at Court."),
-                        __("All the court nobles do is eat, drink, fuck, and plot against one another. I wish I had that kind of life."),
-                        __("This city is doomed. When the head is rotten, how can you save the body?"),
-                        __("My sister is a maid at court. She had a glimpse of one of the ceremonies and wouldn't shut up about it. 'The dresses!', 'The lights!', 'The jewels!', 'The gold dishes!', and so on."),
-                        __("Every noble courtier has one or more courtesans in tow. That's how they call hookers there. Not that it stops them from visiting regular brothels, mind you."),
-                        __("The nobles of Zan are a curious breed. They suck their estates dry trying to make it at court and impress the King, but they all despise him and think him weak. They are the ones being played for fools."),
-                        __("At the beginning of his reign, 18 years ago, King Pharo was doing well enough. But his achievements have been unraveling one by one, and now the city has lost all direction."),
-                        __("I don't care what happened to the princess's mother, the King should have remarried. What if something happens to the princess?"),
-                        __("No male heir spells disaster for any royal family. Why doesn't the King understand that?"),
-                        __("Because King Pharo has no male heir, power will go to the princess's son, when and if she marries. I guess she would be regent in the interim."),
-                        __("Sure, King Pharo has a laissez-faire attitude to everything... But isn't that what makes Zan so great? Would you like to see a crackdown on whores, alcohol, spices, or even gambling?"),
-                        __("The King is always brooding, his mood dark... He sure looks grim for someone whose courtiers throw so many parties."),
-                        __("The princess is a lovely thing, isn't she? All the knights and nobles are crazy in love with her."),
-                        __("Her delicate features and manners make the princess the sweetheart of all Zan, nobles and commoners alike."),
-                        __("The princess seems in a dark mood sometimes. Could such a blessed person have problems like all of us?"),
-                        __("The King's knights are all sworn to protect him and his family. Their commander looks like Arios made flesh himself. He's a very zealous and devoted man."),
-                        __("I hear some big shot's been murdered a few days back in the castle. They are trying to keep the lid on it, but it seems like trouble is brewing."),
-                        __("Some ancient weapons hold tremendous power. I wonder how one can get a hold on one of those?"),
-                        __("When people go to a whorehouse, they expect more than just a tryst... Good service is always appreciated."),
-                        __("So many young girls are turning into whoring slaves these days... Some even turn themselves in voluntarily. I guess it's one way to get food and shelter in these troubled times."),
-                        __("The girls are so glamorous there... I never knew being a slut was so rewarding. Makes me question my morals!"),
-                        __("All travelers agree on one thing: the best thing about Zan is its sex slaves... Any kind of sexual fantasy can be fulfilled here. Many slaves take great pride in fulfilling their master's desires."),
-                        __("Girls in Zan are so easy. All it takes is showing up at the same place every day, chatting them up, and sooner or later they'll roll in the hay with you."),
-                        __("That merchant girl is so hot, man! I'd go there and buy stuff every day if I could convince her to fool around with me."),
-                        __("People who like unusual sex acts are less common, but they pay more money."),
-                        __("I came by this brothel the other day, and saw a pink-haired hottie... but was disappointed to find out she wasn't one of the working staff."),
-                        __("After a day's hard work, what's hotter than going to a club to be served by beautiful girls, then have one of them strip and go down on you? I understand the appeal."),
-                        __("Whores are like priestesses for the sex goddess, that's what my 'pa used to say. He was usually drunk as a skunk."),
-                        __("Some guy from Westmarch had trouble understanding what geishas are. He kept saying they're like regular hookers. I swear, it's impossible to educate these unrefined barbarians ."),
-                        __("I went to this little establishment by the harbor, asking for a good massage. And I really got a good one, down there... Isn't it wonderful?"),
-                    ]
-
-    chapter_gossip = {
-                    1 : [
-                            __("Have you seen the new Guard uniforms? They adorn their armor with fine silk, while the rest of us starve..., "),
-                            __("I've heard some talk of a secret lair somewhere around the Slums... A haven for thieves and bandits. I shiver to think of it."),
-                            __("Captain Farah is one greedy bitch. Her men came yesterday to shake one of my friends down. Everyone hates her, but they say she's got protection in high places."),
-                            __("The head of the guards is Captain Farah. Best stay clear of them if you want my advice. Levies and taxes are all the guards care about. If you ask me, they just make them up as they go."),
-                            __("Some say the captain of the Guard is getting too greedy, even among her own men... There are some who say they'd do better. Maybe they mean they'd be better at not getting caught."),
-                            __("Thieves are getting bold these days. Or desperate. Doesn't look like the guards care to do anything about it, mind you."),
-                            __("My neighbor complained about the taxes, so they took him in, and no one's heard of him since. Better suck it up and stay alive, if you want my 2 denars."),
-                            __("The guards took everything from me, but what can I do? Only the King has higher authority, and he won't listen to a commoner."),
-                            __("Some say the thieves operate in an organized fashion, much like a guild. I don't buy this nonsense. Ever seen a thief with anything else than spice for brains?"),
-                            __("People here like to blame a secret Shalia cabal for all their ills, but let me tell you: it's our good Arios-loving captain who's robbing us blind at the moment!"),
-                            __("I keep hearing about this new brothel outside the city. I really have to check it out."),
-                        ],
-                    2 : [
-                            __("There has been a wave of murders in the city lately... And not just the usual rabble: they took out some pretty big shots."),
-                            __("People say the streets aren't safe at night, hired blades on the prowl... Many highborns won't go out anymore without an escort."),
-                            __("Somebody's been snuffing out the blue bloods one by one... It was about time someone started fighting for justice in this city!"),
-                            __("A murderous killer is on the prowl... Some say he killed the high judge, and the royals could be next."),
-                            __("How dare someone threaten the life of our dear Princess? I hope they catch the motherfucker, and gouge his eyes out!"),
-                            __("No one is safe in this city, not even the judges... Time to head for the country until things quiet down."),
-                            __("Don't worry about those killers. There are only after the bigwigs, no one is paying to assassinate small fry like you and me."),
-                            __("I've heard of a fearsome group of superhuman stealth warriors, on a quest for blood and revenge throughout the city... They call them {i}ninjas{/i}."),
-                            __("Ninjas? What a load of bull. They only exist in children's tales."),
-                            __("Ninjas are a secret society of bloodthirsty assassins that has infiltrated Zan. Or so I hear."),
-                            __("Why would anyone threaten the Princess's life? She's the only one who doesn't wish us little people ill in this royal nest of vipers."),
-                            __("Noble families have paid a heavy toll in the latest wave of murders... Maybe this so-called revolution is coming after all?"),
-                        ],
-                    3 : [
-                            __("You won't believe what I saw the other day! A young woman was leaping across roofs, like one of these daredevil ninjas! And after her went a complete lunatic drooling like a maniac, wielding a toy hamer! I swear, sex games are getting out of hand in this city..."),
-                            __("There she was, a super cute girl with blue hair and a stunning pair of knockers. I was so distracted by them, I didn't realize she was stealing all the fish until she left in a puff of smoke, saying 'Meow'!"),
-                            __("Have you heard about the archmage that is the active Dean of the Magic University? A real piece of work, let me tell you."),
-                            __("I have no talent for magic, but I was told I could enroll at Magic University for the right price. The clerk there truly doesn't give a fuck."),
-                            __("I heard there's a vengeful ninja ghost roaming the city, assaulting private citizens and even sometimes giving them surprise handjobs! Don't laugh! You could be next!!!"),
-                            __("... I tell you, I had to duck out of the way or I would have crushed by a damn earthquake. It was summoned by a devil ninja with a yellow outfit! *make the Arios sign* Sun God protects!"),
-                            __("So he saw that schoolgirl the other day, cute little one, heading for Magic U. He just wanted to cop a feel, you know, brush her ass a little, nothing serious. Damn, man, the poor sod is still at the Arios hospitium! She stabbed him real good. Kids these days!"),
-                            __("The Princess {i}has{/i} to marry soon, before the nobles start a damned civil war, shades of Shalia! Some of them are already building private armies. this can't end well..."),
-                            __("Have you heard? The King is sick. If he croaks, the nobles will be at each other's throat, and Princess Kurohime is only a woman. What can she do?"),
-                            __("So she turned the student into a wererat, and now he haunts the sewers at night, wishing he had paid attention in class. Don't you ask again about studying magic!"),
-                            __("Ever heard of Stee V the Wondrous, the best bard in all of Xeros? Too bad about his eyes, though. I guess that way he can hear the music better."),
-                            __("Some people claim the Avatar of Arios appears to them when the going get tough. I think the problem is not with their going, but with their drinking."),
-                            __("There's an up-and-coming brothel you should know about: [brothel.name]. You really should drop by there. Some of these girls have serious talent."),
-                            __("I have it on good authority: The Princess has a lover, a man called [MC.name]. He's a deadly foreign spy who works for two or three foreign powers, at least. He's got some stupid cover story about being a brothel owner, but who can believe that?"),
-                            __("It's such a shame what happened to poor Lord Henso. To lose a child... I don't even want to think about it."),
-                            __("That stuck-up Knight Commander is getting on my nerves. Patrol this, patrol that- my lover's been on patrol all nights this week! When will I get any?"),
-                            __("Of course the war is going well. Do you think our mighty host has anything to fear from half-naked savages, tiny elves and talking cats?"),
-                            __("If the Holy Land is not purged from the heretic fairies, we will all grow fur and horns, and we will start mating with donkeys and goats! So Arios speaketh!"),
-                    ],
-                    4 : [],
-                    5 : [],
-                    6 : [],
-                    7 : [
-                            __("Have you heard of [MC.name], the legendary Brothel Master? I bet he can turn your sister into a sex-crazed goddess."),
-                            __("[MC.name] is the best of the best. There was never a better Brothel Master in all of Zan, and there never will be."),
-                            __("Do you know about the King? I mean, the Brothel King? It's [MC.name], the legendary owner of [brothel.name]..."),
-                            __("The best brothel in town? Where the hell did you come from? It's [brothel.name], of course! It's leagues ahead of every other whorehouse. The competitors just gave up."),
-                        ],
-
-                    # The following are added by the story
-
-                    "c1_good" : [
-                                    __("Captain Maya is really a godsend. She's going to clean up the Guard's act in no time, believe me."),
-                                    __("I was stopped by the guards the other day. I thought they would rob me like they usually do, but they were polite and they just let me go. Amazing."),
-                                    __("Many of the old guards have been kicked out of the force recently. It seems like the new captain is serious about fighting corruption."),
-                                    __("Don't ever tell him I said that, but it's obvious Roz has a crush on Maya. That big oaf doesn't stand a chance..."),
-                                ],
-                    "c1_neutral" :[
-                                    __("Is the new captain any better than the old one? Things will never change around here, no matter who's in charge."),
-                                    __("Captain Lydie seems just as shrewd as the old captain, but at least she keeps a low profile. Guild wars are bad for business."),
-                                    __("I've heard some talk of a secret lair somewhere around the Slums... A haven for thieves and bandits. I shiver to think of it."),
-                                    __("Thieves are getting bold these days. Or desperate. Doesn't look like the guards care to do anything about it, mind you."),
-                                    __("Some say the thieves operate in an organized fashion, much like a guild. I don't buy this nonsense. Ever seen a thief with anything else than spice for brains?"),
-                                ],
-                    "c1_evil" : [
-                                    __("Have you seen the new guard uniforms? They adorn their armor with fine silk, while the rest of us starve..."),
-                                    __("Captain Farah is one greedy bitch. Her men came yesterday to shake one of my friends down. Everyone hates her, but they say she's got protection in high places."),
-                                    __("The head of the guards is Captain Farah. Best stay clear of them if you want my advice. Levies and taxes are all the guards cares about. If you ask me, they just make them up as they go."),
-                                    __("Some say the captain of the Guard is getting too greedy, even among her own men... There are some who say they'd do better. Maybe they mean they'd be better at not getting caught."),
-                                    __("My neighbor complained about the taxes, so they took him in, and no one's heard of him since. Better suck it up and stay alive, if you want my 2 denars."),
-                                    __("The guards took everything from me, but what can I do? Only the King has higher authority, and he won't listen to a commoner."),
-                                    __("People here like to blame a secret Shalia cabal for all their ills, but let me tell you: it's our good Arios-loving captain who's robbing us blind at the moment!"),
-                                    __("Captain Farah is stronger than ever in the slums. She's completely unopposed now, our only choice is to pay her cronies. Do you want to hang?"),
-                                    __("I thought things couldn't get worse with the Guard, but it did. They looted my shop and raped my wife and daughters. No one dared lift a finger..."),
-                                ],
-
-                    "c2_kunoichi" : [
-                                    __("Heard about the Kunoichi? A secret organization of female ninjas... That is so hot!"),
-                                    __("I wish they'd catch those women devils, the Kunoichi. I hear they consort with demons."),
-                                    __("Don't believe what you hear about the Kunoichi. They're pure and noble warriors."),
-                                    __("I heard some kind of female ninja clan is going after a brothel owner in the city... Poor guy, he's dead meat."),
-                                    __("Female ninjas? I bet they wear very skimpy clothing... Hmm..."),
-                                    __("I read the tale about female ninjas that can kill using only their vagina... Crazy, I know."),
-                                    __("When a baby gets abandoned, sometimes a ninja clan will adopt her... That's what I heard."),
-                                ],
-
-                    "c2_kunoichi_hunt" : [
-                                    __("The {b}Thieves' guild{/b} quarter is already a dump... And now there are ninjas there, too???"),
-                                    __("Ninjas in the {b}Thieves' guild{/b} quarter... The rogues ain't gonna like that."),
-                                    __("I told you I saw a child in the {b}Thieves' guild{/b} quarter... I was gonna help, but then I saw she had a huge ninja star, so I thought better of it."),
-                                    __("She did look like a lil' brat, but she was a ninja, I tells ya! Standin' atop the {b}Thieves' guild{/b}'s roof, no less."),
-
-                                    __("I was walking alongside the {b}Beach{/b} at night, when I saw a ghost! A beautiful, pale lady ghost. And she was walking over water. Like a ninja!"),
-                                    __("I went to the {b}Beach{/b} at night to fish for trout, and I saw a beautiful lady taking a bath by the moonlight. When I tried to approach her, she disappeared like a ghost!"),
-                                    __("There have been disappearances near the {b}Beach{/b}. Some blame ninjas, but that's childish nonsense."),
-                                    __("So the pretty lady waved her hand, and the water around her rose and shielded her from view. We couldn't see her from the {b}Beach{/b} anymore, and none of us dared venture into the sea."),
-
-                                    __("I'm telling you, she was a ninja! Who else could climb the {b}Prison{/b} walls like that?"),
-                                    __("It was the most peculiar thing, the girl snapped her fingers, and it caused a tremor! The {b}Prison{/b} guards fell down on their asses."),
-                                    __("Why would a ninja stalk the {b}Prison{/b} quarter? Any criminal knows to steer clear of our good King's jails!"),
-                                    __("Stop it, there are no such things as female ninjas flying above the {b}Prison{/b}! Now go clean up your room!"),
-                                ],
-
-                     }
-
-    district_gossip = {
-                        "The Slums" : [
-                                    __("Thieves are everywhere in the slums, and guards are even worse. I can't wait to get out of this place. Other places can't possibly be this bad!"),
-                                    __("The worst thing about the slums is the stench. Or second worst thing. Worse is, you can get your throat slit for a denar and never smell a thing, ever again."),
-                                    __("The people of Zan are wicked, depraved and degenerates, but they sure are industrious. The city grows by the day! And the slums are her underbelly."),
-                                    __("I saw this strange girl in the sewers, all by herself. I told her there were monsters about, but she just smiled and said 'I know.'"),
-                                    __("The sewers are full of dirty critters and monsters... Some people even make a living hunting them."),
-                                    __("Have you met that strange girl, Willow? She's got odd ears, I wonder if she's fully human. She's cute, though."),
-                                    __("The farmland is haunted. Don't go there."),
-                                    __("There are always strange things going on in the country. I even hear some girls fuck animals there."),
-                                    __("Have you met Goldie at the farm? She's a sweet young woman. It's so sad, what happened to her family."),
-                                    __("I usually go and buy milk from Goldie at the farm. She gets it from her cows, but I'd rather milk her instead, if you catch my drift..."),
-                                    __("If I wanted to buy animals, I'd go to the farm of course. But I hear some of them are behaving strangely."),
-                                    __("There's a crazy girl in the junkyard, sifting through the garbage to find Arios-knows-what. I tried to talk some sense into her, but she didn't even listen to me."),
-                                    __("I made a good deal last week, selling an old useless gizmo to the funny girl in the junkyard."),
-                                    __("Have you met Gina, the weird scientist in the junkyard? She buys and sells some weird machines. Gives me the creeps."),
-                                    __("A thieves guild, here, in the slums? Nonsense. The Guard captain would never allow it.")
-                                ],
-                        "The Docks" : [
-                                    __("The league of adventurers is located somewhere near the harbor. The smell of rotting fish isn't off-putting to those rogues."),
-                                    __("Why are there so many whorehouses close to the sea? Is it because it's wetter here?"),
-                                    __("Why are there so many whorehouses in the Docks? Is it because it sounds like 'Dicks'?"),
-                                    __("Where there are sailors, there are whores. That's just a fact of life."),
-                                    __("There's a woman selling gifts by the seafront. She's got those huge knockers..."),
-                                    __("Have you seen that woman in red, selling gifts by the seafront? She's got gifts all right, a huge pair of tits..."),
-                                    __("They sell those strange slaves by the harbor, mindless drones with horse-like cocks... My girlfriend thinks it's cool, but I find it creepy."),
-                                    __("There are slavemongers from the Blood Islands about in the harbor. They treat humans like cattle. It's awesome."),
-                                    __("Fancy ladies go to the harbor to buy some very special slaves... I hear they obey every order and they have huge... *whisper*"),
-                                    __("Have you seen that fearsome slaver by the harbor, all clad in leather like a dominatrix? She turns me on... "),
-                                ],
-                        "The Warehouse" : [],
-                        "The Magic Gardens" : [],
-                        "The Cathedra" : [
-                                    __("The Cathedra is the pride of Zan and the crown jewel of all Xeros. All rejoice in the glorious light of Arios!"),
-                                    __("The Cathedra was a place for silent contemplation and prayer, but with all the filthy pilgrims who pour in now, day in, day out, I don't want to go there anymore."),
-                                    __("The waves of pilgrims heading to the Cathedra have been good for business, that's for sure."),
-                                    __("Judging by the fervor at the Cathedra, you'd think Arios was the one and only god... Many of us in this city are not followers of Arios; they seem to forget that all too easily."),
-                                ],
-                        "The King's Hold" : [
-                                    __("The knights in the palace are all good Arios-loving folks. That warms my heart."),
-                                    __("I've been told of a secret swapping society in the King's Hold, where members exchange their wives and daughters in all-night orgies..."),
-                                    __("The nobles roam the King's Hold, like a pack of vultures hovering, waiting for their next meal. They all think they can sire the next heir, or take power by other means when the King's gone..."),
-                                ],
-                       }
-
-
-
-
-    ## JOKES ##
-
-    jokes = {
-            "harmless" : ("What's the hardest thing about being a Guard? Telling your parents you're gay!", "My dog used to run after everyone on a horse. It got so bad, I had to take his horse away.", "What's the difference between a snowman and a snowwoman? Snowballs!", "How do you catch a bra? With a booby trap."),
-            "sex" : ("Why was the luth teacher arrested? For fingering a minor...", "What do the Court and pussies have in common? One slip of the tongue, and you're in deep shit.", "Know what I do in my garden? Get down and dirty with my hoes.", "What do you call the useless part around a dick? A man!", "What's the difference between a wife and a job? After 5 years, your job will still suck."),
-            "dark" : ("How do you make a girl scream twice? First, fuck her in the ass, then wipe your dick on her curtains!", "I like my women like my wine... Locked in the cellar!", "A doctor tells his patient:__('I')m sorry, but you've only got about 10 left.'\nPatient:__('10 what? Months, weeks?')\nDoctor:__('Nine, eight...')", "What's the best part about sex with twenty-eight-year-olds? There are 20 of them!", "How many male chauvinists does it take to refuel the lamp? None. Let her do the dishes in the dark."),
-            "mean" : ("I like you. People say I've no taste, but I like you.", "Damn, you're hot, but you'd be a lot hotter if you just shut up.", "I like my women attractive, dumb, and bitchy. You seem to fit the bill quite nicely.", "I'd hire you as a whore, but my girls have class...")
-        }
-
-
-    ## COMPLIMENTS ##
-
-    compliments =  {
-                    "beauty" : ("%s, aren't you beautiful today...", "%s, you're so lovely...", "%s, I swear you have the cutest face.", "Your face lights up when you smile, %s."),
-                    "body" : ("Wow, you've got such a hot body you know.", "Baby, you've got such an amazing ass...", "I love your knockers, honey, they look amazing without a bra.", "Look at that nice piece of ass...", "Wow, you're stunning, makes me really want to touch the merchandise!"),
-                    "mind" : ("You're a bright girl, I like that about you.", "A beautiful mind... Haven't you got everything?", "You seem to know a lot... You definitely should get to know more about me!", "I love the conversations we're having, it's always enlightening."),
-                    "spirit" : ("You're always spirited and lively; it's very nice.", "At last, someone with character. I don't like dull people.", "You're always passionate about everything. I like that!")
-                    }
-
+    # EN: Load archetype data from JSON (BK Evolution).
+    # ZH: 从 JSON 加载天赋原型数据（BK Evolution）。
+    _arch_json = DataLoader.load_archetype_data()
+    if _arch_json:
+        archetype_list = _arch_json.get("archetype_list", [])
+        archetype_description = {k: __(v) for k, v in _arch_json.get("archetype_description", {}).items()}
+    else:
+        archetype_list = []
+        archetype_description = {}
 
     ## GIRL BACKGROUND ##
 
-    slave_stories = ["slave_story1", "slave_story2", "slave_story3", "slave_story4", "slave_story5", "slave_story6", "slave_story7", "slave_story8"]
+    # EN: Load random pools for girl background generation from JSON (BK Evolution).
+    # ZH: 从 JSON 加载女孩背景生成随机池（BK Evolution）。
+    _bgp_json = DataLoader.load_girl_background_pools()
+    if _bgp_json:
+        slave_stories = _bgp_json.get("slave_stories", [])
+        homes = _bgp_json.get("homes", [])
+        guardians = _bgp_json.get("guardians", [])
+        hobbies = _bgp_json.get("hobbies", [])
+        colors = _bgp_json.get("colors", [])
+        food = _bgp_json.get("food", [])
+        drinks = _bgp_json.get("drinks", [])
+    else:
+        slave_stories = []
+        homes = []
+        guardians = []
+        hobbies = []
+        colors = []
+        food = []
+        drinks = []
 
     origins = ["Zan", "the border with the Holy Lands", "the Blood Islands", "Karkyr", "Westmarch", "the desert of Hokoma", "Borgo, the port city", "the Goliath desolations", "the Arik mountains"]
 
@@ -2297,17 +1581,7 @@ init -4 python:
 #                           "the Arik mountains" : __("They say the Arik mountains are the highest in the world. The air is pure there, not full of filth and magic like here... My %s taught me how to love and respect the mountains."),
 #                           }
 
-    homes = ["palace", "hovel", "mansion", "shack", "hut", "big house", "small house", "temple", "shop", "old house", "tower", "church"]
-
-    guardians = ["parents", "dad", "mom", "uncle", "grand-ma", "auntie", "grand-pa", "big brother", "big sister", "little brother", "little sister", "tutor"]
-
-    hobbies = ["painting", "singing", "playing music", "hiking", "gambling", "shopping", "reading", "weaving", "swimming", "writing"]
-
-    colors = ["white", "yellow", "red", "green", "blue", "purple", "orange", "pink", "black"]
-
-    food = ["cake", "cream", "fish", "fruit", "meat", "cookies", "sweets", "chocolate", "bread", "rice"]
-
-    drinks = ["milk", "sake", "wine", "beer", "apple juice", "lemon juice", "mango juice", "spice water"]
+    ## MC interact counters ##
 
 
     ## MC interact counters ##
@@ -2326,245 +1600,13 @@ init -4 python:
 #                            "charm_obedience" : 0, "charm_sensitivity" : 0, "charm_libido" : 0, "charm_love" : 0, "charm_fear" : 0
 #                            }
 
-    ## Results dictionaries
-
-    roll_dict = {1 : __("critical failure"), 2 : __("failure"), 3 : __("neutral"), 4 : __("neutral"), 5 : __("success"), 6 : __("critical success")}
-    result_dict = {-999 : __("very bad"), 1 : __("bad"), 6 : __("average"), 9 : __("good"), 12 : __("very good"), 15 : __("perfect")}
     result_colors = {"very bad" : c_red, "bad" : c_lightred, "average" : c_white, "good" : c_lightgreen, "very good" : c_green, "perfect" : c_orange}
     result_star_dict = {"very bad" : "{image=img_empty_star}"*5, "bad" : "{image=img_star}"+"{image=img_empty_star}"*4, "average" : "{image=img_star}"*2+"{image=img_empty_star}"*3, "good" : "{image=img_star}"*3+"{image=img_empty_star}"*2, "very good" : "{image=img_star}"*4+"{image=img_empty_star}", "perfect" : "{image=img_star}"*5}
-
-    reversed_result_dict = {v: k for k, v in result_dict.items()}
-
-    result_reference = "%i: {color=%s}Very bad{/color}\n" % (reversed_result_dict["bad"]-1, result_colors["very bad"]) + "%i-%i: {color=%s}Bad{/color}\n" % (reversed_result_dict["bad"], reversed_result_dict["average"]-1, result_colors["bad"]) + "%i-%i: {color=%s}Average{/color}\n" % (reversed_result_dict["average"], reversed_result_dict["good"]-1, result_colors["average"]) + "%i-%i: {color=%s}Good{/color}\n" % (reversed_result_dict["good"], reversed_result_dict["very good"]-1, result_colors["good"]) + "%i-%i: {color=%s}Very good{/color}\n" % (reversed_result_dict["very good"], reversed_result_dict["perfect"]-1, result_colors["very good"]) + "%i+: {color=%s}Perfect{/color}\n" % (reversed_result_dict["perfect"], result_colors["perfect"])
-
-
-
-#    result_value = {"very bad" : 0, "bad" : 1, "average" : 2, "good" : 3, "very good" : 4, "perfect" : 5}
-#    roll_value = {"critical failure" : 0, "failure" : 1, "neutral" : 2, "success" : 3, "critical success" : 4}
 
 #    result_names = {v: k for k, v in result_value.items()}
 #    roll_names = {v: k for k, v in roll_value.items()}
 
     # <MIGRATED: see data/jobs.rpy>
-
-    farm_perform_dict = {
-                        "pref_bonus" : {"fascinated": 0.5, "very interested": 0.3, "interested": 0.15, "a little interested": 0.05, "indifferent": 0.0, "a little reluctant": -0.05, "reluctant": -0.15, "very reluctant": -0.3, "refuses": -0.5, "positive act": 0.15, "negative act": -0.15, "farm weakness": 0.2},
-
-                        "naked_stats" : (("beauty", "secondary"), ("body", "secondary"), ("charm", "secondary"), ("refinement", "secondary")),
-                        "service_stats" : (("service", "primary"), ("charm", "secondary"), ("obedience", "secondary")),
-                        "sex_stats" : (("sex", "primary"), ("beauty", "secondary"), ("libido", "secondary")),
-                        "anal_stats" : (("anal", "primary"), ("body", "secondary"), ("constitution", "secondary")),
-                        "fetish_stats" : (("fetish", "primary"), ("refinement", "secondary"), ("sensitivity", "secondary")),
-                        "bisexual_stats" : (("service", "secondary"), ("fetish", "secondary"), ("libido", "secondary"), ("sensitivity", "secondary")),
-                        "group_stats" : (("sex", "secondary"), ("anal", "secondary"), ("obedience", "secondary"), ("constitution", "secondary")),
-
-                        # M1. Intro message
-
-                        "location" : ["in the old barn", "in the hay", "by the tool shed", "down in the mud", "in the meadow", "in the pig stall", "down in a pit", "by the windmill", "beneath the old oak", "among the scarecrows", "behind the chicken coop", "in the milking parlor", "inside the stable", "behind a fence", "in the corn field", "in the corn field, forming a perfect circle visible from the sky that would remain and later confound mystery seekers"],
-
-                        "intro minion" : {"stallion" : __("a well-endowed, hunking stallion"), "beast" : __("a dirty, vulgar beast"), "monster" : __("a vile, oozing monster"), "machine" : __("a kinky buzzing machine"), "stallions" : __("neighing, horny stallions"), "beasts" : __("drooling, mindless beasts"), "monsters" : __("deformed monsters"), "machines" : __("weird fucking machines"), "various" : __("a strange coterie of minions")},
-
-                        "intro perfect" : {"beauty" : __("They are stunned to see such a beautiful woman standing next to %s."),
-                                            "body" : __("They get rowdy seeing her perfect curves so close to %s"),
-                                            "charm" : __("They are mesmerized by her charm, even though she is standing next to such %s."),
-                                            "refinement" : __("They wondered how such a noble and refined girl could exist in the same space as %s.")},
-
-                        "intro good" : {"beauty" : __("They are impressed to see a pretty girl with %s."),
-                                            "body" : __("They whistle encouragingly at her exposed body, next to %s"),
-                                            "charm" : __("They think she looks graceful for someone so close to %s."),
-                                            "refinement" : __("They are pleasantly surprised to see she maintains her dignity, even standing next to %s.")},
-
-                        "intro average+" : {"beauty" : __("They think she is quite pretty for a girl standing next to %s"),
-                                            "body" : __("They cheer on her sweet body as she stands next to %s"),
-                                            "charm" : __("They think she has charm as she stands next to %s"),
-                                            "refinement" : __("They are surprised to see she retains her manners next to %s")},
-
-                        "intro average-" : {"beauty" : __(", but they are disappointed in her face."),
-                                            "body" : __(", but they think her body is out of shape."),
-                                            "charm" : __(", but her charm is lacking."),
-                                            "refinement" : __(", but they feel she lacks class.")},
-
-                        "intro bad" : {"beauty" : __("They grumble as they don't think she's pretty."),
-                                            "body" : __("They make disparaging comments about her lack of curves."),
-                                            "charm" : __("They are disappointed to find her charisma lacking."),
-                                            "refinement" : __("They frown, complaining that she is uncouth.")},
-
-                        "intro very bad" : {"beauty" : __("They boo and call her ugly, even next to %s."),
-                                            "body" : __("They loudly complain about her unattractive shape, even next to %s."),
-                                            "charm" : __("They hurl insults at her for her utter lack of charm, unsurprised she is kept with %s."),
-                                            "refinement" : __("They turn up their nose at her, calling her an unrefined farmhand, only good to serve %s.")},
-
-
-                        # M2 & M4. Set-up
-
-                        "naked story stallion" : {"title": __("The Naked Truth"), "desc" : __("Sometimes, all it takes for one to be mindful of their sexual self is to strip naked in the presence of strangers. %s is experiencing that, standing next to %s - although it's doubtful he is mindful about anything at all.\n\nHer eyes widen when she notices his massive cock standing to full attention, swaying mere inches from her exposed body.")},
-
-                        "naked story beast" : {"title": __("Caught in the Bare"), "desc" : __("Animals don't wear clothes, and %s is reminded of that as she is forced to mingle with the beasts as %s sniffs at her shivering body. As the animal releases pheromones, she feels a strange mix of shame and dirty curiosity.")},
-
-                        "naked story monster" : {"title": __("Personal Space Invader"), "desc" : __("%s is forced to spread out in a lewd pose, while the lewd creature %s grasps her wrists and ankles with its weird appendages. She can't help but offer her most intimate parts in full view of all the customers.")},
-
-                        "naked story machine" : {"title": __("The Birthday Suit"), "desc" : __("%s is tied up to %s, the strange machine, which hums as it runs various scans on her exposed body. While nothing visible happens on the outside, her face becomes visibly flushed and she squirms, rubbing her thighs together.")},
-
-                        "service story stallion" : {"title": __("Not-So Little Pony"), "desc" : __("Excitement rises within the crowd as %s steps closer to %s, running her hands over his muscular torso. As always, his barely-human cock is standing to attention. Taking her time to show off to the customers, she kneels in front of the stallion, her knees buried in the dirty mud."), "desc2" : __("She is holding his massive cock in her hands and licking the tip, before finally taking it in her mouth.")}, # g, m
-
-                        "service story beast" : {"title": __("Around The Fur"), "desc" : __("Getting down right in the mud, %s spreads her legs, giving the crowd a full view of her body. %s obediently positions himself over her to form a 69, his beastly cock hanging in front of her face."), "desc2" : __("The animal buries his snout into her snatch, making loud grunts as he starts licking. In turn, she opens her mouth to welcome his cock.")},
-
-                        "service story monster" : {"title": __("The Shadow over Her Mouth"), "desc" : __("The crowd gasps when the monster extends a strange appendage, oozing with yellowish liquid that seems like the creature's pre-cum. %s hangs it right in front of %s's face."), "desc2" : __("With only a moment's hesitation, she starts to lick the strange cock-like thing, running her tongue up and down the monstrous shaft.")},
-
-                        "service story machine" : {"title": __("Toy Story"), "desc" : __("%s steps inside the strange contraption, which starts to whizz and buzz around her. A dildo pops out of the side of %s, rubbing against her face. Playing with her nipples, she takes it in her mouth."), "desc2" : __("The machine sits her down on a strange stool, and an audible vibrating noise can be heard as she gasps.")},
-
-                        "sex story stallion" : {"title": __("Harnessing Passion"), "desc" : __("As soon as Gizel gives the signal, %s wastes no time, shoving %s in the mud and spreading her legs, his fat dick already pushing against her labia."), "desc2" : __("The crowd holds their breath as it seems impossible that the humongous cock will fit inside her, but inch by inch, the stallion forces it in, until a visible bulge can be seen distorting her belly.\n\nHe starts moving, and her moans echo through the farm as she gets fucked mercilessly.")}, # m, g
-
-                        "sex story beast" : {"title": __("On The Prowl"), "desc" : __("His beastly eyes shining with brute lust, %s pushes her to the ground, ready to mount her like a female of his own species. %s squeals as the strangely-shaped dick forces its way inside her pussy."), "desc2" : __("The beast grunts and groans as he pummels her human pussy, rubbing his hairy body against her naked skin and drooling in her hair.")},
-
-                        "sex story monster" : {"title": __("Tales from the Crotch"), "desc" : __("%s's monstrous body shivers with anticipation as Gizel gives the signal for the show to start. %s's eyes widen as the strange creature deploys its gooey tentacles to encircle her. A thicker, cock-like tentacle places itself at the entrance of her pussy, rubbing it with strangely fluorescent juice."), "desc2" : __("The girl moans in surprise as the monster penetrates her, strecthing her cunt grotesquely. It moves inside in strange ways, extracting moans from her that are part pain and part confusing pleasure.")},
-
-                        "sex story machine" : {"title": __("The Joystick"), "desc" : __("Gizel activates %s and ties %s up to the strange machine. She shivers as the cold metal makes contact with her naked body, and she cannot advert her eyes as a rotating, buzzing rod is pushed between her legs."), "desc2" : __("The machine starts fucking her, making clanking sounds as the mechanical dick accelerates its pace. She gasps and moans as the clockwork cock stretches her pussy.")},
-
-                        "anal story stallion" : {"title": __("Back Door Rodeo"), "desc" : __("As soon as Gizel gives the signal, %s wastes no time, shoving %s in the mud and spreading her buttcheeks, his fat dick already pushing against her tiny asshole."), "desc2" : __("The crowd gasps as the stallion mercilessly shoves his humongous dick inside her butt, stretching her anus impossibly wide. She cries out as her ass gets fucked mercilessly.")}, # m, g
-
-                        "anal story beast" : {"title": __("Into the Wild"), "desc" : __("His beastly eyes shining with mad lust, %s pushes her to the ground, forcing %s in an unnatural position. She squeals as his cock forces its way inside her asshole."), "desc2" : __("The beast grunts and groans as he pummels her ass, reaching inner parts that only he could with his oddly-shaped dick.")},
-
-                        "anal story monster" : {"title": __("It Came from Uranus"), "desc" : __("%s's monstrous body shivers with anticipation as Gizel gives the signal for the show to start. %s's eyes widen as the strange creature deploys its gooey tentacles to encircle her. A thicker, cock-like tentacle places itself at the entrance of her asshole, rubbing it with strangely fluorescent juice."), "desc2" : __("She moans in surprise as the alien cock penetrates her and stretches her asshole, pulsing and expanding to an abnormal size. It starts fucking her, extracting moans from her that are part pain and part confusing pleasure.")},
-
-                        "anal story machine" : {"title": __("Baby Got Back"), "desc" : __("Gizel activates %s and ties %s up to the strange machine. She shivers as the cold metal makes contact with her naked body, and she cannot advert her eyes as a rotating, buzzing rod comes up to poke her butt."), "desc2" : __("She cries out as the mechanical cock invades her ass, stimulating her sensitive insides. The machine increases its pace. She gasps and moans as the clockwork cock stretches her ass.")},
-
-                        "fetish story stallion" : {"title": __("The Whip Cracks"), "desc" : __("After tying %s up with rope, Gizel hands a pair of metal clips to %s."), "desc2" : __("The mindless hunk follows orders and attaches the clips to each of her nipples. She squeals in pain, but he is not done. With hands the size of dinner plates, he spanks her until her ass is flushed bright red.")}, # g, m
-
-                        "fetish story beast" : {"title": __("The Milky Way"), "desc" : __("Gizel ties %s's arms together and sits her up on a wooden horse, while she leads %s on a leash."), "desc2" : __("The beast starts rubbing itself against her ass, smearing her with drool and pre-cum, weighing her down on the wooden device.")},
-
-                        "fetish story monster" : {"title": __("Day of the Tentacle"), "desc" : __("Gizel feeds the gross monster a vial of some fiery liquid, and he becomes bright red. %s shivers as she sees %s approaching her with its tentacles dangling."), "desc2" : __("The monster spurts some reddish liquid over her body, and she screams in pain. Apparently it produces a kind of hot wax, mixed with aphrodisiacs.")},
-
-                        "fetish story machine" : {"title": __("Plug and Play"), "desc" : __("%s is blindfolded. Gizel works on the machine for a little while, and %s rattles as it converts itself into a kind of translucid iron maiden."), "desc2" : __("The customers hold their breath as Gizel pushes the hapless girl into the torture device. They can see everything through the glassy lid as needles prick her skin and hot iron sears her in various places.")},
-
-                        "bisexual story stallion" : {"title": __("Cock Riders in the Sack"), "desc" : __("Gizel conjures up a doppleganger that joins %s and the horny stallion in the ring. The summoned creature isn't shy and immediately grabs %s's thick dick, stroking it and bringing it to %s's face. The two girls actively lick and tease the stallion, using their bodies to please him and each other."), "desc2" : __("The three of them keep fucking for a while, trying different positions.")}, # g, m, g
-
-                        "bisexual story beast" : {"title": __("Horny Tiger, Fucking Dragon"), "desc" : __("Gizel conjures up a doppleganger that immediately joins %s and %s in the mud. Unafraid to touch the beast, she pets him lovingly before grabbing his manhood and pointing it at %s."), "desc2" : __("The beast fucks each girl in turn, while the other one entwines her tongue with his, her mouth tasting the animal's saliva.")},
-
-                        "bisexual story monster" : {"title": __("Invasion of the Pussy Munchers"), "desc" : __("More pussy is always better, so Gizel made sure to bring a friend alongside %s. Soon the girls are being held tight by a dozen tentacles, and %s starts teasing %s's sensitive parts."), "desc2" : __("The monster's tentacles start fucking the girls in various holes, making them moan in unison.")}, # g, m, g
-
-                        "bisexual story machine" : {"title": __("Switching Gears"), "desc" : __("Toys are fun, but sharing is caring: Gizel invites one of the female customers to join %s in the circle, and she ties them up with %s, buzzing with dark energy as it oozes oil on %s's naked body."), "desc2" : __("Soon, both girls are entering a trance, sharing an erotic experience as the love machine's various gizmos tug at their limit.")},
-
-                        "group story stallion" : {"title": __("Breeding Trouble"), "desc" : __("As the hulking bodies of the stallions loom over %s, she looks like a frail doll. She yelps as one of them lifts her as if she was nothing, spreading her legs and forcing his large cock inside her."), "desc2" : __("Her cries are soon muffled by another fat cock in her mouth, her body rocked back and forth as she gets fucked from both ends.")}, # g
-
-                        "group story beast" : {"title": __("Number of the Beasts"), "desc" : __("Growling beasts surround %s, sniffing her as if she was a piece of meat."), "desc2" : __("Unable to restrain themselves, the beasts shove her down in the mud, and their hairy bodies soon cover her as their animal dicks find their way inside her holes.")},
-
-                        "group story monster" : {"title": __("The Hills have Dicks"), "desc" : __("The monsters surround %s, dripping gooey liquid over her head and body from thick, oozing tentacles."), "desc2" : __("The monsters press various appendages against her whole body, stimulating her erogenous parts and penetrating her various holes.")},
-
-                        "group story machine" : {"title": __("A Clockwork Orgy"), "desc" : __("Mechanical devices start to whir and hover around %s as the machines light up one by one."), "desc2" : __("She gasps as metal clamps hold her in place and a number of pistons and dildos are brought to fuck her holes.")},
-
-                        # M3. Crowd reaction
-
-                        "perf good" : { "beauty" : __("The crowd love to see such a beautiful girl lower herself before them."),
-                                        "body" : __("The customers drool as they ogle her lovely body soiled by mud and love fluids."),
-                                        "charm" : __("Her natural charm shines through even in such a dirty and unusual situation."),
-                                        "refinement" : __("Her elaborate, refined gestures delight the crowd even as she gets down and dirty."),
-
-                                        "obedience" : __("The crowd is delighted to see that in spite of everything, she remains submissive and obedient."),
-                                        "libido" : __("She is obviously horny, her juices leaking in plain view, making the crowd leer and cheer."),
-                                        "sensitivity" : __("The customers love to see her reactions as her sensitive body responds to the lewd stimulations."),
-                                        "constitution" : __("She goes on for a long time, her stamina impressing everyone as she works hard on her task."),
-
-                                        "service" : __("She is a perfect little cocksucker, and the skill of her hands and tongue make the customers obviously horny."),
-                                        "sex" : __("She is obviously good at sex, giving many customers a visible boner as she takes cock in stride."),
-                                        "anal" : __("She is an expert anal slut, a fact that doesn't escape the eyes of the horny crowd."),
-                                        "fetish" : __("She is at ease with kinky stuff, impressing the customers with her skill and depravity."),},
-
-                        "perf bad" : { "beauty" : __("Some customers whisper that they would like the show better if she was prettier."),
-                                        "body" : __("The customers find her body too plain to get excited."),
-                                        "charm" : __("Her lack of charm lowers the enjoyment of the customers."),
-                                        "refinement" : __("The customers wish she was more refined, even though the show is in a farm they would like her to behave better."),
-
-                                        "obedience" : __("The crowd finds her obedience lacking as she seems to balk at her task."),
-                                        "libido" : __("Her lack of sexual passion is visible, marring the enjoyment of the onlookers."),
-                                        "sensitivity" : __("The customers find her too stiff, wishing she had more sensitivity."),
-                                        "constitution" : __("Due to her weaker constitution, she struggles to keep up, making some customers grumble."),
-
-                                        "service" : __("She doesn't look skilled enough when sucking cock, causing some customers to get bored."),
-                                        "sex" : __("Her lack of sexual experience is showing, as she struggles to accomodate her partner's cock."),
-                                        "anal" : __("She moans in pain as she takes a cock in the ass, clearly uncomfortable with the act, spoiling the mood."),
-                                        "fetish" : __("She doesn't look at ease with non-vanilla act, showing her lack of experience with fetish stuff."),},
-
-                        "service perfect" : __("%s displays expert technique, taking her time to bring %s to release, using her tongue and hands to great effect while making sure all the customers get a great view."),
-
-                        "service good" : __("%s does her best to impress the customers with her technique, making sure she puts everything she's learnt to good use to make %s cum."),
-
-                        "service average" : __("%s is nervous, but mostly succeeds in hiding it, sucking off %s with efficiency, if not creativity."),
-
-                        "service bad" : __("%s's technique is wooden, and her mind is obviously somewhere else. The customers start grumbling as she takes too long to bring %s to climax."),
-
-                        "service very bad" : __("%s goes through the motions without any technique, barely even touching %s's cock, obviously waiting for it all to end. The customers boo as they realize she is not going to finish."),
-
-                        "sex perfect" : __("%s acts like a perfect making love to %s as if he was a regular partner. The customers are amazed and envious to see how well she performs."),
-
-                        "sex good" : __("%s moans suggestively as she gets fucked by %s, putting on a show in spite of the situation."),
-
-                        "sex average" : __("%s has enough sexual experience to take it, letting %s have his way while trying to follow his lead."),
-
-                        "sex bad" : __("%s does her best to match %s's moves, still in pain but trying to hide it. The customers are unimpressed."),
-
-                        "sex very bad" : __("%s remains passive, taking her mind elsewhere as she waits meekly for %s to finish. The customers hurl insults at her, angry to see her put on such a poor show."),
-
-                        "anal perfect" : __("%s loves to be fucked in the ass and it shows. The customers yell enthusiastically as she welcomes %s's cock deeper inside her."),
-
-                        "anal good" : __("%s grabs onto %s, moaning as she takes it the ass like a true professional."),
-
-                        "anal average" : __("%s tries to ease into the act as %s fucks her, eventually relaxing and soldiering on as she takes it up the ass."),
-
-                        "anal bad" : __("%s's obviously lacks anal experience. She grits her teeth and hangs on, but the customers start grumbling as her low energy doesn't match that of %s."),
-
-                        "anal very bad" : __("%s remains tense and uncooperative, still trying to process the stress and pain of her situation as %s violates her ass. She is oblivious to the customers throwing mud and rotten fruits at her, angered by her passivity."),
-
-                        "fetish perfect" : __("%s is completely soaking wet, savouring every little bit of pleasure and pain %s inflicts her. She could do this all day."),
-
-                        "fetish good" : __("%s is a kinky girl, and she finds pervert pleasure in everything %s does to her, giving the customers a good show."),
-
-                        "fetish average" : __("%s is clearly uncomfortable, but she hands on by a thread as %s puts her through even more humiliation."),
-
-                        "fetish bad" : __("%s grits her teeth as she tries to endure the pain administered by %s, but she does poorly. Everyone can tell she isn't experienced enough for such a hardcore show."),
-
-                        "fetish very bad" : __("%s screams in shock at the abuse %s inflicts her, her face racked with fear and pain. Even the more sadistic customers are having second thoughts."),
-
-                        "bisexual perfect" : __("%s makes a show of rubbing herself against the other girl all over her body, sharing some of %s's bodily fluids in a passionate kiss. The customers applaud her performance."),
-
-                        "bisexual good" : __("%s is at ease with serving both males and females, as she demonstrates by fucking %s and the other girl in turns."),
-
-                        "bisexual average" : __("%s is nervous having sex with another girl in such a setting, but she does her best, leaning on %s a little more."),
-
-                        "bisexual bad" : __("%s seems to find the idea of having sex with another girl even less appealing than fucking %s, so she spends most of her time tending to the minion. The customers are disappointed."),
-
-                        "bisexual very bad" : __("%s is unwilling or unable to touch another girl, and loudly freaks out as %s tries to force her to kiss the other girl. The customers feel cheated."),
-
-                        "group perfect" : __("%s loves to fuck as many dicks as possible and it shows. She takes one in every hole, multiple times, always asking for more."),
-
-                        "group good" : __("%s is good at this, and soon she works all the minions close to their limits, using all the parts of her body to please them."),
-
-                        "group average" : __("%s is not fully prepared for this, but she tries her best, tending to each minion in turn."),
-
-                        "group bad" : __("%s is clearly overwhelmed, not knowing what to do with whom. The minions take the lead and she tries to follow, but her passivity annoy the customers."),
-
-                        "group very bad" : __("%s is way in over her head, unable to do anything except lie there all stiff and frozen. The minions try to work with her but she is completely frigid."),
-
-
-                        "stallion cum" : __("Eventually, %s the stallion cums hard, shooting his thick jizz all over %s."),
-
-                        "stallion cum group" : __("The stallions gather around her, shooting their spunk all over %s."),
-
-                        "beast cum" : __("%s climaxes loudly, his deformed cock smearing %s with dirty animal cum."),
-
-                        "beast cum group" : __("The beasts excitedly shoot dirty animal cum all over %s."),
-
-                        "monster cum" : __("Unexpectedly, %s reaches what seems like a climax, shooting thick monster cum from several appendages at once onto %s."),
-
-                        "monster cum group" : __("The monsters surround %s, covering her in strange cum-like juice as they take turns to shoot their loads."),
-
-                        "machine cum" : __("After vibrating and rubbing for a while, %s brings %s to a surprise orgasm, releasing a strange thick oil that stiks to her shivering body."),
-
-                        "machine cum group" : __("The machines all work in unison, mercilessly bringing %s to multiple earth-shattering orgasms, covering her in oily mechanical fluids."),
-
-                        "various cum group" : __("All of the minions gather around %s to cover her body with cum and fluids."),
-
-    }
 
     stat_increase_dict = {
                         "level" : __("\n{color=[c_lightgreen]}LEVEL UP{/color}"),
@@ -2590,196 +1632,42 @@ init -4 python:
     for k in color_dict.keys():
         event_color[k] = "{color=" + color_dict[k] + "}%s{/color}"
 
-    log_event_dict = {
-                    "level" : "{color=" + c_orange + "}%s has gained a new level.{/color}",
-                    "job_up" : "{color=" + c_orange + "}%s has increased her %s skill.{/color}",
-                    "rank" : "{color=" + c_orange + "}%s is ready to reach a new rank.{/color}",
-                    }
-
-    attraction_dict = {
-                        "beauty_good" : __("was very beautiful"),
-                        "body_good" : __("had a perfect body"),
-                        "charm_good" : __("had great charm"),
-                        "refinement_good" : __("was really refined"),
-                        "beauty_bad" : __("was ugly"),
-                        "body_bad" : __("was plain looking"),
-                        "charm_bad" : __("was a bore"),
-                        "refinement_bad" : __("was clumsy")
-                    }
-
-    #### BROTHEL SERVICES ####
-
-    maintenance_desc = {"clean" : __("Your brothel is ") + event_color["good"] % "{b}clean{/b}" + ".",
-                    "clean enough" : __("Your brothel is ") + event_color["a little good"] % "{b}clean enough{/b}" + ".",
-                    "dusty" : __("Your brothel is getting ") + event_color["average contrast"] % "{b}dusty{/b}" + ".",
-                    "dirty" : __("Your brothel is getting ") + event_color["a little bad"] % "{b}dirty{/b}" + ".",
-                    "disgusting" : __("Warning! Your brothel is ") + event_color["bad"] % "{b}disgusting{/b}" + "!",
-                    "fire" : event_color["very bad"] % "Warning!!! Your brothel is at risk of a fire!"
-                    }
-
-    gold_threat_amount = {1 : 500, 2 : 1000, 3 : 2500, 4 : 10000, 5: 25000} # Gain 1 threat for every slice of X gold depending on DISTRICT RANK up to gold max
-
-    gold_threat_max = {1 : 4, 2 : 12, 3 : 18, 4 : 24, 5: 30, 6 : 36, 7 : 52} # Max gold threat depending on CHAPTER
-
-
-
     #### ITEMS ####
-
-    quality_prefix = {
-                    "dress_0" : __("Ragged"),
-                    "dress_1" : __("Worn"),
-                    "dress_2" : __("Simple"),
-                    "dress_3" : __("Fine"),
-                    "dress_4" : __("Fancy"),
-                    "dress_5" : __("Enchanted"),
-                    "dress_6" : __("Legendary"),
-
-                    "necklace_0" : __("Rusty"),
-                    "necklace_1" : __("Broken"),
-                    "necklace_2" : __("Small"),
-                    "necklace_3" : __("Medium"),
-                    "necklace_4" : __("Heavy"),
-                    "necklace_5" : __("Magical"),
-                    "necklace_6" : __("Legendary"),
-
-                    "ring_0" : __("Rusty"),
-                    "ring_1" : __("Fake"),
-                    "ring_2" : __("Small"),
-                    "ring_3" : __("Medium"),
-                    "ring_4" : __("Large"),
-                    "ring_5" : __("Magical"),
-                    "ring_6" : __("Legendary"),
-
-#                      "gift_1" : __("Cheap "),
-#                      "gift_2" : __("Common "),
-#                      "gift_3" : __("Fine "),
-#                      "gift_4" : __("Rare "),
-
-                    "food_0" : __("Rotten"),
-                    "food_1" : __("Bland"),
-                    "food_2" : __("Tasty"),
-                    "food_3" : __("Juicy"),
-                    "food_4" : __("Organic"),
-                    "food_5" : __("Enchanted"),
-                    "food_6" : __("Legendary"),
-
-#                      "accessory_1" : __("Worn "),
-#                      "accessory_2" : __("Simple "),
-#                      "accessory_3" : __("Fine "),
-#                      "accessory_4" : __("Fancy "),
-#                      "accessory_5" : __("Enchanted "),
-
-                    "scroll_0" : __("Tattered"),
-                    "scroll_1" : __("Minor"),
-                    "scroll_2" : __("Lesser"),
-                    "scroll_3" : __("Medium"),
-                    "scroll_4" : __("Greater"),
-                    "scroll_5" : __("Ultimate"),
-
-                    "misc_0" : __("Worthless"),
-                    "misc_1" : __("Cheap"),
-                    "misc_2" : __("Common"),
-                    "misc_3" : __("Fine"),
-                    "misc_4" : __("Rare"),
-                    "misc_5" : __("Magical"),
-                    "misc_6" : __("Legendary"),
-
-                    }
-
-    quality_modifier = { # High increase in cost for upper ranks (see how it behaves)
-                        0 : 0.25,
-                        1 : 1.0,
-                        2 : 2.5, #?
-                        3 : 5.0, #?
-                        4 : 12.5, #?
-                        5 : 25.0, #?
-                        6 : 50.0 #?
-                        }
-
-
 
     #### QUESTS & CLASSES ####
 
     ## PRICES ##
+    # Loaded from JSON (BK Evolution)
 
-    special_quest_description = {
-                                "Cheap" : __("This class is cheap. Enroll now and benefit from better prices!"),
-                                "Masterclass" : __("This class is taught by a master. Stats will increase faster than normal."),
-                                "High reward" : __("The rewards for this quest are more important than usual."),
-                                "Notorious" : __("This quest will bring extra reputation when completed."),
-                                "Story" : __("Complete this quest to advance the story."),
-                                "story" : __("Complete this quest to advance the story."),
-                                }
-
-    quest_base_gold = { # This the gold value per stat point of requirement and per day
-                        "normal" : 1,
-                        "sex" : 2
-                        }
-
-    class_prices = {
-                    1 : 100,
-                    2 : 250,
-                    3 : 500,
-                    4 : 1000,
-                    5 : 1000
-                    }
+    _qp_json = DataLoader.load_quest_prices()
+    if _qp_json:
+        if "quest_base_gold" in _qp_json:
+            quest_base_gold = _qp_json["quest_base_gold"]
+        if "class_prices" in _qp_json:
+            class_prices = {int(k): v for k, v in _qp_json["class_prices"].items()}
+    else:
+        quest_base_gold = {}
+        class_prices = {}
 
     ## CLASS PREFIXES ##
-
-    class_prefixes = {
-                    1 : __("Beginner "),
-                    2 : __("Regular "),
-                    3 : __("Advanced "),
-                    4 : __("Elite "),
-                    5 : __("Elite ")
-                    }
-
 
     #### MODIFIERS ####
 
     ## PRICE MODIFIERS ##
 
-    price_modifiers = {
-                            "buy" : 1.0,
-                            "sell" : 0.6,
-                            "bargain" : 0.75,
-#                             "buy item" : 1.0,
-#                             "sell item" : 0.6
-                            }
-
-#     price_modifiers_trader = {
-#                             "buy girl" : 0.9,
-#                             "sell girl" : 0.7,
-#                             "buy item" : 0.9,
-#                             "bargain item" : 0.75,
-#                             "sell item" : 0.7
-#                             }
-
-    ## ROLL MODIFIERS ##
-
-    stat_bonus = {
-                "primary" :  (4, 2.5, 1.5, 0),
-                "secondary" : (2, 1.5, 1, 0),
-                "booster" : (1.5, 1, 0.5, 0)
-            }
-
-    roll_modifier = {
-                "critical success" : 1.3,
-                "success" : 1.1,
-                "neutral" : 1.0,
-                "failure" : 0.9,
-                "critical failure" : 0.7
-            }
-
-    ## TIP and REP ##
-
-    helper_cost = {
-                1 : 5,
-                2 : 10,
-                3 : 25,
-                4 : 50,
-                5 : 100
-                }
+    # EN: Load economy modifiers from JSON (BK Evolution).
+    # ZH: 从 JSON 加载经济修正参数（BK Evolution）。
+    _econ_json = DataLoader.load_economy_modifiers()
+    if _econ_json:
+        price_modifiers = _econ_json.get("price_modifiers", {})
+        stat_bonus = {k: tuple(v) for k, v in _econ_json.get("stat_bonus", {}).items()}
+        roll_modifier = _econ_json.get("roll_modifier", {})
+        helper_cost = {int(k): v for k, v in _econ_json.get("helper_cost", {}).items()}
+    else:
+        price_modifiers = {}
+        stat_bonus = {}
+        roll_modifier = {}
+        helper_cost = {}
 
     # max_upkeep = {
     #             1 : 75,
@@ -2794,150 +1682,55 @@ init -4 python:
 ## XP and RANK ##
 
 
-    ## LEVEL UP ##
+    ## LEVEL UP / RANKS / JOB POINTS
+    # EN: Loaded from JSON (BK Evolution).
+    # ZH: 从 JSON 加载等级、晋升与职业点参数（BK Evolution）。
+    _xp_json = DataLoader.load_xp_rank_params()
+    if _xp_json:
+        xp_to_levelup = {int(k): v for k, v in _xp_json.get("xp_to_levelup", {}).items()}
+        MC_xp_to_levelup = {int(k): v for k, v in _xp_json.get("MC_xp_to_levelup", {}).items()}
+        rank_cost = {int(k): v for k, v in _xp_json.get("rank_cost", {}).items()}
+        rank_stat_step = {int(k): tuple(v) for k, v in _xp_json.get("rank_stat_step", {}).items()}
+        jp_result_modifier = _xp_json.get("jp_result_modifier", {})
+        jp_customer_rank_modifier = {int(k): v for k, v in _xp_json.get("jp_customer_rank_modifier", {}).items()}
+        jp_job_level_modifier = {int(k): v for k, v in _xp_json.get("jp_job_level_modifier", {}).items()}
+    else:
+        xp_to_levelup = {}
+        MC_xp_to_levelup = {}
+        rank_cost = {}
+        rank_stat_step = {}
+        jp_result_modifier = {}
+        jp_customer_rank_modifier = {}
+        jp_job_level_modifier = {}
 
-    xp_to_levelup = {0 : 0}
+    ## RANKS / JOB POINTS — JSON-driven (BK Evolution) ##
+    _ranks_path = _os.path.join(renpy.config.gamedir, "core", "data", "ranks", "ranks.json")
+    _ranks_data = {}
+    if _os.path.exists(_ranks_path):
+        with open(_ranks_path, 'r', encoding='utf-8') as _f:
+            _ranks_data = _json.load(_f)
+        del _f
 
-    for i in range(1, 25):
+    _rn = _ranks_data.get("rank_names", {})
+    rank_name = {int(k) if str(k).lstrip('-').isdigit() else k: __(v) for k, v in _rn.items()}
 
-        xp_to_levelup[i] = xp_to_levelup[i-1] + 10 * (i) ** 2
+    _jtl = _ranks_data.get("jp_to_level", {})
+    jp_to_level = {int(k): v for k, v in _jtl.items()}
 
-#        if i < 5:
-#            xp_to_levelup[i] = xp_to_levelup[i-1] + 5 * (i + 1)
+    _jud = _ranks_data.get("job_up_dict", {})
+    job_up_dict = {k: tuple(v) for k, v in _jud.items()}
 
-#        elif i < 10:
-#            xp_to_levelup[i] = xp_to_levelup[i-1] + 15 * (i + 1)
+    _juc = _ranks_data.get("job_up_change", {})
+    job_up_change = {int(k): tuple(v) for k, v in _juc.items()}
 
-#        elif i < 15:
-#            xp_to_levelup[i] = xp_to_levelup[i-1] + 40 * (i + 1)
+    _rtr = _ranks_data.get("rep_to_rank", {})
+    rep_to_rank = {int(k): v for k, v in _rtr.items()}
 
-#        else:
-#            xp_to_levelup[i] = xp_to_levelup[i-1] + 100 * (i + 1)
+    _rgd = _ranks_data.get("rep_gains_dict", {})
+    rep_gains_dict = {int(k): {sk: __(sv) for sk, sv in svdict.items()} for k, svdict in _rgd.items()}
 
-
-    ## MC LEVEL UP ##
-
-    MC_xp_to_levelup = {0 : 0}
-
-    for i in range(1, 26):
-
-        MC_xp_to_levelup[i] = MC_xp_to_levelup[i-1] + 10 * i ** 2
-
-
-
-    ## RANKS / JOB POINTS ##
-
-    # Rank names #
-
-    rank_name = {
-                    1 : __("C"), #"{color=[c_white]}C{/color}",
-                    2 : __("B"), #"{color=[c_yellow]}B{/color}",
-                    3 : __("A"), #"{color=[c_lightblue]}A{/color}",
-                    4 : __("S"), #"{color=[c_purple]}S{/color}",
-                    5 : __("X"), #"{color=[c_gold]}X{/color}",
-                    "waitress0": __("Unskilled"),
-                    "waitress1": __("Beginner Waitress"),
-                    "waitress2": __("Competent Waitress"),
-                    "waitress3": __("Skilled Barmaid"),
-                    "waitress4": __("Expert Barmaid"),
-                    "waitress5": __("Tavern Queen"),
-                    "dancer0": __("Unskilled"),
-                    "dancer1": __("Beginner Dancer"),
-                    "dancer2": __("Competent Dancer"),
-                    "dancer3": __("Skilled Stripper"),
-                    "dancer4": __("Expert Stripper"),
-                    "dancer5": __("Poledance Queen"),
-                    "masseuse0": __("Unskilled"),
-                    "masseuse1": __("Beginner Masseuse"),
-                    "masseuse2": __("Competent Masseuse"),
-                    "masseuse3": __("Skilled Massage girl"),
-                    "masseuse4": __("Expert Massage girl"),
-                    "masseuse5": __("Soapy Queen"),
-                    "geisha0": __("Unskilled"),
-                    "geisha1": __("Beginner Maiko"),
-                    "geisha2": __("Competent Maiko"),
-                    "geisha3": __("Skilled Geisha"),
-                    "geisha4": __("Expert Geisha"),
-                    "geisha5": __("Courtesan Queen"),
-                    "sex0" : __("Unskilled"),
-                    "sex1" : __("Beginner Prostitute"),
-                    "sex2" : __("Competent Prostitute"),
-                    "sex3" : __("Skilled Whore"),
-                    "sex4" : __("Expert Whore"),
-                    "sex5" : __("Brothel Queen"),
-                    "service0" : __("Unskilled"),
-                    "service1" : __("Beginner Wanker"),
-                    "service2" : __("Competent Wanker"),
-                    "service3" : __("Skilled Cocksucker"),
-                    "service4" : __("Expert Cocksucker"),
-                    "service5" : __("Blowjob Queen"),
-                    "anal0" : __("Unskilled"),
-                    "anal1" : __("Beginner Anal Slut"),
-                    "anal2" : __("Competent Anal Slut"),
-                    "anal3" : __("Skilled Butt Lover"),
-                    "anal4" : __("Expert Butt Lover"),
-                    "anal5" : __("Anal Queen"),
-                    "fetish0" : __("Unskilled"),
-                    "fetish1" : __("Beginner Servant"),
-                    "fetish2" : __("Competent Servant"),
-                    "fetish3" : __("Skilled Escort"),
-                    "fetish4" : __("Expert Escort"),
-                    "fetish5" : __("Bondage Queen"),
-                }
-
-
-    jp_to_level = {
-                    -1 : 0,
-                    0 : 50,
-                    1 : 125,
-                    2 : 250,
-                    3 : 425,
-                    4 : 650,
-                }
-
-    job_up_dict = {
-                    "waitress" : ("charm", "constitution", "beauty", "body"),
-                    "dancer" : ("body", "libido", "charm", "refinement"),
-                    "masseuse" : ("beauty", "sensitivity", "body", "refinement"),
-                    "geisha" : ("refinement", "obedience", "charm", "beauty"),
-                    "service" : ("service", "sensitivity", "charm", "fetish"),
-                    "sex" : ("sex", "libido", "beauty", "service"),
-                    "anal" : ("anal", "constitution", "body", "sex"),
-                    "fetish" : ("fetish", "obedience", "refinement", "anal"),
-                }
-
-    job_up_change = {
-                    1 : (5, 5, 0),
-                    2 : (10, 5, 0),
-                    3 : (15, 10, 5),
-                    4 : (25, 15, 10),
-                    5 : (40, 25, 15),
-                }
-
-    rep_to_rank = {
-                    0 : 0,
-                    1 : 10,
-                    2 : 25,
-                    3 : 50,
-                    4 : 100,
-                    5 : 1000,
-                }
-
-    rep_gains_dict = { # Read as: For a given girl rank - 'cust.rank relative to girl.rank (e.g: __('higher') = The customer has a higher rank) : must get a result >= X to earn rep'
-                    1 : {"higher" : __("bad"), "same" : __("average")},
-                    2 : {"higher" : __("bad"), "same" : __("average"), "lower" : __("good")},
-                    3 : {"higher" : __("average"), "same" : __("good"), "lower" : __("very good")},
-                    4 : {"higher" : __("average"), "same" : __("good"), "lower" : __("very good")},
-                    5 : {"same" : __("good"), "lower" : __("perfect")}, # Made easier for now
-                }
-
-    rep_loss_dict = { # Read as: __('must get a result < X to lose rep'). Being < to very bad is actually impossible
-                    1 : {"higher" : __("very bad"), "same" : __("bad")},
-                    2 : {"higher" : __("very bad"), "same" : __("bad"), "lower" : __("average")},
-                    3 : {"higher" : __("bad"), "same" : __("average"), "lower" : __("good")},
-                    4 : {"higher" : __("bad"), "same" : __("average"), "lower" : __("good")},
-                    5 : {"same" : __("average"), "lower" : __("very good")}, # Made easier for now
-                }
+    _rld = _ranks_data.get("rep_loss_dict", {})
+    rep_loss_dict = {int(k): {sk: __(sv) for sk, sv in svdict.items()} for k, svdict in _rld.items()}
 
 #     rep_gains_dict = {
 #                      1 : 6, # average score or better raises reputation
@@ -2956,48 +1749,7 @@ init -4 python:
 #                      5 : 8 # average score or lower damages reputation
 #                      }
 
-    rank_cost = {
-                    1 : 25,
-                    2 : 100,
-                    3 : 250,
-                    4 : 1000,
-                    5 : 2500,
-                }
-
-    # Increases cost estimate of average skills with every level: (start value, step)
-    rank_stat_step = {
-                    1 : (10, 1),
-                    2 : (15, 2),
-                    3 : (25, 5),
-                    4 : (50, 10),
-                    5 : (100, 25),
-                }
-
-    jp_result_modifier = {
-                        "very bad" : -2,
-                        "bad" : -1,
-                        "average" : 0,
-                        "good" : 1,
-                        "very good" : 2,
-                        "perfect" : 4,
-                    }
-
-    jp_customer_rank_modifier = {
-                                1 : 1,
-                                2 : 2,
-                                3 : 3,
-                                4 : 4,
-                                5 : 5,
-                            }
-
-    jp_job_level_modifier = { # JP are harder to get as girls raise in level
-                            0 : 0,
-                            1 : -1,
-                            2 : -2,
-                            3 : -3,
-                            4 : -4,
-                            5 : -5,
-                        }
+    # (rank_cost, rank_stat_step, jp_* loaded from JSON above)
 
 
 
@@ -3597,7 +2349,6 @@ init -5 python:
         "normal": c_white,
         "normal contrast": c_black,
 
-
         "+++" : c_emerald,
         "++" : c_green,
         "+" : c_lightgreen,
@@ -3625,6 +2376,12 @@ init -5 python:
         "normal" : c_white,
     }
 
+    ## EN: Load event colors from JSON (BK Evolution).
+    ## ZH: 从 JSON 加载事件颜色映射（BK Evolution）。
+    _ec_json = DataLoader.load_event_colors()
+    if _ec_json and "color_dict" in _ec_json:
+        color_dict = _ec_json["color_dict"]
+
 
 
 ## MODS ##
@@ -3639,135 +2396,34 @@ init -5 python:
 
 
 init -2 python:
-    contract_level = {2 : [1], 3 : [1, 2], 4 : [2], 5 : [2, 3], 6 : [3, 4], 7 : [4]} # Picks randomized task number according to chapter
-    contract_value = {2 : 250, 3 : 500, 4 : 625, 5 : 1000, 6 : 1250, 7 : 1600} # Base value for contract rewards. Min-Max payout is 2-4 times base value for each successful task (not taking Special bonuses into account)
+    # EN: Load contract parameters from JSON (BK Evolution).
+    # ZH: 从 JSON 加载契约参数（BK Evolution）。
+    _contract_json = DataLoader.load_contract_params()
+    if _contract_json:
+        contract_level = {int(k): v for k, v in _contract_json.get("contract_level", {}).items()}
+        contract_value = {int(k): v for k, v in _contract_json.get("contract_value", {}).items()}
+        contract_skill_limit = {int(k): v for k, v in _contract_json.get("contract_skill_limit", {}).items()}
+        contract_sex_limit = {int(k): v for k, v in _contract_json.get("contract_sex_limit", {}).items()}
+    else:
+        contract_level = {}
+        contract_value = {}
+        contract_skill_limit = {}
+        contract_sex_limit = {}
 
-    contract_skill_limit = {2 : {"easy" : 75, "hard" : 100}, 3 : {"easy" : 100, "hard" : 125}, 4 : {"easy" : 125, "hard" : 150},
-                            5 : {"easy" : 150, "hard" : 175}, 6 : {"easy" : 175, "hard" : 225}, 7 : {"easy" : 225, "hard" : 275}}
-    contract_sex_limit =   {
-                            2: {"easy": __("a little reluctant"), "hard": __("indifferent")},
-                            3: {"easy": __("indifferent"), "hard": __("a little interested")},
-                            4: {"easy": __("a little interested"), "hard": __("interested")},
-                            5: {"easy": __("interested"), "hard": __("very interested")},
-                            6: {"easy": __("very interested"), "hard": __("fascinated")},
-                            7: {"easy": __("very interested"), "hard": __("fascinated")},
-                        }
-
-    # ORG/org = Organizer, VEN/ven = venue, AVEN/aven = article + venue, LOC/loc = location, DIS/dis = district
-
-    contract_description = {"cruise" : __(":ORG: is organizing a nightly cruise tour of :dis: to thank its members for their hard work this year. :AVEN: will depart for a sightseeing tour of the bay at dusk, then moor next to the :LOC: for a night of entertainment."),
-                            "party" : __(":ORG: is throwing a lavish party in :aven: near the :LOC:. Everyone who is anyone in Zan is expected to attend and party until well after dawn."),
-                            "ceremony" : __(":ORG: chose :aven: near the :LOC: to celebrate one of their numerous holy days. In order to get closer to their deity, worshippers are expected to transcend both spirit and flesh by indulging in the most shameful pleasures, washing away their sins with large amounts of holy alcohol, conveniently sold on the premises by the Church."),
-                            "festival" : __(":ORG: is throwing a huge festival next month in :dis:, to celebrate a new season, a three-headed cow, the sun rising again, or some other redneck nonsense. Still, there will be a big feast at :aven: near the :LOC: complete with food, drinks, shows and of course, girls!"),
-                            "date" : __(":ORG: has invited a few friends to :aven: next to the :LOC: for the night, and has requested some company. Well-groomed, well-behaved female servants are expected to tend to his every need."),
-                            "meeting" : __(":ORG: convened a meeting of like-minded nobles and diplomats to discuss :ven: in a discreet venue near the :LOC:. While the intricacies of this grave topic will occupy much of their time, they will also expect their hosts to provide top-notch service and ways of 'relieving' the tension."),
-                            "magic" : __(":ORG: summoned all arcane users to a night of fun and magic out in the :LOC:. Tended to by beautiful women, the guests will attend special events in :aven:, overlooking the magnificence of :DIS:."),
-                            "orgy" : __(":ORG: is happy to announce a long night of hedonism and erotic surprises in the :LOC:. Gathered in :aven:, the guests will enjoy forbidden pleasure with like-minded individuals and a hand-picked selection of elite sex slaves.")
-                        }
 
 init python:
 
-    contract_task_types_order = {"greet" : 1, "serve" : 2, "mingle" : 3, "event" : 4, "private show" : 5, "fun" : 6}
-    contract_task_types_description = {"greet" : __("Greet Guests"), "serve" : __("Serve Guests"), "mingle" : __("Socialize"), "event" : __("Participate In An Event"), "private show" : __("Deliver A Private Show"), "fun" : __("Have 'Fun'")}
-
-    contract_tasks = [
-                        ContractTask("clean", type="serve", requirements=["job waitress", "skill obedience", "skill constitution", ], tags=(["maid"], ["obedience"], ["waitress"], ["profile"])),
-                        ContractTask("serve guests", type="serve", requirements=["job waitress", "skill beauty", "skill charm", "skill obedience", ], tags=(["waitress"], ["profile"])),
-                        ContractTask("serve drinks", type="serve", requirements=["job waitress", "skill beauty", "skill charm", "skill constitution", ], tags=(["waitress"], ["profile"])),
-                        ContractTask("feed guests", type="serve", requirements=["job waitress", "job geisha", "skill charm", "skill obedience", ], tags=(["waitress", "geisha"], ["profile"])),
-                        ContractTask("onsen", type="mingle", requirements=["job masseuse", "skill beauty", "skill body", "skill charm", "skill obedience", "skill constitution", ], tags=(["masseuse"], ["swim"], ["profile"])),
-                        ContractTask("swimming pool", type="mingle", requirements=["job masseuse", "skill beauty", "skill body", "skill charm", ], tags=(["swim"], ["masseuse"], ["profile"])),
-                        ContractTask("swimming show", type="event", requirements=["job masseuse", "skill beauty", "skill body", "skill constitution", ], tags=(["swim"], ["profile"]), and_tags=["rest"]),
-                        ContractTask("lingerie show", type="event", requirements=["job dancer", "skill body", "skill refinement", "skill libido", ], tags=(["profile"]), and_tags=["libido"]),
-                        ContractTask("entice guests", type="greet", requirements=["job dancer", "skill beauty", "skill charm", "skill refinement", "skill libido", ], tags=(["model"], ["profile"]), and_tags=["libido"]),
-                        ContractTask("dance show", type="private show", requirements=["job dancer", "skill body", "skill refinement", "skill constitution", ], tags=(["dance"], ["profile"])),
-                        ContractTask("erotic show", type="private show", requirements=["job dancer", "skill body", "skill libido", "skill constitution", ], tags=(["dance"], ["profile"]), and_tags=["libido"]),
-                        ContractTask("cosplay", type="mingle", requirements=["job waitress", "job dancer", "skill charm", "skill libido", ], tags=(["cosplay"], ["dance"], ["profile"])),
-                        ContractTask("lap dance", type="private show", requirements=["job dancer", "skill body", "skill obedience", "skill libido", ], tags=(["dance"], ["profile"]), and_tags=["libido"]),
-                        ContractTask("welcome massage", type="greet", requirements=["job masseuse", "skill beauty", "skill charm", ], tags=(["masseuse"], ["profile"])),
-                        ContractTask("erotic massage", type="serve", requirements=["job masseuse", "skill beauty", "skill charm", "skill libido", ], tags=(["masseuse"], ["profile"]), and_tags=["libido"]),
-                        ContractTask("conversation", type="mingle", requirements=["job geisha", "skill beauty", "skill charm", "skill refinement", ], tags=(["geisha"], ["profile"])),
-                        ContractTask("protocol", type="greet", requirements=["job geisha", "skill charm", "skill refinement", "skill obedience", ], tags=(["geisha"], ["profile"])),
-                        ContractTask("ceremony", type="mingle", requirements=["job geisha", "skill beauty", "skill refinement", ], tags=(["geisha"], ["profile"])),
-                        ContractTask("welcome guests", type="greet", requirements=["job geisha", "skill charm", "skill obedience", ], tags=(["geisha"], ["profile"])),
-                        ContractTask("kiss guests", type="greet", requirements=["skill beauty", "skill refinement", "skill libido", ], tags=(["kiss"], ["profile"])),
-                        ContractTask("catwalk", type="event", requirements=["skill beauty", "skill refinement", ], tags=(["model"], ["dance"], ["profile"])),
-                        ContractTask("catfight", type="event", requirements=["skill body", "skill constitution", ], tags=(["fight"], ["dance"], ["profile"])),
-                        ContractTask("art model", type="mingle", requirements=["skill beauty", "skill refinement", "skill obedience", ], tags=(["model"], ["profile"])),
-                        ContractTask("sub greeting", type="greet", requirements=["skill refinement", "skill obedience", ], tags=(["sub"], ["profile"])),
-                        ContractTask("dom greeting", type="greet", requirements=["skill refinement", "skill libido", "skill constitution", ], tags=(["dom"], ["profile"])),
-                        ContractTask("sports show", type="event", requirements=["skill body", "skill constitution", ], tags=(["constitution"], ["profile"])),
-                        ContractTask("fondle", type="mingle", requirements=["job masseuse", "skill body", "skill charm", "skill libido", ], tags=(["fondle", "grope"], ["profile"])),
-                        ContractTask("strip", type="private show", requirements=["skill beauty", "skill body", "skill refinement", "skill libido", ], tags=(["strip"], ["naked"]), soft="naked"),
-                        ContractTask("nude help", type="mingle", requirements=["skill body", "skill charm", "skill obedience", ], tags=(["waitress"], ["geisha"], ["profile"]), and_tags=["naked"], soft="naked"),
-                        ContractTask("naked", type="fun", requirements=["skill body", "skill libido", ], tags=(["naked"]), and_tags2 = ["cum shower"], soft="naked"),
-                        ContractTask("masturbate", type="private show", requirements=["job service", "skill constitution", "skill service", "pref service", ], tags=(["service"], ["naked"]), and_tags=["mast"], soft=False),
-                        ContractTask("barmaid blowjob", type="serve", requirements=["job waitress", "job service", "skill charm", "skill service", "pref service", ], tags=(["waitress"], ["service"], ["naked"]), and_tags=["service"], soft=False),
-                        ContractTask("service", type="fun", requirements=["job service", "skill service", "pref service", ], tags=(["service"], ["naked"]), and_tags2 = ["cim"], soft=False),
-                        ContractTask("cosplay sex", type="event", requirements=["job sex", "skill libido", "skill sex", "pref sex", ], tags=(["cosplay"], ["sex"], ["naked"]), and_tags=["sex"], soft=False),
-                        ContractTask("full service massage", type="serve", requirements=["job masseuse", "job sex", "skill beauty", "skill sex", "pref sex", ], tags=(["masseuse"], ["sex"], ["naked"]), and_tags=["sex"], soft=False),
-                        ContractTask("sex", type="fun", requirements=["job sex", "skill libido", "skill sex", "pref sex", ], tags=(["sex"], ["naked"]), and_tags2 = ["creampie"], soft=False),
-                        ContractTask("cosplay anal", type="event", requirements=["job anal", "skill obedience", "skill constitution", "skill anal", "pref anal", ], tags=(["cosplay"], ["anal"], ["naked"]), and_tags=["anal"], soft=False),
-                        ContractTask("anal dance", type="private show", requirements=["job dancer", "job anal", "skill constitution", "skill anal", "pref anal", ], tags=(["dancer"], ["anal"], ["naked"]), and_tags=["anal"], soft=False),
-                        ContractTask("anal", type="fun", requirements=["job anal", "skill constitution", "skill anal", "pref anal", ], tags=(["anal"], ["naked"]), and_tags2 = ["cob"], soft=False),
-                        ContractTask("toy", type="private show", requirements=["job fetish", "skill obedience", "skill fetish", "pref fetish", ], tags=(["fetish"], ["naked"]), and_tags=["toy"], soft=False),
-                        ContractTask("geisha bondage", type="event", requirements=["job geisha", "job fetish", "skill refinement", "skill fetish", "pref fetish", ], tags=(["geisha"], ["fetish"], ["naked"]), and_tags=["fetish"], soft=False),
-                        ContractTask("fetish", type="fun", requirements=["job fetish", "skill obedience", "skill fetish", "pref fetish", ], tags=(["fetish"], ["naked"]), and_tags2 = ["cof"], soft=False),
-                        ContractTask("group sex", type="fun", requirements=["job sex", "skill libido", "skill sex", "pref sex", ], tags=(["sex"], ["group"], ["naked"]), and_tags=["group"], and_tags2 = ["group", "bukkake"], soft=False),
-                        ContractTask("group anal", type="fun", requirements=["job anal", "skill constitution", "skill anal", "pref anal", ], tags=(["anal"], ["group"], ["naked"]), and_tags=["group"], and_tags2 = ["group", "cum shower"], soft=False),
-                        ContractTask("bisexual service", type="fun", requirements=["job service", "skill service", "pref service", ], tags=(["service"], ["bisexual"], ["naked"]), and_tags=["bisexual"], and_tags2=["bisexual", "orgasm"], soft=False),
-                        ContractTask("bisexual fetish", type="fun", requirements=["job fetish", "skill obedience", "skill fetish", "pref fetish", ], tags=(["fetish"], ["bisexual"], ["naked"]), and_tags=["bisexual"], and_tags2=["bisexual", "squirt"], soft=False),
-]
-
-    contract_specials = [("trait", 3), ("perk", 2), ("fix", 3), ("farm", 1), ("item", 1)]
-
-    contract_stage_modifier = {1 : 1, 2 : 1.5, 3 : 3, 4 : 6}
+    # EN: Load contract parameters from JSON (BK Evolution) — continued.
+    # ZH: 从 JSON 加载契约参数（BK Evolution）— 续。
+    if _contract_json:
+        contract_specials = [tuple(x) for x in _contract_json.get("contract_specials", [])]
+        contract_stage_modifier = {int(k): v for k, v in _contract_json.get("contract_stage_modifier", {}).items()}
+    else:
+        contract_specials = []
+        contract_stage_modifier = {}
 
 
     ### Brothel Rankings ###
-
-    brothel_ranking_reputations = {
-                        40 : __("nobody"),
-                        39 : __("almost nobody"),
-                        38 : __("nameless drifter"),
-                        37: __("suspicious foreigner"),
-                        36 : __("passing stranger"),
-                        35 : __("new face"),
-                        34 : __("shifty lurker"),
-                        33 : __("dark alley dweller"),
-                        32 : __("street-corner hawker"),
-                        31 : __("flesh peddler"),
-                        30 : __("seedy innkeeper"),
-                        29 : __("cheap mackerel"),
-                        28 : __("semi-reliable hustler"),
-                        27 : __("small business owner"),
-                        26 : __("trendy bartender"),
-                        25 : __("young upstart"),
-                        24 : __("ascending pimp"),
-                        23 : __("well-known pimp"),
-                        22 : __("disreputable whoremonger"),
-                        21 : __("reputable whoremonger"),
-                        20 : __("respected brothel-keeper"),
-                        19 : __("red-light staple"),
-                        18 : __("local favorite"),
-                        17 : __("nightlife fixture"),
-                        16 : __("vice entrepreneur"),
-                        15 : __("bordello artist"),
-                        14 : __("smooth operator"),
-                        13 : __("smooth criminal"),
-                        12 : __("fancy souteneur"),
-                        11 : __("wealthy whoremonger"),
-                        10 : __("prostitution magnate"),
-                        9 : __("notable sexmonger"),
-                        8 : __("famed brothel master"),
-                        7 : __("icon of corruption"),
-                        6 : __("sin tycoon"),
-                        5 : __("lord of filth"),
-                        4 : __("pope of debauchery"),
-                        3 : __("king of the underworld"),
-                        2 : __("god emperor of whores"),
-                        1 : __("absolute legend")
-                        }
 
 # init -1 python:
 #     init_galleries()
@@ -3795,3 +2451,356 @@ init -10 python:
 ### End of Mod defaut settings ###
 
 ## END OF BK INIT VARIABLES FILE ##
+
+
+init 1 python:
+
+    # EN: Load minion definitions from JSON (BK Evolution).
+    # ZH: 从 JSON 加载仆从定义（BK Evolution）。
+    _minions_json = DataLoader.load_minions()
+    if _minions_json:
+        if "all_minion_types" in _minions_json:
+            all_minion_types = _minions_json["all_minion_types"]
+        if "minion_descriptions" in _minions_json:
+            minion_description = {k: __(v) for k, v in _minions_json["minion_descriptions"].items()}
+        if "minion_xp_to_level" in _minions_json:
+            minion_xp_to_level = _minions_json["minion_xp_to_level"]
+        if "minion_price" in _minions_json:
+            minion_price = _minions_json["minion_price"]
+        if "farm_pics" in _minions_json:
+            farm_pics = _minions_json["farm_pics"]
+
+    # EN: Load farm installation parameters from JSON (BK Evolution).
+    # ZH: 从 JSON 加载农场安装参数（BK Evolution）。
+    _installations_json = DataLoader.load_installations()
+    if _installations_json:
+        if "installation_price" in _installations_json:
+            installation_price = _installations_json["installation_price"]
+        if "farm_type_list" in _installations_json:
+            farm_type_list = _installations_json["farm_type_list"]
+        if "farm_inst_list" in _installations_json:
+            farm_inst_list = _installations_json["farm_inst_list"]
+        if "farm_installations_dict" in _installations_json:
+            farm_installations_dict = _installations_json["farm_installations_dict"]
+
+    # EN: Load farm performance text dictionary from JSON (BK Evolution).
+    # ZH: 从 JSON 加载农场表演文本字典（BK Evolution）。
+    _farm_json = DataLoader.load_farm_perform_dict()
+    if _farm_json:
+        def _to_tuples(lst):
+            return tuple(tuple(x) for x in lst)
+
+        def _tr_dict(dct):
+            return {k: __(v) for k, v in dct.items()}
+
+        farm_perform_dict = {
+            "pref_bonus": _farm_json["pref_bonus"],
+            "naked_stats": _to_tuples(_farm_json["naked_stats"]),
+            "service_stats": _to_tuples(_farm_json["service_stats"]),
+            "sex_stats": _to_tuples(_farm_json["sex_stats"]),
+            "anal_stats": _to_tuples(_farm_json["anal_stats"]),
+            "fetish_stats": _to_tuples(_farm_json["fetish_stats"]),
+            "bisexual_stats": _to_tuples(_farm_json["bisexual_stats"]),
+            "group_stats": _to_tuples(_farm_json["group_stats"]),
+            "location": [__(s) for s in _farm_json["location_i18n"]],
+            "intro minion": _tr_dict(_farm_json["intro_minion_i18n"]),
+            "intro perfect": _tr_dict(_farm_json["intro_perfect_i18n"]),
+            "intro good": _tr_dict(_farm_json["intro_good_i18n"]),
+            "intro average+": _tr_dict(_farm_json["intro_average_plus_i18n"]),
+            "intro average-": _tr_dict(_farm_json["intro_average_minus_i18n"]),
+            "intro bad": _tr_dict(_farm_json["intro_bad_i18n"]),
+            "intro very bad": _tr_dict(_farm_json["intro_very_bad_i18n"]),
+        }
+
+        for _act in ("naked", "service", "sex", "anal", "fetish", "bisexual", "group"):
+            for _mtype in ("stallion", "beast", "monster", "machine"):
+                _key = _act + " story " + _mtype
+                _json_key = _act + "_story_" + _mtype + "_i18n"
+                farm_perform_dict[_key] = _tr_dict(_farm_json[_json_key])
+
+        farm_perform_dict["perf good"] = _tr_dict(_farm_json["perf_good_i18n"])
+        farm_perform_dict["perf bad"] = _tr_dict(_farm_json["perf_bad_i18n"])
+
+        for _act in ("service", "sex", "anal", "fetish", "bisexual", "group"):
+            for _qual in ("perfect", "good", "average", "bad", "very bad"):
+                _key = _act + " " + _qual
+                _json_key = _act + "_" + _qual.replace(" ", "_") + "_i18n"
+                farm_perform_dict[_key] = __(_farm_json[_json_key])
+
+        for _mtype in ("stallion", "beast", "monster", "machine"):
+            farm_perform_dict[_mtype + " cum"] = __(_farm_json[_mtype + "_cum_i18n"])
+            farm_perform_dict[_mtype + " cum group"] = __(_farm_json[_mtype + "_cum_group_i18n"])
+        farm_perform_dict["various cum group"] = __(_farm_json["various_cum_group_i18n"])
+
+    # EN: Load gossip text from JSON (BK Evolution).
+    # ZH: 从 JSON 加载流言文本（BK Evolution）。
+    _gossip_json = DataLoader.load_gossip()
+    if _gossip_json:
+        generic_gossip = [__(s) for s in _gossip_json.get("generic_gossip_i18n", [])]
+        chapter_gossip = {k: [__(s) for s in v] for k, v in _gossip_json.get("chapter_gossip_i18n", {}).items()}
+        district_gossip = {k: [__(s) for s in v] for k, v in _gossip_json.get("district_gossip_i18n", {}).items()}
+    else:
+        generic_gossip = []
+        chapter_gossip = {}
+        district_gossip = {}
+
+    # EN: Load stat increase text from JSON (BK Evolution).
+    # ZH: 从 JSON 加载属性增长文本（BK Evolution）。
+    _stat_json = DataLoader.load_stat_increase_dict()
+    if _stat_json and "stat_increase_dict_i18n" in _stat_json:
+        stat_increase_dict = {k: __(v) for k, v in _stat_json["stat_increase_dict_i18n"].items()}
+
+    # EN: Load maintenance description text from JSON (BK Evolution).
+    # ZH: 从 JSON 加载维护描述文本（BK Evolution）。
+    _maint_json = DataLoader.load_maintenance_desc()
+    if _maint_json and "maintenance_desc_i18n" in _maint_json:
+        maintenance_desc = {}
+        _maint_colors = _maint_json.get("maintenance_desc_colors", {})
+        for k, parts in _maint_json["maintenance_desc_i18n"].items():
+            prefix, body, suffix = parts
+            color_key = _maint_colors.get(k, "normal")
+            maintenance_desc[k] = __(prefix) + event_color[color_key] % __(body) + __(suffix)
+
+    # EN: Load jokes and compliments from JSON (BK Evolution).
+    # ZH: 从 JSON 加载笑话和赞美语文本（BK Evolution）。
+    _dialogue_json = DataLoader.load_dialogue_texts()
+    if _dialogue_json:
+        def _expand_inline_i18n(text):
+            import re
+            def _repl(m):
+                return __(m.group(1))
+            return re.sub(r"__\('([^']+?)'\)", _repl, text)
+
+        if "jokes_i18n" in _dialogue_json:
+            jokes = {k: tuple(_expand_inline_i18n(__(s)) for s in v) for k, v in _dialogue_json["jokes_i18n"].items()}
+        else:
+            jokes = {}
+        if "compliments_i18n" in _dialogue_json:
+            compliments = {k: tuple(_expand_inline_i18n(__(s)) for s in v) for k, v in _dialogue_json["compliments_i18n"].items()}
+        else:
+            compliments = {}
+
+    # EN: Load recent event templates from JSON (BK Evolution).
+    # ZH: 从 JSON 加载近期事件模板（BK Evolution）。
+    _recent_json = DataLoader.load_recent_events()
+    if _recent_json and "recent_event_templates_i18n" in _recent_json:
+        recent_event_templates = {}
+        for key, evt in _recent_json["recent_event_templates_i18n"].items():
+            kwargs = {"type": evt["type"]}
+            if "action_i18n" in evt:
+                kwargs["action"] = __(evt["action_i18n"])
+            if "base_description_i18n" in evt:
+                kwargs["base_description"] = __(evt["base_description_i18n"])
+            if "encourage" in evt:
+                kwargs["encourage"] = evt["encourage"]
+            if "discipline" in evt:
+                kwargs["discipline"] = evt["discipline"]
+            recent_event_templates[key] = GirlRecentEvent(**kwargs)
+    else:
+        recent_event_templates = {}
+
+    # EN: Load log events and attraction descriptions from JSON (BK Evolution).
+    # ZH: 从 JSON 加载日志事件和吸引力描述文本（BK Evolution）。
+    _event_texts_json = DataLoader.load_event_texts()
+    if _event_texts_json:
+        if "log_event_dict_i18n" in _event_texts_json:
+            log_event_dict = {}
+            for k, v in _event_texts_json["log_event_dict_i18n"].items():
+                color = color_dict.get(v["color_key"], c_white)
+                log_event_dict[k] = "{color=" + color + "}" + __(v["template_i18n"]) + "{/color}"
+        if "attraction_dict_i18n" in _event_texts_json:
+            attraction_dict = {k: __(v) for k, v in _event_texts_json["attraction_dict_i18n"].items()}
+    else:
+        log_event_dict = {}
+        attraction_dict = {}
+
+    # EN: Load roll and result dictionaries from JSON (BK Evolution).
+    # ZH: 从 JSON 加载掷骰和结果字典（BK Evolution）。
+    _roll_json = DataLoader.load_roll_results()
+    if _roll_json:
+        if "roll_dict" in _roll_json:
+            roll_dict = {int(k): v for k, v in _roll_json["roll_dict"].items()}
+        if "result_dict" in _roll_json:
+            result_dict = {int(k): v for k, v in _roll_json["result_dict"].items()}
+            reversed_result_dict = {v: k for k, v in result_dict.items()}
+        if "result_reference_templates_i18n" in _roll_json and "result_reference_labels_i18n" in _roll_json:
+            _ref_tmpl = _roll_json["result_reference_templates_i18n"]
+            _ref_lbl = _roll_json["result_reference_labels_i18n"]
+            result_reference = (
+                _ref_tmpl["very_bad"] % (reversed_result_dict["bad"]-1, result_colors["very bad"], __(_ref_lbl["very_bad"]))
+                + _ref_tmpl["bad"] % (reversed_result_dict["bad"], reversed_result_dict["average"]-1, result_colors["bad"], __(_ref_lbl["bad"]))
+                + _ref_tmpl["average"] % (reversed_result_dict["average"], reversed_result_dict["good"]-1, result_colors["average"], __(_ref_lbl["average"]))
+                + _ref_tmpl["good"] % (reversed_result_dict["good"], reversed_result_dict["very good"]-1, result_colors["good"], __(_ref_lbl["good"]))
+                + _ref_tmpl["very_good"] % (reversed_result_dict["very good"], reversed_result_dict["perfect"]-1, result_colors["very good"], __(_ref_lbl["very_good"]))
+                + _ref_tmpl["perfect"] % (reversed_result_dict["perfect"], result_colors["perfect"], __(_ref_lbl["perfect"]))
+            )
+    else:
+        roll_dict = {}
+        result_dict = {}
+        reversed_result_dict = {}
+        result_reference = ""
+
+    # EN: Load quality prefix and modifier tables from JSON (BK Evolution).
+    # ZH: 从 JSON 加载品质前缀和修正值表（BK Evolution）。
+    _quality_json = DataLoader.load_quality()
+    if _quality_json:
+        if "quality_prefix" in _quality_json:
+            quality_prefix = _quality_json["quality_prefix"]
+        if "quality_modifier" in _quality_json:
+            quality_modifier = {int(k): v for k, v in _quality_json["quality_modifier"].items()}
+    else:
+        quality_prefix = {}
+        quality_modifier = {}
+
+    # EN: Load mood/love/fear description dictionaries from JSON (BK Evolution).
+    # ZH: 从 JSON 加载心情/爱意/恐惧描述字典（BK Evolution）。
+    _desc_json = DataLoader.load_girl_descriptions()
+    if _desc_json:
+        if "mood_description_i18n" in _desc_json:
+            mood_description = {k: __(v) for k, v in _desc_json["mood_description_i18n"].items()}
+        if "love_description_i18n" in _desc_json:
+            love_description = {k: __(v) for k, v in _desc_json["love_description_i18n"].items()}
+        if "fear_description_i18n" in _desc_json:
+            fear_description = {k: __(v) for k, v in _desc_json["fear_description_i18n"].items()}
+    else:
+        mood_description = {}
+        love_description = {}
+        fear_description = {}
+
+    # EN: Load merchant dialogue and title data from JSON (BK Evolution).
+    # ZH: 从 JSON 加载商人对话和头衔数据（BK Evolution）。
+    _merchant_json = DataLoader.load_merchants()
+    if _merchant_json:
+        if "merchant_dict" in _merchant_json:
+            merchant_dict = _merchant_json["merchant_dict"]
+        if "merchant_title_i18n" in _merchant_json:
+            merchant_title = {k: __(v) for k, v in _merchant_json["merchant_title_i18n"].items()}
+        if "merchant_greetings_i18n" in _merchant_json:
+            merchant_greetings = {k: __(v) for k, v in _merchant_json["merchant_greetings_i18n"].items()}
+    else:
+        merchant_dict = {}
+        merchant_title = {}
+        merchant_greetings = {}
+
+    # EN: Load brothel ranking reputation titles from JSON (BK Evolution).
+    # ZH: 从 JSON 加载青楼声望等级头衔（BK Evolution）。
+    _rankings_json = DataLoader.load_rankings()
+    if _rankings_json and "brothel_ranking_reputations_i18n" in _rankings_json:
+        brothel_ranking_reputations = {int(k): __(v) for k, v in _rankings_json["brothel_ranking_reputations_i18n"].items()}
+    else:
+        brothel_ranking_reputations = {}
+
+    # EN: Load event sounds and gold threat parameters from JSON (BK Evolution).
+    # ZH: 从 JSON 加载事件音效和金币威胁参数（BK Evolution）。
+    _threat_json = DataLoader.load_threat_params()
+    if _threat_json:
+        if "event_sounds" in _threat_json:
+            event_sounds = {}
+            for k, v in _threat_json["event_sounds"].items():
+                event_sounds[k] = getattr(store, v, None)
+        if "gold_threat_amount" in _threat_json:
+            gold_threat_amount = {int(k): v for k, v in _threat_json["gold_threat_amount"].items()}
+        if "gold_threat_max" in _threat_json:
+            gold_threat_max = {int(k): v for k, v in _threat_json["gold_threat_max"].items()}
+    else:
+        event_sounds = {}
+        gold_threat_amount = {}
+        gold_threat_max = {}
+
+    # EN: Load preference responses and act descriptions from JSON (BK Evolution).
+    # ZH: 从 JSON 加载偏好反应和性行为描述文本（BK Evolution）。
+    _sex_desc_json = DataLoader.load_sex_descriptions()
+    if _sex_desc_json:
+        if "pref_response_i18n" in _sex_desc_json:
+            pref_response = {k: __(v) for k, v in _sex_desc_json["pref_response_i18n"].items()}
+        if "long_act_description_i18n" in _sex_desc_json:
+            long_act_description = {k: __(v) for k, v in _sex_desc_json["long_act_description_i18n"].items()}
+        if "experienced_description_i18n" in _sex_desc_json:
+            experienced_description = {k: __(v) for k, v in _sex_desc_json["experienced_description_i18n"].items()}
+    else:
+        pref_response = {}
+        long_act_description = {}
+        experienced_description = {}
+
+    # EN: Load miscellaneous UI texts from JSON (BK Evolution).
+    # ZH: 从 JSON 加载杂项 UI 文本（BK Evolution）。
+    _misc_json = DataLoader.load_misc_texts()
+    if _misc_json:
+        if "shopgirl_comment_i18n" in _misc_json:
+            shopgirl_comment = {k: __(v) for k, v in _misc_json["shopgirl_comment_i18n"].items()}
+        if "gift_description_i18n" in _misc_json:
+            gift_description = {k: __(v) for k, v in _misc_json["gift_description_i18n"].items()}
+        if "class_prefixes_i18n" in _misc_json:
+            class_prefixes = {int(k): __(v) for k, v in _misc_json["class_prefixes_i18n"].items()}
+    else:
+        shopgirl_comment = {}
+        gift_description = {}
+        class_prefixes = {}
+
+    # EN: Load small UI text dictionaries from JSON (BK Evolution).
+    # ZH: 从 JSON 加载小型 UI 文本字典（BK Evolution）。
+    _small_json = DataLoader.load_small_texts()
+    if _small_json:
+        if "attract_pop_dict_i18n" in _small_json:
+            attract_pop_dict = {int(k): __(v) for k, v in _small_json["attract_pop_dict_i18n"].items()}
+        if "workshift_dict_i18n" in _small_json:
+            workshift_dict = {int(k): __(v) for k, v in _small_json["workshift_dict_i18n"].items()}
+        if "special_quest_description_i18n" in _small_json:
+            special_quest_description = {k: __(v) for k, v in _small_json["special_quest_description_i18n"].items()}
+    else:
+        attract_pop_dict = {}
+        workshift_dict = {}
+        special_quest_description = {}
+
+    # EN: Load contract task definitions from JSON (BK Evolution).
+    # ZH: 从 JSON 加载契约任务定义（BK Evolution）。
+    _contracts_json = DataLoader.load_contract_tasks()
+    if _contracts_json:
+        if "contract_description_i18n" in _contracts_json:
+            contract_description = {k: __(v) for k, v in _contracts_json["contract_description_i18n"].items()}
+        if "contract_task_types_order" in _contracts_json:
+            contract_task_types_order = _contracts_json["contract_task_types_order"]
+        if "contract_task_types_description_i18n" in _contracts_json:
+            contract_task_types_description = {k: __(v) for k, v in _contracts_json["contract_task_types_description_i18n"].items()}
+        if "contract_tasks" in _contracts_json:
+            contract_tasks = []
+            for t in _contracts_json["contract_tasks"]:
+                kwargs = {
+                    "name": __(t.get("name_i18n", t.get("name", ""))),
+                    "type": t["type"],
+                    "requirements": t["requirements"],
+                    "tags": tuple(tuple(x) if isinstance(x, list) else x for x in t["tags"]),
+                }
+                if "and_tags" in t and t["and_tags"]:
+                    kwargs["and_tags"] = t["and_tags"]
+                if "and_tags2" in t and t["and_tags2"]:
+                    kwargs["and_tags2"] = t["and_tags2"]
+                if "soft" in t:
+                    kwargs["soft"] = t["soft"]
+                contract_tasks.append(ContractTask(**kwargs))
+    else:
+        contract_description = {}
+        contract_task_types_order = {}
+        contract_task_types_description = {}
+        contract_tasks = []
+
+    # EN: Load MC class/stat/god/alignment descriptions from JSON (BK Evolution).
+    # ZH: 从 JSON 加载主角职业/属性/神祇/阵营描述（BK Evolution）。
+    _mc_json = DataLoader.load_mc_descriptions()
+    if _mc_json:
+        if "MC_playerclass_description_i18n" in _mc_json:
+            MC_playerclass_description = {k: __(v) for k, v in _mc_json["MC_playerclass_description_i18n"].items()}
+        if "MC_stat_description_i18n" in _mc_json:
+            MC_stat_description = {k: __(v) for k, v in _mc_json["MC_stat_description_i18n"].items()}
+        if "god_description_i18n" in _mc_json:
+            god_description = {(None if k == "null" else k): __(v) for k, v in _mc_json["god_description_i18n"].items()}
+        if "alignment_description_i18n" in _mc_json:
+            alignment_description = {k: __(v) for k, v in _mc_json["alignment_description_i18n"].items()}
+    else:
+        MC_playerclass_description = {}
+        MC_stat_description = {}
+        god_description = {}
+        alignment_description = {}
+
+    # NOTE: TagRegistry tag_dict is loaded from JSON in settings.rpy (init -10)
+    # and registered at init -4, before tag_list_dict is built at init -3.

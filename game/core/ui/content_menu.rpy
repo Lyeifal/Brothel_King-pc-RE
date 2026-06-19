@@ -220,7 +220,7 @@ screen h_content(): # H preferences and various game settings
 
                 for setting in hm_settings[section]:
                     if is_string(setting):
-                        text "\n" + setting
+                        text _("\n%s") % setting
                     elif setting.special: # Custom buttons that do not behave as toggleable objects
                         # Forbidden_tags
                         if setting.variable == "forbidden_tags":

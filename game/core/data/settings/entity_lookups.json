@@ -1,0 +1,12 @@
+{
+    "god_dict": {
+        "Arios": "light",
+        "Shalia": "dark",
+        "null": "neutral"
+    },
+    "name_map": {
+        "captain": "farah",
+        "lieutenant": "lydie"
+    },
+    "all_qualities": ["junk", "common", "rare", "exceptional"]
+}

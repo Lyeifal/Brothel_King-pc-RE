@@ -1,0 +1,86 @@
+{
+    "_description": "Random pools for girl background generation. Loaded into slave_stories, homes, guardians, hobbies, colors, food, drinks. See BK_EVOLUTION_DATA_MIGRATION.md.",
+    "slave_stories": [
+        "slave_story1",
+        "slave_story2",
+        "slave_story3",
+        "slave_story4",
+        "slave_story5",
+        "slave_story6",
+        "slave_story7",
+        "slave_story8"
+    ],
+    "homes": [
+        "palace",
+        "hovel",
+        "mansion",
+        "shack",
+        "hut",
+        "big house",
+        "small house",
+        "temple",
+        "shop",
+        "old house",
+        "tower",
+        "church"
+    ],
+    "guardians": [
+        "parents",
+        "dad",
+        "mom",
+        "uncle",
+        "grand-ma",
+        "auntie",
+        "grand-pa",
+        "big brother",
+        "big sister",
+        "little brother",
+        "little sister",
+        "tutor"
+    ],
+    "hobbies": [
+        "painting",
+        "singing",
+        "playing music",
+        "hiking",
+        "gambling",
+        "shopping",
+        "reading",
+        "weaving",
+        "swimming",
+        "writing"
+    ],
+    "colors": [
+        "white",
+        "yellow",
+        "red",
+        "green",
+        "blue",
+        "purple",
+        "orange",
+        "pink",
+        "black"
+    ],
+    "food": [
+        "cake",
+        "cream",
+        "fish",
+        "fruit",
+        "meat",
+        "cookies",
+        "sweets",
+        "chocolate",
+        "bread",
+        "rice"
+    ],
+    "drinks": [
+        "milk",
+        "sake",
+        "wine",
+        "beer",
+        "apple juice",
+        "lemon juice",
+        "mango juice",
+        "spice water"
+    ]
+}

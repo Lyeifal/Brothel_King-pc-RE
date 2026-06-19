@@ -1,0 +1,55 @@
+{
+    "_description": "Sex training parameters. Loaded into base_reluctance, preference_modifier, preference_limit, experienced_modifiers, experienced_color, sexual_training_value. See BK_EVOLUTION_DATA_MIGRATION.md.",
+    "base_reluctance": {
+        "naked": -375,
+        "service": -500,
+        "sex": -500,
+        "anal": -750,
+        "fetish": -750,
+        "bisexual": -750,
+        "group": -1000
+    },
+    "preference_modifier": {
+        "refuses": 150,
+        "very reluctant": 75,
+        "reluctant": 50,
+        "a little reluctant": 25,
+        "indifferent": 0,
+        "a little interested": -5,
+        "interested": -15,
+        "very interested": -35,
+        "fascinated": -75
+    },
+    "preference_limit": {
+        "refuses": 3.0,
+        "very reluctant": 0.9,
+        "reluctant": 0.7,
+        "a little reluctant": 0.5,
+        "indifferent": 0.2,
+        "a little interested": -0.2,
+        "interested": -0.5,
+        "very interested": -0.7,
+        "fascinated": -0.9
+    },
+    "experienced_modifiers": {
+        "very experienced": [250, 150, 75],
+        "experienced": [150, 75, 25],
+        "average": [75, 25, 0],
+        "inexperienced": [25, 0, -25],
+        "very inexperienced": [0, 0, -50]
+    },
+    "experienced_color": {
+        "very experienced": "#FF9900",
+        "experienced": "#00B050",
+        "average": "#FFFF33",
+        "inexperienced": "#F78181",
+        "very inexperienced": "#FF0000"
+    },
+    "sexual_training_value": {
+        "very experienced": 1,
+        "experienced": 2,
+        "average": 3,
+        "inexperienced": 4,
+        "very inexperienced": 5
+    }
+}

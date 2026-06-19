@@ -1,0 +1,21 @@
+{
+  "_description": "Training prerequisite conditions. Keys are act names, values are lists of (required_act, required_preference_level) tuples. All values are code identifiers, not translatable text. No _i18n suffix.",
+  "training_test_dict": {
+    "naked": [],
+    "service": [["naked", "reluctant"], ["service", "reluctant"]],
+    "sex": [["naked", "indifferent"], ["service", "indifferent"], ["sex", "reluctant"]],
+    "anal": [["sex", "indifferent"], ["anal", "reluctant"]],
+    "fetish": [["anal", "indifferent"], ["service", "interested"], ["fetish", "reluctant"]],
+    "bisexual": [["sex", "interested"], ["service", "interested"], ["bisexual", "indifferent"]],
+    "group": [["anal", "interested"], ["sex", "fascinated"], ["group", "indifferent"]]
+  },
+  "magic_training_test_dict": {
+    "naked": [],
+    "service": [],
+    "sex": [["naked", "reluctant"], ["service", "reluctant"], ["sex", "very reluctant"]],
+    "anal": [["sex", "reluctant"], ["anal", "very reluctant"]],
+    "fetish": [["anal", "reluctant"], ["service", "indifferent"], ["fetish", "very reluctant"]],
+    "bisexual": [["sex", "indifferent"], ["service", "indifferent"], ["bisexual", "reluctant"]],
+    "group": [["anal", "a little interested"], ["sex", "very interested"], ["group", "a little reluctant"]]
+  }
+}

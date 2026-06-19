@@ -1,0 +1,14 @@
+{
+  "_description": "Quest gold rates and class prices. All values are numeric, not translatable text. No _i18n suffix.",
+  "quest_base_gold": {
+    "normal": 1,
+    "sex": 2
+  },
+  "class_prices": {
+    "1": 100,
+    "2": 250,
+    "3": 500,
+    "4": 1000,
+    "5": 1000
+  }
+}

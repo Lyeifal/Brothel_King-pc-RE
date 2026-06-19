@@ -1,0 +1,44 @@
+{
+  "channels": [
+    "story",
+    "story2",
+    "story3",
+    "advance",
+    "advance2",
+    "papa",
+    "contract",
+    "other"
+  ],
+  "channels_no_story": [
+    "advance",
+    "advance2",
+    "contract",
+    "other"
+  ],
+  "categories": {
+    "story": "STORY",
+    "story2": "STORY",
+    "story3": "STORY",
+    "advance": "ADVANCE",
+    "advance2": "ADVANCE",
+    "contract": "CONTRACT",
+    "other": "MISC",
+    "papa": "MISC"
+  },
+  "tb": {
+    "story": "tb story",
+    "story2": "tb story",
+    "story3": "tb story",
+    "advance": "tb advance",
+    "advance2": "tb advance",
+    "contract": "tb contract",
+    "other": "tb other",
+    "papa": "tb papa"
+  },
+  "colors": {
+    "STORY": "#9683EC",
+    "ADVANCE": "#A41CC6",
+    "CONTRACT": "#B22222",
+    "MISC": "#FFFF33"
+  }
+}

@@ -19,7 +19,9 @@ init python:
 
 
 
-    achievement_list = [
+    ## EN: Fallback achievement data (used only if JSON is missing).
+    ## ZH: 成就 fallback 数据（仅在 JSON 缺失时使用）。
+    _fallback_achievement_list = [
                         Achievement("Introduction: Brothel Management 101", "Watch the introduction.", pic="portrait.webp", pic_path="resources/characters/npc/Sill/", target="intro"),
 
                         Achievement("New trainer: Maya", "You have unlocked Maya. She can improve your girls' defense.", pic="portrait.webp", pic_path="resources/characters/npc/Maya/", target="trainer maya", multi=3),
@@ -278,13 +280,23 @@ init python:
                         Achievement("Hall of Fame", "Reach #%s spot in the city's brothel rankings.", pic="holy handgrenade.webp", pic_path="resources/items/weapon/", target="brothel ranking", level_nb=8, requirements={1 : 35, 2 : 30, 3 : 25, 4 : 20, 5 : 15, 6 : 10, 7: 5, 8: 1}, multi=5),
                         ]
 
+    ## EN: Load achievements from JSON (BK Evolution), fallback to hardcoded list.
+    ## ZH: 从 JSON 加载成就（BK Evolution），否则使用硬编码列表。
+    achievement_list = DataLoader.load_achievements() or _fallback_achievement_list
+
     achievement_dict = {}
 
     for achv in achievement_list:
         achievement_dict[achv.target] = achv
 
     # List of achievement targets that are tested with a game.track() update
-    tracked_achievements = ["used toy", "farm_days", "had sex", "completed quest", "completed class", "completed contracts", "total_gold", "security events", "neg fixation removed", "hypnotize success", "hypnotize failure", "sell girl gold", "raped", "beaten", "punished", "rewarded", "free girl acquired", "origin stories", "gold spent slavemarket", "gold spent shops", "gold clean", "kosmo", "powers", "purple mojo", "green mojo", "blue mojo", "red mojo", "yellow mojo", "broken", "broken girl street", "perform service", "perform sex", "perform anal", "perform fetish", "perform bisexual", "perform group"]
+    ## EN: Load tracked achievement targets from JSON (BK Evolution), fallback to hardcoded.
+    ## ZH: 从 JSON 加载成就追踪目标（BK Evolution），否则使用硬编码。
+    _ta_json = DataLoader.load_tracked_achievements()
+    if _ta_json:
+        tracked_achievements = _ta_json.get("tracked_achievements", [])
+    else:
+        tracked_achievements = ["used toy", "farm_days", "had sex", "completed quest", "completed class", "completed contracts", "total_gold", "security events", "neg fixation removed", "hypnotize success", "hypnotize failure", "sell girl gold", "raped", "beaten", "punished", "rewarded", "free girl acquired", "origin stories", "gold spent slavemarket", "gold spent shops", "gold clean", "kosmo", "powers", "purple mojo", "green mojo", "blue mojo", "red mojo", "yellow mojo", "broken", "broken girl street", "perform service", "perform sex", "perform anal", "perform fetish", "perform bisexual", "perform group"]
 
     def unlock_achievement(target, level_cap=99):
         if target not in achievement_dict.keys():

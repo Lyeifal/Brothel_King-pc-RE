@@ -1,0 +1,39 @@
+{
+    "training_difficulty": {
+        "naked": 10,
+        "service": 12,
+        "sex": 12,
+        "anal": 13,
+        "fetish": 13,
+        "bisexual": 13,
+        "group": 14
+    },
+    "obedience_training_difficulty": {
+        "very dom": 7,
+        "dom": 6,
+        "very sub": 4,
+        "sub": 5
+    },
+    "constitution_training_difficulty": {
+        "very introvert": 7,
+        "introvert": 6,
+        "very extravert": 4,
+        "extravert": 5
+    },
+    "hypnosis_training_difficulty": {
+        "obedience": 2,
+        "libido": 2,
+        "sensitivity": 2,
+        "naked": 4,
+        "service": 5,
+        "sex": 6,
+        "anal": 7,
+        "fetish": 8,
+        "bisexual": 9,
+        "group": 10
+    },
+    "hypnosis_personality_modifiers": {
+        "very dom": 1,
+        "very sub": -2
+    }
+}

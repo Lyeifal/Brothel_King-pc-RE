@@ -1,0 +1,16 @@
+{
+  "stat_increase_dict_i18n": {
+    "level": "\n{color=[c_lightgreen]}LEVEL UP{/color}",
+    "stat": "\n%s {color=[c_green]}+%s{/color}",
+    "stat_neg": "\n%s {color=[c_red]}%s{/color}",
+    "xp": "\nXP {color=[c_lightgreen]}+%s{/color}",
+    "xp_dark": "\nXP {color=[c_darkgreen]}+%s{/color}",
+    "jp": "\nJP {color=[c_orange]}+%s{/color}",
+    "gold+": "\nGold {color=[c_darkgold]}+%s{/color}",
+    "gold-": "\nGold {color=[c_darkgold]}%s{/color}",
+    "rep": "\nRep. {color=[c_softpurple]}+%s{/color}",
+    "rep_neg": "\nRep. {color=[c_red]}%s{/color}",
+    "job_up": "\n{color=[c_orange]}JOB SKILL UP{/color}",
+    "rank": "\n{color=[c_softpurple]}NEW RANK AVAILABLE{/color}"
+  }
+}

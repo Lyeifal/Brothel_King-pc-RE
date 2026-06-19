@@ -1,0 +1,999 @@
+{
+    "contract_description_i18n": {
+        "cruise": ":ORG: is organizing a nightly cruise tour of :dis: to thank its members for their hard work this year. :AVEN: will depart for a sightseeing tour of the bay at dusk, then moor next to the :LOC: for a night of entertainment.",
+        "party": ":ORG: is throwing a lavish party in :aven: near the :LOC:. Everyone who is anyone in Zan is expected to attend and party until well after dawn.",
+        "ceremony": ":ORG: chose :aven: near the :LOC: to celebrate one of their numerous holy days. In order to get closer to their deity, worshippers are expected to transcend both spirit and flesh by indulging in the most shameful pleasures, washing away their sins with large amounts of holy alcohol, conveniently sold on the premises by the Church.",
+        "festival": ":ORG: is throwing a huge festival next month in :dis:, to celebrate a new season, a three-headed cow, the sun rising again, or some other redneck nonsense. Still, there will be a big feast at :aven: near the :LOC: complete with food, drinks, shows and of course, girls!",
+        "date": ":ORG: has invited a few friends to :aven: next to the :LOC: for the night, and has requested some company. Well-groomed, well-behaved female servants are expected to tend to his every need.",
+        "meeting": ":ORG: convened a meeting of like-minded nobles and diplomats to discuss :ven: in a discreet venue near the :LOC:. While the intricacies of this grave topic will occupy much of their time, they will also expect their hosts to provide top-notch service and ways of 'relieving' the tension.",
+        "magic": ":ORG: summoned all arcane users to a night of fun and magic out in the :LOC:. Tended to by beautiful women, the guests will attend special events in :aven:, overlooking the magnificence of :DIS:.",
+        "orgy": ":ORG: is happy to announce a long night of hedonism and erotic surprises in the :LOC:. Gathered in :aven:, the guests will enjoy forbidden pleasure with like-minded individuals and a hand-picked selection of elite sex slaves."
+    },
+    "contract_task_types_order": {
+        "greet": 1,
+        "serve": 2,
+        "mingle": 3,
+        "event": 4,
+        "private show": 5,
+        "fun": 6
+    },
+    "contract_task_types_description_i18n": {
+        "greet": "Greet Guests",
+        "serve": "Serve Guests",
+        "mingle": "Socialize",
+        "event": "Participate In An Event",
+        "private show": "Deliver A Private Show",
+        "fun": "Have 'Fun'"
+    },
+    "contract_tasks": [
+        {
+            "type": "serve",
+            "requirements": [
+                "job waitress",
+                "skill obedience",
+                "skill constitution"
+            ],
+            "tags": [
+                [
+                    "maid"
+                ],
+                [
+                    "obedience"
+                ],
+                [
+                    "waitress"
+                ],
+                [
+                    "profile"
+                ]
+            ],
+            "name_i18n": "clean"
+        },
+        {
+            "type": "serve",
+            "requirements": [
+                "job waitress",
+                "skill beauty",
+                "skill charm",
+                "skill obedience"
+            ],
+            "tags": [
+                [
+                    "waitress"
+                ],
+                [
+                    "profile"
+                ]
+            ],
+            "name_i18n": "serve guests"
+        },
+        {
+            "type": "serve",
+            "requirements": [
+                "job waitress",
+                "skill beauty",
+                "skill charm",
+                "skill constitution"
+            ],
+            "tags": [
+                [
+                    "waitress"
+                ],
+                [
+                    "profile"
+                ]
+            ],
+            "name_i18n": "serve drinks"
+        },
+        {
+            "type": "serve",
+            "requirements": [
+                "job waitress",
+                "job geisha",
+                "skill charm",
+                "skill obedience"
+            ],
+            "tags": [
+                [
+                    "waitress",
+                    "geisha"
+                ],
+                [
+                    "profile"
+                ]
+            ],
+            "name_i18n": "feed guests"
+        },
+        {
+            "type": "mingle",
+            "requirements": [
+                "job masseuse",
+                "skill beauty",
+                "skill body",
+                "skill charm",
+                "skill obedience",
+                "skill constitution"
+            ],
+            "tags": [
+                [
+                    "masseuse"
+                ],
+                [
+                    "swim"
+                ],
+                [
+                    "profile"
+                ]
+            ],
+            "name_i18n": "onsen"
+        },
+        {
+            "type": "mingle",
+            "requirements": [
+                "job masseuse",
+                "skill beauty",
+                "skill body",
+                "skill charm"
+            ],
+            "tags": [
+                [
+                    "swim"
+                ],
+                [
+                    "masseuse"
+                ],
+                [
+                    "profile"
+                ]
+            ],
+            "name_i18n": "swimming pool"
+        },
+        {
+            "type": "event",
+            "requirements": [
+                "job masseuse",
+                "skill beauty",
+                "skill body",
+                "skill constitution"
+            ],
+            "tags": [
+                [
+                    "swim"
+                ],
+                [
+                    "profile"
+                ]
+            ],
+            "and_tags": [
+                "rest"
+            ],
+            "name_i18n": "swimming show"
+        },
+        {
+            "type": "event",
+            "requirements": [
+                "job dancer",
+                "skill body",
+                "skill refinement",
+                "skill libido"
+            ],
+            "tags": [
+                "profile"
+            ],
+            "and_tags": [
+                "libido"
+            ],
+            "name_i18n": "lingerie show"
+        },
+        {
+            "type": "greet",
+            "requirements": [
+                "job dancer",
+                "skill beauty",
+                "skill charm",
+                "skill refinement",
+                "skill libido"
+            ],
+            "tags": [
+                [
+                    "model"
+                ],
+                [
+                    "profile"
+                ]
+            ],
+            "and_tags": [
+                "libido"
+            ],
+            "name_i18n": "entice guests"
+        },
+        {
+            "type": "private show",
+            "requirements": [
+                "job dancer",
+                "skill body",
+                "skill refinement",
+                "skill constitution"
+            ],
+            "tags": [
+                [
+                    "dance"
+                ],
+                [
+                    "profile"
+                ]
+            ],
+            "name_i18n": "dance show"
+        },
+        {
+            "type": "private show",
+            "requirements": [
+                "job dancer",
+                "skill body",
+                "skill libido",
+                "skill constitution"
+            ],
+            "tags": [
+                [
+                    "dance"
+                ],
+                [
+                    "profile"
+                ]
+            ],
+            "and_tags": [
+                "libido"
+            ],
+            "name_i18n": "erotic show"
+        },
+        {
+            "type": "mingle",
+            "requirements": [
+                "job waitress",
+                "job dancer",
+                "skill charm",
+                "skill libido"
+            ],
+            "tags": [
+                [
+                    "cosplay"
+                ],
+                [
+                    "dance"
+                ],
+                [
+                    "profile"
+                ]
+            ],
+            "name_i18n": "cosplay"
+        },
+        {
+            "type": "private show",
+            "requirements": [
+                "job dancer",
+                "skill body",
+                "skill obedience",
+                "skill libido"
+            ],
+            "tags": [
+                [
+                    "dance"
+                ],
+                [
+                    "profile"
+                ]
+            ],
+            "and_tags": [
+                "libido"
+            ],
+            "name_i18n": "lap dance"
+        },
+        {
+            "type": "greet",
+            "requirements": [
+                "job masseuse",
+                "skill beauty",
+                "skill charm"
+            ],
+            "tags": [
+                [
+                    "masseuse"
+                ],
+                [
+                    "profile"
+                ]
+            ],
+            "name_i18n": "welcome massage"
+        },
+        {
+            "type": "serve",
+            "requirements": [
+                "job masseuse",
+                "skill beauty",
+                "skill charm",
+                "skill libido"
+            ],
+            "tags": [
+                [
+                    "masseuse"
+                ],
+                [
+                    "profile"
+                ]
+            ],
+            "and_tags": [
+                "libido"
+            ],
+            "name_i18n": "erotic massage"
+        },
+        {
+            "type": "mingle",
+            "requirements": [
+                "job geisha",
+                "skill beauty",
+                "skill charm",
+                "skill refinement"
+            ],
+            "tags": [
+                [
+                    "geisha"
+                ],
+                [
+                    "profile"
+                ]
+            ],
+            "name_i18n": "conversation"
+        },
+        {
+            "type": "greet",
+            "requirements": [
+                "job geisha",
+                "skill charm",
+                "skill refinement",
+                "skill obedience"
+            ],
+            "tags": [
+                [
+                    "geisha"
+                ],
+                [
+                    "profile"
+                ]
+            ],
+            "name_i18n": "protocol"
+        },
+        {
+            "type": "mingle",
+            "requirements": [
+                "job geisha",
+                "skill beauty",
+                "skill refinement"
+            ],
+            "tags": [
+                [
+                    "geisha"
+                ],
+                [
+                    "profile"
+                ]
+            ],
+            "name_i18n": "ceremony"
+        },
+        {
+            "type": "greet",
+            "requirements": [
+                "job geisha",
+                "skill charm",
+                "skill obedience"
+            ],
+            "tags": [
+                [
+                    "geisha"
+                ],
+                [
+                    "profile"
+                ]
+            ],
+            "name_i18n": "welcome guests"
+        },
+        {
+            "type": "greet",
+            "requirements": [
+                "skill beauty",
+                "skill refinement",
+                "skill libido"
+            ],
+            "tags": [
+                [
+                    "kiss"
+                ],
+                [
+                    "profile"
+                ]
+            ],
+            "name_i18n": "kiss guests"
+        },
+        {
+            "type": "event",
+            "requirements": [
+                "skill beauty",
+                "skill refinement"
+            ],
+            "tags": [
+                [
+                    "model"
+                ],
+                [
+                    "dance"
+                ],
+                [
+                    "profile"
+                ]
+            ],
+            "name_i18n": "catwalk"
+        },
+        {
+            "type": "event",
+            "requirements": [
+                "skill body",
+                "skill constitution"
+            ],
+            "tags": [
+                [
+                    "fight"
+                ],
+                [
+                    "dance"
+                ],
+                [
+                    "profile"
+                ]
+            ],
+            "name_i18n": "catfight"
+        },
+        {
+            "type": "mingle",
+            "requirements": [
+                "skill beauty",
+                "skill refinement",
+                "skill obedience"
+            ],
+            "tags": [
+                [
+                    "model"
+                ],
+                [
+                    "profile"
+                ]
+            ],
+            "name_i18n": "art model"
+        },
+        {
+            "type": "greet",
+            "requirements": [
+                "skill refinement",
+                "skill obedience"
+            ],
+            "tags": [
+                [
+                    "sub"
+                ],
+                [
+                    "profile"
+                ]
+            ],
+            "name_i18n": "sub greeting"
+        },
+        {
+            "type": "greet",
+            "requirements": [
+                "skill refinement",
+                "skill libido",
+                "skill constitution"
+            ],
+            "tags": [
+                [
+                    "dom"
+                ],
+                [
+                    "profile"
+                ]
+            ],
+            "name_i18n": "dom greeting"
+        },
+        {
+            "type": "event",
+            "requirements": [
+                "skill body",
+                "skill constitution"
+            ],
+            "tags": [
+                [
+                    "constitution"
+                ],
+                [
+                    "profile"
+                ]
+            ],
+            "name_i18n": "sports show"
+        },
+        {
+            "type": "mingle",
+            "requirements": [
+                "job masseuse",
+                "skill body",
+                "skill charm",
+                "skill libido"
+            ],
+            "tags": [
+                [
+                    "fondle",
+                    "grope"
+                ],
+                [
+                    "profile"
+                ]
+            ],
+            "name_i18n": "fondle"
+        },
+        {
+            "type": "private show",
+            "requirements": [
+                "skill beauty",
+                "skill body",
+                "skill refinement",
+                "skill libido"
+            ],
+            "tags": [
+                [
+                    "strip"
+                ],
+                [
+                    "naked"
+                ]
+            ],
+            "soft": "naked",
+            "name_i18n": "strip"
+        },
+        {
+            "type": "mingle",
+            "requirements": [
+                "skill body",
+                "skill charm",
+                "skill obedience"
+            ],
+            "tags": [
+                [
+                    "waitress"
+                ],
+                [
+                    "geisha"
+                ],
+                [
+                    "profile"
+                ]
+            ],
+            "and_tags": [
+                "naked"
+            ],
+            "soft": "naked",
+            "name_i18n": "nude help"
+        },
+        {
+            "type": "fun",
+            "requirements": [
+                "skill body",
+                "skill libido"
+            ],
+            "tags": [
+                "naked"
+            ],
+            "and_tags2": [
+                "cum shower"
+            ],
+            "soft": "naked",
+            "name_i18n": "naked"
+        },
+        {
+            "type": "private show",
+            "requirements": [
+                "job service",
+                "skill constitution",
+                "skill service",
+                "pref service"
+            ],
+            "tags": [
+                [
+                    "service"
+                ],
+                [
+                    "naked"
+                ]
+            ],
+            "and_tags": [
+                "mast"
+            ],
+            "soft": false,
+            "name_i18n": "masturbate"
+        },
+        {
+            "type": "serve",
+            "requirements": [
+                "job waitress",
+                "job service",
+                "skill charm",
+                "skill service",
+                "pref service"
+            ],
+            "tags": [
+                [
+                    "waitress"
+                ],
+                [
+                    "service"
+                ],
+                [
+                    "naked"
+                ]
+            ],
+            "and_tags": [
+                "service"
+            ],
+            "soft": false,
+            "name_i18n": "barmaid blowjob"
+        },
+        {
+            "type": "fun",
+            "requirements": [
+                "job service",
+                "skill service",
+                "pref service"
+            ],
+            "tags": [
+                [
+                    "service"
+                ],
+                [
+                    "naked"
+                ]
+            ],
+            "and_tags2": [
+                "cim"
+            ],
+            "soft": false,
+            "name_i18n": "service"
+        },
+        {
+            "type": "event",
+            "requirements": [
+                "job sex",
+                "skill libido",
+                "skill sex",
+                "pref sex"
+            ],
+            "tags": [
+                [
+                    "cosplay"
+                ],
+                [
+                    "sex"
+                ],
+                [
+                    "naked"
+                ]
+            ],
+            "and_tags": [
+                "sex"
+            ],
+            "soft": false,
+            "name_i18n": "cosplay sex"
+        },
+        {
+            "type": "serve",
+            "requirements": [
+                "job masseuse",
+                "job sex",
+                "skill beauty",
+                "skill sex",
+                "pref sex"
+            ],
+            "tags": [
+                [
+                    "masseuse"
+                ],
+                [
+                    "sex"
+                ],
+                [
+                    "naked"
+                ]
+            ],
+            "and_tags": [
+                "sex"
+            ],
+            "soft": false,
+            "name_i18n": "full service massage"
+        },
+        {
+            "type": "fun",
+            "requirements": [
+                "job sex",
+                "skill libido",
+                "skill sex",
+                "pref sex"
+            ],
+            "tags": [
+                [
+                    "sex"
+                ],
+                [
+                    "naked"
+                ]
+            ],
+            "and_tags2": [
+                "creampie"
+            ],
+            "soft": false,
+            "name_i18n": "sex"
+        },
+        {
+            "type": "event",
+            "requirements": [
+                "job anal",
+                "skill obedience",
+                "skill constitution",
+                "skill anal",
+                "pref anal"
+            ],
+            "tags": [
+                [
+                    "cosplay"
+                ],
+                [
+                    "anal"
+                ],
+                [
+                    "naked"
+                ]
+            ],
+            "and_tags": [
+                "anal"
+            ],
+            "soft": false,
+            "name_i18n": "cosplay anal"
+        },
+        {
+            "type": "private show",
+            "requirements": [
+                "job dancer",
+                "job anal",
+                "skill constitution",
+                "skill anal",
+                "pref anal"
+            ],
+            "tags": [
+                [
+                    "dancer"
+                ],
+                [
+                    "anal"
+                ],
+                [
+                    "naked"
+                ]
+            ],
+            "and_tags": [
+                "anal"
+            ],
+            "soft": false,
+            "name_i18n": "anal dance"
+        },
+        {
+            "type": "fun",
+            "requirements": [
+                "job anal",
+                "skill constitution",
+                "skill anal",
+                "pref anal"
+            ],
+            "tags": [
+                [
+                    "anal"
+                ],
+                [
+                    "naked"
+                ]
+            ],
+            "and_tags2": [
+                "cob"
+            ],
+            "soft": false,
+            "name_i18n": "anal"
+        },
+        {
+            "type": "private show",
+            "requirements": [
+                "job fetish",
+                "skill obedience",
+                "skill fetish",
+                "pref fetish"
+            ],
+            "tags": [
+                [
+                    "fetish"
+                ],
+                [
+                    "naked"
+                ]
+            ],
+            "and_tags": [
+                "toy"
+            ],
+            "soft": false,
+            "name_i18n": "toy"
+        },
+        {
+            "type": "event",
+            "requirements": [
+                "job geisha",
+                "job fetish",
+                "skill refinement",
+                "skill fetish",
+                "pref fetish"
+            ],
+            "tags": [
+                [
+                    "geisha"
+                ],
+                [
+                    "fetish"
+                ],
+                [
+                    "naked"
+                ]
+            ],
+            "and_tags": [
+                "fetish"
+            ],
+            "soft": false,
+            "name_i18n": "geisha bondage"
+        },
+        {
+            "type": "fun",
+            "requirements": [
+                "job fetish",
+                "skill obedience",
+                "skill fetish",
+                "pref fetish"
+            ],
+            "tags": [
+                [
+                    "fetish"
+                ],
+                [
+                    "naked"
+                ]
+            ],
+            "and_tags2": [
+                "cof"
+            ],
+            "soft": false,
+            "name_i18n": "fetish"
+        },
+        {
+            "type": "fun",
+            "requirements": [
+                "job sex",
+                "skill libido",
+                "skill sex",
+                "pref sex"
+            ],
+            "tags": [
+                [
+                    "sex"
+                ],
+                [
+                    "group"
+                ],
+                [
+                    "naked"
+                ]
+            ],
+            "and_tags": [
+                "group"
+            ],
+            "and_tags2": [
+                "group",
+                "bukkake"
+            ],
+            "soft": false,
+            "name_i18n": "group sex"
+        },
+        {
+            "type": "fun",
+            "requirements": [
+                "job anal",
+                "skill constitution",
+                "skill anal",
+                "pref anal"
+            ],
+            "tags": [
+                [
+                    "anal"
+                ],
+                [
+                    "group"
+                ],
+                [
+                    "naked"
+                ]
+            ],
+            "and_tags": [
+                "group"
+            ],
+            "and_tags2": [
+                "group",
+                "cum shower"
+            ],
+            "soft": false,
+            "name_i18n": "group anal"
+        },
+        {
+            "type": "fun",
+            "requirements": [
+                "job service",
+                "skill service",
+                "pref service"
+            ],
+            "tags": [
+                [
+                    "service"
+                ],
+                [
+                    "bisexual"
+                ],
+                [
+                    "naked"
+                ]
+            ],
+            "and_tags": [
+                "bisexual"
+            ],
+            "and_tags2": [
+                "bisexual",
+                "orgasm"
+            ],
+            "soft": false,
+            "name_i18n": "bisexual service"
+        },
+        {
+            "type": "fun",
+            "requirements": [
+                "job fetish",
+                "skill obedience",
+                "skill fetish",
+                "pref fetish"
+            ],
+            "tags": [
+                [
+                    "fetish"
+                ],
+                [
+                    "bisexual"
+                ],
+                [
+                    "naked"
+                ]
+            ],
+            "and_tags": [
+                "bisexual"
+            ],
+            "and_tags2": [
+                "bisexual",
+                "squirt"
+            ],
+            "soft": false,
+            "name_i18n": "bisexual fetish"
+        }
+    ]
+}

@@ -1,0 +1,31 @@
+{
+    "farm_holding_dict_i18n": {
+        "libido": "Tending to minions (Lib)",
+        "sensitivity": "Tending to Gizel (Sen)",
+        "obedience": "Cleaning up the farm (Ob)",
+        "constitution": "Working outside (Con)",
+        "rest": "Resting"
+    },
+    "farm_ttip_i18n": {
+        "libido": "She will tend to the farm creatures (boosts libido, costs energy).",
+        "sensitivity": "She will tend to Gizel personally (boosts sensitivity, costs energy).",
+        "obedience": "She will clean up the farm (boosts obedience, costs energy).",
+        "constitution": "She will work-out in the backyard (boosts constitution, costs energy).",
+        "rest": "She will be resting in her cell.",
+        "gentle": "In {b}gentle{/b} mode, she won't be forced to do something she doesn't want to. This training will not generate fear.",
+        "tough": "In {b}tough{/b} mode, Gizel will overcome moderate resistance on her part. This training will generate fear.",
+        "hardcore": "In {b}hardcore{/b} mode, Gizel will ignore all red lines and force her to do anything. This training will generate massive fear."
+    },
+    "farm_holding_stats": {
+        "constitution": ["naked", "obedience"],
+        "obedience": ["fetish", "libido"],
+        "sensitivity": ["bisexual", "constitution"],
+        "libido": ["service", "sensitivity"]
+    },
+    "farm_holding_tags": {
+        "constitution": ["run", "constitution"],
+        "obedience": ["obedience", "maid"],
+        "sensitivity": ["sensitivity"],
+        "libido": ["libido"]
+    }
+}

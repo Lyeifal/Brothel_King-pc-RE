@@ -78,45 +78,45 @@ init python:
 
         if keyword == "powers":
             if farm.powers == "super":
-                return persistent.help_dict[keyword] + " " + persistent.help_dict["powers supercharged"]
+                return __(persistent.help_dict[keyword]) + " " + __(persistent.help_dict["powers supercharged"])
         elif keyword == "farm":
             if farm.powers:
-                return persistent.help_dict[keyword] + " " + persistent.help_dict["farm powers"]
+                return __(persistent.help_dict[keyword]) + " " + __(persistent.help_dict["farm powers"])
         elif keyword == "fear":
             if farm.powers:
-                return persistent.help_dict[keyword] + "\n\n" + persistent.help_dict["fear mojo"]
+                return __(persistent.help_dict[keyword]) + "\n\n" + __(persistent.help_dict["fear mojo"])
         elif keyword.startswith("sexual preference") and farm.active:
-            return persistent.help_dict[keyword] + "\n\n" + persistent.help_dict["sexual preferences farm"]
+            return __(persistent.help_dict[keyword]) + "\n\n" + __(persistent.help_dict["sexual preferences farm"])
         elif keyword in ("home screen", "Main Character screen", "Girls screen", "Brothel screen", "City screen", "Slave Market screen", "Shop screen", "Postings screen", "End day"):
-            desc = persistent.help_dict[keyword]
+            desc = __(persistent.help_dict[keyword])
             if farm.active:
-                desc = desc % persistent.help_dict["home screen farm"]
+                desc = desc % __(persistent.help_dict["home screen farm"])
             else:
                 desc = desc % ""
             if keyword == "Brothel screen" and NPC_carpenter.active:
-                desc += "\n\n" + persistent.help_dict[keyword + " wagon"]
+                desc += "\n\n" + __(persistent.help_dict[keyword + " wagon"])
             return desc
         elif keyword in ("girls"):
             if farm.active:
-                return persistent.help_dict[keyword] % persistent.help_dict[keyword + " farm"]
+                return __(persistent.help_dict[keyword]) % __(persistent.help_dict[keyword + " farm"])
             else:
-                return persistent.help_dict[keyword] % ""
+                return __(persistent.help_dict[keyword]) % ""
 
         elif keyword == "shortcuts":
             desc = ""
             if NPC_carpenter.active:
-                desc += persistent.help_dict[keyword + " wagon"]
+                desc += __(persistent.help_dict[keyword + " wagon"])
             if farm.active:
-                desc += persistent.help_dict[keyword + " farm"]
-            return persistent.help_dict[keyword] % desc
+                desc += __(persistent.help_dict[keyword + " farm"])
+            return __(persistent.help_dict[keyword]) % desc
 
 
         # Generic case
 
         try:
-            return persistent.help_dict[keyword]
+            return __(persistent.help_dict[keyword])
         except:
-            return "Text not found: %s" % keyword
+            return __("Text not found: %s") % keyword
 
 
 ## Help pictures and text ##
@@ -125,169 +125,31 @@ init python:
 # Words in the description can be explicitely excluded from indexing by being prefaced with the '$' sign. $ signs are not displayed on screen.
 # Short common keywords (like 'sex') that are better off not being automatically highlighted in all cases can be explicitely declared and written by being prefaced with the '*' sign. * signs are not displayed on screen.
 
-    help_pic_dict = {
-                    "default" : "side sill sad",
-                    "powers" : "penta",
-                    "mojo" : "resources/ui/powers/magic fire.webp",
-                    "purple mojo" : "resources/ui/powers/orb_purple.webp",
-                    "green mojo" : "resources/ui/powers/orb_green.webp",
-                    "blue mojo" : "resources/ui/powers/orb_blue.webp",
-                    "red mojo" : "resources/ui/powers/orb_red.webp",
-                    "yellow mojo" : "resources/ui/powers/orb_yellow.webp",
-                    "farm": "side gizel",
-                    "spells" : "resources/ui/mana.webp",
-                    "mana" : "resources/ui/mana.webp",
-                    "fear" : "resources/ui/skull.webp",
-                    "sanity" : "resources/ui/skull x3.webp",
-                    "evil deck" : "evil_deck",
-                    "supercharged" : "evil_deck",
-                    "Main Character" : "MC",
-                    }
-
-    help_center_pic_dict = {
-                            "Xeros" : "resources/ui/xeros.webp",
-                            }
+    _help_data = DataLoader.load_help_texts()
+    if _help_data:
+        help_pic_dict = _help_data.get("help_pic_dict", {})
+        help_center_pic_dict = _help_data.get("help_center_pic_dict", {})
+    else:
+        help_pic_dict = {}
+        help_center_pic_dict = {}
 
     def compile_help(): # Will run once to avoid putting drag on the system if the help gets too complex. Can be called again if changes are made.
         # Place '$' in front of a word to avoid the creation of a hyperlink
 
-        help_dict = {
-                            ## GIRLS ##
+        # Load help texts from JSON (BK Evolution)
+        _help_json = DataLoader.load_help_texts()
+        if _help_json and "help_dict_i18n" in _help_json:
+            help_dict = {k: v for k, v in _help_json["help_dict_i18n"].items()}
+        else:
+            help_dict = {}
 
-                            "girls" : "{b}Girls{/b} are the bread and butter of your brothel. You can recruit them from the slave market, or in the city if your relationship if high enough.\n\nEach girl has her own traits, *skills and personality.\n\nYou can use your girls to work in the brothel%s and send them on quests or classes",
-                            "girls farm" : ", at the farm,",
-                            "traits" : "{b}Traits{/b} are inborn abilities a girl has that make her better or worse-suited for certain tasks, and are generally hard to change.\n\nThere are positive and negative traits, and even rare gold traits that are extra-powerful.\n\nBefore you buy, think hard about what kind of jobs or sex acts you want a girl to perform, and if her traits will support that.",
-                            "personality" : "Each girl has her own {b}personality{/b}, which you can learn about by interacting with her.\n\nGirls can have a combination of personality attributes: extrovert/introvert, idealist/materialist, lewd/modest and dominant/submissive. These attributes affect the friends and rivals they make along the way, as well as how they react to a number of situations.",
-                            "*skills" : "There are two types of {b}skills{/b} for your girls: main skills and sex skills. Working jobs, training and other events may increase, and sometimes decrease, specific skills. The maximum skill value is capped by a girl's rank (usually 50 points/rank).\n\nThere are eight main skills: charm, beauty, body, refinement, sensitivity, libido, constitution, obedience.\n\nThere are four sex skills: service, *sex, anal, fetish.",
-                            "main skills" : "There are two types of skills for your girls: {b}main skills{/b} and sex skills. Working jobs, training and other events may increase, and sometimes decrease, specific skills. The maximum skill value is capped by a girl's rank (usually 50 points/rank).\n\n{b}Main skills{/b} are generic skills that every girl can improve by working jobs.\n\nThere are eight main skills: charm, beauty, body, refinement, sensitivity, libido, constitution, obedience.",
-                            "sex skills" : "There are two types of skills for your girls: main skills and {b}sex skills{/b}. Working jobs, training and other events may increase, and sometimes decrease, specific skills. The maximum skill value is capped by a girl's rank (usually 50 points/rank).\n\n{b}Sex skills{/b} are related to sex acts and reflect the level of experience of a girl in a specific sex act (not to be confused with sexual preferences). You may choose permissible sex acts by ticking the box next to a sex skill, but a girl may ignore your choices if she lacks obedience.\n\nThere are four sex skills: service, *sex, anal, fetish.",
-                            "sex skill" : "There are two types of skills for your girls: main skills and sex skills. Working jobs, training and other events may increase, and sometimes decrease, specific skills. The maximum skill value is capped by a girl's rank (usually 50 points/rank).\n\n{b}Sex skills{/b} are related to sex acts and reflect the level of experience of a girl in a specific sex act (not to be confused with sexual preferences). You may choose permissible sex acts by ticking the box next to a sex skill, but a girl may ignore your choices if she lacks obedience.\n\nThere are four sex skills: service, *sex, anal, fetish.",
-
-                            "beauty" : "{b}Beauty{/b} is one of the eight main skills for girls. It reflects the attractiveness of a girl's features.\n\nA high beauty skill improves results for the masseuse job and *sex.\n\nTogether with constitution, beauty also affects how many customers a masseuse can serve every night (1 extra job customer for each [$job_customer_points] points in beauty).\n\n{i}See also:{/i} charm, beauty, body, refinement, sensitivity, libido, constitution, obedience.",
-                            "body" : "{b}Body{/b} is one of the eight main skills for girls. It reflects how sexy their body and womanly attributes are.\n\nA high body skill improves results for the dancer job and anal sex.\n\nTogether with constitution, body also affects how many customers a dancer can serve every night (1 extra job customer for each [$job_customer_points] points in body).\n\n{i}See also:{/i} charm, beauty, body, refinement, sensitivity, libido, constitution, obedience.",
-                            "charm" : "{b}Charm{/b} is one of the eight main skills for girls. It reflects the attractiveness or their personality and charisma.\n\nA high charm skill improves results for the waitress job and sexual service.\n\nTogether with constitution, charm also affects how many customers a waitress can serve every night (1 extra job customer for each [$job_customer_points] points in charm).\n\n{i}See also:{/i} charm, beauty, body, refinement, sensitivity, libido, constitution, obedience.",
-                            "refinement" : "{b}Refinement{/b} is one of the eight main skills for girls. It reflects their intelligence, sophistication and manners.\n\nA high refinement skill improves results for the geisha job and fetish.\n\nTogether with constitution, refinement also affects how many customers a geisha can serve every night (1 extra job customer for each [$job_customer_points] points in refinement).\n\n{i}See also:{/i} charm, beauty, body, refinement, sensitivity, libido, constitution, obedience.",
-
-                            "sensitivity" : "{b}Sensitivity{/b} is one of the eight main skills for girls. It reflects how physically and emotionally atuned a girl is with herself and her partners.\n\nA high sensitivity improves results for the masseuse job and service.\n\nSensitivity also provides a small satisfaction bonus for all sex acts.\n\n{i}See also:{/i} charm, beauty, body, refinement, sensitivity, libido, constitution, obedience.",
-                            "libido" : "{b}Libido{/b} is one of the eight main skills for girls. It reflects how interested and eager a girl is for sex acts.\n\nA high libido improves results for the dancer job and *sex.\n\nTogether with constitution, libido affects how many customers a whore can have sex with every night (1 extra customer for each [$whore_customer_points] points in libido).\n\n{i}See also:{/i} charm, beauty, body, refinement, sensitivity, libido, constitution, obedience.",
-                            "constitution" : "{b}Constitution{/b} is one of the eight main skills for girls. It reflects a girl's overall stamina, and determines max energy.\n\nA high constitution improves results for the waitress job and anal sex.\n\nConstitution affects how many customers a girl can serve every night (1 extra job customer for each [$job_customer_points] points in constitution, 1 extra whoring customer for each [$whore_customer_points] points in constitution).\n\n{i}See also:{/i} charm, beauty, body, refinement, sensitivity, libido, constitution, obedience.",
-                            "obedience" : "{b}Obedience{/b} is one of the eight main skills for girls. It reflects how receptive a girl is to orders and servitude.\n\nA high obedience improves results for the geisha job and fetish acts.\n\nObedience also increases a girl's likelihood to accept work, whoring, or training and reduces her chances of escaping.\n\n{i}See also:{/i} charm, beauty, body, refinement, sensitivity, libido, constitution, obedience.",
-                            "accept" : "{b}Accepting{/b} work, whoring or training is checked against a number of factors. Job checks are normally easier than training or whoring checks.\n\nAll checks are affected by obedience, fear and mood (in that order of importance). In addition, training checks may be affected by love, jobs and whoring by energy levels.\n\nThe chance of dis$obedience increases for girls of a higher rank, and with the more girls there are in the brothel (friends do not count towards this penalty, but rivals count double).",
-                            "friends" : "A girl can make {b}friends{/b} and rivals while working in the brothel.\n\nFriends improve a girl's mood and make her more likely to accept her tasks.",
-                            "rivals" : "A girl can make friends and {b}rivals{/b} while working in the brothel.\n\nRivals lower a girl's mood and make her less likely to accept her tasks.",
-                            "energy" : "{b}Energy{/b} is a skill whose maximum is derived from constitution.\n\nEvery time a girl performs a job, whoring, or sexual training, she spends some amount of energy. If a girl's energy is allowed to reach zero, she will become exhausted.\n\nEnergy is recovered by resting.",
-                            "training" : "{b}Training{/b} your girls is an activity you can carry in the Girls screen interact menu or automatically once you improve your Master bedroom.\n\nTraining girls can raise their obedience or constitution, or make them more open to various sex acts.",
-                            "resting" : "{b}Rest{/b} is an occupation for your girls, who will simply get the day off and stay in their room or enjoy their free time.\n\nResting restores mood and energy, and heals hurt girls.",
-                            "*rest" : "{b}Rest{/b} is an occupation for your girls, who will simply get the day off and stay in their room or enjoy their free time.\n\nResting restores mood and energy, and heals hurt girls.",
-                            "exhausted" : "{b}Exhaustion{/b} happens when a girl's energy is allowed to hit zero. An exhausted girl will need to *rest until she is back to her full energy level before being able to work again.",
-                            "hurt" : "{b}Sickness/Hurt{/b} may happen to a girl as a result of your own actions, during security events or if your brothel maintenance is insufficient.\n\nHurt girls need to *rest for a number of days before they can work again.",
-
-                            "service" : "{b}Service{/b} is one of the four girl sex skills. It covers all kinds of foreplay, including masturbation, hand$jobs, blow$jobs and tit$jobs.\n\nWhile the service skill has a major role in determining a girl's performance during service, it is also influenced by the sensitivity, charm and fetish skills.\n\n{i}See also:{/i} service, *sex, anal, fetish.",
-                            "*sex" : "{b}Sex{/b} is one of the four girl sexual skills. It covers regular intercourse.\n\nWhile the sex skill has a major role in determining a girl's performance during sex, it is also influenced by the libido, beauty and service skills.\n\n{i}See also:{/i} service, sex, anal, fetish.",
-                            "anal" : "{b}Anal{/b} is one of the four girl sexual skills. It covers anal intercourse.\n\nWhile the anal skill has a major role in determining a girl's performance during anal sex, it is also influenced by the constitution, body and sex skills.\n\n{i}See also:{/i} service, *sex, anal, fetish.",
-                            "fetish" : "{b}Fetish{/b} is one of the four girl sexual skills. It covers unusual kinks such as foot$jobs, bondage, roleplay and other special requests.\n\nWhile the fetish skill has a major role in determining a girl's performance during fetish acts, it is also influenced by the obedience, refinement and anal skills.\n\n{i}See also:{/i} service, *sex, anal, fetish.",
-
-                            "jobs" : "{b}Jobs{/b} are occupations for your girls that do not require them to accept whoring. Girls carry out jobs during the entertainment phase every night, to provide for customers who are waiting for a whore.\n\nJobs serve more customers but bring less tip than whoring, although they can be reinforced with specific perks to be nearly as good. Customers get a satisfaction boost when being entertained, so it is good to have girls working jobs in your brothel and not just whores.\n\nThere are four $job types: waitress, dancer, masseuse and geisha.",
-                            "job" : "{b}Jobs{/b} are occupations for your girls that do not require them to accept whoring. Girls carry out $jobs during the entertainment phase every night, to provide for customers who are waiting for a whore.\n\nJobs serve more customers but bring less tip than whoring, although they can be reinforced with specific perks to be nearly as good. Customers get a satisfaction boost when being entertained, so it is good to have girls working $jobs in your brothel and not just whores.\n\nThere are four job types: waitress, dancer, masseuse and geisha.",
-                            "whoring" : "{b}Whoring{/b} is an occupation for girls in the brothel providing sex acts (I'm sure you never guessed). Girls carry out $whoring every night, after the entertainment (jobs) phase.\n\nWhoring brings in more money than jobs, but requires a girl's libido, obedience and sexual preferences to be high enough.",
-                            "whores" : "{b}Whoring{/b} is an occupation for girls in the brothel providing sex acts (I'm sure you never guessed). Girls carry out $whoring every night, after the entertainment (jobs) phase.\n\nWhoring brings in more money than jobs, but requires a girl's libido, obedience and sexual preferences to be high enough.",
-                            "whore" : "{b}Whoring{/b} is an occupation for girls in the brothel providing sex acts (I'm sure you never guessed). Girls carry out $whoring every night, after the entertainment (jobs) phase.\n\nWhoring brings in more money than jobs, but requires a girl's libido, obedience and sexual preferences to be high enough.",
-
-                            ## SEX ACTS & PREFERENCES ##
-
-                            "sex acts" : "There are four basic {b}sex acts{/b}, each related to a sex skill and sexual preference. They are: service, *sex, anal and fetish.\n\nIn addition, there are three extended sex acts, which have their own sexual preferences but no related skill: naked, bisexual and group sex.",
-                            "sex act" : "There are four basic {b}sex acts{/b}, each related to one of four sex skills and sexual preferences: service, *sex, anal and fetish.\n\nIn addition, there are three extended sex acts, which have their own sexual preferences but no related skill: naked, bisexual and group sex.",
-                            "sexual preferences" : "{b}Sexual preference{/b} reflects the level of interest and willingness of a girl to perform sex acts. Unlike sex skills, which reflect her level of skill and experience in a certain act, sexual preference only indicates her curiosity towards it. It ranges from 'refusing' to 'fascinated'.\n\nBefore a girl will accept to train sex acts or whore herself, she will need to have a high enough sexual preferences, as well as enough libido and obedience.\n\nSexual preference can be unlocked by MC training, or slowly during jobs.",
-                            "sexual preference" : "{b}Sexual preference{/b} reflects the level of interest and willingness of a girl to perform sex acts. Unlike sex skills, which reflect her level of skill and experience in a certain act, sexual preference only indicates her curiosity towards it. It ranges from 'refusing' to 'fascinated'.\n\nBefore a girl will accept to train sex acts or whore herself, she will need to have a high enough sexual preference, as well as enough libido and obedience.\n\nSexual preference can be unlocked by Main Character training, or slowly during jobs.",
-                            "sexual preferences farm" : " The farm allows you to train sexual preference faster with the help of minions.",
-
-                            "naked" : "{b}Naked{/b} is part of extended sex acts and sexual preferences, and covers nudity.\n\nOnce a girl's naked sexual preference and libido are high enough, you can talk to her about working naked in the brothel for a day or even permanently.\n\nNaked girls will bring %i per cent more tips while working jobs.\n\n{i}See also:{/i} naked, group, bisexual." % ((tip_act_modifier["naked bonus"] - 1)*100),
-                            "bisexual" : "{b}Bisexual{/b} is part of extended sex acts and sexual preferences, and covers female on female sex acts, including during threesomes.\n\nOnce bisexual sexual preference is high enough, two bisexual girls have sex with a single customer while whoring, and tire slower.\n\nDuring bisexual sex, the customer will pay %i per cent more tip than during one-on-one. Bisexual sex is best when you do not have a lot of paying customers and want to drain all of their budget.\n\n{i}See also:{/i} naked, group, bisexual." % ((1 - tip_act_modifier["bisexual bonus"])*100*2),
-                            "group" : "{b}Group{/b} is part of extended sex acts and sexual preferences, and covers sex acts between a girl and 2 or more male partners.\n\nOnce group preference is high enough, a girl can have sex with several customers at once while whoring, but will tire faster.\n\nDuring group sex, each customer will pay %i per cent less tip than during one-on-one. Group sex is best when you have a lot of paying customers and cannot serve all of them one-on-one.\n\n{i}See also{/i}: naked, group, bisexual." % ((1 - tip_act_modifier["group bonus"])*100),
-
-                            ## FARM POWERS ##
-                            "powers" : "{b}Dark powers{/b} are incantations that are pulled from the evil deck and can be cast in the farm. Unlike spells, powers require no mana to cast. Instead, they use mojo created by inducing fear in your girls. Powers will also affect your girl's sanity, which may break if you push them too far.",
-                            "powers supercharged" : "Powers can be supercharged to improve their effects, increasing their mojo and sanity cost.",
-                            "mojo" : "Fear leads to anger, anger leads to hate, hate leads to suffering, suffering leads to... {b}Mojo{/b}. Mojo is a special fluid with astonishing magical properties, replacing mana when casting dark powers.\n\nMojo comes in various colors, depending on the type of fear that produced it. Most fear events generate purple mojo, which can be used as a stand-in for all mojo colors. Special events at the farm have a chance to generate green mojo, blue mojo, red mojo or yellow mojo in larger quantities.\n\nOnce a girl's fear is maxed, she will not produce any additional mojo until she raises in rank or her fear is reduced by other means.",
-                            "purple mojo" : "{b}Purple mojo{/b} is the most common type of mojo, being generated in small quantities by most fear events in and out of the brothel. It can be used as a stand-in for any other mojo color when casting powers. While this is good, purple mojo generates a lot slower than green mojo, blue mojo, red mojo or yellow mojo.",
-                            "green mojo" : "{b}Green mojo{/b} is generated by fear events at the farm, during sensitivity, naked and service training. It accumulates faster than purple mojo, but can only be used for powers that rely on green mojo.",
-                            "blue mojo" : "{b}Blue mojo{/b} is generated by fear events at the farm, during libido, sex and group training. It accumulates faster than purple mojo, but can only be used for powers that rely on blue mojo.",
-                            "red mojo" : "{b}Red mojo{/b} is generated by fear events at the farm, during constitution, anal and group training. It accumulates faster than purple mojo, but can only be used for powers that rely on red mojo.",
-                            "yellow mojo" : "{b}Yellow mojo{/b} is generated by fear events at the farm, during obedience, fetish and bisexual training. It accumulates faster than purple mojo, but can only be used for powers that rely on yellow mojo.",
-                            "farm": "Once the haunt of a $fearful spirit, the {b}farm{/b} is now the den of Gizel the pale elf, a witch of considerable power and depravity.\n\nWhile you can simply have your girls *rest in a pen if your brothel is full, the farm is most useful to train your slaves in libido, obedience, sensitivity or constitution, or to increase sexual preferences by having them train with minions in the farm's facilities.\n\nDepending on the type and intensity of training you choose, the farm may generate fear and increase your evil bend.",
-
-                            "farm powers" : "This, in turn, will generate mojo, allowing you to cast dark powers from the secluded sanctuary deep in the Farm's basement.",
-
-                            "mood" : "{b}Mood{/b} reflects the day-to-day positive or negative state of mind of a girl. Unlike love and fear, mood changes fast and can quickly rise or stoop based on her current circumstances.\n\nMood affects obedience and the success of a variety of actions, such as training or classes.\n\nYou can check a girl's mood on her profile.",
-
-                            "love" : "{b}Love{/b} is a hidden stat representing how loving and loyal a girl is towards the Main Character.\n\nLove increases whenever a girl is comfortable around the player and factors depend on her personality. It changes slowly but will build up faster for *good players.\n\nA high love value improves her mood and training efficiency. The opposite of love is *hate.\n\nLove can be used to woo free girls in the city. Within the brothel, the maximum amount of love/*hate is determined by a girl's rank.\n\n{i}See also:{/i} love, *hate, fear, *trust.",
-                            "*hate" : "{b}Hate{/b} is a hidden stat representing how resentful and disloyal a girl is towards the Main Character.\n\nHate increases whenever a girl feels wronged by the player and factors depend on her personality. It changes slowly but will build up slower for *good players.\n\nHate reduces mood and training efficiency. The opposite of hate is love.\n\nWithin the brothel, the maximum amount of love/hate is determined by a girl's rank.\n\n{i}See also:{/i} love, hate, fear, *trust.",
-                            "*trust" : "{b}Trust{/b} is a hidden stat that represents how safe and comfortable a girl feels.\n\nTrust increases whenever she is protected from an uncomfortable or scary situation, whether through the player's actions or another source. It changes slowly but will build up slower for *evil players.\n\nThe opposite of trust is fear. A high trust value reduces obedience checks success, but improves mood.\n\nThe maximum amount of fear/trust that can build up is determined by a girl's rank.\n\n{i}See also:{/i} love, *hate, fear, trust.",
-                            "fear" : "{b}Fear{/b} is a hidden stat that represents how scared for her life or general circumstances a girl feels.\n\nFear increases whenever she is put in an uncomfortable or scary situation, whether through the player's actions or another source. It changes slowly but will build up faster for *evil players.\n\nThe opposite of fear is *trust. A high fear value improves obedience checks success and training efficiency, but lowers mood.\n\nThe maximum amount of fear/*trust that can build up is determined by a girl's rank.\n\n{i}See also:{/i} love, *hate, fear, *trust.",
-                            "fear mojo" : "Fear generates various amounts of mojo that can be used to cast dark powers.",
-                            "sanity" : "{b}Sanity{/b} is a hidden girl stat that represents her mental fortitude. It increases with rank, and degrades when casting dark powers on her. If her sanity gets too low, a girl may become broken with unexpected results.",
-                            "evil deck" : "The {b}evil deck{/b} is an ancient artifact that was found in the farm's basement. It allows you to draw a maximum of %i dark powers to cast.\n\nThe maximum number of powers you have access to as well as the ability to draw new ones can be improved with the right items or furniture.",
-                            "supercharged" : "{b}Supercharged{/b} powers are beefier versions of dark powers that you can cast for an additional cost in mojo and girl sanity. You can press the 'Supercharge' button or use the 'Shift' key to alternate between regular and supercharged powers.",
-
-                            ## SCREENS ##
-
-                            "home screen" : "The {b}Home{/b} screen is the main hub of your brothel, from which you can control everything in your business. On top of the screen, you can see from left to right: the current moon and date, your available gold, your remaining action points and mana for the day, and the help (?) button. Hints may also appear in the top-right corner if you hover your cursor over something.\n\nFrom the Home screen, you can also access all the main screens from the right-hand menu (or use shortcuts). You can access the option menu by right clicking or pressing 'Esc'. You can save or load a game and change all sorts of useful options from there.\n\n{i}See also:{/i} Main Character screen, Girls screen, Brothel screen, %sCity screen, Slave Market screen, Shop screen, Postings screen, End day.",
-                            "home screen farm" : "Farm screen, ",
-                            "Main Character screen" : "The {b}Main Character{/b} screen allows you to see more information about yourself. From there, you can see your Main Character information, change your name (by clicking on it), change your profile picture, *$manage your items and your spells. You can use arrows to browse available profile pictures. You can even add your own pictures in the {i}game\\MC\\{/i} folder.\n\n{i}See also:{/i} Main Character screen, Girls screen, Brothel screen, %sCity screen, Slave Market screen, Shop screen, Postings screen, End day.",
-                            "Girls screen" : "The {b}Girls{/b} screen is where you interact with your slave girls in all sorts of ways. It is very important!\n\nOn the Girls screen, you can choose their job and schedule, interact with them, equip or use items, level up or even sell or let them go.\n\n{i}See also:{/i} Main Character screen, Girls screen, Brothel screen, %sCity screen, Slave Market screen, Shop screen, Postings screen, End day.",
-                            "Brothel screen" : "The {b}Brothel{/b} tab allows you to upgrade your brothel and set up your advertising, security and maintenance. Don't neglect this one!\n\n{i}See also:{/i} Main Character screen, Girls screen, Brothel screen, %sCity screen, Slave Market screen, Shop screen, Postings screen, End day.",
-                            "Brothel screen wagon" : "From the Brothel tab, you can also access the {b}Wagon{/b} to build furniture and set up {b}Customer options{/b}.",
-                            "Farm screen" : "The {b}Farm{/b} tab allows you to visit Gizel and her spooky farm. This will only lead to trouble, if you ask me.\n\n{i}See also:{/i} Main Character screen, Girls screen, Brothel screen, %sCity screen, Slave Market screen, Shop screen, Postings screen, End day.",
-                            "City screen" :  "The {b}City{/b} tab allows you to visit the city and its available district. Give it a go if you get bored here!\n\n{i}See also:{/i} Main Character screen, Girls screen, Brothel screen, %sCity screen, Slave Market screen, Shop screen, Postings screen, End day.",
-                            "Slave Market screen" :  "The {b}Slave Market{/b} is bustling with sex slaves and the people who buy and sell them! Use it to get fresh slaves - if you can afford it.\n\n{i}See also:{/i} Main Character screen, Girls screen, Brothel screen, %sCity screen, Slave Market screen, Shop screen, Postings screen, End day.",
-                            "Shop screen" :  "The {b}Shop{/b} screen is where you can buy all sorts of mundane items for you or your girls. Maybe you'll find a bargain?\n\nYou can navigate between the various shops you have discovered in the city directly from the shop screen.\n\n{i}See also:{/i} Main Character screen, Girls screen, Brothel screen, %sCity screen, Slave Market screen, Shop screen, Postings screen, End day.",
-                            "Postings screen" :  "The {b}Postings{/b} screen allows you to look for ads about quests and classes for your girl. Quests and classes take your girls away from the brothel for a number of days, and raise xp and reputation. In addition, quests reward your girls with gold and classes reward your girls with skill points, allowing you to upgrade a girl's main skills or sex skills slightly beyond the skill cap.\n\n{i}See also:{/i} Main Character screen, Girls screen, Brothel screen, %sCity screen, Slave Market screen, Shop screen, Postings screen, End day.",
-
-                            ## MC ##
-
-                            "Main Character" : "It's you, [MC.name].\n\nYou are a young upstart in the bustling city-state of Zan, trying to make it in your new life as a brothel owner with the help of your girls.",
-                            "prestige" : "{b}Prestige{/b} reflects your character's renown in Zan. Earning prestige allows you to level up and get skill points.\n\nPrestige is earned whenever you or your girls have sex or accomplish something, and is used to level up your Main Character. Prestige rewards increase with chapter and girl rank. You may learn new spells with every level, so it's worth getting all the prestige you can get.",
-
-                            "Main Character information" : "Your character is first defined by his class (Warrior, Wizard or Rogue trader).\n\nYour class determines your available spells and your starting level in each of the four Main Character skills: strength, spirit, charisma and speed. All skills can reach a maximum of 10 (before bonuses), regardless of your class.\n\nYou are currently level [MC.level]/25. You can level up with prestige. Each new level will grant you a skill point which you may use to boost your skills.\n\nFinally, you can find information about your beliefs (set at character creation) and alignment (determined by your actions in and out of the brothel).",
-
-                            "Warrior" : "The {b}Warrior{/b} is one of the three Main Character classes. The warrior is a skilled fighter with a tough spirit, having fought in the Holy War. His social skills are a bit lacking, though.\n\nMain skill: strength.\n\n{i}See also:{/i} Warrior, Wizard, Rogue trader.",
-                            "Wizard" : "The {b}Wizard{/b} is one of the three Main Character classes. Trained at the famous magic academy of Karkyr, the wizard is skilled in spellcasting, with some wits to match. Don't get him into close combat, though, it's not his forte.\n\nMain skill: spirit.{i}See also:{/i} Warrior, Wizard, Rogue trader.",
-                            "Rogue trader" : "The {b}Rogue trader{/b} is one of the three Main Character classes. He is good at bartering and trading favorably, and has learned the skills to survive in the mean streets of Borgo, even acquiring a $fearsome baby dragon as his protector. As he would rather sell books than read them, he is not very good with magic, though.\n\nMain skill: charisma.\n\n{i}See also:{/i} Warrior, Wizard, Rogue trader.",
-
-                            "strength" : "{b}Strength{/b} is one of the four Main Character skills. It affects how well you perform physical tasks and hold your own in close combat.\n\nWhenever you have unspent *AP at the end of the day, Strength gives a free boost to your brothel security and may twart negative outcomes from security events and runaway attempts.\n\nYou may use skill points to increase your strength, up to a maximum of 10.\n\n{i}See also:{/i} strength, spirit, charisma, speed.",
-                            "spirit" : "{b}Spirit{/b} is one of the four Main Character skills. It affects how well you can sense magic and cast spells.\n\nSpirit increases your available mana to cast spells, and helps with hypnotic training.\n\nYou may use skill points to increase your spirit, up to a maximum of 10.\n\n{i}See also:{/i} strength, spirit, charisma, speed.",
-                            "charisma" : "{b}Charisma{/b} is one of the four Main Character skills. It affects your social skills and other people's reactions to dialog choices, including your girls.\n\nCharisma boosts both the love and fear impacts of your actions.\n\nYou may use skill points to increase your charisma, up to a maximum of 10.\n\n{i}See also:{/i} strength, spirit, charisma, speed.",
-                            "speed" : "{b}Speed{/b} is one of the four Main Character skills. Every point in Speed gives you one additional *AP every day. It has no other impact on the game.\n\nYou may use skill points to increase your speed, up to a maximum of 10.\n\n{i}See also:{/i} strength, spirit, charisma, speed.",
-                            "items" : "{b}Items{/b} are easy! Just click on the item you want to use, and select 'use' or 'equip'. You can unequip an item in the same way. Please note that you can only use items that are intended {color=[c_main]}{b}for you{/b}{/color} and not {color=[c_pink]}{b}for your girls{/b}{/color}. Watch for the color in the item tab.",
-                            "spells" : "You can learn new {b}Spells{/b} and {b}Talents{/b} from your character class when increasing your level.\n\nSpells must be cast and cost mana. After you learn a spell, you can use it any time from the spellbook.\n\nTalents are passive abilities that you always benefit from. You can review your unlocked talents in the spellbook.\n\nOnly one spell of a given type can be active every day. For instance, wizards can only have one active aura at any given time. Some spells are only active for one night, and some last until a specific event occurs.",
-                            "spellbook" : "The {b}Spellbook{/b} contains all known spells and talents. It can be accessed from the Main Character screen.\n\nAfter you learn a spell, you can use it any time from the Spellbook. Press 'K' for fast access to the Spellbook.\n\nLeft click on a spell in the spells tab to cast it. Right click on a spell in the spells tab to autocast it. You can choose between auto-casting at night or in the morning by right-clicking again.\n\nHover over a spell to see its description.",
-                            "mana" : "{b}Mana Points{/b} (MP) are used to cast spells and depend on your Spirit skill. They are replenished every day.",
-                            "action points" : "{b}Action Points{/b} (AP) are used for various actions by the Main Character, including training girls or visiting the city.\n\nAction Points depend on your Speed skill, and are replenished every day.",
-                            "*AP" : "{b}Action Points{/b} (AP) are used for various actions by the Main Character, including training girls or visiting the city.\n\nAction Points depend on your Speed skill, and are replenished every day.",
-                            "*good" : "{b}Good{/b} is one of the three possible alignments for the Main Character. Alignment is based on your actions and may change depending on your behavior towards your girls and during story events.\n\nGood players are more successful with love-based interactions, and less successful with fear-based interactions.\n\n{i}See also:{/i} *good, *evil, *neutral",
-                            "*neutral" : "{b}Neutral{/b} is one of the three possible alignments for the Main Character. Alignment is based on your actions and may change depending on your behavior towards your girls and during story events.\n\nNeutral players are equally successful with love-based and fear-based interactions.\n\n{i}See also:{/i} *good, *evil, *neutral",
-                            "*evil" : "{b}Evil{/b} is one of the three possible alignments for the Main Character. Alignment is based on your actions and may change depending on your behavior towards your girls and during story events.\n\nEvil players are more successful with fear-based interactions, and less successful with love-based interactions.\n\n{i}See also:{/i} *good, *evil, *neutral",
-                            "alignments" : "{b}Alignment{/b} is an attribute of the Main Character, reflecting his morality.\n\nAlignment is based on your actions and may change depending on your behavior towards your girls and during story events.\n\n{i}See also:{/i} *good, *evil, *neutral",
-                            "alignment" : "{b}Alignment{/b} is an attribute of the Main Character, reflecting his morality.\n\nAlignment is based on your actions and may change depending on your behavior towards your girls and during story events.\n\n{i}See also:{/i} *good, *evil, *neutral",
-
-                            ## LORE ##
-                            "brothel king" : "Welcome to the world of Brothel King! A world of fantasy where gods, magic and monsters are all facts of life.\n\nSelect a topic you would like to know more about:\n{a=help:$home screen}Game screens{/a}\nBrothel\nGirls\n*Controls\n{a=help:$Xeros}Lore{/a}\n\nVisit [URL] for bug reports, patches and information about the game.",
-                            "Xeros" : "The main continent, Xeros, contains all kinds of climates and cultures, and the game's location, the city of Zan, heavily draws from oriental influences. While the world's advancement could be compared to our own medieval/early renaissance period, magic and ancient technology means that pretty much anything is possible.\n\n{i}Famous locations:{/i} Zan, Karkyr, Borgo, the Holy Lands, the Arik Mountains, Westmarch, Hokoma, the Blood Islands, the Goliath desolations.",
-                            "Zan" : "Zan, aka the City of Jade, is the most prosperous city on the super-continent of Xeros.\n\nZan sits in the North-East corner of Xeros, with easy access to major sea routes and surrounded by good agricultural land.\n\nZan's wealth is built on commerce and slave trading, and its economy is as strong as its leaders are divided and weak. Corruption runs rampant, as a matter of course.\n\n{i}See also:{/i} Zan, Karkyr, Borgo, the Holy Lands, the Arik mountains, Westmarch, Hokoma, the Blood Islands, the Goliath desolations.",
-                            "Holy Lands": "The Holy Lands are wild lands in the North of Xeros, layered with jagged mountains and dense forests where the god Arios is said to have first descended on Xeros.\n\nA bloody war has been waged here for years, involving humans, non-humans and monsters to settle the control of this region. This is where the Warrior spent most of his adulthood, fighting in the crusaders' army.\n\n{i}See also:{/i} Zan, Karkyr, Borgo, the Holy Lands, the Arik mountains, Westmarch, Hokoma, the Blood Islands, the Goliath desolations.",
-                            "Karkyr": "Smack in the center of Xeros, Karkyr is the City of Mages, a place where magic-users gather to learn and experiment freely with magic.\n\nKarkyr sits at the confluence of several rivers and atop a powerful magical nexus, allowing its inhabitants to easily use magic to improve their daily lives. This is where the Wizard used to study.\n\n{i}See also:{/i} Zan, Karkyr, Borgo, the Holy Lands, the Arik Mountains, Westmarch, Hokoma, the Blood Islands, the Goliath desolations.",
-                            "Arik mountains" : "These high peaks sit between the Holy lands and Karkyr, some ways off from major trade routes and settlements. They have a mystical aura, and many legends feel alive there, attracting hermits and treasure hunters alike.\n\n{i}See also:{/i} Zan, Karkyr, Borgo, the Holy Lands, the Arik mountains, Westmarch, Hokoma, the Blood Islands, the Goliath desolations.",
-                            "Westmarch": "The West of Xeros is occupied by feuding principalities, where dozens of minor noble families vie for power, prisoners of a complex network of alliances and grudges that are often inscrutable for foreigners.\n\nThe Princes tend to live easy and privileged lives, with some being eager patrons of science, arts, and magic, while their subjects live squalid lives of hard menial and agricultural labor to pay for it all. Westmarch is where the Wizard used to work as an advisor to a local prince.\n\n{i}See also:{/i} Zan, Karkyr, Borgo, the Holy Lands, the Arik mountains, Westmarch, Hokoma, the Blood Islands, the Goliath desolations.",
-                            "Borgo" : "Borgo is Zan's main rival as a major port, located further South on the East coast of Xeros. Called the Harbor city, it sits at the entrance of a massive river that allows for boat transport to reach as far inland as Karkyr.\n\nBorgo is significantly rougher than Zan with lots of poor, working class people or outlaws. Only a loose coalition of merchants and middle class citizens calling itself the 'Republic' ensures something akin to 'Law and order', still leaving a lot to be desired. This is the native city of the Rogue trader.\n\n{i}See also:{/i} Zan, Karkyr, Borgo, the Holy Lands, the Arik mountains, Westmarch, Hokoma, the Blood Islands, the Goliath desolations.",
-                            "Hokoma" : "The far South of Xeros is at first a large desert, then covered by dense jungles that haven't been properly mapped yet by the 'civilized'.\n\nThere aren't any large settlements, but a great many nomad tribes, some of them with truly bizarre cultures and rituals. They sometimes venture North to acquire modern goods and captives. This is where the Rogue trader lost his previous livelihood in an ambush.\n\n{i}See also:{/i} Zan, Karkyr, Borgo, the Holy Lands, the Arik mountains, Westmarch, Hokoma, the Blood Islands, the Goliath desolations.",
-                            "Goliath desolations": "In the far North-West of Xeros sits a harsh realm of ice and rock. Forgotten to many, it was once a center of culture and power rivaling the East, but this ended long before recorded history. Legend has it that it used to be a $charming and bucolic place, but it all ended during the time of the Goliath invasions, a mythical war fought against a mysterious people of giants.\n\nWhatever happened, it devastated the land so that, to this day, it remains harsh and barren. Human settlements still cling to the desolations, perhaps remnants of the large cities that existed before the event. The people there are hardened Nordic folks, used to handle the brutal cold and many dangers of the desolations.\n\n{i}See also:{/i} Zan, Karkyr, Borgo, the Holy Lands, the Arik mountains, Westmarch, Hokoma, the Blood Islands, the Goliath desolations.",
-                            "Blood Islands": "A hundred miles off the coast of Zan lies a large archipelago called the Blood Islands. It is surrounded by the Blood Sea, which gets its name from the reddish color of the ocean and the violent reputation of the islands' slavers.\n\nThe absolute masters of the islands are the Blood Council, powerful nobles and mages said to have high-elf blood running in their veins. They are cruel slavers who made their reputation on their creativity and ability to accommodate every customer need - for a steep price.\n\n{i}See also:{/i} Zan, Karkyr, Borgo, the Holy Lands, the Arik mountains, Westmarch, Hokoma, the Blood Islands, the Goliath desolations.",
-                            "*controls" : "To advance through the game, left-click or press the space bar or enter keys.\n\nRight-clicking allows you to return to the previous screen, or, if on the main screen, to bring up the Options screen. The Options screen (including Save/Load) can be accessed at any moment by using the Esc key. Middle-clicking will hide the UI and text to show the background picture. Hover your mouse over most of the UI components in-game to access tips and detailed information.\n\nThe Ctrl key can be used to skip text faster. By default, it will only skip text you have already seen, but this can be adjusted in 'Preferences' to fast-skip all text.\n\n{i}See also:{/i} controls, shortcuts.",
-                            "*Controls" : "To advance through the game, left-click or press the space bar or enter keys.\n\nRight-clicking allows you to return to the previous screen, or, if on the main screen, to bring up the Options screen. The Options screen (including Save/Load) can be accessed at any moment by using the Esc key. Middle-clicking will hide the UI and text to show the background picture. Hover your mouse over most of the UI components in-game to access tips and detailed information.\n\nThe Ctrl key can be used to skip text faster. By default, it will only skip text you have already seen, but this can be adjusted in 'Preferences' to fast-skip all text.\n\n{i}See also:{/i} controls, shortcuts.",
-                            "shortcuts" : "The following shortcuts allow fast-moving from a screen to another:{size=-4}\nh: Home screen\nc: Main Character screen\nk : Spellbook\ng: Girls screen\nb: Brothel screen%s\nv: City screen\nl: Return to the last visited city location\nm: Slave market screen\ns: Shop screen\np: Postings screen\ne: End day\no or Esc: Save/Options menu\n\n{/size}{i}See also:{/i} *controls, shortcuts.",
-                            "shortcuts wagon" : "\nw: Wagon screen",
-                            "shortcuts farm" : "\nf: Farm screen",
-                            }
+        # Apply init-time %i formatting for dynamic values
+        if "naked" in help_dict:
+            help_dict["naked"] = help_dict["naked"] % ((tip_act_modifier["naked bonus"] - 1) * 100)
+        if "bisexual" in help_dict:
+            help_dict["bisexual"] = help_dict["bisexual"] % ((1 - tip_act_modifier["bisexual bonus"]) * 100 * 2)
+        if "group" in help_dict:
+            help_dict["group"] = help_dict["group"] % ((1 - tip_act_modifier["group bonus"]) * 100)
 
         # Automatically adds hyperlinks for existing keywords. Complexity will grow with number of entries. Hopefully it doesn't become a drag on resources at init.
 
@@ -472,7 +334,7 @@ label help(scr):
                 "Food effects reset."
 
             "Activate picture count in gallery (girl packs)" if not persistent.debug_pic_counter:
-                if renpy.call_screen("yes_no", "Warning! This is a debug feature and might slow down your game. Would you like to proceed?"):
+                if renpy.call_screen("yes_no", __("Warning! This is a debug feature and might slow down your game. Would you like to proceed?")):
                     $ persistent.debug_pic_counter = True
 
                     "The number of times a girl pack picture is drawn in-game will now be tracked and visible in the gallery."
@@ -554,21 +416,21 @@ label help(scr):
                             $ r = long_menu("Select picture to remove from set", menu_options, limit=9)
 
                             if r != "back":
-                                if renpy.call_screen("yes_no", "Do you want to remove this picture from the 'IGNORE' list?"):
+                                if renpy.call_screen("yes_no", __("Do you want to remove this picture from the 'IGNORE' list?")):
                                     $ toggle_ignore_pic(r)
                                     jump edit_ignored
                     "Clear ignored pictures":
-                        if renpy.call_screen("yes_no", "This will reset the 'IGNORE' list and restore all girl packs to default. Would you like to proceed?"):
+                        if renpy.call_screen("yes_no", __("This will reset the 'IGNORE' list and restore all girl packs to default. Would you like to proceed?")):
                             $ persistent.pic_ignore_list = []
                     "Print list of ignored pictures to file":
-                        if renpy.call_screen("yes_no", "This will create a file named 'ignored_pictures.txt' in your 'game/' directory containing the list of ignored pictures so that you can edit or delete them. Would you like to proceed?"):
+                        if renpy.call_screen("yes_no", __("This will create a file named 'ignored_pictures.txt' in your 'game/' directory containing the list of ignored pictures so that you can edit or delete them. Would you like to proceed?")):
                             $ print_ignore_list()
                     "Cancel":
                         pass
 
             "Repair girl/MC pictures":
                 #! Broken
-                if renpy.call_screen("yes_no", "This will reset all girl and MC pictures (useful if you changed some pictures outside of the game or renamed them). Would you like to proceed?"):
+                if renpy.call_screen("yes_no", __("This will reset all girl and MC pictures (useful if you changed some pictures outside of the game or renamed them). Would you like to proceed?")):
 
                     python:
                         missing_girls = []
@@ -583,7 +445,7 @@ label help(scr):
                         MC.load_pics()
 
                     if missing_girls:
-                        if renpy.call_screen("yes_no", "All files are missing for " + and_text([g.path for g in missing_girls]) + ". Do you want to erase all girls with these templates from the game (you might run into bugs otherwise)?"):
+                        if renpy.call_screen("yes_no", __("All files are missing for ") + and_text([g.path for g in missing_girls]) + ". Do you want to erase all girls with these templates from the game (you might run into bugs otherwise)?"):
                             python:
                                 for girl in missing_girls:
                                     for glist in (MC.girls, slavemarket.girls, game.free_girls, MC.escaped_girls, farm.girls):
@@ -591,7 +453,7 @@ label help(scr):
                                             glist.remove(girl)
                                             MC.items += girl.items
 
-                        elif renpy.call_screen("yes_no", "All files are missing for " + and_text([g.path for g in missing_girls]) + ". Do you want to replace their profile and portrait pictures with stock pictures? (debugging only)"):
+                        elif renpy.call_screen("yes_no", __("All files are missing for ") + and_text([g.path for g in missing_girls]) + ". Do you want to replace their profile and portrait pictures with stock pictures? (debugging only)"):
                             python:
                                 for girl in missing_girls:
                                     girl.refresh_pictures(force_default=True)
@@ -602,7 +464,7 @@ label help(scr):
                     $ rating_dict = defaultdict(dict)
 
             "Reload Quests/Classes/Farm pictures": #! Broken
-                if renpy.call_screen("yes_no", "This will reload all quests/classes and generic farm pictures (useful if you changed some event pictures outside of the game or renamed them). Would you like to proceed?"):
+                if renpy.call_screen("yes_no", __("This will reload all quests/classes and generic farm pictures (useful if you changed some event pictures outside of the game or renamed them). Would you like to proceed?")):
                     $ farm.load_pics()
                     $ load_quest_pics()
 
@@ -993,7 +855,7 @@ label help_whores():
     return
 
 label ignore_introduction(): # Introduces ignore key for girl pack pictures
-    if not renpy.call_screen("yes_no", "You have just pressed the 'DEL' key. The currently shown picture will be ignored by the game in the future (after the game restarts). You can cancel this action by pressing the 'DEL' key again. Further options can be accessed in the 'Help' menu.", yes_caption="Understood", no_caption="Do not show hint in the future"):
+    if not renpy.call_screen("yes_no", __("You have just pressed the 'DEL' key. The currently shown picture will be ignored by the game in the future (after the game restarts). You can cancel this action by pressing the 'DEL' key again. Further options can be accessed in the 'Help' menu."), yes_caption=__("Understood"), no_caption=__("Do not show hint in the future")):
         $ persistent.seen_ignore_intro = True
     return
 
@@ -1162,7 +1024,7 @@ label jobs_introduction():
 label help_brothel_intro():
     sill "Welcome to your brothel! Here you can manage your brothel options, buy new rooms and hire freelancers."
 
-    if not debug_mode and story_mode:
+    if not debug_mode and game.is_story_mode():
         menu:
             sill "Would you like to learn more about your brothel?"
 
@@ -1405,7 +1267,8 @@ label help_districts():
 
 label help_visit_district():
 
-    sill happy "From here, you can see the various locations available in {b}[district.name]{/b}. Click on their picture to visit them."
+    $ _district_name = __(district.name)
+    sill happy "From here, you can see the various locations available in {b}[_district_name]{/b}. Click on their picture to visit them."
 
     return
 
@@ -2324,7 +2187,7 @@ label cheat_menu():
                         l = []
                         for g in game.free_girls:
                             l.append(g.fullname + " (id: " + str(g.id) + ")")
-                        renpy.say("", "Free girls: " + and_text(l))
+                        renpy.say("", __("Free girls: %s") % and_text(l))
 
                 "Back":
                     jump cheat_menu
@@ -2387,7 +2250,7 @@ label cheat_menu():
                     python:
                         if untagged_pics:
                             for p in untagged_pics:
-                                renpy.say("", "Couldn't tag " + p)
+                                renpy.say("", __("Couldn't tag %s") % p)
                         else:
                             "No picture found missing a tag"
 
@@ -2396,7 +2259,7 @@ label cheat_menu():
                         for tag in tag_dict.keys():
                             for tag2 in tag_dict.keys():
                                 if tag in tag2 and tag != tag2:
-                                    renpy.say("", "Warning: " + tag + " is in " + tag2 + ".")
+                                    renpy.say("", __("Warning: %s is in %s.") % (tag, tag2))
 
         "Farm":
             menu:
@@ -2583,9 +2446,9 @@ label check_missing_pictures(type):
 
             for tag in ["profile", "portrait"]:
                 if missing[tag]:
-                    renpy.say("", and_text(missing[tag]) + ": missing a {b}" + tag + "{/b} picture.")
+                    renpy.say("", __("%s: missing a {b}%s{/b} picture.") % (and_text(missing[tag]), tag))
                 elif len(template_girls) > 1:
-                    renpy.say("", "No girls are missing a " + tag + " picture.")
+                    renpy.say("", __("No girls are missing a %s picture.") % tag)
 
 
         "Step2: Checking job/sex pictures"
@@ -2601,9 +2464,9 @@ label check_missing_pictures(type):
 
             for tag in ["rest", "waitress", "dancer", "masseuse", "geisha", "service", "sex", "anal", "fetish"]:
                 if missing[tag]:
-                    renpy.say("", and_text(missing[tag]) + ": missing a regular {b}" + tag + "{/b} picture.")
+                    renpy.say("", __("%s: missing a regular {b}%s{/b} picture.") % (and_text(missing[tag]), tag))
                 elif len(template_girls) > 1:
-                    renpy.say("", "No girls are missing a " + tag + " picture.")
+                    renpy.say("", __("No girls are missing a %s picture.") % tag)
 
 
         "Step3: Checking naked pictures"
@@ -2617,9 +2480,9 @@ label check_missing_pictures(type):
 
             for tag in normal_tags:
                 if missing[tag]:
-                    renpy.say("", and_text(missing[tag]) + ": missing a {b}naked " + tag + "{/b} picture.")
+                    renpy.say("", __("%s: missing a {b}naked %s{/b} picture.") % (and_text(missing[tag]), tag))
                 elif len(template_girls) > 1:
-                    renpy.say("", "No girls are missing a naked " + tag + " picture.")
+                    renpy.say("", __("No girls are missing a naked %s picture.") % tag)
 
         "Step4: Checking group and bisexual sex pictures"
 
@@ -2633,9 +2496,9 @@ label check_missing_pictures(type):
             for tag in ["group", "bisexual"]:
                 for act in all_sex_acts:
                     if missing[(tag, act)]:
-                        renpy.say("", and_text(missing[tag]) + ": missing a {b}" + tag + " " + act + "{/b} picture.")
+                        renpy.say("", __("%s: missing a {b}%s %s{/b} picture.") % (and_text(missing[tag]), tag, act))
                     elif len(template_girls) > 1:
-                        renpy.say("", "No girls are missing a " + tag + " " + act + " picture.")
+                        renpy.say("", __("No girls are missing a %s %s picture.") % (tag, act))
 
     elif type == "optional":
 
@@ -2652,9 +2515,9 @@ label check_missing_pictures(type):
             for tag in ["big", "beast", "monster", "toy"]:
                 for act in extended_sex_acts:
                     if missing[(tag, act)]:
-                        renpy.say("", and_text(missing[(tag, act)]) + ": missing a {b}" + tag + " " + act + "{/b} picture.")
+                        renpy.say("", __("%s: missing a {b}%s %s{/b} picture.") % (and_text(missing[(tag, act)]), tag, act))
                     elif len(template_girls) > 1:
-                        renpy.say("", "No girls are missing a " + tag + " " + act + " picture.")
+                        renpy.say("", __("No girls are missing a %s %s picture.") % (tag, act))
 
         "Step2: Checking optional fixation pictures"
 
@@ -2669,9 +2532,9 @@ label check_missing_pictures(type):
                 for fix in fix_dict.values():
                     for act in fix.acts:
                         if missing[(fix, act)]:
-                            renpy.say("", and_text(missing[(fix, act)]) + ": missing a {b}" + act + " " + fix.name + "{/b} picture.")
+                            renpy.say("", __("%s: missing a {b}%s %s{/b} picture.") % (and_text(missing[(fix, act)]), act, fix.name))
                         elif len(template_girls) > 1:
-                            renpy.say("", "No girls are missing a " + act + " " + fix.name + " picture.")
+                            renpy.say("", __("No girls are missing a %s %s picture.") % (act, fix.name))
 
     "End of picture check."
 
@@ -2776,7 +2639,7 @@ label test_perks_menu:
             $ duration = int(renpy.input("Duration", default=duration))
 
         "Job: [jobs]":
-            $ jobs = menu([("Whore", "whore"), ("Waitress", "waitress"), ("Dancer", "dancer"), ("Masseuse", "masseuse"), ("Geisha", "geisha"), ("Cycle jobs", "cycle jobs"), ("Cycle all", "cycle all")])
+            $ jobs = menu([(__("Whore"), "whore"), (__("Waitress"), "waitress"), (__("Dancer"), "dancer"), (__("Masseuse"), "masseuse"), (__("Geisha"), "geisha"), (__("Cycle jobs"), "cycle jobs"), (__("Cycle all"), "cycle all")])
 
         "Show events: [show_ev]":
             $ show_ev = not show_ev
@@ -2945,7 +2808,7 @@ screen perk_test_results(days, girls, girls2, girl_stats):
 
         has vbox
 
-        text "Test results - " + perk_text
+        text _("Test results - %s") % perk_text
 
         viewport:
 

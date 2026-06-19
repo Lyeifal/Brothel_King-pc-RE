@@ -1,0 +1,4253 @@
+{
+  "intro": {
+    "pic": "portrait.webp",
+    "pic_path": "resources/characters/npc/Sill/",
+    "level_nb": 1,
+    "target": "intro",
+    "requirements": {
+      "1": 1,
+      "2": 2,
+      "3": 3,
+      "4": 4,
+      "5": 5
+    },
+    "requirements2": null,
+    "custom_titles": null,
+    "multi": 1,
+    "title_i18n": "Introduction: Brothel Management 101",
+    "description_i18n": "Watch the introduction."
+  },
+  "trainer maya": {
+    "pic": "portrait.webp",
+    "pic_path": "resources/characters/npc/Maya/",
+    "level_nb": 1,
+    "target": "trainer maya",
+    "requirements": {
+      "1": 1,
+      "2": 2,
+      "3": 3,
+      "4": 4,
+      "5": 5
+    },
+    "requirements2": null,
+    "custom_titles": null,
+    "multi": 3,
+    "title_i18n": "New trainer: Maya",
+    "description_i18n": "You have unlocked Maya. She can improve your girls' defense."
+  },
+  "trainer renza": {
+    "pic": "portrait.webp",
+    "pic_path": "resources/characters/npc/Renza/",
+    "level_nb": 1,
+    "target": "trainer renza",
+    "requirements": {
+      "1": 1,
+      "2": 2,
+      "3": 3,
+      "4": 4,
+      "5": 5
+    },
+    "requirements2": null,
+    "custom_titles": null,
+    "multi": 3,
+    "title_i18n": "New trainer: Renza",
+    "description_i18n": "You have unlocked Renza. She can train your girls as thieves."
+  },
+  "trainer satella": {
+    "pic": "portrait.webp",
+    "pic_path": "resources/characters/npc/Satella/",
+    "level_nb": 1,
+    "target": "trainer satella",
+    "requirements": {
+      "1": 1,
+      "2": 2,
+      "3": 3,
+      "4": 4,
+      "5": 5
+    },
+    "requirements2": null,
+    "custom_titles": null,
+    "multi": 3,
+    "title_i18n": "New trainer: Satella",
+    "description_i18n": "You have unlocked Satella. She will strike fear into your girl's hearts."
+  },
+  "trainer farah": {
+    "pic": "portrait.webp",
+    "pic_path": "resources/characters/npc/Captain/",
+    "level_nb": 1,
+    "target": "trainer farah",
+    "requirements": {
+      "1": 1,
+      "2": 2,
+      "3": 3,
+      "4": 4,
+      "5": 5
+    },
+    "requirements2": null,
+    "custom_titles": null,
+    "multi": 3,
+    "title_i18n": "New trainer: Farah",
+    "description_i18n": "You have unlocked Farah. She trains the spicier sex acts."
+  },
+  "trainer lydie": {
+    "pic": "portrait.webp",
+    "pic_path": "resources/characters/npc/Lieutenant/",
+    "level_nb": 1,
+    "target": "trainer lydie",
+    "requirements": {
+      "1": 1,
+      "2": 2,
+      "3": 3,
+      "4": 4,
+      "5": 5
+    },
+    "requirements2": null,
+    "custom_titles": null,
+    "multi": 3,
+    "title_i18n": "New trainer: Lydie",
+    "description_i18n": "You have unlocked Lydie. She can make your girls more obedient."
+  },
+  "trainer stella": {
+    "pic": "portrait.webp",
+    "pic_path": "resources/characters/npc/Stella/",
+    "level_nb": 1,
+    "target": "trainer stella",
+    "requirements": {
+      "1": 1,
+      "2": 2,
+      "3": 3,
+      "4": 4,
+      "5": 5
+    },
+    "requirements2": null,
+    "custom_titles": null,
+    "multi": 3,
+    "title_i18n": "New trainer: Stella",
+    "description_i18n": "You have unlocked Stella. She can boost your farm techniques."
+  },
+  "trainer bast": {
+    "pic": "portrait.webp",
+    "pic_path": "resources/characters/npc/Bast/",
+    "level_nb": 1,
+    "target": "trainer bast",
+    "requirements": {
+      "1": 1,
+      "2": 2,
+      "3": 3,
+      "4": 4,
+      "5": 5
+    },
+    "requirements2": null,
+    "custom_titles": null,
+    "multi": 3,
+    "title_i18n": "New trainer: Bast",
+    "description_i18n": "You have unlocked Bast. She can improve your resource collection."
+  },
+  "trainer goldie": {
+    "pic": "portrait.webp",
+    "pic_path": "resources/characters/npc/Goldie/",
+    "level_nb": 1,
+    "target": "trainer goldie",
+    "requirements": {
+      "1": 1,
+      "2": 2,
+      "3": 3,
+      "4": 4,
+      "5": 5
+    },
+    "requirements2": null,
+    "custom_titles": null,
+    "multi": 3,
+    "title_i18n": "New trainer: Goldie",
+    "description_i18n": "You have unlocked Goldie. She can train your girls in softcore techniques."
+  },
+  "trainer taxgirl": {
+    "pic": "portrait.webp",
+    "pic_path": "resources/characters/npc/Taxgirl/",
+    "level_nb": 1,
+    "target": "trainer taxgirl",
+    "requirements": {
+      "1": 1,
+      "2": 2,
+      "3": 3,
+      "4": 4,
+      "5": 5
+    },
+    "requirements2": null,
+    "custom_titles": null,
+    "multi": 3,
+    "title_i18n": "New trainer: Guild Woman",
+    "description_i18n": "You have unlocked the Guild Woman. She can shield part of your income from taxes."
+  },
+  "merchant goldie": {
+    "pic": "portrait.webp",
+    "pic_path": "resources/characters/npc/Goldie/",
+    "level_nb": 1,
+    "target": "merchant goldie",
+    "requirements": {
+      "1": 1,
+      "2": 2,
+      "3": 3,
+      "4": 4,
+      "5": 5
+    },
+    "requirements2": null,
+    "custom_titles": null,
+    "multi": 2,
+    "title_i18n": "New merchant: Goldie",
+    "description_i18n": "You have unlocked the ranch, where Goldie sells beasts and related items."
+  },
+  "merchant stella": {
+    "pic": "portrait.webp",
+    "pic_path": "resources/characters/npc/Stella/",
+    "level_nb": 1,
+    "target": "merchant stella",
+    "requirements": {
+      "1": 1,
+      "2": 2,
+      "3": 3,
+      "4": 4,
+      "5": 5
+    },
+    "requirements2": null,
+    "custom_titles": null,
+    "multi": 2,
+    "title_i18n": "New merchant: Stella",
+    "description_i18n": "Stella sells stallions and related items, if you dare approach her."
+  },
+  "merchant willow": {
+    "pic": "portrait.webp",
+    "pic_path": "resources/characters/npc/Willow/",
+    "level_nb": 1,
+    "target": "merchant willow",
+    "requirements": {
+      "1": 1,
+      "2": 2,
+      "3": 3,
+      "4": 4,
+      "5": 5
+    },
+    "requirements2": null,
+    "custom_titles": null,
+    "multi": 2,
+    "title_i18n": "New merchant: Willow",
+    "description_i18n": "Willows sells monsters that she captures for a living, and related items."
+  },
+  "merchant gina": {
+    "pic": "portrait.webp",
+    "pic_path": "resources/characters/npc/Gina/",
+    "level_nb": 1,
+    "target": "merchant gina",
+    "requirements": {
+      "1": 1,
+      "2": 2,
+      "3": 3,
+      "4": 4,
+      "5": 5
+    },
+    "requirements2": null,
+    "custom_titles": null,
+    "multi": 2,
+    "title_i18n": "New merchant: Gina",
+    "description_i18n": "Gina the scientist sells mechanical gizmos, and studies flight."
+  },
+  "merchant riche": {
+    "pic": "portrait.webp",
+    "pic_path": "resources/characters/npc/Riche/",
+    "level_nb": 1,
+    "target": "merchant riche",
+    "requirements": {
+      "1": 1,
+      "2": 2,
+      "3": 3,
+      "4": 4,
+      "5": 5
+    },
+    "requirements2": null,
+    "custom_titles": null,
+    "multi": 4,
+    "title_i18n": "New merchant: Riche",
+    "description_i18n": "Riche sells flowers she picks at the botanical garden."
+  },
+  "merchant katryn": {
+    "pic": "portrait.webp",
+    "pic_path": "resources/characters/npc/Katryn/",
+    "level_nb": 1,
+    "target": "merchant katryn",
+    "requirements": {
+      "1": 1,
+      "2": 2,
+      "3": 3,
+      "4": 4,
+      "5": 5
+    },
+    "requirements2": null,
+    "custom_titles": null,
+    "multi": 4,
+    "title_i18n": "New merchant: Katryn",
+    "description_i18n": "Katryn sells trinkets and has a short temper."
+  },
+  "merchant gurigura": {
+    "pic": "portrait.webp",
+    "pic_path": "resources/characters/npc/Gurigura/",
+    "level_nb": 1,
+    "target": "merchant gurigura",
+    "requirements": {
+      "1": 1,
+      "2": 2,
+      "3": 3,
+      "4": 4,
+      "5": 5
+    },
+    "requirements2": null,
+    "custom_titles": null,
+    "multi": 4,
+    "title_i18n": "New merchant: Gurigura",
+    "description_i18n": "Gurigura sells toys, food and supplies, when she doesn't get distracted."
+  },
+  "merchant ramias": {
+    "pic": "portrait.webp",
+    "pic_path": "resources/characters/npc/Ramias/",
+    "level_nb": 1,
+    "target": "merchant ramias",
+    "requirements": {
+      "1": 1,
+      "2": 2,
+      "3": 3,
+      "4": 4,
+      "5": 5
+    },
+    "requirements2": null,
+    "custom_titles": null,
+    "multi": 4,
+    "title_i18n": "New merchant: Ramias",
+    "description_i18n": "Ramias sells weapons, and does not suffer fools and hagglers."
+  },
+  "merchant giftgirl": {
+    "pic": "portrait.webp",
+    "pic_path": "resources/characters/npc/Gift girl/",
+    "level_nb": 1,
+    "target": "merchant giftgirl",
+    "requirements": {
+      "1": 1,
+      "2": 2,
+      "3": 3,
+      "4": 4,
+      "5": 5
+    },
+    "requirements2": null,
+    "custom_titles": null,
+    "multi": 4,
+    "title_i18n": "New merchant: Gift shop",
+    "description_i18n": "The gift shop girl sells... Gifts. Duh."
+  },
+  "merchant twins": {
+    "pic": "body.webp",
+    "pic_path": "resources/characters/npc/Twins/",
+    "level_nb": 1,
+    "target": "merchant twins",
+    "requirements": {
+      "1": 1,
+      "2": 2,
+      "3": 3,
+      "4": 4,
+      "5": 5
+    },
+    "requirements2": null,
+    "custom_titles": null,
+    "multi": 4,
+    "title_i18n": "New merchant: Twins",
+    "description_i18n": "Twins, Austin! Twins!"
+  },
+  "c1 gang": {
+    "pic": "portrait naked.webp",
+    "pic_path": "resources/characters/npc/Sewer girl/",
+    "level_nb": 1,
+    "target": "c1 gang",
+    "requirements": {
+      "1": 1,
+      "2": 2,
+      "3": 3,
+      "4": 4,
+      "5": 5
+    },
+    "requirements2": null,
+    "custom_titles": null,
+    "multi": 2,
+    "title_i18n": "Chapter 1: Gangbanger",
+    "description_i18n": "You helped a bunch of thugs fuck a helpless woman in the sewers."
+  },
+  "c1 good": {
+    "pic": "portrait.webp",
+    "pic_path": "resources/characters/npc/Maya/",
+    "level_nb": 1,
+    "target": "c1 good",
+    "requirements": {
+      "1": 1,
+      "2": 2,
+      "3": 3,
+      "4": 4,
+      "5": 5
+    },
+    "requirements2": null,
+    "custom_titles": null,
+    "multi": 10,
+    "title_i18n": "Chapter 1: Friend Of Justice",
+    "description_i18n": "You have completed Chapter 1, and sided with Maya."
+  },
+  "c1 neutral": {
+    "pic": "portrait.webp",
+    "pic_path": "resources/characters/npc/Renza/",
+    "level_nb": 1,
+    "target": "c1 neutral",
+    "requirements": {
+      "1": 1,
+      "2": 2,
+      "3": 3,
+      "4": 4,
+      "5": 5
+    },
+    "requirements2": null,
+    "custom_titles": null,
+    "multi": 10,
+    "title_i18n": "Chapter 1: Friend Of The Guild",
+    "description_i18n": "You have completed Chapter 1, and sided with Renza."
+  },
+  "c1 evil": {
+    "pic": "portrait.webp",
+    "pic_path": "resources/characters/npc/Captain/",
+    "level_nb": 1,
+    "target": "c1 evil",
+    "requirements": {
+      "1": 1,
+      "2": 2,
+      "3": 3,
+      "4": 4,
+      "5": 5
+    },
+    "requirements2": null,
+    "custom_titles": null,
+    "multi": 10,
+    "title_i18n": "Chapter 1: Friend Of The Guard",
+    "description_i18n": "You have completed Chapter 1, and sided with the Captain."
+  },
+  "c2 kunoichi": {
+    "pic": "kunoichi portrait.webp",
+    "pic_path": "resources/characters/npc/kunoichi/",
+    "level_nb": 1,
+    "target": "c2 kunoichi",
+    "requirements": {
+      "1": 1,
+      "2": 2,
+      "3": 3,
+      "4": 4,
+      "5": 5
+    },
+    "requirements2": null,
+    "custom_titles": null,
+    "multi": 4,
+    "title_i18n": "Chapter 2: The Hunt",
+    "description_i18n": "You have caught your first Kunoichi."
+  },
+  "c2 haruka": {
+    "pic": "portrait.webp",
+    "pic_path": "resources/characters/npc/kunoichi/haruka/",
+    "level_nb": 1,
+    "target": "c2 haruka",
+    "requirements": {
+      "1": 1,
+      "2": 2,
+      "3": 3,
+      "4": 4,
+      "5": 5
+    },
+    "requirements2": null,
+    "custom_titles": null,
+    "multi": 4,
+    "title_i18n": "Chapter 2: Painful Memories",
+    "description_i18n": "You have learnt about Haruka's traumatic past."
+  },
+  "c2 mizuki": {
+    "pic": "portrait.webp",
+    "pic_path": "resources/characters/npc/kunoichi/mizuki/",
+    "level_nb": 1,
+    "target": "c2 mizuki",
+    "requirements": {
+      "1": 1,
+      "2": 2,
+      "3": 3,
+      "4": 4,
+      "5": 5
+    },
+    "requirements2": null,
+    "custom_titles": null,
+    "multi": 4,
+    "title_i18n": "Chapter 2: The Onsen Ghost",
+    "description_i18n": "You have had a strange and arousing encounter in your onsen with Mizuki."
+  },
+  "c2 narika": {
+    "pic": "portrait.webp",
+    "pic_path": "resources/characters/npc/kunoichi/narika/",
+    "level_nb": 1,
+    "target": "c2 narika",
+    "requirements": {
+      "1": 1,
+      "2": 2,
+      "3": 3,
+      "4": 4,
+      "5": 5
+    },
+    "requirements2": null,
+    "custom_titles": null,
+    "multi": 4,
+    "title_i18n": "Chapter 2: The Naughty Schoolgirl",
+    "description_i18n": "You have peeped on Narika's secret intimate session."
+  },
+  "suzume hint": {
+    "pic": "portrait doubt.webp",
+    "pic_path": "resources/characters/npc/suzume/",
+    "level_nb": 1,
+    "target": "suzume hint",
+    "requirements": {
+      "1": 1,
+      "2": 2,
+      "3": 3,
+      "4": 4,
+      "5": 5
+    },
+    "requirements2": null,
+    "custom_titles": null,
+    "multi": 5,
+    "title_i18n": "Chapter 3: Take a hint",
+    "description_i18n": "You have obtained your first hint in the hunt for the mysterious Kunoichi."
+  },
+  "homura secret": {
+    "pic": "portrait ninja.webp",
+    "pic_path": "resources/characters/npc/homura/",
+    "level_nb": 1,
+    "target": "homura secret",
+    "requirements": {
+      "1": 1,
+      "2": 2,
+      "3": 3,
+      "4": 4,
+      "5": 5
+    },
+    "requirements2": null,
+    "custom_titles": null,
+    "multi": 5,
+    "title_i18n": "Chapter 3: Light my Fire",
+    "description_i18n": "You have learnt the true identity of the mysterious Fire Kunoichi."
+  },
+  "haruka captured": {
+    "pic": "portrait blush.webp",
+    "pic_path": "resources/characters/npc/kunoichi/haruka/",
+    "level_nb": 1,
+    "target": "haruka captured",
+    "requirements": {
+      "1": 1,
+      "2": 2,
+      "3": 3,
+      "4": 4,
+      "5": 5
+    },
+    "requirements2": null,
+    "custom_titles": null,
+    "multi": 10,
+    "title_i18n": "The last Earthbender",
+    "description_i18n": "You have captured the Earth Kunoichi and made her your sex slave."
+  },
+  "narika captured": {
+    "pic": "portrait blush.webp",
+    "pic_path": "resources/characters/npc/kunoichi/narika/",
+    "level_nb": 1,
+    "target": "narika captured",
+    "requirements": {
+      "1": 1,
+      "2": 2,
+      "3": 3,
+      "4": 4,
+      "5": 5
+    },
+    "requirements2": null,
+    "custom_titles": null,
+    "multi": 10,
+    "title_i18n": "The last Voidbender",
+    "description_i18n": "You have captured the Void Kunoichi and made her your sex slave."
+  },
+  "mizuki revenge": {
+    "pic": "portrait naked.webp",
+    "pic_path": "resources/characters/npc/kunoichi/mizuki/",
+    "level_nb": 1,
+    "target": "mizuki revenge",
+    "requirements": {
+      "1": 1,
+      "2": 2,
+      "3": 3,
+      "4": 4,
+      "5": 5
+    },
+    "requirements2": null,
+    "custom_titles": null,
+    "multi": 10,
+    "title_i18n": "The last Waterbender",
+    "description_i18n": "You have made a deal with the Water Kunoichi and she became your sex slave."
+  },
+  "homura farm": {
+    "pic": "portrait naked.webp",
+    "pic_path": "resources/characters/npc/homura/",
+    "level_nb": 1,
+    "target": "homura farm",
+    "requirements": {
+      "1": 1,
+      "2": 2,
+      "3": 3,
+      "4": 4,
+      "5": 5
+    },
+    "requirements2": null,
+    "custom_titles": null,
+    "multi": 10,
+    "title_i18n": "The last Firebender",
+    "description_i18n": "You have enlisted the help of Gizel to break Homura's will and turn her into your sex slave."
+  },
+  "haruka ally": {
+    "pic": "portrait.webp",
+    "pic_path": "resources/characters/npc/kunoichi/subaru/",
+    "level_nb": 1,
+    "target": "haruka ally",
+    "requirements": {
+      "1": 1,
+      "2": 2,
+      "3": 3,
+      "4": 4,
+      "5": 5
+    },
+    "requirements2": null,
+    "custom_titles": null,
+    "multi": 10,
+    "title_i18n": "Chapter 3: Spitting out the Demons",
+    "description_i18n": "You have helped Haruka rescue her Master Subaru from the clutches of evil demon knights."
+  },
+  "narika ally": {
+    "pic": "portrait sad.webp",
+    "pic_path": "resources/characters/npc/kunoichi/narika/",
+    "level_nb": 1,
+    "target": "narika ally",
+    "requirements": {
+      "1": 1,
+      "2": 2,
+      "3": 3,
+      "4": 4,
+      "5": 5
+    },
+    "requirements2": null,
+    "custom_titles": null,
+    "multi": 10,
+    "title_i18n": "Chapter 3: Ocean's Two",
+    "description_i18n": "You have helped Narika unfold her not-so-master plan to rob the Magic University, and escaped by the skin of your teeth."
+  },
+  "mizuki redeemed": {
+    "pic": "portrait sad.webp",
+    "pic_path": "resources/characters/npc/kunoichi/mizuki/",
+    "level_nb": 1,
+    "target": "mizuki redeemed",
+    "requirements": {
+      "1": 1,
+      "2": 2,
+      "3": 3,
+      "4": 4,
+      "5": 5
+    },
+    "requirements2": null,
+    "custom_titles": null,
+    "multi": 10,
+    "title_i18n": "Chapter 3: A Zanese Ghost Story",
+    "description_i18n": "You have helped Mizuki meet her long-lost heir, and brought her suffering to an end."
+  },
+  "homura love": {
+    "pic": "portrait blush.webp",
+    "pic_path": "resources/characters/npc/homura/",
+    "level_nb": 1,
+    "target": "homura love",
+    "requirements": {
+      "1": 1,
+      "2": 2,
+      "3": 3,
+      "4": 4,
+      "5": 5
+    },
+    "requirements2": null,
+    "custom_titles": null,
+    "multi": 10,
+    "title_i18n": "Chapter 3: The Power of Love",
+    "description_i18n": "Homura renounced her oath to Shirohito and became yours instead."
+  },
+  "haruka banished": {
+    "pic": "portrait evil.webp",
+    "pic_path": "resources/characters/npc/kunoichi/subaru/",
+    "level_nb": 1,
+    "target": "haruka banished",
+    "requirements": {
+      "1": 1,
+      "2": 2,
+      "3": 3,
+      "4": 4,
+      "5": 5
+    },
+    "requirements2": null,
+    "custom_titles": null,
+    "multi": 10,
+    "title_i18n": "Chapter 3: It's a Trap!",
+    "description_i18n": "You have led Haruka into a horrible trap."
+  },
+  "narika raped": {
+    "pic": "enlarger.webp",
+    "pic_path": "resources/items/misc/",
+    "level_nb": 1,
+    "target": "narika raped",
+    "requirements": {
+      "1": 1,
+      "2": 2,
+      "3": 3,
+      "4": 4,
+      "5": 5
+    },
+    "requirements2": null,
+    "custom_titles": null,
+    "multi": 10,
+    "title_i18n": "Chapter 3: Honey, I Shrunk your Ass",
+    "description_i18n": "You have turned poor Narika into a fleshlight."
+  },
+  "mizuki captured": {
+    "pic": "portrait ninja.webp",
+    "pic_path": "resources/characters/npc/kunoichi/mizuki/",
+    "level_nb": 1,
+    "target": "mizuki captured",
+    "requirements": {
+      "1": 1,
+      "2": 2,
+      "3": 3,
+      "4": 4,
+      "5": 5
+    },
+    "requirements2": null,
+    "custom_titles": null,
+    "multi": 5,
+    "title_i18n": "Chapter 3: The One that Got Away",
+    "description_i18n": "You have captured Mizuki, only for her to slip between your fingers."
+  },
+  "homura shower": {
+    "pic": "capture (5).webp",
+    "pic_path": "resources/characters/npc/homura/",
+    "level_nb": 1,
+    "target": "homura shower",
+    "requirements": {
+      "1": 1,
+      "2": 2,
+      "3": 3,
+      "4": 4,
+      "5": 5
+    },
+    "requirements2": null,
+    "custom_titles": null,
+    "multi": 5,
+    "title_i18n": "Chapter 3: Hot Shower",
+    "description_i18n": "You have captured Homura, and relieved some of the tension between you."
+  },
+  "haruka arrested": {
+    "pic": "portrait surprise.webp",
+    "pic_path": "resources/characters/npc/kunoichi/haruka/",
+    "level_nb": 1,
+    "target": "haruka arrested",
+    "requirements": {
+      "1": 1,
+      "2": 2,
+      "3": 3,
+      "4": 4,
+      "5": 5
+    },
+    "requirements2": null,
+    "custom_titles": null,
+    "multi": 5,
+    "title_i18n": "Chapter 3: Earth Kunoichi down",
+    "description_i18n": "You have defeated the Earth Kunoichi and turned her over to the authorities."
+  },
+  "narika arrested": {
+    "pic": "portrait angry.webp",
+    "pic_path": "resources/characters/npc/kunoichi/narika/",
+    "level_nb": 1,
+    "target": "narika arrested",
+    "requirements": {
+      "1": 1,
+      "2": 2,
+      "3": 3,
+      "4": 4,
+      "5": 5
+    },
+    "requirements2": null,
+    "custom_titles": null,
+    "multi": 5,
+    "title_i18n": "Chapter 3: Void Kunoichi down",
+    "description_i18n": "You have defeated the Void Kunoichi and turned her over to the authorities."
+  },
+  "mizuki arrested": {
+    "pic": "portrait ninja.webp",
+    "pic_path": "resources/characters/npc/kunoichi/mizuki/",
+    "level_nb": 1,
+    "target": "mizuki arrested",
+    "requirements": {
+      "1": 1,
+      "2": 2,
+      "3": 3,
+      "4": 4,
+      "5": 5
+    },
+    "requirements2": null,
+    "custom_titles": null,
+    "multi": 5,
+    "title_i18n": "Chapter 3: Water Kunoichi down",
+    "description_i18n": "You have defeated the Water Kunoichi and turned her over to the authorities."
+  },
+  "homura arrested": {
+    "pic": "portrait ninja.webp",
+    "pic_path": "resources/characters/npc/homura/",
+    "level_nb": 1,
+    "target": "homura arrested",
+    "requirements": {
+      "1": 1,
+      "2": 2,
+      "3": 3,
+      "4": 4,
+      "5": 5
+    },
+    "requirements2": null,
+    "custom_titles": null,
+    "multi": 5,
+    "title_i18n": "Chapter 3: Fire Kunoichi down",
+    "description_i18n": "You have defeated the Fire Kunoichi and turned her over to the authorities."
+  },
+  "h treasure blonde": {
+    "pic": "amber ring.webp",
+    "pic_path": "resources/items/ring/",
+    "level_nb": 1,
+    "target": "h treasure blonde",
+    "requirements": {
+      "1": 1,
+      "2": 2,
+      "3": 3,
+      "4": 4,
+      "5": 5
+    },
+    "requirements2": null,
+    "custom_titles": null,
+    "multi": 10,
+    "title_i18n": "Treasure hunter: Blondie",
+    "description_i18n": "You had sex with the blonde treasure girl."
+  },
+  "h treasure pink": {
+    "pic": "amber ring.webp",
+    "pic_path": "resources/items/ring/",
+    "level_nb": 1,
+    "target": "h treasure pink",
+    "requirements": {
+      "1": 1,
+      "2": 2,
+      "3": 3,
+      "4": 4,
+      "5": 5
+    },
+    "requirements2": null,
+    "custom_titles": null,
+    "multi": 10,
+    "title_i18n": "Treasure hunter: Pinky",
+    "description_i18n": "You had sex with the pink-haired treasure girl."
+  },
+  "h sill1": {
+    "pic": "portrait2.webp",
+    "pic_path": "resources/characters/npc/Sill/",
+    "level_nb": 1,
+    "target": "h sill1",
+    "requirements": {
+      "1": 1,
+      "2": 2,
+      "3": 3,
+      "4": 4,
+      "5": 5
+    },
+    "requirements2": null,
+    "custom_titles": null,
+    "multi": 5,
+    "title_i18n": "Bedded: The Slave",
+    "description_i18n": "You had hot sex with your slave Sill."
+  },
+  "h maid": {
+    "pic": "portrait blush.webp",
+    "pic_path": "resources/characters/npc/Maid/",
+    "level_nb": 1,
+    "target": "h maid",
+    "requirements": {
+      "1": 1,
+      "2": 2,
+      "3": 3,
+      "4": 4,
+      "5": 5
+    },
+    "requirements2": null,
+    "custom_titles": null,
+    "multi": 5,
+    "title_i18n": "Bedded: The Maid",
+    "description_i18n": "You had sex with Gio's maid."
+  },
+  "h banker": {
+    "pic": "portrait.webp",
+    "pic_path": "resources/characters/npc/Banker/",
+    "level_nb": 1,
+    "target": "h banker",
+    "requirements": {
+      "1": 1,
+      "2": 2,
+      "3": 3,
+      "4": 4,
+      "5": 5
+    },
+    "requirements2": null,
+    "custom_titles": null,
+    "multi": 10,
+    "title_i18n": "Bedded: The Banker",
+    "description_i18n": "You had sex with the Banker."
+  },
+  "h farah": {
+    "pic": "portrait.webp",
+    "pic_path": "resources/characters/npc/Captain/",
+    "level_nb": 1,
+    "target": "h farah",
+    "requirements": {
+      "1": 1,
+      "2": 2,
+      "3": 3,
+      "4": 4,
+      "5": 5
+    },
+    "requirements2": null,
+    "custom_titles": null,
+    "multi": 5,
+    "title_i18n": "Bedded: The Captain",
+    "description_i18n": "You had sex with Farah."
+  },
+  "h lydie": {
+    "pic": "portrait.webp",
+    "pic_path": "resources/characters/npc/Lieutenant/",
+    "level_nb": 1,
+    "target": "h lydie",
+    "requirements": {
+      "1": 1,
+      "2": 2,
+      "3": 3,
+      "4": 4,
+      "5": 5
+    },
+    "requirements2": null,
+    "custom_titles": null,
+    "multi": 5,
+    "title_i18n": "Bedded: The Lieutenant",
+    "description_i18n": "You had sex with Lydie."
+  },
+  "h kashiv": {
+    "pic": "portrait.webp",
+    "pic_path": "resources/characters/npc/Sergeant/",
+    "level_nb": 1,
+    "target": "h kashiv",
+    "requirements": {
+      "1": 1,
+      "2": 2,
+      "3": 3,
+      "4": 4,
+      "5": 5
+    },
+    "requirements2": null,
+    "custom_titles": null,
+    "multi": 5,
+    "title_i18n": "Bedded: The Sergeant",
+    "description_i18n": "You had sex with Kashiv."
+  },
+  "h maya": {
+    "pic": "portrait.webp",
+    "pic_path": "resources/characters/npc/Maya/",
+    "level_nb": 1,
+    "target": "h maya",
+    "requirements": {
+      "1": 1,
+      "2": 2,
+      "3": 3,
+      "4": 4,
+      "5": 5
+    },
+    "requirements2": null,
+    "custom_titles": null,
+    "multi": 5,
+    "title_i18n": "Bedded: The Guard",
+    "description_i18n": "You had sex with Maya."
+  },
+  "h renza": {
+    "pic": "portrait.webp",
+    "pic_path": "resources/characters/npc/Renza/",
+    "level_nb": 1,
+    "target": "h renza",
+    "requirements": {
+      "1": 1,
+      "2": 2,
+      "3": 3,
+      "4": 4,
+      "5": 5
+    },
+    "requirements2": null,
+    "custom_titles": null,
+    "multi": 10,
+    "title_i18n": "Bedded: The Thief",
+    "description_i18n": "You had sex with Renza."
+  },
+  "h goldie": {
+    "pic": "portrait.webp",
+    "pic_path": "resources/characters/npc/Goldie/",
+    "level_nb": 1,
+    "target": "h goldie",
+    "requirements": {
+      "1": 1,
+      "2": 2,
+      "3": 3,
+      "4": 4,
+      "5": 5
+    },
+    "requirements2": null,
+    "custom_titles": null,
+    "multi": 5,
+    "title_i18n": "Bedded: The Rancher",
+    "description_i18n": "You had sex with Goldie."
+  },
+  "h stella": {
+    "pic": "portrait.webp",
+    "pic_path": "resources/characters/npc/Stella/",
+    "level_nb": 1,
+    "target": "h stella",
+    "requirements": {
+      "1": 1,
+      "2": 2,
+      "3": 3,
+      "4": 4,
+      "5": 5
+    },
+    "requirements2": null,
+    "custom_titles": null,
+    "multi": 5,
+    "title_i18n": "Bedded: The Officer",
+    "description_i18n": "You had sex with Stella."
+  },
+  "h ka": {
+    "pic": "ka portrait.webp",
+    "pic_path": "resources/characters/npc/Stella/",
+    "level_nb": 1,
+    "target": "h ka",
+    "requirements": {
+      "1": 1,
+      "2": 2,
+      "3": 3,
+      "4": 4,
+      "5": 5
+    },
+    "requirements2": null,
+    "custom_titles": null,
+    "multi": 10,
+    "title_i18n": "Bedded: The General",
+    "description_i18n": "You had sex with Ka."
+  },
+  "h zee": {
+    "pic": "zee portrait.webp",
+    "pic_path": "resources/characters/npc/Stella/",
+    "level_nb": 1,
+    "target": "h zee",
+    "requirements": {
+      "1": 1,
+      "2": 2,
+      "3": 3,
+      "4": 4,
+      "5": 5
+    },
+    "requirements2": null,
+    "custom_titles": null,
+    "multi": 10,
+    "title_i18n": "Bedded: The Admiral",
+    "description_i18n": "You had sex with Zee."
+  },
+  "h willow": {
+    "pic": "portrait.webp",
+    "pic_path": "resources/characters/npc/Willow/",
+    "level_nb": 1,
+    "target": "h willow",
+    "requirements": {
+      "1": 1,
+      "2": 2,
+      "3": 3,
+      "4": 4,
+      "5": 5
+    },
+    "requirements2": null,
+    "custom_titles": null,
+    "multi": 5,
+    "title_i18n": "Bedded: The Hunter",
+    "description_i18n": "You had sex with Willow."
+  },
+  "h relative": {
+    "pic": "portrait.webp",
+    "pic_path": "resources/characters/npc/Willow/",
+    "level_nb": 1,
+    "target": "h relative",
+    "requirements": {
+      "1": 1,
+      "2": 2,
+      "3": 3,
+      "4": 4,
+      "5": 5
+    },
+    "requirements2": null,
+    "custom_titles": null,
+    "multi": 10,
+    "title_i18n": "Bedded: The Relative",
+    "description_i18n": "You had sex with Willow's relative."
+  },
+  "h toad": {
+    "pic": "milkmaid.webp",
+    "pic_path": "resources/characters/npc/Misc/",
+    "level_nb": 1,
+    "target": "h toad",
+    "requirements": {
+      "1": 1,
+      "2": 2,
+      "3": 3,
+      "4": 4,
+      "5": 5
+    },
+    "requirements2": null,
+    "custom_titles": null,
+    "multi": 10,
+    "title_i18n": "Battle Toad",
+    "description_i18n": "You had sex as a toad, and now you can never tell your friends."
+  },
+  "h shop": {
+    "pic": "silky nighties.webp",
+    "pic_path": "resources/items/gift/",
+    "level_nb": 1,
+    "target": "h shop",
+    "requirements": {
+      "1": 1,
+      "2": 2,
+      "3": 3,
+      "4": 4,
+      "5": 5
+    },
+    "requirements2": null,
+    "custom_titles": null,
+    "multi": 10,
+    "title_i18n": "Bedded: The Shop Owner",
+    "description_i18n": "You had sex with the shop owner."
+  },
+  "h satella": {
+    "pic": "portrait.webp",
+    "pic_path": "resources/characters/npc/Satella/",
+    "level_nb": 1,
+    "target": "h satella",
+    "requirements": {
+      "1": 1,
+      "2": 2,
+      "3": 3,
+      "4": 4,
+      "5": 5
+    },
+    "requirements2": null,
+    "custom_titles": null,
+    "multi": 10,
+    "title_i18n": "Bedded: The Night Mistress",
+    "description_i18n": "You had sex with Satella."
+  },
+  "h shalia": {
+    "pic": "portrait.webp",
+    "pic_path": "resources/characters/npc/Shalia/",
+    "level_nb": 1,
+    "target": "h shalia",
+    "requirements": {
+      "1": 1,
+      "2": 2,
+      "3": 3,
+      "4": 4,
+      "5": 5
+    },
+    "requirements2": null,
+    "custom_titles": null,
+    "multi": 25,
+    "title_i18n": "Bedded: The Moon Goddess",
+    "description_i18n": "You had sex with the Goddess, Shalia."
+  },
+  "h sewer": {
+    "pic": "portrait.webp",
+    "pic_path": "resources/characters/npc/Sewer girl/",
+    "level_nb": 1,
+    "target": "h sewer",
+    "requirements": {
+      "1": 1,
+      "2": 2,
+      "3": 3,
+      "4": 4,
+      "5": 5
+    },
+    "requirements2": null,
+    "custom_titles": null,
+    "multi": 10,
+    "title_i18n": "Bedded: The Accountant",
+    "description_i18n": "You had sex with the woman you rescued from the sewers."
+  },
+  "h bast": {
+    "pic": "portrait.webp",
+    "pic_path": "resources/characters/npc/Bast/",
+    "level_nb": 1,
+    "target": "h bast",
+    "requirements": {
+      "1": 1,
+      "2": 2,
+      "3": 3,
+      "4": 4,
+      "5": 5
+    },
+    "requirements2": null,
+    "custom_titles": null,
+    "multi": 10,
+    "title_i18n": "Bedded: The Holy Builder",
+    "description_i18n": "You had sex with Bast."
+  },
+  "h anika": {
+    "pic": "anika portrait.webp",
+    "pic_path": "resources/characters/npc/Jobgirl/beach/",
+    "level_nb": 1,
+    "target": "h anika",
+    "requirements": {
+      "1": 1,
+      "2": 2,
+      "3": 3,
+      "4": 4,
+      "5": 5
+    },
+    "requirements2": null,
+    "custom_titles": null,
+    "multi": 10,
+    "title_i18n": "Bedded: The Swimmer",
+    "description_i18n": "You had sex with Anika."
+  },
+  "h jobgirl": {
+    "pic": "portrait.webp",
+    "pic_path": "resources/characters/npc/Jobgirl/",
+    "level_nb": 1,
+    "target": "h jobgirl",
+    "requirements": {
+      "1": 1,
+      "2": 2,
+      "3": 3,
+      "4": 4,
+      "5": 5
+    },
+    "requirements2": null,
+    "custom_titles": null,
+    "multi": 1,
+    "title_i18n": "Bedded: The Adventurer",
+    "description_i18n": "You had sex with Scarlet."
+  },
+  "h taxgirl": {
+    "pic": "portrait.webp",
+    "pic_path": "resources/characters/npc/taxgirl/",
+    "level_nb": 1,
+    "target": "h taxgirl",
+    "requirements": {
+      "1": 1,
+      "2": 2,
+      "3": 3,
+      "4": 4,
+      "5": 5
+    },
+    "requirements2": null,
+    "custom_titles": null,
+    "multi": 10,
+    "title_i18n": "Bedded: The Taxwoman",
+    "description_i18n": "You had sex with the Slavers' Guild woman."
+  },
+  "h suzume": {
+    "pic": "portrait.webp",
+    "pic_path": "resources/characters/npc/suzume/",
+    "level_nb": 1,
+    "target": "h suzume",
+    "requirements": {
+      "1": 1,
+      "2": 2,
+      "3": 3,
+      "4": 4,
+      "5": 5
+    },
+    "requirements2": null,
+    "custom_titles": null,
+    "multi": 10,
+    "title_i18n": "Bedded: The Air Kunoichi",
+    "description_i18n": "You had (repeated) sex with Suzume."
+  },
+  "h homura": {
+    "pic": "portrait.webp",
+    "pic_path": "resources/characters/npc/homura/",
+    "level_nb": 1,
+    "target": "h homura",
+    "requirements": {
+      "1": 1,
+      "2": 2,
+      "3": 3,
+      "4": 4,
+      "5": 5
+    },
+    "requirements2": null,
+    "custom_titles": null,
+    "multi": 10,
+    "title_i18n": "Bedded: The Noble Girl",
+    "description_i18n": "You had sex with Lady Homura Henso."
+  },
+  "h impress": {
+    "pic": "impress0.webp",
+    "pic_path": "resources/characters/npc/encounters/",
+    "level_nb": 4,
+    "target": "h impress",
+    "requirements": {
+      "1": 1,
+      "2": 2,
+      "3": 3,
+      "4": 4,
+      "5": 5
+    },
+    "requirements2": null,
+    "custom_titles": null,
+    "multi": 2,
+    "title_i18n": "City: The Raiders",
+    "description_i18n": "You had sex with %s of the women adventurers."
+  },
+  "h slavegirl": {
+    "pic": "slave2.webp",
+    "pic_path": "resources/characters/npc/misc/",
+    "level_nb": 1,
+    "target": "h slavegirl",
+    "requirements": {
+      "1": 1,
+      "2": 2,
+      "3": 3,
+      "4": 4,
+      "5": 5
+    },
+    "requirements2": null,
+    "custom_titles": null,
+    "multi": 2,
+    "title_i18n": "City: The Slave Apprentice",
+    "description_i18n": "You helped with a slavegirl's training."
+  },
+  "h slavemarket": {
+    "pic": "slave1.webp",
+    "pic_path": "resources/characters/npc/misc/",
+    "level_nb": 1,
+    "target": "h slavemarket",
+    "requirements": {
+      "1": 1,
+      "2": 2,
+      "3": 3,
+      "4": 4,
+      "5": 5
+    },
+    "requirements2": null,
+    "custom_titles": null,
+    "multi": 4,
+    "title_i18n": "City: The Slave Mistress",
+    "description_i18n": "You had sex with the slavemarket girls."
+  },
+  "h catgirl": {
+    "pic": "cat found.webp",
+    "pic_path": "resources/characters/npc/encounters/",
+    "level_nb": 2,
+    "target": "h catgirl",
+    "requirements": {
+      "1": 1,
+      "2": 2,
+      "3": 3,
+      "4": 4,
+      "5": 5
+    },
+    "requirements2": null,
+    "custom_titles": null,
+    "multi": 2,
+    "title_i18n": "City: The Catgirls",
+    "description_i18n": "You had sex with %s of the catgirls."
+  },
+  "h gypsy": {
+    "pic": "gypsy1_1.webp",
+    "pic_path": "resources/characters/npc/encounters/",
+    "level_nb": 1,
+    "target": "h gypsy",
+    "requirements": {
+      "1": 1,
+      "2": 2,
+      "3": 3,
+      "4": 4,
+      "5": 5
+    },
+    "requirements2": null,
+    "custom_titles": null,
+    "multi": 2,
+    "title_i18n": "City: The Gypsy",
+    "description_i18n": "You had sex with a gypsy girl."
+  },
+  "h robber": {
+    "pic": "rob5_1.webp",
+    "pic_path": "resources/characters/npc/encounters/",
+    "level_nb": 1,
+    "target": "h robber",
+    "requirements": {
+      "1": 1,
+      "2": 2,
+      "3": 3,
+      "4": 4,
+      "5": 5
+    },
+    "requirements2": null,
+    "custom_titles": null,
+    "multi": 2,
+    "title_i18n": "City: The Robber",
+    "description_i18n": "You had sex with a defeated robber."
+  },
+  "h gambler": {
+    "pic": "gambler4_1.webp",
+    "pic_path": "resources/characters/npc/encounters/",
+    "level_nb": 1,
+    "target": "h gambler",
+    "requirements": {
+      "1": 1,
+      "2": 2,
+      "3": 3,
+      "4": 4,
+      "5": 5
+    },
+    "requirements2": null,
+    "custom_titles": null,
+    "multi": 2,
+    "title_i18n": "City: The Gambler",
+    "description_i18n": "You had sex with a gambling girl."
+  },
+  "hmas": {
+    "pic": "portrait.webp",
+    "pic_path": "resources/characters/npc/Hmas/",
+    "level_nb": 1,
+    "target": "hmas",
+    "requirements": {
+      "1": 1,
+      "2": 2,
+      "3": 3,
+      "4": 4,
+      "5": 5
+    },
+    "requirements2": null,
+    "custom_titles": null,
+    "multi": 10,
+    "title_i18n": "Merry H-Mas Everyone",
+    "description_i18n": "You had sex with a mysterious winter visitor."
+  },
+  "slaves": {
+    "pic": "slave1.webp",
+    "pic_path": "resources/characters/npc/Misc/",
+    "level_nb": 5,
+    "target": "slaves",
+    "requirements": {
+      "1": 4,
+      "2": 8,
+      "3": 16,
+      "4": 24,
+      "5": 32
+    },
+    "requirements2": null,
+    "custom_titles": null,
+    "multi": 5,
+    "title_i18n": "Let's play: Master And Servants",
+    "description_i18n": "Own %s slaves (not counting Sill)."
+  },
+  "rank B": {
+    "pic": "slave2.webp",
+    "pic_path": "resources/characters/npc/Misc/",
+    "level_nb": 5,
+    "target": "rank B",
+    "requirements": {
+      "1": 1,
+      "2": 4,
+      "3": 8,
+      "4": 16,
+      "5": 32
+    },
+    "requirements2": null,
+    "custom_titles": null,
+    "multi": 2,
+    "title_i18n": "P.I.M.P",
+    "description_i18n": "Have %s slaves with rank B or above."
+  },
+  "rank A": {
+    "pic": "slave2.webp",
+    "pic_path": "resources/characters/npc/Misc/",
+    "level_nb": 5,
+    "target": "rank A",
+    "requirements": {
+      "1": 1,
+      "2": 4,
+      "3": 8,
+      "4": 16,
+      "5": 32
+    },
+    "requirements2": null,
+    "custom_titles": null,
+    "multi": 3,
+    "title_i18n": "Hustler",
+    "description_i18n": "Have %s slaves with rank A or above."
+  },
+  "rank S": {
+    "pic": "slave2.webp",
+    "pic_path": "resources/characters/npc/Misc/",
+    "level_nb": 5,
+    "target": "rank S",
+    "requirements": {
+      "1": 1,
+      "2": 4,
+      "3": 8,
+      "4": 16,
+      "5": 32
+    },
+    "requirements2": null,
+    "custom_titles": null,
+    "multi": 5,
+    "title_i18n": "Monsieur",
+    "description_i18n": "Have %s slaves with rank S or above."
+  },
+  "rank X": {
+    "pic": "slave2.webp",
+    "pic_path": "resources/characters/npc/Misc/",
+    "level_nb": 5,
+    "target": "rank X",
+    "requirements": {
+      "1": 1,
+      "2": 4,
+      "3": 8,
+      "4": 16,
+      "5": 32
+    },
+    "requirements2": null,
+    "custom_titles": null,
+    "multi": 10,
+    "title_i18n": "Milord",
+    "description_i18n": "Have %s slaves with rank X or above."
+  },
+  "masochist": {
+    "pic": "slave2.webp",
+    "pic_path": "resources/characters/npc/Misc/",
+    "level_nb": 5,
+    "target": "masochist",
+    "requirements": {
+      "1": 1,
+      "2": 2,
+      "3": 4,
+      "4": 8,
+      "5": 16
+    },
+    "requirements2": null,
+    "custom_titles": null,
+    "multi": 3,
+    "title_i18n": "Enter The Dungeon",
+    "description_i18n": "Have %s masochist slaves."
+  },
+  "farm_days": {
+    "pic": "beast2.webp",
+    "pic_path": "resources/characters/npc/Minions/",
+    "level_nb": 5,
+    "target": "farm_days",
+    "requirements": {
+      "1": 10,
+      "2": 30,
+      "3": 90,
+      "4": 180,
+      "5": 365
+    },
+    "requirements2": null,
+    "custom_titles": null,
+    "multi": 2,
+    "title_i18n": "A Day At The Farm",
+    "description_i18n": "Your girls have spent a combined %s days training at the farm in one playthrough."
+  },
+  "used toy": {
+    "pic": "black dildo.webp",
+    "pic_path": "Items/Toy/",
+    "level_nb": 5,
+    "target": "used toy",
+    "requirements": {
+      "1": 1,
+      "2": 10,
+      "3": 100,
+      "4": 500,
+      "5": 2500
+    },
+    "requirements2": null,
+    "custom_titles": null,
+    "multi": 3,
+    "title_i18n": "Toy Story",
+    "description_i18n": "Have your girls use toys %s times in one playthrough."
+  },
+  "hands": {
+    "pic": "knife.webp",
+    "pic_path": "Items/Weapon/",
+    "level_nb": 5,
+    "target": "hands",
+    "requirements": {
+      "1": 1,
+      "2": 4,
+      "3": 8,
+      "4": 16,
+      "5": 32
+    },
+    "requirements2": null,
+    "custom_titles": null,
+    "multi": 1,
+    "title_i18n": "Babes With Blades",
+    "description_i18n": "Equip %s girls with weapons."
+  },
+  "body": {
+    "pic": "frilly dress.webp",
+    "pic_path": "Items/dress/",
+    "level_nb": 5,
+    "target": "body",
+    "requirements": {
+      "1": 1,
+      "2": 4,
+      "3": 8,
+      "4": 16,
+      "5": 32
+    },
+    "requirements2": null,
+    "custom_titles": null,
+    "multi": 1,
+    "title_i18n": "Dress To Impress",
+    "description_i18n": "Equip %s girls with dresses."
+  },
+  "neck": {
+    "pic": "dog collar.webp",
+    "pic_path": "Items/necklace/",
+    "level_nb": 5,
+    "target": "neck",
+    "requirements": {
+      "1": 1,
+      "2": 4,
+      "3": 8,
+      "4": 16,
+      "5": 32
+    },
+    "requirements2": null,
+    "custom_titles": null,
+    "multi": 1,
+    "title_i18n": "Pet Collars",
+    "description_i18n": "Equip %s girls with necklaces."
+  },
+  "finger": {
+    "pic": "brass ring.webp",
+    "pic_path": "Items/ring/",
+    "level_nb": 5,
+    "target": "finger",
+    "requirements": {
+      "1": 1,
+      "2": 4,
+      "3": 8,
+      "4": 16,
+      "5": 32
+    },
+    "requirements2": null,
+    "custom_titles": null,
+    "multi": 1,
+    "title_i18n": "My Precious",
+    "description_i18n": "Equip %s girls with rings."
+  },
+  "accessory": {
+    "pic": "lace panties.webp",
+    "pic_path": "Items/accessory/",
+    "level_nb": 5,
+    "target": "accessory",
+    "requirements": {
+      "1": 2,
+      "2": 4,
+      "3": 8,
+      "4": 16,
+      "5": 32
+    },
+    "requirements2": null,
+    "custom_titles": null,
+    "multi": 1,
+    "title_i18n": "The IT panties",
+    "description_i18n": "Equip %s girls with accessories."
+  },
+  "naked": {
+    "pic": "naked2.webp",
+    "pic_path": "resources/ui/status/",
+    "level_nb": 5,
+    "target": "naked",
+    "requirements": {
+      "1": 2,
+      "2": 4,
+      "3": 8,
+      "4": 16,
+      "5": 32
+    },
+    "requirements2": null,
+    "custom_titles": null,
+    "multi": 3,
+    "title_i18n": "Nudist Beach",
+    "description_i18n": "Have %s girls naked at the same time."
+  },
+  "bisexual": {
+    "pic": "naked2.webp",
+    "pic_path": "resources/ui/status/",
+    "level_nb": 5,
+    "target": "bisexual",
+    "requirements": {
+      "1": 1,
+      "2": 4,
+      "3": 8,
+      "4": 16,
+      "5": 32
+    },
+    "requirements2": null,
+    "custom_titles": null,
+    "multi": 5,
+    "title_i18n": "Bi Curious",
+    "description_i18n": "Have %s girls comfortable with bisexual sex."
+  },
+  "group": {
+    "pic": "naked2.webp",
+    "pic_path": "resources/ui/status/",
+    "level_nb": 5,
+    "target": "group",
+    "requirements": {
+      "1": 1,
+      "2": 4,
+      "3": 8,
+      "4": 16,
+      "5": 32
+    },
+    "requirements2": null,
+    "custom_titles": null,
+    "multi": 10,
+    "title_i18n": "Groupon",
+    "description_i18n": "Have %s girls comfortable with group sex."
+  },
+  "Warrior": {
+    "pic": "warrior.webp",
+    "pic_path": "resources/ui/",
+    "level_nb": 5,
+    "target": "Warrior",
+    "requirements": {
+      "1": 5,
+      "2": 10,
+      "3": 15,
+      "4": 20,
+      "5": 25
+    },
+    "requirements2": null,
+    "custom_titles": null,
+    "multi": 5,
+    "title_i18n": "Hokuto No Chin-Chin",
+    "description_i18n": "Reach level %s as a Warrior."
+  },
+  "Wizard": {
+    "pic": "wizard.webp",
+    "pic_path": "resources/ui/",
+    "level_nb": 5,
+    "target": "Wizard",
+    "requirements": {
+      "1": 5,
+      "2": 10,
+      "3": 15,
+      "4": 20,
+      "5": 25
+    },
+    "requirements2": null,
+    "custom_titles": null,
+    "multi": 5,
+    "title_i18n": "Klaatu Barada Nikto",
+    "description_i18n": "Reach level %s as a Wizard."
+  },
+  "Trader": {
+    "pic": "trader.webp",
+    "pic_path": "resources/ui/",
+    "level_nb": 5,
+    "target": "Trader",
+    "requirements": {
+      "1": 5,
+      "2": 10,
+      "3": 15,
+      "4": 20,
+      "5": 25
+    },
+    "requirements2": null,
+    "custom_titles": null,
+    "multi": 5,
+    "title_i18n": "Gold Finger",
+    "description_i18n": "Reach level %s as a Trader."
+  },
+  "good": {
+    "pic": "al_good.webp",
+    "pic_path": "resources/ui/",
+    "level_nb": 1,
+    "target": "good",
+    "requirements": {
+      "1": 1,
+      "2": 2,
+      "3": 3,
+      "4": 4,
+      "5": 5
+    },
+    "requirements2": null,
+    "custom_titles": null,
+    "multi": 10,
+    "title_i18n": "Johny B. Good",
+    "description_i18n": "Become a shining example of justice. And a brothel owner. Why not?"
+  },
+  "neutral": {
+    "pic": "al_neutral.webp",
+    "pic_path": "resources/ui/",
+    "level_nb": 1,
+    "target": "neutral",
+    "requirements": {
+      "1": 1,
+      "2": 2,
+      "3": 3,
+      "4": 4,
+      "5": 5
+    },
+    "requirements2": null,
+    "custom_titles": null,
+    "multi": 10,
+    "title_i18n": "Switzerland",
+    "description_i18n": "You don't take sides, you just collect your winnings."
+  },
+  "evil": {
+    "pic": "al_evil.webp",
+    "pic_path": "resources/ui/",
+    "level_nb": 3,
+    "target": "evil",
+    "requirements": {
+      "1": 10,
+      "2": 100,
+      "3": 1000
+    },
+    "requirements2": null,
+    "custom_titles": {
+      "1": "Mother-In-Law",
+      "2": "Dr. Evil",
+      "3": "Palpatine"
+    },
+    "multi": 5,
+    "title_i18n": "Evil Heart",
+    "description_i18n": "Become inordinately evil. Obtain over %s evil points."
+  },
+  "pet armageddon": {
+    "pic": "pet1.webp",
+    "pic_path": "resources/characters/npc/Misc/Pets/",
+    "level_nb": 1,
+    "target": "pet armageddon",
+    "requirements": {
+      "1": 1,
+      "2": 2,
+      "3": 3,
+      "4": 4,
+      "5": 5
+    },
+    "requirements2": null,
+    "custom_titles": null,
+    "multi": 25,
+    "title_i18n": "P.E.T.A. Disclaimer",
+    "description_i18n": "No supernatural animals were harmed in the production of this game. {b}{i}OR WERE THEY?{/i}{/b}"
+  },
+  "mc strength": {
+    "pic": "warrior.webp",
+    "pic_path": "resources/ui/",
+    "level_nb": 1,
+    "target": "mc strength",
+    "requirements": {
+      "1": 1,
+      "2": 2,
+      "3": 3,
+      "4": 4,
+      "5": 5
+    },
+    "requirements2": null,
+    "custom_titles": null,
+    "multi": 10,
+    "title_i18n": "The Mountain",
+    "description_i18n": "Reach 10 in strength."
+  },
+  "mc spirit": {
+    "pic": "wizard.webp",
+    "pic_path": "resources/ui/",
+    "level_nb": 1,
+    "target": "mc spirit",
+    "requirements": {
+      "1": 1,
+      "2": 2,
+      "3": 3,
+      "4": 4,
+      "5": 5
+    },
+    "requirements2": null,
+    "custom_titles": null,
+    "multi": 10,
+    "title_i18n": "Gandalf",
+    "description_i18n": "Reach 10 in spirit."
+  },
+  "mc charisma": {
+    "pic": "trader.webp",
+    "pic_path": "resources/ui/",
+    "level_nb": 1,
+    "target": "mc charisma",
+    "requirements": {
+      "1": 1,
+      "2": 2,
+      "3": 3,
+      "4": 4,
+      "5": 5
+    },
+    "requirements2": null,
+    "custom_titles": null,
+    "multi": 10,
+    "title_i18n": "Solo",
+    "description_i18n": "Reach 10 in charisma."
+  },
+  "mc speed": {
+    "pic": "Leather boots.webp",
+    "pic_path": "resources/items/accessory/",
+    "level_nb": 1,
+    "target": "mc speed",
+    "requirements": {
+      "1": 1,
+      "2": 2,
+      "3": 3,
+      "4": 4,
+      "5": 5
+    },
+    "requirements2": null,
+    "custom_titles": null,
+    "multi": 10,
+    "title_i18n": "Meep Meep",
+    "description_i18n": "Reach 10 in speed."
+  },
+  "months": {
+    "pic": "calendar.webp",
+    "pic_path": "resources/ui/",
+    "level_nb": 5,
+    "target": "months",
+    "requirements": {
+      "1": 1,
+      "2": 3,
+      "3": 6,
+      "4": 12,
+      "5": 24
+    },
+    "requirements2": null,
+    "custom_titles": null,
+    "multi": 5,
+    "title_i18n": "Long And Hard",
+    "description_i18n": "Play Brothel King for %s game months in one playthrough."
+  },
+  "completed contracts": {
+    "pic": "license1.webp",
+    "pic_path": "resources/ui/",
+    "level_nb": 5,
+    "target": "completed contracts",
+    "requirements": {
+      "1": 1,
+      "2": 3,
+      "3": 6,
+      "4": 12,
+      "5": 24
+    },
+    "requirements2": null,
+    "custom_titles": null,
+    "multi": 10,
+    "title_i18n": "Hitwoman",
+    "description_i18n": "Successfully complete %s contracts."
+  },
+  "contract sale": {
+    "pic": "maid.webp",
+    "pic_path": "resources/characters/npc/Misc/",
+    "level_nb": 1,
+    "target": "contract sale",
+    "requirements": {
+      "1": 1,
+      "2": 2,
+      "3": 3,
+      "4": 4,
+      "5": 5
+    },
+    "requirements2": null,
+    "custom_titles": null,
+    "multi": 25,
+    "title_i18n": "Career change",
+    "description_i18n": "Sell a girl after a perfectly successful contract."
+  },
+  "completed quest": {
+    "pic": "portrait.webp",
+    "pic_path": "resources/characters/npc/Jobgirl/",
+    "level_nb": 5,
+    "target": "completed quest",
+    "requirements": {
+      "1": 5,
+      "2": 25,
+      "3": 50,
+      "4": 100,
+      "5": 250
+    },
+    "requirements2": null,
+    "custom_titles": null,
+    "multi": 5,
+    "title_i18n": "HeroQuest",
+    "description_i18n": "Complete %s quests."
+  },
+  "completed class": {
+    "pic": "portrait.webp",
+    "pic_path": "resources/characters/npc/Jobgirl/",
+    "level_nb": 5,
+    "target": "completed class",
+    "requirements": {
+      "1": 5,
+      "2": 25,
+      "3": 50,
+      "4": 100,
+      "5": 250
+    },
+    "requirements2": null,
+    "custom_titles": null,
+    "multi": 5,
+    "title_i18n": "Hentai High School",
+    "description_i18n": "Complete %s classes."
+  },
+  "filled class": {
+    "pic": "portrait.webp",
+    "pic_path": "resources/characters/npc/Sewer girl/",
+    "level_nb": 1,
+    "target": "filled class",
+    "requirements": {
+      "1": 1,
+      "2": 2,
+      "3": 3,
+      "4": 4,
+      "5": 5
+    },
+    "requirements2": null,
+    "custom_titles": null,
+    "multi": 10,
+    "title_i18n": "Sensei",
+    "description_i18n": "Fill out a class with your girls."
+  },
+  "minions": {
+    "pic": "beast1.webp",
+    "pic_path": "resources/characters/npc/Minions/",
+    "level_nb": 5,
+    "target": "minions",
+    "requirements": {
+      "1": 2,
+      "2": 4,
+      "3": 8,
+      "4": 12,
+      "5": 20
+    },
+    "requirements2": null,
+    "custom_titles": null,
+    "multi": 5,
+    "title_i18n": "Animal Farm",
+    "description_i18n": "Recruit %s minions."
+  },
+  "total_gold": {
+    "pic": "gold bag.webp",
+    "pic_path": "resources/items/misc/",
+    "level_nb": 6,
+    "target": "total_gold",
+    "requirements": {
+      "1": 1000,
+      "2": 10000,
+      "3": 100000,
+      "4": 1000000,
+      "5": 10000000,
+      "6": 100000000
+    },
+    "requirements2": null,
+    "custom_titles": null,
+    "multi": 10,
+    "title_i18n": "Brothel Tycoon",
+    "description_i18n": "Earn %s denars in a single playthrough."
+  },
+  "income": {
+    "pic": "coin.webp",
+    "pic_path": "resources/ui/",
+    "level_nb": 5,
+    "target": "income",
+    "requirements": {
+      "1": 100,
+      "2": 1000,
+      "3": 10000,
+      "4": 100000,
+      "5": 250000
+    },
+    "requirements2": null,
+    "custom_titles": null,
+    "multi": 10,
+    "title_i18n": "The Executive",
+    "description_i18n": "Make %s denars in a single night."
+  },
+  "losses": {
+    "pic": "portrait.webp",
+    "pic_path": "resources/characters/npc/Kosmo/",
+    "level_nb": 5,
+    "target": "losses",
+    "requirements": {
+      "1": 100,
+      "2": 1000,
+      "3": 5000,
+      "4": 10000,
+      "5": 25000
+    },
+    "requirements2": null,
+    "custom_titles": null,
+    "multi": 10,
+    "title_i18n": "WeWork",
+    "description_i18n": "Lose %s denars in a single night."
+  },
+  "gold": {
+    "pic": "jewel bag.webp",
+    "pic_path": "resources/items/misc/",
+    "level_nb": 5,
+    "target": "gold",
+    "requirements": {
+      "1": 1000,
+      "2": 10000,
+      "3": 100000,
+      "4": 1000000,
+      "5": 10000000
+    },
+    "requirements2": null,
+    "custom_titles": null,
+    "multi": 10,
+    "title_i18n": "Cockfeller",
+    "description_i18n": "Amass %s denars in cash."
+  },
+  "friends": {
+    "pic": "heart.webp",
+    "pic_path": "resources/ui/",
+    "level_nb": 5,
+    "target": "friends",
+    "requirements": {
+      "1": 2,
+      "2": 4,
+      "3": 8,
+      "4": 16,
+      "5": 32
+    },
+    "requirements2": null,
+    "custom_titles": null,
+    "multi": 5,
+    "title_i18n": "Friends With Benefits",
+    "description_i18n": "%s of your girls have friends."
+  },
+  "rivals": {
+    "pic": "broken heart.webp",
+    "pic_path": "resources/ui/",
+    "level_nb": 5,
+    "target": "rivals",
+    "requirements": {
+      "1": 2,
+      "2": 4,
+      "3": 8,
+      "4": 16,
+      "5": 32
+    },
+    "requirements2": null,
+    "custom_titles": null,
+    "multi": 5,
+    "title_i18n": "Mean Girls",
+    "description_i18n": "%s of your girls have rivals."
+  },
+  "security events": {
+    "pic": "shield.webp",
+    "pic_path": "resources/ui/",
+    "level_nb": 5,
+    "target": "security events",
+    "requirements": {
+      "1": 10,
+      "2": 25,
+      "3": 50,
+      "4": 125,
+      "5": 250
+    },
+    "requirements2": null,
+    "custom_titles": null,
+    "multi": 5,
+    "title_i18n": "Battle Tested",
+    "description_i18n": "Survive %s security events."
+  },
+  "general captured": {
+    "pic": "portrait.webp",
+    "pic_path": "resources/characters/npc/Kenshin",
+    "level_nb": 1,
+    "target": "general captured",
+    "requirements": {
+      "1": 1,
+      "2": 2,
+      "3": 3,
+      "4": 4,
+      "5": 5
+    },
+    "requirements2": null,
+    "custom_titles": null,
+    "multi": 25,
+    "title_i18n": "War Master",
+    "description_i18n": "Capture an enemy general."
+  },
+  "rescued from kidnapping": {
+    "pic": "knight portrait.webp",
+    "pic_path": "resources/characters/npc/Misc/",
+    "level_nb": 1,
+    "target": "rescued from kidnapping",
+    "requirements": {
+      "1": 1,
+      "2": 2,
+      "3": 3,
+      "4": 4,
+      "5": 5
+    },
+    "requirements2": null,
+    "custom_titles": null,
+    "multi": 25,
+    "title_i18n": "Cavalry",
+    "description_i18n": "Rescue a kidnapped girl."
+  },
+  "pos fixations": {
+    "pic": "droplet.webp",
+    "pic_path": "resources/ui/",
+    "level_nb": 5,
+    "target": "pos fixations",
+    "requirements": {
+      "1": 10,
+      "2": 25,
+      "3": 50,
+      "4": 125,
+      "5": 250
+    },
+    "requirements2": null,
+    "custom_titles": null,
+    "multi": 5,
+    "title_i18n": "Does This Make You Ticklish?",
+    "description_i18n": "Discover %s positive fixations on your girls."
+  },
+  "neg fixations": {
+    "pic": "skull.webp",
+    "pic_path": "resources/ui/",
+    "level_nb": 5,
+    "target": "neg fixations",
+    "requirements": {
+      "1": 10,
+      "2": 25,
+      "3": 50,
+      "4": 125,
+      "5": 250
+    },
+    "requirements2": null,
+    "custom_titles": null,
+    "multi": 5,
+    "title_i18n": "Phobia",
+    "description_i18n": "Discover %s negative fixations on your girls."
+  },
+  "neg fixation removed": {
+    "pic": "droplet.webp",
+    "pic_path": "resources/ui/",
+    "level_nb": 5,
+    "target": "neg fixation removed",
+    "requirements": {
+      "1": 1,
+      "2": 4,
+      "3": 8,
+      "4": 16,
+      "5": 32
+    },
+    "requirements2": null,
+    "custom_titles": null,
+    "multi": 5,
+    "title_i18n": "Sex Therapist",
+    "description_i18n": "Remove %s negative fixations from your girls."
+  },
+  "neg fixation locked": {
+    "pic": "skull.webp",
+    "pic_path": "resources/ui/",
+    "level_nb": 1,
+    "target": "neg fixation locked",
+    "requirements": {
+      "1": 1,
+      "2": 2,
+      "3": 3,
+      "4": 4,
+      "5": 5
+    },
+    "requirements2": null,
+    "custom_titles": null,
+    "multi": 5,
+    "title_i18n": "Oops",
+    "description_i18n": "Lock a girl's negative fixation by trying too hard."
+  },
+  "hypnotize success": {
+    "pic": "droplet.webp",
+    "pic_path": "resources/ui/",
+    "level_nb": 5,
+    "target": "hypnotize success",
+    "requirements": {
+      "1": 1,
+      "2": 10,
+      "3": 50,
+      "4": 100,
+      "5": 250
+    },
+    "requirements2": null,
+    "custom_titles": null,
+    "multi": 5,
+    "title_i18n": "Trussst In Me",
+    "description_i18n": "Successfully hypnotize girls %s times."
+  },
+  "hypnotize failure": {
+    "pic": "droplet.webp",
+    "pic_path": "resources/ui/",
+    "level_nb": 5,
+    "target": "hypnotize failure",
+    "requirements": {
+      "1": 1,
+      "2": 5,
+      "3": 25,
+      "4": 50,
+      "5": 100
+    },
+    "requirements2": null,
+    "custom_titles": null,
+    "multi": 3,
+    "title_i18n": "Charlatan",
+    "description_i18n": "Fail at hypnotizing girls %s times."
+  },
+  "love": {
+    "pic": "heart.webp",
+    "pic_path": "resources/ui/",
+    "level_nb": 5,
+    "target": "love",
+    "requirements": {
+      "1": 1,
+      "2": 2,
+      "3": 4,
+      "4": 8,
+      "5": 16
+    },
+    "requirements2": {
+      "1": 25,
+      "2": 50,
+      "3": 75,
+      "4": 100,
+      "5": 125
+    },
+    "custom_titles": null,
+    "multi": 3,
+    "title_i18n": "Lovebirds",
+    "description_i18n": "Have %s girls with %s love or more."
+  },
+  "fear": {
+    "pic": "skull.webp",
+    "pic_path": "resources/ui/",
+    "level_nb": 5,
+    "target": "fear",
+    "requirements": {
+      "1": 1,
+      "2": 2,
+      "3": 4,
+      "4": 8,
+      "5": 16
+    },
+    "requirements2": {
+      "1": 25,
+      "2": 50,
+      "3": 75,
+      "4": 100,
+      "5": 125
+    },
+    "custom_titles": null,
+    "multi": 3,
+    "title_i18n": "Scarecrow",
+    "description_i18n": "Have %s girls with %s fear or more."
+  },
+  "Beauty": {
+    "pic": "portrait.webp",
+    "pic_path": "resources/characters/npc/Katryn/",
+    "level_nb": 5,
+    "target": "Beauty",
+    "requirements": {
+      "1": 1,
+      "2": 2,
+      "3": 4,
+      "4": 8,
+      "5": 16
+    },
+    "requirements2": {
+      "1": 50,
+      "2": 100,
+      "3": 150,
+      "4": 200,
+      "5": 250
+    },
+    "custom_titles": null,
+    "multi": 2,
+    "title_i18n": "Beauty Mastery",
+    "description_i18n": "Have %s girls with over %s beauty."
+  },
+  "Body": {
+    "pic": "portrait.webp",
+    "pic_path": "resources/characters/npc/Ramias/",
+    "level_nb": 5,
+    "target": "Body",
+    "requirements": {
+      "1": 1,
+      "2": 2,
+      "3": 4,
+      "4": 8,
+      "5": 16
+    },
+    "requirements2": {
+      "1": 50,
+      "2": 100,
+      "3": 150,
+      "4": 200,
+      "5": 250
+    },
+    "custom_titles": null,
+    "multi": 2,
+    "title_i18n": "Body Mastery",
+    "description_i18n": "Have %s girls with over %s body."
+  },
+  "Charm": {
+    "pic": "portrait.webp",
+    "pic_path": "resources/characters/npc/Gurigura/",
+    "level_nb": 5,
+    "target": "Charm",
+    "requirements": {
+      "1": 1,
+      "2": 2,
+      "3": 4,
+      "4": 8,
+      "5": 16
+    },
+    "requirements2": {
+      "1": 50,
+      "2": 100,
+      "3": 150,
+      "4": 200,
+      "5": 250
+    },
+    "custom_titles": null,
+    "multi": 2,
+    "title_i18n": "Charm Mastery",
+    "description_i18n": "Have %s girls with over %s charm."
+  },
+  "Refinement": {
+    "pic": "portrait.webp",
+    "pic_path": "resources/characters/npc/Riche/",
+    "level_nb": 5,
+    "target": "Refinement",
+    "requirements": {
+      "1": 1,
+      "2": 2,
+      "3": 4,
+      "4": 8,
+      "5": 16
+    },
+    "requirements2": {
+      "1": 50,
+      "2": 100,
+      "3": 150,
+      "4": 200,
+      "5": 250
+    },
+    "custom_titles": null,
+    "multi": 2,
+    "title_i18n": "Refinement Mastery",
+    "description_i18n": "Have %s girls with over %s refinement."
+  },
+  "Libido": {
+    "pic": "portrait.webp",
+    "pic_path": "resources/characters/npc/Captain/",
+    "level_nb": 5,
+    "target": "Libido",
+    "requirements": {
+      "1": 1,
+      "2": 2,
+      "3": 4,
+      "4": 8,
+      "5": 16
+    },
+    "requirements2": {
+      "1": 50,
+      "2": 100,
+      "3": 150,
+      "4": 200,
+      "5": 250
+    },
+    "custom_titles": null,
+    "multi": 2,
+    "title_i18n": "Libido Mastery",
+    "description_i18n": "Have %s girls with over %s libido."
+  },
+  "Obedience": {
+    "pic": "portrait.webp",
+    "pic_path": "resources/characters/npc/Maid/",
+    "level_nb": 5,
+    "target": "Obedience",
+    "requirements": {
+      "1": 1,
+      "2": 2,
+      "3": 4,
+      "4": 8,
+      "5": 16
+    },
+    "requirements2": {
+      "1": 50,
+      "2": 100,
+      "3": 150,
+      "4": 200,
+      "5": 250
+    },
+    "custom_titles": null,
+    "multi": 2,
+    "title_i18n": "Obedience Mastery",
+    "description_i18n": "Have %s girls with over %s obedience."
+  },
+  "Constitution": {
+    "pic": "portrait.webp",
+    "pic_path": "resources/characters/npc/Jobgirl/",
+    "level_nb": 5,
+    "target": "Constitution",
+    "requirements": {
+      "1": 1,
+      "2": 2,
+      "3": 4,
+      "4": 8,
+      "5": 16
+    },
+    "requirements2": {
+      "1": 50,
+      "2": 100,
+      "3": 150,
+      "4": 200,
+      "5": 250
+    },
+    "custom_titles": null,
+    "multi": 2,
+    "title_i18n": "Constitution Mastery",
+    "description_i18n": "Have %s girls with over %s constitution."
+  },
+  "Sensitivity": {
+    "pic": "portrait.webp",
+    "pic_path": "resources/characters/npc/Satella/",
+    "level_nb": 5,
+    "target": "Sensitivity",
+    "requirements": {
+      "1": 1,
+      "2": 2,
+      "3": 4,
+      "4": 8,
+      "5": 16
+    },
+    "requirements2": {
+      "1": 50,
+      "2": 100,
+      "3": 150,
+      "4": 200,
+      "5": 250
+    },
+    "custom_titles": null,
+    "multi": 2,
+    "title_i18n": "Sensitivity Mastery",
+    "description_i18n": "Have %s girls with over %s sensitivity."
+  },
+  "Service": {
+    "pic": "portrait.webp",
+    "pic_path": "resources/characters/npc/Willow/",
+    "level_nb": 5,
+    "target": "Service",
+    "requirements": {
+      "1": 1,
+      "2": 2,
+      "3": 4,
+      "4": 8,
+      "5": 16
+    },
+    "requirements2": {
+      "1": 50,
+      "2": 100,
+      "3": 150,
+      "4": 200,
+      "5": 250
+    },
+    "custom_titles": null,
+    "multi": 4,
+    "title_i18n": "Service Mastery",
+    "description_i18n": "Have %s girls with over %s service skill."
+  },
+  "Sex": {
+    "pic": "portrait.webp",
+    "pic_path": "resources/characters/npc/Goldie/",
+    "level_nb": 5,
+    "target": "Sex",
+    "requirements": {
+      "1": 1,
+      "2": 2,
+      "3": 4,
+      "4": 8,
+      "5": 16
+    },
+    "requirements2": {
+      "1": 50,
+      "2": 100,
+      "3": 150,
+      "4": 200,
+      "5": 250
+    },
+    "custom_titles": null,
+    "multi": 4,
+    "title_i18n": "Sex Mastery",
+    "description_i18n": "Have %s girls with over %s sex skill."
+  },
+  "Anal": {
+    "pic": "portrait.webp",
+    "pic_path": "resources/characters/npc/Kosmo/",
+    "level_nb": 5,
+    "target": "Anal",
+    "requirements": {
+      "1": 1,
+      "2": 2,
+      "3": 4,
+      "4": 8,
+      "5": 16
+    },
+    "requirements2": {
+      "1": 50,
+      "2": 100,
+      "3": 150,
+      "4": 200,
+      "5": 250
+    },
+    "custom_titles": null,
+    "multi": 4,
+    "title_i18n": "Anal Mastery",
+    "description_i18n": "Have %s girls with over %s anal skill."
+  },
+  "Fetish": {
+    "pic": "portrait.webp",
+    "pic_path": "resources/characters/npc/Stella/",
+    "level_nb": 5,
+    "target": "Fetish",
+    "requirements": {
+      "1": 1,
+      "2": 2,
+      "3": 4,
+      "4": 8,
+      "5": 16
+    },
+    "requirements2": {
+      "1": 50,
+      "2": 100,
+      "3": 150,
+      "4": 200,
+      "5": 250
+    },
+    "custom_titles": null,
+    "multi": 4,
+    "title_i18n": "Fetish Mastery",
+    "description_i18n": "Have %s girls with over %s fetish skill."
+  },
+  "ultimate": {
+    "pic": "portrait.webp",
+    "pic_path": "resources/characters/npc/Sill/",
+    "level_nb": 5,
+    "target": "ultimate",
+    "requirements": {
+      "1": 1,
+      "2": 2,
+      "3": 4,
+      "4": 8,
+      "5": 16
+    },
+    "requirements2": {
+      "1": 50,
+      "2": 100,
+      "3": 150,
+      "4": 200,
+      "5": 250
+    },
+    "custom_titles": null,
+    "multi": 5,
+    "title_i18n": "Ultimate Mastery",
+    "description_i18n": "Have %s girls with over %s in all skills."
+  },
+  "sell girl gold": {
+    "pic": "slave1.webp",
+    "pic_path": "resources/characters/npc/Misc/",
+    "level_nb": 5,
+    "target": "sell girl gold",
+    "requirements": {
+      "1": 500,
+      "2": 2500,
+      "3": 10000,
+      "4": 25000,
+      "5": 100000
+    },
+    "requirements2": null,
+    "custom_titles": null,
+    "multi": 5,
+    "title_i18n": "Slaver",
+    "description_i18n": "Sell girls for a total of %s denars during one playthrough."
+  },
+  "sell girl love": {
+    "pic": "spirit portrait.webp",
+    "pic_path": "resources/characters/npc/Misc/",
+    "level_nb": 1,
+    "target": "sell girl love",
+    "requirements": {
+      "1": 1,
+      "2": 2,
+      "3": 3,
+      "4": 4,
+      "5": 5
+    },
+    "requirements2": null,
+    "custom_titles": null,
+    "multi": 20,
+    "title_i18n": "Heartless",
+    "description_i18n": "Sell a girl who loves you."
+  },
+  "release free girl": {
+    "pic": "broken heart.webp",
+    "pic_path": "resources/ui/",
+    "level_nb": 1,
+    "target": "release free girl",
+    "requirements": {
+      "1": 1,
+      "2": 2,
+      "3": 3,
+      "4": 4,
+      "5": 5
+    },
+    "requirements2": null,
+    "custom_titles": null,
+    "multi": 10,
+    "title_i18n": "Let Her Go",
+    "description_i18n": "Let a girl get her freedom back."
+  },
+  "raped": {
+    "pic": "spirit portrait.webp",
+    "pic_path": "resources/characters/npc/Misc/",
+    "level_nb": 5,
+    "target": "raped",
+    "requirements": {
+      "1": 1,
+      "2": 5,
+      "3": 10,
+      "4": 25,
+      "5": 100
+    },
+    "requirements2": null,
+    "custom_titles": null,
+    "multi": 3,
+    "title_i18n": "Rapelay",
+    "description_i18n": "Rape your girls %s times."
+  },
+  "beaten": {
+    "pic": "spirit portrait.webp",
+    "pic_path": "resources/characters/npc/Misc/",
+    "level_nb": 5,
+    "target": "beaten",
+    "requirements": {
+      "1": 1,
+      "2": 5,
+      "3": 10,
+      "4": 25,
+      "5": 100
+    },
+    "requirements2": null,
+    "custom_titles": null,
+    "multi": 3,
+    "title_i18n": "Wife Beater",
+    "description_i18n": "Beat your girls up %s times."
+  },
+  "punished": {
+    "pic": "skull.webp",
+    "pic_path": "resources/ui/",
+    "level_nb": 5,
+    "target": "punished",
+    "requirements": {
+      "1": 5,
+      "2": 25,
+      "3": 100,
+      "4": 250,
+      "5": 500
+    },
+    "requirements2": null,
+    "custom_titles": null,
+    "multi": 2,
+    "title_i18n": "Harsh Master",
+    "description_i18n": "Punish your girls %s times."
+  },
+  "rewarded": {
+    "pic": "droplet.webp",
+    "pic_path": "resources/ui/",
+    "level_nb": 5,
+    "target": "rewarded",
+    "requirements": {
+      "1": 5,
+      "2": 25,
+      "3": 100,
+      "4": 250,
+      "5": 500
+    },
+    "requirements2": null,
+    "custom_titles": null,
+    "multi": 2,
+    "title_i18n": "Sugar Daddy",
+    "description_i18n": "Reward your girls %s times."
+  },
+  "spoiled": {
+    "pic": "bun.webp",
+    "pic_path": "resources/items/food/",
+    "level_nb": 1,
+    "target": "spoiled",
+    "requirements": {
+      "1": 1,
+      "2": 2,
+      "3": 3,
+      "4": 4,
+      "5": 5
+    },
+    "requirements2": null,
+    "custom_titles": null,
+    "multi": 2,
+    "title_i18n": "Spoiler Alert",
+    "description_i18n": "You have rewarded one of your girls so much that she became spoiled."
+  },
+  "terrified": {
+    "pic": "monster juice.webp",
+    "pic_path": "resources/items/misc/",
+    "level_nb": 1,
+    "target": "terrified",
+    "requirements": {
+      "1": 1,
+      "2": 2,
+      "3": 3,
+      "4": 4,
+      "5": 5
+    },
+    "requirements2": null,
+    "custom_titles": null,
+    "multi": 2,
+    "title_i18n": "Terrorist",
+    "description_i18n": "You have punished one of your girls so much that she became terrified."
+  },
+  "farm": {
+    "pic": "beast2.webp",
+    "pic_path": "resources/characters/npc/Minions/",
+    "level_nb": 1,
+    "target": "farm",
+    "requirements": {
+      "1": 1,
+      "2": 2,
+      "3": 3,
+      "4": 4,
+      "5": 5
+    },
+    "requirements2": null,
+    "custom_titles": null,
+    "multi": 2,
+    "title_i18n": "Farmer",
+    "description_i18n": "You have unlocked the Farm."
+  },
+  "wagon": {
+    "pic": "portrait.webp",
+    "pic_path": "resources/characters/npc/Carpenter/",
+    "level_nb": 1,
+    "target": "wagon",
+    "requirements": {
+      "1": 1,
+      "2": 2,
+      "3": 3,
+      "4": 4,
+      "5": 5
+    },
+    "requirements2": null,
+    "custom_titles": null,
+    "multi": 2,
+    "title_i18n": "Knock On Wood",
+    "description_i18n": "You have unlocked the Carpenter's Wagon."
+  },
+  "sewer defender": {
+    "pic": "portrait naked.webp",
+    "pic_path": "resources/characters/npc/Sewer girl/",
+    "level_nb": 1,
+    "target": "sewer defender",
+    "requirements": {
+      "1": 1,
+      "2": 2,
+      "3": 3,
+      "4": 4,
+      "5": 5
+    },
+    "requirements2": null,
+    "custom_titles": null,
+    "multi": 2,
+    "title_i18n": "Sewer Knight",
+    "description_i18n": "You saved the prisoner in the sewers."
+  },
+  "kosmo": {
+    "pic": "portrait.webp",
+    "pic_path": "resources/characters/npc/Kosmo/",
+    "level_nb": 4,
+    "target": "kosmo",
+    "requirements": {
+      "1": 1,
+      "2": 5,
+      "3": 10,
+      "4": 20
+    },
+    "requirements2": null,
+    "custom_titles": null,
+    "multi": 2,
+    "title_i18n": "Enduring",
+    "description_i18n": "Kosmo visited you %s times."
+  },
+  "had sex": {
+    "pic": "heart.webp",
+    "pic_path": "resources/ui/",
+    "level_nb": 5,
+    "target": "had sex",
+    "requirements": {
+      "1": 5,
+      "2": 25,
+      "3": 100,
+      "4": 250,
+      "5": 1000
+    },
+    "requirements2": null,
+    "custom_titles": null,
+    "multi": 5,
+    "title_i18n": "Casanova",
+    "description_i18n": "Sleep with girls %s times."
+  },
+  "gold spent slavemarket": {
+    "pic": "slave2.webp",
+    "pic_path": "resources/characters/npc/Misc/",
+    "level_nb": 4,
+    "target": "gold spent slavemarket",
+    "requirements": {
+      "1": 500,
+      "2": 2500,
+      "3": 10000,
+      "4": 25000,
+      "5": 100000
+    },
+    "requirements2": null,
+    "custom_titles": null,
+    "multi": 2,
+    "title_i18n": "Big Spender",
+    "description_i18n": "Spend %s denars at the slave market."
+  },
+  "gold spent shops": {
+    "pic": "portrait.webp",
+    "pic_path": "resources/characters/npc/Gift girl/",
+    "level_nb": 4,
+    "target": "gold spent shops",
+    "requirements": {
+      "1": 500,
+      "2": 2500,
+      "3": 10000,
+      "4": 25000,
+      "5": 100000
+    },
+    "requirements2": null,
+    "custom_titles": null,
+    "multi": 2,
+    "title_i18n": "Fashion Victim",
+    "description_i18n": "Spend %s denars in shops."
+  },
+  "origin stories": {
+    "pic": "empty heart.webp",
+    "pic_path": "resources/ui/",
+    "level_nb": 5,
+    "target": "origin stories",
+    "requirements": {
+      "1": 1,
+      "2": 4,
+      "3": 8,
+      "4": 16,
+      "5": 24
+    },
+    "requirements2": null,
+    "custom_titles": null,
+    "multi": 2,
+    "title_i18n": "The Confident",
+    "description_i18n": "Hear %s girl origin stories in one playthrough."
+  },
+  "free girl acquired": {
+    "pic": "empty heart.webp",
+    "pic_path": "resources/ui/",
+    "level_nb": 5,
+    "target": "free girl acquired",
+    "requirements": {
+      "1": 1,
+      "2": 4,
+      "3": 8,
+      "4": 16,
+      "5": 32
+    },
+    "requirements2": null,
+    "custom_titles": null,
+    "multi": 5,
+    "title_i18n": "Gigolo",
+    "description_i18n": "Convince %s free girls to join your brothel."
+  },
+  "girlfriends": {
+    "pic": "heart.webp",
+    "pic_path": "resources/ui/",
+    "level_nb": 1,
+    "target": "girlfriends",
+    "requirements": {
+      "1": 10
+    },
+    "requirements2": null,
+    "custom_titles": null,
+    "multi": 25,
+    "title_i18n": "You Might Get Murdered",
+    "description_i18n": "Have ten girlfriends simultaneously."
+  },
+  "originals": {
+    "pic": "license2.webp",
+    "pic_path": "resources/ui/",
+    "level_nb": 5,
+    "target": "originals",
+    "requirements": {
+      "1": 1,
+      "2": 4,
+      "3": 8,
+      "4": 16,
+      "5": 32
+    },
+    "requirements2": null,
+    "custom_titles": null,
+    "multi": 2,
+    "title_i18n": "We Have The Original",
+    "description_i18n": "Have %s original girls in your brothel."
+  },
+  "broke beggars": {
+    "pic": "beggar.webp",
+    "pic_path": "resources/ui/customers/",
+    "level_nb": 1,
+    "target": "broke beggars",
+    "requirements": {
+      "1": 1,
+      "2": 2,
+      "3": 3,
+      "4": 4,
+      "5": 5
+    },
+    "requirements2": null,
+    "custom_titles": null,
+    "multi": 1,
+    "title_i18n": "Broke: Beggar",
+    "description_i18n": "Have a Beggar spend all his money in the brothel."
+  },
+  "broke thugs": {
+    "pic": "thug.webp",
+    "pic_path": "resources/ui/customers/",
+    "level_nb": 1,
+    "target": "broke thugs",
+    "requirements": {
+      "1": 1,
+      "2": 2,
+      "3": 3,
+      "4": 4,
+      "5": 5
+    },
+    "requirements2": null,
+    "custom_titles": null,
+    "multi": 2,
+    "title_i18n": "Broke: Thug",
+    "description_i18n": "Have a Thug spend all his money in the brothel."
+  },
+  "broke laborers": {
+    "pic": "Laborer.webp",
+    "pic_path": "resources/ui/customers/",
+    "level_nb": 1,
+    "target": "broke laborers",
+    "requirements": {
+      "1": 1,
+      "2": 2,
+      "3": 3,
+      "4": 4,
+      "5": 5
+    },
+    "requirements2": null,
+    "custom_titles": null,
+    "multi": 2,
+    "title_i18n": "Broke: Laborer",
+    "description_i18n": "Have a Laborer spend all his money in the brothel."
+  },
+  "broke sailors": {
+    "pic": "Sailor.webp",
+    "pic_path": "resources/ui/customers/",
+    "level_nb": 1,
+    "target": "broke sailors",
+    "requirements": {
+      "1": 1,
+      "2": 2,
+      "3": 3,
+      "4": 4,
+      "5": 5
+    },
+    "requirements2": null,
+    "custom_titles": null,
+    "multi": 2,
+    "title_i18n": "Broke: Sailor",
+    "description_i18n": "Have a Sailor spend all his money in the brothel."
+  },
+  "broke commoners": {
+    "pic": "Commoner.webp",
+    "pic_path": "resources/ui/customers/",
+    "level_nb": 1,
+    "target": "broke commoners",
+    "requirements": {
+      "1": 1,
+      "2": 2,
+      "3": 3,
+      "4": 4,
+      "5": 5
+    },
+    "requirements2": null,
+    "custom_titles": null,
+    "multi": 3,
+    "title_i18n": "Broke: Commoner",
+    "description_i18n": "Have a Commoner spend all his money in the brothel."
+  },
+  "broke craftsmen": {
+    "pic": "Craftsman.webp",
+    "pic_path": "resources/ui/customers/",
+    "level_nb": 1,
+    "target": "broke craftsmen",
+    "requirements": {
+      "1": 1,
+      "2": 2,
+      "3": 3,
+      "4": 4,
+      "5": 5
+    },
+    "requirements2": null,
+    "custom_titles": null,
+    "multi": 3,
+    "title_i18n": "Broke: Craftsman",
+    "description_i18n": "Have a Craftsman spend all his money in the brothel."
+  },
+  "broke bourgeois": {
+    "pic": "Bourgeois.webp",
+    "pic_path": "resources/ui/customers/",
+    "level_nb": 1,
+    "target": "broke bourgeois",
+    "requirements": {
+      "1": 1,
+      "2": 2,
+      "3": 3,
+      "4": 4,
+      "5": 5
+    },
+    "requirements2": null,
+    "custom_titles": null,
+    "multi": 3,
+    "title_i18n": "Broke: Bourgeois",
+    "description_i18n": "Have a Bourgeois spend all his money in the brothel."
+  },
+  "broke guild members": {
+    "pic": "Guild Member.webp",
+    "pic_path": "resources/ui/customers/",
+    "level_nb": 1,
+    "target": "broke guild members",
+    "requirements": {
+      "1": 1,
+      "2": 2,
+      "3": 3,
+      "4": 4,
+      "5": 5
+    },
+    "requirements2": null,
+    "custom_titles": null,
+    "multi": 4,
+    "title_i18n": "Broke: Guild Member",
+    "description_i18n": "Have a Guild Member spend all his money in the brothel."
+  },
+  "broke patricians": {
+    "pic": "Patrician.webp",
+    "pic_path": "resources/ui/customers/",
+    "level_nb": 1,
+    "target": "broke patricians",
+    "requirements": {
+      "1": 1,
+      "2": 2,
+      "3": 3,
+      "4": 4,
+      "5": 5
+    },
+    "requirements2": null,
+    "custom_titles": null,
+    "multi": 4,
+    "title_i18n": "Broke: Patrician",
+    "description_i18n": "Have a Patrician spend all his money in the brothel."
+  },
+  "broke aristocrats": {
+    "pic": "aristocrat.webp",
+    "pic_path": "resources/ui/customers/",
+    "level_nb": 1,
+    "target": "broke aristocrats",
+    "requirements": {
+      "1": 1,
+      "2": 2,
+      "3": 3,
+      "4": 4,
+      "5": 5
+    },
+    "requirements2": null,
+    "custom_titles": null,
+    "multi": 4,
+    "title_i18n": "Broke: Aristocrat",
+    "description_i18n": "Have an Aristocrat spend all his money in the brothel."
+  },
+  "broke nobles": {
+    "pic": "Noble.webp",
+    "pic_path": "resources/ui/customers/",
+    "level_nb": 1,
+    "target": "broke nobles",
+    "requirements": {
+      "1": 1,
+      "2": 2,
+      "3": 3,
+      "4": 4,
+      "5": 5
+    },
+    "requirements2": null,
+    "custom_titles": null,
+    "multi": 5,
+    "title_i18n": "Broke: Noble",
+    "description_i18n": "Have a Noble spend all his money in the brothel."
+  },
+  "broke royals": {
+    "pic": "Royal.webp",
+    "pic_path": "resources/ui/customers/",
+    "level_nb": 1,
+    "target": "broke royals",
+    "requirements": {
+      "1": 1,
+      "2": 2,
+      "3": 3,
+      "4": 4,
+      "5": 5
+    },
+    "requirements2": null,
+    "custom_titles": null,
+    "multi": 10,
+    "title_i18n": "Broke: Royal",
+    "description_i18n": "Have a Royal family member spend all his money in the brothel."
+  },
+  "happy beggars": {
+    "pic": "beggar.webp",
+    "pic_path": "resources/ui/customers/",
+    "level_nb": 1,
+    "target": "happy beggars",
+    "requirements": {
+      "1": 1,
+      "2": 2,
+      "3": 3,
+      "4": 4,
+      "5": 5
+    },
+    "requirements2": null,
+    "custom_titles": null,
+    "multi": 1,
+    "title_i18n": "Perfect: Beggar",
+    "description_i18n": "Have a Beggar reach maximum satisfaction in the brothel."
+  },
+  "happy thugs": {
+    "pic": "thug.webp",
+    "pic_path": "resources/ui/customers/",
+    "level_nb": 1,
+    "target": "happy thugs",
+    "requirements": {
+      "1": 1,
+      "2": 2,
+      "3": 3,
+      "4": 4,
+      "5": 5
+    },
+    "requirements2": null,
+    "custom_titles": null,
+    "multi": 2,
+    "title_i18n": "Perfect: Thug",
+    "description_i18n": "Have a Thug reach maximum satisfaction in the brothel."
+  },
+  "happy laborers": {
+    "pic": "Laborer.webp",
+    "pic_path": "resources/ui/customers/",
+    "level_nb": 1,
+    "target": "happy laborers",
+    "requirements": {
+      "1": 1,
+      "2": 2,
+      "3": 3,
+      "4": 4,
+      "5": 5
+    },
+    "requirements2": null,
+    "custom_titles": null,
+    "multi": 2,
+    "title_i18n": "Perfect: Laborer",
+    "description_i18n": "Have a Laborer reach maximum satisfaction in the brothel."
+  },
+  "happy sailors": {
+    "pic": "Sailor.webp",
+    "pic_path": "resources/ui/customers/",
+    "level_nb": 1,
+    "target": "happy sailors",
+    "requirements": {
+      "1": 1,
+      "2": 2,
+      "3": 3,
+      "4": 4,
+      "5": 5
+    },
+    "requirements2": null,
+    "custom_titles": null,
+    "multi": 2,
+    "title_i18n": "Perfect: Sailor",
+    "description_i18n": "Have a Sailor reach maximum satisfaction in the brothel."
+  },
+  "happy commoners": {
+    "pic": "Commoner.webp",
+    "pic_path": "resources/ui/customers/",
+    "level_nb": 1,
+    "target": "happy commoners",
+    "requirements": {
+      "1": 1,
+      "2": 2,
+      "3": 3,
+      "4": 4,
+      "5": 5
+    },
+    "requirements2": null,
+    "custom_titles": null,
+    "multi": 3,
+    "title_i18n": "Perfect: Commoner",
+    "description_i18n": "Have a Commoner reach maximum satisfaction in the brothel."
+  },
+  "happy craftsmen": {
+    "pic": "Craftsman.webp",
+    "pic_path": "resources/ui/customers/",
+    "level_nb": 1,
+    "target": "happy craftsmen",
+    "requirements": {
+      "1": 1,
+      "2": 2,
+      "3": 3,
+      "4": 4,
+      "5": 5
+    },
+    "requirements2": null,
+    "custom_titles": null,
+    "multi": 3,
+    "title_i18n": "Perfect: Craftsman",
+    "description_i18n": "Have a Craftsman reach maximum satisfaction in the brothel."
+  },
+  "happy bourgeois": {
+    "pic": "Bourgeois.webp",
+    "pic_path": "resources/ui/customers/",
+    "level_nb": 1,
+    "target": "happy bourgeois",
+    "requirements": {
+      "1": 1,
+      "2": 2,
+      "3": 3,
+      "4": 4,
+      "5": 5
+    },
+    "requirements2": null,
+    "custom_titles": null,
+    "multi": 3,
+    "title_i18n": "Perfect: Bourgeois",
+    "description_i18n": "Have a Bourgeois reach maximum satisfaction in the brothel."
+  },
+  "happy guild members": {
+    "pic": "Guild Member.webp",
+    "pic_path": "resources/ui/customers/",
+    "level_nb": 1,
+    "target": "happy guild members",
+    "requirements": {
+      "1": 1,
+      "2": 2,
+      "3": 3,
+      "4": 4,
+      "5": 5
+    },
+    "requirements2": null,
+    "custom_titles": null,
+    "multi": 4,
+    "title_i18n": "Perfect: Guild Member",
+    "description_i18n": "Have a Guild Member reach maximum satisfaction in the brothel."
+  },
+  "happy patricians": {
+    "pic": "Patrician.webp",
+    "pic_path": "resources/ui/customers/",
+    "level_nb": 1,
+    "target": "happy patricians",
+    "requirements": {
+      "1": 1,
+      "2": 2,
+      "3": 3,
+      "4": 4,
+      "5": 5
+    },
+    "requirements2": null,
+    "custom_titles": null,
+    "multi": 4,
+    "title_i18n": "Perfect: Patrician",
+    "description_i18n": "Have a Patrician reach maximum satisfaction in the brothel."
+  },
+  "happy aristocrats": {
+    "pic": "aristocrat.webp",
+    "pic_path": "resources/ui/customers/",
+    "level_nb": 1,
+    "target": "happy aristocrats",
+    "requirements": {
+      "1": 1,
+      "2": 2,
+      "3": 3,
+      "4": 4,
+      "5": 5
+    },
+    "requirements2": null,
+    "custom_titles": null,
+    "multi": 4,
+    "title_i18n": "Perfect: Aristocrat",
+    "description_i18n": "Have an Aristocrat reach maximum satisfaction in the brothel."
+  },
+  "happy nobles": {
+    "pic": "Noble.webp",
+    "pic_path": "resources/ui/customers/",
+    "level_nb": 1,
+    "target": "happy nobles",
+    "requirements": {
+      "1": 1,
+      "2": 2,
+      "3": 3,
+      "4": 4,
+      "5": 5
+    },
+    "requirements2": null,
+    "custom_titles": null,
+    "multi": 5,
+    "title_i18n": "Perfect: Noble",
+    "description_i18n": "Have a Noble reach maximum satisfaction in the brothel."
+  },
+  "happy royals": {
+    "pic": "Royal.webp",
+    "pic_path": "resources/ui/customers/",
+    "level_nb": 1,
+    "target": "happy royals",
+    "requirements": {
+      "1": 1,
+      "2": 2,
+      "3": 3,
+      "4": 4,
+      "5": 5
+    },
+    "requirements2": null,
+    "custom_titles": null,
+    "multi": 10,
+    "title_i18n": "Perfect: Royal",
+    "description_i18n": "Have a Royal family member reach maximum satisfaction in the brothel."
+  },
+  "The Maid": {
+    "pic": "The Maid portrait.webp",
+    "pic_path": "resources/perks/",
+    "level_nb": 1,
+    "target": "The Maid",
+    "requirements": {
+      "1": 1,
+      "2": 2,
+      "3": 3,
+      "4": 4,
+      "5": 5
+    },
+    "requirements2": null,
+    "custom_titles": null,
+    "multi": 5,
+    "title_i18n": "Perks: The Maid Tree",
+    "description_i18n": "Unlock all perks in the Maid tree on one of your girls."
+  },
+  "The Player": {
+    "pic": "The Player portrait.webp",
+    "pic_path": "resources/perks/",
+    "level_nb": 1,
+    "target": "The Player",
+    "requirements": {
+      "1": 1,
+      "2": 2,
+      "3": 3,
+      "4": 4,
+      "5": 5
+    },
+    "requirements2": null,
+    "custom_titles": null,
+    "multi": 5,
+    "title_i18n": "Perks: The Player Tree",
+    "description_i18n": "Unlock all perks in the Player tree on one of your girls."
+  },
+  "The Model": {
+    "pic": "The Model portrait.webp",
+    "pic_path": "resources/perks/",
+    "level_nb": 1,
+    "target": "The Model",
+    "requirements": {
+      "1": 1,
+      "2": 2,
+      "3": 3,
+      "4": 4,
+      "5": 5
+    },
+    "requirements2": null,
+    "custom_titles": null,
+    "multi": 5,
+    "title_i18n": "Perks: The Model Tree",
+    "description_i18n": "Unlock all perks in the Model tree on one of your girls."
+  },
+  "The Courtesan": {
+    "pic": "The Courtesan portrait.webp",
+    "pic_path": "resources/perks/",
+    "level_nb": 1,
+    "target": "The Courtesan",
+    "requirements": {
+      "1": 1,
+      "2": 2,
+      "3": 3,
+      "4": 4,
+      "5": 5
+    },
+    "requirements2": null,
+    "custom_titles": null,
+    "multi": 5,
+    "title_i18n": "Perks: The Courtesan Tree",
+    "description_i18n": "Unlock all perks in the Courtesan tree on one of your girls."
+  },
+  "The Escort": {
+    "pic": "The Escort portrait.webp",
+    "pic_path": "resources/perks/",
+    "level_nb": 1,
+    "target": "The Escort",
+    "requirements": {
+      "1": 1,
+      "2": 2,
+      "3": 3,
+      "4": 4,
+      "5": 5
+    },
+    "requirements2": null,
+    "custom_titles": null,
+    "multi": 5,
+    "title_i18n": "Perks: The Escort Tree",
+    "description_i18n": "Unlock all perks in the Escort tree on one of your girls."
+  },
+  "The Fox": {
+    "pic": "The Fox portrait.webp",
+    "pic_path": "resources/perks/",
+    "level_nb": 1,
+    "target": "The Fox",
+    "requirements": {
+      "1": 1,
+      "2": 2,
+      "3": 3,
+      "4": 4,
+      "5": 5
+    },
+    "requirements2": null,
+    "custom_titles": null,
+    "multi": 5,
+    "title_i18n": "Perks: The Fox Tree",
+    "description_i18n": "Unlock all perks in the Fox tree on one of your girls."
+  },
+  "The Slut": {
+    "pic": "The Slut portrait.webp",
+    "pic_path": "resources/perks/",
+    "level_nb": 1,
+    "target": "The Slut",
+    "requirements": {
+      "1": 1,
+      "2": 2,
+      "3": 3,
+      "4": 4,
+      "5": 5
+    },
+    "requirements2": null,
+    "custom_titles": null,
+    "multi": 5,
+    "title_i18n": "Perks: The Slut Tree",
+    "description_i18n": "Unlock all perks in the Slut tree on one of your girls."
+  },
+  "The Bride": {
+    "pic": "The Bride portrait.webp",
+    "pic_path": "resources/perks/",
+    "level_nb": 1,
+    "target": "The Bride",
+    "requirements": {
+      "1": 1,
+      "2": 2,
+      "3": 3,
+      "4": 4,
+      "5": 5
+    },
+    "requirements2": null,
+    "custom_titles": null,
+    "multi": 5,
+    "title_i18n": "Perks: The Bride Tree",
+    "description_i18n": "Unlock all perks in the Bride tree on one of your girls."
+  },
+  "perform service": {
+    "pic": "egg vibrator.webp",
+    "pic_path": "resources/items/toy/",
+    "level_nb": 5,
+    "target": "perform service",
+    "requirements": {
+      "1": 1,
+      "2": 10,
+      "3": 100,
+      "4": 1000,
+      "5": 10000
+    },
+    "requirements2": null,
+    "custom_titles": null,
+    "multi": 5,
+    "title_i18n": "Service Mania",
+    "description_i18n": "Have your girls perform service acts %s times."
+  },
+  "perform sex": {
+    "pic": "lace panties.webp",
+    "pic_path": "resources/items/accessory/",
+    "level_nb": 5,
+    "target": "perform sex",
+    "requirements": {
+      "1": 1,
+      "2": 10,
+      "3": 100,
+      "4": 1000,
+      "5": 10000
+    },
+    "requirements2": null,
+    "custom_titles": null,
+    "multi": 5,
+    "title_i18n": "Sex Mania",
+    "description_i18n": "Have your girls perform sex acts %s times."
+  },
+  "perform anal": {
+    "pic": "butt plug.webp",
+    "pic_path": "resources/items/toy/",
+    "level_nb": 5,
+    "target": "perform anal",
+    "requirements": {
+      "1": 1,
+      "2": 10,
+      "3": 100,
+      "4": 1000,
+      "5": 10000
+    },
+    "requirements2": null,
+    "custom_titles": null,
+    "multi": 5,
+    "title_i18n": "Anal Mania",
+    "description_i18n": "Have your girls perform anal acts %s times."
+  },
+  "perform fetish": {
+    "pic": "ropes.webp",
+    "pic_path": "resources/items/toy/",
+    "level_nb": 5,
+    "target": "perform fetish",
+    "requirements": {
+      "1": 1,
+      "2": 10,
+      "3": 100,
+      "4": 1000,
+      "5": 10000
+    },
+    "requirements2": null,
+    "custom_titles": null,
+    "multi": 5,
+    "title_i18n": "Fetish Mania",
+    "description_i18n": "Have your girls perform fetish acts %s times."
+  },
+  "perform bisexual": {
+    "pic": "black dildo.webp",
+    "pic_path": "resources/items/toy/",
+    "level_nb": 5,
+    "target": "perform bisexual",
+    "requirements": {
+      "1": 1,
+      "2": 5,
+      "3": 25,
+      "4": 100,
+      "5": 250
+    },
+    "requirements2": null,
+    "custom_titles": null,
+    "multi": 5,
+    "title_i18n": "Bisexual Mania",
+    "description_i18n": "Have your girls perform bisexual acts %s times."
+  },
+  "perform group": {
+    "pic": "beer keg.webp",
+    "pic_path": "resources/items/furniture/",
+    "level_nb": 5,
+    "target": "perform group",
+    "requirements": {
+      "1": 1,
+      "2": 5,
+      "3": 25,
+      "4": 100,
+      "5": 250
+    },
+    "requirements2": null,
+    "custom_titles": null,
+    "multi": 5,
+    "title_i18n": "Group Mania",
+    "description_i18n": "Have your girls perform group acts %s times."
+  },
+  "rep": {
+    "pic": "star.webp",
+    "pic_path": "resources/ui/",
+    "level_nb": 5,
+    "target": "rep",
+    "requirements": {
+      "1": 100,
+      "2": 1000,
+      "3": 5000,
+      "4": 10000,
+      "5": 30000
+    },
+    "requirements2": null,
+    "custom_titles": null,
+    "multi": 5,
+    "title_i18n": "Star System",
+    "description_i18n": "Reach %s reputation."
+  },
+  "furniture": {
+    "pic": "steam jacuzzi.webp",
+    "pic_path": "resources/items/furniture/",
+    "level_nb": 6,
+    "target": "furniture",
+    "requirements": {
+      "1": 2,
+      "2": 3,
+      "3": 4,
+      "4": 5,
+      "5": 6,
+      "6": 7
+    },
+    "requirements2": null,
+    "custom_titles": null,
+    "multi": 2,
+    "title_i18n": "Interior Designer",
+    "description_i18n": "Build all furniture for chapter %s."
+  },
+  "upgrades": {
+    "pic": "chapel.webp",
+    "pic_path": "resources/items/furniture/",
+    "level_nb": 7,
+    "target": "upgrades",
+    "requirements": {
+      "1": 1,
+      "2": 2,
+      "3": 3,
+      "4": 4,
+      "5": 5,
+      "6": 6,
+      "7": 7
+    },
+    "requirements2": null,
+    "custom_titles": null,
+    "multi": 2,
+    "title_i18n": "Home Sweet Home",
+    "description_i18n": "Build all upgrades for chapter %s."
+  },
+  "gold clean": {
+    "pic": "broom.webp",
+    "pic_path": "resources/items/furniture/",
+    "level_nb": 5,
+    "target": "gold clean",
+    "requirements": {
+      "1": 250,
+      "2": 1000,
+      "3": 5000,
+      "4": 25000,
+      "5": 100000
+    },
+    "requirements2": null,
+    "custom_titles": null,
+    "multi": 2,
+    "title_i18n": "Does This Bring You Joy?",
+    "description_i18n": "Spend %s denars on cleaning."
+  },
+  "first loan": {
+    "pic": "portrait.webp",
+    "pic_path": "resources/characters/npc/Banker/",
+    "level_nb": 1,
+    "target": "first loan",
+    "requirements": {
+      "1": 1,
+      "2": 2,
+      "3": 3,
+      "4": 4,
+      "5": 5
+    },
+    "requirements2": null,
+    "custom_titles": null,
+    "multi": 3,
+    "title_i18n": "Close Call",
+    "description_i18n": "Repay the Banker's loan."
+  },
+  "game over": {
+    "pic": "zap traps.webp",
+    "pic_path": "resources/items/furniture/",
+    "level_nb": 1,
+    "target": "game over",
+    "requirements": {
+      "1": 1,
+      "2": 2,
+      "3": 3,
+      "4": 4,
+      "5": 5
+    },
+    "requirements2": null,
+    "custom_titles": null,
+    "multi": 3,
+    "title_i18n": "Fail Fast",
+    "description_i18n": "Lose the game once."
+  },
+  "runaway": {
+    "pic": "skull.webp",
+    "pic_path": "resources/ui/",
+    "level_nb": 1,
+    "target": "runaway",
+    "requirements": {
+      "1": 1,
+      "2": 2,
+      "3": 3,
+      "4": 4,
+      "5": 5
+    },
+    "requirements2": null,
+    "custom_titles": null,
+    "multi": 3,
+    "title_i18n": "The One That Got Away",
+    "description_i18n": "A girl has run away from you."
+  },
+  "caught NPC": {
+    "pic": "guard portrait.webp",
+    "pic_path": "resources/characters/npc/Misc/",
+    "level_nb": 1,
+    "target": "caught NPC",
+    "requirements": {
+      "1": 1,
+      "2": 2,
+      "3": 3,
+      "4": 4,
+      "5": 5
+    },
+    "requirements2": null,
+    "custom_titles": null,
+    "multi": 3,
+    "title_i18n": "The One That Got Caught",
+    "description_i18n": "Your hirelings have caught a runaway girl."
+  },
+  "caught MC": {
+    "pic": "misc.webp",
+    "pic_path": "resources/ui/achievements/",
+    "level_nb": 1,
+    "target": "caught MC",
+    "requirements": {
+      "1": 1,
+      "2": 2,
+      "3": 3,
+      "4": 4,
+      "5": 5
+    },
+    "requirements2": null,
+    "custom_titles": null,
+    "multi": 5,
+    "title_i18n": "What's Mine Is Mine",
+    "description_i18n": "You have caught a runaway girl and brought her back."
+  },
+  "win normal": {
+    "pic": "bronze statue.webp",
+    "pic_path": "resources/items/furniture/",
+    "level_nb": 1,
+    "target": "win normal",
+    "requirements": {
+      "1": 1,
+      "2": 2,
+      "3": 3,
+      "4": 4,
+      "5": 5
+    },
+    "requirements2": null,
+    "custom_titles": null,
+    "multi": 25,
+    "title_i18n": "Brothel Prince",
+    "description_i18n": "Reach endless mode in normal difficulty."
+  },
+  "win hard": {
+    "pic": "silver statue.webp",
+    "pic_path": "resources/items/furniture/",
+    "level_nb": 1,
+    "target": "win hard",
+    "requirements": {
+      "1": 1,
+      "2": 2,
+      "3": 3,
+      "4": 4,
+      "5": 5
+    },
+    "requirements2": null,
+    "custom_titles": null,
+    "multi": 50,
+    "title_i18n": "Brothel King",
+    "description_i18n": "Reach endless mode in hard difficulty."
+  },
+  "win insane": {
+    "pic": "gold statue.webp",
+    "pic_path": "resources/items/furniture/",
+    "level_nb": 1,
+    "target": "win insane",
+    "requirements": {
+      "1": 1,
+      "2": 2,
+      "3": 3,
+      "4": 4,
+      "5": 5
+    },
+    "requirements2": null,
+    "custom_titles": null,
+    "multi": 100,
+    "title_i18n": "Brothel Emperor",
+    "description_i18n": "Reach endless mode in hardest difficulty."
+  },
+  "powers": {
+    "pic": "evil deck.webp",
+    "pic_path": "resources/ui/powers/",
+    "level_nb": 5,
+    "target": "powers",
+    "requirements": {
+      "1": 1,
+      "2": 5,
+      "3": 25,
+      "4": 50,
+      "5": 100
+    },
+    "requirements2": null,
+    "custom_titles": null,
+    "multi": 3,
+    "title_i18n": "Faust",
+    "description_i18n": "Cast %s evil powers."
+  },
+  "purple mojo": {
+    "pic": "purple mojo.webp",
+    "pic_path": "resources/ui/powers/",
+    "level_nb": 5,
+    "target": "purple mojo",
+    "requirements": {
+      "1": 10,
+      "2": 25,
+      "3": 50,
+      "4": 100,
+      "5": 500
+    },
+    "requirements2": null,
+    "custom_titles": null,
+    "multi": 2,
+    "title_i18n": "Purple Rain",
+    "description_i18n": "Accumulate %s purple mojo."
+  },
+  "green mojo": {
+    "pic": "orb_green.webp",
+    "pic_path": "resources/ui/powers/",
+    "level_nb": 5,
+    "target": "green mojo",
+    "requirements": {
+      "1": 10,
+      "2": 25,
+      "3": 50,
+      "4": 100,
+      "5": 500
+    },
+    "requirements2": null,
+    "custom_titles": null,
+    "multi": 2,
+    "title_i18n": "Dr. Greenthumb",
+    "description_i18n": "Accumulate %s green mojo."
+  },
+  "blue mojo": {
+    "pic": "orb_blue.webp",
+    "pic_path": "resources/ui/powers/",
+    "level_nb": 5,
+    "target": "blue mojo",
+    "requirements": {
+      "1": 10,
+      "2": 25,
+      "3": 50,
+      "4": 100,
+      "5": 500
+    },
+    "requirements2": null,
+    "custom_titles": null,
+    "multi": 2,
+    "title_i18n": "Blue Monday",
+    "description_i18n": "Accumulate %s blue mojo."
+  },
+  "red mojo": {
+    "pic": "orb_red.webp",
+    "pic_path": "resources/ui/powers/",
+    "level_nb": 5,
+    "target": "red mojo",
+    "requirements": {
+      "1": 10,
+      "2": 25,
+      "3": 50,
+      "4": 100,
+      "5": 500
+    },
+    "requirements2": null,
+    "custom_titles": null,
+    "multi": 2,
+    "title_i18n": "Red Alert",
+    "description_i18n": "Accumulate %s red mojo."
+  },
+  "yellow mojo": {
+    "pic": "orb_yellow.webp",
+    "pic_path": "resources/ui/powers/",
+    "level_nb": 5,
+    "target": "yellow mojo",
+    "requirements": {
+      "1": 10,
+      "2": 25,
+      "3": 50,
+      "4": 100,
+      "5": 500
+    },
+    "requirements2": null,
+    "custom_titles": null,
+    "multi": 2,
+    "title_i18n": "Yellow Fever",
+    "description_i18n": "Accumulate %s yellow mojo."
+  },
+  "broken": {
+    "pic": "whip.webp",
+    "pic_path": "Items/weapon/",
+    "level_nb": 5,
+    "target": "broken",
+    "requirements": {
+      "1": 1,
+      "2": 3,
+      "3": 10,
+      "4": 25,
+      "5": 50
+    },
+    "requirements2": null,
+    "custom_titles": null,
+    "multi": 2,
+    "title_i18n": "Can't make an omelet...",
+    "description_i18n": "Break %s girls' sanity."
+  },
+  "broken girl auction": {
+    "pic": "navThe Slums_idle.webp",
+    "pic_path": "resources/ui/",
+    "level_nb": 1,
+    "target": "broken girl auction",
+    "requirements": {
+      "1": 1,
+      "2": 2,
+      "3": 3,
+      "4": 4,
+      "5": 5
+    },
+    "requirements2": null,
+    "custom_titles": null,
+    "multi": 5,
+    "title_i18n": "Somebody Else's Problem",
+    "description_i18n": "Dump a broken girl on the market."
+  },
+  "broken girl asylum": {
+    "pic": "navThe Cathedra_idle.webp",
+    "pic_path": "resources/ui/",
+    "level_nb": 1,
+    "target": "broken girl asylum",
+    "requirements": {
+      "1": 1,
+      "2": 2,
+      "3": 3,
+      "4": 4,
+      "5": 5
+    },
+    "requirements2": null,
+    "custom_titles": null,
+    "multi": 5,
+    "title_i18n": "See? I'm Not That Bad!",
+    "description_i18n": "Send a broken girl to an asylum."
+  },
+  "broken girl healed": {
+    "pic": "Tonic.webp",
+    "pic_path": "resources/items/misc/",
+    "level_nb": 1,
+    "target": "broken girl healed",
+    "requirements": {
+      "1": 1,
+      "2": 2,
+      "3": 3,
+      "4": 4,
+      "5": 5
+    },
+    "requirements2": null,
+    "custom_titles": null,
+    "multi": 5,
+    "title_i18n": "Back from the brink",
+    "description_i18n": "Successfully heal a broken girl."
+  },
+  "broken girl street": {
+    "pic": "brothelnavbutton_idle.webp",
+    "pic_path": "resources/ui/",
+    "level_nb": 4,
+    "target": "broken girl street",
+    "requirements": {
+      "1": 1,
+      "2": 3,
+      "3": 10,
+      "4": 20
+    },
+    "requirements2": null,
+    "custom_titles": null,
+    "multi": 3,
+    "title_i18n": "Bitch Better Get My Money",
+    "description_i18n": "Have %s street whores."
+  },
+  "chaos": {
+    "pic": "portrait.webp",
+    "pic_path": "resources/characters/npc/Chaos/",
+    "level_nb": 1,
+    "target": "chaos",
+    "requirements": {
+      "1": 1,
+      "2": 2,
+      "3": 3,
+      "4": 4,
+      "5": 5
+    },
+    "requirements2": null,
+    "custom_titles": null,
+    "multi": 25,
+    "title_i18n": "Chaos Unleashed",
+    "description_i18n": "Unlock Chaos the talking sword."
+  },
+  "newgame+": {
+    "pic": "pet1.webp",
+    "pic_path": "resources/characters/npc/misc/Pets/",
+    "level_nb": 1,
+    "target": "newgame+",
+    "requirements": {
+      "1": 1,
+      "2": 2,
+      "3": 3,
+      "4": 4,
+      "5": 5
+    },
+    "requirements2": null,
+    "custom_titles": null,
+    "multi": 5,
+    "title_i18n": "NewGame+ unlocked",
+    "description_i18n": "Finish the game for the first time to unlock NewGame+."
+  },
+  "free girl challenge": {
+    "pic": "girl.webp",
+    "pic_path": "resources/spells/",
+    "level_nb": 1,
+    "target": "free girl challenge",
+    "requirements": {
+      "1": 1,
+      "2": 2,
+      "3": 3,
+      "4": 4,
+      "5": 5
+    },
+    "requirements2": null,
+    "custom_titles": null,
+    "multi": 100,
+    "title_i18n": "Free Girl Challenge",
+    "description_i18n": "Finish the game with the free girl challenge activated."
+  },
+  "training challenge": {
+    "pic": "militia.webp",
+    "pic_path": "resources/spells/",
+    "level_nb": 1,
+    "target": "training challenge",
+    "requirements": {
+      "1": 1,
+      "2": 2,
+      "3": 3,
+      "4": 4,
+      "5": 5
+    },
+    "requirements2": null,
+    "custom_titles": null,
+    "multi": 200,
+    "title_i18n": "Training Challenge",
+    "description_i18n": "Finish the game with the training challenge activated."
+  },
+  "brothel ranking": {
+    "pic": "holy handgrenade.webp",
+    "pic_path": "resources/items/weapon/",
+    "level_nb": 8,
+    "target": "brothel ranking",
+    "requirements": {
+      "1": 35,
+      "2": 30,
+      "3": 25,
+      "4": 20,
+      "5": 15,
+      "6": 10,
+      "7": 5,
+      "8": 1
+    },
+    "requirements2": null,
+    "custom_titles": null,
+    "multi": 5,
+    "title_i18n": "Hall of Fame",
+    "description_i18n": "Reach #%s spot in the city's brothel rankings."
+  }
+}

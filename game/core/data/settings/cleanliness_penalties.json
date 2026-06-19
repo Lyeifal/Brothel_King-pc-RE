@@ -1,0 +1,17 @@
+{
+  "dusty": {
+    "dice_count": 2,
+    "dice_bonus": -1,
+    "text_i18n": "\nYour brothel is getting dusty. There are cobwebs in the rooms."
+  },
+  "dirty": {
+    "dice_count": 3,
+    "dice_bonus": 0,
+    "text_i18n": "\nYour brothel is getting dirty. Sill thinks she saw a rat."
+  },
+  "disgusting": {
+    "dice_count": 6,
+    "dice_bonus": 0,
+    "text_i18n": "\nThis place is a disgusting mess. Customers are turning away and girls are getting sick!"
+  }
+}

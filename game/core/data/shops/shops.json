@@ -1,0 +1,467 @@
+{
+  "shops": [
+    {
+      "id": "shop",
+      "unlock_batch": null,
+      "char_name": "shopgirl",
+      "portrait": "side shopgirl",
+      "bg": "bg shop",
+      "district": null,
+      "shop_type": "general",
+      "item_types": "all",
+      "minion_type": null,
+      "restock_formula": {
+        "junk": "d3 + 3",
+        "common": "d6",
+        "rare": "d3",
+        "exceptional": "d3 + -2"
+      },
+      "restock_cost": {
+        "2": 500,
+        "3": 1000,
+        "4": 2000,
+        "5": 4000,
+        "6": 8000,
+        "7": 15000
+      },
+      "item_type_weights": {},
+      "special_items": [
+        {
+          "condition": "always",
+          "method": "rand_item",
+          "quality": "F",
+          "count": 1
+        },
+        {
+          "condition": "story_flag",
+          "flag": "ninja hunt",
+          "method": "instance",
+          "item_id": "makibishi",
+          "dice": "d3 + 1"
+        }
+      ],
+      "name_i18n": "Shop"
+    },
+    {
+      "id": "riche",
+      "unlock_batch": "item_late",
+      "char_name": "riche",
+      "portrait": "side riche",
+      "bg": "bg botanical_garden",
+      "district": "gardens",
+      "shop_type": "specialist",
+      "item_types": [
+        "Flower"
+      ],
+      "item_type_weights": {
+        "Flower": 2.0
+      },
+      "minion_type": null,
+      "restock_formula": {
+        "junk": "d6",
+        "common": "d6 + 2",
+        "rare": "d3 + 1",
+        "exceptional": "d3 + -1"
+      },
+      "restock_cost": {
+        "2": 400,
+        "3": 800,
+        "4": 1600,
+        "5": 3200,
+        "6": 6400,
+        "7": 12000
+      },
+      "special_items": [],
+      "name_i18n": "Riche"
+    },
+    {
+      "id": "ramias",
+      "unlock_batch": "item_early",
+      "char_name": "ramias",
+      "portrait": "side ramias",
+      "bg": "bg arena_front",
+      "district": null,
+      "shop_type": "specialist",
+      "item_types": [
+        "Weapon"
+      ],
+      "item_type_weights": {
+        "Weapon": 2.0
+      },
+      "minion_type": null,
+      "restock_formula": {
+        "junk": "d6",
+        "common": "d6 + 2",
+        "rare": "d3 + 1",
+        "exceptional": "d3 + -1"
+      },
+      "restock_cost": {
+        "2": 400,
+        "3": 800,
+        "4": 1600,
+        "5": 3200,
+        "6": 6400,
+        "7": 12000
+      },
+      "special_items": [],
+      "name_i18n": "Ramias"
+    },
+    {
+      "id": "gurigura",
+      "unlock_batch": "item_early",
+      "char_name": "gurigura",
+      "portrait": "side gurigura",
+      "bg": "bg prison",
+      "district": null,
+      "shop_type": "specialist",
+      "item_types": [
+        "Toy",
+        "Food",
+        "Supplies"
+      ],
+      "item_type_weights": {
+        "Toy": 1.5,
+        "Food": 1.0,
+        "Supplies": 1.0
+      },
+      "minion_type": null,
+      "restock_formula": {
+        "junk": "d6",
+        "common": "d6 + 2",
+        "rare": "d3 + 1",
+        "exceptional": "d3 + -1"
+      },
+      "restock_cost": {
+        "2": 400,
+        "3": 800,
+        "4": 1600,
+        "5": 3200,
+        "6": 6400,
+        "7": 12000
+      },
+      "special_items": [],
+      "name_i18n": "Gurigura"
+    },
+    {
+      "id": "katryn",
+      "unlock_batch": "item_late",
+      "char_name": "katryn",
+      "portrait": "side katryn",
+      "bg": "bg magic_university",
+      "district": null,
+      "shop_type": "specialist",
+      "item_types": [
+        "Ring",
+        "Necklace"
+      ],
+      "item_type_weights": {
+        "Ring": 1.5,
+        "Necklace": 1.0
+      },
+      "minion_type": null,
+      "restock_formula": {
+        "junk": "d6",
+        "common": "d6 + 2",
+        "rare": "d3 + 1",
+        "exceptional": "d3 + -1"
+      },
+      "restock_cost": {
+        "2": 400,
+        "3": 800,
+        "4": 1600,
+        "5": 3200,
+        "6": 6400,
+        "7": 12000
+      },
+      "special_items": [],
+      "name_i18n": "Katryn"
+    },
+    {
+      "id": "giftgirl",
+      "unlock_batch": "item_early",
+      "char_name": "giftgirl",
+      "portrait": "side giftgirl",
+      "bg": "bg exotic_emporium",
+      "district": null,
+      "shop_type": "specialist",
+      "item_types": [
+        "Gift",
+        "Misc"
+      ],
+      "item_type_weights": {
+        "Gift": 1.5,
+        "Misc": 1.0
+      },
+      "minion_type": null,
+      "restock_formula": {
+        "junk": "d6",
+        "common": "d6 + 2",
+        "rare": "d3 + 1",
+        "exceptional": "d3 + -1"
+      },
+      "restock_cost": {
+        "2": 400,
+        "3": 800,
+        "4": 1600,
+        "5": 3200,
+        "6": 6400,
+        "7": 12000
+      },
+      "special_items": [
+        {
+          "condition": "dice",
+          "chance": 10,
+          "method": "instance",
+          "item_id": "wyvern_egg"
+        }
+      ],
+      "name_i18n": "Gift Shop Girl"
+    },
+    {
+      "id": "twins",
+      "unlock_batch": "item_late",
+      "char_name": "today",
+      "portrait": "side today",
+      "bg": "bg pilgrim_road",
+      "district": null,
+      "shop_type": "specialist",
+      "item_types": [
+        "Dress",
+        "Accessory"
+      ],
+      "item_type_weights": {
+        "Dress": 1.5,
+        "Accessory": 1.0
+      },
+      "minion_type": null,
+      "restock_formula": {
+        "junk": "d6",
+        "common": "d6 + 2",
+        "rare": "d3 + 1",
+        "exceptional": "d3 + -1"
+      },
+      "restock_cost": {
+        "2": 400,
+        "3": 800,
+        "4": 1600,
+        "5": 3200,
+        "6": 6400,
+        "7": 12000
+      },
+      "special_items": [],
+      "name_i18n": "Today"
+    },
+    {
+      "id": "goldie",
+      "unlock_batch": "minion_early",
+      "char_name": "goldie",
+      "portrait": "side goldie",
+      "bg": "bg farmland",
+      "district": null,
+      "shop_type": "minion",
+      "item_types": null,
+      "minion_type": "beast",
+      "restock_formula": {
+        "minion": "d5",
+        "item": "d4 + -1"
+      },
+      "restock_cost": {
+        "2": 400,
+        "3": 800,
+        "4": 1600,
+        "5": 3200,
+        "6": 6400,
+        "7": 12000
+      },
+      "special_items": [],
+      "name_i18n": "Goldie"
+    },
+    {
+      "id": "willow",
+      "unlock_batch": "minion_early",
+      "char_name": "willow",
+      "portrait": "side willow",
+      "bg": "bg sewers",
+      "district": null,
+      "shop_type": "minion",
+      "item_types": null,
+      "minion_type": "monster",
+      "restock_formula": {
+        "minion": "d5",
+        "item": "d4 + -1"
+      },
+      "restock_cost": {
+        "2": 400,
+        "3": 800,
+        "4": 1600,
+        "5": 3200,
+        "6": 6400,
+        "7": 12000
+      },
+      "special_items": [],
+      "name_i18n": "Willow"
+    },
+    {
+      "id": "gina",
+      "unlock_batch": "minion_early",
+      "char_name": "gina",
+      "portrait": "side gina",
+      "bg": "bg junkyard",
+      "district": null,
+      "shop_type": "minion",
+      "item_types": null,
+      "minion_type": "machine",
+      "restock_formula": {
+        "minion": "d5",
+        "item": "d4 + -1"
+      },
+      "restock_cost": {
+        "2": 400,
+        "3": 800,
+        "4": 1600,
+        "5": 3200,
+        "6": 6400,
+        "7": 12000
+      },
+      "special_items": [],
+      "name_i18n": "Gina"
+    },
+    {
+      "id": "stella",
+      "unlock_batch": "minion_late",
+      "char_name": "stella",
+      "portrait": "side stella",
+      "bg": "bg harbor",
+      "district": null,
+      "shop_type": "minion",
+      "item_types": null,
+      "minion_type": "stallion",
+      "restock_formula": {
+        "minion": "d5",
+        "item": "d4 + -1"
+      },
+      "restock_cost": {
+        "2": 400,
+        "3": 800,
+        "4": 1600,
+        "5": 3200,
+        "6": 6400,
+        "7": 12000
+      },
+      "special_items": [],
+      "name_i18n": "Stella"
+    }
+  ],
+  "upgrades": {
+    "1": {
+      "chapter": 2,
+      "cost": {
+        "resource": "wood",
+        "amount": 5
+      },
+      "stock_bonus": {
+        "quality": "junk",
+        "amount": 2
+      }
+    },
+    "2": {
+      "chapter": 2,
+      "cost": {
+        "resource": "dye",
+        "amount": 10
+      },
+      "stock_bonus": {
+        "quality": "common",
+        "amount": 1
+      }
+    },
+    "3": {
+      "chapter": 2,
+      "cost": {
+        "resource": "leather",
+        "amount": 15
+      },
+      "stock_bonus": {
+        "quality": "junk",
+        "amount": 3
+      }
+    },
+    "4": {
+      "chapter": 4,
+      "cost": {
+        "resource": "ore",
+        "amount": 10
+      },
+      "stock_bonus": {
+        "quality": "common",
+        "amount": 2
+      }
+    },
+    "5": {
+      "chapter": 3,
+      "cost": {
+        "resource": "dye",
+        "amount": 20
+      },
+      "stock_bonus": {
+        "quality": "rare",
+        "amount": 1
+      }
+    },
+    "6": {
+      "chapter": 4,
+      "cost": {
+        "resource": "silk",
+        "amount": 15
+      },
+      "stock_bonus": {
+        "quality": "common",
+        "amount": 3
+      }
+    },
+    "7": {
+      "chapter": 4,
+      "cost": {
+        "resource": "marble",
+        "amount": 20
+      },
+      "stock_bonus": {
+        "quality": "rare",
+        "amount": 1
+      }
+    },
+    "8": {
+      "chapter": 5,
+      "cost": {
+        "resource": "silk",
+        "amount": 30
+      },
+      "stock_bonus": {
+        "quality": "exceptional",
+        "amount": 1
+      }
+    },
+    "9": {
+      "chapter": 6,
+      "cost": {
+        "resource": "diamond",
+        "amount": 5
+      },
+      "stock_bonus": {
+        "quality": "rare",
+        "amount": 2
+      }
+    },
+    "10": {
+      "chapter": 7,
+      "cost": {
+        "resource": "diamond",
+        "amount": 15
+      },
+      "stock_bonus": {
+        "quality": "exceptional",
+        "amount": 2
+      }
+    }
+  }
+}

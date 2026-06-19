@@ -1,0 +1,231 @@
+{
+  "diff_list": [
+    "very easy",
+    "easy",
+    "normal",
+    "hard",
+    "insane"
+  ],
+  "diff_settings_range": {
+    "gold": {
+      "min": 0.1,
+      "max": 5.0,
+      "pace": 0.05
+    },
+    "budget": {
+      "min": 0.1,
+      "max": 5.0,
+      "pace": 0.05
+    },
+    "rewards": {
+      "min": 0.1,
+      "max": 5.0,
+      "pace": 0.05
+    },
+    "resources": {
+      "min": 0.1,
+      "max": 5.0,
+      "pace": 0.05
+    },
+    "stats": {
+      "min": 0.1,
+      "max": 5.0,
+      "pace": 0.05
+    },
+    "pref": {
+      "min": 0.1,
+      "max": 5.0,
+      "pace": 0.05
+    },
+    "xp": {
+      "min": 0.1,
+      "max": 5.0,
+      "pace": 0.05
+    },
+    "jp": {
+      "min": 0.1,
+      "max": 5.0,
+      "pace": 0.05
+    },
+    "rep": {
+      "min": 0.1,
+      "max": 5.0,
+      "pace": 0.05
+    },
+    "prestige": {
+      "min": 0.1,
+      "max": 5.0,
+      "pace": 0.05
+    },
+    "tax rate": {
+      "min": -0.3,
+      "max": 0.3,
+      "pace": 0.05
+    },
+    "satisfaction": {
+      "min": -3,
+      "max": 3,
+      "pace": 1
+    },
+    "security": {
+      "min": 0,
+      "max": 5,
+      "pace": 1
+    }
+  },
+  "diff_dict": {
+    "very easy": {
+      "gold": 1.5,
+      "budget": 1.25,
+      "rewards": 1.5,
+      "resources": 1.5,
+      "stats": 1.5,
+      "pref": 1.5,
+      "xp": 1.5,
+      "jp": 1.5,
+      "rep": 1.5,
+      "prestige": 1.5,
+      "tax rate": -0.2,
+      "satisfaction": 2,
+      "security": 5
+    },
+    "easy": {
+      "gold": 1.25,
+      "budget": 1.1,
+      "rewards": 1.25,
+      "resources": 1.5,
+      "stats": 1.25,
+      "pref": 1.25,
+      "xp": 1.25,
+      "jp": 1.25,
+      "rep": 1.25,
+      "prestige": 1.25,
+      "tax rate": -0.1,
+      "satisfaction": 1,
+      "security": 3
+    },
+    "normal": {
+      "gold": 1.0,
+      "budget": 1.0,
+      "rewards": 1.0,
+      "resources": 1.0,
+      "stats": 1.0,
+      "pref": 1.0,
+      "xp": 1.0,
+      "jp": 1.0,
+      "rep": 1.0,
+      "prestige": 1.0,
+      "tax rate": 0.0,
+      "satisfaction": 0,
+      "security": 1
+    },
+    "hard": {
+      "gold": 0.8,
+      "budget": 0.9,
+      "rewards": 0.85,
+      "resources": 0.85,
+      "stats": 0.75,
+      "pref": 0.75,
+      "xp": 0.75,
+      "jp": 0.75,
+      "rep": 1.0,
+      "prestige": 1.0,
+      "tax rate": 0.1,
+      "satisfaction": -1,
+      "security": 0
+    },
+    "insane": {
+      "gold": 0.6,
+      "budget": 0.75,
+      "rewards": 0.6,
+      "resources": 0.6,
+      "stats": 0.5,
+      "pref": 0.5,
+      "xp": 0.5,
+      "jp": 0.5,
+      "rep": 0.75,
+      "prestige": 0.75,
+      "tax rate": 0.2,
+      "satisfaction": -2,
+      "security": 0
+    }
+  },
+
+  "difficulties": {
+    "very easy": {
+      "name_i18n": "Gigolo",
+      "description_i18n": "No challenge at all. You're either here for the story, or the pretty pictures. {i}All achievements are locked.{/i}"
+    },
+    "easy": {
+      "name_i18n": "Hustler",
+      "description_i18n": "A basic challenge for new players."
+    },
+    "normal": {
+      "name_i18n": "Whorelord",
+      "description_i18n": "The classic experience."
+    },
+    "hard": {
+      "name_i18n": "Brothel Prince",
+      "description_i18n": "Want more challenge? Hard has got you covered."
+    },
+    "insane": {
+      "name_i18n": "Brothel King{#1}",
+      "description_i18n": "The ultimate challenge."
+    }
+  },
+
+  "settings": {
+    "gold": {
+      "name_i18n": "Income",
+      "description_i18n": "Affects your {b}Brothel Income{/b}."
+    },
+    "budget": {
+      "name_i18n": "Customer budget",
+      "description_i18n": "Changes cap on customers' individual {b}budget{/b}."
+    },
+    "rewards": {
+      "name_i18n": "Rewards",
+      "description_i18n": "Affects {b}Rewards{/b} from quests, classes and monthly contracts."
+    },
+    "resources": {
+      "name_i18n": "Resources",
+      "description_i18n": "Affects the amount of {b}Resources{/b} you get from collecting and trading."
+    },
+    "stats": {
+      "name_i18n": "Girl skills",
+      "description_i18n": "Affects the progression of your girls' {b}Skills{/b}."
+    },
+    "pref": {
+      "name_i18n": "Preferences",
+      "description_i18n": "Affects the progression of your girls' {b}Sexual Preferences{/b}."
+    },
+    "xp": {
+      "name_i18n": "XP",
+      "description_i18n": "Affects the progression of your girls' {b}XP{/b}."
+    },
+    "jp": {
+      "name_i18n": "JP",
+      "description_i18n": "Affects the progression of your girls' {b}JP{/b}."
+    },
+    "rep": {
+      "name_i18n": "Girl reputation",
+      "description_i18n": "Affects the progression of your girls' {b}REP{/b}."
+    },
+    "prestige": {
+      "name_i18n": "Prestige",
+      "description_i18n": "Affects the progression of your Main Character's {b}Prestige{/b}."
+    },
+    "tax rate": {
+      "name_i18n": "Guild Fee Offset",
+      "description_i18n": "Increases or decreases the Slave Guild's {b}fee{/b}."
+    },
+    "satisfaction": {
+      "name_i18n": "Customer satisfaction",
+      "description_i18n": "Changes customer {b}satisfaction{/b} bonus."
+    },
+    "security": {
+      "name_i18n": "Security grace period",
+      "description_i18n": "Delays threat buildup by this number of days after each event."
+    }
+  }
+}

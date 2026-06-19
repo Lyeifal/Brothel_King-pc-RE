@@ -1,6 +1,23 @@
 #### SECURITY EVENTS ####
 
 
+## EN: Siege enemy scaling config (BK Evolution — extracted from hardcoded if-elif).
+## ZH: 围攻敌人数量配置（BK Evolution — 从硬编码 if-elif 中提取）。
+init python:
+    ## EN: Load siege enemy scaling from JSON (BK Evolution), fallback to hardcoded.
+    ## ZH: 从 JSON 加载围城敌人规模配置（BK Evolution），否则使用硬编码。
+    _sec_scale_json = DataLoader.load_security_scaling()
+    if _sec_scale_json:
+        _ses = _sec_scale_json.get("siege_enemy_scaling", {})
+        siege_enemy_scaling = {int(k): v for k, v in _ses.items()}
+    else:
+        siege_enemy_scaling = {
+            4: {"base_enemies": 16, "enemy_dice": 6, "base_machines": 1, "machine_dice": 2},
+            5: {"base_enemies": 21, "enemy_dice": 8, "base_machines": 1, "machine_dice": 3},
+            6: {"base_enemies": 28, "enemy_dice": 10, "base_machines": 2, "machine_dice": 3},
+            7: {"base_enemies": 42, "enemy_dice": 12, "base_machines": 3, "machine_dice": 3},
+        }
+
 label security(working_girls, ev_type=None): # Happens when the threat level overcomes the event threshhold. ev_type may be provided for debugging.
 
     $ debug_notify("Security event")
@@ -331,18 +348,10 @@ label security(working_girls, ev_type=None): # Happens when the threat level ove
 
             allies = brothel.security
 
-            if game.chapter == 4:
-                enemies = 16 + dice(6)
-                war_machines = 1 + dice(2)
-            elif game.chapter == 5:
-                enemies = 21 + dice(8)
-                war_machines = 1 + dice(3)
-            elif game.chapter == 6:
-                enemies = 28 + dice(10)
-                war_machines = 2 + dice(3)
-            elif game.chapter == 7:
-                enemies = 42 + dice(12)
-                war_machines = 3 + dice(3)
+            _scale = siege_enemy_scaling.get(game.chapter)
+            if _scale:
+                enemies = _scale["base_enemies"] + dice(_scale["enemy_dice"])
+                war_machines = _scale["base_machines"] + dice(_scale["machine_dice"])
             else: # for debugging
                 enemies = 8 + dice(4)
                 war_machines = 2

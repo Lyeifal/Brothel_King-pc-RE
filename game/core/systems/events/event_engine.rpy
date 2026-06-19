@@ -73,6 +73,15 @@ init -4 python:
                     renpy.log("EventEngine: Cannot add unknown event '%s' to queue" % event_id)
                 return False
 
+            ## EN: Skip events that don't match the current game mode.
+            ## ZH: 跳过与当前游戏模式不匹配的事件。
+            if hasattr(event, 'modes') and event.modes is not None:
+                current_mode = game.game_mode.mode_id if hasattr(game, 'game_mode') and game.game_mode else None
+                if current_mode:
+                    allowed = (event.modes,) if is_string(event.modes) else event.modes
+                    if current_mode not in allowed:
+                        return False
+
             # Location forces city queue, matching story_add_event() logic
             if event_type == "city" or event.location:
                 if event not in city_events:
@@ -119,10 +128,10 @@ init -4 python:
 
         def scan_custom_events(self):
             """
-            Scan game/custom/events/ for .rpy files.
+            Scan game/core/content/events/ for .rpy files.
             :returns: list of absolute file paths
             """
-            events_dir = os.path.join(config.gamedir, "custom", "events")
+            events_dir = os.path.join(config.gamedir, "core", "content", "events")
             if not os.path.isdir(events_dir):
                 return []
 
@@ -157,7 +166,7 @@ init -4 python:
                 return True
             except Exception as e:
                 if config.developer:
-                    renpy.log("EventEngine: Failed to load event pack '%s': %s" % (filepath, str(e)))
+                    renpy.log(__("EventEngine: Failed to load event pack '%s': %s") % (filepath, str(e)))
                 return False
 
         # --- Hook Integration ---

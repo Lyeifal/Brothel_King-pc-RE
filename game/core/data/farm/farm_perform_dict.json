@@ -1,0 +1,368 @@
+{
+  "pref_bonus": {
+    "fascinated": 0.5,
+    "very interested": 0.3,
+    "interested": 0.15,
+    "a little interested": 0.05,
+    "indifferent": 0.0,
+    "a little reluctant": -0.05,
+    "reluctant": -0.15,
+    "very reluctant": -0.3,
+    "refuses": -0.5,
+    "positive act": 0.15,
+    "negative act": -0.15,
+    "farm weakness": 0.2
+  },
+
+  "naked_stats": [
+    ["beauty", "secondary"],
+    ["body", "secondary"],
+    ["charm", "secondary"],
+    ["refinement", "secondary"]
+  ],
+  "service_stats": [
+    ["service", "primary"],
+    ["charm", "secondary"],
+    ["obedience", "secondary"]
+  ],
+  "sex_stats": [
+    ["sex", "primary"],
+    ["beauty", "secondary"],
+    ["libido", "secondary"]
+  ],
+  "anal_stats": [
+    ["anal", "primary"],
+    ["body", "secondary"],
+    ["constitution", "secondary"]
+  ],
+  "fetish_stats": [
+    ["fetish", "primary"],
+    ["refinement", "secondary"],
+    ["sensitivity", "secondary"]
+  ],
+  "bisexual_stats": [
+    ["service", "secondary"],
+    ["fetish", "secondary"],
+    ["libido", "secondary"],
+    ["sensitivity", "secondary"]
+  ],
+  "group_stats": [
+    ["sex", "secondary"],
+    ["anal", "secondary"],
+    ["obedience", "secondary"],
+    ["constitution", "secondary"]
+  ],
+
+  "location_i18n": [
+    "in the old barn",
+    "in the hay",
+    "by the tool shed",
+    "down in the mud",
+    "in the meadow",
+    "in the pig stall",
+    "down in a pit",
+    "by the windmill",
+    "beneath the old oak",
+    "among the scarecrows",
+    "behind the chicken coop",
+    "in the milking parlor",
+    "inside the stable",
+    "behind a fence",
+    "in the corn field",
+    "in the corn field, forming a perfect circle visible from the sky that would remain and later confound mystery seekers"
+  ],
+
+  "intro_minion_i18n": {
+    "stallion": "a well-endowed, hunking stallion",
+    "beast": "a dirty, vulgar beast",
+    "monster": "a vile, oozing monster",
+    "machine": "a kinky buzzing machine",
+    "stallions": "neighing, horny stallions",
+    "beasts": "drooling, mindless beasts",
+    "monsters": "deformed monsters",
+    "machines": "weird fucking machines",
+    "various": "a strange coterie of minions"
+  },
+
+  "intro_perfect_i18n": {
+    "beauty": "They are stunned to see such a beautiful woman standing next to %s.",
+    "body": "They get rowdy seeing her perfect curves so close to %s",
+    "charm": "They are mesmerized by her charm, even though she is standing next to such %s.",
+    "refinement": "They wondered how such a noble and refined girl could exist in the same space as %s."
+  },
+
+  "intro_good_i18n": {
+    "beauty": "They are impressed to see a pretty girl with %s.",
+    "body": "They whistle encouragingly at her exposed body, next to %s",
+    "charm": "They think she looks graceful for someone so close to %s.",
+    "refinement": "They are pleasantly surprised to see she maintains her dignity, even standing next to %s."
+  },
+
+  "intro_average_plus_i18n": {
+    "beauty": "They think she is quite pretty for a girl standing next to %s",
+    "body": "They cheer on her sweet body as she stands next to %s",
+    "charm": "They think she has charm as she stands next to %s",
+    "refinement": "They are surprised to see she retains her manners next to %s"
+  },
+
+  "intro_average_minus_i18n": {
+    "beauty": ", but they are disappointed in her face.",
+    "body": ", but they think her body is out of shape.",
+    "charm": ", but her charm is lacking.",
+    "refinement": ", but they feel she lacks class."
+  },
+
+  "intro_bad_i18n": {
+    "beauty": "They grumble as they don't think she's pretty.",
+    "body": "They make disparaging comments about her lack of curves.",
+    "charm": "They are disappointed to find her charisma lacking.",
+    "refinement": "They frown, complaining that she is uncouth."
+  },
+
+  "intro_very_bad_i18n": {
+    "beauty": "They boo and call her ugly, even next to %s.",
+    "body": "They loudly complain about her unattractive shape, even next to %s.",
+    "charm": "They hurl insults at her for her utter lack of charm, unsurprised she is kept with %s.",
+    "refinement": "They turn up their nose at her, calling her an unrefined farmhand, only good to serve %s."
+  },
+
+  "naked_story_stallion_i18n": {
+    "title": "The Naked Truth",
+    "desc": "Sometimes, all it takes for one to be mindful of their sexual self is to strip naked in the presence of strangers. %s is experiencing that, standing next to %s - although it's doubtful he is mindful about anything at all.\n\nHer eyes widen when she notices his massive cock standing to full attention, swaying mere inches from her exposed body."
+  },
+
+  "naked_story_beast_i18n": {
+    "title": "Caught in the Bare",
+    "desc": "Animals don't wear clothes, and %s is reminded of that as she is forced to mingle with the beasts as %s sniffs at her shivering body. As the animal releases pheromones, she feels a strange mix of shame and dirty curiosity."
+  },
+
+  "naked_story_monster_i18n": {
+    "title": "Personal Space Invader",
+    "desc": "%s is forced to spread out in a lewd pose, while the lewd creature %s grasps her wrists and ankles with its weird appendages. She can't help but offer her most intimate parts in full view of all the customers."
+  },
+
+  "naked_story_machine_i18n": {
+    "title": "The Birthday Suit",
+    "desc": "%s is tied up to %s, the strange machine, which hums as it runs various scans on her exposed body. While nothing visible happens on the outside, her face becomes visibly flushed and she squirms, rubbing her thighs together."
+  },
+
+  "service_story_stallion_i18n": {
+    "title": "Not-So Little Pony",
+    "desc": "Excitement rises within the crowd as %s steps closer to %s, running her hands over his muscular torso. As always, his barely-human cock is standing to attention. Taking her time to show off to the customers, she kneels in front of the stallion, her knees buried in the dirty mud.",
+    "desc2": "She is holding his massive cock in her hands and licking the tip, before finally taking it in her mouth."
+  },
+
+  "service_story_beast_i18n": {
+    "title": "Around The Fur",
+    "desc": "Getting down right in the mud, %s spreads her legs, giving the crowd a full view of her body. %s obediently positions himself over her to form a 69, his beastly cock hanging in front of her face.",
+    "desc2": "The animal buries his snout into her snatch, making loud grunts as he starts licking. In turn, she opens her mouth to welcome his cock."
+  },
+
+  "service_story_monster_i18n": {
+    "title": "The Shadow over Her Mouth",
+    "desc": "The crowd gasps when the monster extends a strange appendage, oozing with yellowish liquid that seems like the creature's pre-cum. %s hangs it right in front of %s's face.",
+    "desc2": "With only a moment's hesitation, she starts to lick the strange cock-like thing, running her tongue up and down the monstrous shaft."
+  },
+
+  "service_story_machine_i18n": {
+    "title": "Toy Story",
+    "desc": "%s steps inside the strange contraption, which starts to whizz and buzz around her. A dildo pops out of the side of %s, rubbing against her face. Playing with her nipples, she takes it in her mouth.",
+    "desc2": "The machine sits her down on a strange stool, and an audible vibrating noise can be heard as she gasps."
+  },
+
+  "sex_story_stallion_i18n": {
+    "title": "Harnessing Passion",
+    "desc": "As soon as Gizel gives the signal, %s wastes no time, shoving %s in the mud and spreading her legs, his fat dick already pushing against her labia.",
+    "desc2": "The crowd holds their breath as it seems impossible that the humongous cock will fit inside her, but inch by inch, the stallion forces it in, until a visible bulge can be seen distorting her belly.\n\nHe starts moving, and her moans echo through the farm as she gets fucked mercilessly."
+  },
+
+  "sex_story_beast_i18n": {
+    "title": "On The Prowl",
+    "desc": "His beastly eyes shining with brute lust, %s pushes her to the ground, ready to mount her like a female of his own species. %s squeals as the strangely-shaped dick forces its way inside her pussy.",
+    "desc2": "The beast grunts and groans as he pummels her human pussy, rubbing his hairy body against her naked skin and drooling in her hair."
+  },
+
+  "sex_story_monster_i18n": {
+    "title": "Tales from the Crotch",
+    "desc": "%s's monstrous body shivers with anticipation as Gizel gives the signal for the show to start. %s's eyes widen as the strange creature deploys its gooey tentacles to encircle her. A thicker, cock-like tentacle places itself at the entrance of her pussy, rubbing it with strangely fluorescent juice.",
+    "desc2": "The girl moans in surprise as the monster penetrates her, strecthing her cunt grotesquely. It moves inside in strange ways, extracting moans from her that are part pain and part confusing pleasure."
+  },
+
+  "sex_story_machine_i18n": {
+    "title": "The Joystick",
+    "desc": "Gizel activates %s and ties %s up to the strange machine. She shivers as the cold metal makes contact with her naked body, and she cannot advert her eyes as a rotating, buzzing rod is pushed between her legs.",
+    "desc2": "The machine starts fucking her, making clanking sounds as the mechanical dick accelerates its pace. She gasps and moans as the clockwork cock stretches her pussy."
+  },
+
+  "anal_story_stallion_i18n": {
+    "title": "Back Door Rodeo",
+    "desc": "As soon as Gizel gives the signal, %s wastes no time, shoving %s in the mud and spreading her buttcheeks, his fat dick already pushing against her tiny asshole.",
+    "desc2": "The crowd gasps as the stallion mercilessly shoves his humongous dick inside her butt, stretching her anus impossibly wide. She cries out as her ass gets fucked mercilessly."
+  },
+
+  "anal_story_beast_i18n": {
+    "title": "Into the Wild",
+    "desc": "His beastly eyes shining with mad lust, %s pushes her to the ground, forcing %s in an unnatural position. She squeals as his cock forces its way inside her asshole.",
+    "desc2": "The beast grunts and groans as he pummels her ass, reaching inner parts that only he could with his oddly-shaped dick."
+  },
+
+  "anal_story_monster_i18n": {
+    "title": "It Came from Uranus",
+    "desc": "%s's monstrous body shivers with anticipation as Gizel gives the signal for the show to start. %s's eyes widen as the strange creature deploys its gooey tentacles to encircle her. A thicker, cock-like tentacle places itself at the entrance of her asshole, rubbing it with strangely fluorescent juice.",
+    "desc2": "She moans in surprise as the alien cock penetrates her and stretches her asshole, pulsing and expanding to an abnormal size. It starts fucking her, extracting moans from her that are part pain and part confusing pleasure."
+  },
+
+  "anal_story_machine_i18n": {
+    "title": "Baby Got Back",
+    "desc": "Gizel activates %s and ties %s up to the strange machine. She shivers as the cold metal makes contact with her naked body, and she cannot advert her eyes as a rotating, buzzing rod comes up to poke her butt.",
+    "desc2": "She cries out as the mechanical cock invades her ass, stimulating her sensitive insides. The machine increases its pace. She gasps and moans as the clockwork cock stretches her ass."
+  },
+
+  "fetish_story_stallion_i18n": {
+    "title": "The Whip Cracks",
+    "desc": "After tying %s up with rope, Gizel hands a pair of metal clips to %s.",
+    "desc2": "The mindless hunk follows orders and attaches the clips to each of her nipples. She squeals in pain, but he is not done. With hands the size of dinner plates, he spanks her until her ass is flushed bright red."
+  },
+
+  "fetish_story_beast_i18n": {
+    "title": "The Milky Way",
+    "desc": "Gizel ties %s's arms together and sits her up on a wooden horse, while she leads %s on a leash.",
+    "desc2": "The beast starts rubbing itself against her ass, smearing her with drool and pre-cum, weighing her down on the wooden device."
+  },
+
+  "fetish_story_monster_i18n": {
+    "title": "Day of the Tentacle",
+    "desc": "Gizel feeds the gross monster a vial of some fiery liquid, and he becomes bright red. %s shivers as she sees %s approaching her with its tentacles dangling.",
+    "desc2": "The monster spurts some reddish liquid over her body, and she screams in pain. Apparently it produces a kind of hot wax, mixed with aphrodisiacs."
+  },
+
+  "fetish_story_machine_i18n": {
+    "title": "Plug and Play",
+    "desc": "%s is blindfolded. Gizel works on the machine for a little while, and %s rattles as it converts itself into a kind of translucid iron maiden.",
+    "desc2": "The customers hold their breath as Gizel pushes the hapless girl into the torture device. They can see everything through the glassy lid as needles prick her skin and hot iron sears her in various places."
+  },
+
+  "bisexual_story_stallion_i18n": {
+    "title": "Cock Riders in the Sack",
+    "desc": "Gizel conjures up a doppleganger that joins %s and the horny stallion in the ring. The summoned creature isn't shy and immediately grabs %s's thick dick, stroking it and bringing it to %s's face. The two girls actively lick and tease the stallion, using their bodies to please him and each other.",
+    "desc2": "The three of them keep fucking for a while, trying different positions."
+  },
+
+  "bisexual_story_beast_i18n": {
+    "title": "Horny Tiger, Fucking Dragon",
+    "desc": "Gizel conjures up a doppleganger that immediately joins %s and %s in the mud. Unafraid to touch the beast, she pets him lovingly before grabbing his manhood and pointing it at %s.",
+    "desc2": "The beast fucks each girl in turn, while the other one entwines her tongue with his, her mouth tasting the animal's saliva."
+  },
+
+  "bisexual_story_monster_i18n": {
+    "title": "Invasion of the Pussy Munchers",
+    "desc": "More pussy is always better, so Gizel made sure to bring a friend alongside %s. Soon the girls are being held tight by a dozen tentacles, and %s starts teasing %s's sensitive parts.",
+    "desc2": "The monster's tentacles start fucking the girls in various holes, making them moan in unison."
+  },
+
+  "bisexual_story_machine_i18n": {
+    "title": "Switching Gears",
+    "desc": "Toys are fun, but sharing is caring: Gizel invites one of the female customers to join %s in the circle, and she ties them up with %s, buzzing with dark energy as it oozes oil on %s's naked body.",
+    "desc2": "Soon, both girls are entering a trance, sharing an erotic experience as the love machine's various gizmos tug at their limit."
+  },
+
+  "group_story_stallion_i18n": {
+    "title": "Breeding Trouble",
+    "desc": "As the hulking bodies of the stallions loom over %s, she looks like a frail doll. She yelps as one of them lifts her as if she was nothing, spreading her legs and forcing his large cock inside her.",
+    "desc2": "Her cries are soon muffled by another fat cock in her mouth, her body rocked back and forth as she gets fucked from both ends."
+  },
+
+  "group_story_beast_i18n": {
+    "title": "Number of the Beasts",
+    "desc": "Growling beasts surround %s, sniffing her as if she was a piece of meat.",
+    "desc2": "Unable to restrain themselves, the beasts shove her down in the mud, and their hairy bodies soon cover her as their animal dicks find their way inside her holes."
+  },
+
+  "group_story_monster_i18n": {
+    "title": "The Hills have Dicks",
+    "desc": "The monsters surround %s, dripping gooey liquid over her head and body from thick, oozing tentacles.",
+    "desc2": "The monsters press various appendages against her whole body, stimulating her erogenous parts and penetrating her various holes."
+  },
+
+  "group_story_machine_i18n": {
+    "title": "A Clockwork Orgy",
+    "desc": "Mechanical devices start to whir and hover around %s as the machines light up one by one.",
+    "desc2": "She gasps as metal clamps hold her in place and a number of pistons and dildos are brought to fuck her holes."
+  },
+
+  "perf_good_i18n": {
+    "beauty": "The crowd love to see such a beautiful girl lower herself before them.",
+    "body": "The customers drool as they ogle her lovely body soiled by mud and love fluids.",
+    "charm": "Her natural charm shines through even in such a dirty and unusual situation.",
+    "refinement": "Her elaborate, refined gestures delight the crowd even as she gets down and dirty.",
+    "obedience": "The crowd is delighted to see that in spite of everything, she remains submissive and obedient.",
+    "libido": "She is obviously horny, her juices leaking in plain view, making the crowd leer and cheer.",
+    "sensitivity": "The customers love to see her reactions as her sensitive body responds to the lewd stimulations.",
+    "constitution": "She goes on for a long time, her stamina impressing everyone as she works hard on her task.",
+    "service": "She is a perfect little cocksucker, and the skill of her hands and tongue make the customers obviously horny.",
+    "sex": "She is obviously good at sex, giving many customers a visible boner as she takes cock in stride.",
+    "anal": "She is an expert anal slut, a fact that doesn't escape the eyes of the horny crowd.",
+    "fetish": "She is at ease with kinky stuff, impressing the customers with her skill and depravity."
+  },
+
+  "perf_bad_i18n": {
+    "beauty": "Some customers whisper that they would like the show better if she was prettier.",
+    "body": "The customers find her body too plain to get excited.",
+    "charm": "Her lack of charm lowers the enjoyment of the customers.",
+    "refinement": "The customers wish she was more refined, even though the show is in a farm they would like her to behave better.",
+    "obedience": "The crowd finds her obedience lacking as she seems to balk at her task.",
+    "libido": "Her lack of sexual passion is visible, marring the enjoyment of the onlookers.",
+    "sensitivity": "The customers find her too stiff, wishing she had more sensitivity.",
+    "constitution": "Due to her weaker constitution, she struggles to keep up, making some customers grumble.",
+    "service": "She doesn't look skilled enough when sucking cock, causing some customers to get bored.",
+    "sex": "Her lack of sexual experience is showing, as she struggles to accomodate her partner's cock.",
+    "anal": "She moans in pain as she takes a cock in the ass, clearly uncomfortable with the act, spoiling the mood.",
+    "fetish": "She doesn't look at ease with non-vanilla act, showing her lack of experience with fetish stuff."
+  },
+
+  "service_perfect_i18n": "%s displays expert technique, taking her time to bring %s to release, using her tongue and hands to great effect while making sure all the customers get a great view.",
+  "service_good_i18n": "%s does her best to impress the customers with her technique, making sure she puts everything she's learnt to good use to make %s cum.",
+  "service_average_i18n": "%s is nervous, but mostly succeeds in hiding it, sucking off %s with efficiency, if not creativity.",
+  "service_bad_i18n": "%s's technique is wooden, and her mind is obviously somewhere else. The customers start grumbling as she takes too long to bring %s to climax.",
+  "service_very_bad_i18n": "%s goes through the motions without any technique, barely even touching %s's cock, obviously waiting for it all to end. The customers boo as they realize she is not going to finish.",
+
+  "sex_perfect_i18n": "%s acts like a perfect making love to %s as if he was a regular partner. The customers are amazed and envious to see how well she performs.",
+  "sex_good_i18n": "%s moans suggestively as she gets fucked by %s, putting on a show in spite of the situation.",
+  "sex_average_i18n": "%s has enough sexual experience to take it, letting %s have his way while trying to follow his lead.",
+  "sex_bad_i18n": "%s does her best to match %s's moves, still in pain but trying to hide it. The customers are unimpressed.",
+  "sex_very_bad_i18n": "%s remains passive, taking her mind elsewhere as she waits meekly for %s to finish. The customers hurl insults at her, angry to see her put on such a poor show.",
+
+  "anal_perfect_i18n": "%s loves to be fucked in the ass and it shows. The customers yell enthusiastically as she welcomes %s's cock deeper inside her.",
+  "anal_good_i18n": "%s grabs onto %s, moaning as she takes it the ass like a true professional.",
+  "anal_average_i18n": "%s tries to ease into the act as %s fucks her, eventually relaxing and soldiering on as she takes it up the ass.",
+  "anal_bad_i18n": "%s's obviously lacks anal experience. She grits her teeth and hangs on, but the customers start grumbling as her low energy doesn't match that of %s.",
+  "anal_very_bad_i18n": "%s remains tense and uncooperative, still trying to process the stress and pain of her situation as %s violates her ass. She is oblivious to the customers throwing mud and rotten fruits at her, angered by her passivity.",
+
+  "fetish_perfect_i18n": "%s is completely soaking wet, savouring every little bit of pleasure and pain %s inflicts her. She could do this all day.",
+  "fetish_good_i18n": "%s is a kinky girl, and she finds pervert pleasure in everything %s does to her, giving the customers a good show.",
+  "fetish_average_i18n": "%s is clearly uncomfortable, but she hands on by a thread as %s puts her through even more humiliation.",
+  "fetish_bad_i18n": "%s grits her teeth as she tries to endure the pain administered by %s, but she does poorly. Everyone can tell she isn't experienced enough for such a hardcore show.",
+  "fetish_very_bad_i18n": "%s screams in shock at the abuse %s inflicts her, her face racked with fear and pain. Even the more sadistic customers are having second thoughts.",
+
+  "bisexual_perfect_i18n": "%s makes a show of rubbing herself against the other girl all over her body, sharing some of %s's bodily fluids in a passionate kiss. The customers applaud her performance.",
+  "bisexual_good_i18n": "%s is at ease with serving both males and females, as she demonstrates by fucking %s and the other girl in turns.",
+  "bisexual_average_i18n": "%s is nervous having sex with another girl in such a setting, but she does her best, leaning on %s a little more.",
+  "bisexual_bad_i18n": "%s seems to find the idea of having sex with another girl even less appealing than fucking %s, so she spends most of her time tending to the minion. The customers are disappointed.",
+  "bisexual_very_bad_i18n": "%s is unwilling or unable to touch another girl, and loudly freaks out as %s tries to force her to kiss the other girl. The customers feel cheated.",
+
+  "group_perfect_i18n": "%s loves to fuck as many dicks as possible and it shows. She takes one in every hole, multiple times, always asking for more.",
+  "group_good_i18n": "%s is good at this, and soon she works all the minions close to their limits, using all the parts of her body to please them.",
+  "group_average_i18n": "%s is not fully prepared for this, but she tries her best, tending to each minion in turn.",
+  "group_bad_i18n": "%s is clearly overwhelmed, not knowing what to do with whom. The minions take the lead and she tries to follow, but her passivity annoy the customers.",
+  "group_very_bad_i18n": "%s is way in over her head, unable to do anything except lie there all stiff and frozen. The minions try to work with her but she is completely frigid.",
+
+  "stallion_cum_i18n": "Eventually, %s the stallion cums hard, shooting his thick jizz all over %s.",
+  "stallion_cum_group_i18n": "The stallions gather around her, shooting their spunk all over %s.",
+  "beast_cum_i18n": "%s climaxes loudly, his deformed cock smearing %s with dirty animal cum.",
+  "beast_cum_group_i18n": "The beasts excitedly shoot dirty animal cum all over %s.",
+  "monster_cum_i18n": "Unexpectedly, %s reaches what seems like a climax, shooting thick monster cum from several appendages at once onto %s.",
+  "monster_cum_group_i18n": "The monsters surround %s, covering her in strange cum-like juice as they take turns to shoot their loads.",
+  "machine_cum_i18n": "After vibrating and rubbing for a while, %s brings %s to a surprise orgasm, releasing a strange thick oil that stiks to her shivering body.",
+  "machine_cum_group_i18n": "The machines all work in unison, mercilessly bringing %s to multiple earth-shattering orgasms, covering her in oily mechanical fluids.",
+  "various_cum_group_i18n": "All of the minions gather around %s to cover her body with cum and fluids."
+}

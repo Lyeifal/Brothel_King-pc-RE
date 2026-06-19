@@ -1,0 +1,56 @@
+{
+  "jokes_i18n": {
+    "harmless": [
+      "What's the hardest thing about being a Guard? Telling your parents you're gay!",
+      "My dog used to run after everyone on a horse. It got so bad, I had to take his horse away.",
+      "What's the difference between a snowman and a snowwoman? Snowballs!",
+      "How do you catch a bra? With a booby trap."
+    ],
+    "sex": [
+      "Why was the luth teacher arrested? For fingering a minor...",
+      "What do the Court and pussies have in common? One slip of the tongue, and you're in deep shit.",
+      "Know what I do in my garden? Get down and dirty with my hoes.",
+      "What do you call the useless part around a dick? A man!",
+      "What's the difference between a wife and a job? After 5 years, your job will still suck."
+    ],
+    "dark": [
+      "How do you make a girl scream twice? First, fuck her in the ass, then wipe your dick on her curtains!",
+      "I like my women like my wine... Locked in the cellar!",
+      "A doctor tells his patient:__('I')m sorry, but you've only got about 10 left.'\nPatient:__('10 what? Months, weeks?')\nDoctor:__('Nine, eight...')",
+      "What's the best part about sex with twenty-eight-year-olds? There are 20 of them!",
+      "How many male chauvinists does it take to refuel the lamp? None. Let her do the dishes in the dark."
+    ],
+    "mean": [
+      "I like you. People say I've no taste, but I like you.",
+      "Damn, you're hot, but you'd be a lot hotter if you just shut up.",
+      "I like my women attractive, dumb, and bitchy. You seem to fit the bill quite nicely.",
+      "I'd hire you as a whore, but my girls have class..."
+    ]
+  },
+  "compliments_i18n": {
+    "beauty": [
+      "%s, aren't you beautiful today...",
+      "%s, you're so lovely...",
+      "%s, I swear you have the cutest face.",
+      "Your face lights up when you smile, %s."
+    ],
+    "body": [
+      "Wow, you've got such a hot body you know.",
+      "Baby, you've got such an amazing ass...",
+      "I love your knockers, honey, they look amazing without a bra.",
+      "Look at that nice piece of ass...",
+      "Wow, you're stunning, makes me really want to touch the merchandise!"
+    ],
+    "mind": [
+      "You're a bright girl, I like that about you.",
+      "A beautiful mind... Haven't you got everything?",
+      "You seem to know a lot... You definitely should get to know more about me!",
+      "I love the conversations we're having, it's always enlightening."
+    ],
+    "spirit": [
+      "You're always spirited and lively; it's very nice.",
+      "At last, someone with character. I don't like dull people.",
+      "You're always passionate about everything. I like that!"
+    ]
+  }
+}

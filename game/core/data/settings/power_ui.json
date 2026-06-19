@@ -1,0 +1,8 @@
+{
+  "_description": "EN: Evil power UI colors and card sizing. ZH: 邪恶力量 UI 颜色与卡片尺寸。",
+  "evpower_color": {
+    "platinum": {"true": "c_gold", "false": "c_white"},
+    "regular": {"true": "c_darkpurple", "false": "c_black"}
+  },
+  "evil_card_size": 160
+}

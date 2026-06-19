@@ -111,7 +111,7 @@ label c3_update_hint_goals():
             # Unlocks hint recap with Suzume
             if nin.flags["hints"] >= 3:
                 if nin.flags["locked"]: # First call
-                    game.set_task(desc + ": Talk to Suzume again about %s." % nin.name, channel, blocking=True)
+                    game.set_task(__("%s: Talk to Suzume again about %s.") % (desc, nin.name), channel, blocking=True)
                 nin.flags["locked"] = False
 
             # Init hints
@@ -165,7 +165,7 @@ label c3_interrogate_contacts():
         $ contact_list.append(("side roz", "Roz, the zealous Guard Lieutenant", NPC_roz))
     if harbor.action:
         $ contact_list.append(("side stella", "Stella, the Blood Isles's Slaver", NPC_stella))
-    if farmland.action:
+    if is_unlocked("farmland"):
         $ contact_list.append(("side goldie", "Goldie, the Farmhand", NPC_goldie))
     if sewers.action:
         $ contact_list.append(("side willow", "Willow, the Monster Catcher", NPC_willow))
@@ -1992,7 +1992,7 @@ label c3_papa_cells():
 
         if MC.girls:
             "Choose a girl from your brothel to bring with you (reminder: she must have at least [req_val] in [req], and be open to whoring)"
-            $ girl = long_menu("Choose a girl", [(g.fullname + " (%s %i, %s %i, %s %i)" % (req_skills[0], g.get_stat(req_skills[0]), req_skills[1], g.get_stat(req_skills[1]), req_skills[2], g.get_stat(req_skills[2])), g) for g in MC.girls])
+            $ girl = long_menu(__("Choose a girl"), [(g.fullname + __(" (%s %i, %s %i, %s %i)") % (req_skills[0], g.get_stat(req_skills[0]), req_skills[1], g.get_stat(req_skills[1]), req_skills[2], g.get_stat(req_skills[2])), g) for g in MC.girls])
         else:
             "You cannot satisfy Papa Freak's requests, as you have no girls in your brothel."
             return
@@ -4293,7 +4293,7 @@ label c3_narika_dean_visit():
 
     sill "Master, you're making it worse..."
 
-    $ shizuka_name = "Dean Shizuka"
+    $ shizuka_name = __("Dean Shizuka")
 
     shizuka "Your slave has more sense than you. You barge into my office and start calling out a lady about her age?"
 
@@ -4501,7 +4501,7 @@ label c3_narika_MU_class():
 
         you "I'm sorry, your face looks kind of familiar, but... Have we met?"
 
-        $ sill_name = "Familiar girl"
+        $ sill_name = _("Familiar girl")
 
         sill "Master! It's me!"
 
@@ -4513,7 +4513,7 @@ label c3_narika_MU_class():
 
         you "Sill! Is that you?"
 
-        $ sill_name = "Sill"
+        $ sill_name = __("Sill")
 
         sill "Of course it's me! Gee, Master, is my disguise really so effective?"
 
@@ -7578,7 +7578,7 @@ label narika_break_test():
     if job_event:
         $ renpy.call(job_event)
         $ MC.change_prestige(3)
-        $ notify("Narika has now trained sufficiently as a %s." % job)
+        $ notify(__("Narika has now trained sufficiently as a %s.") % job)
         return
 
     # Step 1: Find an available job
@@ -7805,10 +7805,10 @@ label narika_break_test():
         with fade
 
         if girl.job == "dancer" and NPC_narika.flags[girl.job + " counter"] == 4:
-            $ notify("Narika has now trained sufficiently as a dancer.")
+            $ notify(_("Narika has now trained sufficiently as a dancer."))
 
         if NPC_narika.flags[girl.job + " counter"] <= 4:
-            $ notify("Narika trained with %s as a %s (%i/4)." % (girl.name, girl.job, NPC_narika.flags[girl.job + " counter"]), pic="side narika blush")
+            $ notify(_("Narika trained with %s as a %s (%i/4).") % (girl.name, __(girl.job.capitalize()), NPC_narika.flags[girl.job + " counter"]), pic="side narika blush")
 
     else:
         $ notify("Narika couldn't help any girls in the brothel with their job.", pic="side narika blush", col=c_lightred)
@@ -9986,7 +9986,7 @@ label mizuki_k_back(girl):
 
         show bg mizuki honeymoon1 at sepia with fade
 
-        $ mizuki_name = "Lady Sui"
+        $ mizuki_name = __("Lady Sui")
 
         play sound s_surprise
         show bg mizuki honeymoon1 at top_color with flashbackin
@@ -10146,7 +10146,7 @@ label mizuki_k_back(girl):
 
         "Lord Mitsuhide" "*snore*"
 
-        $ mizuki_name = "Mizuki"
+        $ mizuki_name = __("Mizuki")
 
         scene black with fade
         show bg archives at sepia with dissolve
@@ -10708,7 +10708,7 @@ label mizuki_k_back2(girl):
 
                     "Echoes of a lord's voice" "Ngggh... N-No more... I-It hurts... P-Please let me go..."
 
-                    $ mizuki_name = "Echoes of Mizuki's voice"
+                    $ mizuki_name = _("Echoes of Mizuki's voice")
 
                     mizuki ninja "Fufufu... Of course."
 
@@ -10742,7 +10742,7 @@ label mizuki_k_back2(girl):
 
                     "Crystal" "Seems I'm not the only one who cheated death."
 
-                    $ mizuki_name = "Mizuki"
+                    $ mizuki_name = __("Mizuki")
 
                     $ q_mizuki = False
 
@@ -11243,7 +11243,7 @@ label mizuki_w_back(girl):
 
         show bg mizuki family2 at top_color with flashbackin
 
-        $ mizuki_name = "Lady Sui"
+        $ mizuki_name = __("Lady Sui")
 
         mizuki happy "Oh, my sweet baby... You're starving again, aren't you? No matter how much milk I give you, you always want more."
 
@@ -11503,7 +11503,7 @@ label mizuki_w_back(girl):
         "He shivers, before falling silent."
 
         $ NPC_mizuki.flags["W1 unlock"] = True
-        $ mizuki_name = "Mizuki"
+        $ mizuki_name = __("Mizuki")
 
         scene black with flashbackout
 
@@ -17786,7 +17786,7 @@ label haruka_break_test(): # Fires up every morning after capturing Haruka
         $ NPC_haruka.flags[min_type + " counter"] += 1
 
         if NPC_haruka.flags[min_type + " counter"] < 4:
-            $ notify("Haruka trained with a %s at the Farm." % min_type, pic="side haruka blush")
+            $ notify(__("Haruka trained with a %s at the Farm.") % min_type, pic="side haruka blush")
         else:
             call haruka_farm(min_type) from _call_haruka_farm
             $ NPC_haruka.flags["farm completed"] += 1
@@ -20458,7 +20458,7 @@ label c3_confrontation(): # Happens on the next Saturday night after Homura's vi
     show homura ninja at right
     with pushright
 
-    $ mask_name = "Shirohito"
+    $ mask_name = __("Shirohito")
 
     mask "Heed my words. My full name is Prince Shirohito, Royal Heir of the Pharo dynasty."
 
@@ -21284,7 +21284,7 @@ label c3_confrontation_fight: # Follows previous label
 
         scene black with fade
 
-        $ narrator("Your Kunoichi all%s ha%s come to your aid!" % (plural(len(nin_list), singular="y", ending="ies"), plural(len(nin_list), singular="s", ending="ve")))
+        $ narrator(__("Your Kunoichi all%s ha%s come to your aid!") % (plural(len(nin_list), singular="y", ending="ies"), plural(len(nin_list), singular="s", ending="ve")))
 
     else:
         "With no allies to aid you, you prepare for a desperate duel against the duo of assassins."
@@ -21611,9 +21611,9 @@ label c3_confrontation_fight: # Follows previous label
         # Challenge
         $ chal = renpy.call_screen("challenge_menu", challenges=[("Fight Homura", "fight", 8-bonus), ("Use a spell", "control", 8-bonus)])
 
-        $ bonus_ttip += "Character bonus: %i\n" % (MC.get_stat("strength") - MC.get_stat("strength", raw=True))
+        $ bonus_ttip += __("Character bonus: %i\n") % (MC.get_stat("strength") - MC.get_stat("strength", raw=True))
         if MC.get_effect("change", chal + " challenges"):
-            $ bonus_ttip += "Challenge bonus: %i" % MC.get_effect("change", chal + " challenges")
+            $ bonus_ttip += __("Challenge bonus: %i") % MC.get_effect("change", chal + " challenges")
 
         # Run challenge
 
@@ -22364,7 +22364,7 @@ label c3_confrontation_shiro(): # Follows previous label
             $ norollback()
 
             if chal == "fight":
-                $ bonus_ttip += "Character bonus: %i\n" % (MC.get_stat("strength") - MC.get_stat("strength", raw=True))
+                $ bonus_ttip += __("Character bonus: %i\n") % (MC.get_stat("strength") - MC.get_stat("strength", raw=True))
                 if MC.get_effect("change", "fight challenges"):
                     $ bonus_ttip += "Challenge bonus: %i" % MC.get_effect("change", "fight challenges")
 
@@ -22451,7 +22451,7 @@ label c3_confrontation_shiro(): # Follows previous label
 
 
             else:
-                $ bonus_ttip += "Character bonus: %i\n" % (MC.get_stat("charisma") - MC.get_stat("charisma", raw=True))
+                $ bonus_ttip += __("Character bonus: %i\n") % (MC.get_stat("charisma") - MC.get_stat("charisma", raw=True))
                 if MC.get_effect("change", "bluff challenges"):
                     $ bonus_ttip += "Challenge bonus: %i" % MC.get_effect("change", "bluff challenges")
 

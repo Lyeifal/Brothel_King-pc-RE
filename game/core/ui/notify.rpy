@@ -138,7 +138,7 @@ screen notify_history:
     # key "mouseup_1" action Hide()
     # key "mouseup_3" action Hide()
 
-    text "(%i)" % len(notify_history) size res_font(14)
+    text _("(%i)") % len(notify_history) size res_font(14)
 
     viewport:
         # scrollbars "vertical"

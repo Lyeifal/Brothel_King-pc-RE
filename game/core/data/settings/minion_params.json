@@ -1,0 +1,14 @@
+{
+    "minion_adjectives": {
+        "stallion": ["erect", "drooling", "horny", "well-built", "snorting", "bulky", "nickering", "sleazy"],
+        "beast": ["drooling", "horny", "filthy", "dirty", "rowdy", "excited", "fat"],
+        "monster": ["horny", "gooey", "filthy", "dirty", "large", "wiggly", "weird-looking", "strange", "sleazy"],
+        "machine": ["buzzing", "strange", "weird-looking", "bizarre", "enchanted", "convoluted", "protruding"]
+    },
+    "minion_name_dict": {
+        "consonants": ["q", "w", "r", "t", "p", "s", "d", "f", "g", "h", "j", "k", "l", "z", "x", "c", "v", "b", "n", "m"],
+        "vowels": ["a", "e", "i", "o", "u", "y"],
+        "monster1": ["gr", "kr", "le", "ry", "shr", "dr", "kz", "gz", "th", "bl", "kl", "wr", "qr", "mr", "sh"],
+        "monster2": ["ck", "k", "rk", "rz", "rm", "xx", "uz", "oo", "hu", "qq", "tz", "zt", "rh", "th"]
+    }
+}

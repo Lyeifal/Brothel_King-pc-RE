@@ -2,7 +2,7 @@
 ## Migrated from BKinit_variables.rpy ##
 init -10 python:
 
-    perform_job_dict = {
+    _fallback_perform_job_dict = {
 #                        "roll_critical failure" : __("\n{color=[c_red]}%s wasn't trying hard today. She barely even paid attention to what she was doing.{/color}"),
 #                        "roll_failure" : __("\n%s wasn't really into it."),
 #                        "roll_neutral" : __("\n%s went about her job as usual."),
@@ -214,3 +214,14 @@ init -10 python:
 
                     }
 
+
+
+init 1 python:
+
+    # EN: Attempt to load perform_job_dict from JSON (BK Evolution).
+    # ZH: 尝试从 JSON 加载 perform_job_dict（BK Evolution）。
+    _json_perform_job_dict = DataLoader.load_perform_job_dict()
+    if _json_perform_job_dict:
+        perform_job_dict = _json_perform_job_dict
+    else:
+        perform_job_dict = _fallback_perform_job_dict

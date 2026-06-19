@@ -6,6 +6,19 @@
 
 init -1 python:
 
+    ## EN: Load courtyard upgrade costs from JSON (BK Evolution), fallback to hardcoded.
+    ## ZH: 从 JSON 加载庭院升级成本（BK Evolution），否则使用硬编码。
+    _cuc_json = DataLoader.load_courtyard_upgrade_costs()
+    if _cuc_json:
+        _cuc = _cuc_json.get("courtyard_upgrade_costs", {})
+        _garden_uc = {int(k): v for k, v in _cuc.get("garden", {}).items()}
+        _hotspring_uc = {int(k): v for k, v in _cuc.get("hotspring", {}).items()}
+        _training_uc = {int(k): v for k, v in _cuc.get("training_ground", {}).items()}
+    else:
+        _garden_uc = {2: 500, 3: 1500}
+        _hotspring_uc = {2: 800, 3: 2000}
+        _training_uc = {2: 1000, 3: 2500}
+
     class CourtyardFacility(object):
         """
         EN: A facility within the courtyard that provides passive benefits.
@@ -99,21 +112,21 @@ init -1 python:
                     name_i18n_key="Garden",
                     description_i18n_key="A peaceful garden that improves mood recovery for all housed girls.",
                     effects=[Effect("boost", "mood recovery", 0.1, scope="courtyard")],
-                    upgrade_cost={2: 500, 3: 1500},
+                    upgrade_cost=_garden_uc,
                 ),
                 "hotspring": CourtyardFacility(
                     facility_id="hotspring",
                     name_i18n_key="Hot Spring",
                     description_i18n_key="A soothing hot spring that boosts energy recovery.",
                     effects=[Effect("boost", "energy recovery", 0.15, scope="courtyard")],
-                    upgrade_cost={2: 800, 3: 2000},
+                    upgrade_cost=_hotspring_uc,
                 ),
                 "training_ground": CourtyardFacility(
                     facility_id="training_ground",
                     name_i18n_key="Training Ground",
                     description_i18n_key="A quiet training area. Girls can train skills at 30%% efficiency.",
                     effects=[Effect("boost", "courtyard training", 0.3, scope="courtyard")],
-                    upgrade_cost={2: 1000, 3: 2500},
+                    upgrade_cost=_training_uc,
                 ),
             }
 

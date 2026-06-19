@@ -1,0 +1,394 @@
+{
+  "menus": {
+    "chat": {
+      "kind": "submenu",
+      "items": [
+        "GENERAL TOPICS",
+        "PERSONAL TOPICS",
+        "DEBUG"
+      ]
+    },
+    "GENERAL TOPICS": {
+      "kind": "topics",
+      "items": [
+        {
+          "type": "chat",
+          "group": "chat",
+          "caption_i18n": "Small talk",
+          "label": "free_chat_small_talk"
+        },
+        {
+          "type": "chat",
+          "group": "chat",
+          "caption_i18n": "Gossip",
+          "label": "free_chat_gossip"
+        },
+        {
+          "type": "chat",
+          "group": "chat",
+          "caption_i18n": "Life",
+          "label": "free_chat_life"
+        },
+        {
+          "type": "chat",
+          "group": "chat",
+          "caption_i18n": "Love",
+          "label": "free_chat_love"
+        }
+      ]
+    },
+    "PERSONAL TOPICS": {
+      "kind": "topics",
+      "items": [
+        {
+          "type": "chat",
+          "group": "chat",
+          "caption_i18n": "Her origins",
+          "label": "free_chat_origins",
+          "love_test": 10
+        },
+        {
+          "type": "chat",
+          "group": "chat",
+          "caption_i18n": "Her hobbies",
+          "label": "free_chat_hobbies",
+          "love_test": 10
+        },
+        {
+          "type": "chat",
+          "group": "chat",
+          "caption_i18n": "Likes",
+          "label": "free_chat_likes",
+          "love_test": 10
+        },
+        {
+          "type": "chat",
+          "group": "chat",
+          "caption_i18n": "Dislikes",
+          "label": "free_chat_dislikes",
+          "love_test": 10
+        }
+      ]
+    },
+    "fun": {
+      "kind": "submenu",
+      "items": [
+        "JOKE",
+        "TOUCH",
+        "PLAY"
+      ]
+    },
+    "JOKE": {
+      "kind": "topics",
+      "items": [
+        {
+          "type": "fun",
+          "group": "joke",
+          "caption_i18n": "Harmless",
+          "label": "free_joke_harmless",
+          "love_test": 15
+        },
+        {
+          "type": "fun",
+          "group": "joke",
+          "caption_i18n": "Adult",
+          "label": "free_joke_adult",
+          "love_test": 15
+        },
+        {
+          "type": "fun",
+          "group": "joke",
+          "caption_i18n": "Dark",
+          "label": "free_joke_dark",
+          "love_test": 15
+        },
+        {
+          "type": "fun",
+          "group": "joke",
+          "caption_i18n": "Mean",
+          "label": "free_joke_mean",
+          "love_test": 15
+        }
+      ]
+    },
+    "TOUCH": {
+      "kind": "topics",
+      "items": [
+        {
+          "type": "fun",
+          "group": "touch",
+          "caption_i18n": "Hold her hand",
+          "label": "free_touch_hand",
+          "love_test": 40
+        },
+        {
+          "type": "fun",
+          "group": "touch",
+          "caption_i18n": "Kiss",
+          "label": "free_touch_kiss",
+          "relationship_level": 2
+        },
+        {
+          "type": "fun",
+          "group": "touch",
+          "caption_i18n": "Slap her ass",
+          "label": "free_touch_ass",
+          "love_test": 55,
+          "relationship_level": 3
+        },
+        {
+          "type": "fun",
+          "group": "touch",
+          "caption_i18n": "Touch her breasts",
+          "label": "free_touch_breasts",
+          "love_test": 60,
+          "relationship_level": 3
+        },
+        {
+          "type": "fun",
+          "group": "touch",
+          "caption_i18n": "Touch her pussy",
+          "label": "free_touch_pussy",
+          "love_test": 65,
+          "relationship_level": 3
+        }
+      ]
+    },
+    "PLAY": {
+      "kind": "topics",
+      "items": [
+        {
+          "type": "fun",
+          "group": "play",
+          "caption_i18n": "Get her naked",
+          "label": "free_play",
+          "act": "naked",
+          "relationship_level": 4
+        },
+        {
+          "type": "fun",
+          "group": "play",
+          "caption_i18n": "Ask for service",
+          "label": "free_play",
+          "act": "service",
+          "relationship_level": 4
+        },
+        {
+          "type": "fun",
+          "group": "play",
+          "caption_i18n": "Ask for sex",
+          "label": "free_play",
+          "act": "sex",
+          "relationship_level": 4
+        },
+        {
+          "type": "fun",
+          "group": "play",
+          "caption_i18n": "Ask for anal sex",
+          "label": "free_play",
+          "act": "anal",
+          "relationship_level": 4
+        },
+        {
+          "type": "fun",
+          "group": "play",
+          "caption_i18n": "Ask for fetish",
+          "label": "free_play",
+          "act": "fetish",
+          "relationship_level": 4
+        }
+      ]
+    },
+    "flirt": {
+      "kind": "submenu",
+      "items": [
+        "COMPLIMENT",
+        "SEXUAL TOPICS"
+      ]
+    },
+    "COMPLIMENT": {
+      "kind": "topics",
+      "items": [
+        {
+          "type": "flirt",
+          "group": "compliment",
+          "caption_i18n": "Compliment her beauty",
+          "label": "free_flirt_beauty",
+          "relationship_level": 1
+        },
+        {
+          "type": "flirt",
+          "group": "compliment",
+          "caption_i18n": "Compliment her body",
+          "label": "free_flirt_body",
+          "relationship_level": 1
+        },
+        {
+          "type": "flirt",
+          "group": "compliment",
+          "caption_i18n": "Compliment her mind",
+          "label": "free_flirt_mind",
+          "relationship_level": 1
+        },
+        {
+          "type": "flirt",
+          "group": "compliment",
+          "caption_i18n": "Compliment her spirit",
+          "label": "free_flirt_spirit",
+          "relationship_level": 1
+        }
+      ]
+    },
+    "SEXUAL TOPICS": {
+      "kind": "topics",
+      "items": [
+        {
+          "type": "flirt",
+          "group": "chat about sex",
+          "caption_i18n": "Her sexual experience",
+          "label": "free_flirt_sex_experience",
+          "love_test": 55
+        },
+        {
+          "type": "flirt",
+          "group": "chat about sex",
+          "caption_i18n": "Her sexual tastes",
+          "label": "free_flirt_sex_tastes",
+          "love_test": 55
+        },
+        {
+          "type": "flirt",
+          "group": "chat about sex",
+          "caption_i18n": "Nudity",
+          "label": "free_flirt_sex_act",
+          "act": "naked",
+          "love_test": 55
+        },
+        {
+          "type": "flirt",
+          "group": "chat about sex",
+          "caption_i18n": "Service",
+          "label": "free_flirt_sex_act",
+          "act": "service",
+          "love_test": 55
+        },
+        {
+          "type": "flirt",
+          "group": "chat about sex",
+          "caption_i18n": "Sex",
+          "label": "free_flirt_sex_act",
+          "act": "sex",
+          "love_test": 55
+        },
+        {
+          "type": "flirt",
+          "group": "chat about sex",
+          "caption_i18n": "Anal sex",
+          "label": "free_flirt_sex_act",
+          "act": "anal",
+          "love_test": 55
+        },
+        {
+          "type": "flirt",
+          "group": "chat about sex",
+          "caption_i18n": "Fetish acts",
+          "label": "free_flirt_sex_act",
+          "act": "fetish",
+          "love_test": 55
+        },
+        {
+          "type": "flirt",
+          "group": "chat about sex",
+          "caption_i18n": "Bisexuality",
+          "label": "free_flirt_sex_act",
+          "act": "bisexual",
+          "love_test": 55
+        },
+        {
+          "type": "flirt",
+          "group": "chat about sex",
+          "caption_i18n": "Group sex",
+          "label": "free_flirt_sex_act",
+          "act": "group",
+          "love_test": 55
+        }
+      ]
+    },
+    "give": {
+      "kind": "submenu",
+      "items": [
+        "GIVE",
+        "OFFER"
+      ]
+    },
+    "GIVE": {
+      "kind": "topics",
+      "items": [
+        {
+          "type": "give",
+          "group": "gift",
+          "caption_i18n": "Give her a present",
+          "label": "free_give_gift",
+          "love_test": 20
+        },
+        {
+          "type": "give",
+          "group": "gold",
+          "caption_i18n": "Give her money",
+          "label": "free_give_gold",
+          "love_test": 20
+        }
+      ]
+    },
+    "OFFER": {
+      "kind": "topics",
+      "items": [
+        {
+          "type": "give",
+          "group": "offer",
+          "caption_i18n": "Offer her a job",
+          "label": "free_offer_job",
+          "love_test": 90,
+          "relationship_level": 5
+        }
+      ]
+    },
+    "DEBUG": {
+      "kind": "topics",
+      "items": [
+        {
+          "type": "give",
+          "group": null,
+          "caption_i18n": "Change love",
+          "label": "interaction_cheat_love",
+          "AP_cost": 0,
+          "condition": "debug_mode"
+        },
+        {
+          "type": "give",
+          "group": null,
+          "caption_i18n": "Reset girl interactions",
+          "label": "interaction_cheat_girl",
+          "AP_cost": 0,
+          "condition": "debug_mode"
+        },
+        {
+          "type": "give",
+          "group": null,
+          "caption_i18n": "Reset MC interactions",
+          "label": "interaction_cheat_MC",
+          "AP_cost": 0,
+          "condition": "debug_mode"
+        },
+        {
+          "type": "give",
+          "group": null,
+          "caption_i18n": "Reveal Personality",
+          "label": "interaction_cheat_personality",
+          "AP_cost": 0,
+          "condition": "debug_mode"
+        }
+      ]
+    }
+  }
+}

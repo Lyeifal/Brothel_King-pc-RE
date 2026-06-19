@@ -9,7 +9,32 @@
         global evpower_color
         global evil_card_size
 
-        # <MIGRATED: see data/powers.rpy>
+        def _make_power(cls, data):
+            effects = None
+            if data.get("effects"):
+                effects = [Effect.from_dict(e) for e in data["effects"]]
+            return cls(
+                name=get_i18n(data, "name"),
+                type=data.get("type"),
+                power=data.get("power"),
+                target=data.get("target", "conduit"),
+                effects=effects,
+                short_description=get_i18n(data, "short_description", ""),
+                description=get_i18n(data, "description") if get_i18n_raw(data, "description") else None,
+                mojo_cost=[tuple(m) for m in data.get("mojo_cost", [])],
+                sanity_cost=data.get("sanity_cost", 1),
+                duration=data.get("duration"),
+                activation_limit=data.get("activation_limit", "once")
+            )
+
+        _powers_json = DataLoader.load_powers()
+        if _powers_json:
+            evpower_list = [_make_power(EvilPower, p) for p in _powers_json.get("regular", [])]
+            evpower_super_list = [_make_power(EvilSuperPower, p) for p in _powers_json.get("super", [])]
+        else:
+            # Fallback: empty lists if JSON is missing (game will be unplayable but won't crash)
+            evpower_list = []
+            evpower_super_list = []
 
         evpower_dict = {pow.power : pow for pow in evpower_list}
 
@@ -17,9 +42,22 @@
 
         evpower_deck = EvilPowerDeck()
 
-        evpower_color = {"platinum" : {True : c_gold, False : c_white}, "regular" : {True : c_darkpurple, False : c_black}}
-
-        evil_card_size = 160
+        ## EN: Load power UI config from JSON (BK Evolution), fallback to hardcoded.
+        ## ZH: 从 JSON 加载力量 UI 配置（BK Evolution），否则使用硬编码。
+        _pui_json = DataLoader.load_power_ui()
+        if _pui_json:
+            _pc = _pui_json.get("evpower_color", {})
+            _color_map = {"c_gold": c_gold, "c_white": c_white, "c_darkpurple": c_darkpurple, "c_black": c_black}
+            evpower_color = {}
+            for _tier, _states in _pc.items():
+                evpower_color[_tier] = {}
+                for _k, _v in _states.items():
+                    _bool_key = (_k.lower() == "true")
+                    evpower_color[_tier][_bool_key] = _color_map.get(_v, c_white)
+            evil_card_size = _pui_json.get("evil_card_size", 160)
+        else:
+            evpower_color = {"platinum" : {True : c_gold, False : c_white}, "regular" : {True : c_darkpurple, False : c_black}}
+            evil_card_size = 160
 
     class EvilPower(object):
         def __init__(self, name, type=None, power=None, target = "conduit", effects = None, short_description=__(""), description=__(""), pic = "", mojo_cost = None, sanity_cost=1, duration=None, activation_limit="once"):
@@ -78,7 +116,7 @@
 
         def can_activate(self):
             if self.activation_limit == "once" and self.power in MC.active_powers:
-                notify(event_color["a little good"] % ("%s is already active" % self.power.capitalize()))
+                notify(event_color["a little good"] % (__("%s is already active") % self.power.capitalize()))
                 return False
             elif not MC.has_mojo(self.get_mojo_cost()):
                 notify(event_color["a little bad"] % ("You do not have enough mojo to cast this power"))
@@ -95,7 +133,7 @@
                 self.active = conduit
                 calendar.set_alarm(calendar.time + self.duration, StoryEvent("deactivate_power", arg=self))
 
-                notify(self.name + " is now active for %i day%s." % (self.duration, plural(self.duration)))
+                notify(__("%s is now active for %i day%s.") % (self.name, self.duration, plural(self.duration)))
 
         def deactivate(self):
             if self.power not in MC.active_powers:
@@ -156,7 +194,7 @@
                     self.hand += renpy.random.sample(available_powers, self.hand_size-len(self.hand))
                 return True
             else:
-                renpy.notify("You cannot draw any more powers this week.")
+                renpy.notify(__("You cannot draw any more powers this week."))
                 return False
 
         def play(self, power, conduit): # Returns actual spent points for possible refund
@@ -449,7 +487,7 @@ label power_use(_pow, girl, girl2):
                 for g in MC.girls + farm.girls:
                     add_effects(g, _pow.effects)
 
-                notify("All girls: Libido and Obedience increased")
+                notify(_("All girls: Libido and Obedience increased"))
 
         elif _pow.power.endswith("violence"):
             play sound s_scream_loud
@@ -465,7 +503,7 @@ label power_use(_pow, girl, girl2):
                 for g in MC.girls + farm.girls:
                     add_effects(g, _pow.effects)
 
-                notify("All girls: Fear increased")
+                notify(_("All girls: Fear increased"))
 
         "[witness.fullname] cannot avert her eyes."
 
@@ -573,7 +611,7 @@ label power_use(_pow, girl, girl2):
                 else:
                     text1 = pref_response["modest " + new_pref] % long_act_description[_pow.power]
             else:
-                text1 = "Her %s preference has moderately increased." % _pow.power
+                text1 = __("Her %s preference has moderately increased.") % _pow.power
 
         $ pic = girl.get_pic("rest", and_tags = ["libido"])
 
@@ -907,7 +945,7 @@ label power_use(_pow, girl, girl2):
                 for mn in farm.get_minions(mn_type):
                     mn.xp += girl.rank*5
                     if mn.level_up():
-                        text1 = "MINION LEVEL UP: %s (level %i)" % (mn.name, mn.level)
+                        text1 = __("MINION LEVEL UP: %s (level %i)") % (mn.name, mn.level)
                         change_log.add(text1, col="special")
                         renpy.notify(text1)
 
@@ -1070,7 +1108,7 @@ label power_use(_pow, girl, girl2):
             $ changes = []
 
             while attempt <= 2:
-                $ changes.append(menu([("Choose how to affect her personality ([attempt]/2):", None)] + [("Become more %s" % a, a) for a in attr_change_list if a not in changes]))
+                $ changes.append(menu([(__("Choose how to affect her personality ([attempt]/2):"), None)] + [(__("Become more %s") % a, a) for a in attr_change_list if a not in changes]))
                 $ attempt += 1
 
         else:
@@ -1090,7 +1128,7 @@ label power_use(_pow, girl, girl2):
 
         call dialogue(girl, "slave confused") from _call_dialogue_259
 
-        $ narrator("[girl.fullname] has become more %s and %s." % (changes[0], changes[1]))
+        $ narrator(__("[girl.fullname] has become more %s and %s.") % (changes[0], changes[1]))
 
 
     elif _pow.power == "negative trait":
@@ -1120,7 +1158,7 @@ label power_use(_pow, girl, girl2):
 
         if _pow.super:
             $ menu_list = [(t.name + ": " + t.get_description(), t) for t, w in trait_list[:3]] # Lists the first three traits
-            $ new_neg = menu([("Choose a new trait to replace %s:" % old_neg.name, None)] + menu_list)
+            $ new_neg = menu([(__("Choose a new trait to replace %s:") % old_neg.name, None)] + menu_list)
         else:
             $ new_neg = weighted_choice(trait_list)
 
@@ -1220,7 +1258,7 @@ label kidnap_return(girl, kidnapped_girl, _super):
         "[girl.fullname] was successful in kidnapping [kidnapped_girl.fullname] and bringing her back. She drops her unconscious prey at your feet, before collapsing with exhaustion. You gesture for her to be taken to her room and instruct Sill to take charge of your new acquisition."
 
         $ girl.change_xp(50*girl.rank)
-        $ notify("%s has gained XP." % girl.fullname)
+        $ notify(__("%s has gained XP.") % girl.fullname)
 
         ## Acquire new girl
         call acquire_girl(kidnapped_girl, context="free", can_follow=False) from _call_acquire_girl_4
@@ -1260,7 +1298,7 @@ label kidnap_return(girl, kidnapped_girl, _super):
 
         $ h = girl.get_hurt(max(1, dice(3) + kidnapped_girl.rank - girl.rank))
         if h > 0:
-            $ text1 = "She was hurt in the process (for %i day%s)." % (h, plural(h))
+            $ text1 = __("She was hurt in the process (for %i day%s).") % (h, plural(h))
 
         "[girl.fullname]'s attempt to abduct [kidnapped_girl.fullname] failed.[text1]"
 

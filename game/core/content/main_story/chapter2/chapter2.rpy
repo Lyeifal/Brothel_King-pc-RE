@@ -375,7 +375,8 @@ label c2_intro():
     show expression district.get_pic(config.screen_width, int(config.screen_height*0.8)) at top
     with fade
 
-    "Not letting Sill's whining spoil your mood, you watch with satisfaction as you leave the slums behind and enter the bustling streets of Zan's popular neighborhoods, stepping into [district.name]."
+    $ _district_name = __(district.name)
+    "Not letting Sill's whining spoil your mood, you watch with satisfaction as you leave the slums behind and enter the bustling streets of Zan's popular neighborhoods, stepping into [_district_name]."
 
     if district.name == "The Docks":
         "The sounds of waves crashing on the pier and seagulls shrieking echo everywhere. It's a pleasant change from the Slums, although you have a feeling it might get old quickly."
@@ -429,7 +430,8 @@ label c2_intro():
     show bg street at top
     with fade
 
-    you "The streets are so busy this time of day... Travellers from everywhere drop by [district.name]. This should be good for business..."
+    $ _district_name = __(district.name)
+    you "The streets are so busy this time of day... Travellers from everywhere drop by [_district_name]. This should be good for business..."
 
     play sound s_laugh
 
@@ -445,7 +447,7 @@ label c2_intro():
 
     katryn "My, my, Gurigura... You're such a bumpkin. This is just like any city..."
 
-    $ gurigura_name = "Gurigura"
+    $ gurigura_name = __("Gurigura")
 
     hide gurigura
     hide katryn
@@ -459,7 +461,7 @@ label c2_intro():
 
     riche "Come on, Katryn, don't be such a killjoy... This {i}is{/i} the largest city in Xeros! Isn't it amazing? Right, Ramias?"
 
-    $ katryn_name = "Katryn"
+    $ katryn_name = __("Katryn")
 
     show ramias at right behind riche with dissolve
 
@@ -467,11 +469,11 @@ label c2_intro():
 
     riche "Ramias?"
 
-    $ ramias_name = "Ramias"
+    $ ramias_name = __("Ramias")
 
     ramias "I sense danger, Riche. These streets are not safe. There are too many places to hide..."
 
-    $ riche_name = "Riche"
+    $ riche_name = __("Riche")
 
     hide riche
     hide ramias
@@ -1512,7 +1514,7 @@ label c2_princess_visit2:
 
     homura "Oh, of course, I apologize for not introducing myself. I am Lady Homura Henso, from the Henso family. No doubt you've heard about us. A pleasure to meet you."
 
-    $ homura_name = "Homura"
+    $ homura_name = __("Homura")
 
     "The young lady extends her alabaster-white hand to you in a delicate gesture. You take it and bow, unsure about the proper salute."
 
@@ -2253,7 +2255,7 @@ label c2_palace_intrusion:
 
     kuro "Commander Uesugi!!! What in Arios's name are you doing?!? The killer is getting away!"
 
-    $ kenshin_name = "Uesugi"
+    $ kenshin_name = __("Uesugi")
 
     kenshin "The killer? B-B-But... I got the killer..."
 
@@ -2902,7 +2904,7 @@ label c2_suzume_forest1():
 
     suzume "My name is Suzume. Nice to meet you, Mister [MC.name]. "
 
-    $ suzume_name = "Suzume"
+    $ suzume_name = __("Suzume")
 
     suzume "Seen up close, you're cuter than I thought! So, you found my message?"
 
@@ -4039,7 +4041,8 @@ label c2_homura_city_meet():
     show expression bg_bro at top
     with dissolve
 
-    "One morning, as you open your window, you spot a familiar figure that looks out of place in [district.name]."
+    $ _district_name = __(district.name)
+    "One morning, as you open your window, you spot a familiar figure that looks out of place in [_district_name]."
 
     play music m_palace fadein 3.0
 
@@ -5607,7 +5610,7 @@ label intercept_narika():
 
         narika "Who am I kidding, of course you do! After all, everyone in Xeros has heard of me: Narika Shihoudou, the Legend!"
 
-        $ narika_name = "Narika"
+        $ narika_name = __("Narika")
 
         menu:
 
@@ -6734,7 +6737,7 @@ label intercept_mizuki():
 
         mizuki "I'm Mizuki Ike. And I'm not usually in the business of giving answers."
 
-        $ mizuki_name = "Mizuki"
+        $ mizuki_name = __("Mizuki")
 
         menu:
             "Flatter her":
@@ -7653,7 +7656,7 @@ label intercept_haruka():
 
         haruka "Suzume? I've heard your name. I'm Haruka Takamori."
 
-        $ haruka_name = "Haruka"
+        $ haruka_name = __("Haruka")
 
         haruka "You're a Kunoichi as well, aren't you?"
 
@@ -8426,7 +8429,7 @@ label c2_palace_visit1(): # Happens after all Kunoichi have been met once
 
     "As you finish breakfast, Sill brings you a letter bearing the royal seal."
 
-    call screen letter(header = "Meeting request",
+    call screen letter(header = _("Meeting request"),
                     message = __("Dear ") + MC.name + ",\n\nI hope this letter finds you well, and that you have made some progress on our mutual subject of interest. Please meet me at the Palace for debriefing at your earliest convenience.",
                     signature = "Princess Kurohime")
 
@@ -10016,7 +10019,7 @@ label c2_unlock_next_brothel(): # Happens in the rank 2 district where his broth
     $ NPC_freak.district = {"The Docks" : district_dict["warehouse"], "The Warehouse" : district_dict["docks"]}[district.name]
 
     $ dis_name = NPC_freak.district.name
-    $ dis_name = "t" + dis_name[1:]
+    $ dis_name = __("t") + dis_name[1:]
 
     play sound s_crash
 

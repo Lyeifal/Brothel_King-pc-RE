@@ -1,0 +1,314 @@
+{
+  "shield_effect": {
+    "value": 1,
+    "type": "special",
+    "target": "shield"
+  },
+  "bshield_effect": {
+    "value": 1,
+    "scope": "brothel",
+    "type": "special",
+    "target": "shield"
+  },
+  "bshield_spell": {
+    "pic": "shield.webp",
+    "type": "shield",
+    "level": 4,
+    "cost": 2,
+    "effects": [
+      {
+        "value": 1,
+        "scope": "brothel",
+        "type": "special",
+        "target": "shield"
+      }
+    ],
+    "name_i18n": "Magic shield",
+    "description_i18n": "Protects your girls from external threats with a magic barrier. Stops the next act of aggression against one of your girls before it happens. Lasts until the next attack."
+  },
+  "moons": {
+    "1": {
+      "effects": [
+        {
+          "value": 0.5,
+          "scope": "brothel",
+          "type": "boost",
+          "target": "income"
+        }
+      ],
+      "sound": "gold.ogg",
+      "description_i18n": "A new year is just starting in Xeros! This is the most important holiday of the year. People are encouraged to spend a lot to show off their good fortune.",
+      "name": "gold",
+      "display_name_i18n": "Gold"
+    },
+    "2": {
+      "effects": [
+        {
+          "scope": "brothel",
+          "type": "boost",
+          "target": "city rewards",
+          "value": 1
+        },
+        {
+          "scope": "brothel",
+          "type": "change",
+          "target": "city rewards",
+          "value": 1
+        },
+        {
+          "scope": "brothel",
+          "type": "boost",
+          "target": "resource extraction",
+          "value": 1
+        }
+      ],
+      "sound": "wolf.ogg",
+      "description_i18n": "This month is the coldest of the year. It is said that adventurers that brave this tough season can reap the best rewards.",
+      "name": "wolf",
+      "display_name_i18n": "Wolf"
+    },
+    "3": {
+      "effects": [
+        {
+          "scope": "brothel",
+          "scales_with": "district",
+          "type": "change",
+          "target": "customers",
+          "value": 2
+        },
+        {
+          "scope": "brothel",
+          "type": "change",
+          "target": "mood modifier",
+          "value": -1
+        }
+      ],
+      "sound": "crowd cheer.ogg",
+      "description_i18n": "On a blue moon, people feel depressed and lonely. Many look for company in the town's brothels.",
+      "name": "blue",
+      "display_name_i18n": "Blue"
+    },
+    "4": {
+      "effects": [
+        {
+          "scope": "brothel",
+          "type": "boost",
+          "target": "crazy",
+          "value": 1
+        },
+        {
+          "scales_with": "district",
+          "type": "change",
+          "target": "threat",
+          "value": 2
+        }
+      ],
+      "sound": "fire.ogg",
+      "description_i18n": "Something about this moon drives otherwise normal people crazy. Violent crimes always peak during this month.",
+      "name": "blood",
+      "display_name_i18n": "Blood"
+    },
+    "5": {
+      "effects": [
+        {
+          "scope": "world",
+          "type": "boost",
+          "target": "love gains",
+          "value": 1
+        },
+        {
+          "scope": "world",
+          "type": "boost",
+          "target": "fear gains",
+          "value": -0.5
+        }
+      ],
+      "sound": "potion.ogg",
+      "description_i18n": "A favorite month for lovers to elope together, their passion bright and short-lived as a spring flower.",
+      "name": "honey",
+      "display_name_i18n": "Honey"
+    },
+    "6": {
+      "effects": [
+        {
+          "scope": "brothel",
+          "type": "change",
+          "target": "job obedience target",
+          "value": -15
+        },
+        {
+          "scope": "brothel",
+          "type": "boost",
+          "target": "job customer budget",
+          "value": 0.1
+        },
+        {
+          "scope": "brothel",
+          "type": "change",
+          "target": "whore obedience target",
+          "value": 15
+        },
+        {
+          "scope": "brothel",
+          "type": "change",
+          "target": "train obedience target",
+          "value": 15
+        }
+      ],
+      "sound": "sigh.ogg",
+      "description_i18n": "The dry moon is nothing special, quite boring really. People would rather tend to the task at hand than idly stare at this dull moon.",
+      "name": "dry",
+      "display_name_i18n": "Dry"
+    },
+    "7": {
+      "effects": [
+        {
+          "scope": "brothel",
+          "type": "boost",
+          "target": "quest rewards",
+          "value": 1
+        },
+        {
+          "scope": "brothel",
+          "type": "boost",
+          "target": "class results",
+          "value": 1
+        },
+        {
+          "scope": "brothel",
+          "type": "boost",
+          "target": "contract rewards",
+          "value": 0.5
+        },
+        {
+          "scope": "brothel",
+          "type": "boost",
+          "target": "income",
+          "value": -0.25
+        }
+      ],
+      "sound": "sheath.ogg",
+      "description_i18n": "Hunting season is at its peak. This month was especially holy to the elder races.",
+      "name": "hunter",
+      "display_name_i18n": "Hunter"
+    },
+    "8": {
+      "effects": [
+        {
+          "scope": "farm",
+          "type": "boost",
+          "target": "farm preference increase",
+          "value": 1
+        },
+        {
+          "scope": "brothel",
+          "type": "boost",
+          "target": "all sex acts preference increase",
+          "value": -0.5
+        }
+      ],
+      "sound": "moo.ogg",
+      "description_i18n": "It's time for your girls to harvest your crops, tend to your cattle, and learn animal husbandry... with a twist!",
+      "name": "harvest",
+      "display_name_i18n": "Harvest"
+    },
+    "9": {
+      "effects": [
+        {
+          "scope": "brothel",
+          "scales_with": "spirit",
+          "type": "change",
+          "target": "mana",
+          "value": 1
+        }
+      ],
+      "sound": "spell.ogg",
+      "description_i18n": "The silver moon is at its peak magical energy. Experienced spellcasters are careful to cast their most powerful spells and invocations on this month.",
+      "name": "silver",
+      "display_name_i18n": "Silver"
+    },
+    "10": {
+      "effects": [
+        {
+          "scope": "brothel",
+          "type": "change",
+          "target": "whore obedience target",
+          "value": -15
+        },
+        {
+          "scope": "brothel",
+          "type": "change",
+          "target": "train obedience target",
+          "value": -15
+        },
+        {
+          "scope": "brothel",
+          "type": "boost",
+          "target": "whore customer budget",
+          "value": 0.1
+        },
+        {
+          "scope": "brothel",
+          "type": "boost",
+          "target": "customer events",
+          "value": 1
+        },
+        {
+          "type": "boost",
+          "target": "dirt",
+          "value": 0.25
+        }
+      ],
+      "sound": "mmh.ogg",
+      "description_i18n": "The water spirits grant the moon a surreal quality this month. It is said to make everyone loosen up a little.",
+      "name": "wet",
+      "display_name_i18n": "Wet"
+    },
+    "11": {
+      "effects": [
+        {
+          "scope": "brothel",
+          "type": "boost",
+          "target": "threat",
+          "value": 0.3
+        },
+        {
+          "scope": "brothel",
+          "type": "boost",
+          "target": "crazy",
+          "value": 2
+        },
+        {
+          "scope": "brothel",
+          "type": "change",
+          "target": "customer defense",
+          "value": 2
+        }
+      ],
+      "sound": "maniacal laugh.ogg",
+      "description_i18n": "This pagan holly month is the time of the year when monsters and spirits thrive, and the kids in Zan play 'Tricks or Tits'.",
+      "name": "hallow",
+      "display_name_i18n": "Hallow"
+    },
+    "12": {
+      "effects": [
+        {
+          "scope": "world",
+          "type": "boost",
+          "target": "love gains",
+          "value": -0.5
+        },
+        {
+          "scope": "world",
+          "type": "boost",
+          "target": "fear gains",
+          "value": 1
+        }
+      ],
+      "sound": "mystery.ogg",
+      "description_i18n": "Under a dark moon, everything seems more frightening. This is the darkest of winter, only broken by the season festival Zan people call H-mas.",
+      "name": "dark",
+      "display_name_i18n": "Dark"
+    }
+  }
+}

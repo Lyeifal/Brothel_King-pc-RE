@@ -1,0 +1,41 @@
+{
+    "first": ["The", "House of the", "Den of the", "Garden of the"],
+    "second": [
+        "beautiful", "sleazy", "naughty", "horny", "hungry", "hasty", "mighty", "sweaty", "rowdy", "bawdy",
+        "screwy", "loony", "bloody", "holy", "spicy", "grim", "old", "ol'", "lame", "hunchback",
+        "blind", "rebel", "mysterious", "secret", "rogue", "lurking", "singing", "dancing", "laughing",
+        "limping", "crying", "golden", "silver", "bronze", "copper", "iron", "stone", "ice", "fire",
+        "velvet", "red", "green", "blue", "yellow", "purple", "violet", "white", "black", "light",
+        "dark", "pink", "hot", "cold", "big", "long", "tiny", "fat", "ruby", "emerald", "opal",
+        "Borgese", "Western", "Eastern", "Northern", "Southern", "Zanic"
+    ],
+    "second_i18n": [
+        "beautiful", "sleazy", "naughty", "horny", "hungry", "hasty", "mighty", "sweaty", "rowdy", "bawdy",
+        "screwy", "loony", "bloody", "holy", "spicy", "grim", "old", "ol'", "lame", "hunchback",
+        "blind", "rebel", "mysterious", "secret", "rogue", "lurking", "singing", "dancing", "laughing",
+        "limping", "crying", "golden", "silver", "bronze", "copper", "iron", "stone", "ice", "fire",
+        "velvet", "red", "green", "blue", "yellow", "purple", "violet", "white", "black", "light",
+        "dark", "pink", "hot", "cold", "big", "long", "tiny", "fat", "ruby", "emerald", "opal",
+        "Borgese", "Western", "Eastern", "Northern", "Southern", "Zanic"
+    ],
+    "third": [
+        "dragon", "griffin", "pegasus", "unicorn", "basilisk", "hydra", "hippogriff", "horse", "giant",
+        "goliath", "kraken", "goblin", "orc", "gnoll", "hobgoblin", "troll", "mare", "bear", "boar",
+        "cock", "rabbit", "snake", "serpent", "lizard", "dog", "cat", "swan", "falcon", "owl", "snail",
+        "butterfly", "shark", "dolphin", "whale", "mermaid", "bard", "knight", "prince", "princess",
+        "sailor", "priest", "pirate", "corsair", "gentleman", "man", "lady", "madam", "maiden", "belle",
+        "star", "glove", "hat", "eye", "hand"
+    ],
+    "third_i18n": [
+        "dragon", "griffin", "pegasus", "unicorn", "basilisk", "hydra", "hippogriff", "horse", "giant",
+        "goliath", "kraken", "goblin", "orc", "gnoll", "hobgoblin", "troll", "mare", "bear", "boar",
+        "cock", "rabbit", "snake", "serpent", "lizard", "dog", "cat", "swan", "falcon", "owl", "snail",
+        "butterfly", "shark", "dolphin", "whale", "mermaid", "bard", "knight", "prince", "princess",
+        "sailor", "priest", "pirate", "corsair", "gentleman", "man", "lady", "madam", "maiden", "belle",
+        "star", "glove", "hat", "eye", "hand"
+    ],
+    "names": ["Joe", "Mary", "Bill", "Sam", "Wendy", "Zora", "Zelda", "Sara", "Mila", "Estrella", "Lee", "Weng", "Dong", "Fang", "Chan", "Chen", "Mathilda", "Jon", "Dick"],
+    "names_i18n": ["Joe", "Mary", "Bill", "Sam", "Wendy", "Zora", "Zelda", "Sara", "Mila", "Estrella", "Lee", "Weng", "Dong", "Fang", "Chan", "Chen", "Mathilda", "Jon", "Dick"],
+    "fourth": ["'s inn", "'s tavern", "'s club", "'s lair", "'s den", "'s World", "'s parlor", "'s place", "'s emporium", " Villa", " Palazzo", " of Sin", " of Pleasure", " of Redemption", " of Damnation", " of Lust", " of Westmarch", " of Karkyr"],
+    "fourth_i18n": ["'s inn", "'s tavern", "'s club", "'s lair", "'s den", "'s World", "'s parlor", "'s place", "'s emporium", " Villa", " Palazzo", " of Sin", " of Pleasure", " of Redemption", " of Damnation", " of Lust", " of Westmarch", " of Karkyr"]
+}

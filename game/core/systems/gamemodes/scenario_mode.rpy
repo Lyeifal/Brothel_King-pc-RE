@@ -19,7 +19,8 @@ init -9 python:
         def __init__(self, scenario_id, name_i18n_key, description_i18n_key,
                      author="", version="1.0",
                      rules=None, events_script="scenario_default",
-                     starting_conditions=None, victory_conditions=None):
+                     starting_conditions=None, victory_conditions=None,
+                     world_map_id="default"):
             ## EN: Unique identifier (namespace prefix recommended: "author.scenario_name").
             ## ZH: 唯一标识符（建议带命名空间前缀："作者.剧本名"）。
             self.scenario_id = scenario_id
@@ -44,6 +45,10 @@ init -9 python:
             ## EN: List of victory condition dicts.
             ## ZH: 胜利条件字典列表。
             self.victory_conditions = victory_conditions or []
+
+            ## EN: World map template ID (references a JSON file in worlds/).
+            ## ZH: 世界地图模板 ID（引用 worlds/ 目录下的 JSON 文件）。
+            self.world_map_id = world_map_id
 
         def get_name(self):
             return __(self.name_i18n_key)
@@ -109,6 +114,7 @@ init -9 python:
                 "events_script": self.events_script,
                 "starting_conditions": self.starting_conditions,
                 "victory_conditions": self.victory_conditions,
+                "world_map_id": self.world_map_id,
             }
 
         @classmethod
@@ -123,6 +129,7 @@ init -9 python:
                 events_script=data.get("events_script", "scenario_default"),
                 starting_conditions=data.get("starting_conditions", {}),
                 victory_conditions=data.get("victory_conditions", []),
+                world_map_id=data.get("world_map_id", "default"),
             )
 
 
@@ -136,7 +143,8 @@ init -9 python:
             self._scenarios = {}
 
         def register(self, scenario):
-            if isinstance(scenario, dict):
+            _builtin_dict = __import__('builtins').dict
+            if isinstance(scenario, _builtin_dict):
                 scenario = Scenario.from_dict(scenario)
             if not isinstance(scenario, Scenario):
                 raise TypeError("EN: Expected Scenario instance or dict. ZH: 需要 Scenario 实例或字典。")
@@ -176,12 +184,22 @@ init -9 python:
         def on_game_start(self, game):
             """
             EN: Apply scenario starting conditions and set up goal channels.
-            ZH: 应用剧本起始条件并设置目标频道。
+               Also loads custom world map if the scenario specifies one.
+            ZH: 应用剧本起始条件并设置目标频道。若剧本指定了自定义世界地图则加载。
             """
             game.goal_channels = ("advance", "advance2", "contract", "other")
 
-            if self.selected_scenario and MC:
-                self.selected_scenario.apply_starting_conditions(game, MC)
+            # BK Evolution: Load custom world map if scenario specifies one
+            if self.selected_scenario:
+                _wm_id = getattr(self.selected_scenario, "world_map_id", "default")
+                if _wm_id and _wm_id != "default":
+                    _world_data = DataLoader.load_world_map(_wm_id)
+                    if _world_data:
+                        _wm = WorldMap.from_dict(_world_data)
+                        activate_world_map(_wm)
+
+                if MC:
+                    self.selected_scenario.apply_starting_conditions(game, MC)
 
         def can_advance_chapter(self, game):
             return True

@@ -1,0 +1,350 @@
+{
+  "world_id": "zan_default",
+  "world_name_i18n": "The city of Zan.",
+  "populations": [
+    {
+      "id": "beggar",
+      "name": "beggars",
+      "pic": "beggar.webp",
+      "diff": 15,
+      "range": 10,
+      "rank": 1,
+      "weight": 5,
+      "base_description_i18n": "An extremely unrefined and undemanding class of customers. After all, beggars can't be choosers.",
+      "effects": []
+    },
+    {
+      "id": "thug",
+      "name": "thugs",
+      "pic": "thug.webp",
+      "diff": 20,
+      "range": 10,
+      "rank": 1,
+      "weight": 3,
+      "base_description_i18n": "Thug life comes with its share of bros and hoes. You're the bro that gets the hoes.",
+      "effects": [
+        {"type": "boost", "target": "crazy", "value": 1}
+      ]
+    },
+    {
+      "id": "laborer",
+      "name": "laborers",
+      "pic": "laborer.webp",
+      "diff": 30,
+      "range": 20,
+      "rank": 1,
+      "weight": 2,
+      "base_description_i18n": "Workers of the world, unite! Or, you know, get a girl for the night.",
+      "effects": []
+    },
+    {
+      "id": "sailor",
+      "name": "sailors",
+      "pic": "sailor.webp",
+      "diff": 40,
+      "range": 20,
+      "rank": 2,
+      "weight": 0,
+      "base_description_i18n": "Sailors are famously randy when they come ashore. After a long voyage, seamen need some release.",
+      "effects": [
+        {"type": "change", "target": "waitress preference", "value": 15},
+        {"type": "change", "target": "anal preference", "value": 15}
+      ]
+    },
+    {
+      "id": "commoner",
+      "name": "commoners",
+      "pic": "commoner.webp",
+      "diff": 50,
+      "range": 20,
+      "rank": 2,
+      "weight": 0,
+      "base_description_i18n": "Common lives, common jobs, common wives... Seeing a commoner trying to escape all of this in a brothel is... common.",
+      "effects": [
+        {"type": "change", "target": "dancer preference", "value": 15},
+        {"type": "change", "target": "service preference", "value": 15}
+      ]
+    },
+    {
+      "id": "craftsman",
+      "name": "craftsmen",
+      "pic": "craftsman.webp",
+      "diff": 70,
+      "range": 30,
+      "rank": 2,
+      "weight": 0,
+      "base_description_i18n": "Craftsmen work with their hands, and when their hands get restless, they like to lay them on a pretty girl. Craftsmen are crafty.",
+      "effects": [
+        {"type": "special", "target": "horny", "value": 1}
+      ]
+    },
+    {
+      "id": "bourgeois",
+      "name": "bourgeois",
+      "pic": "bourgeois.webp",
+      "diff": 90,
+      "range": 30,
+      "rank": 3,
+      "weight": 0,
+      "base_description_i18n": "When did 'down with the bourgeoisie' become 'get down with the bourgeoisie'? You sold out, man.",
+      "effects": [
+        {"type": "change", "target": "geisha preference", "value": 15},
+        {"type": "change", "target": "sex preference", "value": 15}
+      ]
+    },
+    {
+      "id": "guildmember",
+      "name": "guild members",
+      "pic": "guild member.webp",
+      "diff": 110,
+      "range": 30,
+      "rank": 3,
+      "weight": 0,
+      "base_description_i18n": "Guild members are like craftsmen, but craftier.",
+      "effects": [
+        {"type": "change", "target": "masseuse preference", "value": 15},
+        {"type": "change", "target": "fetish preference", "value": 15}
+      ]
+    },
+    {
+      "id": "patrician",
+      "name": "patricians",
+      "pic": "patrician.webp",
+      "diff": 110,
+      "range": 40,
+      "rank": 3,
+      "weight": 0,
+      "base_description_i18n": "Father figures to the community, ready to meet young girls with daddy issues.",
+      "effects": [
+        {"type": "special", "target": "horny", "value": 1},
+        {"type": "change", "target": "satisfaction", "value": -1}
+      ]
+    },
+    {
+      "id": "aristocrat",
+      "name": "aristocrats",
+      "pic": "aristocrat.webp",
+      "diff": 135,
+      "range": 40,
+      "rank": 4,
+      "weight": 0,
+      "base_description_i18n": "Above the law. Entitled AF. Filthy rich. What's not to like?",
+      "effects": [
+        {"type": "boost", "target": "crazy", "value": 1.5},
+        {"type": "change", "target": "satisfaction", "value": -1}
+      ]
+    },
+    {
+      "id": "noble",
+      "name": "nobles",
+      "pic": "noble.webp",
+      "diff": 160,
+      "range": 40,
+      "rank": 4,
+      "weight": 0,
+      "base_description_i18n": "Nobles are easily bored. Living a life of privilege isn't all fun and games, it's also yawns.",
+      "effects": [
+        {"type": "change", "target": "satisfaction", "value": -2}
+      ]
+    },
+    {
+      "id": "royal",
+      "name": "royals",
+      "pic": "royal.webp",
+      "diff": 200,
+      "range": 50,
+      "rank": 5,
+      "weight": 0,
+      "base_description_i18n": "People say royals are jaded, undeserving narcissistic parasites. No one gives them credit for how generous they are with their subjects' money. Sad.",
+      "effects": [
+        {"type": "change", "target": "satisfaction", "value": -3}
+      ]
+    }
+  ],
+  "locations": [
+    {"id": "spice_market", "name": "Spice market", "pic": "Spice market.webp", "has_girls": true, "secret": false, "action": false, "menu_caption_i18n": null, "menu_label": null, "menu_costs_AP": true},
+    {"id": "sewers", "name": "Sewers", "pic": "Sewers.webp", "has_girls": true, "secret": false, "action": false, "menu_caption_i18n": "Visit the monster catcher.", "menu_label": "visit_willow", "menu_costs_AP": false},
+    {"id": "farmland", "name": "Farm", "pic": "farmland.webp", "has_girls": true, "secret": false, "action": false, "menu_caption_i18n": "Visit the rancher.", "menu_label": "visit_goldie", "menu_costs_AP": false},
+    {"id": "watchtower", "name": "Watchtower", "pic": "Watchtower.webp", "has_girls": true, "secret": false, "action": false, "menu_caption_i18n": "Browse the Captain's vault.", "menu_label": "visit_watchtower", "menu_costs_AP": true},
+    {"id": "junkyard", "name": "Junkyard", "pic": "Junkyard.webp", "has_girls": true, "secret": false, "action": false, "menu_caption_i18n": "Visit the scientist.", "menu_label": "visit_gina", "menu_costs_AP": false},
+    {"id": "thieves_guild", "name": "Thieves guild", "pic": "Thieves guild.webp", "has_girls": true, "secret": true, "action": false, "menu_caption_i18n": "Browse the guild warehouse.", "menu_label": "visit_thieves_guild", "menu_costs_AP": true},
+
+    {"id": "harbor", "name": "Harbor", "pic": "Harbor.webp", "has_girls": true, "secret": false, "action": false, "menu_caption_i18n": "Visit the headmaster.", "menu_label": "visit_stella", "menu_costs_AP": false},
+    {"id": "shipyard", "name": "Shipyard", "pic": "Shipyard.webp", "has_girls": true, "secret": false, "action": false, "menu_caption_i18n": "Collect wood.", "menu_label": "collect_wood", "menu_costs_AP": true},
+    {"id": "taverns", "name": "Taverns", "pic": "Taverns.webp", "has_girls": true, "secret": false, "action": false, "menu_caption_i18n": null, "menu_label": null, "menu_costs_AP": true},
+    {"id": "seafront", "name": "Seafront", "pic": "Seafront.webp", "has_girls": true, "secret": false, "action": false, "menu_caption_i18n": "Visit Papa Freak.", "menu_label": "visit_papa", "menu_costs_AP": false},
+    {"id": "beach", "name": "Beach", "pic": "Beach.webp", "has_girls": true, "secret": false, "action": false, "menu_caption_i18n": "Brew dye.", "menu_label": "collect_dye", "menu_costs_AP": true},
+    {"id": "exotic_emporium", "name": "Exotic emporium", "pic": "Exotic emporium.webp", "has_girls": true, "secret": false, "action": false, "menu_caption_i18n": "Visit gift shop.", "menu_label": "visit_giftgirl", "menu_costs_AP": false},
+
+    {"id": "stables", "name": "Stables", "pic": "Stables.webp", "has_girls": true, "secret": false, "action": false, "menu_caption_i18n": "Get leather.", "menu_label": "collect_leather", "menu_costs_AP": true},
+    {"id": "plaza", "name": "Plaza", "pic": "Plaza.webp", "has_girls": true, "secret": false, "action": false, "menu_caption_i18n": "Contact Homura.", "menu_label": "c3_contact_homura", "menu_costs_AP": false},
+    {"id": "market", "name": "Market", "pic": "Market.webp", "has_girls": true, "secret": false, "action": true, "menu_caption_i18n": "Visit the exchange.", "menu_label": "visit_exchange", "menu_costs_AP": false},
+    {"id": "gallows", "name": "Gallows", "pic": "Gallows.webp", "has_girls": true, "secret": false, "action": false, "menu_caption_i18n": "Visit Papa Freak.", "menu_label": "visit_papa", "menu_costs_AP": false},
+    {"id": "prison", "name": "Prison", "pic": "Prison.webp", "has_girls": true, "secret": false, "action": false, "menu_caption_i18n": "Visit G's bazaar.", "menu_label": "visit_gurigura", "menu_costs_AP": false},
+    {"id": "arena", "name": "Arena", "pic": "Arena.webp", "has_girls": true, "secret": false, "action": false, "menu_caption_i18n": "Visit weapon shop.", "menu_label": "visit_ramias", "menu_costs_AP": false},
+
+    {"id": "botanical_garden", "name": "Botanical garden", "pic": "Botanical garden.webp", "has_girls": true, "secret": false, "action": false, "menu_caption_i18n": "Visit flower stall.", "menu_label": "visit_riche", "menu_costs_AP": false},
+    {"id": "magic_university", "name": "Magic university", "pic": "magic_university.webp", "has_girls": true, "secret": false, "action": false, "menu_caption_i18n": "Visit trinket shop.", "menu_label": "visit_katryn", "menu_costs_AP": false},
+    {"id": "magic_forest", "name": "Magic forest", "pic": "Magic forest.webp", "has_girls": true, "secret": false, "action": false, "menu_caption_i18n": null, "menu_label": null, "menu_costs_AP": true},
+    {"id": "hanging_gardens", "name": "Hanging gardens", "pic": "Hanging gardens.webp", "has_girls": true, "secret": false, "action": false, "menu_caption_i18n": "Weave silk.", "menu_label": "collect_silk", "menu_costs_AP": true},
+    {"id": "guild_quarter", "name": "Guild quarter", "pic": "Guild quarter.webp", "has_girls": true, "secret": false, "action": false, "menu_caption_i18n": "Smuggle ore.", "menu_label": "collect_ore", "menu_costs_AP": true},
+    {"id": "magic_guild", "name": "Magic guild", "pic": "Magic guild.webp", "has_girls": true, "secret": false, "action": false, "menu_caption_i18n": null, "menu_label": null, "menu_costs_AP": true},
+
+    {"id": "pilgrim_road", "name": "Pilgrim road", "pic": "Pilgrim road.webp", "has_girls": true, "secret": false, "action": false, "menu_caption_i18n": "Visit tailor shop.", "menu_label": "visit_twins", "menu_costs_AP": false},
+    {"id": "banking_quarter", "name": "Banking quarter", "pic": "Banking quarter.webp", "has_girls": true, "secret": false, "action": true, "menu_caption_i18n": "Visit Bank.", "menu_label": "visit_bank", "menu_costs_AP": false},
+    {"id": "old_ruins", "name": "Old ruins", "pic": "Ruins.webp", "has_girls": true, "secret": false, "action": false, "menu_caption_i18n": "Extract marble.", "menu_label": "collect_marble", "menu_costs_AP": true},
+    {"id": "lake", "name": "Lakefront", "pic": "Lake.webp", "has_girls": true, "secret": false, "action": false, "menu_caption_i18n": null, "menu_label": null, "menu_costs_AP": true},
+    {"id": "training_ground", "name": "Training ground", "pic": "Training ground.webp", "has_girls": true, "secret": false, "action": false, "menu_caption_i18n": null, "menu_label": null, "menu_costs_AP": true},
+    {"id": "cathedra_loc", "name": "Cathedra", "pic": "Cathedra.webp", "has_girls": true, "secret": false, "action": false, "menu_caption_i18n": null, "menu_label": null, "menu_costs_AP": true},
+
+    {"id": "battlements", "name": "Battlements", "pic": "Battlements.webp", "has_girls": true, "secret": false, "action": false, "menu_caption_i18n": null, "menu_label": null, "menu_costs_AP": true},
+    {"id": "keep", "name": "Keep", "pic": "Keep.webp", "has_girls": true, "secret": false, "action": false, "menu_caption_i18n": null, "menu_label": null, "menu_costs_AP": true},
+    {"id": "hall", "name": "Hall", "pic": "Hall.webp", "has_girls": true, "secret": false, "action": false, "menu_caption_i18n": null, "menu_label": null, "menu_costs_AP": true},
+    {"id": "courtyard", "name": "Courtyard", "pic": "Courtyard.webp", "has_girls": true, "secret": false, "action": false, "menu_caption_i18n": null, "menu_label": null, "menu_costs_AP": true},
+    {"id": "temple", "name": "Temple", "pic": "Temple.webp", "has_girls": true, "secret": false, "action": false, "menu_caption_i18n": null, "menu_label": null, "menu_costs_AP": true},
+    {"id": "falls", "name": "Waterfalls", "pic": "Falls.webp", "has_girls": true, "secret": false, "action": false, "menu_caption_i18n": "Look for diamonds.", "menu_label": "collect_diamond", "menu_costs_AP": true}
+  ],
+  "districts": [
+    {
+      "id": "slum",
+      "name": "The Slums",
+      "chapter": 1,
+      "rank": 1,
+      "diff": 15,
+      "pop": [
+        {"population_id": "beggar", "weight": 80},
+        {"population_id": "thug", "weight": 20}
+      ],
+      "room": [],
+      "pic": "resources/districts/slums.webp",
+      "description_i18n": "The Slums are located on the outskirts of Zan, beyond the defensive wall. It is home to the Zani rabble: new arrivals, refugees, paupers, spice addicts... It is also rumored to host the hideout of the Thieves Guild, who worship the Shadow Goddess Shalia.",
+      "location_ids": ["spice_market", "sewers", "farmland", "watchtower", "junkyard", "thieves_guild"]
+    },
+    {
+      "id": "docks",
+      "name": "The Docks",
+      "chapter": 2,
+      "rank": 2,
+      "diff": 40,
+      "pop": [
+        {"population_id": "thug", "weight": 10},
+        {"population_id": "laborer", "weight": 10},
+        {"population_id": "sailor", "weight": 40},
+        {"population_id": "commoner", "weight": 25},
+        {"population_id": "craftsman", "weight": 15}
+      ],
+      "room": ["tavern"],
+      "pic": "resources/districts/docks.webp",
+      "description_i18n": "The docks are home to rowdy sailors and dodgy pirates sheltering from the treacherous seas. With seamen all around, no wonder there is a thriving market for cheap whores near the port.",
+      "location_ids": ["harbor", "shipyard", "seafront", "beach", "taverns", "exotic_emporium"]
+    },
+    {
+      "id": "warehouse",
+      "name": "The Warehouse",
+      "chapter": 2,
+      "rank": 2,
+      "diff": 40,
+      "pop": [
+        {"population_id": "thug", "weight": 10},
+        {"population_id": "laborer", "weight": 20},
+        {"population_id": "sailor", "weight": 20},
+        {"population_id": "commoner", "weight": 30},
+        {"population_id": "craftsman", "weight": 20}
+      ],
+      "room": ["strip club"],
+      "pic": "resources/districts/warehouse.webp",
+      "description_i18n": "The warehouse is the industrial part of Zan, where all kinds of craftsmen and day laborer come to look for work. Its streets are buzzing with trade and activities during the day, but dodgy at night.",
+      "location_ids": ["market", "stables", "plaza", "gallows", "prison", "arena"]
+    },
+    {
+      "id": "gardens",
+      "name": "The Magic Gardens",
+      "chapter": 4,
+      "rank": 3,
+      "diff": 100,
+      "pop": [
+        {"population_id": "commoner", "weight": 5},
+        {"population_id": "craftsman", "weight": 15},
+        {"population_id": "bourgeois", "weight": 30},
+        {"population_id": "guildmember", "weight": 30},
+        {"population_id": "patrician", "weight": 20}
+      ],
+      "room": ["onsen"],
+      "pic": "resources/districts/gardens.webp",
+      "description_i18n": "The gardens are where the magic-wielding locals gather to soak up mana after a long night of dangerous experiments. It is said some of those experiments occasionally escape...",
+      "location_ids": ["botanical_garden", "magic_university", "magic_forest", "hanging_gardens", "guild_quarter", "magic_guild"]
+    },
+    {
+      "id": "cathedra",
+      "name": "The Cathedra",
+      "chapter": 4,
+      "rank": 3,
+      "diff": 100,
+      "pop": [
+        {"population_id": "commoner", "weight": 5},
+        {"population_id": "craftsman", "weight": 10},
+        {"population_id": "bourgeois", "weight": 20},
+        {"population_id": "guildmember", "weight": 35},
+        {"population_id": "patrician", "weight": 30}
+      ],
+      "room": ["okiya"],
+      "pic": "resources/districts/cathedra.webp",
+      "description_i18n": "The Cathedra is the holy center of the Arios order. Pilgrims, knights and priests rub elbows during prayers and rituals, while savvy merchants and bankers make a killing providing them with expensive service.",
+      "location_ids": ["pilgrim_road", "banking_quarter", "old_ruins", "lake", "training_ground", "cathedra_loc"]
+    },
+    {
+      "id": "hold",
+      "name": "The King's Hold",
+      "chapter": 6,
+      "rank": 4,
+      "diff": 150,
+      "pop": [
+        {"population_id": "patrician", "weight": 20},
+        {"population_id": "aristocrat", "weight": 50},
+        {"population_id": "noble", "weight": 30}
+      ],
+      "room": "free",
+      "pic": "resources/districts/final castle night.webp",
+      "description_i18n": "This is the center of power in Zan, where courtiers compete for power and the King's support. Behind the veneer of respectability and privilege, however, daggers are drawn... Beware.",
+      "location_ids": ["battlements", "keep", "hall", "courtyard", "temple", "falls"]
+    }
+  ],
+  "brothels": [
+    {"id": 1, "rank": 1, "level": 1, "upgrades": [1, 3], "max_rep": 120},
+    {"id": 2, "rank": 2, "level": 2, "upgrades": [2, 5], "max_rep": 1150},
+    {"id": 3, "rank": 2, "level": 3, "upgrades": [3, 6], "max_rep": 1800},
+    {"id": 4, "rank": 3, "level": 4, "upgrades": [3, 8], "max_rep": 5800},
+    {"id": 5, "rank": 3, "level": 5, "upgrades": [4, 9], "max_rep": 8000},
+    {"id": 6, "rank": 4, "level": 6, "upgrades": [5, 11], "max_rep": 18500},
+    {"id": 7, "rank": 5, "level": 7, "upgrades": [6, 12], "max_rep": 33750}
+  ],
+  "endless_district": {
+    "id": "hold_endless",
+    "name": "The King's Hold",
+    "chapter": 7,
+    "rank": 5,
+    "diff": 200,
+    "pop": [
+      {"population_id": "royal", "weight": 100}
+    ],
+    "room": ["tavern", "strip club", "onsen", "okiya"],
+    "pic": "resources/districts/final castle.webp",
+    "description_i18n": "This is the center of power in Zan, where courtiers compete for power and the King's support. Behind the veneer of respectability and privilege, however, daggers are drawn... Beware.",
+    "location_ids": ["battlements", "keep", "hall", "courtyard", "temple", "falls"]
+  },
+  "district_order": ["slum", "warehouse", "docks", "gardens", "cathedra", "hold"],
+  "classifications": {
+    "town_locations": ["spice market", "taverns", "market", "plaza", "guild quarter", "pilgrim road", "banking quarter"],
+    "beach_locations": ["beach", "seafront", "lakefront", "waterfalls"],
+    "nature_locations": ["farm", "botanical garden", "magic forest", "hanging gardens", "old ruins", "courtyard"],
+    "court_locations": ["magic university", "magic guild", "cathedra", "keep", "hall", "temple"]
+  },
+  "ui_layout": {
+    "slum": {"column": 0, "row": 0, "column_span": 1},
+    "warehouse": {"column": 1, "row": 0, "column_span": 1},
+    "docks": {"column": 1, "row": 1, "column_span": 1},
+    "gardens": {"column": 2, "row": 0, "column_span": 1},
+    "cathedra": {"column": 2, "row": 1, "column_span": 1},
+    "hold": {"column": 3, "row": 0, "column_span": 1}
+  }
+}

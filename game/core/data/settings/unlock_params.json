@@ -1,0 +1,28 @@
+{
+    "_description": "Sex act unlock thresholds, district unlocks, cheat modifiers, and license data. See BK_EVOLUTION_DATA_MIGRATION.md.",
+    "sex_act_test": {
+        "service": [["libido", 15], ["obedience", 15]],
+        "sex": [["libido", 25], ["obedience", 25]],
+        "anal": [["libido", 35]],
+        "fetish": [["obedience", 35]]
+    },
+    "chapter_district_unlocks": {
+        "2": ["slum"],
+        "4": ["warehouse", "docks"],
+        "6": ["gardens", "cathedra"]
+    },
+    "cheat_modifier": {
+        "gold": 1.0,
+        "stats": 1.0,
+        "xp": 1.0,
+        "jp": 1.0,
+        "rep": 1.0,
+        "prestige": 1.0
+    },
+    "license_dict": {
+        "0": {"name_i18n": "No license", "pic": "missing license.webp"},
+        "1": {"name_i18n": "Pimp license", "pic": "license1.webp"},
+        "2": {"name_i18n": "Whoremonger license", "pic": "license2.webp"},
+        "3": {"name_i18n": "Brothelmaster license", "pic": "license3.webp"}
+    }
+}

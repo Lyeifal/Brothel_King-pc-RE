@@ -1,0 +1,13 @@
+{
+  "gold": {"name": "gold", "rank": 0, "sound": "gold.ogg", "location": null},
+  "prestige": {"name": "prestige", "rank": 0, "sound": "chimes.ogg", "location": null},
+  "action": {"name": "action", "rank": 0, "sound": "success.ogg", "location": null},
+  "mana": {"name": "mana", "rank": 0, "sound": "spell.ogg", "location": null},
+  "wood": {"name": "wood", "rank": 2, "stat": "strength", "sound": "saw.ogg", "location": "shipyard"},
+  "dye": {"name": "dye", "rank": 2, "stat": "spirit", "sound": "bubbling.ogg", "location": "beach"},
+  "leather": {"name": "leather", "rank": 2, "stat": "charisma", "sound": "equip item.ogg", "location": "stables"},
+  "marble": {"name": "marble", "rank": 3, "stat": "strength", "sound": "stone.ogg", "location": "old_ruins"},
+  "silk": {"name": "silk", "rank": 3, "stat": "spirit", "sound": "equip dress.ogg", "location": "hanging_gardens"},
+  "ore": {"name": "ore", "rank": 3, "stat": "charisma", "sound": "sword clash.ogg", "location": "guild_quarter"},
+  "diamond": {"name": "diamond", "rank": 4, "sound": "success.ogg", "location": null}
+}

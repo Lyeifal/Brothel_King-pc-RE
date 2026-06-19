@@ -1,0 +1,11 @@
+{
+    "loandict": {
+        "1": {"amount": 250, "interest": 0.4, "duration": 10},
+        "2": {"amount": 500, "interest": 0.4, "duration": 10},
+        "3": {"amount": 1000, "interest": 0.4, "duration": 14},
+        "4": {"amount": 2500, "interest": 0.4, "duration": 14},
+        "5": {"amount": 5000, "interest": 0.4, "duration": 20},
+        "6": {"amount": 10000, "interest": 0.4, "duration": 20},
+        "7": {"amount": 25000, "interest": 0.4, "duration": 25}
+    }
+}

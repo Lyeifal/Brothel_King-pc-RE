@@ -1,0 +1,115 @@
+{
+  "1": [
+    {
+      "type": "gold",
+      "value": 1000,
+      "target": 0,
+      "label": "",
+      "channel": "advance",
+      "max_chapter": null,
+      "blocking": true
+    }
+  ],
+  "2": [
+    {
+      "type": "gold",
+      "value": 5000,
+      "target": 0,
+      "label": "",
+      "channel": "advance",
+      "max_chapter": null,
+      "blocking": true
+    }
+  ],
+  "3": [
+    {
+      "type": "ranked",
+      "value": 2,
+      "target": 6,
+      "label": "",
+      "channel": "advance",
+      "max_chapter": null,
+      "blocking": true
+    },
+    {
+      "type": "gold",
+      "value": 7500,
+      "target": 0,
+      "label": "",
+      "channel": "advance",
+      "max_chapter": null,
+      "blocking": true
+    }
+  ],
+  "4": [
+    {
+      "type": "ranked",
+      "value": 3,
+      "target": 8,
+      "label": "",
+      "channel": "advance",
+      "max_chapter": null,
+      "blocking": true
+    },
+    {
+      "type": "gold",
+      "value": 15000,
+      "target": 0,
+      "label": "",
+      "channel": "advance",
+      "max_chapter": null,
+      "blocking": true
+    }
+  ],
+  "5": [
+    {
+      "type": "ranked",
+      "value": 3,
+      "target": 12,
+      "label": "",
+      "channel": "advance",
+      "max_chapter": null,
+      "blocking": true
+    },
+    {
+      "type": "gold",
+      "value": 25000,
+      "target": 0,
+      "label": "",
+      "channel": "advance",
+      "max_chapter": null,
+      "blocking": true
+    }
+  ],
+  "6": [
+    {
+      "type": "ranked",
+      "value": 4,
+      "target": 12,
+      "label": "",
+      "channel": "advance",
+      "max_chapter": null,
+      "blocking": true
+    },
+    {
+      "type": "gold",
+      "value": 100000,
+      "target": 0,
+      "label": "",
+      "channel": "advance",
+      "max_chapter": null,
+      "blocking": true
+    }
+  ],
+  "7": [
+    {
+      "type": null,
+      "value": 0,
+      "target": 0,
+      "label": "",
+      "channel": "other",
+      "max_chapter": null,
+      "blocking": true
+    }
+  ]
+}

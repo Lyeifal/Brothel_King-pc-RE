@@ -1,0 +1,43 @@
+{
+    "_description": "Picture filename mappings for events and UI. Values are image filenames (not translatable text). Do NOT use _i18n suffix.",
+    "advertising_pics": {
+        "1": ["poster girls1.webp", "poster girls2.webp", "poster girls3.webp", "poster girls4.webp", "poster girls5.webp", "poster girls6.webp", "poster girls7.webp", "poster girls8.webp", "poster girls9.webp", "poster girls10.webp", "poster girls11.webp"],
+        "2": ["poster girls1.webp", "poster girls2.webp", "poster girls3.webp", "poster girls4.webp", "poster girls5.webp", "poster girls6.webp", "poster girls7.webp", "poster girls8.webp", "poster girls9.webp", "poster girls10.webp", "poster girls11.webp"],
+        "3": ["poster girls1.webp", "poster girls2.webp", "poster girls3.webp", "poster girls4.webp", "poster girls5.webp", "poster girls6.webp", "poster girls7.webp", "poster girls8.webp", "poster girls9.webp", "poster girls10.webp", "poster girls11.webp"],
+        "4": ["poster girls1.webp", "poster girls2.webp", "poster girls3.webp", "poster girls4.webp", "poster girls5.webp", "poster girls6.webp", "poster girls7.webp", "poster girls8.webp", "poster girls9.webp", "poster girls10.webp", "poster girls11.webp"],
+        "5": ["poster girls1.webp", "poster girls2.webp", "poster girls3.webp", "poster girls4.webp", "poster girls5.webp", "poster girls6.webp", "poster girls7.webp", "poster girls8.webp", "poster girls9.webp", "poster girls10.webp", "poster girls11.webp"]
+    },
+    "pony_pics": ["ponygirls.webp", "ponygirls (1).webp", "ponygirls (2).webp", "ponygirls (3).webp", "ponygirls (4).webp", "ponygirls (5).webp", "ponygirls (6).webp"],
+    "security_pics": {
+        "gooey monsters": ["monster assault.webp"],
+        "rogue mercenaries": ["merc assault (1).webp", "merc assault (1).webp", "merc assault (2).webp"],
+        "marauding ogres": ["ogre assault (1).webp", "ogre assault (3).webp", "ogre assault (2).webp"],
+        "monster rape": ["monster (1).webp", "monster (1).webp", "monster (2).webp", "monster (2).webp", "monster (3).webp", "monster (4).webp", "monster (5).webp", "monster (6).webp", "monster (7).webp", "monster (8).webp", "monster (9).webp", "monster (10).webp"],
+        "thief": ["thief (1).webp", "thief (2).webp", "thief (3).webp", "thief (4).webp", "thief (5).webp", "thief (6).webp"],
+        "brothel defense": ["brothel defense (1).webp", "brothel defense (2).webp"],
+        "monster defense": ["monster defense (1).webp", "monster defense (2).webp"],
+        "thief defense": ["thief captured (1).webp", "thief captured (2).webp", "thief captured (3).webp", "thief captured (4).webp", "thief captured (5).webp"],
+        "girl defense": ["bar fight.webp"],
+        "girl shield": ["shield.webp"],
+        "default girl fight": ["fight1.webp", "fight2.webp", "fight3.webp", "fight4.webp"],
+        "assassin defense": ["assassin1.webp", "assassin2.webp", "assassin3.webp", "assassin4.webp", "assassin5.webp", "assassin6.webp"],
+        "assassin": ["assassin7.webp", "assassin8.webp", "assassin9.webp"],
+        "sword defense": ["sword defense1.webp", "sword defense2.webp", "sword defense3.webp", "sword defense4.webp"],
+        "magic defense": ["magic defense.webp"],
+        "dragon defense": ["dragon defense.webp"],
+        "brawl": ["bar fight.webp", "brawl1.webp", "brawl2.webp", "brawl3.webp"],
+        "siege": ["hannies (5).webp", "siege2.webp", "siege3.webp", "siege4.webp", "siege5.webp", "siege6.webp", "siege7.webp"],
+        "hood": ["hood.webp"],
+        "dark street": ["dark street1.webp", "dark street2.webp"],
+        "alert": ["alert1.webp", "alert2.webp", "alert3.webp"]
+    },
+    "arson_pics": ["arson1.webp", "arson2.webp", "arson3.webp", "arson4.webp"],
+    "violent_pics": ["violent.webp", "violent2.webp"],
+    "treasure_pics": {
+        "+++": ["treasure_blonde (3).webp", "treasure_pink (3).webp"],
+        "++": ["treasure_blonde (2).webp", "treasure_pink (2).webp"],
+        "+": ["treasure_blonde (1).webp", "treasure_pink (1).webp"],
+        "-": ["treasure_blonde (0).webp", "treasure_pink (0).webp"]
+    },
+    "no_girls_pics": ["harem.webp"]
+}

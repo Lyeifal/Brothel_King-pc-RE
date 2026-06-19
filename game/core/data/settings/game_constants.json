@@ -1,0 +1,64 @@
+{
+    "_description": "Miscellaneous game constants: calendar, colors, pics, tags, and balance settings. See BK_EVOLUTION_DATA_MIGRATION.md.",
+    "weekdays": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+    "workshift_color": {
+        "0": "#33CC99",
+        "50": "#660033",
+        "100": "#FF9900"
+    },
+    "MC_class_index": {
+        "Warrior": 0,
+        "Wizard": 3,
+        "Trader": 6
+    },
+    "roman_numbers": {
+        "1": "I",
+        "2": "II",
+        "3": "III",
+        "4": "IV",
+        "5": "V",
+        "6": "VI",
+        "7": "VII",
+        "8": "VIII",
+        "9": "IX",
+        "10": "X"
+    },
+    "playerclass_pics": {
+        "Warrior": "resources/ui/warrior.webp",
+        "Wizard": "resources/ui/wizard.webp",
+        "Trader": "resources/ui/trader.webp"
+    },
+    "god_pics": {
+        "Arios": "resources/ui/arios.webp",
+        "Shalia": "resources/ui/shalia.webp",
+        "null": "resources/ui/none.webp"
+    },
+    "alignment_pics": {
+        "good": "resources/ui/al_good.webp",
+        "evil": "resources/ui/al_evil.webp",
+        "neutral": "resources/ui/al_neutral.webp"
+    },
+    "frequency_tags": {
+        "freq_highest": 900,
+        "freq_high": 300,
+        "freq_low": 30,
+        "freq_lowest": 10
+    },
+    "night_pics": ["night.webp"],
+    "fix_pic_balance_variety": {
+        "act-based": 0.5,
+        "generic": 0.5
+    },
+    "fix_pic_balance_accuracy": {
+        "act-based": 0.75,
+        "generic": 0.25
+    },
+    "tip_base": 10,
+    "maximum_tip_modifier": 5.0,
+    "starting_gold": 500,
+    "class_discount": 0.15,
+    "nsfw": true,
+    "stock_picture_threshold": 4,
+    "mood_runaway_limit": 10,
+    "free_girls_per_district": 12
+}

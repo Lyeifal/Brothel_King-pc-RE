@@ -1,0 +1,36 @@
+{
+  "all_minion_types": [
+    "stallion",
+    "beast",
+    "monster",
+    "machine"
+  ],
+  "minion_descriptions": {
+    "stallion": "Stallions are male sex slaves from the Blood Islands, magically brainwashed and bred selectively for their abnormally large dicks....",
+    "beast": "Beasts are all sorts of animals that Gizel keeps around at the farm. More like a zoo, really.",
+    "monster": "Monsters are unnatural fiends crawling inside the darkest caves of Xeros. They come in many forms, but the ones with tentacles are the most sought after.",
+    "machine": "Machines or artefacts have many uses, but in Gizel's workshop, they really only seem to be designed for one thing: sex."
+  },
+  "minion_xp_to_level": {
+    "0": 0,
+    "1": 10,
+    "2": 25,
+    "3": 50,
+    "4": 100,
+    "5": 250
+  },
+  "minion_price": {
+    "0": 100,
+    "1": 200,
+    "2": 300,
+    "3": 400,
+    "4": 500,
+    "5": 750
+  },
+  "farm_pics": {
+    "stallion": ["big"],
+    "beast": ["beast"],
+    "monster": ["monster"],
+    "machine": ["machine", "toy"]
+  }
+}

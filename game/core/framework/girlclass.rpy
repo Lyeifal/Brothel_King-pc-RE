@@ -6,11 +6,24 @@
 
 init -2 python:
 
+    ## EN: Load girl upkeep/workday mapping parameters from JSON (BK Evolution), fallback to hardcoded.
+    ## ZH: 从 JSON 加载女孩维护/工作日映射参数（BK Evolution），否则使用硬编码。
+    _gup_json = DataLoader.load_girl_upkeep_params()
+    if _gup_json:
+        workday_map_reverse = {int(k): v for k, v in _gup_json["workday_map_reverse"].items()}
+        workday_map_normal = {int(k): v for k, v in _gup_json["workday_map_normal"].items()}
+        upkeep_base_value = {int(k): v for k, v in _gup_json["upkeep_base_value"].items()}
+        upkeep_modifier_step = {int(k): v for k, v in _gup_json["upkeep_modifier_step"].items()}
+    else:
+        workday_map_reverse = {100 : 50, 50 : 0, 0 : 100}
+        workday_map_normal = {100 : 0, 50 : 100, 0 : 50}
+        upkeep_base_value = {5 : 10, 4 : 8, 3 : 6, 2 : 4, 1 : 2, 0 : -2, -1 : -4, -2 : -6, -3 : -8, -4 : -10, -5 : -15}
+        upkeep_modifier_step = {-20 : -6, -12 : -5, -8 : -4, -4 : -3, -2 : -2, -1 : -1, 0 : 0, 1 : 1, 2 : 2, 3 : 3, 4 : 4, 5 : 5}
 
 ## GIRLS GIRLS GIRLS! ##
 
 
-    class Girl(object): #Attributes: name, lastname, age, description, pictures, stats, status, inventory, character
+    class Girl(EffectBearer): #Attributes: name, lastname, age, description, pictures, stats, status, inventory, character
 
         """This class is for free and working girls in the game. This should probably inherit from the NPC
         class, but I'm not using inheritance."""
@@ -306,25 +319,25 @@ init -2 python:
             if self.broken:
                 calendar.set_alarm(calendar.time+1, StoryEvent("is_broken", arg=self, type = "morning"))
                 renpy.play(s_scream_loud, "sound")
-                return event_color["fear"] % ("A long, inhumane shriek sends shivers down your spine. It came from %s, who is white with terror and on the verge of collapsing. This can't be good..." % self.name)
+                return event_color["fear"] % (__("A long, inhumane shriek sends shivers down your spine. It came from %s, who is white with terror and on the verge of collapsing. This can't be good...") % self.name)
 
             elif self.sanity < 5:
-                return event_color["very bad"] % ("%s has a look of sheer terror in her eyes, and she shakes uncontrollably. She moans like a wounded animal if you move even slightly towards her. You can tell that a slight push would be all it takes to send her mind over the edge now." % self.name)
+                return event_color["very bad"] % (__("%s has a look of sheer terror in her eyes, and she shakes uncontrollably. She moans like a wounded animal if you move even slightly towards her. You can tell that a slight push would be all it takes to send her mind over the edge now.") % self.name)
 
             elif self.sanity < 10:
-                return event_color["bad"] % ("%s curls and looks around herself in complete panic, her eyes wild with fear. If you insist on using your powers on her, her mind will end up breaking." % self.name)
+                return event_color["bad"] % (__("%s curls and looks around herself in complete panic, her eyes wild with fear. If you insist on using your powers on her, her mind will end up breaking.") % self.name)
 
             elif self.sanity < 20:
-                return event_color["a little bad"] % ("%s looks bewildered, not sure what has been happening to her. Little by little her sanity is beginning to slip." % self.name)
+                return event_color["a little bad"] % (__("%s looks bewildered, not sure what has been happening to her. Little by little her sanity is beginning to slip.") % self.name)
 
             elif self.sanity < 50:
                 if self.is_("dom"):
-                    return event_color["a little bad"] % ("%s seems shaken by what just happened, but puts on a brave face. She looks defiant in spite of what she has been through." % self.name)
+                    return event_color["a little bad"] % (__("%s seems shaken by what just happened, but puts on a brave face. She looks defiant in spite of what she has been through.") % self.name)
                 else:
-                    return event_color["a little bad"] % ("%s seems shaken by what just happened, but she tries to keep it to herself. She looks away from you, trying to suppress a sob." % self.name)
+                    return event_color["a little bad"] % (__("%s seems shaken by what just happened, but she tries to keep it to herself. She looks away from you, trying to suppress a sob.") % self.name)
 
             else:
-                return ("As %s returns to normal, she barely seems to register what just happened to her, although you know it must have had a subconscious effect." % self.name)
+                return (__("As %s returns to normal, she barely seems to register what just happened to her, although you know it must have had a subconscious effect.") % self.name)
 
 
         def set_name(self): ## This creates the full name with or without lastname
@@ -410,11 +423,11 @@ init -2 python:
         def cycle_workday(self, day, reverse = False):
 
             if reverse:
-                dict = {100 : 50, 50 : 0, 0 : 100}
+                _wd = workday_map_reverse
             else:
-                dict = {100 : 0, 50 : 100, 0 : 50}
+                _wd = workday_map_normal
 
-            self.workdays[day] = dict[self.workdays[day]]
+            self.workdays[day] = _wd[self.workdays[day]]
 
             renpy.restart_interaction()
 
@@ -1406,7 +1419,7 @@ init -2 python:
                         self.personality_unlock[name] = True
                         if feedback:
                             renpy.play(s_aaah, "sound")
-                            renpy.say("", "You have discovered " + self.name + "'s fixation with " + name + ".")
+                            renpy.say("", __("You have discovered %s's fixation with %s.") % (self.name, name))
                 return "pos"
             elif r == "neg":
                 if unlock:
@@ -1414,7 +1427,7 @@ init -2 python:
                         self.personality_unlock[name] = True
                         if feedback:
                             renpy.play(s_surprise, "sound")
-                            renpy.say("", "You have discovered " + self.name + "'s disgust for " + name + ".")
+                            renpy.say("", __("You have discovered %s's disgust for %s.") % (self.name, name))
                 return "neg"
             else:
                 return False
@@ -1524,9 +1537,9 @@ init -2 python:
             if step == "min" or step == -6:
                 return self.get_med_upkeep() // 4
 
-            base_value = {5 : 10, 4 : 8, 3 : 6, 2 : 4, 1 : 2, 0 : -2, -1 : -4, -2 : -6, -3 : -8, -4 : -10, -5 : -15}[step]
+            _bv = upkeep_base_value[step]
 
-            r = self.get_med_upkeep() + (base_value * self.rank * 2 ** self.rank)
+            r = self.get_med_upkeep() + (_bv * self.rank * 2 ** self.rank)
 
             if step <= 0: # To emulate the legacy switch from >= to >
                 r += 1
@@ -1585,19 +1598,19 @@ init -2 python:
 
         def get_next_upkeep_step(self):
             m = self.get_upkeep_modifier()
-            step = {-20 : -6, -12 : -5, -8 : -4, -4 : -3, -2 : -2, -1 : -1, 0 : 0, 1 : 1, 2 : 2, 3 : 3, 4 : 4, 5 : 5}[m]
+            _st = upkeep_modifier_step[m]
             
-            if step < 5:
-                return self.get_upkeep_threshold(step + 1)
+            if _st < 5:
+                return self.get_upkeep_threshold(_st + 1)
             else:
                 return get_upkeep_threshold(5)
 
         def get_previous_upkeep_step(self):
             m = self.get_upkeep_modifier()
-            step = {-20 : -6, -12 : -5, -8 : -4, -4 : -3, -2 : -2, -1 : -1, 0 : 0, 1 : 1, 2 : 2, 3 : 3, 4 : 4, 5 : 5}[m]
+            _st = upkeep_modifier_step[m]
             
-            if step > -6:
-                return max(self.get_upkeep_threshold(step - 1), self.get_upkeep_threshold("min"))
+            if _st > -6:
+                return max(self.get_upkeep_threshold(_st - 1), self.get_upkeep_threshold("min"))
             else:
                 return self.get_upkeep_threshold("min")
 
@@ -1610,7 +1623,7 @@ init -2 python:
 
         def equip(self, item):
             if not isinstance(item, ItemInstance):
-                renpy.say(bk_error, "Warning: This item is not instantiated (%s)." % item.name)
+                renpy.say(bk_error, __("Warning: This item is not instantiated (%s).") % item.name)
 
             for it in self.equipped:
                 if it.slot == item.slot:
@@ -1636,7 +1649,7 @@ init -2 python:
 
         def unequip(self, item):
             if not isinstance(item, ItemInstance):
-                renpy.say(bk_error, "Warning: This item is not instantiated (%s)." % item.name)
+                renpy.say(bk_error, __("Warning: This item is not instantiated (%s).") % item.name)
 
             self.equipped.remove(item)
             self.remove_effects(item.effects)
@@ -1660,7 +1673,7 @@ init -2 python:
 
         def use_item(self, item, night=False):
             if not isinstance(item, ItemInstance):
-                renpy.say(bk_error, "Warning: This item is not instantiated (%s)." % item.name)
+                renpy.say(bk_error, __("Warning: This item is not instantiated (%s).") % item.name)
 
             changes = NightChangeLog(title=item.name)
 
@@ -1673,13 +1686,13 @@ init -2 python:
                 if e.type == "gain":
                     c = self.add_effects(e)
                     if c:
-                        changes.add(e.target.capitalize() + ": %s" % plus_text(c))
+                        changes.add(e.target.capitalize() + _(" : %s") % plus_text(c))
                     used = True
 
                 elif e.type == "change": # In case of direct usage, the change will last only for one turn or the item duration
                     if item.type.name == "Food": # Prevents stacking food effects for the same stat
                         if self.current_food_effect[e.target]:
-                            changes.add("%s: %s (expired)" % (self.current_food_effect[e.target].target.capitalize(), plus_text(-self.current_food_effect[e.target].value)))
+                            changes.add(_("%s: %s (expired)") % (self.current_food_effect[e.target].target.capitalize(), plus_text(-self.current_food_effect[e.target].value)))
                             self.remove_effects(self.current_food_effect[e.target])
 
                         self.current_food_effect[e.target] = e # Stores the object used to remove the effect in case another food is absorbed
@@ -1687,11 +1700,11 @@ init -2 python:
                     if e.duration > 0:
                         c = self.add_effects(e, expires = calendar.time + e.duration)
                         if c:
-                            changes.add("%s: %s (duration: %s days)" % (e.target.capitalize(), plus_text(c), e.duration))
+                            changes.add(_("%s: %s (duration: %s days)") % (e.target.capitalize(), plus_text(c), e.duration))
                     else:
                         c = self.add_effects(e, expires = calendar.time + 1)
                         if c:
-                            changes.add("%s: %s" % (e.target.capitalize(), plus_text(c)))
+                            changes.add(_("%s: %s") % (e.target.capitalize(), plus_text(c)))
 
                     used = True
 
@@ -1700,29 +1713,29 @@ init -2 python:
                         if self.level < e.value:
                             self.xp = self.get_xp_cap()
                             self.level_up()
-                            changes.add("Level: +1", col=c_orange)
+                            changes.add(_("Level: +1"), col=c_orange)
                             used = True
                         else:
-                            notify("This item can only be used up to level " + str(e.value), pic=self.portrait)
+                            notify(__("This item can only be used up to level %s") % e.value, pic=self.portrait)
 
                     elif e.target == "heal":
                         if not self.can_heal_from_item() and not night:
-                            renpy.say("", "Only one healing item can be used per day.")
+                            renpy.say("", __("Only one healing item can be used per day."))
 
                         elif self.hurt > 0:
                             c, _ = self.heal(e.value, from_item=True)
                             if c:
-                                changes.add("Healing", "header")
-                                changes.add("Healed: %s" % plus_text(c))
+                                changes.add(__("Healing"), "header")
+                                changes.add(__("Healed: %s") % plus_text(c))
                                 if self.hurt <= 0:
-                                    changes.add("(fully healed)", col="good")
+                                    changes.add(__("(fully healed)"), col="good")
                                     if not night:
-                                        renpy.say("", self.name + " has been healed completely.")
+                                        renpy.say("", __("%s has been healed completely.") % self.name)
                                 elif not night:
-                                    renpy.say("", self.name + " has been healed but still need some time to rest.")
+                                    renpy.say("", __("%s has been healed but still need some time to rest.") % self.name)
                                 used = True
                         else:
-                            notify(self.name + " is in good health.", pic=self.portrait)
+                            notify(__("%s is in good health.") % self.name, pic=self.portrait)
 
                     # Virginity restoration
                     elif e.target == "virginity":
@@ -1750,7 +1763,7 @@ init -2 python:
 
         def take(self, giver, obj):
             if not isinstance(obj, ItemInstance):
-                renpy.say(bk_error, "Warning: This item is not instantiated (%s)." % obj.name)
+                renpy.say(bk_error, __("Warning: This item is not instantiated (%s).") % obj.name)
 
             self.items.append(obj)
             if obj.equipped:
@@ -1787,7 +1800,7 @@ init -2 python:
 
         def receive_gift(self, item):
             if not isinstance(item, ItemInstance):
-                renpy.say(bk_error, "Warning: This item is not instantiated (%s)." % item.name)
+                renpy.say(bk_error, __("Warning: This item is not instantiated (%s).") % item.name)
 
             flower = False
             potion = False
@@ -1813,19 +1826,19 @@ init -2 python:
                 if e.target == self.likes["color"]:
                     score += 4
                     self.personality_unlock["fav_color"] = True
-                    renpy.say(self.char, "Oh, you remembered my favorite color! You're so considerate...")
+                    renpy.say(self.char, __("Oh, you remembered my favorite color! You're so considerate..."))
 
                 elif e.target == self.dislikes["color"]:
                     score += 0
                     self.personality_unlock["dis_color"] = True
-                    renpy.say(self.char, "Ah, em, thanks. You know, I don't like this color, but I appreciate the gesture.")
+                    renpy.say(self.char, __("Ah, em, thanks. You know, I don't like this color, but I appreciate the gesture."))
 
                 else:
                     score += 2
-                    renpy.say(self.char, "Flowers! For me! Thank you...")
+                    renpy.say(self.char, __("Flowers! For me! Thank you..."))
 
                 if self.MC_relationship_level == 2:
-                    renpy.say(self.char, "This is very romantic... Was there something you wanted from me?")
+                    renpy.say(self.char, __("This is very romantic... Was there something you wanted from me?"))
 
                     r = menu(items = (("Actually...", None), ("Ask her out", True), ("Never mind", False)))
 
@@ -1838,8 +1851,8 @@ init -2 python:
 
                     else:
                         norollback()
-                        renpy.say(you, "Hmm, no, not really.")
-                        renpy.say(self.char, "Oh... I see.")
+                        renpy.say(you, __("Hmm, no, not really."))
+                        renpy.say(self.char, __("Oh... I see."))
 
             elif potion:
                 if potion == "seduction":
@@ -1862,21 +1875,21 @@ init -2 python:
                     elif self.MC_relationship_level < 5:
                         renpy.call("free_girl_job_request", self)
                     else:
-                        renpy.say(narrator, "Already at the maximum relationship level. This potion had no effect.")
+                        renpy.say(narrator, __("Already at the maximum relationship level. This potion had no effect."))
                     # /NG+
 
             else:
                 if score >= 4:
-                    renpy.say(self.char, "Oh, I love it so much!!! Thank you, thank you!")
+                    renpy.say(self.char, __("Oh, I love it so much!!! Thank you, thank you!"))
 
                 elif score >= 2:
-                    renpy.say(self.char, "It's nice! Thanks for thinking about me.")
+                    renpy.say(self.char, __("It's nice! Thanks for thinking about me."))
 
                 elif score >= 0:
-                    renpy.say(self.char, "Ah, em, thanks. It's an interesting... whatever it is, I guess.")
+                    renpy.say(self.char, __("Ah, em, thanks. It's an interesting... whatever it is, I guess."))
 
                 else:
-                    renpy.say(self.char, "What the? Ew, take this away from me!")
+                    renpy.say(self.char, __("What the? Ew, take this away from me!"))
 
             if score >= 0:
                 score *= mod
@@ -1888,12 +1901,12 @@ init -2 python:
 
 
         def test_say(self):
-            renpy.say(self.char, "Let's test if say methods break the flow.")
+            renpy.say(self.char, __("Let's test if say methods break the flow."))
             self.change_love(200)
-            renpy.say(self.char, "Did my love go up? Now it's %s" % self.love)
+            renpy.say(self.char, __("Did my love go up? Now it's %s") % self.love)
             self.say("free_ask_out")
             self.change_love(-200)
-            renpy.say(self.char, "Did my love go down now? It's %s" % self.love)
+            renpy.say(self.char, __("Did my love go down now? It's %s") % self.love)
             return
 
 
@@ -2197,22 +2210,22 @@ init -2 python:
             elif act in all_sex_acts:
                 xp = (xp_bonus_dict[result] * cust_diff) ** 1.1 / len(customers) # Gives a small advantage to group over normal
 
-            xp_ttip = "Base XP vs Difficulty: %s" % event_color["xp"] % (str_int(xp) + " XP")
+            xp_ttip = _("Base XP vs Difficulty: %s") % event_color["xp"] % (str_int(xp) + " XP")
 
             # Result boost effect
             boost = self.get_effect("boost", result + " result xp")
             if boost != 1.0:
                 xp = xp * boost
-                xp_ttip += "\nPerks & special effects: x%s" % percent_text(boost, False)
+                xp_ttip += _("\nPerks & special effects: x%s") % percent_text(boost, False)
 
             #<Chris Job Mod>
             if game.has_active_mod("chrisjobmod") and act in all_jobs:
                 xp /= act_max_customers_modifier[self.job]
-                xp_ttip += "\nJob Mod modifier: x%s" % percent_text(1.0/act_max_customers_modifier[self.job], False)
+                xp_ttip += _("\nJob Mod modifier: x%s") % percent_text(1.0/act_max_customers_modifier[self.job], False)
             #</Chris Job Mod>
 
             xp = max(xp * cheat_modifier["xp"] * game.get_diff_setting("xp"), 1) # 1 XP is always guaranteed
-            xp_ttip += "\n\nDifficulty modifier: x%s" % percent_text(cheat_modifier["xp"] * game.get_diff_setting("xp"), False)
+            xp_ttip += _("\n\nDifficulty modifier: x%s") % percent_text(cheat_modifier["xp"] * game.get_diff_setting("xp"), False)
 
             return xp, xp_ttip
 
@@ -2226,26 +2239,26 @@ init -2 python:
             else:
                 jp = dice(3, 1+len(customers)) # Gives 2-6 JP + 1-3 per extra customer
 
-            jp_ttip = "Base JP vs customers: %s" % event_color["jp"] % (str_int(jp) + " JP")
+            jp_ttip = _("Base JP vs customers: %s") % event_color["jp"] % (str_int(jp) + " JP")
 
             jp += jp_job_level_modifier[self.job_level[act]] + jp_customer_rank_modifier[cust_rank] + jp_result_modifier[result]
 
-            jp_ttip += "\nGirl rank vs Customer rank: %s\n" % plus_text(jp_job_level_modifier[self.job_level[act]] + jp_customer_rank_modifier[cust_rank], color_scheme="jp")
-            jp_ttip += result.capitalize() + " result: %s" % plus_text(jp_result_modifier[result], color_scheme="jp")
+            jp_ttip += _("\nGirl rank vs Customer rank: %s\n") % plus_text(jp_job_level_modifier[self.job_level[act]] + jp_customer_rank_modifier[cust_rank], color_scheme="jp")
+            jp_ttip += result.capitalize() + _(" result: %s") % plus_text(jp_result_modifier[result], color_scheme="jp")
 
             # Result boost effect
             boost = self.get_effect("boost", result + " result jp")
             if boost != 1.0:
                 jp = jp * boost
-                jp_ttip += "\nPerks & special effects: x%s" % percent_text(boost, False)
+                jp_ttip += _("\nPerks & special effects: x%s") % percent_text(boost, False)
 
             #<Chris Job Mod>
             if game.has_active_mod("chrisjobmod") and act in all_jobs:
                 jp /= act_max_customers_modifier[self.job]
-                jp_ttip += "\nJob Mod modifier: x%s" % percent_text(1.0/act_max_customers_modifier[self.job], False)
+                jp_ttip += _("\nJob Mod modifier: x%s") % percent_text(1.0/act_max_customers_modifier[self.job], False)
             #</Chris Job Mod>
 
-            jp_ttip += "\n\nDifficulty modifier: x%s" % percent_text(cheat_modifier["jp"] * game.get_diff_setting("jp"), False)
+            jp_ttip += _("\n\nDifficulty modifier: x%s") % percent_text(cheat_modifier["jp"] * game.get_diff_setting("jp"), False)
 
             jp *= cheat_modifier["jp"] * game.get_diff_setting("jp")
 
@@ -2258,7 +2271,7 @@ init -2 python:
             # Reputation gains now depend on relative rank between girl and customer
 
             if cust_rank + 1 < self.rank: # No reputation changes for customers two ranks lower or more
-                rep_ttip = "No reputation change: customer rank too low."
+                rep_ttip = _("No reputation change: customer rank too low.")
                 return 0, rep_ttip
 
             elif cust_rank < self.rank: # Girls serving lower rank customers gain reputation less easily
@@ -2280,22 +2293,22 @@ init -2 python:
 
             if score >= (reversed_result_dict[rep_gains_dict[self.rank][relative_rank]] + self.get_effect("special", "score_to_rep")):
                 pos_rep *= dice(len(customers))
-                rep_ttip = "Reputation increase vs Customers: +%s" % str_dec(pos_rep, 1)
+                rep_ttip = _("Reputation increase vs Customers: +%s") % str_dec(pos_rep, 1)
                 # First customer effect
                 if first_customer:
                     first_rep_boost = self.get_effect("boost", "first customer rep")
                     if first_rep_boost != 1.0:
                         pos_rep *= first_rep_boost
-                        rep_ttip += "\nFirst customer: x%s" % percent_text(self.get_effect("boost", "first customer rep"), False)
+                        rep_ttip += _("\nFirst customer: x%s") % percent_text(self.get_effect("boost", "first customer rep"), False)
                 return pos_rep, rep_ttip
 
             elif score < (reversed_result_dict[rep_loss_dict[self.rank][relative_rank]] - self.get_effect("special", "score_to_rep")):
                 neg_rep *= dice(len(customers))
-                rep_ttip = "Reputation decrease vs Customers: %s" % str_dec(neg_rep)
+                rep_ttip = _("Reputation decrease vs Customers: %s") % str_dec(neg_rep)
                 return neg_rep, rep_ttip
 
             else:
-                return 0, "No change."
+                return 0, _("No change.")
 
         def get_tip(self, act, result, customers, final_tip_change=0, first_customer=False, specials = []):
 
@@ -2316,9 +2329,9 @@ init -2 python:
 
             if "lost virginity" in specials:
                 tip += 100
-                gold_ttip = "Base tip: {image=img_gold}%i(Lost virginity: {image=img_gold}+100)\n" % tip
+                gold_ttip = _("Base tip: {image=img_gold}%i(Lost virginity: {image=img_gold}+100)\n") % tip
             else:
-                gold_ttip = "Base tip: {image=img_gold}%i\n" % tip
+                gold_ttip = _("Base tip: {image=img_gold}%i\n") % tip
 
             ## 2. Generic multipliers apply to the base tip ##
 
@@ -2327,24 +2340,24 @@ init -2 python:
             # Work tip is higher if the girl is naked
             if self.naked and act in all_jobs:
                 tip_multiplier *= tip_act_modifier["naked bonus"] * self.get_effect("boost", "naked bonus")
-                gold_ttip += "\nNaked bonus: x%s" % percent_text(tip_act_modifier["naked bonus"] * self.get_effect("boost", "naked bonus"), False)
+                gold_ttip += _("\nNaked bonus: x%s") % percent_text(tip_act_modifier["naked bonus"] * self.get_effect("boost", "naked bonus"), False)
 
             if "bisexual" in specials:
                 tip_multiplier *= tip_act_modifier["bisexual bonus"]
-                gold_ttip += "\nBisexual bonus: %s" % tip_act_modifier["bisexual bonus"]
+                gold_ttip += _("\nBisexual bonus: %s") % tip_act_modifier["bisexual bonus"]
 
             # Group sex
             if act in all_sex_acts and len(customers) > 1:
                 tip_multiplier *= tip_act_modifier["group bonus"] * len(customers) #? As diff already increases base tip for groups, this might be too much of an advantage
-                gold_ttip += "\nGroup bonus: x%s" % percent_text(tip_act_modifier["group bonus"] * len(customers), False)
+                gold_ttip += _("\nGroup bonus: x%s") % percent_text(tip_act_modifier["group bonus"] * len(customers), False)
 
             # Result boost
             if act in all_jobs:
                 tip_multiplier *= tip_result_modifier["job " + result] * self.get_effect("boost", result + " result tip")
-                gold_ttip += "\nResult bonus: x%s" % percent_text(tip_result_modifier["job " + result] * self.get_effect("boost", result + " result tip"), False)
+                gold_ttip += _("\nResult bonus: x%s") % percent_text(tip_result_modifier["job " + result] * self.get_effect("boost", result + " result tip"), False)
             else:
                 tip_multiplier *= tip_result_modifier["whore " + result] * self.get_effect("boost", result + " result tip")
-                gold_ttip += "\nResult bonus: x%s" % percent_text(tip_result_modifier["whore " + result] * self.get_effect("boost", result + " result tip"), False)
+                gold_ttip += _("\nResult bonus: x%s") % percent_text(tip_result_modifier["whore " + result] * self.get_effect("boost", result + " result tip"), False)
 
             ## 3. Perk multipliers and other special effects apply (additive) ##
 
@@ -2368,13 +2381,35 @@ init -2 python:
                 perk_tip_multiplier += self.get_effect("boost", "total tip", custom_scale=("whore cust nb", self.get_log("whore_cust", "today"))) - 1
 
             if perk_tip_multiplier != 1.0:
-                gold_ttip += "\nPerks and special effects: x%s" % percent_text(perk_tip_multiplier, False)
+                gold_ttip += _("\nPerks and special effects: x%s") % percent_text(perk_tip_multiplier, False)
 
             tip_multiplier *= perk_tip_multiplier
 
+            ## EN: BK Evolution — apply customer mood tip modifiers (average across all customers).
+            ## ZH: BK Evolution — 应用顾客心情小费修正（所有顾客的平均值）。
+            if customers:
+                _mood_mult_sum = 0.0
+                _mood_chance_sum = 0.0
+                _mood_count = 0
+                for cust in customers:
+                    if hasattr(cust, 'affixes') and cust.affixes and cust.affixes.mood:
+                        _mood_mult_sum += cust.affixes.mood.tip_multiplier
+                        _mood_chance_sum += cust.affixes.mood.tip_chance
+                        _mood_count += 1
+                if _mood_count:
+                    _avg_mult = _mood_mult_sum / _mood_count
+                    _avg_chance = _mood_chance_sum / _mood_count
+                    if _avg_mult != 1.0:
+                        tip_multiplier *= _avg_mult
+                        gold_ttip += _("\nCustomer mood avg: x%s") % percent_text(_avg_mult, False)
+                    if _avg_chance > 0:
+                        _tc_bonus = 1.0 + _avg_chance
+                        tip_multiplier *= _tc_bonus
+                        gold_ttip += _("\nCustomer mood tip chance avg: x%s") % percent_text(_tc_bonus, False)
+
             # Sanity check: final tip_multiplier cannot go below 10% or above 500%
             if tip_multiplier > maximum_tip_modifier:
-                gold_ttip += "\n{i}Total modifier cannot exceed x%s{/i}" % str(maximum_tip_modifier)
+                gold_ttip += _("\n{i}Total modifier cannot exceed x%s{/i}") % str(maximum_tip_modifier)
             tip_multiplier = min(maximum_tip_modifier, max(0.1, tip_multiplier))
 
             tip *= tip_multiplier
@@ -2385,7 +2420,7 @@ init -2 python:
             act_modif = tip_act_modifier[act]
             if act_modif != 1.0:
                 tip *= act_modif
-                gold_ttip += "\nAct modifier: x%i" % (act_modif * 100) + "%"
+                gold_ttip += _("\nAct modifier: x%i") % (act_modif * 100) + "%"
                 if not game.has_active_mod("chrisjobmod") or cap_positive_tip_act_modifier:
                     if act_modif > 1.0:
                         tip_multiplier = min(maximum_tip_modifier, max(0.1, tip_multiplier))
@@ -2394,7 +2429,7 @@ init -2 python:
             #<Chris Job Mod>
             if game.has_active_mod("chrisjobmod") and act in all_jobs:
                 tip /= act_max_customers_modifier[self.job]
-                gold_ttip += "\nJob Mod modifier: x%s" % percent_text(1.0/act_max_customers_modifier[self.job], False)
+                gold_ttip += _("\nJob Mod modifier: x%s") % percent_text(1.0/act_max_customers_modifier[self.job], False)
             #</Chris Job Mod>
 
             ## 4. Extra flat tip is added ##
@@ -2404,20 +2439,20 @@ init -2 python:
 
             tip += extra
             if extra:
-                gold_ttip += "\n\nExtra tip: {image=img_gold}%s" % plus_text(extra)
+                gold_ttip += _("\n\nExtra tip: {image=img_gold}%s") % plus_text(extra)
                 if final_tip_change:
-                    gold_ttip += " (Five stars perk: {image=img_gold}%s" % plus_text(final_tip_change)
+                    gold_ttip += _(" (Five stars perk: {image=img_gold}%s") % plus_text(final_tip_change)
 
             ## 5. Difficulty and cheat modifiers multiply everything ##
 
             # Difficulty/Cheats
             tip *= cheat_modifier["gold"] * game.get_diff_setting("gold")
-            gold_ttip += "\n\nDifficulty modifier: x%s" % percent_text(cheat_modifier["gold"] * game.get_diff_setting("gold"), False)
+            gold_ttip += _("\n\nDifficulty modifier: x%s") % percent_text(cheat_modifier["gold"] * game.get_diff_setting("gold"), False)
 
             # A final (unneeded) sanity check is applied
             tip = max(10, round_int(tip))
 
-            gold_ttip += "\n\n= {image=img_gold}%i" % tip
+            gold_ttip += _("\n\n= {image=img_gold}%i") % tip
 
             return tip, gold_ttip
 
@@ -2529,7 +2564,7 @@ init -2 python:
         def get_hurt(self, x):
 
             if self.get_effect("special", "immune"):
-                notify("%s is immune to getting hurt." % self.name, pic=self.portrait)
+                notify(_("%s is immune to getting hurt.") % self.name, pic=self.portrait)
                 return 0
 
             chg = round(x * self.get_effect("boost", "hurt") + self.get_effect("change", "hurt") - self.get_effect("resist", "hurt"))
@@ -2544,7 +2579,7 @@ init -2 python:
             update_effects()
 
             if chg >= 1:
-                notify("%s is hurt for %i day%s." % (self.fullname, chg, plural(chg)), pic=self.portrait)
+                notify(_("%s is hurt for %i day%s.") % (self.fullname, chg, plural(chg)), pic=self.portrait)
 
             return chg
 
@@ -2576,7 +2611,7 @@ init -2 python:
 
             if self in farm.girls:
                 if farm.exhaust_girl(self, energy=self.energy+r):
-                    notify(self.fullname + " was so tired that she fell sick for %i day%s" % (self.hurt, plural(self.hurt)), pic=self.portrait, col="bad")
+                    notify(self.fullname + _(" was so tired that she fell sick for %i day%s") % (self.hurt, plural(self.hurt)), pic=self.portrait, col="bad")
 
             self.energy += r
 
@@ -2645,7 +2680,7 @@ init -2 python:
                     if context == "farm":
                         resting_text += "\n{color=[c_emerald]}She is now fully recovered and can go back to work or training.{/color}"
                     elif self.job:
-                        resting_text += "\n{color=[c_emerald]}She is now fully recovered and can go back to work as a " + self.job + ".{/color}"
+                        resting_text += "\n{color=[c_emerald]}She is now fully recovered and can go back to work as a " + __(self.job.capitalize()) + ".{/color}"
                     else:
                         resting_text += "\n{color=[c_emerald]}She is now fully recovered and went back to resting.{/color}"
 
@@ -2678,7 +2713,7 @@ init -2 python:
                 if context == "farm":
                     resting_text += "\n{color=[c_emerald]}She is now fully rested and can go back to her training.{/color}"
                 elif self.job:
-                    resting_text += "\n{color=[c_emerald]}She is now fully rested and can go back to work as a " + self.job + ".{/color}"
+                    resting_text += "\n{color=[c_emerald]}She is now fully rested and can go back to work as a " + __(self.job.capitalize()) + ".{/color}"
                 else:
                     resting_text += "\n{color=[c_emerald]}She is now fully rested and is waiting for a job assignment.{/color}"
 
@@ -2860,9 +2895,6 @@ init -2 python:
 
             return r
 
-
-        def add_effects(self, effects, apply_boost=False, spillover=False, expires = False):
-            return add_effects(self, effects, apply_boost=apply_boost, spillover=spillover, expires=expires)
 
         def remove_effects(self, effects):
             remove_effects(self, effects)
@@ -3169,7 +3201,7 @@ init -2 python:
                             self.refresh_sex_acts() # Checks if sex_acts can still be done
 
                         if not silent and r:
-                            notify(notify_prefix + stat_name_dict[s.name] + ": %s" % plus_text(r, color_scheme="stat") + notify_suffix, pic=self.portrait) # Experimental
+                            notify(notify_prefix + stat_name_dict[s.name] + _(" : %s") % plus_text(r, color_scheme="stat") + notify_suffix, pic=self.portrait) # Experimental
 
                         test_achievements(gstats_main + gstats_sex + ["ultimate"])
 
@@ -3190,7 +3222,7 @@ init -2 python:
                         test_achievements(gstats_main + gstats_sex + ["ultimate"])
 
                         if not silent and r:
-                            notify(notify_prefix + stat_name_dict[s.name] + ": %s" % plus_text(r, color_scheme="stat") + notify_suffix, pic=self.portrait) # Experimental
+                            notify(notify_prefix + stat_name_dict[s.name] + _(" : %s") % plus_text(r, color_scheme="stat") + notify_suffix, pic=self.portrait) # Experimental
 
                         return r
 
@@ -3285,7 +3317,7 @@ init -2 python:
             else:
                 self.xp += change
 
-            if change and not silent: notify("XP: %s" % plus_text(change, color_scheme="xp"), pic=self.portrait) # Experimental
+            if change and not silent: notify(_("XP: %s") % plus_text(change, color_scheme="xp"), pic=self.portrait) # Experimental
 
             return change
 
@@ -3328,7 +3360,7 @@ init -2 python:
             while self.ready_to_job_up(job):
                 self.job_up(job, announcement_delay=announcement_delay)
 
-            if change and not silent: notify(job.capitalize() + " JP: %s" % plus_text(change, color_scheme="jp"), pic=self.portrait) # Experimental
+            if change and not silent: notify(_("%s JP: %s") % (__(job.capitalize()), plus_text(change, color_scheme="jp")), pic=self.portrait) # Experimental
 
             return change
 
@@ -3637,7 +3669,7 @@ init -2 python:
 
             self.rep += chg
 
-            if not silent: notify("Reputation: %s" % plus_text(int(chg)), col="rep", pic=self.portrait)
+            if not silent: notify(_("Reputation: %s") % plus_text(int(chg)), col="rep", pic=self.portrait)
 
             return chg
 
@@ -4462,7 +4494,7 @@ init -2 python:
                 else: # Can no longer work as a whore
                     if self.job == "whore":
                         self.job = None
-                        notify("%s cannot work as a whore anymore." % self.fullname, pic=self.portrait)
+                        notify(_("%s cannot work as a whore anymore.") % self.fullname, pic=self.portrait)
 
                     # raise AssertionError("No sex act activated")
 
@@ -4711,9 +4743,9 @@ init -2 python:
                     mood_factors += str(up) + ": She isn't happy with her allowance.\n"
 
                 if fr > 0:
-                    mood_factors += "+" + str(round_best(fr)) + ": She has friends (%s).\n" % and_text([g.name for g in self.friends])
+                    mood_factors += "+" + str(round_best(fr)) + _(" : She has friends (%s).\n") % and_text([g.name for g in self.friends])
                 if rv < 0:
-                    mood_factors += str(round_best(rv)) + ": She has rivals (%s).\n" % and_text([g.name for g in self.rivals])
+                    mood_factors += str(round_best(rv)) + _(" : She has rivals (%s).\n") % and_text([g.name for g in self.rivals])
 
                 if roo > 4:
                     mood_factors += "+" + str(round_best(roo)) + ": She loves her accommodations.\n"
@@ -5103,32 +5135,32 @@ init -2 python:
 
                 # Background
 
-                background_des = self.name + " is a "
+                background_des = self.name + __(" is a ")
 
                 if self.free and self in MC.girls + farm.girls:
-                    background_des += "former free girl"
+                    background_des += __("former free girl")
                 elif self.free:
-                    background_des += "free girl"
+                    background_des += __("free girl")
                 else:
-                    background_des += "slave"
+                    background_des += __("slave")
 
                 if "origin" in self.notebook_unlocks:
-                    background_des += " from " + self.origin
+                    background_des += __(" from ") + self.origin
 
                 background_des += ". "
 
                 if self.flags["story"] < 10:
-                    background_des += "You do not know her story."
+                    background_des += __("You do not know her story.")
                 elif self.flags["story"] < 20:
-                    background_des += "You know a few things about her story."
+                    background_des += __("You know a few things about her story.")
                 elif self.flags["story"] < 50:
-                    background_des += "You know some things about her story."
+                    background_des += __("You know some things about her story.")
                 elif self.flags["story"] < 100:
-                    background_des += "She has told you her story, but you haven't done anything about it yet."
+                    background_des += __("She has told you her story, but you haven't done anything about it yet.")
                 elif self.flags["MC refused story"]:
-                    background_des += "You know about her story."
+                    background_des += __("You know about her story.")
                 else:
-                    background_des += "You know about her story, and did something about it."
+                    background_des += __("You know about her story, and did something about it.")
 
                 background_des += "\n\n"
 
@@ -5247,7 +5279,7 @@ init -2 python:
                 if taste_text:
                     des += taste_text
                 else:
-                    des += "You don't know anything about her tastes."
+                    des += __("You don't know anything about her tastes.")
 
             elif show == "sexual":
 
@@ -5303,7 +5335,7 @@ init -2 python:
                     des += "You do not know her sexual tastes very well."
 
                 if farm.knows["weakness"][self]:
-                    des+= "\nShe is vulnerable to farm %ss." % self.weakness
+                    des+= _("\nShe is vulnerable to farm %ss.") % self.weakness
 
             elif show == "recent":
 
@@ -5427,13 +5459,13 @@ init -2 python:
                     if feedback:
                         if _pos and _neg:
                             renpy.play(s_ahaa, "sound")
-                            renpy.say("", "You notice that " + self.name + " is feeling a mix of pleasure and discomfort during " + long_act_description[act] + ". It seems she has ambivalent feelings about it.")
+                            renpy.say("", __("You notice that %s is feeling a mix of pleasure and discomfort during %s. It seems she has ambivalent feelings about it.") % (self.name, __(long_act_description[act])))
                         elif _pos:
                             renpy.play(s_mmh, "sound")
-                            renpy.say("", "You notice that " + self.name + " seems to enjoy " + long_act_description[act] + ".")
+                            renpy.say("", __("You notice that %s seems to enjoy %s.") % (self.name, __(long_act_description[act])))
                         elif _neg:
                             renpy.play(s_scream, "sound")
-                            renpy.say("", "You notice that " + self.name + " seems disgusted by " + long_act_description[act] + ".")
+                            renpy.say("", __("You notice that %s seems disgusted by %s.") % (self.name, __(long_act_description[act])))
 
             return _pos, _neg
 
@@ -5883,345 +5915,5 @@ init -2 python:
 ##   Also handles packstates.                              ##################################################
 ##                                                         ##################################################
 
-default preferences.packstate_unrecognized = "Rename"
-
-init -2 python:
-    import datetime
-    import bisect
-
-
-    class GirlFilesDict(NoRollback):
-
-        def __init__(self):
-            self.__load_files()
-
-        def __load_files(self): # Goldo: Changed to use get_girl_path() to establish the root folder
-            start = datetime.datetime.now()
-            self.__pathset = set()
-            self.__pathtuple = list() # Start with changeable set
-            self.__path_dict = defaultdict(str)
-            self.__filetuple_dict = dict()
-            self.__pictuple_dict = dict()
-            self.__ini_dict = dict()
-            self.__packstates = list()
-            self.__timestamp = datetime.datetime.now()
-            self.__totalcount = 0
-
-            for file in renpy.list_files():
-                if file.startswith(GirlFilesDict.get_packstate_directory()): # Packstate folder
-                    self.__packstates.append(file.lower())
-                else: # Other folders
-                    girlpack_name, girlpack_path, file_name = get_girl_path(file) # get_girl_path only returns values if it is a confirmed girlpack path
-
-                    if girlpack_name: # get_girl_path may return None if the file is not path is hidden
-                        if girlpack_name in self.__pathset: # Controls for duplicate girlpack folders
-                            if girlpack_path != self.__path_dict[girlpack_name]:
-                                raise AssertionError("Two girl packs with the name '%s' were found:\n%s\n%s\nRename one of them to avoid conflicts." % (girlpack_name, self.__path_dict[girlpack_name], girlpack_path))
-                                renpy.say("", "Exiting Ren'Py...{w=1}{nw}")
-                                renpy.quit()
-
-                        else: # __pathset/tuple should be renamed something else since path isn't used anymore
-                            self.__pathset.add(girlpack_name)
-                            self.__pathtuple.append(girlpack_name)
-                            self.__path_dict[girlpack_name] = girlpack_path
-                            self.__filetuple_dict[girlpack_name] = list() # Start changeable
-                        self.__filetuple_dict[girlpack_name].append(file)
-                        if file.endswith("_BK.ini"): self.__ini_dict[girlpack_name] = file
-                        self.__totalcount += 1
-
-            # Switch to unchangeable, sorted tuple
-            self.__pathtuple.sort()
-            self.__pathtuple = tuple(self.__pathtuple)
-
-            for girlpath in self.__pathtuple:
-                self.__filetuple_dict[girlpath].sort() # Important! Binary search only works if sorted!
-                self.__filetuple_dict[girlpath] = tuple(self.__filetuple_dict[girlpath]) # Switch to unchangeable
-                self.__load_pics(girlpath)
-
-            self.__init_duration = datetime.datetime.now() - start
-
-        def __load_pics(self, girlpath): # Where girlpath is the root folder
-
-            # Resetting pictures
-
-            self.__pictuple_dict[girlpath] = list() # Start changeable
-
-            if girlpath not in self.__pathset : return
-
-            # Identifying image files
-
-            imgfiles = [img for img in self.__filetuple_dict[girlpath] if is_imgfile(img)]
-
-            # Creating pictures
-
-            for file in imgfiles:
-                pic = Picture(path=file)
-
-                self.__pictuple_dict[girlpath].append(pic)
-
-                # Tracing untagged pics for debugging
-                if pic.tags == []:
-                    untagged_pics.append(pic.path)
-
-            self.__pictuple_dict[girlpath] = tuple(self.__pictuple_dict[girlpath]) # Switch to unchangeable
-
-        @staticmethod
-        # Just to be safe, in case some changes need to be made.
-        # The first singleton approach did not work out, since it then got saved by Renpy.
-        # (Which made the game use old GirlFilesDicts without updated files & pics)
-        def __get():
-            #if GirlFilesDict.__singleton is None:
-            #    GirlFilesDict.__singleton = GirlFilesDict()
-            #return GirlFilesDict.__singleton
-            return globalFilesDict
-
-        @staticmethod
-        # The directory where the packstates are located in.
-        # You only have to change it here.
-        # Please make sure it ends with a /
-        def get_packstate_directory():
-            return "gpackstates/"
-
-        @staticmethod
-        # returns the duration of the init.
-        # mostly for debugging
-        # you can check this in the console with "GirlFilesDict.get_init_duration()"
-        def get_init_duration():
-            return GirlFilesDict.__get().__init_duration
-
-        @staticmethod
-        # returns the total number of files managed by the dictionary
-        # mostly for debugging
-        # you can check this in the console with "GirlFilesDict.get_totalcount()"
-        def get_totalcount():
-            return GirlFilesDict.__get().__totalcount
-
-        @staticmethod
-        # Returns the _BK.ini for a girlpack, or None if no such file exists
-        def get_ini(girlpath):
-            try:
-                return GirlFilesDict.__get().__ini_dict[girlpath]
-            except:
-                return None
-
-        @staticmethod
-        # Returns the paths of all available girls. Useful for end_of_week stuff.
-        def get_paths():
-            return GirlFilesDict.__get().__pathtuple
-
-        @staticmethod
-        def get_path_dict():
-            return GirlFilesDict.__get().__path_dict
-
-        @staticmethod
-        # Returns all files for a specific girl.
-        # To check if a file exists, use contains_file() instead, it uses a fast binary search.
-        def get_files(girlpath):
-            return GirlFilesDict.__get().__filetuple_dict[girlpath]
-
-        @staticmethod
-        # Looks if a file exists, using fast binary search
-        # (Roughly speaking, Binary Search is how you'd look for a name in a phonebook)
-        def contains_file(girlpath, file): # Goldo: Changed to use a file's complete path instead.
-            instance = GirlFilesDict.__get()
-            if girlpath not in instance.__filetuple_dict :
-                return False
-            else :
-                files = instance.__filetuple_dict[girlpath]
-                idx = bisect.bisect_left(files, file)
-                return idx != len(files) and files[idx] == file
-
-        @staticmethod
-        # Gets all pics for a specific girl.
-        # Initialized lazy at the first request
-        def get_pics(girlpath):
-            instance = GirlFilesDict.__get()
-            if not girlpath in instance.__pictuple_dict:
-                instance.__load_pics(girlpath)
-            return instance.__pictuple_dict[girlpath]
-
-        @staticmethod
-        # Gets a certain pic for a specific girl. Not using binary search yet.
-        # Initialized lazy at the first request
-        def get_pic_by_name(girlpath, pic_name):
-            pic_name = pic_name.lower()
-            instance = GirlFilesDict.__get()
-            if not girlpath in instance.__pictuple_dict:
-                instance.__load_pics(girlpath)
-            for pic in instance.__pictuple_dict[girlpath] :
-                if pic.filename == pic_name:
-                    return pic
-            return None
-
-        @staticmethod # Goldo #
-        # The GirlFilesDict timestamp is initialized at Renpy startup
-        # Used by AutoRepair to check if there could be new images
-        def reload_files():
-            GirlFilesDict.__get().__load_files()
-
-        @staticmethod
-        # The GirlFilesDict timestamp is initialized at Renpy startup
-        # Used by AutoRepair to check if there could be new images
-        def get_timestamp():
-            instance = GirlFilesDict.__get()
-            return instance.__timestamp
-
-        @staticmethod
-        # Imports packstates for all girls
-        # If simulate = True, only creates a logfile without any renames
-        def import_packstates(simulate = False):
-            all_results = list()
-            total_changes = 0
-
-            for girlpack_name in GirlFilesDict.__get().get_paths():
-                result, changes = GirlFilesDict.__import_tags(girlpack_name, simulate)
-                renpy.say("Checking", girlpack_name + "{fast}{nw}")
-                all_results.append(result)
-                total_changes += changes
-
-            with open(config.gamedir + "\\packstate_log.txt", "wt") as log_file :
-                log_file.write("\n".join(all_results))
-
-            if (total_changes > 0) :
-                if simulate :
-                    GirlFilesDict.__get().__load_files() # Revert tags
-                    renpy.say("", str(total_changes) + " file(s) would be renamed. See {a=call_in_new_context:invoke_packstate_log}{color=[c_magenta]}packstate_log.txt{/color}{/a} in the 'game' directory for details.")
-                else :
-                    renpy.say("", str(total_changes) + " file(s) were renamed. See {a=call_in_new_context:invoke_packstate_log}{color=[c_magenta]}packstate_log.txt{/color}{/a} for details.\nRestarting Renpy. This may take a few seconds.{fast}{nw}")
-                    renpy.utter_restart()
-            else :
-                renpy.say("", "No files were renamed. See {a=call_in_new_context:invoke_packstate_log}{color=[c_magenta]}packstate_log.txt{/color}{/a} for details.")
-
-        @staticmethod
-        # The workhorse of the packstates import
-        def __import_tags(girlpack_name, simulate):
-
-            packStateFilePath = GirlFilesDict.get_packstate_directory() + girlpack_name + ".txt" #?
-
-            if packStateFilePath.lower() not in GirlFilesDict.__get().__packstates :
-                return (girlpack_name + ": No packstate\n", 0)
-
-            counterChanges = 0
-            try :
-                with open(config.gamedir + "/" + packStateFilePath, "r") as packStateFile :
-                    import_result = ""
-                    counterImageStates = 0
-                    counterFileChecked = 0
-                    counterDuplicates = 0
-                    all_renames = list()
-
-
-                    groupedBySize = dict()
-                    # trash needs to come last, or the duplicates would alternate every time
-                    for skip_trash in (True, False) :
-                        for pic in GirlFilesDict.get_pics(girlpack_name) :
-                            if pic.is_trash == skip_trash : continue
-                            filesize = pic.get_filesize()
-                            if filesize in groupedBySize:
-                                groupedBySize[filesize].append(pic)
-                            else:
-                                groupedBySize[filesize] = [ pic ]
-                            pic.is_unrecognized = True
-
-                    filesize = packStateFile.readline()
-                    while (len(filesize) != 0) :
-                        filesize = int(filesize.strip())
-                        hash = packStateFile.readline().strip()
-                        tag_filename = packStateFile.readline().strip().lower()
-                        tagsSet = set(tag_filename.split())
-                        alreadyFound = False
-                        counterImageStates += 1
-                        if filesize in groupedBySize:
-                            for pic in groupedBySize[filesize] :
-                                duplicateCheck = (len(groupedBySize[filesize]) > 1)
-
-                                # use set to make the check indifferent to tag order
-                                picNeedsRenaming = (set(pic.filename[:pic.filename.find("(")].lower().split()) != tagsSet)
-                                if (duplicateCheck or picNeedsRenaming) :
-                                    # only get the hash if there are potential duplicates or if the image would need renaming
-                                    if (pic.get_hash() == hash) :
-                                        pic.is_unrecognized = False
-                                        counterFileChecked += 1
-                                        if alreadyFound :
-                                            counterDuplicates += 1
-
-                                        if picNeedsRenaming or alreadyFound :
-                                            pic.is_trash = alreadyFound or tag_filename.startswith("_trash")
-                                            pic.oldtags = [] # using oldtags, refresh them later
-                                            if alreadyFound : pic.oldtags.append("duplicate")
-                                            for tag in tag_filename.split() :
-                                                if tag != "_trash" : pic.oldtags.append(tag)
-
-                                            new_name = pic.get_new_name()
-                                            if pic.filename[:pic.filename.find("(")] != new_name[:new_name.find("(")]:
-                                                counterChanges += 1
-                                                if simulate :
-                                                    all_renames.append(pic.filename + " -> " + new_name)
-                                                else :
-                                                    old_filename = pic.filename
-                                                    pic.commit_changes()
-                                                    all_renames.append(old_filename + " -> " + pic.filename)
-                                            pic.make_tags_from_filename() # refresh tags
-
-                                        alreadyFound = True
-
-                                else :
-                                    # This part does not rely on the hash for performance reasons
-                                    # If both filesize and tags matched, it's reasonably safe to assume that it is the correct image.
-                                    # Otherwise, you'd have to calculate the hashes of ALL files EVERY TIME.
-                                    pic.is_unrecognized = False
-
-                        filesize = packStateFile.readline()
-
-                counterUnrecognized = 0
-                for pic in GirlFilesDict.get_pics(girlpack_name) :
-                    if pic.is_unrecognized :
-                        if pic.filename.lower().startswith("_untagged") :
-                            continue # no need for "_UNRECOGNIZED _UNTAGGED"
-
-                        counterFileChecked += 1
-                        new_name = pic.get_new_name()
-                        if pic.filename[:pic.filename.find("(")] != new_name[:new_name.find("(")]:
-                            counterChanges += 1
-                            if simulate :
-                                all_renames.append(pic.filename + " -> " + new_name)
-                            else :
-                                old_filename = pic.filename
-                                pic.commit_changes()
-                                all_renames.append(old_filename + " -> " + pic.filename)
-                            pic.make_tags_from_filename() # refresh tags
-                            counterUnrecognized += 1
-
-                import_result = girlpack_name + ": packstate contained " + str(counterImageStates) + " image states.\n"
-
-                if counterFileChecked > 0 :
-                    import_result += "  " + str(counterFileChecked) + " file(s) needed to be checked, "
-                    if counterChanges > 0:
-                        import_result += "and " + str(counterChanges) + " were renamed.\n"
-                    else :
-                        import_result += "but none had to be changed. Everything's up to date.\n"
-
-                    if counterDuplicates > 0 :
-                        import_result += "  Of those, " + str(counterDuplicates) + " were duplicates and marked for deletion (tagged as _TRASH).\n"
-                    if counterUnrecognized > 0 :
-                        import_result += "  " + str(counterUnrecognized) + " were unrecognized. Those images will be used depending on your game settings.\n"
-                    if counterChanges > 0 :
-                        import_result += "    " + "\n    ".join(all_renames)
-                else :
-                    import_result += "  No files were found that had to be changed. Everything's up to date.\n"
-
-            except IOError as e:
-                errno, strerror = e.args
-                import_result = "I/O error({0}): {1}".format(errno, strerror)
-                pass
-            except :
-                raise
-            return (import_result, counterChanges)
-
-    # Global Object Initialized in Python Init -> skips renpy save process
-    # So it will always have the newest files when you restart the game
-    globalFilesDict = GirlFilesDict()
-
-#</Chris12 PackState>
 
 #### END OF BK GIRLCLASS FILE ####

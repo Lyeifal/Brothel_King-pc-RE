@@ -1,0 +1,66 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Item",
+  "description": "Schema for Brothel King item definitions",
+  "type": "object",
+  "properties": {
+    "template_items": {
+      "type": "array",
+      "items": { "$ref": "#/definitions/item" }
+    },
+    "all_items": {
+      "type": "array",
+      "items": { "$ref": "#/definitions/item" }
+    }
+  },
+  "required": ["template_items", "all_items"],
+  "definitions": {
+    "item": {
+      "type": "object",
+      "properties": {
+        "name": { "type": "string" },
+        "target": { "type": "string" },
+        "type": {
+          "type": "string",
+          "enum": ["Weapon", "Dress", "Ring", "Necklace", "Accessory", "Toy", "Supplies", "Food", "Gift", "Flower", "Misc", "Story", "Passive"]
+        },
+        "pic": { "type": "string" },
+        "template": { "type": "boolean" },
+        "rank": { "type": "integer" },
+        "max_rank": { "type": "integer" },
+        "rarity": {},
+        "charges": { "type": ["integer", "null"] },
+        "price": { "type": "integer" },
+        "effects": {
+          "type": "array",
+          "items": { "$ref": "#/definitions/effect" }
+        },
+        "description": { "type": "string" },
+        "adjectives": { "type": ["string", "null"] },
+        "sound": { "type": ["string", "null"] },
+        "hidden_effect": { "type": "boolean" },
+        "pic_dir": { "type": ["string", "null"] },
+        "sellable": {},
+        "giveable": {},
+        "usage": { "type": "string" }
+      },
+      "required": ["name", "target", "type"]
+    },
+    "effect": {
+      "type": "object",
+      "properties": {
+        "type": { "type": "string" },
+        "target": { "type": "string" },
+        "value": {},
+        "chance": { "type": "number" },
+        "scales_with": { "type": ["string", "null"] },
+        "scope": { "type": ["string", "null"] },
+        "dice": { "type": "boolean" },
+        "change_cap": { "type": "boolean" },
+        "duration": { "type": "integer" },
+        "source": { "type": ["string", "null"] }
+      },
+      "required": ["type", "target"]
+    }
+  }
+}

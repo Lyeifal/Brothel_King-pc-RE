@@ -64,7 +64,7 @@ screen right_menu():
                 $ rows += 1
             if mod_menu:
                 $ rows += 1
-            if game.goals_reached() and (game.chapter != 1 or not story_mode or debug_mode):
+            if game.goals_reached() and (game.chapter != 1 or not game.is_story_mode() or debug_mode):
                 $ rows += 1
             ## EN: BK Evolution — add room for courtyard and auction buttons.
             ## ZH: BK Evolution — 为别院和拍卖按钮增加空间。
@@ -139,7 +139,7 @@ screen right_menu():
 
         # Goals Reached box
 
-        if not game.goals_reached() or (story_mode and not debug_mode and game.chapter == 1):
+        if not game.goals_reached() or (game.is_story_mode() and not debug_mode and game.chapter == 1):
             frame background Frame("resources/ui/scroll.webp", left=10, right=10, top=15, bottom=15) xalign 1.0 xpadding xres(20) ypadding yres(30) xmargin xres(10):
                 if screen_is_wide:
                     xsize 0.125
@@ -216,13 +216,13 @@ screen right_menu_girls():
     hbox xalign 1.0 spacing 20:
 
         if b:
-            $ ttip = "One of your girls is ready to {color=[c_yellow]}{b}level up{/b}{/color}."
+            $ ttip = __("One of your girls is ready to {color=[c_yellow]}{b}level up{/b}{/color}.")
             button style "rm_alert" action NullAction() tooltip ttip hovered (SetDict(seen_alerts, "girls", True)):
                 add ProportionalScale("resources/ui/status/levelup.webp", *res_tb(25)) xalign 1.0
                 if not seen_alerts["girls"] and persistent.home_screen_notifications == 0:
                     at blink
         elif r:
-            $ ttip = "One of your girls is ready to {color=[c_yellow]}{b}rank up.{/b}{/color}"
+            $ ttip = __("One of your girls is ready to {color=[c_yellow]}{b}rank up.{/b}{/color}")
             button style "rm_alert" action NullAction() tooltip ttip hovered (SetDict(seen_alerts, "girls", True)):
                 add ProportionalScale("resources/ui/status/rankup.webp", *res_tb(25)) xalign 1.0
                 if not seen_alerts["girls"] and persistent.home_screen_notifications == 0:
@@ -270,7 +270,7 @@ screen right_menu_farm():
     default girls_ready = [g.fullname for g in farm.girls if g.get_build_up() >= 100]
     hbox xalign 1.0 spacing 20:
         if farm.active and story_flags["farm shows"] and girls_ready and persistent.home_screen_notifications != 2:
-            button style "rm_alert" action NullAction() tooltip "%s %s ready for a {b}farm show{/b}." % (and_text(girls_ready), plural(len(girls_ready), "are", "is")) hovered (SetDict(seen_alerts, "farm", True)):
+            button style "rm_alert" action NullAction() tooltip __("%s %s ready for a {b}farm show{/b}.") % (and_text(girls_ready), plural(len(girls_ready), "are", "is")) hovered (SetDict(seen_alerts, "farm", True)):
                 add ProportionalScale("resources/characters/npc/gizel/portrait.webp", *res_tb(25)) xalign 1.0
                 if not seen_alerts["farm"] and persistent.home_screen_notifications == 0:
                     at blink
@@ -278,7 +278,7 @@ screen right_menu_farm():
             text ""
         textbutton _("{u}F{/u}arm") style_group "rm":
             action Return("farm")
-            tooltip "Visit the farm and train the girls there. Gizel currently holds {color=[c_hotpink]}{b}" + str(len(farm.girls)) + " girl" + plural(len(farm.girls)) + "{/b}{/color} and {color=[c_softpurple]}{b}" + str(farm.count_minions()) + " minion" + plural(farm.count_minions()) + "{/b}{/color} at the farm."
+            tooltip __("Visit the farm and train the girls there. Gizel currently holds {color=[c_hotpink]}{b}%s{/b}{/color} and {color=[c_softpurple]}{b}%s{/b}{/color} at the farm.") % (str(len(farm.girls)) + " girl" + plural(len(farm.girls)), str(farm.count_minions()) + " minion" + plural(farm.count_minions()))
 
 
 ################
@@ -298,7 +298,7 @@ screen right_menu_city():
 
         textbutton _("{u}V{/u}isit City") style_group "rm":
             action Return("districts")
-            tooltip "Visit the {b}city{/b} of Zan and explore its various locations."
+            tooltip __("Visit the {b}city{/b} of Zan and explore its various locations.")
 
 
 ################
@@ -397,7 +397,7 @@ screen right_menu_endday():
 
         textbutton _("{u}E{/u}nd Day") style_group "rm":
             action Return("end_day")
-            tooltip "Click here to {b}end the day{/b} and move on with the night's events."
+            tooltip __("Click here to {b}end the day{/b} and move on with the night's events.")
 
 ################
 ## Home - Right menu - Display Advance button
@@ -406,7 +406,7 @@ screen right_menu_endday():
 screen right_menu_advance():
 
     if game.goals_reached():
-        if game.chapter != 1 or not story_mode or debug_mode:
+        if game.chapter != 1 or not game.is_story_mode() or debug_mode:
             hbox xalign 1.0 spacing 20:
                 text ""
 
@@ -419,7 +419,7 @@ screen right_menu_advance():
                     if MC.has_gold(blist[game.chapter+1].cost):
                         action Return("advance")
                     else:
-                        action Function(renpy.notify, "You do not have enough gold to advance.")
+                        action Function(renpy.notify, __("You do not have enough gold to advance."))
 
                     tooltip __("Advance to the next game chapter, at the cost of %s gold.") % '{:,}'.format(blist[game.chapter+1].cost)
 

@@ -1,0 +1,11 @@
+{
+    "UI_elements_colors": [
+        ["lightblue", "#6699ff"],
+        ["orange", "#FF9900"],
+        ["darkorange", "#D67229"],
+        ["lightorange", "#FFCC66"],
+        ["lightcontrast", "#FFECBF"],
+        ["lightgrey", "#D3D3D3"],
+        ["prune", "#811453"]
+    ]
+}

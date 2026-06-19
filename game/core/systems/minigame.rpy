@@ -212,7 +212,11 @@ label ninja_game(ninja): # Where ninja is an NPC object
         suzume normal "All right! The stuck-up bitch is going down!" with vpunch
 
     python:
-        house_templates = ["house1", "house2", "house3", "house4", "house5", "house6", "house7", "house8", ]
+        _mt_json = DataLoader.load_minigame_templates()
+        if _mt_json:
+            house_templates = _mt_json["ninja_hunt_house_templates"]
+        else:
+            house_templates = ["house1", "house2", "house3", "house4", "house5", "house6", "house7", "house8"]
 
         special = False
 

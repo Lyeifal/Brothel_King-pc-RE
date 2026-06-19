@@ -41,7 +41,7 @@ init -10 python:
             """
             if obj_id in self._registry:
                 if config.developer:
-                    renpy.log("%s: overwriting '%s' (was %s) with %s" % (self._name, obj_id, self._registry[obj_id], obj))
+                    renpy.log(__("%s: overwriting '%s' (was %s) with %s") % (self._name, obj_id, self._registry[obj_id], obj))
             self._registry[obj_id] = obj
             self._categories[obj_id] = category
             if category is not None:
@@ -97,7 +97,7 @@ init -10 python:
             return len(self._registry)
 
         def __repr__(self):
-            return "<%s: %d entries>" % (self._name, len(self._registry))
+            return __("<%s: %d entries>") % (self._name, len(self._registry))
 
     # Helper: expose a dict-like view for backward compat
     class _RegistryProxy(object):

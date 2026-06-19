@@ -100,7 +100,7 @@ translate chinese_simplified jobgirl_beach_1_1b78ddc6:
 translate chinese_simplified jobgirl_beach_1_a577ad0e:
 
     # you "What?"
-    you "什么？"
+    you "什么?"
 
 # game/kite_jobgirl 2_beach.rpy:67
 translate chinese_simplified jobgirl_beach_1_7ba222e9:
@@ -1288,7 +1288,7 @@ translate chinese_simplified jobgirl_beach_4_71e66058:
 translate chinese_simplified jobgirl_beach_4_ec3a7cef:
 
     # you "And...?"
-    you "和...？"
+    you "和....吗？"
 
 # game/kite_jobgirl 2_beach.rpy:678
 translate chinese_simplified jobgirl_beach_4_6d77e6bd:
@@ -2027,4 +2027,10 @@ translate chinese_simplified jobgirl_beach_5_6ccd9795:
 
     # you "(See you soon, sweetie.)"
     you "（亲爱的，回头见。）"
+
+# TODO: Translation updated at 2026-06-12 05:03
+
+translate chinese_simplified strings:
+    old "Don't indulge her"
+    new "不要纵容她。"
 

@@ -1,0 +1,636 @@
+{
+  "menus": {
+    "chat": {
+      "kind": "submenu",
+      "items": [
+        "GENERAL TOPICS",
+        "PERSONAL TOPICS",
+        "STORY"
+      ]
+    },
+    "GENERAL TOPICS": {
+      "kind": "topics",
+      "items": [
+        {
+          "type": "chat",
+          "group": "chat",
+          "caption_i18n": "Life as a slave",
+          "label": "slave_chat_slave_life"
+        },
+        {
+          "type": "chat",
+          "group": "chat",
+          "caption_i18n": "Life in the brothel",
+          "label": "slave_chat_brothel",
+          "condition": "has_worked"
+        },
+        {
+          "type": "chat",
+          "group": "chat",
+          "caption_i18n": "Getting along with customers",
+          "label": "slave_chat_customers",
+          "condition": "has_worked"
+        },
+        {
+          "type": "chat",
+          "group": "chat",
+          "caption_i18n": "Getting along with other girls",
+          "label": "slave_chat_other_girls",
+          "condition": "other_girls"
+        }
+      ]
+    },
+    "PERSONAL TOPICS": {
+      "kind": "topics",
+      "items": [
+        {
+          "type": "chat",
+          "group": "chat",
+          "caption_i18n": "Her well-being",
+          "label": "slave_chat_well_being"
+        },
+        {
+          "type": "chat",
+          "group": "chat",
+          "caption_i18n": "Her feelings about you",
+          "label": "slave_chat_feelings"
+        },
+        {
+          "type": "chat",
+          "group": "chat",
+          "caption_i18n": "Her tastes",
+          "label": "slave_chat_tastes"
+        },
+        {
+          "type": "chat",
+          "group": "chat",
+          "caption_i18n": "Her origins",
+          "label": "slave_chat_origins"
+        }
+      ]
+    },
+    "STORY": {
+      "kind": "topics",
+      "items": [
+        {
+          "type": "chat",
+          "group": "story",
+          "caption_i18n": "Hear her story again",
+          "label": "slave_chat_story",
+          "AP_cost": 0,
+          "condition": "story"
+        }
+      ]
+    },
+    "train": {
+      "kind": "submenu",
+      "items": [
+        "SKILL TRAINING",
+        "SEXUAL TRAINING",
+        "SPECIAL TRAINING"
+      ]
+    },
+    "SKILL TRAINING": {
+      "kind": "topics",
+      "items": [
+        {
+          "type": "train",
+          "group": "train",
+          "caption_i18n": "Obedience training",
+          "label": "slave_train_obedience",
+          "act": "obedience"
+        },
+        {
+          "type": "train",
+          "group": "train",
+          "caption_i18n": "Constitution training",
+          "label": "slave_train_constitution",
+          "act": "constitution"
+        }
+      ]
+    },
+    "SEXUAL TRAINING": {
+      "kind": "topics",
+      "items": [
+        {
+          "type": "train",
+          "group": "train",
+          "caption_i18n": "Naked",
+          "label": "slave_train_sex_acts",
+          "act": "naked",
+          "advanced": true
+        },
+        {
+          "type": "train",
+          "group": "train",
+          "caption_i18n": "Service",
+          "label": "slave_train_sex_acts",
+          "act": "service",
+          "advanced": true
+        },
+        {
+          "type": "train",
+          "group": "train",
+          "caption_i18n": "Sex",
+          "label": "slave_train_sex_acts",
+          "act": "sex",
+          "advanced": true
+        },
+        {
+          "type": "train",
+          "group": "train",
+          "caption_i18n": "Anal",
+          "label": "slave_train_sex_acts",
+          "act": "anal",
+          "advanced": true
+        },
+        {
+          "type": "train",
+          "group": "train",
+          "caption_i18n": "Fetish",
+          "label": "slave_train_sex_acts",
+          "act": "fetish",
+          "advanced": true
+        },
+        {
+          "type": "train",
+          "group": "train",
+          "caption_i18n": "Bisexual",
+          "label": "slave_train_sex_acts",
+          "act": "bisexual",
+          "advanced": true
+        },
+        {
+          "type": "train",
+          "group": "train",
+          "caption_i18n": "Group",
+          "label": "slave_train_sex_acts",
+          "act": "group",
+          "advanced": true
+        }
+      ]
+    },
+    "SPECIAL TRAINING": {
+      "kind": "topics",
+      "items": [
+        {
+          "type": "train",
+          "group": "train",
+          "caption_i18n": "Free-form training",
+          "label": "slave_train_free_form",
+          "condition": "free-form"
+        },
+        {
+          "type": "train",
+          "group": "train",
+          "caption_i18n": "Remove negative fixation",
+          "label": "slave_remove_fixation",
+          "condition": "neg_fix"
+        }
+      ]
+    },
+    "magic": {
+      "kind": "submenu",
+      "items": [
+        "MAGIC SKILL TRAINING {image=img_gold}",
+        "MAGIC SEXUAL TRAINING {image=img_gold}",
+        "MAGIC SKILL TRAINING {image=img_MP}",
+        "MAGIC SEXUAL TRAINING {image=img_MP}",
+        "CHOOSE METHOD"
+      ]
+    },
+    "CHOOSE METHOD": {
+      "kind": "topics",
+      "items": [
+        {
+          "type": "magic",
+          "group": null,
+          "caption_i18n": "Current method",
+          "label": "slave_hypnotize_method",
+          "AP_cost": 0
+        },
+        {
+          "type": "magic",
+          "group": null,
+          "caption_i18n": "Spend",
+          "label": "slave_hypnotize_driver",
+          "AP_cost": 0
+        }
+      ]
+    },
+    "MAGIC SKILL TRAINING {image=img_gold}": {
+      "kind": "topics",
+      "items": [
+        {
+          "type": "magic",
+          "group": "train",
+          "caption_i18n": "Obedience training",
+          "label": "slave_magic",
+          "gold_cost": 20,
+          "act": "obedience",
+          "condition": "gold_driver"
+        },
+        {
+          "type": "magic",
+          "group": "train",
+          "caption_i18n": "Sensitivity training",
+          "label": "slave_magic",
+          "gold_cost": 20,
+          "act": "sensitivity",
+          "condition": "gold_driver"
+        },
+        {
+          "type": "magic",
+          "group": "train",
+          "caption_i18n": "Libido training",
+          "label": "slave_magic",
+          "gold_cost": 20,
+          "act": "libido",
+          "condition": "gold_driver"
+        }
+      ]
+    },
+    "MAGIC SEXUAL TRAINING {image=img_gold}": {
+      "kind": "topics",
+      "items": [
+        {
+          "type": "magic",
+          "group": "train",
+          "caption_i18n": "Naked",
+          "label": "slave_magic",
+          "gold_cost": 20,
+          "act": "naked",
+          "condition": "gold_driver",
+          "advanced": true
+        },
+        {
+          "type": "magic",
+          "group": "train",
+          "caption_i18n": "Service",
+          "label": "slave_magic",
+          "gold_cost": 40,
+          "act": "service",
+          "condition": "gold_driver",
+          "advanced": true
+        },
+        {
+          "type": "magic",
+          "group": "train",
+          "caption_i18n": "Sex",
+          "label": "slave_magic",
+          "gold_cost": 50,
+          "act": "sex",
+          "condition": "gold_driver",
+          "advanced": true
+        },
+        {
+          "type": "magic",
+          "group": "train",
+          "caption_i18n": "Anal",
+          "label": "slave_magic",
+          "gold_cost": 60,
+          "act": "anal",
+          "condition": "gold_driver",
+          "advanced": true
+        },
+        {
+          "type": "magic",
+          "group": "train",
+          "caption_i18n": "Fetish",
+          "label": "slave_magic",
+          "gold_cost": 70,
+          "act": "fetish",
+          "condition": "gold_driver",
+          "advanced": true
+        },
+        {
+          "type": "magic",
+          "group": "train",
+          "caption_i18n": "Bisexual",
+          "label": "slave_magic",
+          "gold_cost": 80,
+          "act": "bisexual",
+          "condition": "gold_driver",
+          "advanced": true
+        },
+        {
+          "type": "magic",
+          "group": "train",
+          "caption_i18n": "Group",
+          "label": "slave_magic",
+          "gold_cost": 100,
+          "act": "group",
+          "condition": "gold_driver",
+          "advanced": true
+        }
+      ]
+    },
+    "MAGIC SKILL TRAINING {image=img_MP}": {
+      "kind": "topics",
+      "items": [
+        {
+          "type": "magic",
+          "group": "train",
+          "caption_i18n": "Obedience training",
+          "label": "slave_magic",
+          "MP_cost": 1,
+          "act": "obedience",
+          "condition": "mana_driver"
+        },
+        {
+          "type": "magic",
+          "group": "train",
+          "caption_i18n": "Sensitivity training",
+          "label": "slave_magic",
+          "MP_cost": 1,
+          "act": "sensitivity",
+          "condition": "mana_driver"
+        },
+        {
+          "type": "magic",
+          "group": "train",
+          "caption_i18n": "Libido training",
+          "label": "slave_magic",
+          "MP_cost": 1,
+          "act": "libido",
+          "condition": "mana_driver"
+        }
+      ]
+    },
+    "MAGIC SEXUAL TRAINING {image=img_MP}": {
+      "kind": "topics",
+      "items": [
+        {
+          "type": "magic",
+          "group": "train",
+          "caption_i18n": "Naked",
+          "label": "slave_magic",
+          "MP_cost": 1,
+          "act": "naked",
+          "condition": "mana_driver",
+          "advanced": true
+        },
+        {
+          "type": "magic",
+          "group": "train",
+          "caption_i18n": "Service",
+          "label": "slave_magic",
+          "MP_cost": 2,
+          "act": "service",
+          "condition": "mana_driver",
+          "advanced": true
+        },
+        {
+          "type": "magic",
+          "group": "train",
+          "caption_i18n": "Sex",
+          "label": "slave_magic",
+          "MP_cost": 3,
+          "act": "sex",
+          "condition": "mana_driver",
+          "advanced": true
+        },
+        {
+          "type": "magic",
+          "group": "train",
+          "caption_i18n": "Anal",
+          "label": "slave_magic",
+          "MP_cost": 3,
+          "act": "anal",
+          "condition": "mana_driver",
+          "advanced": true
+        },
+        {
+          "type": "magic",
+          "group": "train",
+          "caption_i18n": "Fetish",
+          "label": "slave_magic",
+          "MP_cost": 4,
+          "act": "fetish",
+          "condition": "mana_driver",
+          "advanced": true
+        },
+        {
+          "type": "magic",
+          "group": "train",
+          "caption_i18n": "Bisexual",
+          "label": "slave_magic",
+          "MP_cost": 4,
+          "act": "bisexual",
+          "condition": "mana_driver",
+          "advanced": true
+        },
+        {
+          "type": "magic",
+          "group": "train",
+          "caption_i18n": "Group",
+          "label": "slave_magic",
+          "MP_cost": 5,
+          "act": "group",
+          "condition": "mana_driver",
+          "advanced": true
+        }
+      ]
+    },
+    "react": {
+      "kind": "submenu",
+      "items": [
+        "ENCOURAGE",
+        "DISCIPLINE"
+      ]
+    },
+    "ENCOURAGE": {
+      "kind": "topics",
+      "items": [
+        {
+          "type": "react",
+          "group": "reward",
+          "caption_i18n": "Praise her",
+          "label": "slave_reward_praise"
+        },
+        {
+          "type": "react",
+          "group": "reward",
+          "caption_i18n": "Give her gold",
+          "label": "slave_reward_gold"
+        },
+        {
+          "type": "react",
+          "group": "reward",
+          "caption_i18n": "Give her a gift",
+          "label": "slave_reward_gift"
+        },
+        {
+          "type": "react",
+          "group": "reward",
+          "caption_i18n": "Pet her",
+          "label": "slave_reward_pet"
+        },
+        {
+          "type": "react",
+          "group": "reward",
+          "caption_i18n": "Give her a day off",
+          "label": "slave_reward_day"
+        },
+        {
+          "type": "react",
+          "group": "reward",
+          "caption_i18n": "Have sex with her",
+          "label": "slave_reward_sex"
+        }
+      ]
+    },
+    "DISCIPLINE": {
+      "kind": "topics",
+      "items": [
+        {
+          "type": "react",
+          "group": "discipline",
+          "caption_i18n": "Scold her",
+          "label": "slave_punish_scold"
+        },
+        {
+          "type": "react",
+          "group": "discipline",
+          "caption_i18n": "Remove upkeep",
+          "label": "slave_punish_upkeep"
+        },
+        {
+          "type": "react",
+          "group": "discipline",
+          "caption_i18n": "Force her to go naked",
+          "label": "slave_punish_naked",
+          "condition": "dressed"
+        },
+        {
+          "type": "react",
+          "group": "discipline",
+          "caption_i18n": "Beat her",
+          "label": "slave_punish_beat"
+        },
+        {
+          "type": "react",
+          "group": "discipline",
+          "caption_i18n": "Rape her",
+          "label": "slave_punish_rape"
+        },
+        {
+          "type": "react",
+          "group": "discipline",
+          "caption_i18n": "Send her to the farm",
+          "label": "slave_punish_farm",
+          "condition": "farm"
+        }
+      ]
+    },
+    "misc": {
+      "kind": "submenu",
+      "items": [
+        "CLOTHING",
+        "CUSTOMERS",
+        "MASTER BEDROOM",
+        "DEBUG"
+      ]
+    },
+    "CLOTHING": {
+      "kind": "topics",
+      "items": [
+        {
+          "type": "misc",
+          "group": null,
+          "caption_i18n": "Tell her to go naked",
+          "label": "slave_clothing_naked",
+          "AP_cost": 0,
+          "condition": "can_undress"
+        },
+        {
+          "type": "misc",
+          "group": null,
+          "caption_i18n": "Tell her to get dressed",
+          "label": "slave_clothing_dressed",
+          "AP_cost": 0,
+          "condition": "naked"
+        }
+      ]
+    },
+    "CUSTOMERS": {
+      "kind": "topics",
+      "items": [
+        {
+          "type": "misc",
+          "group": null,
+          "caption_i18n": "Forbid sex acts during job",
+          "label": "slave_forbid_cust_events",
+          "AP_cost": 0,
+          "condition": "!forbid customer sex"
+        },
+        {
+          "type": "misc",
+          "group": null,
+          "caption_i18n": "Allow sex acts during job",
+          "label": "slave_allow_cust_events",
+          "AP_cost": 0,
+          "condition": "forbid customer sex"
+        }
+      ]
+    },
+    "MASTER BEDROOM": {
+      "kind": "topics",
+      "items": [
+        {
+          "type": "misc",
+          "group": null,
+          "caption_i18n": "Send her to your bedroom",
+          "label": "slave_master_bedroom_add",
+          "AP_cost": 0,
+          "condition": "master_bedroom_add"
+        },
+        {
+          "type": "misc",
+          "group": null,
+          "caption_i18n": "Remove her from your bedroom",
+          "label": "slave_master_bedroom_remove",
+          "AP_cost": 0,
+          "condition": "master_bedroom_remove"
+        }
+      ]
+    },
+    "DEBUG": {
+      "kind": "topics",
+      "items": [
+        {
+          "type": "misc",
+          "group": null,
+          "caption_i18n": "Cheat",
+          "label": "interaction_cheat_menu",
+          "AP_cost": 0,
+          "condition": "debug_mode"
+        },
+        {
+          "type": "misc",
+          "group": null,
+          "caption_i18n": "Reset girl interactions",
+          "label": "interaction_cheat_girl",
+          "AP_cost": 0,
+          "condition": "debug_mode"
+        },
+        {
+          "type": "misc",
+          "group": null,
+          "caption_i18n": "Reset MC interactions",
+          "label": "interaction_cheat_MC",
+          "AP_cost": 0,
+          "condition": "debug_mode"
+        },
+        {
+          "type": "misc",
+          "group": null,
+          "caption_i18n": "Reveal Personality",
+          "label": "interaction_cheat_personality",
+          "AP_cost": 0,
+          "condition": "debug_mode"
+        }
+      ]
+    }
+  }
+}

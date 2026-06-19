@@ -1,0 +1,62 @@
+{
+  "fight": {
+    "stat": "strength",
+    "opposed": true,
+    "name": "Fight",
+    "name_i18n": "Fight"
+  },
+  "force": {
+    "stat": "strength",
+    "opposed": false,
+    "name": "Force",
+    "name_i18n": "Force"
+  },
+  "stamina": {
+    "stat": "strength",
+    "opposed": false,
+    "name": "Stamina",
+    "name_i18n": "Stamina"
+  },
+  "cast": {
+    "stat": "spirit",
+    "opposed": false,
+    "name": "Cast Spell",
+    "name_i18n": "Cast Spell"
+  },
+  "control": {
+    "stat": "spirit",
+    "opposed": true,
+    "name": "Control",
+    "name_i18n": "Control"
+  },
+  "detect": {
+    "stat": "spirit",
+    "opposed": false,
+    "name": "Detect Magic",
+    "name_i18n": "Detect Magic"
+  },
+  "rally": {
+    "stat": "charisma",
+    "opposed": false,
+    "name": "Rally",
+    "name_i18n": "Rally"
+  },
+  "charm": {
+    "stat": "charisma",
+    "opposed": false,
+    "name": "Charm",
+    "name_i18n": "Charm"
+  },
+  "bluff": {
+    "stat": "charisma",
+    "opposed": true,
+    "name": "Bluff",
+    "name_i18n": "Bluff"
+  },
+  "speed": {
+    "stat": "speed",
+    "opposed": false,
+    "name": "Speed",
+    "name_i18n": "Speed"
+  }
+}

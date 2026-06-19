@@ -25,9 +25,9 @@ define patch_version = "v260527"
 
 init python:
     try:
-        config.version = "%s %s" % (BK_DIST, patch_version)
+        config.version = __("%s %s") % (BK_DIST, patch_version)
     except: # Covers exceptions for older versions that didn't have the dist number
-        config.version = "0.2 %s" % patch_version
+        config.version = __("0.2 %s") % patch_version
 
 ## Determines if the title given above is shown on the main menu screen. Set
 ## this to False to hide the title.

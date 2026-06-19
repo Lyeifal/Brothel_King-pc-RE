@@ -1987,7 +1987,7 @@ label farm_meet_gizel2():
 
     gizel surprise "Uh???"
 
-    $ gizel_name = "Gizel"
+    $ gizel_name = __("Gizel")
 
     gizel shy "Gizel is my name, sir, but I am no witch... I'm just a teenage beggar, come to Zan to make a few denars..."
 
@@ -3203,7 +3203,7 @@ label farm_meet_goldie():
 
     man "Goldie..."
 
-    $ goldie_name = "Goldie"
+    $ goldie_name = __("Goldie")
 
     man "You're always so brave. I wish I was, too..."
 
@@ -4018,7 +4018,7 @@ label farm_activate_goldie():
 
     scene black with fade
 
-    $ farmland.action = True
+    $ unlock("farmland")
     $ unlocked_shops.append(NPC_goldie)
 
     "You may now buy {b}beasts{/b} at the farm."
@@ -4530,7 +4530,7 @@ label farm_meet_gina():
 
     gina "Deal! My name is Gina. Come by here anytime, and I'll fix some of those machines for you. So you can, uh, enjoy yourself."
 
-    $ gina_name = "Gina"
+    $ gina_name = __("Gina")
 
     you "I'm [MC.name]. And, uh, it's not for me, it's for a friend..."
 
@@ -4956,7 +4956,7 @@ label farm_meet_stella():
 
     stella "My name is Stella. Come visit me any time if you want to buy stallions. I'll have new arrivals every week."
 
-    $ stella_name = "Stella"
+    $ stella_name = __("Stella")
 
     scene black with fade
 
@@ -5448,7 +5448,7 @@ label stella_invitation():
 
     play sound s_dress
 
-    call screen letter(header = "Burn after reading", message = __("The merchandise is brought to the guild quarter on the first Tuesday of every month. Look for a private club called 'Mania', and show them the amulet.\n\nDon't expect any more intel from me, this is getting too dangerous. My cover is nearly blown, I'm out."), signature = "DT")
+    call screen letter(header = _("Burn after reading"), message = __("The merchandise is brought to the guild quarter on the first Tuesday of every month. Look for a private club called 'Mania', and show them the amulet.\n\nDon't expect any more intel from me, this is getting too dangerous. My cover is nearly blown, I'm out."), signature = "DT")
 
     you "How mysterious... Merchandise? A private club? A cheesy charm? Who wrote this..."
 
@@ -6922,7 +6922,7 @@ label farm_meet_willow():
 
     willow "Come here, sweety. Willow loves you... Willow is going to find you a good home."
 
-    $ willow_name = "Willow"
+    $ willow_name = __("Willow")
 
     play sound s_fizzle
 
@@ -10557,7 +10557,7 @@ label satella_letter(): # Occurs some time after Chapter 1 is complete. Then occ
 
         play sound s_dress
 
-        call screen letter(header = "Urgent invitation", message = __("Dear ") + MC.name + ",\n\nIt's been a while since you last visited me. I'm disappointed. After all, you and I are best friends, aren't we?\nDon't {b}disappoint{/b} me. That makes me angry.\nWhen I'm angry, I break things. And people.\nPlease visit me soon, I have, uh, something urgent to tell you.\n\nCome! It will be fun!", signature = "Night Mistress Satella {font=[style.default.font]}{size=-18}[emo_heart]")
+        call screen letter(header = _("Urgent invitation"), message = __("Dear ") + MC.name + ",\n\nIt's been a while since you last visited me. I'm disappointed. After all, you and I are best friends, aren't we?\nDon't {b}disappoint{/b} me. That makes me angry.\nWhen I'm angry, I break things. And people.\nPlease visit me soon, I have, uh, something urgent to tell you.\n\nCome! It will be fun!", signature = "Night Mistress Satella {font=[style.default.font]}{size=-18}[emo_heart]")
 
         you "Oh... Satella is summoning me to Shalia's temple... It must be important."
 
@@ -10586,7 +10586,7 @@ label satella_letter(): # Occurs some time after Chapter 1 is complete. Then occ
 
         play sound s_dress
 
-        call screen letter(header = "Urgent invitation", message = __("Dear ") + MC.name + ",\n\nI have to see you urgently. In fact, you should have been here yesterday.\nWhere WERE you yesterday???\nDon't be a bad friend. Bad friends die young.\nCome visit me.", signature = "Night Mistress Satella {font=[style.default.font]}{size=-18}[emo_heart]")
+        call screen letter(header = _("Urgent invitation"), message = __("Dear ") + MC.name + ",\n\nI have to see you urgently. In fact, you should have been here yesterday.\nWhere WERE you yesterday???\nDon't be a bad friend. Bad friends die young.\nCome visit me.", signature = "Night Mistress Satella {font=[style.default.font]}{size=-18}[emo_heart]")
 
         you "I've got a bad feeling about this."
 
@@ -11361,11 +11361,11 @@ label satella_game(game_type="the guessing game"):
                                     r = int(r)
 
                                     if r < 2 or r > 12:
-                                        renpy.say("", "Please choose a number between 2 and 12.")
+                                        renpy.say("", __("Please choose a number between 2 and 12."))
                                         renpy.jump('satella_game_guess_loop')
 
                                 except:
-                                    renpy.say("", "Please choose a number between 2 and 12.")
+                                    renpy.say("", __("Please choose a number between 2 and 12."))
                                     renpy.jump("satella_game_guess_loop")
 
                             if d1+d2 > r:
@@ -11387,11 +11387,11 @@ label satella_game(game_type="the guessing game"):
                                     r = int(r)
 
                                     if r < 2 or r > 12:
-                                        renpy.say("", "Please choose a number between 2 and 12.")
+                                        renpy.say("", __("Please choose a number between 2 and 12."))
                                         renpy.jump("satella_game_guess_loop")
 
                                 except:
-                                    renpy.say("", "Please choose a number between 2 and 12.")
+                                    renpy.say("", __("Please choose a number between 2 and 12."))
                                     renpy.jump("satella_game_guess_loop")
 
                             if d1+d2 < r:
@@ -11461,11 +11461,11 @@ label satella_game(game_type="the guessing game"):
                         r = int(r)
 
                         if r < 2 or r > 12:
-                            renpy.say("", "Please choose a number between 2 and 12.")
+                            renpy.say("", __("Please choose a number between 2 and 12."))
                             r = 0
 
                     except:
-                        renpy.say("", "Please choose a number between 2 and 12.")
+                        renpy.say("", __("Please choose a number between 2 and 12."))
                         r = 0
 
             if r == (d1 + d2):
@@ -12314,7 +12314,7 @@ label shalia1(): # Happens in the morning after meeting Satella in Chapter 1. Al
 
     show shalia5 with dissolve
 
-    $ shalia_name = "Strange woman"
+    $ shalia_name = _("Strange woman")
 
     shalia "Welcome, my child."
 
@@ -12344,7 +12344,7 @@ label shalia1(): # Happens in the morning after meeting Satella in Chapter 1. Al
 
     you "Shalia!" with vpunch
 
-    $ shalia_name = "Shalia"
+    $ shalia_name = __("Shalia")
 
     "She is the Goddess herself. You are awestruck. You try to bow or take a knee, only to fail embarrassingly, as you are just a disembodied spirit floating in space."
 
@@ -14146,7 +14146,7 @@ label no_money():
 
         you "*gulp*"
 
-        $ banker_name = "Banker"
+        $ banker_name = _("Banker")
 
         banker "Let me cut to the chase. I hear you are in a dire financial situation right now."
 
@@ -14309,7 +14309,14 @@ label no_money():
 
         you "Well, uh... I'm not too good with maths... How much is that?"
 
-        $ loandict = {1 : Loan(250, 0.4, 10), 2 : Loan(500, 0.4, 10), 3 : Loan(1000, 0.4, 14), 4 : Loan(2500, 0.4, 14), 5 : Loan(5000, 0.4, 20), 6 : Loan(10000, 0.4, 20), 7 : Loan(25000, 0.4, 25),}
+        ## EN: Load loan parameters from JSON (BK Evolution), fallback to hardcoded.
+        ## ZH: 从 JSON 加载贷款参数（BK Evolution），否则使用硬编码。
+        python:
+            _loan_json = DataLoader.load_loans()
+            if _loan_json:
+                loandict = {int(k): Loan(v["amount"], v["interest"], v["duration"]) for k, v in _loan_json["loandict"].items()}
+            else:
+                loandict = {1: Loan(250, 0.4, 10), 2: Loan(500, 0.4, 10), 3: Loan(1000, 0.4, 14), 4: Loan(2500, 0.4, 14), 5: Loan(5000, 0.4, 20), 6: Loan(10000, 0.4, 20), 7: Loan(25000, 0.4, 25)}
 
         $ MC.take_loan(loandict[game.chapter])
 
@@ -14426,7 +14433,7 @@ label visit_bank():
     if not story_flags["bank visited"]:
 
         $ story_flags["bank visited"] = True
-        $ banker_name = "Banker"
+        $ banker_name = _("Banker")
 
 
         banker "Welcome to TJB. As a partner, I am delighted to welcome you to the finest banking establishment in the city."
@@ -14606,7 +14613,7 @@ label visit_bank():
 
             banker "So, what do you say?"
 
-            if renpy.call_screen("yes_no", "Do you want to take the ultimate loan, the 'TJB special'? All your money will be taken away, and you must make 100 000 gold back in 7 days, or lose everything."):
+            if renpy.call_screen("yes_no", __("Do you want to take the ultimate loan, the 'TJB special'? All your money will be taken away, and you must make 100 000 gold back in 7 days, or lose everything.")):
                 you "I'm in. And I will be {i}in{/i}, if you catch my drift."
 
                 "The banker throws her arms around you with excitement."
@@ -14635,7 +14642,7 @@ label visit_bank():
 
 
         else:
-            if renpy.call_screen("yes_no", "Are you sure you want to take a loan for " + str(r.amount) + " gold? (daily cost: " + str(r.daily_cost) + " gold)"):
+            if renpy.call_screen("yes_no", __("Are you sure you want to take a loan for ") + str(r.amount) + " gold? (daily cost: " + str(r.daily_cost) + " gold)"):
                 $ MC.take_loan(r)
                 play sound s_gold
 
@@ -14799,7 +14806,7 @@ label loan_repaid():
                 banker "Well, you know where to find me... *purr*"
 
     else:
-        $ renpy.say(banker, "That makes it " + str_int(NPC_banker.love // 5) + " points. Only " + str_int(5 - NPC_banker.love // 5) + " more to go!")
+        $ renpy.say(banker, __("That makes it %s points. Only %s more to go!") % (str_int(NPC_banker.love // 5), str_int(5 - NPC_banker.love // 5)))
 
     hide banker with dissolve
 
@@ -15077,7 +15084,7 @@ label game_over(antagonist):
 
     play music m_theme
 
-    $ title = Text(("Brothel King"), size=80, yalign=0.4, xpos=0.5, drop_shadow=(3,3), font="resources/fonts/MATURASC.ttf")
+    $ title = Text(_("Brothel King"), size=80, yalign=0.4, xpos=0.5, drop_shadow=(3,3), font="resources/fonts/MATURASC.ttf")
 
     show expression title #Note: Find a way to make the zoom slower and the title cooler
     with zoomin
@@ -15418,7 +15425,7 @@ label meet_carpenter():
 
     carpenter "I'm Iulia, by the way... Who are ya?"
 
-    $ carpenter_name = "Iulia"
+    $ carpenter_name = __("Iulia")
 
     "She eyes you a bit suspiciously."
 
@@ -15702,7 +15709,7 @@ label wagon_first_visit():
 
 
 label hire_carpenter():
-    $ carpenter_name = "Iulia"
+    $ carpenter_name = __("Iulia")
 
     scene black with fade
     show bg wagon at top with dissolve
@@ -17167,7 +17174,7 @@ label resource_exchange_menu():
 
             you "I'll... I'll just call you Bast."
 
-            $ bast_name = "Bast"
+            $ bast_name = __("Bast")
 
             bast "Sure, whatever."
 
@@ -17264,7 +17271,7 @@ label resource_exchange_menu():
             you "I see..."
 
             if MC.has_resource("wood", 5) and MC.has_resource("leather", 5) and MC.has_resource("dye", 5):
-                if renpy.call_screen("yes_no", "Do you want to get a basic builder license for 5 wood, 5 leather and 5 dye?"):
+                if renpy.call_screen("yes_no", __("Do you want to get a basic builder license for 5 wood, 5 leather and 5 dye?")):
                     $ MC.resources["wood"] -= 5
                     $ MC.resources["leather"] -= 5
                     $ MC.resources["dye"] -= 5
@@ -17286,7 +17293,7 @@ label resource_exchange_menu():
             hide bast with dissolve
             scene black with fade
 
-            $ bast_name = "Bast"
+            $ bast_name = __("Bast")
 
             return
 
@@ -17329,7 +17336,7 @@ label new_builder_license():
                 bast "The cost is 5 blocks of marble, 5 rolls of silk, and 5 chunks of ore."
 
                 if MC.has_resource("marble", 5) and MC.has_resource("silk", 5) and MC.has_resource("ore", 5):
-                    if renpy.call_screen("yes_no", "Do you want to get an advanced builder license for 5 marble, 5 silk and 5 ore?"):
+                    if renpy.call_screen("yes_no", __("Do you want to get an advanced builder license for 5 marble, 5 silk and 5 ore?")):
                         $ MC.resources["marble"] -= 5
                         $ MC.resources["silk"] -= 5
                         $ MC.resources["ore"] -= 5
@@ -17352,7 +17359,7 @@ label new_builder_license():
                 bast "Yep. But diamond traders make the most money. Consider this an investment."
 
                 if MC.has_resource("diamond", 2):
-                    if renpy.call_screen("yes_no", "Do you want to get a master builder license for 2 diamonds?"):
+                    if renpy.call_screen("yes_no", __("Do you want to get a master builder license for 2 diamonds?")):
                         $ MC.resources["diamond"] -= 2
                         $ story_flags["builder license"] = 5
 
@@ -17372,7 +17379,7 @@ label new_builder_license():
                 bast "The cost is 5 blocks of marble, 5 rolls of silk, and 5 chunks of ore."
 
                 if MC.has_resource("marble", 5) and MC.has_resource("silk", 5) and MC.has_resource("ore", 5):
-                    if renpy.call_screen("yes_no", "Do you want to get an advanced builder license for 5 marble, 5 silk and 5 ore?"):
+                    if renpy.call_screen("yes_no", __("Do you want to get an advanced builder license for 5 marble, 5 silk and 5 ore?")):
                         $ MC.resources["marble"] -= 5
                         $ MC.resources["silk"] -= 5
                         $ MC.resources["ore"] -= 5
@@ -17389,7 +17396,7 @@ label new_builder_license():
                 bast "It will cost you 2 diamonds. I don't wanna know how you get them..."
 
                 if MC.has_resource("diamond", 2):
-                    if renpy.call_screen("yes_no", "Do you want to get a master builder license for 2 diamonds?"):
+                    if renpy.call_screen("yes_no", __("Do you want to get a master builder license for 2 diamonds?")):
                         $ MC.resources["diamond"] -= 2
                         $ story_flags["builder license"] = 5
 
@@ -19528,8 +19535,8 @@ label meet_twins():
 
     today "I'm Today! Pleased to meet you. My sister here is Yesterday."
 
-    $ today_name = "Today"
-    $ yesterday_name = "Yesterday"
+    $ today_name = _("Today")
+    $ yesterday_name = _("Yesterday")
 
     yesterday "Hi."
 
@@ -20475,7 +20482,7 @@ label chaos(girl): # Called upon unlocking the 'Chaos' evil power (girl is the c
 
     chaos "You dare question the will of your god, the mighty CHAOS?" with vpunch
 
-    $ chaos_name = "Chaos"
+    $ chaos_name = _("Chaos")
 
     if MC.god:
         you "I follow [MC.god], you idiot. And last time I checked, {i}I{/i} was the one who summoned you in the first place."

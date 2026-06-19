@@ -1,0 +1,22 @@
+{
+  "attract_pop_dict_i18n": {
+    "1": "A few ",
+    "2": "Some  ",
+    "3": "Many  ",
+    "4": "A lot ",
+    "5": "Loads "
+  },
+  "workshift_dict_i18n": {
+    "0": "Rest",
+    "50": "Half Shift",
+    "100": "Full Shift"
+  },
+  "special_quest_description_i18n": {
+    "Cheap": "This class is cheap. Enroll now and benefit from better prices!",
+    "Masterclass": "This class is taught by a master. Stats will increase faster than normal.",
+    "High reward": "The rewards for this quest are more important than usual.",
+    "Notorious": "This quest will bring extra reputation when completed.",
+    "Story": "Complete this quest to advance the story.",
+    "story": "Complete this quest to advance the story."
+  }
+}

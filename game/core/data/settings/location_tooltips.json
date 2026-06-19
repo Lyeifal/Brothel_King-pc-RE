@@ -1,0 +1,32 @@
+{
+    "_description": "Location tooltip mappings and Papa Freak location aliases. See BK_EVOLUTION_DATA_MIGRATION.md.",
+    "location_tb": {
+        "visit_willow": "tb willow",
+        "visit_goldie": "tb goldie",
+        "visit_watchtower": "tb captain",
+        "visit_gina": "tb gina",
+        "visit_thieves_guild": "tb renza",
+        "visit_stella": "tb stella",
+        "visit_giftgirl": "tb giftgirl",
+        "visit_ramias": "tb ramias",
+        "visit_gurigura": "tb gurigura",
+        "visit_riche": "tb riche",
+        "visit_katryn": "tb katryn",
+        "visit_twins": "tb twins",
+        "visit_bank": "tb banker",
+        "visit_exchange": "tb bast",
+        "visit_papa": "tb papa",
+        "collect_wood": "tb wood",
+        "collect_leather": "tb leather",
+        "collect_dye": "tb dye",
+        "collect_ore": "tb ore",
+        "collect_marble": "tb marble",
+        "collect_silk": "tb silk",
+        "collect_diamond": "tb diamond",
+        "c3_contact_homura": "side homura"
+    },
+    "papa_location": {
+        "The Docks": {"name_i18n": "Seafront"},
+        "The Warehouse": {"name_i18n": "Gallows"}
+    }
+}

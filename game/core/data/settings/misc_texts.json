@@ -1,0 +1,25 @@
+{
+  "shopgirl_comment_i18n": {
+    "wood": "New shelf, perfect!",
+    "leather": "Great! This leather basket will fit nicely in the entrance.",
+    "dye": "Nice! This freshly painted display looks sweet.",
+    "marble": "Ooh, a marble counter! That's going to make all the other shopkeepers jealous, yay!",
+    "ore": "Copper-plated counter shelves are sure to draw some attention. Very nice.",
+    "silk": "Ah, finally, some soft, smooth silk to hold the fragile items... And rub my face into!",
+    "diamond": "A girl's best friends... You've got style, handsome! And so does my new diamond-encrusted display... [emo_heart]"
+  },
+  "gift_description_i18n": {
+    "cute": "cute things",
+    "book": "books",
+    "precious": "precious things",
+    "erotica": "erotic things",
+    "drinks": "hard liquor"
+  },
+  "class_prefixes_i18n": {
+    "1": "Beginner ",
+    "2": "Regular ",
+    "3": "Advanced ",
+    "4": "Elite ",
+    "5": "Elite "
+  }
+}

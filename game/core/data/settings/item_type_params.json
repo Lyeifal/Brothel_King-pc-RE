@@ -1,0 +1,14 @@
+{
+    "_note": "furniture_types descriptions are displayed directly in UI, so _i18n is used.",
+    "all_equipement_types": ["weapon", "dress", "ring", "necklace", "accessory", "passive"],
+    "furniture_types": [
+        {"type": "Decoration", "description": "Attracts new kinds of customers to your brothel", "description_i18n": "Attracts new kinds of customers to your brothel"},
+        {"type": "Furnishing", "description": "Unlocks more options for attracting customers", "description_i18n": "Unlocks more options for attracting customers"},
+        {"type": "Utility", "description": "Help with advertising, security and maintenance", "description_i18n": "Help with advertising, security and maintenance"},
+        {"type": "Comfort", "description": "Help your girls feel more comfortable in the brothel", "description_i18n": "Help your girls feel more comfortable in the brothel"},
+        {"type": "Windows", "description": "Influences your girl's preferences", "description_i18n": "Influences your girl's preferences"},
+        {"type": "Altars", "description": "Pray here and get results, for once", "description_i18n": "Pray here and get results, for once"},
+        {"type": "Arcane", "description": "Helps with dark rituals", "description_i18n": "Helps with dark rituals"},
+        {"type": "Gizmos", "description": "Strange artefacts from a bygone technological age", "description_i18n": "Strange artefacts from a bygone technological age"}
+    ]
+}

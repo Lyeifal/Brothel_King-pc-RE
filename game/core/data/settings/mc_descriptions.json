@@ -1,0 +1,23 @@
+{
+  "MC_playerclass_description_i18n": {
+    "Warrior": "You are a Warrior. You might be young, but you have seen more than your share of bloody battles. You are stronger in fights and for protecting the brothel.",
+    "Wizard": "You are a Wizard. People bend to your will, and your magic. You have access to the most spells.",
+    "Trader": "You are a Rogue Trader. You've been hustling since you were a young street rat. You can make better deals and fetch the best prices."
+  },
+  "MC_stat_description_i18n": {
+    "strength": "This is the current strength of your character. Improves security and helps in individual fights.",
+    "spirit": "This is your magic fortitude. Spirit is the source of your mana, and improves spell results during events.",
+    "charisma": "This covers your character personality, looks and oratory skills. Improves results during interactions.",
+    "speed": "This is your character's level of energy. Increases the number of actions you can perform."
+  },
+  "god_description_i18n": {
+    "Arios": "You worship Arios, god of Light and lord of the Angels. +1 to Strength.",
+    "Shalia": "You worship Shalia, goddess of Shadows and ruler of the Night. +1 to Spirit.",
+    "null": "You do not worship any god, and delight instead in the wonders of the natural world. +1 to Charisma."
+  },
+  "alignment_description_i18n": {
+    "good": "Your actions have shown you to be a {b}good{/b} person. Love-based interactions with your girls are more successful than fear-based ones.",
+    "evil": "You are an {b}evil{/b} man, and revel in your own cruelty. Fear-based interactions with your girls are more successful than love-based ones.",
+    "neutral": "You are {b}neutral{/b}, and would rather maintain balance between your own interests and those of others. Love and fear-based interactions are equally successful."
+  }
+}

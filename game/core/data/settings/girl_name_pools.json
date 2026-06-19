@@ -1,0 +1,17 @@
+{
+    "girl_name_dict": {
+        "syllabs": [
+            "sha", "she", "shee", "shi", "wa", "ri", "ree", "ra", "ru", "ti", "ta", "ty", "ya", "yu", "sa", "so", "su", "se", "sy",
+            "da", "de", "di", "do", "dy", "fa", "fe", "fio", "fia", "gi", "hu", "ha", "hyu", "ja", "ju", "ji", "ka", "ky", "ki",
+            "kyo", "kyu", "la", "li", "le", "lo", "lu", "lyu", "lia", "lya", "lee", "loo", "za", "zi", "zu", "ze", "zee", "xa",
+            "xy", "xe", "ca", "ce", "chi", "chu", "va", "vi", "vy", "ve", "bu", "be", "na", "ne", "ni", "nya", "nyu", "nee",
+            "ma", "mu", "me", "mi", "myu", "mia", "mya"
+        ],
+        "fillers": ["n", "r", "l", "s", "'", "", "", ""],
+        "enders": ["n", "l", "nn", "a", "ya", "na", "ly", "", "", ""],
+        "last_syllabs": [
+            "jo", "sho", "to", "ya", "ma", "mi", "yo", "ko", "na", "ye", "yu", "ka", "ta", "fu", "ro", "sa", "shi", "ki", "no",
+            "ra", "re", "tsu", "chi", "shi", "se", "n", "mu", "ne", "kyo", "ku"
+        ]
+    }
+}

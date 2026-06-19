@@ -19,7 +19,7 @@ init -1 python:
             self.timestamp = calendar.day if calendar else 0  ## EN: Day of bid. ZH: 出价日期。
 
         def __repr__(self):
-            return "<AuctionBid %s: %s gold>" % (self.bidder_name, self.amount)
+            return __("<AuctionBid %s: %s gold>") % (self.bidder_name, self.amount)
 
 
     class AuctionLot(object):

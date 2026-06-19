@@ -2,7 +2,7 @@
 ## Migrated from BKitems.rpy ##
 init 1 python:
 
-        template_items =   [
+        _fallback_template_items = [
                             Item(name = 'Stolen underwear', target = 'MC', type = IT_Misc, pic = 'Stolen underwear.webp', template = True, rank = 1, max_rank = 5, rarity = "S", charges = 1, price = 500, effects = (Effect('gain', 'prestige', 2), ), description = "So you're into these, eh?"),
                             Item(name = 'Romantic novel', target = 'gift', type = IT_Gift, pic = 'Romantic novel.webp', template = True, rank = 1, max_rank = 5, rarity = 1, charges = 1, price = 100, effects = (Effect('gift', 'cute', 1), Effect('gift', 'book', 1), ), description =  "A knight in shining armor. A princess. A plumber. The usual.", hidden_effect = True),
                             Item(name = 'Erotic manual', target = 'gift', type = IT_Gift, pic = 'Erotic manual.webp', template = True, rank = 1, max_rank = 5, rarity = 1, charges = 1, price = 100, effects = (Effect('gift', 'erotica', 1), Effect('gift', 'book', 1), ), description =  "50 positions that you can only achieve using black magic.", hidden_effect = True),
@@ -95,11 +95,14 @@ init 1 python:
                             Item(name = 'Monster cookie', target = 'minion', type = IT_Misc, pic = 'cookie.webp', template = True, rank = 1, max_rank = 5, rarity = "M", charges = 1, price = 120, effects = (Effect('gain', 'monster xp', 10), ), description = "C is for cock-y.", adjectives = "food"),
                             ]
 
+        template_items = DataLoader.load_items("template") or _fallback_template_items
+        all_items = DataLoader.load_items("all") or _fallback_all_items
+
 
 #### ITEMS ####
 ## Migrated from BKitems.rpy ##
 
-        all_items = [
+        _fallback_all_items = [
                     Item(name = 'Short sword', target = 'MC', type = IT_Weapon, pic = 'Short sword.webp', rank = 1, rarity = 1, price = 250, effects = (Effect('change', 'strength', 1), ), description =  ""),
                     Item(name = 'Cutlass', target = 'MC', type = IT_Weapon, pic = 'Cutlass.webp', rank = 1, rarity = 2, price = 500, effects = (Effect('change', 'strength', 2), ), description =  "It's not a knife. That's a knife."),
                     Item(name = 'Axe', target = 'MC', type = IT_Weapon, pic = 'Axe.webp', rank = 2, rarity = 2, price = 1000, effects = (Effect('change', 'strength', 2), Effect('change', 'spirit', 1), ), description =  ""),

@@ -1,0 +1,44 @@
+{
+  "meta_upgrades": [
+    {
+      "id": "crystal_cap",
+      "max_rank": 5,
+      "cost_per_rank": [
+        10,
+        25,
+        50,
+        100,
+        200
+      ],
+      "effects": [
+        {
+          "type": "change",
+          "target": "crystal cap",
+          "value": 50
+        }
+      ],
+      "unlock_condition": "newgame+",
+      "name_i18n": "Crystal Cap",
+      "description_i18n": "Increase maximum crystals carried across runs by 50."
+    },
+    {
+      "id": "starting_crystals",
+      "max_rank": 3,
+      "cost_per_rank": [
+        20,
+        50,
+        100
+      ],
+      "effects": [
+        {
+          "type": "change",
+          "target": "starting crystals",
+          "value": 10
+        }
+      ],
+      "unlock_condition": "newgame+",
+      "name_i18n": "Starting Crystals",
+      "description_i18n": "Begin each New Game+ with extra crystals."
+    }
+  ]
+}

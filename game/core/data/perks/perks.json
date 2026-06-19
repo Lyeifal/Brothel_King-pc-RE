@@ -1,0 +1,903 @@
+[
+  {
+    "name": "Maid Training",
+    "type": "level",
+    "effects": [
+      {
+        "type": "change",
+        "target": "obedience",
+        "value": 5
+      },
+      {
+        "type": "change",
+        "target": "maintenance",
+        "scope": "brothel"
+      }
+    ],
+    "archetype": "The Maid",
+    "pic": "maid0.webp"
+  },
+  {
+    "name": "Loyalty",
+    "type": "level",
+    "effects": [
+      {
+        "type": "change",
+        "target": "train obedience target",
+        "value": -10
+      },
+      {
+        "type": "change",
+        "target": "job obedience target",
+        "value": -10
+      }
+    ],
+    "archetype": "The Maid",
+    "pic": "maid1_1.webp",
+    "perk_level": 1
+  },
+  {
+    "name": "Hardworking",
+    "type": "level",
+    "effects": [
+      {
+        "type": "boost",
+        "target": "upkeep",
+        "value": -0.15
+      },
+      {
+        "type": "boost",
+        "target": "waitress jp gains",
+        "value": 0.1
+      }
+    ],
+    "archetype": "The Maid",
+    "pic": "maid1_2.webp",
+    "perk_level": 1
+  },
+  {
+    "name": "Try Again",
+    "type": "level",
+    "effects": [
+      {
+        "type": "reroll",
+        "target": "job critical failure"
+      },
+      {
+        "type": "boost",
+        "target": "xp gains",
+        "value": 0.05
+      }
+    ],
+    "archetype": "The Maid",
+    "pic": "maid2_1.webp",
+    "perk_level": 2
+  },
+  {
+    "name": "Survivor",
+    "type": "level",
+    "effects": [
+      {
+        "type": "boost",
+        "target": "fear",
+        "value": 0.5
+      },
+      {
+        "type": "resist",
+        "target": "hurt",
+        "value": 3
+      }
+    ],
+    "archetype": "The Maid",
+    "pic": "maid2_2.webp",
+    "perk_level": 2
+  },
+  {
+    "name": "Strive for Perfection",
+    "type": "level",
+    "effects": [
+      {
+        "type": "boost",
+        "target": "all skill gains",
+        "value": 0.25
+      },
+      {
+        "type": "change",
+        "target": "brothel reputation",
+        "value": 5,
+        "scales_with": "rank",
+        "scope": "brothel"
+      }
+    ],
+    "archetype": "The Maid",
+    "pic": "maid3.webp",
+    "perk_level": 3
+  },
+  {
+    "name": "Bunny Girl",
+    "type": "level",
+    "effects": [
+      {
+        "type": "change",
+        "target": "body",
+        "value": 10
+      },
+      {
+        "type": "change",
+        "target": "advertising",
+        "scope": "brothel"
+      }
+    ],
+    "archetype": "The Player",
+    "pic": "player0.webp"
+  },
+  {
+    "name": "Party Girl",
+    "type": "level",
+    "effects": [
+      {
+        "type": "change",
+        "target": "job customer capacity",
+        "value": 2
+      },
+      {
+        "type": "boost",
+        "target": "customer penalties",
+        "value": -0.5
+      }
+    ],
+    "archetype": "The Player",
+    "pic": "player1_1.webp",
+    "perk_level": 1
+  },
+  {
+    "name": "Bimbo",
+    "type": "level",
+    "effects": [
+      {
+        "type": "boost",
+        "target": "reputation gains",
+        "value": 0.15
+      },
+      {
+        "type": "boost",
+        "target": "dancer jp gains",
+        "value": 0.1
+      }
+    ],
+    "archetype": "The Player",
+    "pic": "player1_2.webp",
+    "perk_level": 1
+  },
+  {
+    "name": "Autograph",
+    "type": "level",
+    "effects": [
+      {
+        "type": "change",
+        "target": "tip",
+        "scales_with": "rep"
+      },
+      {
+        "type": "special",
+        "target": "job prestige"
+      }
+    ],
+    "archetype": "The Player",
+    "pic": "player2_1.webp",
+    "perk_level": 2
+  },
+  {
+    "name": "Exhibitionist",
+    "type": "level",
+    "effects": [
+      {
+        "type": "boost",
+        "target": "naked bonus",
+        "value": 0.15
+      }
+    ],
+    "archetype": "The Player",
+    "pic": "player2_2.webp",
+    "perk_level": 2
+  },
+  {
+    "name": "Star Power",
+    "type": "level",
+    "effects": [
+      {
+        "type": "increase satisfaction",
+        "target": "all jobs"
+      },
+      {
+        "type": "increase satisfaction",
+        "target": "all sex acts"
+      }
+    ],
+    "archetype": "The Player",
+    "pic": "player3.webp",
+    "perk_level": 3
+  },
+  {
+    "name": "Modeling 101",
+    "type": "level",
+    "effects": [
+      {
+        "type": "change",
+        "target": "beauty",
+        "value": 10
+      },
+      {
+        "type": "boost",
+        "target": "quest results",
+        "value": 0.2
+      }
+    ],
+    "archetype": "The Model",
+    "pic": "model0.webp"
+  },
+  {
+    "name": "Rules of Attraction",
+    "type": "level",
+    "effects": [
+      {
+        "type": "change",
+        "target": "customers",
+        "value": 3,
+        "scope": "brothel"
+      }
+    ],
+    "archetype": "The Model",
+    "pic": "model1_1.webp",
+    "perk_level": 1
+  },
+  {
+    "name": "Overachiever",
+    "type": "level",
+    "effects": [
+      {
+        "type": "change",
+        "target": "all skill max",
+        "value": 10
+      },
+      {
+        "type": "boost",
+        "target": "masseuse jp gains",
+        "value": 0.1
+      }
+    ],
+    "archetype": "The Model",
+    "pic": "model1_2.webp",
+    "perk_level": 1
+  },
+  {
+    "name": "Eye Contact",
+    "type": "level",
+    "effects": [
+      {
+        "type": "special",
+        "target": "lucky"
+      },
+      {
+        "type": "change",
+        "target": "brothel reputation",
+        "value": 50,
+        "chance": 0.2,
+        "scope": "brothel"
+      }
+    ],
+    "archetype": "The Model",
+    "pic": "model2_1.webp",
+    "perk_level": 2
+  },
+  {
+    "name": "Life of Luxury",
+    "type": "level",
+    "effects": [
+      {
+        "type": "special",
+        "target": "luxury"
+      },
+      {
+        "type": "change",
+        "target": "mood",
+        "value": 0.5,
+        "scales_with": "equipped"
+      }
+    ],
+    "archetype": "The Model",
+    "pic": "model2_2.webp",
+    "perk_level": 2
+  },
+  {
+    "name": "Beauty Queen",
+    "type": "level",
+    "effects": [
+      {
+        "type": "change",
+        "target": "all main skills",
+        "value": 15
+      },
+      {
+        "type": "boost",
+        "target": "job customer budget"
+      }
+    ],
+    "archetype": "The Model",
+    "pic": "model3.webp",
+    "perk_level": 3
+  },
+  {
+    "name": "Court relations",
+    "type": "level",
+    "effects": [
+      {
+        "type": "change",
+        "target": "refinement",
+        "value": 10
+      },
+      {
+        "type": "increase satisfaction",
+        "target": "bisexual"
+      }
+    ],
+    "archetype": "The Courtesan",
+    "pic": "courtesan0.webp"
+  },
+  {
+    "name": "Warm welcome",
+    "type": "level",
+    "effects": [
+      {
+        "type": "change",
+        "target": "first customer satisfaction"
+      },
+      {
+        "type": "boost",
+        "target": "half-shift resting bonus",
+        "value": 0.5
+      }
+    ],
+    "archetype": "The Courtesan",
+    "pic": "courtesan1_1.webp",
+    "perk_level": 1
+  },
+  {
+    "name": "Refined taste",
+    "type": "level",
+    "effects": [
+      {
+        "type": "boost",
+        "target": "bisexual chance",
+        "value": 0.5
+      },
+      {
+        "type": "boost",
+        "target": "geisha jp gains",
+        "value": 0.1
+      }
+    ],
+    "archetype": "The Courtesan",
+    "pic": "courtesan1_2.webp",
+    "perk_level": 1
+  },
+  {
+    "name": "Five Stars",
+    "type": "level",
+    "effects": [
+      {
+        "type": "change",
+        "target": "total tip",
+        "value": 25,
+        "scales_with": "customer satisfaction"
+      }
+    ],
+    "archetype": "The Courtesan",
+    "pic": "courtesan2_1.webp",
+    "perk_level": 2
+  },
+  {
+    "name": "Heavenly Pleasures",
+    "type": "level",
+    "effects": [
+      {
+        "type": "boost",
+        "target": "perfect result tip",
+        "value": 0.1
+      },
+      {
+        "type": "boost",
+        "target": "perfect result xp",
+        "value": 0.1
+      },
+      {
+        "type": "boost",
+        "target": "perfect result jp",
+        "value": 0.1
+      }
+    ],
+    "archetype": "The Courtesan",
+    "pic": "courtesan2_2.webp",
+    "perk_level": 2
+  },
+  {
+    "name": "Royal Treatment",
+    "type": "level",
+    "effects": [
+      {
+        "type": "boost",
+        "target": "first customer tip",
+        "value": 1.5
+      },
+      {
+        "type": "boost",
+        "target": "first customer rep",
+        "value": 2.5
+      },
+      {
+        "type": "boost",
+        "target": "whore customer budget"
+      }
+    ],
+    "archetype": "The Courtesan",
+    "pic": "courtesan3.webp",
+    "perk_level": 3
+  },
+  {
+    "name": "Available",
+    "type": "level",
+    "effects": [
+      {
+        "type": "change",
+        "target": "constitution",
+        "value": 5
+      },
+      {
+        "type": "increase satisfaction",
+        "target": "group"
+      }
+    ],
+    "archetype": "The Escort",
+    "pic": "escort0.webp"
+  },
+  {
+    "name": "Convincing",
+    "type": "level",
+    "effects": [
+      {
+        "type": "special",
+        "target": "temptress",
+        "value": 0.66
+      }
+    ],
+    "archetype": "The Escort",
+    "pic": "slut2_2.webp",
+    "perk_level": 1
+  },
+  {
+    "name": "On Call",
+    "type": "level",
+    "effects": [
+      {
+        "type": "boost",
+        "target": "group chance",
+        "value": 0.5
+      },
+      {
+        "type": "change",
+        "target": "whore obedience target",
+        "value": -10
+      }
+    ],
+    "archetype": "The Escort",
+    "pic": "escort2_1.webp",
+    "perk_level": 1
+  },
+  {
+    "name": "Focus",
+    "type": "level",
+    "effects": [
+      {
+        "type": "special",
+        "target": "focus"
+      }
+    ],
+    "archetype": "The Escort",
+    "pic": "escort1_1.webp",
+    "perk_level": 2
+  },
+  {
+    "name": "Loves Sex",
+    "type": "level",
+    "effects": [
+      {
+        "type": "change",
+        "target": "all sex skills",
+        "value": 10
+      }
+    ],
+    "archetype": "The Escort",
+    "pic": "slut2_1.webp",
+    "perk_level": 2
+  },
+  {
+    "name": "Business and Pleasure",
+    "type": "level",
+    "effects": [
+      {
+        "type": "boost",
+        "target": "total tip",
+        "value": 0.01,
+        "scales_with": "job cust nb"
+      },
+      {
+        "type": "boost",
+        "target": "total tip",
+        "value": 0.03,
+        "scales_with": "whore cust nb"
+      },
+      {
+        "type": "change",
+        "target": "mood",
+        "value": 0.25,
+        "scales_with": "cust nb"
+      }
+    ],
+    "archetype": "The Escort",
+    "pic": "escort3.webp",
+    "perk_level": 3
+  },
+  {
+    "name": "Foxy Lady",
+    "type": "level",
+    "effects": [
+      {
+        "type": "change",
+        "target": "charm",
+        "value": 10
+      },
+      {
+        "type": "boost",
+        "target": "class results",
+        "value": 0.2
+      }
+    ],
+    "archetype": "The Fox",
+    "pic": "fox0.webp"
+  },
+  {
+    "name": "Something New",
+    "type": "level",
+    "effects": [
+      {
+        "type": "boost",
+        "target": "xp gains",
+        "chance": 0.1
+      },
+      {
+        "type": "boost",
+        "target": "all jp gains",
+        "chance": 0.1
+      }
+    ],
+    "archetype": "The Fox",
+    "pic": "fox1_1.webp",
+    "perk_level": 1
+  },
+  {
+    "name": "Lost and Found",
+    "type": "level",
+    "effects": [
+      {
+        "type": "special",
+        "target": "random item",
+        "chance": 0.025
+      }
+    ],
+    "archetype": "The Fox",
+    "pic": "fox1_2.webp",
+    "perk_level": 1,
+    "base_description_i18n": "'I'm sure he won't miss it.'"
+  },
+  {
+    "name": "Secret Admirers",
+    "type": "level",
+    "effects": [
+      {
+        "type": "boost",
+        "target": "tip",
+        "chance": 0.2
+      }
+    ],
+    "archetype": "The Fox",
+    "pic": "fox2_1.webp",
+    "perk_level": 2
+  },
+  {
+    "name": "Tempting Fate",
+    "type": "level",
+    "effects": [
+      {
+        "type": "special",
+        "target": "effect chance"
+      }
+    ],
+    "archetype": "The Fox",
+    "pic": "fox2_2.webp",
+    "perk_level": 2
+  },
+  {
+    "name": "Stars Are Aligned",
+    "type": "level",
+    "effects": [
+      {
+        "type": "boost",
+        "target": "income",
+        "chance": 0.02,
+        "scope": "brothel"
+      }
+    ],
+    "archetype": "The Fox",
+    "pic": "fox3.webp",
+    "perk_level": 3
+  },
+  {
+    "name": "Teaser",
+    "type": "level",
+    "effects": [
+      {
+        "type": "change",
+        "target": "libido",
+        "value": 5
+      },
+      {
+        "type": "gain",
+        "target": "positive fixation"
+      }
+    ],
+    "archetype": "The Slut",
+    "pic": "slut0.webp"
+  },
+  {
+    "name": "Open mind",
+    "type": "level",
+    "effects": [
+      {
+        "type": "gain",
+        "target": "all sexual preferences",
+        "value": 250
+      }
+    ],
+    "archetype": "The Slut",
+    "pic": "slut1_1.webp",
+    "perk_level": 1
+  },
+  {
+    "name": "Bedroom Eyes",
+    "type": "level",
+    "effects": [
+      {
+        "type": "boost",
+        "target": "service jp bonus",
+        "value": 0.1
+      },
+      {
+        "type": "boost",
+        "target": "sex jp bonus",
+        "value": 0.1
+      },
+      {
+        "type": "boost",
+        "target": "anal jp bonus",
+        "value": 0.1
+      },
+      {
+        "type": "boost",
+        "target": "fetish jp bonus",
+        "value": 0.1
+      }
+    ],
+    "archetype": "The Slut",
+    "pic": "slut1_2.webp",
+    "perk_level": 1
+  },
+  {
+    "name": "Next",
+    "type": "level",
+    "effects": [
+      {
+        "type": "change",
+        "target": "whore customer capacity"
+      }
+    ],
+    "archetype": "The Slut",
+    "pic": "escort1_2.webp",
+    "perk_level": 2
+  },
+  {
+    "name": "Work and Whore",
+    "type": "level",
+    "effects": [
+      {
+        "type": "special",
+        "target": "workwhore"
+      }
+    ],
+    "archetype": "The Slut",
+    "pic": "slut3.webp",
+    "perk_level": 2
+  },
+  {
+    "name": "Me So Horny",
+    "type": "level",
+    "effects": [
+      {
+        "type": "boost",
+        "target": "tiredness",
+        "value": -0.1
+      }
+    ],
+    "archetype": "The Slut",
+    "pic": "escort2_2.webp",
+    "perk_level": 3
+  },
+  {
+    "name": "Enter The Bride",
+    "type": "level",
+    "effects": [
+      {
+        "type": "change",
+        "target": "sensitivity",
+        "value": 5
+      },
+      {
+        "type": "change",
+        "target": "security",
+        "scope": "brothel"
+      }
+    ],
+    "archetype": "The Bride",
+    "pic": "bride0.webp"
+  },
+  {
+    "name": "Helping Hand",
+    "type": "level",
+    "effects": [
+      {
+        "type": "change",
+        "target": "making friends"
+      },
+      {
+        "type": "boost",
+        "target": "mood gains from friendship",
+        "value": 0.5
+      }
+    ],
+    "archetype": "The Bride",
+    "pic": "bride1_1.webp",
+    "perk_level": 1
+  },
+  {
+    "name": "Confession",
+    "type": "level",
+    "effects": [
+      {
+        "type": "spillover",
+        "target": "xp",
+        "value": 0.1
+      },
+      {
+        "type": "spillover",
+        "target": "jp",
+        "value": 0.1
+      }
+    ],
+    "archetype": "The Bride",
+    "pic": "bride1_2.webp",
+    "perk_level": 1
+  },
+  {
+    "name": "Leading by Example",
+    "type": "level",
+    "effects": [
+      {
+        "type": "special",
+        "target": "skill catch up"
+      }
+    ],
+    "archetype": "The Bride",
+    "pic": "bride2_1.webp",
+    "perk_level": 2
+  },
+  {
+    "name": "The Healer",
+    "type": "level",
+    "effects": [
+      {
+        "type": "boost",
+        "target": "love gains",
+        "value": 0.5
+      },
+      {
+        "type": "change",
+        "target": "heal",
+        "chance": 0.33,
+        "scope": "brothel"
+      }
+    ],
+    "archetype": "The Bride",
+    "pic": "bride2_2.webp",
+    "perk_level": 2
+  },
+  {
+    "name": "The Virgin Whore",
+    "type": "level",
+    "effects": [
+      {
+        "type": "boost",
+        "target": "virgin tip"
+      },
+      {
+        "type": "boost",
+        "target": "virgin rep"
+      }
+    ],
+    "archetype": "The Bride",
+    "pic": "bride3.webp",
+    "perk_level": 3
+  },
+  {
+    "name": "Naturist",
+    "type": "sex",
+    "effects": [
+      {
+        "type": "special",
+        "target": "naked"
+      }
+    ]
+  },
+  {
+    "name": "Ponygirl",
+    "type": "sex",
+    "effects": [
+      {
+        "type": "special",
+        "target": "ponygirl",
+        "chance": 0.5
+      }
+    ]
+  },
+  {
+    "name": "Bisexual",
+    "type": "sex",
+    "effects": [
+      {
+        "type": "special",
+        "target": "bisexual",
+        "chance": 0.5
+      }
+    ]
+  },
+  {
+    "name": "Group",
+    "type": "sex",
+    "effects": [
+      {
+        "type": "special",
+        "target": "group",
+        "chance": 0.5
+      }
+    ]
+  },
+  {
+    "name": "Orgy",
+    "type": "sex",
+    "effects": [
+      {
+        "type": "special",
+        "target": "orgy",
+        "chance": 0.5
+      }
+    ]
+  }
+]

@@ -61,7 +61,8 @@ init -9 python:
         """
 
         def __init__(self, origin_id, name_i18n_key, description_i18n_key,
-                     icon_tag="origin_default", talents=None, starting_bonus=None):
+                     icon_tag="origin_default", talents=None, starting_bonus=None,
+                     available_classes=None):
             ## EN: Unique identifier.
             ## ZH: 唯一标识符。
             self.origin_id = origin_id
@@ -85,6 +86,10 @@ init -9 python:
             ## EN: Dict of starting bonuses (e.g. {"gold": 500, "reputation": 20}).
             ## ZH: 起始奖励字典（例如 {"gold": 500, "reputation": 20}）。
             self.starting_bonus = starting_bonus or {}
+
+            ## EN: List of available player classes for this origin in sandbox mode.
+            ## ZH: 此出身在沙盒模式下可用的主角职业列表。
+            self.available_classes = available_classes or []
 
         def get_name(self):
             return __(self.name_i18n_key)
@@ -222,7 +227,7 @@ init -9 python:
     gamemode_registry.register(SandboxMode())
 
 
-## EN: Built-in origins are now loaded from game/custom/data/sandbox/origins.json via DataLoader.
-## ZH: 内置出身现在通过 DataLoader 从 game/custom/data/sandbox/origins.json 加载。
+## EN: Built-in origins are now loaded from game/core/data/sandbox/origins.json via DataLoader.
+## ZH: 内置出身现在通过 DataLoader 从 game/core/data/sandbox/origins.json 加载。
 ##     See DataLoader.load_origins() in game/core/systems/data_loader.rpy
 

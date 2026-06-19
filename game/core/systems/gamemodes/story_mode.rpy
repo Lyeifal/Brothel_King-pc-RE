@@ -55,7 +55,7 @@ init -9 python:
             ZH: 自动设置新章节目标。
             """
             if new_chapter in chapter_goals:
-                game.goals = chapter_goals[new_chapter]
+                game.set_goals(chapter_goals[new_chapter])
 
 
     ## EN: Register story mode in the global registry.

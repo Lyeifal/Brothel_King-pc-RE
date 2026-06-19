@@ -1,0 +1,18 @@
+{
+  "maintenance_desc_i18n": {
+    "clean": ["Your brothel is ", "{b}clean{/b}", "."],
+    "clean enough": ["Your brothel is ", "{b}clean enough{/b}", "."],
+    "dusty": ["Your brothel is getting ", "{b}dusty{/b}", "."],
+    "dirty": ["Your brothel is getting ", "{b}dirty{/b}", "."],
+    "disgusting": ["Warning! Your brothel is ", "{b}disgusting{/b}", "!"],
+    "fire": ["", "Warning!!! Your brothel is at risk of a fire!", ""]
+  },
+  "maintenance_desc_colors": {
+    "clean": "good",
+    "clean enough": "a little good",
+    "dusty": "average contrast",
+    "dirty": "a little bad",
+    "disgusting": "bad",
+    "fire": "very bad"
+  }
+}

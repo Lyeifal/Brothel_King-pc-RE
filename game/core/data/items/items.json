@@ -1,0 +1,4079 @@
+{
+  "template_items": [
+    {
+      "name": "Stolen underwear",
+      "target": "MC",
+      "type": "Misc",
+      "pic": "Stolen underwear.webp",
+      "template": true,
+      "rank": 1,
+      "max_rank": 5,
+      "rarity": "S",
+      "charges": 1,
+      "price": 500,
+      "effects": [
+        {
+          "type": "gain",
+          "target": "prestige",
+          "value": 2
+        }
+      ],
+      "name_i18n": "Stolen underwear",
+      "description_i18n": "So you're into these, eh?"
+    },
+    {
+      "name": "Romantic novel",
+      "target": "gift",
+      "type": "Gift",
+      "pic": "Romantic novel.webp",
+      "template": true,
+      "rank": 1,
+      "max_rank": 5,
+      "rarity": 1,
+      "charges": 1,
+      "price": 100,
+      "effects": [
+        {
+          "type": "gift",
+          "target": "cute",
+          "value": 1
+        },
+        {
+          "type": "gift",
+          "target": "book",
+          "value": 1
+        }
+      ],
+      "hidden_effect": true,
+      "name_i18n": "Romantic novel",
+      "description_i18n": "A knight in shining armor. A princess. A plumber. The usual."
+    },
+    {
+      "name": "Erotic manual",
+      "target": "gift",
+      "type": "Gift",
+      "pic": "Erotic manual.webp",
+      "template": true,
+      "rank": 1,
+      "max_rank": 5,
+      "rarity": 1,
+      "charges": 1,
+      "price": 100,
+      "effects": [
+        {
+          "type": "gift",
+          "target": "erotica",
+          "value": 1
+        },
+        {
+          "type": "gift",
+          "target": "book",
+          "value": 1
+        }
+      ],
+      "hidden_effect": true,
+      "name_i18n": "Erotic manual",
+      "description_i18n": "50 positions that you can only achieve using black magic."
+    },
+    {
+      "name": "Goldleaf book",
+      "target": "gift",
+      "type": "Gift",
+      "pic": "Goldleaf book.webp",
+      "template": true,
+      "rank": 1,
+      "max_rank": 5,
+      "rarity": 1,
+      "charges": 1,
+      "price": 100,
+      "effects": [
+        {
+          "type": "gift",
+          "target": "precious",
+          "value": 1
+        },
+        {
+          "type": "gift",
+          "target": "book",
+          "value": 1
+        }
+      ],
+      "hidden_effect": true,
+      "name_i18n": "Goldleaf book",
+      "description_i18n": "What does it talk about? Who cares! It's shiny."
+    },
+    {
+      "name": "Book of magical cocktails",
+      "target": "gift",
+      "type": "Gift",
+      "pic": "Book of magical cocktails.webp",
+      "template": true,
+      "rank": 1,
+      "max_rank": 5,
+      "rarity": 1,
+      "charges": 1,
+      "price": 100,
+      "effects": [
+        {
+          "type": "gift",
+          "target": "drinks",
+          "value": 1
+        },
+        {
+          "type": "gift",
+          "target": "book",
+          "value": 1
+        }
+      ],
+      "hidden_effect": true,
+      "name_i18n": "Book of magical cocktails",
+      "description_i18n": "Warning: consuming those potions may result in loss of memory. Also,  dignity."
+    },
+    {
+      "name": "Pet",
+      "target": "gift",
+      "type": "Gift",
+      "pic": "Pet.webp",
+      "template": true,
+      "rank": 1,
+      "max_rank": 5,
+      "rarity": 1,
+      "charges": 1,
+      "price": 100,
+      "effects": [
+        {
+          "type": "gift",
+          "target": "cute",
+          "value": 1
+        },
+        {
+          "type": "gift",
+          "target": "precious",
+          "value": 1
+        }
+      ],
+      "hidden_effect": true,
+      "name_i18n": "Pet",
+      "description_i18n": "Isn't he adorable? As long as he doesn't bite your hand off..."
+    },
+    {
+      "name": "Silky nighties",
+      "target": "gift",
+      "type": "Gift",
+      "pic": "Silky nighties.webp",
+      "template": true,
+      "rank": 1,
+      "max_rank": 5,
+      "rarity": 1,
+      "charges": 1,
+      "price": 100,
+      "effects": [
+        {
+          "type": "gift",
+          "target": "cute",
+          "value": 1
+        },
+        {
+          "type": "gift",
+          "target": "erotica",
+          "value": 1
+        }
+      ],
+      "hidden_effect": true,
+      "name_i18n": "Silky nighties",
+      "description_i18n": "Smooth and sexy."
+    },
+    {
+      "name": "Sakura liquor",
+      "target": "gift",
+      "type": "Gift",
+      "pic": "Sakura liquor.webp",
+      "template": true,
+      "rank": 1,
+      "max_rank": 5,
+      "rarity": 1,
+      "charges": 1,
+      "price": 100,
+      "effects": [
+        {
+          "type": "gift",
+          "target": "cute",
+          "value": 1
+        },
+        {
+          "type": "gift",
+          "target": "drinks",
+          "value": 1
+        }
+      ],
+      "hidden_effect": true,
+      "name_i18n": "Sakura liquor",
+      "description_i18n": "A subtle drink made of distilled flower petals."
+    },
+    {
+      "name": "Sexy high heels",
+      "target": "gift",
+      "type": "Gift",
+      "pic": "Sexy high heels.webp",
+      "template": true,
+      "rank": 1,
+      "max_rank": 5,
+      "rarity": 1,
+      "charges": 1,
+      "price": 100,
+      "effects": [
+        {
+          "type": "gift",
+          "target": "erotica",
+          "value": 1
+        },
+        {
+          "type": "gift",
+          "target": "precious",
+          "value": 1
+        }
+      ],
+      "hidden_effect": true,
+      "name_i18n": "Sexy high heels",
+      "description_i18n": "Some women would kill to get their hands on those shoes. Actually,  they're a little blood spattered."
+    },
+    {
+      "name": "Champagne",
+      "target": "gift",
+      "type": "Gift",
+      "pic": "Champagne.webp",
+      "template": true,
+      "rank": 1,
+      "max_rank": 5,
+      "rarity": 1,
+      "charges": 1,
+      "price": 100,
+      "effects": [
+        {
+          "type": "gift",
+          "target": "drinks",
+          "value": 1
+        },
+        {
+          "type": "gift",
+          "target": "precious",
+          "value": 1
+        }
+      ],
+      "hidden_effect": true,
+      "name_i18n": "Champagne",
+      "description_i18n": "'Le Nouveau Riche': A strong drink; also, a statement that you can afford it."
+    },
+    {
+      "name": "Aphrodisiac",
+      "target": "gift",
+      "type": "Gift",
+      "pic": "Aphrodisiac.webp",
+      "template": true,
+      "rank": 1,
+      "max_rank": 5,
+      "rarity": 1,
+      "charges": 1,
+      "price": 100,
+      "effects": [
+        {
+          "type": "gift",
+          "target": "drinks",
+          "value": 1
+        },
+        {
+          "type": "gift",
+          "target": "erotica",
+          "value": 1
+        }
+      ],
+      "hidden_effect": true,
+      "name_i18n": "Aphrodisiac",
+      "description_i18n": "Fire in your belly,  fire in your pants..."
+    },
+    {
+      "name": "Pretty ring",
+      "target": "girl",
+      "type": "Ring",
+      "pic": "Pretty ring.webp",
+      "template": true,
+      "rank": 1,
+      "max_rank": 6,
+      "rarity": 2,
+      "price": 150,
+      "effects": [
+        {
+          "type": "change",
+          "target": "beauty",
+          "value": 5
+        }
+      ],
+      "name_i18n": "Pretty ring"
+    },
+    {
+      "name": "Bronze ring",
+      "target": "girl",
+      "type": "Ring",
+      "pic": "Bronze ring.webp",
+      "template": true,
+      "rank": 1,
+      "max_rank": 6,
+      "rarity": 2,
+      "price": 150,
+      "effects": [
+        {
+          "type": "change",
+          "target": "body",
+          "value": 5
+        }
+      ],
+      "name_i18n": "Bronze ring"
+    },
+    {
+      "name": "Zanic ring",
+      "target": "girl",
+      "type": "Ring",
+      "pic": "Zanic ring.webp",
+      "template": true,
+      "rank": 1,
+      "max_rank": 6,
+      "rarity": 2,
+      "price": 150,
+      "effects": [
+        {
+          "type": "change",
+          "target": "charm",
+          "value": 5
+        }
+      ],
+      "name_i18n": "Zanic ring"
+    },
+    {
+      "name": "Silver ring",
+      "target": "girl",
+      "type": "Ring",
+      "pic": "Silver ring.webp",
+      "template": true,
+      "rank": 1,
+      "max_rank": 6,
+      "rarity": 2,
+      "price": 150,
+      "effects": [
+        {
+          "type": "change",
+          "target": "refinement",
+          "value": 5
+        }
+      ],
+      "name_i18n": "Silver ring"
+    },
+    {
+      "name": "Gold ring",
+      "target": "girl",
+      "type": "Ring",
+      "pic": "Gold ring.webp",
+      "template": true,
+      "rank": 1,
+      "max_rank": 6,
+      "rarity": 2,
+      "price": 250,
+      "effects": [
+        {
+          "type": "change",
+          "target": "libido",
+          "value": 5
+        }
+      ],
+      "name_i18n": "Gold ring"
+    },
+    {
+      "name": "Marine ring",
+      "target": "girl",
+      "type": "Ring",
+      "pic": "Marine ring.webp",
+      "template": true,
+      "rank": 1,
+      "max_rank": 6,
+      "rarity": 2,
+      "price": 250,
+      "effects": [
+        {
+          "type": "change",
+          "target": "sensitivity",
+          "value": 5
+        }
+      ],
+      "name_i18n": "Marine ring"
+    },
+    {
+      "name": "Iron ring",
+      "target": "girl",
+      "type": "Ring",
+      "pic": "Iron ring.webp",
+      "template": true,
+      "rank": 1,
+      "max_rank": 6,
+      "rarity": 2,
+      "price": 375,
+      "effects": [
+        {
+          "type": "change",
+          "target": "obedience",
+          "value": 5
+        }
+      ],
+      "name_i18n": "Iron ring"
+    },
+    {
+      "name": "Wooden ring",
+      "target": "girl",
+      "type": "Ring",
+      "pic": "Wooden ring.webp",
+      "template": true,
+      "rank": 1,
+      "max_rank": 6,
+      "rarity": 2,
+      "price": 250,
+      "effects": [
+        {
+          "type": "change",
+          "target": "constitution",
+          "value": 5
+        }
+      ],
+      "name_i18n": "Wooden ring"
+    },
+    {
+      "name": "Blue ribbon",
+      "target": "girl",
+      "type": "Necklace",
+      "pic": "Blue ribbon.webp",
+      "template": true,
+      "rank": 1,
+      "max_rank": 6,
+      "rarity": 2,
+      "price": 100,
+      "effects": [
+        {
+          "type": "boost",
+          "target": "beauty gains",
+          "value": 0.1
+        }
+      ],
+      "name_i18n": "Blue ribbon"
+    },
+    {
+      "name": "Pearl necklace",
+      "target": "girl",
+      "type": "Necklace",
+      "pic": "Pearl necklace.webp",
+      "template": true,
+      "rank": 1,
+      "max_rank": 6,
+      "rarity": 2,
+      "price": 100,
+      "effects": [
+        {
+          "type": "boost",
+          "target": "body gains",
+          "value": 0.1
+        }
+      ],
+      "name_i18n": "Pearl necklace"
+    },
+    {
+      "name": "Moon necklace",
+      "target": "girl",
+      "type": "Necklace",
+      "pic": "Moon necklace.webp",
+      "template": true,
+      "rank": 1,
+      "max_rank": 6,
+      "rarity": 2,
+      "price": 100,
+      "effects": [
+        {
+          "type": "boost",
+          "target": "charm gains",
+          "value": 0.1
+        }
+      ],
+      "name_i18n": "Moon necklace"
+    },
+    {
+      "name": "Ivory necklace",
+      "target": "girl",
+      "type": "Necklace",
+      "pic": "Ivory necklace.webp",
+      "template": true,
+      "rank": 1,
+      "max_rank": 6,
+      "rarity": 2,
+      "price": 100,
+      "effects": [
+        {
+          "type": "boost",
+          "target": "refinement gains",
+          "value": 0.1
+        }
+      ],
+      "name_i18n": "Ivory necklace"
+    },
+    {
+      "name": "Choker necklace",
+      "target": "girl",
+      "type": "Necklace",
+      "pic": "Choker necklace.webp",
+      "template": true,
+      "rank": 1,
+      "max_rank": 6,
+      "rarity": 2,
+      "price": 250,
+      "effects": [
+        {
+          "type": "boost",
+          "target": "libido gains",
+          "value": 0.1
+        }
+      ],
+      "name_i18n": "Choker necklace"
+    },
+    {
+      "name": "Dog collar",
+      "target": "girl",
+      "type": "Necklace",
+      "pic": "Dog collar.webp",
+      "template": true,
+      "rank": 1,
+      "max_rank": 6,
+      "rarity": 2,
+      "price": 250,
+      "effects": [
+        {
+          "type": "boost",
+          "target": "obedience gains",
+          "value": 0.1
+        }
+      ],
+      "name_i18n": "Dog collar"
+    },
+    {
+      "name": "Silver chain",
+      "target": "girl",
+      "type": "Necklace",
+      "pic": "Silver chain.webp",
+      "template": true,
+      "rank": 1,
+      "max_rank": 6,
+      "rarity": 2,
+      "price": 250,
+      "effects": [
+        {
+          "type": "boost",
+          "target": "sensitivity gains",
+          "value": 0.1
+        }
+      ],
+      "name_i18n": "Silver chain"
+    },
+    {
+      "name": "Dagger necklace",
+      "target": "girl",
+      "type": "Necklace",
+      "pic": "Dagger necklace.webp",
+      "template": true,
+      "rank": 1,
+      "max_rank": 5,
+      "rarity": 2,
+      "price": 250,
+      "effects": [
+        {
+          "type": "boost",
+          "target": "constitution gains",
+          "value": 0.1
+        }
+      ],
+      "name_i18n": "Dagger necklace"
+    },
+    {
+      "name": "Gold bag",
+      "target": "girl",
+      "type": "Misc",
+      "pic": "Gold bag.webp",
+      "template": true,
+      "rank": 1,
+      "max_rank": 5,
+      "rarity": 2,
+      "charges": 1,
+      "price": 600,
+      "effects": [
+        {
+          "type": "special",
+          "target": "level",
+          "value": 5
+        }
+      ],
+      "adjectives": "ring",
+      "name_i18n": "Gold bag",
+      "description_i18n": "Instant level up. Use it wisely..."
+    },
+    {
+      "name": "Jewel bag",
+      "target": "girl",
+      "type": "Misc",
+      "pic": "Jewel bag.webp",
+      "template": true,
+      "rank": 1,
+      "max_rank": 5,
+      "rarity": 3,
+      "charges": 1,
+      "price": 500,
+      "effects": [
+        {
+          "type": "gain",
+          "target": "skill points",
+          "value": 5
+        }
+      ],
+      "name_i18n": "Jewel bag",
+      "description_i18n": "Get extra skill points."
+    },
+    {
+      "name": "Knowledge scroll",
+      "target": "girl",
+      "type": "Misc",
+      "pic": "Knowledge scroll.webp",
+      "template": true,
+      "rank": 1,
+      "max_rank": 5,
+      "rarity": 2,
+      "charges": 1,
+      "price": 400,
+      "effects": [
+        {
+          "type": "gain",
+          "target": "xp",
+          "value": 50
+        }
+      ],
+      "adjectives": "scroll",
+      "name_i18n": "Knowledge scroll",
+      "description_i18n": "Get free xp."
+    },
+    {
+      "name": "Medicine bag",
+      "target": "girl",
+      "type": "Misc",
+      "pic": "Medicine bag.webp",
+      "template": true,
+      "rank": 1,
+      "max_rank": 5,
+      "rarity": 2,
+      "charges": 1,
+      "price": 250,
+      "effects": [
+        {
+          "type": "instant",
+          "target": "heal",
+          "value": 2
+        }
+      ],
+      "name_i18n": "Medicine bag",
+      "description_i18n": ""
+    },
+    {
+      "name": "Tonic",
+      "target": "girl",
+      "type": "Misc",
+      "pic": "Tonic.webp",
+      "template": true,
+      "rank": 1,
+      "max_rank": 5,
+      "rarity": 1,
+      "charges": 1,
+      "price": 75,
+      "effects": [
+        {
+          "type": "gain",
+          "target": "energy",
+          "value": 20
+        }
+      ],
+      "name_i18n": "Tonic",
+      "description_i18n": ""
+    },
+    {
+      "name": "Wine",
+      "target": "girl",
+      "type": "Misc",
+      "pic": "Wine.webp",
+      "template": true,
+      "rank": 1,
+      "max_rank": 5,
+      "rarity": 1,
+      "charges": 1,
+      "price": 75,
+      "effects": [
+        {
+          "type": "gain",
+          "target": "mood",
+          "value": 10
+        }
+      ],
+      "name_i18n": "Wine",
+      "description_i18n": ""
+    },
+    {
+      "name": "Apple",
+      "target": "girl",
+      "type": "Food",
+      "pic": "Apple.webp",
+      "template": true,
+      "rank": 1,
+      "max_rank": 6,
+      "rarity": 1,
+      "charges": 1,
+      "price": 50,
+      "effects": [
+        {
+          "type": "change",
+          "target": "beauty",
+          "value": 5,
+          "duration": 10
+        },
+        {
+          "type": "instant",
+          "target": "heal",
+          "value": 1,
+          "chance": 0.5
+        }
+      ],
+      "name_i18n": "Apple",
+      "description_i18n": "An apple a day keeps the doctor away."
+    },
+    {
+      "name": "Pear",
+      "target": "girl",
+      "type": "Food",
+      "pic": "Pear.webp",
+      "template": true,
+      "rank": 1,
+      "max_rank": 6,
+      "rarity": 1,
+      "charges": 1,
+      "price": 50,
+      "effects": [
+        {
+          "type": "change",
+          "target": "body",
+          "value": 5,
+          "duration": 10
+        },
+        {
+          "type": "instant",
+          "target": "heal",
+          "value": 1,
+          "chance": 0.5
+        }
+      ],
+      "name_i18n": "Pear"
+    },
+    {
+      "name": "Peach",
+      "target": "girl",
+      "type": "Food",
+      "pic": "Peach.webp",
+      "template": true,
+      "rank": 1,
+      "max_rank": 6,
+      "rarity": 1,
+      "charges": 1,
+      "price": 50,
+      "effects": [
+        {
+          "type": "change",
+          "target": "charm",
+          "value": 5,
+          "duration": 10
+        },
+        {
+          "type": "instant",
+          "target": "heal",
+          "value": 1,
+          "chance": 0.5
+        }
+      ],
+      "name_i18n": "Peach"
+    },
+    {
+      "name": "Grapes",
+      "target": "girl",
+      "type": "Food",
+      "pic": "Grapes.webp",
+      "template": true,
+      "rank": 1,
+      "max_rank": 6,
+      "rarity": 1,
+      "charges": 1,
+      "price": 50,
+      "effects": [
+        {
+          "type": "change",
+          "target": "refinement",
+          "value": 5,
+          "duration": 10
+        },
+        {
+          "type": "instant",
+          "target": "heal",
+          "value": 1,
+          "chance": 0.5
+        }
+      ],
+      "name_i18n": "Grapes"
+    },
+    {
+      "name": "Sausage",
+      "target": "girl",
+      "type": "Food",
+      "pic": "Sausage.webp",
+      "template": true,
+      "rank": 1,
+      "max_rank": 6,
+      "rarity": 1,
+      "charges": 1,
+      "price": 75,
+      "effects": [
+        {
+          "type": "change",
+          "target": "libido",
+          "value": 5,
+          "duration": 10
+        },
+        {
+          "type": "instant",
+          "target": "heal",
+          "value": 1,
+          "chance": 0.5
+        }
+      ],
+      "name_i18n": "Sausage"
+    },
+    {
+      "name": "Cheese",
+      "target": "girl",
+      "type": "Food",
+      "pic": "Cheese.webp",
+      "template": true,
+      "rank": 1,
+      "max_rank": 6,
+      "rarity": 1,
+      "charges": 1,
+      "price": 75,
+      "effects": [
+        {
+          "type": "change",
+          "target": "sensitivity",
+          "value": 5,
+          "duration": 10
+        },
+        {
+          "type": "instant",
+          "target": "heal",
+          "value": 1,
+          "chance": 0.5
+        }
+      ],
+      "name_i18n": "Cheese"
+    },
+    {
+      "name": "Chicken",
+      "target": "girl",
+      "type": "Food",
+      "pic": "Chicken.webp",
+      "template": true,
+      "rank": 1,
+      "max_rank": 6,
+      "rarity": 1,
+      "charges": 1,
+      "price": 90,
+      "effects": [
+        {
+          "type": "change",
+          "target": "obedience",
+          "value": 5,
+          "duration": 10
+        },
+        {
+          "type": "instant",
+          "target": "heal",
+          "value": 1,
+          "chance": 0.5
+        }
+      ],
+      "name_i18n": "Chicken"
+    },
+    {
+      "name": "Roastbeef",
+      "target": "girl",
+      "type": "Food",
+      "pic": "Roastbeef.webp",
+      "template": true,
+      "rank": 1,
+      "max_rank": 6,
+      "rarity": 1,
+      "charges": 1,
+      "price": 75,
+      "effects": [
+        {
+          "type": "change",
+          "target": "constitution",
+          "value": 5,
+          "duration": 10
+        },
+        {
+          "type": "instant",
+          "target": "heal",
+          "value": 1,
+          "chance": 0.5
+        }
+      ],
+      "name_i18n": "Roastbeef"
+    },
+    {
+      "name": "Love potion",
+      "target": "girl",
+      "type": "Misc",
+      "pic": "Love potion.webp",
+      "template": true,
+      "rank": 1,
+      "max_rank": 6,
+      "rarity": 2,
+      "charges": 1,
+      "price": 100,
+      "effects": [
+        {
+          "type": "gain",
+          "target": "love",
+          "value": 2.5
+        }
+      ],
+      "name_i18n": "Love potion",
+      "description_i18n": "Who said money can't buy you love?"
+    },
+    {
+      "name": "Monster juice",
+      "target": "girl",
+      "type": "Misc",
+      "pic": "Monster juice.webp",
+      "template": true,
+      "rank": 1,
+      "max_rank": 6,
+      "rarity": 2,
+      "charges": 1,
+      "price": 60,
+      "effects": [
+        {
+          "type": "gain",
+          "target": "fear",
+          "value": 2.5
+        }
+      ],
+      "name_i18n": "Monster juice",
+      "description_i18n": "You don't want to know from which monster body parts this came from."
+    },
+    {
+      "name": "Pink panties",
+      "target": "girl",
+      "type": "Accessory",
+      "pic": "Pink panties.webp",
+      "template": true,
+      "rank": 1,
+      "max_rank": 6,
+      "rarity": 1,
+      "price": 125,
+      "effects": [
+        {
+          "type": "change",
+          "target": "beauty",
+          "value": 5
+        }
+      ],
+      "name_i18n": "Pink panties"
+    },
+    {
+      "name": "Hot pants",
+      "target": "girl",
+      "type": "Accessory",
+      "pic": "Hot pants.webp",
+      "template": true,
+      "rank": 1,
+      "max_rank": 6,
+      "rarity": 1,
+      "price": 125,
+      "effects": [
+        {
+          "type": "change",
+          "target": "body",
+          "value": 5
+        }
+      ],
+      "name_i18n": "Hot pants"
+    },
+    {
+      "name": "Lowcut panties",
+      "target": "girl",
+      "type": "Accessory",
+      "pic": "Lowcut panties.webp",
+      "template": true,
+      "rank": 1,
+      "max_rank": 6,
+      "rarity": 1,
+      "price": 125,
+      "effects": [
+        {
+          "type": "change",
+          "target": "charm",
+          "value": 5
+        }
+      ],
+      "name_i18n": "Lowcut panties"
+    },
+    {
+      "name": "Lace panties",
+      "target": "girl",
+      "type": "Accessory",
+      "pic": "Lace panties.webp",
+      "template": true,
+      "rank": 1,
+      "max_rank": 6,
+      "rarity": 1,
+      "price": 125,
+      "effects": [
+        {
+          "type": "change",
+          "target": "refinement",
+          "value": 5
+        }
+      ],
+      "name_i18n": "Lace panties"
+    },
+    {
+      "name": "Sexy panties",
+      "target": "girl",
+      "type": "Accessory",
+      "pic": "Sexy panties.webp",
+      "template": true,
+      "rank": 1,
+      "max_rank": 6,
+      "rarity": 2,
+      "price": 250,
+      "effects": [
+        {
+          "type": "change",
+          "target": "libido",
+          "value": 5
+        }
+      ],
+      "name_i18n": "Sexy panties"
+    },
+    {
+      "name": "Seethrough panties",
+      "target": "girl",
+      "type": "Accessory",
+      "pic": "Seethrough panties.webp",
+      "template": true,
+      "rank": 1,
+      "max_rank": 6,
+      "rarity": 2,
+      "price": 250,
+      "effects": [
+        {
+          "type": "change",
+          "target": "sensitivity",
+          "value": 5
+        }
+      ],
+      "name_i18n": "Seethrough panties"
+    },
+    {
+      "name": "Chastity belt",
+      "target": "girl",
+      "type": "Accessory",
+      "pic": "Chastity belt.webp",
+      "template": true,
+      "rank": 1,
+      "max_rank": 6,
+      "rarity": 2,
+      "price": 350,
+      "effects": [
+        {
+          "type": "change",
+          "target": "obedience",
+          "value": 5
+        }
+      ],
+      "name_i18n": "Chastity belt"
+    },
+    {
+      "name": "Thong",
+      "target": "girl",
+      "type": "Accessory",
+      "pic": "Thong.webp",
+      "template": true,
+      "rank": 1,
+      "max_rank": 6,
+      "rarity": 2,
+      "price": 175,
+      "effects": [
+        {
+          "type": "change",
+          "target": "constitution",
+          "value": 5
+        }
+      ],
+      "name_i18n": "Thong"
+    },
+    {
+      "name": "Bunny suit",
+      "target": "girl",
+      "type": "Dress",
+      "pic": "Bunny suit.webp",
+      "template": true,
+      "rank": 0,
+      "max_rank": 6,
+      "rarity": 0,
+      "price": 250,
+      "effects": [
+        {
+          "type": "change",
+          "target": "body",
+          "value": 5
+        },
+        {
+          "type": "change",
+          "target": "libido",
+          "value": 5
+        }
+      ],
+      "name_i18n": "Bunny suit"
+    },
+    {
+      "name": "Guard uniform",
+      "target": "girl",
+      "type": "Dress",
+      "pic": "Guard uniform.webp",
+      "template": true,
+      "rank": 0,
+      "max_rank": 6,
+      "rarity": 0,
+      "price": 250,
+      "effects": [
+        {
+          "type": "change",
+          "target": "charm",
+          "value": 5
+        },
+        {
+          "type": "change",
+          "target": "constitution",
+          "value": 5
+        }
+      ],
+      "name_i18n": "Guard uniform"
+    },
+    {
+      "name": "School uniform",
+      "target": "girl",
+      "type": "Dress",
+      "pic": "School uniform.webp",
+      "template": true,
+      "rank": 0,
+      "max_rank": 6,
+      "rarity": 0,
+      "price": 250,
+      "effects": [
+        {
+          "type": "change",
+          "target": "beauty",
+          "value": 5
+        },
+        {
+          "type": "change",
+          "target": "libido",
+          "value": 5
+        }
+      ],
+      "name_i18n": "School uniform"
+    },
+    {
+      "name": "Bikini",
+      "target": "girl",
+      "type": "Dress",
+      "pic": "Bikini.webp",
+      "template": true,
+      "rank": 0,
+      "max_rank": 6,
+      "rarity": 0,
+      "price": 250,
+      "effects": [
+        {
+          "type": "change",
+          "target": "body",
+          "value": 5
+        },
+        {
+          "type": "change",
+          "target": "constitution",
+          "value": 5
+        }
+      ],
+      "name_i18n": "Bikini"
+    },
+    {
+      "name": "Kimono",
+      "target": "girl",
+      "type": "Dress",
+      "pic": "Kimono.webp",
+      "template": true,
+      "rank": 0,
+      "max_rank": 6,
+      "rarity": 0,
+      "price": 350,
+      "effects": [
+        {
+          "type": "change",
+          "target": "refinement",
+          "value": 5
+        },
+        {
+          "type": "change",
+          "target": "obedience",
+          "value": 5
+        }
+      ],
+      "name_i18n": "Kimono"
+    },
+    {
+      "name": "Swimsuit",
+      "target": "girl",
+      "type": "Dress",
+      "pic": "Swimsuit.webp",
+      "template": true,
+      "rank": 0,
+      "max_rank": 6,
+      "rarity": 0,
+      "price": 250,
+      "effects": [
+        {
+          "type": "change",
+          "target": "beauty",
+          "value": 5
+        },
+        {
+          "type": "change",
+          "target": "sensitivity",
+          "value": 5
+        }
+      ],
+      "name_i18n": "Swimsuit"
+    },
+    {
+      "name": "Frilly dress",
+      "target": "girl",
+      "type": "Dress",
+      "pic": "Frilly dress.webp",
+      "template": true,
+      "rank": 0,
+      "max_rank": 6,
+      "rarity": 0,
+      "price": 250,
+      "effects": [
+        {
+          "type": "change",
+          "target": "charm",
+          "value": 5
+        },
+        {
+          "type": "change",
+          "target": "sensitivity",
+          "value": 5
+        }
+      ],
+      "name_i18n": "Frilly dress"
+    },
+    {
+      "name": "Leather dress",
+      "target": "girl",
+      "type": "Dress",
+      "pic": "Leather dress.webp",
+      "template": true,
+      "rank": 0,
+      "max_rank": 6,
+      "rarity": 0,
+      "price": 250,
+      "effects": [
+        {
+          "type": "change",
+          "target": "constitution",
+          "value": 5
+        },
+        {
+          "type": "change",
+          "target": "obedience",
+          "value": 5
+        }
+      ],
+      "name_i18n": "Leather dress"
+    },
+    {
+      "name": "Evening gown",
+      "target": "girl",
+      "type": "Dress",
+      "pic": "Evening gown.webp",
+      "template": true,
+      "rank": 1,
+      "max_rank": 6,
+      "rarity": 1,
+      "price": 400,
+      "effects": [
+        {
+          "type": "change",
+          "target": "beauty",
+          "value": 5
+        },
+        {
+          "type": "change",
+          "target": "charm",
+          "value": 5
+        },
+        {
+          "type": "change",
+          "target": "refinement",
+          "value": 5
+        },
+        {
+          "type": "change",
+          "target": "body",
+          "value": -5
+        }
+      ],
+      "name_i18n": "Evening gown"
+    },
+    {
+      "name": "Silk dress",
+      "target": "girl",
+      "type": "Dress",
+      "pic": "Silk dress.webp",
+      "template": true,
+      "rank": 1,
+      "max_rank": 6,
+      "rarity": 1,
+      "price": 400,
+      "effects": [
+        {
+          "type": "change",
+          "target": "libido",
+          "value": 5
+        },
+        {
+          "type": "change",
+          "target": "sensitivity",
+          "value": 5
+        },
+        {
+          "type": "change",
+          "target": "obedience",
+          "value": 5
+        },
+        {
+          "type": "change",
+          "target": "constitution",
+          "value": -5
+        }
+      ],
+      "name_i18n": "Silk dress"
+    },
+    {
+      "name": "Pompom uniform",
+      "target": "girl",
+      "type": "Dress",
+      "pic": "Pompom uniform.webp",
+      "template": true,
+      "rank": 1,
+      "max_rank": 6,
+      "rarity": 1,
+      "price": 400,
+      "effects": [
+        {
+          "type": "change",
+          "target": "beauty",
+          "value": 5
+        },
+        {
+          "type": "change",
+          "target": "charm",
+          "value": 5
+        },
+        {
+          "type": "change",
+          "target": "body",
+          "value": 5
+        },
+        {
+          "type": "change",
+          "target": "refinement",
+          "value": -5
+        }
+      ],
+      "name_i18n": "Pompom uniform"
+    },
+    {
+      "name": "Knight uniform",
+      "target": "girl",
+      "type": "Dress",
+      "pic": "Knight uniform.webp",
+      "template": true,
+      "rank": 1,
+      "max_rank": 6,
+      "rarity": 1,
+      "price": 400,
+      "effects": [
+        {
+          "type": "change",
+          "target": "body",
+          "value": 5
+        },
+        {
+          "type": "change",
+          "target": "constitution",
+          "value": 5
+        },
+        {
+          "type": "change",
+          "target": "obedience",
+          "value": 5
+        },
+        {
+          "type": "change",
+          "target": "libido",
+          "value": -5
+        }
+      ],
+      "name_i18n": "Knight uniform"
+    },
+    {
+      "name": "Black slavekini",
+      "target": "girl",
+      "type": "Dress",
+      "pic": "Black slavekini.webp",
+      "template": true,
+      "rank": 1,
+      "max_rank": 6,
+      "rarity": "S",
+      "price": 750,
+      "effects": [
+        {
+          "type": "change",
+          "target": "beauty",
+          "value": 5
+        },
+        {
+          "type": "change",
+          "target": "body",
+          "value": 5
+        },
+        {
+          "type": "change",
+          "target": "charm",
+          "value": 5
+        },
+        {
+          "type": "change",
+          "target": "refinement",
+          "value": 5
+        }
+      ],
+      "name_i18n": "Black slavekini"
+    },
+    {
+      "name": "Blue slavekini",
+      "target": "girl",
+      "type": "Dress",
+      "pic": "Blue slavekini.webp",
+      "template": true,
+      "rank": 1,
+      "max_rank": 6,
+      "rarity": "S",
+      "price": 1000,
+      "effects": [
+        {
+          "type": "change",
+          "target": "libido",
+          "value": 5
+        },
+        {
+          "type": "change",
+          "target": "sensitivity",
+          "value": 5
+        },
+        {
+          "type": "change",
+          "target": "obedience",
+          "value": 5
+        },
+        {
+          "type": "change",
+          "target": "constitution",
+          "value": 5
+        }
+      ],
+      "name_i18n": "Blue slavekini"
+    },
+    {
+      "name": "Red slavekini",
+      "target": "girl",
+      "type": "Dress",
+      "pic": "Red slavekini.webp",
+      "template": true,
+      "rank": 1,
+      "max_rank": 6,
+      "rarity": "S",
+      "price": 2000,
+      "effects": [
+        {
+          "type": "change",
+          "target": "service",
+          "value": 5
+        },
+        {
+          "type": "change",
+          "target": "sex",
+          "value": 5
+        },
+        {
+          "type": "change",
+          "target": "anal",
+          "value": 5
+        },
+        {
+          "type": "change",
+          "target": "fetish",
+          "value": 5
+        }
+      ],
+      "name_i18n": "Red slavekini"
+    },
+    {
+      "name": "Sunny dress",
+      "target": "girl",
+      "type": "Dress",
+      "pic": "Sunny dress.webp",
+      "template": true,
+      "rank": 0,
+      "max_rank": 6,
+      "rarity": 0,
+      "price": 300,
+      "effects": [
+        {
+          "type": "change",
+          "target": "beauty",
+          "value": 10
+        }
+      ],
+      "name_i18n": "Sunny dress"
+    },
+    {
+      "name": "Revealing dress",
+      "target": "girl",
+      "type": "Dress",
+      "pic": "Revealing dress.webp",
+      "template": true,
+      "rank": 0,
+      "max_rank": 6,
+      "rarity": 0,
+      "price": 300,
+      "effects": [
+        {
+          "type": "change",
+          "target": "body",
+          "value": 10
+        }
+      ],
+      "name_i18n": "Revealing dress"
+    },
+    {
+      "name": "Exotic dress",
+      "target": "girl",
+      "type": "Dress",
+      "pic": "Exotic dress.webp",
+      "template": true,
+      "rank": 0,
+      "max_rank": 6,
+      "rarity": 0,
+      "price": 300,
+      "effects": [
+        {
+          "type": "change",
+          "target": "charm",
+          "value": 10
+        }
+      ],
+      "name_i18n": "Exotic dress"
+    },
+    {
+      "name": "Priestess robe",
+      "target": "girl",
+      "type": "Dress",
+      "pic": "Priestess robe.webp",
+      "template": true,
+      "rank": 0,
+      "max_rank": 6,
+      "rarity": 0,
+      "price": 300,
+      "effects": [
+        {
+          "type": "change",
+          "target": "refinement",
+          "value": 10
+        }
+      ],
+      "name_i18n": "Priestess robe"
+    },
+    {
+      "name": "Slutty dress",
+      "target": "girl",
+      "type": "Dress",
+      "pic": "Slutty dress.webp",
+      "template": true,
+      "rank": 0,
+      "max_rank": 6,
+      "rarity": 0,
+      "price": 425,
+      "effects": [
+        {
+          "type": "change",
+          "target": "libido",
+          "value": 10
+        }
+      ],
+      "name_i18n": "Slutty dress"
+    },
+    {
+      "name": "Seethrough dress",
+      "target": "girl",
+      "type": "Dress",
+      "pic": "Seethrough dress.webp",
+      "template": true,
+      "rank": 0,
+      "max_rank": 6,
+      "rarity": 0,
+      "price": 425,
+      "effects": [
+        {
+          "type": "change",
+          "target": "sensitivity",
+          "value": 10
+        }
+      ],
+      "name_i18n": "Seethrough dress"
+    },
+    {
+      "name": "Maid uniform",
+      "target": "girl",
+      "type": "Dress",
+      "pic": "Maid uniform.webp",
+      "template": true,
+      "rank": 0,
+      "max_rank": 6,
+      "rarity": 0,
+      "price": 500,
+      "effects": [
+        {
+          "type": "change",
+          "target": "obedience",
+          "value": 10
+        }
+      ],
+      "name_i18n": "Maid uniform"
+    },
+    {
+      "name": "Gym uniform",
+      "target": "girl",
+      "type": "Dress",
+      "pic": "Gym uniform.webp",
+      "template": true,
+      "rank": 0,
+      "max_rank": 6,
+      "rarity": 0,
+      "price": 425,
+      "effects": [
+        {
+          "type": "change",
+          "target": "constitution",
+          "value": 10
+        }
+      ],
+      "name_i18n": "Gym uniform"
+    },
+    {
+      "name": "Emerald ring",
+      "target": "girl",
+      "type": "Ring",
+      "pic": "Emerald ring.webp",
+      "template": true,
+      "rank": 1,
+      "max_rank": 5,
+      "rarity": 3,
+      "price": 500,
+      "effects": [
+        {
+          "type": "change",
+          "target": "service",
+          "value": 5
+        }
+      ],
+      "name_i18n": "Emerald ring"
+    },
+    {
+      "name": "Ruby ring",
+      "target": "girl",
+      "type": "Ring",
+      "pic": "Ruby ring.webp",
+      "template": true,
+      "rank": 1,
+      "max_rank": 5,
+      "rarity": 3,
+      "price": 500,
+      "effects": [
+        {
+          "type": "change",
+          "target": "sex",
+          "value": 5
+        }
+      ],
+      "name_i18n": "Ruby ring"
+    },
+    {
+      "name": "Amber ring",
+      "target": "girl",
+      "type": "Ring",
+      "pic": "Amber ring.webp",
+      "template": true,
+      "rank": 1,
+      "max_rank": 5,
+      "rarity": 3,
+      "price": 500,
+      "effects": [
+        {
+          "type": "change",
+          "target": "anal",
+          "value": 5
+        }
+      ],
+      "name_i18n": "Amber ring"
+    },
+    {
+      "name": "Sapphire ring",
+      "target": "girl",
+      "type": "Ring",
+      "pic": "sapphire ring.webp",
+      "template": true,
+      "rank": 1,
+      "max_rank": 5,
+      "rarity": 3,
+      "price": 500,
+      "effects": [
+        {
+          "type": "change",
+          "target": "fetish",
+          "value": 5
+        }
+      ],
+      "name_i18n": "Sapphire ring"
+    },
+    {
+      "name": "Scroll of bartending",
+      "target": "girl",
+      "type": "Misc",
+      "pic": "Scroll of bartending.webp",
+      "template": true,
+      "rank": 1,
+      "max_rank": 5,
+      "rarity": 2,
+      "charges": 1,
+      "price": 150,
+      "effects": [
+        {
+          "type": "gain",
+          "target": "waitress jp",
+          "value": 10
+        }
+      ],
+      "adjectives": "scroll",
+      "name_i18n": "Scroll of bartending"
+    },
+    {
+      "name": "Scroll of whirling",
+      "target": "girl",
+      "type": "Misc",
+      "pic": "Scroll of whirling.webp",
+      "template": true,
+      "rank": 1,
+      "max_rank": 5,
+      "rarity": 2,
+      "charges": 1,
+      "price": 150,
+      "effects": [
+        {
+          "type": "gain",
+          "target": "dancer jp",
+          "value": 10
+        }
+      ],
+      "adjectives": "scroll",
+      "name_i18n": "Scroll of whirling"
+    },
+    {
+      "name": "Scroll of rubbing",
+      "target": "girl",
+      "type": "Misc",
+      "pic": "Scroll of rubbing.webp",
+      "template": true,
+      "rank": 1,
+      "max_rank": 5,
+      "rarity": 2,
+      "charges": 1,
+      "price": 150,
+      "effects": [
+        {
+          "type": "gain",
+          "target": "masseuse jp",
+          "value": 10
+        }
+      ],
+      "adjectives": "scroll",
+      "name_i18n": "Scroll of rubbing"
+    },
+    {
+      "name": "Scroll of etiquette",
+      "target": "girl",
+      "type": "Misc",
+      "pic": "Scroll of etiquette.webp",
+      "template": true,
+      "rank": 1,
+      "max_rank": 5,
+      "rarity": 2,
+      "charges": 1,
+      "price": 150,
+      "effects": [
+        {
+          "type": "gain",
+          "target": "geisha jp",
+          "value": 10
+        }
+      ],
+      "adjectives": "scroll",
+      "name_i18n": "Scroll of etiquette"
+    },
+    {
+      "name": "Scroll of Onan",
+      "target": "girl",
+      "type": "Misc",
+      "pic": "Scroll of Onan.webp",
+      "template": true,
+      "rank": 1,
+      "max_rank": 5,
+      "rarity": 2,
+      "charges": 1,
+      "price": 150,
+      "effects": [
+        {
+          "type": "gain",
+          "target": "service jp",
+          "value": 10
+        }
+      ],
+      "adjectives": "scroll",
+      "name_i18n": "Scroll of Onan"
+    },
+    {
+      "name": "Scroll of Eros",
+      "target": "girl",
+      "type": "Misc",
+      "pic": "Scroll of Eros.webp",
+      "template": true,
+      "rank": 1,
+      "max_rank": 5,
+      "rarity": 2,
+      "charges": 1,
+      "price": 150,
+      "effects": [
+        {
+          "type": "gain",
+          "target": "sex jp",
+          "value": 10
+        }
+      ],
+      "adjectives": "scroll",
+      "name_i18n": "Scroll of Eros"
+    },
+    {
+      "name": "Scroll of Sodom",
+      "target": "girl",
+      "type": "Misc",
+      "pic": "Scroll of Sodom.webp",
+      "template": true,
+      "rank": 1,
+      "max_rank": 5,
+      "rarity": 2,
+      "charges": 1,
+      "price": 150,
+      "effects": [
+        {
+          "type": "gain",
+          "target": "anal jp",
+          "value": 10
+        }
+      ],
+      "adjectives": "scroll",
+      "name_i18n": "Scroll of Sodom"
+    },
+    {
+      "name": "Scroll of Gomorrah",
+      "target": "girl",
+      "type": "Misc",
+      "pic": "Scroll of Gomorrah.webp",
+      "template": true,
+      "rank": 1,
+      "max_rank": 5,
+      "rarity": 2,
+      "charges": 1,
+      "price": 150,
+      "effects": [
+        {
+          "type": "gain",
+          "target": "fetish jp",
+          "value": 10
+        }
+      ],
+      "adjectives": "scroll",
+      "name_i18n": "Scroll of Gomorrah"
+    },
+    {
+      "name": "Elvish-made penis enlarger",
+      "target": "minion",
+      "type": "Misc",
+      "pic": "enlarger.webp",
+      "template": true,
+      "rank": 1,
+      "max_rank": 5,
+      "rarity": "M",
+      "charges": 1,
+      "price": 120,
+      "effects": [
+        {
+          "type": "gain",
+          "target": "stallion xp",
+          "value": 10
+        }
+      ],
+      "name_i18n": "Elvish-made penis enlarger",
+      "description_i18n": "That's not mine. This sort of thing ain't my bag, baby!"
+    },
+    {
+      "name": "Machine lubricant",
+      "target": "minion",
+      "type": "Misc",
+      "pic": "lubricant.webp",
+      "template": true,
+      "rank": 1,
+      "max_rank": 5,
+      "rarity": "M",
+      "charges": 1,
+      "price": 120,
+      "effects": [
+        {
+          "type": "gain",
+          "target": "machine xp",
+          "value": 10
+        }
+      ],
+      "name_i18n": "Machine lubricant",
+      "description_i18n": "Grease is good."
+    },
+    {
+      "name": "Strange feed",
+      "target": "minion",
+      "type": "Misc",
+      "pic": "feed.webp",
+      "template": true,
+      "rank": 1,
+      "max_rank": 5,
+      "rarity": "M",
+      "charges": 1,
+      "price": 120,
+      "effects": [
+        {
+          "type": "gain",
+          "target": "beast xp",
+          "value": 10
+        }
+      ],
+      "name_i18n": "Strange feed",
+      "description_i18n": "Like it when they hold onto your leg and rubs themselves up and down? Because this feed sure makes them wanna do that."
+    },
+    {
+      "name": "Monster cookie",
+      "target": "minion",
+      "type": "Misc",
+      "pic": "cookie.webp",
+      "template": true,
+      "rank": 1,
+      "max_rank": 5,
+      "rarity": "M",
+      "charges": 1,
+      "price": 120,
+      "effects": [
+        {
+          "type": "gain",
+          "target": "monster xp",
+          "value": 10
+        }
+      ],
+      "adjectives": "food",
+      "name_i18n": "Monster cookie",
+      "description_i18n": "C is for cock-y."
+    }
+  ],
+  "all_items": [
+    {
+      "name": "Short sword",
+      "target": "MC",
+      "type": "Weapon",
+      "pic": "Short sword.webp",
+      "rank": 1,
+      "rarity": 1,
+      "price": 250,
+      "effects": [
+        {
+          "type": "change",
+          "target": "strength",
+          "value": 1
+        }
+      ],
+      "name_i18n": "Short sword",
+      "description_i18n": ""
+    },
+    {
+      "name": "Cutlass",
+      "target": "MC",
+      "type": "Weapon",
+      "pic": "Cutlass.webp",
+      "rank": 1,
+      "rarity": 2,
+      "price": 500,
+      "effects": [
+        {
+          "type": "change",
+          "target": "strength",
+          "value": 2
+        }
+      ],
+      "name_i18n": "Cutlass",
+      "description_i18n": "It's not a knife. That's a knife."
+    },
+    {
+      "name": "Axe",
+      "target": "MC",
+      "type": "Weapon",
+      "pic": "Axe.webp",
+      "rank": 2,
+      "rarity": 2,
+      "price": 1000,
+      "effects": [
+        {
+          "type": "change",
+          "target": "strength",
+          "value": 2
+        },
+        {
+          "type": "change",
+          "target": "spirit",
+          "value": 1
+        }
+      ],
+      "name_i18n": "Axe",
+      "description_i18n": ""
+    },
+    {
+      "name": "Lance",
+      "target": "MC",
+      "type": "Weapon",
+      "pic": "Lance.webp",
+      "rank": 2,
+      "rarity": 2,
+      "price": 2500,
+      "effects": [
+        {
+          "type": "change",
+          "target": "strength",
+          "value": 3
+        },
+        {
+          "type": "change",
+          "target": "charisma",
+          "value": 1
+        }
+      ],
+      "name_i18n": "Lance",
+      "description_i18n": ""
+    },
+    {
+      "name": "Long sword",
+      "target": "MC",
+      "type": "Weapon",
+      "pic": "Long sword.webp",
+      "rank": 2,
+      "rarity": 3,
+      "price": 3500,
+      "effects": [
+        {
+          "type": "change",
+          "target": "strength",
+          "value": 3
+        },
+        {
+          "type": "change",
+          "target": "charisma",
+          "value": 1
+        },
+        {
+          "type": "change",
+          "target": "spirit",
+          "value": 1
+        }
+      ],
+      "name_i18n": "Long sword",
+      "description_i18n": ""
+    },
+    {
+      "name": "Rapier",
+      "target": "MC",
+      "type": "Weapon",
+      "pic": "Rapier.webp",
+      "rank": 3,
+      "rarity": 3,
+      "price": 5000,
+      "effects": [
+        {
+          "type": "change",
+          "target": "strength",
+          "value": 4
+        },
+        {
+          "type": "change",
+          "target": "charisma",
+          "value": 2
+        }
+      ],
+      "name_i18n": "Rapier",
+      "description_i18n": ""
+    },
+    {
+      "name": "Battle axe",
+      "target": "MC",
+      "type": "Weapon",
+      "pic": "Battle axe.webp",
+      "rank": 3,
+      "rarity": 3,
+      "price": 10000,
+      "effects": [
+        {
+          "type": "change",
+          "target": "strength",
+          "value": 5
+        },
+        {
+          "type": "change",
+          "target": "spirit",
+          "value": 2
+        }
+      ],
+      "name_i18n": "Battle axe",
+      "description_i18n": ""
+    },
+    {
+      "name": "Warhammer",
+      "target": "MC",
+      "type": "Weapon",
+      "pic": "Warhammer.webp",
+      "rank": 3,
+      "rarity": 4,
+      "price": 17500,
+      "effects": [
+        {
+          "type": "change",
+          "target": "strength",
+          "value": 5
+        },
+        {
+          "type": "change",
+          "target": "charisma",
+          "value": 2
+        },
+        {
+          "type": "change",
+          "target": "spirit",
+          "value": 1
+        }
+      ],
+      "name_i18n": "Warhammer",
+      "description_i18n": ""
+    },
+    {
+      "name": "Holy sword",
+      "target": "MC",
+      "type": "Weapon",
+      "pic": "Holy sword.webp",
+      "rank": 4,
+      "rarity": 4,
+      "price": 40000,
+      "effects": [
+        {
+          "type": "change",
+          "target": "strength",
+          "value": 6
+        },
+        {
+          "type": "change",
+          "target": "spirit",
+          "value": 3
+        }
+      ],
+      "name_i18n": "Holy sword",
+      "description_i18n": "This sword hums with power. The light reflects so brightly on its blade it could blind the angels themselves."
+    },
+    {
+      "name": "Ebony sword",
+      "target": "MC",
+      "type": "Weapon",
+      "pic": "Ebony sword.webp",
+      "rank": 4,
+      "rarity": 5,
+      "price": 100000,
+      "effects": [
+        {
+          "type": "change",
+          "target": "strength",
+          "value": 8
+        },
+        {
+          "type": "change",
+          "target": "charisma",
+          "value": 4
+        },
+        {
+          "type": "change",
+          "target": "spirit",
+          "value": -2
+        }
+      ],
+      "name_i18n": "Ebony sword",
+      "description_i18n": "This blade is made of a mysterious alloy that shifts in and out of existence. It is said every hit with this blade drains a part of your soul; but it's more like a slight tug."
+    },
+    {
+      "name": "Broom staff",
+      "target": "MC",
+      "type": "Weapon",
+      "pic": "Broom staff.webp",
+      "rank": 1,
+      "rarity": 1,
+      "price": 250,
+      "effects": [
+        {
+          "type": "change",
+          "target": "spirit",
+          "value": 1
+        }
+      ],
+      "name_i18n": "Broom staff",
+      "description_i18n": ""
+    },
+    {
+      "name": "Wooden staff",
+      "target": "MC",
+      "type": "Weapon",
+      "pic": "Wooden staff.webp",
+      "rank": 1,
+      "rarity": 2,
+      "price": 500,
+      "effects": [
+        {
+          "type": "change",
+          "target": "spirit",
+          "value": 2
+        }
+      ],
+      "name_i18n": "Wooden staff",
+      "description_i18n": ""
+    },
+    {
+      "name": "Goblin staff",
+      "target": "MC",
+      "type": "Weapon",
+      "pic": "Goblin staff.webp",
+      "rank": 2,
+      "rarity": 2,
+      "price": 1000,
+      "effects": [
+        {
+          "type": "change",
+          "target": "charisma",
+          "value": 1
+        },
+        {
+          "type": "change",
+          "target": "spirit",
+          "value": 2
+        }
+      ],
+      "name_i18n": "Goblin staff",
+      "description_i18n": ""
+    },
+    {
+      "name": "Bronze staff",
+      "target": "MC",
+      "type": "Weapon",
+      "pic": "Bronze staff.webp",
+      "rank": 2,
+      "rarity": 2,
+      "price": 2500,
+      "effects": [
+        {
+          "type": "change",
+          "target": "strength",
+          "value": 1
+        },
+        {
+          "type": "change",
+          "target": "spirit",
+          "value": 3
+        }
+      ],
+      "name_i18n": "Bronze staff",
+      "description_i18n": ""
+    },
+    {
+      "name": "Wind staff",
+      "target": "MC",
+      "type": "Weapon",
+      "pic": "Wind staff.webp",
+      "rank": 2,
+      "rarity": 3,
+      "price": 3500,
+      "effects": [
+        {
+          "type": "change",
+          "target": "strength",
+          "value": 1
+        },
+        {
+          "type": "change",
+          "target": "charisma",
+          "value": 1
+        },
+        {
+          "type": "change",
+          "target": "spirit",
+          "value": 3
+        }
+      ],
+      "name_i18n": "Wind staff",
+      "description_i18n": ""
+    },
+    {
+      "name": "Healing staff",
+      "target": "MC",
+      "type": "Weapon",
+      "pic": "Healing staff.webp",
+      "rank": 3,
+      "rarity": 3,
+      "price": 5000,
+      "effects": [
+        {
+          "type": "change",
+          "target": "charisma",
+          "value": 2
+        },
+        {
+          "type": "change",
+          "target": "spirit",
+          "value": 4
+        }
+      ],
+      "name_i18n": "Healing staff",
+      "description_i18n": ""
+    },
+    {
+      "name": "Thunder staff",
+      "target": "MC",
+      "type": "Weapon",
+      "pic": "Thunder staff.webp",
+      "rank": 3,
+      "rarity": 3,
+      "price": 10000,
+      "effects": [
+        {
+          "type": "change",
+          "target": "strength",
+          "value": 2
+        },
+        {
+          "type": "change",
+          "target": "spirit",
+          "value": 5
+        }
+      ],
+      "name_i18n": "Thunder staff",
+      "description_i18n": ""
+    },
+    {
+      "name": "Emerald staff",
+      "target": "MC",
+      "type": "Weapon",
+      "pic": "Emerald staff.webp",
+      "rank": 3,
+      "rarity": 4,
+      "price": 17500,
+      "effects": [
+        {
+          "type": "change",
+          "target": "strength",
+          "value": 1
+        },
+        {
+          "type": "change",
+          "target": "charisma",
+          "value": 2
+        },
+        {
+          "type": "change",
+          "target": "spirit",
+          "value": 5
+        }
+      ],
+      "name_i18n": "Emerald staff",
+      "description_i18n": ""
+    },
+    {
+      "name": "Crystal staff",
+      "target": "MC",
+      "type": "Weapon",
+      "pic": "Crystal staff.webp",
+      "rank": 4,
+      "rarity": 4,
+      "price": 40000,
+      "effects": [
+        {
+          "type": "change",
+          "target": "strength",
+          "value": 3
+        },
+        {
+          "type": "change",
+          "target": "spirit",
+          "value": 6
+        }
+      ],
+      "name_i18n": "Crystal staff",
+      "description_i18n": ""
+    },
+    {
+      "name": "Angel staff",
+      "target": "MC",
+      "type": "Weapon",
+      "pic": "Angel staff.webp",
+      "rank": 4,
+      "rarity": 5,
+      "price": 100000,
+      "effects": [
+        {
+          "type": "change",
+          "target": "charisma",
+          "value": 2
+        },
+        {
+          "type": "change",
+          "target": "spirit",
+          "value": 8
+        }
+      ],
+      "name_i18n": "Angel staff",
+      "description_i18n": ""
+    },
+    {
+      "name": "Throwing knife",
+      "target": "MC",
+      "type": "Weapon",
+      "pic": "Throwing knife.webp",
+      "rank": 1,
+      "rarity": 1,
+      "price": 250,
+      "effects": [
+        {
+          "type": "change",
+          "target": "charisma",
+          "value": 1
+        }
+      ],
+      "name_i18n": "Throwing knife",
+      "description_i18n": ""
+    },
+    {
+      "name": "Throwing axe",
+      "target": "MC",
+      "type": "Weapon",
+      "pic": "Throwing axe.webp",
+      "rank": 1,
+      "rarity": 2,
+      "price": 500,
+      "effects": [
+        {
+          "type": "change",
+          "target": "charisma",
+          "value": 2
+        }
+      ],
+      "name_i18n": "Throwing axe",
+      "description_i18n": ""
+    },
+    {
+      "name": "Bow",
+      "target": "MC",
+      "type": "Weapon",
+      "pic": "Bow.webp",
+      "rank": 2,
+      "rarity": 2,
+      "price": 1000,
+      "effects": [
+        {
+          "type": "change",
+          "target": "strength",
+          "value": 1
+        },
+        {
+          "type": "change",
+          "target": "charisma",
+          "value": 2
+        }
+      ],
+      "name_i18n": "Bow",
+      "description_i18n": ""
+    },
+    {
+      "name": "Ornate bow",
+      "target": "MC",
+      "type": "Weapon",
+      "pic": "Ornate bow.webp",
+      "rank": 2,
+      "rarity": 2,
+      "price": 2500,
+      "effects": [
+        {
+          "type": "change",
+          "target": "charisma",
+          "value": 3
+        },
+        {
+          "type": "change",
+          "target": "spirit",
+          "value": 1
+        }
+      ],
+      "name_i18n": "Ornate bow",
+      "description_i18n": ""
+    },
+    {
+      "name": "Flintlock",
+      "target": "MC",
+      "type": "Weapon",
+      "pic": "Flintlock.webp",
+      "rank": 2,
+      "rarity": 3,
+      "price": 3500,
+      "effects": [
+        {
+          "type": "change",
+          "target": "strength",
+          "value": 2
+        },
+        {
+          "type": "change",
+          "target": "charisma",
+          "value": 3
+        }
+      ],
+      "name_i18n": "Flintlock",
+      "description_i18n": ""
+    },
+    {
+      "name": "Crossbow",
+      "target": "MC",
+      "type": "Weapon",
+      "pic": "Crossbow.webp",
+      "rank": 3,
+      "rarity": 3,
+      "price": 5000,
+      "effects": [
+        {
+          "type": "change",
+          "target": "strength",
+          "value": 1
+        },
+        {
+          "type": "change",
+          "target": "charisma",
+          "value": 4
+        },
+        {
+          "type": "change",
+          "target": "spirit",
+          "value": 1
+        }
+      ],
+      "name_i18n": "Crossbow",
+      "description_i18n": ""
+    },
+    {
+      "name": "Repeater",
+      "target": "MC",
+      "type": "Weapon",
+      "pic": "Repeater.webp",
+      "rank": 3,
+      "rarity": 3,
+      "price": 10000,
+      "effects": [
+        {
+          "type": "change",
+          "target": "strength",
+          "value": 2
+        },
+        {
+          "type": "change",
+          "target": "charisma",
+          "value": 5
+        }
+      ],
+      "name_i18n": "Repeater",
+      "description_i18n": ""
+    },
+    {
+      "name": "Blunderbuss",
+      "target": "MC",
+      "type": "Weapon",
+      "pic": "Blunderbuss.webp",
+      "rank": 3,
+      "rarity": 4,
+      "price": 17500,
+      "effects": [
+        {
+          "type": "change",
+          "target": "strength",
+          "value": 3
+        },
+        {
+          "type": "change",
+          "target": "charisma",
+          "value": 5
+        }
+      ],
+      "name_i18n": "Blunderbuss",
+      "description_i18n": "This. Is. My boomstick!"
+    },
+    {
+      "name": "Holy handgrenade",
+      "target": "MC",
+      "type": "Weapon",
+      "pic": "Holy handgrenade.webp",
+      "rank": 4,
+      "rarity": 4,
+      "price": 40000,
+      "effects": [
+        {
+          "type": "change",
+          "target": "charisma",
+          "value": 6
+        },
+        {
+          "type": "change",
+          "target": "spirit",
+          "value": 3
+        }
+      ],
+      "name_i18n": "Holy handgrenade",
+      "description_i18n": ""
+    },
+    {
+      "name": "Death dispenser",
+      "target": "MC",
+      "type": "Weapon",
+      "pic": "Death dispenser.webp",
+      "rank": 4,
+      "rarity": 5,
+      "price": 100000,
+      "effects": [
+        {
+          "type": "change",
+          "target": "strength",
+          "value": 4
+        },
+        {
+          "type": "change",
+          "target": "charisma",
+          "value": 8
+        },
+        {
+          "type": "change",
+          "target": "spirit",
+          "value": -2
+        }
+      ],
+      "name_i18n": "Death dispenser",
+      "description_i18n": ""
+    },
+    {
+      "name": "Arios amulet",
+      "target": "MC",
+      "type": "Necklace",
+      "pic": "Arios amulet.webp",
+      "rank": 1,
+      "rarity": "U",
+      "price": 25000,
+      "effects": [],
+      "name_i18n": "Arios amulet",
+      "description_i18n": "Unique reward for completing the Arios knight quest."
+    },
+    {
+      "name": "Shalia talisman",
+      "target": "MC",
+      "type": "Necklace",
+      "pic": "Shalia talisman.webp",
+      "rank": 1,
+      "rarity": "U",
+      "price": 25000,
+      "effects": [],
+      "name_i18n": "Shalia talisman",
+      "description_i18n": "Unique reward for completing the Shalia shadow quest."
+    },
+    {
+      "name": "Merchant sigil",
+      "target": "MC",
+      "type": "Necklace",
+      "pic": "Merchant sigil.webp",
+      "rank": 1,
+      "rarity": "U",
+      "price": 25000,
+      "effects": [],
+      "name_i18n": "Merchant sigil",
+      "description_i18n": "Unique reward for completing the guild of merchants quest."
+    },
+    {
+      "name": "Fur boots",
+      "target": "MC",
+      "type": "Accessory",
+      "pic": "Fur boots.webp",
+      "rank": 1,
+      "rarity": 1,
+      "price": 500,
+      "effects": [
+        {
+          "type": "change",
+          "target": "speed",
+          "value": 1
+        }
+      ],
+      "name_i18n": "Fur boots"
+    },
+    {
+      "name": "Leather boots",
+      "target": "MC",
+      "type": "Accessory",
+      "pic": "Leather boots.webp",
+      "rank": 1,
+      "rarity": 2,
+      "price": 2000,
+      "effects": [
+        {
+          "type": "change",
+          "target": "speed",
+          "value": 2
+        }
+      ],
+      "name_i18n": "Leather boots"
+    },
+    {
+      "name": "Elven boots",
+      "target": "MC",
+      "type": "Accessory",
+      "pic": "Elven boots.webp",
+      "rank": 2,
+      "rarity": 3,
+      "price": 10000,
+      "effects": [
+        {
+          "type": "change",
+          "target": "speed",
+          "value": 3
+        }
+      ],
+      "name_i18n": "Elven boots"
+    },
+    {
+      "name": "Horse",
+      "target": "MC",
+      "type": "Accessory",
+      "pic": "Horse.webp",
+      "rank": 3,
+      "rarity": 4,
+      "price": 50000,
+      "effects": [
+        {
+          "type": "change",
+          "target": "speed",
+          "value": 4
+        }
+      ],
+      "name_i18n": "Horse"
+    },
+    {
+      "name": "Dark horse",
+      "target": "MC",
+      "type": "Accessory",
+      "pic": "Dark horse.webp",
+      "rank": 4,
+      "rarity": 5,
+      "price": 150000,
+      "effects": [
+        {
+          "type": "change",
+          "target": "speed",
+          "value": 5
+        }
+      ],
+      "name_i18n": "Dark horse"
+    },
+    {
+      "name": "Dragon egg",
+      "target": "MC",
+      "type": "Misc",
+      "pic": "Dragon egg.webp",
+      "rank": 1,
+      "rarity": "S",
+      "charges": 1,
+      "price": 5000,
+      "effects": [
+        {
+          "type": "gain",
+          "target": "skill points",
+          "value": 1
+        }
+      ],
+      "sound": "crunch.ogg",
+      "hidden_effect": true,
+      "name_i18n": "Dragon egg",
+      "description_i18n": "'He was no dragon...'nEat this at your own risk!"
+    },
+    {
+      "name": "Knuckle duster",
+      "target": "girl",
+      "type": "Weapon",
+      "pic": "Knuckle duster.webp",
+      "rank": 1,
+      "rarity": 1,
+      "price": 50,
+      "effects": [
+        {
+          "type": "change",
+          "target": "defense",
+          "value": 1
+        }
+      ],
+      "name_i18n": "Knuckle duster"
+    },
+    {
+      "name": "Hook",
+      "target": "girl",
+      "type": "Weapon",
+      "pic": "Hook.webp",
+      "rank": 1,
+      "rarity": 1,
+      "price": 250,
+      "effects": [
+        {
+          "type": "change",
+          "target": "defense",
+          "value": 2
+        }
+      ],
+      "name_i18n": "Hook"
+    },
+    {
+      "name": "Shiv",
+      "target": "girl",
+      "type": "Weapon",
+      "pic": "Shiv.webp",
+      "rank": 1,
+      "rarity": 2,
+      "price": 500,
+      "effects": [
+        {
+          "type": "change",
+          "target": "defense",
+          "value": 3
+        }
+      ],
+      "name_i18n": "Shiv"
+    },
+    {
+      "name": "Knife",
+      "target": "girl",
+      "type": "Weapon",
+      "pic": "Knife.webp",
+      "rank": 2,
+      "rarity": 2,
+      "price": 1000,
+      "effects": [
+        {
+          "type": "change",
+          "target": "defense",
+          "value": 4
+        }
+      ],
+      "name_i18n": "Knife"
+    },
+    {
+      "name": "Dagger",
+      "target": "girl",
+      "type": "Weapon",
+      "pic": "Dagger.webp",
+      "rank": 2,
+      "rarity": 2,
+      "price": 1750,
+      "effects": [
+        {
+          "type": "change",
+          "target": "defense",
+          "value": 5
+        }
+      ],
+      "name_i18n": "Dagger"
+    },
+    {
+      "name": "Sacrificial knife",
+      "target": "girl",
+      "type": "Weapon",
+      "pic": "Sacrificial knife.webp",
+      "rank": 2,
+      "rarity": 3,
+      "price": 2750,
+      "effects": [
+        {
+          "type": "change",
+          "target": "defense",
+          "value": 6
+        }
+      ],
+      "name_i18n": "Sacrificial knife"
+    },
+    {
+      "name": "Mace",
+      "target": "girl",
+      "type": "Weapon",
+      "pic": "Mace.webp",
+      "rank": 3,
+      "rarity": 3,
+      "price": 5000,
+      "effects": [
+        {
+          "type": "change",
+          "target": "defense",
+          "value": 7
+        }
+      ],
+      "name_i18n": "Mace"
+    },
+    {
+      "name": "Whip",
+      "target": "girl",
+      "type": "Weapon",
+      "pic": "Whip.webp",
+      "rank": 3,
+      "rarity": 4,
+      "price": 10000,
+      "effects": [
+        {
+          "type": "change",
+          "target": "defense",
+          "value": 8
+        }
+      ],
+      "name_i18n": "Whip"
+    },
+    {
+      "name": "Steel whip",
+      "target": "girl",
+      "type": "Weapon",
+      "pic": "Steel whip.webp",
+      "rank": 4,
+      "rarity": 4,
+      "price": 25000,
+      "effects": [
+        {
+          "type": "change",
+          "target": "defense",
+          "value": 9
+        }
+      ],
+      "name_i18n": "Steel whip"
+    },
+    {
+      "name": "Magic blade",
+      "target": "girl",
+      "type": "Weapon",
+      "pic": "Magic blade.webp",
+      "rank": 4,
+      "rarity": 5,
+      "price": 60000,
+      "effects": [
+        {
+          "type": "change",
+          "target": "defense",
+          "value": 10
+        }
+      ],
+      "name_i18n": "Magic blade"
+    },
+    {
+      "name": "Dildo",
+      "target": "girl",
+      "type": "Toy",
+      "pic": "Dildo.webp",
+      "rank": 1,
+      "rarity": 2,
+      "charges": 8,
+      "price": 125,
+      "effects": [
+        {
+          "type": "gain",
+          "target": "sex",
+          "value": 1,
+          "chance": 0.5
+        }
+      ],
+      "name_i18n": "Dildo",
+      "description_i18n": "Chance to improve Sex when resting (limited uses)."
+    },
+    {
+      "name": "XL dildo",
+      "target": "girl",
+      "type": "Toy",
+      "pic": "XL dildo.webp",
+      "rank": 2,
+      "rarity": 3,
+      "charges": 8,
+      "price": 500,
+      "effects": [
+        {
+          "type": "gain",
+          "target": "sex",
+          "value": 2,
+          "chance": 0.5
+        }
+      ],
+      "name_i18n": "XL dildo",
+      "description_i18n": "Chance to improve Sex when resting (limited uses)."
+    },
+    {
+      "name": "XXL dildo",
+      "target": "girl",
+      "type": "Toy",
+      "pic": "XXL dildo.webp",
+      "rank": 3,
+      "rarity": 4,
+      "charges": 8,
+      "price": 2500,
+      "effects": [
+        {
+          "type": "gain",
+          "target": "sex",
+          "value": 3,
+          "chance": 0.5
+        }
+      ],
+      "name_i18n": "XXL dildo",
+      "description_i18n": "Chance to improve Sex when resting (limited uses)."
+    },
+    {
+      "name": "Black dildo",
+      "target": "girl",
+      "type": "Toy",
+      "pic": "Black dildo.webp",
+      "rank": 4,
+      "rarity": 5,
+      "charges": 8,
+      "price": 10000,
+      "effects": [
+        {
+          "type": "gain",
+          "target": "sex",
+          "value": 5,
+          "chance": 0.5
+        }
+      ],
+      "name_i18n": "Black dildo",
+      "description_i18n": "Chance to improve Sex when resting (limited uses)."
+    },
+    {
+      "name": "Butt plug",
+      "target": "girl",
+      "type": "Toy",
+      "pic": "Butt plug.webp",
+      "rank": 1,
+      "rarity": 2,
+      "charges": 8,
+      "price": 125,
+      "effects": [
+        {
+          "type": "gain",
+          "target": "anal",
+          "value": 1,
+          "chance": 0.5
+        }
+      ],
+      "name_i18n": "Butt plug",
+      "description_i18n": "Chance to improve Anal when resting (limited uses)."
+    },
+    {
+      "name": "Butt pump",
+      "target": "girl",
+      "type": "Toy",
+      "pic": "Butt pump.webp",
+      "rank": 2,
+      "rarity": 3,
+      "charges": 8,
+      "price": 500,
+      "effects": [
+        {
+          "type": "gain",
+          "target": "anal",
+          "value": 2,
+          "chance": 0.5
+        }
+      ],
+      "name_i18n": "Butt pump",
+      "description_i18n": "Chance to improve Anal when resting (limited uses)."
+    },
+    {
+      "name": "Anal dildo",
+      "target": "girl",
+      "type": "Toy",
+      "pic": "Anal dildo.webp",
+      "rank": 3,
+      "rarity": 4,
+      "charges": 8,
+      "price": 2500,
+      "effects": [
+        {
+          "type": "gain",
+          "target": "anal",
+          "value": 3,
+          "chance": 0.5
+        }
+      ],
+      "name_i18n": "Anal dildo",
+      "description_i18n": "Chance to improve Anal when resting (limited uses)."
+    },
+    {
+      "name": "Anal beads",
+      "target": "girl",
+      "type": "Toy",
+      "pic": "Anal beads.webp",
+      "rank": 4,
+      "rarity": 5,
+      "charges": 8,
+      "price": 10000,
+      "effects": [
+        {
+          "type": "gain",
+          "target": "anal",
+          "value": 5,
+          "chance": 0.5
+        }
+      ],
+      "name_i18n": "Anal beads",
+      "description_i18n": "Chance to improve Anal when resting (limited uses)."
+    },
+    {
+      "name": "Ropes",
+      "target": "girl",
+      "type": "Toy",
+      "pic": "Ropes.webp",
+      "rank": 1,
+      "rarity": 2,
+      "charges": 8,
+      "price": 125,
+      "effects": [
+        {
+          "type": "gain",
+          "target": "fetish",
+          "value": 1,
+          "chance": 0.5
+        }
+      ],
+      "name_i18n": "Ropes",
+      "description_i18n": "Chance to improve Fetish when resting (limited uses)."
+    },
+    {
+      "name": "Cuffs",
+      "target": "girl",
+      "type": "Toy",
+      "pic": "Cuffs.webp",
+      "rank": 2,
+      "rarity": 3,
+      "charges": 8,
+      "price": 500,
+      "effects": [
+        {
+          "type": "gain",
+          "target": "fetish",
+          "value": 2,
+          "chance": 0.5
+        }
+      ],
+      "name_i18n": "Cuffs",
+      "description_i18n": "Chance to improve Fetish when resting (limited uses)."
+    },
+    {
+      "name": "Gag",
+      "target": "girl",
+      "type": "Toy",
+      "pic": "Gag.webp",
+      "rank": 3,
+      "rarity": 4,
+      "charges": 8,
+      "price": 2500,
+      "effects": [
+        {
+          "type": "gain",
+          "target": "fetish",
+          "value": 3,
+          "chance": 0.5
+        }
+      ],
+      "name_i18n": "Gag",
+      "description_i18n": "Chance to improve Fetish when resting (limited uses)."
+    },
+    {
+      "name": "Blindfold",
+      "target": "girl",
+      "type": "Toy",
+      "pic": "Blindfold.webp",
+      "rank": 4,
+      "rarity": 5,
+      "charges": 8,
+      "price": 10000,
+      "effects": [
+        {
+          "type": "gain",
+          "target": "fetish",
+          "value": 5,
+          "chance": 0.5
+        }
+      ],
+      "name_i18n": "Blindfold",
+      "description_i18n": "Chance to improve Fetish when resting (limited uses)."
+    },
+    {
+      "name": "Arousing gel",
+      "target": "girl",
+      "type": "Toy",
+      "pic": "Arousing gel.webp",
+      "rank": 1,
+      "rarity": 2,
+      "charges": 8,
+      "price": 125,
+      "effects": [
+        {
+          "type": "gain",
+          "target": "service",
+          "value": 1,
+          "chance": 0.5
+        }
+      ],
+      "name_i18n": "Arousing gel",
+      "description_i18n": "Chance to improve Service when resting (limited uses)."
+    },
+    {
+      "name": "Egg vibrator",
+      "target": "girl",
+      "type": "Toy",
+      "pic": "Egg vibrator.webp",
+      "rank": 2,
+      "rarity": 3,
+      "charges": 8,
+      "price": 500,
+      "effects": [
+        {
+          "type": "gain",
+          "target": "service",
+          "value": 2,
+          "chance": 0.5
+        }
+      ],
+      "name_i18n": "Egg vibrator",
+      "description_i18n": "Chance to improve Service when resting (limited uses)."
+    },
+    {
+      "name": "Long vibrator",
+      "target": "girl",
+      "type": "Toy",
+      "pic": "Long vibrator.webp",
+      "rank": 3,
+      "rarity": 4,
+      "charges": 8,
+      "price": 2500,
+      "effects": [
+        {
+          "type": "gain",
+          "target": "service",
+          "value": 3,
+          "chance": 0.5
+        }
+      ],
+      "name_i18n": "Long vibrator",
+      "description_i18n": "Chance to improve Service when resting (limited uses)."
+    },
+    {
+      "name": "Arcanic vibrator",
+      "target": "girl",
+      "type": "Toy",
+      "pic": "Arcanic vibrator.webp",
+      "rank": 4,
+      "rarity": 5,
+      "charges": 8,
+      "price": 10000,
+      "effects": [
+        {
+          "type": "gain",
+          "target": "service",
+          "value": 5,
+          "chance": 0.5
+        }
+      ],
+      "name_i18n": "Arcanic vibrator",
+      "description_i18n": "Chance to improve Service when resting (limited uses)."
+    },
+    {
+      "name": "Lucky charm",
+      "target": "girl",
+      "type": "Necklace",
+      "pic": "Lucky charm.webp",
+      "rank": 1,
+      "rarity": 2,
+      "price": 1250,
+      "effects": [
+        {
+          "type": "special",
+          "target": "lucky",
+          "value": 1
+        }
+      ],
+      "name_i18n": "Lucky charm",
+      "description_i18n": "It is said to bring luck to its owner. The rabbit it belonged to might disagree..."
+    },
+    {
+      "name": "Leather choker",
+      "target": "girl",
+      "type": "Necklace",
+      "pic": "Leather choker.webp",
+      "rank": 1,
+      "rarity": 2,
+      "price": 750,
+      "effects": [
+        {
+          "type": "boost",
+          "target": "obedience tests",
+          "value": 0.2
+        }
+      ],
+      "name_i18n": "Leather choker"
+    },
+    {
+      "name": "Bronze amulet",
+      "target": "girl",
+      "type": "Necklace",
+      "pic": "Bronze amulet.webp",
+      "rank": 2,
+      "rarity": 3,
+      "price": 2500,
+      "effects": [
+        {
+          "type": "boost",
+          "target": "all regular skills gains",
+          "value": 0.05
+        }
+      ],
+      "name_i18n": "Bronze amulet"
+    },
+    {
+      "name": "Silver amulet",
+      "target": "girl",
+      "type": "Necklace",
+      "pic": "Silver amulet.webp",
+      "rank": 3,
+      "rarity": 4,
+      "price": 12500,
+      "effects": [
+        {
+          "type": "boost",
+          "target": "all regular skills gains",
+          "value": 0.1
+        }
+      ],
+      "name_i18n": "Silver amulet"
+    },
+    {
+      "name": "Gold amulet",
+      "target": "girl",
+      "type": "Necklace",
+      "pic": "Gold amulet.webp",
+      "rank": 4,
+      "rarity": 5,
+      "price": 25000,
+      "effects": [
+        {
+          "type": "boost",
+          "target": "all regular skills gains",
+          "value": 0.15
+        }
+      ],
+      "name_i18n": "Gold amulet"
+    },
+    {
+      "name": "Monster pearl necklace",
+      "target": "girl",
+      "type": "Necklace",
+      "pic": "Monster pearl necklace.webp",
+      "rank": 3,
+      "rarity": 5,
+      "price": 25000,
+      "effects": [
+        {
+          "type": "boost",
+          "target": "all sex skills gains",
+          "value": 0.1
+        }
+      ],
+      "name_i18n": "Monster pearl necklace",
+      "description_i18n": "It came from the sea..."
+    },
+    {
+      "name": "Ale",
+      "target": "girl",
+      "type": "Supplies",
+      "pic": "Ale.webp",
+      "rank": 1,
+      "rarity": 1,
+      "charges": 10,
+      "price": 500,
+      "effects": [
+        {
+          "type": "change",
+          "target": "waitress results",
+          "value": 1
+        }
+      ],
+      "name_i18n": "Ale",
+      "description_i18n": "Used when working."
+    },
+    {
+      "name": "Massage oil",
+      "target": "girl",
+      "type": "Supplies",
+      "pic": "Massage oil.webp",
+      "rank": 1,
+      "rarity": 1,
+      "charges": 10,
+      "price": 500,
+      "effects": [
+        {
+          "type": "change",
+          "target": "masseuse results",
+          "value": 1
+        }
+      ],
+      "name_i18n": "Massage oil",
+      "description_i18n": "Used when working."
+    },
+    {
+      "name": "Tanning oil",
+      "target": "girl",
+      "type": "Supplies",
+      "pic": "Tanning oil.webp",
+      "rank": 1,
+      "rarity": 1,
+      "charges": 10,
+      "price": 500,
+      "effects": [
+        {
+          "type": "change",
+          "target": "dancer results",
+          "value": 1
+        }
+      ],
+      "name_i18n": "Tanning oil",
+      "description_i18n": "Used when working."
+    },
+    {
+      "name": "Fans",
+      "target": "girl",
+      "type": "Supplies",
+      "pic": "Fans.webp",
+      "rank": 1,
+      "rarity": 1,
+      "charges": 10,
+      "price": 500,
+      "effects": [
+        {
+          "type": "change",
+          "target": "geisha results",
+          "value": 1
+        }
+      ],
+      "name_i18n": "Fans",
+      "description_i18n": "Used when working."
+    },
+    {
+      "name": "Sensual perfume",
+      "target": "girl",
+      "type": "Supplies",
+      "pic": "Sensual perfume.webp",
+      "rank": 1,
+      "rarity": 3,
+      "charges": 10,
+      "price": 750,
+      "effects": [
+        {
+          "type": "change",
+          "target": "service results",
+          "value": 1
+        }
+      ],
+      "name_i18n": "Sensual perfume",
+      "description_i18n": "Used when working."
+    },
+    {
+      "name": "Gel",
+      "target": "girl",
+      "type": "Supplies",
+      "pic": "Gel.webp",
+      "rank": 1,
+      "rarity": 3,
+      "charges": 10,
+      "price": 750,
+      "effects": [
+        {
+          "type": "change",
+          "target": "sex results",
+          "value": 1
+        }
+      ],
+      "name_i18n": "Gel",
+      "description_i18n": "Used when working."
+    },
+    {
+      "name": "Enema",
+      "target": "girl",
+      "type": "Supplies",
+      "pic": "Enema.webp",
+      "rank": 1,
+      "rarity": 3,
+      "charges": 10,
+      "price": 750,
+      "effects": [
+        {
+          "type": "change",
+          "target": "anal results",
+          "value": 1
+        }
+      ],
+      "name_i18n": "Enema",
+      "description_i18n": "Used when working."
+    },
+    {
+      "name": "Wax",
+      "target": "girl",
+      "type": "Supplies",
+      "pic": "Wax.webp",
+      "rank": 1,
+      "rarity": 3,
+      "charges": 10,
+      "price": 750,
+      "effects": [
+        {
+          "type": "change",
+          "target": "fetish results",
+          "value": 1
+        }
+      ],
+      "name_i18n": "Wax",
+      "description_i18n": "Used when working."
+    },
+    {
+      "name": "Glasses",
+      "target": "girl",
+      "type": "Accessory",
+      "pic": "Glasses.webp",
+      "rank": 1,
+      "rarity": 3,
+      "price": 1000,
+      "effects": [
+        {
+          "type": "boost",
+          "target": "xp gains",
+          "value": 0.1
+        }
+      ],
+      "name_i18n": "Glasses"
+    },
+    {
+      "name": "Tail",
+      "target": "girl",
+      "type": "Accessory",
+      "pic": "Tail.webp",
+      "rank": 1,
+      "rarity": 3,
+      "price": 1000,
+      "effects": [
+        {
+          "type": "boost",
+          "target": "reputation gains",
+          "value": 0.2
+        }
+      ],
+      "name_i18n": "Tail"
+    },
+    {
+      "name": "Bunny ears",
+      "target": "girl",
+      "type": "Accessory",
+      "pic": "Bunny ears.webp",
+      "rank": 1,
+      "rarity": 4,
+      "price": 2500,
+      "effects": [
+        {
+          "type": "change",
+          "target": "waitress results",
+          "value": 1
+        }
+      ],
+      "name_i18n": "Bunny ears"
+    },
+    {
+      "name": "Hairpin",
+      "target": "girl",
+      "type": "Accessory",
+      "pic": "Hairpin.webp",
+      "rank": 1,
+      "rarity": 4,
+      "price": 2500,
+      "effects": [
+        {
+          "type": "change",
+          "target": "masseuse results",
+          "value": 1
+        }
+      ],
+      "name_i18n": "Hairpin"
+    },
+    {
+      "name": "Nun veil",
+      "target": "girl",
+      "type": "Accessory",
+      "pic": "Nun veil.webp",
+      "rank": 1,
+      "rarity": 4,
+      "price": 2500,
+      "effects": [
+        {
+          "type": "change",
+          "target": "dancer results",
+          "value": 1
+        }
+      ],
+      "name_i18n": "Nun veil"
+    },
+    {
+      "name": "Noh mask",
+      "target": "girl",
+      "type": "Accessory",
+      "pic": "Noh mask.webp",
+      "rank": 1,
+      "rarity": 4,
+      "price": 2500,
+      "effects": [
+        {
+          "type": "change",
+          "target": "geisha results",
+          "value": 1
+        }
+      ],
+      "name_i18n": "Noh mask"
+    },
+    {
+      "name": "Cat ears",
+      "target": "girl",
+      "type": "Accessory",
+      "pic": "Cat ears.webp",
+      "rank": 1,
+      "rarity": 4,
+      "price": 2500,
+      "effects": [
+        {
+          "type": "change",
+          "target": "service results",
+          "value": 1
+        }
+      ],
+      "name_i18n": "Cat ears"
+    },
+    {
+      "name": "Nurse hat",
+      "target": "girl",
+      "type": "Accessory",
+      "pic": "Nurse hat.webp",
+      "rank": 1,
+      "rarity": 4,
+      "price": 2500,
+      "effects": [
+        {
+          "type": "change",
+          "target": "sex results",
+          "value": 1
+        }
+      ],
+      "name_i18n": "Nurse hat"
+    },
+    {
+      "name": "Leather cap",
+      "target": "girl",
+      "type": "Accessory",
+      "pic": "Leather cap.webp",
+      "rank": 1,
+      "rarity": 4,
+      "price": 2500,
+      "effects": [
+        {
+          "type": "change",
+          "target": "anal results",
+          "value": 1
+        }
+      ],
+      "name_i18n": "Leather cap"
+    },
+    {
+      "name": "Maid hat",
+      "target": "girl",
+      "type": "Accessory",
+      "pic": "Maid hat.webp",
+      "rank": 1,
+      "rarity": 4,
+      "price": 2500,
+      "effects": [
+        {
+          "type": "change",
+          "target": "fetish results",
+          "value": 1
+        }
+      ],
+      "name_i18n": "Maid hat"
+    },
+    {
+      "name": "Magic notebook",
+      "target": "MC",
+      "type": "Passive",
+      "pic": "Magic notebook.webp",
+      "template": false,
+      "rank": 1,
+      "rarity": "S",
+      "price": 0,
+      "effects": [
+        {
+          "type": "special",
+          "target": "notebook",
+          "value": 1
+        }
+      ],
+      "hidden_effect": true,
+      "name_i18n": "Magic notebook",
+      "description_i18n": "This handy notebook will store all the information you know about your girls. It magically records all your thoughts. Wait, don't think about {i}that{/i}... Too late."
+    },
+    {
+      "name": "Healing powder",
+      "target": "minion",
+      "type": "Misc",
+      "pic": "healing powder.webp",
+      "template": false,
+      "rank": 1,
+      "rarity": "M",
+      "charges": 1,
+      "price": 100,
+      "effects": [
+        {
+          "type": "special",
+          "target": "heal minion",
+          "value": 1
+        }
+      ],
+      "name_i18n": "Healing powder",
+      "description_i18n": "This mysterious powder from the East will heal a minion's wounds or repair a magical artefact. Side effects may include dizziness, horniness, tentacles sprouting all over body."
+    },
+    {
+      "name": "Cimerian scrap",
+      "target": "misc",
+      "type": "Misc",
+      "pic": "Cimerian scrap.webp",
+      "sound": "s_vibro",
+      "template": false,
+      "rank": 1,
+      "max_rank": 5,
+      "rarity": 1,
+      "charges": 1,
+      "price": 250,
+      "effects": [],
+      "name_i18n": "Cimerian scrap",
+      "description_i18n": "A mysterious piece of ancient technological junk."
+    },
+    {
+      "name": "Cimerian artefact",
+      "target": "misc",
+      "type": "Misc",
+      "pic": "Cimerian artefact.webp",
+      "sound": "s_vibro",
+      "template": false,
+      "rank": 1,
+      "max_rank": 5,
+      "rarity": 4,
+      "charges": 1,
+      "price": 1000,
+      "effects": [],
+      "name_i18n": "Cimerian artefact",
+      "description_i18n": "A mysterious piece of ancient machinery. Also, junk."
+    },
+    {
+      "name": "Lightning Rod",
+      "target": "MC",
+      "type": "Story",
+      "pic": "lightning rod.webp",
+      "template": false,
+      "rank": 2,
+      "max_rank": 5,
+      "rarity": 3,
+      "price": 1000,
+      "effects": [],
+      "name_i18n": "Lightning Rod",
+      "description_i18n": "Prevents lightning bolts from hurting you. It could save your ass in the right situation, although the chance to be hit by lightning while working in a brothel is very low. A syphilis rod might be more useful."
+    },
+    {
+      "name": "White flower",
+      "target": "girl",
+      "type": "Flower",
+      "pic": "White flower.webp",
+      "template": false,
+      "rank": 1,
+      "max_rank": 5,
+      "rarity": "F",
+      "price": 75,
+      "effects": [
+        {
+          "type": "flower",
+          "target": "white",
+          "value": 1
+        }
+      ],
+      "hidden_effect": true,
+      "name_i18n": "White flower",
+      "description_i18n": "Flowers are often used as gifts for one's love interest."
+    },
+    {
+      "name": "Yellow flower",
+      "target": "girl",
+      "type": "Flower",
+      "pic": "Yellow flower.webp",
+      "template": false,
+      "rank": 1,
+      "max_rank": 5,
+      "rarity": "F",
+      "price": 75,
+      "effects": [
+        {
+          "type": "flower",
+          "target": "yellow",
+          "value": 1
+        }
+      ],
+      "hidden_effect": true,
+      "name_i18n": "Yellow flower",
+      "description_i18n": "Flowers are often used as gifts for one's love interest."
+    },
+    {
+      "name": "Red flower",
+      "target": "girl",
+      "type": "Flower",
+      "pic": "Red flower.webp",
+      "template": false,
+      "rank": 1,
+      "max_rank": 5,
+      "rarity": "F",
+      "price": 75,
+      "effects": [
+        {
+          "type": "flower",
+          "target": "red",
+          "value": 1
+        }
+      ],
+      "hidden_effect": true,
+      "name_i18n": "Red flower",
+      "description_i18n": "Flowers are often used as gifts for one's love interest."
+    },
+    {
+      "name": "Green flower",
+      "target": "girl",
+      "type": "Flower",
+      "pic": "Green flower.webp",
+      "template": false,
+      "rank": 1,
+      "max_rank": 5,
+      "rarity": "F",
+      "price": 75,
+      "effects": [
+        {
+          "type": "flower",
+          "target": "green",
+          "value": 1
+        }
+      ],
+      "hidden_effect": true,
+      "name_i18n": "Green flower",
+      "description_i18n": "Flowers are often used as gifts for one's love interest."
+    },
+    {
+      "name": "Blue flower",
+      "target": "girl",
+      "type": "Flower",
+      "pic": "Blue flower.webp",
+      "template": false,
+      "rank": 1,
+      "max_rank": 5,
+      "rarity": "F",
+      "price": 75,
+      "effects": [
+        {
+          "type": "flower",
+          "target": "blue",
+          "value": 1
+        }
+      ],
+      "hidden_effect": true,
+      "name_i18n": "Blue flower",
+      "description_i18n": "Flowers are often used as gifts for one's love interest."
+    },
+    {
+      "name": "Orange flower",
+      "target": "girl",
+      "type": "Flower",
+      "pic": "Orange flower.webp",
+      "template": false,
+      "rank": 1,
+      "max_rank": 5,
+      "rarity": "F",
+      "price": 75,
+      "effects": [
+        {
+          "type": "flower",
+          "target": "orange",
+          "value": 1
+        }
+      ],
+      "hidden_effect": true,
+      "name_i18n": "Orange flower",
+      "description_i18n": "Flowers are often used as gifts for one's love interest."
+    },
+    {
+      "name": "Purple flower",
+      "target": "girl",
+      "type": "Flower",
+      "pic": "Purple flower.webp",
+      "template": false,
+      "rank": 1,
+      "max_rank": 5,
+      "rarity": "F",
+      "price": 75,
+      "effects": [
+        {
+          "type": "flower",
+          "target": "purple",
+          "value": 1
+        }
+      ],
+      "hidden_effect": true,
+      "name_i18n": "Purple flower",
+      "description_i18n": "Flowers are often used as gifts for one's love interest."
+    },
+    {
+      "name": "Pink flower",
+      "target": "girl",
+      "type": "Flower",
+      "pic": "Pink flower.webp",
+      "template": false,
+      "rank": 1,
+      "max_rank": 5,
+      "rarity": "F",
+      "price": 75,
+      "effects": [
+        {
+          "type": "flower",
+          "target": "pink",
+          "value": 1
+        }
+      ],
+      "hidden_effect": true,
+      "name_i18n": "Pink flower",
+      "description_i18n": "Flowers are often used as gifts for one's love interest."
+    },
+    {
+      "name": "Black flower",
+      "target": "girl",
+      "type": "Flower",
+      "pic": "Black flower.webp",
+      "template": false,
+      "rank": 1,
+      "max_rank": 5,
+      "rarity": "F",
+      "price": 75,
+      "effects": [
+        {
+          "type": "flower",
+          "target": "black",
+          "value": 1
+        }
+      ],
+      "hidden_effect": true,
+      "name_i18n": "Black flower",
+      "description_i18n": "Flowers are often used as gifts for one's love interest."
+    }
+  ]
+}

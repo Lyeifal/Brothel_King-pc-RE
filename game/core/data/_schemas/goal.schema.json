@@ -1,0 +1,42 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Goal",
+  "description": "EN: Chapter goal definition.\nZH: 章节目标定义。",
+  "type": "object",
+  "required": ["type", "value"],
+  "properties": {
+    "type": {
+      "type": ["string", "null"],
+      "description": "EN: Goal type: gold, ranked, reputation, prestige, story, or null (endless).\nZH: 目标类型：gold、ranked、reputation、prestige、story 或 null（无尽模式）。"
+    },
+    "value": {
+      "type": ["number", "string"],
+      "description": "EN: Target value (gold amount, rank level, reputation, etc.). For 'story' type, this is the description text.\nZH: 目标数值。对于 'story' 类型，这是描述文本。"
+    },
+    "target": {
+      "type": "integer",
+      "default": 0,
+      "description": "EN: For 'ranked' type: number of girls needed.\nZH: 对于 'ranked' 类型：需要达到该等级的女孩数量。"
+    },
+    "label": {
+      "type": "string",
+      "default": "",
+      "description": "EN: For 'story' type: story flag label to check.\nZH: 对于 'story' 类型：要检查的剧情标志标签。"
+    },
+    "channel": {
+      "type": "string",
+      "default": "advance",
+      "description": "EN: Goal channel: advance, story, other.\nZH: 目标频道：advance、story、other。"
+    },
+    "max_chapter": {
+      "type": ["integer", "null"],
+      "default": null,
+      "description": "EN: If set, goal is only blocking up to this chapter.\nZH: 如果设置，目标仅在此章节之前阻塞。"
+    },
+    "blocking": {
+      "type": "boolean",
+      "default": true,
+      "description": "EN: If false, goal is always considered reached.\nZH: 如果为 false，目标始终视为已达成。"
+    }
+  }
+}

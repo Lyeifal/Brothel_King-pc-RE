@@ -1,0 +1,302 @@
+{
+  "alignment_bonus": {
+    "good_love": 1.25,
+    "good_fear": 0.75,
+    "neutral_love": 1.0,
+    "neutral_fear": 1.0,
+    "evil_love": 0.75,
+    "evil_fear": 1.25
+  },
+  "personality_attributes": [
+    ["extravert", "introvert"],
+    ["idealist", "materialist"],
+    ["lewd", "modest"],
+    ["dom", "sub"]
+  ],
+  "attribute_score_dict": {
+    "very extravert": {
+      "very extravert": 3,
+      "extravert": 1,
+      "introvert": -1,
+      "very introvert": -3
+    },
+    "extravert": {
+      "very extravert": 1,
+      "extravert": 1,
+      "introvert": 0,
+      "very introvert": -1
+    },
+    "introvert": {
+      "very extravert": -1,
+      "extravert": 0,
+      "introvert": 1,
+      "very introvert": 1
+    },
+    "very introvert": {
+      "very extravert": -3,
+      "extravert": -1,
+      "introvert": 1,
+      "very introvert": 3
+    },
+    "very idealist": {
+      "very idealist": 3,
+      "idealist": 1,
+      "materialist": -1,
+      "very materialist": -3
+    },
+    "idealist": {
+      "very idealist": 1,
+      "idealist": 1,
+      "materialist": 0,
+      "very materialist": -1
+    },
+    "materialist": {
+      "very idealist": -1,
+      "idealist": 0,
+      "materialist": 1,
+      "very materialist": 1
+    },
+    "very materialist": {
+      "very idealist": -3,
+      "idealist": -1,
+      "materialist": 1,
+      "very materialist": 3
+    },
+    "very lewd": {
+      "very lewd": 3,
+      "lewd": 1,
+      "modest": -1,
+      "very modest": -3
+    },
+    "lewd": {
+      "very lewd": 1,
+      "lewd": 1,
+      "modest": 0,
+      "very modest": -1
+    },
+    "modest": {
+      "very lewd": -1,
+      "lewd": 0,
+      "modest": 1,
+      "very modest": 1
+    },
+    "very modest": {
+      "very lewd": -3,
+      "lewd": -1,
+      "modest": 1,
+      "very modest": 3
+    },
+    "very dom": {
+      "very dom": -3,
+      "dom": -1,
+      "sub": 1,
+      "very sub": 3
+    },
+    "dom": {
+      "very dom": -1,
+      "dom": 0,
+      "sub": 1,
+      "very sub": 1
+    },
+    "sub": {
+      "very dom": 1,
+      "dom": 1,
+      "sub": 0,
+      "very sub": -1
+    },
+    "very sub": {
+      "very dom": 3,
+      "dom": 1,
+      "sub": -1,
+      "very sub": -3
+    }
+  },
+  "gpersonalities_likes": {
+    "very extravert": {
+      "cute": 1,
+      "book": -3,
+      "precious": 0,
+      "erotica": -1,
+      "drinks": 3
+    },
+    "very introvert": {
+      "cute": -1,
+      "book": 3,
+      "precious": 0,
+      "erotica": 1,
+      "drinks": -3
+    },
+    "very idealist": {
+      "cute": 3,
+      "book": 1,
+      "precious": -3,
+      "erotica": 0,
+      "drinks": -1
+    },
+    "very materialist": {
+      "cute": -1,
+      "book": -3,
+      "precious": 3,
+      "erotica": 0,
+      "drinks": 1
+    },
+    "very lewd": {
+      "cute": -3,
+      "book": -1,
+      "precious": 0,
+      "erotica": 3,
+      "drinks": 1
+    },
+    "very modest": {
+      "cute": 3,
+      "book": 1,
+      "precious": 0,
+      "erotica": -3,
+      "drinks": -1
+    },
+    "very dom": {
+      "cute": -3,
+      "book": -1,
+      "precious": 1,
+      "erotica": 0,
+      "drinks": 3
+    },
+    "very sub": {
+      "cute": 1,
+      "book": 3,
+      "precious": -1,
+      "erotica": 0,
+      "drinks": -3
+    }
+  },
+  "gpersonalities_comment": {
+    "very extravert pos": {
+      "comments_i18n": [
+        "She's friendly._i18n",
+        "She's always ready to help._i18n",
+        "She's fun._i18n",
+        "She's lively._i18n"
+      ]
+    },
+    "very introvert pos": {
+      "comments_i18n": [
+        "She's nice._i18n",
+        "She's quiet._i18n",
+        "She doesn't gossip._i18n",
+        "She's soft-spoken._i18n"
+      ]
+    },
+    "very idealist pos": {
+      "comments_i18n": [
+        "She follows her dreams._i18n",
+        "She's smart._i18n",
+        "She knows a lot about everything._i18n",
+        "She's very clever._i18n"
+      ]
+    },
+    "very materialist pos": {
+      "comments_i18n": [
+        "She's down-to-earth._i18n",
+        "She likes the finer things in life._i18n",
+        "She's ambitious._i18n",
+        "She has great taste._i18n"
+      ]
+    },
+    "very lewd pos": {
+      "comments_i18n": [
+        "She's open-minded._i18n",
+        "She's curious._i18n",
+        "She knows how to party._i18n",
+        "She's a real party-girl._i18n"
+      ]
+    },
+    "very modest pos": {
+      "comments_i18n": [
+        "She's rational._i18n",
+        "She keeps her head cool._i18n",
+        "She's stable._i18n",
+        "She's pure._i18n"
+      ]
+    },
+    "very dom pos": {
+      "comments_i18n": [
+        "She's so confident._i18n",
+        "She's driven._i18n",
+        "She's very independent._i18n",
+        "She's fearless._i18n"
+      ]
+    },
+    "very sub pos": {
+      "comments_i18n": [
+        "She's humble._i18n",
+        "She's quiet._i18n",
+        "She's loyal._i18n",
+        "She's obedient._i18n"
+      ]
+    },
+    "very extravert neg": {
+      "comments_i18n": [
+        "She's self-absorbed._i18n",
+        "She's loud._i18n",
+        "She's self-centered._i18n",
+        "She won't shut up._i18n"
+      ]
+    },
+    "very introvert neg": {
+      "comments_i18n": [
+        "She's no fun._i18n",
+        "She's aloof._i18n",
+        "She's unfriendly._i18n",
+        "She's a bore._i18n"
+      ]
+    },
+    "very idealist neg": {
+      "comments_i18n": [
+        "She's nerdy._i18n",
+        "She's a snowflake._i18n",
+        "She's a snob._i18n",
+        "She's a nerd._i18n"
+      ]
+    },
+    "very materialist neg": {
+      "comments_i18n": [
+        "She's a nasty bitch._i18n",
+        "She's so superficial._i18n",
+        "She's selfish._i18n",
+        "She's a cold-hearted bitch._i18n"
+      ]
+    },
+    "very lewd neg": {
+      "comments_i18n": [
+        "She's a perv._i18n",
+        "She's depraved, even for a whore._i18n",
+        "She has no morals._i18n",
+        "She's a slut._i18n"
+      ]
+    },
+    "very modest neg": {
+      "comments_i18n": [
+        "She's boring._i18n",
+        "She thinks she's better than us._i18n",
+        "She's prissy._i18n",
+        "She's intolerant._i18n"
+      ]
+    },
+    "very dom neg": {
+      "comments_i18n": [
+        "She's arrogant._i18n",
+        "She's over-confident._i18n",
+        "She's a bully._i18n",
+        "She's manipulative._i18n"
+      ]
+    },
+    "very sub neg": {
+      "comments_i18n": [
+        "She's a pushover._i18n",
+        "She whines too much._i18n",
+        "She's a crybaby._i18n",
+        "She's a loser._i18n"
+      ]
+    }
+  }
+}

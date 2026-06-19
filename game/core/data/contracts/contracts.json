@@ -1,0 +1,272 @@
+[
+  {
+    "type": "cruise",
+    "district": "The Docks",
+    "archetypes": [
+      "The Player",
+      "The Fox"
+    ],
+    "character": "young_sailor",
+    "MC_event_pic": "resources/events/brawl3.webp",
+    "names_i18n": [
+      "A Night At Sea",
+      "Touring Zan's Bay",
+      "The Retired Sailor",
+      "A Fancy Cruise"
+    ],
+    "organizers_i18n": [
+      "the rowdy sailor fraternity",
+      "Zan's navy",
+      "the flibusteer social club",
+      "the Northern merchant navy"
+    ],
+    "venues_i18n": [
+      "refitted galleon",
+      "private junk",
+      "princely yacht",
+      "fleet of small fishing boats",
+      "large tour boat"
+    ]
+  },
+  {
+    "type": "party",
+    "district": "The Cathedra",
+    "archetypes": [
+      "The Maid",
+      "The Slut"
+    ],
+    "character": "party_girl",
+    "MC_event_pic": "resources/events/violent2.webp",
+    "names_i18n": [
+      "Party Hard",
+      "All-Nighter by The Cathedra",
+      "Shameless Party",
+      "From Dusk Till Dawn",
+      "Blackjack Tables, and Hookers",
+      "Dude, Where's My Cart?"
+    ],
+    "organizers_i18n": [
+      "a foreign dignitary",
+      "a wealthy patrician family",
+      "an interguild association",
+      "a visiting High Mage of Karkyr",
+      "a close advisor of the king",
+      "a wealthy brothel master",
+      "the House of Lannister"
+    ],
+    "venues_i18n": [
+      "abandoned church",
+      "famous okiya",
+      "fancy palace",
+      "seedy tavern",
+      "underground casino"
+    ]
+  },
+  {
+    "type": "ceremony",
+    "district": "The Cathedra",
+    "archetypes": [
+      "The Model",
+      "The Bride"
+    ],
+    "character": "nun",
+    "MC_event_pic": "resources/events/monster assault.webp",
+    "names_i18n": [
+      "A Holy Affair",
+      "A Religious Festival",
+      "The Saintly Ceremony",
+      "A Most Holy Gathering",
+      "After The Prayer"
+    ],
+    "organizers_i18n": [
+      "The Holy Church of Arios",
+      "The Nuns of Saint Dil d'Oh",
+      "The Enlightened Brothers",
+      "The Pious Fraternity",
+      "The Friends of Shalia",
+      "The Ol' Gods Alliance",
+      "The Worshippers of the Unspeakable Yog'Gluglu",
+      "The Priestesses of Arios"
+    ],
+    "venues_i18n": [
+      "large convent",
+      "venerable cathedral",
+      "isolated monastery",
+      "quiet retreat",
+      "forgotten temple",
+      "glorious church",
+      "destitute orphanage"
+    ]
+  },
+  {
+    "type": "festival",
+    "district": "The Slums",
+    "archetypes": [
+      "The Player",
+      "The Fox"
+    ],
+    "character": "kimono_lady",
+    "MC_event_pic": "resources/characters/default/farm/sex beast (7).webp",
+    "names_i18n": [
+      "The Moonlight Festival",
+      "A Country Festival",
+      "Season's Greetings",
+      "The Countryside Fair",
+      "The Farmers Market",
+      "A Prized Tradition"
+    ],
+    "organizers_i18n": [
+      "The Bumpkin Pumpkins",
+      "The Farmers Guild",
+      "Zan's Country Club",
+      "The Gardening Brotherhood",
+      "The Landlords Cooperative",
+      "Dirty hippies from the Valley",
+      "The Union of Goat-Herders"
+    ],
+    "venues_i18n": [
+      "former junkyard",
+      "large plaza",
+      "market square",
+      "city gate",
+      "main roadside"
+    ]
+  },
+  {
+    "type": "date",
+    "district": "The Magic Gardens",
+    "archetypes": [
+      "The Bride",
+      "The Model"
+    ],
+    "character": "young_maid",
+    "MC_event_pic": "resources/characters/npc/encounters/thief4.webp",
+    "names_i18n": [
+      "A Romantic Date",
+      "The Lonely Gentleman",
+      "The Lord's Penthouse",
+      "Pretty Woman"
+    ],
+    "organizers_i18n": [
+      "Calif Bretznah",
+      "High Priest Ronan",
+      "Lord Nabukov",
+      "Master Rhi-Seung",
+      "Count Dicku",
+      "The Pink Baron",
+      "Duke Nukem",
+      "Guild Master Felix"
+    ],
+    "venues_i18n": [
+      "luxurious penthouse",
+      "big country house",
+      "old mansion",
+      "family palace",
+      "private temple",
+      "popular resort"
+    ]
+  },
+  {
+    "type": "meeting",
+    "district": "The Warehouse",
+    "archetypes": [
+      "The Courtesan",
+      "The Maid"
+    ],
+    "character": "diplomat",
+    "MC_event_pic": "resources/characters/npc/encounters/thief2.webp",
+    "names_i18n": [
+      "A Strategic Meeting",
+      "A Show of Power",
+      "A Political Reunion",
+      "A Momentous Occasion",
+      "A Pompous Conference"
+    ],
+    "organizers_i18n": [
+      "The Zanic City Council",
+      "The Rebel Alliance",
+      "The government of His Majesty's King Pharo the 1st",
+      "The Knights of the Oddly-Shaped Table",
+      "The Blood-Island Coalition"
+    ],
+    "venues_i18n": [
+      "progress in the Holy War",
+      "military cooperation",
+      "freer sex slave trading",
+      "new fishery regulations",
+      "limits on magic weapon stockpiles",
+      "lowering taxes for the noble-born",
+      "raising taxes on the poor and destitute"
+    ]
+  },
+  {
+    "type": "magic",
+    "district": "The Magic Gardens",
+    "archetypes": [
+      "The Escort",
+      "The Courtesan"
+    ],
+    "character": "sorceress",
+    "MC_event_pic": "resources/characters/npc/encounters/witches (1).webp",
+    "names_i18n": [
+      "Magic: The Gathering",
+      "The Wizard Annual Convention",
+      "The Magical Science Fair",
+      "Fun at the Magic Guild",
+      "Magic Schools Face-Off",
+      "Witch Please"
+    ],
+    "organizers_i18n": [
+      "High Mage Windzoss",
+      "The Union of Concerned Sorceresses",
+      "The Necromancer Social Club",
+      "The Elders of Karkyr",
+      "The Friendly Neighborhood Dark Cultists"
+    ],
+    "venues_i18n": [
+      "haunted manor",
+      "creepy old house",
+      "high tower",
+      "underground lair",
+      "recently-opened demonic plane",
+      "dusty library"
+    ]
+  },
+  {
+    "type": "orgy",
+    "district": "The King's Hold",
+    "archetypes": [
+      "The Slut",
+      "The Escort"
+    ],
+    "character": "naked_lady",
+    "MC_event_pic": "resources/characters/npc/encounters/ev_onsens2.webp",
+    "names_i18n": [
+      "Orgy Night",
+      "Sleazy Party",
+      "Ready To Mingle",
+      "Bachelors Day Out",
+      "A Night Of Dirty Fun"
+    ],
+    "organizers_i18n": [
+      "Mistress Smutty Kitty",
+      "Brothel Master Quinn",
+      "High Priest Ronan",
+      "The Arios Nun Choir",
+      "The Gimp",
+      "The Hooker Trade Union",
+      "An anonymous member of the royal family",
+      "A rich businessman",
+      "A noble lady"
+    ],
+    "venues_i18n": [
+      "mysterious forest clearing",
+      "gipsy camp",
+      "dark dungeon",
+      "decadent palace",
+      "smutty tavern",
+      "hidden basement",
+      "forgotten temple"
+    ]
+  }
+]

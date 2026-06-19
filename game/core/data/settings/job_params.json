@@ -1,0 +1,41 @@
+{
+    "_description": "Job and sex act IDs, colors, sort values, and tag lists. See BK_EVOLUTION_DATA_MIGRATION.md.",
+    "all_jobs": ["waitress", "dancer", "masseuse", "geisha"],
+    "all_sex_acts": ["service", "sex", "anal", "fetish"],
+    "extended_sex_acts": ["naked", "service", "sex", "anal", "fetish", "bisexual", "group"],
+    "farm_hardcore_acts": ["beast", "monster"],
+    "opposite_sex_acts": {
+        "naked": ["service", "sex", "anal", "fetish", "bisexual", "group"],
+        "service": ["sex", "anal", "fetish", "bisexual", "group"],
+        "sex": ["service", "anal", "fetish", "bisexual", "group"],
+        "anal": ["service", "sex", "fetish", "bisexual", "group"],
+        "fetish": ["service", "sex", "anal", "bisexual", "group"],
+        "bisexual": ["group"],
+        "group": [],
+        "null": []
+    },
+    "normal_tags": ["profile", "portrait", "rest", "waitress", "dancer", "masseuse", "geisha"],
+    "all_farm_tags": ["big", "beast", "monster", "machine"],
+    "job_sort_value": {
+        "whore": 0,
+        "waitress": 10,
+        "dancer": 20,
+        "masseuse": 30,
+        "geisha": 40,
+        "null": 90,
+        "hurt": 80,
+        "away": 70,
+        "farm": 70
+    },
+    "job_color": {
+        "whore": "#FF0000",
+        "waitress": "#66FF99",
+        "dancer": "#FFC0CB",
+        "masseuse": "#FFFF33",
+        "geisha": "#A41CC6",
+        "null": "#FFFFFF",
+        "hurt": "#FF0000",
+        "away": "#6699ff",
+        "farm": "#502F13"
+    }
+}

@@ -37,7 +37,7 @@ init -2 python:
                 else:
                     # Sanity check: whore must do something
                     if girl.job == "whore" and not girl.does_anything():
-                        renpy.say("", "[girl.fullname] cannot work as a whore as she refuses to do any sex act.")
+                        renpy.say("", __("[girl.fullname] cannot work as a whore as she refuses to do any sex act."))
                         context.striking_girls.append(girl)
                         girl.add_log("work_days", -1)
                         girl.add_log("rest_days")
@@ -120,9 +120,9 @@ init -2 python:
                 rep_loss = -sum(c.rank for c in lost)
                 rep_loss = brothel.change_rep(rep_loss)
                 if not context.customers:
-                    text1 = "Your brothel was so dirty that all %s customers ran away (%s reputation)" % (str(len(lost)), str_int(rep_loss))
+                    text1 = __("Your brothel was so dirty that all %s customers ran away (%s reputation)") % (str(len(lost)), str_int(rep_loss))
                 else:
-                    text1 = "%s customers turned away because the brothel looked filthy (%s reputation)" % (str(len(lost)), str_int(rep_loss))
+                    text1 = __("%s customers turned away because the brothel looked filthy (%s reputation)") % (str(len(lost)), str_int(rep_loss))
                 context.maint_text += "\n" + text1
                 if context.log:
                     context.log.add_report(event_color["bad"] % text1)
@@ -239,12 +239,12 @@ init -2 python:
                 renpy.call("run_away", girl)
                 girl.add_log("run_away", delay=-1)
             elif check == "warning":
-                renpy.say(sill, "Warning! [girl.fullname] is unhappy and grumbling about running away...")
+                renpy.say(sill, __("Warning! [girl.fullname] is unhappy and grumbling about running away..."))
 
         # Tired checks
         for girl in MC.girls:
             if girl.tired_check():
-                renpy.say(sill, "Warning! [girl.fullname] is getting tired...")
+                renpy.say(sill, __("Warning! [girl.fullname] is getting tired..."))
                 if dice(6) >= 6:
                     calendar.set_alarm(calendar.time, Event(label="too_tired", object=girl))
 

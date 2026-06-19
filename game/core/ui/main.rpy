@@ -66,7 +66,7 @@ label slavemarket:
     if game.has_active_mod("Headhunter Mod"):
         if not slavemarket_firstvisit and slavemarket_firstvisit3:
             $ slavemarket_firstvisit3 = False
-            if renpy.call_screen("yes_no", "Go and see what all this hoopla about contracts is about?"):
+            if renpy.call_screen("yes_no", __("Go and see what all this hoopla about contracts is about?")):
                 jump headhunter_main
 ############ Jman - Headhunter Mod End ########
 
@@ -99,7 +99,7 @@ label slavemarket_loop:
                     gio "Hmm, that hunter lass might be onto something. The cheap low-rank slaves they sell to newcomers like you aren't particularly obedient."
                     gio "And it's hard to make a proper slut out of one of these tarts. So your brothel might be lacking whores..."
                     gio "... unless you go take up that pirate gal's offer. That little tease flashed us!"
-                    if renpy.call_screen("yes_no", "Skip buying a slave and come back later to try out the headhunting discount?"):
+                    if renpy.call_screen("yes_no", __("Skip buying a slave and come back later to try out the headhunting discount?")):
                         call hide_everything() from _call_hide_everything_49
                         $ game.headhunter_button_enabled = 1
                         $ slavemarket_firstvisit = False
@@ -292,7 +292,7 @@ label visit_location():
                             renpy.call("city_" + ev_type)
 
                 if district.rank >= 2 and renpy.random.random() <= 0.12: # 8% chance of getting a resource, 4% Cimerian
-                    $ renpy.say("", "While exploring the city, you found something useful.")
+                    $ renpy.say("", __("While exploring the city, you found something useful."))
                     $ d = dice(6)
 
                     if dice(6) >= 5:
@@ -422,7 +422,7 @@ label brothel_loop():
                     if pop.weight > 0:
                         break
                 else:
-                    if not renpy.call_screen("yes_no", "Warning! All customer populations have been set to zero. If that happens, only {b}beggars{/b} will come tonight. Are you sure you want to proceed?"):
+                    if not renpy.call_screen("yes_no", __("Warning! All customer populations have been set to zero. If that happens, only {b}beggars{/b} will come tonight. Are you sure you want to proceed?")):
                         renpy.jump("brothel_loop")
 
             hide screen brothel_options
@@ -684,7 +684,7 @@ label farm_loop():
 
                     play sound s_spell
 
-                    $ renpy.say("", "Your " + minions[0].type + plural(len(minions)) + " earned XP.")
+                    $ renpy.say("", __("Your %s%s earned XP.") % (minions[0].type, plural(len(minions))))
 
                     $ MC.use_item(it)
 
@@ -819,13 +819,13 @@ label farm_loop():
 
             if not MC.can_sell(slavemarket, girl):
                 gizel upset "You can't sell that girl again! The slavemarket won't allow it!"
-                if renpy.call_screen("yes_no", "The slavemarket will not buy her back. Do you want to dismiss [girl.fullname] for no money?"):
+                if renpy.call_screen("yes_no", __("The slavemarket will not buy her back. Do you want to dismiss [girl.fullname] for no money?")):
                     $ farm.girls.remove(girl)
 
             else:
                 $ price = girl.get_price("sell")
 
-                $ result = renpy.call_screen("yes_no", "Do you really want to sell [girl.fullname] for [price] gold?")
+                $ result = renpy.call_screen("yes_no", __("Do you really want to sell [girl.fullname] for [price] gold?"))
 
                 if result == True:
                     python:
@@ -849,7 +849,7 @@ label farm_loop():
 
             $ girl = obj
 
-            if renpy.call_screen("yes_no", "Do you really want to dismiss [girl.fullname]? She will recover her freedom and leave the city for good."):
+            if renpy.call_screen("yes_no", __("Do you really want to dismiss [girl.fullname]? She will recover her freedom and leave the city for good.")):
 
                 python:
                     if girl.items: # Unequip all items before dismiss
@@ -857,7 +857,7 @@ label farm_loop():
                             if it.equipped:
                                 girl.unequip(it)
                             MC.take(girl, it)
-                            renpy.notify(girl.name + " has lost " + it.name)
+                            renpy.notify(_("%s has lost %s.") % (girl.name, it.name))
                             renpy.pause(0.5)
 
                     farm.girls.remove(girl)
@@ -1187,11 +1187,11 @@ label girls_loop():
 
             if girl.away or girl.hurt > 0 or girl.exhausted:
                 if girl.away:
-                    $ renpy.notify("%s is away and cannot be assigned a new job at the moment." % girl.name)
+                    $ renpy.notify(__("%s is away and cannot be assigned a new job at the moment.") % girl.name)
                 elif girl.hurt > 0:
-                    $ renpy.notify("%s is hurt and cannot be assigned a new job at the moment." % girl.name)
+                    $ renpy.notify(__("%s is hurt and cannot be assigned a new job at the moment.") % girl.name)
                 elif girl.exhausted:
-                    $ renpy.notify("%s is exhausted and cannot be assigned a new job at the moment." % girl.name)
+                    $ renpy.notify(__("%s is exhausted and cannot be assigned a new job at the moment.") % girl.name)
                 jump girls_loop
 
             $ exit = False
@@ -1428,13 +1428,13 @@ label girls_loop():
 
             if not MC.can_sell(slavemarket, girl):
                 slavegirl1 "You already sold us this girl once. You can't change your mind all the time. We're busy, you know."
-                if renpy.call_screen("yes_no", "The slavemarket will not buy her back. Do you want to dismiss [girl.fullname] for no money?"):
+                if renpy.call_screen("yes_no", __("The slavemarket will not buy her back. Do you want to dismiss [girl.fullname] for no money?")):
                     $ MC.girls.remove(girl)
 
             else:
                 $ price = girl.get_price("sell")
 
-                $ result = renpy.call_screen("yes_no", "Do you really want to sell [girl.fullname] for [price] gold?")
+                $ result = renpy.call_screen("yes_no", __("Do you really want to sell [girl.fullname] for [price] gold?"))
 
                 if result == True:
 
@@ -1459,7 +1459,7 @@ label girls_loop():
 
             $ girl = selected_girl
 
-            if renpy.call_screen("yes_no", "Do you really want to dismiss [girl.fullname]? She will recover her freedom and leave the city for good."):
+            if renpy.call_screen("yes_no", __("Do you really want to dismiss [girl.fullname]? She will recover her freedom and leave the city for good.")):
 
                 python:
                     if girl.items: # Unequip all items before dismiss
@@ -1467,7 +1467,7 @@ label girls_loop():
                             if it.equipped:
                                 girl.unequip(it)
                             MC.take(girl, it)
-                            renpy.notify(girl.name + " has lost " + it.name)
+                            renpy.notify(_("%s has lost %s.") % (girl.name, it.name))
                             renpy.pause(0.5)
 
                     MC.girls.remove(girl)
@@ -1534,9 +1534,9 @@ label girls_loop():
                                 if collected:
                                     collected_from.append(g.fullname)
                     if nb:
-                        $ notify("%s collected %i items from %s." % (left_focus.name, nb, and_text(collected_from)))
+                        $ notify(__("%s collected %i items from %s.") % (left_focus.name, nb, and_text(collected_from)))
                     else:
-                        $ notify("No items were found in other girls' inventories.")
+                        $ notify(_("No items were found in other girls' inventories."))
                     
 
                 elif act == "equip":
@@ -1665,7 +1665,7 @@ label perks(): # girl is passed by the previous label (girls)
         $ result, obj = ui.interact() # obj is an archetype or perk
 
         if result == "unlock":
-            if renpy.call_screen("yes_no", "Are you sure you want to unlock {b}" + obj + "{/b} zodiac for 2 perk points?"):
+            if renpy.call_screen("yes_no", __("Are you sure you want to unlock {b}") + obj + "{/b} zodiac for 2 perk points?"):
 
                 play sound s_spell
                 $ perk_points -= 2
@@ -1782,10 +1782,10 @@ label visit_merchant(merc):
     $ tt = show_tt("top_right")
 
     if merc == shop and shop.updated:
-        $ merc.char(merchant_greetings[merc.name + " caravan"])
+        $ merc.char(merchant_greetings[merc.id + " caravan"])
         $ shop.updated = False
     else:
-        $ merc.char(merchant_greetings[merc.name + " greeting"])
+        $ merc.char(merchant_greetings[merc.id + " greeting"])
 
         if merc == NPC_twins:
             $ yesterday(merchant_greetings["Yesterday greeting"])
@@ -1794,12 +1794,12 @@ label visit_merchant(merc):
     $ right_focus = merc
 
     $ left_party = [MC] + MC.girls
-    $ right_party = [shop] + [m for m in (minion_merchants + city_merchants) if m in unlocked_shops] # Sorts unlocked shops in the same order
+    $ right_party = [shop] + [m for m in all_shops if m != shop and m in unlocked_shops] # Sorts unlocked shops in the same order
 
     if merc == shop:
         $ context = "shop"
         $ back_to = "main"
-    elif merc in minion_merchants:
+    elif getattr(merc, 'shop_type', None) == "minion":
         $ context = "minion_merchant"
         $ back_to = "visit_location"
     else:
@@ -1863,7 +1863,7 @@ label visit_merchant_loop():
                     # Update context
                     if right_focus == shop:
                         $ context = "shop"
-                    elif right_focus in minion_merchants:
+                    elif getattr(right_focus, 'shop_type', None) == "minion":
                         $ context = "minion_merchant"
                     elif isinstance(right_focus, NPC):
                         $ context = "city_merchant"
@@ -1875,9 +1875,9 @@ label visit_merchant_loop():
 
             elif act == "restock":
                 if it:
-                    $ restock_cost = shop_restock_cost[context][game.chapter]
+                    $ restock_cost = right_focus.get_restock_cost(game.chapter)
 
-                    if renpy.call_screen("yes_no", "Are you sure you want to restock this store for %i gold?" % restock_cost):
+                    if renpy.call_screen("yes_no", __("Are you sure you want to restock this store for %i gold?") % restock_cost):
                         $ MC.gold -= restock_cost
                         play sound s_gold
                         $ right_focus.restock(update_flag=False)
@@ -1889,7 +1889,7 @@ label visit_merchant_loop():
             elif act == "sell":
                 if not MC.can_sell(right_focus, it):
                     right_focus.char "You already sold this to me once! I'm sorry, but this is not a pawn shop. You keep it now."
-                    if renpy.call_screen("yes_no", "The merchant will not buy this back. Do you want to get rid of [it.name] for no money?"):
+                    if renpy.call_screen("yes_no", __("The merchant will not buy this back. Do you want to get rid of [it.name] for no money?")):
                         if it.equipped:
                             $ owner.unequip(it)
                         $ owner.items.remove(it)
@@ -1954,7 +1954,7 @@ label visit_merchant_loop():
                         $ norollback()
 
                         # $ right_focus.char(merchant_greetings[merc.name + " bought something"])
-                        $ notify(merchant_greetings[right_focus.name + " bought something"] % it.name, right_focus.portrait, col=right_focus.char.who_args["color"]) # right_focus.char.who_args["color"] retrieves the name color of the character. Don't ask.
+                        $ notify(merchant_greetings[right_focus.id + " bought something"] % it.name, right_focus.portrait, col=right_focus.char.who_args["color"]) # right_focus.char.who_args["color"] retrieves the name color of the character. Don't ask.
 
                         if right_focus == NPC_twins:
                             # $ yesterday(merchant_greetings["Yesterday bought something"])
@@ -1964,12 +1964,12 @@ label visit_merchant_loop():
                         if act == "buy and equip":
                             play sound it.sound
                             if counterpart == MC:
-                                $ notify("You have equipped the %s." % it.name)
+                                $ notify(__("You have equipped the %s.") % it.name)
                             else:
-                                $ notify("%s has equipped the %s." % (counterpart.name, it.name), pic=counterpart.portrait, col=c_white)
+                                $ notify(__("%s has equipped the %s.") % (counterpart.name, it.name), pic=counterpart.portrait, col=c_white)
 
                 else:
-                    $ right_focus.char(merchant_greetings[right_focus.name + " no money"])
+                    $ right_focus.char(merchant_greetings[right_focus.id + " no money"])
 
             elif act == "equip":
                 $ owner.equip(it)
@@ -1988,9 +1988,9 @@ label visit_merchant_loop():
 
             elif act == "upgrade_shop":
                 if it:
-                    $ chapter, cost, upgrade = shop_upgrades[right_focus.upgrade_level + 1]
+                    $ chapter, cost, upgrade = right_focus.get_upgrade_info()
 
-                    if renpy.call_screen("yes_no", "Are you sure you want to upgrade this shop for %s %s?" % (str(cost[1]), cost[0])):
+                    if renpy.call_screen("yes_no", __("Are you sure you want to upgrade this shop for %s %s?") % (str(cost[1]), cost[0])):
                         $ right_focus.upgrade_shop(cost, upgrade)
 
                         $ right_focus.char(shopgirl_comment[cost[0]])

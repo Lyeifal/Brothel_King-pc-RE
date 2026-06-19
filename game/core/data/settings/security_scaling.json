@@ -1,0 +1,9 @@
+{
+  "_description": "EN: Siege enemy scaling configuration by game chapter. ZH: 按章节划分的围城敌人规模配置。",
+  "siege_enemy_scaling": {
+    "4": {"base_enemies": 16, "enemy_dice": 6, "base_machines": 1, "machine_dice": 2},
+    "5": {"base_enemies": 21, "enemy_dice": 8, "base_machines": 1, "machine_dice": 3},
+    "6": {"base_enemies": 28, "enemy_dice": 10, "base_machines": 2, "machine_dice": 3},
+    "7": {"base_enemies": 42, "enemy_dice": 12, "base_machines": 3, "machine_dice": 3}
+  }
+}
