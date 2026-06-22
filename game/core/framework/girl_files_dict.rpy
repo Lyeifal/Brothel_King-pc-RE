@@ -5,6 +5,8 @@ default preferences.packstate_unrecognized = "Rename"
 init -2 python:
     import datetime
     import bisect
+    import os
+    import shutil
 
 
     class GirlFilesDict(NoRollback):
@@ -24,7 +26,54 @@ init -2 python:
             self.__timestamp = datetime.datetime.now()
             self.__totalcount = 0
 
-            for file in renpy.list_files():
+            # Move empty/corrupt .avif files to temp/error_images instead of deleting
+            all_files = list(renpy.list_files())
+            moved_files = []
+            moved_file_paths = set()
+            error_base = os.path.join(config.gamedir, "temp", "error_images")
+            report_path = os.path.join(config.gamedir, "temp", "error_images_report.txt")
+
+            for file in all_files:
+                if file.lower().endswith(".avif"):
+                    try:
+                        fpath = renpy.loader.transfn(file)
+                        if os.path.getsize(fpath) == 0:
+                            # Preserve path relative to the girls folder if possible, else relative to game/
+                            if file.startswith("custom/girls/"):
+                                rel_path = file[len("custom/girls/"):]
+                            elif "/girls/" in file:
+                                rel_path = file[file.find("/girls/") + len("/girls/"):]
+                            else:
+                                rel_path = file
+
+                            dest_path = os.path.join(error_base, rel_path)
+                            dest_dir = os.path.dirname(dest_path)
+                            if not os.path.exists(dest_dir):
+                                os.makedirs(dest_dir)
+
+                            shutil.move(fpath, dest_path)
+                            moved_files.append((file, dest_path))
+                            moved_file_paths.add(file)
+                    except:
+                        pass
+
+            if moved_files:
+                print("GirlFilesDict: Moved %i empty .avif file(s) to temp/error_images." % len(moved_files))
+                try:
+                    with open(report_path, "w", encoding="utf-8") as report:
+                        report.write("Empty/Corrupt .avif files moved during girl pack loading\n")
+                        report.write("Total: %i\n" % len(moved_files))
+                        report.write("=" * 60 + "\n\n")
+                        for src, dest in moved_files:
+                            report.write("SOURCE:  %s\n" % src)
+                            report.write("MOVED TO: %s\n\n" % dest)
+                except:
+                    pass
+
+            for file in all_files:
+                if file in moved_file_paths:
+                    continue
+
                 if file.startswith(GirlFilesDict.get_packstate_directory()): # Packstate folder
                     self.__packstates.append(file.lower())
                 else: # Other folders

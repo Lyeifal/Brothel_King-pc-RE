@@ -34,6 +34,7 @@ traceback.txt
 # User content (girl packs should not be tracked)
 game/girls/*
 !game/girls/YOUR GIRL FOLDERS GO HERE.txt
+game/custom/girls/
 
 # Translation work-in-progress exports
 *.xlsx

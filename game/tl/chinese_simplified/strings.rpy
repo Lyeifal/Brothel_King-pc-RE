@@ -13559,7 +13559,7 @@ translate chinese_simplified strings:
 
     #  game/data/settings.rpy:7
     old "No challenge at all. You're either here for the story, or the pretty pictures. {i}All achievements are locked.{/i}"
-    new "毫无挑战性。你来这里要么是为了体验剧情，要么是为了欣赏精美的画面。所有成就均已锁定。{/i}"
+    new "毫无挑战性。你来这里要么是为了体验剧情，要么是为了欣赏精美的画面。{i}所有成就均已锁定。{/i}"
     #  game/BKdialogue.rpy:1921
     old "No complaints from me!"
     new "我没有任何抱怨！"

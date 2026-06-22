@@ -5398,6 +5398,7 @@ screen yes_no(message, yes_caption=_("Yes"), no_caption=_("No"), col=c_white, bg
         yalign 0.5
         ypadding 25
         ymargin 10
+        ymaximum 0.85
         background bg
 
         has vbox:
@@ -5405,10 +5406,18 @@ screen yes_no(message, yes_caption=_("Yes"), no_caption=_("No"), col=c_white, bg
             yalign .5
             spacing 25
 
-        label _(message):
-            xalign 0.5
-            text_size res_font(18)
-            text_color col
+        viewport:
+            id "yesno_message"
+            xfill True
+            ymaximum 0.6
+            mousewheel "change"
+            draggable True
+            scrollbars "vertical"
+
+            label _(message):
+                xalign 0.5
+                text_size res_font(18)
+                text_color col
 
         hbox:
             xalign 0.5

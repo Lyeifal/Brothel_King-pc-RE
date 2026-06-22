@@ -3,6 +3,7 @@
 init -4 python:
 
     import hashlib
+    import os
     class Picture(object):
 
         """This class is for managing pictures and tags."""
@@ -40,7 +41,10 @@ init -4 python:
                 return (self.y_size <= self.x_size)
             except:
                 if len(self.path) < 256 and is_imgfile(self.path, video=False): # 256 characters is the Windows OS limit
-                    self.x_size, self.y_size = renpy.image_size(self.path) # image_size() is slow, store the result
+                    try:
+                        self.x_size, self.y_size = renpy.image_size(self.path) # image_size() is slow, store the result
+                    except:
+                        return True
                 else:
                     return True
                 return (self.y_size <= self.x_size)
@@ -50,7 +54,10 @@ init -4 python:
                 return (self.y_size > self.x_size)
             except:
                 if len(self.path) < 148 and is_imgfile(self.path, video=False): # 148 characters seems to be a limit
-                    self.x_size, self.y_size = renpy.image_size(self.path) # image_size() is slow, store the result
+                    try:
+                        self.x_size, self.y_size = renpy.image_size(self.path) # image_size() is slow, store the result
+                    except:
+                        return True
                 else:
                     return True
                 return (self.y_size > self.x_size)
@@ -353,10 +360,21 @@ init -4 python:
             self.height = maxheight or config.screen_height
             if not renpy.exists(imgname):
                 imgname = "resources/backgrounds/not_found.webp"
+            else:
+                try:
+                    fpath = renpy.loader.transfn(imgname)
+                    if os.path.getsize(fpath) == 0:
+                        imgname = "resources/backgrounds/not_found.webp"
+                except:
+                    pass
             self.image = Transform(imgname, size=(self.width, self.height), fit="contain", **properties)
+            self.fallback = Transform("resources/backgrounds/not_found.webp", size=(self.width, self.height), fit="contain")
 
         def render(self, width, height, st, at): # Used for rendering
-            return renpy.render(self.image, self.width, self.height, st, at)
+            try:
+                return renpy.render(self.image, self.width, self.height, st, at)
+            except Exception:
+                return renpy.render(self.fallback, self.width, self.height, st, at)
 
         def visit(self): # Used for predicting
             return [ self.image ]
