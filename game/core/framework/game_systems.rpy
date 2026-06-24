@@ -1006,71 +1006,76 @@ init -3 python:
         return list(available_mixes)
 
     def get_day_report(_log):
+        # Phase 0.2: All report strings now use __() for I18N.
+        # The plural() function is language-aware — returns "" for CJK locales.
+
+        gold_str = __("gold")
+
         if _log.net >= 0:
-            msg = "You made " + event_color["good"] % (str(round_int(_log.net)) + " gold") + " last night.\n"
+            msg = __("You made %s last night.\n") % (event_color["good"] % (str(round_int(_log.net)) + " " + gold_str),)
         else:
-            msg = "You lost " + event_color["bad"] % (str(round_int(_log.net)) + " gold") + " last night.\n"
+            msg = __("You lost %s last night.\n") % (event_color["bad"] % (str(round_int(_log.net)) + " " + gold_str),)
 
-        msg += "{size=-2}" + "- Gold made: + " + event_color["good"] % str(round_int(_log.gold_made)) + "\n"
-        msg += "- Girls upkeep: - " + event_color["bad"] % str(round_int(_log.upkeep)) + "\n"
-        msg += "- Brothel costs: - " + event_color["bad"] % str(round_int(_log.costs)) + "\n{/size}\n"
+        msg += "{size=-2}" + __("- Gold made: + %s\n") % (event_color["good"] % str(round_int(_log.gold_made)),)
+        msg += __("- Girls upkeep: - %s\n") % (event_color["bad"] % str(round_int(_log.upkeep)),)
+        msg += __("- Brothel costs: - %s\n{/size}\n") % (event_color["bad"] % str(round_int(_log.costs)),)
 
-        msg += str(_log.cust) + " customer" + plural(_log.cust) + " came to the brothel.\n"
-        msg += "{size=-2}" + "- Customer" + plural(_log.check("served")) + " served (job): " + event_color["good"] % str(_log.check("served")) + "/" + str(_log.cust) + "\n"
-        msg += "- Customer" + plural(_log.check("entertained")) + " entertained (job): " + event_color["good"] % str(_log.check("entertained")) + "/" + str(_log.check("served")) + "\n"
-        msg += "- Customer" + plural(_log.check("laid")) + " served (sex): " + event_color["good"] % str(_log.check("laid")) + "/" + str(_log.cust) + "\n"
-        msg += "- Customer" + plural(_log.check("satisfied")) + " satisfied (sex): " + event_color["good"] % str(_log.check("satisfied")) + "/" + str(_log.check("laid")) + "\n{/size}\n"
+        msg += __("%s customer%s came to the brothel.\n") % (str(_log.cust), plural(_log.cust))
+        msg += "{size=-2}" + __("- Customer%s served (job): %s/%s\n") % (plural(_log.check("served")), event_color["good"] % str(_log.check("served")), str(_log.cust))
+        msg += __("- Customer%s entertained (job): %s/%s\n") % (plural(_log.check("entertained")), event_color["good"] % str(_log.check("entertained")), str(_log.check("served")))
+        msg += __("- Customer%s served (sex): %s/%s\n") % (plural(_log.check("laid")), event_color["good"] % str(_log.check("laid")), str(_log.cust))
+        msg += __("- Customer%s satisfied (sex): %s/%s\n{/size}\n") % (plural(_log.check("satisfied")), event_color["good"] % str(_log.check("satisfied")), str(_log.check("laid")))
 
-        msg += str(_log.check("work_days")) + " girl" + plural(_log.check("work_days")) + " worked in the brothel. "
+        msg += __("%s girl%s worked in the brothel. ") % (str(_log.check("work_days")), plural(_log.check("work_days")))
 
         if _log.check("strike_days"):
-            msg += event_color["bad"] % (str(_log.check("strike_days")) + " girl" + plural(_log.check("strike_days")) + " went on strike. ")
+            msg += event_color["bad"] % __("%s girl%s went on strike. ") % (str(_log.check("strike_days")), plural(_log.check("strike_days")))
         if _log.check("run_away"):
-                msg += event_color["bad"] % (str(_log.check("run_away")) + " girl" + plural(_log.check("run_away")) + " ran away from the brothel.")
+            msg += event_color["bad"] % __("%s girl%s ran away from the brothel.") % (str(_log.check("run_away")), plural(_log.check("run_away")))
 
-        msg += __("\n{size=-2}- Waitress: %s\n") % (event_color["good"] % str(_log.check("waitress_days")))
-        msg += __("- Dancer: %s\n") % (event_color["good"] % str(_log.check("dancer_days")))
-        msg += __("- Masseuse: %s\n") % (event_color["good"] % str(_log.check("masseuse_days")))
-        msg += __("- Geisha: %s\n") % (event_color["good"] % str(_log.check("geisha_days")))
-        msg += __("- Whore: %s\n{/size}\n") % (event_color["good"] % str(_log.check("whore_days")))
+        msg += __("\n{size=-2}- Waitress: %s\n") % (event_color["good"] % str(_log.check("waitress_days")),)
+        msg += __("- Dancer: %s\n") % (event_color["good"] % str(_log.check("dancer_days")),)
+        msg += __("- Masseuse: %s\n") % (event_color["good"] % str(_log.check("masseuse_days")),)
+        msg += __("- Geisha: %s\n") % (event_color["good"] % str(_log.check("geisha_days")),)
+        msg += __("- Whore: %s\n{/size}\n") % (event_color["good"] % str(_log.check("whore_days")),)
 
         if _log.check("rest_days") > 1:
-            msg += str(_log.check("rest_days")) + " girls were resting at the brothel. "
+            msg += __("%s girls were resting at the brothel. ") % str(_log.check("rest_days"))
         elif _log.check("rest_days") > 0:
-            msg += str(_log.check("rest_days")) + " girl was resting at the brothel. "
+            msg += __("%s girl was resting at the brothel. ") % str(_log.check("rest_days"))
 
         if _log.check("hurt_days") > 1:
-            msg += event_color["bad"] % (str(_log.check("hurt_days")) + " girls were hurt while working. ")
+            msg += event_color["bad"] % __("%s girls were hurt while working. ") % str(_log.check("hurt_days"))
         elif _log.check("hurt_days") > 0:
-            msg += event_color["bad"] % (str(_log.check("hurt_days")) + " girl was hurt while working. ")
+            msg += event_color["bad"] % __("%s girl was hurt while working. ") % str(_log.check("hurt_days"))
 
         if _log.check("exhausted"):
-            msg += event_color["bad"] % (str(_log.check("exhausted")) + " girl" + plural(_log.check("exhausted")) + " became exhausted while working. ")
+            msg += event_color["bad"] % __("%s girl%s became exhausted while working. ") % (str(_log.check("exhausted")), plural(_log.check("exhausted")))
 
         msg += "\n"
 
         if farm.active:
-            msg += str(_log.check("farm_days") + _log.check("farm_rest_days")) + " girls were at the farm last night. "
+            msg += __("%s girls were at the farm last night. ") % str(_log.check("farm_days") + _log.check("farm_rest_days"))
 
             if _log.check("farm_resisted_training"):
-                msg += event_color["bad"] % (str(_log.check("farm_resisted_training")) + " girl" + plural(_log.check("farm_resisted_training")) + " resisted training. ")
+                msg += event_color["bad"] % __("%s girl%s resisted training. ") % (str(_log.check("farm_resisted_training")), plural(_log.check("farm_resisted_training")))
 
             if _log.check("farm_run_away"):
-                msg += event_color["bad"] % (str(_log.check("farm_run_away")) + " girl" + plural(_log.check("farm_run_away")) + " ran away from the farm.")
+                msg += event_color["bad"] % __("%s girl%s ran away from the farm.") % (str(_log.check("farm_run_away")), plural(_log.check("farm_run_away")))
 
             if _log.check("farm_hurt"):
-                msg += event_color["bad"] % (str(_log.check("farm_hurt")) + " girl" + plural(_log.check("farm_hurt")) + " got hurt while resisting.")
+                msg += event_color["bad"] % __("%s girl%s got hurt while resisting.") % (str(_log.check("farm_hurt")), plural(_log.check("farm_hurt")))
 
             if _log.check("minion_hurt"):
-                msg += event_color["bad"] % (str(_log.check("minion_hurt")) + " minion" + plural(_log.check("minion_hurt")) + " got hurt in the fighting.")
+                msg += event_color["bad"] % __("%s minion%s got hurt in the fighting.") % (str(_log.check("minion_hurt")), plural(_log.check("minion_hurt")))
 
-            msg += "\n{size=-2}" + "- In training: " + event_color["good"] % str(_log.check("farm_training_days")) + "\n"
-            msg += "- In holding: " + event_color["good"] % str(_log.check("farm_holding_days")) + "{/size}\n"
+            msg += "\n{size=-2}" + __("- In training: %s\n") % (event_color["good"] % str(_log.check("farm_training_days")),)
+            msg += __("- In holding: %s{/size}\n") % (event_color["good"] % str(_log.check("farm_holding_days")),)
 
             if _log.check("farm_rest_days") > 1:
-                msg += str(_log.check("farm_rest_days")) + " girls were resting at the farm. "
+                msg += __("%s girls were resting at the farm. ") % str(_log.check("farm_rest_days"))
             elif _log.check("farm_rest_days") > 0:
-                msg += str(_log.check("farm_rest_days")) + " girl was resting at the farm. "
+                msg += __("%s girl was resting at the farm. ") % str(_log.check("farm_rest_days"))
 
         return msg
 

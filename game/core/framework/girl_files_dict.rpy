@@ -21,6 +21,7 @@ init -2 python:
             self.__path_dict = defaultdict(str)
             self.__filetuple_dict = dict()
             self.__pictuple_dict = dict()
+            self.__tag_index = dict()  # Phase 0.6: tag -> [Picture, ...] inverted index per pack
             self.__ini_dict = dict()
             self.__packstates = list()
             self.__timestamp = datetime.datetime.now()
@@ -105,7 +106,8 @@ init -2 python:
             for girlpath in self.__pathtuple:
                 self.__filetuple_dict[girlpath].sort() # Important! Binary search only works if sorted!
                 self.__filetuple_dict[girlpath] = tuple(self.__filetuple_dict[girlpath]) # Switch to unchangeable
-                self.__load_pics(girlpath)
+                # Phase 0.6: Picture objects are now loaded lazily in get_pics()
+                # to reduce startup time with many girl packs.
 
             self.__init_duration = datetime.datetime.now() - start
 
@@ -121,18 +123,25 @@ init -2 python:
 
             imgfiles = [img for img in self.__filetuple_dict[girlpath] if is_imgfile(img)]
 
-            # Creating pictures
+            # Creating pictures and building inverted tag index (Phase 0.6)
+
+            tag_index = defaultdict(list)
 
             for file in imgfiles:
                 pic = Picture(path=file)
 
                 self.__pictuple_dict[girlpath].append(pic)
 
-                # Tracing untagged pics for debugging
+                # Tracing untagged pics for debugging (triggers lazy tag parsing)
                 if pic.tags == []:
                     untagged_pics.append(pic.path)
 
+                # Build inverted index: tag -> list of Pictures
+                for tag in pic.tags:
+                    tag_index[tag].append(pic)
+
             self.__pictuple_dict[girlpath] = tuple(self.__pictuple_dict[girlpath]) # Switch to unchangeable
+            self.__tag_index[girlpath] = dict(tag_index)  # Freeze to plain dict
 
         @staticmethod
         # Just to be safe, in case some changes need to be made.
@@ -208,6 +217,15 @@ init -2 python:
             if not girlpath in instance.__pictuple_dict:
                 instance.__load_pics(girlpath)
             return instance.__pictuple_dict[girlpath]
+
+        @staticmethod
+        # Phase 0.6: Returns the inverted tag→[Picture, ...] index for a pack.
+        # Built on first get_pics() call. Returns empty dict if pack not loaded.
+        def get_tag_index(girlpath):
+            instance = GirlFilesDict.__get()
+            if girlpath not in instance.__pictuple_dict:
+                instance.__load_pics(girlpath)
+            return instance.__tag_index.get(girlpath, {})
 
         @staticmethod
         # Gets a certain pic for a specific girl. Not using binary search yet.

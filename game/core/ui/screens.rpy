@@ -1513,7 +1513,7 @@ screen girl_profile(girl, context = None): # context can be girls, slavemarket, 
                     #         textbutton "Duration:" xsize 0.5 xfill True text_xalign 0 text_size res_font(14) background None text_color c_white xpadding 0 xmargin 0.05 ypadding 0 ymargin 0 action NullAction() hovered tt.Action("The duration of her stay.")
                     #         text str(farm.programs[girl].duration) + " days" size res_font(14) bold True
 
-                    textbutton _("Change program") text_size res_font(16) xalign 0.5 action Return(("change program", girl)) tooltip "Change " + girl.name + "'s current training program."
+                    textbutton _("Change program") text_size res_font(16) xalign 0.5 action Return(("change program", girl)) tooltip __("Change %s's current training program.") % girl.name
 
                     text "" size res_font(18)
 
@@ -2848,7 +2848,7 @@ screen button_overlay(girl, context="girls"):
 
                 tooltip _("Change this girl's equipment.")
 
-            textbutton _("Le{u}a{/u}ve farm") text_size res_font(14) action Return(("take out", girl)) tooltip "Send " + girl.name + " back to the brothel."
+            textbutton _("Le{u}a{/u}ve farm") text_size res_font(14) action Return(("take out", girl)) tooltip __("Send %s back to the brothel.") % girl.name
 
             if girl.free:
                 textbutton _("Dismiss"):
@@ -3020,7 +3020,7 @@ screen schedule(glist):
                         xalign 1.0
                         yalign 0.5
 
-                        button xsize xres(95) ysize yres(53) style "girlbutton" xpadding xres(6) ypadding yres(3) action (SetVariable("selected_girl", girl), Return()) tooltip "Click here to check " + girl.fullname + "'s profile.":
+                        button xsize xres(95) ysize yres(53) style "girlbutton" xpadding xres(6) ypadding yres(3) action (SetVariable("selected_girl", girl), Return()) tooltip __("Click here to check %s's profile.") % girl.fullname:
                             has vbox
 
                             xalign 1.0
@@ -4522,7 +4522,7 @@ screen brothel():
 
                             vbox spacing 6 xsize xres(150):
                                 text _("Threat level") size res_font(14)
-                                textbutton brothel.estimate_threat_level(caps=True) style "inv_no_padding" action NullAction() tooltip "Your brothel's current threat level is " + brothel.estimate_threat_level() + ". Brothel threat is affected by brothel security and your Strength skill."
+                                textbutton brothel.estimate_threat_level(caps=True) style "inv_no_padding" action NullAction() tooltip __("Your brothel's current threat level is %s. Brothel threat is affected by brothel security and your Strength skill.") % brothel.estimate_threat_level()
 
                             vbox spacing 6 xsize xres(200):
                                 hbox spacing 10:

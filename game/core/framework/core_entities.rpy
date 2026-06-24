@@ -394,7 +394,15 @@ init -2 python:
         #<Chris12 AutoRepair>
         # If there could be new images, checks if all girls still have their portraits and profiles.
         # Does not perform any missing_girls business, use the help menu for that
+        #
+        # Phase 0.5: Now runs at most once per in-game day (was every main-loop
+        # iteration, causing unnecessary CPU load with many girl packs).
         def update_files_timestamp(self):
+            # Throttle to once per game day
+            if hasattr(self, '_last_repair_day') and self._last_repair_day == calendar.day:
+                return
+            self._last_repair_day = calendar.day
+
             newFiles = None
             try :
                 newFiles = self.__filesdict_timestamp != GirlFilesDict.get_timestamp()

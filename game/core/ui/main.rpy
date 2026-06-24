@@ -488,7 +488,7 @@ label farm_loop():
         gizel upset "[MC.name]! One of your good-for-nothing sluts has hurt my babies! If you don't act quickly, I'm going to have to retire it."
 
         python:
-            menu_list = [(str(len(hurt)) + " minion" + plural(len(hurt)) + " are hurt. What do you want to do?", None)]
+            menu_list = [(__("%s minion%s are hurt. What do you want to do?") % (str(len(hurt)), plural(len(hurt))), None)]
 
             if MC.get_items(target="minion", name="Healing powder"):
                 for mn in hurt:

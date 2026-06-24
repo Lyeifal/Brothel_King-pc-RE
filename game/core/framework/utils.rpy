@@ -300,16 +300,59 @@ init -3 python:
 
         return txt + ("\n" + txt).join(li)
 
-    def plural(nb, ending = "s", singular=""):
+    # ── i18n-safe plural & article ──────────────────────────────────────
+    # Phase 0.1: These are now language-aware.
+    #
+    # pluralize() is the recommended replacement for plural().
+    #   - English: pluralize(1, "file", "files") → "file"
+    #              pluralize(3, "file", "files") → "files"
+    #   - Chinese/Japanese/Korean: always returns singular form.
+    #
+    # article() is retained for compatibility but returns "" for non-English
+    # locales (CJK languages do not use articles).
 
-        if nb == 1:
+    def _is_english_locale():
+        """True when the active language has no plural/article grammar."""
+        lang = getattr(renpy.game.preferences, 'language', None)
+        return lang is None  # None = English, all others = no plural/article suffixes
+
+    def pluralize(nb, singular_form, plural_form=None):
+        """Return the correct singular or plural form for the current language.
+
+        For English: uses CLDR-style nplurals=2 (n != 1). If plural_form is
+        omitted, defaults to singular_form + 's'.
+        For CJK/Korean: always returns singular_form (no grammatical number).
+        """
+        if not _is_english_locale():
+            return singular_form
+        if abs(nb) == 1:
+            return singular_form
+        if plural_form is not None:
+            return plural_form
+        return singular_form + "s"
+
+    def plural(nb, ending="s", singular=""):
+        """DEPRECATED: use pluralize() instead.
+
+        Kept for backward compatibility. Now language-aware:
+        - English: returns *ending* if nb != 1, otherwise *singular*.
+        - CJK/Korean: always returns "" (no plural suffix needed).
+        """
+        if not _is_english_locale():
+            return ""
+        if abs(nb) == 1:
             return singular
-
-        else:
-            return ending
+        return ending
 
     def article(noun, definite=False):
+        """DEPRECATED: use __() with full noun phrases instead.
 
+        Kept for backward compatibility. Now language-aware:
+        - English: returns "a "/"an "/"the " + noun.
+        - CJK/Korean: returns noun unchanged (no articles).
+        """
+        if not _is_english_locale():
+            return noun
         if definite:
             return __("the ") + noun
         elif noun[0].lower() in ("a", "i", "e", "o"):

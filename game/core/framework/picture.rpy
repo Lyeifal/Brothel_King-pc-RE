@@ -23,7 +23,12 @@ init -4 python:
             self.path = path
 
             #<Chris12 PackState>
-            self.make_tags_from_filename()
+            # Phase 0.6: Tag parsing is now lazy — deferred to first access of
+            # .tags / .oldtags. This avoids expensive filename parsing for
+            # packs that are never activated during a session.
+            self._tags_loaded = False
+            self._tags = []
+            self._oldtags = []
             self.__hashcode = None
             self.__filesize = -1
             #</Chris12 PackState>
@@ -62,6 +67,31 @@ init -4 python:
                     return True
                 return (self.y_size > self.x_size)
 
+
+        # Phase 0.6: Lazy tag loading via properties.
+        # Tags are parsed from filename only on first access, avoiding expensive
+        # string processing for packs that are never activated during a session.
+        @property
+        def tags(self):
+            if not self._tags_loaded:
+                self.make_tags_from_filename()
+            return self._tags
+
+        @tags.setter
+        def tags(self, value):
+            self._tags = value
+            self._tags_loaded = True
+
+        @property
+        def oldtags(self):
+            if not self._tags_loaded:
+                self.make_tags_from_filename()
+            return self._oldtags
+
+        @oldtags.setter
+        def oldtags(self, value):
+            self._oldtags = value
+            self._tags_loaded = True
 
         def get_old(self, x = None, y = None, proportional = True, side = False, profile = False): # Doesn't work with just x or y for now
 
@@ -204,9 +234,11 @@ init -4 python:
 #             global ending_pattern
 
             # Initialization has been moved to BKinit_variables.rpy
+            # Phase 0.6: Uses internal _tags/_oldtags to avoid triggering the
+            # lazy-loading properties recursively.
 
-            self.tags = []
-            self.oldtags = []
+            self._tags = []
+            self._oldtags = []
 
             # This checks longest tags first. The second parameter allows filtered tag_lists to be used (for tags with spaces)
             def check_all_tags(filename, current_tag_list):
@@ -217,8 +249,8 @@ init -4 python:
                     new_len = len(filename)
                     if (new_len != old_len):
                         old_len = new_len
-                        self.oldtags.append(_tag)
-                        self.tags += tag_list_dict[_tag]
+                        self._oldtags.append(_tag)
+                        self._tags += tag_list_dict[_tag]
 
                 return filename
 
@@ -235,8 +267,8 @@ init -4 python:
                 if part.strip() != "":
                     tag_entry = tag_dict.get(part, None)
                     if tag_entry is not None: # tag was found
-                        self.oldtags.append(part)
-                        self.tags += tag_list_dict[part]
+                        self._oldtags.append(part)
+                        self._tags += tag_list_dict[part]
                     else:
                         not_found.append(part)
 
@@ -245,12 +277,14 @@ init -4 python:
                 check_all_tags(filename, sorted_tag_dict_keys)
 
             # Adding tag 'orgy' for bisexual and group pics, by popular demand
-            if "group" in self.tags and "bisexual" in self.tags:
-                self.tags.append("orgy")
+            if "group" in self._tags and "bisexual" in self._tags:
+                self._tags.append("orgy")
 
             # Adding 'group' to double only for human partners (by popular demand)
-            if "double" in self.tags and "beast" not in self.tags and "monster" not in self.tags and "machine" not in self.tags and "group" not in self.tags:
-                self.tags.append("group")
+            if "double" in self._tags and "beast" not in self._tags and "monster" not in self._tags and "machine" not in self._tags and "group" not in self._tags:
+                self._tags.append("group")
+
+            self._tags_loaded = True
 
         # calculates a checksum.
         # Has to be the same as the function in the picture namer, so that packstates work

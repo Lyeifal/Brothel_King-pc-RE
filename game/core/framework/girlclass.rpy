@@ -569,6 +569,9 @@ init -2 python:
             # if not silent:
             #     debug_notify("Refreshing pictures for %s" % self.fullname, pic=self.portrait)
 
+            # Phase 0.4: Invalidate picture cache for this girl on refresh
+            PictureCache.evict(self)
+
             if force_default:
                 self.portrait = get_pic(game, "portrait", "profile")
                 self.profile = get_pic(game, "profile", "portrait", vertical=True)
@@ -903,7 +906,7 @@ init -2 python:
             for sex_act in all_sex_acts:
                 if self.does[sex_act] and not self.will_do_sex_act(sex_act):
                     self.does[sex_act] = False
-                    notify(self.fullname + " can no longer do " + sex_act + ".", pic=self.portrait)
+                    notify(__("%s can no longer do %s.") % (self.fullname, sex_act), pic=self.portrait)
 
 
         def activate_sex_act(self, sex_act):
@@ -2654,7 +2657,7 @@ init -2 python:
                 return chg, "sick"
             else:
                 update_effects()
-                notify(self.fullname + " is fully healed.", pic=self.portrait)
+                notify(__("%s is fully healed.") % self.fullname, pic=self.portrait)
                 return chg, "healthy"
 
         def full_rest(self):
@@ -5879,13 +5882,13 @@ init -2 python:
                     calendar.set_alarm(calendar.time+1, StoryEvent("farm_shows_intro", arg=self, type = "morning"))
                     self.flags["buildup warning 100"] = True
                 elif not self.flags["buildup warning 100"]:
-                    notify(self.fullname + " is now ready to attend a farm show (100%).")
+                    notify(__("%s is now ready to attend a farm show (100%).") % self.fullname)
                     self.flags["buildup warning 100"] = True
                 elif self.buildup >= 150 and not self.flags["buildup warning 150"]:
-                    notify(self.fullname + " is now ready to attend a farm show (150%).")
+                    notify(__("%s is now ready to attend a farm show (150%).") % self.fullname)
                     self.flags["buildup warning 150"] = True
                 elif self.buildup >= 200 and not self.flags["buildup warning 200"]:
-                    notify(self.fullname + " is now ready to attend a farm show (200%).")
+                    notify(__("%s is now ready to attend a farm show (200%).") % self.fullname)
                     self.flags["buildup warning 200"] = True
 
         def get_build_up(self): # FARM EVENTS - Recovers her farm show jauge

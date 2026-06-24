@@ -291,6 +291,12 @@ init -3 python:
 
     def get_pic_list(thing, tags, and_tags = None, not_tags = None, weighted=True, horizontal=False, vertical=False): # For performance reasons, get_pic_list should always receive lists as arguments
 
+        # Phase 0.4: Check the picture cache first to avoid repeated linear scans
+        if weighted:
+            cached = PictureCache.get(thing, tags, and_tags, not_tags)
+            if cached is not None:
+                return cached
+
         # not_tags will be trimmed if they contradict search_tags or and_tags
         not_tags = make_list(not_tags)
         _not_tags = list(not_tags) # Local copy of not_tags to avoid changing mutable list
@@ -312,7 +318,10 @@ init -3 python:
         if weighted:
             if isinstance(thing, Girl):
                 show_unrecognized = preferences.packstate_unrecognized != "Hide"
-                return [(pic, pic.get_weight()) for pic in GirlFilesDict.get_pics(thing.path) if not pic.is_trash and (not pic.is_unrecognized or show_unrecognized) and pic.has_tags(tags, and_tags, _not_tags, horizontal=horizontal, vertical=vertical)]
+                result = [(pic, pic.get_weight()) for pic in GirlFilesDict.get_pics(thing.path) if not pic.is_trash and (not pic.is_unrecognized or show_unrecognized) and pic.has_tags(tags, and_tags, _not_tags, horizontal=horizontal, vertical=vertical)]
+                # Phase 0.4: Cache the result for future lookups
+                PictureCache.put(thing, tags, and_tags, not_tags, result)
+                return result
             #</Chris12 PackState>
             return [(pic, pic.get_weight()) for pic in thing.pics if pic.has_tags(tags, and_tags, _not_tags, horizontal=horizontal, vertical=vertical)]
 
