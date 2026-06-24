@@ -26,10 +26,68 @@ init -2 python:
             return self.girl._get_love_impl()
         def get_fear(self):
             return self.girl._get_fear_impl()
+        # ── Love & fear (implementations moved from girlclass.rpy) ──
         def change_love(self, amount, min_cap=None, max_cap=None, silent=False):
-            return self.girl._change_love_impl(amount, min_cap, max_cap, silent)
+            g = self.girl
+            if g in game.free_girls:
+                if not min_cap: min_cap = 0
+                if not max_cap: max_cap = 100
+            else:
+                if not min_cap: min_cap = g.rank * -25
+                if not max_cap: max_cap = g.rank * 25
+
+            if g in MC.girls or g in game.free_girls:
+                if g in MC.girls:
+                    boost = g.get_effect("boost", "love gains") * alignment_bonus[MC.get_alignment() + "_love"]
+                elif g in game.free_girls:
+                    boost = g.get_effect("boost", "love gains") * MC.get_effect("boost", "free girl love gains") * alignment_bonus[MC.get_alignment() + "_love"]
+                boost = reverse_if(boost, amount)
+                if amount > 0:
+                    boost *= (1.0 + MC.get_charisma() * 0.1)
+            else:
+                boost = 1.0
+
+            change = get_change_min_max(g.love, amount * boost, min_cap, max_cap, enforce_boundaries=False)
+            g.love += change
+
+            if not silent:
+                if change > 0.5:   notify(__("Love increased"), pic=g.portrait, debug_txt="(%s)" % str(change))
+                elif change < -0.5: notify(__("Love decreased"), pic=g.portrait, debug_txt="(%s)" % str(change))
+
+            test_achievement("love")
+            return change
+
         def change_fear(self, amount, min_cap=None, max_cap=None, mojo_color="purple", silent=False):
-            return self.girl._change_fear_impl(amount, min_cap, max_cap, mojo_color, silent)
+            g = self.girl
+            if not min_cap: min_cap = g.rank * -25
+            if not max_cap: max_cap = g.rank * 25
+
+            if g in MC.girls or g in game.free_girls:
+                if g in MC.girls:
+                    boost = g.get_effect("boost", "fear gains") * alignment_bonus[MC.get_alignment() + "_fear"]
+                elif g in game.free_girls:
+                    boost = g.get_effect("boost", "fear gains") * MC.get_effect("boost", "free girl fear gains") * alignment_bonus[MC.get_alignment() + "_fear"]
+                boost = reverse_if(boost, amount)
+                if amount > 0:
+                    boost *= (1.0 + MC.get_charisma() * 0.1)
+            else:
+                boost = 1.0
+
+            change = get_change_min_max(g.fear, amount * boost, min_cap, max_cap, enforce_boundaries=False)
+            g.fear += change
+
+            if change > 0:
+                if mojo_color == "purple":
+                    MC.raise_mojo(mojo_color, mojo=change / NORMAL_MOJO_VALUE)
+                else:
+                    MC.raise_mojo(mojo_color, mojo=change / FARM_MOJO_VALUE)
+
+            if not silent:
+                if change > 0.5:   notify(__("Fear increased"), pic=g.portrait, debug_txt="(%s)" % str(change))
+                elif change < -0.5: notify(__("Fear decreased"), pic=g.portrait, debug_txt="(%s)" % str(change))
+
+            test_achievement("fear")
+            return change
         def meet_MC(self):
             return self.girl._meet_MC_impl()
         def spoil(self, nb):

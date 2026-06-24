@@ -3951,90 +3951,12 @@ init -2 python:
             return fear
 
 
-        def change_love(self, amount, min_cap = None, max_cap = None, silent=False): # Cap is the limit above which love won't go with this action (used for free girls only)
+        # Phase 2.1: Delegated to GirlRelationships component
+        def change_love(self, amount, min_cap=None, max_cap=None, silent=False):
+            return self._relationships.change_love(amount, min_cap, max_cap, silent)
 
-            if self in game.free_girls:
-                if not min_cap:
-                    min_cap = 0
-                if not max_cap:
-                    max_cap = 100
-            else:
-                if not min_cap:
-                    min_cap = self.rank*-25
-                if not max_cap:
-                    max_cap = self.rank*25
-
-            # Charisma bonus = 10% per stat point, good/bad alignment = +/- 25%
-            if self in MC.girls or self in game.free_girls:
-                if self in MC.girls:
-                    boost = self.get_effect("boost", "love gains") * alignment_bonus[MC.get_alignment() + "_love"]
-                elif self in game.free_girls:
-                    boost = self.get_effect("boost", "love gains") * MC.get_effect("boost", "free girl love gains") * alignment_bonus[MC.get_alignment() + "_love"]
-                
-                boost = reverse_if(boost, amount) ## Reverses boost if decreasing love
-
-                if amount > 0: # Only use Charisma when raising love
-                    boost *= (1.0 + MC.get_charisma()*0.1)
-
-            else:
-                boost = 1.0
-
-            change = get_change_min_max(self.love, amount*boost, min_cap, max_cap, enforce_boundaries=False) # enforce_boundaries=False means the love value will not be reset to min or max cap if it exceeds them.
-            self.love += change
-
-            if not silent:
-                if change > 0.5:
-                    notify("Love increased", pic=self.portrait, debug_txt="(%s)" % str(change))
-
-                elif change < -0.5:
-                    notify("Love decreased", pic=self.portrait, debug_txt="(%s)" % str(change))
-
-            test_achievement("love")
-
-            return change
-
-        def change_fear(self, amount, min_cap = None, max_cap = None, mojo_color = "purple", silent=False):
-
-            if not min_cap:
-                min_cap = self.rank*-25
-            if not max_cap:
-                max_cap = self.rank*25
-
-            # Charisma bonus = 10% per stat point, good/bad alignment = +/- 25%
-            if self in MC.girls or self in game.free_girls:
-                if self in MC.girls:
-                    boost = self.get_effect("boost", "fear gains") * alignment_bonus[MC.get_alignment() + "_fear"]
-                elif self in game.free_girls:
-                    boost = self.get_effect("boost", "fear gains") * MC.get_effect("boost", "free girl fear gains") * alignment_bonus[MC.get_alignment() + "_fear"]
-
-                boost = reverse_if(boost, amount) ## Reverses boost if decreasing fear
-
-                if amount > 0: # Only use Charisma when raising love
-                    boost *= (1.0 + MC.get_charisma()*0.1)
-            else:
-                boost = 1.0
-
-            change = get_change_min_max(self.fear, amount*boost, min_cap, max_cap, enforce_boundaries=False) # enforce_boundaries=False means the fear value will not be reset to min or max cap if it exceeds them.
-            self.fear += change
-
-            # mojo generation (only if fear gained is positive)
-
-            if change > 0:
-                if mojo_color == "purple": # Regular fear gains
-                    MC.raise_mojo(mojo_color, mojo = change / NORMAL_MOJO_VALUE)
-                else: # Farm fear gains
-                    MC.raise_mojo(mojo_color, mojo = change / FARM_MOJO_VALUE)
-
-            if not silent:
-                if change > 0.5:
-                    notify("fear increased", pic=self.portrait, debug_txt="(%s)" % str(change))
-
-                elif change < -0.5:
-                    notify("fear decreased", pic=self.portrait, debug_txt="(%s)" % str(change))
-
-            test_achievement("fear")
-
-            return change
+        def change_fear(self, amount, min_cap=None, max_cap=None, mojo_color="purple", silent=False):
+            return self._relationships.change_fear(amount, min_cap, max_cap, mojo_color, silent)
 
 
         def get_obedience_check_target(self, act=None, train=False): # This is the target (in %) UNDER which a girl must roll to obey.
