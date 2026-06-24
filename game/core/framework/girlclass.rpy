@@ -653,46 +653,12 @@ init -2 python:
                 return False
 
 
+        # Phase 2.1: Delegated to GirlSex component
         def will_do_sex_act(self, sex_act, use_desc=False):
-
-            sex_act = sex_act.lower()
-
-            if sex_act in all_sex_acts:
-                tests = sex_act_test[sex_act]
-
-                modifier = self.get_sex_act_modifier(sex_act)
-
-                for stat, target in tests:
-                    target += modifier
-
-                    if self.get_stat(stat) < target:
-                        if use_desc:
-                            return False, sex_act.capitalize() + " cannot be activated.\n" + event_color["a little bad"] % ("Her {b}" + stat.lower() + "{/b} is too low (min: " + str(target) + ").")
-                        return False
-
-            if self.get_effect("special", "minimum preference", raw=True):
-                min_pref = self.get_effect("special", "minimum preference", raw=True) # Must return a string corresponding to a preference
-            else:
-                min_pref = "reluctant"
-
-            if not compare_preference(self, sex_act, min_pref): # Means the girl is very reluctant or worse
-                if use_desc:
-                    return False, sex_act.capitalize() + " cannot be activated.\n" + event_color["a little bad"] % ("Her preference for {b}" + sex_act.lower() + "{/b} acts is too low. She requires more training.")
-                return False
-
-            if use_desc:
-                return True, ""
-            return True
+            return self._sex.will_do_sex_act(sex_act, use_desc)
 
         def toggle_sex_act(self, sex_act):
-
-            sex_act = sex_act.lower()
-
-            if self.does[sex_act]:
-                self.does[sex_act] = False
-                if not self.has_activated_sex_acts() and self.job == "whore":
-                    self.set_job(None)
-                    renpy.say("", __("%s cannot remain a whore if you deactivate all sex acts. She has been set to rest.") % self.fullname)
+            return self._sex.toggle_sex_act(sex_act)
                 return True, ""
 
             else:
@@ -765,31 +731,15 @@ init -2 python:
 
             return False
 
-        def refresh_sex_acts(self): # Ensures unavailable sex acts don't stay ticked
-            for sex_act in all_sex_acts:
-                if self.does[sex_act] and not self.will_do_sex_act(sex_act):
-                    self.does[sex_act] = False
-                    notify(__("%s can no longer do %s.") % (self.fullname, sex_act), pic=self.portrait)
-
+        # Phase 2.1: Delegated to GirlSex component
+        def refresh_sex_acts(self):
+            return self._sex.refresh_sex_acts()
 
         def activate_sex_act(self, sex_act):
-
-            sex_act = sex_act.lower()
-
-            if self.will_do_sex_act(sex_act):
-                self.does[sex_act] = True
-                return True
-            else:
-                return False
+            return self._sex.activate_sex_act(sex_act)
 
         def deactivate_sex_act(self, sex_act):
-
-            sex_act = sex_act.lower()
-
-            self.does[sex_act] = False
-
-            if not self.has_activated_sex_acts() and self.job == "whore":
-                renpy.say("", __("%s cannot remain a whore if you deactivate all sex acts. She has been set to rest.") % self.fullname)
+            return self._sex.deactivate_sex_act(sex_act)
                 self.set_job(None)
             return True
 

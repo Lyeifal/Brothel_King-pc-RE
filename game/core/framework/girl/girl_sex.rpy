@@ -21,27 +21,51 @@ init -2 python:
 
         # ── 性行为检查 | Sex act checks ──
 
-        def will_do_sex_act(self, sex_act):
-            # 检查女孩是否愿意进行某性行为 | Check if girl will do a sex act
+        def will_do_sex_act(self, sex_act, use_desc=False):
+            '''检查女孩是否愿意进行某性行为 | Check if a girl will perform a sex act'''
             g = self.girl
-            if sex_act not in g.does:
+            sex_act = sex_act.lower()
+
+            if sex_act in all_sex_acts:
+                tests = sex_act_test[sex_act]
+                modifier = g.get_sex_act_modifier(sex_act)
+                for stat, target in tests:
+                    target += modifier
+                    if g.get_stat(stat) < target:
+                        if use_desc:
+                            return False, sex_act.capitalize() + __(" cannot be activated.\n") + event_color["a little bad"] % (__("Her {b}%s{/b} is too low (min: %s).") % (stat.lower(), str(target)))
+                        return False
+
+            min_pref = g.get_effect("special", "minimum preference", raw=True) or "reluctant"
+            if not compare_preference(g, sex_act, min_pref):
+                if use_desc:
+                    return False, sex_act.capitalize() + __(" cannot be activated.\n") + event_color["a little bad"] % (__("Her preference for {b}%s{/b} acts is too low. She requires more training.") % sex_act.lower())
                 return False
-            if not g.does[sex_act]:
-                return False
-            if g.hurt > 0 or g.exhausted:
-                return False
-            if g.away:
-                return False
-            if g.farm and sex_act not in farm_hardcore_acts:
-                return False
+
+            if use_desc:
+                return True, ""
             return True
 
         def toggle_sex_act(self, sex_act):
-            # 切换性行为开关 | Toggle a sex act on/off
-            return self.girl._toggle_sex_act_impl(sex_act)
+            '''切换性行为开关 | Toggle sex act on/off'''
+            g = self.girl
+            sex_act = sex_act.lower()
+            if g.does[sex_act]:
+                g.does[sex_act] = False
+                if not g.has_activated_sex_acts() and g.job == "whore":
+                    g.set_job(None)
+                    renpy.say("", __("%s cannot remain a whore if you deactivate all sex acts. She has been set to rest.") % g.fullname)
+            else:
+                result = g.will_do_sex_act(sex_act, use_desc=True)
+                if result[0]:
+                    g.does[sex_act] = True
+                    if use_desc:
+                        return result[1]
+                elif use_desc:
+                    return result[1]
 
         def does_anything(self):
-            # 检查是否有任何已激活的性行为 | Check if any sex act is activated
+            '''检查是否有任何已激活的性行为 | Check if any sex act is activated'''
             return self.girl._does_anything_impl()
 
         def will_do_anything(self):
@@ -67,16 +91,29 @@ init -2 python:
         # ── 性行为激活/停用 | Sex act activation/deactivation ──
 
         def refresh_sex_acts(self):
-            # 刷新性行为列表（移除不可用的）| Refresh sex acts, removing unavailable ones
-            return self.girl._refresh_sex_acts_impl()
+            '''刷新性行为列表 | Ensure disabled sex acts stay unchecked, notify on changes'''
+            g = self.girl
+            for sex_act in all_sex_acts:
+                if g.does[sex_act] and not g.will_do_sex_act(sex_act):
+                    g.does[sex_act] = False
+                    notify(__("%s can no longer do %s.") % (g.fullname, sex_act), pic=g.portrait)
 
         def activate_sex_act(self, sex_act):
-            # 激活性行为 | Activate a sex act
-            return self.girl._activate_sex_act_impl(sex_act)
+            '''激活性行为 | Activate a sex act'''
+            g = self.girl
+            sex_act = sex_act.lower()
+            if g.will_do_sex_act(sex_act):
+                g.does[sex_act] = True
+                return True
+            return False
 
         def deactivate_sex_act(self, sex_act):
-            # 停用性行为 | Deactivate a sex act
-            return self.girl._deactivate_sex_act_impl(sex_act)
+            '''停用性行为 | Deactivate a sex act'''
+            g = self.girl
+            sex_act = sex_act.lower()
+            g.does[sex_act] = False
+            if not g.has_activated_sex_acts() and g.job == "whore":
+                renpy.say("", __("%s cannot remain a whore if you deactivate all sex acts. She has been set to rest.") % g.fullname)
 
         def get_sex_act_modifier(self, sex_act="all"):
             # 获取性行为修正系数 | Get sex act modifier
