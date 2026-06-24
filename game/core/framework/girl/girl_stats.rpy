@@ -1,9 +1,9 @@
-#### GirlStats — Stat management component ####
-# Phase 2.1: Stats, stat caps, stat changes, spillover, JP/XP/REP management.
-# Methods to migrate: generate_stats, find_stat, get_stat, average_stats,
-# test_stats, raise_stats, can_upgrade_stat, upgrade_stat, get_stat_max,
-# get_stat_minmax, stat_spillover, change_stat, set_stat, average_skills,
-# get_xp_cap, get_jp_cap, get_rep_cap.
+#### GirlStats — Stat management component | 属性管理组件 ####
+# Phase 2.1: Stats, stat caps, stat changes, spillover, JP/XP/REP caps.
+# 属性、属性上限、属性变更、溢出、经验/职业经验/声望上限
+# Methods: generate_stats, find_stat, get_stat, change_stat, set_stat,
+#          stat_spillover, test_stats, raise_stats, upgrade_stat,
+#          get_stat_max, get_stat_minmax, get_xp_cap, get_jp_cap, get_rep_cap.
 
 init -2 python:
 

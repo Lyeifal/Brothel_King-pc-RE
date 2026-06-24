@@ -1,8 +1,8 @@
-#### GirlSchedule — Job and workday management component ####
+#### GirlSchedule — Job and workday management | 日程与工作管理 ####
 # Phase 2.1: Schedule, job assignment, workdays, status display.
-# Methods to migrate: set_workdays, cycle_workday, set_job, set_rest,
-# works_today, will_do, get_schedule, load_schedule, get_status,
-# get_status_summary, get_day_off, tired_check.
+# 日程、工作分配、工日、状态显示
+# ★ get_status / get_status_summary — 已从 girlclass.rpy 移入
+# Methods: set_workdays, set_job, works_today, get_schedule, etc.
 
 init -2 python:
 

@@ -1,10 +1,8 @@
-#### GirlEconomy — Economic calculations component ####
+#### GirlEconomy — Economic calculations | 经济计算组件 ####
 # Phase 2.1: Prices, upkeep, tips, customer capacity, performance estimation.
-# Methods to migrate: get_price, get_med_upkeep, adjust_upkeep, update_upkeep_ratio,
-# get_upkeep_threshold, get_upkeep_modifier, get_next_upkeep_step, get_previous_upkeep_step,
-# get_max_cust_served, get_max_interactions, get_interaction_modifer, reset_interactions,
-# estimate_performance, get_xp, get_jp, get_rep, get_tip, get_street_tip, whore_on_street,
-# cut_upkeep, restore_upkeep, customer_populations_safety_check, change_rep.
+# 价格、维护费、小费、客户容量、表现评估
+# ★ get_price/get_xp/get_jp/get_rep/estimate_performance — 已从 girlclass.rpy 移入
+# Methods: get_tip, change_rep, get_max_cust_served, adjust_upkeep, etc.
 #
 # Migration: Delegation wrappers added. Implementation bodies remain in girlclass.rpy
 # and will be moved incrementally.

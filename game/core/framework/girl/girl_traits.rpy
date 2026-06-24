@@ -1,8 +1,9 @@
-#### GirlTraits — Trait and perk management component ####
+#### GirlTraits — Trait and perk management | 特质与天赋管理 ####
 # Phase 2.1: Traits, perks, archetypes, combo checks.
-# Methods to migrate: generate_traits, has_trait, has_perk, add_trait,
-# remove_trait, can_acquire_perk, update_can_perk, acquire_perk,
-# refund_perks, check_combo_perks, has_prerequisites, get_perk, get_perk_level.
+# 特质、天赋、原型、连携检查
+# ★ generate_traits — 特质生成（已从 girlclass.rpy 移入）
+# Methods: has_trait, has_perk, add_trait, remove_trait,
+#          acquire_perk, refund_perks, check_combo_perks.
 
 init -2 python:
 

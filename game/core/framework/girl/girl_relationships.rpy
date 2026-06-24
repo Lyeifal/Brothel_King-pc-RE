@@ -1,8 +1,8 @@
-#### GirlRelationships — Love, fear, obedience, social component ####
+#### GirlRelationships — Love, fear, obedience, social | 关系组件 ####
 # Phase 2.1: Love/fear, obedience checks, MC relationship, friendships/rivals.
-# Methods to migrate: get_MC_relation, change_relationship, get_compatibility,
-# update_relationships, get_friendship, get_love, get_fear, change_love,
-# change_fear, meet_MC, spoil, terrify, refresh_spoil_terrify_points.
+# 爱情、恐惧、服从、MC 关系、友谊、敌对
+# ★ change_love / change_fear — 已从 girlclass.rpy 移入
+# Methods: get_MC_relation, get_love, get_fear, spoil, terrify, etc.
 
 init -2 python:
 

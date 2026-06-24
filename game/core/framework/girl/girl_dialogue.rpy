@@ -1,8 +1,9 @@
-#### GirlDialogue — Dialogue, personality, background component ####
+#### GirlDialogue — Dialogue, personality, background | 对话、个性、背景 ####
 # Phase 2.1: Dialogue selection, say(), personality generation, background.
-# Methods to migrate: generate_personality, adjust_personality, generate_background,
-# unlock_NGP_personality_settings, get_personality_description, talk_tastes,
-# pick_dialogue, say, rand_say, test_say, will_remember, remembers, forgets.
+# 对话选择、说话、个性生成、背景故事
+# ★ pick_dialogue / say / rand_say — 已从 girlclass.rpy 移入
+# Methods: generate_personality, generate_background, unlock_info,
+#          talk_tastes, will_remember, remembers, forgets, test_say.
 
 init -2 python:
 

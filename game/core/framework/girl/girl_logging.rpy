@@ -1,5 +1,6 @@
-#### GirlLogging — Event logging and tracking component ####
+#### GirlLogging — Event logging and tracking | 日志与追踪组件 ####
 # Phase 2.1: Logging, stats tracking, memory, event history.
+# 日志、属性追踪、记忆、事件历史
 # Methods to migrate: commit, return_from, add_log, get_log, get_average_performance,
 # track_event, get_recent_events, get_recent_events_description, count_occurences.
 

@@ -1,10 +1,9 @@
-#### GirlMood — Mood, sanity, energy, health component ####
+#### GirlMood — Mood, sanity, energy, health | 情绪、理智、体力、健康 ####
 # Phase 2.1: Mood, sanity, energy, health, exhaustion, hurt.
-# Methods to migrate: init_sanity, rank_up_sanity, lose_sanity, get_sanity,
-# sanity_warning, change_energy, tire, get_hurt, health_check, heal, full_rest,
-# rest, get_energy_color, get_energy_ttip, update_mood, change_mood,
-# get_mood_modifier, get_mood_description, get_mood_picture,
-# build_up, get_build_up, reset_build_up.
+# 情绪、理智、体力、健康、疲惫、伤害
+# ★ change_energy/heal/full_rest/rest — 已从 girlclass.rpy 移入
+# Methods: init_sanity, get_sanity, update_mood, change_mood,
+#          get_mood_modifier, get_mood_description, build_up, etc.
 
 init -2 python:
 

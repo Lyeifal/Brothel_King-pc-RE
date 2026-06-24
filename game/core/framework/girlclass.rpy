@@ -166,6 +166,7 @@ init -2 python:
             self._relationships = GirlRelationships(self)
             self._dialogue = GirlDialogue(self)
             self._logging = GirlLogging(self)
+            self._sex = GirlSex(self)
 
         def randomize(self, free=False, p_traits=None, n_trait=None, perks=None, force_original=False, level=1, personality=None, temp_list=None):
 
@@ -5117,6 +5118,35 @@ init -2 python:
         # _adjust_level_impl already defined in Stats section above
         _randomize_impl = randomize
 
+        # ── Phase 2.1: Sex delegation aliases ──
+        _will_do_sex_act_impl = will_do_sex_act
+        _toggle_sex_act_impl = toggle_sex_act
+        _does_anything_impl = does_anything
+        _will_do_anything_impl = will_do_anything
+        _count_available_sex_acts_impl = count_available_sex_acts
+        _get_trainable_sex_acts_impl = get_trainable_sex_acts
+        _count_activated_sex_acts_impl = count_activated_sex_acts
+        _has_activated_sex_acts_impl = has_activated_sex_acts
+        _refresh_sex_acts_impl = refresh_sex_acts
+        _activate_sex_act_impl = activate_sex_act
+        _deactivate_sex_act_impl = deactivate_sex_act
+        _get_sex_act_modifier_impl = get_sex_act_modifier
+        _test_fix_impl = test_fix
+        _check_fix_impl = check_fix
+        _get_sex_attitude_impl = get_sex_attitude
+        _get_preference_bonus_impl = get_preference_bonus
+        _add_random_fixation_impl = add_random_fixation
+        _reset_sex_acts_impl = reset_sex_acts
+        _raise_preference_impl = raise_preference
+        _change_preference_impl = change_preference
+        _get_preference_impl = get_preference
+        _compare_preference_impl = compare_preference
+        _pop_virginity_impl = pop_virginity
+        _restore_virginity_impl = restore_virginity
+        _test_weakness_impl = test_weakness
+        _has_fixation_impl = has_fixation
+        _remove_fixation_impl = remove_fixation
+        _try_to_remove_fix_impl = try_to_remove_fix
 
 
 

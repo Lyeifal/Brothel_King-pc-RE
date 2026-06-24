@@ -1,7 +1,8 @@
-#### GirlBase — Core identity component ####
+#### GirlBase — Core identity component | 核心身份组件 ####
 # Phase 2.1: Identity, name handling, level, serialization.
-# Methods to migrate: __init__, randomize, is_unique, set_name, set_fullname,
-# random_rename, get_name, get_badge, adjust_level, load_ini, read_ini.
+# 身份、名称处理、等级、序列化
+# Methods: set_name, set_fullname, random_rename, get_name, get_badge,
+#          is_unique, load_ini, read_ini, adjust_level, randomize.
 
 init -2 python:
 
