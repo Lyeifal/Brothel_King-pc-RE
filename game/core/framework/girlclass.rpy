@@ -2853,135 +2853,16 @@ init -2 python:
 
 ## For MC / Girl interactions
 
-        def generate_personality(self, personality=None, change=False): # Where personality is a string if provided. Use change=True to change her existing personality
+        # Phase 2.1: Delegated to GirlDialogue component
+        def generate_personality(self, personality=None, change=False):
+            return self._dialogue.generate_personality(personality, change)
 
-            if use_ini_personality and self.init_dict["custom personality/custom_personality"] and not change: #? Warning: check if changing personality doesn't break some custom-made girlpacks
-                self.personality = Personality(
-                                                name=self.init_dict["custom personality/personality_name"],
-                                                attributes=self.init_dict["custom personality/attributes"],
-#                                                 generic_dialogue=self.init_dict["custom personality/generic_dialogue"],
-                                                personality_dialogue_only=self.init_dict["custom personality/personality_dialogue_only"],
-                                                dialogue_personality_weight=self.init_dict["custom personality/dialogue_personality_weight"],
-                                                dialogue_attribute_weight=self.init_dict["custom personality/dialogue_attribute_weight"],
-                                                description=self.init_dict["custom personality/description"],
-                                                )
+        def adjust_personality(self):
+            return self._dialogue.adjust_personality()
 
-            elif use_ini_personality and self.init_dict["base personality/always"] and not change: # If a specific personality is provided in the init file
-                self.personality = gpersonalities[rand_choice(self.init_dict["base personality/always"])]
-
-            elif personality and (personality not in self.init_dict["base personality/never"] or not use_ini_personality): # If a specific personality is provided as an argument (will not override init setting depending on use_ini_personality)
-                self.personality = gpersonalities[personality]
-
-            else: # Random personality
-                personalities = []
-
-                for pers in gpersonalities.values(): # In this case, pers is an Object
-                    if pers in self.init_dict["base personality/never"] or (change and self.personality == pers):
-                        pass
-                    elif pers in self.init_dict["base personality/often"]:
-                        personalities.append((pers, 4))
-                    elif pers in self.init_dict["base personality/rarely"]:
-                        personalities.append((pers, 1))
-                    else:
-                        personalities.append((pers, 2))
-
-                self.personality = weighted_choice(personalities)
-
-            # Receives custom dialogue if applicable
-            if use_ini_personality and self.init_dict["custom personality/custom_dialogue_label"]:
-                self.custom_dialogue_label = self.init_dict["custom personality/custom_dialogue_label"]
-
-            # Receives a list of attributes from its parent personality
-            self.attributes = self.personality.generate_attributes(self)
-            self.gift_likes = self.personality.gift_likes
-
-        def adjust_personality(self): # Use if her personality attributes have changed
-
-            adjust = False
-
-            # Checks if her defining attributes are still there
-            for attr in self.personality.attributes:
-                if attr.startswith("very"):
-                    if not self.is_(attr[5:]):
-                        adjust = True
-                        break
-                elif not self.is_(attr):
-                    adjust = True
-                    break
-
-            # If not, looks for a matching personality
-            if adjust:
-                new_pers = None
-                best_score = 0
-
-                for pers in random.sample(gpersonalities, len(gpersonalities)): # Shuffles a copy of the gpersonalities list
-                    score = 0
-                    for attr in pers.attributes:
-                        if self.is_(attr):
-                            score += 3
-                        elif self.is_(attr[5:]):
-                            score += 1
-                    if score > best_score:
-                        new_pers = pers
-
-                self.personality = new_pers
-                self.gift_likes = self.personality.gift_likes
-
-
+        # Phase 2.1: Delegated to GirlDialogue component
         def generate_background(self, t2=0):
-            if self.init_dict["tastes/hobbies"]:
-                self.hobbies = self.init_dict["tastes/hobbies"]
-            else:
-                self.hobbies = rand_choice(hobbies, 2)
-
-            # self.hobbies.append(rand_choice(hobbies))
-            # self.hobbies.append(hobbies[hobbies.index(self.hobbies[0]) - dice((len(hobbies)-1))])
-
-            if self.init_dict["background story/origin"] and self.init_dict["background story/origin"] != "random":
-                self.origin = self.init_dict["background story/origin"]
-            else:
-                self.origin = rand_choice(origins)
-
-            if self.init_dict["background story/story_label"]:
-                self.story = self.init_dict["background story/story_label"]
-            else:
-                # generates random slave story
-                if self.init_dict["background story/always_slave_story"]:
-                    self.story = rand_choice(self.init_dict["background story/always_slave_story"])
-                else:
-                    available_stories = []
-                    for story in slave_stories:
-                        if story not in (self.init_dict["background story/never_slave_story"] + self.personality.story_dict["never"]):
-                            # _BK.ini settings take precedence over personality settings
-                            if story in self.init_dict["background story/often_slave_story"]:
-                                w = 4
-                            elif story in self.init_dict["background story/rarely_slave_story"]:
-                                w = 1
-                            elif story in self.personality.story_dict["often"]:
-                                w = 4
-                            elif story in self.personality.story_dict["rarely"]:
-                                w = 1
-                            else:
-                                w = 2
-                            available_stories.append((story, w))
-                    self.story = weighted_choice(available_stories)
-
-            self.story_profession = rand_choice([pop for pop in all_populations if pop.name != "royals"]).get_rand_name("M")
-            self.story_profession_article = article(self.story_profession)
-            self.story_home = rand_choice(homes)
-            self.story_home_article = article(self.story_home)
-            self.story_guardian = rand_choice(guardians)
-            self.flags["story"] = 4 # Used in combination with personality unlock["story"] to check when unlocking a new part of the girl's background story
-            self.personality_unlock = defaultdict(int)
-            self.personality_unlock["likes"] = []
-            self.personality_unlock["loves"] = []
-            self.personality_unlock["hates"] = []
-
-            if self.init_dict["tastes/favorite_color"]:
-                self.likes["color"] = self.init_dict["tastes/favorite_color"]
-            else:
-                self.likes["color"] = rand_choice(colors)
-            if self.init_dict["tastes/favorite_food"]:
+            return self._dialogue.generate_background(t2)
                 self.likes["food"] = self.init_dict["tastes/favorite_food"]
             else:
                 self.likes["food"] = rand_choice(food)
