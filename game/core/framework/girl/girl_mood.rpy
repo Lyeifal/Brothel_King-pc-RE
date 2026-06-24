@@ -83,7 +83,53 @@ init -2 python:
             g.energy = g.get_stat_minmax("energy")[1]
 
         def rest(self, context=None, mod=1):
-            return self.girl._rest_impl(context, mod)
+            g = self.girl
+            if context == "farm":
+                resting_changes = NightChangeLog(title=__("Holding"))
+                resting_text = __("%s rested in her pen today.") % g.fullname
+            else:
+                resting_changes = NightChangeLog(title=__("Resting"))
+                resting_text = __("%s rested in her room today.") % g.fullname
+
+            if g.hurt > 0:
+                r, case = g.heal(1)
+                resting_changes.add("\n{color=[c_green]}Health{/color}: %s" % plus_text(r, color_scheme="standard"))
+                if case == "healthy":
+                    resting_changes.add("(full recovery)", "header", col="good", separator="\n")
+                    if context == "farm":
+                        resting_text += __("\n{color=[c_emerald]}She is now fully recovered and can go back to work or training.{/color}")
+                    elif g.job:
+                        resting_text += __("\n{color=[c_emerald]}She is now fully recovered and can go back to work as a %s.{/color}") % __(g.job.capitalize())
+                    else:
+                        resting_text += __("\n{color=[c_emerald]}She is now fully recovered and went back to resting.{/color}")
+
+            x = (25 + g.get_stat("constitution")/4) * g.get_effect("boost", "energy when resting") + g.get_effect("change", "energy when resting")
+            if g.hurt > 0:
+                x = x // 2
+            x *= mod
+
+            r, case = g.change_energy(x)
+            max_en = g.get_stat_max("energy")
+
+            if g.energy >= 0.8 * max_en:   col = c_green
+            elif g.energy >= 0.6 * max_en: col = c_lightgreen
+            elif g.energy >= 0.4 * max_en: col = c_yellow
+            elif g.energy >= 0.2 * max_en: col = c_lightred
+            else:                          col = c_red
+
+            resting_changes.add("Energy: %s/%i (%s)" % ("{color=%s}%i{/color}" % (col, g.energy), max_en, plus_text(r)), "header")
+
+            if case == "recovered":
+                resting_changes.add("(fully rested)", "header", col="good", separator="\n")
+                if context == "farm":
+                    resting_text += __("\n{color=[c_emerald]}She is now fully rested and can go back to her training.{/color}")
+                elif g.job:
+                    resting_text += __("\n{color=[c_emerald]}She is now fully rested and can go back to work as a %s.{/color}") % __(g.job.capitalize())
+                else:
+                    resting_text += __("\n{color=[c_emerald]}She is now fully rested and is waiting for a job assignment.{/color}")
+
+            return resting_text, resting_changes
+
         def can_heal_from_item(self):
             return self.girl._can_heal_from_item_impl()
         def get_energy_color(self):

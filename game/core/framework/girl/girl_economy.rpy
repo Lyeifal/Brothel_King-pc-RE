@@ -99,16 +99,81 @@ init -2 python:
                 return score
             return -1
 
-        # ── Rewards ──
+        # ── Rewards (implementations moved from girlclass.rpy) ──
 
         def get_xp(self, act, result, customers):
-            return self.girl._get_xp_impl(act, result, customers)
+            g = self.girl
+            cust_diff = round_int(sum(c.diff for c in customers))
+            if act in all_jobs:
+                xp = xp_bonus_dict[result] * cust_diff ** 1.1 / 2
+            elif act in all_sex_acts:
+                xp = (xp_bonus_dict[result] * cust_diff) ** 1.1 / len(customers)
+
+            xp_ttip = _("Base XP vs Difficulty: %s") % event_color["xp"] % (str_int(xp) + " XP")
+            boost = g.get_effect("boost", result + " result xp")
+            if boost != 1.0:
+                xp = xp * boost
+                xp_ttip += _("\nPerks & special effects: x%s") % percent_text(boost, False)
+
+            if game.has_active_mod("chrisjobmod") and act in all_jobs:
+                xp /= act_max_customers_modifier[g.job]
+                xp_ttip += _("\nJob Mod modifier: x%s") % percent_text(1.0 / act_max_customers_modifier[g.job], False)
+
+            xp = max(xp * cheat_modifier["xp"] * game.get_diff_setting("xp"), 1)
+            xp_ttip += _("\n\nDifficulty modifier: x%s") % percent_text(cheat_modifier["xp"] * game.get_diff_setting("xp"), False)
+            return xp, xp_ttip
 
         def get_jp(self, act, result, customers, silent=False):
-            return self.girl._get_jp_impl(act, result, customers, silent)
+            g = self.girl
+            cust_rank = round_int(sum(c.rank for c in customers) / len(customers))
+            if act in all_jobs:
+                jp = dice(3, len(customers))
+            else:
+                jp = dice(3, 1 + len(customers))
+
+            jp_ttip = _("Base JP vs customers: %s") % event_color["jp"] % (str_int(jp) + " JP")
+            jp += jp_job_level_modifier[g.job_level[act]] + jp_customer_rank_modifier[cust_rank] + jp_result_modifier[result]
+            jp_ttip += _("\nGirl rank vs Customer rank: %s\n") % plus_text(jp_job_level_modifier[g.job_level[act]] + jp_customer_rank_modifier[cust_rank], color_scheme="jp")
+            jp_ttip += result.capitalize() + _(" result: %s") % plus_text(jp_result_modifier[result], color_scheme="jp")
+
+            boost = g.get_effect("boost", result + " result jp")
+            if boost != 1.0:
+                jp = jp * boost
+                jp_ttip += _("\nPerks & special effects: x%s") % percent_text(boost, False)
+
+            if game.has_active_mod("chrisjobmod") and act in all_jobs:
+                jp /= act_max_customers_modifier[g.job]
+                jp_ttip += _("\nJob Mod modifier: x%s") % percent_text(1.0 / act_max_customers_modifier[g.job], False)
+
+            jp_ttip += _("\n\nDifficulty modifier: x%s") % percent_text(cheat_modifier["jp"] * game.get_diff_setting("jp"), False)
+            jp *= cheat_modifier["jp"] * game.get_diff_setting("jp")
+            return jp, jp_ttip
 
         def get_rep(self, score, customers, first_customer=False):
-            return self.girl._get_rep_impl(score, customers, first_customer)
+            g = self.girl
+            cust_rank = round_int(sum(c.rank for c in customers) / float(len(customers)))
+
+            if cust_rank + 1 < g.rank:
+                rep_ttip = _("No reputation change: customer rank too low.")
+                return 0, rep_ttip
+            elif cust_rank < g.rank:
+                relative_rank = "lower"; pos_rep = 0.25; neg_rep = -0.75
+            elif cust_rank == g.rank:
+                relative_rank = "same"; pos_rep = 1; neg_rep = -0.5
+            elif cust_rank > g.rank:
+                relative_rank = "higher"; pos_rep = 1; neg_rep = -0.25
+
+            if score >= (reversed_result_dict[rep_gains_dict[g.rank][relative_rank]] + g.get_effect("special", "score_to_rep")):
+                pos_rep *= dice(len(customers))
+                rep_ttip = _("Reputation increase vs Customers: +%s") % str_dec(pos_rep, 1)
+                if first_customer:
+                    first_rep_boost = g.get_effect("boost", "first customer rep")
+                    if first_rep_boost != 1.0:
+                        pos_rep *= first_rep_boost
+                        rep_ttip += _("\nFirst customer bonus: x%s") % percent_text(first_rep_boost, False)
+                return pos_rep, rep_ttip
+            else:
+                return neg_rep, ""
 
         def get_tip(self, act, result, customers, final_tip_change=0, first_customer=False, specials=[]):
             return self.girl._get_tip_impl(act, result, customers, final_tip_change, first_customer, specials)

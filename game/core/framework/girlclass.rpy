@@ -1802,117 +1802,14 @@ init -2 python:
             return self._economy.estimate_performance(sex_act)
 
 
-        def get_xp(self, act, result, customers): # Note: Boosting effects are applied elsewhere (change_xp)
+        def get_xp(self, act, result, customers):
+            return self._economy.get_xp(act, result, customers)
 
-            # Note: XP gains have been significantly lowered due to player feedback
+        def get_jp(self, act, result, customers, silent=False):
+            return self._economy.get_jp(act, result, customers, silent)
 
-            cust_diff = round_int(sum(c.diff for c in customers))
-
-            if act in all_jobs:
-                xp = xp_bonus_dict[result] * cust_diff ** 1.1 / 2
-
-            elif act in all_sex_acts:
-                xp = (xp_bonus_dict[result] * cust_diff) ** 1.1 / len(customers) # Gives a small advantage to group over normal
-
-            xp_ttip = _("Base XP vs Difficulty: %s") % event_color["xp"] % (str_int(xp) + " XP")
-
-            # Result boost effect
-            boost = self.get_effect("boost", result + " result xp")
-            if boost != 1.0:
-                xp = xp * boost
-                xp_ttip += _("\nPerks & special effects: x%s") % percent_text(boost, False)
-
-            #<Chris Job Mod>
-            if game.has_active_mod("chrisjobmod") and act in all_jobs:
-                xp /= act_max_customers_modifier[self.job]
-                xp_ttip += _("\nJob Mod modifier: x%s") % percent_text(1.0/act_max_customers_modifier[self.job], False)
-            #</Chris Job Mod>
-
-            xp = max(xp * cheat_modifier["xp"] * game.get_diff_setting("xp"), 1) # 1 XP is always guaranteed
-            xp_ttip += _("\n\nDifficulty modifier: x%s") % percent_text(cheat_modifier["xp"] * game.get_diff_setting("xp"), False)
-
-            return xp, xp_ttip
-
-
-        def get_jp(self, act, result, customers, silent=False): # Boosting effects are applied elsewhere (change_jp)
-
-            cust_rank = round_int(sum(c.rank for c in customers) / len(customers))
-
-            if act in all_jobs: # Changed from dice(6, 2)
-                jp = dice(3, len(customers)) # Gives 1-3 JP per customer
-            else:
-                jp = dice(3, 1+len(customers)) # Gives 2-6 JP + 1-3 per extra customer
-
-            jp_ttip = _("Base JP vs customers: %s") % event_color["jp"] % (str_int(jp) + " JP")
-
-            jp += jp_job_level_modifier[self.job_level[act]] + jp_customer_rank_modifier[cust_rank] + jp_result_modifier[result]
-
-            jp_ttip += _("\nGirl rank vs Customer rank: %s\n") % plus_text(jp_job_level_modifier[self.job_level[act]] + jp_customer_rank_modifier[cust_rank], color_scheme="jp")
-            jp_ttip += result.capitalize() + _(" result: %s") % plus_text(jp_result_modifier[result], color_scheme="jp")
-
-            # Result boost effect
-            boost = self.get_effect("boost", result + " result jp")
-            if boost != 1.0:
-                jp = jp * boost
-                jp_ttip += _("\nPerks & special effects: x%s") % percent_text(boost, False)
-
-            #<Chris Job Mod>
-            if game.has_active_mod("chrisjobmod") and act in all_jobs:
-                jp /= act_max_customers_modifier[self.job]
-                jp_ttip += _("\nJob Mod modifier: x%s") % percent_text(1.0/act_max_customers_modifier[self.job], False)
-            #</Chris Job Mod>
-
-            jp_ttip += _("\n\nDifficulty modifier: x%s") % percent_text(cheat_modifier["jp"] * game.get_diff_setting("jp"), False)
-
-            jp *= cheat_modifier["jp"] * game.get_diff_setting("jp")
-
-            return jp, jp_ttip
-
-        def get_rep(self, score, customers, first_customer=False): # Boosting effects are applied elsewhere (change_rep)
-
-            cust_rank = round_int(sum(c.rank for c in customers)/float(len(customers)))
-
-            # Reputation gains now depend on relative rank between girl and customer
-
-            if cust_rank + 1 < self.rank: # No reputation changes for customers two ranks lower or more
-                rep_ttip = _("No reputation change: customer rank too low.")
-                return 0, rep_ttip
-
-            elif cust_rank < self.rank: # Girls serving lower rank customers gain reputation less easily
-                relative_rank = "lower"
-                pos_rep = 0.25
-                neg_rep = -0.75 # Made rep loss easier on the player for now
-
-            elif cust_rank == self.rank: # Balanced gains if serving same-rank customers
-                relative_rank = "same"
-                pos_rep = 1
-                neg_rep = -0.5 # Made rep loss easier on the player for now
-
-            elif cust_rank > self.rank: # Girls serving higher rank customers gain reputation more easily
-                relative_rank = "higher"
-                pos_rep = 1
-                neg_rep = -0.25
-
-            # Comparing result and threshold for improving/lowering reputation
-
-            if score >= (reversed_result_dict[rep_gains_dict[self.rank][relative_rank]] + self.get_effect("special", "score_to_rep")):
-                pos_rep *= dice(len(customers))
-                rep_ttip = _("Reputation increase vs Customers: +%s") % str_dec(pos_rep, 1)
-                # First customer effect
-                if first_customer:
-                    first_rep_boost = self.get_effect("boost", "first customer rep")
-                    if first_rep_boost != 1.0:
-                        pos_rep *= first_rep_boost
-                        rep_ttip += _("\nFirst customer: x%s") % percent_text(self.get_effect("boost", "first customer rep"), False)
-                return pos_rep, rep_ttip
-
-            elif score < (reversed_result_dict[rep_loss_dict[self.rank][relative_rank]] - self.get_effect("special", "score_to_rep")):
-                neg_rep *= dice(len(customers))
-                rep_ttip = _("Reputation decrease vs Customers: %s") % str_dec(neg_rep)
-                return neg_rep, rep_ttip
-
-            else:
-                return 0, _("No change.")
+        def get_rep(self, score, customers, first_customer=False):
+            return self._economy.get_rep(score, customers, first_customer)
 
         def get_tip(self, act, result, customers, final_tip_change=0, first_customer=False, specials = []):
 
@@ -2219,62 +2116,7 @@ init -2 python:
             self._mood.full_rest()
 
         def rest(self, context=None, mod=1):
-
-            if context == "farm":
-                resting_changes = NightChangeLog(title=__("Holding"))
-                resting_text = self.fullname + " rested in her pen today."
-            else:
-                resting_changes = NightChangeLog(title=__("Resting"))
-                resting_text = self.fullname + " rested in her room today."
-
-            if self.hurt > 0:
-                r, case = self.heal(1)
-
-                resting_changes.add("\n{color=[c_green]}Health{/color}: %s" % plus_text(r, color_scheme="standard"))
-
-                if case == "healthy":
-                    resting_changes.add("(full recovery)", "header", col="good", separator="\n")
-                    if context == "farm":
-                        resting_text += "\n{color=[c_emerald]}She is now fully recovered and can go back to work or training.{/color}"
-                    elif self.job:
-                        resting_text += "\n{color=[c_emerald]}She is now fully recovered and can go back to work as a " + __(self.job.capitalize()) + ".{/color}"
-                    else:
-                        resting_text += "\n{color=[c_emerald]}She is now fully recovered and went back to resting.{/color}"
-
-            x = (25 + self.get_stat("constitution")/4) * self.get_effect("boost", "energy when resting") + self.get_effect("change", "energy when resting")
-
-            if self.hurt > 0: # Hurt girls recover half as fast
-                x = x//2
-
-            x *= mod
-
-            r, case = self.change_energy(x)
-
-            max_en = self.get_stat_max("energy")
-
-            if self.energy >= 0.8 * max_en:
-                col = c_green
-            elif self.energy >= 0.6 * max_en:
-                col = c_lightgreen
-            elif self.energy >= 0.4 * max_en:
-                col = c_yellow
-            elif self.energy >= 0.2 * max_en:
-                col = c_lightred
-            else:
-                col = c_red
-
-            resting_changes.add("Energy: %s/%i (%s)" % ("{color=%s}%i{/color}" % (col, self.energy), max_en, plus_text(r)), "header")
-
-            if case == "recovered":
-                resting_changes.add("(fully rested)", "header", col="good", separator="\n")
-                if context == "farm":
-                    resting_text += "\n{color=[c_emerald]}She is now fully rested and can go back to her training.{/color}"
-                elif self.job:
-                    resting_text += "\n{color=[c_emerald]}She is now fully rested and can go back to work as a " + __(self.job.capitalize()) + ".{/color}"
-                else:
-                    resting_text += "\n{color=[c_emerald]}She is now fully rested and is waiting for a job assignment.{/color}"
-
-            return resting_text, resting_changes
+            return self._mood.rest(context, mod)
 
 
 ## Stats, Traits, Perks
