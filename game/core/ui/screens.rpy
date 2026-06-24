@@ -4192,7 +4192,7 @@ screen brothel():
 
                     $ text1 += __("%sd){/size}") % str(leftover_dur)
                 
-                $ ttip = "Build furniture to unlock various upgrades for the brothel."
+                $ ttip = __("Build furniture to unlock various upgrades for the brothel.")
             else:
                 $ text1 = "???"
                 $ ttip = "" #!
@@ -4297,7 +4297,7 @@ screen brothel():
 
                         fixed yfill False ysize yres(120):
 
-                            $ ttip = "Your brothel's current reputation is {b}" + str(brothel.rep) + "{/b}."
+                            $ ttip = __("Your brothel's current reputation is {b}%s{/b}.") % str(brothel.rep)
 
                             textbutton _("Advertising") ypos 0.1 text_color c_white ypadding 4 text_size res_font(18) background None action NullAction() tooltip ttip text_align 0.0
 
@@ -4321,7 +4321,7 @@ screen brothel():
 
                             textbutton __("[brothel.advertising]  babes%s") % text1 background None text_size res_font(14) xpos 0.6 ypos 0.1 ypadding 6
 
-                            $ ttip = "Your brothel's current threat level is " + brothel.estimate_threat_level() + "."
+                            $ ttip = __("Your brothel's current threat level is %s.") % brothel.estimate_threat_level()
 
                             textbutton _("Security") text_color c_white ypos 0.4 ymargin 0 ypadding 4 text_align 0.0  background None text_size res_font(18) action NullAction() tooltip ttip
 
@@ -4347,7 +4347,7 @@ screen brothel():
 
 
 
-                            $ ttip = "Your brothel's current dirt level is {b}" + str(round_int(brothel.dirt)) + "{/b}."
+                            $ ttip = __("Your brothel's current dirt level is {b}%s{/b}.") % str(round_int(brothel.dirt))
 
                             textbutton _("Maintenance") text_color c_white ypos 0.7 ymargin 0 ypadding 4 text_align 0.0 text_size res_font(18) background None action NullAction() tooltip ttip
 
@@ -4500,7 +4500,7 @@ screen brothel():
                                                 for girl in brothel.master_bedroom.girls:
                                                     button background c_white yalign 0.5 xmargin 2 ymargin 0 xpadding 1 ypadding 1:
                                                         action NullAction()
-                                                        tooltip girl.fullname + " is currently assigned to the master bedroom."
+                                                        tooltip __("%s is currently assigned to the master bedroom.") % girl.fullname
                                                         add girl.portrait.get(*res_tb(20)) alpha 1.0
 
                                         if brothel.master_bedroom.level < brothel.rank:

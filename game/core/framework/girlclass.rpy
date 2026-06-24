@@ -1747,109 +1747,12 @@ init -2 python:
                 self.workdays[day] = schedule[i]
                 i += 1
 
-        def get_status(self): # Returns a list of tuples (picture name, tooltip)
-            status_list = []
-
-            if self.away and persistent.show_girl_status["away"]:
-                status_list.append(["away.webp", self.fullname + " is {b}away{/b} on a class or quest for %s more day%s."  % (self.return_date - calendar.time, plural(self.return_date - calendar.time))])
-
-            elif self in farm.girls and persistent.show_girl_status["farm"]:
-                try:
-                    if farm.programs[self].target == "no training":
-                        if farm.programs[self].holding == "rest":
-                            status_list.append(["rest.webp", self.fullname + " is {b}resting{/b} in her pen today."])
-                        else:
-                            status_list.append(["farm.webp", self.fullname + " is being trained at the {b}farm{/b} (" + farm.programs[self].holding + " training)."])
-                    else:
-                        status_list.append(["farm.webp", self.fullname + " is being trained at the {b}farm{/b} (" + farm.programs[self].target + " training)."])
-                except:
-                    farm.programs[self] = FarmProgram(self)
-
-            elif (self.resting or not self.job or not self.works_today()) and not self.exhausted:
-                if self.workdays[calendar.get_weekday()] > 0 and persistent.show_girl_status["scheduled"]:
-                    status_list.append(["scheduled.webp", self.fullname + " is {b}resting{/b} today as scheduled."])
-                elif persistent.show_girl_status["rest"]:
-                    status_list.append(["rest.webp", self.fullname + " is {b}resting{/b} today."])
-
-            elif self.energy <= autorest_limit[self] and self.energy < self.get_stat_max("energy"):
-                status_list.append(["autorest.webp", self.fullname + " 's energy is low. She will be automatically sent to {b}rest{/b} today."])
-
-            elif self.works_today() == 50 and persistent.show_girl_status["half-shift"]:
-                status_list.append(["half.webp", self.fullname + " is working a {b}half-shift{/b} today."])
-
-            if self in brothel.master_bedroom.girls and persistent.show_girl_status["master bedroom"]:
-                status_list.append(["master.webp", self.fullname + " is set to train in the {b}master bedroom{/b}."])
-
-            if self.ready_to_rank():
-                status_list.append(["rankup.webp", self.fullname + " is ready to {b}rank up{/b}."])
-
-            if self.can_perk or self.can_spend_upgrade_points():
-                status_list.append(["levelup.webp", self.fullname + " is ready to {b}level up{/b}."])
-
-            if self.hurt > 0:
-                if self.hurt <= 1:
-                    status_list.append(["hurt.webp", self.fullname + " is {b}hurt or sick{/b} and will need to rest for 1 more day before she can do anything."])
-                else:
-                    status_list.append(["hurt.webp", self.fullname + " is {b}hurt or sick{/b} and will need to rest for " + str(round_int(self.hurt)) + " more days until she can do anything."])
-
-            elif self.exhausted:
-                status_list.append(["tired.webp", self.fullname + " is {b}tired{/b} and needs to be fully rested until she can work again."]) # Replaced exhausted.webp
-
-            if persistent.show_girl_status["work&whore"] and self.works_today() and self.work_whore and self in MC.girls:
-                status_list.append(["ww.webp", self.fullname + " is {b}working and whoring{/b} today."])
-
-            if persistent.show_girl_status["not work&whore"] and self.works_today() and not self.work_whore and self in MC.girls:
-                status_list.append(["not_ww.webp", self.fullname + " is not {b}working and whoring{/b}."])
-
-            if self.naked and persistent.show_girl_status["naked"]:
-                if self.get_effect("special", "naked"):
-                    status_list.append(["naked.webp", self.fullname + " will remain {b}naked{/b} at all times."])
-                else:
-                    status_list.append(["naked2.webp", self.fullname + " will remain {b}naked{/b} today."])
-
-            if not self.naked and persistent.show_girl_status["not naked"]:
-                status_list.append(["not_naked.webp", self.fullname + " is not {b}naked{/b} (and that's a problem for you, apparently)."])
-
-            if [fix.name for fix in self.neg_fixations if self.personality_unlock[fix.name]] and persistent.show_girl_status["negative fixation"]:
-                status_list.append(["negfix.webp", "You know that " + self.fullname + " has a {b}negative fixation{/b}."])
-
-            return status_list
-
+        # Phase 2.1: Delegated to GirlSchedule component (implementations moved)
+        def get_status(self):
+            return self._schedule.get_status()
 
         def get_status_summary(self):
-
-            r = ""
-
-            if self.ready_to_rank():
-                r += "\nReady to {b}rank up{/b}"
-            if self.can_perk or self.can_spend_upgrade_points():
-                r += "\nReady to {b}level up{/b}"
-
-            if self.hurt > 0:
-                r += "\n{b}Hurt{/b} for %s day%s" % (round_up(self.hurt), plural(round_up(self.hurt)))
-
-            elif self.exhausted:
-                r += "\n{b}Exhausted{/b}"
-
-            if self.away:
-                r += "\n{b}Away{/b} on a class or quest for %s day%s" % (self.return_date - calendar.time, plural(self.return_date - calendar.time))
-            elif self in farm.girls:
-                r += "\nTraining at the {b}farm{/b}"
-            elif self.resting or not self.job or not self.works_today():
-                r += "\n{b}Resting today{/b}"
-            elif self.works_today() == 50:
-                r += "\n{b}Half-shift{/b}"
-
-            if self.work_whore:
-                r += "\n{b}Working and whoring{/b}"
-
-            if self.naked:
-                r += "\n{b}Naked{/b}"
-
-            if [fix.name for fix in self.neg_fixations if self.personality_unlock[fix.name]]:
-                r += "\nHas a {b}negative fixation{/b}"
-
-            return r
+            return self._schedule.get_status_summary()
 
 
         def get_max_cust_served(self, job="current"):
@@ -5799,6 +5702,18 @@ init -2 python:
         _get_recent_events_impl = get_recent_events
         _get_recent_events_description_impl = get_recent_events_description
         _count_occurences_impl = count_occurences
+
+        # ── Phase 2.1: Base/Identity delegation aliases (10/10 complete) ──
+        _set_name_impl = set_name
+        _set_fullname_impl = set_fullname
+        _random_rename_impl = random_rename
+        _get_name_impl = get_name
+        _get_badge_impl = get_badge
+        _is_unique_impl = is_unique
+        _load_ini_impl = load_ini
+        _read_ini_impl = read_ini
+        # _adjust_level_impl already defined in Stats section above
+        _randomize_impl = randomize
 
 
 
