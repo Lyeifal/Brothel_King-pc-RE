@@ -1797,27 +1797,9 @@ init -2 python:
             self.farm_lock = False
 
 
+        # Phase 2.1: Delegated to GirlEconomy component
         def estimate_performance(self, sex_act):
-
-            if self.will_do_sex_act(sex_act):
-
-                stats = perform_job_dict[sex_act + "_stats"]
-                score = 0
-                totalw = 0
-
-                for tup in stats:
-
-                    stat, weight = tup
-
-                    score += self.get_stat(stat) * weight
-                    totalw += weight
-
-                score /= float(totalw)
-
-                return score
-
-            else:
-                return -1
+            return self._economy.estimate_performance(sex_act)
 
 
         def get_xp(self, act, result, customers): # Note: Boosting effects are applied elsewhere (change_xp)
@@ -2223,65 +2205,18 @@ init -2 python:
             return "healthy"
 
 
+        # Phase 2.1: Delegated to GirlMood component
         def change_energy(self, x):
-
-            _min, _max = self.get_stat_minmax("energy")
-
-            boost = reverse_if(self.get_effect("boost", "energy"), x) ## Reverses boost if decreasing stat
-
-            r = get_change_min_max(self.energy, x*boost + self.get_effect("change", "energy"), _min, _max)
-
-            if self in farm.girls:
-                if farm.exhaust_girl(self, energy=self.energy+r):
-                    notify(self.fullname + _(" was so tired that she fell sick for %i day%s") % (self.hurt, plural(self.hurt)), pic=self.portrait, col="bad")
-
-            self.energy += r
-
-            if self.energy <= 0:
-                if not self.exhausted:
-                    self.exhausted = True
-                    self.resting = True
-                    update_effects()
-                return r, "exhausted"
-
-            elif self.energy >= _max:
-                if self.exhausted:
-                    self.exhausted = False
-                    self.resting = False
-                    update_effects()
-                    return r, "recovered"
-
-            return r, ""
-
+            return self._mood.change_energy(x)
 
         def can_heal_from_item(self):
-            if not hasattr(self, "last_healing_item"):
-                self.last_healing_item = 0
+            return self._mood.can_heal_from_item()
 
-            if self.last_healing_item < calendar.time:
-                return True
-            else:
-                return False
-
-        def heal(self, chg = 1, from_item=False):
-
-            chg = chg * self.get_effect("boost", "heal") + self.get_effect("change", "heal")
-
-            self.hurt = max(self.hurt-chg, 0)
-
-            if from_item:
-                self.last_healing_item = calendar.time
-
-            if self.hurt > 0:
-                return chg, "sick"
-            else:
-                update_effects()
-                notify(__("%s is fully healed.") % self.fullname, pic=self.portrait)
-                return chg, "healthy"
+        def heal(self, chg=1, from_item=False):
+            return self._mood.heal(chg, from_item)
 
         def full_rest(self):
-            self.hurt = 0
-            self.energy = self.get_stat_minmax("energy")[1]
+            self._mood.full_rest()
 
         def rest(self, context=None, mod=1):
 

@@ -30,19 +30,58 @@ init -2 python:
         def sanity_warning(self):
             return self.girl._sanity_warning_impl()
 
-        # ── Energy & health ──
+        # ── Energy & health (implementations moved from girlclass.rpy) ──
         def change_energy(self, x):
-            return self.girl._change_energy_impl(x)
+            g = self.girl
+            _min, _max = g.get_stat_minmax("energy")
+            boost = reverse_if(g.get_effect("boost", "energy"), x)
+            r = get_change_min_max(g.energy, x * boost + g.get_effect("change", "energy"), _min, _max)
+
+            if g in farm.girls:
+                if farm.exhaust_girl(g, energy=g.energy + r):
+                    notify(__("%s was so tired that she fell sick for %i day%s") % (g.fullname, g.hurt, plural(g.hurt)), pic=g.portrait, col="bad")
+
+            g.energy += r
+
+            if g.energy <= 0:
+                if not g.exhausted:
+                    g.exhausted = True
+                    g.resting = True
+                    update_effects()
+                return r, "exhausted"
+            elif g.energy >= _max:
+                if g.exhausted:
+                    g.exhausted = False
+                    g.resting = False
+                    update_effects()
+                    return r, "recovered"
+            return r, ""
+
         def tire(self, x):
             return self.girl._tire_impl(x)
         def get_hurt(self, x):
             return self.girl._get_hurt_impl(x)
         def health_check(self):
             return self.girl._health_check_impl()
+
         def heal(self, chg=1, from_item=False):
-            return self.girl._heal_impl(chg, from_item)
+            g = self.girl
+            chg = chg * g.get_effect("boost", "heal") + g.get_effect("change", "heal")
+            g.hurt = max(g.hurt - chg, 0)
+            if from_item:
+                g.last_healing_item = calendar.time
+            if g.hurt > 0:
+                return chg, "sick"
+            else:
+                update_effects()
+                notify(__("%s is fully healed.") % g.fullname, pic=g.portrait)
+                return chg, "healthy"
+
         def full_rest(self):
-            return self.girl._full_rest_impl()
+            g = self.girl
+            g.hurt = 0
+            g.energy = g.get_stat_minmax("energy")[1]
+
         def rest(self, context=None, mod=1):
             return self.girl._rest_impl(context, mod)
         def can_heal_from_item(self):

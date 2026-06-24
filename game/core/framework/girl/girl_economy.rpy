@@ -71,7 +71,7 @@ init -2 python:
         def restore_upkeep(self):
             return self.girl._restore_upkeep_impl()
 
-        # ── Performance & capacity ──
+        # ── Performance & capacity (implementations moved from girlclass.rpy) ──
 
         def get_max_cust_served(self, job="current"):
             return self.girl._get_max_cust_served_impl(job)
@@ -86,7 +86,18 @@ init -2 python:
             return self.girl._reset_interactions_impl()
 
         def estimate_performance(self, sex_act):
-            return self.girl._estimate_performance_impl(sex_act)
+            g = self.girl
+            if g.will_do_sex_act(sex_act):
+                stats = perform_job_dict[sex_act + "_stats"]
+                score = 0
+                totalw = 0
+                for tup in stats:
+                    stat, weight = tup
+                    score += g.get_stat(stat) * weight
+                    totalw += weight
+                score /= float(totalw)
+                return score
+            return -1
 
         # ── Rewards ──
 
