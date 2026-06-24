@@ -1228,47 +1228,9 @@ init -2 python:
             return score
 
 
+        # Phase 2.1: Delegated to GirlEconomy component
         def get_price(self, operation, raw=False):
-
-            modifier = MC.get_modifier(operation, raw)
-
-            #<Trait King: Modify girl price>
-            if game.has_active_mod("traitking"):
-
-                traitking_modifier = 1.0
-
-                if not hasattr(self, 'valuation'):
-
-                    self.valuation = 100
-
-                traitking_valuation = self.valuation + self.get_effect("change", "valuation")
-
-                traitking_modifier *= max(10, traitking_valuation) / 100.0
-
-                modifier *= traitking_modifier
-
-            #</Trait King>
-
-            # Originals are 15% more expensive
-
-            if self.original:
-                modifier *= 1.15
-
-            stat_average = sum(s.value for s in self.stats + self.sex_stats) / 12
-
-            # The cost of every point of stat average is the rank's base cost + step * (level - rank*5)
-            baseprice = rank_cost[self.rank] + stat_average * (rank_stat_step[self.rank][0] + rank_stat_step[self.rank][1] * (self.level - (self.rank-1)*5)) #?
-            
-            # baseprice = rank_cost[self.rank] + statsum * (2 * self.rank) #? Changed, see how it goes
-
-            # Vanilla: Price increases by 1% for every x points of preference raised (50 by default)
-
-            # pref_boost = 1 + sum((self.preferences[act]-base_reluctance[act])/2500.0 for act in self.preferences.keys()) # Old formula
-            pref_boost = 1 + sum((sell_girl_preference_boost*(self.preferences[act]-base_reluctance[act])) for act in self.preferences.keys())
-
-            finalprice = round_int(baseprice * pref_boost * modifier)
-
-            return finalprice
+            return self._economy.get_price(operation, raw)
 
 
         def get_med_upkeep(self):

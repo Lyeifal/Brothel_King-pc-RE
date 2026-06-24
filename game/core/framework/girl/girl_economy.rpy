@@ -20,10 +20,29 @@ init -2 python:
         def __init__(self, girl):
             self.girl = girl
 
-        # ── Price ──
+        # ── Price (implementations moved from girlclass.rpy) ──
 
         def get_price(self, operation, raw=False):
-            return self.girl._get_price_impl(operation, raw)
+            g = self.girl
+            modifier = MC.get_modifier(operation, raw)
+
+            if game.has_active_mod("traitking"):
+                traitking_modifier = 1.0
+                if not hasattr(g, 'valuation'):
+                    g.valuation = 100
+                traitking_valuation = g.valuation + g.get_effect("change", "valuation")
+                traitking_modifier *= max(10, traitking_valuation) / 100.0
+                modifier *= traitking_modifier
+
+            if g.original:
+                modifier *= 1.15
+
+            stat_average = sum(s.value for s in g.stats + g.sex_stats) / 12
+            baseprice = rank_cost[g.rank] + stat_average * (rank_stat_step[g.rank][0] + rank_stat_step[g.rank][1] * (g.level - (g.rank - 1) * 5))
+            pref_boost = 1 + sum((sell_girl_preference_boost * (g.preferences[act] - base_reluctance[act])) for act in g.preferences.keys())
+            finalprice = round_int(baseprice * pref_boost * modifier)
+
+            return finalprice
 
         def get_med_upkeep(self):
             return self.girl._get_med_upkeep_impl()

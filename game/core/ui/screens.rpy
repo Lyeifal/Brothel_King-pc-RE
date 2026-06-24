@@ -4387,7 +4387,7 @@ screen brothel():
                                     textbutton _("Clean up") xmargin 10 ymargin 0 ypadding 6 text_size res_font(14):
                                         if brothel.get_clean_up_cost() > 0:
                                             action Return(("clean up", ""))
-                                        tooltip "Buy cleaning material and have Sill and the servants scrub your brothel clean (full clean-up cost: %s gold)." % str(brothel.get_clean_up_cost())
+                                        tooltip __("Buy cleaning material and have Sill and the servants scrub your brothel clean (full clean-up cost: %s gold).") % str(brothel.get_clean_up_cost())
                                 textbutton str(round_int(brothel.dirt)) + " {size=-4}(-" + str_int(brothel.get_maintenance()) + ")" style "inv_no_padding" action NullAction() tooltip maintenance_desc[brothel.get_cleanliness()] yoffset -12
 
 
@@ -4429,11 +4429,11 @@ screen brothel():
                         has vbox spacing 6
 
                         if brothel.bedrooms < brothel.get_maxbedrooms():
-                            $ text1 = "Add a new bedroom to your brothel for {b}" + str(brothel.get_room_price()) +  " gold{/b}. This brothel can only have a maximum of {b}" + str(brothel.get_maxbedrooms()) +  " bedrooms{/b}."
+                            $ text1 = __("Add a new bedroom to your brothel for {b}%s gold{/b}. This brothel can only have a maximum of {b}%s bedrooms{/b}.") % (str(brothel.get_room_price()), str(brothel.get_maxbedrooms()))
                         elif district.rank < 5:
-                            $ text1 = "You cannot add any more bedrooms until you move to another brothel."
+                            $ text1 = __("You cannot add any more bedrooms until you move to another brothel.")
                         else:
-                            $ text1 = "You have reached the maximum number of bedrooms."
+                            $ text1 = __("You have reached the maximum number of bedrooms.")
 
                         button style "inv_no_padding" action NullAction():
                             tooltip text1
