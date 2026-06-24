@@ -1555,7 +1555,7 @@ label end_day:
         retired_minions = farm.hurt_minions()
 
         for mn in retired_minions:
-            notify("A level " + str(mn.level) + " " + mn.type + " has been retired because of wounds or damage it sustained.", pic="side gizel", col="bad")
+            notify(__("A level %s %s has been retired because of wounds or damage it sustained.") % (str(mn.level), mn.type), pic="side gizel", col="bad")
     
     while exit_girls:
         $ girl = exit_girls.pop(0)

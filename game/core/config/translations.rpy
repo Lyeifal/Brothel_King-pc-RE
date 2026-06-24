@@ -4,10 +4,35 @@
 
 init -10 python:
 
-    bk_language_map = {
+    # Phase 4.6: Language map with JSON override support.
+    # Adding a new language requires:
+    #   1. Create game/tl/<lang_code>/ directory with translation files
+    #   2. Add entry to custom/config/languages.json (optional)
+    #   3. Or: add entry to the hardcoded fallback below
+    _fallback_languages = {
         None:       "English",
         "chinese_simplified": "简体中文",
     }
+
+    # Try loading language list from JSON (mod/community extensible)
+    _loaded_languages = {}
+    try:
+        import json, os
+        _lang_config = os.path.join(renpy.config.gamedir, "custom", "config", "languages.json")
+        if os.path.exists(_lang_config):
+            with open(_lang_config, "r", encoding="utf-8") as f:
+                _json_langs = json.load(f)
+                # JSON keys are strings; None is represented as "null" → convert back
+                for k, v in _json_langs.items():
+                    key = None if k == "null" or k is None else k
+                    _loaded_languages[key] = v
+    except Exception:
+        pass
+
+    # Merge: JSON overrides take precedence, fallback fills gaps
+    bk_language_map = {}
+    bk_language_map.update(_fallback_languages)
+    bk_language_map.update(_loaded_languages)
 
     bk_language_list = list(bk_language_map.items())
 

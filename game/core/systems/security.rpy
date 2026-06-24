@@ -105,7 +105,7 @@ label security(working_girls, ev_type=None): # Happens when the threat level ove
             menu_list = [["Choose a girl to defend", None]]
 
             for girl in target_girls:
-                menu_list.append([girl.fullname.capitalize() + ", Level " + str(girl.level) + ", Defense " + str_int(girl.get_defense()), girl])
+                menu_list.append([__("%s, Level %s, Defense %s") % (girl.fullname.capitalize(), str(girl.level), str_int(girl.get_defense())), girl])
 
         $ girl = menu(menu_list)
 
