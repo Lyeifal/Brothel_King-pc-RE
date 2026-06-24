@@ -1158,120 +1158,12 @@ init -2 python:
 
             return and_text(not_tags)
 
-        def get_pic_by_name(self, filename): # Where filename must NOT include the path to any subfolder. Doesn't include ignored folders for now.
-            return GirlFilesDict.get_pic_by_name(self.path, filename)
+        # Phase 2.1: Delegated to GirlPictures component
+        def get_pic_by_name(self, filename):
+            return self._pictures.get_pic_by_name(filename)
 
         def get_fix_pic(self, act=None, fix=None, and_tags=None, not_tags=None, hide_farm=True, naked_filter=False, pref_filter=True, attempts=0, allow_lesbian=False, always_stock=False, strict=False):
-            # Where act is a string but fix is an object (important). hide_farm is on by default. allow_lesbian is overridden by bisexual/group or using lesbian tag
-            # Strict works differently for this method
-
-            if is_string(fix): # Failsafe
-                fix = fix_dict[fix]
-
-            ## 0. Sanity check
-
-            if not fix:
-                raise AssertionError("No fixation provided for picture.")
-
-            debug_output = False
-            if debug_output: BkLog.info("\nLooking for " + self.path + "picture - act: " + str(act) + " fix:" + fix.name)
-
-            ## 1. Preparing and and not tags
-
-            if and_tags:
-                and_tags = make_list(and_tags)
-            else:
-                and_tags = []
-            if not_tags:
-                not_tags = make_list(not_tags)
-            else:
-                not_tags = []
-
-            if hide_farm:
-                not_tags += farm_hardcore_acts
-                if not persistent.fuzzy_tagging_acts: # Disables machine and big for all non farm picture search
-                    not_tags.append("big")
-                    not_tags.append("machine")
-                elif act != "fetish":
-                    not_tags.append("machine")
-
-            if act not in ("bisexual", "group"):
-                not_tags += ["bisexual", "group"]
-            elif act == "bisexual":
-                not_tags.append("group")
-
-            if act == "naked":
-                not_tags += all_sex_acts
-
-            # Lesbian pics will be excluded unless it is explicitely requested or the context is bisexual/group, or forced on with 'allow_lesbian'
-
-            if not allow_lesbian and act not in ("bisexual", "group") and "lesbian" not in (and_tags + not_tags):
-                not_tags.append("lesbian")
-
-            not_tags.extend(ntag for ntag in fix.not_list if ntag not in not_tags)
-
-            ## 2. Picking a fixation picture according to Preferences (as suggested by Chris12)
-
-            # The game may randomly pick either a fixation picture fit for the sex act or a stand-alone fixation picture that doesn't conflict with the sex act.
-            # e.g. when looking for 'doggy anal': 'doggy anal.jpg' works. 'doggy anal sex.jpg' works. 'doggy.jpg' works. 'doggy sex.jpg' does NOT work.
-
-            and_not_settings = []
-
-            if act:
-                # PIC 1 - Looks for a fixation picture AND featuring the requested sex act
-                and_not_settings.append(["act-based", list(and_tags) + [act], list(not_tags)])
-
-                # PIC 2 - Looks for a fixation picture NOT featuring incompatible sex acts (except for the 'public' fixation)
-                if fix.name != "public acts":
-                    and_not_settings.append(["generic", list(and_tags), list(not_tags) + opposite_sex_acts[act]])
-
-            else:
-                and_not_settings.append(["generic", list(and_tags), list(not_tags)])
-
-            pics = [] # Primary pool: uses tuples (pic, weight).
-            pics_second = [] # Second rate pictures, if not all conditions can be satisfied.
-
-            for _context, _and_tags, _not_tags in and_not_settings:
-                for tags in fix.tag_list:
-                    _tags = make_list(tags)
-                    if debug_output: BkLog.info("Looking for " + " ".join(tagslist) + " +" + " +".join(and_tags1) + " -" + " -".join(not_tags1))
-                    pic = self.get_pic(_tags, and_tags=_and_tags, not_tags=_not_tags, strict=True, naked_filter=naked_filter, pref_filter=pref_filter, always_stock=always_stock)
-                    if pic:
-                        if debug_output: BkLog.info("    Found: " + pic.filename + " (" + _context + ")")
-                        # Pic weight is affected by the fix_pic_balance setting
-                        pics.append((pic, pic.get_weight(_context)))
-                        break
-                else: # Drops the 'strict' argument if no picture is found
-                    if debug_output: BkLog.info("Not Found " + fix.name + "! (" + _context + ")")
-
-                    for tags in fix.tag_list:
-                        attempts += 1
-                        pic = self.get_pic(tags, and_tags=_and_tags, not_tags=_not_tags, attempts=attempts, naked_filter=naked_filter, pref_filter=pref_filter, always_stock=always_stock)
-                        if pic:
-                            if debug_output: BkLog.info("Found non strict:" + pic.filename)
-                            pics_second.append((pic, pic.get_weight()))
-
-            attempts = game.last_pic["attempts"] # This is necessary to properly count all attempts
-
-            if pics:
-                return weighted_choice(pics)
-            elif strict: # Aborpts
-                return None
-            elif pics_second:
-                return weighted_choice(pics_second)
-            elif act: # Gets an act picture if no fixation picture is found, then a naked picture, then a profile pic if all else fails
-#                renpy.say("", "Fix - Looking for " + act)
-                if act in extended_sex_acts and fix.name != "cosplay":
-                    pic = self.get_pic(act, "naked", "profile", and_tags=and_tags, not_tags=not_tags, attempts=attempts, naked_filter=False, pref_filter=pref_filter, always_stock=always_stock)
-                else:
-                    pic = self.get_pic(act, "profile", and_tags=and_tags, not_tags=not_tags, attempts=attempts, naked_filter=naked_filter, pref_filter=pref_filter, always_stock=always_stock)
-
-                if pic:
-                    if debug_output: BkLog.info("No fixation picture found: Reverted to %s or naked picture (%s)" % (act, pic.filename))
-                    return pic
-
-            if debug_output: BkLog.info("No picture found: Reverted to profile picture (%s)" % pic.filename)
-            return self.get_pic("profile", and_tags=and_tags, not_tags=not_tags, attempts=attempts, naked_filter=naked_filter) # Probably unnecessary
+            return self._pictures.get_fix_pic(act, fix, and_tags, not_tags, hide_farm, naked_filter, pref_filter, attempts, allow_lesbian, always_stock, strict)
 
 
         def test_fix(self, name, unlock=False, feedback=False):
@@ -5881,6 +5773,32 @@ init -2 python:
         _remembers_impl = remembers
         _forgets_impl = forgets
         _unlock_info_impl = unlock_info
+
+        # ── Phase 2.1: Traits delegation aliases ──
+        _generate_traits_impl = generate_traits
+        _has_trait_impl = has_trait
+        _has_perk_impl = has_perk
+        _add_trait_impl = add_trait
+        _remove_trait_impl = remove_trait
+        _can_acquire_perk_impl = can_acquire_perk
+        _update_can_perk_impl = update_can_perk
+        _acquire_perk_impl = acquire_perk
+        _refund_perks_impl = refund_perks
+        _check_combo_perks_impl = check_combo_perks
+        _has_prerequisites_impl = has_prerequisites
+        _get_perk_impl = get_perk
+        _get_perk_level_impl = get_perk_level
+
+        # ── Phase 2.1: Logging delegation aliases ──
+        _commit_impl = commit
+        _return_from_impl = return_from
+        _add_log_impl = add_log
+        _get_log_impl = get_log
+        _get_average_performance_impl = get_average_performance
+        _track_event_impl = track_event
+        _get_recent_events_impl = get_recent_events
+        _get_recent_events_description_impl = get_recent_events_description
+        _count_occurences_impl = count_occurences
 
 
 

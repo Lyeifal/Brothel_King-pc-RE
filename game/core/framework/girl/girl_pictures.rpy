@@ -172,3 +172,93 @@ init -2 python:
         def update_files():
             """No-op: file management moved to GirlFilesDict."""
             pass
+
+        # ── Picture lookup (delegated from Girl) ──
+
+        def get_pic_by_name(self, filename):
+            return GirlFilesDict.get_pic_by_name(self.girl.path, filename)
+
+        def get_fix_pic(self, act=None, fix=None, and_tags=None, not_tags=None, hide_farm=True, naked_filter=False, pref_filter=True, attempts=0, allow_lesbian=False, always_stock=False, strict=False):
+            """Find a picture matching a fixation + sex act combination."""
+            g = self.girl
+
+            if is_string(fix):
+                fix = fix_dict[fix]
+
+            if not fix:
+                raise AssertionError("No fixation provided for picture.")
+
+            # Prepare tags
+            if and_tags:
+                and_tags = make_list(and_tags)
+            else:
+                and_tags = []
+            if not_tags:
+                not_tags = make_list(not_tags)
+            else:
+                not_tags = []
+
+            if hide_farm:
+                not_tags += farm_hardcore_acts
+                if not persistent.fuzzy_tagging_acts:
+                    not_tags.append("big")
+                    not_tags.append("machine")
+                elif act != "fetish":
+                    not_tags.append("machine")
+
+            if act not in ("bisexual", "group"):
+                not_tags += ["bisexual", "group"]
+            elif act == "bisexual":
+                not_tags.append("group")
+
+            if act == "naked":
+                not_tags += all_sex_acts
+
+            if not allow_lesbian and act not in ("bisexual", "group") and "lesbian" not in (and_tags + not_tags):
+                not_tags.append("lesbian")
+
+            not_tags.extend(ntag for ntag in fix.not_list if ntag not in not_tags)
+
+            # Build search settings
+            and_not_settings = []
+            if act:
+                and_not_settings.append(["act-based", list(and_tags) + [act], list(not_tags)])
+                if fix.name != "public acts":
+                    and_not_settings.append(["generic", list(and_tags), list(not_tags) + opposite_sex_acts[act]])
+            else:
+                and_not_settings.append(["generic", list(and_tags), list(not_tags)])
+
+            pics = []
+            pics_second = []
+
+            for _context, _and_tags, _not_tags in and_not_settings:
+                for tags in fix.tag_list:
+                    _tags = make_list(tags)
+                    pic = g.get_pic(_tags, and_tags=_and_tags, not_tags=_not_tags, strict=True, naked_filter=naked_filter, pref_filter=pref_filter, always_stock=always_stock)
+                    if pic:
+                        pics.append((pic, pic.get_weight(_context)))
+                        break
+                else:
+                    for tags in fix.tag_list:
+                        attempts += 1
+                        pic = g.get_pic(tags, and_tags=_and_tags, not_tags=_not_tags, attempts=attempts, naked_filter=naked_filter, pref_filter=pref_filter, always_stock=always_stock)
+                        if pic:
+                            pics_second.append((pic, pic.get_weight()))
+
+            attempts = game.last_pic["attempts"]
+
+            if pics:
+                return weighted_choice(pics)
+            elif strict:
+                return None
+            elif pics_second:
+                return weighted_choice(pics_second)
+            elif act:
+                if act in extended_sex_acts and fix.name != "cosplay":
+                    pic = g.get_pic(act, "naked", "profile", and_tags=and_tags, not_tags=not_tags, attempts=attempts, naked_filter=False, pref_filter=pref_filter, always_stock=always_stock)
+                else:
+                    pic = g.get_pic(act, "profile", and_tags=and_tags, not_tags=not_tags, attempts=attempts, naked_filter=naked_filter, pref_filter=pref_filter, always_stock=always_stock)
+                if pic:
+                    return pic
+
+            return g.get_pic("profile", and_tags=and_tags, not_tags=not_tags, attempts=attempts, naked_filter=naked_filter)
