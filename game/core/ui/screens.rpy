@@ -941,11 +941,11 @@ screen girl_button(girl, bsize="x4", status_list=[], context="girls", extra_acti
     elif context == "farm":
         if farm.programs[girl].target != "no training":
             $ text1 = farm.programs[girl].target.capitalize()
-            $ but_ttip = "{b}" + girl.fullname + "{/b} is training (" + text1 + ")."
+            $ but_ttip = __("{b}%s{/b} is training (%s).") % (girl.fullname, text1)
             $ text_col = c_orange
         else:
             $ text1 = farm.programs[girl].holding.capitalize()
-            $ but_ttip = "{b}" + girl.fullname + "{/b} is being held (" + text1 + ")."
+            $ but_ttip = __("{b}%s{/b} is being held (%s).") % (girl.fullname, text1)
             $ text_col = c_white
         $ use_badge = True
 
@@ -1395,10 +1395,10 @@ screen girl_fast_actions(girl, notebook=True, love_fear=True, schedule=True, cus
                     if brothel.get_effect("allow", pop.name):
                         if girl.refused_populations[pop.name]:
                             $ X_text = "{b}X{/b}"
-                            $ ttip = "Click to allow " + pop.description
+                            $ ttip = __("Click to allow %s") % pop.description
                         else:
                             $ X_text = ""
-                            $ ttip = "Click to block " + pop.description
+                            $ ttip = __("Click to block %s") % pop.description
                         button xsize xres(25) ysize yres(25) xmargin 0 xpadding 0 ymargin 0 ypadding 0 background None yalign 0.5:
                             at alpha_transform
                             action (ToggleDict(girl.refused_populations, pop.name), girl.customer_populations_safety_check(pop.name))

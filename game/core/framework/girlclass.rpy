@@ -162,6 +162,7 @@ init -2 python:
             self._pictures = GirlPictures(self)
             self._economy = GirlEconomy(self)
             self._mood = GirlMood(self)
+            self._schedule = GirlSchedule(self)
             self._relationships = GirlRelationships(self)
             self._dialogue = GirlDialogue(self)
             self._logging = GirlLogging(self)
@@ -5790,6 +5791,45 @@ init -2 python:
         _whore_on_street_impl = whore_on_street
         _change_rep_impl = change_rep
         _customer_populations_safety_check_impl = customer_populations_safety_check
+
+        # ── Phase 2.1: Mood delegation aliases ──
+        _init_sanity_impl = init_sanity
+        _rank_up_sanity_impl = rank_up_sanity
+        _lose_sanity_impl = lose_sanity
+        _get_sanity_impl = get_sanity
+        _sanity_warning_impl = sanity_warning
+        _change_energy_impl = change_energy
+        _tire_impl = tire
+        _get_hurt_impl = get_hurt
+        _health_check_impl = health_check
+        _heal_impl = heal
+        _full_rest_impl = full_rest
+        _rest_impl = rest
+        _can_heal_from_item_impl = can_heal_from_item
+        _get_energy_color_impl = get_energy_color
+        _get_energy_ttip_impl = get_energy_ttip
+        _update_mood_impl = update_mood
+        _change_mood_impl = change_mood
+        _get_mood_modifier_impl = get_mood_modifier
+        _get_mood_description_impl = get_mood_description
+        _get_mood_picture_impl = get_mood_picture
+        _build_up_impl = build_up
+        _get_build_up_impl = get_build_up
+        _reset_build_up_impl = reset_build_up
+
+        # ── Phase 2.1: Schedule delegation aliases ──
+        _set_workdays_impl = set_workdays
+        _cycle_workday_impl = cycle_workday
+        _set_job_impl = set_job
+        _set_rest_impl = set_rest
+        _works_today_impl = works_today
+        _will_do_impl = will_do
+        _get_schedule_impl = get_schedule
+        _load_schedule_impl = load_schedule
+        _get_status_impl = get_status
+        _get_status_summary_impl = get_status_summary
+        _get_day_off_impl = get_day_off
+        _tired_check_impl = tired_check
 
 
 
