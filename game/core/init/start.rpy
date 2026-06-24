@@ -241,6 +241,10 @@ label init_game(quick=False):
         game = Game()
         calendar = Calendar()
 
+        # Phase 1.1: Register core services
+        services.register("game", game)
+        services.register("calendar", calendar)
+
         ## EN: Bind the selected game mode to the Game instance.
         ## ZH: 将选中的游戏模式绑定到 Game 实例。
         if game_mode:
@@ -332,6 +336,7 @@ label init_game(quick=False):
         MC_name = "Nero"
         MC = Main()
         MC.char = you
+        services.register("mc", MC)  # Phase 1.1
 
         ## EN: Load MC challenges from JSON (BK Evolution), fallback to hardcoded dict.
         ## ZH: 从 JSON 加载 MC 挑战（BK Evolution），否则使用硬编码字典。
@@ -549,6 +554,7 @@ label init_game(quick=False):
                             "workshop" : Installation(name = __("workshop"), pic = "workshop.webp", tags = ["machine", "toy"], minion_type = "machine", skill = "sensitivity"),
                             }
         farm = Farm()
+        services.register("farm", farm)  # Phase 1.1
         init_powers()
 
     #### SPELLS ####

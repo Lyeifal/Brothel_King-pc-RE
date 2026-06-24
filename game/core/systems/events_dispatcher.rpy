@@ -743,6 +743,7 @@ label advance_to_chapter(chapter, silent=False, free=False, start=False): # All 
     if start:
     # START - Set-up base name and furniture
         $ brothel = newbrothel
+        $ services.register("brothel", brothel)  # Phase 1.1
         $ brothel.setup(__("The Rose Garden"), free_room=district.room)
         $ get_starting_furniture(chapter)
 

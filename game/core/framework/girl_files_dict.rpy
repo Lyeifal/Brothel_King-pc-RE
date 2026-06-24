@@ -408,6 +408,8 @@ init -2 python:
     # Global Object Initialized in Python Init -> skips renpy save process
     # So it will always have the newest files when you restart the game
     globalFilesDict = GirlFilesDict()
+    # Phase 1.1: Register with the service container
+    services.register("girl_files_dict", globalFilesDict)
 
 #</Chris12 PackState>
 

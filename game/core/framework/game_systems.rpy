@@ -319,8 +319,10 @@ init -3 python:
 
         if type == "city":
             city_events.append(new_event)
+            EventBridge.sync_to_engine(new_event, "city")  # Phase 1.3
         elif type in ("any", "day", "night", "morning"):
             daily_events.append(new_event)
+            EventBridge.sync_to_engine(new_event, type)  # Phase 1.3
 
     def story_add_event(lbl, type="city", duplicates=True):
 
@@ -334,11 +336,13 @@ init -3 python:
             if duplicates or ev not in city_events: # Avoids creating duplicate events if duplicates is set to False
                 city_events.append(ev)
                 city_events.sort(key=lambda x: x.order)
+                EventBridge.sync_to_engine(ev, "city")  # Phase 1.3
 
         else:
             if duplicates or ev not in daily_events: # Avoids creating duplicate events if duplicates is set to False
                 daily_events.append(ev)
                 daily_events.sort(key=lambda x: x.order)
+                EventBridge.sync_to_engine(ev, type)  # Phase 1.3
 
         return
 

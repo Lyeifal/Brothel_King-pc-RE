@@ -199,3 +199,4 @@ init -4 python:
 
     # Global handle
     event_engine = EventEngine.instance()
+    services.register("event_engine", event_engine)  # Phase 1.1
