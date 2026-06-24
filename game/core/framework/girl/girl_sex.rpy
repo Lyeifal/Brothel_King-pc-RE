@@ -179,6 +179,96 @@ init -2 python:
             # 测试弱点 | Test a weakness
             return self.girl._test_weakness_impl(act, unlock, feedback)
 
+        # ── 偏好生成 | Preference generation ──
+
+        def generate_preferences(self):
+            '''生成女孩性偏好 (偏好值 + 固恋 + 性经历) | Generate sexual preferences'''
+            g = self.girl
+            g.preferences = copy.copy(base_reluctance)
+            g.fix_level = defaultdict(int)
+            g.locked_fix = []
+
+            pos_fix_nb = 2
+            neg_fix_nb = 1
+
+            if g.is_("very modest"): neg_fix_nb += 2
+            elif g.is_("modest"): neg_fix_nb += 1
+            elif g.is_("very lewd"): pos_fix_nb += 2
+            elif g.is_("lewd"): pos_fix_nb += 1
+
+            if use_ini_sex and g.init_dict["sexual preferences/always_fixations"]:
+                if len(g.init_dict["sexual preferences/always_fixations"]) <= pos_fix_nb:
+                    g.pos_fixations = [fix_dict[fix] for fix in g.init_dict["sexual preferences/always_fixations"]]
+                else:
+                    g.pos_fixations = [fix_dict[fix] for fix in rand_choice(g.init_dict["sexual preferences/always_fixations"], nb=pos_fix_nb)]
+                pos_fix_nb -= len(g.pos_fixations)
+
+            if pos_fix_nb >= 1:
+                g.add_random_fixation(type="pos", nb=pos_fix_nb)
+            if g.personality.name == "masochist":
+                g.add_random_fixation(act="fetish")
+
+            if use_ini_sex and g.init_dict["sexual preferences/always_negative_fixations"]:
+                if len(g.init_dict["sexual preferences/always_negative_fixations"]) <= neg_fix_nb:
+                    g.neg_fixations = [fix_dict[fix] for fix in g.init_dict["sexual preferences/always_negative_fixations"]]
+                else:
+                    g.neg_fixations = [fix_dict[fix] for fix in rand_choice(g.init_dict["sexual preferences/always_negative_fixations"], nb=neg_fix_nb)]
+                neg_fix_nb -= len(g.neg_fixations)
+
+            if neg_fix_nb >= 1:
+                g.add_random_fixation(type="neg", nb=neg_fix_nb)
+
+            g.reset_sex_acts()
+
+            if use_ini_sex and g.init_dict["sexual preferences/farm_weakness"] in farm_type_list:
+                g.weakness = g.init_dict["sexual preferences/farm_weakness"]
+            else:
+                g.weakness = rand_choice(farm_type_list)
+
+            if use_ini_sex and g.init_dict["sexual preferences/sexual_experience"] in ["very experienced", "experienced", "average", "inexperienced", "very inexperienced"]:
+                g.sexual_experience = g.init_dict["sexual preferences/sexual_experience"]
+                g.training_value = sexual_training_value[g.sexual_experience]
+            else:
+                d = dice(6, 2)
+                if g.free:
+                    if g.is_("very lewd"): d += 2
+                    elif g.is_("lewd"): d += 1
+                    elif g.is_("very modest"): d -= 2
+                    elif g.is_("modest"): d -= 1
+                else:
+                    if g.is_("very sub"): d += dice(3) - 1
+                    elif g.is_("sub"): d += dice(2) - 1
+                    elif g.is_("very dom"): d -= -1 * dice(3) + 1
+                    elif g.is_("dom"): d -= -1 * dice(2) + 1
+
+                if d >= 12: g.sexual_experience = "very experienced"
+                elif d >= 10: g.sexual_experience = "experienced"
+                elif d >= 5: g.sexual_experience = "average"
+                elif d >= 3: g.sexual_experience = "inexperienced"
+                else: g.sexual_experience = "very inexperienced"
+                g.training_value = sexual_training_value[g.sexual_experience]
+
+            pos_bonus, av_bonus, neg_bonus = experienced_modifiers[g.sexual_experience]
+
+            for act in g.preferences.keys():
+                if g.free:
+                    if act in g.pos_acts and not act in g.neg_acts:
+                        if pos_bonus: g.change_preference(act, pos_bonus * district.rank + dice(pos_bonus, district.rank), fast=True, silent=True)
+                    elif act in g.neg_acts and not act in g.pos_acts:
+                        if neg_bonus > 0: g.change_preference(act, neg_bonus * district.rank + dice(neg_bonus, district.rank), fast=True, silent=True)
+                        elif neg_bonus < 0: g.change_preference(act, neg_bonus * district.rank - dice(-1 * neg_bonus, district.rank), fast=True, silent=True)
+                    else:
+                        if av_bonus: g.change_preference(act, av_bonus * district.rank + dice(av_bonus, district.rank), fast=True, silent=True)
+                else:
+                    d = dice(6)
+                    if d >= 5:
+                        if pos_bonus: g.change_preference(act, pos_bonus * district.rank + dice(pos_bonus, district.rank), fast=True, silent=True)
+                    elif d < 2:
+                        if neg_bonus > 0: g.change_preference(act, neg_bonus * district.rank + dice(neg_bonus, district.rank), fast=True, silent=True)
+                        elif neg_bonus < 0: g.change_preference(act, neg_bonus * district.rank - dice(-1 * neg_bonus, district.rank), fast=True, silent=True)
+                    else:
+                        if av_bonus: g.change_preference(act, av_bonus * district.rank + dice(av_bonus, district.rank), fast=True, silent=True)
+
         # ── 固恋移除 | Fixation removal ──
 
         def has_fixation(self, type="pos", fix_name=None):

@@ -174,7 +174,92 @@ init -2 python:
                 return neg_rep, ""
 
         def get_tip(self, act, result, customers, final_tip_change=0, first_customer=False, specials=[]):
-            return self.girl._get_tip_impl(act, result, customers, final_tip_change, first_customer, specials)
+            '''计算女孩小费收入 | Calculate girl's tip income'''
+            g = self.girl
+            cust_rank = ((sum(c.diff for c in customers) / float(len(customers))) / 10.0) ** 0.5
+            tip = tip_base * cust_rank * g.rank
+            tip += sum(cust.diff for cust in customers)
+            tip = max(10, tip)
+
+            if "lost virginity" in specials:
+                tip += 100
+                gold_ttip = _("Base tip: {image=img_gold}%i(Lost virginity: {image=img_gold}+100)\n") % tip
+            else:
+                gold_ttip = _("Base tip: {image=img_gold}%i\n") % tip
+
+            tip_multiplier = 1.0
+            if g.naked and act in all_jobs:
+                tip_multiplier *= tip_act_modifier["naked bonus"] * g.get_effect("boost", "naked bonus")
+                gold_ttip += _("\nNaked bonus: x%s") % percent_text(tip_act_modifier["naked bonus"] * g.get_effect("boost", "naked bonus"), False)
+            if "bisexual" in specials:
+                tip_multiplier *= tip_act_modifier["bisexual bonus"]
+                gold_ttip += _("\nBisexual bonus: %s") % tip_act_modifier["bisexual bonus"]
+            if act in all_sex_acts and len(customers) > 1:
+                tip_multiplier *= tip_act_modifier["group bonus"] * len(customers)
+                gold_ttip += _("\nGroup bonus: x%s") % percent_text(tip_act_modifier["group bonus"] * len(customers), False)
+            if act in all_jobs:
+                tip_multiplier *= tip_result_modifier["job " + result] * g.get_effect("boost", result + " result tip")
+                gold_ttip += _("\nResult bonus: x%s") % percent_text(tip_result_modifier["job " + result] * g.get_effect("boost", result + " result tip"), False)
+            else:
+                tip_multiplier *= tip_result_modifier["whore " + result] * g.get_effect("boost", result + " result tip")
+                gold_ttip += _("\nResult bonus: x%s") % percent_text(tip_result_modifier["whore " + result] * g.get_effect("boost", result + " result tip"), False)
+
+            perk_tip_multiplier = g.get_effect("boost", "tip")
+            if "focus" in specials: perk_tip_multiplier += 0.25
+            if "virgin tip" in specials: perk_tip_multiplier += g.get_effect("boost", "virgin tip") - 1
+            if first_customer: perk_tip_multiplier += (g.get_effect("boost", "first customer tip") - 1) / len(customers)
+            if act in all_jobs: perk_tip_multiplier += g.get_effect("boost", "total tip", custom_scale=("job cust nb", len(customers))) - 1
+            elif act in all_sex_acts: perk_tip_multiplier += g.get_effect("boost", "total tip", custom_scale=("whore cust nb", g.get_log("whore_cust", "today"))) - 1
+            if perk_tip_multiplier != 1.0: gold_ttip += _("\nPerks and special effects: x%s") % percent_text(perk_tip_multiplier, False)
+            tip_multiplier *= perk_tip_multiplier
+
+            # BK Evolution: customer mood tip modifiers
+            if customers:
+                _mood_mult_sum = _mood_chance_sum = 0.0
+                _mood_count = 0
+                for cust in customers:
+                    if hasattr(cust, 'affixes') and cust.affixes and cust.affixes.mood:
+                        _mood_mult_sum += cust.affixes.mood.tip_multiplier
+                        _mood_chance_sum += cust.affixes.mood.tip_chance
+                        _mood_count += 1
+                if _mood_count:
+                    _avg_mult = _mood_mult_sum / _mood_count
+                    _avg_chance = _mood_chance_sum / _mood_count
+                    if _avg_mult != 1.0:
+                        tip_multiplier *= _avg_mult
+                        gold_ttip += _("\nCustomer mood avg: x%s") % percent_text(_avg_mult, False)
+                    if _avg_chance > 0:
+                        _tc_bonus = 1.0 + _avg_chance
+                        tip_multiplier *= _tc_bonus
+                        gold_ttip += _("\nCustomer mood tip chance avg: x%s") % percent_text(_tc_bonus, False)
+
+            if tip_multiplier > maximum_tip_modifier:
+                gold_ttip += _("\n{i}Total modifier cannot exceed x%s{/i}") % str(maximum_tip_modifier)
+            tip_multiplier = min(maximum_tip_modifier, max(0.1, tip_multiplier))
+            tip *= tip_multiplier
+
+            act_modif = tip_act_modifier[act]
+            if act_modif != 1.0:
+                tip *= act_modif
+                gold_ttip += _("\nAct modifier: x%i") % (act_modif * 100) + "%"
+                if not game.has_active_mod("chrisjobmod") or cap_positive_tip_act_modifier:
+                    if act_modif > 1.0: tip_multiplier = min(maximum_tip_modifier, max(0.1, tip_multiplier))
+
+            if game.has_active_mod("chrisjobmod") and act in all_jobs:
+                tip /= act_max_customers_modifier[g.job]
+                gold_ttip += _("\nJob Mod modifier: x%s") % percent_text(1.0 / act_max_customers_modifier[g.job], False)
+
+            extra = g.get_effect("change", "tip") + final_tip_change
+            tip += extra
+            if extra:
+                gold_ttip += _("\n\nExtra tip: {image=img_gold}%s") % plus_text(extra)
+                if final_tip_change: gold_ttip += _(" (Five stars perk: {image=img_gold}%s") % plus_text(final_tip_change)
+
+            tip *= cheat_modifier["gold"] * game.get_diff_setting("gold")
+            gold_ttip += _("\n\nDifficulty modifier: x%s") % percent_text(cheat_modifier["gold"] * game.get_diff_setting("gold"), False)
+            tip = max(10, round_int(tip))
+            gold_ttip += _("\n\n= {image=img_gold}%i") % tip
+            return tip, gold_ttip
 
         def get_street_tip(self):
             return self.girl._get_street_tip_impl()
