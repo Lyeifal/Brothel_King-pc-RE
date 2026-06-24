@@ -5766,6 +5766,31 @@ init -2 python:
             self.flags["buildup warning 150"] = False
             self.flags["buildup warning 200"] = False
 
+        # ── Phase 2.1: Economy delegation aliases ──
+        _get_price_impl = get_price
+        _get_med_upkeep_impl = get_med_upkeep
+        _adjust_upkeep_impl = adjust_upkeep
+        _update_upkeep_ratio_impl = update_upkeep_ratio
+        _get_upkeep_threshold_impl = get_upkeep_threshold
+        _get_upkeep_modifier_impl = get_upkeep_modifier
+        _get_next_upkeep_step_impl = get_next_upkeep_step
+        _get_previous_upkeep_step_impl = get_previous_upkeep_step
+        _cut_upkeep_impl = cut_upkeep
+        _restore_upkeep_impl = restore_upkeep
+        _get_max_cust_served_impl = get_max_cust_served
+        _get_max_interactions_impl = get_max_interactions
+        _get_interaction_modifier_impl = get_interaction_modifier
+        _reset_interactions_impl = reset_interactions
+        _estimate_performance_impl = estimate_performance
+        _get_xp_impl = get_xp
+        _get_jp_impl = get_jp
+        _get_rep_impl = get_rep
+        _get_tip_impl = get_tip
+        _get_street_tip_impl = get_street_tip
+        _whore_on_street_impl = whore_on_street
+        _change_rep_impl = change_rep
+        _customer_populations_safety_check_impl = customer_populations_safety_check
+
 
 
 
