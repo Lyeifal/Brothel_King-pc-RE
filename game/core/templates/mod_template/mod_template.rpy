@@ -1,32 +1,53 @@
-## BK Phase 6 — Mod Template
+## BK Phase 6 — Mod Template (v2 API)
 ## This is a starter template for creating Brothel King mods.
 ## Place this file in game/custom/mods/<YourModName>/
 
 init 1 python:
 
-    # 1. DECLARE THE MOD
-    my_mod = Mod(
-        name="My Awesome Mod",
-        folder="mod_template",  # Must match the folder name
-        creator="Your Name",
-        version=1.0,
-        description=__("This is a sample mod demonstrating the Phase 6 API."),
-        help_prompts=[
-            ("About this mod", "bk_template_mod_about"),
-        ],
-        init_label="bk_template_mod_init",
-        night_label="bk_template_mod_night",
-        early_label="",
-        update_label="",
-        load_label="",
-        remove_label="bk_template_mod_remove",
-    )
+    # ── 1. DECLARE THE MOD (v2 API with capability flags) ──
+    api = ModAPIV2.instance()
 
-    # 2. REGISTER HOOKS (Phase 6)
-    # Hooks let your mod intercept core game events safely.
-    def on_girl_generated(girl):
-        # Example: give every generated girl a small bonus
+    my_mod_manifest = {
+        "name": "My Awesome Mod",
+        "version": "1.0.0",
+        "api_version": 2,
+        "min_game_version": "0.3.0",
+        "author": "Your Name",
+        "description": __("This is a sample mod demonstrating the v2 API."),
+        "requires": ["girl_traits", "events"],  # Capability flags
+        "dependencies": [],                      # Other mod IDs this depends on
+        "hooks": {},                              # {hook_name: callback} dict
+    }
+
+    api.register_mod("my_awesome_mod", my_mod_manifest)
+
+    # ── 2. REGISTER CUSTOM CONTENT ──
+
+    # Register a custom trait
+    # custom_trait = Trait(name="Custom", verb="customizes", effects=[...])
+    # api.register_trait(custom_trait, category="community")
+
+    # Register a custom event
+    # custom_event = StoryEvent(label="my_custom_event", type="city", chance=0.3)
+    # api.register_event("my_custom_event", custom_event, category="community")
+
+    # ── 3. REGISTER HOOKS (v2 standardized naming) ──
+    # Hook naming: <domain>_<action>_<tense>
+    # Available hooks: see ModAPIV2.HOOK_* constants
+
+    def on_girl_generated(context):
+        # context = {"girl": Girl instance, "pack_name": str}
+        girl = context.get("girl")
+        # Custom logic here
         pass
+
+    api.register_hook(api.HOOK_GIRL_GENERATED, on_girl_generated, priority=0)
+
+    def on_night_finished(context):
+        # context = {"log": NightLog instance, "net_gold": int}
+        pass
+
+    api.register_hook(api.HOOK_NIGHT_FINISHED, on_night_finished)
 
     def on_day_ended():
         # Example: log something at end of day
