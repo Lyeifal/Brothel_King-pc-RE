@@ -155,6 +155,17 @@ init -2 python:
 
             self.flags = defaultdict(bool)
 
+            # Phase 2.1: Component delegation (see game/core/framework/girl/)
+            self._base = GirlBase(self)
+            self._stats = GirlStats(self)
+            self._traits = GirlTraits(self)
+            self._pictures = GirlPictures(self)
+            self._economy = GirlEconomy(self)
+            self._mood = GirlMood(self)
+            self._relationships = GirlRelationships(self)
+            self._dialogue = GirlDialogue(self)
+            self._logging = GirlLogging(self)
+
         def randomize(self, free=False, p_traits=None, n_trait=None, perks=None, force_original=False, level=1, personality=None, temp_list=None):
 
             t0 = time.perf_counter()
@@ -486,171 +497,21 @@ init -2 python:
                 return "No init file"
 
         def load_pics(self):
-            #<Chris12 PackState>
-            #Moved to GirlFilesDict - Should no longer be necessary
-            #</Chris12 PackState>
+            #<Chris12 PackState>Moved to GirlFilesDict</Chris12 PackState>
             pass
 
-        def evaluate_girlpack(self): # Evaluate girl pack metrics to use for the girl pack rating
+        # Phase 2.1: Delegated to GirlPictures component
+        def evaluate_girlpack(self):
+            return self._pictures.evaluate_girlpack()
 
-            start = datetime.datetime.now()
-            main_cover_score, main_div_score, op_cover_score, op_div_score = 0.0, 0.0, 0.0, 0.0
-
-            # Check pictures with 'Main' tags (including naked variations)
-
-            for tag in normal_tags:
-                currentList = get_pic_list(self, [tag], not_tags=["naked"], weighted=False)
-                if len(currentList): main_cover_score += 1
-                main_div_score += min(10, len(currentList)) # Only the first 10 pictures will count towards diversity average to avoid skewing pack rating
-
-                currentList = get_pic_list(self, [tag], and_tags=["naked"], weighted=False)
-                if len(currentList) : main_cover_score += 1
-                main_div_score += min(10, len(currentList)) # Only the first 10 pictures will count towards diversity average to avoid skewing pack rating
-
-            for tag in all_sex_acts:
-                currentList = get_pic_list(self, [tag], not_tags=["group", "bisexual", "machine", "beast", "monster"], weighted=False)
-                if len(currentList) : main_cover_score += 1
-                main_div_score += min(10, len(currentList)) # Only the first 10 pictures will count towards diversity average to avoid skewing pack rating
-
-                for tag2 in ("group", "bisexual") :
-                    currentList = get_pic_list(self, [tag2], and_tags=[tag], not_tags=["machine", "beast", "monster"], weighted=False)
-                    if len(currentList) :  main_cover_score += 1
-                    main_div_score += min(10, len(currentList)) # Only the first 10 pictures will count towards diversity average to avoid skewing pack rating
-
-            main_cover_score_total = len(normal_tags)*2 + len(all_sex_acts)*3
-            timingResult = str(datetime.datetime.now() - start) + "\n"
-
-            # Check pictures with optional tags (including all act variations)
-
-            extended_sex_acts_tuples = [make_list(tag) for tag in extended_sex_acts]
-            for tag in all_farm_tags:
-                unfiltered = get_pic_list(self, [tag], weighted=False)
-                for tag2 in extended_sex_acts_tuples:
-                    currentList = list(filter(lambda pic : pic.has_tag(tag2), unfiltered))
-                    if len(currentList) :  op_cover_score += 1
-                    op_div_score += min(5, len(currentList)) # Only the first 5 pictures will count towards diversity average to avoid skewing pack rating
-
-            for fix in fix_dict.values():
-                unfiltered = get_pic_list(self, fix.tag_list[0], and_tags=[], not_tags=fix.not_list, weighted=False)
-                for atag in fix.acts:
-                    atagTuple = make_list(atag)
-                    currentList = list(filter(lambda pic : pic.has_tags(atagTuple), unfiltered))
-                    if len(currentList) :  op_cover_score += 1
-                    op_div_score += min(5, len(currentList)) # Only the first 5 pictures will count towards diversity average to avoid skewing pack rating
-
-            op_cover_score_total = len(all_farm_tags)*len(extended_sex_acts) + sum(len(fix.acts) for fix in fix_dict.values())
-            timingResult += str(datetime.datetime.now() - start) + "\n"
-
-            # Store result of evaluation
-
-            if main_cover_score:
-                main_av_pics = main_div_score/main_cover_score
-            else:
-                main_av_pics = 0
-
-            if op_cover_score:
-                op_av_pics = op_div_score/op_cover_score
-            else:
-                op_av_pics = 0
-
-#            renpy.say(self.path, "main_cover_score_total " + str(main_cover_score_total) + ", op_cover_score_total " + str(op_cover_score_total) + ", main_cover_score " + str(main_cover_score) + ", op_cover_score " + str(op_cover_score) + ", main div " + str(main_div_score) + ", op div " + str(op_div_score) + ", main_av_pics " + str(main_av_pics) + ", op_av_pics " + str(op_av_pics))
-
-#            with open(config.gamedir[:config.gamedir.rfind("/")] + "/ratinglog_" + self.name + ".txt", "wt") as log_file :
-#                log_file.write(self.path + " (" + str(len(GirlFilesDict.get_pics(self.path))) + " images)\n" + timingResult + "\n\n" + " ".join(traceback.format_stack()))
-
-            return {"main cover score" : main_cover_score/main_cover_score_total,
-                    "main diversity average" : main_av_pics,
-                    "optional cover score" : op_cover_score/op_cover_score_total,
-                    "optional diversity average" : op_av_pics}
-
-
-        def refresh_pictures(self, force_default=False, silent=False): # Every girl folder MUST have at least one pic with the 'profile' tag to be displayed properly
-
-            # if not silent:
-            #     debug_notify("Refreshing pictures for %s" % self.fullname, pic=self.portrait)
-
-            # Phase 0.4: Invalidate picture cache for this girl on refresh
-            PictureCache.evict(self)
-
-            if force_default:
-                self.portrait = get_pic(game, "portrait", "profile")
-                self.profile = get_pic(game, "profile", "portrait", vertical=True)
-
-            elif self in slavemarket.girls:
-                self.portrait = self.get_pic("portrait", "profile", naked_filter = True, and_priority=False, soft=True)
-                if self.naked:
-                    self.profile = self.get_pic("market", "profile", "portrait", and_tags=["naked"], and_priority=False, not_tags=["beach", "nature", "date", "strip"], soft=True, vertical=True) # Reminder: not tags are dropped from right to left when unavailable
-                elif persistent.naked_girls_in_slavemarket:
-                    self.profile = self.get_pic("market", "profile", "portrait", not_tags=["beach", "nature", "date"], soft=True, vertical=True)
-                else:
-                    self.profile = self.get_pic("market", "profile", "portrait", not_tags=["naked", "beach", "nature", "date"], soft=True, vertical=True)
-
-            elif self in game.free_girls: # Free girls will never be naked (unless activated in H menu). Profile picture changes according to current location
-                if persistent.naked_girls_in_town and self.naked:
-                    _and_tags = ["naked"]
-                    _not_tags = ["masseuse", "waitress", "dancer", "strip"] # Reminder: not tags are dropped from right to left when unavailable
-                else:
-                    _and_tags = []
-                    _not_tags = ["naked", "masseuse", "waitress", "dancer"] # Reminder: not tags are dropped from right to left when unavailable
-
-                self.portrait = self.get_pic("portrait", "profile", and_tags=_and_tags, not_tags=_not_tags, and_priority=False, soft=True)
-                if self.location.lower() in town_locations: # Reminder: self.location contains location name (string)
-                    self.profile = self.get_pic("profile", "portrait", and_tags=_and_tags+["town"], not_tags = _not_tags+["beach", "nature"], soft=True, vertical=True)
-                elif self.location.lower() in beach_locations:
-                    self.profile = self.get_pic("profile", "portrait", and_tags=_and_tags+["beach"], not_tags = _not_tags+["town", "nature"], soft=True, vertical=True)
-                elif self.location.lower() in nature_locations:
-                    self.profile = self.get_pic("profile", "portrait", and_tags=_and_tags+["nature"], not_tags = _not_tags+["town", "beach"], soft=True, vertical=True)
-                elif self.location.lower() in court_locations:
-                    self.profile = self.get_pic("date", "geisha", "profile", and_tags=_and_tags+["profile"], not_tags = _not_tags+["beach", "nature"], soft=True, vertical=True)
-                else:
-                    self.profile = self.get_pic("profile", "portrait", and_tags=_and_tags, not_tags=_not_tags, soft=True)
-
-            else: # Brothel girls
-                not_tags =  ["rest", "wet", "beach", "public"] + [j for j in all_jobs if j != self.job]
-                # edit: This suggested by darkzerotor, a lot of packs have too many pics that tag "profile" that dont make sense
-
-                self.portrait = self.get_pic("portrait", "profile", naked_filter = True, and_priority=False, soft=True)
-                self.profile = self.get_pic("profile", "portrait", not_tags=not_tags, naked_filter = True, soft=True, vertical=True)
-
-            if not self.profile:
-                #<Chris12 AutoRepair>
-                # Use not_found.webp. No longer needs to renpy.quit(), since it has some image to show
-                renpy.say("", __("{color=[c_bad]}No profile or portrait picture could be found for the following girl: %s.{/color}\nPlease rename at least one of her pictures to include the words 'profile' or 'portrait'\n(e.g.: 'profile3.webp')\nAlternatively, completely delete her directory, restart the game and then go to the Help Menu and 'Repair Girl/MC Pictures' to remove her.") % self.path)
-                self.profile = Picture(path="resources/backgrounds/not_found.webp")
-                # renpy.say("", "Exiting Ren'Py...{w=1}{nw}")
-                # renpy.quit()
-                #<Chris12 AutoRepair>
-
-            if not self.portrait : self.portrait = Picture(path="resources/backgrounds/not_found.webp") #<Chris12 AutoRepair - Use not_found />
-
-            # Auto-unlocks CG for the gallery upon generating a profile and portrait as a convenience for the player (no need to interact with every girl)
-
-            unlock_pic(self.portrait.path, silent=True)
-            unlock_pic(self.profile.path, silent=True)
-
-            self.create_char() # <Chris12 AutoRepair - Use the new portrait/>
+        def refresh_pictures(self, force_default=False, silent=False):
+            self._pictures.refresh_pictures(force_default, silent)
 
         def create_char(self):
+            self._pictures.create_char()
 
-            if self.init_dict["identity/game_character"]:
-                self.char = self.init_dict["identity/game_character"]
-            elif self.portrait != None:
-                self.char = Character(self.name, color = c_pink, window_left_padding=wl_padding, show_side_image = self.portrait.get(side = True))
-            else:
-                self.char = Character(self.name, color = c_pink)
-
-        #<Chris12 AutoRepair>
-        # Checks if portrait and profile are still valid pictures
-        # refreshes them if they are not
         def check_pictures(self):
-            if self.portrait == None or not GirlFilesDict.contains_file(self.path, self.portrait.path):
-                # renpy.notify(self.path + ": Portrait not found, updating images")
-                self.refresh_pictures(silent=True)
-            elif self.profile == None or not GirlFilesDict.contains_file(self.path, self.profile.path):
-                # renpy.notify(self.path + ": Profile not found, updating images")
-                self.refresh_pictures(silent=True)
-        #</Chris12 AutoRepair>
-
+            self._pictures.check_pictures()
 
         def generate_stats(self, sex=False): # regular stats are generated first, sx stats are generated after fixations
 

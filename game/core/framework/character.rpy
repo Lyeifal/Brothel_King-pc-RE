@@ -1,6 +1,23 @@
 #### Character classes ####
 
 init -2 python:
+
+    # Phase 2.4: Lightweight data validation for from_dict() constructors
+    def _require_fields(data, *required, **typed):
+        """Validate dict has required keys and optional type-checked keys.
+
+        Raises ValueError with a clear message if validation fails.
+        Example: _require_fields(d, "name", "type", effects=list)
+        """
+        missing = [k for k in required if k not in data]
+        if missing:
+            raise ValueError("Missing required fields: %s" % ", ".join(missing))
+        for key, expected_type in typed.items():
+            if key in data and not isinstance(data[key], expected_type):
+                raise ValueError(
+                    "Field '%s' expected %s, got %s" % (key, expected_type.__name__, type(data[key]).__name__)
+                )
+
     class Stat(object):
 
         """This class is for stats (skills with a value that can be changed)."""
@@ -225,6 +242,8 @@ init -2 python:
         ## Phase 6: Data serialization
         @classmethod
         def from_dict(cls, d):
+            # Phase 2.4: Validate required fields
+            _require_fields(d, "name")
             effects = d.get("effects", [])
             if effects:
                 _builtin_dict = __import__('builtins').dict
@@ -305,6 +324,8 @@ init -2 python:
         ## Phase 6: Data serialization
         @classmethod
         def from_dict(cls, d):
+            # Phase 2.4: Validate required fields
+            _require_fields(d, "name", "type")
             effects = d.get("effects", [])
             if effects:
                 _builtin_dict = __import__('builtins').dict
