@@ -5831,6 +5831,57 @@ init -2 python:
         _get_day_off_impl = get_day_off
         _tired_check_impl = tired_check
 
+        # ── Phase 2.1: Stats delegation aliases ──
+        _generate_stats_impl = generate_stats
+        _find_stat_impl = find_stat
+        _get_stat_impl = get_stat
+        _average_stats_impl = average_stats
+        _test_stats_impl = test_stats
+        _raise_stats_impl = raise_stats
+        _can_upgrade_stat_impl = can_upgrade_stat
+        _upgrade_stat_impl = upgrade_stat
+        _get_stat_max_impl = get_stat_max
+        _get_stat_minmax_impl = get_stat_minmax
+        _stat_spillover_impl = stat_spillover
+        _change_stat_impl = change_stat
+        _set_stat_impl = set_stat
+        _average_skills_impl = average_skills
+        _get_xp_cap_impl = get_xp_cap
+        _get_jp_cap_impl = get_jp_cap
+        _get_rep_cap_impl = get_rep_cap
+        _adjust_level_impl = adjust_level
+
+        # ── Phase 2.1: Relationships delegation aliases ──
+        _get_MC_relation_impl = get_MC_relation
+        _change_relationship_impl = change_relationship
+        _get_compatibility_impl = get_compatibility
+        _update_relationships_impl = update_relationships
+        _get_friendship_impl = get_friendship
+        _get_love_impl = get_love
+        _get_fear_impl = get_fear
+        _change_love_impl = change_love
+        _change_fear_impl = change_fear
+        _meet_MC_impl = meet_MC
+        _spoil_impl = spoil
+        _terrify_impl = terrify
+        _refresh_spoil_terrify_points_impl = refresh_spoil_terrify_points
+
+        # ── Phase 2.1: Dialogue delegation aliases ──
+        _generate_personality_impl = generate_personality
+        _adjust_personality_impl = adjust_personality
+        _generate_background_impl = generate_background
+        _unlock_NGP_personality_settings_impl = unlock_NGP_personality_settings
+        _get_personality_description_impl = get_personality_description
+        _talk_tastes_impl = talk_tastes
+        _pick_dialogue_impl = pick_dialogue
+        _say_impl = say
+        _rand_say_impl = rand_say
+        _test_say_impl = test_say
+        _will_remember_impl = will_remember
+        _remembers_impl = remembers
+        _forgets_impl = forgets
+        _unlock_info_impl = unlock_info
+
 
 
 
