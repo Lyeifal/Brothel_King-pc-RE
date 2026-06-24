@@ -175,7 +175,7 @@ init -3 python:
 
             if name not in persistent.mods.keys():
                 register_mod(mod)
-                renpy.notify(mod.full_name + " has been added.")
+                renpy.notify(_("%s has been added.") % mod.full_name)
 
                 mod_traceback += "\n" + "Mod: " + name + " has been added."
 
@@ -184,7 +184,7 @@ init -3 python:
             elif mod.check_for_updates():
 #                renpy.call_screen("OK_screen", title = mod.name + ": new version found", message = "A different version of this mod: " + mod.name + " has been found ([[mod.version]]). The mod has been reset.")
                 register_mod(mod)
-                renpy.notify(mod.full_name + " has been updated.")
+                renpy.notify(_("%s has been updated.") % mod.full_name)
                 mod.active = True
                 mod_traceback += "\n" + "Mod: " + name + " has been updated."
 

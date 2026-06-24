@@ -151,7 +151,7 @@ init -2 python:
                 return False, "The " + self.name + " cannot be extended any further."
             elif self.rank >= district.rank:
                 return False, "Extending the " + self.name + " further would draw too much attention to us. Perhaps once you get a higher brothel license, we can grease a few palms and extend our operation?"
-            elif renpy.call_screen("yes_no", __("Do you really want to upgrade the ") + self.name + " for " + str(self.get_price()) + " gold?"):
+            elif renpy.call_screen("yes_no", __("Do you really want to upgrade the %s for %s gold?") % (self.name, self.get_price())):
                 MC.gold -= self.get_price()
                 self.rank += 1
                 renpy.play(s_gold, "sound")
@@ -1149,7 +1149,7 @@ init -2 python:
                 return False, "You can't expand the farm further for now. This would draw attention to us..."
             elif MC.gold < self.get_pen_cost():
                 return False, "You don't have enough gold! Stop wasting my time."
-            elif renpy.call_screen("yes_no", __("Do you really want to add a pen to the farm for ") + str(farm.get_pen_cost()) + " gold?"):
+            elif renpy.call_screen("yes_no", __("Do you really want to add a pen to the farm for %s gold?") % farm.get_pen_cost()):
                 MC.gold -= self.get_pen_cost()
                 self.pens += 1
                 renpy.play(s_gold, "sound")

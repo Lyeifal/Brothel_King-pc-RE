@@ -1,8 +1,6 @@
 ﻿# TODO: Translation updated at 2026-06-12 08:13
 
 translate chinese_simplified strings:
-    old "A long, inhumane shriek sends shivers down your spine. It came from %s, who is white with terror and on the verge of collapsing. This can't be good..."
-    new "一声凄厉的惨叫令人脊背发凉。声音来自%s，他脸色惨白，惊恐万分，几乎要崩溃。这肯定不妙……"
     old "%s has a look of sheer terror in her eyes, and she shakes uncontrollably. She moans like a wounded animal if you move even slightly towards her. You can tell that a slight push would be all it takes to send her mind over the edge now."
     new "%s眼中充满了极度的恐惧，身体不受控制地颤抖着。哪怕你只是稍微朝她靠近一点，她都会像受伤的野兽一样发出痛苦的呜咽。你能感觉到，现在只需要再轻轻推她一把，她的精神就会彻底崩溃。"
     old "%s curls and looks around herself in complete panic, her eyes wild with fear. If you insist on using your powers on her, her mind will end up breaking."
@@ -73,15 +71,21 @@ translate chinese_simplified strings:
     new "我的爱就此消逝吗？是%s"
     old "Base XP vs Difficulty: %s"
     new "基础经验值与难度：%s"
-    old "\nPerks & special effects: x%s"
+    old """
+Perks & special effects: x%s"""
     new "天赋与特殊效果：x%s"
-    old "\nJob Mod modifier: x%s"
+    old """
+Job Mod modifier: x%s"""
     new "职业修正值：x%s"
-    old "\n\nDifficulty modifier: x%s"
+    old """
+
+Difficulty modifier: x%s"""
     new "难度调整值：x%s"
     old "Base JP vs customers: %s"
     new "基础日本用户与客户对比：%s"
-    old "\nGirl rank vs Customer rank: %s\n"
+    old """
+Girl rank vs Customer rank: %s
+"""
     new "女孩排名 vs 顾客排名：%s"
     old " result: %s"
     new "结果：%s"
@@ -89,39 +93,55 @@ translate chinese_simplified strings:
     new "信誉度不改变：客户排名太低。"
     old "Reputation increase vs Customers: +%s"
     new "客户声望提升：+%s"
-    old "\nFirst customer: x%s"
+    old """
+First customer: x%s"""
     new "首位客户：x%s"
     old "Reputation decrease vs Customers: %s"
     new "客户声望下降：%s"
     old "No change."
     new "没有变化。"
-    old "Base tip: {image=img_gold}%i(Lost virginity: {image=img_gold}+100)\n"
+    old """Base tip: {image=img_gold}%i(Lost virginity: {image=img_gold}+100)
+"""
     new "基础提示：{image=img_gold}%i(失去童贞：{image=img_gold}+100)"
-    old "Base tip: {image=img_gold}%i\n"
+    old """Base tip: {image=img_gold}%i
+"""
     new "底部尖端：{image=img_gold}%i"
-    old "\nNaked bonus: x%s"
+    old """
+Naked bonus: x%s"""
     new "裸体奖励：x%s"
-    old "\nBisexual bonus: %s"
+    old """
+Bisexual bonus: %s"""
     new "双性恋加分：%s"
-    old "\nGroup bonus: x%s"
+    old """
+Group bonus: x%s"""
     new "团队加成：x%s"
-    old "\nResult bonus: x%s"
+    old """
+Result bonus: x%s"""
     new "结果加成：x%s"
-    old "\nPerks and special effects: x%s"
+    old """
+Perks and special effects: x%s"""
     new "特效和特殊效果：x%s"
-    old "\nCustomer mood avg: x%s"
+    old """
+Customer mood avg: x%s"""
     new "客人平均情绪倍率：x%s"
-    old "\nCustomer mood tip chance avg: x%s"
+    old """
+Customer mood tip chance avg: x%s"""
     new "客人情绪提示触发率平均值：x%s"
-    old "\n{i}Total modifier cannot exceed x%s{/i}"
+    old """
+{i}Total modifier cannot exceed x%s{/i}"""
     new " {i}总修饰符不能超过 x%s{/i}"
-    old "\nAct modifier: x%i"
+    old """
+Act modifier: x%i"""
     new "行动修正值：x%i"
-    old "\n\nExtra tip: {image=img_gold}%s"
+    old """
+
+Extra tip: {image=img_gold}%s"""
     new "额外提示：{image=img_gold}%s"
     old " (Five stars perk: {image=img_gold}%s"
     new " （五星级特权：{image=img_gold}%s"
-    old "\n\n= {image=img_gold}%i"
+    old """
+
+= {image=img_gold}%i"""
     new " = {image=img_gold}%i"
     old "%s is immune to getting hurt."
     new "%s 不会受伤。"
@@ -137,11 +157,14 @@ translate chinese_simplified strings:
     new "信誉：%s"
     old "%s cannot work as a whore anymore."
     new "%s 不能再做妓女了。"
-    old " : She has friends (%s).\n"
+    old """ : She has friends (%s).
+"""
     new "她有朋友（%s）。"
-    old " : She has rivals (%s).\n"
+    old """ : She has rivals (%s).
+"""
     new "她有竞争对手（%s）。"
-    old "\nShe is vulnerable to farm %ss."
+    old """
+She is vulnerable to farm %ss."""
     new "她容易受到农场%ss的影响。"
     old "You notice that %s is feeling a mix of pleasure and discomfort during %s. It seems she has ambivalent feelings about it."
     new "你注意到，%s 在 %s 期间感到既愉悦又不适。她似乎对此感到矛盾。"
@@ -149,12 +172,6 @@ translate chinese_simplified strings:
     new "你注意到 %s 似乎很喜欢 %s。"
     old "You notice that %s seems disgusted by %s."
     new "你注意到 %s 似乎对 %s 感到厌恶。"
-
-# TODO: Translation updated at 2026-06-19 02:59
-
-translate chinese_simplified strings:
-    old " is a "
-    new " 是一名"
     old "former free girl"
     new "前自由女孩"
     old "free girl"
@@ -177,10 +194,28 @@ translate chinese_simplified strings:
     new "你了解她的故事，并且为此做了一些事。"
     old "You don't know anything about her tastes."
     new "你对她的喜好一无所知。"
-
-# TODO: Translation updated at 2026-06-19 03:36
-
 translate chinese_simplified strings:
+    old """{color=[c_bad]}No profile or portrait picture could be found for the following girl: %s.{/color}
+Please rename at least one of her pictures to include the words 'profile' or 'portrait'
+(e.g.: 'profile3.webp')
+Alternatively, completely delete her directory, restart the game and then go to the Help Menu and 'Repair Girl/MC Pictures' to remove her."""
+    new "{color=[c_bad]}找不到以下女孩的个人资料或肖像照片：%s。{/color}\n请至少重命名她的一张照片，以包含“个人资料”或“肖像”字样\n（例如：“profile3.webp”）\n或者，完全删除她的目录，重新启动游戏，然后转到“帮助”菜单和“修复女孩/MC 图片”将其删除。"
     old "%s JP: %s"
     new "%s JP: %s"
+    old "%s cannot remain a whore if you deactivate all sex acts. She has been set to rest."
+    new "如果你停用了所有性行为，%s 就不能继续做妓女。她已被设置为休息。"
+    old "Label: {color=[c_red]}%s{/color} doesn't exist (Custom girl: {color=[c_red]}%s/_BK.ini{/color})."
+    new "标签：{color=[c_red]}%s{/color} 不存在（自定义女孩：{color=[c_red]}%s/_BK.ini{/color}）。"
+
+# TODO: Translation updated at 2026-06-25 01:53
+
+translate chinese_simplified strings:
+
+    # game/core/framework/girlclass.rpy:322
+    old "A long, inhumane shriek sends shivers down your spine. It came from %s, who is white with terror and on the verge of collapsing. This can't be good..."
+    new "一声漫长、非人的尖叫让你脊背发凉。它来自 %s，她吓得脸色苍白，快要崩溃了。这绝不是好事……"
+
+    # game/core/framework/girlclass.rpy:5138
+    old " is a "
+    new " 是一个 "
 

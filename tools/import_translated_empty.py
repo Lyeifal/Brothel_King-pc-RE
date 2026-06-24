@@ -166,7 +166,7 @@ def import_dialogue(dialogue_entries):
             pattern = re.compile(
                 r'(translate chinese_simplified ' + re.escape(hash_id) + r':\s*\n)'
                 r'((?:\s*\n|\s*#.*\n)*)'
-                r'(\s*(?:(\w+)\s+)?)("(?:[^"\\]|\\.)*")',
+                r'(\s*(?:(\w+(?:\s+\w+)*)\s+)?)("(?:[^"\\]|\\.)*")',
                 re.MULTILINE,
             )
 

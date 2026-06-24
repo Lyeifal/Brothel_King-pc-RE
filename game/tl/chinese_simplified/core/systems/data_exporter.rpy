@@ -9,8 +9,6 @@ translate chinese_simplified export_all_data_09e1c178:
 # TODO: Translation updated at 2026-06-12 08:13
 
 translate chinese_simplified strings:
-    old "Export trait error: %s - %s"
-    new "导出特征错误：%s - %s"
     old "Exported %s traits to %s"
     new "已将 %s 个特征导出到 %s"
     old "Export perk error: %s - %s"
@@ -35,4 +33,9 @@ translate chinese_simplified strings:
     new "导出元数据错误：%s - %s"
     old "Exported %s meta upgrades to %s"
     new "已将 %s 元数据升级导出到 %s"
+translate chinese_simplified strings:
+
+    # game/core/systems/data_exporter.rpy:39
+    old "Export trait error: %s - %s"
+    new "导出特质错误：%s - %s"
 

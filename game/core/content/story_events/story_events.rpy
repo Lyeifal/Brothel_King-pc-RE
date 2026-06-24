@@ -11212,7 +11212,7 @@ label satella_game(game_type="the guessing game"):
 
         if r <= 4:
 
-            $ renpy.say("", rand_choice(("Reaching in the dark, you grab a handful of hair. It's awfully thick and coarse.", "Reaching in the dark, your hand meets a viscous, moist surface. It feels like frog-skin. An awfully large frog.", "Reaching in the dark, you grab something that feels like a large horn. Or is that a tooth?")))
+            $ renpy.say("", rand_choice((__("Reaching in the dark, you grab a handful of hair. It's awfully thick and coarse."), __("Reaching in the dark, your hand meets a viscous, moist surface. It feels like frog-skin. An awfully large frog."), __("Reaching in the dark, you grab something that feels like a large horn. Or is that a tooth?"))))
 
             you "Sat... Satella?"
 
@@ -11354,7 +11354,7 @@ label satella_game(game_type="the guessing game"):
                         extend "\n{i}[answers]{/i}"
 
                         "Is the total above...":
-                            $ r = renpy.input("Is the number above...", default="7")
+                            $ r = renpy.input(_("Is the number above..."), default="7")
 
                             python:
                                 try:
@@ -11380,7 +11380,7 @@ label satella_game(game_type="the guessing game"):
 
 
                         "Is the total below...":
-                            $ r = renpy.input("Is the number below...", default="7")
+                            $ r = renpy.input(_("Is the number below..."), default="7")
 
                             python:
                                 try:
@@ -11454,7 +11454,7 @@ label satella_game(game_type="the guessing game"):
 
             while r == 0:
 
-                $ r = renpy.input("Guess the total of Satella's dice{i}" + answers + "{/i}")
+                $ r = renpy.input(_("Guess the total of Satella's dice{i}%s{/i}") % answers)
 
                 python:
                     try:
@@ -14642,7 +14642,7 @@ label visit_bank():
 
 
         else:
-            if renpy.call_screen("yes_no", __("Are you sure you want to take a loan for ") + str(r.amount) + " gold? (daily cost: " + str(r.daily_cost) + " gold)"):
+            if renpy.call_screen("yes_no", __("Are you sure you want to take a loan for %s gold? (daily cost: %s gold)") % (r.amount, r.daily_cost)):
                 $ MC.take_loan(r)
                 play sound s_gold
 

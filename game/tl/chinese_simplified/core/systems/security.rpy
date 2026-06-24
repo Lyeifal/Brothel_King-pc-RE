@@ -1072,7 +1072,7 @@ translate chinese_simplified kidnap_rescue_84d8f40d:
 translate chinese_simplified kidnap_rescue_608c23f3:
 
     # you "Booh."
-    you "BOOM！"
+    you "繁荣！"
 
 # game/BKsecurity.rpy:1913
 translate chinese_simplified kidnap_rescue_e0fc9b8b:
@@ -1251,8 +1251,6 @@ translate chinese_simplified girl_come_back_e964c4d3:
 # TODO: Translation updated at 2026-06-12 05:03
 
 translate chinese_simplified strings:
-    old "Challenge their leader (use Strength to attack the [enemy_g])"
-    new "挑战他们的首领（使用力量攻击[enemy_g]）"
     old "Challenge their leader (use Spirit to attack the [enemy_g])"
     new "挑战他们的首领（使用精神攻击[enemy_g]）"
     old "Intercept their leader (use Strength to attack the [enemy_g])"
@@ -1271,4 +1269,21 @@ translate chinese_simplified strings:
     new "你们妓院没有足够的空间迎接[girl.fullname]回到这里。"
     old "[girl.fullname] returns today. You do not have enough room to welcome her back to the brothel."
     new "[girl.fullname]今天回来了。你的妓院没有足够的空间迎接她回来。"
+    old "Fire rains down on your troops, wounding [damage]."
+    new "火焰如雨般落在你的部队上，击伤了 [damage] 人。"
+    old "Cannonballs mow down [damage] of your security guards."
+    new "炮弹扫倒了 [damage] 名保安。"
+    old "A huge stone crashes among your troops, wounding [damage]."
+    new "一块巨石砸入你的部队，击伤了 [damage] 人。"
+    old "%s picture missing: %s"
+    new "%s 图片缺失：%s"
+translate chinese_simplified strings:
+
+    # game/core/systems/security.rpy:397
+    old "Challenge their leader (use Strength to attack the [enemy_g])"
+    new "挑战他们的首领（使用力量攻击 [enemy_g]）"
+
+    # game/core/systems/security.rpy:513
+    old "Shrapnel bursts among your troops, wounding [damage] of them."
+    new "弹片在你的部队中炸开，伤及 [damage] 人。"
 

@@ -2404,7 +2404,7 @@ translate chinese_simplified c1_sewers_608e50f0:
 translate chinese_simplified c1_sewers_0f37c3fc:
 
     # sewer_woman "Ngggh!"
-    sewer_woman "Ngggh!"
+    sewer_woman "呃！"
 
 # game/BKchapter1.rpy:1529
 translate chinese_simplified c1_sewers_f84cb265:
@@ -2422,7 +2422,7 @@ translate chinese_simplified c1_sewers_f94b9aa2:
 translate chinese_simplified c1_sewers_a8d8b907:
 
     # sewer_woman "Mmmmmngh!"
-    sewer_woman "Mmmmmngh!"
+    sewer_woman "嗯嗯！"
 
 # game/BKchapter1.rpy:1535
 translate chinese_simplified c1_sewers_6c3eb268:
@@ -2446,7 +2446,7 @@ translate chinese_simplified c1_sewers_902193ee:
 translate chinese_simplified c1_sewers_82f51304:
 
     # sewer_woman "Nnnnnghhh!"
-    sewer_woman "Nnnnnghhh!"
+    sewer_woman "嗯嗯嗯！"
 
 # game/BKchapter1.rpy:1545
 translate chinese_simplified c1_sewers_47c58fa1:
@@ -2458,7 +2458,7 @@ translate chinese_simplified c1_sewers_47c58fa1:
 translate chinese_simplified c1_sewers_8d1ad97b:
 
     # sewer_woman "Hhhhpp mmmh!!!"
-    sewer_woman "Hhhhpp mmmh!!!"
+    sewer_woman "哈哈哈哈哈哈！！！"
 
 # game/BKchapter1.rpy:1551
 translate chinese_simplified c1_sewers_2b8c03d5:
@@ -2716,7 +2716,7 @@ translate chinese_simplified c1_sewers_40a5ff55:
 translate chinese_simplified c1_sewers_08c13cc0:
 
     # woman "Nhhhh!!!"
-    woman "Nhhhh!!!"
+    woman "嗯嗯！！！"
 
 # game/BKchapter1.rpy:1753
 translate chinese_simplified c1_sewers_39ae9921:
@@ -2746,7 +2746,7 @@ translate chinese_simplified c1_sewers_43ae5a7a:
 translate chinese_simplified c1_sewers_ff6d5c47:
 
     # sewer_woman "NGHH!!!"
-    sewer_woman "NGHH!!!"
+    sewer_woman "呃！！！"
 
 # game/BKchapter1.rpy:1767
 translate chinese_simplified c1_sewers_4b06914c:
@@ -2806,7 +2806,7 @@ translate chinese_simplified c1_sewers_2132d031:
 translate chinese_simplified c1_sewers_8df4797f:
 
     # sewer_woman "NGHHH! NGGGGGHHH!!!"
-    sewer_woman "NGHHH! NGGGGGHHH!!!"
+    sewer_woman "呃呃！呜呜呜！！！"
 
 # game/BKchapter1.rpy:1807
 translate chinese_simplified c1_sewers_2fb34122:
@@ -9274,7 +9274,7 @@ translate chinese_simplified c1_captain_meeting_3e40f82f:
 translate chinese_simplified c1_captain_meeting_6964c6e6:
 
     # captain "........."
-    captain "........."
+    captain "…………"
 
 # game/BKchapter1.rpy:4969
 translate chinese_simplified c1_captain_meeting_c2cebc67:
@@ -11410,7 +11410,7 @@ translate chinese_simplified c1_ending_maya_3d3a555d:
 translate chinese_simplified c1_ending_maya_7bffb1bd:
 
     # roz "[MC.name]!"
-    roz "[MC.name]!"
+    roz "[MC.name]！"
 
 # game/BKchapter1.rpy:6104
 translate chinese_simplified c1_ending_maya_0e3a1bef:
@@ -13677,8 +13677,6 @@ translate chinese_simplified c1_judge_fate_4d86a6bc:
 # TODO: Translation updated at 2026-06-12 05:03
 
 translate chinese_simplified strings:
-    old "SKIP (debug)"
-    new "跳过（调试）"
     old "What will you do first?"
     new "你首先会做什么？"
     old "Visit Maya"
@@ -13695,16 +13693,19 @@ translate chinese_simplified strings:
     new "用咒语催眠她"
     old "You had your own reasons."
     new "你肯定有你自己的理由。"
-
-# TODO: Translation updated at 2026-06-19 05:43
-
-translate chinese_simplified strings:
-    old "Kosmo"
-    new "科斯莫"
     old "Sergeant"
     new "中士"
     old "Cpt. Maya"
     new "玛雅队长"
     old "Cpt. Lydie"
     new "莉迪队长"
+translate chinese_simplified strings:
+
+    # game/core/content/main_story/chapter1/chapter1.rpy:113
+    old "SKIP (debug)"
+    new "跳过（调试）"
+
+    # game/core/content/main_story/chapter1/chapter1.rpy:157
+    old "Kosmo"
+    new "科斯莫"
 

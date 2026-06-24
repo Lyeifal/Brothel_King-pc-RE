@@ -716,7 +716,7 @@ init -2 python:
                 target_level = self.master_bedroom.level + 1
 
             if MC.has_gold(master_bedrooms[target_level].cost):
-                if renpy.call_screen("yes_no", __("Are you sure you want to upgrade your room for ") + str(master_bedrooms[target_level].cost) + " gold?"):
+                if renpy.call_screen("yes_no", __("Are you sure you want to upgrade your room for %s gold?") % master_bedrooms[target_level].cost):
                     renpy.play(s_gold, "sound")
                     MC.gold -= master_bedrooms[target_level].cost
                     self.total_value += master_bedrooms[target_level].cost

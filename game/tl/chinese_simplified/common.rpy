@@ -230,13 +230,11 @@ translate chinese_simplified strings:
     old "Are you sure you want to overwrite your save?"
     new "你确定要覆盖你的存档吗？"
     old "Loading will lose unsaved progress.\nAre you sure you want to do this?"
-    new """读取将丢失未保存的进度。
-你确定要这样做吗？"""
+    new "读取将丢失未保存的进度。\n你确定要这样做吗？"
     old "Are you sure you want to quit?"
     new "你确定要退出吗？"
     old "Are you sure you want to return to the main menu?\nThis will lose unsaved progress."
-    new """你确定要返回主菜单吗？
-这将丢失未保存的进度。"""
+    new "你确定要返回主菜单吗？\n这将丢失未保存的进度。"
     old "Are you sure you want to continue where you left off?"
     new "你确定要从上次离开的地方继续吗？"
     old "Are you sure you want to end the replay?"
@@ -398,8 +396,7 @@ translate chinese_simplified strings:
     old "The Ren'Py Sync server does not have a copy of this sync. The sync ID may be invalid, or it may have timed out."
     new "Ren'Py 同步服务器没有此同步的副本。同步 ID 可能无效，或可能已超时。"
     old "Please enter the sync ID you generated.\nNever enter a sync ID you didn't create yourself."
-    new """请输入你生成的同步 ID。
-切勿输入非你自己创建的同步 ID。"""
+    new "请输入你生成的同步 ID。\n永远不要输入不是你自己创建的同步 ID。"
     old "The sync ID is not in the correct format."
     new "同步 ID 格式不正确。"
     old "The sync could not be decrypted."
@@ -409,8 +406,8 @@ translate chinese_simplified strings:
     old "The sync contains a file with an invalid name."
     new "同步包含文件名无效的文件。"
     old "This will upload your saves to the {a=https://sync.renpy.org}Ren'Py Sync Server{/a}.\nDo you want to continue?"
-    new """这将把您的存档上传到{a=https://sync.renpy.org}Ren'Py 同步服务器{/a}。
-你要继续吗？"""
+    new """这将把你的存档上传到 {a=https://sync.renpy.org}Ren'Py 同步服务器{/a}。
+你想继续吗？"""
     old "Enter Sync ID"
     new "输入同步 ID"
     old "This will contact the {a=https://sync.renpy.org}Ren'Py Sync Server{/a}."
@@ -422,12 +419,11 @@ translate chinese_simplified strings:
     old "You can use this ID to download your save on another device.\nThis sync will expire in an hour.\nRen'Py Sync is supported by {a=https://www.renpy.org/sponsors.html}Ren'Py's Sponsors{/a}."
     new """你可以使用此 ID 在另一台设备上下载你的存档。
 此同步将在一小时后过期。
-Ren'Py 同步由{a=https://www.renpy.org/sponsors.html}Ren'Py 的赞助商{/a}提供支持。"""
+Ren'Py 同步由 {a=https://www.renpy.org/sponsors.html}Ren'Py 的赞助商{/a} 提供支持。"""
     old "Sync Error"
     new "同步错误"
     old "Contacting App Store\nPlease Wait..."
-    new """正在连接应用商店
-请稍候..."""
+    new "正在连接应用商店\n请稍候..."
     old "No update methods found."
     new "未找到更新方法。"
     old "Could not download file list: "

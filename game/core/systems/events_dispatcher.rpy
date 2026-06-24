@@ -802,7 +802,7 @@ label advance_to_chapter(chapter, silent=False, free=False, start=False): # All 
             sill "Do you want to rename your brothel for the occasion?"
 
             "Yes":
-                $ brothel.name = renpy.input("Change name:", default = brothel.name, length = 40)
+                $ brothel.name = renpy.input(_("Change name:"), default = brothel.name, length = 40)
             "No":
                 pass
 
@@ -4696,7 +4696,7 @@ label farm_resisted_menu:
             "Do not warn me about training problems anymore (switch to notifications)":
                 gizel angry "Are you sure? This means you won't see my pretty porcelain-white ass blast through your door every other morning?"
 
-                if renpy.call_screen("yes_no", __("Are you sure you want to replace Gizel events with notifications?"), "Get rid of that bitch", "On second thought..."):
+                if renpy.call_screen("yes_no", __("Are you sure you want to replace Gizel events with notifications?"), __("Get rid of that bitch"), __("On second thought...")):
                     # Disables Gizel 'resisted' events
                     $ NPC_gizel.flags[("no events", "all")] = True
                     "Gizel warnings will now display as notifications."
@@ -4851,12 +4851,12 @@ label exit_farm(girl, reason):
                 for act in extended_sex_acts:
                     if not girl.will_do_farm_act(act, prog.mode):
                         resist = True
-                        renpy.say(gizel, MC.name + ", I have trained " + girl.fullname + " as far as I could, but there are things she refuses to do. Perhaps if you allowed me to go {i}really{/i} hard on her...")
+                        renpy.say(gizel, __("%s, I have trained %s as far as I could, but there are things she refuses to do. Perhaps if you allowed me to go {i}really{/i} hard on her...") % (MC.name, girl.fullname))
                         break
                 else:
                     prep = {"indifferent" : " to", "interested" : " by", "fascinated" : " with"}[prog.condition]
                     resist = False
-                    renpy.say(gizel, MC.name + ", I brought you "+ girl.fullname + " back. You asked me to train her until she was " + prog.condition + prep + " with all sex acts, well, there she is.")
+                    renpy.say(gizel, __("%s, I brought you %s back. You asked me to train her until she was %s%s with all sex acts, well, there she is.") % (MC.name, girl.fullname, prog.condition, prep))
 
         menu:
             gizel "Would you like to have her back?"
@@ -5346,7 +5346,7 @@ label run_contract():
         # sanity check
         if not isinstance(girls[0], Girl):
             pass
-        elif renpy.call_screen("yes_no", __("Are you sure you want to send ") + and_text([g.fullname for g in girls]) + " to complete this contract?"):
+        elif renpy.call_screen("yes_no", __("Are you sure you want to send %s to complete this contract?") % and_text([g.fullname for g in girls])):
             jump run_contract_continue
 
     # Contract introduction

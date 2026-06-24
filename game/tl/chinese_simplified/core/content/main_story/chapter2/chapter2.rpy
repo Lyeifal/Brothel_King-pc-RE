@@ -40,7 +40,7 @@ translate chinese_simplified sewer_girl_returns_84344522:
 translate chinese_simplified sewer_girl_returns_0f37c3fc:
 
     # sewer_woman "Ngggh!"
-    sewer_woman "Ngggh!"
+    sewer_woman "呃！"
 
 # game/BKchapter2.rpy:49
 translate chinese_simplified sewer_girl_returns_f84cb265:
@@ -52,7 +52,7 @@ translate chinese_simplified sewer_girl_returns_f84cb265:
 translate chinese_simplified sewer_girl_returns_a8d8b907:
 
     # sewer_woman "Mmmmmngh!"
-    sewer_woman "Mmmmmngh!"
+    sewer_woman "嗯嗯！"
 
 # game/BKchapter2.rpy:59
 translate chinese_simplified sewer_girl_returns_8edddd02:
@@ -6508,7 +6508,7 @@ translate chinese_simplified c2_suzume_forest2_e9dc93b2:
 translate chinese_simplified c2_suzume_forest2_5eb0631b:
 
     # suzume "ZZZZ..."
-    suzume "ZZZZ..."
+    suzume "兹兹兹..."
 
 # game/BKchapter2.rpy:3529
 translate chinese_simplified c2_suzume_forest2_1016d245:
@@ -6520,7 +6520,7 @@ translate chinese_simplified c2_suzume_forest2_1016d245:
 translate chinese_simplified c2_suzume_forest2_03aeb058:
 
     # suzume "ZZZZZZZ..."
-    suzume "ZZZZZZZ..."
+    suzume "呜呜呜……"
 
 # game/BKchapter2.rpy:3533
 translate chinese_simplified c2_suzume_forest2_68339f45:
@@ -7258,7 +7258,7 @@ translate chinese_simplified c2_suzume_brothel_0d890e4d:
 translate chinese_simplified c2_suzume_brothel_5972564c:
 
     # you "UUUUAAAAAAAH..."
-    you "UUUUAAAAAAAH..."
+    you "呜呜啊啊啊啊……"
 
 # game/BKchapter2.rpy:3851
 translate chinese_simplified c2_suzume_brothel_89db9d55:
@@ -15946,7 +15946,7 @@ translate chinese_simplified intercept_haruka_d6cbced2:
 translate chinese_simplified intercept_haruka_4eed5cbd:
 
     # man "Muhahahaha!"
-    man "Muhahahaha!"
+    man "哈哈哈哈！"
 
 # game/BKchapter2.rpy:8108
 translate chinese_simplified intercept_haruka_b56de356:
@@ -16276,7 +16276,7 @@ translate chinese_simplified intercept_haruka_d538a1d5:
 translate chinese_simplified intercept_haruka_842f91e5:
 
     # suzume "[MC.name]!"
-    suzume "[MC.name]!"
+    suzume "[MC.name]！"
 
 # game/BKchapter2.rpy:8248
 translate chinese_simplified intercept_haruka_fd9659ef:
@@ -17920,7 +17920,7 @@ translate chinese_simplified c2_homura_okiya2_8a27886a:
 translate chinese_simplified c2_homura_okiya2_c7325e74:
 
     # homura "Say, [MC.name]?"
-    homura "[MC.name]?"
+    homura "[MC.name]？"
 
 # game/BKchapter2.rpy:9028
 translate chinese_simplified c2_homura_okiya2_b9f03b8c:
@@ -22294,7 +22294,7 @@ translate chinese_simplified homura_sex_a90008fb:
 translate chinese_simplified homura_sex_e057a997:
 
     # homura "Zzzz..."
-    homura "Zzzz..."
+    homura "兹兹..."
 
 # game/BKchapter2.rpy:11009
 translate chinese_simplified homura_sex_275b4c6c:
@@ -22755,8 +22755,6 @@ translate chinese_simplified homura_bj_5285c564:
 # TODO: Translation updated at 2026-06-12 05:03
 
 translate chinese_simplified strings:
-    old "I want both (Charisma test: [diff])"
-    new "我两个都要（魅力检定：[diff]）"
     old "See Chapter 2 intro?"
     new "请参阅第二章引言？"
     old "Whose fault is this?"
@@ -22813,10 +22811,8 @@ translate chinese_simplified strings:
     new "宫廷工作人员"
     old "About your boyfriend"
     new "关于你的男朋友"
-
-# TODO: Translation updated at 2026-06-19 03:36
-
-# game/core/content/main_story/chapter2/chapter2.rpy:379
+    old "t"
+    new "t"
 translate chinese_simplified c2_intro_f07da722:
 
     # "Not letting Sill's whining spoil your mood, you watch with satisfaction as you leave the slums behind and enter the bustling streets of Zan's popular neighborhoods, stepping into [_district_name]."
@@ -22836,15 +22832,21 @@ translate chinese_simplified c2_homura_city_meet_4481756f:
 
 # TODO: Translation updated at 2026-06-19 04:19
 
-translate chinese_simplified strings:
-    old "Meeting request"
-    new "会面请求"
 
-# TODO: Translation updated at 2026-06-19 05:43
+
+# TODO: Translation updated at 2026-06-25 01:53
 
 translate chinese_simplified strings:
+
+    # game/core/content/main_story/chapter2/chapter2.rpy:91
+    old "I want both (Charisma test: [diff])"
+    new "我两个都要（魅力检定：[diff]）"
+
+    # game/core/content/main_story/chapter2/chapter2.rpy:2258
     old "Uesugi"
     new "上杉"
-    old "t"
-    new "t"
+
+    # game/core/content/main_story/chapter2/chapter2.rpy:8432
+    old "Meeting request"
+    new "会面请求"
 

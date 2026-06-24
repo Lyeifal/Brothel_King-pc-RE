@@ -19,8 +19,6 @@ translate chinese_simplified select_scenario_8f893736:
     "EN: 为剧本模式展示剧本选择。如果没有安装剧本则回退到沙盒模式。"
 
 translate chinese_simplified strings:
-    old "Choose a starting mode"
-    new "选择启动模式"
     old "Export hardcoded data to JSON (Evolution)"
     new "将硬编码数据导出为 JSON（Evolution）"
     old "Would you like to see the intro?"
@@ -39,10 +37,18 @@ translate chinese_simplified strings:
     new "主教座堂是神圣的中心……"
     old "This is the center of power in Zan..."
     new "这里是赞恩的权力中心……"
+translate chinese_simplified init_game_38728340:
 
-# TODO: Translation updated at 2026-06-12 08:13
+    # centered "Loading...{nw}"
+    centered ""
 
 translate chinese_simplified strings:
+
+    # game/core/init/start.rpy:39
+    old "Choose a starting mode"
+    new "选择起始模式"
+
+    # game/core/init/start.rpy:60
     old "Data export completed. Restart game to see changes."
-    new "数据导出完成。重启游戏即可查看更改。"
+    new "数据导出完成。重启游戏以查看更改。"
 

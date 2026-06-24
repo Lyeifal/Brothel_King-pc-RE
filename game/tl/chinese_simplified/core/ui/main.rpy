@@ -489,8 +489,6 @@ translate chinese_simplified postings_75b55ded:
 # TODO: Translation updated at 2026-06-12 05:03
 
 translate chinese_simplified strings:
-    old "Choose what to do"
-    new "选择做什么"
     old "Do you want to invert her first and last name?"
     new "你想把她的名字和姓氏颠倒过来吗？"
     old "Work as a waitress"
@@ -503,12 +501,6 @@ translate chinese_simplified strings:
     new "做艺伎"
     old "Ask [girl.name] to work and whore at the same time?"
     new "让[girl.name]同时工作和卖淫？"
-
-# TODO: Translation updated at 2026-06-12 05:58
-
-translate chinese_simplified strings:
-    old "Go and see what all this hoopla about contracts is about?"
-    new "去看看大家对合同的种种议论到底是怎么回事？"
     old "Skip buying a slave and come back later to try out the headhunting discount?"
     new "先别买奴隶，过段时间再来试试猎头折扣？"
     old "Warning! All customer populations have been set to zero. If that happens, only {b}beggars{/b} will come tonight. Are you sure you want to proceed?"
@@ -527,12 +519,6 @@ translate chinese_simplified strings:
     new "商家不会回购这件商品。你想免费处理掉[it.name]吗？"
     old "Are you sure you want to upgrade this shop for %s %s?"
     new "您确定要将这家商店升级到 %s %s 吗？"
-
-# TODO: Translation updated at 2026-06-12 08:13
-
-translate chinese_simplified strings:
-    old "While exploring the city, you found something useful."
-    new "在游览城市的过程中，你发现了一些有用的东西。"
     old "Your %s%s earned XP."
     new "你的 %s%s 获得了 XP。"
     old "%s is away and cannot be assigned a new job at the moment."
@@ -547,12 +533,35 @@ translate chinese_simplified strings:
     new "您已装备 %s。"
     old "%s has equipped the %s."
     new "%s 已配备 %s。"
-
-# TODO: Translation updated at 2026-06-19 04:19
-
-translate chinese_simplified strings:
-    old "%s has lost %s."
-    new "%s 失去了 %s。"
     old "No items were found in other girls' inventories."
     new "在其他女孩的物品栏中没有找到物品。"
+    old "Do you want to change her last name?"
+    new "你想改她的姓吗？"
+    old "%s is now a level %i %s."
+    new "%s现在是%i级的%s了。"
+    old "Are you sure you want to unlock {b}%s{/b} zodiac for 2 perk points?"
+    new "你确定要花费2点天赋点解锁{b}%s{/b}星座吗？"
+    old "Do you want to change your name?"
+    new "你想改名字吗？"
+translate chinese_simplified strings:
+
+    # game/core/ui/main.rpy:69
+    old "Go and see what all this hoopla about contracts is about?"
+    new "去看看这些关于合同的喧闹是怎么回事？"
+
+    # game/core/ui/main.rpy:295
+    old "While exploring the city, you found something useful."
+    new "在探索城市时，你找到了有用的东西。"
+
+    # game/core/ui/main.rpy:389
+    old "Choose what to do"
+    new "选择要做什么"
+
+    # game/core/ui/main.rpy:594
+    old "Do you want to change her first name?"
+    new "你想改变她的名吗？"
+
+    # game/core/ui/main.rpy:860
+    old "%s has lost %s."
+    new "%s 失去了 %s。"
 

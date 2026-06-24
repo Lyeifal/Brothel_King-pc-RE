@@ -1,6 +1,22 @@
 ﻿# TODO: Translation updated at 2026-06-12 05:03
 
 translate chinese_simplified strings:
+    old "E: [girl.energy]"
+    new "E: [girl.energy]"
+    old "[selected_girl.job]"
+    new "[selected_girl.job]"
+    old "Mood: [selected_girl.mood]"
+    new "心情：[selected_girl.mood]"
+    old "Energy: [selected_girl.energy]"
+    new "能量：[selected_girl.energy]"
+translate chinese_simplified strings:
+
+    old "M: [girl.mood]"
+    new "心情：[girl.mood]"
+
+# TODO: Translation updated at 2026-06-25 03:14
+
+translate chinese_simplified strings:
 
     # game/core/systems/courtyard/screen_courtyard.rpy:27
     old "别院"
@@ -45,18 +61,4 @@ translate chinese_simplified strings:
     # game/core/systems/courtyard/screen_courtyard.rpy:227
     old "最高等级"
     new "最高等级"
-
-# TODO: Translation updated at 2026-06-12 08:13
-
-translate chinese_simplified strings:
-    old "M: [girl.mood]"
-    new "M：[girl.mood]"
-    old "E: [girl.energy]"
-    new "E: [girl.energy]"
-    old "[selected_girl.job]"
-    new "[selected_girl.job]"
-    old "Mood: [selected_girl.mood]"
-    new "心情：[selected_girl.mood]"
-    old "Energy: [selected_girl.energy]"
-    new "能量：[selected_girl.energy]"
 

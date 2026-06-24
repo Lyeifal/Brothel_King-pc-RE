@@ -705,8 +705,6 @@ translate chinese_simplified powers_intro_9bf1152d:
 # TODO: Translation updated at 2026-06-12 08:13
 
 translate chinese_simplified strings:
-    old "%s is already active"
-    new "%s 已激活"
     old "%s is now active for %i day%s."
     new "%s 已激活 %i 天%s。"
     old "You cannot draw any more powers this week."
@@ -727,12 +725,15 @@ translate chinese_simplified strings:
     new "%s 获得了 XP。"
     old "She was hurt in the process (for %i day%s)."
     new "她在此过程中受伤了（持续%i天%s）。"
-
-# TODO: Translation updated at 2026-06-19 04:19
-
-translate chinese_simplified strings:
-    old "All girls: Libido and Obedience increased"
-    new "所有女孩：性欲和服从增加"
     old "All girls: Fear increased"
     new "所有女孩：恐惧增加"
+translate chinese_simplified strings:
+
+    # game/core/systems/powers.rpy:119
+    old "%s is already active"
+    new "%s 已经激活"
+
+    # game/core/systems/powers.rpy:490
+    old "All girls: Libido and Obedience increased"
+    new "所有女孩：性欲和服从提升"
 

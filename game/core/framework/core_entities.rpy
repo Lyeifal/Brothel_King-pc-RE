@@ -208,11 +208,11 @@ init -2 python:
             for mod in list(self.active_mods.values()):
 
                 if mod.name not in detected_mods.keys():
-                    if renpy.call_screen("yes_no", mod.full_name + " couldn't be found. Would you like to deactivate this mod for this game (recommended)?"):
+                    if renpy.call_screen("yes_no", __("%s couldn't be found. Would you like to deactivate this mod for this game (recommended)?") % mod.full_name):
                         self.deactivate_mod(mod)
 
                 elif mod.check_for_updates():
-                    renpy.say("Mod Update", __("A different version of mod: %s has been found (%s).") % (mod.name, str(mod.version)))
+                    renpy.say(__("Mod Update"), __("A different version of mod: %s has been found (%s).") % (mod.name, str(mod.version)))
 
                     if not hasattr(mod, "update_label"): # Fix for older games
                         mod.update_label = ""
@@ -225,7 +225,7 @@ init -2 python:
                         self.activate_mod(detected_mods[mod.name])
 
                 elif not persistent.mods[mod.name]["active"]:
-                    if renpy.call_screen("yes_no", mod.full_name + " has been deactivated. Would you like to deactivate this mod for this game?"):
+                    if renpy.call_screen("yes_no", __("%s has been deactivated. Would you like to deactivate this mod for this game?") % mod.full_name):
                         self.deactivate_mod(mod)
 
             # Checks if a new mod has been activated
@@ -233,7 +233,7 @@ init -2 python:
             for name, mod in list(detected_mods.items()):
                 if mod.active:
                     if name not in self.active_mods.keys():
-                        if renpy.call_screen("yes_no", __("A new mod has been activated: ") + mod.full_name + ". Would you like to activate this mod for this game?"):
+                        if renpy.call_screen("yes_no", __("A new mod has been activated: %s. Would you like to activate this mod for this game?") % mod.full_name):
                             self.activate_mod(mod)
 
             updated_games[self] = True # To do: Check if it works or needs a function
@@ -278,7 +278,7 @@ init -2 python:
             try:
                 del self.active_mods[mod.name]
             except:
-                renpy.say("System", event_color["bad"] % ("Failure to deactivate " + mod.name))
+                renpy.say(__("System"), event_color["bad"] % __("Failure to deactivate %s") % mod.name)
 
             # Phase 6: Unregister mod hooks
             hook_manager.unregister_mod(mod)
@@ -734,7 +734,7 @@ init -2 python:
         def repay_in_full(self):
             if self.loan:
                 if self.gold >= self.loan.amount:
-                    if renpy.call_screen("yes_no", __("Are you sure you want to repay your loan in full for ") + str(self.loan.amount) + " gold?"):
+                    if renpy.call_screen("yes_no", __("Are you sure you want to repay your loan in full for %s gold?") % self.loan.amount):
                         self.gold -= self.loan.amount
                         self.loan = None
                         return True
@@ -2084,7 +2084,7 @@ init -2 python:
             if not filter_text:
                 self.filtered_report = self.report
             else:
-                renpy.notify("filtering")
+                renpy.notify(_("filtering"))
                 report_lines = self.report.splitlines()
                 filtered_report_lines = [line for line in report_lines if filter_text.lower() in line.lower()]
                 self.filtered_report = "\n".join(filtered_report_lines)

@@ -1,8 +1,6 @@
 ﻿# TODO: Translation updated at 2026-06-12 08:13
 
 translate chinese_simplified strings:
-    old "Register %s for the selected class."
-    new "为所选课程注册 %s。"
     old "Your girl's skills are too high to learn anything from this class."
     new "你女儿的水平太高了，这门课对她来说什么都学不到。"
     old "You do not have enough money to register a girl for this class."
@@ -15,12 +13,6 @@ translate chinese_simplified strings:
     new "你不能训练%s，因为她受伤了。"
     old "Training is disabled due to NewGame+ challenge"
     new "由于新游戏+挑战，训练功能已禁用。"
-
-# TODO: Translation updated at 2026-06-19 05:43
-
-translate chinese_simplified strings:
-    old "You do not have enough interactions left for advanced training."
-    new "你剩下的互动次数不足以进行高级训练。"
     old "The master bedroom is already full."
     new "主卧已经满员了。"
     old "You have no interactions left for today."
@@ -41,4 +33,13 @@ translate chinese_simplified strings:
     new "你每天不能对一名女孩%s超过3次。"
     old "In free-form training, you will be able to switch between different sex acts she is comfortable with. Only the {b}last chosen sex act{/b} will actually be trained."
     new "在自由训练中，你可以在她接受的性行为之间切换。只有{b}最后选择的性行为{/b}会被真正训练。"
+translate chinese_simplified strings:
+
+    # game/core/framework/interactions.rpy:436
+    old "Register %s for the selected class."
+    new "将 %s 注册到选定的职业。"
+
+    # game/core/framework/interactions.rpy:800
+    old "You do not have enough interactions left for advanced training."
+    new "你剩下的互动次数不足以进行高级训练。"
 

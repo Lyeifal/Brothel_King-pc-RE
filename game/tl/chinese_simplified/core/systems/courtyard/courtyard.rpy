@@ -1,8 +1,6 @@
 ﻿# TODO: Translation updated at 2026-06-12 05:03
 
 translate chinese_simplified strings:
-    old "Already at max level."
-    new "已达到最高等级。"
     old "Not enough gold."
     new "黄金不够。"
     old "Upgraded to level [self.upgrade_level]."
@@ -15,4 +13,9 @@ translate chinese_simplified strings:
     new "妓院已达到最大工作容量（24）。"
     old "[girl.name] has returned to the brothel."
     new "[girl.name] 又回到了妓院。"
+translate chinese_simplified strings:
+
+    # game/core/systems/courtyard/courtyard.rpy:50
+    old "Already at max level."
+    new "已达到最高等级。"
 

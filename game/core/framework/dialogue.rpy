@@ -290,10 +290,10 @@ init -3 python:
         return defaultdict(list)
 
     def add_mix():
-        new_mix = renpy.input("Enter the name of the mix you want to create")
+        new_mix = renpy.input(_("Enter the name of the mix you want to create"))
 
         if new_mix in (persistent.girl_mix.keys()):
-            renpy.notify("{color=[c_red]}[new_mix] already exists.{/color}")
+            renpy.notify(_("{color=[c_red]}%s already exists.{/color}") % new_mix)
         else:
             persistent.girl_mix[new_mix] = []
             persistent.active_mix = new_mix

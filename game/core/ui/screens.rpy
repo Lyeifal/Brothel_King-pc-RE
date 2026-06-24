@@ -889,7 +889,7 @@ screen girl_pick_badge(girl):
                         tooltip _("Pick this badge")
                     add ProportionalScale(badge_pics[i], *res_tb(60)) xalign 0.5 yalign 0.5
 
-        text "\nYou can add your own badges in the UI/Badges folder (restart required)." italic True size res_font(12) xalign 0.5 color c_darkorange
+        text _("\nYou can add your own badges in the UI/Badges folder (restart required).") italic True size res_font(12) xalign 0.5 color c_darkorange
 
 
 screen badge_button(girl, _size, t_size=20, active=True): # Where badge is a file name or ""
@@ -1551,7 +1551,7 @@ screen girl_profile(girl, context = None): # context can be girls, slavemarket, 
                 if context == "slavemarket" or persistent.show_girlpack_rating=="Everywhere":
                     $ rating, ttip = get_girlpack_rating(girl)
 
-                    textbutton "Girl rating (" + capitalize(girl.path.split("/")[-1]) + "): " + rating background c_ui_darkblue text_size res_font(18) yalign 1.0 xmargin 10 ymargin 10 action NullAction() tooltip ttip
+                    textbutton _("Girl rating (%s): %s") % (capitalize(girl.path.split("/")[-1]), rating) background c_ui_darkblue text_size res_font(18) yalign 1.0 xmargin 10 ymargin 10 action NullAction() tooltip ttip
 
 
 screen stat_bar(base_value, bonus, max_skill=100, max_cap=None, separator=50, bar_color=c_darkorange, pos_color=c_emerald, neg_color=c_crimson, color_scale=False): # All purpose stat bar, can be recolored
@@ -2832,7 +2832,7 @@ screen button_overlay(girl, context="girls"):
                 key "K_BACKSPACE" action Return(("sell", girl))
 
             if story_flags["farm shows"] == True:
-                textbutton "{u}F{/u}arm show (%i%%)" % girl.get_build_up() text_size res_font(14):
+                textbutton _("{u}F{/u}arm show (%i%%)") % girl.get_build_up() text_size res_font(14):
                     if girl.get_build_up() >= 100:
                         action Return(("show", girl))
                     else:
@@ -4236,7 +4236,7 @@ screen visit_location():
 
                                 $ rating, ttip = get_girlpack_rating(girl)
 
-                                textbutton "Girl rating (" + capitalize(girl.path.split("/")[-1]) + "): " + rating background c_ui_darkblue text_size res_font(18) yalign 1.0 xmargin 10 ymargin 10 action NullAction() tooltip ttip
+                                textbutton _("Girl rating (%s): %s") % (capitalize(girl.path.split("/")[-1]), rating) background c_ui_darkblue text_size res_font(18) yalign 1.0 xmargin 10 ymargin 10 action NullAction() tooltip ttip
 
         text ""
         text ""
@@ -4518,7 +4518,7 @@ screen brothel():
 
                             vbox spacing 6 xsize xres(180):
                                 text _("Estimated customers") size res_font(14)
-                                textbutton "{image=img_cust} %i" % brothel.customer_count style "inv_no_padding" action NullAction() tooltip brothel.count_customers_description()
+                                textbutton _("{image=img_cust} %i") % brothel.customer_count style "inv_no_padding" action NullAction() tooltip brothel.count_customers_description()
 
                             vbox spacing 6 xsize xres(150):
                                 text _("Threat level") size res_font(14)
@@ -4853,7 +4853,7 @@ screen brothel_options():
                                         hbox spacing 6 xalign 0.0:
                                             bar thumb Frame("tb empty", xsize=xres(9), ysize=yres(18)) xsize xres(100) ysize yres(18) yalign 0.0 value FieldValue(pop, "weight", 5, action=Function(brothel.update_customer_count))
                                             text attract_pop_dict[pop.weight] color c_brown size res_font(14) yalign 1.0
-                                        textbutton "Average budget: %s gold" % total_budget xalign 0.0 yalign 1.0 xmargin 0 xpadding 0 ymargin 0 ypadding 0 background None text_color c_prune text_size res_font(14) action NullAction() tooltip "This is the average {b}maximum budget{/b} for %s. (%s for entertainment, %s for whoring)" % (pop.name, ent_budget, wh_budget)
+                                        textbutton _("Average budget: %s gold") % total_budget xalign 0.0 yalign 1.0 xmargin 0 xpadding 0 ymargin 0 ypadding 0 background None text_color c_prune text_size res_font(14) action NullAction() tooltip _("This is the average {b}maximum budget{/b} for %s. (%s for entertainment, %s for whoring)") % (pop.name, ent_budget, wh_budget)
             vbox xsize xres(320):
                 text _("{b}Customer preferences{/b}") size res_font(18) yalign 0.0 drop_shadow (2, 2)
                 frame xfill True xpadding xres(10) ypadding yres(10):
@@ -4898,7 +4898,7 @@ screen brothel_options():
                     elif game.matching_priority == "act":
                         $ text1 = "When possible, customers will be matched with girls that allow their preferred job or sex act."
 
-                    textbutton "By %s" % game.matching_priority text_size res_font(18) xsize xres(100) action ToggleField(game, "matching_priority", true_value="rank", false_value="act")
+                    textbutton _("By %s") % game.matching_priority text_size res_font(18) xsize xres(100) action ToggleField(game, "matching_priority", true_value="rank", false_value="act")
 
                     text text1 size res_font(14) color c_prune
 
@@ -6220,7 +6220,7 @@ screen spellbook():
 
 #    use dark_filter
 
-    textbutton "%s's Spellbook" % MC.name yalign 0.1 xalign 0.5
+    textbutton _("%s's Spellbook") % MC.name yalign 0.1 xalign 0.5
 
     fixed xalign 0.5 yalign 0.5:
         fit_first True
@@ -6377,7 +6377,7 @@ screen postings(qlist):
                         xalign 0.0
 
                         if selected_quest.special:
-                            textbutton "{image=img_star} %s {image=img_star}" % selected_quest.special xalign 0.0 yalign 0.5 ypadding 0 text_color c_orange background None action NullAction() hovered tt.Action(special_quest_description[selected_quest.special])
+                            textbutton _("{image=img_star} %s {image=img_star}") % selected_quest.special xalign 0.0 yalign 0.5 ypadding 0 text_color c_orange background None action NullAction() hovered tt.Action(special_quest_description[selected_quest.special])
 
                         text selected_quest.name xalign 0.0 yalign 0.5 color c_prune
 
@@ -6439,7 +6439,7 @@ screen postings(qlist):
 
                                     text "[stat!t]" + " " + t size res_font(14) color c_brown
 
-                                textbutton "\nMax skill: " + str(selected_quest.stat_cap) text_size res_font(14) text_color c_brown xalign 0.0 yalign 0.5 xpadding 0 ypadding 0 background None:
+                                textbutton _("\nMax skill: %s") % selected_quest.stat_cap text_size res_font(14) text_color c_brown xalign 0.0 yalign 0.5 xpadding 0 ypadding 0 background None:
                                     action NullAction()
                                     tooltip _("Classes may cause a girl's skills to exceed their level cap.")
 
@@ -6889,7 +6889,7 @@ screen farm_menu(prog, can_cancel=True):
         else:
             hbox xalign 0.5:
                 for train_mode in ("gentle", "tough", "hardcore"):
-                    textbutton "Train her (%s)" % train_mode ypadding yres(9) text_color c_white text_size res_font(18) xsize yres(780//3) action (SetField(prog, "mode", train_mode), SelectedIf(prog.mode==train_mode), Return("commit")) tooltip farm_ttip[train_mode]
+                    textbutton _("Train her (%s)") % train_mode ypadding yres(9) text_color c_white text_size res_font(18) xsize yres(780//3) action (SetField(prog, "mode", train_mode), SelectedIf(prog.mode==train_mode), Return("commit")) tooltip farm_ttip[train_mode]
 
 
 
@@ -7231,7 +7231,7 @@ screen fshow_init(girl, initial_act):
         else:
             $ text2 = ""
 
-        textbutton "Choose her partner(s)" + text2 style "inv_no_padding" xalign 0.01 text_size res_font(18)
+        textbutton _("Choose her partner(s)%s") % text2 style "inv_no_padding" xalign 0.01 text_size res_font(18)
 
         null height yres(9)
 
@@ -8552,9 +8552,9 @@ screen girl_mix(show_rating=False):
 
                                     vbox xsize xres(360) yalign 0.5:
                                         text pack_name + {True: event_color["good"] % " (unique)", False: ""}[gpinfo_dict[gp]["unique"]] drop_shadow (1, 1) font "resources/fonts/MATURASC.ttf" size res_font(18)
-                                        text "by " + gpinfo_dict[gp]["creator"] drop_shadow (1, 1) size res_font(14) italic True
+                                        text _("by %s") % gpinfo_dict[gp]["creator"] drop_shadow (1, 1) size res_font(14) italic True
                                         if show_rating:
-                                            text "{size=14}Rating: {/size}" + rating size res_font(18) drop_shadow (1, 1) # drop_shadow_color c_white
+                                            text _("{size=14}Rating: {/size}%s") % rating size res_font(18) drop_shadow (1, 1) # drop_shadow_color c_white
                                     if show_rating:
                                         text rtg_text size res_font(14) yalign 0.5 color c_darkbrown
             text "" size res_font(14)
@@ -9375,7 +9375,7 @@ screen mojo_trade(sell_rate=2, buy_rate=1): # Returns a dict with changes to com
 
         use close([Return("back"), Hide("mojo_trade")])
 
-        text "Current rate:\n{b}%i {image=mojo purple} for %i {image=mojo green}{image=mojo blue}{image=mojo red}{image=mojo yellow}{/b}" % (buy_rate, sell_rate) size res_font(16) xalign 0.5
+        text _("Current rate:\n{b}%i {image=mojo purple} for %i {image=mojo green}{image=mojo blue}{image=mojo red}{image=mojo yellow}{/b}") % (buy_rate, sell_rate) size res_font(16) xalign 0.5
 
         hbox:
             spacing xres(12)
@@ -9519,7 +9519,7 @@ screen brothel_ranking(old, new):
             add AlphaMask(MC.current_pic.get(), Frame("GUI/edge_mask.png")) fit "contain" xalign 0.5 ysize 0.85
 
             text "{b}%s{/b}" % MC.name xalign 0.5
-            text "Known as: {b}%s{/b}" % brothel_ranking_reputations[new.index(brothel)+1].capitalize() xalign 0.5 size res_font(16)
+            text _("Known as: {b}%s{/b}") % brothel_ranking_reputations[new.index(brothel)+1].capitalize() xalign 0.5 size res_font(16)
     
     # text str(old_adj) + ": " + str(new_adj) + ": " + str(max_adj) + "\n" + str(yadj.value)
 

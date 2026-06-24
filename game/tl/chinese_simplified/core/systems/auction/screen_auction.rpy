@@ -1,6 +1,32 @@
 ﻿# TODO: Translation updated at 2026-06-12 05:03
 
 translate chinese_simplified strings:
+    old "-"
+    new "-"
+    old "+"
+    new "+"
+    old "Rank [lot.girl.rank] — [lot.girl.job]"
+    new "排名 [lot.girl.rank] — [lot.girl.job]"
+    old "Seller: [lot.seller]"
+    new "卖家：[lot.seller]"
+    old "[lot.current_bid] gold"
+    new "[lot.current_bid] 黄金"
+    old "Rank [selected_lot.girl.rank]"
+    new "排名 [selected_lot.girl.rank]"
+    old "Level [selected_lot.girl.level]"
+    new "等级 [selected_lot.girl.level]"
+    old "[bid_amount] gold"
+    new "[bid_amount] 黄金"
+translate chinese_simplified strings:
+
+    old "[current_session.session_name] — Day [current_session.date]"
+    new "[current_session.session_name] — 第 [current_session.date] 天"
+    old "Rank %s — %s"
+    new "等级 %s — %s"
+
+# TODO: Translation updated at 2026-06-25 03:14
+
+translate chinese_simplified strings:
 
     # game/core/systems/auction/screen_auction.rpy:28
     old "拍卖行"
@@ -37,10 +63,6 @@ translate chinese_simplified strings:
     # game/core/systems/auction/screen_auction.rpy:186
     old "加价幅度: [selected_lot.min_increment] 金币"
     new "加价幅度: [selected_lot.min_increment] 金币"
-    old "-"
-    new "-"
-    old "+"
-    new "+"
 
     # game/core/systems/auction/screen_auction.rpy:211
     old "出价"
@@ -78,33 +100,11 @@ translate chinese_simplified strings:
     old "选择你的一个女孩进行拍卖。"
     new "选择你的一个女孩进行拍卖。"
 
-    # game/core/systems/auction/screen_auction.rpy:322
-    old "取消"
-    new "取消"
-
-# TODO: Translation updated at 2026-06-12 08:13
-
-translate chinese_simplified strings:
-    old "[current_session.session_name] — Day [current_session.date]"
-    new "[current_session.session_name] — Day [current_session.date]"
-    old "Rank [lot.girl.rank] — [lot.girl.job]"
-    new "排名 [lot.girl.rank] — [lot.girl.job]"
-    old "Seller: [lot.seller]"
-    new "卖家：[lot.seller]"
-    old "[lot.current_bid] gold"
-    new "[lot.current_bid] 黄金"
-    old "Rank [selected_lot.girl.rank]"
-    new "排名 [selected_lot.girl.rank]"
-    old "Level [selected_lot.girl.level]"
-    new "等级 [selected_lot.girl.level]"
-    old "[bid_amount] gold"
-    new "[bid_amount] 黄金"
+    # game/core/systems/auction/screen_auction.rpy:317
     old "出售价格: [girl.get_price('sell')] 金币"
     new "出售价格: [girl.get_price('sell')] 金币"
 
-# TODO: Translation updated at 2026-06-19 03:36
-
-translate chinese_simplified strings:
-    old "Rank %s — %s"
-    new "%s阶 — %s"
+    # game/core/systems/auction/screen_auction.rpy:322
+    old "取消"
+    new "取消"
 

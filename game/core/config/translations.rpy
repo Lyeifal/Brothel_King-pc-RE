@@ -6,7 +6,6 @@ init -10 python:
 
     bk_language_map = {
         None:       "English",
-        "chinese":  "中文",
         "chinese_simplified": "简体中文",
     }
 
@@ -23,7 +22,7 @@ init -10 python:
             "resources/fonts/VIVALDII.TTF",
             "resources/fonts/SFBurlingtonScript.ttf",
         ]
-        if persistent._bk_language in ("chinese", "chinese_simplified"):
+        if persistent._bk_language == "chinese_simplified":
             for wf in western_fonts:
                 config.font_replacement_map[(wf, False, False)] = (cjk_font, False, False)
         else:

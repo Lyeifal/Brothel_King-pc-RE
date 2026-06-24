@@ -218,3 +218,53 @@ translate chinese_simplified strings:
     old "%s ([topic.AP_cost]{image=img_AP})"
     new "%s（[topic.AP_cost]{image=img_AP}）"
 
+# TODO: Translation updated at 2026-06-25 03:14
+
+translate chinese_simplified strings:
+
+    # game/core/ui/screens.rpy:892
+    old "\nYou can add your own badges in the UI/Badges folder (restart required)."
+    new "\n你可以在 UI/Badges 文件夹中添加自己的徽章（需要重启）。"
+
+    # game/core/ui/screens.rpy:1554
+    old "Girl rating (%s): %s"
+    new "女孩评分（%s）：%s"
+    # game/core/ui/screens.rpy:2835
+    old "{u}F{/u}arm show (%i%%)"
+    new "{u}农{/u}场表演（%i%%）"
+    # game/core/ui/screens.rpy:4856
+    old "Average budget: %s gold"
+    new "平均预算：%s 金币"
+    # game/core/ui/screens.rpy:4856
+    old "This is the average {b}maximum budget{/b} for %s. (%s for entertainment, %s for whoring)"
+    new "这是 %s 的平均{b}最高预算{/b}。（娱乐 %s，卖淫 %s）"
+    # game/core/ui/screens.rpy:4901
+    old "By %s"
+    new "由 %s"
+    # game/core/ui/screens.rpy:6223
+    old "%s's Spellbook"
+    new "%s 的法术书"
+    # game/core/ui/screens.rpy:6380
+    old "{image=img_star} %s {image=img_star}"
+    new "{image=img_star} %s {image=img_star}"
+    # game/core/ui/screens.rpy:6442
+    old "\nMax skill: %s"
+    new "\n最高技能：%s"
+    # game/core/ui/screens.rpy:6892
+    old "Train her (%s)"
+    new "训练她（%s）"
+    # game/core/ui/screens.rpy:7234
+    old "Choose her partner(s)%s"
+    new "选择她的搭档%s"
+    # game/core/ui/screens.rpy:8555
+    old "by %s"
+    new "由 %s"
+    # game/core/ui/screens.rpy:8557
+    old "{size=14}Rating: {/size}%s"
+    new "{size=14}评分：{/size}%s"
+    # game/core/ui/screens.rpy:9378
+    old "Current rate:\n{b}%i {image=mojo purple} for %i {image=mojo green}{image=mojo blue}{image=mojo red}{image=mojo yellow}{/b}"
+    new "当前汇率：\n{b}%i {image=mojo purple} 兑换 %i {image=mojo green}{image=mojo blue}{image=mojo red}{image=mojo yellow}{/b}"
+    # game/core/ui/screens.rpy:9522
+    old "Known as: {b}%s{/b}"
+    new "被称为：{b}%s{/b}"

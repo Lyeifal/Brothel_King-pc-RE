@@ -1,8 +1,6 @@
 ﻿# TODO: Translation updated at 2026-06-12 08:13
 
 translate chinese_simplified strings:
-    old "Mod: %s has been removed."
-    new "模组：%s 已被移除。"
     old "You cannot train a girl more than once per day."
     new "一天之内不能训练同一个女孩超过一次。"
     old "You cannot do the same things more than 3 times a day with a girl."
@@ -21,12 +19,6 @@ translate chinese_simplified strings:
     new "你已获得 %s 作为初始奴隶！"
     old "Removing %s from game mixes"
     new "从游戏混合池中移除%s"
-
-# TODO: Translation updated at 2026-06-19 03:36
-
-translate chinese_simplified strings:
-    old "- Waitress: "
-    new "- 女服务员："
     old "- Dancer: "
     new "- 舞女："
     old "- Masseuse: "
@@ -35,4 +27,15 @@ translate chinese_simplified strings:
     new "- 艺伎："
     old "- Whore: "
     new "- 娼妓："
+    old "%s has been updated."
+    new "%s 已更新。"
+translate chinese_simplified strings:
+
+    # game/core/framework/game_systems.rpy:167
+    old "Mod: %s has been removed."
+    new "模组：%s 已被移除。"
+
+    # game/core/framework/game_systems.rpy:178
+    old "%s has been added."
+    new "%s 已添加。"
 

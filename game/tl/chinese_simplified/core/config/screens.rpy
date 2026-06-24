@@ -1,16 +1,13 @@
-﻿# TODO: Translation updated at 2026-06-03 23:34
-
-# TODO: Translation updated at 2026-06-12 05:03
+﻿# TODO: Translation updated at 2026-06-23 01:35
 
 translate chinese_simplified strings:
-    old "Choose target resolution (currently [config.screen_width]x[config.screen_height])"
-    new "选择目标分辨率（当前为 [config.screen_width]x[config.screen_height]）"
-
-# TODO: Translation updated at 2026-06-12 08:13
-
-translate chinese_simplified strings:
-    old "For updates, bug reports, and discussion: [URL]"
-    new "如需了解最新信息、提交错误报告或参与讨论，请访问：[URL]"
+    old "Choose screen width"
+    new "选择屏幕宽度"
+    old "Choose screen height"
+    new "选择屏幕高度"
+    old """{i}Screen made
+ by OhWee{/i}"""
+    new "{i}界面制作：OhWee{/i}"
     old "[renpy.version_string]"
     new "[renpy.version_string]"
     old "BK [config.version]"
@@ -27,4 +24,25 @@ translate chinese_simplified strings:
     new "[config.version]"
     old "Shift+A"
     new "Shift+A"
+# TODO: Translation updated at 2026-06-25 01:53
+
+translate chinese_simplified strings:
+
+    # game/core/config/screens.rpy:957
+    old "For updates, bug reports, and discussion: [URL]"
+    new "获取更新、报告错误和参与讨论：[URL]"
+
+    # game/core/config/screens.rpy:1035
+    old "Choose target resolution (currently [config.screen_width]x[config.screen_height])"
+    new "选择目标分辨率（当前 [config.screen_width]x[config.screen_height]）"
+
+# TODO: Translation updated at 2026-06-25 01:58
+
+# TODO: Translation updated at 2026-06-25 03:14
+
+translate chinese_simplified strings:
+
+    # game/core/config/screens.rpy:2345
+    old "简体中文"
+    new "简体中文"
 

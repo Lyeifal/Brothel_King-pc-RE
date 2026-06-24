@@ -11,7 +11,13 @@ Reports mismatches without modifying files.
 import re
 import sys
 from pathlib import Path
-from collections import Counter
+
+# Some Windows consoles use GBK, which cannot print every Unicode character.
+# Force UTF-8 output and replace unencodable characters rather than crashing.
+try:
+    sys.stdout.reconfigure(encoding='utf-8', errors='replace')
+except AttributeError:  # Python < 3.7
+    pass
 
 ROOT = Path(__file__).resolve().parent.parent
 TL_DIR = ROOT / "game" / "tl" / "chinese_simplified"
@@ -29,25 +35,62 @@ def extract_placeholders(text):
     return sorted(printf + interp)
 
 
+STRING_RE = re.compile(
+    r'(?P<triple>"""[\s\S]*?""")|(?P<single>"(?:[^"\\]|\\.)*")'
+)
+
+
 def parse_translation_blocks(content):
-    """Yield (old_text, new_text, line_number) from an .rpy translation file."""
+    """Yield (old_text, new_text, line_number) from an .rpy translation file.
+
+    Handles multi-line triple-quoted strings and ignores inline comments.
+    """
     lines = content.split('\n')
     i = 0
     while i < len(lines):
-        line = lines[i]
-        stripped = line.strip()
+        stripped = lines[i].strip()
         if stripped.startswith('old '):
-            old_match = re.match(r'^\s*old\s+((?:"""[\s\S]*?"""|"(?:[^"\\]|\\.)*"))', line)
-            if old_match and i + 1 < len(lines):
-                new_match = re.match(r'^\s*new\s+((?:"""[\s\S]*?"""|"(?:[^"\\]|\\.)*"))', lines[i + 1])
+            old_match = match_string_literal(lines, i)
+            if old_match and old_match['end_line'] + 1 < len(lines):
+                new_line = old_match['end_line'] + 1
+                new_match = match_string_literal(lines, new_line)
                 if new_match:
-                    old_raw = old_match.group(1)
-                    new_raw = new_match.group(1)
-                    old_text = unquote(old_raw)
-                    new_text = unquote(new_raw)
-                    yield old_text, new_text, i + 1
-                    i += 1
+                    old_text = unquote(old_match['raw'])
+                    new_text = unquote(new_match['raw'])
+                    yield old_text, new_text, new_line + 1
+                    i = new_match['end_line']
         i += 1
+
+
+def match_string_literal(lines, start_idx):
+    """Match a Ren'Py string literal starting at lines[start_idx].
+
+    Returns a dict with 'raw' and 'end_line', or None if no string found.
+    """
+    line = lines[start_idx]
+    # Strip leading whitespace and optional keyword (old/new)
+    m = re.match(r'^\s*(?:old|new)?\s*(.*)', line)
+    if not m:
+        return None
+    remainder = m.group(1)
+
+    if remainder.startswith('"""'):
+        # Multi-line triple-quoted string
+        raw = remainder
+        end_idx = start_idx
+        while True:
+            if raw.endswith('"""') and len(raw) > 3:
+                return {'raw': raw, 'end_line': end_idx}
+            end_idx += 1
+            if end_idx >= len(lines):
+                return None
+            raw += '\n' + lines[end_idx]
+    elif remainder.startswith('"'):
+        # Single-line double-quoted string
+        m = STRING_RE.match(remainder)
+        if m and m.group('single'):
+            return {'raw': m.group('single'), 'end_line': start_idx}
+    return None
 
 
 def unquote(raw):
@@ -85,9 +128,22 @@ def main():
         content = rpy_file.read_text(encoding='utf-8')
         for old_text, new_text, line_no in parse_translation_blocks(content):
             checked += 1
-            if not new_text:
-                continue  # empty translation, already covered by translate --count
+            # Empty source string maps to empty translation by definition.
+            if not old_text:
+                continue
             old_ph = extract_placeholders(old_text)
+            if not new_text:
+                # Empty translation is dangerous when the source string is used
+                # with printf-style formatting (e.g. __("%s%s") % (a, b)).
+                mismatches.append({
+                    'file': rpy_file.relative_to(ROOT),
+                    'line': line_no,
+                    'old': old_text,
+                    'new': new_text,
+                    'old_ph': old_ph,
+                    'new_ph': ['(empty translation)'],
+                })
+                continue
             new_ph = extract_placeholders(new_text)
             if old_ph != new_ph:
                 mismatches.append({

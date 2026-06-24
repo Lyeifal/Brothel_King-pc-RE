@@ -445,7 +445,7 @@ label help(scr):
                         MC.load_pics()
 
                     if missing_girls:
-                        if renpy.call_screen("yes_no", __("All files are missing for ") + and_text([g.path for g in missing_girls]) + ". Do you want to erase all girls with these templates from the game (you might run into bugs otherwise)?"):
+                        if renpy.call_screen("yes_no", __("All files are missing for %s. Do you want to erase all girls with these templates from the game (you might run into bugs otherwise)?") % and_text([g.path for g in missing_girls])):
                             python:
                                 for girl in missing_girls:
                                     for glist in (MC.girls, slavemarket.girls, game.free_girls, MC.escaped_girls, farm.girls):
@@ -453,7 +453,7 @@ label help(scr):
                                             glist.remove(girl)
                                             MC.items += girl.items
 
-                        elif renpy.call_screen("yes_no", __("All files are missing for ") + and_text([g.path for g in missing_girls]) + ". Do you want to replace their profile and portrait pictures with stock pictures? (debugging only)"):
+                        elif renpy.call_screen("yes_no", __("All files are missing for %s. Do you want to replace their profile and portrait pictures with stock pictures? (debugging only)?") % and_text([g.path for g in missing_girls])):
                             python:
                                 for girl in missing_girls:
                                     girl.refresh_pictures(force_default=True)

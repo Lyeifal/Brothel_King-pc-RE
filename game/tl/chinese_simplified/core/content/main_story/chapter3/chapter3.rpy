@@ -29116,7 +29116,7 @@ translate chinese_simplified c3_mizuki_goodbye_18d13b29:
 translate chinese_simplified c3_mizuki_goodbye_61529f7b:
 
     # you "M-Mizuki?"
-    you "M-Mizuki？"
+    you "M-水木？"
 
 # game/BKchapter3.rpy:14203
 translate chinese_simplified c3_mizuki_goodbye_feb8c473:
@@ -44632,7 +44632,7 @@ translate chinese_simplified c3_confrontation_shiro_6a3c187d:
 translate chinese_simplified c3_confrontation_shiro_4109e838:
 
     # kuro "[MC.name]!"
-    kuro "[MC.name]!"
+    kuro "[MC.name]！"
 
 # game/BKchapter3.rpy:22286
 translate chinese_simplified c3_confrontation_shiro_b1015be7:
@@ -46642,7 +46642,7 @@ translate chinese_simplified c3_homura_capture_menu_dcd5deb0:
 translate chinese_simplified c3_homura_capture_menu_23d4eccf:
 
     # homura "!!!"
-    homura "!!!"
+    homura "！！！"
 
 # game/BKchapter3.rpy:23427
 translate chinese_simplified c3_homura_capture_menu_c5414b20:
@@ -48579,8 +48579,6 @@ translate chinese_simplified c3_ending_2bafff68:
 # TODO: Translation updated at 2026-06-12 05:03
 
 translate chinese_simplified strings:
-    old "I found hints about Narika"
-    new "我找到了关于娜丽卡的线索"
     old "I found hints about Mizuki"
     new "我找到了关于瑞希的线索"
     old "I found hints about Haruka"
@@ -48715,12 +48713,6 @@ translate chinese_simplified strings:
     new "让她为你效力"
     old "Play with her first"
     new "和她一起玩第一个"
-
-# TODO: Translation updated at 2026-06-12 08:13
-
-translate chinese_simplified strings:
-    old "%s: Talk to Suzume again about %s."
-    new "%s：再和铃芽谈谈 %s 的事。"
     old "Choose a girl"
     new "选个女孩"
     old " (%s %i, %s %i, %s %i)"
@@ -48731,28 +48723,38 @@ translate chinese_simplified strings:
     new "Haruka 在农场接受 %s 训练。"
     old "Your Kunoichi all%s ha%s come to your aid!"
     new "你的所有女忍者%s ha%s都赶来帮助你了！"
-    old "Character bonus: %i\n"
+    old """Character bonus: %i
+"""
     new "角色加成：%i"
     old "Challenge bonus: %i"
     new "挑战奖励：%i"
-
-# TODO: Translation updated at 2026-06-19 04:19
-
-translate chinese_simplified strings:
-    old "Narika has now trained sufficiently as a dancer."
-    new "成香现在已经完成了作为舞女的充分训练。"
     old "Narika trained with %s as a %s (%i/4)."
     new "成香与 %s 一起作为 %s 训练 (%i/4)。"
-
-# TODO: Translation updated at 2026-06-19 05:43
-
-translate chinese_simplified strings:
-    old "Dean Shizuka"
-    new "静香院长"
     old "Familiar girl"
     new "熟悉的女孩"
     old "Lady Sui"
     new "水夫人"
     old "Echoes of Mizuki's voice"
     new "水月声音的余响"
+translate chinese_simplified strings:
+
+    # game/core/content/main_story/chapter3/chapter3.rpy:114
+    old "%s: Talk to Suzume again about %s."
+    new "%s：再和 Suzume 谈谈 %s。"
+
+    # game/core/content/main_story/chapter3/chapter3.rpy:193
+    old "I found hints about Narika"
+    new "我找到了关于 Narika 的线索"
+
+    # game/core/content/main_story/chapter3/chapter3.rpy:4296
+    old "Dean Shizuka"
+    new "院长 Shizuka"
+
+    # game/core/content/main_story/chapter3/chapter3.rpy:4475
+    old "Choose day number"
+    new "选择天数"
+
+    # game/core/content/main_story/chapter3/chapter3.rpy:7808
+    old "Narika has now trained sufficiently as a dancer."
+    new "Narika 作为舞者的训练已经足够。"
 

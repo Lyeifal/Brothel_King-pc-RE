@@ -2030,7 +2030,10 @@ translate chinese_simplified jobgirl_beach_5_6ccd9795:
 
 # TODO: Translation updated at 2026-06-12 05:03
 
+
 translate chinese_simplified strings:
+
+    # game/core/content/side_stories/kite_jobgirl/beach.rpy:458
     old "Don't indulge her"
-    new "不要纵容她。"
+    new "不要纵容她"
 

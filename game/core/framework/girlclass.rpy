@@ -612,7 +612,7 @@ init -2 python:
             if not self.profile:
                 #<Chris12 AutoRepair>
                 # Use not_found.webp. No longer needs to renpy.quit(), since it has some image to show
-                renpy.say("", event_color["bad"] % ("No profile or portrait picture could be found for the following girl: " + self.path + ".") + "\nPlease rename at least one of her pictures to include the words 'profile' or 'portrait'\n(e.g.: 'profile3.webp')\nAlternatively, completely delete her directory, restart the game and then go to the Help Menu and 'Repair Girl/MC Pictures' to remove her.")
+                renpy.say("", __("{color=[c_bad]}No profile or portrait picture could be found for the following girl: %s.{/color}\nPlease rename at least one of her pictures to include the words 'profile' or 'portrait'\n(e.g.: 'profile3.webp')\nAlternatively, completely delete her directory, restart the game and then go to the Help Menu and 'Repair Girl/MC Pictures' to remove her.") % self.path)
                 self.profile = Picture(path="resources/backgrounds/not_found.webp")
                 # renpy.say("", "Exiting Ren'Py...{w=1}{nw}")
                 # renpy.quit()
@@ -826,7 +826,7 @@ init -2 python:
                 self.does[sex_act] = False
                 if not self.has_activated_sex_acts() and self.job == "whore":
                     self.set_job(None)
-                    renpy.say("", self.fullname + " cannot remain a whore if you deactivate all sex acts. She has been set to rest.")
+                    renpy.say("", __("%s cannot remain a whore if you deactivate all sex acts. She has been set to rest.") % self.fullname)
                 return True, ""
 
             else:
@@ -923,7 +923,7 @@ init -2 python:
             self.does[sex_act] = False
 
             if not self.has_activated_sex_acts() and self.job == "whore":
-                renpy.say("", self.fullname + " cannot remain a whore if you deactivate all sex acts. She has been set to rest.")
+                renpy.say("", __("%s cannot remain a whore if you deactivate all sex acts. She has been set to rest.") % self.fullname)
                 self.set_job(None)
             return True
 
@@ -5805,7 +5805,7 @@ init -2 python:
                     renpy.call(self.custom_dialogue_label, girl=self, topic=topic)
                     return # Probably unnecessary, but better to be safe
                 else:
-                    renpy.say(event_color["bad"] % "System", "Label: {color=[c_red]}%s{/color} doesn't exist (Custom girl: {color=[c_red]}%s/_BK.ini{/color})." % (self.custom_dialogue_label, self.path))
+                    renpy.say(__("System"), __("Label: {color=[c_red]}%s{/color} doesn't exist (Custom girl: {color=[c_red]}%s/_BK.ini{/color}).") % (self.custom_dialogue_label, self.path))
 
             dial = self.pick_dialogue(topic)
 

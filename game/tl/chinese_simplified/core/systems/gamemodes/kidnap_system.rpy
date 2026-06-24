@@ -1,5 +1,9 @@
 ﻿# TODO: Translation updated at 2026-06-12 05:03
 
+# TODO: Translation updated at 2026-06-25 01:58
+
+# TODO: Translation updated at 2026-06-25 03:14
+
 translate chinese_simplified strings:
 
     # game/core/systems/gamemodes/kidnap_system.rpy:68

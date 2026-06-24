@@ -1466,7 +1466,7 @@ label slave_remove_fixation(girl):
         play sound s_fizzle
 #         girl.char "..."
         $ renpy.say("", fix_description[fix.name + " neg_reaction"])
-        $ renpy.say("", event_color["a little bad"] % ("Your training didn't lead to any significant improvement."))
+        $ renpy.say("", event_color["a little bad"] % __("Your training didn't lead to any significant improvement."))
 
     elif inter.result == "locked":
         play sound s_scream_loud

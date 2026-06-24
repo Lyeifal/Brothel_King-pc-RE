@@ -289,7 +289,7 @@ label resume_intro:
 
     guard "Who goes there?"
 
-    $ MC.name = renpy.input("I am...", default = MC_name, length = 20)
+    $ MC.name = renpy.input(_("I am..."), default = MC_name, length = 20)
 
     guard "[MC.name]? Odd name, for sure."
 

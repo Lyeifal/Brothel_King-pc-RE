@@ -2421,8 +2421,6 @@ translate chinese_simplified test_perks_launch_b7930d9a:
 # TODO: Translation updated at 2026-06-12 05:03
 
 translate chinese_simplified strings:
-    old "Activate picture count in gallery (girl packs)"
-    new "启用图库中的图片计数（女孩包）"
     old "Deactivate picture count in gallery"
     new "关闭图库中的图片计数"
     old "Would you like to reset all existing counters to zero?"
@@ -2505,24 +2503,12 @@ translate chinese_simplified strings:
     new "你打算实现什么样的目标？"
     old "Testing perks: [perk_text]"
     new "测试特权：[perk_text]"
-
-# TODO: Translation updated at 2026-06-12 05:58
-
-translate chinese_simplified strings:
-    old "Warning! This is a debug feature and might slow down your game. Would you like to proceed?"
-    new "警告！这是调试功能，可能会降低游戏速度。是否继续？"
     old "This will reset all girl and MC pictures (useful if you changed some pictures outside of the game or renamed them). Would you like to proceed?"
     new "这将重置所有女孩和主角的图片（如果您在游戏外更改或重命名了图片，这将非常有用）。您要继续吗？"
     old "All files are missing for "
     new "所有文件均缺失"
     old "This will reload all quests/classes and generic farm pictures (useful if you changed some event pictures outside of the game or renamed them). Would you like to proceed?"
     new "这将重新加载所有任务/职业和通用农场图片（如果您在游戏外更改或重命名了某些活动图片，这将非常有用）。您要继续吗？"
-
-# TODO: Translation updated at 2026-06-12 08:13
-
-translate chinese_simplified strings:
-    old "Text not found: %s"
-    new "未找到文本：%s"
     old "Do you want to remove this picture from the 'IGNORE' list?"
     new "是否要将此图片从“忽略”列表中移除？"
     old "This will reset the 'IGNORE' list and restore all girl packs to default. Would you like to proceed?"
@@ -2557,20 +2543,39 @@ translate chinese_simplified strings:
     new "没有女孩缺少一张 %s %s 图片。"
     old "Test results - %s"
     new "测试结果 - %s"
-
-# TODO: Translation updated at 2026-06-19 03:15
-
-translate chinese_simplified strings:
-    old "Cycle jobs"
-    new "轮换工作"
     old "Cycle all"
     new "全部轮换"
-
-# TODO: Translation updated at 2026-06-19 03:36
-
-# game/core/systems/help.rpy:1271
+    old "All files are missing for %s. Do you want to replace their profile and portrait pictures with stock pictures? (debugging only)?"
+    new "%s 的所有文件都丢失了。你要将她们的资料和肖像图片替换为默认图片吗？（仅用于调试）？"
 translate chinese_simplified help_visit_district_e842b74b:
 
     # sill happy "From here, you can see the various locations available in {b}[_district_name]{/b}. Click on their picture to visit them."
     sill happy ""
+
+# TODO: Translation updated at 2026-06-23 01:35
+
+
+# TODO: Translation updated at 2026-06-25 01:53
+
+translate chinese_simplified strings:
+
+    # game/core/systems/help.rpy:119
+    old "Text not found: %s"
+    new "未找到文本：%s"
+
+    # game/core/systems/help.rpy:329
+    old "Activate picture count in gallery (girl packs)"
+    new "在画廊中激活图片计数（女孩包）"
+
+    # game/core/systems/help.rpy:337
+    old "Warning! This is a debug feature and might slow down your game. Would you like to proceed?"
+    new "警告！这是调试功能，可能会降低游戏速度。你想继续吗？"
+
+    # game/core/systems/help.rpy:448
+    old "All files are missing for %s. Do you want to erase all girls with these templates from the game (you might run into bugs otherwise)?"
+    new "%s 的所有文件都缺失了。你想从游戏中删除所有使用这些模板的女孩吗（否则可能会遇到错误）？"
+
+    # game/core/systems/help.rpy:2642
+    old "Cycle jobs"
+    new "轮换工作"
 

@@ -24,7 +24,10 @@ translate chinese_simplified bk_template_mod_event_label_c784d5e7:
     # "System" "You encountered a custom event from My Awesome Mod!"
     "System" ""
 
+
 translate chinese_simplified strings:
+
+    # game/core/templates/mod_template/mod_template.rpy:8
     old "This is a sample mod demonstrating the Phase 6 API."
     new "这是一个演示 Phase 6 API 的示例模组。"
 

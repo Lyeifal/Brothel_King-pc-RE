@@ -6286,7 +6286,7 @@ translate chinese_simplified night_girl_perform_30f6f16b:
 translate chinese_simplified night_girl_perform_e9526f3f:
 
     # "[girl.name] lets out an audible moan as she feels a foreign finger probing inside her anus."
-    "[girl.name] lets out an audible moan as she feels a foreign finger probing inside her anus."
+    "当 [girl.name] 感觉到一根异物手指探入她的肛门时，她发出了一声可听见的呻吟声。"
 
 # game/BKday_events.rpy:4276
 translate chinese_simplified night_girl_perform_1a8c2e33:
@@ -6298,7 +6298,7 @@ translate chinese_simplified night_girl_perform_1a8c2e33:
 translate chinese_simplified night_girl_perform_5245f24d:
 
     # "[girl.name] blushes bright red and gasps audibly as the man starts probing inside her anus."
-    "[girl.name] blushes bright red and gasps audibly as the man starts probing inside her anus."
+    "当男人开始探查她的肛门时，[girl.name] 的脸涨得通红，并发出喘息声。"
 
 # game/BKday_events.rpy:4282
 translate chinese_simplified night_girl_perform_65a50894:
@@ -6316,7 +6316,7 @@ translate chinese_simplified night_girl_perform_f15251c8:
 translate chinese_simplified night_girl_perform_c607797e:
 
     # "Unfazed, the man keeps toying with her pink asshole, watching her every reaction while his erection grows harder. Soon, he whips his dick out, and [girl.name] gasps when she sees the size of it."
-    "Unfazed, the man keeps toying with her pink asshole, watching her every reaction while his erection grows harder. Soon, he whips his dick out, and [girl.name] gasps when she sees the size of it."
+    "男人不为所动，继续玩弄她粉红色的屁眼，观察她的每一个反应，同时他的勃起变得更硬。很快，他把他的鸡巴抽了出来，当[girl.name]看到它的大小时，她倒抽了一口气。"
 
 # game/BKday_events.rpy:4288
 translate chinese_simplified night_girl_perform_2e424ee0:
@@ -6352,7 +6352,7 @@ translate chinese_simplified night_girl_perform_4f5701ce:
 translate chinese_simplified night_girl_perform_edb73f07:
 
     # "[girl.name]'s face reddens with embarrassment as she realizes the man is about to fuck her ass, right here in the club. The crowd goes wild with excitement."
-    "[girl.name]'s face reddens with embarrassment as she realizes the man is about to fuck her ass, right here in the club. The crowd goes wild with excitement."
+    "[girl.name] 的脸因尴尬而变红，因为她意识到这个男人即将在俱乐部里操她的屁股。人群兴奋得疯狂。"
 
 # game/BKday_events.rpy:4310
 translate chinese_simplified night_girl_perform_1b638ad9_1:
@@ -6364,7 +6364,7 @@ translate chinese_simplified night_girl_perform_1b638ad9_1:
 translate chinese_simplified night_girl_perform_6e900a9c:
 
     # "The man pushes his cock inside her butt, using his saliva as a lubricant. [girl.name]'s eyes seem about to pop out as she struggles to accommodate the size of the big man's shaft."
-    "The man pushes his cock inside her butt, using his saliva as a lubricant. [girl.name]'s eyes seem about to pop out as she struggles to accommodate the size of the big man's shaft."
+    "男人将他的阴茎推入她的屁股，用他的唾液作为润滑剂。 [girl.name] 的眼睛似乎要突出来，因为她努力适应这个大男人的阴茎的大小。"
 
 # game/BKday_events.rpy:4316
 translate chinese_simplified night_girl_perform_71bc82a6:
@@ -6394,7 +6394,7 @@ translate chinese_simplified night_girl_perform_eb58a8b8:
 translate chinese_simplified night_girl_perform_0478dfa2:
 
     # "[girl.name] clenches her teeth and remembers her training, letting her asshole slowly expand to fit the man's penis. After a few moments, she loosens up enough for him to start moving."
-    "[girl.name] clenches her teeth and remembers her training, letting her asshole slowly expand to fit the man's penis. After a few moments, she loosens up enough for him to start moving."
+    "[girl.name] 咬紧牙关，回忆起她的训练，让她的屁眼慢慢扩张以适应男人的阴茎。过了一会儿，她放松下来，他可以开始移动了。"
 
 # game/BKday_events.rpy:4329
 translate chinese_simplified night_girl_perform_bc990f3a:
@@ -6406,7 +6406,7 @@ translate chinese_simplified night_girl_perform_bc990f3a:
 translate chinese_simplified night_girl_perform_19073c74:
 
     # "The man grabs both of her arms and pulls her backwards, impaling her little asshole on his erect cock. It is hard for her at first, but she takes it in stride."
-    "The man grabs both of her arms and pulls her backwards, impaling her little asshole on his erect cock. It is hard for her at first, but she takes it in stride."
+    "男人抓住她的双臂，将她向后拉，将她的小屁眼刺进他勃起的阴茎上。一开始这对她来说很难，但她泰然处之。"
 
 # game/BKday_events.rpy:4333
 translate chinese_simplified night_girl_perform_a3d34740_1:
@@ -6418,7 +6418,7 @@ translate chinese_simplified night_girl_perform_a3d34740_1:
 translate chinese_simplified night_girl_perform_bf7787be:
 
     # "Shoving his dick even deeper inside her, the man pushes her off-balance, and she falls down on all fours. He doesn't take any break from fucking her, mating with her like an animal."
-    "Shoving his dick even deeper inside her, the man pushes her off-balance, and she falls down on all fours. He doesn't take any break from fucking her, mating with her like an animal."
+    "男人把他的鸡巴推得更深入，让她失去平衡，她四肢着地摔倒在地。他一刻不停地操她，像动物一样与她交配。"
 
 # game/BKday_events.rpy:4344
 translate chinese_simplified night_girl_perform_bffd3a06:
@@ -6448,7 +6448,7 @@ translate chinese_simplified night_girl_perform_3c674b47:
 translate chinese_simplified night_girl_perform_9b3c86cf:
 
     # "The man shoots a huge load of warm cum inside [girl.name]'s tight anus, and she cums screaming at the top of her voice as the thick white semen overflows out of her."
-    "The man shoots a huge load of warm cum inside [girl.name]'s tight anus, and she cums screaming at the top of her voice as the thick white semen overflows out of her."
+    "男人将大量温暖的精液射入[girl.name]紧致的肛门内，当浓稠的白色精液从她体内溢出时，她大声尖叫着射精。"
 
 # game/BKday_events.rpy:4367
 translate chinese_simplified night_girl_perform_badaae4a:
@@ -10612,7 +10612,7 @@ translate chinese_simplified night_girl_perform_4ab971fa:
 translate chinese_simplified night_girl_perform_c9422940:
 
     # "Placing the plug at the entrance of her oiled-up asshole, you force it in little by little."
-    "Placing the plug at the entrance of her oiled-up asshole, you force it in little by little."
+    "将塞子放在她沾满油的屁眼的入口处，一点一点地用力塞进去。"
 
 # game/BKday_events.rpy:6826
 translate chinese_simplified night_girl_perform_426d503d:
@@ -10936,7 +10936,7 @@ translate chinese_simplified night_girl_perform_d56d98cb:
 translate chinese_simplified night_girl_perform_3a40f0d4:
 
     # you "[girl.name]?"
-    you "[girl.name]?"
+    you "[girl.name]？"
 
 # game/BKday_events.rpy:6991
 translate chinese_simplified night_girl_perform_04853aca_1:
@@ -11194,7 +11194,7 @@ translate chinese_simplified night_girl_perform_a0161858_4:
 translate chinese_simplified night_girl_perform_e18c5e89:
 
     # "It's time to make her howl. Adding your thumb to the mix, you struggle to fit your hand inside [girl.name]. She screams in pain and struggles hard to accommodate your whole hand inside her [_type]."
-    "It's time to make her howl. Adding your thumb to the mix, you struggle to fit your hand inside [girl.name]. She screams in pain and struggles hard to accommodate your whole hand inside her [type]."
+    "是时候让她嚎叫了。再加上你的拇指，你很难将手放入 [girl.name] 中。她痛苦地尖叫，并努力挣扎着将你的整只手放入她的[type]中。"
 
 # game/BKday_events.rpy:7143
 translate chinese_simplified night_girl_perform_79a603c3:
@@ -11925,8 +11925,6 @@ translate chinese_simplified night_girl_perform_006c9607:
 # TODO: Translation updated at 2026-06-12 05:03
 
 translate chinese_simplified strings:
-    old "Admire her"
-    new "欣赏她"
     old "Encourage her"
     new "鼓励她"
     old "Tell her to go back to her room"
@@ -11985,4 +11983,9 @@ translate chinese_simplified strings:
     new "奶牛莫莉最不寻常的故事（以哺乳为主题的情色表演）"
     old "The Secret Spring Behind The Forbidden Gate (Erotic show featuring an enema)"
     new "禁门后的秘密泉水（包含灌肠的色情表演）"
+translate chinese_simplified strings:
+
+    # game/core/content/day_events/day_events.rpy:46
+    old "Admire her"
+    new "欣赏她"
 

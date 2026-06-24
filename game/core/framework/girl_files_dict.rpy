@@ -35,6 +35,9 @@ init -2 python:
 
             for file in all_files:
                 if file.lower().endswith(".avif"):
+                    # Skip files already quarantined to avoid moving them deeper
+                    if file.startswith("temp/error_images/"):
+                        continue
                     try:
                         fpath = renpy.loader.transfn(file)
                         if os.path.getsize(fpath) == 0:
@@ -241,7 +244,7 @@ init -2 python:
 
             for girlpack_name in GirlFilesDict.__get().get_paths():
                 result, changes = GirlFilesDict.__import_tags(girlpack_name, simulate)
-                renpy.say("Checking", girlpack_name + "{fast}{nw}")
+                renpy.say(__("Checking"), girlpack_name + "{fast}{nw}")
                 all_results.append(result)
                 total_changes += changes
 
@@ -251,12 +254,12 @@ init -2 python:
             if (total_changes > 0) :
                 if simulate :
                     GirlFilesDict.__get().__load_files() # Revert tags
-                    renpy.say("", str(total_changes) + " file(s) would be renamed. See {a=call_in_new_context:invoke_packstate_log}{color=[c_magenta]}packstate_log.txt{/color}{/a} in the 'game' directory for details.")
+                    renpy.say("", __("{count} file(s) would be renamed. See {a=call_in_new_context:invoke_packstate_log}{color=[c_magenta]}packstate_log.txt{/color}{/a} in the 'game' directory for details.").format(count=total_changes))
                 else :
-                    renpy.say("", str(total_changes) + " file(s) were renamed. See {a=call_in_new_context:invoke_packstate_log}{color=[c_magenta]}packstate_log.txt{/color}{/a} for details.\nRestarting Renpy. This may take a few seconds.{fast}{nw}")
+                    renpy.say("", __("{count} file(s) were renamed. See {a=call_in_new_context:invoke_packstate_log}{color=[c_magenta]}packstate_log.txt{/color}{/a} for details.\nRestarting Renpy. This may take a few seconds.{fast}{nw}").format(count=total_changes))
                     renpy.utter_restart()
             else :
-                renpy.say("", "No files were renamed. See {a=call_in_new_context:invoke_packstate_log}{color=[c_magenta]}packstate_log.txt{/color}{/a} for details.")
+                renpy.say("", __("No files were renamed. See {a=call_in_new_context:invoke_packstate_log}{color=[c_magenta]}packstate_log.txt{/color}{/a} for details."))
 
         @staticmethod
         # The workhorse of the packstates import

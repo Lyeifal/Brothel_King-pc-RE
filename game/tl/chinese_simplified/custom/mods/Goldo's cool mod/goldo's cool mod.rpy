@@ -52,10 +52,7 @@ translate chinese_simplified mymod_add_meet_event_f7be312d:
 translate chinese_simplified mymod_add_meet_event_17859683:
 
     # "{i}Meet me tomorrow at the thieves guild. Make sure you bring some gold.\nI have an interesting offer for you. Believe me, it's too good to pass.\n\n[mymod.nemesis]"
-    """{i}明天在盗贼公会见我。确保带些金币来。
-我有一个有趣的提议给你。相信我，不容错过。
-
-[mymod.nemesis]"""
+    "{i}明天在盗贼公会见我。记得带些金币来。\n我有个有趣的提议给你。相信我，不容错过。\n\n[mymod.nemesis]"
 
 # game/custom/mods/Goldo's cool mod/goldo's cool mod.rpy:102
 translate chinese_simplified mymod_add_meet_event_a01fe6ec:
@@ -185,11 +182,11 @@ translate chinese_simplified strings:
 
     # game/custom/mods/Goldo's cool mod/goldo's cool mod.rpy:34
     old "Random trait yo"
-    new "随机特质哟"
+    new "Goldo 的酷模组是一个给模组作者看的简短入门教程（别被名字骗了），演示了创建和管理事件的一些基本技巧。激活模组后，你可以通过游戏内的“帮助”菜单测试一些事件。\n\n{b}普通玩家装这个模组毫无意义。{/b}"
 
     # game/custom/mods/Goldo's cool mod/goldo's cool mod.rpy:186
     old "Gold: +100"
-    new "金币：+100"
+    new "你喜欢什么样的女孩？"
 
     # game/custom/mods/Goldo's cool mod/goldo's cool mod.rpy:208
     old "Hey, you clicked!"

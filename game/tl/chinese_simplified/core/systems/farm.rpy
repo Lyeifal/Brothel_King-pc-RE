@@ -1,18 +1,10 @@
 ﻿# TODO: Translation updated at 2026-06-12 05:58
 
 translate chinese_simplified strings:
-    old "Do you want to upgrade "
-    new "您想升级吗？"
     old "Do you really want to upgrade the "
     new "你真的想升级吗？"
     old "Do you really want to add a pen to the farm for "
     new "你真的想在农场里增设一个畜栏吗？"
-
-# TODO: Translation updated at 2026-06-12 08:13
-
-translate chinese_simplified strings:
-    old "The %s can hold %i minion%s (currently: %i). "
-    new " %s 可以容纳 %i 个 minion%s（目前：%i）。"
     old "Click here to upgrade the capacity of this facility for %s gold."
     new "点击这里升级该设施处理 %s 黄金的能力。"
     old "Click here to build this facility for %s gold."
@@ -45,8 +37,20 @@ translate chinese_simplified strings:
     new "（训练模式：{i}%s{/i}）"
     old "%s was held at the farm today"
     new "今天在农场举行了 %s 活动。"
-    old ".\n"
+    old """.
+"""
     new " 。"
     old "WRONG: not in training"
     new "错误：未接受培训"
+    old "Do you really want to add a pen to the farm for %s gold?"
+    new "你真的要花费 %s 金币为农场增加一个栏位吗？"
+translate chinese_simplified strings:
+
+    # game/core/systems/farm.rpy:21
+    old "The %s can hold %i minion%s (currently: %i). "
+    new "%s 可以容纳 %i 个小兵%s（当前：%i）。"
+
+    # game/core/systems/farm.rpy:154
+    old "Do you really want to upgrade the %s for %s gold?"
+    new "你真的想花费 %s 金币升级 %s 吗？"
 

@@ -1,24 +1,8 @@
 ﻿# TODO: Translation updated at 2026-06-12 05:03
 
 translate chinese_simplified strings:
-    old "In courtyard: {b}{size=+4}"
-    new "在庭院里：{b}{size=+4}"
-
-    # game/core/ui/screen_home.rpy:438
-    old "管理安置在别院的女孩。"
-    new "管理安置在别院的女孩。"
     old "Auction"
     new "拍卖"
-
-    # game/core/ui/screen_home.rpy:452
-    old "访问拍卖行买卖女孩。"
-    new "访问拍卖行买卖女孩。"
-
-# TODO: Translation updated at 2026-06-19 04:19
-
-translate chinese_simplified strings:
-    old "One of your girls is ready to {color=[c_yellow]}{b}level up{/b}{/color}."
-    new "你的一名女孩已准备好{color=[c_yellow]}{b}升级{/b}{/color}。"
     old "One of your girls is ready to {color=[c_yellow]}{b}rank up.{/b}{/color}"
     new "你的一名女孩已准备好{color=[c_yellow]}{b}升阶。{/b}{/color}"
     old "%s %s ready for a {b}farm show{/b}."
@@ -31,5 +15,27 @@ translate chinese_simplified strings:
     new "点击此处{b}结束这一天{/b}并进入夜间事件。"
     old "You do not have enough gold to advance."
     new "你没有足够的金币来推进。"
+translate chinese_simplified strings:
 
+    # game/core/ui/screen_home.rpy:35
+    old "In courtyard: {b}{size=+4}"
+    new "在庭院中：{b}{size=+4}"
+
+    # game/core/ui/screen_home.rpy:219
+    old "One of your girls is ready to {color=[c_yellow]}{b}level up{/b}{/color}."
+    new "你的一个女孩准备{color=[c_yellow]}{b}升级{/b}{/color}了。"
+
+# TODO: Translation updated at 2026-06-25 01:58
+
+# TODO: Translation updated at 2026-06-25 03:14
+
+translate chinese_simplified strings:
+
+    # game/core/ui/screen_home.rpy:438
+    old "管理安置在别院的女孩。"
+    new "管理安置在别院的女孩。"
+
+    # game/core/ui/screen_home.rpy:452
+    old "访问拍卖行买卖女孩。"
+    new "访问拍卖行买卖女孩。"
 

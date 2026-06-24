@@ -4472,7 +4472,7 @@ label c3_narika_MU_class():
     $ story_flags["MU class days"] += 1
 
     if debug_mode:
-        $ story_flags["MU class days"] = int(renpy.input("Choose day number"))
+        $ story_flags["MU class days"] = int(renpy.input(_("Choose day number")))
 
     $ renpy.block_rollback()
 

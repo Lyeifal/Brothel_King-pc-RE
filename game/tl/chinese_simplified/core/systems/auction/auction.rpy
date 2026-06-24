@@ -1,8 +1,6 @@
 ﻿# TODO: Translation updated at 2026-06-12 05:03
 
 translate chinese_simplified strings:
-    old "Lord Blackwood"
-    new "布莱克伍德勋爵"
     old "Merchant Velira"
     new "商人维利拉"
     old "Countess Sable"
@@ -17,10 +15,13 @@ translate chinese_simplified strings:
     new "你"
     old "Anonymous Seller"
     new "匿名卖家"
-
-# TODO: Translation updated at 2026-06-12 08:13
-
 translate chinese_simplified strings:
+
+    # game/core/systems/auction/auction.rpy:22
     old "<AuctionBid %s: %s gold>"
-    new "<AuctionBid %s: %s 金币>"
+    new "<拍卖出价 %s：%s 金币>"
+
+    # game/core/systems/auction/auction.rpy:177
+    old "Lord Blackwood"
+    new "Blackwood 领主"
 

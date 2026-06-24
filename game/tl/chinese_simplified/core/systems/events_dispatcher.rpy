@@ -179,7 +179,12 @@ translate chinese_simplified strings:
 
     # game/core/systems/events_dispatcher.rpy:146
     old "The game couldn't find any girl packs in the girlpack folder (default: 'game\\girls\\'). Without any girl pack installed, the game cannot run.\n\nHave you downloaded and installed girl packs?\nVisit [URL] to get your first girl packs. If you're unsure which one to pick, check the release thread for the 'base girl pack' which contains over 20 high-quality packs.\n\nClick 'OK' to close the game."
-    new ""
+    new """游戏在女孩包文件夹（默认：'game\\\\girls\\\\'）中找不到任何女孩包。没有安装任何女孩包，游戏无法运行。
+
+你是否已下载并安装女孩包？
+访问 [URL] 获取你的第一个女孩包。如果你不确定选择哪一个，请查看发布帖中的“基础女孩包”，其中包含 20 多个高质量包。
+
+点击“确定”关闭游戏。"""
     old "Delete"
     new "删除"
     old "Ignore (update manually)"
@@ -187,11 +192,7 @@ translate chinese_simplified strings:
     old "Warning"
     new "警告"
     old "You are running an {b}unpatched{/b} version of Brothel King.\n\nAs the game is still in alpha, it is very important that you install the latest patch to avoid bugs.\n\nPlease do not report any bugs on the HentHighSchool/BK Forum unless you have installed the latest patch."
-    new """你正在运行{b}未打补丁{/b}版本的 Brothel King。
-
-由于游戏仍处于 alpha 阶段，安装最新补丁以避免错误非常重要。
-
-除非你已安装最新补丁，否则请勿在 HentHighSchool/BK 论坛上报告任何错误。"""
+    new "你正在运行{b}未打补丁{/b}版本的 Brothel King。\n\n由于游戏仍处于 alpha 阶段，安装最新补丁以避免错误非常重要。\n\n除非你已安装最新补丁，否则请勿在 HentHighSchool/BK 论坛上报告任何错误。"
 
 # TODO: Translation updated at 2026-06-19 03:36
 
@@ -205,11 +206,7 @@ translate chinese_simplified strings:
     old "%s is the district where you are currently established. Please choose a different district."
     new "%s 是你当前所在的地区。请选择不同的地区。"
     old "{i}[chosen_district.description]{/i}\n\nDo you really want to move your brothel to {b}%s{/b}?\n\n{size=-2}This will reset all your room improvements, but you will keep your furniture and decorations."
-    new """{i}[chosen_district.description]{/i}
-
-你真的想把你的青楼搬到{b}%s{/b}吗？
-
-{size=-2}这将重置你所有的房间改善，但你会保留家具和装饰。"""
+    new "{i}[chosen_district.description]{/i}\n\n你真的想把你的青楼搬到{b}%s{/b}吗？\n\n{size=-2}这将重置你所有的房间改善，但你会保留家具和装饰。"
 
 # TODO: Translation updated at 2026-06-19 05:43
 
@@ -223,3 +220,28 @@ translate chinese_simplified strings:
     old "You just bought [girl.fullname]. I hope you will enjoy her."
     new "你刚刚买下了[girl.fullname]。希望你能喜欢她。"
 
+# TODO: Translation updated at 2026-06-25 03:14
+
+translate chinese_simplified strings:
+
+    # game/core/systems/events_dispatcher.rpy:805
+    old "Change name:"
+    new "更改名称："
+
+    # game/core/systems/events_dispatcher.rpy:4699
+    old "Get rid of that bitch"
+    new "赶走那婊子"
+
+    # game/core/systems/events_dispatcher.rpy:4699
+    old "On second thought..."
+    new "算了"
+
+    # game/core/systems/events_dispatcher.rpy:4854
+    old "%s, I have trained %s as far as I could, but there are things she refuses to do. Perhaps if you allowed me to go {i}really{/i} hard on her..."
+    new "%s，我已经尽我所能训练了 %s，但有些事她拒绝做。也许如果你允许我对她 {i}真正{/i} 严厉一些……"
+    # game/core/systems/events_dispatcher.rpy:4859
+    old "%s, I brought you %s back. You asked me to train her until she was %s%s with all sex acts, well, there she is."
+    new "%s，我把 %s 带回来了。你要求我训练她，直到她对所有性行为都 %s%s，好了，她来了。"
+    # game/core/systems/events_dispatcher.rpy:5349
+    old "Are you sure you want to send %s to complete this contract?"
+    new "你确定要派 %s 去完成这份合同吗？"

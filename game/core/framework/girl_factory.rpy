@@ -397,7 +397,7 @@ init -3 python:
                     if trait in renamed_traits.keys(): # Updates trait name for backwards compatibility
                         input_dict["base positive traits/" + key].append(renamed_traits[trait])
                     else:
-                        renpy.say("{color=[c_red]}{b}Error parsing " + file + "{/b}{/color}", "{color=[c_red]}" + str(trait) + "{/color} is not a valid trait.\nCheck the correct use of brackets and quotes.")
+                        renpy.say(__("{color=[c_red]}{b}Error parsing %s{/b}{/color}") % file, __("{color=[c_red]}%s{/color} is not a valid trait.\nCheck the correct use of brackets and quotes.") % trait)
 
             for trait in input_dict["base negative traits/" + key]:
                 if trait not in trait_dict.keys():
@@ -406,13 +406,13 @@ init -3 python:
                     if trait in renamed_traits.keys(): # Updates trait name for backwards compatibility
                         input_dict["base negative traits/" + key].append(renamed_traits[trait])
                     else:
-                        renpy.say("{color=[c_red]}{b}Error parsing " + file + "{/b}{/color}", "{color=[c_red]}" + str(trait) + "{/color} is not a valid trait.\nCheck the correct use of brackets and quotes.")
+                        renpy.say(__("{color=[c_red]}{b}Error parsing %s{/b}{/color}") % file, __("{color=[c_red]}%s{/color} is not a valid trait.\nCheck the correct use of brackets and quotes.") % trait)
 
             input_dict["base personality/" + key] = [p.lower() for p in input_dict["base personality/" + key]]
 
             for pers in input_dict["base personality/" + key]:
                 if pers not in gpersonalities.keys():
-                    renpy.say("{color=[c_red]}{b}Error parsing " + file + "{/b}{/color}", "{color=[c_red]}" + str(pers) + "{/color} is not a valid personality.\nCheck the correct use of brackets and quotes.")
+                    renpy.say(__("{color=[c_red]}{b}Error parsing %s{/b}{/color}") % file, __("{color=[c_red]}%s{/color} is not a valid personality.\nCheck the correct use of brackets and quotes.") % pers)
 
         # Custom personality (for backwards compatibility)
 
@@ -442,7 +442,7 @@ init -3 python:
 
             for act in input_dict["sexual preferences/" + key]:
                 if act not in extended_sex_acts:
-                    renpy.say("{color=[c_red]}{b}Error parsing " + file + "{/b}{/color}", "{color=[c_red]}" + str(act) + "{/color} is not a valid sex act.\nCheck the correct use of brackets and quotes.")
+                    renpy.say(__("{color=[c_red]}{b}Error parsing %s{/b}{/color}") % file, __("{color=[c_red]}%s{/color} is not a valid sex act.\nCheck the correct use of brackets and quotes.") % act)
 
         # Fixations
 
@@ -451,7 +451,7 @@ init -3 python:
 
             for fix in input_dict["sexual preferences/" + key]:
                 if fix not in fix_dict.keys():
-                    renpy.say("{color=[c_red]}{b}Error parsing " + file + "{/b}{/color}", "{color=[c_red]}" + str(fix) + "{/color} is not a valid fixation.\nCheck the correct use of brackets and quotes.")
+                    renpy.say(__("{color=[c_red]}{b}Error parsing %s{/b}{/color}") % file, __("{color=[c_red]}%s{/color} is not a valid fixation.\nCheck the correct use of brackets and quotes.") % fix)
 
         # Prior sexual experience
 
@@ -459,7 +459,7 @@ init -3 python:
             input_dict["sexual preferences/sexual_experience"] = input_dict["sexual preferences/sexual_experience"].lower()
 
             if input_dict["sexual preferences/sexual_experience"].lower() not in list(sexual_training_value.keys()) + ["random"]:
-                renpy.say("{color=[c_red]}{b}Error parsing " + file + "{/b}{/color}", "{color=[c_red]}" + str(input_dict["sexual preferences/sexual_experience"]) + "{/color} is not a valid setting.\nAccepted values are " + '"very experienced", "experienced",  "average", "inexperienced", "very inexperienced", "random".')
+                renpy.say(__("{color=[c_red]}{b}Error parsing %s{/b}{/color}") % file, __("{color=[c_red]}%s{/color} is not a valid setting.\nAccepted values are \"very experienced\", \"experienced\",  \"average\", \"inexperienced\", \"very inexperienced\", \"random\".") % input_dict["sexual preferences/sexual_experience"])
 
         # Farm
 
@@ -467,7 +467,7 @@ init -3 python:
             input_dict["sexual preferences/farm_weakness"] = input_dict["sexual preferences/farm_weakness"].lower()
 
             if input_dict["sexual preferences/farm_weakness"] not in all_minion_types + ["random"]:
-                renpy.say("{color=[c_red]}{b}Error parsing " + file + "{/b}{/color}", "{color=[c_red]}" + str(input_dict["sexual preferences/farm_weakness"]) + '{/color} is not a valid farm weakness.\nAccepted values are "stallion", "beast", "monster", "machine", "random".')
+                renpy.say(__("{color=[c_red]}{b}Error parsing %s{/b}{/color}") % file, __("{color=[c_red]}%s{/color} is not a valid farm weakness.\nAccepted values are \"stallion\", \"beast\", \"monster\", \"machine\", \"random\".") % input_dict["sexual preferences/farm_weakness"])
 
         # Back story
 

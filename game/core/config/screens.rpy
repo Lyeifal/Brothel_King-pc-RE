@@ -1064,7 +1064,7 @@ label pick_resolution():
 
 
 
-                x = renpy.input("Choose screen width", default=config.screen_width, length = 4)
+                x = renpy.input(_("Choose screen width"), default=config.screen_width, length = 4)
 
                 try:
 
@@ -1090,7 +1090,7 @@ label pick_resolution():
 
                     narrator("{color=%s}Warning: This feature is experimental. Please use at your own risks.{/color}" % c_red, interact=False)
 
-                    y = renpy.input("Choose screen height", default=config.screen_height, length = 4)
+                    y = renpy.input(_("Choose screen height"), default=config.screen_height, length = 4)
 
                     try:
 
@@ -1818,7 +1818,7 @@ screen file_picker():
 
                 text "" size res_font(8)
 
-                text "{i}Screen made\n by OhWee{/i}" size res_font(12) xalign 0.85 color "#521" text_align 1.0 line_spacing -2
+                text _("{i}Screen made\n by OhWee{/i}") size res_font(12) xalign 0.85 color "#521" text_align 1.0 line_spacing -2
 
 
 
@@ -2341,8 +2341,6 @@ screen preferences(): #!
                     label _("Language")
 
                     textbutton _("English") action Function(bk_set_language, None)
-
-                    textbutton _("中文") action Function(bk_set_language, "chinese")
 
                     textbutton _("简体中文") action Function(bk_set_language, "chinese_simplified")
 

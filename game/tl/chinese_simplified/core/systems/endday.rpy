@@ -1,8 +1,6 @@
 ﻿# TODO: Translation updated at 2026-06-12 08:13
 
 translate chinese_simplified strings:
-    old "Attempt: %s"
-    new "尝试次数：%s"
     old "Search tags: %s"
     new "搜索标签：%s"
     old "AND tags: %s"
@@ -15,7 +13,8 @@ translate chinese_simplified strings:
     new "你妓院的声誉已从 %s 变为 %s。"
     old "Your brothel's reputation remains stable (%s)."
     new "你的妓院声誉保持稳定（%s）。"
-    old "Brothel reputation:\n%s (%s)"
+    old """Brothel reputation:
+%s (%s)"""
     new "妓院声誉：%s (%s)"
     old "Brothel report"
     new "妓院报告"
@@ -67,7 +66,8 @@ translate chinese_simplified strings:
     new "%s 的顾客因为妓院看起来肮脏（%s 的声誉）而拒绝光顾。"
     old "Customers turned away: -%s"
     new "被拒收的顾客：-%s"
-    old "\nTurned away: %s"
+    old """
+Turned away: %s"""
     new "转身离开：%s"
     old "Customers: %s"
     new "顾客：%s"
@@ -129,7 +129,8 @@ translate chinese_simplified strings:
     new "污垢：%s"
     old "Maintenance: %s"
     new "维护：%s"
-    old "\nYou paid {image=img_gold} %s to the bank for your loan."
+    old """
+You paid {image=img_gold} %s to the bank for your loan."""
     new "您已向银行支付了 %s 的贷款款项。"
     old "You paid {image=img_gold_24} %s in brothel costs."
     new "你支付了{image=img_gold_24} %s的妓院费用。"
@@ -169,4 +170,26 @@ translate chinese_simplified strings:
     new "警告！[girl.fullname] 很不开心，正在抱怨要离家出走……"
     old "Warning! [girl.fullname] is getting tired..."
     new "警告！[girl.fullname] 累了……"
+translate chinese_simplified end_day_98ad9d3d:
+
+    # "System" "Label: {color=[c_red]}[lbl]{/color} doesn't exist (Custom girl: {color=[c_red]}[girl.path]{/color})."
+    "System" ""
+
+# game/core/systems/endday.rpy:1442
+translate chinese_simplified end_day_ea7f72a4:
+
+    # girl.char "[text1]){/size}"
+    girl.char ""
+
+# game/core/systems/endday.rpy:1479
+translate chinese_simplified end_day_38728340:
+
+    # centered "Loading...{nw}"
+    centered ""
+
+translate chinese_simplified strings:
+
+    # game/core/systems/endday.rpy:265
+    old "Attempt: %s"
+    new "尝试：%s"
 

@@ -1624,7 +1624,7 @@ translate chinese_simplified city_slave_802d5805:
 translate chinese_simplified city_slave_6c6ac6f8:
 
     # you "HAAAAAAAAAAAAA!!!"
-    you "HAAAAAAAAAAAAA!!!"
+    you "哈哈哈哈哈哈！！！"
 
 # game/BKcity_events.rpy:1327
 translate chinese_simplified city_slave_3aa91c80:
@@ -1762,7 +1762,7 @@ translate chinese_simplified city_slave_eefaf412:
 translate chinese_simplified city_slave_b502c3b5:
 
     # slavegirl1 "Aaaaaaah!!!"
-    slavegirl1 "Aaaaaaah!!!"
+    slavegirl1 "啊啊啊！！！"
 
 # game/BKcity_events.rpy:1449
 translate chinese_simplified city_slave_f3666851:
@@ -2764,7 +2764,7 @@ translate chinese_simplified city_wrestle_8a556914:
 translate chinese_simplified city_wrestle_f8910b6b:
 
     # warrior "Hahahahaha!!!"
-    warrior "Hahahahaha!!!"
+    warrior "哈哈哈哈！！！"
 
 # game/BKcity_events.rpy:2203
 translate chinese_simplified city_wrestle_fa530948:
@@ -3484,19 +3484,19 @@ translate chinese_simplified city_cat_62f43f09:
 translate chinese_simplified city_cat_3714e19b:
 
     # you "Haaaaa!"
-    you "Haaaaa!"
+    you "哈啊啊啊！"
 
 # game/BKcity_events.rpy:2776
 translate chinese_simplified city_cat_cbafcc88:
 
     # ev_girl3 "Hiiiii!!!"
-    ev_girl3 "Hiiiii!!!"
+    ev_girl3 "嘿嘿嘿！！！"
 
 # game/BKcity_events.rpy:2780
 translate chinese_simplified city_cat_9a2e12a9:
 
     # yuna "Nyaaaaaaaah!!!"
-    yuna "Nyaaaaaaaah!!!"
+    yuna "尼玛啊啊啊！！！"
 
 # game/BKcity_events.rpy:2784
 translate chinese_simplified city_cat_69bf38ed:
@@ -6801,8 +6801,6 @@ translate chinese_simplified slave_beach_event_2666d939:
 # TODO: Translation updated at 2026-06-12 05:03
 
 translate chinese_simplified strings:
-    old "Sell it to Willow"
-    new "卖给柳树"
     old "Let me..."
     new "让我..."
     old "What will you do?"
@@ -6819,12 +6817,15 @@ translate chinese_simplified strings:
     new "你想让她做什么？"
     old "Choose what [girl.name] will do."
     new "选择[girl.name]将要做什么。"
-
-# TODO: Translation updated at 2026-06-12 08:13
-
-translate chinese_simplified strings:
-    old "You remember [girl.name] likes %s, and decide to exploit her weakness."
-    new "你记得[girl.name]喜欢%s，于是决定利用她的弱点。"
     old "You remember [girl.name] dislikes %s, but you decide to go for it anyway."
     new "你记得[girl.name]不喜欢%s，但你还是决定试一试。"
+translate chinese_simplified strings:
+
+    # game/core/content/city_events/city_events.rpy:336
+    old "Sell it to Willow"
+    new "卖给 Willow"
+
+    # game/core/content/city_events/city_events.rpy:4802
+    old "You remember [girl.name] likes %s, and decide to exploit her weakness."
+    new "你记得 [girl.name] 喜欢 %s，于是决定利用她的弱点。"
 

@@ -490,10 +490,10 @@ init -2 python:
                     reset_updated_games()
 
                 else:
-                    renpy.notify(self.name + " is already active.")
+                    renpy.notify(_("%s is already active.") % self.name)
 
         def deactivate(self):
-            if renpy.call_screen("yes_no", __("Do you really want to deactivate ") + self.full_name + "? This might negatively affect games saved while this mod was on."):
+            if renpy.call_screen("yes_no", __("Do you really want to deactivate %s? This might negatively affect games saved while this mod was on.") % self.full_name):
                 if self.active or persistent.mods[self.name]["active"]:
                     self.active = False
                     persistent.mods[self.name]["active"] = False
@@ -503,7 +503,7 @@ init -2 python:
                         pass
                     reset_updated_games()
                 else:
-                    renpy.notify(self.name + " couldn't be found among active mods.")
+                    renpy.notify(_("%s couldn't be found among active mods.") % self.name)
 
         def add_event(self, event_name, type=None, date=None, delay=1, call_args=None): # event_name is the event label (not object). date is the exact calendar date. If not provided, current time + delay is used instead (D+1 by default).
 
@@ -521,7 +521,7 @@ init -2 python:
                 calendar.set_alarm(date, self.events[event_name])
 
                 if date <= calendar.time:
-                    renpy.say("System", __("Warning: Event set to a past date. Change the event time or delay."))
+                    renpy.say(__("System"), __("Warning: Event set to a past date. Change the event time or delay."))
 
             elif type in ("morning", "day", "night"):
                 daily_events.append(self.events[event_name])

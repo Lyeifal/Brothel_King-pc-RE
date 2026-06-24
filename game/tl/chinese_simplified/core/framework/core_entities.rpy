@@ -1,23 +1,17 @@
 ﻿# TODO: Translation updated at 2026-06-12 05:58
 
 translate chinese_simplified strings:
-    old "WARNING. Activating cheats will disable achievements for this game. It will not affect achievements you already have. This decision cannot be reversed.\\n{b}Are you sure you want to activate cheats for this game?{/b}"
-    new "警告：启用作弊功能将禁用此游戏的成就。但不会影响您已获得的成就。此操作无法撤销。您确定要启用此游戏的作弊功能吗？"
     old "Would you like to reset this mod for this game (recommended)?"
     new "您想重置此游戏的模组吗（推荐）？"
     old "A new mod has been activated: "
     new "一个新的模组已启用："
     old "Are you sure you want to repay your loan in full for "
     new "你确定要全额偿还贷款吗？"
-
-# TODO: Translation updated at 2026-06-12 08:13
-
-translate chinese_simplified strings:
-    old "A different version of mod: %s has been found (%s)."
-    new "已找到不同版本的 mod：%s (%s)。"
-    old "\n%s has been activated."
+    old """
+%s has been activated."""
     new " %s 已被激活。"
-    old "\n%s has been deactivated."
+    old """
+%s has been deactivated."""
     new " %s 已被停用。"
     old "-%s AP"
     new "-%s AP"
@@ -61,4 +55,29 @@ translate chinese_simplified strings:
     new "您缺少此升级所需的资源（%s %s）。"
     old "Alarm set for %i (%s)"
     new "为 %i (%s) 设了闹钟"
+    old "Mod Update"
+    new "模组更新"
+    old "%s has been deactivated. Would you like to deactivate this mod for this game?"
+    new "%s 已被停用。你要在这个游戏中停用此模组吗？"
+    old "A new mod has been activated: %s. Would you like to activate this mod for this game?"
+    new "新模组已激活：%s。你要在这个游戏中激活此模组吗？"
+    old "Failure to deactivate %s"
+    new "停用 %s 失败"
+    old "Are you sure you want to repay your loan in full for %s gold?"
+    new "你确定要一次性还清 %s 金币的贷款吗？"
+    old "filtering"
+    new "筛选中"
+translate chinese_simplified strings:
+
+    # game/core/framework/core_entities.rpy:104
+    old "WARNING. Activating cheats will disable achievements for this game. It will not affect achievements you already have. This decision cannot be reversed.\\n{b}Are you sure you want to activate cheats for this game?{/b}"
+    new "警告。激活作弊将禁用本游戏的成就。它不会影响你已获得的成就。此决定无法撤销。\n{b}你确定要为本游戏激活作弊吗？{/b}"
+
+    # game/core/framework/core_entities.rpy:211
+    old "%s couldn't be found. Would you like to deactivate this mod for this game (recommended)?"
+    new "找不到 %s。你想在本游戏中停用此模组吗（推荐）？"
+
+    # game/core/framework/core_entities.rpy:215
+    old "A different version of mod: %s has been found (%s)."
+    new "发现了不同版本的模组：%s（%s）。"
 

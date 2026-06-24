@@ -1,8 +1,6 @@
 ﻿# TODO: Translation updated at 2026-06-12 08:13
 
 translate chinese_simplified strings:
-    old "DataLoader error loading %s: %s"
-    new "加载%s时发生 DataLoader 错误：%s"
     old "Trait load error: %s"
     new "特性加载错误：%s"
     old "Perk load error: %s"
@@ -29,4 +27,9 @@ translate chinese_simplified strings:
     new "元数据进度加载错误：%s"
     old "Item load error: %s"
     new "项目加载错误：%s"
+translate chinese_simplified strings:
+
+    # game/core/systems/data_loader.rpy:63
+    old "DataLoader error loading %s: %s"
+    new "DataLoader 加载 %s 时出错：%s"
 

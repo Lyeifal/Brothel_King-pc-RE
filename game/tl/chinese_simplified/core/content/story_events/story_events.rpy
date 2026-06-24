@@ -2044,7 +2044,7 @@ translate chinese_simplified renza_onsen3_0673aa20:
 translate chinese_simplified renza_onsen3_1e22b3ae:
 
     # renza "[MC.name]?"
-    renza "[MC.name]?"
+    renza "[MC.name]？"
 
 # game/BKstory_events.rpy:1074
 translate chinese_simplified renza_onsen3_54120118:
@@ -2548,7 +2548,7 @@ translate chinese_simplified renza_onsen3_314f17ce:
 translate chinese_simplified renza_onsen3_1e22b3ae_1:
 
     # renza "[MC.name]?"
-    renza "[MC.name]?"
+    renza "[MC.name]？"
 
 # game/BKstory_events.rpy:1297
 translate chinese_simplified renza_onsen3_06290627:
@@ -4930,7 +4930,7 @@ translate chinese_simplified gizel_rape_193be30d:
 translate chinese_simplified gizel_rape_6e4ac3a1:
 
     # templar "Muhahahaha!"
-    templar "Muhahahaha!"
+    templar "哈哈哈哈！"
 
 # game/BKstory_events.rpy:2555
 translate chinese_simplified gizel_rape_1687731a:
@@ -5488,7 +5488,7 @@ translate chinese_simplified gizel_attack_18418c7e:
 translate chinese_simplified gizel_attack_250b6e3a:
 
     # gizel "........."
-    gizel "........."
+    gizel "…………"
 
 # game/BKstory_events.rpy:2879
 translate chinese_simplified gizel_attack_998604da:
@@ -6796,7 +6796,7 @@ translate chinese_simplified farm_exorcism_attempt_30e32c48:
 translate chinese_simplified farm_exorcism_attempt_5624b186:
 
     # spirit "Booh."
-    spirit "BOOM！"
+    spirit "繁荣！"
 
 # game/BKstory_events.rpy:3476
 translate chinese_simplified farm_exorcism_attempt_816e6c51:
@@ -10228,7 +10228,7 @@ translate chinese_simplified stella_handjob_59617b44:
 translate chinese_simplified stella_handjob_56ebb028:
 
     # you "!!!"
-    you "!!!"
+    you "！！！"
 
 # game/BKstory_events.rpy:5152
 translate chinese_simplified stella_handjob_1a6aaece:
@@ -12652,7 +12652,7 @@ translate chinese_simplified stella_bj_2a10c048:
 translate chinese_simplified stella_bj_56ebb028:
 
     # you "!!!"
-    you "!!!"
+    you "！！！"
 
 # game/BKstory_events.rpy:6365
 translate chinese_simplified stella_bj_c4483e15:
@@ -14026,7 +14026,7 @@ translate chinese_simplified willow_fight_dae0ec55:
 translate chinese_simplified willow_fight_625cb42d:
 
     # you "!?!"
-    you "!?!"
+    you "！？！"
 
 # game/BKstory_events.rpy:7083
 translate chinese_simplified willow_fight_eec04d88:
@@ -18790,7 +18790,7 @@ translate chinese_simplified farm_first_monster_3915fb31:
 translate chinese_simplified farm_first_monster_e68d9242:
 
     # gizel "[MC.name]?"
-    gizel "[MC.name]?"
+    gizel "[MC.name]？"
 
 # game/BKstory_events.rpy:9408
 translate chinese_simplified farm_first_monster_17e036ed:
@@ -19666,7 +19666,7 @@ translate chinese_simplified farm_first_monster_bcd390c5:
 translate chinese_simplified farm_first_monster_b8120b26:
 
     # gizel "[MC.name]!"
-    gizel "[MC.name]!"
+    gizel "[MC.name]！"
 
 # game/BKstory_events.rpy:9823
 translate chinese_simplified farm_first_monster_eddfddf4:
@@ -19726,7 +19726,7 @@ translate chinese_simplified farm_second_monster_4a234e99:
 translate chinese_simplified farm_second_monster_546648a2:
 
     # you "Gizel?"
-    you "Gizel?"
+    you "吉泽尔？"
 
 # game/BKstory_events.rpy:9874
 translate chinese_simplified farm_second_monster_cca5261f:
@@ -20002,7 +20002,7 @@ translate chinese_simplified farm_first_machine_dc63e663:
 translate chinese_simplified farm_first_machine_546648a2:
 
     # you "Gizel?"
-    you "Gizel?"
+    you "吉泽尔？"
 
 # game/BKstory_events.rpy:10029
 translate chinese_simplified farm_first_machine_dae0ec55:
@@ -20044,7 +20044,7 @@ translate chinese_simplified farm_first_machine_03a47e71:
 translate chinese_simplified farm_first_machine_546648a2_1:
 
     # you "Gizel?"
-    you "Gizel?"
+    you "吉泽尔？"
 
 # game/BKstory_events.rpy:10045
 translate chinese_simplified farm_first_machine_44aa4b62:
@@ -20188,7 +20188,7 @@ translate chinese_simplified farm_first_machine_cac74c1c:
 translate chinese_simplified farm_first_machine_a07a3bb6:
 
     # you "There it is! {i}Habith, karzawat!{/i}"
-    you "{i}Habith, karzawat!{/i}"
+    you "{i}哈比斯，卡扎瓦特！{/i}"
 
 # game/BKstory_events.rpy:10114
 translate chinese_simplified farm_first_machine_3d98f188:
@@ -20230,7 +20230,7 @@ translate chinese_simplified farm_first_machine_2fa0a2ad:
 translate chinese_simplified farm_first_machine_de8a2b51:
 
     # you "Here, let's try this. {i}Zortawort, mazeltov...{/i}"
-    you "{i}Zortawort, mazeltov...{/i}"
+    you "{i}Zortawort、mazeltov...{/i}"
 
 # game/BKstory_events.rpy:10138
 translate chinese_simplified farm_first_machine_98f28b4a:
@@ -21220,7 +21220,7 @@ translate chinese_simplified satella_first_visit_f5b8afff:
 translate chinese_simplified satella_first_visit_6931e35b:
 
     # satella "Rodrigo!"
-    satella "Rodrigo!"
+    satella "罗德里戈！"
 
 # game/BKstory_events.rpy:10708
 translate chinese_simplified satella_first_visit_b0a689b7:
@@ -22984,7 +22984,7 @@ translate chinese_simplified satella_thunderbolt_2486477c:
 translate chinese_simplified satella_thunderbolt_f663c16b:
 
     # satella "Muhahahaha!"
-    satella "Muhahahaha!"
+    satella "哈哈哈哈！"
 
 # game/BKstory_events.rpy:11773
 translate chinese_simplified satella_thunderbolt_7f29e070:
@@ -25270,7 +25270,7 @@ translate chinese_simplified shalia_visit_9a564355:
 translate chinese_simplified shalia_visit_ddbf6b95:
 
     # satella "[MC.name]?"
-    satella "[MC.name]?"
+    satella "[MC.name]？"
 
 # game/BKstory_events.rpy:13086
 translate chinese_simplified shalia_visit_b9f03b8c:
@@ -28870,7 +28870,7 @@ translate chinese_simplified banker_special1_e4af00c4:
 translate chinese_simplified banker_special1_625cb42d:
 
     # you "!?!"
-    you "!?!"
+    you "！？！"
 
 # game/BKstory_events.rpy:14826
 translate chinese_simplified banker_special1_446b255a:
@@ -35326,7 +35326,7 @@ translate chinese_simplified return_to_bast_aa66499b:
 translate chinese_simplified return_to_bast_8c025419:
 
     # bast "........."
-    bast "........."
+    bast "…………"
 
 # game/BKstory_events.rpy:18099
 translate chinese_simplified return_to_bast_be5b4997:
@@ -40354,7 +40354,7 @@ translate chinese_simplified chaos_9a427fff:
 translate chinese_simplified chaos_78fc0acc:
 
     # chaos "........."
-    chaos "........."
+    chaos "…………"
 
 # game/BKstory_events.rpy:20495
 translate chinese_simplified chaos_4e03a3aa:
@@ -40396,7 +40396,7 @@ translate chinese_simplified chaos_b70ec7be:
 translate chinese_simplified chaos_3815e715:
 
     # chaos "FUFUFUFUFUFUFU..."
-    chaos "FUFUFUFUFUFUFU..."
+    chaos "呼呼呼呼呼呼……"
 
 # game/BKstory_events.rpy:20511
 translate chinese_simplified chaos_d825505d:
@@ -40432,7 +40432,7 @@ translate chinese_simplified chaos_46fb542e:
 translate chinese_simplified chaos_47669044:
 
     # chaos "FUFUFUFUFU..."
-    chaos "FUFUFUFUFU..."
+    chaos "呼呼呼呼……"
 
 # game/BKstory_events.rpy:20525
 translate chinese_simplified chaos_7e40b2f7:
@@ -40486,7 +40486,7 @@ translate chinese_simplified chaos_4295bdbc_1:
 translate chinese_simplified chaos_35ccb315:
 
     # chaos "....."
-    chaos "....."
+    chaos "……"
 
 # game/BKstory_events.rpy:20549
 translate chinese_simplified chaos_bf0dfe43:
@@ -40858,13 +40858,13 @@ translate chinese_simplified MU_jobgirl_071ae59c:
 translate chinese_simplified MU_jobgirl_953056c1:
 
     # jobgirl "Well, I... May have 'borrowed' her magic staff for a moment, because I wasn't able to cast such a high-level spell..."
-    jobgirl "Well, I... May have 'borrowed' her magic staff for a moment, because I wasn't able to cast such a high-level spell..."
+    jobgirl "嗯，我……可能暂时‘借用’了她的魔法杖，因为我无法施展如此高级的法术……"
 
 # game/BKstory_events.rpy:20710
 translate chinese_simplified MU_jobgirl_3a74d150:
 
     # jobgirl "So, I would rather she doesn't find out. Please, can you help me?"
-    jobgirl "So, I would rather she doesn't find out. Please, can you help me?"
+    jobgirl "所以，我宁愿她不知道。拜托，你能帮我吗？"
 
 # game/BKstory_events.rpy:20713
 translate chinese_simplified MU_jobgirl_11fdb519:
@@ -40882,73 +40882,73 @@ translate chinese_simplified MU_jobgirl_7b17eda7:
 translate chinese_simplified MU_jobgirl_6a64dce7:
 
     # you "{i}Yayum gamjee, yayum shrink boo bee!{/i}"
-    you "{i}Yayum gamjee, yayum shrink boo bee!{/i}"
+    you "{i}Yayum gamjee，yayum 缩小嘘蜜蜂！{/i}"
 
 # game/BKstory_events.rpy:20729
 translate chinese_simplified MU_jobgirl_a7cae8bf:
 
     # "You immediately recognize the staff as a Shalia artifact."
-    "You immediately recognize the staff as a Shalia artifact."
+    "你立即认出这根法杖是莎莉亚神器。"
 
 # game/BKstory_events.rpy:20731
 translate chinese_simplified MU_jobgirl_9629085b:
 
     # you "Well, I think it's a little curse placed on you by the Lady of the Night."
-    you "Well, I think it's a little curse placed on you by the Lady of the Night."
+    you "好吧，我认为这是夜之女士对你施加的一个小诅咒。"
 
 # game/BKstory_events.rpy:20733
 translate chinese_simplified MU_jobgirl_2b17a1f2:
 
     # jobgirl "The Lady of... You mean Shalia?"
-    jobgirl "The Lady of... You mean Shalia?"
+    jobgirl "女士……你是说莎莉亚吗？"
 
 # game/BKstory_events.rpy:20735
 translate chinese_simplified MU_jobgirl_8e33fd7b:
 
     # you "Yes. It might not be that your spell succeeded at all, but you probably shouldn't have touched that staff."
-    you "Yes. It might not be that your spell succeeded at all, but you probably shouldn't have touched that staff."
+    you "是的。也许你的咒语根本没有成功，但你可能不应该碰那根法杖。"
 
 # game/BKstory_events.rpy:20737
 translate chinese_simplified MU_jobgirl_eff72369:
 
     # jobgirl "But what's the point of a curse that gives large... You know?"
-    jobgirl "But what's the point of a curse that gives large... You know?"
+    jobgirl "但是给予大的诅咒有什么意义……你知道吗？"
 
 # game/BKstory_events.rpy:20739
 translate chinese_simplified MU_jobgirl_55defb2b:
 
     # you "Good question... They are inordinately large, uh... *drool*"
-    you "Good question... They are inordinately large, uh... *drool*"
+    you "好问题...它们非常大，呃...*流口水*"
 
 # game/BKstory_events.rpy:20741
 translate chinese_simplified MU_jobgirl_34c70ee1:
 
     # you "Erm, sorry."
-    you "Erm, sorry."
+    you "呃，抱歉。"
 
 # game/BKstory_events.rpy:20743
 translate chinese_simplified MU_jobgirl_1941a2f5:
 
     # jobgirl "Come to think of it, the professor also had a huge rack..."
-    jobgirl "Come to think of it, the professor also had a huge rack..."
+    jobgirl "想想看，教授还有一个巨大的架子……"
 
 # game/BKstory_events.rpy:20745
 translate chinese_simplified MU_jobgirl_3ebe2a1f:
 
     # jobgirl "Maybe this is no curse at all! Maybe she uses the staff to grow her own boobs! So when I touched it, this happened to me!"
-    jobgirl "Maybe this is no curse at all! Maybe she uses the staff to grow her own boobs! So when I touched it, this happened to me!"
+    jobgirl "或许这根本就不是诅咒！也许她会用棍子来长出自己的胸部！所以当我触摸它时，这发生在我身上！"
 
 # game/BKstory_events.rpy:20747
 translate chinese_simplified MU_jobgirl_ad9229d6:
 
     # you "Yeah, yeah. Another fascinating mystery solved..."
-    you "Yeah, yeah. Another fascinating mystery solved..."
+    you "是啊是啊。又一个令人着迷的谜团解开了……"
 
 # game/BKstory_events.rpy:20749
 translate chinese_simplified MU_jobgirl_7b97e161:
 
     # jobgirl "But what can I do?"
-    jobgirl "But what can I do?"
+    jobgirl "但我能做什么呢？"
 
 # game/BKstory_events.rpy:20751
 translate chinese_simplified MU_jobgirl_27bf58c8:
@@ -40966,13 +40966,13 @@ translate chinese_simplified MU_jobgirl_f0b07669:
 translate chinese_simplified MU_jobgirl_e1110b46:
 
     # "She tosses the staff into a nearby bush."
-    "She tosses the staff into a nearby bush."
+    "她将手杖扔进附近的灌木丛中。"
 
 # game/BKstory_events.rpy:20757
 translate chinese_simplified MU_jobgirl_4c23915b:
 
     # you "Look, if this is Shalia's doing, I know a simple prayer. Shalia is known to like a little prank, but she can recognise when they have gone on too long. Usually."
-    you "Look, if this is Shalia's doing, I know a simple prayer. Shalia is known to like a little prank, but she can recognise when they have gone on too long. Usually."
+    you "听着，如果这是莎莉亚做的，我知道一个简单的祈祷。众所周知，莎莉亚喜欢恶作剧，但当他们玩得太久时，她也能意识到。通常。"
 
 # game/BKstory_events.rpy:20759
 translate chinese_simplified MU_jobgirl_02024c11:
@@ -40984,7 +40984,7 @@ translate chinese_simplified MU_jobgirl_02024c11:
 translate chinese_simplified MU_jobgirl_a4f9dc46:
 
     # you "*mumble a prayer*"
-    you "*mumble a prayer*"
+    you "*低声祈祷*"
 
 # game/BKstory_events.rpy:20763
 translate chinese_simplified MU_jobgirl_dded6da0:
@@ -40996,13 +40996,13 @@ translate chinese_simplified MU_jobgirl_dded6da0:
 translate chinese_simplified MU_jobgirl_7d523869:
 
     # jobgirl "It's working! Oh, that's a relief..."
-    jobgirl "It's working! Oh, that's a relief..."
+    jobgirl "它正在工作！哦，这真是一种解脱……"
 
 # game/BKstory_events.rpy:20771
 translate chinese_simplified MU_jobgirl_b6456a7b:
 
     # you "Look, I'm no magician..."
-    you "Look, I'm no magician..."
+    you "听着，我不是魔法师..."
 
 # game/BKstory_events.rpy:20773
 translate chinese_simplified MU_jobgirl_c875bdca:
@@ -41014,7 +41014,7 @@ translate chinese_simplified MU_jobgirl_c875bdca:
 translate chinese_simplified MU_jobgirl_64647464:
 
     # you "But I know someone who may be able to help you."
-    you "But I know someone who may be able to help you."
+    you "但我认识一个人也许可以帮助你。"
 
 # game/BKstory_events.rpy:20777
 translate chinese_simplified MU_jobgirl_f3dfd25a:
@@ -41026,37 +41026,37 @@ translate chinese_simplified MU_jobgirl_f3dfd25a:
 translate chinese_simplified MU_jobgirl_7be87c37:
 
     # you "Sure! Remember my slave Sill?"
-    you "Sure! Remember my slave Sill?"
+    you "当然！还记得我的奴隶希尔吗？"
 
 # game/BKstory_events.rpy:20781
 translate chinese_simplified MU_jobgirl_220fa735:
 
     # you "Before her parents lost their fortunes and sold her to me, she received some magic training."
-    you "Before her parents lost their fortunes and sold her to me, she received some magic training."
+    you "在她父母倾家荡产并将她卖给我之前，她接受过一些魔法训练。"
 
 # game/BKstory_events.rpy:20783
 translate chinese_simplified MU_jobgirl_f3d7f13f:
 
     # you "She said she was quite good. I put an end to this nonsense of course, but she may still remember something from that time."
-    you "She said she was quite good. I put an end to this nonsense of course, but she may still remember something from that time."
+    you "她说她很好。我当然结束了这种废话，但她可能还记得当时的一些事情。"
 
 # game/BKstory_events.rpy:20785
 translate chinese_simplified MU_jobgirl_6fa87929:
 
     # jobgirl "Does she know how to lift that nasty spell?"
-    jobgirl "Does she know how to lift that nasty spell?"
+    jobgirl "她知道如何解除那个讨厌的咒语吗？"
 
 # game/BKstory_events.rpy:20787
 translate chinese_simplified MU_jobgirl_4d9bff21:
 
     # you "Maybe, maybe not. Let's find out."
-    you "Maybe, maybe not. Let's find out."
+    you "也许，也许不是。让我们来看看吧。"
 
 # game/BKstory_events.rpy:20793
 translate chinese_simplified MU_jobgirl_71bf7d3e:
 
     # sill "Yes, Master?"
-    sill "Yes, Master?"
+    sill "是吗，师父？"
 
 # game/BKstory_events.rpy:20795
 translate chinese_simplified MU_jobgirl_b49bab3c:
@@ -41068,25 +41068,25 @@ translate chinese_simplified MU_jobgirl_b49bab3c:
 translate chinese_simplified MU_jobgirl_0a421ada:
 
     # sill "Oh, really? Please give me the staff, I'll see if I can cure you."
-    sill "Oh, really? Please give me the staff, I'll see if I can cure you."
+    sill "哦真的吗？请把法杖给我，我看看能不能治好你。"
 
 # game/BKstory_events.rpy:20799
 translate chinese_simplified MU_jobgirl_cfb87ffe:
 
     # sill "Hmmm... Let's see if I can remember that counterspell..."
-    sill "Hmmm... Let's see if I can remember that counterspell..."
+    sill "嗯...让我看看我是否能记住那个反咒语..."
 
 # game/BKstory_events.rpy:20801
 translate chinese_simplified MU_jobgirl_cf56daee:
 
     # sill "{i}Titillating twins, now shrink away, to leave this body with a lighter weight!{/i}"
-    sill "{i}Titillating twins, now shrink away, to leave this body with a lighter weight!{/i}"
+    sill "{i}令人兴奋的双胞胎，现在退缩，让这个身体的重量更轻！{/i}"
 
 # game/BKstory_events.rpy:20809
 translate chinese_simplified MU_jobgirl_8b49263b:
 
     # you "Oh my, this is terrible... Let me take a good look, see if I can find a solution..."
-    you "Oh my, this is terrible... Let me take a good look, see if I can find a solution..."
+    you "天哪，这太可怕了……让我仔细看看，看看能不能找到解决办法……"
 
 # game/BKstory_events.rpy:20811
 translate chinese_simplified MU_jobgirl_be7f19dc:
@@ -41098,13 +41098,13 @@ translate chinese_simplified MU_jobgirl_be7f19dc:
 translate chinese_simplified MU_jobgirl_424c7de3:
 
     # you "I must look closer, to make sure I can see every angle of the problem... *drool*"
-    you "I must look closer, to make sure I can see every angle of the problem... *drool*"
+    you "我必须看得更仔细，以确保我能看到问题的各个角度...... *流口水*"
 
 # game/BKstory_events.rpy:20822
 translate chinese_simplified MU_jobgirl_36b70949:
 
     # jobgirl "Is this really necessary..."
-    jobgirl "Is this really necessary..."
+    jobgirl "这真的有必要吗..."
 
 # game/BKstory_events.rpy:20824
 translate chinese_simplified MU_jobgirl_6908213b:
@@ -41116,37 +41116,37 @@ translate chinese_simplified MU_jobgirl_6908213b:
 translate chinese_simplified MU_jobgirl_d982e357:
 
     # "You point at her enormous boobs, poking the fabric of her top, which seems about to burst."
-    "You point at her enormous boobs, poking the fabric of her top, which seems about to burst."
+    "你指着她巨大的胸部，戳戳她上衣的布料，看起来快要破裂了。"
 
 # game/BKstory_events.rpy:20828
 translate chinese_simplified MU_jobgirl_2d1f4499:
 
     # you "It seems we have here a surge in, ahem, mammary inflation..."
-    you "It seems we have here a surge in, ahem, mammary inflation..."
+    you "看来我们这里的乳房胀气激增……"
 
 # game/BKstory_events.rpy:20830
 translate chinese_simplified MU_jobgirl_b4c9dfa5:
 
     # you "*more magical mumbo-jumbo*"
-    you "*more magical mumbo-jumbo*"
+    you "*更神奇的胡言乱语*"
 
 # game/BKstory_events.rpy:20832
 translate chinese_simplified MU_jobgirl_a8b8747f:
 
     # jobgirl "You... really know what you are talking about, right?"
-    jobgirl "You... really know what you are talking about, right?"
+    jobgirl "你……真的知道你在说什么，对吧？"
 
 # game/BKstory_events.rpy:20834
 translate chinese_simplified MU_jobgirl_90074290:
 
     # you "Of, course, my dear. Turn around."
-    you "Of, course, my dear. Turn around."
+    you "当然，亲爱的。回转。"
 
 # game/BKstory_events.rpy:20836
 translate chinese_simplified MU_jobgirl_9421f9db:
 
     # "*POKE*"
-    "*POKE*"
+    "*戳*"
 
 # game/BKstory_events.rpy:20840
 translate chinese_simplified MU_jobgirl_05c10af8:
@@ -41158,25 +41158,25 @@ translate chinese_simplified MU_jobgirl_05c10af8:
 translate chinese_simplified MU_jobgirl_53e81fc3:
 
     # you "It seems the adiposity of the lower backside has increased by... A voluptuacious modiquantum..."
-    you "It seems the adiposity of the lower backside has increased by... A voluptuacious modiquantum..."
+    you "看来下背部的赘肉增加了……肉感十足……"
 
 # game/BKstory_events.rpy:20844
 translate chinese_simplified MU_jobgirl_cfe37567:
 
     # jobgirl "You mean... My butt..."
-    jobgirl "You mean... My butt..."
+    jobgirl "你是说……我的屁股……"
 
 # game/BKstory_events.rpy:20846
 translate chinese_simplified MU_jobgirl_6a818b9f:
 
     # you "... Has grown much larger, yes. In fact, it makes your shorts look like a thong."
-    you "... Has grown much larger, yes. In fact, it makes your shorts look like a thong."
+    you "...已经变得更大了，是的。事实上，它会让你的短裤看起来像丁字裤。"
 
 # game/BKstory_events.rpy:20848
 translate chinese_simplified MU_jobgirl_04d11b5b:
 
     # you "I'm afraid this situation is desperate."
-    you "I'm afraid this situation is desperate."
+    you "这种情况恐怕是令人绝望了。"
 
 # game/BKstory_events.rpy:20850
 translate chinese_simplified MU_jobgirl_261c1f14:
@@ -41188,7 +41188,7 @@ translate chinese_simplified MU_jobgirl_261c1f14:
 translate chinese_simplified MU_jobgirl_76918372:
 
     # you "Without proper treatment, your juicy... I mean, sensitive parts will grow, and grow, until they pop out like balloons. This could prove fatal."
-    you "Without proper treatment, your juicy... I mean, sensitive parts will grow, and grow, until they pop out like balloons. This could prove fatal."
+    you "如果没有适当的治疗，你的多汁……我的意思是，敏感部位会不断生长，直到它们像气球一样弹出。这可能是致命的。"
 
 # game/BKstory_events.rpy:20856
 translate chinese_simplified MU_jobgirl_a7ac221a:
@@ -41200,7 +41200,7 @@ translate chinese_simplified MU_jobgirl_a7ac221a:
 translate chinese_simplified MU_jobgirl_08cb7ade:
 
     # you "Well, you're in luck. I know a secret esoteric massage that can relieve your precious parts."
-    you "Well, you're in luck. I know a secret esoteric massage that can relieve your precious parts."
+    you "嗯，你很幸运。我知道一种秘传按摩，可以缓解你的珍贵部位。"
 
 # game/BKstory_events.rpy:20860
 translate chinese_simplified MU_jobgirl_2f327157:
@@ -41212,55 +41212,55 @@ translate chinese_simplified MU_jobgirl_2f327157:
 translate chinese_simplified MU_jobgirl_b5ab1545:
 
     # you "E-SO-TE-ric massage, my dear."
-    you "E-SO-TE-ric massage, my dear."
+    you "E-SO-TE-ric 按摩，亲爱的。"
 
 # game/BKstory_events.rpy:20864
 translate chinese_simplified MU_jobgirl_6661061c:
 
     # jobgirl "R-Right, what was I thinking... *blush*"
-    jobgirl "R-Right, what was I thinking... *blush*"
+    jobgirl "R、对了，我在想什么……*脸红*"
 
 # game/BKstory_events.rpy:20866
 translate chinese_simplified MU_jobgirl_87e934af:
 
     # you "There is no time to waste! Let's get started."
-    you "There is no time to waste! Let's get started."
+    you "没有时间可以浪费了！让我们开始吧。"
 
 # game/BKstory_events.rpy:20868
 translate chinese_simplified MU_jobgirl_42981bbc:
 
     # jobgirl "W-Wait, here?"
-    jobgirl "W-Wait, here?"
+    jobgirl "等、等等，这里？"
 
 # game/BKstory_events.rpy:20870
 translate chinese_simplified MU_jobgirl_8b6cb7a6:
 
     # you "We can find a more secluded place if you want; but time is of the essence, let us hurry."
-    you "We can find a more secluded place if you want; but time is of the essence, let us hurry."
+    you "如果您愿意，我们可以找一个更僻静的地方；但时间至关重要，让我们抓紧时间吧。"
 
 # game/BKstory_events.rpy:20875
 translate chinese_simplified MU_jobgirl_e69ad623:
 
     # "You both sneak into an empty room in the students' dorm."
-    "You both sneak into an empty room in the students' dorm."
+    "你们俩溜进了学生宿舍的一间空房间。"
 
 # game/BKstory_events.rpy:20879
 translate chinese_simplified MU_jobgirl_af23a371:
 
     # jobgirl "W-What do you want me to do?"
-    jobgirl "W-What do you want me to do?"
+    jobgirl "你-你想让我做什么？"
 
 # game/BKstory_events.rpy:20881
 translate chinese_simplified MU_jobgirl_41c91606:
 
     # you "Well, just stand still. Let me handle it."
-    you "Well, just stand still. Let me handle it."
+    you "好吧，就站着吧。让我来处理吧。"
 
 # game/BKstory_events.rpy:20883
 translate chinese_simplified MU_jobgirl_a99e8bfd:
 
     # "You place a hand on her breast."
-    "You place a hand on her breast."
+    "你将一只手放在她的乳房上。"
 
 # game/BKstory_events.rpy:20887
 translate chinese_simplified MU_jobgirl_46924847:
@@ -41272,7 +41272,7 @@ translate chinese_simplified MU_jobgirl_46924847:
 translate chinese_simplified MU_jobgirl_0e1f5e72:
 
     # you "Hush, don't move. It's a delicate procedure, I must concentrate. Just trust me."
-    you "Hush, don't move. It's a delicate procedure, I must concentrate. Just trust me."
+    you "嘘，别动。这是一个微妙的过程，我必须集中注意力。相信我。"
 
 # game/BKstory_events.rpy:20891
 translate chinese_simplified MU_jobgirl_0de140f4:
@@ -41290,25 +41290,25 @@ translate chinese_simplified MU_jobgirl_0106c5b7:
 translate chinese_simplified MU_jobgirl_b83951a7:
 
     # jobgirl "Why are you... Hmmm... Massaging my breasts..."
-    jobgirl "Why are you... Hmmm... Massaging my breasts..."
+    jobgirl "你为什么……嗯……按摩我的乳房……"
 
 # game/BKstory_events.rpy:20899
 translate chinese_simplified MU_jobgirl_184ae9f6:
 
     # you "It's good for you. Obviously, you can't treat mammary inflation without addressing the, err, mammary area."
-    you "It's good for you. Obviously, you can't treat mammary inflation without addressing the, err, mammary area."
+    you "这对你有好处。显然，如果不解决乳房区域问题，就无法治疗乳房肿胀。"
 
 # game/BKstory_events.rpy:20901
 translate chinese_simplified MU_jobgirl_ea085ce7:
 
     # jobgirl "*heavy breathing*"
-    jobgirl "*heavy breathing*"
+    jobgirl "*粗重的呼吸*"
 
 # game/BKstory_events.rpy:20903
 translate chinese_simplified MU_jobgirl_e49b5954:
 
     # you "Your clothing is getting in the way. We need a more direct approach. Let me massage you underneath it."
-    you "Your clothing is getting in the way. We need a more direct approach. Let me massage you underneath it."
+    you "你的衣服妨碍了。我们需要一种更直接的方法。让我在下面按摩你。"
 
 # game/BKstory_events.rpy:20905
 translate chinese_simplified MU_jobgirl_8e513c0e:
@@ -41320,7 +41320,7 @@ translate chinese_simplified MU_jobgirl_8e513c0e:
 translate chinese_simplified MU_jobgirl_a9cebb82:
 
     # you "Then I'm afraid your tits might burst any moment now..."
-    you "Then I'm afraid your tits might burst any moment now..."
+    you "那我担心你的奶子随时都会爆掉……"
 
 # game/BKstory_events.rpy:20909
 translate chinese_simplified MU_jobgirl_be8fb016:
@@ -41332,25 +41332,25 @@ translate chinese_simplified MU_jobgirl_be8fb016:
 translate chinese_simplified MU_jobgirl_4148f92c:
 
     # you "Sure, sure... Hehehehe..."
-    you "Sure, sure... Hehehehe..."
+    you "当然，当然……呵呵呵呵……"
 
 # game/BKstory_events.rpy:20913
 translate chinese_simplified MU_jobgirl_a598ba49:
 
     # "Sliding your hands under her top, you feel her large, puffy nipples under your palm."
-    "Sliding your hands under her top, you feel her large, puffy nipples under your palm."
+    "将你的手滑到她的上衣下方，你会感觉到她大而浮肿的乳头在你的手掌下。"
 
 # game/BKstory_events.rpy:20917
 translate chinese_simplified MU_jobgirl_da389696:
 
     # jobgirl "Oh, aaah..."
-    jobgirl "Oh, aaah..."
+    jobgirl "哦，啊啊……"
 
 # game/BKstory_events.rpy:20919
 translate chinese_simplified MU_jobgirl_c7fb3aec:
 
     # you "Interesting... Were they always like this, or is it the spell?"
-    you "Interesting... Were they always like this, or is it the spell?"
+    you "有趣……他们一直都是这样，还是咒语造成的？"
 
 # game/BKstory_events.rpy:20921
 translate chinese_simplified MU_jobgirl_68046316:
@@ -41362,13 +41362,13 @@ translate chinese_simplified MU_jobgirl_68046316:
 translate chinese_simplified MU_jobgirl_29591174:
 
     # "Her nipples are stiff and hard under your touch. It seems your ministrations had an effect."
-    "Her nipples are stiff and hard under your touch. It seems your ministrations had an effect."
+    "在你的触摸下，她的乳头变得又硬又硬。看来你的服务有效果。"
 
 # game/BKstory_events.rpy:20925
 translate chinese_simplified MU_jobgirl_8fd5d9de:
 
     # "You squeeze her nipples between your fingers."
-    "You squeeze her nipples between your fingers."
+    "你用手指挤压她的乳头。"
 
 # game/BKstory_events.rpy:20929
 translate chinese_simplified MU_jobgirl_0d36e617:
@@ -41380,25 +41380,25 @@ translate chinese_simplified MU_jobgirl_0d36e617:
 translate chinese_simplified MU_jobgirl_c010e5d2:
 
     # "This time, she doesn't seem to really be waiting for an answer, so you just continue."
-    "This time, she doesn't seem to really be waiting for an answer, so you just continue."
+    "这一次，她似乎并不是真的在等待答案，所以你就继续吧。"
 
 # game/BKstory_events.rpy:20933
 translate chinese_simplified MU_jobgirl_57c05365:
 
     # "Her breasts are so large that you can't hope to hold them in your hand, so you just sink your hands into the flesh, bouncing them up and down."
-    "Her breasts are so large that you can't hope to hold them in your hand, so you just sink your hands into the flesh, bouncing them up and down."
+    "她的乳房太大了，你无法指望将它们握在手中，所以你只能将手伸进肉里，上下弹跳。"
 
 # game/BKstory_events.rpy:20935
 translate chinese_simplified MU_jobgirl_5e1a92c0:
 
     # jobgirl "Ohh!!! Do... Do you have to jiggle them this much?"
-    jobgirl "Ohh!!! Do... Do you have to jiggle them this much?"
+    jobgirl "哦！！！你……你有必要这么摇晃它们吗？"
 
 # game/BKstory_events.rpy:20937
 translate chinese_simplified MU_jobgirl_6c80bfae:
 
     # you "It's necessary. Every part must be stimulated for the magic to drain properly."
-    you "It's necessary. Every part must be stimulated for the magic to drain properly."
+    you "有必要。每个部位都必须受到刺激，魔力才能正常排出。"
 
 # game/BKstory_events.rpy:20939
 translate chinese_simplified MU_jobgirl_0de140f4_1:
@@ -41410,7 +41410,7 @@ translate chinese_simplified MU_jobgirl_0de140f4_1:
 translate chinese_simplified MU_jobgirl_14556e98:
 
     # "Going in for the kill, you pull her closer, placing your hands on her overgrown ass."
-    "Going in for the kill, you pull her closer, placing your hands on her overgrown ass."
+    "准备杀人时，你把她拉得更近，把手放在她肥大的屁股上。"
 
 # game/BKstory_events.rpy:20943
 translate chinese_simplified MU_jobgirl_a9907d97:
@@ -41422,31 +41422,31 @@ translate chinese_simplified MU_jobgirl_a9907d97:
 translate chinese_simplified MU_jobgirl_97d2cf65:
 
     # "She doesn't even think to protest this time. Your hard-on is pressing against her short pants, but she doesn't seem to notice or care."
-    "She doesn't even think to protest this time. Your hard-on is pressing against her short pants, but she doesn't seem to notice or care."
+    "这一次，她连反抗的念头都没有。你的硬挺压在她的短裤上，但她似乎没有注意到或关心。"
 
 # game/BKstory_events.rpy:20947
 translate chinese_simplified MU_jobgirl_ed738b79:
 
     # "You feel that she's ready for the next phase of your plan."
-    "You feel that she's ready for the next phase of your plan."
+    "你觉得她已经准备好执行你计划的下一阶段了。"
 
 # game/BKstory_events.rpy:20953
 translate chinese_simplified MU_jobgirl_37760586:
 
     # you "Alright, the massage is over. It's time to giev you the magic medicine."
-    you "Alright, the massage is over. It's time to giev you the magic medicine."
+    you "好了，按摩结束了。是时候给你神药了。"
 
 # game/BKstory_events.rpy:20957
 translate chinese_simplified MU_jobgirl_8dbc933b:
 
     # jobgirl "Ahaa... What... What do you mean..."
-    jobgirl "Ahaa... What... What do you mean..."
+    jobgirl "啊哈……什么……什么意思……"
 
 # game/BKstory_events.rpy:20959
 translate chinese_simplified MU_jobgirl_241269c4:
 
     # you "No time to explain, it's really complicated. But here is the syringe."
-    you "No time to explain, it's really complicated. But here is the syringe."
+    you "没时间解释，真的很复杂。但这是注射器。"
 
 # game/BKstory_events.rpy:20962
 translate chinese_simplified MU_jobgirl_bcc78b9a:
@@ -41458,25 +41458,25 @@ translate chinese_simplified MU_jobgirl_bcc78b9a:
 translate chinese_simplified MU_jobgirl_9220a293:
 
     # jobgirl "Oh! What a large... Syringe..."
-    jobgirl "Oh! What a large... Syringe..."
+    jobgirl "哦！好大的……注射器……"
 
 # game/BKstory_events.rpy:20968
 translate chinese_simplified MU_jobgirl_1893a35c:
 
     # you "We need to lubricate it well before we insert it. You can help with that."
-    you "We need to lubricate it well before we insert it. You can help with that."
+    you "在插入之前我们需要对其进行润滑。你可以帮忙。"
 
 # game/BKstory_events.rpy:20972
 translate chinese_simplified MU_jobgirl_b00a98c8:
 
     # jobgirl "Mhm..."
-    jobgirl "Mhm..."
+    jobgirl "嗯..."
 
 # game/BKstory_events.rpy:20976
 translate chinese_simplified MU_jobgirl_d47e4a45:
 
     # you "Make sure it is well lubricated. You must lick every inch of it..."
-    you "Make sure it is well lubricated. You must lick every inch of it..."
+    you "确保其润滑良好。每一寸都必须舔干净"
 
 # game/BKstory_events.rpy:20978
 translate chinese_simplified MU_jobgirl_a2cb38a2:
@@ -41488,19 +41488,19 @@ translate chinese_simplified MU_jobgirl_a2cb38a2:
 translate chinese_simplified MU_jobgirl_3298edbd:
 
     # jobgirl "Ngh... Ngh..."
-    jobgirl "Ngh... Ngh..."
+    jobgirl "呃……呃……"
 
 # game/BKstory_events.rpy:20983
 translate chinese_simplified MU_jobgirl_aa6216c3:
 
     # you "All right, I think it's ready. Let's move on to the injection."
-    you "All right, I think it's ready. Let's move on to the injection."
+    you "好吧，我想已经准备好了。让我们继续注射。"
 
 # game/BKstory_events.rpy:20985
 translate chinese_simplified MU_jobgirl_d46d9aeb:
 
     # you "Brace yourself, it may sting a little."
-    you "Brace yourself, it may sting a little."
+    you "做好准备，可能会有点刺痛。"
 
 # game/BKstory_events.rpy:20990
 translate chinese_simplified MU_jobgirl_e9e07b76:
@@ -41512,13 +41512,13 @@ translate chinese_simplified MU_jobgirl_e9e07b76:
 translate chinese_simplified MU_jobgirl_1bd14039:
 
     # jobgirl "*pant* W-What are you..."
-    jobgirl "*pant* W-What are you..."
+    jobgirl "*喘气* W-你在做什么..."
 
 # game/BKstory_events.rpy:20995
 translate chinese_simplified MU_jobgirl_73356fbd:
 
     # "With one smooth motion, you thrust the syringe in her wet pussy."
-    "With one smooth motion, you thrust the syringe in her wet pussy."
+    "你以一个平稳的动作，将注射器插入她湿漉漉的阴户。"
 
 # game/BKstory_events.rpy:20997
 translate chinese_simplified MU_jobgirl_7f61ab4d:
@@ -41530,13 +41530,13 @@ translate chinese_simplified MU_jobgirl_7f61ab4d:
 translate chinese_simplified MU_jobgirl_d67f2860:
 
     # you "Man, look at these big udders... Looks like they're even spurting milk now!"
-    you "Man, look at these big udders... Looks like they're even spurting milk now!"
+    you "伙计，看看这些大乳房……看起来它们现在甚至在喷奶了！"
 
 # game/BKstory_events.rpy:21000
 translate chinese_simplified MU_jobgirl_6eda90b1:
 
     # "You squeeze her swollen, leaking breasts."
-    "You squeeze her swollen, leaking breasts."
+    "你挤压她肿胀、漏水的乳房。"
 
 # game/BKstory_events.rpy:21004
 translate chinese_simplified MU_jobgirl_c4943e30:
@@ -41548,13 +41548,13 @@ translate chinese_simplified MU_jobgirl_c4943e30:
 translate chinese_simplified MU_jobgirl_cd03762b:
 
     # "She moans as you start pumping the 'syringe' in and out of her pussy."
-    "She moans as you start pumping the 'syringe' in and out of her pussy."
+    "当你开始将“注射器”从她的阴户里抽进抽出时，她会呻吟出声。"
 
 # game/BKstory_events.rpy:21008
 translate chinese_simplified MU_jobgirl_6b280db9:
 
     # "She clings to you tighter as you make her ride your cock."
-    "She clings to you tighter as you make her ride your cock."
+    "当你让她骑着你的鸡巴时，她会更紧地抱住你。"
 
 # game/BKstory_events.rpy:21010
 translate chinese_simplified MU_jobgirl_d2ad075e:
@@ -41566,7 +41566,7 @@ translate chinese_simplified MU_jobgirl_d2ad075e:
 translate chinese_simplified MU_jobgirl_a695f6dd:
 
     # "Her love juices are flowing freely, covering your shaft in sticky fluid."
-    "Her love juices are flowing freely, covering your shaft in sticky fluid."
+    "她的爱汁自由地流淌，让你的阴茎沾满粘稠的液体。"
 
 # game/BKstory_events.rpy:21014
 translate chinese_simplified MU_jobgirl_8a7eb9e0:
@@ -41578,19 +41578,19 @@ translate chinese_simplified MU_jobgirl_8a7eb9e0:
 translate chinese_simplified MU_jobgirl_e0e36e14:
 
     # "You push your dick deeper and deeper, making sure to fill her up completely."
-    "You push your dick deeper and deeper, making sure to fill her up completely."
+    "你将你的鸡巴推得越来越深，确保完全填满她。"
 
 # game/BKstory_events.rpy:21018
 translate chinese_simplified MU_jobgirl_fe059e24:
 
     # jobgirl "Oh no! It's too much... I'm going to..."
-    jobgirl "Oh no! It's too much... I'm going to..."
+    jobgirl "哦不！太过分了……我去……"
 
 # game/BKstory_events.rpy:21020
 translate chinese_simplified MU_jobgirl_e3106d0a:
 
     # "You squeeze her breasts as her body stiffens and you ram your cock all the way in."
-    "You squeeze her breasts as her body stiffens and you ram your cock all the way in."
+    "当她的身体僵硬时，你挤压她的乳房，然后将你的阴茎完全插入。"
 
 # game/BKstory_events.rpy:21024
 translate chinese_simplified MU_jobgirl_f56bbd36:
@@ -41602,13 +41602,13 @@ translate chinese_simplified MU_jobgirl_f56bbd36:
 translate chinese_simplified MU_jobgirl_b4b29f38:
 
     # "As she cums from your assault, she squirts love juice all over the bed."
-    "As she cums from your assault, she squirts love juice all over the bed."
+    "当她因你的攻击而高潮时，她会将爱的汁液喷得到处都是。"
 
 # game/BKstory_events.rpy:21032
 translate chinese_simplified MU_jobgirl_d7216e20:
 
     # jobgirl "Haaa, haaa..."
-    jobgirl "Haaa, haaa..."
+    jobgirl "哈哈哈哈..."
 
 # game/BKstory_events.rpy:21034
 translate chinese_simplified MU_jobgirl_4a5e9f48:
@@ -41620,25 +41620,25 @@ translate chinese_simplified MU_jobgirl_4a5e9f48:
 translate chinese_simplified MU_jobgirl_1b3cd0f7:
 
     # "You are not there yet, so you keep fucking her sensitive pussy."
-    "You are not there yet, so you keep fucking her sensitive pussy."
+    "你还没到那一步，所以你继续操她敏感的阴部。"
 
 # game/BKstory_events.rpy:21038
 translate chinese_simplified MU_jobgirl_e96263af:
 
     # jobgirl "Ohh... Aaah... Did you... Did you cure me?"
-    jobgirl "Ohh... Aaah... Did you... Did you cure me?"
+    jobgirl "哦……啊啊……你……你治好了我吗？"
 
 # game/BKstory_events.rpy:21040
 translate chinese_simplified MU_jobgirl_d7898d6c:
 
     # you "Not yet, we need to inject the full dosage."
-    you "Not yet, we need to inject the full dosage."
+    you "还不行，我们需要注射全部剂量。"
 
 # game/BKstory_events.rpy:21042
 translate chinese_simplified MU_jobgirl_ae6ef5a1:
 
     # "Increasing your pace, you feel your own climax approaching."
-    "Increasing your pace, you feel your own climax approaching."
+    "加快步伐，你会感觉到自己的高潮即将到来。"
 
 # game/BKstory_events.rpy:21044
 translate chinese_simplified MU_jobgirl_e81e0853:
@@ -41650,13 +41650,13 @@ translate chinese_simplified MU_jobgirl_e81e0853:
 translate chinese_simplified MU_jobgirl_2ad554f6:
 
     # you "It's time for the final injection! Get ready!"
-    you "It's time for the final injection! Get ready!"
+    you "是时候进行最后的注射了！准备！"
 
 # game/BKstory_events.rpy:21048
 translate chinese_simplified MU_jobgirl_e899fc8a:
 
     # "Holding her tightly, you press on her belly, increasing the feeling of your hard cock ramming into her."
-    "Holding her tightly, you press on her belly, increasing the feeling of your hard cock ramming into her."
+    "你紧紧地抱着她，压在她的腹部，增加了你坚硬的阴茎撞击她的感觉。"
 
 # game/BKstory_events.rpy:21050
 translate chinese_simplified MU_jobgirl_c3d09156:
@@ -41668,13 +41668,13 @@ translate chinese_simplified MU_jobgirl_c3d09156:
 translate chinese_simplified MU_jobgirl_77c93b41:
 
     # "Cumming in a torrent, you pump her womb full of 'magical medicine', making her scream."
-    "Cumming in a torrent, you pump her womb full of 'magical medicine', making her scream."
+    "你在激流中射精，将“神奇药物”注入她的子宫，让她尖叫。"
 
 # game/BKstory_events.rpy:21060
 translate chinese_simplified MU_jobgirl_7e194b37:
 
     # "She squirts again, and her milk starts shooting from her tits, hitting the floor."
-    "She squirts again, and her milk starts shooting from her tits, hitting the floor."
+    "她再次喷出，她的乳汁开始从她的乳房中喷出，落在地板上。"
 
 # game/BKstory_events.rpy:21064
 translate chinese_simplified MU_jobgirl_f9bf0181:
@@ -41686,19 +41686,19 @@ translate chinese_simplified MU_jobgirl_f9bf0181:
 translate chinese_simplified MU_jobgirl_c574d5e4:
 
     # you "Man... Someone's going to hate having to clean up their room..."
-    you "Man... Someone's going to hate having to clean up their room..."
+    you "伙计...有人会讨厌清理他们的房间..."
 
 # game/BKstory_events.rpy:21068
 translate chinese_simplified MU_jobgirl_e129f1df:
 
     # "You both collapse onto the floor, exhausted from the exercise."
-    "You both collapse onto the floor, exhausted from the exercise."
+    "你们都倒在地板上，因为锻炼而筋疲力尽。"
 
 # game/BKstory_events.rpy:21070
 translate chinese_simplified MU_jobgirl_65ce012c:
 
     # jobgirl "So... Am I cured now?"
-    jobgirl "So... Am I cured now?"
+    jobgirl "那么……我现在痊愈了吗？"
 
 # game/BKstory_events.rpy:21072
 translate chinese_simplified MU_jobgirl_685847ec:
@@ -41710,7 +41710,7 @@ translate chinese_simplified MU_jobgirl_685847ec:
 translate chinese_simplified MU_jobgirl_ae95618d:
 
     # "{i}Moments later...{/i}"
-    "{i}Moments later...{/i}"
+    "{i}片刻之后...{/i}"
 
 # game/BKstory_events.rpy:21082
 translate chinese_simplified MU_jobgirl_cdc852d6:
@@ -41722,7 +41722,7 @@ translate chinese_simplified MU_jobgirl_cdc852d6:
 translate chinese_simplified MU_jobgirl_d115c94e:
 
     # jobgirl "MOTHER F..."
-    jobgirl "MOTHER F..."
+    jobgirl "妈妈F..."
 
 # game/BKstory_events.rpy:21086
 translate chinese_simplified MU_jobgirl_38fbd8d3:
@@ -41740,19 +41740,19 @@ translate chinese_simplified MU_jobgirl_58d228b8:
 translate chinese_simplified MU_jobgirl_37a66fbf:
 
     # jobgirl "You did it! You're my hero!"
-    jobgirl "You did it! You're my hero!"
+    jobgirl "你做到了！你是我的英雄！"
 
 # game/BKstory_events.rpy:21108
 translate chinese_simplified MU_jobgirl_0cc74bf6:
 
     # "She jumps in your arms and give you a warm hug. You don't break it for a long moment."
-    "She jumps in your arms and give you a warm hug. You don't break it for a long moment."
+    "她跳进你的怀里，给你一个温暖的拥抱。很长一段时间你都不会打破它。"
 
 # game/BKstory_events.rpy:21110
 translate chinese_simplified MU_jobgirl_76f401cf:
 
     # jobgirl "Thank you so much, [MC.name], you always have my back."
-    jobgirl "Thank you so much, [MC.name], you always have my back."
+    jobgirl "非常感谢你，[MC.name]，你永远是我的后盾。"
 
 # game/BKstory_events.rpy:21113
 translate chinese_simplified MU_jobgirl_11fdb519_1:
@@ -41764,25 +41764,25 @@ translate chinese_simplified MU_jobgirl_11fdb519_1:
 translate chinese_simplified MU_jobgirl_42b398c4:
 
     # you "My pleasure, really."
-    you "My pleasure, really."
+    you "我很高兴，真的。"
 
 # game/BKstory_events.rpy:21118
 translate chinese_simplified MU_jobgirl_919904b0:
 
     # jobgirl "But I want to reward you. Here, I know: the next class you take will be on me. How about that?"
-    jobgirl "But I want to reward you. Here, I know: the next class you take will be on me. How about that?"
+    jobgirl "但我想奖励你。在这里，我知道：你下一堂课将由我来上课。怎么样？"
 
 # game/BKstory_events.rpy:21120
 translate chinese_simplified MU_jobgirl_0862aacc:
 
     # you "Wow, thanks. I just wanted to help you."
-    you "Wow, thanks. I just wanted to help you."
+    you "哇，谢谢。我只是想帮助你。"
 
 # game/BKstory_events.rpy:21122
 translate chinese_simplified MU_jobgirl_a2b8b036:
 
     # jobgirl "You're very sweet... I don't know, I..."
-    jobgirl "You're very sweet... I don't know, I..."
+    jobgirl "你很可爱...我不知道，我..."
 
 # game/BKstory_events.rpy:21124
 translate chinese_simplified MU_jobgirl_efaf5a2d:
@@ -41794,79 +41794,79 @@ translate chinese_simplified MU_jobgirl_efaf5a2d:
 translate chinese_simplified MU_jobgirl_0bc4da1d:
 
     # jobgirl "I... I have to go! Thanks, [MC.name]!"
-    jobgirl "I... I have to go! Thanks, [MC.name]!"
+    jobgirl "我……我得走了！谢谢，[MC.name]！"
 
 # game/BKstory_events.rpy:21131
 translate chinese_simplified MU_jobgirl_249a3c1a:
 
     # you "What's with her? She ran away like a demon was on her tail..."
-    you "What's with her? She ran away like a demon was on her tail..."
+    you "她怎么了？她像被恶魔追赶一样逃跑了……"
 
 # game/BKstory_events.rpy:21135
 translate chinese_simplified MU_jobgirl_f26b6491:
 
     # "The next time you {b}register a girl for a class{/b}, it will be free of charge."
-    "The next time you {b}register a girl for a class{/b}, it will be free of charge."
+    "下次您{b}为女孩注册课程{/b}时，将免费。"
 
 # game/BKstory_events.rpy:21141
 translate chinese_simplified MU_jobgirl_9e9773be:
 
     # you "Your hero deserves a little kiss, don't you think?"
-    you "Your hero deserves a little kiss, don't you think?"
+    you "你的英雄值得一个小小的吻，你不觉得吗？"
 
 # game/BKstory_events.rpy:21143
 translate chinese_simplified MU_jobgirl_9018d8f7:
 
     # jobgirl "Oh, uhm..."
-    jobgirl "Oh, uhm..."
+    jobgirl "哦，嗯..."
 
 # game/BKstory_events.rpy:21145
 translate chinese_simplified MU_jobgirl_e4c11912:
 
     # "She blushes and hesitates for a moment."
-    "She blushes and hesitates for a moment."
+    "她脸红了，犹豫了一会儿。"
 
 # game/BKstory_events.rpy:21147
 translate chinese_simplified MU_jobgirl_c175d168:
 
     # "Just when you start to think your bluff failed, she leans closer, and places her lips over yours."
-    "Just when you start to think your bluff failed, she leans closer, and places her lips over yours."
+    "正当你开始认为你的虚张声势失败时，她靠得更近，将嘴唇放在你的嘴唇上。"
 
 # game/BKstory_events.rpy:21149
 translate chinese_simplified MU_jobgirl_cd4d14f6:
 
     # you "Hmm!"
-    you "Hmm!"
+    you "唔！"
 
 # game/BKstory_events.rpy:21151
 translate chinese_simplified MU_jobgirl_f8b48748:
 
     # "You are startled, not expecting her to be so bold."
-    "You are startled, not expecting her to be so bold."
+    "你吃了一惊，没想到她竟然如此大胆。"
 
 # game/BKstory_events.rpy:21155
 translate chinese_simplified MU_jobgirl_df06602d:
 
     # "She pulls back from the embrace, and give you a faint smile."
-    "She pulls back from the embrace, and give you a faint smile."
+    "她从怀抱中挣脱出来，给你一个浅浅的微笑。"
 
 # game/BKstory_events.rpy:21157
 translate chinese_simplified MU_jobgirl_648668b1:
 
     # jobgirl "There. Are you happy with your reward?"
-    jobgirl "There. Are you happy with your reward?"
+    jobgirl "那里。您对自己的奖励满意吗？"
 
 # game/BKstory_events.rpy:21159
 translate chinese_simplified MU_jobgirl_5df7e1e3:
 
     # you "Erm, ahem... Sure..."
-    you "Erm, ahem... Sure..."
+    you "呃，咳咳……当然……"
 
 # game/BKstory_events.rpy:21161
 translate chinese_simplified MU_jobgirl_2df5b657:
 
     # "She looks into your eyes intently for a moment. Then she turns away."
-    "She looks into your eyes intently for a moment. Then she turns away."
+    "她专注地看着你的眼睛一会儿。然后她转身走开。"
 
 # game/BKstory_events.rpy:21163
 translate chinese_simplified MU_jobgirl_9181ef79:
@@ -41878,19 +41878,19 @@ translate chinese_simplified MU_jobgirl_9181ef79:
 translate chinese_simplified MU_jobgirl_2f94498c:
 
     # jobgirl "I have to go! Bye, [MC.name]!"
-    jobgirl "I have to go! Bye, [MC.name]!"
+    jobgirl "我得走了！再见，[MC.name]！"
 
 # game/BKstory_events.rpy:21169
 translate chinese_simplified MU_jobgirl_74349cf6:
 
     # you "*sigh* I'm not sure I get that girl..."
-    you "*sigh* I'm not sure I get that girl..."
+    you "*叹气*我不确定我能理解那个女孩......"
 
 # game/BKstory_events.rpy:21177
 translate chinese_simplified MU_jobgirl_f7f4ca35:
 
     # you "I'll have your back alright..."
-    you "I'll have your back alright..."
+    you "我会支持你的，好吧..."
 
 # game/BKstory_events.rpy:21181
 translate chinese_simplified MU_jobgirl_c77d2411:
@@ -41902,7 +41902,7 @@ translate chinese_simplified MU_jobgirl_c77d2411:
 translate chinese_simplified MU_jobgirl_1e680e26:
 
     # jobgirl "!!!"
-    jobgirl "!!!"
+    jobgirl "！！！"
 
 # game/BKstory_events.rpy:21189
 translate chinese_simplified MU_jobgirl_447f105e:
@@ -41914,7 +41914,7 @@ translate chinese_simplified MU_jobgirl_447f105e:
 translate chinese_simplified MU_jobgirl_03bf8679:
 
     # "But instead, she remains frozen in place, like a deer in a magical headlight. Her grasp tightening on your shoulders is the only indication that she registered your move."
-    "But instead, she remains frozen in place, like a deer in a magical headlight. Her grasp tightening on your shoulders is the only indication that she registered your move."
+    "但相反，她仍然僵在原地，就像一头被神奇车灯照亮的鹿。她紧紧地抓着你的肩膀，这是她注意到你的动作的唯一迹象。"
 
 # game/BKstory_events.rpy:21193
 translate chinese_simplified MU_jobgirl_3aba6755:
@@ -41926,7 +41926,7 @@ translate chinese_simplified MU_jobgirl_3aba6755:
 translate chinese_simplified MU_jobgirl_389374f3:
 
     # "Pushing your luck, you start fondling her butt some more."
-    "Pushing your luck, you start fondling her butt some more."
+    "碰碰运气，你开始更多地抚摸她的屁股。"
 
 # game/BKstory_events.rpy:21199
 translate chinese_simplified MU_jobgirl_466942ba:
@@ -41938,7 +41938,7 @@ translate chinese_simplified MU_jobgirl_466942ba:
 translate chinese_simplified MU_jobgirl_4e4a2694:
 
     # "Finally, you move your hands down, brushing against the exposed skin of her underbutt."
-    "Finally, you move your hands down, brushing against the exposed skin of her underbutt."
+    "最后，你将手向下移动，抚摸她屁股下裸露的皮肤。"
 
 # game/BKstory_events.rpy:21205
 translate chinese_simplified MU_jobgirl_eacd151b:
@@ -41962,13 +41962,13 @@ translate chinese_simplified MU_jobgirl_273113c9:
 translate chinese_simplified MU_jobgirl_9c83a42a:
 
     # "Not looking you in the eye, she pulls back and runs away from you."
-    "Not looking you in the eye, she pulls back and runs away from you."
+    "她没有看你的眼睛，退后并逃离了你。"
 
 # game/BKstory_events.rpy:21216
 translate chinese_simplified MU_jobgirl_12b85e21:
 
     # "You wonder if you went too far."
-    "You wonder if you went too far."
+    "你想知道你是否走得太远了。"
 
 # game/BKstory_events.rpy:21220
 translate chinese_simplified MU_jobgirl_63ac1775:
@@ -42040,7 +42040,7 @@ translate chinese_simplified MU_jobgirl_cdcebd3f:
 translate chinese_simplified MU_jobgirl_f26b6491_1:
 
     # "The next time you {b}register a girl for a class{/b}, it will be free of charge."
-    "The next time you {b}register a girl for a class{/b}, it will be free of charge."
+    "下次您{b}为女孩注册课程{/b}时，将免费。"
 
 # game/BKstory_events.rpy:21269
 translate chinese_simplified NGPintro_19c4b697:
@@ -42214,7 +42214,7 @@ translate chinese_simplified NGPintro_562b1a35:
 translate chinese_simplified NGPintro_44f98ae6:
 
     # you "........."
-    you "........."
+    you "…………"
 
 # game/BKstory_events.rpy:21389
 translate chinese_simplified NGPintro_84a8452e:
@@ -42315,8 +42315,6 @@ translate chinese_simplified kosmo_returns_eab365de:
     kosmo "你看，[MC.name]！她将成为 {font=resources/fonts/DejaVuSans.ttf}HʘʘKERS™{/font} 的新星！而且还是个处女！我花了一大笔钱买下她……"
 
 translate chinese_simplified strings:
-    old "Choose your present"
-    new "你的礼物"
     old "How did you become a thief?"
     new "你是怎么成为小偷的？"
     old "How did you become the guild leader?"
@@ -42393,44 +42391,53 @@ translate chinese_simplified strings:
     new "向沙利亚祈祷"
     old "Ask Sill for help"
     new "请希尔帮忙"
-
-# TODO: Translation updated at 2026-06-12 05:58
-
-translate chinese_simplified strings:
-    old "Are you sure you want to take a loan for "
-    new "你确定要贷款吗？"
     old "Do you want to get a basic builder license for 5 wood, 5 leather and 5 dye?"
     new "你想用5个木材、5个皮革和5个染料获得一个基本的建筑许可证吗？"
     old "Do you want to get an advanced builder license for 5 marble, 5 silk and 5 ore?"
     new "你想用5个大理石、5个丝绸和5个矿石获得高级建造者许可证吗？"
     old "Do you want to get a master builder license for 2 diamonds?"
     new "你想用2颗钻石获得高级建造师执照吗？"
-
-# TODO: Translation updated at 2026-06-12 08:13
-
-translate chinese_simplified strings:
-    old "Please choose a number between 2 and 12."
-    new "请选择 2 到 12 之间的数字。"
     old "Do you want to take the ultimate loan, the 'TJB special'? All your money will be taken away, and you must make 100 000 gold back in 7 days, or lose everything."
     new "你想申请终极贷款——“TJB特惠”吗？你所有的钱都会被没收，你必须在7天内赚回10万金币，否则将失去一切。"
     old "That makes it %s points. Only %s more to go!"
     new "这样一来，他已经得了%s分。还剩%s分就到终点了！"
-
-# TODO: Translation updated at 2026-06-19 04:19
-
-translate chinese_simplified strings:
-    old "Burn after reading"
-    new "阅后即焚"
     old "Urgent invitation"
     new "紧急邀请"
-
-# TODO: Translation updated at 2026-06-19 05:43
-
-translate chinese_simplified strings:
-    old "Strange woman"
-    new "陌生女人"
     old "Shalia"
     new "莎莉亚"
     old "Chaos"
     new "混沌"
+    old "Reaching in the dark, your hand meets a viscous, moist surface. It feels like frog-skin. An awfully large frog."
+    new "在黑暗中摸索，你的手触碰到一种黏稠湿润的表面。感觉像青蛙皮。一只非常大的青蛙。"
+    old "Reaching in the dark, you grab something that feels like a large horn. Or is that a tooth?"
+    new "在黑暗中摸索，你抓到了一个感觉像大角的东西。还是那是一颗牙齿？"
+    old "Is the number above..."
+    new "数字是不是大于……"
+    old "Is the number below..."
+    new "数字是不是小于……"
+    old "Guess the total of Satella's dice{i}%s{/i}"
+    new "猜猜萨特拉骰子的总数{i}%s{/i}"
+    old "Are you sure you want to take a loan for %s gold? (daily cost: %s gold)"
+    new "你确定要贷款 %s 金币吗？（每日费用：%s 金币）"
+translate chinese_simplified strings:
+
+    # game/core/content/story_events/story_events.rpy:130
+    old "Choose your present"
+    new "选择你的礼物"
+
+    # game/core/content/story_events/story_events.rpy:5451
+    old "Burn after reading"
+    new "阅后即焚"
+
+    # game/core/content/story_events/story_events.rpy:11215
+    old "Reaching in the dark, you grab a handful of hair. It's awfully thick and coarse."
+    new "在黑暗中摸索，你抓住了一把头发。它又粗又厚。"
+
+    # game/core/content/story_events/story_events.rpy:11364
+    old "Please choose a number between 2 and 12."
+    new "请选择一个 2 到 12 之间的数字。"
+
+    # game/core/content/story_events/story_events.rpy:12317
+    old "Strange woman"
+    new "陌生女人"
 

@@ -399,7 +399,7 @@ label brothel_loop():
 
         elif operation == "change name":
 
-            $ brothel.name = renpy.input("Change name:", default = brothel.name, length = 40)
+            $ brothel.name = renpy.input(_("Change name:"), default = brothel.name, length = 40)
 
         elif operation == "furniture":
 
@@ -591,9 +591,9 @@ label farm_loop():
 
         elif res == "change_name":
             $ girl = obj
-            $ girl.name = renpy.input("Do you want to change her first name?", default = girl.name)
+            $ girl.name = renpy.input(_("Do you want to change her first name?"), default = girl.name)
             $ girl.char.name = girl.name
-            $ girl.lastname = renpy.input("Do you want to change her last name?", default = girl.lastname)
+            $ girl.lastname = renpy.input(_("Do you want to change her last name?"), default = girl.lastname)
 
             menu:
                 "Do you want to invert her first and last name?"
@@ -698,7 +698,7 @@ label farm_loop():
 
                     while levelup:
                         $ mn = levelup.pop()
-                        $ renpy.say(gizel, mn.name + " is now a level " + str(mn.level) + " " + mn.type + ".")
+                        $ renpy.say(gizel, _("%s is now a level %i %s.") % (mn.name, mn.level, mn.type))
 
                 hide screen dark_filter
 
@@ -1163,9 +1163,9 @@ label girls_loop():
 
             $ girl = selected_girl
 
-            $ girl.name = renpy.input("Do you want to change her first name?", default = girl.name)
+            $ girl.name = renpy.input(_("Do you want to change her first name?"), default = girl.name)
             $ girl.char.name = girl.name
-            $ girl.lastname = renpy.input("Do you want to change her last name?", default = girl.lastname)
+            $ girl.lastname = renpy.input(_("Do you want to change her last name?"), default = girl.lastname)
 
             menu:
                 "Do you want to invert her first and last name?"
@@ -1665,7 +1665,7 @@ label perks(): # girl is passed by the previous label (girls)
         $ result, obj = ui.interact() # obj is an archetype or perk
 
         if result == "unlock":
-            if renpy.call_screen("yes_no", __("Are you sure you want to unlock {b}") + obj + "{/b} zodiac for 2 perk points?"):
+            if renpy.call_screen("yes_no", __("Are you sure you want to unlock {b}%s{/b} zodiac for 2 perk points?") % obj):
 
                 play sound s_spell
                 $ perk_points -= 2
@@ -2067,7 +2067,7 @@ label main_character:
 
         if result == "change_name":
 
-            $ MC.name = renpy.input("Do you want to change your name?", default = MC.name, length = 20)
+            $ MC.name = renpy.input(_("Do you want to change your name?"), default = MC.name, length = 20)
 
             $ norollback()
 

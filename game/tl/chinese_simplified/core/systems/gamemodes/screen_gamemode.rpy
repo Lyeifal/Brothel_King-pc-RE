@@ -1,6 +1,18 @@
 ﻿# TODO: Translation updated at 2026-06-12 05:03
 
 translate chinese_simplified strings:
+    old "{b}[key]{/b}: +[val]"
+    new "{b}[key]{/b}: +[val]"
+    old "[key]: [val]"
+    new "[key]: [val]"
+translate chinese_simplified strings:
+
+    old "v[sc.version] by [sc.author]"
+    new "v[sc.version] 作者：[sc.author]"
+
+# TODO: Translation updated at 2026-06-25 03:14
+
+translate chinese_simplified strings:
 
     # game/core/systems/gamemodes/screen_gamemode.rpy:24
     old "选择你的道路"
@@ -53,8 +65,6 @@ translate chinese_simplified strings:
     # game/core/systems/gamemodes/screen_gamemode.rpy:245
     old "起始奖励"
     new "起始奖励"
-    old "{b}[key]{/b}: +[val]"
-    new "{b}[key]{/b}: +[val]"
 
     # game/core/systems/gamemodes/screen_gamemode.rpy:259
     old "确认选择"
@@ -91,12 +101,4 @@ translate chinese_simplified strings:
     # game/core/systems/gamemodes/screen_gamemode.rpy:410
     old "选择一个剧本以查看详情。"
     new "选择一个剧本以查看详情。"
-
-# TODO: Translation updated at 2026-06-12 08:13
-
-translate chinese_simplified strings:
-    old "v[sc.version] by [sc.author]"
-    new "v[sc.version] 作者：[sc.author]"
-    old "[key]: [val]"
-    new "[key]: [val]"
 
