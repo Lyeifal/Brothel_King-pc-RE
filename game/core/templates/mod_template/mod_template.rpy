@@ -49,15 +49,6 @@ init 1 python:
 
     api.register_hook(api.HOOK_NIGHT_FINISHED, on_night_finished)
 
-    def on_day_ended():
-        # Example: log something at end of day
-        pass
-
-    my_mod.hooks = {
-        "on_girl_generate": on_girl_generated,
-        "on_day_end": on_day_ended,
-    }
-
     # 3. REGISTER CUSTOM CONTENT VIA API (Phase 6)
     # Traits, perks, tags, dialogue, events, and NG+ settings can all be registered.
 
