@@ -18,16 +18,55 @@ init -2 python:
             self.girl = girl
 
         # ── Sanity ──
+        # ── 理智值管理 | Sanity management ──
+
         def init_sanity(self):
-            return self.girl._init_sanity_impl()
+            '''初始化理智值 | Initialize girl's sanity based on rank and dominance'''
+            g = self.girl
+            if g.is_("very dom"): mod = 7
+            elif g.is_("dom"): mod = 5
+            else: mod = 4
+            g.sanity = dice(11, g.rank) + mod * g.rank
+
         def rank_up_sanity(self):
-            return self.girl._rank_up_sanity_impl()
+            '''升级时增加理智值 | Increase sanity on rank up'''
+            g = self.girl
+            if g.is_("very dom"): mod = 7
+            elif g.is_("dom"): mod = 5
+            else: mod = 4
+            g.sanity += dice(11) + mod
+
         def lose_sanity(self, cost):
-            return self.girl._lose_sanity_impl(cost)
+            '''减少理智值（含效果修正）| Decrease sanity with effect modifiers'''
+            g = self.girl
+            g.sanity -= cost * g.get_effect("boost", "sanity loss") - g.get_effect("change", "sanity loss")
+            if g.sanity <= 0:
+                g.broken = True
+            return g.sanity_warning()
+
         def get_sanity(self):
-            return self.girl._get_sanity_impl()
+            '''获取理智值文本描述 | Get sanity status as localized text'''
+            g = self.girl
+            if g.broken: san = event_color["very bad"] % __("Broken")
+            elif g.sanity < 5: san = event_color["very bad"] % __("Nearly broken")
+            elif g.sanity < 10: san = event_color["bad"] % __("Very frail")
+            elif g.sanity < 20: san = event_color["a little bad"] % __("Frail")
+            elif g.sanity < 50: san = event_color["a little bad"] % __("Shaken")
+            else: san = event_color["a little bad"] % __("Normal")
+            if debug_mode: san += " (%i)" % g.sanity
+            return san
+
         def sanity_warning(self):
-            return self.girl._sanity_warning_impl()
+            '''理智值过低时返回警告文本 | Warning text when sanity is very low'''
+            g = self.girl
+            if g.broken:
+                calendar.set_alarm(calendar.time + 1, StoryEvent("is_broken", arg=g, type="morning"))
+                renpy.play(s_scream_loud, "sound")
+                return event_color["fear"] % (__("A long, inhumane shriek sends shivers down your spine. It came from %s, who is white with terror and on the verge of collapsing. This can't be good...") % g.name)
+            elif g.sanity < 5:
+                return event_color["very bad"] % (__("%s has a look of sheer terror in her eyes, and she shakes uncontrollably. She moans like a wounded animal if you move even slightly towards her. You can tell that a slight push would be all it takes to send her mind over the edge now.") % g.name)
+            elif g.sanity < 10:
+                return event_color["bad"] % (__("%s curls and looks around herself in complete panic, her eyes wild with fear. If you insist on using your powers on her, her mind will end up breaking.") % g.name)
 
         # ── Energy & health (implementations moved from girlclass.rpy) ──
         def change_energy(self, x):

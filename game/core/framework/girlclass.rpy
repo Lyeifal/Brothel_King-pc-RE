@@ -4458,11 +4458,7 @@ init -2 python:
         _customer_populations_safety_check_impl = customer_populations_safety_check
 
         # ── Phase 2.1: Mood delegation aliases ──
-        _init_sanity_impl = init_sanity
-        _rank_up_sanity_impl = rank_up_sanity
-        _lose_sanity_impl = lose_sanity
-        _get_sanity_impl = get_sanity
-        _sanity_warning_impl = sanity_warning
+        # (Sanity methods now delegate directly to GirlMood — aliases removed)
         _change_energy_impl = change_energy
         _tire_impl = tire
         _get_hurt_impl = get_hurt
