@@ -656,8 +656,6 @@ init -2 python:
 
         def deactivate_sex_act(self, sex_act):
             return self._sex.deactivate_sex_act(sex_act)
-                self.set_job(None)
-            return True
 
 
         def get_sex_act_modifier(self, sex_act = "all"):
