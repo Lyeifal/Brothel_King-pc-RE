@@ -168,6 +168,7 @@ init -2 python:
             self._logging = GirlLogging(self)
             self._sex = GirlSex(self)
             self._items = GirlItems(self)
+            self._training = GirlTraining(self)
 
         def randomize(self, free=False, p_traits=None, n_trait=None, perks=None, force_original=False, level=1, personality=None, temp_list=None):
 
@@ -4498,6 +4499,17 @@ init -2 python:
         # ── Phase 2.1: Items delegation aliases | 物品方法别名 ──
         _get_equipped_impl = get_equipped
         _receive_gift_impl = receive_gift
+
+        # -- Phase 2.1: Training delegation aliases | 训练方法别名 --
+        _will_do_farm_act_impl = will_do_farm_act
+        _will_rebel_in_farm_impl = will_rebel_in_farm
+        _farm_beg_test_impl = farm_beg_test
+        _get_obedience_check_target_impl = get_obedience_check_target
+        _obedience_check_impl = obedience_check
+        _training_check_impl = training_check
+        _run_away_check_impl = run_away_check
+        _get_working_chance_impl = get_working_chance
+        _get_training_chance_impl = get_training_chance
 
 
 
