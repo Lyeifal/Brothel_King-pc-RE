@@ -130,7 +130,6 @@ init -2 python:
 
         # ── Delegation stubs (implementations remain in girlclass.rpy) ──
         def has_trait(self, name):
-        def has_trait(self, name):
             return self.girl._has_trait_impl(name)
         def has_perk(self, name):
             return self.girl._has_perk_impl(name)

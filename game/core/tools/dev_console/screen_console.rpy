@@ -50,23 +50,24 @@ screen dev_console():
                         text line size 13 color "#CCCCCC"
 
             # ── Input area ──
+            # EN: Use a button with default=True to capture Enter key.
+            # ZH: 使用 default=True 的按钮来捕获回车键。
             hbox:
                 spacing 5
-                text ">>>" size 15 color c_emerald yalign 0.5
+                text ">>>" size 15 color c_emerald yalign 0.5 xpadding 5
                 input:
                     value ScreenVariableInputValue("console_input")
                     size 15
                     color "#FFFFFF"
-                    xsize 850
+                    xsize 800
                     copypaste True
-                    key "K_RETURN" action [
+                textbutton "Run" text_size 13:
+                    action [
                         Function(console_execute, console_input),
                         SetScreenVariable("console_input", ""),
                     ]
-                    key "K_KP_ENTER" action [
-                        Function(console_execute, console_input),
-                        SetScreenVariable("console_input", ""),
-                    ]
+                    yalign 0.5
+                    xpadding 10
 
 
 init -1 python:
@@ -101,8 +102,8 @@ init -1 python:
         ]
 
 
-# ── Key binding: Shift+O to toggle ──
-# Using Shift+O instead of backtick for broader keyboard compatibility.
+# ── Key binding: O key to toggle (when developer mode) ──
+# Press O to open/close the dev console.
 
 init -1 python:
 
@@ -113,13 +114,8 @@ init -1 python:
             else:
                 renpy.show_screen("dev_console")
 
-    # Add to keymap so the key works in-game
-    if "K_LSHIFT" not in config.keymap:
-        config.keymap["console_toggle"] = ["K_o"]
-    else:
-        config.keymap["console_toggle"] = ["K_o"]
-
-    # Hook into the overlay to register the keybinding
-    config.overlay_functions.append(
-        lambda: renpy.Keymap(console_toggle=_console_toggle)
+    # Register as a keymap entry (works globally in Ren'Py)
+    config.keymap.setdefault("console_toggle", ["K_o"])
+    config.underlay.append(
+        renpy.Keymap(console_toggle=_console_toggle)
     )

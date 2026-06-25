@@ -4227,13 +4227,6 @@ init -2 python:
 
         def rand_say(self, *dialogue_options):
             return self._dialogue.rand_say(*dialogue_options)
-                        sentences.append(sentence[4:])
-                elif sentence.startswith("do: ") or sentence.startswith("dm: "):
-                    if self.is_("dom"):
-                        sentences.append(sentence[4:])
-
-            if sentences:
-                self.char(rand_choice(sentences))
 
 
         def customer_populations_safety_check(self, current_pop): # Where current_pop is a population name
