@@ -54,7 +54,7 @@ screen dev_console():
             # ZH: 使用 default=True 的按钮来捕获回车键。
             hbox:
                 spacing 5
-                text ">>>" size 15 color c_emerald yalign 0.5 xpadding 5
+                text ">>>" size 15 color c_emerald yalign 0.5
                 input:
                     value ScreenVariableInputValue("console_input")
                     size 15

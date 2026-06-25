@@ -586,17 +586,6 @@ init -2 python:
 
         def toggle_sex_act(self, sex_act):
             return self._sex.toggle_sex_act(sex_act)
-                return True, ""
-
-            else:
-
-                result, reason = self.will_do_sex_act(sex_act, True)
-
-                if result:
-
-                    self.does[sex_act] = True
-
-                return result, reason
 
 
         def does_anything(self): ## Tests if the girl has any activated sex act. She will be excluded from whoring if she isn't.
