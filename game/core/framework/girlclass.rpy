@@ -2493,42 +2493,6 @@ init -2 python:
         # Phase 2.1: Delegated to GirlDialogue component
         def generate_background(self, t2=0):
             return self._dialogue.generate_background(t2)
-                self.likes["food"] = self.init_dict["tastes/favorite_food"]
-            else:
-                self.likes["food"] = rand_choice(food)
-            if self.init_dict["tastes/favorite_drink"]:
-                self.likes["drink"] = self.init_dict["tastes/favorite_drink"]
-            else:
-                self.likes["drink"] = rand_choice(drinks)
-
-            if self.init_dict["tastes/disliked_color"]:
-                self.dislikes["color"] = self.init_dict["tastes/disliked_color"]
-            elif self.likes["color"] in colors:
-                self.dislikes["color"] = colors[colors.index(self.likes["color"]) - dice((len(colors)-1))] # Avoids picking the color she likes
-            else: # Suggestion by xxxwetxxx. For user-defined colors I guess?
-                self.dislikes["color"] = rand_choice(colors) 
-
-            if self.init_dict["tastes/disliked_food"]:
-                self.dislikes["food"] = self.init_dict["tastes/disliked_food"]
-            elif self.likes["food"] in food:
-                self.dislikes["food"] = food[food.index(self.likes["food"]) - dice((len(food)-1))] # Avoids picking the color she likes
-            else: # Suggestion by xxxwetxxx. For user-defined food I guess?
-                self.dislikes["food"] = rand_choice(food)
-
-            if self.init_dict["tastes/disliked_drink"]:
-                self.dislikes["drink"] = self.init_dict["tastes/disliked_drink"]
-            elif self.likes["drink"] in drinks: 
-                self.dislikes["drink"] = drinks[drinks.index(self.likes["drink"]) - dice((len(drinks)-1))] # Avoids picking the color she likes
-            else: # Suggestion by xxxwetxxx. For user-defined drinks I guess?
-                self.dislikes["drink"] = rand_choice(drinks)
-
-            self.unlock_NGP_personality_settings()
-
-            t3 = time.perf_counter()
-            game.func_time_log2 += "\nbackground: %s" % (t3 - t2)
-
-            return t3
-
         def unlock_NGP_personality_settings(self):
 
             # NewGame+ additional info
