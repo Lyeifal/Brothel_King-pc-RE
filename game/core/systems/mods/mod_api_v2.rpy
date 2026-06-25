@@ -23,6 +23,7 @@ init -3 python:
             api.register_hook("girl_generated", my_callback)
         """
 
+        _instance = None  # EN: Own singleton, separate from ModAPI v1 | 自己的单例，与 v1 分开
         API_VERSION = 2
 
         # ── Capability flags a mod can require ──
