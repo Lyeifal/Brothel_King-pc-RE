@@ -4240,7 +4240,7 @@ init -2 python:
         _restore_upkeep_impl = restore_upkeep
         _get_max_cust_served_impl = get_max_cust_served
         _get_max_interactions_impl = get_max_interactions
-        _get_interaction_modifier_impl = get_interaction_modifier
+        _get_interaction_modifier_impl = get_interaction_modifer
         _reset_interactions_impl = reset_interactions
         _estimate_performance_impl = estimate_performance
         _get_xp_impl = get_xp
