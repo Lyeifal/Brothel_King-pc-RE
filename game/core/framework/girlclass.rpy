@@ -1695,27 +1695,8 @@ init -2 python:
                     return s
             return False
 
-        def get_stat(self, stat_name, raw = False):
-
-            result = None
-
-            if stat_name in ("defense", "strength"):
-                return self.get_defense()
-
-            elif stat_name == "energy":
-                return self.energy
-
-            if raw:
-                eff = 0
-            else:
-                eff = self.get_effect("change", stat_name) + self.get_effect("change", "all skills") # Adds changes to stats
-
-                if stat_name.capitalize() in gstats_main:
-                    eff += self.get_effect("change", "all main skills")
-                elif stat_name.capitalize() in gstats_sex:
-                    eff += self.get_effect("change", "all sex skills")
-
-            stat = self.find_stat(stat_name)
+        def get_stat(self, stat_name, raw=False):
+            return self._stats.get_stat(stat_name, raw)
 
             if stat == False: # wrong stat name
                 raise AssertionError(stat_name + " is not a valid stat/skill name. Accepted: " + and_text(["defense", "strength", "energy"] + [s.name.lower() for s in (self.stats+self.sex_stats)]))
@@ -2110,111 +2091,14 @@ init -2 python:
                                 g.change_stat(stat, chg*eff, apply_boost=False, spillover=False, silent=True) # spillover=False is needed to avoid an infinite feedback loop
 
 
-        def change_stat(self, stat, chg, apply_boost = True, spillover=True, custom_cap=None, silent=False, notify_prefix="", notify_suffix=""): # custom_cap applies to stats only (for classes)
+        def change_stat(self, stat, chg, apply_boost=True, spillover=True, custom_cap=None, silent=False, notify_prefix="", notify_suffix=""):
+            return self._stats.change_stat(stat, chg, apply_boost, spillover, custom_cap, silent, notify_prefix, notify_suffix)
 
-            if stat == "mood":
-                return self.change_mood(chg)
-
-            elif stat == "love":
-                return self.change_love(chg, silent=silent)
-
-            elif stat == "fear":
-                return self.change_fear(chg, silent=silent)
-
-            elif stat == "energy":
-                return self.change_energy(chg)[0]
-
-            elif stat in ("rep", "reputation"):
-                return self.change_rep(chg, silent=silent)
-
-            elif stat == "xp":
-                return self.change_xp(chg, spillover=spillover, silent=silent)
-
-            elif stat == "jp":
-                return self.change_jp(chg, self.job, spillover=spillover, silent=silent)
-
-            elif stat.endswith(" jp"):
-                return self.change_jp(chg, stat[:-3], spillover=spillover, silent=silent)
-
-            elif stat.endswith(" preference"):
-                return self.change_preference(stat[:-11], chg, silent=silent)
-
-            else:
-
-                # Stat spillover (not currently used)
-                if spillover:
-                    self.stat_spillover(stat, chg)
-
-                _min, _max = self.get_stat_minmax(stat, raw = True, custom_cap=custom_cap) # custom_cap can set maximum to a different value (for classes) - Experimental
-
-                boost = 1.0
-
-                if apply_boost:
-                    boost = self.get_effect("boost", stat + " gains") * self.get_effect("boost", "all skill gains")
-
-                for s in self.stats:
-                    if s.name == stat.capitalize():
-                        if apply_boost:
-                            boost *= self.get_effect("boost", "all regular skills gains")
-
-                            boost = reverse_if(boost, chg) ## Reverses boost if decreasing stat
-
-                        r = s.change(chg*boost, _max)
-
-                        if self.auto_upkeep:
-                            self.adjust_upkeep()
-
-                        if stat in ("obedience", "libido"):
-                            self.refresh_sex_acts() # Checks if sex_acts can still be done
-
-                        if not silent and r:
-                            notify(notify_prefix + stat_name_dict[s.name] + _(" : %s") % plus_text(r, color_scheme="stat") + notify_suffix, pic=self.portrait) # Experimental
-
-                        test_achievements(gstats_main + gstats_sex + ["ultimate"])
-
-                        return r
-
-                for s in self.sex_stats:
-                    if s.name == stat.capitalize():
-                        if apply_boost:
-                            boost *= self.get_effect("boost", "all sex skills gains")
-
-                            boost = reverse_if(boost, chg) ## Reverses boost if decreasing stat
-
-                        r = s.change(chg*boost, _max)
-
-                        if self.auto_upkeep:
-                            self.adjust_upkeep()
-
-                        test_achievements(gstats_main + gstats_sex + ["ultimate"])
-
-                        if not silent and r:
-                            notify(notify_prefix + stat_name_dict[s.name] + _(" : %s") % plus_text(r, color_scheme="stat") + notify_suffix, pic=self.portrait) # Experimental
-
-                        return r
-
-        def set_stat(self, stat, val): # Forces a stat to raw value val, ignoring random generation and caps. Only for girl skills (for now)
-            for s in self.stats + self.sex_stats:
-                if s.name == stat.capitalize():
-                    s.set(val)
-                    return
+        def set_stat(self, stat, val):
+            return self._stats.set_stat(stat, val)
 
         def average_skills(self, sk_list, mod=1.0):
-
-            t = 0
-
-            for sk in sk_list:
-                t += self.get_stat(sk, raw=True)
-
-            avg = t / len(sk_list)
-
-            avg *= mod
-
-            # Total variation is limited to -20% from average
-            change_dict = {sk: 0.8*avg for sk in sk_list}
-
-            # The remaining points (0.2 * sk_nb * avg) are spread out randomly
-            remaining_points = 0.2 * len(sk_list) * avg
+            return self._stats.average_skills(sk_list, mod)
 
             while remaining_points > 0: # May give an additional skill point depending on rounding (in favor of the player)
                 change_dict[rand_choice(sk_list)] += 1
