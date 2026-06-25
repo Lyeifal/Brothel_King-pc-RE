@@ -167,6 +167,7 @@ init -2 python:
             self._dialogue = GirlDialogue(self)
             self._logging = GirlLogging(self)
             self._sex = GirlSex(self)
+            self._items = GirlItems(self)
 
         def randomize(self, free=False, p_traits=None, n_trait=None, perks=None, force_original=False, level=1, personality=None, temp_list=None):
 
@@ -1116,39 +1117,13 @@ init -2 python:
 
 ## Items
 
+        # Phase 2.1: Delegated to GirlItems component
         def equip(self, item):
-            if not isinstance(item, ItemInstance):
-                renpy.say(bk_error, __("Warning: This item is not instantiated (%s).") % item.name)
+            return self._items.equip(item)
 
-            for it in self.equipped:
-                if it.slot == item.slot:
-                    self.unequip(it)
-
-            self.equipped.append(item)
-
-            # Change item effects if girl has boost item type effects
-            boost = self.get_effect("boost", item.type.name.lower())
-
-            # To save on memory, effects are deep copied only when the 'boost' perk is used
-            if boost != 1.0:
-                item.effects = copy.deepcopy(item.effects)
-                for eff in item.effects:
-                    eff.value *= boost
-
-            self.add_effects(item.effects)
-            item.equipped = True
-
-            self.refresh_sex_acts() # Checks if sex_acts can still be done
-
-            test_achievements(["hands", "body", "finger", "neck", "accessory"])
-
+        # Phase 2.1: Delegated to GirlItems component
         def unequip(self, item):
-            if not isinstance(item, ItemInstance):
-                renpy.say(bk_error, __("Warning: This item is not instantiated (%s).") % item.name)
-
-            self.equipped.remove(item)
-            self.remove_effects(item.effects)
-            item.equipped = False
+            return self._items.unequip(item)
 
             # Restores item effects if girl had boost item type effects
             boost = self.get_effect("boost", item.type.name.lower())
@@ -4681,6 +4656,9 @@ init -2 python:
         _remove_fixation_impl = remove_fixation
         _try_to_remove_fix_impl = try_to_remove_fix
 
+        # ── Phase 2.1: Items delegation aliases | 物品方法别名 ──
+        _get_equipped_impl = get_equipped
+        _receive_gift_impl = receive_gift
 
 
 
