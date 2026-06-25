@@ -514,49 +514,15 @@ init -2 python:
 
             #! No skill points are distributed for now, see if it works
 
-        def will_do_farm_act(self, act, mode=None): # Returns 'accepted', 'resisted', 'refused' unless a specific mode is chosen, in which case it returns a boolean
+        def will_do_farm_act(self, act, mode=None):
+            return self._training.will_do_farm_act(act, mode)
 
-            if not act:
-                raise AssertionError("No act found for training")
+        def will_rebel_in_farm(self, train_mode, reaction):
+            return self._training.will_rebel_in_farm(train_mode, reaction)
 
-            mod = self.get_sex_act_modifier(act) # Not in use for the moment
+        def farm_beg_test(self):
+            return self._training.farm_beg_test()
 
-            score = self.preferences[act] + self.get_stat("obedience") + self.get_stat("libido")//2 + self.get_love()//2 + self.get_fear() # Love has less impact than fear
-
-            if self.is_("very dom"):
-                score -= 100
-            elif self.is_("dom"):
-                score -= 50
-            elif self.is_("very sub"):
-                score += 50
-
-            if self.is_("very modest"):
-                score -= 100
-            elif self.is_("modest"):
-                score -= 50
-            elif self.is_("very lewd"):
-                score += 50
-
-            if score > 0:
-                res = "accepted"
-            elif score > -250:
-                res = "resisted"
-            else:
-                res = "refused"
-
-            # Generic case
-            if not mode:
-                return res
-
-            # Specific mode selected
-            elif mode == "gentle" and res == "accepted":
-                return True
-            elif mode == "tough" and res in ("resisted", "accepted"):
-                return True
-            elif mode == "hardcore":
-                return True
-            else:
-                return False
 
         def will_rebel_in_farm(self, train_mode, reaction):
 
