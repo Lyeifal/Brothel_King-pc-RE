@@ -275,59 +275,18 @@ init -2 python:
                 return True
             return False
 
-        ## Sanity (fuels evil farm powers before becoming broken) ##
-        def init_sanity(self): # Sanity increases with rank and certain personality attributes
-            if self.is_("very dom"):
-                mod = 7
-            elif self.is_("dom"):
-                mod = 5
-            else:
-                mod = 4
+        ## Phase 2.1: Delegated to GirlMood component ##
+        def init_sanity(self):
+            return self._mood.init_sanity()
 
-            self.sanity = dice(11, self.rank) + mod * self.rank # Generates 5-15 sanity points per rank (+1/+3 for dom/vdom girls)
+        def rank_up_sanity(self):
+            return self._mood.rank_up_sanity()
 
-        def rank_up_sanity(self): # Sanity increases with rank and certain personality attributes
-            if self.is_("very dom"):
-                mod = 7
-            elif self.is_("dom"):
-                mod = 5
-            else:
-                mod = 4
-
-            self.sanity += dice(11) + mod # Generates 5-15 sanity points per rank (+1/+3 for dom/vdom girls)
-
-        def lose_sanity(self, cost): # Returns a message to display as narrator dialogue
-            self.sanity -= cost*self.get_effect("boost", "sanity loss") - self.get_effect("change", "sanity loss")
-
-            if self.sanity <= 0:
-                self.broken = True
-
-            return self.sanity_warning()
+        def lose_sanity(self, cost):
+            return self._mood.lose_sanity(cost)
 
         def get_sanity(self):
-            if self.broken:
-                san = event_color["very bad"] % __("Broken")
-
-            elif self.sanity < 5:
-                san = event_color["very bad"] % __("Nearly broken")
-
-            elif self.sanity < 10:
-                san = event_color["bad"] % __("Very frail")
-
-            elif self.sanity < 20:
-                san = event_color["a little bad"] % ("Frail")
-
-            elif self.sanity < 50:
-                san = event_color["a little bad"] % ("Shaken")
-
-            else:
-                san = event_color["a little bad"] % ("Normal")
-
-            if debug_mode:
-                san += " (%i)" % self.sanity
-
-            return san
-
+            return self._mood.get_sanity()
 
         def sanity_warning(self): # Returns a message to display as narrator dialogue
             if self.broken:
