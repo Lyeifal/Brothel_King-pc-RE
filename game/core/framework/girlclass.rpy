@@ -857,65 +857,13 @@ init -2 python:
 
 
         def test_fix(self, name, unlock=False, feedback=False):
-
-            r = self.check_fix(name)
-
-            if r == "pos":
-                if unlock:
-                    if not self.personality_unlock[name]:
-                        self.personality_unlock[name] = True
-                        if feedback:
-                            renpy.play(s_aaah, "sound")
-                            renpy.say("", __("You have discovered %s's fixation with %s.") % (self.name, name))
-                return "pos"
-            elif r == "neg":
-                if unlock:
-                    if not self.personality_unlock[name]:
-                        self.personality_unlock[name] = True
-                        if feedback:
-                            renpy.play(s_surprise, "sound")
-                            renpy.say("", __("You have discovered %s's disgust for %s.") % (self.name, name))
-                return "neg"
-            else:
-                return False
+            return self._sex.test_fix(name, unlock, feedback)
 
         def check_fix(self, fix_name):
-            if fix_name in [fix.name for fix in self.pos_fixations]:
-                return "pos"
-            elif fix_name in [fix.name for fix in self.neg_fixations]:
-                return "neg"
-            else:
-                return False
+            return self._sex.check_fix(fix_name)
 
         def get_sex_attitude(self, act=None, fix=None): # Measures how much a girl enjoys a particular sex act or fixation
-
-            # Where fix is a String, not an Object
-
-            score = self.get_stat("libido")
-
-            if act:
-                score += self.preferences[act]
-                if act in all_sex_acts:
-                    score += self.get_stat(act)
-
-            else: # When there's no sex act, such as kissing or groping
-                score += self.get_stat("obedience") - 75
-
-            if fix:
-
-                fix = make_list(fix)
-
-                for fix_name in fix:
-                    if fix_name in [fix.name for fix in self.pos_fixations]:
-                        score += self.get_stat("sensitivity") // 2
-                    elif fix_name in [fix.name for fix in self.neg_fixations]:
-                        if self.is_("dom"):
-                            score -= self.get_stat("sensitivity")
-                        elif self.is_("very sub"):
-                            score += self.get_stat("sensitivity") // 2
-                        elif self.is_("sub"):
-                            score += self.get_stat("sensitivity") // 4
-            return score
+            return self._sex.get_sex_attitude(act, fix)
 
 
         # Phase 2.1: Delegated to GirlEconomy component
@@ -4213,9 +4161,6 @@ init -2 python:
         _activate_sex_act_impl = activate_sex_act
         _deactivate_sex_act_impl = deactivate_sex_act
         _get_sex_act_modifier_impl = get_sex_act_modifier
-        _test_fix_impl = test_fix
-        _check_fix_impl = check_fix
-        _get_sex_attitude_impl = get_sex_attitude
         _get_preference_bonus_impl = get_preference_bonus
         _add_random_fixation_impl = add_random_fixation
         _reset_sex_acts_impl = reset_sex_acts

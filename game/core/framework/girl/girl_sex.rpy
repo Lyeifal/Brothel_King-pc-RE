@@ -122,16 +122,68 @@ init -2 python:
         # ── 固恋管理 | Fixation management ──
 
         def test_fix(self, name, unlock=False, feedback=False):
-            # 测试固恋 | Test a fixation
-            return self.girl._test_fix_impl(name, unlock, feedback)
+            '''测试固恋 | Test a fixation (optionally unlock it with feedback)'''
+            g = self.girl
+            r = g.check_fix(name)
+
+            if r == "pos":
+                if unlock:
+                    if not g.personality_unlock[name]:
+                        g.personality_unlock[name] = True
+                        if feedback:
+                            renpy.play(s_aaah, "sound")
+                            renpy.say("", __("You have discovered %s's fixation with %s.") % (g.name, name))
+                return "pos"
+            elif r == "neg":
+                if unlock:
+                    if not g.personality_unlock[name]:
+                        g.personality_unlock[name] = True
+                        if feedback:
+                            renpy.play(s_surprise, "sound")
+                            renpy.say("", __("You have discovered %s's disgust for %s.") % (g.name, name))
+                return "neg"
+            else:
+                return False
 
         def check_fix(self, fix_name):
-            # 检查固恋状态 | Check fixation status
-            return self.girl._check_fix_impl(fix_name)
+            '''检查固恋状态 | Check fixation status (pos/neg/False)'''
+            g = self.girl
+            if fix_name in [fix.name for fix in g.pos_fixations]:
+                return "pos"
+            elif fix_name in [fix.name for fix in g.neg_fixations]:
+                return "neg"
+            else:
+                return False
 
         def get_sex_attitude(self, act=None, fix=None):
-            # 获取女孩对性行为或固恋的态度 | Get girl's attitude toward an act or fixation
-            return self.girl._get_sex_attitude_impl(act, fix)
+            '''获取女孩对性行为或固恋的态度 | Get girl's attitude toward an act or fixation (fix is a String, not an Object)'''
+            g = self.girl
+
+            score = g.get_stat("libido")
+
+            if act:
+                score += g.preferences[act]
+                if act in all_sex_acts:
+                    score += g.get_stat(act)
+
+            else: # 无性行为时（如亲吻、抚摸）| When there's no sex act, such as kissing or groping
+                score += g.get_stat("obedience") - 75
+
+            if fix:
+
+                fix = make_list(fix)
+
+                for fix_name in fix:
+                    if fix_name in [fix.name for fix in g.pos_fixations]:
+                        score += g.get_stat("sensitivity") // 2
+                    elif fix_name in [fix.name for fix in g.neg_fixations]:
+                        if g.is_("dom"):
+                            score -= g.get_stat("sensitivity")
+                        elif g.is_("very sub"):
+                            score += g.get_stat("sensitivity") // 2
+                        elif g.is_("sub"):
+                            score += g.get_stat("sensitivity") // 4
+            return score
 
         def get_preference_bonus(self, act, minion_type=None):
             # 获取偏好加成（农场用）| Get preference bonus (for farm use)
