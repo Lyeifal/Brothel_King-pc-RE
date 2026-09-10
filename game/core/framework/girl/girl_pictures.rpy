@@ -262,3 +262,170 @@ init -2 python:
                     return pic
 
             return g.get_pic("profile", and_tags=and_tags, not_tags=not_tags, attempts=attempts, naked_filter=naked_filter)
+
+        # ── 标签搜索 | Tag-based picture search ──
+
+        def get_pic(self, tags, alt_tags1=None, alt_tags2=None, alt_tags3=None, and_tags=None, not_tags=None, strict=False, and_priority=True, naked_filter=False, attempts=0, soft=False, hide_farm=False, pref_filter=False, allow_lesbian=False, always_stock=False, horizontal=False, vertical=False):
+            '''按标签查找图片 | Find a picture by tags (tries alt_tags in order; and/not_tags dropped in reverse priority order)'''
+            g = self.girl
+
+            # First looks for a pic with 'tags', then 'alt_tags1' if no pic is found, then 'alt_tags2'...
+            # The 'and' and 'not_tags' apply to every set of tags.
+            # NEW: and_tags and not_tags should be listed from the most important to the least important (they will be dropped in reverse order)
+            # If 'strict' is on, a False value is returned if no picture can be found with the and/not_tags conditions
+            # If 'and_priority' is on, the 'and' and 'not' clause will only be dropped after the search list has been exhausted
+            # allow_lesbian is overridden by bisexual/group or using lesbian tag
+
+            tags = make_list(tags)
+            if and_tags:
+                and_tags = make_list(and_tags)
+            else:
+                and_tags = []
+            if not_tags:
+                not_tags = make_list(not_tags)
+            else:
+                not_tags = []
+
+            ## 优先级过滤器：优先于传入的 not_tags，重要性递增 | Priority filters: take precedence over provided not_tags, in ascending order of importance
+
+            # 'naked_filter' 自动加入 naked 标签（仅用于 profile/rest/work 图，慎用于性事件）| 'naked_filter' automatically adds the naked tag (use only with profile, rest, or work pics)
+
+            if naked_filter and "naked" not in (tags + and_tags + not_tags): # 直接标签指令优先于 naked_filter | Direct tag orders take precedence over naked_filter
+                if g.naked:
+                    and_tags.append("naked")
+                elif not g.naked:
+                    not_tags.insert(0, "naked") # 将 "naked" 置于 not_tags 开头 | Places "naked" at the beginning of the not_tags list
+
+            # 'Soft' 自动排除性标签（不排除 naked/农场标签）| 'Soft' automatically excludes sexual tags (keeps naked/farm tags without sexual tags)
+
+            if soft: # 将 soft 过滤器插入 not_tags 开头 | Inserts soft filters at the beginning of the not_tags list
+                not_tags = [ntag for ntag in (all_sex_acts + ["group", "bisexual", "cumshot"]) if ntag not in not_tags] + not_tags
+
+            # 除非明确请求或上下文为 bisexual/group，否则排除 lesbian 图 | Lesbian pics excluded unless explicitly requested or context is bisexual/group
+
+            if not allow_lesbian and "lesbian" not in (tags + and_tags + not_tags) and "bisexual" not in (tags + and_tags) and "group" not in (tags + and_tags):
+                not_tags.insert(0, "lesbian") # 将 "lesbian" 置于 not_tags 开头 | Places "lesbian" at the beginning of the not_tags list
+
+            # 处女女孩不显示性行为图片，除非明确为 'sex' 或 'group' | 'Virgin' girls never have sex pics shown unless the act is explicitly 'sex' or 'group'
+
+            if g.has_trait("Virgin"):
+                if not "sex" in (tags + and_tags + not_tags) and not "group" in (tags + and_tags):
+                    not_tags.insert(0, "sex") # 将 "sex" 置于 not_tags 开头 | Places "sex" at the beginning of the not_tags list
+
+            # 'Hide_farm' 排除硬核农场行为，优先级最高 | 'Hide_farm' excludes hardcore farm acts, takes precedence over everything else
+            if hide_farm:
+                if not persistent.fuzzy_tagging_acts: # 非农场搜索禁用 machine 和 big | Disables machine and big for all non farm picture search
+                    not_tags.insert(0, "machine") # 将 "machine" 置于 not_tags 开头 | Places "machine" at the beginning of the not_tags list
+                    not_tags.append("big")
+                elif "fetish" not in (tags + and_tags):
+                    not_tags.insert(0, "machine") # 将 "machine" 置于 not_tags 开头 | Places "machine" at the beginning of the not_tags list
+                not_tags = farm_hardcore_acts + not_tags
+
+            ## 非优先级过滤器（追加到 not_tags 末尾）| Non-priority filters (added at the end of the not_tags list)
+
+            # 'portrait' 仅在明确请求时显示 | 'portrait' may not show unless specifically requested
+
+            if "portrait" not in (tags + and_tags + not_tags):
+                not_tags.append("portrait")
+
+            # 'pref_filter' 过滤掉女孩不感兴趣的行为标签 | 'pref_filter' filters out sex acts she isn't at least indifferent to
+
+            if pref_filter:
+                not_tags += [a for a in all_sex_acts if (not a in (tags + and_tags + not_tags) and not compare_preference(g, a, "indifferent"))]
+
+            # 附加过滤器（欲望/心情）| Additional filters (libido/mood)
+
+            if g.get_stat("libido") < 75 and "libido" not in (tags + and_tags + not_tags): # 欲望过低不出 libido 标签 | Libido tags won't happen if girl's libido is too low
+                not_tags.append("libido")
+            if g.mood > 0 and g.get_love() - g.get_fear() > 0 and "sad" not in not_tags: # 开心且被爱时不出现 sad 标签 | Sad tags won't happen if girl is happy and loving
+                not_tags.append("sad")
+            if g.mood < 0 or g.get_love() - g.get_fear() < 0 and "happy" not in not_tags: # 悲伤或恐惧时不出现 happy 标签 | Happy tags won't happen if girl is sad or in fear
+                not_tags.append("happy")
+            if g.mood >= 15 or g.mood <= -15 or g.get_love() - g.get_fear() >= 15 or g.get_love() - g.get_fear() <= -15: # 情绪激烈时不出现 neutral 标签 | Neutral tags won't happen on strong emotions
+                if "neutral" not in not_tags:
+                    not_tags.append("neutral")
+
+            # 调用全局 get_pic 执行实际搜索 | Call the global get_pic to perform the actual search
+            return get_pic(g, tags=tags, alt_tags1=alt_tags1, alt_tags2=alt_tags2, alt_tags3=alt_tags3, and_tags=and_tags, not_tags=not_tags, strict=strict, and_priority=and_priority, attempts=attempts, always_stock=always_stock, horizontal=horizontal, vertical=vertical)
+
+        def get_pic_not_tags(self, tags, alt_tags1=None, alt_tags2=None, alt_tags3=None, and_tags=None, not_tags=None, strict=False, and_priority=True, naked_filter=False, attempts=0, soft=False, hide_farm=False, pref_filter=False, allow_lesbian=False, always_stock=False):
+            '''按标签排除查找图片（get_pic 的 not_tags 变体）| Find a picture by tags (not_tags variant of get_pic)'''
+            g = self.girl
+
+            # First looks for a pic with 'tags', then 'alt_tags1' if no pic is found, then 'alt_tags2'...
+            # The 'and' and 'not_tags' apply to every set of tags.
+            # NEW: and_tags and not_tags should be listed from the most important to the least important (they will be dropped in reverse order)
+            # If 'strict' is on, a False value is returned if no picture can be found with the and/not_tags conditions
+            # If 'and_priority' is on, the 'and' and 'not' clause will only be dropped after the search list has been exhausted
+            # allow_lesbian is overridden by bisexual/group or using lesbian tag
+
+            tags = make_list(tags)
+            if and_tags:
+                and_tags = make_list(and_tags)
+            else:
+                and_tags = []
+            if not_tags:
+                not_tags = make_list(not_tags)
+            else:
+                not_tags = []
+
+            ## 优先级过滤器：优先于传入的 not_tags，重要性递增 | Priority filters: take precedence over provided not_tags, in ascending order of importance
+
+            # 'naked_filter' 自动加入 naked 标签（仅用于 profile/rest/work 图，慎用于性事件）| 'naked_filter' automatically adds the naked tag (use only with profile, rest, or work pics)
+
+            if naked_filter and "naked" not in (tags + and_tags + not_tags): # 直接标签指令优先于 naked_filter | Direct tag orders take precedence over naked_filter
+                if g.naked:
+                    and_tags.append("naked")
+                elif not g.naked:
+                    not_tags.insert(0, "naked") # 将 "naked" 置于 not_tags 开头 | Places "naked" at the begining of the not_tags list
+
+            # 'Soft' 自动排除性标签（不排除 naked/农场标签）| 'Soft' automatically excludes sexual tags (keeps naked/farm tags without sexual tags)
+
+            if soft: # 将 soft 过滤器插入 not_tags 开头 | Inserts soft filters at the beginning of the not_tags list
+                not_tags = [ntag for ntag in (all_sex_acts + ["group", "bisexual", "cumshot"]) if ntag not in not_tags] + not_tags
+
+            # 除非明确请求或上下文为 bisexual/group，否则排除 lesbian 图 | Lesbian pics excluded unless explicitly requested or context is bisexual/group
+
+            if not allow_lesbian and "lesbian" not in (tags + and_tags + not_tags) and "bisexual" not in (tags + and_tags) and "group" not in (tags + and_tags):
+                not_tags.insert(0, "lesbian") # 将 "lesbian" 置于 not_tags 开头 | Places "lesbian" at the beginning of the not_tags list
+
+            # 处女女孩不显示性行为图片，除非明确为 'sex' 或 'group' | 'Virgin' girls never have sex pics shown unless the act is explicitly 'sex' or 'group'
+
+            if g.has_trait("Virgin"):
+                if not "sex" in (tags + and_tags + not_tags) and not "group" in (tags + and_tags):
+                    not_tags.insert(0, "sex") # 将 "sex" 置于 not_tags 开头 | Places "sex" at the beginning of the not_tags list
+
+            # 'Hide_farm' 排除硬核农场行为，优先级最高 | 'Hide_farm' excludes hardcore farm acts, takes precedence over everything else
+            if hide_farm:
+                if not persistent.fuzzy_tagging_acts: # 非农场搜索禁用 machine 和 big | Disables machine and big for all non farm picture search
+                    not_tags.insert(0, "machine") # 将 "machine" 置于 not_tags 开头 | Places "machine" at the beginning of the not_tags list
+                    not_tags.append("big")
+                elif "fetish" not in (tags + and_tags):
+                    not_tags.insert(0, "machine") # 将 "machine" 置于 not_tags 开头 | Places "machine" at the beginning of the not_tags list
+                not_tags = farm_hardcore_acts + not_tags
+
+            ## 非优先级过滤器（追加到 not_tags 末尾）| Non-priority filters (added at the end of the not_tags list)
+
+            # 'portrait' 仅在明确请求时显示 | 'portrait' may not show unless specifically requested
+
+            if "portrait" not in (tags + and_tags + not_tags):
+                not_tags.append("portrait")
+
+            # 'pref_filter' 过滤掉女孩不感兴趣的行为标签 | 'pref_filter' filters out sex acts she isn't at least indifferent to
+
+            if pref_filter:
+                not_tags += [a for a in all_sex_acts if (not a in (tags + and_tags + not_tags) and not compare_preference(g, a, "indifferent"))]
+
+            # 附加过滤器（欲望/心情）| Additional filters (libido/mood)
+
+            if g.get_stat("libido") < 75 and "libido" not in (tags + and_tags + not_tags): # 欲望过低不出 libido 标签 | Libido tags won't happen if girl's libido is too low
+                not_tags.append("libido")
+            if g.mood > 0 and g.get_love() - g.get_fear() > 0 and "sad" not in not_tags: # 开心且被爱时不出现 sad 标签 | Sad tags won't happen if girl is happy and loving
+                not_tags.append("sad")
+            if g.mood < 0 or g.get_love() - g.get_fear() < 0 and "happy" not in not_tags: # 悲伤或恐惧时不出现 happy 标签 | Happy tags won't happen if girl is sad or in fear
+                not_tags.append("happy")
+            if g.mood >= 15 or g.mood <= -15 or g.get_love() - g.get_fear() >= 15 or g.get_love() - g.get_fear() <= -15: # 情绪激烈时不出现 neutral 标签 | Neutral tags won't happen on strong emotions
+                if "neutral" not in not_tags:
+                    not_tags.append("neutral")
+
+            return and_text(not_tags)
