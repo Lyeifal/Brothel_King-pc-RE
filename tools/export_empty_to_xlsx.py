@@ -12,13 +12,18 @@ from pathlib import Path
 
 try:
     import openpyxl
+    from openpyxl.cell.cell import ILLEGAL_CHARACTERS_RE
 except ImportError:
     print("openpyxl not installed. Install with: pip install openpyxl")
     exit(1)
 
-NEW_PROJECT = Path(r"C:\Users\akxls\Documents\Code\BK\Brothel_King-pc")
+NEW_PROJECT = Path(__file__).resolve().parent.parent
 NEW_TL_DIR = NEW_PROJECT / "game" / "tl" / "chinese_simplified"
 NEW_STRINGS_RPY = NEW_TL_DIR / "strings.rpy"
+
+
+def clean(text):
+    return ILLEGAL_CHARACTERS_RE.sub("", text)
 
 
 def export_strings_empty():
@@ -110,13 +115,13 @@ def main():
     ws1.title = "strings"
     ws1.append(["Type", "File", "Context", "English (DO NOT MODIFY)", "Chinese Translation"])
     for e in strings_empty:
-        ws1.append([e['type'], e['file'], e['comment'], e['english'], e['chinese']])
+        ws1.append([e['type'], e['file'], clean(e['comment']), clean(e['english']), e['chinese']])
     
     # Dialogue sheet
     ws2 = wb.create_sheet("dialogue")
     ws2.append(["Type", "File", "Hash", "English (DO NOT MODIFY)", "Chinese Translation"])
     for e in dialogue_empty:
-        ws2.append([e['type'], e['file'], e['comment'], e['english'], e['chinese']])
+        ws2.append([e['type'], e['file'], e['comment'], clean(e['english']), e['chinese']])
     
     output = NEW_PROJECT / "temp" / "translations" / "to_translate_empty.xlsx"
     output.parent.mkdir(parents=True, exist_ok=True)
