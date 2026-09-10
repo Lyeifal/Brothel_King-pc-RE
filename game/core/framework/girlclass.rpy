@@ -169,6 +169,7 @@ init -2 python:
             self._sex = GirlSex(self)
             self._items = GirlItems(self)
             self._training = GirlTraining(self)
+            self._effects = GirlEffects(self)
 
         def randomize(self, free=False, p_traits=None, n_trait=None, perks=None, force_original=False, level=1, personality=None, temp_list=None):
 
@@ -1700,44 +1701,14 @@ init -2 python:
 
 
         def list_effects(self):
-            msg = ""
-            for eff in self.effects:
-                msg += eff.type + " " + eff.target + ", "
-
-            return msg
+            return self._effects.list_effects()
 
         def get_effect(self, type, target, raw=False, custom_scale=("factor", 0), change_cap=False):
             # raw=True means no additional brothel or world effects will be included. MUST if you expect to get a string value
-            # custom_scale is a tuple 'factor name', 'value' which is used for some perks
-            # Change_cap will only return Effects with the change_cap attribute as True (which means it affects stat min and max)
-
-            # Only brothel effects are currently in use
-
-            r = get_effect(thing=self, type=type, target=target, custom_scale=custom_scale, change_cap=change_cap)
-
-            if not raw:
-                if type == "boost":
-                    if self in MC.girls:
-                        r *= get_effect(brothel, type, target, change_cap=change_cap)
-                    elif self in farm.girls:
-                        r *= get_effect(farm, type, target, change_cap=change_cap)
-                    elif self in game.free_girls:
-                        r *= get_effect(game, type, target, change_cap=change_cap)
-
-                else:
-                    if self in MC.girls:
-                        r += get_effect(brothel, type, target, change_cap=change_cap)
-                    elif self in farm.girls:
-                        r += get_effect(farm, type, target, change_cap=change_cap)
-                    elif self in game.free_girls:
-                        r += get_effect(game, type, target, change_cap=change_cap)
-
-            return r
-
+            return self._effects.get_effect(type, target, raw, custom_scale, change_cap)
 
         def remove_effects(self, effects):
-            remove_effects(self, effects)
-            self.refresh_sex_acts() # Checks if sex_acts can still be done
+            return self._effects.remove_effects(effects)
 
 
         def get_defense(self, fight = False, raw=False):
