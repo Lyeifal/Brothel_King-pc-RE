@@ -170,107 +170,10 @@ init -2 python:
             self._items = GirlItems(self)
             self._training = GirlTraining(self)
             self._effects = GirlEffects(self)
+            self._generation = GirlGeneration(self)
 
         def randomize(self, free=False, p_traits=None, n_trait=None, perks=None, force_original=False, level=1, personality=None, temp_list=None):
-
-            t0 = time.perf_counter()
-            game.func_time_log2 = "\nstart: %s" % t0
-
-            # 1. INIT GIRL
-
-            self.free = free
-
-            # Has a chance to generate original if it doesn't exist, otherwise creates a clone:
-            # 'original' attribute stores the source for debugging
-
-            if force_original:
-                self.original = "forced original"
-            elif self.is_unique():
-                self.original = "unique"
-            elif self.free and dice(100)<=15 and not self.count_occurences("all", original=True, add_list=temp_list) > 0:
-                self.original = "random free"
-            elif not free and dice(100)<=5 and not self.count_occurences("all", original=True, add_list=temp_list) > 0:
-                self.original = "random slave"
-            else:
-                self.original = False
-
-            if not self.original and self.ini:
-                self.init_dict = clone_init_dict(self.init_dict)
-
-            self.set_name()
-            self.activation_date = calendar.time
-            self.talked_to_date = None
-            self.recent_events = defaultdict(list)
-            self.relations = defaultdict(int)
-
-            t1 = time.perf_counter()
-            game.func_time_log2 += "\ninit: %s" % (t1 - t0)
-
-            # 2. PERSONALITY
-
-            self.generate_personality(personality)
-
-            t2 = time.perf_counter()
-            game.func_time_log2 += "\npersonality: %s" % (t2 - t1)
-
-            t3 = self.generate_background(t2)
-
-            # 3. LEVEL AND REGULAR SKILLS
-
-            self.adjust_level(level)
-            self.generate_stats()
-
-            t4 = time.perf_counter()
-            game.func_time_log2 += "\nstats: %s" % (t4 - t3)
-
-            # 4. TRAITS AND PERKS
-
-            self.generate_traits(p_traits, n_trait)
-
-            if perks:
-                for perk in perks:
-                    self.acquire_perk(perk, forced=True)
-
-            t5 = time.perf_counter()
-            game.func_time_log2 += "\ntraits: %s" % (t5 - t4)
-
-            self.update_can_perk() # This is not checked dynamically for performance
-
-            # 5. ADJUSTMENTS
-
-            self.auto_upkeep = True
-            self.upkeep = -1
-            self.upkeep_ratio = 1.0
-            self.locked_upkeep = None
-            self.generate_preferences()
-            t6 = time.perf_counter()
-            game.func_time_log2 += "\npreferences: %s" % (t6 - t5)
-
-            self.upkeep = self.get_med_upkeep()
-            self.energy = self.get_stat_minmax("energy")[1]
-            self.init_sanity() # Used as a limit on farm powers (degrades over time, unrecoverable)
-            self.last_power = 0
-            self.broken = False
-            self.streetdays = 0
-            self.interactions = 0
-            self.reset_interactions()
-
-            # 6. PICTURES AND CHAR
-
-            self.refresh_pictures(silent=True)
-
-            t7 = time.perf_counter()
-            game.func_time_log2 += "\nrefresh pictures: %s" % (t7 - t6)
-
-            # Creating girl character (for talking)
-
-            self.create_char()
-
-            t8 = time.perf_counter()
-            game.func_time_log2 += "\nchar creation: %s" % (t8 - t7)
-
-            game.func_time_log2 += "\nend: %s" % t8
-            game.func_time_log2 += "\ntotal time: %s" % (t8 - t0)
+            return self._generation.randomize(free, p_traits, n_trait, perks, force_original, level, personality, temp_list)
 
         def is_unique(self): # Unique girls may only generate if none other already exists
             if self.init_dict["identity/unique"] or self.init_dict["cloning options/unique"]:
@@ -4117,7 +4020,6 @@ init -2 python:
         _load_ini_impl = load_ini
         _read_ini_impl = read_ini
         # _adjust_level_impl already defined in Stats section above
-        _randomize_impl = randomize
 
         # ── Phase 2.1: Sex delegation aliases ──
         _will_do_sex_act_impl = will_do_sex_act

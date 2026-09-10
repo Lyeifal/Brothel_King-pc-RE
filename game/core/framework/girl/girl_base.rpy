@@ -31,4 +31,4 @@ init -2 python:
         def adjust_level(self, level):
             return self.girl._adjust_level_impl(level)
         def randomize(self, free=False, p_traits=None, n_trait=None, perks=None, force_original=False, level=1, personality=None, temp_list=None):
-            return self.girl._randomize_impl(free, p_traits, n_trait, perks, force_original, level, personality, temp_list)
+            return self.girl._generation.randomize(free, p_traits, n_trait, perks, force_original, level, personality, temp_list)
