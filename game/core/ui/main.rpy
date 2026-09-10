@@ -835,6 +835,9 @@ label farm_loop():
                         game.track("sell girl gold", price)
                         test_achievement("sell girl gold")
 
+                        # 通知 Mod: 女孩已被卖出 | Notify mods: girl sold
+                        mod_api_v2.execute_hook(mod_api_v2.HOOK_GIRL_SOLD, girl=girl, price=price)
+
                     if girl.get_love() >= 90:
                         $ unlock_achievement("sell girl love")
                         call dialogue(girl, "sold love") from _call_dialogue_15
@@ -1444,6 +1447,9 @@ label girls_loop():
                         MC.sell(slavemarket, girl, price)
                         game.track("sell girl gold", price)
                         test_achievement("sell girl gold")
+
+                        # 通知 Mod: 女孩已被卖出 | Notify mods: girl sold
+                        mod_api_v2.execute_hook(mod_api_v2.HOOK_GIRL_SOLD, girl=girl, price=price)
 
                     if girl.get_love() >= 90:
                         $ unlock_achievement("sell girl love")

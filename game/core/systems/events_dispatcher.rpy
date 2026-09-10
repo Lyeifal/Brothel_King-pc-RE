@@ -186,6 +186,10 @@ label before_main_menu(): # Will show before main menu (standard Ren'py label)
 label after_load: # Happens after a game state is loaded
 
     python:
+        # 通知 Mod: 存档已加载 | Notify mods: game loaded (guard: old saves may lack mod_api_v2)
+        if hasattr(store, "mod_api_v2"):
+            mod_api_v2.execute_hook(mod_api_v2.HOOK_GAME_LOADED)
+
         load_labels = []
         for mod_name in game.active_mods.keys():
             # Retrieves the new Mod object from detected_mods
@@ -653,6 +657,9 @@ label advance_to_chapter(chapter, silent=False, free=False, start=False): # All 
         temp_gossip = []
         NPC_taxgirl.time_pressure_modifier = 0.0
 
+    # 通知 Mod: 章节开始推进 | Notify mods: chapter starting
+    $ mod_api_v2.execute_hook(mod_api_v2.HOOK_CHAPTER_STARTING, chapter=game.chapter)
+
 
     # Chapter splashscreen
     $ renpy.call("chapter", chapter, silent)
@@ -1042,6 +1049,9 @@ label advance_to_chapter(chapter, silent=False, free=False, start=False): # All 
     if debug:
         $ print("step7: %.2f seconds" % (t7 - t6))
 
+    # 通知 Mod: 章节推进完成 | Notify mods: chapter finished
+    $ mod_api_v2.execute_hook(mod_api_v2.HOOK_CHAPTER_FINISHED, chapter=game.chapter)
+
     return
 
 label got_license(level):
@@ -1070,7 +1080,11 @@ label display_events(ev_list):
 
 #        "Playing [ev.label] with type [ev.type]."
 
+        # 通知 Mod: 事件即将触发 | Notify mods: event triggering
+        $ mod_api_v2.execute_hook(mod_api_v2.HOOK_EVENT_TRIGGERING, event=ev, event_type=ev.type, label=ev.label)
         $ ev.play()
+        # 通知 Mod: 事件已结束 | Notify mods: event finished
+        $ mod_api_v2.execute_hook(mod_api_v2.HOOK_EVENT_FINISHED, event=ev, event_type=ev.type, label=ev.label)
         $ ev.happened = True
 
         stop music fadeout 3.0
@@ -1154,6 +1168,9 @@ label run_away(girl):
         $ brothel.master_bedroom.girls.remove(girl)
 
     $ MC.escaped_girls.append(girl)
+
+    # 通知 Mod: 女孩已成功逃跑 | Notify mods: girl ran away
+    $ mod_api_v2.execute_hook(mod_api_v2.HOOK_GIRL_RUNAWAY, girl=girl)
 
     hide screen girl_profile
     hide screen girl_stats
@@ -8418,6 +8435,9 @@ label acquire_girl(girl, price=0, context="generic", can_follow=True):
         if result not in ("farm", "courtyard"):
             $ MC.girls.append(girl)
         $ girl.init_after_acquire(refresh_pics=False)
+
+        # 通知 Mod: 女孩已被 MC 获得 | Notify mods: girl acquired
+        $ mod_api_v2.execute_hook(mod_api_v2.HOOK_GIRL_ACQUIRED, girl=girl, price=price, context=context)
 
         if context == "free":
             python:

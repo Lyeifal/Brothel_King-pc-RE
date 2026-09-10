@@ -1933,6 +1933,8 @@ init -2 python:
                         self.year += 1
 
             if self.time % 7 == 1 :
+                # 通知 Mod: 新的一周开始 | Notify mods: week starting
+                mod_api_v2.execute_hook(mod_api_v2.HOOK_WEEK_STARTING, week=(self.time - 1) // 7 + 1, time=self.time)
                 self.updates()
 
 

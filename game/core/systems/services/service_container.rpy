@@ -107,6 +107,10 @@ init -12 python:
             return self.get("mod_api")
 
         @property
+        def mod_api_v2(self):
+            return self.get("mod_api_v2")
+
+        @property
         def config(self):
             return self.get("config")
 

@@ -274,6 +274,9 @@ init -3 python:
                 except:
                     raise AssertionError("Function " + girl.init_dict["background story/init_function"] + " in " + girl.path + "/_BK.ini doesn't exist or failed.")
 
+            # 通知 Mod: 女孩已完整生成（randomize 与 init_function 之后） | Notify mods: girl fully generated (after randomize and init_function)
+            mod_api_v2.execute_hook(mod_api_v2.HOOK_GIRL_GENERATED, girl=girl)
+
         t4 = time.perf_counter()
 
         try:

@@ -336,6 +336,9 @@ label end_day:
     $ settlement_ctx = SettlementContext()
     $ hook_manager.invoke("on_day_end", settlement_ctx)
 
+    # 通知 Mod: 一天即将结束 | Notify mods: day ending
+    $ mod_api_v2.execute_hook(mod_api_v2.HOOK_DAY_ENDING, time=calendar.time)
+
     call sill_checks() from _call_sill_checks
 
     if not _return:
@@ -395,6 +398,9 @@ label end_day:
     scene black with Fade(0.15, 0.3, 0.15)
 
 #### PREPARING GIRLS ####
+
+    # 通知 Mod: 夜晚阶段开始 | Notify mods: night starting
+    $ mod_api_v2.execute_hook(mod_api_v2.HOOK_NIGHT_STARTING, time=calendar.time)
 
     ## Prepare
 
@@ -1421,6 +1427,8 @@ label end_day:
 
 #### SHOW NIGHT RECAP ####
 
+    # 通知 Mod: 夜晚阶段结束 | Notify mods: night finished
+    $ mod_api_v2.execute_hook(mod_api_v2.HOOK_NIGHT_FINISHED, time=calendar.time)
 
 ## Catch up changes
     while catch_up_changes:
@@ -1485,6 +1493,9 @@ label end_day:
         MC.reset_spells()
 
         calendar.newday()
+
+        # 通知 Mod: 新的一天开始 | Notify mods: day starting
+        mod_api_v2.execute_hook(mod_api_v2.HOOK_DAY_STARTING, time=calendar.time)
 
         today_weekday = calendar.get_weekday()
 

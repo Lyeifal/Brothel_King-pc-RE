@@ -57,6 +57,10 @@ label security(working_girls, ev_type=None): # Happens when the threat level ove
         $ notify("Suzume prevented a security breach.", pic="resources/characters/npc/Suzume/roof.webp")
         return
 
+    if ev_type != "quiet":
+        # 通知 Mod: 安保事件处理中 | Notify mods: security event
+        $ mod_api_v2.execute_hook(mod_api_v2.HOOK_SECURITY_EVENT, event_type=ev_type, alert_level=brothel.alert_level)
+
     ## ALERT LEVEL 3 ##
 
     # Because those events are more complex, they are not generated as regular night events
