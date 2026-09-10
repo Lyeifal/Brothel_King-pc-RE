@@ -60,9 +60,17 @@ screen right_menu():
                     if mod.home_rightmenu_add_buttons and isinstance(mod.home_rightmenu_add_buttons, list):
                         mod_menu.append(mod)
 
+                # EN: Mod API v2 mods declaring home right-menu buttons (always active).
+                # ZH: 声明了主页右侧菜单按钮的 Mod API v2 Mod（常驻激活）。
+                v2_menu_buttons = []
+                try:
+                    v2_menu_buttons = services.mod_api_v2.get_menu_buttons()
+                except Exception:
+                    v2_menu_buttons = []
+
             if farm.active:
                 $ rows += 1
-            if mod_menu:
+            if mod_menu or v2_menu_buttons:
                 $ rows += 1
             if game.goals_reached() and (game.chapter != 1 or not game.is_story_mode() or debug_mode):
                 $ rows += 1
@@ -122,11 +130,12 @@ screen right_menu():
 
                 use right_menu_postings
 
-                # Mods custom button display
+                # Mods custom button display (v1 active mods + Mod API v2 button screens)
 
-                if mod_menu:
+                if mod_menu or v2_menu_buttons:
                     null height 20
-                    textbutton _("Mods") action Show("mod_menu_display", mod_menu=mod_menu) tooltip __("Access options from your active mods (%s).") % and_text([event_color["special"] % m.name for m in game.active_mods.values()])  text_size res_font(20) style_group "rm" xalign 1.0
+                    $ _mod_names = [m.name for m in mod_menu] + [name for _mid, name, _btns in v2_menu_buttons]
+                    textbutton _("Mods") action Show("mod_menu_display", mod_menu=mod_menu, v2_buttons=v2_menu_buttons) tooltip __("Access options from your active mods (%s).") % and_text([event_color["special"] % n for n in _mod_names])  text_size res_font(20) style_group "rm" xalign 1.0
 
                 null height 20
 
@@ -370,7 +379,7 @@ screen right_menu_postings():
 ## Home - Right menu - Mod menu button and display
 ################
 
-screen mod_menu_display(mod_menu):
+screen mod_menu_display(mod_menu, v2_buttons=None):
 
     modal True
 
@@ -382,6 +391,13 @@ screen mod_menu_display(mod_menu):
             vbox box_wrap True:
                 text _mod.name size res_font(14) bold True color c_gold
                 for _but in _mod.home_rightmenu_add_buttons:
+                    use expression _but
+        # EN: Mod API v2 mods (always active) declaring menu buttons.
+        # ZH: 声明了菜单按钮的 Mod API v2 Mod（常驻激活）。
+        for _mid, _v2_name, _v2_but_list in (v2_buttons or []):
+            vbox box_wrap True:
+                text _v2_name size res_font(14) bold True color c_gold
+                for _but in _v2_but_list:
                     use expression _but
         # null
         # textbutton "X" action Hide("mod_menu_display")

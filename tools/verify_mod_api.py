@@ -68,12 +68,14 @@ def warn(label):
 # ─────────────────────────────────────────────
 
 def extract_init_block(path):
-    """取出 rpy 文件中 `init <n> python:` 之后的 Python 代码块并去缩进。
+    """取出 rpy 文件中第一个 `init <n> python:` 块并去缩进。
 
-    Extract and dedent the Python block following `init <n> python:`.
+    Extract and dedent the first `init <n> python:` block. Stops at the next
+    top-level `init` statement (the file may contain several init blocks).
     """
     src = path.read_text(encoding="utf-8")
-    m = re.search(r"^init\s+-?\d+\s+python:\s*\n(.*\Z)", src, re.M | re.S)
+    m = re.search(r"^init\s+-?\d+\s+python:\s*\n((?:(?!^init\s)[^\n]*\n?)*)",
+                  src, re.M | re.S)
     if not m:
         raise RuntimeError("no init python block found in %s" % path)
     return textwrap.dedent(m.group(1))
@@ -148,6 +150,10 @@ class _StubRenpy(object):
     @classmethod
     def notify(cls, msg):
         cls.notifications.append(msg)
+
+    @classmethod
+    def log(cls, msg):
+        pass
 
 
 class _StubServices(object):
@@ -260,6 +266,30 @@ def simulated_checks():
     check(all(mid != "verify_mod" for lst in api._mod_hooks.values()
               for mid, _cb, _p in lst),
           "unregister_mod removes the mod's hooks | 注销时清理其钩子")
+
+    # 2h. 重复注册被拒绝 | duplicate registration rejected
+    api.register_mod("verify_mod", manifest)
+    try:
+        api.register_mod("verify_mod", manifest)
+        check(False, "register_mod rejects duplicate mod_id")
+    except ValueError:
+        check(True, "register_mod rejects duplicate mod_id")
+    api.unregister_mod("verify_mod")
+
+    # 2i. UI 集成: 主页菜单按钮 + mod 信息 | UI integration: menu buttons + info
+    ui_manifest = dict(manifest)
+    ui_manifest["home_rightmenu_add_buttons"] = ["verify_button_screen"]
+    api.register_mod("verify_ui_mod", ui_manifest)
+    check(("verify_ui_mod", "Verify Mod", ["verify_button_screen"]) in api.get_menu_buttons(),
+          "get_menu_buttons returns declared button screens | 菜单按钮清单正确")
+    info = api.get_mod_info("verify_ui_mod")
+    check(info is not None and info.get("version") == "1.0.0",
+          "get_mod_info returns manifest copy | mod 信息返回 manifest 副本")
+    check(api.get_mod_info("no_such_mod") is None,
+          "get_mod_info returns None for unknown mod | 未知 mod 返回 None")
+    api.unregister_mod("verify_ui_mod")
+    check(api.get_menu_buttons() == [],
+          "get_menu_buttons empty after unregister | 注销后按钮清单清空")
 
     print("  [INFO] simulated flow register -> fire -> cancel all exercised | "
           "注册->触发->取消 全流程已 exercised")

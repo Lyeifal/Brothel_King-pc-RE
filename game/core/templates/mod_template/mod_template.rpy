@@ -17,6 +17,9 @@ init 1 python:
         "requires": ["girl_traits", "events"],  # Capability flags
         "dependencies": [],                      # Other mod IDs this depends on
         "hooks": {},                              # {hook_name: callback} dict
+        # EN: No-arg screens shown in the home right menu under "Mods".
+        # ZH: 显示在主页右侧菜单 "Mods" 下的无参屏幕列表。
+        "home_rightmenu_add_buttons": [],
     }
 
     api.register_mod("my_awesome_mod", my_mod_manifest)

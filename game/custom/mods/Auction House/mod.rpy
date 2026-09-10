@@ -1,30 +1,31 @@
 ################################################################################
-##  Auction House — Mod 入口 | Mod entry
-##  EN: Mod declaration and home right-menu button for the auction house.
-##  ZH: 拍卖行 Mod 声明与主页右侧菜单按钮。
+##  Auction House — Mod 入口 | Mod entry (Mod API v2)
+##  EN: Registers the auction house through Mod API v2 and provides the home
+##      right-menu button. Core logic lives in auction.rpy, UI in
+##      auction_screens.rpy.
+##  ZH: 通过 Mod API v2 注册拍卖行并提供主页右侧菜单按钮。
+##      核心逻辑在 auction.rpy，UI 在 auction_screens.rpy。
 ##
-##  EN: This mod was extracted from game/core/systems/auction/ (BK Evolution).
-##      The v1 Mod() mechanism is used because Mod API v2 hook points are not
-##      wired into game flow yet; migrate to register_mod() once they are.
-##  ZH: 本 Mod 提取自 game/core/systems/auction/（BK Evolution）。
-##      因 Mod API v2 钩子点尚未接入游戏流程，此处使用可用的 v1 Mod() 机制；
-##      待钩子接线后可迁移至 register_mod()。
+##  EN: v2 mods are always active once installed (no per-save toggle); remove
+##      this folder from game/custom/mods/ to disable.
+##  ZH: v2 Mod 安装后即常驻激活（无逐存档开关）；停用请删除
+##      game/custom/mods/ 下的本文件夹。
 ################################################################################
 
 init -1 python:
 
-    auction_house_mod = Mod(
-        ## EN: Basic mod information. ZH: Mod 基本信息。
-        name = __("Auction House"),
-        folder = "Auction House",
-        creator = "BK Evolution",
-        version = 1.0,
-        description = __("The auction house lets you buy and sell girls through bidding. Access it from the right menu (Mods) on the home screen."),
-
-        ## EN: Button shown in the home right menu under "Mods" (screen name).
-        ## ZH: 主页右侧菜单 "Mods" 下显示的按钮（屏幕名）。
-        home_rightmenu_add_buttons = ["right_menu_auction"],
-    )
+    services.mod_api_v2.register_mod("auction_house", {
+        "name": __("Auction House"),
+        "version": "2.0",
+        "api_version": 2,
+        "min_game_version": "0.3",
+        "author": "BK Evolution",
+        "description": __("The auction house lets you buy and sell girls through bidding. Access it from the right menu (Mods) on the home screen."),
+        "requires": [],
+        "hooks": {},
+        "dependencies": [],
+        "home_rightmenu_add_buttons": ["right_menu_auction"],
+    })
 
 
 ################

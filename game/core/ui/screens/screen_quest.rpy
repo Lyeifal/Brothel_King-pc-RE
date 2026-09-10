@@ -564,12 +564,25 @@ screen mods():
     $ mod_list = list(detected_mods) # Creates a list of keys from the dictionary
     $ mod_list.sort() # Sorts mods by name
 
+    # EN: Mod API v2 mods (always active once installed).
+    # ZH: Mod API v2 Mod（安装后常驻激活）。
+    $ v2_mod_list = []
+    python:
+        try:
+            v2_mod_list = sorted(services.mod_api_v2.list_active_mods())
+        except Exception:
+            v2_mod_list = []
+
     use game_menu(_("Mods")):
 
-        if mod_list:
-            default selected_mod = detected_mods[mod_list[0]]
-        else:
-            default selected_mod = None
+        default selected_mod = None
+        default selected_v2 = None
+
+        if selected_mod is None and selected_v2 is None:
+            if mod_list:
+                $ selected_mod = detected_mods[mod_list[0]]
+            elif v2_mod_list:
+                $ selected_v2 = v2_mod_list[0]
 
         frame xsize 0.82 xpadding xres(20) ypadding yres(20):
 
@@ -587,13 +600,21 @@ screen mods():
                     for mod_name in mod_list:
                         $ mod = detected_mods[mod_name]
                         if mod:
-                            button xsize xres(140) action SelectedIf(selected_mod == mod) hovered SetScreenVariable("selected_mod", mod), SetField(mod, "seen", True):
+                            button xsize xres(140) action [SelectedIf(selected_mod == mod), SetScreenVariable("selected_mod", mod), SetScreenVariable("selected_v2", None)] hovered SetField(mod, "seen", True):
                                 if not mod.seen:
                                     at blink
 
                                 text mod.name size res_font(18):
                                     if mod.active:
                                         bold True
+
+                    if v2_mod_list:
+                        null height yres(12)
+                        text _("API v2 Mods") color c_brown size res_font(14)
+
+                        for mod_id in v2_mod_list:
+                            button xsize xres(140) action [SetScreenVariable("selected_v2", mod_id), SetScreenVariable("selected_mod", None)]:
+                                text mod_id size res_font(16)
 
                 if selected_mod:
                     $ selected_mod.seen = True
@@ -608,12 +629,12 @@ screen mods():
                                 text _("(Inactive)") color c_grey
 
                             null height yres(16)
-                        
+
                             viewport xsize xres(480):
                                 mousewheel True
                                 draggable True
                                 scrollbars "vertical"
-                                
+
                                 vbox xfill True:
                                     if selected_mod.pic:
                                         frame xsize xres(250) background None:
@@ -622,7 +643,7 @@ screen mods():
                                     null height yres(16)
 
                                     text selected_mod.description size res_font(14) color c_brown
-                        
+
                         if selected_mod.active:
                             textbutton _("Deactivate Mod") action renpy.curried_invoke_in_new_context(selected_mod.deactivate) xalign 1.0 xsize xres(100) text_size res_font(24)
                         else:
@@ -630,10 +651,28 @@ screen mods():
 
                             # textbutton "Reset Mod" action renpy.curried_invoke_in_new_context(reset_mod, selected_mod)
 
-                        
-    
-                            
-                        
+                elif selected_v2:
+                    # EN: Mod API v2 mod details (read-only: always active).
+                    # ZH: Mod API v2 Mod 详情（只读：常驻激活）。
+                    $ v2_info = services.mod_api_v2.get_mod_info(selected_v2)
+
+                    if v2_info:
+                        hbox xfill True spacing xres(6):
+                            frame xpadding xres(10) ypadding yres(10):
+                                has vbox
+                                text v2_info.get("name", selected_v2) size res_font(24) bold True color c_darkorange
+                                text _("(Always Active — API v2)") color c_emerald
+                                text __("v%s, by %s") % (v2_info.get("version", "?"), v2_info.get("author", __("Unknown"))) size res_font(16) color c_grey
+
+                                null height yres(16)
+
+                                viewport xsize xres(480):
+                                    mousewheel True
+                                    draggable True
+                                    scrollbars "vertical"
+
+                                    vbox xfill True:
+                                        text v2_info.get("description", "") size res_font(14) color c_brown
 
 
 ### GIRL INTERACT SCREEN
