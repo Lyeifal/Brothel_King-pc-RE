@@ -127,9 +127,24 @@ init -3 python:
             """Signal that the default action should be cancelled.
 
             Returns True if any hook requested cancellation.
+            Hooks signal cancellation by setting context["cancel"] = True.
             """
+            # EN: Do NOT route this through execute_hook: that method rebuilds
+            #     its own context dict from **kwargs, so the dict created here
+            #     would never reach the callbacks and cancellation would be
+            #     silently lost (cancel_hook always returned False).
+            # ZH: 不能经由 execute_hook 中转：该方法会用 **kwargs 重建自己的
+            #     context 字典，本方法创建的 dict 到不了回调，取消信号会静默
+            #     丢失（cancel_hook 过去永远返回 False）。
             context = {"cancel": False}
-            self.execute_hook(hook_name, context=context)
+            for mod_id, callback, _priority in self._mod_hooks.get(hook_name, []):
+                try:
+                    callback(context)
+                except Exception as e:
+                    # EN: Hook failure should never crash the game
+                    # ZH: 钩子失败不应导致游戏崩溃
+                    if renpy.config.developer:
+                        renpy.notify("Hook '%s' (mod '%s') failed: %s" % (hook_name, mod_id, str(e)))
             return context.get("cancel", False)
 
         # ── Hook point constants (for documentation and auto-complete) ──
