@@ -17,35 +17,31 @@
 
 ```
 game/tl/
-├── chinese_simplified/              # 简体中文翻译目录
+├── chinese_simplified/              # 游戏本体简体中文翻译（仅本体，不含 Mod）
 │   ├── strings.rpy                  # 代码字符串翻译（_() / __()）
 │   ├── common.rpy                   # Ren'Py 通用界面翻译
-│   ├── screens.rpy                  # 屏幕界面翻译
-│   ├── BKchapter1.rpy               # 主线第一章剧情翻译
-│   ├── BKchapter2.rpy               # 主线第二章剧情翻译
-│   ├── BKchapter3.rpy               # 主线第三章剧情翻译
-│   ├── BKstory_events.rpy           # 通用事件剧情翻译
-│   ├── BKcity_events.rpy            # 城市随机事件翻译
-│   ├── BKday_events.rpy             # 日常随机事件翻译
-│   ├── BKinteractions.rpy           # 互动系统剧情翻译
-│   ├── BKinteractions_free.rpy      # 自由女孩互动翻译
-│   ├── BKhelp.rpy                   # 帮助系统翻译
-│   ├── BKintro.rpy                  # 序章翻译
-│   ├── BKmain.rpy                   # 主菜单翻译
-│   ├── BKminigame.rpy               # 小游戏翻译
-│   ├── BKpowers.rpy                 # 力量系统翻译
-│   ├── BKscreens.rpy                # 游戏屏幕翻译
-│   ├── BKsecurity.rpy               # 安全系统翻译
-│   ├── BKstart.rpy                  # 开局翻译
-│   ├── kite_jobgirl 1_riddle.rpy    # 支线任务1翻译
-│   ├── kite_jobgirl 2_beach.rpy     # 支线任务2翻译
-│   └── Mods/                        # Mod 翻译
-│       └── Goldo's cool mod/
-│           └── goldo's cool mod.rpy
-├── chinese/                         # 繁体中文（旧版，暂不维护）
-│   └── strings.rpy.backup
+│   └── core/                        # 镜像 game/core/ 源码树的对话翻译
+│       ├── content/                 #   剧情内容（intro、interactions、章节、事件…）
+│       ├── framework/               #   框架层
+│       ├── systems/                 #   系统层
+│       └── ui/ …
 └── TRANSLATION_GUIDE.md             # 本说明文档
 ```
+
+**Mod 翻译不由本目录管理。** 每个 Mod 在自己的目录内自带翻译，
+与 Mod 源码同址，随 Mod 一起安装/卸载：
+
+```
+game/custom/mods/<Mod名称>/
+├── <mod源码>.rpy
+└── tl/
+    └── chinese_simplified/          # 该 Mod 的简体中文翻译
+        └── <对应源码文件>.rpy
+```
+
+> Ren'Py 启动时递归扫描整个 game/ 目录加载 `translate` 块，
+> 翻译文件放在 `game/tl/` 下还是 Mod 目录下效果完全相同。
+> 约定：**本体翻译 → `game/tl/<语言>/`；Mod 翻译 → Mod 自带 `tl/<语言>/`**。
 
 ---
 
