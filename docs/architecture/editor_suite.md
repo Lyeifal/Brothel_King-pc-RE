@@ -1,85 +1,53 @@
-# Editor Suite 架构
+# Editor Suite（编辑器套件）架构
 
-> **文件**: `tools/bk_editor/`  
-> **启动**: `python tools/bk_editor.py`（统一入口）或 `python tools/bk_editor/<editor>/main.py`（单独启动）  
-> **技术栈**: Python 3.9+, tkinter（零第三方依赖，可选 Pillow/OpenCV）
+> 最后更新: 2026-09-11（与代码核对）
+> **目录**: `tools/bk_editor/`
+> **详细文档**: [tools/bk_editor/README.md](../../tools/bk_editor/README.md)（本文只作架构级精简介绍，细节以该 README 与 `tools/bk_editor/AGENTS.md` 为准）
+> **技术栈**: Python 3.9+，tkinter（Pillow 可选，已默认安装）
 
 ---
 
 ## 1. 系统职责
 
-Editor Suite 是 BK Evolution 的可视化数据编辑工具链，让非程序员也能制作 Mod 内容。采用**三分架构**：
+Editor Suite 是 BK Evolution 的可视化数据编辑工具链，让非程序员也能制作 Mod 内容。采用**三分独立编辑器**架构：
 
 | 编辑器 | 目录 | 目标用户 | 核心职责 |
 |--------|------|----------|---------|
-| **女孩包编辑器** | `tools/bk_editor/girl_pack_editor/` | Mod 作者 | 图片打标、`_BK.ini` 编辑、自定义 Trait/Perk、包验证 |
-| **剧本编辑器** | `tools/bk_editor/scenario_editor/` | 剧情/事件作者 | StoryEvent CRUD、Scenario 管理、District/NPC/Shop 参考、对话标签扫描 |
-| **开发控制台** | `tools/bk_editor/dev_console/` | 核心开发者 | Achievement / Difficulty / NG+ / Meta-progression / Goal / Customer Affix 等 JSON 数据增删改查 |
+| **女孩包编辑器** | `girl_pack_editor/` | Mod 作者 | 图片批量打标、`_BK.ini` 编辑、自定义 Trait/Perk、包验证 |
+| **剧本编辑器** | `scenario_editor/` | 剧情/事件作者 | StoryEvent CRUD、剧本管理、地图/NPC/商店参考、对话标签扫描 |
+| **开发控制台** | `dev_console/` | 核心开发者 | 成就、难度、NG+、局外养成（Meta）、I18n、数据同步 |
 
-共享基础库 (`tools/bk_editor/shared/`)：
-- `paths.py` — 项目路径常量
-- `json_io.py` — JSON 读写封装（支持 `str/Path` 自动转换）
-- `widgets.py` — tkinter 通用组件（带搜索的列表框、标签输入器等）
-- `validators.py` — 字段校验
-- `renpy_ref.py` — 延迟加载游戏内数据（如 `all_jobs`, `all_sex_acts`）
+## 2. 关键约定
 
----
+- **禁止跨目录引用**：每个编辑器只能导入自己的 `tabs/` 子模块、`bk_editor.shared` 共享库、标准库 + tkinter。
+- **共享库 `shared/`**: `paths.py`（项目路径常量）、`json_io.py`（JSON 读写）、`widgets.py`（`LabeledEntry`/`EffectEditor`/`JsonTreeview` 等）、`validators.py`（字段校验）、`renpy_ref.py`（函数级延迟引用游戏内数据，**禁止模块顶层 import renpy**）。
+- **统一入口**: `tools/bk_editor.py`，或各编辑器 `main.py` 单独启动。
+- **JSON 契约**：编辑器产出 JSON → 游戏侧 `DataLoader.load_*()` 加载 → 注册表生效。改 JSON 后需重启游戏（注册表 init 期重建）。
 
-## 2. 解耦方式
+## 3. 编辑器 ↔ 游戏数据映射（经 AGENTS.md 核实）
 
-- **三分隔离**: 三个编辑器**禁止目录间交叉引用**。统一通过 `bk_editor.shared` 获取能力。
-- **与游戏引擎解耦**: 编辑器作为独立 Python 进程运行，不依赖 Ren'Py 运行时，仅通过 `renpy_ref.py` 读取 `.rpy` 中的常量定义。
-- **与数据格式解耦**: 所有数据交互通过 `json_io.py` 进行，编辑器不直接操作 `.rpy` 源码（除 `renpy_ref.py` 的只读引用）。
+| 编辑器模块 | JSON 文件 | 游戏加载点 |
+|-----------|-----------|-----------|
+| `dev_console/achievement_editor` | `core/data/achievements/achievements.json` | `DataLoader.load_achievements()` |
+| `dev_console/difficulty_editor` | `core/data/difficulty/difficulty.json` | `DataLoader.load_difficulty()` |
+| `dev_console/ngp_editor` | `core/data/ngp/ngp_settings.json` | `DataLoader.load_ngp_settings()` |
+| `dev_console/meta_editor` | `core/data/meta/meta_progression.json` | `DataLoader.load_meta_progression()` |
+| `scenario_editor/event_editor` | `core/data/stories/story_events.json`、`core/data/sandbox/events.json` | `load_story_events()` / `load_sandbox_events()` |
+| `scenario_editor/scenario_editor_tab` | `core/data/scenarios/scenarios.json` | `DataLoader.load_scenarios()` |
+| `girl_pack_editor/trait_creator` | `core/data/traits/traits.json`、`core/data/perks/perks.json` | `load_traits()` / `load_perks()` |
 
----
+## 4. 已知限制
 
-## 3. 系统间联系
-
-```
-tools/bk_editor/
-    ├─→ shared/
-    │      ├─→ json_io.py  ←→ game/core/data/**/*.json
-    │      ├─→ renpy_ref.py ←→ game/ 中的常量定义
-    │      └─→ widgets.py   ←→ 所有编辑器的 UI 组件
-    ├─→ girl_pack_editor/
-    │      ├─→ image_tagger.py    ←→ TagRegistry (图片标签)
-    │      ├─→ trait_creator.py   ←→ TraitRegistry / PerkRegistry
-    │      └─→ pack_validator.py  ←→ Girl Pack 完整性规则
-    ├─→ scenario_editor/
-    │      ├─→ event_editor.py    ←→ StoryEvent / EventRegistry
-    │      ├─→ scenario_editor_tab.py ←→ Scenario / GameMode
-    │      └─→ npc_editor.py      ←→ NPC 参考数据
-    └─→ dev_console/
-           ├─→ achievement_editor.py ←→ AchievementRegistry
-           ├─→ difficulty_editor.py  ←→ 难度设置 JSON
-           ├─→ goal_editor.py        ←→ Goal / chapter_goals JSON
-           ├─→ customer_affix_editor.py ←→ Customer Affix JSON
-           └─→ data_sync.py          ←→ JSON Schema 验证
-```
-
-- 编辑器产出的 JSON 文件被 `DataLoader` 在游戏启动时加载。
-- `DataLoader` 的加载顺序在 `init -1`，早于大多数游戏系统，确保编辑器修改的数据即时生效。
+- `_BK.ini` 编辑器保存时移除全部注释（configparser 限制）。
+- tkinter PhotoImage 不装 Pillow 无法预览 WebP/AVIF（已默认装 Pillow）。
+- District/Location/NPC/Shop 无 JSON（仍硬编码于 `start.rpy`），编辑器只提供参考查看与代码片段生成。
+- Windows 控制台可能无法正确显示非 ASCII 文件名（文件操作正常）。
 
 ---
 
-## 4. 编辑器支持矩阵
+## 相关文档
 
-| 数据类型 | 女孩包编辑器 | 剧本编辑器 | 开发控制台 |
-|----------|-------------|-----------|-----------|
-| Trait/Perk | ✅ 完整 | ❌ | ❌ |
-| Girl Pack / `_BK.ini` | ✅ 完整 | ❌ | ❌ |
-| StoryEvent | ❌ | ✅ 完整 | ❌ |
-| Scenario / GameMode | ❌ | ✅ 完整 | ✅ 数据同步 |
-| Achievement | ❌ | ❌ | ✅ 完整 |
-| Difficulty | ❌ | ❌ | ✅ 完整 |
-| NG+ / Meta | ❌ | ❌ | ✅ 完整 |
-| Goal | ❌ | ❌ | ✅ 完整 |
-| Customer Affix | ❌ | ❌ | ✅ 数据同步 |
-
----
-
-## 5. 向后兼容
-
-- 编辑器输出的 JSON 均通过 Schema 验证，确保与游戏端 `from_dict()` 兼容。
-- `json_io.py` 的 `load_json(path, default=...)` 在文件缺失时返回默认值，不抛异常。
-- 所有编辑器标签页通过统一的初始化测试框架验证，确保新增/修改不会破坏现有功能。
+- [tools/bk_editor/README.md](../../tools/bk_editor/README.md) — 三编辑器的完整使用文档
+- [data_loader.md](data_loader.md) — 编辑器 JSON 的游戏侧加载
+- [registry.md](registry.md) — 编辑器的注册表目标
+- [girl_pack.md](girl_pack.md) — 女孩包编辑器的验证逻辑

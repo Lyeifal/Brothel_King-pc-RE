@@ -1,7 +1,8 @@
 # DataLoader 系统架构
 
-> **文件**: `game/core/systems/data_loader.rpy`  
-> **调用时机**: `init -1`（类定义）；`label init_game`（运行时一次性加载）  
+> 最后更新: 2026-09-11（与代码核对）
+> **文件**: `game/core/systems/data_loader.rpy`（1,319 行）
+> **调用时机**: 类定义 `init -11`（data_loader.rpy:7）；`DataLoader.load_all()` 在 `label start` 运行期调用（`game/core/init/start.rpy:258`）
 > **数据目录**: `game/core/data/`
 
 ---
@@ -10,59 +11,79 @@
 
 DataLoader 是 BK Evolution 中所有 JSON 驱动内容的统一加载入口：
 
-- **一次性加载**: 每个 JSON 文件在会话期间只解析一次，结果缓存到对应注册表。
-- **安全降级**: 文件不存在、格式错误或字段缺失时，静默跳过并 `renpy.notify()` 提示，不阻止游戏启动。
-- **多类别支持**: Trait、Perk、Origin、StoryEvent、SandboxEvent、Scenario、Achievement、Difficulty、NGP Settings、Meta Progression 等。
+- **一次性加载**: 每个 JSON 文件每会话只解析一次（`cls._loaded` 缓存集合，data_loader.rpy:18）。
+- **安全降级**: `_load_json_file()`（:41）经 `renpy.loadable()` / `renpy.open_file()` 读取；文件不存在或非法时 `renpy.notify()` 提示并返回 `None`，不阻止游戏启动。
+- **多类别支持**: 约 45 个 `load_*` 类方法（:27-1308），覆盖 Trait、Perk、Origin、StoryEvent、SandboxEvent、Scenario、Achievement、Challenge、Difficulty、NGP、Meta、Item、Power、Shop、Spell、MC 职业、Minion、Installation、Gossip、对话文本、近期事件、清洁惩罚、宝藏阈值、税率、维护描述、目标 UI、安全事件、事件颜色等。
+- **运行时覆盖**: 文件尾部 `init -1` 块（data_loader.rpy:1309-1319）用 `load_difficulty()` 的 JSON 覆盖全局难度表。
 
 核心方法：
-- `DataLoader.load_all()` — 加载所有类别。
-- `DataLoader.reset_cache()` — 清除缓存，支持运行时重载（调试用途）。
-- `DataLoader._load_json_file(rel_path)` — 通过 `renpy.loadable()` / `renpy.open_file()` 安全读取。
 
----
+| 方法 | 说明 |
+|------|------|
+| `DataLoader.load_all()` (:27) | 加载全部核心类别（traits/perks/origins/story+sandbox events/scenarios/achievements/challenges/difficulty/ngp/meta） |
+| `DataLoader.reset_cache()` (:34) | 清缓存，支持运行时重载（调试） |
+| `DataLoader._load_json_file(rel_path)` (:41) | 统一安全读取，`DATA_DIR = "core/data"` |
 
-## 2. 解耦方式
+## 2. Fallback 模式（仍在，未清理）
 
-- **与游戏逻辑解耦**: DataLoader 只负责读取和构造对象，不干预游戏逻辑。构造后的对象交给各注册表管理。
-- **与注册表解耦**: DataLoader 知道注册表的接口（如 `trait_registry.register_trait()`），但不依赖注册表内部实现。
-- **与文件系统解耦**: 使用 Ren'Py 的 `renpy.loadable()` / `renpy.open_file()` 而非原生 Python IO，确保在打包后的游戏（如 Android/Steam）中也能工作。
+**DataLoader 自身只返回数据或 None，不做回退**；回退逻辑分散在各调用点，模式统一为「JSON 优先，硬编码 fallback」。已核实的 fallback 点：
 
----
+| 调用点 | 文件:行 | 说明 |
+|--------|---------|------|
+| 模板/全部物品 | `game/core/data/items.rpy:98-99` | `load_items() or _fallback_template_items / _fallback_all_items` |
+| 工作绩效字典 | `game/core/data/jobs.rpy:227` | `perform_job_dict = _fallback_perform_job_dict` |
+| 对抗挑战概率 | `framework/challenges.rpy:36` | JSON 缺失用硬编码表 |
+| 核心实体查表 | `framework/core_entities.rpy:7` | 实体 lookup table |
+| 顾客等级/性行为简评 | `framework/economy.rpy:1894, 1902` | 顾客 rank 顺序、sex act 短描述 |
+| UI 颜色映射 / EV 画廊 | `content/declarations.rpy:292, 1494` | |
+| 自由女孩互动好感上限 | `content/interactions_free.rpy:6` | |
+| 贷款参数 | `content/story_events/story_events.rpy:14312` | |
+| 章节目标 | `init/settings.rpy:101-123` | `_chapter_goals_fallback` + `Goal.from_dict` |
+| 安全事件 | `init/settings.rpy:231-240` | `load_security_events()` 失败置 `{}` |
 
-## 3. 系统间联系
+**现状评估**: fallback 是刻意的兼容策略而非临时方案（`tools/bk_editor/AGENTS.md` 明确要求"保留硬编码 fallback，确保 JSON 文件缺失时游戏仍可启动"），暂无清理计划；称其为"未清理"是指双份数据源长期共存，修改数据时须同时意识到两处。
+
+## 3. 解耦方式
+
+- **与游戏逻辑解耦**: DataLoader 只读 JSON 并构造对象，不干预运行逻辑。
+- **与注册表解耦**: 加载器知道注册表接口（如 `trait_registry.register_trait()`）但不依赖其内部实现；构造产物交给注册表管理（见 [registry.md](registry.md)）。
+- **与文件系统解耦**: 用 Ren'Py `renpy.loadable()` / `renpy.open_file()` 而非原生 Python IO，打包发行（Android/Steam）后仍可工作。例外：`customer_affixes.rpy:18` 与 `settings.rpy` 中章节目标等少数点仍用 `os.path` + 原生 open——已知不一致。
+
+## 4. 系统间联系
 
 ```
 game/core/data/
-    ├─→ traits/traits.json                → DataLoader.load_traits()
-    ├─→ perks/perks.json                  → DataLoader.load_perks()
-    ├─→ sandbox/origins.json              → DataLoader.load_origins()
-    ├─→ events/event_dict.json            → DataLoader.load_story_events()
-    ├─→ sandbox/events.json               → DataLoader.load_sandbox_events()
-    ├─→ scenarios/scenarios.json          → DataLoader.load_scenarios()
-    ├─→ achievements/achievements.json    → DataLoader.load_achievements()
-    ├─→ difficulty/difficulty.json        → DataLoader.load_difficulty()
-    ├─→ settings/ngp_settings.json        → DataLoader.load_ngp_settings()
-    ├─→ meta/meta_progression.json        → DataLoader.load_meta_progression()
-    └─→ goals/chapter_goals.json          → 由 init/settings.rpy 加载（未来可能统一进 DataLoader）
-           └─→ 各注册表 (TraitRegistry, PerkRegistry, EventRegistry, ...)
-                  └─→ 游戏运行时系统 (Girl, EventEngine, Game, ...)
+    ├─→ traits/traits.json (131 条)      → load_traits()        → TraitRegistry
+    ├─→ perks/perks.json (53 条)         → load_perks()         → PerkRegistry
+    ├─→ sandbox/origins.json               → load_origins()       → sandbox OriginRegistry
+    ├─→ stories/story_events.json          → load_story_events()  → EventRegistry
+    ├─→ sandbox/events.json                → load_sandbox_events()→ EventRegistry
+    ├─→ scenarios/scenarios.json           → load_scenarios()     → ScenarioRegistry
+    ├─→ achievements/achievements.json     → load_achievements()  → 成就系统
+    ├─→ difficulty/difficulty.json         → load_difficulty()    → init -1 覆盖 diff_list 等
+    ├─→ ngp/ngp_settings.json              → load_ngp_settings()  → NGPRegistry
+    ├─→ meta/meta_progression.json         → load_meta_progression() → MetaRegistry
+    ├─→ goals/goal_ui.json                 → load_goal_ui()       → settings.rpy:520
+    ├─→ settings/security_events.json      → load_security_events() → settings.rpy:231
+    ├─→ customers/customer_affixes.json    → （不走 DataLoader，customer_affixes.rpy 自载）
+    └─→ 其余 settings/*.json（清洁/宝藏/税率/事件颜色等）→ 对应 load_* 方法
 ```
 
-- `settings.rpy` 中的 `chapter_goals` / `chapter_titles` 等也采用相同的 JSON-first 策略，但由 `settings.rpy` 自身加载，不经过 DataLoader（历史原因，未来可能统一）。
+注意两类"例外"： goals/chapter_goals.json 由 `init/settings.rpy` 自行加载（含 fallback，见 [goal.md](goal.md)）；customers/customer_affixes.json 由 `systems/customer/customer_affixes.rpy:18` 自行加载（见 [customer_affix.md](customer_affix.md)）。
 
----
-
-## 4. 编辑器支持
+## 5. 编辑器支持
 
 | 编辑器 | 支持情况 | 说明 |
 |--------|---------|------|
-| 所有编辑器 | ✅ 间接 | 编辑器产出 JSON → DataLoader 加载 → 游戏生效。编辑器不负责调用 DataLoader |
-| 开发控制台 (`data_sync.py`) | ✅ 支持 | 批量验证 JSON 格式、Schema 校验、格式化 |
+| 全部编辑器 | ✅ 间接 | 编辑器产出 JSON → DataLoader 加载 → 游戏生效 |
+| 开发控制台 `data_sync.py` | ✅ | JSON 格式/Schema 批量校验 |
 
 ---
 
-## 5. 向后兼容
+## 相关文档
 
-- `DataLoader._load_json_file()` 返回 `None` 时，调用方（如 `load_traits()`）直接 `return`，不修改注册表，旧数据保持有效。
-- `from_dict()` 方法普遍使用 `.get(key, default)`，兼容字段缺失的旧 JSON。
-- 硬编码回退字典在所有数据驱动化点保留，确保无 JSON 时游戏仍能启动。
+- [registry.md](registry.md) — DataLoader 的加载目标
+- [trait_perk.md](trait_perk.md) — traits/perks JSON 的消费方
+- [goal.md](goal.md) — chapter_goals.json 的独立加载路径
+- [customer_affix.md](customer_affix.md) — 另一处自载 JSON 的范例
+- [editor_suite.md](editor_suite.md) — 编辑器与 DataLoader 的 JSON 契约

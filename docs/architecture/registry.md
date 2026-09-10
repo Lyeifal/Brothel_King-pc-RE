@@ -1,100 +1,74 @@
 # Registry 系统架构
 
-> **文件**: `game/core/systems/registry/*.rpy`  
-> **基类**: `game/core/systems/registry/registry.rpy`  
-> **Phase**: Phase 6 (System Decoupling & Mod Support)
+> 最后更新: 2026-09-11（与代码核对）
+> **基类**: `game/core/systems/registry/registry.rpy`（init -10）
+> **Phase**: Phase 6（系统解耦与 Mod 支持）
 
 ---
 
 ## 1. 系统职责
 
-Registry 是 Phase 6 引入的统一注册中心，替代分散的全局字典（`trait_dict`, `perk_dict`, `event_dict`, `dialogue_dict` 等），提供：
+Registry 是 Phase 6 引入的统一注册中心，替代分散的全局字典（`trait_dict`、`perk_dict`、`event_dict`、`dialogue_dict` 等），提供：
 
-- **统一生命周期**: `register` / `unregister` / `clear` / `has` / `get` / `get_by_category`
-- **分类管理**: `category` 参数支持按组检索（如 Trait 按 `positive`/`negative`/`background` 分类）。
-- **向后兼容代理**: `_RegistryProxy` 让旧代码的 `dict[key]` / `key in dict` / `dict.get()` 语法继续工作。
-- **运行时扩展**: Mod 可在游戏运行时安全地向注册表添加/移除条目。
+- **统一 API**: `register` / `unregister` / `get` / `get_all` / `get_by_category` / `get_categories` / `clear` / `__contains__` / `__len__`（registry.rpy:37-100）。
+- **分类管理**: `category` 参数支持按组检索（如 Trait 按 positive/negative/background）。
+- **覆盖语义**: 重复 register 时 developer 模式记日志并覆盖——后来的注册胜出，这正是 Mod 覆盖官方内容的机制（registry.rpy:42-44）。
+- **兼容代理**: `_RegistryProxy`（registry.rpy:103-144）把 Registry 包装成 dict 外观，旧代码的 `dict[key]` / `key in dict` / `.get()` 语法无感知。
+- **单例保障**: 基类 `__new__` 按子类缓存实例（registry.rpy:14-20），各注册表全游戏只有一个实例。
+- **不持久化**: 所有注册表在 init 期重建，不进存档文件。
 
----
+## 2. 注册表清单（10 个文件，全部核实）
 
-## 2. 已实现的注册表
+| 注册表 | 文件 | init 级 | 类定义行 | 用途 |
+|--------|------|--------|---------|------|
+| `Registry` | `registry.rpy` | -10 | :7 | 抽象基类 + `_RegistryProxy` |
+| `UnlockRegistry` | `unlock_registry.rpy` | **-9** | :13 | 解锁条件注册 |
+| `TagRegistry` | `tag_registry.rpy` | -5 | :7 | 图片标签映射 |
+| `TraitRegistry` | `trait_registry.rpy` | -5 | :7 | 特质定义（见 [trait_perk.md](trait_perk.md)） |
+| `PerkRegistry` | `perk_registry.rpy` | -5 | :7 | 天赋定义 |
+| `DialogueRegistry` | `dialogue_registry.rpy` | -5 | :7 | 对话主题管理 |
+| `EventRegistry` | `event_registry.rpy` | -5 | :7 | 事件定义 + 运行时队列（见 [event.md](event.md)） |
+| `NGPRegistry` | `ngp_registry.rpy` | -5 | :7 | NG+ 设置 |
+| `MetaRegistry` | `meta_registry.rpy` | -5 | :7 | Meta-progression / 解锁 |
 
-| 注册表 | 文件 | 替换的原全局变量 | 用途 |
-|--------|------|----------------|------|
-| `Registry` | `registry.rpy` | — | 抽象基类 |
-| `TagRegistry` | `tag_registry.rpy` | `tag_dict`, `tag_list_dict` | 图片标签映射 |
-| `TraitRegistry` | `trait_registry.rpy` | `trait_dict` | 特质定义 |
-| `PerkRegistry` | `perk_registry.rpy` | `perk_dict` | 天赋定义 |
-| `DialogueRegistry` | `dialogue_registry.rpy` | `dialogue_dict` | 对话主题管理 |
-| `EventRegistry` | `event_registry.rpy` | `event_dict` | 事件定义 + 运行时队列 |
-| `NGPRegistry` | `ngp_registry.rpy` | `NGP_settings_dict` | NG+ 设置 |
-| `MetaRegistry` | `meta_registry.rpy` | `meta_dict` | Meta-progression / 解锁 |
-| `UnlockRegistry` | `unlock_registry.rpy` | `unlock_dict` | 解锁条件注册 |
-
----
+基类 init -10，UnlockRegistry -9，其余子类统一 init -5。
 
 ## 3. 解耦方式
 
-- **与全局命名空间解耦**: 旧全局字典（`trait_dict = {}`）被替换为注册表单例，避免 `init` 阶段顺序依赖导致的 `KeyError`。
-- **与具体类解耦**: 基类 `Registry` 不依赖 `Trait` / `Perk` 等具体类型，通过泛型接口工作。
-- **与旧代码解耦**: `_RegistryProxy` 和 `_TagListDictProxy` 在旧代码和注册表之间提供兼容层，旧语法无需修改即可工作。
-
----
+- **与全局命名空间解耦**: 旧的全局字典被注册表单例替代，避免 init 顺序依赖导致的 `KeyError`。
+- **与具体类解耦**: 基类不依赖 Trait/Perk 等具体类型，泛型接口工作。
+- **与旧代码解耦**: `_RegistryProxy` 在旧代码与注册表之间提供兼容层；旧语法 `trait_dict[id]` 实际经代理走 `TraitRegistry`，新旧混用无感知。
+- **与 Mod 解耦**: Mod 只调 `ModAPI.register_*()`（见 [mod_system.md](mod_system.md)），不直接接触注册表实现；覆盖语义天然支持 Mod 替换官方定义。
 
 ## 4. 系统间联系
 
 ```
-Registry (基类)
-    ├─→ TagRegistry
-    │       ├─→ GirlPack / image_tagger.py
-    │       └─→ Room (init -10 阶段安全访问)
-    ├─→ TraitRegistry
-    │       ├─→ DataLoader.load_traits()
-    │       ├─→ Girl.__init__() / get_effect()
-    │       └─→ girl_pack_editor (trait_creator.py)
-    ├─→ PerkRegistry
-    │       ├─→ DataLoader.load_perks()
-    │       ├─→ Girl.get_effect()
-    │       └─→ girl_pack_editor (trait_creator.py)
-    ├─→ EventRegistry
-    │       ├─→ DataLoader.load_story_events()
-    │       ├─→ EventEngine (运行时筛选)
-    │       └─→ scenario_editor (event_editor.py)
-    ├─→ DialogueRegistry
-    │       ├─→ GirlPack (自定义对话)
-    │       └─→ HookManager.on_dialogue_select
-    ├─→ NGPRegistry
-    │       └─→ dev_console (ngp_editor.py)
-    ├─→ MetaRegistry
-    │       └─→ dev_console (meta_editor.py)
-    └─→ UnlockRegistry
-            └─→ 成就/目标/解锁条件评估
+Registry (基类, init -10)
+    ├─→ TagRegistry ──────→ GirlPack / 图片打标 / Room
+    ├─→ TraitRegistry ────→ DataLoader.load_traits() / Girl(GirlTraits 组件) / girl_pack_editor
+    ├─→ PerkRegistry ─────→ DataLoader.load_perks() / Girl / girl_pack_editor
+    ├─→ EventRegistry ────→ DataLoader.load_story_events() / EventEngine / scenario_editor
+    ├─→ DialogueRegistry ─→ GirlPack 自定义对话 / ModAPI.register_dialogue
+    ├─→ NGPRegistry ──────→ dev_console (ngp_editor.py)
+    ├─→ MetaRegistry ─────→ dev_console (meta_editor.py)
+    └─→ UnlockRegistry ───→ 成就/目标/解锁条件评估
 ```
 
-### Init 优先级链
-
-```
-init -10: Registry 基类
-init -9:  settings.rpy 批量注册到 TagRegistry
-init -6:  Trait / Perk / Tag / Dialogue / Event / NGP / Meta / Unlock 注册表实例化
-init -4:  ModAPI, EventEngine
-init -2:  DataLoader.load_all() (加载 JSON 到注册表)
-```
-
----
+调用链：`game/core/data/*.json → DataLoader.load_*() → 各 Registry → 游戏运行时系统（Girl / EventEngine / Game / ...）`。
 
 ## 5. 编辑器支持
 
 | 编辑器 | 支持情况 | 说明 |
 |--------|---------|------|
-| 女孩包编辑器 | ✅ 间接→完整 | 图片标签通过 TagRegistry 解析；Trait/Perk 直接操作对应注册表 |
-| 剧本编辑器 | ✅ 完整 | 直接操作 EventRegistry |
-| 开发控制台 | ✅ 完整 | 直接操作 NGPRegistry、MetaRegistry、UnlockRegistry；`data_sync.py` 验证注册表数据一致性 |
+| 女孩包编辑器 | ✅ | Trait/Perk 直接操作 TraitRegistry/PerkRegistry；标签经 TagRegistry 解析 |
+| 剧本编辑器 | ✅ | 直接操作 EventRegistry |
+| 开发控制台 | ✅ | NGPRegistry、MetaRegistry、UnlockRegistry；`data_sync.py` 校验一致性 |
 
 ---
 
-## 6. 向后兼容
+## 相关文档
 
-- `_RegistryProxy` 支持 `obj[key]`, `key in obj`, `obj.get(key)`, `len(obj)`, `iter(obj)` 等全部 dict 语义。
-- `_TagListDictProxy` 解决了 `init -10` 阶段 `Room` 对象提前访问 `tag_list_dict` 的 `KeyError` 问题。
-- 旧代码中的 `trait_dict[id]` 实际上通过代理访问 `TraitRegistry`，新旧代码混用无感知。
+- [data_loader.md](data_loader.md) — 注册表的主要填充方
+- [trait_perk.md](trait_perk.md) — Trait/Perk 注册表的消费方
+- [event.md](event.md) — EventRegistry 与 EventEngine 的关系
+- [mod_system.md](mod_system.md) — ModAPI 注册包装的目标
