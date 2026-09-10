@@ -1,7 +1,13 @@
 ################################################################################
-##  Auction Screens — BK Evolution
+##  Auction Screens — BK Evolution (now part of the "Auction House" mod)
 ##  EN: UI for the auction house: lot list, bidding, and results.
+##      Moved from game/core/systems/auction/screen_auction.rpy.
+##      Bug fix during move: auction_sell_girl now receives the active session
+##      (was referencing the undefined global 'auction_house_session').
 ##  ZH: 拍卖行 UI：拍品列表、竞拍界面和结果展示。
+##      从 game/core/systems/auction/screen_auction.rpy 移至本 Mod。
+##      迁移时修复 bug：auction_sell_girl 现在接收当前会话
+##      （原先引用了不存在的全局变量 'auction_house_session'）。
 ################################################################################
 
 ## EN: Main auction house screen — shows current lots.
@@ -53,10 +59,6 @@ screen auction_house():
                     action [SetScreenVariable("current_session",
                              AuctionSession(auction_house.generate_npc_lots(4))),
                             SetScreenVariable("selected_lot", None)]
-
-                textbutton __("出售我的一个女孩"):
-                    xalign 0.5
-                    action Show("auction_sell_girl")
         else:
             hbox:
                 xalign 0.5
@@ -247,13 +249,17 @@ screen auction_house():
                 textbutton __("自动结拍"):
                     action Function(current_session.auto_resolve)
 
+                textbutton __("出售我的一个女孩"):
+                    action Show("auction_sell_girl", session=current_session)
+
                 textbutton __("关闭"):
                     action [Return(), Hide("auction_house")]
 
 
 ## EN: Screen for selecting a girl from MC's roster to sell.
-## ZH: 从 MC 队伍中选择女孩出售的面板。
-screen auction_sell_girl():
+##      Receives the active session so the girl is added to it.
+## ZH: 从 MC 队伍中选择女孩出售的面板。接收当前会话以加入拍品。
+screen auction_sell_girl(session):
 
     modal True
 
@@ -301,7 +307,7 @@ screen auction_sell_girl():
                             background "#333333"
                             hover_background "#555555"
 
-                            action [Function(auction_house_session.player_sell_girl, girl),
+                            action [Function(session.player_sell_girl, girl),
                                     Hide("auction_sell_girl")]
 
                             vbox:

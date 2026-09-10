@@ -17,11 +17,11 @@ translate chinese_simplified strings:
     new "匿名卖家"
 translate chinese_simplified strings:
 
-    # game/core/systems/auction/auction.rpy:22
+    # game/custom/mods/Auction House/auction.rpy:22
     old "<AuctionBid %s: %s gold>"
     new "<拍卖出价 %s：%s 金币>"
 
-    # game/core/systems/auction/auction.rpy:177
+    # game/custom/mods/Auction House/auction.rpy:177
     old "Lord Blackwood"
     new "Blackwood 领主"
 

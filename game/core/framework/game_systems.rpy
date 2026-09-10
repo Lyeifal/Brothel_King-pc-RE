@@ -157,7 +157,7 @@ init -3 python:
 
         undetected_mods = []
 
-        for name, _ in persistent.mods.items():
+        for name in persistent.mods.keys():
             if name not in detected_mods.keys():
                 undetected_mods.append(name)
 

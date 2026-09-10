@@ -1,7 +1,9 @@
 ################################################################################
-##  Auction System — BK Evolution
+##  Auction System — BK Evolution (now part of the "Auction House" mod)
 ##  EN: Core classes for the auction house (buying/selling girls via bidding).
+##      Moved from game/core/systems/auction/auction.rpy into this mod.
 ##  ZH: 拍卖行核心类（通过竞拍买卖女孩）。
+##      从 game/core/systems/auction/auction.rpy 移至本 Mod。
 ################################################################################
 
 init -1 python:

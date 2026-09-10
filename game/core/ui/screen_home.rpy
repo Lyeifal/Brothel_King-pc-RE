@@ -66,9 +66,13 @@ screen right_menu():
                 $ rows += 1
             if game.goals_reached() and (game.chapter != 1 or not game.is_story_mode() or debug_mode):
                 $ rows += 1
-            ## EN: BK Evolution — add room for courtyard and auction buttons.
-            ## ZH: BK Evolution — 为别院和拍卖按钮增加空间。
-            $ rows += 2
+            ## EN: BK Evolution — add room for courtyard button.
+            ## ZH: BK Evolution — 为别院按钮增加空间。
+            ## EN: The auction house button moved to the "Auction House" mod
+            ##     (game/custom/mods/Auction House/), shown under "Mods".
+            ## ZH: 拍卖行按钮已移至 "Auction House" Mod
+            ##     （game/custom/mods/Auction House/），显示在 "Mods" 下。
+            $ rows += 1
 
 
             # Generate a grid of 2 columns and x rows for the right menu
@@ -113,9 +117,6 @@ screen right_menu():
 
                 # Courtyard Alert and Button
                 use right_menu_courtyard
-
-                # Auction House Alert and Button
-                use right_menu_auction
 
                 # Postings Alert and Button
 
@@ -439,18 +440,12 @@ screen right_menu_courtyard():
 
 
 ################
-## Home - Right menu - Display Auction House button (BK Evolution)
+## Home - Right menu - Display Auction House button
+## EN: REMOVED — moved to the "Auction House" mod
+##     (game/custom/mods/Auction House/mod.rpy, screen right_menu_auction).
+## ZH: 已移除 — 移至 "Auction House" Mod
+##     （game/custom/mods/Auction House/mod.rpy 的 right_menu_auction 屏幕）。
 ################
-
-screen right_menu_auction():
-
-    hbox xalign 1.0 spacing 20:
-        text ""
-
-        textbutton _("Auction") style_group "rm":
-            action Show("auction_house")
-            tooltip __("访问拍卖行买卖女孩。")
-
 
 init -2:
     # Make all the right menu buttons be the same size.

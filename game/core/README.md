@@ -219,12 +219,11 @@ game/core/
 | `spells.rpy` | 法术系统 UI |
 | `traits.rpy` | 特质系统 UI |
 
-#### 2.6.2 拍卖系统 (`systems/auction/`)
+#### 2.6.2 拍卖系统 (已提取为 Mod)
 
-| 文件 | 说明 |
+| 位置 | 说明 |
 |------|------|
-| `auction.rpy` | 拍卖核心逻辑：`AuctionLot`、`AuctionSession`、`AuctionHouse` |
-| `screen_auction.rpy` | 拍卖行屏幕定义 |
+| `custom/mods/Auction House/` | 拍卖系统已提取为 "Auction House" Mod（`mod.rpy` 声明 + `auction.rpy` 核心类 + `auction_screens.rpy` 屏幕）。原 `systems/auction/` 目录已删除。 |
 
 #### 2.6.3 别院系统 (`systems/courtyard/`)
 

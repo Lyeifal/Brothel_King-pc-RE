@@ -148,7 +148,7 @@
 | # | 变量名 | 文件 | 行号 | 条目数 | 说明 | 迁移优先级 |
 |---|--------|------|------|--------|------|-----------|
 | 27 | `extractor_items` | `systems/items.rpy` | 400 | 2 | `Item` 对象实例（Extractor Mk I/II） | ⚠️ 不建议（含对象实例） |
-| 28 | `npc_names` | `systems/auction/auction.rpy` | 177 | 6 | 拍卖 NPC 名字列表 | 🟢 低 |
+| 28 | `npc_names` | `custom/mods/Auction House/auction.rpy` | 179 | 6 | 拍卖 NPC 名字列表（拍卖系统已提取为 Mod） | 🟢 低 |
 | 29 | `_sound_map` | `systems/postings.rpy` | 9 | 5 | 声音名 → 声音变量映射 | 🟢 低 |
 
 ### 2.6 训练系统（diff 扩展）
