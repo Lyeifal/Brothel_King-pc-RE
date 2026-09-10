@@ -46,7 +46,6 @@ screen autorest(girl="default"):
         else:
             textbutton _("Ok") action Hide("autorest") xalign 1.0
 
-## LEVEL & PERKS SCREEN
 
 screen level(girl):
 
@@ -249,10 +248,3 @@ screen perks(girl):
                                     textbutton _("Confirm"):
                                         if new_perks:
                                             action Return(("commit", ""))
-
-
-# screen trait_details + perk_details → EXTRACTED to ui/screens/screen_girl_stats.rpy (Phase 2)
-# 女孩属性/属性条/特性详情 已提取到 screen_girl_stats.rpy
-
-# screen girl_log → EXTRACTED to ui/screens/screen_girl_log.rpy (Phase 2)
-# 女孩日志/昨夜回顾 已提取到 screen_girl_log.rpy

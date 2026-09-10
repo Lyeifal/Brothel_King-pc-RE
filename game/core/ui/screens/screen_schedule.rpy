@@ -212,7 +212,3 @@ screen load_schedule(girl):
 
             null height yres(10)
             textbutton _("Cancel") action Hide("load_schedule", transition=Dissolve(0.15)) xalign 1.0
-
-
-# screen autorest + level + perks → EXTRACTED to ui/screens/screen_progress.rpy (Phase 2)
-# 升级/加点/作息 已提取到 screen_progress.rpy

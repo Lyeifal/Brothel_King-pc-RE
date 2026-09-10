@@ -418,12 +418,6 @@ screen visit_location():
     use close((Hide("visit_location"), Jump("visit_district")))
 
 
-
-## BROTHEL SCREEN ##
-
-# screen brothel + furniture + brothel_options → EXTRACTED to ui/screens/screen_brothel.rpy (Phase 3.1)
-# 青楼/家具/选项界面已提取到 screen_brothel.rpy
-
 screen matchmaking(girls, customers, match_list, context="job"): # Where match list is a list of tuples (girl, customer)
 
     tag show_screen
@@ -580,6 +574,8 @@ screen matchmaking(girls, customers, match_list, context="job"): # Where match l
     else:
         $ load_txt = __(" (done)")
 
+
+
 screen customer_satisfaction(customers, old_rep, rep_chg):
 
     tag show_screen
@@ -683,6 +679,3 @@ screen customer_satisfaction(customers, old_rep, rep_chg):
             $ displayed_customers = customers[:idx]
             $ total_change = round_int(sum(c.reputation_change for c in displayed_customers))
             $ displayed_rep = min(max(round_int(old_rep + total_change), 0), brothel.max_rep)
-
-
-## RIGHT MENU : this is the main menu on the main screen (not named main menu to avoid confusion with the standard Renpy screen)

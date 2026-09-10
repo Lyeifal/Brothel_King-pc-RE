@@ -77,9 +77,6 @@ screen adv_tooltip():
                 text ttip size res_font(15)
 
 
-# screen tool + overlay → EXTRACTED to ui/screens/screen_common.rpy (Phase 2)
-# 通用组件 已提取到 screen_common.rpy
-
 screen girls(girls, context = "girls"): # context can be girls, slavemarket, farm
 
     tag girls
@@ -230,7 +227,6 @@ screen girl_tab(girls, context="girls"):
 
                 frame xsize yres(30) ysize yres(20) xpadding 0 ypadding 0 xmargin 0 ymargin 0:
                     textbutton "↑" text_font "DejaVuSans.TTF" text_italic True text_color c_darkbrown text_selected_color c_emerald text_size res_font(12) xpadding 0 ypadding 0 xalign 0.5 yalign 0.6 xsize yres(30) ysize yres(20) idle_background None action SetLocalVariable("sort_view", "normal") tooltip _("Go back to other filters.")
-
 
 
         frame:
@@ -936,13 +932,6 @@ screen girl_fast_actions(girl, notebook=True, love_fear=True, schedule=True, cus
                             text X_text color c_crimson size res_font(24) xalign 0.5 yalign 0.5
 
 
-
-# screen girl_profile → EXTRACTED to ui/screens/screen_girl_profile.rpy (Phase 3.1)
-
-
-# screen stat_bar + custom_bar + girl_stats + assign_job + girl_stats_light → EXTRACTED to ui/screens/screen_girl_stats.rpy (Phase 2)
-# 女孩属性/属性条/特性详情 已提取到 screen_girl_stats.rpy
-
 screen button_overlay(girl, context="girls"):
 
     zorder 5
@@ -1319,7 +1308,3 @@ screen rank_level_details(girl):
                 text str(round_int(girl.jp[job])) + " {size=12}/ " + str(girl.get_jp_cap(job)) + "{/size}" yalign 0.5 color c_orange
 
 
-## SCHEDULE SCREEN
-
-# screen schedule + save_schedule + load_schedule → EXTRACTED to ui/screens/screen_schedule.rpy (Phase 2)
-# 日程安排/保存/读取 已提取到 screen_schedule.rpy

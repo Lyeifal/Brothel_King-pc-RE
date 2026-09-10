@@ -49,11 +49,6 @@ screen suzume_hints(contact_list):
 
         
 
-# screen districts + district_button + visit_district + visit_location + matchmaking + customer_satisfaction → EXTRACTED to ui/screens/screen_districts.rpy (Phase 2)
-# 城区/地点/配对/顾客满意度 已提取到 screen_districts.rpy
-
-# screen home + brothel_report → EXTRACTED to ui/screens/screen_home.rpy (Phase 2)
-# 主页/青楼报告 已提取到 screen_home.rpy
 
 screen restock_button(merc, upgrade=False):
 
@@ -103,9 +98,6 @@ screen inventory_filter(filters=inventory_filters["base"]):
                             add "filter_all_unselect"
                         hovered tt.Action(_("Show all items."))
 
-
-
-## GIRL BROWSER
 
 screen girl_select(girl_list, orange = False, no_sched=False, action_button=None):
 
@@ -201,11 +193,6 @@ screen girl_select(girl_list, orange = False, no_sched=False, action_button=None
                 if girl_list:
                     action (Function(select_next_girl, girl_list), Hide("item_profile"), SetVariable("selected_item", None))
 
-
-## START SCREEN
-
-# screen quick_start → EXTRACTED to ui/screens/screen_common.rpy (Phase 2)
-# 通用组件 已提取到 screen_common.rpy
 
 screen main_character():
 
@@ -384,12 +371,6 @@ screen notebook():
     use personality_screen()
 
 
-
-## FARM SCREENS ##
-
-# screen farm_menu + farm_tab + minion_button + fshow_init → EXTRACTED to ui/screens/screen_farm.rpy (Phase 2)
-# 农场/小黄人/展示 已提取到 screen_farm.rpy
-
 screen fshow_screen(customers, title, pic, desc, but_caption=_("Next")):
 
     layer "master"
@@ -427,7 +408,6 @@ screen farm_show_gold(girl, total_cust_budget=1000, income=1200, bonus = 1.0):
             text (_("Customer tips (%i%%): ") % (bonus*100)) bold True size res_font(24) align 0.5, 0.5
             use increment_counter(startv = total_cust_budget, stopv = income, duration = 3.0, _caption = "%s gold", _background = None, _size = 24, _color = _col)
 
-# Generic event screen
 
 screen generic_event_screen(title, pic, desc, but_caption=_("Next")):
 
@@ -458,7 +438,6 @@ screen generic_event_screen(title, pic, desc, but_caption=_("Next")):
 
                 textbutton but_caption xalign 1.0 yalign 1.0 action Return()
 
-# Profile details
 
 screen mood_details(girl):
 
@@ -647,6 +626,3 @@ screen sex_details(girl):
 
                 else:
                     text "?" size res_font(14) xalign 0.5
-
-
-## CHALLENGE SCREENS ##

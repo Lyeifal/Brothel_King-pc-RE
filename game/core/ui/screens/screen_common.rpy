@@ -147,9 +147,6 @@ screen overlay(current_screen = None, kwargs=None, ttip=False):
         use tool(x = 0.93, y = 0.0, w = 0.32, h = 0.075, bg = False)
 
 
-
-## GIRL TAB
-
 screen quick_start(def_panel = "MC"):
 
     modal True
@@ -383,7 +380,6 @@ screen quick_start(def_panel = "MC"):
 
                 textbutton _("CONFIRM") xalign 1.0 yfill True action Return(True) tooltip _("Start a new game with these settings.")
 
-## MAIN CHARACTER SCREEN
 
 screen dark_filter(can_click=True, covers_dialogue=True):
 
@@ -447,8 +443,6 @@ screen yes_no(message, yes_caption=_("Yes"), no_caption=_("No"), col=c_white, bg
             textbutton _(yes_caption) action Return(True)
             textbutton _(no_caption) action Return(False)
 
-
-## Ok message (used for giving information...)
 
 screen OK_screen(title="", message="", pic = None, pic_size = "large", dark=False, x=0.6, y=0.7, always_scrollbar=False):
 
@@ -515,8 +509,6 @@ screen OK_screen(title="", message="", pic = None, pic_size = "large", dark=Fals
 
             textbutton _("Ok") action Return(True)
 
-
-# show_img, show_event and show_sex_event do basically the same thing and have finally been merged into show_event. Hurray!
 
 screen show_img(img, bg=None): # Mostly used to show full screen pictures with no background, such as brothel pics
 
@@ -627,9 +619,6 @@ screen show_sex_event(event_pic, bg = c_ui_dark): # Mostly used for interactions
     #                 text "AND NOT tags: " + and_text(game.last_pic["not_tags"]) size res_font(14)
 
 
-
-## Shortcuts
-
 screen shortcuts():
 
     zorder 100
@@ -660,7 +649,6 @@ screen shortcuts():
     if farm.powers:
         key "noshift_K_p" action (SetVariable("selected_destination", "farm_powers"), Jump("teleport"))
 
-## Close button
 
 screen close(act, name="back", ttip="Click to go back (or use right-click)."):
 
@@ -681,12 +669,6 @@ screen close(act, name="back", ttip="Click to go back (or use right-click)."):
         action act
         tooltip ttip
 
-
-
-
-## ITEMS
-
-# Inventory screens are located in BKitems.rpy
 
 screen receive_item(it, msg, col=c_emerald):
 

@@ -779,6 +779,7 @@ screen girl_stats(girl, context = "girls"): # context can be girls, slavemarket,
 
                         text str(girl.get_med_upkeep() // 4) + " gold (fixed)" size res_font(14)
 
+
 screen assign_job(girl):
 
     modal True
@@ -1096,9 +1097,3 @@ screen perk_details(girl):
                     frame background None ypadding 0 xsize xres(150) xfill True xalign 0.0 yalign 0.0:
                         text perk.name xmaximum xres(150) yalign 0.0 size res_font(13) bold True
                     text perk.get_description(short=True) xmaximum xres(250) size res_font(13)
-
-
-
-
-
-## GIRL LOG SCREEN ## Displays statistics about each girl

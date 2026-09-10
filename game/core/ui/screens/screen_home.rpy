@@ -147,6 +147,3 @@ screen brothel_report():
                 text "" size res_font(14)
 
                 text get_warnings() size res_font(14) color c_brown
-
-# screen previous_night_log → EXTRACTED to ui/screens/screen_girl_log.rpy (Phase 2)
-# 女孩日志/昨夜回顾 已提取到 screen_girl_log.rpy

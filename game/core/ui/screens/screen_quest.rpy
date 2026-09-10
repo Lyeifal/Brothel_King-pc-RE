@@ -126,10 +126,6 @@ screen spellbook():
             use active_spells()
 
 
-
-
-## CLASSES AND QUESTS POSTINGS
-
 screen postings(qlist):
 
     key "mouseup_3" action ((SetVariable("selected_destination", "main"), Jump("teleport")))
@@ -393,16 +389,6 @@ screen postings(qlist):
                             add ProportionalScale("resources/ui/" + license_dict[1][1], *res_tb(50)) xalign 0.5
 
 
-
-
-
-# screen dark_filter → EXTRACTED to ui/screens/screen_common.rpy (Phase 2)
-# 通用组件 已提取到 screen_common.rpy
-
-
-# screen personality_screen + notebook + fshow_screen + farm_show_gold + generic_event_screen + mood_details + love_button + fear_button + sex_details → EXTRACTED to ui/screens/screen_misc2.rpy (Phase 2)
-# 主角面板/提示/详情面板 已提取到 screen_misc2.rpy
-
 screen challenge_menu(header=_("What do you do?"), challenges=[], cancel=False):
     # challenges is a list of arrays (caption, challenge_type, base_diff) where caption is the text displayed on the button.
     # challenge_type must be an existing type in MC.challenges. base_diff is the lowest possible difficulty to achieve success.
@@ -515,8 +501,6 @@ screen challenge(name, diff, raw=False, bonus=0, opponent_bonus=0, bonus_text=""
 
     use adv_tooltip()
 
-#### LETTER SCREEN ####
-
 screen letter(header="", message="", signature = ""): # Returns True upon closing
 
     tag letter
@@ -549,8 +533,6 @@ screen letter(header="", message="", signature = ""): # Returns True upon closin
         text signature size res_font(52) font "SFBurlingtonScript.TTF" xalign 1.0 color c_black yalign 0.9
 
 
-#### RESOURCES ####
-
 screen modal():
 
     modal True
@@ -574,12 +556,6 @@ screen invisible_button():
         textbutton "" xalign 0.5 background None action NullAction() hovered Function(this_is_a_hentai_game_so_why_are_you_trying_to_act_classy_all_of_a_sudden):
             style "menu_choice_button"
 
-
-
-
-
-
-## MOD SCREENS ##
 
 screen mods():
 
@@ -658,8 +634,6 @@ screen mods():
     
                             
                         
-
-
 
 
 ### GIRL INTERACT SCREEN
@@ -1037,8 +1011,6 @@ screen debug_pics(girl):
                         textbutton fix.name.capitalize() + " " + act.capitalize() text_size res_font(14) action SetScreenVariable("pic", girl.get_fix_pic(act, fix, not_tags=not_tags))
 
 
-#### GIRL MIXES ####
-
 screen girl_mix(show_rating=False):
 
     modal True
@@ -1126,7 +1098,6 @@ screen girl_mix(show_rating=False):
             if GetTooltip():
                 text GetTooltip() color c_white
 
-## ACHIEVEMENT SCREENS ##
 
 screen pic_tester(pics, _size): # Checks example pictures for one get_pic prompt
 
@@ -1145,7 +1116,5 @@ screen pic_tester(pics, _size): # Checks example pictures for one get_pic prompt
                         button style "inv_no_padding" action NullAction() tooltip p.path:
                             add p.get(x=_size, y=_size)
 
-
-#### Mod specific ####
 
 #<Chris12 PackState>

@@ -200,7 +200,6 @@ screen brothel():
                             textbutton __("[brothel.security]  goons%s") % text1 background None text_size res_font(14) xpos 0.6 ypos 0.4 ypadding 6
 
 
-
                             $ ttip = __("Your brothel's current dirt level is {b}%s{/b}.") % str(round_int(brothel.dirt))
 
                             textbutton _("Maintenance") text_color c_white ypos 0.7 ymargin 0 ypadding 4 text_align 0.0 text_size res_font(18) background None action NullAction() tooltip ttip
@@ -659,7 +658,4 @@ screen furniture():
                     text brothel.count_budget_description() color c_prune size res_font(14)
 
 
-
-
 ## MATCHMAKING SCREENS
-

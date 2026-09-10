@@ -20,8 +20,6 @@ screen mojo_bar():
                 text (_("%i") % int(mpoints)) bold True size res_font(16) yalign 0.5
 
 
-## Cards
-
 # Card detail (right side of screen)
 
 screen power_detail(pow):
@@ -344,7 +342,6 @@ screen girl_vp_selector(girl_lists, _selected = None, return_value = "selected_t
             null
 
 
-
 # Final screens
 
 screen mojo_payment(pow, conduit, other_girl = None):
@@ -636,13 +633,6 @@ screen brothel_ranking_button(bro, old_rank, new_rank, but_size):
                 if bro == brothel:
                     bold True
 
-#### Pic testing ####
-
-# Calling pic_test and farm_pic_test will display all relevant pictures for the given tags and kwargs for all brothel, farm and slavemarket girls. 
-# It's a quick way to check nothing strange is going on with some girl packs.
-# Kwargs (reminder): tags, alt_tags1 = None, alt_tags2 = None, alt_tags3 = None, and_tags = None, not_tags = None, strict = False, and_priority=True, naked_filter=False, attempts=0, soft=False, hide_farm=False, pref_filter=False, allow_lesbian=False, always_stock=False, horizontal=False, vertical=False
 
 screen harem_button():
     textbutton _("Chat") xsize xres(75) xalign 0.09 yalign 0.25 action Jump("harem_" + MC.current_trainer.name.lower()) hovered tt.Action("Talk to " + MC.current_trainer.name + ".")
-
-#### END OF BK SCREENS FILE ####

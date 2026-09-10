@@ -323,9 +323,6 @@ screen girl_log(): # Reminder: selected_girl is a Global variable that holds the
                             textbutton str(perf) background None xpadding 0 ypadding 0 xmargin 0 ymargin 0 text_size average text_color c_prune xalign 0.5 action NullAction() hovered tt.Action(ttip)
 
 
-
-## DISTRICT SCREEN ##
-
 screen previous_night_log(log):
     modal True
 
@@ -337,10 +334,3 @@ screen previous_night_log(log):
         use night_log(log, use_filter=True)
 
     use close(Hide("previous_night_log"))
-
-
-## Yes / No Confirmation (used for buying, selling...)
-
-
-# screen yes_no + OK_screen + show_img + show_event + show_sex_event + shortcuts + close + receive_item → EXTRACTED to ui/screens/screen_common.rpy (Phase 2)
-# 通用组件 已提取到 screen_common.rpy
