@@ -40,12 +40,14 @@ init -2 python:
                     eff += g.get_effect("change", "all sex skills")
 
             stat_obj = g.find_stat(stat_name)
-            if not stat_obj:
+            if not stat_obj: # 属性名错误 | wrong stat name
+                raise AssertionError(stat_name + " is not a valid stat/skill name. Accepted: " + and_text(["defense", "strength", "energy"] + [s.name.lower() for s in (g.stats + g.sex_stats)]))
+
+            result = stat_obj.value + eff
+            if result > 0:
+                return round_int(result)
+            else:
                 return 0
-            val = stat_obj.value + eff
-            # 处理额外效果 | Handle additional effects
-            extra = (g.get_effect("change", stat_name) + g.get_effect("change", "all skills"))
-            return val + extra
 
         def get_stat_max(self, stat_name, raw=False, custom_cap=None):
             '''获取属性最大值 | Get max value for a stat'''

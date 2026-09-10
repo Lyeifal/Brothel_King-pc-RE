@@ -192,9 +192,13 @@ label test_girl_stats_component:
         stats = GirlStats(girl)
 
         runner.assert_eq(stats.get_stat("charm", raw=True), 50, "GirlStats.get_stat reads base value")
-        # EN: Unknown stats return 0 (they do NOT raise — by design).
-        # ZH: 未知属性返回 0（按设计不抛异常）。
-        runner.assert_eq(stats.get_stat("no_such_stat", raw=True), 0, "GirlStats.get_stat unknown name returns 0")
+        # EN: Unknown stat names raise AssertionError (original girlclass behavior).
+        # ZH: 未知属性名抛出 AssertionError（与重构前 girlclass 行为一致）。
+        try:
+            stats.get_stat("no_such_stat", raw=True)
+            runner.assert_true(False, "GirlStats.get_stat unknown name raises AssertionError")
+        except AssertionError:
+            runner.assert_true(True, "GirlStats.get_stat unknown name raises AssertionError")
         runner.assert_true(not stats.find_stat("no_such_stat"), "GirlStats.find_stat unknown name returns False")
 
         stats.set_stat("charm", 80)
