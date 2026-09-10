@@ -123,15 +123,17 @@ init -2 python:
             if g.init_dict["tastes/favorite_color"]: g.likes["color"] = g.init_dict["tastes/favorite_color"]
             else: g.likes["color"] = rand_choice(colors)
             if g.init_dict["tastes/favorite_food"]: g.likes["food"] = g.init_dict["tastes/favorite_food"]
-            else: g.likes["food"] = rand_choice(foods)
+            else: g.likes["food"] = rand_choice(food)
             if g.init_dict["tastes/favorite_drink"]: g.likes["drink"] = g.init_dict["tastes/favorite_drink"]
             else: g.likes["drink"] = rand_choice(drinks)
             if g.init_dict["tastes/disliked_color"]: g.dislikes["color"] = g.init_dict["tastes/disliked_color"]
             else: g.dislikes["color"] = rand_choice(colors)
             if g.init_dict["tastes/disliked_food"]: g.dislikes["food"] = g.init_dict["tastes/disliked_food"]
-            else: g.dislikes["food"] = rand_choice(foods)
+            else: g.dislikes["food"] = rand_choice(food)
             if g.init_dict["tastes/disliked_drink"]: g.dislikes["drink"] = g.init_dict["tastes/disliked_drink"]
             else: g.dislikes["drink"] = rand_choice(drinks)
+
+            return time.perf_counter()
 
         # ── 对话方法（已迁移）| Dialogue methods (moved) ──
         def pick_dialogue(self, topic):

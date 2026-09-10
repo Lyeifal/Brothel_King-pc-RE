@@ -1036,7 +1036,7 @@ init -2 python:
 
         # Phase 2.1: Delegated to GirlItems component
         def unequip(self, item):
-            return self._items.unequip(item)
+            self._items.unequip(item)
 
             # Restores item effects if girl had boost item type effects
             boost = self.get_effect("boost", item.type.name.lower())
@@ -1652,17 +1652,6 @@ init -2 python:
         def get_stat(self, stat_name, raw=False):
             return self._stats.get_stat(stat_name, raw)
 
-            if stat == False: # wrong stat name
-                raise AssertionError(stat_name + " is not a valid stat/skill name. Accepted: " + and_text(["defense", "strength", "energy"] + [s.name.lower() for s in (self.stats+self.sex_stats)]))
-
-            result = stat.value + eff
-
-            if result > 0:
-                return round_int(result)
-
-            else:
-                return 0
-
 
         def get_xp_cap(self):
 
@@ -2052,11 +2041,7 @@ init -2 python:
             return self._stats.set_stat(stat, val)
 
         def average_skills(self, sk_list, mod=1.0):
-            return self._stats.average_skills(sk_list, mod)
-
-            while remaining_points > 0: # May give an additional skill point depending on rounding (in favor of the player)
-                change_dict[rand_choice(sk_list)] += 1
-                remaining_points -= 1
+            change_dict = self._stats.average_skills(sk_list, mod)
 
             for sk in sk_list:
                 self.set_stat(sk, change_dict[sk])
@@ -2640,7 +2625,7 @@ init -2 python:
 
         # Phase 2.1: Delegated to GirlSex component
         def generate_preferences(self):
-            return self._sex.generate_preferences()
+            self._sex.generate_preferences()
 
             # Generate x skills according to preferences
 

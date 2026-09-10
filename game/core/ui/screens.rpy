@@ -4153,6 +4153,8 @@ screen visit_location():
 # 青楼/家具/选项界面已提取到 screen_brothel.rpy
 
 
+screen matchmaking(girls, customers, match_list, context="job"): # Where match list is a list of tuples (girl, customer)
+
     tag show_screen
 
     key "mouseup_1" action Return()
@@ -4163,7 +4165,7 @@ screen visit_location():
 
     default t = 0
     default n = 0
-    default idle_customers = sorted(customers, key= lambda x : x.rank)
+    default idle_customers = sorted(customers, key=lambda x: x.rank)
     default girl_customers = defaultdict(list)
     default job_customers = defaultdict(int)
     default cust_act = defaultdict(str)
