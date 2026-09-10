@@ -1,11 +1,11 @@
 # Brothel King — game/core 重构进度文档
 
-> 最后更新: 2026-06-25
+> 最后更新: 2026-09-10
 > 当前分支: `bk-evolution`
 
 ---
 
-## 1. 提交链总览 (17次提交)
+## 1. 提交链总览 (59次提交)
 
 ```
 b09f55e  ── 基线提交 (重构前代码快照)
@@ -41,9 +41,37 @@ eaa368d  ── 修复4: generate_background残旧代码删除 (~35行)
 58d53d9  ── 修复6: ModAPIV2单例冲突 -> 独立 _instance 变量
 45e4086  ── 修复7: mod_template 移除残留的 my_mod.hooks 旧版引用
 (WIP)    ── 修复8: matchmaking screen声明行恢复 + 委托残留死代码清理 + generate_background计时返回 + foods->food
-c47440e  ── Phase 3任务1: Dev Console Shift+O 绑定修复 (shift_K_o + modal屏幕内补绑)
-30674f6  ── Phase 3任务2: ModAPIV2.cancel_hook 失效修复 + tools/verify_mod_api.py
-315e452  ── Phase 3任务3: Test Runner 组件冒烟测试 + bk_test_runner 主菜单入口
+a7e4259  ── 修复8提交+基线验证 + 进度文档补记
+
+── Phase 1 (2026-09-10): Girl 组件方法迁移收官 ──
+6f7ae3b  ── 块1: obedience/training/run_away checks → GirlTraining
+fc306e8  ── 块2: raise/change_preference → GirlSex
+d873a42  ── 块3: test_fix/check_fix/get_sex_attitude → GirlSex
+5e5094c  ── 块4: list_effects/get_effect/remove_effects → 新建 GirlEffects
+d1ea8ae  ── 块5: randomize → 新建 GirlGeneration (GirlBase 委托改接)
+773a732  ── 块6: get_pic/get_pic_not_tags → GirlPictures
+
+── Phase 2 (2026-09-10): 屏幕提取收官 (108 screen 全部提取) ──
+5a44989  ── 通用组件12个 → screen_common.rpy
+6f41b0c  ── 女孩属性7个 → screen_girl_stats.rpy
+e459c8d  ── girl_log + previous_night_log → screen_girl_log.rpy
+905a0a0  ── autorest/level/perks → screen_progress.rpy
+36a81ba  ── farm 4个 → screen_farm.rpy
+8831575  ── districts 6个 → screen_districts.rpy
+0d46852  ── schedule 3个 → screen_schedule.rpy
+ecd2019  ── home/brothel_report → screen_home.rpy
+f730004  ── 悬浮层+女孩控件11个 → screen_misc.rpy
+22ffe6d  ── 主角/详情面板14个 → screen_misc2.rpy
+c61dab4  ── 任务/挑战/互动15个 → screen_quest.rpy
+b54f4b0  ── 邪恶力量/卡牌15个 → screen_powers.rpy
+1ab8410  ── 资源/成就/契约14个 → screen_resources.rpy + stray归位 + __init__更新
+
+── Phase 3 (2026-09-10): 系统验证与小项收尾 ──
+c47440e  ── 任务1: Dev Console Shift+O 绑定修复 (shift_K_o + modal屏幕内补绑)
+30674f6  ── 任务2: ModAPIV2.cancel_hook 失效修复 + tools/verify_mod_api.py
+315e452  ── 任务3: Test Runner 组件冒烟测试 + bk_test_runner 主菜单入口
+4a4a439  ── 任务4: I18N 收尾 — 修复i18n_lint/verify_i18n硬编码旧路径; translate_sync.py决策不实现
+1c62fd1  ── 修复: GirlStats.get_stat还原基线语义 (消除效果双倍计入/恢复断言/取整下限)
 ```
 
 **基线验证 (2026-09-10 会话)**: lint 通过（仅历史警告），游戏可正常启动至主菜单。
@@ -90,30 +118,31 @@ c47440e  ── Phase 3任务1: Dev Console Shift+O 绑定修复 (shift_K_o + mo
 
 | 指标 | 重构前 | 当前 | 变化 |
 |------|--------|------|------|
-| 行数 | 5,900 | 4,492 | **-1,408 (-24%)** |
+| 行数 | 5,900 | 3,910 | **-1,990 (-34%)** |
 | 方法数 | 212 | 211 | -1 (有些变成委托) |
-| 组件目录 | 无 | 15 文件 | +2,100 行 |
+| 组件目录 | 无 | 17 文件 | +2,682 行 |
 
-### Girl 组件 (15 个)
+### Girl 组件 (17 个)
 
 | 组件文件 | 行数 | 状态 | 关键迁移方法 |
 |----------|------|------|-------------|
-| `girl_pictures.rpy` | 264 | ★完整 | get_fix_pic, get_pic_by_name, refresh_pictures, create_char, check_pictures, evaluate_girlpack |
+| `girl_pictures.rpy` | 431 | ★完整 | get_fix_pic, get_pic, get_pic_not_tags, get_pic_by_name, refresh_pictures, create_char, check_pictures, evaluate_girlpack |
 | `girl_mood.rpy` | 196 | ★完整 | change_energy, heal, full_rest, rest, init_sanity, rank_up_sanity, lose_sanity, get_sanity, sanity_warning |
 | `girl_economy.rpy` | 274 | ★完整 | get_price, get_xp, get_jp, get_rep, get_tip, estimate_performance |
 | `girl_relationships.rpy` | 98 | ★完整 | change_love, change_fear |
-| `girl_dialogue.rpy` | 215 | ★完整 | generate_personality, adjust_personality, generate_background, pick_dialogue, say, rand_say |
-| `girl_traits.rpy` | 156 | ★完整 | generate_traits (完整180行) |
-| `girl_sex.rpy` | 284 | ★完整 | will_do_sex_act, toggle_sex_act, refresh_sex_acts, activate/deactivate, generate_preferences (160行) |
-| `girl_items.rpy` | 154 | ★完整 | equip, unequip, get_equipped, use_item, take |
-| `girl_stats.rpy` | 190 | ★完整 | get_stat, change_stat, set_stat, average_skills, find_stat, get_stat_max/minmax |
+| `girl_dialogue.rpy` | 217 | ★完整 | generate_personality, adjust_personality, generate_background, pick_dialogue, say, rand_say |
+| `girl_traits.rpy` | 155 | ★完整 | generate_traits (完整180行) |
+| `girl_sex.rpy` | 415 | ★完整 | will_do_sex_act, toggle_sex_act, refresh_sex_acts, activate/deactivate, generate_preferences, test_fix, check_fix, get_sex_attitude, change/raise_preference |
+| `girl_items.rpy` | 110 | ★完整 | equip, unequip, get_equipped, use_item, take |
+| `girl_stats.rpy` | 188 | ★完整 | get_stat, change_stat, set_stat, average_skills, find_stat, get_stat_max/minmax |
 | `girl_schedule.rpy` | 155 | ★完整 | get_status, get_status_summary (全双语注释) |
-| `girl_training.rpy` | 80 | ★完整 | will_do_farm_act, will_rebel_in_farm, farm_beg_test |
+| `girl_training.rpy` | 177 | ★完整 | will_do_farm_act, will_rebel_in_farm, farm_beg_test, obedience_check, training_check, run_away_check |
+| `girl_effects.rpy` | 59 | ★完整 | list_effects, get_effect, remove_effects (Phase 1 块4 新建) |
+| `girl_generation.rpy` | 116 | ★完整 | randomize (含 t0-t8 性能计时埋点, Phase 1 块5 新建) |
 | `girl_base.rpy` | 34 | 委托 | set_name, get_name, is_unique, load_ini, randomize 等 |
 | `girl_logging.rpy` | 32 | 委托 | add_log, get_log, track_event 等 |
-| `girl_generation.rpy` | - | 未创建 | (randomize 等仍留在 girlclass) |
 
-**★ = 含已迁移的实现体 (11/15 个)**
+**★ = 含已迁移的实现体 (13/17 个)**
 **委托 = 方法通过 `_impl` 别名指向 girlclass 中的原始实现**
 
 ### 方法体迁移汇总 (33 个)
@@ -144,17 +173,13 @@ c47440e  ── Phase 3任务1: Dev Console Shift+O 绑定修复 (shift_K_o + mo
 
 ### 仍在 girlclass 中的主要方法
 
-| 方法 | 行数 | 难度 |
+大块方法已全部迁移完毕。剩余为：
+
+| 方法 | 行数 | 说明 |
 |------|------|------|
-| `__init__` | ~120 | 低 (但引用全局变量多) |
-| `randomize` | ~80 | 中 |
-| `get_pic` | ~80 | 高 (复杂的标签过滤逻辑) |
-| `get_pic_not_tags` | ~80 | 高 |
-| `list_effects` / `get_effect` / `remove_effects` | ~50 | 中 (EffectBearer 继承) |
-| `test_fix` / `check_fix` / `get_sex_attitude` | ~50 | 中 |
-| `change_preference` / `raise_preference` | ~100 | 中 |
-| `obedience_check` / `training_check` / `run_away_check` | ~100 | 低 (委托已设) |
-| 其余小方法 | ~1,000 | 低 (但数量多) |
+| `__init__` | ~120 | 属性初始化 + 组件实例化；**有意保持原样**（拆分到各组件 init_* 有存档兼容风险，性价比低，暂缓） |
+| `change_mood` / `update_mood` / `get_mood_modifier` 等心情周边 | ~150 | 与 GirlMood 组件部分重叠，待清理归属 |
+| 其余小方法 | ~800 | 低难度但数量多，按主题归组时可继续收尾 |
 
 ---
 
@@ -191,6 +216,7 @@ c47440e  ── Phase 3任务1: Dev Console Shift+O 绑定修复 (shift_K_o + mo
 - 16 个标准化钩子点 (HOOK_GIRL_GENERATED, HOOK_DAY_STARTING 等)
 - 钩子取消支持 (`cancel_hook`)
 - 本版不兼容旧 Mod (需求要求)
+- ⚠️ **已知待办**: 游戏代码中尚无任何 `execute_hook`/`cancel_hook` 调用点——框架就绪但钩子未接线，mods 的 hooks 暂不生效 (发现于 Phase 3, 2026-09-10)
 
 ### 模板更新
 **文件**: `game/core/templates/mod_template/mod_template.rpy`
@@ -223,37 +249,40 @@ c47440e  ── Phase 3任务1: Dev Console Shift+O 绑定修复 (shift_K_o + mo
 
 ### Test Runner
 **文件**: `game/core/tools/test_runner.rpy`
-- assert_eq/assert_true/assert_contains/assert_not_none
+- assert_eq/assert_true/assert_contains/assert_not_none/skip
+- 组件冒烟测试: GirlStats/GirlMood/GirlEconomy/GirlEffects (桩 Girl) + ModAPIV2
+- 入口: `label bk_test_runner`，主菜单 Tests 按钮（仅 developer mode）
 
 ---
 
-## 7. 屏幕提取 (Phase 3)
+## 7. 屏幕提取 (Phase 3) ✅ 已完成 (2026-09-10)
 
 ### 进度
 
-| 原文件 | 新文件 | 行数 | 屏幕 |
-|--------|--------|------|------|
-| `screens.rpy` | (剩余) | 8,883 | ~70 个屏幕 |
-| — | `screen_girl_list.rpy` | 20 | `screen girls` (定义) |
-| — | `screen_girl_profile.rpy` | 114 | `screen girl_profile` |
-| — | `screen_brothel.rpy` | 665 | `brothel` + `furniture` + `brothel_options` |
-| — | `screen_common.rpy` | 5 | (共享组件桩) |
+| 原文件 | 状态 | 行数 |
+|--------|------|------|
+| `screens.rpy` | ✅ 全部提取完毕，仅剩 image/style 声明、label 块 (girlpack_menu/pic_test/packstates_menu) 与占位注释 | 8,886 → **620** |
 
-**总计从 screens.rpy 移出: ~800 行 (9,500 → 8,883)**
+**108 个 screen 全部提取至 `game/core/ui/screens/`（16 个文件）**，经 `temp/verify_extract.py` 与基线 773a732 逐字比对一致：
 
-### 剩余大块屏幕
+| 新文件 | 行数 | 内容 |
+|--------|------|------|
+| `screen_common.rpy` | 695 | tool/overlay/quick_start/dark_filter/yes_no/OK_screen/show_img/show_event/show_sex_event/shortcuts/close/receive_item 等 12 个通用组件 |
+| `screen_girl_stats.rpy` | 1,096 | girl_stats/girl_stats_light/assign_job/stat_bar/custom_bar/trait_details/perk_details |
+| `screen_girl_log.rpy` | 336 | girl_log + previous_night_log |
+| `screen_progress.rpy` | 250 | autorest/level/perks |
+| `screen_farm.rpy` | 604 | farm_menu/farm_tab/minion_button/fshow_init |
+| `screen_districts.rpy` | 678 | districts/district_button/visit_district/visit_location/matchmaking/customer_satisfaction |
+| `screen_schedule.rpy` | 214 | schedule/save_schedule/load_schedule |
+| `screen_home.rpy` | 149 | home/brothel_report |
+| `screen_misc.rpy` | 1,306 | 悬浮层+女孩控件 11 个 |
+| `screen_misc2.rpy` | 628 | 主角/详情面板 14 个 |
+| `screen_quest.rpy` | 1,120 | 任务/挑战/互动 15 个 |
+| `screen_powers.rpy` | 638 | 邪恶力量/卡牌 15 个 |
+| `screen_resources.rpy` | 627 | 资源/成就/契约 14 个 |
+| (早前已有) | — | screen_girl_list / screen_girl_profile / screen_brothel |
 
-| 屏幕 | 行数 | 说明 |
-|------|------|------|
-| `girl_stats` + `girl_stats_light` | ~700 | 女孩属性面板 |
-| `girl_log` | ~320 | 女孩日志 |
-| `level` + `perks` | ~280 | 升级/天赋 |
-| `districts` + `visit_district` | ~260 | 区域 |
-| `farm_menu` + `farm_tab` | ~500 | 农场 |
-| `home` + `brothel_report` | ~150 | 主页 |
-| `matchmaking` + `customer_satisfaction` | ~260 | 配对 |
-| `schedule` + `save/load_schedule` | ~210 | 日程 |
-| 其余 ~40 个小屏幕 | ~2,000 | — |
+全部 `use`/`call screen` 按名解析，未改任何调用点。
 
 ---
 
@@ -270,25 +299,24 @@ game/core/
   systems/events/event_bridge.rpy       — 事件桥
   systems/mods/mod_api_v2.rpy           — Mod API v2
   framework/picture_cache.rpy           — 图片缓存
-  framework/girl/ (15 个文件)           — 女孩组件
+  framework/girl/ (17 个文件)           — 女孩组件
   tools/dev_console/console_commands.rpy — 控制台命令
   tools/dev_console/screen_console.rpy  — 控制台界面
   tools/girl_pack_editor/*.rpy         — 女孩包编辑器
-  tools/test_runner.rpy                 — 测试框架
-  ui/screens/screen_girl_list.rpy      — 女孩列表屏幕
-  ui/screens/screen_girl_profile.rpy   — 女孩档案屏幕
-  ui/screens/screen_brothel.rpy        — 青楼屏幕
-  ui/screens/screen_common.rpy         — 共享组件
+  tools/test_runner.rpy                 — 测试框架 (+bk_test_runner 入口/主菜单 Tests 按钮)
+  ui/screens/ (16 个文件)              — 全部提取的屏幕 (108 screen)
   ui/view_models/*.rpy                — ViewModel 层
+tools/
+  verify_mod_api.py                   — Mod API v2 验证脚本
 ```
 
 ### 主要修改文件
 
 | 文件 | 变化 |
 |------|------|
-| `girlclass.rpy` | 5,900 → 4,492 行 (-1,408) |
+| `girlclass.rpy` | 5,900 → 3,910 行 (-1,990, -34%) |
 | `girl_files_dict.rpy` | 倒排索引 + 惰性加载 |
-| `screens.rpy` | 9,500 → 8,883 行 (-617) |
+| `screens.rpy` | 9,500 → 620 行 (-8,866, 108 screen 全部提取) |
 | `picture.rpy` | 惰性标签解析 |
 | `utils.rpy` | plural/article 语言感知 |
 | `effects.rpy` | LRU 图片缓存 |
@@ -301,8 +329,8 @@ game/core/
 ## 9. 下一步优先事项
 
 1. **验证测试** — ✅ 部分完成 (2026-09-10): lint 通过 + 启动至主菜单正常；**待人工抽查**: 新游戏开档、一天结算、女孩面板/青楼/农场界面；**Phase 3 增量**: 主菜单 Tests 按钮（developer mode）可运行组件冒烟测试
-2. **剩余方法迁移** — get_pic, randomize, change_preference 等
-3. **屏幕提取** — girl_stats, girl_log, level/perks 等
+2. **剩余方法迁移** — ✅ 大块方法全部完成 (Phase 1, 2026-09-10): obedience/training/run_away checks、change/raise_preference、test_fix/check_fix/get_sex_attitude、list_effects/get_effect/remove_effects (→girl_effects)、randomize (→girl_generation)、get_pic/get_pic_not_tags (→girl_pictures)。**遗留**: __init__ 拆分（暂缓，存档兼容风险）、change_mood 等与 GirlMood 归属重叠的周边方法、~800 行小方法归组
+3. **屏幕提取** — ✅ 全部完成 (Phase 2, 2026-09-10): screens.rpy 8,886 → 620 行，108 screen → 16 个文件，逐字比对验证一致
 4. **翻译工具** — ✅ 已决策不实现 `translate_sync.py` (Phase 3): 同步需求由现有工具链覆盖——缺失检测 `verify_i18n.py`(`translate --count`)、占位符完整性 `audit_placeholders.py`、空翻译往返 `export_empty_to_xlsx.py`/`import_translated_empty.py`、陈旧条目由 Ren'Py `translate` 重写时清理。详见 `docs/I18N_ROADMAP.md` 第 6 节。另修复 `i18n_lint.py`/`verify_i18n.py` 硬编码旧路径（改为按脚本位置推导项目根）。
 5. **Mod API v2 测试** — ✅ 已完成 (Phase 3): `tools/verify_mod_api.py` 静态断言 + 桩环境全流程模拟（注册→触发→取消），`python tools/verify_mod_api.py` 全过；游戏内 `test_mod_api_v2` 冒烟 label 同步加入 Test Runner。**发现并修复**: `cancel_hook` 经 `execute_hook` 中转导致 context 永不达回调、永远返回 False。另注意：16 个 HOOK_* 常量（本文档此前写 15），且游戏代码目前没有任何 `execute_hook`/`cancel_hook` 调用点——钩子框架就绪但尚未接线。
 6. **Dev Console 快捷键** — ✅ 已修复 (Phase 3, c47440e): 根因有二——①keymap 绑定的是无修饰键 `K_o`（应为 `shift_K_o`）；②console screen 为 `modal True`，modal 阻断下层事件，underlay Keymap 在控制台显示期间收不到按键，无法关闭。修复：underlay 负责全局打开，屏幕内 `key "shift_K_o"` 负责关闭，输入框聚焦时忽略切换（避免输入大写 O 误关）。
