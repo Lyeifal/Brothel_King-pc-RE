@@ -30,9 +30,6 @@ screen right_menu():
                     # Count of girls in farm
                     if farm.active:
                         text __("In farm: {b}{size=+4}") + str(len(farm.girls)) + "{/size}{/b} /" + str(farm.pens) size res_font(12)
-                    # Count of girls in courtyard
-                    if len(courtyard.girls) > 0:
-                        text __("In courtyard: {b}{size=+4}") + str(len(courtyard.girls)) + "{/size}{/b} /" + str(courtyard.MAX_CAPACITY) size res_font(12)
 
         # Right menu frame
 
@@ -74,13 +71,10 @@ screen right_menu():
                 $ rows += 1
             if game.goals_reached() and (game.chapter != 1 or not game.is_story_mode() or debug_mode):
                 $ rows += 1
-            ## EN: BK Evolution — add room for courtyard button.
-            ## ZH: BK Evolution — 为别院按钮增加空间。
-            ## EN: The auction house button moved to the "Auction House" mod
-            ##     (game/custom/mods/Auction House/), shown under "Mods".
-            ## ZH: 拍卖行按钮已移至 "Auction House" Mod
-            ##     （game/custom/mods/Auction House/），显示在 "Mods" 下。
-            $ rows += 1
+            ## EN: The courtyard button moved to the "Courtyard" mod
+            ##     (game/custom/mods/Courtyard/), shown under "Mods".
+            ## ZH: 别院按钮已移至 "Courtyard" Mod
+            ##     （game/custom/mods/Courtyard/），显示在 "Mods" 下。
 
 
             # Generate a grid of 2 columns and x rows for the right menu
@@ -122,9 +116,6 @@ screen right_menu():
                 # Shop Alert and Button
 
                 use right_menu_shop
-
-                # Courtyard Alert and Button
-                use right_menu_courtyard
 
                 # Postings Alert and Button
 
@@ -442,18 +433,12 @@ screen right_menu_advance():
 
 
 ################
-## Home - Right menu - Display Courtyard button (BK Evolution)
+## Home - Right menu - Display Courtyard button
+## EN: REMOVED — moved to the "Courtyard" mod
+##     (game/custom/mods/Courtyard/mod.rpy, screen right_menu_courtyard).
+## ZH: 已移除 — 移至 "Courtyard" Mod
+##     （game/custom/mods/Courtyard/mod.rpy 的 right_menu_courtyard 屏幕）。
 ################
-
-screen right_menu_courtyard():
-
-    hbox xalign 1.0 spacing 20:
-        text ""
-
-        textbutton _("Courtyard") style_group "rm":
-            action Show("courtyard")
-            tooltip __("管理安置在别院的女孩。")
-
 
 ################
 ## Home - Right menu - Display Auction House button

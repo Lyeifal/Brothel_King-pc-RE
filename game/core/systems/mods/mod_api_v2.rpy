@@ -89,7 +89,10 @@ init -3 python:
                 self._mod_hooks[hook_name].append((mod_id, callback, 0))
 
             if renpy.config.developer:
-                renpy.log(__("[ModAPI v2] Registered mod '%s' (%s)") % (
+                ## EN: Dev-only log — intentionally NOT translated: translation stubs
+                ##     (new "") would break the %-formatting below.
+                ## ZH: 仅开发者日志——有意不翻译：翻译空槽（new ""）会让下面的 % 格式化崩溃。
+                renpy.log("[ModAPI v2] Registered mod '%s' (%s)" % (
                     mod_id, manifest.get("name", mod_id)))
 
         def unregister_mod(self, mod_id):
@@ -200,6 +203,8 @@ init -3 python:
         HOOK_CHAPTER_FINISHED = "chapter_finished"
         HOOK_GAME_SAVED = "game_saved"
         HOOK_GAME_LOADED = "game_loaded"
+        HOOK_GIRL_DESTINATION_LIST = "girl_destination_list"
+        HOOK_GIRL_DESTINATION_ACCEPT = "girl_destination_accept"
 
     # ── Singleton ──
     mod_api_v2 = ModAPIV2()

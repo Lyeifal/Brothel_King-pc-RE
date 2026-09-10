@@ -222,16 +222,16 @@ v2 没有 v1 的 label 机制，生命周期事件通过钩子覆盖：
 
 ---
 
-## 3. 钩子点完整参考（16 个）
+## 3. 钩子点完整参考（18 个）
 
-常量定义：`game/core/systems/mods/mod_api_v2.rpy:187-202`。命名惯例 `<domain>_<action>_<tense>`（`girl_runaway`、`girl_sold`、`security_event` 三个名字不含 `_<tense>`，`tools/verify_mod_api.py` 会对此发出命名惯例警告，属已知事项）。
+常量定义：`game/core/systems/mods/mod_api_v2.rpy:187-204`。命名惯例 `<domain>_<action>_<tense>`（`girl_runaway`、`girl_sold`、`security_event` 三个名字不含 `_<tense>`，`tools/verify_mod_api.py` 会对此发出命名惯例警告，属已知事项）。
 
 回调签名统一为 `callback(context: dict)`；`execute_hook` 把关键字参数打包成 context dict 传入（`mod_api_v2.rpy:143-159`）。
 
 | # | 常量 | 字符串值 | 调用点（文件:行号） | context 键 |
 |---|------|----------|---------------------|-----------|
 | 1 | `HOOK_GIRL_GENERATED` | `girl_generated` | `game/core/framework/girl_factory.rpy:278` | `girl` |
-| 2 | `HOOK_GIRL_ACQUIRED` | `girl_acquired` | `game/core/systems/events_dispatcher.rpy:8440` | `girl`, `price`, `context` |
+| 2 | `HOOK_GIRL_ACQUIRED` | `girl_acquired` | `game/core/systems/events_dispatcher.rpy:8465` | `girl`, `price`, `context` |
 | 3 | `HOOK_GIRL_SOLD` | `girl_sold` | `game/core/ui/main.rpy:839`、`game/core/ui/main.rpy:1452` | `girl`, `price` |
 | 4 | `HOOK_GIRL_RUNAWAY` | `girl_runaway` | `game/core/systems/events_dispatcher.rpy:1173` | `girl` |
 | 5 | `HOOK_DAY_STARTING` | `day_starting` | `game/core/systems/endday.rpy:1498` | `time` |
@@ -246,6 +246,8 @@ v2 没有 v1 的 label 机制，生命周期事件通过钩子覆盖：
 | 14 | `HOOK_CHAPTER_FINISHED` | `chapter_finished` | `game/core/systems/events_dispatcher.rpy:1053` | `chapter` |
 | 15 | `HOOK_GAME_SAVED` | `game_saved` | `game/core/systems/mods/mod_api_v2.rpy:215`（save_json_callbacks） | 无 |
 | 16 | `HOOK_GAME_LOADED` | `game_loaded` | `game/core/systems/events_dispatcher.rpy:191`（after_load） | 无 |
+| 17 | `HOOK_GIRL_DESTINATION_LIST` | `girl_destination_list` | `game/core/systems/events_dispatcher.rpy:8403` | `girl`, `at_working_cap` |
+| 18 | `HOOK_GIRL_DESTINATION_ACCEPT` | `girl_destination_accept` | `game/core/systems/events_dispatcher.rpy:8497` | `girl`, `destination` |
 
 说明：
 
@@ -253,6 +255,7 @@ v2 没有 v1 的 label 机制，生命周期事件通过钩子覆盖：
 - `girl_sold` 有两个调用点（女孩卖出的两个 UI 入口）；
 - `game_saved`/`game_loaded` 无 context 键（调用时不带参数）；
 - **当前游戏代码没有调用 `cancel_hook()` 的点**（§4），它由测试覆盖（`game/core/tools/test_runner.rpy:352-353`），供 Mod 作者自行 `call` 使用。
+- `girl_destination_list` 在青楼满员收购女孩时触发：Mod 回调返回目的地列表 `[{"id", "text", "available"}]`，本体将其加入安置菜单；玩家选择后触发 `girl_destination_accept`（`destination` 为目的地 id）。参考实现：`game/custom/mods/Courtyard/mod.rpy`（"Courtyard" Mod）。
 
 ---
 

@@ -36,7 +36,7 @@ This directory contains the architecture documentation for the core systems of t
 | [services.md](services.md) | GameServices container, table of 11 registered services, GameConfig, init priority chain |
 | [girl_components.md](girl_components.md) | Girl component system: list of 15 components, delegation pattern, `_impl` aliases, lessons from the get_stat double-counting bug |
 | [ui_screens.md](ui_screens.md) | UI screen architecture: what remains in screens.rpy + per-file screen inventory of the 16 files in ui/screens/ |
-| [mod_system.md](mod_system.md) | v1 Mod class and v2 ModAPIV2 coexistence architecture, registration flow, full table of 16 hook points (call sites verified one by one), HookManager relationship |
+| [mod_system.md](mod_system.md) | v1 Mod class and v2 ModAPIV2 coexistence architecture, registration flow, full table of 18 hook points (call sites verified one by one), HookManager relationship |
 
 ### Subsystems (refreshed in this batch)
 

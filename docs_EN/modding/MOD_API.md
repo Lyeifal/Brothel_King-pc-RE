@@ -222,16 +222,16 @@ v2 has no v1 label mechanism; lifecycle events are covered via hooks:
 
 ---
 
-## 3. Complete hook point reference (16)
+## 3. Complete hook point reference (18)
 
-Constant definitions: `game/core/systems/mods/mod_api_v2.rpy:187-202`. Naming convention: `<domain>_<action>_<tense>` (three names — `girl_runaway`, `girl_sold`, `security_event` — lack `_<tense>`; `tools/verify_mod_api.py` emits a naming-convention warning for these, which is a known item).
+Constant definitions: `game/core/systems/mods/mod_api_v2.rpy:187-204`. Naming convention: `<domain>_<action>_<tense>` (three names — `girl_runaway`, `girl_sold`, `security_event` — lack `_<tense>`; `tools/verify_mod_api.py` emits a naming-convention warning for these, which is a known item).
 
 All callback signatures are uniformly `callback(context: dict)`; `execute_hook` packs the keyword arguments into a context dict and passes it in (`mod_api_v2.rpy:143-159`).
 
 | # | Constant | String value | Call site (file:line) | context keys |
 |---|------|----------|---------------------|-----------|
 | 1 | `HOOK_GIRL_GENERATED` | `girl_generated` | `game/core/framework/girl_factory.rpy:278` | `girl` |
-| 2 | `HOOK_GIRL_ACQUIRED` | `girl_acquired` | `game/core/systems/events_dispatcher.rpy:8440` | `girl`, `price`, `context` |
+| 2 | `HOOK_GIRL_ACQUIRED` | `girl_acquired` | `game/core/systems/events_dispatcher.rpy:8465` | `girl`, `price`, `context` |
 | 3 | `HOOK_GIRL_SOLD` | `girl_sold` | `game/core/ui/main.rpy:839`, `game/core/ui/main.rpy:1452` | `girl`, `price` |
 | 4 | `HOOK_GIRL_RUNAWAY` | `girl_runaway` | `game/core/systems/events_dispatcher.rpy:1173` | `girl` |
 | 5 | `HOOK_DAY_STARTING` | `day_starting` | `game/core/systems/endday.rpy:1498` | `time` |
@@ -246,6 +246,8 @@ All callback signatures are uniformly `callback(context: dict)`; `execute_hook` 
 | 14 | `HOOK_CHAPTER_FINISHED` | `chapter_finished` | `game/core/systems/events_dispatcher.rpy:1053` | `chapter` |
 | 15 | `HOOK_GAME_SAVED` | `game_saved` | `game/core/systems/mods/mod_api_v2.rpy:215` (save_json_callbacks) | none |
 | 16 | `HOOK_GAME_LOADED` | `game_loaded` | `game/core/systems/events_dispatcher.rpy:191` (after_load) | none |
+| 17 | `HOOK_GIRL_DESTINATION_LIST` | `girl_destination_list` | `game/core/systems/events_dispatcher.rpy:8403` | `girl`, `at_working_cap` |
+| 18 | `HOOK_GIRL_DESTINATION_ACCEPT` | `girl_destination_accept` | `game/core/systems/events_dispatcher.rpy:8497` | `girl`, `destination` |
 
 Notes:
 
@@ -253,6 +255,7 @@ Notes:
 - `girl_sold` has two call sites (the two UI entry points for selling a girl);
 - `game_saved`/`game_loaded` have no context keys (invoked without arguments);
 - **No point in the current game code calls `cancel_hook()`** (§4); it is covered by tests (`game/core/tools/test_runner.rpy:352-353`) and is meant for mod authors to `call` themselves.
+- `girl_destination_list` fires when acquiring a girl while the brothel is full: mod callbacks return a list of destinations `[{"id", "text", "available"}]`, which the core adds to the placement menu; if the player picks one, `girl_destination_accept` fires (`destination` = the destination id). Reference implementation: `game/custom/mods/Courtyard/mod.rpy` (the "Courtyard" mod).
 
 ---
 

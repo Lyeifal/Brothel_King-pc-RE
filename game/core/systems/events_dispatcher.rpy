@@ -8396,43 +8396,68 @@ label acquire_girl(girl, price=0, context="generic", can_follow=True):
                 ## ZH: 检查青楼是否已达 24 人工作上限（与卧室数无关）。
                 $ _at_working_cap = (len(MC.girls) >= 24)
 
-                if brothel.bedrooms < brothel.get_maxbedrooms() or (farm.active and farm.has_room()) or (farm.active and farm.pens < farm.get_pen_limit()) or (_at_working_cap and courtyard.can_add_girl()):
+                ## EN: Query mod-registered girl destinations (e.g. the "Courtyard" mod).
+                ## ZH: 查询 Mod 注册的女孩安置目的地（如 "Courtyard" Mod）。
+                python:
+                    _mod_destinations = []
+                    _mod_dest_results = mod_api_v2.execute_hook(mod_api_v2.HOOK_GIRL_DESTINATION_LIST, girl=girl, at_working_cap=_at_working_cap)
+                    for _results in _mod_dest_results.values():
+                        if _results:
+                            _mod_destinations.extend(_results)
+                    _mod_dest_available = any(d.get("available") for d in _mod_destinations)
+
+                if brothel.bedrooms < brothel.get_maxbedrooms() or (farm.active and farm.has_room()) or (farm.active and farm.pens < farm.get_pen_limit()) or _mod_dest_available:
                     $ price1 = brothel.get_room_price()
                     $ price2 = farm.get_pen_cost()
 
-                    menu:
-                        sill "Sorry Master, I'm afraid you don't have room in your brothel for another girl."
+                    ## EN: Build menu items dynamically: brothel room / farm / mod destinations.
+                    ## ZH: 动态构建菜单项：青楼房间 / 农场 / Mod 目的地。
+                    python:
+                        _room_full_items = []
+                        if brothel.bedrooms < brothel.get_maxbedrooms() and MC.gold >= (price + price1) and not _at_working_cap:
+                            _room_full_items.append((__("Add a new room to your brothel ([price1] gold)"), "room"))
+                        if farm.active and farm.has_room():
+                            _room_full_items.append((__("Send her to the farm"), "farm"))
+                        if farm.active and not farm.has_room() and farm.pens < farm.get_pen_limit() and MC.gold >= (price + price2):
+                            _room_full_items.append((__("Add a new pen to your farm ([price2] gold)"), "pen"))
+                        for _d in _mod_destinations:
+                            if _d.get("available"):
+                                _room_full_items.append((_d["text"], "mod:" + _d["id"]))
+                        _room_full_items.append((_("Cancel"), None))
 
-                        "Add a new room to your brothel ([price1] gold)" if brothel.bedrooms < brothel.get_maxbedrooms() and MC.gold >= (price + price1) and not _at_working_cap:
-                            if brothel.add_room():
-                                $ result = True
+                    sill "Sorry Master, I'm afraid you don't have room in your brothel for another girl."
 
-                        "Send her to the farm" if farm.active and farm.has_room():
+                    $ _room_full_choice = renpy.display_menu(_room_full_items)
+
+                    if _room_full_choice == "room":
+                        if brothel.add_room():
+                            $ result = True
+
+                    elif _room_full_choice == "farm":
+                        $ result = "farm"
+
+                    elif _room_full_choice == "pen":
+                        $ res, text1 = farm.add_pen()
+
+                        if res:
                             $ result = "farm"
 
-                        "Add a new pen to your farm ([price2] gold)" if farm.active and not farm.has_room() and farm.pens < farm.get_pen_limit() and MC.gold >= (price + price2):
-                            $ res, text1 = farm.add_pen()
+                        if text1:
+                            gizel normal "[text1]"
 
-                            if res:
-                                $ result = "farm"
-
-                            if text1:
-                                gizel normal "[text1]"
-
-                        "Send her to the Courtyard" if _at_working_cap and courtyard.can_add_girl():
-                            $ result = "courtyard"
-
-                        "Cancel":
-                            pass
+                    elif _room_full_choice is not None:
+                        ## EN: A mod destination was chosen (value = "mod:<dest_id>").
+                        ## ZH: 选择了 Mod 目的地（值为 "mod:<dest_id>"）。
+                        $ result = _room_full_choice
     else:
         $ raise AssertionError("[girl.name] is not a Girl object.")
 
     # 2. Transfer girl from giver to taker
 
     if result:
-        ## EN: Only add to active roster if not going to farm or courtyard.
-        ## ZH: 若非送到农场或别院，则加入活跃名单。
-        if result not in ("farm", "courtyard"):
+        ## EN: Only add to active roster if not going to farm or a mod destination.
+        ## ZH: 若非送到农场或 Mod 目的地，则加入活跃名单。
+        if result not in ("farm",) and not (isinstance(result, str) and result.startswith("mod:")):
             $ MC.girls.append(girl)
         $ girl.init_after_acquire(refresh_pics=False)
 
@@ -8466,12 +8491,10 @@ label acquire_girl(girl, price=0, context="generic", can_follow=True):
             $ farm.programs[girl] = FarmProgram(girl)
             call send_to_farm(girl, can_beg=False, can_cancel=False, can_follow=can_follow) from _call_send_to_farm_4
 
-        elif result == "courtyard":
-            ## EN: Move girl to courtyard instead of active brothel roster.
-            ## ZH: 将女孩移到别院而非青楼活跃名单。
-            python:
-                courtyard.add_girl(girl)
-                notify_list.append((girl.name + __(" has been moved to the Courtyard.")), col="green")
+        elif isinstance(result, str) and result.startswith("mod:"):
+            ## EN: Hand the girl over to the mod that registered the destination.
+            ## ZH: 将女孩移交给注册该目的地的 Mod。
+            $ mod_api_v2.execute_hook(mod_api_v2.HOOK_GIRL_DESTINATION_ACCEPT, girl=girl, destination=result[4:])
 
         hide screen girl_profile
         hide screen girl_stats

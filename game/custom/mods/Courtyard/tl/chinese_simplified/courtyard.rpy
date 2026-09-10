@@ -15,7 +15,7 @@ translate chinese_simplified strings:
     new "[girl.name] 又回到了妓院。"
 translate chinese_simplified strings:
 
-    # game/core/systems/courtyard/courtyard.rpy:50
+    # game/custom/mods/Courtyard/courtyard.rpy:50
     old "Already at max level."
     new "已达到最高等级。"
 

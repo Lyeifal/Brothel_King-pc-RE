@@ -67,14 +67,14 @@ Defined at `game/core/systems/mods/mod_api_v2.rpy:17` (`class ModAPIV2(ModAPI)`,
 - **UI integration**: `get_menu_buttons()` feeds the home right-side menu rendering; `get_mod_info()` feeds the mods screen display.
 - **v1 inheritance**: v2 inherits `ModAPI`, so registration wrappers such as `register_trait/perk/tag/dialogue/event/ngp_setting/scenario/origin/game_mode` are likewise available to v2 Mods.
 
-## 4. The 16 v2 Hook Points (all wired, each verified via grep)
+## 4. The 18 v2 Hook Points (all wired, each verified via grep)
 
-Naming convention `<domain>_<action>_<tense>`. Hook constants are defined at mod_api_v2.rpy:187-202; **all are pure notification hooks** — call sites discard the return value via `$ mod_api_v2.execute_hook(...)`, so Mods can only observe, not intercept, game logic (the `cancel_hook` mechanism exists but no in-game call site currently uses it).
+Naming convention `<domain>_<action>_<tense>`. Hook constants are defined at mod_api_v2.rpy:187-204. Except for the last two destination hooks, **all are pure notification hooks** — call sites discard the return value via `$ mod_api_v2.execute_hook(...)`, so Mods can only observe, not intercept, game logic (the `cancel_hook` mechanism exists but no in-game call site currently uses it). `girl_destination_list`/`girl_destination_accept` are the exception: return values/arguments wire mod-registered girl destinations into the acquisition flow (see rows 17/18 and the "Courtyard" mod reference implementation).
 
 | # | Constant | Hook name | Call site (file:line) | Context keys |
 |---|----------|-----------|-----------------------|--------------|
 | 1 | `HOOK_GIRL_GENERATED` | `girl_generated` | `framework/girl_factory.rpy:278` | `girl` |
-| 2 | `HOOK_GIRL_ACQUIRED` | `girl_acquired` | `systems/events_dispatcher.rpy:8440` | `girl`, `price`, `context` |
+| 2 | `HOOK_GIRL_ACQUIRED` | `girl_acquired` | `systems/events_dispatcher.rpy:8465` | `girl`, `price`, `context` |
 | 3 | `HOOK_GIRL_SOLD` | `girl_sold` | `ui/main.rpy:839`, `ui/main.rpy:1452` | `girl`, `price` |
 | 4 | `HOOK_GIRL_RUNAWAY` | `girl_runaway` | `systems/events_dispatcher.rpy:1173` | `girl` |
 | 5 | `HOOK_DAY_STARTING` | `day_starting` | `systems/endday.rpy:1498` | `time` |
@@ -89,6 +89,8 @@ Naming convention `<domain>_<action>_<tense>`. Hook constants are defined at mod
 | 14 | `HOOK_CHAPTER_FINISHED` | `chapter_finished` | `systems/events_dispatcher.rpy:1053` | `chapter` |
 | 15 | `HOOK_GAME_SAVED` | `game_saved` | `mods/mod_api_v2.rpy:215` (via `renpy.config.save_json_callbacks`, registered at :209-219) | — |
 | 16 | `HOOK_GAME_LOADED` | `game_loaded` | `systems/events_dispatcher.rpy:191` | — |
+| 17 | `HOOK_GIRL_DESTINATION_LIST` | `girl_destination_list` | `systems/events_dispatcher.rpy:8403` | `girl`, `at_working_cap`; callbacks return `[{"id", "text", "available"}]` |
+| 18 | `HOOK_GIRL_DESTINATION_ACCEPT` | `girl_destination_accept` | `systems/events_dispatcher.rpy:8497` | `girl`, `destination` |
 
 For Mod-side usage see the template `game/core/templates/mod_template/mod_template.rpy:47-53`: `api.register_hook(api.HOOK_GIRL_GENERATED, on_girl_generated)`, with callback signature `callback(context: dict)`.
 
@@ -119,7 +121,7 @@ How the two coexisting systems relate:
 v1 Mod (challenges.rpy)
   └─ mod.hooks ──→ HookManager (mod_hooks.rpy) ──→ on_day_end / on_settlement_* / on_event_trigger
 v2 Mod (manifest hooks + register_hook)
-  └─ _mod_hooks (mod_api_v2.rpy:46, independent storage!) ──→ the 16 notification hooks such as girl_generated
+  └─ _mod_hooks (mod_api_v2.rpy:46, independent storage!) ──→ the 18 hooks such as girl_generated (girl_destination_list/accept are interactive)
 ```
 
 Two things to note:

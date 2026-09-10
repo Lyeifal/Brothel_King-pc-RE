@@ -77,6 +77,15 @@ c47440e  ── 任务1: Dev Console Shift+O 绑定修复 (shift_K_o + modal屏�
 ── Mod API v2 补完 (2026-09-11) ──
 c6b3fa2  ── 16个钩子点接入游戏流程 (girl_*/day_*/night_*/event_*/chapter_*/security/game_saved/game_loaded)
 1788c04  ── V2补完+拍卖Mod转V2: manifest菜单按钮/get_menu_buttons/get_mod_info/主页Mods菜单与Mods界面接入v2
+
+── 庭院系统提取为Mod + 翻译治理 (2026-09-11) ──
+1eb7f46  ── 修复翻译广播污染: 清空3个机翻导入错误广播句的1730个槽位(回退英文待重译)
+5300eb2  ── 清理game/tl: 删孤儿chinese/strings.rpyc与english转储/移机翻工作文件出tl目录
+d6e76d6  ── Mod翻译自管理: game/tl/custom/mods → 各Mod目录tl/chinese_simplified/ (TRANSLATION_GUIDE重写)
+6384837  ── 修复庭院屏幕崩溃: 文本插值[len()]/[get_daily_upkeep()]改screen python预计算
+待提交  ── 庭院系统提取为"Courtyard" Mod: systems/courtyard → custom/mods/Courtyard,
+           新增2个v2钩子(girl_destination_list/accept, 18个总数), 收购流程菜单动态化,
+           day_ending接线激活process_day()(原死代码), 翻译随迁Mod目录
 ```
 
 **基线验证 (2026-09-10 会话)**: lint 通过（仅历史警告），游戏可正常启动至主菜单。

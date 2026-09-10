@@ -35,11 +35,13 @@ API_FILE = ROOT / "game" / "core" / "systems" / "mods" / "mod_api_v2.rpy"
 TEMPLATE_FILE = ROOT / "game" / "core" / "templates" / "mod_template" / "mod_template.rpy"
 GAME_DIR = ROOT / "game"
 
-# EN: The progress doc says 15 hook points, but the code defines 16
-#     HOOK_* constants — the code is the source of truth here.
-# ZH: 进度文档写 15 个钩子点，但代码实际定义了 16 个 HOOK_* 常量，
+# EN: The progress doc says 15 hook points; the code now defines 18
+#     HOOK_* constants (16 original + 2 girl-destination hooks added with
+#     the Courtyard mod extraction) — the code is the source of truth here.
+# ZH: 进度文档写 15 个钩子点；代码现定义 18 个 HOOK_* 常量
+#     （原有 16 个 + 庭院 Mod 剥离时新增的 2 个目的地钩子），
 #     此处以代码为准。
-EXPECTED_HOOK_COUNT = 16
+EXPECTED_HOOK_COUNT = 18
 
 PASS = "PASS"
 FAIL = "FAIL"

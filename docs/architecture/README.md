@@ -36,7 +36,7 @@
 | [services.md](services.md) | GameServices 容器、11 个已注册服务表、GameConfig、init 优先级链 |
 | [girl_components.md](girl_components.md) | Girl 组件系统：15 组件清单、委托模式、`_impl` 别名、get_stat 双倍计入 bug 教训 |
 | [ui_screens.md](ui_screens.md) | UI 屏幕架构：screens.rpy 剩余内容 + ui/screens/ 16 文件逐文件 screen 清单 |
-| [mod_system.md](mod_system.md) | v1 Mod 类与 v2 ModAPIV2 并存架构、注册流程、16 个钩子点全表（调用点已逐一核实）、HookManager 关系 |
+| [mod_system.md](mod_system.md) | v1 Mod 类与 v2 ModAPIV2 并存架构、注册流程、18 个钩子点全表（调用点已逐一核实）、HookManager 关系 |
 
 ### 子系统（本次刷新）
 

@@ -1197,16 +1197,6 @@ init -11 python:
             return data
 
         @classmethod
-        def load_courtyard_upgrade_costs(cls):
-            """EN: Load courtyard facility upgrade costs from JSON.
-               ZH: 从 JSON 加载庭院设施升级成本。"""
-            path = "settings/courtyard_upgrade_costs.json"
-            data = cls._load_json_file(path)
-            if not data:
-                return None
-            return data
-
-        @classmethod
         def load_free_girl_limits(cls):
             """EN: Load free girl interaction love limits from JSON.
                ZH: 从 JSON 加载自由女孩交互爱情上限。"""

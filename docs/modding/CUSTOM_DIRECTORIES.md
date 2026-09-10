@@ -104,7 +104,7 @@ game/
 | 文件 | 说明 |
 |------|------|
 | `mod_api.rpy` | v1 `ModAPI`（Registry 包装 + HookManager 包装） |
-| `mod_api_v2.rpy` | v2 `ModAPIV2`（register_mod / manifest / 16 个标准化钩子） |
+| `mod_api_v2.rpy` | v2 `ModAPIV2`（register_mod / manifest / 18 个标准化钩子） |
 | `mod_hooks.rpy` | Phase 6 `HookManager`（v1 兼容层钩子分发器） |
 
 详见 [`MOD_API.md`](MOD_API.md)。

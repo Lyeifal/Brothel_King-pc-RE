@@ -6,18 +6,23 @@
 
 init -1 python:
 
-    ## EN: Load courtyard upgrade costs from JSON (BK Evolution), fallback to hardcoded.
-    ## ZH: 从 JSON 加载庭院升级成本（BK Evolution），否则使用硬编码。
-    _cuc_json = DataLoader.load_courtyard_upgrade_costs()
-    if _cuc_json:
-        _cuc = _cuc_json.get("courtyard_upgrade_costs", {})
-        _garden_uc = {int(k): v for k, v in _cuc.get("garden", {}).items()}
-        _hotspring_uc = {int(k): v for k, v in _cuc.get("hotspring", {}).items()}
-        _training_uc = {int(k): v for k, v in _cuc.get("training_ground", {}).items()}
-    else:
-        _garden_uc = {2: 500, 3: 1500}
-        _hotspring_uc = {2: 800, 3: 2000}
-        _training_uc = {2: 1000, 3: 2500}
+    ## EN: Load upgrade costs from the mod's own JSON, fallback to hardcoded values.
+    ## ZH: 从 Mod 自带的 JSON 加载升级成本，失败则使用硬编码值。
+    _garden_uc = {2: 500, 3: 1500}
+    _hotspring_uc = {2: 800, 3: 2000}
+    _training_uc = {2: 1000, 3: 2500}
+    try:
+        import json as _cuc_json
+        with renpy.loader.load("custom/mods/Courtyard/courtyard_upgrade_costs.json") as _cuc_file:
+            _cuc = _cuc_json.load(_cuc_file).get("courtyard_upgrade_costs", {})
+        if _cuc.get("garden"):
+            _garden_uc = {int(k): v for k, v in _cuc["garden"].items()}
+        if _cuc.get("hotspring"):
+            _hotspring_uc = {int(k): v for k, v in _cuc["hotspring"].items()}
+        if _cuc.get("training_ground"):
+            _training_uc = {int(k): v for k, v in _cuc["training_ground"].items()}
+    except Exception:
+        pass
 
     class CourtyardFacility(object):
         """

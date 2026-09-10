@@ -225,12 +225,11 @@ game/core/
 |------|------|
 | `custom/mods/Auction House/` | 拍卖系统已提取为 "Auction House" Mod（`mod.rpy` 声明 + `auction.rpy` 核心类 + `auction_screens.rpy` 屏幕）。原 `systems/auction/` 目录已删除。 |
 
-#### 2.6.3 别院系统 (`systems/courtyard/`)
+#### 2.6.3 别院系统 → 已剥离为 "Courtyard" Mod
 
-| 文件 | 说明 |
+| 位置 | 说明 |
 |------|------|
-| `courtyard.rpy` | 别院核心逻辑 |
-| `screen_courtyard.rpy` | 别院屏幕定义 |
+| `custom/mods/Courtyard/` | 庭院系统已提取为 "Courtyard" Mod（`mod.rpy` 注册 + 钩子接线、`courtyard.rpy` 核心类、`screen_courtyard.rpy` 屏幕、`courtyard_upgrade_costs.json` 数据）。原 `systems/courtyard/` 目录已删除。 |
 
 #### 2.6.4 顾客系统 (`systems/customer/`)
 
