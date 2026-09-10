@@ -72,6 +72,7 @@ c47440e  ── 任务1: Dev Console Shift+O 绑定修复 (shift_K_o + modal屏�
 315e452  ── 任务3: Test Runner 组件冒烟测试 + bk_test_runner 主菜单入口
 4a4a439  ── 任务4: I18N 收尾 — 修复i18n_lint/verify_i18n硬编码旧路径; translate_sync.py决策不实现
 1c62fd1  ── 修复: GirlStats.get_stat还原基线语义 (消除效果双倍计入/恢复断言/取整下限)
+8828540  ── 拍卖系统提取为Mod: systems/auction → custom/mods/Auction House + update_mods阴影bug修复
 ```
 
 **基线验证 (2026-09-10 会话)**: lint 通过（仅历史警告），游戏可正常启动至主菜单。
