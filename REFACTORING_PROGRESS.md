@@ -73,6 +73,10 @@ c47440e  ── 任务1: Dev Console Shift+O 绑定修复 (shift_K_o + modal屏�
 4a4a439  ── 任务4: I18N 收尾 — 修复i18n_lint/verify_i18n硬编码旧路径; translate_sync.py决策不实现
 1c62fd1  ── 修复: GirlStats.get_stat还原基线语义 (消除效果双倍计入/恢复断言/取整下限)
 8828540  ── 拍卖系统提取为Mod: systems/auction → custom/mods/Auction House + update_mods阴影bug修复
+
+── Mod API v2 补完 (2026-09-11) ──
+c6b3fa2  ── 16个钩子点接入游戏流程 (girl_*/day_*/night_*/event_*/chapter_*/security/game_saved/game_loaded)
+1788c04  ── V2补完+拍卖Mod转V2: manifest菜单按钮/get_menu_buttons/get_mod_info/主页Mods菜单与Mods界面接入v2
 ```
 
 **基线验证 (2026-09-10 会话)**: lint 通过（仅历史警告），游戏可正常启动至主菜单。
@@ -217,7 +221,12 @@ c47440e  ── 任务1: Dev Console Shift+O 绑定修复 (shift_K_o + modal屏�
 - 16 个标准化钩子点 (HOOK_GIRL_GENERATED, HOOK_DAY_STARTING 等)
 - 钩子取消支持 (`cancel_hook`)
 - 本版不兼容旧 Mod (需求要求)
-- ⚠️ **已知待办**: 游戏代码中尚无任何 `execute_hook`/`cancel_hook` 调用点——框架就绪但钩子未接线，mods 的 hooks 暂不生效 (发现于 Phase 3, 2026-09-10)
+- ✅ **钩子已接线** (2026-09-11, c6b3fa2): 全部 16 个钩子点已接入游戏流程
+  （日/夜循环、女孩生成/获得/出售/逃跑、事件、章节、安保、存档/读档），纯通知型
+- ✅ **UI 集成** (2026-09-11, 1788c04): manifest 支持 `home_rightmenu_add_buttons`
+  （主页右侧菜单按钮）；`get_menu_buttons()` / `get_mod_info()` 供 UI 查询；
+  Mods 界面展示 v2 Mod（常驻激活，只读）；重复注册被拒绝
+- ⚠️ **v2 Mod 语义**: 安装即常驻激活，无逐存档开关（与 v1 不同）；停用需移除文件
 
 ### 模板更新
 **文件**: `game/core/templates/mod_template/mod_template.rpy`
