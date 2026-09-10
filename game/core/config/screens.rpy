@@ -1024,6 +1024,13 @@ screen main_menu():
 
                     textbutton _("Help") action Help()
 
+                    # EN: In-game test runner entry, developer mode only.
+                    #     Label bk_test_runner lives in test_runner.rpy.
+                    # ZH: 游戏内测试入口，仅开发者模式显示。
+                    #     入口 label bk_test_runner 定义于 test_runner.rpy。
+                    if config.developer:
+                        textbutton _("Tests") action Start("bk_test_runner")
+
 
 
 label pick_resolution():
