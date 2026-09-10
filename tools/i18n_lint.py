@@ -14,7 +14,11 @@ i18n 审计脚本：扫描 game/core/**/*.rpy，找出不符合 i18n 最佳实�
 import re
 from pathlib import Path
 
-PROJECT_ROOT = Path(r"C:\Users\akxls\Documents\Code\BK\Brothel_King-pc")
+# EN: Resolve the project root from this file's location so the tool works
+#     on any machine/checkout (previously hardcoded to an old absolute path).
+# ZH: 从脚本所在位置推导项目根目录，保证在任何机器/检出上可用
+#     （此前硬编码了旧的绝对路径，已失效）。
+PROJECT_ROOT = Path(__file__).resolve().parent.parent
 GAME_DIR = PROJECT_ROOT / "game" / "core"
 
 # 不需要翻译的字符串集合

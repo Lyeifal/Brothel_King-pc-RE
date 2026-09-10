@@ -12,7 +12,11 @@ import subprocess
 import sys
 from pathlib import Path
 
-PROJECT_ROOT = Path(r"C:\Users\akxls\Documents\Code\BK\Brothel_King-pc")
+# EN: Resolve the project root from this file's location so the tool works
+#     on any machine/checkout (previously hardcoded to an old absolute path).
+# ZH: 从脚本所在位置推导项目根目录，保证在任何机器/检出上可用
+#     （此前硬编码了旧的绝对路径，已失效）。
+PROJECT_ROOT = Path(__file__).resolve().parent.parent
 PYTHON_EXE = PROJECT_ROOT / "lib" / "py3-windows-x86_64" / "python.exe"
 RENPY_LAUNCHER = PROJECT_ROOT / "Brothel_King.py"
 

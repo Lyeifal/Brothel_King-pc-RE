@@ -94,7 +94,7 @@ class MyEntity:
 | 工具 | 路径 | 用途 |
 |------|------|------|
 | `i18n_lint.py` | `tools/i18n_lint.py` | 扫描裸字符串、拼接文本、未包裹格式化等 i18n 问题 |
-| `verify_i18n.py` | `tools/verify_i18n.py` | 运行 `translate --count` + `lint`，断言无缺失翻译 |
+| `verify_i18n.py` | `tools/verify_i18n.py` | 运行 `translate --count` + `lint` + `i18n_lint.py`，断言无缺失翻译（当前基线：1433 dialogue + 118 string 缺失，为内容存量非代码缺陷） |
 | `audit_placeholders.py` | `tools/audit_placeholders.py` | 检查中文翻译与原文占位符是否一致 |
 | `export_empty_to_xlsx.py` | `tools/export_empty_to_xlsx.py` | 导出空翻译到 `temp/translations/to_translate_empty.xlsx` |
 | `import_translated_empty.py` | `tools/import_translated_empty.py` | 从 Excel 导回翻译 |
@@ -150,6 +150,8 @@ game\Brothel_King.py . lint
 | 机器翻译质量审核 | 🚧 持续 | 早期迁移的 ~3,500 对话块和 ~9,000 字符串为机翻，需运行时抽查 |
 | 剧情核心文本重点审核 | 🚧 持续 | chapter1-3、story_events 建议人工润色 |
 | Mod 内容翻译 | ⏳ 待规划 | `game/custom/` 内容默认保持原文；未来可通过统一字符串表支持 |
+| `tools/translate_sync.py` | ✅ 不实现（2026-06-25 决策） | "同步 strings.rpy 与 tl 文件 old/new"的需求已由现有工具链覆盖：缺失检测 = `verify_i18n.py`（`translate --count`）；占位符完整性 = `audit_placeholders.py`；空翻译导出/导回往返 = `export_empty_to_xlsx.py` / `import_translated_empty.py`；源字符串变更后由 Ren'Py `translate` 命令重写 tl 文件时清理陈旧条目。不重复造轮子。 |
+| i18n_lint 开发者面向误报 | 📝 记录 | `i18n_lint.py` 当前报 17 处 issue，全部位于开发者面向文本（dev console 输出、test runner 断言消息、异常消息），非玩家可见字符串，暂不包裹 `__()`；如后续需要可为工具增加路径白名单。 |
 
 ---
 

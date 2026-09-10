@@ -41,6 +41,9 @@ eaa368d  ── 修复4: generate_background残旧代码删除 (~35行)
 58d53d9  ── 修复6: ModAPIV2单例冲突 -> 独立 _instance 变量
 45e4086  ── 修复7: mod_template 移除残留的 my_mod.hooks 旧版引用
 (WIP)    ── 修复8: matchmaking screen声明行恢复 + 委托残留死代码清理 + generate_background计时返回 + foods->food
+c47440e  ── Phase 3任务1: Dev Console Shift+O 绑定修复 (shift_K_o + modal屏幕内补绑)
+30674f6  ── Phase 3任务2: ModAPIV2.cancel_hook 失效修复 + tools/verify_mod_api.py
+315e452  ── Phase 3任务3: Test Runner 组件冒烟测试 + bk_test_runner 主菜单入口
 ```
 
 **基线验证 (2026-09-10 会话)**: lint 通过（仅历史警告），游戏可正常启动至主菜单。
@@ -185,7 +188,7 @@ eaa368d  ── 修复4: generate_background残旧代码删除 (~35行)
 ### 特性
 - 版本化 API: `api_version = 2`
 - 能力标记: `requires = ["girl_traits", "events"]`
-- 15 个标准化钩子点 (HOOK_GIRL_GENERATED, HOOK_DAY_STARTING 等)
+- 16 个标准化钩子点 (HOOK_GIRL_GENERATED, HOOK_DAY_STARTING 等)
 - 钩子取消支持 (`cancel_hook`)
 - 本版不兼容旧 Mod (需求要求)
 
@@ -297,12 +300,12 @@ game/core/
 
 ## 9. 下一步优先事项
 
-1. **验证测试** — ✅ 部分完成 (2026-09-10): lint 通过 + 启动至主菜单正常；**待人工抽查**: 新游戏开档、一天结算、女孩面板/青楼/农场界面
+1. **验证测试** — ✅ 部分完成 (2026-09-10): lint 通过 + 启动至主菜单正常；**待人工抽查**: 新游戏开档、一天结算、女孩面板/青楼/农场界面；**Phase 3 增量**: 主菜单 Tests 按钮（developer mode）可运行组件冒烟测试
 2. **剩余方法迁移** — get_pic, randomize, change_preference 等
 3. **屏幕提取** — girl_stats, girl_log, level/perks 等
-4. **翻译工具** — `tools/translate_sync.py` 完善
-5. **Mod API v2 测试** — 验证钩子系统
-6. **Dev Console 快捷键** — 修复 Shift+O 绑定
+4. **翻译工具** — ✅ 已决策不实现 `translate_sync.py` (Phase 3): 同步需求由现有工具链覆盖——缺失检测 `verify_i18n.py`(`translate --count`)、占位符完整性 `audit_placeholders.py`、空翻译往返 `export_empty_to_xlsx.py`/`import_translated_empty.py`、陈旧条目由 Ren'Py `translate` 重写时清理。详见 `docs/I18N_ROADMAP.md` 第 6 节。另修复 `i18n_lint.py`/`verify_i18n.py` 硬编码旧路径（改为按脚本位置推导项目根）。
+5. **Mod API v2 测试** — ✅ 已完成 (Phase 3): `tools/verify_mod_api.py` 静态断言 + 桩环境全流程模拟（注册→触发→取消），`python tools/verify_mod_api.py` 全过；游戏内 `test_mod_api_v2` 冒烟 label 同步加入 Test Runner。**发现并修复**: `cancel_hook` 经 `execute_hook` 中转导致 context 永不达回调、永远返回 False。另注意：16 个 HOOK_* 常量（本文档此前写 15），且游戏代码目前没有任何 `execute_hook`/`cancel_hook` 调用点——钩子框架就绪但尚未接线。
+6. **Dev Console 快捷键** — ✅ 已修复 (Phase 3, c47440e): 根因有二——①keymap 绑定的是无修饰键 `K_o`（应为 `shift_K_o`）；②console screen 为 `modal True`，modal 阻断下层事件，underlay Keymap 在控制台显示期间收不到按键，无法关闭。修复：underlay 负责全局打开，屏幕内 `key "shift_K_o"` 负责关闭，输入框聚焦时忽略切换（避免输入大写 O 误关）。
 
 ---
 
