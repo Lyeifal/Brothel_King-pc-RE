@@ -2,7 +2,7 @@
 # Phase 6.3: In-game Python REPL with predefined commands for
 # inspecting game state, triggering events, and profiling.
 #
-# Toggle: backtick/tilde key (only in developer mode)
+# Toggle: Shift+O (only in developer mode)
 
 init -1 python:
 
