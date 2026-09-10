@@ -18,31 +18,31 @@ translate chinese_simplified strings:
 translate chinese_simplified intro_bf81a46e:
 
     # sill unknown "Master!"
-    sill unknown "看来你穿越Xeros的漫长旅程即将结束。"
+    sill unknown ""
 
 # game/core/content/intro.rpy:46
 translate chinese_simplified intro_f925164c:
 
     # sill "Master... {w}Please wake up!"
-    sill "看来你穿越Xeros的漫长旅程即将结束。"
+    sill ""
 
 # game/core/content/intro.rpy:58
 translate chinese_simplified intro_0ba2a2d5:
 
     # you "Sill?"
-    you "看来你穿越Xeros的漫长旅程即将结束。"
+    you ""
 
 # game/core/content/intro.rpy:66
 translate chinese_simplified intro_940d07b2:
 
     # sill happy "Yes, Master! Finally, you're awake."
-    sill happy "看来你穿越Xeros的漫长旅程即将结束。"
+    sill happy ""
 
 # game/core/content/intro.rpy:68
 translate chinese_simplified intro_f8993d61:
 
     # sill "We are nearing the city limits. The farmers we passed said we should see the highest towers after we leave the valley."
-    sill "看来你穿越Xeros的漫长旅程即将结束。"
+    sill ""
 
 # game/core/content/intro.rpy:76
 translate chinese_simplified intro_3e8000ce:
@@ -114,151 +114,151 @@ translate chinese_simplified intro_540be635:
 translate chinese_simplified intro_982a6218:
 
     # you "Why did I keep her already?" nointeract
-    you "看来你穿越Xeros的漫长旅程即将结束。" nointeract
+    you "" nointeract
 
 # game/core/content/intro.rpy:136
 translate chinese_simplified intro_3ac23432:
 
     # you "Well, she is more than a simple slave. Roaming this land wouldn't be the same without her."
-    you "看来你穿越Xeros的漫长旅程即将结束。"
+    you ""
 
 # game/core/content/intro.rpy:141
 translate chinese_simplified intro_24dd8b08:
 
     # you "Sell her and what, do my own laundry? Obedient slaves are so hard to come by these days..."
-    you "看来你穿越Xeros的漫长旅程即将结束。"
+    you ""
 
 # game/core/content/intro.rpy:147
 translate chinese_simplified intro_b0e996dc:
 
     # you "Never cared for the little brat. But someone has to drive the carriage when I'm sleeping..."
-    you "看来你穿越Xeros的漫长旅程即将结束。"
+    you ""
 
 # game/core/content/intro.rpy:150
 translate chinese_simplified intro_f929963c:
 
     # you "Besides, we have some good memories... Like that time..." nointeract
-    you "看来你穿越Xeros的漫长旅程即将结束。" nointeract
+    you "" nointeract
 
 # game/core/content/intro.rpy:178
 translate chinese_simplified sill_first_time_f71df0c8:
 
     # sill past "Oh! Master! Oh!"
-    sill past "看来你穿越Xeros的漫长旅程即将结束。"
+    sill past ""
 
 # game/core/content/intro.rpy:180
 translate chinese_simplified sill_first_time_763b469c:
 
     # sill "I feel so... Aaaah..."
-    sill "看来你穿越Xeros的漫长旅程即将结束。"
+    sill ""
 
 # game/core/content/intro.rpy:186
 translate chinese_simplified sill_first_time_5ea97539:
 
     # sill "Oh, aaaah! Maaaster..."
-    sill "看来你穿越Xeros的漫长旅程即将结束。"
+    sill ""
 
 # game/core/content/intro.rpy:188
 translate chinese_simplified sill_first_time_11b5e0e6:
 
     # sill "Master, aaaah... I'm... I'm cumiiiiing!!!"
-    sill "看来你穿越Xeros的漫长旅程即将结束。"
+    sill ""
 
 # game/core/content/intro.rpy:205
 translate chinese_simplified sill_public_48776f53:
 
     # sill past "Mahhher... Thehe ahe childhhen... Mmmh... coming..."
-    sill past "看来你穿越Xeros的漫长旅程即将结束。"
+    sill past ""
 
 # game/core/content/intro.rpy:206
 translate chinese_simplified sill_public_d3c22f00:
 
     # you "Hahaha... Let them look!"
-    you "看来你穿越Xeros的漫长旅程即将结束。"
+    you ""
 
 # game/core/content/intro.rpy:207
 translate chinese_simplified sill_public_0e78f42b:
 
     # you "I bet they've never seen a cock-hungry slave like you sucking a dick from up close!"
-    you "看来你穿越Xeros的漫长旅程即将结束。"
+    you ""
 
 # game/core/content/intro.rpy:208
 translate chinese_simplified sill_public_c6cdb8e4:
 
     # sill "Mahher!!! Donh't..."
-    sill "看来你穿越Xeros的漫长旅程即将结束。"
+    sill ""
 
 # game/core/content/intro.rpy:223
 translate chinese_simplified sill_spank_e4ce544c:
 
     # sill past "What's... What's going on?"
-    sill past "看来你穿越Xeros的漫长旅程即将结束。"
+    sill past ""
 
 # game/core/content/intro.rpy:229
 translate chinese_simplified sill_spank_daa03f08:
 
     # sill "Ow!"
-    sill "看来你穿越Xeros的漫长旅程即将结束。"
+    sill ""
 
 # game/core/content/intro.rpy:231
 translate chinese_simplified sill_spank_e4e7a0e4:
 
     # you "Silence, whore! You will only talk when addressed."
-    you "看来你穿越Xeros的漫长旅程即将结束。"
+    you ""
 
 # game/core/content/intro.rpy:237
 translate chinese_simplified sill_spank_00bb4f90:
 
     # sill "AAAHA!"
-    sill "看来你穿越Xeros的漫长旅程即将结束。"
+    sill ""
 
 # game/core/content/intro.rpy:239
 translate chinese_simplified sill_spank_72b85e3e:
 
     # you "Since you cannot seem to get the basics of discipline through your thick skull, I'll beat it into you proper."
-    you "看来你穿越Xeros的漫长旅程即将结束。"
+    you ""
 
 # game/core/content/intro.rpy:241
 translate chinese_simplified sill_spank_f23b4c09:
 
     # you "But first, let's see if I can fit THIS into your slutty little hole."
-    you "看来你穿越Xeros的漫长旅程即将结束。"
+    you ""
 
 # game/core/content/intro.rpy:245
 translate chinese_simplified sill_spank_dc795e73:
 
     # sill "Aaaah!!!"
-    sill "看来你穿越Xeros的漫长旅程即将结束。"
+    sill ""
 
 # game/core/content/intro.rpy:259
 translate chinese_simplified resume_intro_131476a8:
 
     # sill happy "...and that's how the Pharo dynasty rose to power in Zan, or so the innkeeper said. Fascinating story, isn't it, Master?"
-    sill happy "看来你穿越Xeros的漫长旅程即将结束。"
+    sill happy ""
 
 # game/core/content/intro.rpy:265
 translate chinese_simplified resume_intro_24353786:
 
     # sill "..."
-    sill "看来你穿越Xeros的漫长旅程即将结束。"
+    sill ""
 
 # game/core/content/intro.rpy:267
 translate chinese_simplified resume_intro_05abe805:
 
     # sill sad "Master? Were you listening?"
-    sill sad "看来你穿越Xeros的漫长旅程即将结束。"
+    sill sad ""
 
 # game/core/content/intro.rpy:269
 translate chinese_simplified resume_intro_a832ca80:
 
     # you "Uh... Well..."
-    you "看来你穿越Xeros的漫长旅程即将结束。"
+    you ""
 
 # game/core/content/intro.rpy:271
 translate chinese_simplified resume_intro_daf95156:
 
     # sill happy "Look, Master! We've reached the outer wall!"
-    sill happy "看来你穿越Xeros的漫长旅程即将结束。"
+    sill happy ""
 
 # game/core/content/intro.rpy:279
 translate chinese_simplified resume_intro_b98dd8c2:
@@ -294,43 +294,43 @@ translate chinese_simplified resume_intro_c143bd20:
 translate chinese_simplified resume_intro_076bb3ac:
 
     # guard "Who goes there?"
-    guard "看来你穿越Xeros的漫长旅程即将结束。"
+    guard ""
 
 # game/core/content/intro.rpy:294
 translate chinese_simplified resume_intro_5a1a4c43:
 
     # guard "[MC.name]? Odd name, for sure."
-    guard "看来你穿越Xeros的漫长旅程即将结束。"
+    guard ""
 
 # game/core/content/intro.rpy:296
 translate chinese_simplified resume_intro_3f917070:
 
     # sill happy "I am but a slave, sir. My name is..."
-    sill happy "看来你穿越Xeros的漫长旅程即将结束。"
+    sill happy ""
 
 # game/core/content/intro.rpy:298
 translate chinese_simplified resume_intro_4641be11:
 
     # guard "Silence, slave! No one cares who you are." with vpunch
-    guard "看来你穿越Xeros的漫长旅程即将结束。" with vpunch
+    guard "" with vpunch
 
 # game/core/content/intro.rpy:300
 translate chinese_simplified resume_intro_bfbe5329:
 
     # guard "State your business, stranger."
-    guard "看来你穿越Xeros的漫长旅程即将结束。"
+    guard ""
 
 # game/core/content/intro.rpy:303
 translate chinese_simplified resume_intro_39c9ff75:
 
     # you "I am..." nointeract
-    you "看来你穿越Xeros的漫长旅程即将结束。" nointeract
+    you "" nointeract
 
 # game/core/content/intro.rpy:309
 translate chinese_simplified resume_intro_40b7dd80:
 
     # you "I am a fighter from the Northern armies."
-    you "看来你穿越Xeros的漫长旅程即将结束。"
+    you ""
 
 # game/core/content/intro.rpy:313
 translate chinese_simplified resume_intro_32916bc6:
@@ -366,19 +366,19 @@ translate chinese_simplified resume_intro_bc90bf67:
 translate chinese_simplified resume_intro_f1792448:
 
     # guard "We have great respect for veterans here, Sir."
-    guard "看来你穿越Xeros的漫长旅程即将结束。"
+    guard ""
 
 # game/core/content/intro.rpy:323
 translate chinese_simplified resume_intro_6520075a:
 
     # guard "But do mind your manners while in town. Our quiet urban community is not to be mistaken for a battleground."
-    guard "看来你穿越Xeros的漫长旅程即将结束。"
+    guard ""
 
 # game/core/content/intro.rpy:333
 translate chinese_simplified resume_intro_38823c50:
 
     # you "I am a court mage from the Westmarch Principalities."
-    you "看来你穿越Xeros的漫长旅程即将结束。"
+    you ""
 
 # game/core/content/intro.rpy:338
 translate chinese_simplified resume_intro_474b9df7:
@@ -432,7 +432,7 @@ translate chinese_simplified resume_intro_30c09359:
 translate chinese_simplified resume_intro_8ce983bf:
 
     # guard "A wizard!"
-    guard "看来你穿越Xeros的漫长旅程即将结束。"
+    guard ""
 
 # game/core/content/intro.rpy:352
 translate chinese_simplified resume_intro_0a68ea71:
@@ -444,19 +444,19 @@ translate chinese_simplified resume_intro_0a68ea71:
 translate chinese_simplified resume_intro_3de00e30:
 
     # guard "There is no shortage of self-proclaimed mages and witches in Zan. I won't stop you... But wherever your kind goes, trouble is sure to follow."
-    guard "看来你穿越Xeros的漫长旅程即将结束。"
+    guard ""
 
 # game/core/content/intro.rpy:355
 translate chinese_simplified resume_intro_55327b02:
 
     # guard "I'll keep my eye on you, wizard, so don't step out of line. Otherwise it'll be my pleasure to escort you out of the city... or to the pit."
-    guard "看来你穿越Xeros的漫长旅程即将结束。"
+    guard ""
 
 # game/core/content/intro.rpy:363
 translate chinese_simplified resume_intro_4126abbe:
 
     # you "I am a proud member of the Xeros Traveling Merchant Guild."
-    you "看来你穿越Xeros的漫长旅程即将结束。"
+    you ""
 
 # game/core/content/intro.rpy:368
 translate chinese_simplified resume_intro_052a4d9a:
@@ -516,31 +516,31 @@ translate chinese_simplified resume_intro_7b27127e:
 translate chinese_simplified resume_intro_74809783:
 
     # guard "A peddler, eh? You don't seem to have a lot of goods about. Seen better luck, haven't you?"
-    guard "看来你穿越Xeros的漫长旅程即将结束。"
+    guard ""
 
 # game/core/content/intro.rpy:385
 translate chinese_simplified resume_intro_dde54fb6:
 
     # guard "Well, any man can make it in the City of Jade, or so they say. But stay on the right side of the law, merchant, or you will have to deal with me."
-    guard "看来你穿越Xeros的漫长旅程即将结束。"
+    guard ""
 
 # game/core/content/intro.rpy:392
 translate chinese_simplified resume_intro2_b7df2a5a:
 
     # guard "One more thing. Which god do you worship, [MC.playerclass]?"
-    guard "看来你穿越Xeros的漫长旅程即将结束。"
+    guard ""
 
 # game/core/content/intro.rpy:395
 translate chinese_simplified resume_intro2_4bf8fadb:
 
     # you "Me?" nointeract
-    you "看来你穿越Xeros的漫长旅程即将结束。" nointeract
+    you "" nointeract
 
 # game/core/content/intro.rpy:401
 translate chinese_simplified resume_intro2_4fb17e63:
 
     # guard "That is good, brother. I hope to see you often at the Cathedra to pray."
-    guard "看来你穿越Xeros的漫长旅程即将结束。"
+    guard ""
 
 # game/core/content/intro.rpy:407
 translate chinese_simplified resume_intro2_f126af47:
@@ -552,13 +552,13 @@ translate chinese_simplified resume_intro2_f126af47:
 translate chinese_simplified resume_intro2_4708be52:
 
     # guard "I knew you had that sneaky look about you... There are many shrines dedicated to the dark goddess in Zan, but I'm not the one to tell you where they are. Decent folks shouldn't meddle with the cursed one."
-    guard "看来你穿越Xeros的漫长旅程即将结束。"
+    guard ""
 
 # game/core/content/intro.rpy:415
 translate chinese_simplified resume_intro2_32b8a21b:
 
     # guard "What have we here, a free thinker? You must think oh so highly of yourself, not needing the protection of gods and all?"
-    guard "看来你穿越Xeros的漫长旅程即将结束。"
+    guard ""
 
 # game/core/content/intro.rpy:418
 translate chinese_simplified resume_intro2_81fcfecc:
@@ -570,13 +570,13 @@ translate chinese_simplified resume_intro2_81fcfecc:
 translate chinese_simplified resume_intro2_3075dc9d:
 
     # guard "All right, move along now. And be quiet. Good people are already asleep at this hour."
-    guard "看来你穿越Xeros的漫长旅程即将结束。"
+    guard ""
 
 # game/core/content/intro.rpy:426
 translate chinese_simplified resume_intro2_99b3765e:
 
     # sill sad "Aw, what a bully..."
-    sill sad "看来你穿越Xeros的漫长旅程即将结束。"
+    sill sad ""
 
 # game/core/content/intro.rpy:428
 translate chinese_simplified resume_intro2_def9a5b2:
@@ -594,25 +594,25 @@ translate chinese_simplified resume_intro2_5508145a:
 translate chinese_simplified resume_intro2_becd0c06:
 
     # you "Oh no..."
-    you "看来你穿越Xeros的漫长旅程即将结束。"
+    you ""
 
 # game/core/content/intro.rpy:441
 translate chinese_simplified resume_intro2_4f426239:
 
     # you "It's raining now."
-    you "看来你穿越Xeros的漫长旅程即将结束。"
+    you ""
 
 # game/core/content/intro.rpy:449
 translate chinese_simplified resume_intro2_0568131e:
 
     # you "Sill, hurry up! We have to find an inn."
-    you "看来你穿越Xeros的漫长旅程即将结束。"
+    you ""
 
 # game/core/content/intro.rpy:451
 translate chinese_simplified resume_intro2_e40f6f18:
 
     # sill sad "Yes Master, *pants*, I'm doing the best I can... *pants*"
-    sill sad "看来你穿越Xeros的漫长旅程即将结束。"
+    sill sad ""
 
 # game/core/content/intro.rpy:453
 translate chinese_simplified resume_intro2_f0c16af5:
@@ -624,19 +624,19 @@ translate chinese_simplified resume_intro2_f0c16af5:
 translate chinese_simplified resume_intro2_5de258a0:
 
     # you "Hurry up now will you... What's that?"
-    you "看来你穿越Xeros的漫长旅程即将结束。"
+    you ""
 
 # game/core/content/intro.rpy:462
 translate chinese_simplified resume_intro2_67705f15:
 
     # kuro "Aaaaaaah!" with vpunch
-    kuro "看来你穿越Xeros的漫长旅程即将结束。" with vpunch
+    kuro "" with vpunch
 
 # game/core/content/intro.rpy:464
 translate chinese_simplified resume_intro2_cf35385d:
 
     # kuro "Help me!"
-    kuro "看来你穿越Xeros的漫长旅程即将结束。"
+    kuro ""
 
 # game/core/content/intro.rpy:466
 translate chinese_simplified resume_intro2_96d4e3af:
@@ -654,73 +654,73 @@ translate chinese_simplified resume_intro2_130943ef:
 translate chinese_simplified resume_intro2_b9ca7b9f:
 
     # you "What's going on here?"
-    you "看来你穿越Xeros的漫长旅程即将结束。"
+    you ""
 
 # game/core/content/intro.rpy:484
 translate chinese_simplified resume_intro2_ee6ec26a:
 
     # kuro "Please, my good lord, please help me! These men are here to kill me!"
-    kuro "看来你穿越Xeros的漫长旅程即将结束。"
+    kuro ""
 
 # game/core/content/intro.rpy:495
 translate chinese_simplified resume_intro2_ee17d404:
 
     # thug1 "Now, now, citizen, don't you listen to that lying bitch. We're here on... official business."
-    thug1 "看来你穿越Xeros的漫长旅程即将结束。"
+    thug1 ""
 
 # game/core/content/intro.rpy:497
 translate chinese_simplified resume_intro2_79f324db:
 
     # thug2 "Yeah, orficial..."
-    thug2 "看来你穿越Xeros的漫长旅程即将结束。"
+    thug2 ""
 
 # game/core/content/intro.rpy:498
 translate chinese_simplified resume_intro2_214c66ae:
 
     # thug1 "'n we're just takin' her to be... interrogated."
-    thug1 "看来你穿越Xeros的漫长旅程即将结束。"
+    thug1 ""
 
 # game/core/content/intro.rpy:499
 translate chinese_simplified resume_intro2_ac49d471:
 
     # thug2 "Yeah, in taro gated..."
-    thug2 "看来你穿越Xeros的漫长旅程即将结束。"
+    thug2 ""
 
 # game/core/content/intro.rpy:500
 translate chinese_simplified resume_intro2_d3f90e66:
 
     # thug1 "So no cause for alarm, here, you see... Now be on your way, citizen, for your own sake."
-    thug1 "看来你穿越Xeros的漫长旅程即将结束。"
+    thug1 ""
 
 # game/core/content/intro.rpy:502
 translate chinese_simplified resume_intro2_82a29aa8:
 
     # thug2 "Yeah, that's none of yer business! So back off, will ye."
-    thug2 "看来你穿越Xeros的漫长旅程即将结束。"
+    thug2 ""
 
 # game/core/content/intro.rpy:504
 translate chinese_simplified resume_intro2_dae0ec55:
 
     # you "..."
-    you "看来你穿越Xeros的漫长旅程即将结束。"
+    you ""
 
 # game/core/content/intro.rpy:506
 translate chinese_simplified resume_intro2_4f635bd8:
 
     # you "Did you think I'd fall for that, punks?"
-    you "看来你穿越Xeros的漫长旅程即将结束。"
+    you ""
 
 # game/core/content/intro.rpy:516
 translate chinese_simplified resume_intro2_9a03745f:
 
     # you "Well, what do we have here?"
-    you "看来你穿越Xeros的漫长旅程即将结束。"
+    you ""
 
 # game/core/content/intro.rpy:521
 translate chinese_simplified resume_intro2_ee6ec26a_1:
 
     # kuro "Please, my good lord, please help me! These men are here to kill me!"
-    kuro "看来你穿越Xeros的漫长旅程即将结束。"
+    kuro ""
 
 # game/core/content/intro.rpy:531
 translate chinese_simplified resume_intro2_e2d41a8f:
@@ -732,217 +732,217 @@ translate chinese_simplified resume_intro2_e2d41a8f:
 translate chinese_simplified resume_intro2_0450b8ad:
 
     # you "Two big men attacking a lone woman.."
-    you "看来你穿越Xeros的漫长旅程即将结束。"
+    you ""
 
 # game/core/content/intro.rpy:535
 translate chinese_simplified resume_intro2_1269d5ec:
 
     # you "Such bravery! They'll sing songs about you!"
-    you "看来你穿越Xeros的漫长旅程即将结束。"
+    you ""
 
 # game/core/content/intro.rpy:537
 translate chinese_simplified resume_intro2_f2eac70c:
 
     # thug2 "You..."
-    thug2 "看来你穿越Xeros的漫长旅程即将结束。"
+    thug2 ""
 
 # game/core/content/intro.rpy:538
 translate chinese_simplified resume_intro2_0a1007aa:
 
     # thug1 "Careful boy... This is not your fight, so back off now!"
-    thug1 "看来你穿越Xeros的漫长旅程即将结束。"
+    thug1 ""
 
 # game/core/content/intro.rpy:540
 translate chinese_simplified resume_intro2_432508f5:
 
     # you "So those are the faces of cowardice... Ugly faces, to be sure..."
-    you "看来你穿越Xeros的漫长旅程即将结束。"
+    you ""
 
 # game/core/content/intro.rpy:542
 translate chinese_simplified resume_intro2_b8870258:
 
     # thug2 "Whaddaya mean by that, the feces of kawadice? Speak proper Xerossi, dammit!"
-    thug2 "看来你穿越Xeros的漫长旅程即将结束。"
+    thug2 ""
 
 # game/core/content/intro.rpy:544
 translate chinese_simplified resume_intro2_680bb97e:
 
     # you "It means you're a big, nasty piece of shit, and that I'll have to clean up my boot real good after I shove it in your face!"
-    you "看来你穿越Xeros的漫长旅程即将结束。"
+    you ""
 
 # game/core/content/intro.rpy:546
 translate chinese_simplified resume_intro2_40a44b4f:
 
     # thug2 "Ya hear that cousin? He's ansultin' us! Let's take him!!!"
-    thug2 "看来你穿越Xeros的漫长旅程即将结束。"
+    thug2 ""
 
 # game/core/content/intro.rpy:559
 translate chinese_simplified resume_intro2_22f082a2:
 
     # kuro "Help me! These men are here to kill me!"
-    kuro "看来你穿越Xeros的漫长旅程即将结束。"
+    kuro ""
 
 # game/core/content/intro.rpy:561
 translate chinese_simplified resume_intro2_4e4ccc22:
 
     # you "This is none of my concern... Sill, let's go."
-    you "看来你穿越Xeros的漫长旅程即将结束。"
+    you ""
 
 # game/core/content/intro.rpy:563
 translate chinese_simplified resume_intro2_d1859b15:
 
     # kuro "Please, someone, anyone! Please help!"
-    kuro "看来你穿越Xeros的漫长旅程即将结束。"
+    kuro ""
 
 # game/core/content/intro.rpy:565
 translate chinese_simplified resume_intro2_205d0e30:
 
     # sill "But... Master..."
-    sill "看来你穿越Xeros的漫长旅程即将结束。"
+    sill ""
 
 # game/core/content/intro.rpy:567
 translate chinese_simplified resume_intro2_4b2b913c:
 
     # you "Shut up, Sill, and move it. We're leaving this place."
-    you "看来你穿越Xeros的漫长旅程即将结束。"
+    you ""
 
 # game/core/content/intro.rpy:569
 translate chinese_simplified resume_intro2_0bb92939:
 
     # thug1 "Wait a minute!"
-    thug1 "看来你穿越Xeros的漫长旅程即将结束。"
+    thug1 ""
 
 # game/core/content/intro.rpy:575
 translate chinese_simplified resume_intro2_f60bc48e:
 
     # thug1 "What have we here?"
-    thug1 "看来你穿越Xeros的漫长旅程即将结束。"
+    thug1 ""
 
 # game/core/content/intro.rpy:577
 translate chinese_simplified resume_intro2_d1a28bc3:
 
     # thug1 "So you two little birds have been eavesdropping, uh?"
-    thug1 "看来你穿越Xeros的漫长旅程即将结束。"
+    thug1 ""
 
 # game/core/content/intro.rpy:579
 translate chinese_simplified resume_intro2_2043e3eb:
 
     # you "Dammit."
-    you "看来你穿越Xeros的漫长旅程即将结束。"
+    you ""
 
 # game/core/content/intro.rpy:585
 translate chinese_simplified resume_intro2_07e4fe09:
 
     # thug2 "What were they droppin', cousin?"
-    thug2 "看来你穿越Xeros的漫长旅程即将结束。"
+    thug2 ""
 
 # game/core/content/intro.rpy:587
 translate chinese_simplified resume_intro2_06bb64be:
 
     # thug1 "Eavesdropping you idiot! It means they've been listening to us, and you know what the boss said... No witnesses."
-    thug1 "看来你穿越Xeros的漫长旅程即将结束。"
+    thug1 ""
 
 # game/core/content/intro.rpy:590
 translate chinese_simplified resume_intro2_c64729da:
 
     # thug2 "Oh, that's right..."
-    thug2 "看来你穿越Xeros的漫长旅程即将结束。"
+    thug2 ""
 
 # game/core/content/intro.rpy:592
 translate chinese_simplified resume_intro2_28266d6e:
 
     # thug2 "Hey, cousin, did you see that lil' hotty, with the pink hair?"
-    thug2 "看来你穿越Xeros的漫长旅程即将结束。"
+    thug2 ""
 
 # game/core/content/intro.rpy:594
 translate chinese_simplified resume_intro2_8725e437:
 
     # thug2 "I'm gonna have me some fun with her! After we're through with the noble bitch..."
-    thug2 "看来你穿越Xeros的漫长旅程即将结束。"
+    thug2 ""
 
 # game/core/content/intro.rpy:597
 translate chinese_simplified resume_intro2_dae0ec55_1:
 
     # you "..."
-    you "看来你穿越Xeros的漫长旅程即将结束。"
+    you ""
 
 # game/core/content/intro.rpy:599
 translate chinese_simplified resume_intro2_742abcd0:
 
     # you "I don't think so."
-    you "看来你穿越Xeros的漫长旅程即将结束。"
+    you ""
 
 # game/core/content/intro.rpy:606
 translate chinese_simplified resume_intro3_be6b0d0b:
 
     # thug1 "..."
-    thug1 "看来你穿越Xeros的漫长旅程即将结束。"
+    thug1 ""
 
 # game/core/content/intro.rpy:608
 translate chinese_simplified resume_intro3_9e8680b8:
 
     # thug1 "All right, then... You just dug your own grave, you nosy bastard!"
-    thug1 "看来你穿越Xeros的漫长旅程即将结束。"
+    thug1 ""
 
 # game/core/content/intro.rpy:611
 translate chinese_simplified resume_intro3_a0a7cf74:
 
     # you "Sill, fetch my swords."
-    you "看来你穿越Xeros的漫长旅程即将结束。"
+    you ""
 
 # game/core/content/intro.rpy:614
 translate chinese_simplified resume_intro3_9c5ff660:
 
     # you "Sill, hand me the staff."
-    you "看来你穿越Xeros的漫长旅程即将结束。"
+    you ""
 
 # game/core/content/intro.rpy:617
 translate chinese_simplified resume_intro3_246de6a5:
 
     # you "Sill, you know what to do."
-    you "看来你穿越Xeros的漫长旅程即将结束。"
+    you ""
 
 # game/core/content/intro.rpy:619
 translate chinese_simplified resume_intro3_55110f61:
 
     # sill "Yes Master!"
-    sill "看来你穿越Xeros的漫长旅程即将结束。"
+    sill ""
 
 # game/core/content/intro.rpy:621
 translate chinese_simplified resume_intro3_6ca466a2:
 
     # kuro "Watch out!"
-    kuro "看来你穿越Xeros的漫长旅程即将结束。"
+    kuro ""
 
 # game/core/content/intro.rpy:629
 translate chinese_simplified resume_intro3_490b47c3:
 
     # thug1 "Now..."
-    thug1 "看来你穿越Xeros的漫长旅程即将结束。"
+    thug1 ""
 
 # game/core/content/intro.rpy:630
 translate chinese_simplified resume_intro3_f2eac70c:
 
     # thug2 "You..."
-    thug2 "看来你穿越Xeros的漫长旅程即将结束。"
+    thug2 ""
 
 # game/core/content/intro.rpy:631
 translate chinese_simplified resume_intro3_9e399200:
 
     # thug1 "DIE!"
-    thug1 "看来你穿越Xeros的漫长旅程即将结束。"
+    thug1 ""
 
 # game/core/content/intro.rpy:635
 translate chinese_simplified resume_intro3_c50523ee:
 
     # you "Haa!"
-    you "看来你穿越Xeros的漫长旅程即将结束。"
+    you ""
 
 # game/core/content/intro.rpy:640
 translate chinese_simplified resume_intro3_882c8269:
 
     # thug1 "Aaaw!"
-    thug1 "看来你穿越Xeros的漫长旅程即将结束。"
+    thug1 ""
 
 # game/core/content/intro.rpy:647
 translate chinese_simplified resume_intro3_d423ad70:
@@ -954,7 +954,7 @@ translate chinese_simplified resume_intro3_d423ad70:
 translate chinese_simplified resume_intro3_b6b6e8fe:
 
     # thug2 "Aaaaargh!!!"
-    thug2 "看来你穿越Xeros的漫长旅程即将结束。"
+    thug2 ""
 
 # game/core/content/intro.rpy:653
 translate chinese_simplified resume_intro3_bf2dea4c:
@@ -966,7 +966,7 @@ translate chinese_simplified resume_intro3_bf2dea4c:
 translate chinese_simplified resume_intro3_65a36caa:
 
     # thug2 "Aaarh... Arrhhh..."
-    thug2 "看来你穿越Xeros的漫长旅程即将结束。"
+    thug2 ""
 
 # game/core/content/intro.rpy:660
 translate chinese_simplified resume_intro3_c034af85:
@@ -978,13 +978,13 @@ translate chinese_simplified resume_intro3_c034af85:
 translate chinese_simplified resume_intro3_a2fbc6f3:
 
     # you "Shazam!"
-    you "看来你穿越Xeros的漫长旅程即将结束。"
+    you ""
 
 # game/core/content/intro.rpy:681
 translate chinese_simplified resume_intro3_a40fe476:
 
     # thug2 "AAAAAAAAARRRRRRRRHHHHHHHHH!!!"
-    thug2 "看来你穿越Xeros的漫长旅程即将结束。"
+    thug2 ""
 
 # game/core/content/intro.rpy:684
 translate chinese_simplified resume_intro3_09425a4b:
@@ -996,7 +996,7 @@ translate chinese_simplified resume_intro3_09425a4b:
 translate chinese_simplified resume_intro3_c7346051:
 
     # thug1 "Cou... cousin?"
-    thug1 "看来你穿越Xeros的漫长旅程即将结束。"
+    thug1 ""
 
 # game/core/content/intro.rpy:691
 translate chinese_simplified resume_intro3_e7dfe71e:
@@ -1008,13 +1008,13 @@ translate chinese_simplified resume_intro3_e7dfe71e:
 translate chinese_simplified resume_intro3_1313268c:
 
     # thug1 "What?"
-    thug1 "看来你穿越Xeros的漫长旅程即将结束。"
+    thug1 ""
 
 # game/core/content/intro.rpy:702
 translate chinese_simplified resume_intro3_94f2e604:
 
     # drogon "Hyarrrrrrr!"
-    drogon "看来你穿越Xeros的漫长旅程即将结束。"
+    drogon ""
 
 # game/core/content/intro.rpy:706
 translate chinese_simplified resume_intro3_71362c76:
@@ -1026,55 +1026,55 @@ translate chinese_simplified resume_intro3_71362c76:
 translate chinese_simplified resume_intro3_11198b56:
 
     # thug2 "AAAAARRRRRRGHHH!!!"
-    thug2 "看来你穿越Xeros的漫长旅程即将结束。"
+    thug2 ""
 
 # game/core/content/intro.rpy:718
 translate chinese_simplified resume_intro3_782c1539:
 
     # thug1 "Wh... What sorcery is this???"
-    thug1 "看来你穿越Xeros的漫长旅程即将结束。"
+    thug1 ""
 
 # game/core/content/intro.rpy:720
 translate chinese_simplified resume_intro3_80feca77:
 
     # you "Haha! Meet Drogon, my pet."
-    you "看来你穿越Xeros的漫长旅程即将结束。"
+    you ""
 
 # game/core/content/intro.rpy:723
 translate chinese_simplified resume_intro3_7a51c857:
 
     # drogon "Rrrr!"
-    drogon "看来你穿越Xeros的漫长旅程即将结束。"
+    drogon ""
 
 # game/core/content/intro.rpy:728
 translate chinese_simplified resume_intro3_8ebc5922:
 
     # thug1 "A pet... Dragon???"
-    thug1 "看来你穿越Xeros的漫长旅程即将结束。"
+    thug1 ""
 
 # game/core/content/intro.rpy:730
 translate chinese_simplified resume_intro3_99e82bfa:
 
     # you "Yes, a pet dragon! I acquired this one in the far East, all the way across the Blood Sea, when he was but an egg."
-    you "看来你穿越Xeros的漫长旅程即将结束。"
+    you ""
 
 # game/core/content/intro.rpy:733
 translate chinese_simplified resume_intro3_035d8eb1:
 
     # you "I retrieved it from the funeral pyre of some petty nomad king, incinerated with his western bride and a slave witch, if you can believe it. But long story short..."
-    you "看来你穿越Xeros的漫长旅程即将结束。"
+    you ""
 
 # game/core/content/intro.rpy:736
 translate chinese_simplified resume_intro3_00dee828:
 
     # you "Do you want to be his next snack so badly?"
-    you "看来你穿越Xeros的漫长旅程即将结束。"
+    you ""
 
 # game/core/content/intro.rpy:741
 translate chinese_simplified resume_intro3_455ad294:
 
     # thug1 "You... Damn you!"
-    thug1 "看来你穿越Xeros的漫长旅程即将结束。"
+    thug1 ""
 
 # game/core/content/intro.rpy:749
 translate chinese_simplified resume_intro3_dd8ea13a:
@@ -1086,73 +1086,73 @@ translate chinese_simplified resume_intro3_dd8ea13a:
 translate chinese_simplified resume_intro3_b48937e9:
 
     # kuro "Thank you, my champion, you fought bravely."
-    kuro "看来你穿越Xeros的漫长旅程即将结束。"
+    kuro ""
 
 # game/core/content/intro.rpy:771
 translate chinese_simplified resume_intro3_cd0570d6:
 
     # sill "Well, Drogon did most of the work! Teehee..."
-    sill "看来你穿越Xeros的漫长旅程即将结束。"
+    sill ""
 
 # game/core/content/intro.rpy:774
 translate chinese_simplified resume_intro3_b7fca918:
 
     # drogon "Rrrrh!"
-    drogon "看来你穿越Xeros的漫长旅程即将结束。"
+    drogon ""
 
 # game/core/content/intro.rpy:776
 translate chinese_simplified resume_intro3_353b9b49:
 
     # sill "You're tired now, aren't you? Poor little baby is too young to fight..."
-    sill "看来你穿越Xeros的漫长旅程即将结束。"
+    sill ""
 
 # game/core/content/intro.rpy:778
 translate chinese_simplified resume_intro3_2d73c6bc:
 
     # you "Shut up, you two!"
-    you "看来你穿越Xeros的漫长旅程即将结束。"
+    you ""
 
 # game/core/content/intro.rpy:784
 translate chinese_simplified resume_intro3_318843c0:
 
     # sill happy "Yes! Master is the best!"
-    sill happy "看来你穿越Xeros的漫长旅程即将结束。"
+    sill happy ""
 
 # game/core/content/intro.rpy:786
 translate chinese_simplified resume_intro3_fe3dcf1c:
 
     # you "Please. It was nothing."
-    you "看来你穿越Xeros的漫长旅程即将结束。"
+    you ""
 
 # game/core/content/intro.rpy:789
 translate chinese_simplified resume_intro3_63bf6e93:
 
     # kuro "Thank you, from the bottom of my heart."
-    kuro "看来你穿越Xeros的漫长旅程即将结束。"
+    kuro ""
 
 # game/core/content/intro.rpy:791
 translate chinese_simplified resume_intro3_86901b80:
 
     # kuro "Forgive me though, but I have to leave now. Others like them are on my trail, and I must make it to safety as quickly as I can."
-    kuro "看来你穿越Xeros的漫长旅程即将结束。"
+    kuro ""
 
 # game/core/content/intro.rpy:794
 translate chinese_simplified resume_intro3_8e5a05c7:
 
     # kuro "But you have saved my life, and my honor. I am in your debt."
-    kuro "看来你穿越Xeros的漫长旅程即将结束。"
+    kuro ""
 
 # game/core/content/intro.rpy:795
 translate chinese_simplified resume_intro3_cdb8eeea:
 
     # kuro "Seek the house of master Gio. He is a friend of my family, and he will reward you."
-    kuro "看来你穿越Xeros的漫长旅程即将结束。"
+    kuro ""
 
 # game/core/content/intro.rpy:797
 translate chinese_simplified resume_intro3_ea211000:
 
     # sill "But wait, who..."
-    sill "看来你穿越Xeros的漫长旅程即将结束。"
+    sill ""
 
 # game/core/content/intro.rpy:802
 translate chinese_simplified resume_intro3_37d7d16a:
@@ -1164,25 +1164,25 @@ translate chinese_simplified resume_intro3_37d7d16a:
 translate chinese_simplified resume_intro3_f257587b:
 
     # sill "I hope she'll be ok..."
-    sill "看来你穿越Xeros的漫长旅程即将结束。"
+    sill ""
 
 # game/core/content/intro.rpy:807
 translate chinese_simplified resume_intro3_4edbb086:
 
     # you "Well, she's out of our hands now. But let's check out that Gio fellow."
-    you "看来你穿越Xeros的漫长旅程即将结束。"
+    you ""
 
 # game/core/content/intro.rpy:809
 translate chinese_simplified resume_intro3_5612471a:
 
     # sill "We can ask at the next inn."
-    sill "看来你穿越Xeros的漫长旅程即将结束。"
+    sill ""
 
 # game/core/content/intro.rpy:811
 translate chinese_simplified resume_intro3_7c928c6e:
 
     # you "She looked like a high-born lady, and attractive to boot. This might be my lucky day..."
-    you "看来你穿越Xeros的漫长旅程即将结束。"
+    you ""
 
 # game/core/content/intro.rpy:820
 translate chinese_simplified resume_intro3_337f8f73:
@@ -1200,565 +1200,565 @@ translate chinese_simplified resume_intro3_a20cefa7:
 translate chinese_simplified resume_intro3_70395f9c:
 
     # maid "What is it?"
-    maid "看来你穿越Xeros的漫长旅程即将结束。"
+    maid ""
 
 # game/core/content/intro.rpy:830
 translate chinese_simplified resume_intro3_68242a65:
 
     # you "I apologize for coming at such a late hour. I need to speak with master Gio."
-    you "看来你穿越Xeros的漫长旅程即将结束。"
+    you ""
 
 # game/core/content/intro.rpy:832
 translate chinese_simplified resume_intro3_546511ce:
 
     # maid "..."
-    maid "看来你穿越Xeros的漫长旅程即将结束。"
+    maid ""
 
 # game/core/content/intro.rpy:834
 translate chinese_simplified resume_intro3_755a7541:
 
     # maid "Yes, come in my lord."
-    maid "看来你穿越Xeros的漫长旅程即将结束。"
+    maid ""
 
 # game/core/content/intro.rpy:844
 translate chinese_simplified resume_intro3_3686d57d:
 
     # maid "Welcome, my lord."
-    maid "看来你穿越Xeros的漫长旅程即将结束。"
+    maid ""
 
 # game/core/content/intro.rpy:845
 translate chinese_simplified resume_intro3_96638890:
 
     # maid "I will take you to master Gio."
-    maid "看来你穿越Xeros的漫长旅程即将结束。"
+    maid ""
 
 # game/core/content/intro.rpy:853
 translate chinese_simplified resume_intro3_259a41c6:
 
     # maid "Master, your guest has arrived."
-    maid "看来你穿越Xeros的漫长旅程即将结束。"
+    maid ""
 
 # game/core/content/intro.rpy:857
 translate chinese_simplified resume_intro3_476c405d:
 
     # gio "Ah, very well, Minako. You may leave us."
-    gio "看来你穿越Xeros的漫长旅程即将结束。"
+    gio ""
 
 # game/core/content/intro.rpy:861
 translate chinese_simplified resume_intro3_ef714159:
 
     # maid "Yes master."
-    maid "看来你穿越Xeros的漫长旅程即将结束。"
+    maid ""
 
 # game/core/content/intro.rpy:865
 translate chinese_simplified resume_intro3_7acb4654:
 
     # you "Greetings, master Gio. My name is..."
-    you "看来你穿越Xeros的漫长旅程即将结束。"
+    you ""
 
 # game/core/content/intro.rpy:867
 translate chinese_simplified resume_intro3_901defd2:
 
     # gio "I know who you are. [MC.name], the [MC.playerclass]. Sit down and relax, you're among friends."
-    gio "看来你穿越Xeros的漫长旅程即将结束。"
+    gio ""
 
 # game/core/content/intro.rpy:870
 translate chinese_simplified resume_intro3_ffdd600a:
 
     # you "Wait... How?"
-    you "看来你穿越Xeros的漫长旅程即将结束。"
+    you ""
 
 # game/core/content/intro.rpy:872
 translate chinese_simplified resume_intro3_a909eda0:
 
     # gio "I am Gio Fratello, or Shady Gio, as they call me."
-    gio "看来你穿越Xeros的漫长旅程即将结束。"
+    gio ""
 
 # game/core/content/intro.rpy:874
 translate chinese_simplified resume_intro3_26d0f85b:
 
     # gio "One of my jobs is to know about anyone unusual who comes and goes in this city. And that alone is a lot of work..."
-    gio "看来你穿越Xeros的漫长旅程即将结束。"
+    gio ""
 
 # game/core/content/intro.rpy:877
 translate chinese_simplified resume_intro3_7bb98c3e:
 
     # you "I see. Gio, I apologize for the late hour..."
-    you "看来你穿越Xeros的漫长旅程即将结束。"
+    you ""
 
 # game/core/content/intro.rpy:879
 translate chinese_simplified resume_intro3_c3a9758c:
 
     # gio "Oh, don't sweat it. The Princess said you would come over, and I do most of my business at night, anyway."
-    gio "看来你穿越Xeros的漫长旅程即将结束。"
+    gio ""
 
 # game/core/content/intro.rpy:884
 translate chinese_simplified resume_intro3_3f1f5faa:
 
     # you "The Princess?"
-    you "看来你穿越Xeros的漫长旅程即将结束。"
+    you ""
 
 # game/core/content/intro.rpy:886
 translate chinese_simplified resume_intro3_64fb6224:
 
     # gio "Ah, yes of course, the Princess. Could it be you don't know who she is?"
-    gio "看来你穿越Xeros的漫长旅程即将结束。"
+    gio ""
 
 # game/core/content/intro.rpy:888
 translate chinese_simplified resume_intro3_953b7d09:
 
     # gio "You're from a faraway land, I forgot..."
-    gio "看来你穿越Xeros的漫长旅程即将结束。"
+    gio ""
 
 # game/core/content/intro.rpy:890
 translate chinese_simplified resume_intro3_cd78e6c7:
 
     # gio "Well, I'm not going to spoil the surprise here. I'm sure you'll meet her properly when the time is right."
-    gio "看来你穿越Xeros的漫长旅程即将结束。"
+    gio ""
 
 # game/core/content/intro.rpy:893
 translate chinese_simplified resume_intro3_9c1aa295:
 
     # sill sad "Wait! Don't leave us hanging there!"
-    sill sad "看来你穿越Xeros的漫长旅程即将结束。"
+    sill sad ""
 
 # game/core/content/intro.rpy:895
 translate chinese_simplified resume_intro3_fe43fc3c:
 
     # gio "Hahahaha! I got where I am now by asking questions, not answering them, little girl."
-    gio "看来你穿越Xeros的漫长旅程即将结束。"
+    gio ""
 
 # game/core/content/intro.rpy:897
 translate chinese_simplified resume_intro3_7fbdda74:
 
     # gio "Anyway, friend, I'm sure you're tired from your trip, and eager to get some rest."
-    gio "看来你穿越Xeros的漫长旅程即将结束。"
+    gio ""
 
 # game/core/content/intro.rpy:899
 translate chinese_simplified resume_intro3_89f191b3:
 
     # gio "But indulge me for a few moments, if you will, because we need to discuss your reward."
-    gio "看来你穿越Xeros的漫长旅程即将结束。"
+    gio ""
 
 # game/core/content/intro.rpy:901
 translate chinese_simplified resume_intro3_42a832d7:
 
     # you "I'm all ears."
-    you "看来你穿越Xeros的漫长旅程即将结束。"
+    you ""
 
 # game/core/content/intro.rpy:903
 translate chinese_simplified resume_intro3_498e574c:
 
     # gio "The Princess mentioned a certain sum of money... {w}That I don't have available right now."
-    gio "看来你穿越Xeros的漫长旅程即将结束。"
+    gio ""
 
 # game/core/content/intro.rpy:905
 translate chinese_simplified resume_intro3_c81a54ef:
 
     # gio "In fact, I don't expect to have such cash ready anytime soon."
-    gio "看来你穿越Xeros的漫长旅程即将结束。"
+    gio ""
 
 # game/core/content/intro.rpy:907
 translate chinese_simplified resume_intro3_e71459ee:
 
     # you "*frown*"
-    you "看来你穿越Xeros的漫长旅程即将结束。"
+    you ""
 
 # game/core/content/intro.rpy:909
 translate chinese_simplified resume_intro3_a2738123:
 
     # gio "But wait... It is my understanding that you have come to the city to strike it rich, am I right?"
-    gio "看来你穿越Xeros的漫长旅程即将结束。"
+    gio ""
 
 # game/core/content/intro.rpy:912
 translate chinese_simplified resume_intro3_dae0ec55:
 
     # you "..."
-    you "看来你穿越Xeros的漫长旅程即将结束。"
+    you ""
 
 # game/core/content/intro.rpy:914
 translate chinese_simplified resume_intro3_ebba0da0:
 
     # gio "So I am ready to offer you something a lot better than petty cash... And of similar value to the reward the Princess wanted me to give you."
-    gio "看来你穿越Xeros的漫长旅程即将结束。"
+    gio ""
 
 # game/core/content/intro.rpy:917
 translate chinese_simplified resume_intro3_a9bcb5b5:
 
     # you "Go on."
-    you "看来你穿越Xeros的漫长旅程即将结束。"
+    you ""
 
 # game/core/content/intro.rpy:919
 translate chinese_simplified resume_intro3_107b2420:
 
     # gio "What do you know about power, young man?"
-    gio "看来你穿越Xeros的漫长旅程即将结束。"
+    gio ""
 
 # game/core/content/intro.rpy:921
 translate chinese_simplified resume_intro3_9ceef99f:
 
     # you "Power?"
-    you "看来你穿越Xeros的漫长旅程即将结束。"
+    you ""
 
 # game/core/content/intro.rpy:923
 translate chinese_simplified resume_intro3_40005353:
 
     # gio "Yes. What is power?"
-    gio "看来你穿越Xeros的漫长旅程即将结束。"
+    gio ""
 
 # game/core/content/intro.rpy:925
 translate chinese_simplified resume_intro3_3c7ec6d4:
 
     # you "Hmm."
-    you "看来你穿越Xeros的漫长旅程即将结束。"
+    you ""
 
 # game/core/content/intro.rpy:928
 translate chinese_simplified resume_intro3_47d8ec09:
 
     # you "Power... hangs at the tip of a sword."
-    you "看来你穿越Xeros的漫长旅程即将结束。"
+    you ""
 
 # game/core/content/intro.rpy:931
 translate chinese_simplified resume_intro3_10ff4894:
 
     # you "Power resides in magic."
-    you "看来你穿越Xeros的漫长旅程即将结束。"
+    you ""
 
 # game/core/content/intro.rpy:934
 translate chinese_simplified resume_intro3_6451c416:
 
     # you "Money is power."
-    you "看来你穿越Xeros的漫长旅程即将结束。"
+    you ""
 
 # game/core/content/intro.rpy:936
 translate chinese_simplified resume_intro3_beea074f:
 
     # gio "Haha, it is true to some extent, my friend."
-    gio "看来你穿越Xeros的漫长旅程即将结束。"
+    gio ""
 
 # game/core/content/intro.rpy:938
 translate chinese_simplified resume_intro3_ab2d04c8:
 
     # gio "But even that is not 'true' power."
-    gio "看来你穿越Xeros的漫长旅程即将结束。"
+    gio ""
 
 # game/core/content/intro.rpy:940
 translate chinese_simplified resume_intro3_043ed033:
 
     # you "Then what?"
-    you "看来你穿越Xeros的漫长旅程即将结束。"
+    you ""
 
 # game/core/content/intro.rpy:942
 translate chinese_simplified resume_intro3_61b610f9:
 
     # gio "Sex."
-    gio "看来你穿越Xeros的漫长旅程即将结束。"
+    gio ""
 
 # game/core/content/intro.rpy:944
 translate chinese_simplified resume_intro3_cdd9076e:
 
     # you "Uh?"
-    you "看来你穿越Xeros的漫长旅程即将结束。"
+    you ""
 
 # game/core/content/intro.rpy:946
 translate chinese_simplified resume_intro3_cd2ed6fd:
 
     # gio "Sex is where real power resides."
-    gio "看来你穿越Xeros的漫长旅程即将结束。"
+    gio ""
 
 # game/core/content/intro.rpy:948
 translate chinese_simplified resume_intro3_076c2404:
 
     # sill "S... Sex?"
-    sill "看来你穿越Xeros的漫长旅程即将结束。"
+    sill ""
 
 # game/core/content/intro.rpy:950
 translate chinese_simplified resume_intro3_55e1dee0:
 
     # gio "Yes, sex! Everything is about sex, sweetheart... Except sex."
-    gio "看来你穿越Xeros的漫长旅程即将结束。"
+    gio ""
 
 # game/core/content/intro.rpy:952
 translate chinese_simplified resume_intro3_622ebecb:
 
     # gio "Sex is about power."
-    gio "看来你穿越Xeros的漫长旅程即将结束。"
+    gio ""
 
 # game/core/content/intro.rpy:954
 translate chinese_simplified resume_intro3_24353786:
 
     # sill "..."
-    sill "看来你穿越Xeros的漫长旅程即将结束。"
+    sill ""
 
 # game/core/content/intro.rpy:956
 translate chinese_simplified resume_intro3_9ad01cba:
 
     # you "Fascinating lecture, professor, but can we move on to the part about my reward?"
-    you "看来你穿越Xeros的漫长旅程即将结束。"
+    you ""
 
 # game/core/content/intro.rpy:958
 translate chinese_simplified resume_intro3_51740d96:
 
     # gio "Ah yes, my impatient friend, of course. What do you think drives this city? Who do you think pulls the strings of our stupid king and his clique?"
-    gio "看来你穿越Xeros的漫长旅程即将结束。"
+    gio ""
 
 # game/core/content/intro.rpy:965
 translate chinese_simplified resume_intro3_b96e91b1:
 
     # gio "*roll eyes*"
-    gio "看来你穿越Xeros的漫长旅程即将结束。"
+    gio ""
 
 # game/core/content/intro.rpy:968
 translate chinese_simplified resume_intro3_b96e91b1_1:
 
     # gio "*roll eyes*"
-    gio "看来你穿越Xeros的漫长旅程即将结束。"
+    gio ""
 
 # game/core/content/intro.rpy:971
 translate chinese_simplified resume_intro3_12063099:
 
     # gio "*facepalm*"
-    gio "看来你穿越Xeros的漫长旅程即将结束。"
+    gio ""
 
 # game/core/content/intro.rpy:973
 translate chinese_simplified resume_intro3_b5015152:
 
     # gio "No! It's the {b}brothel masters{/b}."
-    gio "看来你穿越Xeros的漫长旅程即将结束。"
+    gio ""
 
 # game/core/content/intro.rpy:975
 translate chinese_simplified resume_intro3_4c18fd0d:
 
     # sill "The... Brothel masters?"
-    sill "看来你穿越Xeros的漫长旅程即将结束。"
+    sill ""
 
 # game/core/content/intro.rpy:981
 translate chinese_simplified resume_intro3_82f8b786:
 
     # gio "Yes dear, the brothel masters. They're the power behind the throne, and everything else."
-    gio "看来你穿越Xeros的漫长旅程即将结束。"
+    gio ""
 
 # game/core/content/intro.rpy:985
 translate chinese_simplified resume_intro3_f7573d65:
 
     # gio "You see, nobles and their court..."
-    gio "看来你穿越Xeros的漫长旅程即将结束。"
+    gio ""
 
 # game/core/content/intro.rpy:991
 translate chinese_simplified resume_intro3_1eacbb5b:
 
     # extend "{w=0.5}{nw}"
-    extend "看来你穿越Xeros的漫长旅程即将结束。"
+    extend ""
 
 # game/core/content/intro.rpy:999
 translate chinese_simplified resume_intro3_1eacbb5b_1:
 
     # extend "{w=0.5}{nw}"
-    extend "看来你穿越Xeros的漫长旅程即将结束。"
+    extend ""
 
 # game/core/content/intro.rpy:1008
 translate chinese_simplified resume_intro3_1eacbb5b_2:
 
     # extend "{w=0.5}{nw}"
-    extend "看来你穿越Xeros的漫长旅程即将结束。"
+    extend ""
 
 # game/core/content/intro.rpy:1017
 translate chinese_simplified resume_intro3_1eacbb5b_3:
 
     # extend "{w=0.5}{nw}"
-    extend "看来你穿越Xeros的漫长旅程即将结束。"
+    extend ""
 
 # game/core/content/intro.rpy:1026
 translate chinese_simplified resume_intro3_1eacbb5b_4:
 
     # extend "{w=0.5}{nw}"
-    extend "看来你穿越Xeros的漫长旅程即将结束。"
+    extend ""
 
 # game/core/content/intro.rpy:1034
 translate chinese_simplified resume_intro3_1eacbb5b_5:
 
     # extend "{w=0.5}{nw}"
-    extend "看来你穿越Xeros的漫长旅程即将结束。"
+    extend ""
 
 # game/core/content/intro.rpy:1036
 translate chinese_simplified resume_intro3_583cdedb:
 
     # gio "They're always acting all high and mighty during the day..."
-    gio "看来你穿越Xeros的漫长旅程即将结束。"
+    gio ""
 
 # game/core/content/intro.rpy:1040
 translate chinese_simplified resume_intro3_ba7fbcb4:
 
     # gio "But at night... When no one is looking..."
-    gio "看来你穿越Xeros的漫长旅程即将结束。"
+    gio ""
 
 # game/core/content/intro.rpy:1054
 translate chinese_simplified resume_intro3_7c7300d3:
 
     # gio "They unleash their base instincts..."
-    gio "看来你穿越Xeros的漫长旅程即将结束。"
+    gio ""
 
 # game/core/content/intro.rpy:1059
 translate chinese_simplified resume_intro3_d6557bc9:
 
     # gio "... not caring for gods or morals..."
-    gio "看来你穿越Xeros的漫长旅程即将结束。"
+    gio ""
 
 # game/core/content/intro.rpy:1065
 translate chinese_simplified resume_intro3_ea80770f:
 
     # gio "...they revel in depravity with their willing servants..."
-    gio "看来你穿越Xeros的漫长旅程即将结束。"
+    gio ""
 
 # game/core/content/intro.rpy:1072
 translate chinese_simplified resume_intro3_563308b3:
 
     # gio "...even sometimes, their own children and siblings..."
-    gio "看来你穿越Xeros的漫长旅程即将结束。"
+    gio ""
 
 # game/core/content/intro.rpy:1078
 translate chinese_simplified resume_intro3_724bd4da:
 
     # gio "...but they can never fully sate their dirty appetites."
-    gio "看来你穿越Xeros的漫长旅程即将结束。"
+    gio ""
 
 # game/core/content/intro.rpy:1084
 translate chinese_simplified resume_intro3_0d04a0b8:
 
     # gio "That is why they need the brothel masters."
-    gio "看来你穿越Xeros的漫长旅程即将结束。"
+    gio ""
 
 # game/core/content/intro.rpy:1102
 translate chinese_simplified resume_intro3_f7e5ca54:
 
     # gio "The brothel masters cater to the needs of Zan's privileged citizens, bringing them refined and perverse pleasures from out of this world."
-    gio "看来你穿越Xeros的漫长旅程即将结束。"
+    gio ""
 
 # game/core/content/intro.rpy:1107
 translate chinese_simplified resume_intro3_8296e1b4:
 
     # gio "They are men and women who work in the shadows, procuring nobles and rich citizens alike the vices they crave."
-    gio "看来你穿越Xeros的漫长旅程即将结束。"
+    gio ""
 
 # game/core/content/intro.rpy:1110
 translate chinese_simplified resume_intro3_9227eb67:
 
     # gio "They can provide any kind of 'entertainment' if you have the gold: women, fairies, animals, even monsters... They can indulge your every possible fantasy."
-    gio "看来你穿越Xeros的漫长旅程即将结束。"
+    gio ""
 
 # game/core/content/intro.rpy:1113
 translate chinese_simplified resume_intro3_8364ebd7:
 
     # gio "This gives them {b}true{/b} power. They know every one of their customers' dirty secrets..."
-    gio "看来你穿越Xeros的漫长旅程即将结束。"
+    gio ""
 
 # game/core/content/intro.rpy:1121
 translate chinese_simplified resume_intro3_68d65260:
 
     # gio "They say even King Pharo I is the pawn of a powerful brothel master, a fellow by the name of 'Cloud'. {i}I{/i} have never met him, however. And I know {i}everyone{/i} in Zan. Almost."
-    gio "看来你穿越Xeros的漫长旅程即将结束。"
+    gio ""
 
 # game/core/content/intro.rpy:1126
 translate chinese_simplified resume_intro3_83060ccc:
 
     # gio "So, you see. In this city, to be powerful, you need to master and control the sex trade..."
-    gio "看来你穿越Xeros的漫长旅程即将结束。"
+    gio ""
 
 # game/core/content/intro.rpy:1139
 translate chinese_simplified shortcut_1ecd2c96:
 
     # gio "And I... can help you. *grin*"
-    gio "看来你穿越Xeros的漫长旅程即将结束。"
+    gio ""
 
 # game/core/content/intro.rpy:1141
 translate chinese_simplified shortcut_b16af1b0:
 
     # you "You? How?"
-    you "看来你穿越Xeros的漫长旅程即将结束。"
+    you ""
 
 # game/core/content/intro.rpy:1143
 translate chinese_simplified shortcut_9634a2cb:
 
     # gio "You see, I decided to dabble in whore management myself."
-    gio "看来你穿越Xeros的漫长旅程即将结束。"
+    gio ""
 
 # game/core/content/intro.rpy:1145
 translate chinese_simplified shortcut_54a30e66:
 
     # gio "But I'm more of a, err, creative type, not a micro-manager... I'm especially bad with accounting..."
-    gio "看来你穿越Xeros的漫长旅程即将结束。"
+    gio ""
 
 # game/core/content/intro.rpy:1147
 translate chinese_simplified shortcut_9cd2ed3d:
 
     # gio "So, long story short, I opened a cathouse last year and, hem, ran it into the ground."
-    gio "看来你穿越Xeros的漫长旅程即将结束。"
+    gio ""
 
 # game/core/content/intro.rpy:1149
 translate chinese_simplified shortcut_b337bed1:
 
     # gio "All the girls left, but the house is still in order."
-    gio "看来你穿越Xeros的漫长旅程即将结束。"
+    gio ""
 
 # game/core/content/intro.rpy:1151
 translate chinese_simplified shortcut_b42de05b:
 
     # gio "I've decided I'm not good at this racket, but you... You can take over the whorehouse if you want."
-    gio "看来你穿越Xeros的漫长旅程即将结束。"
+    gio ""
 
 # game/core/content/intro.rpy:1154
 translate chinese_simplified shortcut_302aee0c:
 
     # gio "This will be your reward: this way, I get to fulfill my obligation to the Princess, and you get a place to stay and conduct your business. What do you think?"
-    gio "看来你穿越Xeros的漫长旅程即将结束。"
+    gio ""
 
 # game/core/content/intro.rpy:1174
 translate chinese_simplified resume_intro4_df704b47:
 
     # sill sad "Respectfully, Master, I don't think..."
-    sill sad "看来你穿越Xeros的漫长旅程即将结束。"
+    sill sad ""
 
 # game/core/content/intro.rpy:1176
 translate chinese_simplified resume_intro4_35e59458:
 
     # you "[text1] I'm interested! I just hope the brothel is in good condition and all..."
-    you "看来你穿越Xeros的漫长旅程即将结束。"
+    you ""
 
 # game/core/content/intro.rpy:1178
 translate chinese_simplified resume_intro4_859987ed:
 
     # gio "Well, of course, of course... Erm... *nervous*"
-    gio "看来你穿越Xeros的漫长旅程即将结束。"
+    gio ""
 
 # game/core/content/intro.rpy:1180
 translate chinese_simplified resume_intro4_c67a81b1:
 
     # gio "We'll discuss that tomorrow. Right now you must be tired from your trip and need to rest."
-    gio "看来你穿越Xeros的漫长旅程即将结束。"
+    gio ""
 
 # game/core/content/intro.rpy:1182
 translate chinese_simplified resume_intro4_dcb8f413:
 
     # gio "I'll have Minako prepare a room for you. Allow me to be your host tonight."
-    gio "看来你穿越Xeros的漫长旅程即将结束。"
+    gio ""
 
 # game/core/content/intro.rpy:1184
 translate chinese_simplified resume_intro4_553da56b:
 
     # gio "Speaking of which..."
-    gio "看来你穿越Xeros的漫长旅程即将结束。"
+    gio ""
 
 # game/core/content/intro.rpy:1186
 translate chinese_simplified resume_intro4_b9f03b8c:
 
     # you "Yes?"
-    you "看来你穿越Xeros的漫长旅程即将结束。"
+    you ""
 
 # game/core/content/intro.rpy:1188
 translate chinese_simplified resume_intro4_41bd9cc6:
 
     # gio "I've noticed you have brought with you a fine looking slave. Nice piece of ass really..."
-    gio "看来你穿越Xeros的漫长旅程即将结束。"
+    gio ""
 
 # game/core/content/intro.rpy:1192
 translate chinese_simplified resume_intro4_08b0bc52:
@@ -1770,13 +1770,13 @@ translate chinese_simplified resume_intro4_08b0bc52:
 translate chinese_simplified resume_intro4_b874a3e5:
 
     # sill "Ma... Master?"
-    sill "看来你穿越Xeros的漫长旅程即将结束。"
+    sill ""
 
 # game/core/content/intro.rpy:1196
 translate chinese_simplified resume_intro4_59904d12:
 
     # gio "Would you allow me to use her for the night? In exchange, you can have Minako. She's a very devoted little bitch, that one."
-    gio "看来你穿越Xeros的漫长旅程即将结束。"
+    gio ""
 
 # game/core/content/intro.rpy:1201
 translate chinese_simplified resume_intro4_ef5e5c01:
@@ -1788,43 +1788,43 @@ translate chinese_simplified resume_intro4_ef5e5c01:
 translate chinese_simplified resume_intro4_61116746:
 
     # sill "Master!!!"
-    sill "看来你穿越Xeros的漫长旅程即将结束。"
+    sill ""
 
 # game/core/content/intro.rpy:1206
 translate chinese_simplified resume_intro4_6cdecb9c:
 
     # sill "He's... He's touching my butt!" nointeract
-    sill "看来你穿越Xeros的漫长旅程即将结束。" nointeract
+    sill "" nointeract
 
 # game/core/content/intro.rpy:1214
 translate chinese_simplified resume_intro4_6e700cd0:
 
     # you "Stop it Gio! She's mine."
-    you "看来你穿越Xeros的漫长旅程即将结束。"
+    you ""
 
 # game/core/content/intro.rpy:1216
 translate chinese_simplified resume_intro4_16a7e4c1:
 
     # you "You can't touch someone's slave without her master's consent."
-    you "看来你穿越Xeros的漫长旅程即将结束。"
+    you ""
 
 # game/core/content/intro.rpy:1218
 translate chinese_simplified resume_intro4_2ecdbf0c:
 
     # gio "Aw, come on, friend! Is this a way to treat your host?"
-    gio "看来你穿越Xeros的漫长旅程即将结束。"
+    gio ""
 
 # game/core/content/intro.rpy:1220
 translate chinese_simplified resume_intro4_845fabe4:
 
     # you "Sorry, Gio, but that's final."
-    you "看来你穿越Xeros的漫长旅程即将结束。"
+    you ""
 
 # game/core/content/intro.rpy:1222
 translate chinese_simplified resume_intro4_7ec7c7e2:
 
     # gio "All right, then."
-    gio "看来你穿越Xeros的漫长旅程即将结束。"
+    gio ""
 
 # game/core/content/intro.rpy:1224
 translate chinese_simplified resume_intro4_6df17d62:
@@ -1836,19 +1836,19 @@ translate chinese_simplified resume_intro4_6df17d62:
 translate chinese_simplified resume_intro4_ba1c6644:
 
     # gio "Minako!"
-    gio "看来你穿越Xeros的漫长旅程即将结束。"
+    gio ""
 
 # game/core/content/intro.rpy:1230
 translate chinese_simplified resume_intro4_aa5e31bf:
 
     # maid "Yes Master?"
-    maid "看来你穿越Xeros的漫长旅程即将结束。"
+    maid ""
 
 # game/core/content/intro.rpy:1232
 translate chinese_simplified resume_intro4_764c0eb3:
 
     # gio "Take those two lovebirds to the guest room."
-    gio "看来你穿越Xeros的漫长旅程即将结束。"
+    gio ""
 
 # game/core/content/intro.rpy:1234
 translate chinese_simplified resume_intro4_d053065e:
@@ -1860,19 +1860,19 @@ translate chinese_simplified resume_intro4_d053065e:
 translate chinese_simplified resume_intro4_d1e09cfa:
 
     # gio "And come to my bedchambers after that, bringing the SM equipment. I need to blow off some steam."
-    gio "看来你穿越Xeros的漫长旅程即将结束。"
+    gio ""
 
 # game/core/content/intro.rpy:1239
 translate chinese_simplified resume_intro4_bf9b3bb7:
 
     # maid blush "Understood, Master."
-    maid blush "看来你穿越Xeros的漫长旅程即将结束。"
+    maid blush ""
 
 # game/core/content/intro.rpy:1241
 translate chinese_simplified resume_intro4_c952ccef:
 
     # gio "Good night then."
-    gio "看来你穿越Xeros的漫长旅程即将结束。"
+    gio ""
 
 # game/core/content/intro.rpy:1245
 translate chinese_simplified resume_intro4_e41a3957:
@@ -1884,121 +1884,121 @@ translate chinese_simplified resume_intro4_e41a3957:
 translate chinese_simplified resume_intro4_22811f21:
 
     # maid blush "Master..."
-    maid blush "看来你穿越Xeros的漫长旅程即将结束。"
+    maid blush ""
 
 # game/core/content/intro.rpy:1255
 translate chinese_simplified resume_intro4_ea23c534:
 
     # sill "Thank you Master! Thank you thank you thank you!!!"
-    sill "看来你穿越Xeros的漫长旅程即将结束。"
+    sill ""
 
 # game/core/content/intro.rpy:1257
 translate chinese_simplified resume_intro4_4f8527a7:
 
     # you "Sill, don't overdo it."
-    you "看来你穿越Xeros的漫长旅程即将结束。"
+    you ""
 
 # game/core/content/intro.rpy:1259
 translate chinese_simplified resume_intro4_68ff5205:
 
     # sill "But... Master Gio is old, fat and sleazy... I hated it when he touched me."
-    sill "看来你穿越Xeros的漫长旅程即将结束。"
+    sill ""
 
 # game/core/content/intro.rpy:1261
 translate chinese_simplified resume_intro4_24353786:
 
     # sill "..."
-    sill "看来你穿越Xeros的漫长旅程即将结束。"
+    sill ""
 
 # game/core/content/intro.rpy:1263
 translate chinese_simplified resume_intro4_8988ffc4:
 
     # sill "But... I like it when we... You know..."
-    sill "看来你穿越Xeros的漫长旅程即将结束。"
+    sill ""
 
 # game/core/content/intro.rpy:1267
 translate chinese_simplified resume_intro4_6e763379:
 
     # sill "Master... Come..."
-    sill "看来你穿越Xeros的漫长旅程即将结束。"
+    sill ""
 
 # game/core/content/intro.rpy:1274
 translate chinese_simplified resume_intro4_734f0926:
 
     # sill naked "Master... Aaaah... You're always looking out for me..."
-    sill naked "看来你穿越Xeros的漫长旅程即将结束。"
+    sill naked ""
 
 # game/core/content/intro.rpy:1278
 translate chinese_simplified resume_intro4_fa8dca53:
 
     # sill "Even though... I'm just... Aahh... Your slave... Mmmh..."
-    sill "看来你穿越Xeros的漫长旅程即将结束。"
+    sill ""
 
 # game/core/content/intro.rpy:1282
 translate chinese_simplified resume_intro4_6e8f7c7c:
 
     # sill "But I... Uuuuhhh..."
-    sill "看来你穿越Xeros的漫长旅程即将结束。"
+    sill ""
 
 # game/core/content/intro.rpy:1284
 translate chinese_simplified resume_intro4_e2de5ac9:
 
     # sill "I... Aaaaaah..."
-    sill "看来你穿越Xeros的漫长旅程即将结束。"
+    sill ""
 
 # game/core/content/intro.rpy:1290
 translate chinese_simplified resume_intro4_1a8bd1f1:
 
     # sill "Ooooh yes Master... Yes..."
-    sill "看来你穿越Xeros的漫长旅程即将结束。"
+    sill ""
 
 # game/core/content/intro.rpy:1292
 translate chinese_simplified resume_intro4_4066207a:
 
     # sill "Master, you're so fast... Hnnn... Hnnnnn..."
-    sill "看来你穿越Xeros的漫长旅程即将结束。"
+    sill ""
 
 # game/core/content/intro.rpy:1294
 translate chinese_simplified resume_intro4_a3bb54ec:
 
     # sill "Aaaaaaaah!!!"
-    sill "看来你穿越Xeros的漫长旅程即将结束。"
+    sill ""
 
 # game/core/content/intro.rpy:1308
 translate chinese_simplified resume_intro4_b5282370:
 
     # sill "Master... We've been doing it... Aaaah... for hours..."
-    sill "看来你穿越Xeros的漫长旅程即将结束。"
+    sill ""
 
 # game/core/content/intro.rpy:1310
 translate chinese_simplified resume_intro4_667442a8:
 
     # sill "I think, aahhhh... We need to... mmmmh... rest, ah!"
-    sill "看来你穿越Xeros的漫长旅程即将结束。"
+    sill ""
 
 # game/core/content/intro.rpy:1312
 translate chinese_simplified resume_intro4_785e2632:
 
     # you "We'll rest... just... not... yet..."
-    you "看来你穿越Xeros的漫长旅程即将结束。"
+    you ""
 
 # game/core/content/intro.rpy:1314
 translate chinese_simplified resume_intro4_b2d5a534:
 
     # you "Raaah!!!"
-    you "看来你穿越Xeros的漫长旅程即将结束。"
+    you ""
 
 # game/core/content/intro.rpy:1316
 translate chinese_simplified resume_intro4_a4cfd2e7:
 
     # sill "Oh, aaah... Aaah!!!"
-    sill "看来你穿越Xeros的漫长旅程即将结束。"
+    sill ""
 
 # game/core/content/intro.rpy:1322
 translate chinese_simplified resume_intro4_7f1aad4d:
 
     # sill "Aaaaaaahaaaaah!!!"
-    sill "看来你穿越Xeros的漫长旅程即将结束。"
+    sill ""
 
 # game/core/content/intro.rpy:1330
 translate chinese_simplified resume_intro4_5334fa08:
@@ -2010,55 +2010,55 @@ translate chinese_simplified resume_intro4_5334fa08:
 translate chinese_simplified resume_intro4_969bde33:
 
     # you "Look, Gio, it's tempting... But we're all tired."
-    you "看来你穿越Xeros的漫长旅程即将结束。"
+    you ""
 
 # game/core/content/intro.rpy:1343
 translate chinese_simplified resume_intro4_ac2df4c1:
 
     # you "Sill won't be any good after such a long time on the road. She's dirty..."
-    you "看来你穿越Xeros的漫长旅程即将结束。"
+    you ""
 
 # game/core/content/intro.rpy:1345
 translate chinese_simplified resume_intro4_29f4245a:
 
     # gio "I don't mind..."
-    gio "看来你穿越Xeros的漫长旅程即将结束。"
+    gio ""
 
 # game/core/content/intro.rpy:1347
 translate chinese_simplified resume_intro4_301dca82:
 
     # you "...and exhausted."
-    you "看来你穿越Xeros的漫长旅程即将结束。"
+    you ""
 
 # game/core/content/intro.rpy:1349
 translate chinese_simplified resume_intro4_d016b0fd:
 
     # you "Maybe next time, ok?"
-    you "看来你穿越Xeros的漫长旅程即将结束。"
+    you ""
 
 # game/core/content/intro.rpy:1351
 translate chinese_simplified resume_intro4_56897f30:
 
     # sill "Next... time??? But..."
-    sill "看来你穿越Xeros的漫长旅程即将结束。"
+    sill ""
 
 # game/core/content/intro.rpy:1353
 translate chinese_simplified resume_intro4_fa8f9436:
 
     # gio "I see..."
-    gio "看来你穿越Xeros的漫长旅程即将结束。"
+    gio ""
 
 # game/core/content/intro.rpy:1355
 translate chinese_simplified resume_intro4_16d8af57:
 
     # gio "Yes, of course, you both need some rest."
-    gio "看来你穿越Xeros的漫长旅程即将结束。"
+    gio ""
 
 # game/core/content/intro.rpy:1357
 translate chinese_simplified resume_intro4_ed509234:
 
     # gio "I am looking forward to our next meeting, sweetie. *grin*"
-    gio "看来你穿越Xeros的漫长旅程即将结束。"
+    gio ""
 
 # game/core/content/intro.rpy:1361
 translate chinese_simplified resume_intro4_aea13249:
@@ -2070,103 +2070,103 @@ translate chinese_simplified resume_intro4_aea13249:
 translate chinese_simplified resume_intro4_3d9d8572:
 
     # gio "Minako, where are you?"
-    gio "看来你穿越Xeros的漫长旅程即将结束。"
+    gio ""
 
 # game/core/content/intro.rpy:1367
 translate chinese_simplified resume_intro4_3eaf5115:
 
     # maid "Right here, Master."
-    maid "看来你穿越Xeros的漫长旅程即将结束。"
+    maid ""
 
 # game/core/content/intro.rpy:1369
 translate chinese_simplified resume_intro4_44fac3cc:
 
     # gio "Take our guests to their room, will you. Then, meet me in my room with the 'toybox'."
-    gio "看来你穿越Xeros的漫长旅程即将结束。"
+    gio ""
 
 # game/core/content/intro.rpy:1372
 translate chinese_simplified resume_intro4_cc8e8472:
 
     # maid "Yes, Master."
-    maid "看来你穿越Xeros的漫长旅程即将结束。"
+    maid ""
 
 # game/core/content/intro.rpy:1380
 translate chinese_simplified resume_intro4_1f231a59:
 
     # sill "Master... I don't want to sleep with that old man! He's sweaty and gross!"
-    sill "看来你穿越Xeros的漫长旅程即将结束。"
+    sill ""
 
 # game/core/content/intro.rpy:1382
 translate chinese_simplified resume_intro4_00c1c6ba:
 
     # you "And you won't have to..."
-    you "看来你穿越Xeros的漫长旅程即将结束。"
+    you ""
 
 # game/core/content/intro.rpy:1384
 translate chinese_simplified resume_intro4_51ee66fe:
 
     # sill happy "..."
-    sill happy "看来你穿越Xeros的漫长旅程即将结束。"
+    sill happy ""
 
 # game/core/content/intro.rpy:1386
 translate chinese_simplified resume_intro4_d427d525:
 
     # you "...tonight."
-    you "看来你穿越Xeros的漫长旅程即将结束。"
+    you ""
 
 # game/core/content/intro.rpy:1388
 translate chinese_simplified resume_intro4_0bce19d5:
 
     # sill sad "Whaaat?"
-    sill sad "看来你穿越Xeros的漫长旅程即将结束。"
+    sill sad ""
 
 # game/core/content/intro.rpy:1390
 translate chinese_simplified resume_intro4_e5fa45e6:
 
     # you "You need to learn to respect my wishes, Sill. You are my slave, and I'm the one calling the shots."
-    you "看来你穿越Xeros的漫长旅程即将结束。"
+    you ""
 
 # game/core/content/intro.rpy:1393
 translate chinese_simplified resume_intro4_24353786_1:
 
     # sill "..."
-    sill "看来你穿越Xeros的漫长旅程即将结束。"
+    sill ""
 
 # game/core/content/intro.rpy:1395
 translate chinese_simplified resume_intro4_07bfa781:
 
     # sill "Yes, master."
-    sill "看来你穿越Xeros的漫长旅程即将结束。"
+    sill ""
 
 # game/core/content/intro.rpy:1397
 translate chinese_simplified resume_intro4_09f61142:
 
     # you "Come on now, let's get some rest."
-    you "看来你穿越Xeros的漫长旅程即将结束。"
+    you ""
 
 # game/core/content/intro.rpy:1399
 translate chinese_simplified resume_intro4_fa9db4f4:
 
     # sill happy "Finally..."
-    sill happy "看来你穿越Xeros的漫长旅程即将结束。"
+    sill happy ""
 
 # game/core/content/intro.rpy:1407
 translate chinese_simplified resume_intro4_1825586e:
 
     # sill "Master! Can you hear???"
-    sill "看来你穿越Xeros的漫长旅程即将结束。"
+    sill ""
 
 # game/core/content/intro.rpy:1411
 translate chinese_simplified resume_intro4_cb98bbfa:
 
     # you "Come on Sill... I'm trying to sleep here... Let them have their fun."
-    you "看来你穿越Xeros的漫长旅程即将结束。"
+    you ""
 
 # game/core/content/intro.rpy:1413
 translate chinese_simplified resume_intro4_d636b6d0:
 
     # sill "Buuut..."
-    sill "看来你穿越Xeros的漫长旅程即将结束。"
+    sill ""
 
 # game/core/content/intro.rpy:1415
 translate chinese_simplified resume_intro4_e78cc42c:
@@ -2178,31 +2178,31 @@ translate chinese_simplified resume_intro4_e78cc42c:
 translate chinese_simplified resume_intro4_364f147e:
 
     # you "Sounds fun! You can have her."
-    you "看来你穿越Xeros的漫长旅程即将结束。"
+    you ""
 
 # game/core/content/intro.rpy:1432
 translate chinese_simplified resume_intro4_8412af2b:
 
     # sill "Whaaaat?"
-    sill "看来你穿越Xeros的漫长旅程即将结束。"
+    sill ""
 
 # game/core/content/intro.rpy:1434
 translate chinese_simplified resume_intro4_ee3172ac:
 
     # gio "Fantastic!"
-    gio "看来你穿越Xeros的漫长旅程即将结束。"
+    gio ""
 
 # game/core/content/intro.rpy:1436
 translate chinese_simplified resume_intro4_699c19be:
 
     # sill "Wait!!!"
-    sill "看来你穿越Xeros的漫长旅程即将结束。"
+    sill ""
 
 # game/core/content/intro.rpy:1438
 translate chinese_simplified resume_intro4_71eb0bcc:
 
     # gio "Come with me my dear."
-    gio "看来你穿越Xeros的漫长旅程即将结束。"
+    gio ""
 
 # game/core/content/intro.rpy:1442
 translate chinese_simplified resume_intro4_2ca291d1:
@@ -2214,115 +2214,115 @@ translate chinese_simplified resume_intro4_2ca291d1:
 translate chinese_simplified resume_intro4_26710218:
 
     # gio "You will be mine all night, sweetie..."
-    gio "看来你穿越Xeros的漫长旅程即将结束。"
+    gio ""
 
 # game/core/content/intro.rpy:1446
 translate chinese_simplified resume_intro4_b69dcf89:
 
     # sill "Nooo..."
-    sill "看来你穿越Xeros的漫长旅程即将结束。"
+    sill ""
 
 # game/core/content/intro.rpy:1448
 translate chinese_simplified resume_intro4_733795d1:
 
     # you "So, where's Minako?"
-    you "看来你穿越Xeros的漫长旅程即将结束。"
+    you ""
 
 # game/core/content/intro.rpy:1452
 translate chinese_simplified resume_intro4_a2b52e10:
 
     # maid "Yes Mister [MC.name]. You called?"
-    maid "看来你穿越Xeros的漫长旅程即将结束。"
+    maid ""
 
 # game/core/content/intro.rpy:1454
 translate chinese_simplified resume_intro4_b8e35385:
 
     # gio "Minako, take him to the guest room. Make sure he feels... Very welcome."
-    gio "看来你穿越Xeros的漫长旅程即将结束。"
+    gio ""
 
 # game/core/content/intro.rpy:1456
 translate chinese_simplified resume_intro4_6e011257:
 
     # maid blush "..."
-    maid blush "看来你穿越Xeros的漫长旅程即将结束。"
+    maid blush ""
 
 # game/core/content/intro.rpy:1458
 translate chinese_simplified resume_intro4_7f3dc2fb:
 
     # maid blush "Of course, Master Gio."
-    maid blush "看来你穿越Xeros的漫长旅程即将结束。"
+    maid blush ""
 
 # game/core/content/intro.rpy:1460
 translate chinese_simplified resume_intro4_542ee343:
 
     # gio "Now dear, come with me."
-    gio "看来你穿越Xeros的漫长旅程即将结束。"
+    gio ""
 
 # game/core/content/intro.rpy:1462
 translate chinese_simplified resume_intro4_2063f889:
 
     # sill "But... But..."
-    sill "看来你穿越Xeros的漫长旅程即将结束。"
+    sill ""
 
 # game/core/content/intro.rpy:1464
 translate chinese_simplified resume_intro4_70b1f19a:
 
     # you "You heard the man, Sill, go with him. And make sure to give him a great time."
-    you "看来你穿越Xeros的漫长旅程即将结束。"
+    you ""
 
 # game/core/content/intro.rpy:1466
 translate chinese_simplified resume_intro4_4aee7003:
 
     # sill "*sob*"
-    sill "看来你穿越Xeros的漫长旅程即将结束。"
+    sill ""
 
 # game/core/content/intro.rpy:1471
 translate chinese_simplified resume_intro4_78579f68:
 
     # maid "Follow me now, my lord."
-    maid "看来你穿越Xeros的漫长旅程即将结束。"
+    maid ""
 
 # game/core/content/intro.rpy:1479
 translate chinese_simplified resume_intro4_8c27cb79:
 
     # maid "So..."
-    maid "看来你穿越Xeros的漫长旅程即将结束。"
+    maid ""
 
 # game/core/content/intro.rpy:1481
 translate chinese_simplified resume_intro4_62690a11:
 
     # maid blush "What do you request of me, Master [MC.name]?"
-    maid blush "看来你穿越Xeros的漫长旅程即将结束。"
+    maid blush ""
 
 # game/core/content/intro.rpy:1488
 translate chinese_simplified resume_intro4_5168dba1:
 
     # maid "Of course my lord, please allow me to make you feel good..."
-    maid "看来你穿越Xeros的漫长旅程即将结束。"
+    maid ""
 
 # game/core/content/intro.rpy:1495
 translate chinese_simplified resume_intro4_aba47eef:
 
     # maid blush "Hmmm... It's already hard, my lord... Were you waiting for this?"
-    maid blush "看来你穿越Xeros的漫长旅程即将结束。"
+    maid blush ""
 
 # game/core/content/intro.rpy:1499
 translate chinese_simplified resume_intro4_1aba24d5:
 
     # maid "It's bulging... Should I slide it deeper in my throat?"
-    maid "看来你穿越Xeros的漫长旅程即将结束。"
+    maid ""
 
 # game/core/content/intro.rpy:1501
 translate chinese_simplified resume_intro4_4e8b1aa3:
 
     # maid "Just hhike hhat... Mmmmh..."
-    maid "看来你穿越Xeros的漫长旅程即将结束。"
+    maid ""
 
 # game/core/content/intro.rpy:1503
 translate chinese_simplified resume_intro4_50f1cc6d:
 
     # maid "Mmmmmhhh!"
-    maid "看来你穿越Xeros的漫长旅程即将结束。"
+    maid ""
 
 # game/core/content/intro.rpy:1511
 translate chinese_simplified resume_intro4_63a92497:
@@ -2340,7 +2340,7 @@ translate chinese_simplified resume_intro4_37ae563d:
 translate chinese_simplified resume_intro4_62e88945:
 
     # maid "Please, my lord... Allow me to clean you up..."
-    maid "看来你穿越Xeros的漫长旅程即将结束。"
+    maid ""
 
 # game/core/content/intro.rpy:1527
 translate chinese_simplified resume_intro4_767f64a7:
@@ -2352,7 +2352,7 @@ translate chinese_simplified resume_intro4_767f64a7:
 translate chinese_simplified resume_intro4_28a1b85c:
 
     # maid "Ohh my lord... You're so forceful!"
-    maid "看来你穿越Xeros的漫长旅程即将结束。"
+    maid ""
 
 # game/core/content/intro.rpy:1533
 translate chinese_simplified resume_intro4_30ec90e7:
@@ -2364,19 +2364,19 @@ translate chinese_simplified resume_intro4_30ec90e7:
 translate chinese_simplified resume_intro4_187c78f5:
 
     # maid blush "Aaaaaah!"
-    maid blush "看来你穿越Xeros的漫长旅程即将结束。"
+    maid blush ""
 
 # game/core/content/intro.rpy:1541
 translate chinese_simplified resume_intro4_2e8a9f9d:
 
     # maid "Master [MC.name]... is so hard!"
-    maid "看来你穿越Xeros的漫长旅程即将结束。"
+    maid ""
 
 # game/core/content/intro.rpy:1543
 translate chinese_simplified resume_intro4_cbdd44d1:
 
     # maid "You're... drilling me!!!"
-    maid "看来你穿越Xeros的漫长旅程即将结束。"
+    maid ""
 
 # game/core/content/intro.rpy:1545
 translate chinese_simplified resume_intro4_dda3120a:
@@ -2388,19 +2388,19 @@ translate chinese_simplified resume_intro4_dda3120a:
 translate chinese_simplified resume_intro4_c01a8461:
 
     # you "You're already wet, aren't you, you little slut?"
-    you "看来你穿越Xeros的漫长旅程即将结束。"
+    you ""
 
 # game/core/content/intro.rpy:1552
 translate chinese_simplified resume_intro4_cf52d3a2:
 
     # maid "Aaaah, yes my lord... Yes..."
-    maid "看来你穿越Xeros的漫长旅程即将结束。"
+    maid ""
 
 # game/core/content/intro.rpy:1554
 translate chinese_simplified resume_intro4_337b166e:
 
     # maid "I'm... a dirty... slut..."
-    maid "看来你穿越Xeros的漫长旅程即将结束。"
+    maid ""
 
 # game/core/content/intro.rpy:1558
 translate chinese_simplified resume_intro4_fb4fb000:
@@ -2412,31 +2412,31 @@ translate chinese_simplified resume_intro4_fb4fb000:
 translate chinese_simplified resume_intro4_60ef8449:
 
     # maid "Ooh, yes, oooooh!"
-    maid "看来你穿越Xeros的漫长旅程即将结束。"
+    maid ""
 
 # game/core/content/intro.rpy:1562
 translate chinese_simplified resume_intro4_3f03e062:
 
     # maid "My lord! My pussy... is yours... Fuck... Fuck it harder!"
-    maid "看来你穿越Xeros的漫长旅程即将结束。"
+    maid ""
 
 # game/core/content/intro.rpy:1568
 translate chinese_simplified resume_intro4_8a08933c:
 
     # maid "Oh yes, oooooh..."
-    maid "看来你穿越Xeros的漫长旅程即将结束。"
+    maid ""
 
 # game/core/content/intro.rpy:1570
 translate chinese_simplified resume_intro4_1de93956:
 
     # you "I'm not done with you yet..."
-    you "看来你穿越Xeros的漫长旅程即将结束。"
+    you ""
 
 # game/core/content/intro.rpy:1584
 translate chinese_simplified maid_fuck_85e28c35:
 
     # maid blush "Ooooh my lord... You're so... big..."
-    maid blush "看来你穿越Xeros的漫长旅程即将结束。"
+    maid blush ""
 
 # game/core/content/intro.rpy:1586
 translate chinese_simplified maid_fuck_b95940b1:
@@ -2448,55 +2448,55 @@ translate chinese_simplified maid_fuck_b95940b1:
 translate chinese_simplified maid_fuck_f275574b:
 
     # maid "Oh yes, master [MC.name]! Do it like this..."
-    maid "看来你穿越Xeros的漫长旅程即将结束。"
+    maid ""
 
 # game/core/content/intro.rpy:1591
 translate chinese_simplified maid_fuck_1be05301:
 
     # maid "Hnnnnnnnn..."
-    maid "看来你穿越Xeros的漫长旅程即将结束。"
+    maid ""
 
 # game/core/content/intro.rpy:1597
 translate chinese_simplified maid_fuck_77eb2a59:
 
     # maid "Oh my lord... Ooooh..."
-    maid "看来你穿越Xeros的漫长旅程即将结束。"
+    maid ""
 
 # game/core/content/intro.rpy:1599
 translate chinese_simplified maid_fuck_3e34a67e:
 
     # maid "Ahhaaaaa!"
-    maid "看来你穿越Xeros的漫长旅程即将结束。"
+    maid ""
 
 # game/core/content/intro.rpy:1601
 translate chinese_simplified maid_fuck_b67233cb:
 
     # maid "Yes, oh yes... I'm... I'm..."
-    maid "看来你穿越Xeros的漫长旅程即将结束。"
+    maid ""
 
 # game/core/content/intro.rpy:1609
 translate chinese_simplified maid_fuck_a7ac3967:
 
     # maid "CUMMIIIIIIIING!!!"
-    maid "看来你穿越Xeros的漫长旅程即将结束。"
+    maid ""
 
 # game/core/content/intro.rpy:1613
 translate chinese_simplified maid_fuck_44f4fc1c:
 
     # maid "Aaaaaah..."
-    maid "看来你穿越Xeros的漫长旅程即将结束。"
+    maid ""
 
 # game/core/content/intro.rpy:1615
 translate chinese_simplified maid_fuck_209d2305:
 
     # maid "Master [MC.name]... It was so good..."
-    maid "看来你穿越Xeros的漫长旅程即将结束。"
+    maid ""
 
 # game/core/content/intro.rpy:1617
 translate chinese_simplified maid_fuck_43276370:
 
     # maid "Would you... fill me up again?"
-    maid "看来你穿越Xeros的漫长旅程即将结束。"
+    maid ""
 
 # game/core/content/intro.rpy:1623
 translate chinese_simplified maid_fuck_16759eaf:
@@ -2508,55 +2508,55 @@ translate chinese_simplified maid_fuck_16759eaf:
 translate chinese_simplified maid_fuck_2151bd44:
 
     # sill naked "Ahaaaaaahh!!!"
-    sill naked "看来你穿越Xeros的漫长旅程即将结束。"
+    sill naked ""
 
 # game/core/content/intro.rpy:1635
 translate chinese_simplified maid_fuck_185ca774:
 
     # gio "Aaaaaaaarhhhh!"
-    gio "看来你穿越Xeros的漫长旅程即将结束。"
+    gio ""
 
 # game/core/content/intro.rpy:1641
 translate chinese_simplified maid_fuck_17115a84:
 
     # sill "AAAAAAHHHHH!!!"
-    sill "看来你穿越Xeros的漫长旅程即将结束。"
+    sill ""
 
 # game/core/content/intro.rpy:1643
 translate chinese_simplified maid_fuck_24353786:
 
     # sill "..."
-    sill "看来你穿越Xeros的漫长旅程即将结束。"
+    sill ""
 
 # game/core/content/intro.rpy:1645
 translate chinese_simplified maid_fuck_978431ad:
 
     # sill "How... How many times can you come... you... monster..."
-    sill "看来你穿越Xeros的漫长旅程即将结束。"
+    sill ""
 
 # game/core/content/intro.rpy:1647
 translate chinese_simplified maid_fuck_440ff308:
 
     # gio "Hahaha! We're not even halfway done!"
-    gio "看来你穿越Xeros的漫长旅程即将结束。"
+    gio ""
 
 # game/core/content/intro.rpy:1649
 translate chinese_simplified maid_fuck_c01bfd51:
 
     # gio "Come on, bitch, now turn around and spread your buttcheeks for me."
-    gio "看来你穿越Xeros的漫长旅程即将结束。"
+    gio ""
 
 # game/core/content/intro.rpy:1651
 translate chinese_simplified maid_fuck_2063f889:
 
     # sill "But... But..."
-    sill "看来你穿越Xeros的漫长旅程即将结束。"
+    sill ""
 
 # game/core/content/intro.rpy:1653
 translate chinese_simplified maid_fuck_c99a2233:
 
     # gio "Oh, yes... Exactly. *grin*"
-    gio "看来你穿越Xeros的漫长旅程即将结束。"
+    gio ""
 
 # game/core/content/intro.rpy:1657
 translate chinese_simplified maid_fuck_23e2d648:
@@ -2568,13 +2568,13 @@ translate chinese_simplified maid_fuck_23e2d648:
 translate chinese_simplified day1_b2bda7b4:
 
     # gio "Behold!"
-    gio "看来你穿越Xeros的漫长旅程即将结束。"
+    gio ""
 
 # game/core/content/intro.rpy:1678
 translate chinese_simplified day1_1ce4e059:
 
     # gio "The Zan slave market."
-    gio "看来你穿越Xeros的漫长旅程即将结束。"
+    gio ""
 
 # game/core/content/intro.rpy:1682
 translate chinese_simplified day1_9a445343:
@@ -2622,7 +2622,7 @@ translate chinese_simplified day1_c83441be:
 translate chinese_simplified day1_9f141516:
 
     # extend "\nOthers learn to love their life as a slave, begging for their Master's attention."
-    extend "看来你穿越Xeros的漫长旅程即将结束。"
+    extend ""
 
 # game/core/content/intro.rpy:1729
 translate chinese_simplified day1_7e162e3d:
@@ -2646,121 +2646,121 @@ translate chinese_simplified day1_dd055048:
 translate chinese_simplified day1_af50d3de:
 
     # you "A good place to start my new life."
-    you "看来你穿越Xeros的漫长旅程即将结束。"
+    you ""
 
 # game/core/content/intro.rpy:1740
 translate chinese_simplified day1_b1242d20:
 
     # gio "Aaaah, the slave market! The colors, the scents, the tastes!"
-    gio "看来你穿越Xeros的漫长旅程即将结束。"
+    gio ""
 
 # game/core/content/intro.rpy:1742
 translate chinese_simplified day1_d3cc46dd:
 
     # sill sad "Master! Someone tried to grab my breast! Hey, I'm not for sale!"
-    sill sad "看来你穿越Xeros的漫长旅程即将结束。"
+    sill sad ""
 
 # game/core/content/intro.rpy:1744
 translate chinese_simplified day1_fe0ce7f4:
 
     # gio "The slave market is the place to buy slaves to have them work in your brothel."
-    gio "看来你穿越Xeros的漫长旅程即将结束。"
+    gio ""
 
 # game/core/content/intro.rpy:1746
 translate chinese_simplified day1_2675e959:
 
     # gio "You need at least one girl to start your new business. Here, have [starting_gold] denars."
-    gio "看来你穿越Xeros的漫长旅程即将结束。"
+    gio ""
 
 # game/core/content/intro.rpy:1748
 translate chinese_simplified day1_77de77bf:
 
     # you "Why, thank you Master Gio..."
-    you "看来你穿越Xeros的漫长旅程即将结束。"
+    you ""
 
 # game/core/content/intro.rpy:1750
 translate chinese_simplified day1_0071d336:
 
     # gio "Oh, don't thank me! This is what I got from selling your horses and carriage this morning. You won't be needing them anyway..."
-    gio "看来你穿越Xeros的漫长旅程即将结束。"
+    gio ""
 
 # game/core/content/intro.rpy:1754
 translate chinese_simplified day1_4d9200a0:
 
     # you "What!!! Why you... [starting_gold] denars! It was worth at least twice that!!!"
-    you "看来你穿越Xeros的漫长旅程即将结束。"
+    you ""
 
 # game/core/content/intro.rpy:1756
 translate chinese_simplified day1_3ebce7ac:
 
     # gio "Oh, well, these are hard times... I'm afraid slaves are not the best quality at that price, but your training will make all the difference, I'm sure. Hehehe..."
-    gio "看来你穿越Xeros的漫长旅程即将结束。"
+    gio ""
 
 # game/core/content/intro.rpy:1796
 translate chinese_simplified slavemarket_first_time_5844e0b2:
 
     # gio "Good, you have now bought your first slave."
-    gio "看来你穿越Xeros的漫长旅程即将结束。"
+    gio ""
 
 # game/core/content/intro.rpy:1798
 translate chinese_simplified slavemarket_first_time_d20878d5:
 
     # sill happy "Ahem."
-    sill happy "看来你穿越Xeros的漫长旅程即将结束。"
+    sill happy ""
 
 # game/core/content/intro.rpy:1800
 translate chinese_simplified slavemarket_first_time_024e8571:
 
     # gio "Ok, your second slave then."
-    gio "看来你穿越Xeros的漫长旅程即将结束。"
+    gio ""
 
 # game/core/content/intro.rpy:1801
 translate chinese_simplified slavemarket_first_time_b6a1fc61:
 
     # gio "Oh, by the way. Will you be using Sill as a whore?"
-    gio "看来你穿越Xeros的漫长旅程即将结束。"
+    gio ""
 
 # game/core/content/intro.rpy:1804
 translate chinese_simplified slavemarket_first_time_bfd49cfe:
 
     # gio "As I know from personal experience, she's quite alright in the sack... *wink*"
-    gio "看来你穿越Xeros的漫长旅程即将结束。"
+    gio ""
 
 # game/core/content/intro.rpy:1806
 translate chinese_simplified slavemarket_first_time_0da19645:
 
     # sill sad "Whaaaat? Master, no!!!"
-    sill sad "看来你穿越Xeros的漫长旅程即将结束。"
+    sill sad ""
 
 # game/core/content/intro.rpy:1808
 translate chinese_simplified slavemarket_first_time_a48092dd:
 
     # you "Hmmm..."
-    you "看来你穿越Xeros的漫长旅程即将结束。"
+    you ""
 
 # game/core/content/intro.rpy:1811
 translate chinese_simplified slavemarket_first_time_0d668adf:
 
     # you "No, Sill is my personal slave and I don't want to share her with all of Zan."
-    you "看来你穿越Xeros的漫长旅程即将结束。"
+    you ""
 
 # game/core/content/intro.rpy:1813
 translate chinese_simplified slavemarket_first_time_e8ef0b9b:
 
     # you "She is a dumb slut, but her skills are lacking. Maybe I'll use her later, as a cum dump for unsatisfied customers."
-    you "看来你穿越Xeros的漫长旅程即将结束。"
+    you ""
 
 # game/core/content/intro.rpy:1815
 translate chinese_simplified slavemarket_first_time_cdaff9da:
 
     # sill "Noooooo!!!"
-    sill "看来你穿越Xeros的漫长旅程即将结束。"
+    sill ""
 
 # game/core/content/intro.rpy:1817
 translate chinese_simplified slavemarket_first_time_8f42f826:
 
     # you "No, Sill will help with other tasks. I need someone to handle the reception, the accounting, the laundry, the groceries, the cooking, the cleaning..."
-    you "看来你穿越Xeros的漫长旅程即将结束。"
+    you ""
 
 # game/core/content/intro.rpy:1819
 translate chinese_simplified slavemarket_first_time_f5cfa24a:
@@ -2772,7 +2772,7 @@ translate chinese_simplified slavemarket_first_time_f5cfa24a:
 translate chinese_simplified slavemarket_first_time_bdd56139:
 
     # gio "As you wish."
-    gio "看来你穿越Xeros的漫长旅程即将结束。"
+    gio ""
 
 # game/core/content/intro.rpy:1825
 translate chinese_simplified slavemarket_first_time_38e75056:
@@ -2790,19 +2790,19 @@ translate chinese_simplified slavemarket_first_time_3cf3b2a1:
 translate chinese_simplified slavemarket_first_time_59a50666:
 
     # girl.char "Aaaaah!"
-    girl.char "看来你穿越Xeros的漫长旅程即将结束。"
+    girl.char ""
 
 # game/core/content/intro.rpy:1834
 translate chinese_simplified slavemarket_first_time_1cb40892:
 
     # gio "This girl has a good body. Look at those juicy boobs... Mmmmh."
-    gio "看来你穿越Xeros的漫长旅程即将结束。"
+    gio ""
 
 # game/core/content/intro.rpy:1836
 translate chinese_simplified slavemarket_first_time_b16b0edb:
 
     # gio "This girl is not bad looking. Even if she's useless in bed, she will still attract customers who want to fuck a pretty slut."
-    gio "看来你穿越Xeros的漫长旅程即将结束。"
+    gio ""
 
 # game/core/content/intro.rpy:1839
 translate chinese_simplified slavemarket_first_time_d9935f34:
@@ -2814,199 +2814,199 @@ translate chinese_simplified slavemarket_first_time_d9935f34:
 translate chinese_simplified slavemarket_first_time_e2e2d9ef:
 
     # girl.char "Come on now, keep your hands to yourself, granpa."
-    girl.char "看来你穿越Xeros的漫长旅程即将结束。"
+    girl.char ""
 
 # game/core/content/intro.rpy:1841
 translate chinese_simplified slavemarket_first_time_05f54f30:
 
     # gio "What the..."
-    gio "看来你穿越Xeros的漫长旅程即将结束。"
+    gio ""
 
 # game/core/content/intro.rpy:1842
 translate chinese_simplified slavemarket_first_time_a8af99cc:
 
     # gio "Well, this girl has spirit. Customers like girls with personality."
-    gio "看来你穿越Xeros的漫长旅程即将结束。"
+    gio ""
 
 # game/core/content/intro.rpy:1844
 translate chinese_simplified slavemarket_first_time_f0df62fc:
 
     # gio "She looks quite ladylike, for a cocksucking slave. Maybe she will attract more than the usual rabble, I wonder?"
-    gio "看来你穿越Xeros的漫长旅程即将结束。"
+    gio ""
 
 # game/core/content/intro.rpy:1846
 translate chinese_simplified slavemarket_first_time_2d33f590:
 
     # gio "I don't really see what she's good for. But it's your choice, of course."
-    gio "看来你穿越Xeros的漫长旅程即将结束。"
+    gio ""
 
 # game/core/content/intro.rpy:1849
 translate chinese_simplified slavemarket_first_time_a48092dd_1:
 
     # you "Hmmm..."
-    you "看来你穿越Xeros的漫长旅程即将结束。"
+    you ""
 
 # game/core/content/intro.rpy:1850
 translate chinese_simplified slavemarket_first_time_b8af6747:
 
     # you "Anyway, stop babbling old man."
-    you "看来你穿越Xeros的漫长旅程即将结束。"
+    you ""
 
 # game/core/content/intro.rpy:1851
 translate chinese_simplified slavemarket_first_time_3cd3aee4:
 
     # you "It's time you showed us the house."
-    you "看来你穿越Xeros的漫长旅程即将结束。"
+    you ""
 
 # game/core/content/intro.rpy:1853
 translate chinese_simplified slavemarket_first_time_926b5312:
 
     # gio "Yes, well..."
-    gio "看来你穿越Xeros的漫长旅程即将结束。"
+    gio ""
 
 # game/core/content/intro.rpy:1864
 translate chinese_simplified districts_first_time_ed187e2e:
 
     # gio "First, I must tell you some things about the city layout."
-    gio "看来你穿越Xeros的漫长旅程即将结束。"
+    gio ""
 
 # game/core/content/intro.rpy:1868
 translate chinese_simplified districts_first_time_aa115221:
 
     # gio "Zan is a huge city, with many different neighbourhoods called districts."
-    gio "看来你穿越Xeros的漫长旅程即将结束。"
+    gio ""
 
 # game/core/content/intro.rpy:1872
 translate chinese_simplified districts_first_time_73464aa6:
 
     # gio "Some districts are home to the aristocrats and the wealthy..."
-    gio "看来你穿越Xeros的漫长旅程即将结束。"
+    gio ""
 
 # game/core/content/intro.rpy:1876
 translate chinese_simplified districts_first_time_ff196fe7:
 
     # gio "...others are home to the poor and humble who toil in the shadows."
-    gio "看来你穿越Xeros的漫长旅程即将结束。"
+    gio ""
 
 # game/core/content/intro.rpy:1880
 translate chinese_simplified districts_first_time_41af7e45:
 
     # gio "Every district requires a specific license to open a business within the district limits."
-    gio "看来你穿越Xeros的漫长旅程即将结束。"
+    gio ""
 
 # game/core/content/intro.rpy:1882
 translate chinese_simplified districts_first_time_759cf744:
 
     # gio "To get a license, of course, you need to have the right political and business connections... Something which isn't easy to achieve."
-    gio "看来你穿越Xeros的漫长旅程即将结束。"
+    gio ""
 
 # game/core/content/intro.rpy:1884
 translate chinese_simplified districts_first_time_a8ec5223:
 
     # you "What are you trying to say..."
-    you "看来你穿越Xeros的漫长旅程即将结束。"
+    you ""
 
 # game/core/content/intro.rpy:1886
 translate chinese_simplified districts_first_time_a7b3b131:
 
     # gio "Well..."
-    gio "看来你穿越Xeros的漫长旅程即将结束。"
+    gio ""
 
 # game/core/content/intro.rpy:1888
 translate chinese_simplified districts_first_time_7e1f37b3:
 
     # gio "I don't, err, have a proper license per se..."
-    gio "看来你穿越Xeros的漫长旅程即将结束。"
+    gio ""
 
 # game/core/content/intro.rpy:1890
 translate chinese_simplified districts_first_time_a577ad0e:
 
     # you "What?"
-    you "看来你穿越Xeros的漫长旅程即将结束。"
+    you ""
 
 # game/core/content/intro.rpy:1892
 translate chinese_simplified districts_first_time_5f5fc996:
 
     # gio "... so the only place I could open a brothel was..."
-    gio "看来你穿越Xeros的漫长旅程即将结束。"
+    gio ""
 
 # game/core/content/intro.rpy:1896
 translate chinese_simplified districts_first_time_e7db6af4:
 
     # gio "... the slums."
-    gio "看来你穿越Xeros的漫长旅程即将结束。"
+    gio ""
 
 # game/core/content/intro.rpy:1900
 translate chinese_simplified districts_first_time_5f2b17be:
 
     # you "Whaaat???"
-    you "看来你穿越Xeros的漫长旅程即将结束。"
+    you ""
 
 # game/core/content/intro.rpy:1902
 translate chinese_simplified districts_first_time_3702c7d1:
 
     # gio "But don't you worry, my young friend..."
-    gio "看来你穿越Xeros的漫长旅程即将结束。"
+    gio ""
 
 # game/core/content/intro.rpy:1904
 translate chinese_simplified districts_first_time_9c333ebb:
 
     # gio "You see, people living in the slums might not be very well off..."
-    gio "看来你穿越Xeros的漫长旅程即将结束。"
+    gio ""
 
 # game/core/content/intro.rpy:1906
 translate chinese_simplified districts_first_time_a602e104:
 
     # you "*evil stare*"
-    you "看来你穿越Xeros的漫长旅程即将结束。"
+    you ""
 
 # game/core/content/intro.rpy:1908
 translate chinese_simplified districts_first_time_2d0d4bb0:
 
     # gio "All right, most of them are drifters and beggars."
-    gio "看来你穿越Xeros的漫长旅程即将结束。"
+    gio ""
 
 # game/core/content/intro.rpy:1910
 translate chinese_simplified districts_first_time_68f90f87:
 
     # gio "But like everyone in Zan, they need sex, and what little money they get, they spend on girls and spice."
-    gio "看来你穿越Xeros的漫长旅程即将结束。"
+    gio ""
 
 # game/core/content/intro.rpy:1912
 translate chinese_simplified districts_first_time_be06483b:
 
     # gio "So, while I didn't succeed in making the brothel business take off, I'm sure you will find a way to turn a profit. My instinct tells me so..."
-    gio "看来你穿越Xeros的漫长旅程即将结束。"
+    gio ""
 
 # game/core/content/intro.rpy:1915
 translate chinese_simplified districts_first_time_9f303fe7:
 
     # you "Well, I will have to rely on my legendary business acumen..."
-    you "看来你穿越Xeros的漫长旅程即将结束。"
+    you ""
 
 # game/core/content/intro.rpy:1918
 translate chinese_simplified districts_first_time_7304fb29:
 
     # you "Yeah, whatever..."
-    you "看来你穿越Xeros的漫长旅程即将结束。"
+    you ""
 
 # game/core/content/intro.rpy:1927
 translate chinese_simplified districts_first_time_28e2583e:
 
     # gio "From here, you can see the various districts of Zan."
-    gio "看来你穿越Xeros的漫长旅程即将结束。"
+    gio ""
 
 # game/core/content/intro.rpy:1929
 translate chinese_simplified districts_first_time_f4c6f1c6:
 
     # gio "Right now, you can only open your brothel in the slums."
-    gio "看来你穿越Xeros的漫长旅程即将结束。"
+    gio ""
 
 # game/core/content/intro.rpy:1931
 translate chinese_simplified districts_first_time_d598cb46:
 
     # gio "Later, you may unlock other districts if you have the proper license."
-    gio "看来你穿越Xeros的漫长旅程即将结束。"
+    gio ""
 
 # game/core/content/intro.rpy:1941
 translate chinese_simplified districts_first_time_slums_4276900c:
@@ -3024,139 +3024,139 @@ translate chinese_simplified districts_first_time_slums_1054b62c:
 translate chinese_simplified brothel_first_time_dd9d0132:
 
     # gio "Behold! Your new home."
-    gio "看来你穿越Xeros的漫长旅程即将结束。"
+    gio ""
 
 # game/core/content/intro.rpy:1968
 translate chinese_simplified brothel_first_time_dae0ec55:
 
     # you "..."
-    you "看来你穿越Xeros的漫长旅程即将结束。"
+    you ""
 
 # game/core/content/intro.rpy:1970
 translate chinese_simplified brothel_first_time_bf822476:
 
     # you "You've got to be kidding..."
-    you "看来你穿越Xeros的漫长旅程即将结束。"
+    you ""
 
 # game/core/content/intro.rpy:1972
 translate chinese_simplified brothel_first_time_7734c789:
 
     # sill sad "What's... What's that smell?"
-    sill sad "看来你穿越Xeros的漫长旅程即将结束。"
+    sill sad ""
 
 # game/core/content/intro.rpy:1974
 translate chinese_simplified brothel_first_time_96ee95ff:
 
     # gio "Oh, err... We are located downwind from the nearby junkyard."
-    gio "看来你穿越Xeros的漫长旅程即将结束。"
+    gio ""
 
 # game/core/content/intro.rpy:1976
 translate chinese_simplified brothel_first_time_85d012d5:
 
     # gio "Don't you worry, you'll get used to it in no time."
-    gio "看来你穿越Xeros的漫长旅程即将结束。"
+    gio ""
 
 # game/core/content/intro.rpy:1978
 translate chinese_simplified brothel_first_time_dae0ec55_1:
 
     # you "..."
-    you "看来你穿越Xeros的漫长旅程即将结束。"
+    you ""
 
 # game/core/content/intro.rpy:1982
 translate chinese_simplified brothel_first_time_325732aa:
 
     # you "I'll rip your head off..."
-    you "看来你穿越Xeros的漫长旅程即将结束。"
+    you ""
 
 # game/core/content/intro.rpy:1986
 translate chinese_simplified brothel_first_time_37d25964:
 
     # you "Are you crazy! This place is a dump!"
-    you "看来你穿越Xeros的漫长旅程即将结束。"
+    you ""
 
 # game/core/content/intro.rpy:1988
 translate chinese_simplified brothel_first_time_68595f4c:
 
     # gio "Calm down, my friend, calm down..."
-    gio "看来你穿越Xeros的漫长旅程即将结束。"
+    gio ""
 
 # game/core/content/intro.rpy:1990
 translate chinese_simplified brothel_first_time_c09f52c8:
 
     # gio "I assure you, this is more than good enough for the rabble that lives in this district."
-    gio "看来你穿越Xeros的漫长旅程即将结束。"
+    gio ""
 
 # game/core/content/intro.rpy:1992
 translate chinese_simplified brothel_first_time_649a0165:
 
     # sill "It looks... small and shabby."
-    sill "看来你穿越Xeros的漫长旅程即将结束。"
+    sill ""
 
 # game/core/content/intro.rpy:1994
 translate chinese_simplified brothel_first_time_7466a9f9:
 
     # gio "Well... So do you, sweetheart, and still you've got some tricks up your skirt! *wink*"
-    gio "看来你穿越Xeros的漫长旅程即将结束。"
+    gio ""
 
 # game/core/content/intro.rpy:1998
 translate chinese_simplified brothel_first_time_2dadbc9f:
 
     # sill "Grrr..." with vpunch
-    sill "看来你穿越Xeros的漫长旅程即将结束。" with vpunch
+    sill "" with vpunch
 
 # game/core/content/intro.rpy:2000
 translate chinese_simplified brothel_first_time_78dc5ba9:
 
     # gio "This place is small, but there are bedrooms in the cellar downstairs."
-    gio "看来你穿越Xeros的漫长旅程即将结束。"
+    gio ""
 
 # game/core/content/intro.rpy:2002
 translate chinese_simplified brothel_first_time_72e4a326:
 
     # gio "Right now, only one is usable, though."
-    gio "看来你穿越Xeros的漫长旅程即将结束。"
+    gio ""
 
 # game/core/content/intro.rpy:2004
 translate chinese_simplified brothel_first_time_b1358fe4:
 
     # gio "Also, you will need to entertain your customers in a common room while they wait their turn for more... private action."
-    gio "看来你穿越Xeros的漫长旅程即将结束。"
+    gio ""
 
 # game/core/content/intro.rpy:2006
 translate chinese_simplified brothel_first_time_943b4c54:
 
     # gio "Those common rooms serve as a front for the business, just in case the Guard becomes too nosy."
-    gio "看来你穿越Xeros的漫长旅程即将结束。"
+    gio ""
 
 # game/core/content/intro.rpy:2008
 translate chinese_simplified brothel_first_time_505459bd:
 
     # gio "New girls will start working in the common rooms, until they are comfortable enough taking guests to the bedrooms."
-    gio "看来你穿越Xeros的漫长旅程即将结束。"
+    gio ""
 
 # game/core/content/intro.rpy:2010
 translate chinese_simplified brothel_first_time_262a6213:
 
     # gio "Currently, all the common rooms are in disrepair."
-    gio "看来你穿越Xeros的漫长旅程即将结束。"
+    gio ""
 
 # game/core/content/intro.rpy:2012
 translate chinese_simplified brothel_first_time_7d9f8ca5:
 
     # sill "Ew, I think this one was used by vagrants... As a toilet!"
-    sill "看来你穿越Xeros的漫长旅程即将结束。"
+    sill ""
 
 # game/core/content/intro.rpy:2014
 translate chinese_simplified brothel_first_time_e90bec1c:
 
     # you "So... This brothel is useless as it is, then..."
-    you "看来你穿越Xeros的漫长旅程即将结束。"
+    you ""
 
 # game/core/content/intro.rpy:2016
 translate chinese_simplified brothel_first_time_9e574b33:
 
     # you "*hardcore evil stare*"
-    you "看来你穿越Xeros的漫长旅程即将结束。"
+    you ""
 
 # game/core/content/intro.rpy:2020
 translate chinese_simplified brothel_first_time_f131db99:
@@ -3180,211 +3180,211 @@ translate chinese_simplified brothel_first_time_d169b374:
 translate chinese_simplified brothel_first_time_c0e03f4b:
 
     # gio "I see that you are not quite pleased with my gift... so I'll throw in a bonus."
-    gio "看来你穿越Xeros的漫长旅程即将结束。"
+    gio ""
 
 # game/core/content/intro.rpy:2032
 translate chinese_simplified brothel_first_time_5a1529ac:
 
     # gio "Craftsmen working for me will come this afternoon, and they'll repair one of the common rooms. This should get you started."
-    gio "看来你穿越Xeros的漫长旅程即将结束。"
+    gio ""
 
 # game/core/content/intro.rpy:2034
 translate chinese_simplified brothel_first_time_075a1f1b:
 
     # gio "There are 4 types of common areas. You get to pick the one you like best."
-    gio "看来你穿越Xeros的漫长旅程即将结束。"
+    gio ""
 
 # game/core/content/intro.rpy:2039
 translate chinese_simplified brothel_first_time_8feddac2:
 
     # gio "The {b}tavern{/b} will allow you to train your girls as {b}waitresses{/b}."
-    gio "看来你穿越Xeros的漫长旅程即将结束。"
+    gio ""
 
 # game/core/content/intro.rpy:2041
 translate chinese_simplified brothel_first_time_933948e2:
 
     # gio "Waitresses with good {b}charm{/b} will keep the customers entertained."
-    gio "看来你穿越Xeros的漫长旅程即将结束。"
+    gio ""
 
 # game/core/content/intro.rpy:2043
 translate chinese_simplified brothel_first_time_7a99c792:
 
     # gio "With time, they will start wearing sexy uniforms and providing all kinds of 'entertainment' to the customers."
-    gio "看来你穿越Xeros的漫长旅程即将结束。"
+    gio ""
 
 # game/core/content/intro.rpy:2047
 translate chinese_simplified brothel_first_time_3a4e7fc5:
 
     # gio "The {b}strip club{/b} will allow you to train girls as {b}dancers{/b}."
-    gio "看来你穿越Xeros的漫长旅程即将结束。"
+    gio ""
 
 # game/core/content/intro.rpy:2049
 translate chinese_simplified brothel_first_time_450289c5:
 
     # gio "You should pick girls with a good {b}body{/b} to be Dancers."
-    gio "看来你穿越Xeros的漫长旅程即将结束。"
+    gio ""
 
 # game/core/content/intro.rpy:2051
 translate chinese_simplified brothel_first_time_a08bb573:
 
     # gio "With time, they will remove more and more clothing, and take the customers to a room for a 'private dance'."
-    gio "看来你穿越Xeros的漫长旅程即将结束。"
+    gio ""
 
 # game/core/content/intro.rpy:2055
 translate chinese_simplified brothel_first_time_dfa62532:
 
     # gio "The {b}onsen{/b} will allow you to train girls as {b}masseuses{/b}."
-    gio "看来你穿越Xeros的漫长旅程即将结束。"
+    gio ""
 
 # game/core/content/intro.rpy:2057
 translate chinese_simplified brothel_first_time_e270038c:
 
     # gio "Masseuses should be {b}beautiful{/b} girls, to attract customers to the onsen."
-    gio "看来你穿越Xeros的漫长旅程即将结束。"
+    gio ""
 
 # game/core/content/intro.rpy:2059
 translate chinese_simplified brothel_first_time_03bf0d24:
 
     # gio "With time, they will give erotic massages to the customers, and eventually provide them with 'full service'."
-    gio "看来你穿越Xeros的漫长旅程即将结束。"
+    gio ""
 
 # game/core/content/intro.rpy:2063
 translate chinese_simplified brothel_first_time_b17ae063:
 
     # gio "The {b}okiya{/b} will allow you to train girls as {b}geishas{/b}."
-    gio "看来你穿越Xeros的漫长旅程即将结束。"
+    gio ""
 
 # game/core/content/intro.rpy:2065
 translate chinese_simplified brothel_first_time_9c8cc9ab:
 
     # gio "Geishas should be {b}refined{/b}, elegant and witty. Not that the riffraff around here knows anything about class, mind you... But that's the job description."
-    gio "看来你穿越Xeros的漫长旅程即将结束。"
+    gio ""
 
 # game/core/content/intro.rpy:2067
 translate chinese_simplified brothel_first_time_9a5db8f2:
 
     # gio "With time, they'll learn a thousand ways to please their customers, and how to take care of their more... 'special' requests."
-    gio "看来你穿越Xeros的漫长旅程即将结束。"
+    gio ""
 
 # game/core/content/intro.rpy:2074
 translate chinese_simplified brothel_first_time_03af0acd:
 
     # gio "So now, choose carefully..."
-    gio "看来你穿越Xeros的漫长旅程即将结束。"
+    gio ""
 
 # game/core/content/intro.rpy:2103
 translate chinese_simplified brothel_first_time_997f44cb:
 
     # gio "So, I see you've chosen the {b}[room.name]{/b}. A good choice, my friend!"
-    gio "看来你穿越Xeros的漫长旅程即将结束。"
+    gio ""
 
 # game/core/content/intro.rpy:2105
 translate chinese_simplified brothel_first_time_1eb42fe8:
 
     # gio "I will be back soon with the craftsmen. They will turn this place around in no time."
-    gio "看来你穿越Xeros的漫长旅程即将结束。"
+    gio ""
 
 # game/core/content/intro.rpy:2127
 translate chinese_simplified main_first_time_f76e2db9:
 
     # gio "Tadaaa!"
-    gio "看来你穿越Xeros的漫长旅程即将结束。"
+    gio ""
 
 # game/core/content/intro.rpy:2129
 translate chinese_simplified main_first_time_a4cfd4ac:
 
     # gio "The [room.name] is in order now."
-    gio "看来你穿越Xeros的漫长旅程即将结束。"
+    gio ""
 
 # game/core/content/intro.rpy:2131
 translate chinese_simplified main_first_time_1da6dcb3:
 
     # gio "I'll leave you to it then. Don't forget to assign your girl to work there for the big opening tonight."
-    gio "看来你穿越Xeros的漫长旅程即将结束。"
+    gio ""
 
 # game/core/content/intro.rpy:2140
 translate chinese_simplified main_first_time_56e5581a:
 
     # sill "Finally!"
-    sill "看来你穿越Xeros的漫长旅程即将结束。"
+    sill ""
 
 # game/core/content/intro.rpy:2142
 translate chinese_simplified main_first_time_96ac5f80:
 
     # sill "That old, disgusting guy is gone!"
-    sill "看来你穿越Xeros的漫长旅程即将结束。"
+    sill ""
 
 # game/core/content/intro.rpy:2144
 translate chinese_simplified main_first_time_432b2300:
 
     # you "Yes. Now what do we do?"
-    you "看来你穿越Xeros的漫长旅程即将结束。"
+    you ""
 
 # game/core/content/intro.rpy:2146
 translate chinese_simplified main_first_time_83c87f60:
 
     # sill "Master [MC.name], our first order of business is to find a name for your brothel."
-    sill "看来你穿越Xeros的漫长旅程即将结束。"
+    sill ""
 
 # game/core/content/intro.rpy:2148
 translate chinese_simplified main_first_time_8247c529:
 
     # sill "Gio's old place was just called 'Cunts Galore'. Just goes to show his complete lack of class."
-    sill "看来你穿越Xeros的漫长旅程即将结束。"
+    sill ""
 
 # game/core/content/intro.rpy:2150
 translate chinese_simplified main_first_time_b3b655ba:
 
     # sill "Oh, I know! How about, 'The Rose Garden'? That sounds more poetic, don't you think?"
-    sill "看来你穿越Xeros的漫长旅程即将结束。"
+    sill ""
 
 # game/core/content/intro.rpy:2155
 translate chinese_simplified main_first_time_08f8ec6f:
 
     # sill "Yay! I'm glad you liked it."
-    sill "看来你穿越Xeros的漫长旅程即将结束。"
+    sill ""
 
 # game/core/content/intro.rpy:2158
 translate chinese_simplified main_first_time_f80f4ef0:
 
     # sill sad "Ew! Master! Not that name again!"
-    sill sad "看来你穿越Xeros的漫长旅程即将结束。"
+    sill sad ""
 
 # game/core/content/intro.rpy:2159
 translate chinese_simplified main_first_time_5ff492db:
 
     # you "Shut up, Sill. I call the shots here."
-    you "看来你穿越Xeros的漫长旅程即将结束。"
+    you ""
 
 # game/core/content/intro.rpy:2160
 translate chinese_simplified main_first_time_a39a743b:
 
     # sill "Aw..."
-    sill "看来你穿越Xeros的漫长旅程即将结束。"
+    sill ""
 
 # game/core/content/intro.rpy:2163
 translate chinese_simplified main_first_time_f3dce340:
 
     # sill "Oh, well, that's a good name too, I suppose."
-    sill "看来你穿越Xeros的漫长旅程即将结束。"
+    sill ""
 
 # game/core/content/intro.rpy:2165
 translate chinese_simplified main_first_time_b715d5ea:
 
     # sill happy "While the workers were busy, I went over the old accounting books."
-    sill happy "看来你穿越Xeros的漫长旅程即将结束。"
+    sill happy ""
 
 # game/core/content/intro.rpy:2167
 translate chinese_simplified main_first_time_cbb9dfcd:
 
     # sill "The old geezer was as bad as he said he was at managing the business, but I think I got a rough idea of how things work."
-    sill "看来你穿越Xeros的漫长旅程即将结束。"
+    sill ""
 
 # game/core/content/intro.rpy:2170
 translate chinese_simplified main_first_time_dc84031e:
 
     # sill "Let us visit your girl, and I will explain."
-    sill "看来你穿越Xeros的漫长旅程即将结束。"
+    sill ""
 
 translate chinese_simplified strings:
 
@@ -3394,7 +3394,7 @@ translate chinese_simplified strings:
 
     # game/core/content/intro.rpy:40
     old "???"
-    new "看来你穿越Xeros的漫长旅程即将结束。"
+    new "？？？"
 
     # game/core/content/intro.rpy:292
     old "I am..."
