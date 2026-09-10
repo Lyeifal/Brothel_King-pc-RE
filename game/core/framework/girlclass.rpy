@@ -2950,94 +2950,13 @@ init -2 python:
 
 
         def obedience_check(self, act=None): # Will check if the girl will accept to work tonight
-
-            target = self.get_obedience_check_target(act, train=False)
-
-            result = renpy.random.randrange(100) * self.get_effect("boost", "obedience tests")
-
-            # Boost to training check if girl remembers being rewarded or punished (Dom girls don't like punishment)
-
-            if self.remembers("punish", "disobey"):
-                if self.is_("very dom"):
-                    result -= 5
-                elif self.is_("dom"):
-                    result += 0
-                elif self.is_("very sub"):
-                    result += 6 * self.remembers("punish", "disobey")
-                elif self.is_("sub"):
-                    result += 3 * self.remembers("punish", "disobey")
-
-            self.last_obedience_check = str(result) + "/" + str(round_int(target))
-
-            if result > target:
-                return True
-
-            else:
-                return False
+            return self._training.obedience_check(act)
 
         def training_check(self, act):
-
-            target = self.get_obedience_check_target(act, train=True)
-            result = renpy.random.randrange(100) * self.get_effect("boost", "obedience tests")
-
-            # Boost to training check if girl remembers being rewarded or punished (Dom girls don't like punishment)
-
-            if self.remembers("reward", act):
-                if self.is_("very materialist"):
-                    result += 9 * self.remembers("reward", "act")
-                elif self.is_("materialist"):
-                    result += 6 * self.remembers("reward", "act")
-                elif self.is_("very idealist"):
-                    result += 0
-                elif self.is_("idealist"):
-                    result += 6 * self.remembers("reward", "act")
-
-            if self.remembers("punish", act):
-                if self.is_("very dom"):
-                    result -= 5
-                elif self.is_("dom"):
-                    result += 0
-                elif self.is_("very sub"):
-                    result += 6 * self.remembers("punish", "act")
-                elif self.is_("sub"):
-                    result += 3 * self.remembers("punish", "act")
-
-            if result > target:
-                return "accepted"
-
-            elif result > (target - 25):
-                return "resisted"
-
-            else:
-                return "refused"
+            return self._training.training_check(act)
 
         def run_away_check(self): # Will check if the girl attempts to run away in the morning
-
-            result = False
-
-            if self.mood < mood_runaway_limit and self.ran_away_counter >= 5 and not (self.away or self.farm): # Girls only attempt to run away if their last failed attempt was more than 5 working days before
-
-                if self.remembers("punish", "ran away"):
-                    if self.is_("very dom"):
-                        mod = 5
-                    elif self.is_("dom"):
-                        mod = 0
-                    elif self.is_("very sub"):
-                        mod = -6 * self.remembers("punish", "ran away")
-                    elif self.is_("sub"):
-                        mod = -3 * self.remembers("punish", "ran away")
-                else:
-                    mod = 0
-
-                if dice(100) > 100 - (mood_runaway_limit - self.mood):
-                    if dice(25*self.rank) + mod*self.rank >= (self.get_stat("obedience") + self.get_fear() + brothel.get_security()):
-                        result = "runaway"
-
-                if not result:
-                    if 25*self.rank + mod*self.rank >= (self.get_stat("obedience") + self.get_fear() + brothel.get_security()):
-                        result = "warning"
-
-            return result
+            return self._training.run_away_check()
 
 
         def get_working_chance(self, act):
@@ -4400,9 +4319,6 @@ init -2 python:
         _will_rebel_in_farm_impl = will_rebel_in_farm
         _farm_beg_test_impl = farm_beg_test
         _get_obedience_check_target_impl = get_obedience_check_target
-        _obedience_check_impl = obedience_check
-        _training_check_impl = training_check
-        _run_away_check_impl = run_away_check
         _get_working_chance_impl = get_working_chance
         _get_training_chance_impl = get_training_chance
 

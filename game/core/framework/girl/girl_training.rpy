@@ -73,16 +73,100 @@ init -2 python:
             return self.girl._get_obedience_check_target_impl(act, train)
 
         def obedience_check(self, act=None):
-            '''执行服从检查 | Perform an obedience check'''
-            return self.girl._obedience_check_impl(act)
+            '''执行服从检查 | Perform an obedience check (will she accept to work tonight)'''
+            g = self.girl
+            # 服从检查目标值 | Obedience check target value
+            target = g.get_obedience_check_target(act, train=False)
+
+            result = renpy.random.randrange(100) * g.get_effect("boost", "obedience tests")
+
+            # 奖惩记忆修正（Dom 女孩不喜欢惩罚）| Reward/punishment memory boost (Dom girls dislike punishment)
+
+            if g.remembers("punish", "disobey"):
+                if g.is_("very dom"):
+                    result -= 5
+                elif g.is_("dom"):
+                    result += 0
+                elif g.is_("very sub"):
+                    result += 6 * g.remembers("punish", "disobey")
+                elif g.is_("sub"):
+                    result += 3 * g.remembers("punish", "disobey")
+
+            g.last_obedience_check = str(result) + "/" + str(round_int(target))
+
+            if result > target:
+                return True
+
+            else:
+                return False
 
         def training_check(self, act):
             '''执行训练检查 | Perform a training check'''
-            return self.girl._training_check_impl(act)
+            g = self.girl
+
+            target = g.get_obedience_check_target(act, train=True)
+            result = renpy.random.randrange(100) * g.get_effect("boost", "obedience tests")
+
+            # 奖励记忆修正 | Reward memory boost
+
+            if g.remembers("reward", act):
+                if g.is_("very materialist"):
+                    result += 9 * g.remembers("reward", "act")
+                elif g.is_("materialist"):
+                    result += 6 * g.remembers("reward", "act")
+                elif g.is_("very idealist"):
+                    result += 0
+                elif g.is_("idealist"):
+                    result += 6 * g.remembers("reward", "act")
+
+            if g.remembers("punish", act):
+                if g.is_("very dom"):
+                    result -= 5
+                elif g.is_("dom"):
+                    result += 0
+                elif g.is_("very sub"):
+                    result += 6 * g.remembers("punish", "act")
+                elif g.is_("sub"):
+                    result += 3 * g.remembers("punish", "act")
+
+            if result > target:
+                return "accepted"
+
+            elif result > (target - 25):
+                return "resisted"
+
+            else:
+                return "refused"
 
         def run_away_check(self):
-            '''检查女孩是否尝试逃跑 | Check if girl runs away'''
-            return self.girl._run_away_check_impl()
+            '''检查女孩是否尝试逃跑 | Check if girl attempts to run away in the morning'''
+            g = self.girl
+            result = False
+
+            # 上次逃跑失败需满5个工作日才会再次尝试 | Girls only retry 5 working days after last failed attempt
+            if g.mood < mood_runaway_limit and g.ran_away_counter >= 5 and not (g.away or g.farm):
+
+                if g.remembers("punish", "ran away"):
+                    if g.is_("very dom"):
+                        mod = 5
+                    elif g.is_("dom"):
+                        mod = 0
+                    elif g.is_("very sub"):
+                        mod = -6 * g.remembers("punish", "ran away")
+                    elif g.is_("sub"):
+                        mod = -3 * g.remembers("punish", "ran away")
+                else:
+                    mod = 0
+
+                if dice(100) > 100 - (mood_runaway_limit - g.mood):
+                    if dice(25*g.rank) + mod*g.rank >= (g.get_stat("obedience") + g.get_fear() + brothel.get_security()):
+                        result = "runaway"
+
+                if not result:
+                    if 25*g.rank + mod*g.rank >= (g.get_stat("obedience") + g.get_fear() + brothel.get_security()):
+                        result = "warning"
+
+            return result
 
         def get_working_chance(self, act):
             '''获取工作成功率 | Get working success chance'''
