@@ -2724,90 +2724,10 @@ init -2 python:
                     self.effect_dict[(eff.type, eff.target)].append(eff)
 
         def raise_preference(self, act, type = None, bonus = 1, status_change=False, silent=False, use_effects=True, context="MC"): # Type is fear, love, or None. Bonus depends on the training act (MC, farm or normal play)
-
-            # WARNING: raise_preference is badly named as it can got up of down depending on a girl's fixation modifiers. Set use_effects to False to enforce a positive result
-
-            # Checks current preference
-
-            _old = self.get_preference(act)
-
-            # Test: adding libido to the result
-
-            change = self.get_stat("obedience")//2 + self.get_stat("libido")
-
-            if use_effects:
-                change += self.get_effect("change", act + " preferences changes") + self.get_effect("change", "all preferences changes") # preferences changes effects can be negative
-
-                if context == "MC":
-                    change *= MC.get_effect("boost", "MC training")
-
-                elif context == "farm":
-                    change *= MC.get_effect("boost", "farm training")
-
-            if type == "love":
-                change += self.get_love()
-            elif type == "fear":
-                change += self.get_fear()
-
-            change *= bonus
-
-            if change != 0:
-                if change > 0 or use_effects:
-                    change = self.change_preference(act, change, silent=silent)
-
-            if change > 0 and use_effects: # Only happens if use_effects is on (normal case)
-                if act not in ("naked", "service"): # All sex acts other than service influence naked preference a little
-                    change2 = self.change_preference("naked", 0.25*change, silent=silent)
-
-            _new = self.get_preference(act)
-
-            # Returns new preference if there was a change in status
-
-            if status_change:
-                if _old != _new:
-                    return change, _new
-                else:
-                    return change, False
-            else:
-                return change
-
+            return self._sex.raise_preference(act, type, bonus, status_change, silent, use_effects, context)
 
         def change_preference(self, act, nb, fast=False, silent=False): # Fast disables some checks for performance
-
-            if fast:
-                boost = 1.0
-            else:
-                boost = self.get_effect("boost", act + " preference increase") * self.get_effect("boost", "all sex acts preference increase") * game.get_diff_setting("pref")
-
-                if self in farm.girls:
-                    boost *= self.get_effect("boost", "farm preference increase") # To be replaced with "boost", "farm training" effect?
-
-                boost = reverse_if(boost, nb)
-
-            nb = get_change_min_max(self.preferences[act], nb*boost, -1000, 1000)
-
-            self.preferences[act] += nb
-
-            if not fast:
-                if act == "bisexual" and compare_preference(self, "bisexual", "a little interested"):
-                    story_flags["has_bis"] = True
-                    if not bis_perk in self.perks:
-                        self.acquire_perk(bis_perk, forced=True)
-                        test_achievement("bisexual")
-
-                if act == "group" and compare_preference(self, "group", "a little interested"):
-                    story_flags["has_group"] = True
-                    if not group_perk in self.perks:
-                        self.acquire_perk(group_perk, forced=True)
-                        test_achievement("group")
-                    if compare_preference(self, "group", "very interested"):
-                        if not orgy_perk in self.perks:
-                            self.acquire_perk(orgy_perk, forced=True)
-
-            if not silent:
-                debug_notify("Changing " + act + " preference (%s), value: %i" % (self.fullname, nb), pic=self.portrait)
-
-            return nb
+            return self._sex.change_preference(act, nb, fast, silent)
 
 
         def get_preference(self, act, bonus=0):
@@ -4299,8 +4219,6 @@ init -2 python:
         _get_preference_bonus_impl = get_preference_bonus
         _add_random_fixation_impl = add_random_fixation
         _reset_sex_acts_impl = reset_sex_acts
-        _raise_preference_impl = raise_preference
-        _change_preference_impl = change_preference
         _get_preference_impl = get_preference
         _compare_preference_impl = compare_preference
         _pop_virginity_impl = pop_virginity

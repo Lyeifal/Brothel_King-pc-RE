@@ -148,12 +148,91 @@ init -2 python:
         # ── 偏好管理 | Preference management ──
 
         def raise_preference(self, act, type=None, bonus=1, status_change=False, silent=False, use_effects=True, context="MC"):
-            # 提升偏好 | Raise preference for an act
-            return self.girl._raise_preference_impl(act, type, bonus, status_change, silent, use_effects, context)
+            '''提升偏好 | Raise preference for an act (may go down with fixation modifiers; use_effects=False enforces positive)'''
+            g = self.girl
+
+            # 检查当前偏好 | Checks current preference
+
+            _old = g.get_preference(act)
+
+            # 测试：加入欲望加成 | Test: adding libido to the result
+
+            change = g.get_stat("obedience")//2 + g.get_stat("libido")
+
+            if use_effects:
+                change += g.get_effect("change", act + " preferences changes") + g.get_effect("change", "all preferences changes") # preferences changes effects can be negative
+
+                if context == "MC":
+                    change *= MC.get_effect("boost", "MC training")
+
+                elif context == "farm":
+                    change *= MC.get_effect("boost", "farm training")
+
+            if type == "love":
+                change += g.get_love()
+            elif type == "fear":
+                change += g.get_fear()
+
+            change *= bonus
+
+            if change != 0:
+                if change > 0 or use_effects:
+                    change = g.change_preference(act, change, silent=silent)
+
+            if change > 0 and use_effects: # Only happens if use_effects is on (normal case)
+                if act not in ("naked", "service"): # All sex acts other than service influence naked preference a little
+                    change2 = g.change_preference("naked", 0.25*change, silent=silent)
+
+            _new = g.get_preference(act)
+
+            # 状态变化时返回新偏好 | Returns new preference if there was a change in status
+
+            if status_change:
+                if _old != _new:
+                    return change, _new
+                else:
+                    return change, False
+            else:
+                return change
 
         def change_preference(self, act, nb, fast=False, silent=False):
-            # 改变偏好值 | Change preference value
-            return self.girl._change_preference_impl(act, nb, fast, silent)
+            '''改变偏好值 | Change preference value (fast disables some checks for performance)'''
+            g = self.girl
+
+            if fast:
+                boost = 1.0
+            else:
+                boost = g.get_effect("boost", act + " preference increase") * g.get_effect("boost", "all sex acts preference increase") * game.get_diff_setting("pref")
+
+                if g in farm.girls:
+                    boost *= g.get_effect("boost", "farm preference increase") # To be replaced with "boost", "farm training" effect?
+
+                boost = reverse_if(boost, nb)
+
+            nb = get_change_min_max(g.preferences[act], nb*boost, -1000, 1000)
+
+            g.preferences[act] += nb
+
+            if not fast:
+                if act == "bisexual" and compare_preference(g, "bisexual", "a little interested"):
+                    story_flags["has_bis"] = True
+                    if not bis_perk in g.perks:
+                        g.acquire_perk(bis_perk, forced=True)
+                        test_achievement("bisexual")
+
+                if act == "group" and compare_preference(g, "group", "a little interested"):
+                    story_flags["has_group"] = True
+                    if not group_perk in g.perks:
+                        g.acquire_perk(group_perk, forced=True)
+                        test_achievement("group")
+                    if compare_preference(g, "group", "very interested"):
+                        if not orgy_perk in g.perks:
+                            g.acquire_perk(orgy_perk, forced=True)
+
+            if not silent:
+                debug_notify("Changing " + act + " preference (%s), value: %i" % (g.fullname, nb), pic=g.portrait)
+
+            return nb
 
         def get_preference(self, act, bonus=0):
             # 获取偏好值 | Get preference value for an act
