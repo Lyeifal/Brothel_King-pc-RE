@@ -14,6 +14,12 @@ screen courtyard():
     default selected_girl = None
     default selected_facility = None
 
+    ## EN: Precompute values for text interpolation (function calls are not allowed inside [ ]).
+    ## ZH: 预先计算文本插值用的值（[ ] 内不允许函数调用）。
+    python:
+        _courtyard_girl_count = len(courtyard.girls)
+        _courtyard_upkeep = courtyard.get_daily_upkeep()
+
     frame:
         xfill True
         yfill True
@@ -34,11 +40,11 @@ screen courtyard():
                 xalign 0.5
                 spacing 20
 
-                text __("女孩: [len(courtyard.girls)] / [courtyard.MAX_CAPACITY]"):
+                text __("女孩: [_courtyard_girl_count] / [courtyard.MAX_CAPACITY]"):
                     size 18
                     color "#FFFFFF"
 
-                text __("每日维护: [courtyard.get_daily_upkeep()] 金币"):
+                text __("每日维护: [_courtyard_upkeep] 金币"):
                     size 18
                     color "#FFD700"
 
