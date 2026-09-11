@@ -107,7 +107,8 @@ screen auction_house():
                                                 color "#FFFFFF"
                                                 bold True
 
-                                            text __("Rank %s — %s") % (lot.girl.rank, __(lot.girl.job.capitalize())):
+                                            $ _lot_job_label = __(lot.girl.job.capitalize()) if lot.girl.job else __("No job")
+                                            text __("Rank %s — %s") % (lot.girl.rank, _lot_job_label):
                                                 size 14
                                                 color "#BBBBBB"
 

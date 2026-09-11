@@ -127,7 +127,7 @@ screen courtyard():
                             color "#FFFFFF"
                             bold True
 
-                        if hasattr(selected_girl, "job"):
+                        if getattr(selected_girl, "job", None):
                             text __(selected_girl.job.capitalize()):
                                 size 16
                                 xalign 0.5
