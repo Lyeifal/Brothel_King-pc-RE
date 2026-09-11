@@ -146,7 +146,7 @@ init -1 python:
 
         def add_girl(self, girl):
             """
-            EN: Move a girl to the courtyard. Returns True on success.
+            EN: Move a girl to the courtyard_villa. Returns True on success.
             ZH: 将女孩移到别院。成功返回 True。
             """
             if not self.can_add_girl():
@@ -190,7 +190,7 @@ init -1 python:
                 若青楼已达工作上限（24）则失败。
             """
             if girl not in self.girls:
-                return False, __("Girl is not in the courtyard.")
+                return False, __("Girl is not in the courtyard_villa.")
 
             ## EN: Check working capacity limit.
             ## ZH: 检查工作容量上限。
@@ -249,7 +249,7 @@ init -1 python:
 
         def train_girl(self, girl, skill, duration=1):
             """
-            EN: Train a girl in the courtyard. Efficiency is 30% of normal work training.
+            EN: Train a girl in the courtyard_villa. Efficiency is 30% of normal work training.
             ZH: 在别院训练女孩。效率为正常工作训练的 30%。
             """
             if girl not in self.girls:
@@ -308,6 +308,12 @@ init -1 python:
             return cy
 
 
-    ## EN: Global courtyard instance.
-    ## ZH: 全局别院实例。
-    courtyard = Courtyard()
+    ## EN: Global courtyard instance. Named courtyard_villa (not "courtyard")
+    ##     because start.rpy exposes every city location as a store global
+    ##     (globals()["courtyard"] = Location("Courtyard")), which would
+    ##     shadow a plain "courtyard" name.
+    ## ZH: 全局别院实例。命名为 courtyard_villa 而非 "courtyard"——
+    ##     start.rpy 会把每个城区地点暴露为 store 全局
+    ##     （globals()["courtyard"] = Location("Courtyard")），
+    ##      plain "courtyard" 名称会被其遮蔽。
+    courtyard_villa = Courtyard()

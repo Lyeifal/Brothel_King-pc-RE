@@ -17,8 +17,8 @@ screen courtyard():
     ## EN: Precompute values for text interpolation (function calls are not allowed inside [ ]).
     ## ZH: 预先计算文本插值用的值（[ ] 内不允许函数调用）。
     python:
-        _courtyard_girl_count = len(courtyard.girls)
-        _courtyard_upkeep = courtyard.get_daily_upkeep()
+        _courtyard_girl_count = len(courtyard_villa.girls)
+        _courtyard_upkeep = courtyard_villa.get_daily_upkeep()
 
     frame:
         xfill True
@@ -40,7 +40,7 @@ screen courtyard():
                 xalign 0.5
                 spacing 20
 
-                text __("女孩: [_courtyard_girl_count] / [courtyard.MAX_CAPACITY]"):
+                text __("女孩: [_courtyard_girl_count] / [courtyard_villa.MAX_CAPACITY]"):
                     size 18
                     color "#FFFFFF"
 
@@ -69,7 +69,7 @@ screen courtyard():
                         spacing 6
                         xfill True
 
-                        for girl in courtyard.girls:
+                        for girl in courtyard_villa.girls:
                             button:
                                 xfill True
                                 ysize 60
@@ -154,7 +154,7 @@ screen courtyard():
                         textbutton __("返回青楼"):
                             xalign 0.5
                             sensitive (len(MC.girls) < 24)
-                            action [Function(courtyard.move_to_brothel, selected_girl),
+                            action [Function(courtyard_villa.move_to_brothel, selected_girl),
                                     SetScreenVariable("selected_girl", None)]
 
                         if not (len(MC.girls) < 24):
@@ -166,11 +166,11 @@ screen courtyard():
 
                         textbutton __("训练(缓慢)"):
                             xalign 0.5
-                            action Function(courtyard.train_girl, selected_girl, "obedience", 1)
+                            action Function(courtyard_villa.train_girl, selected_girl, "obedience", 1)
 
                         textbutton __("释放"):
                             xalign 0.5
-                            action [Function(courtyard.remove_girl, selected_girl),
+                            action [Function(courtyard_villa.remove_girl, selected_girl),
                                     SetScreenVariable("selected_girl", None)]
 
                 else:
@@ -200,7 +200,7 @@ screen courtyard():
                         color "#FFD700"
                         underline True
 
-                    for fid, facility in courtyard.facilities.items():
+                    for fid, facility in courtyard_villa.facilities.items():
                         vbox:
                             spacing 4
                             xfill True

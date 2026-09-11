@@ -29,7 +29,7 @@ init -1 python:
     def _courtyard_destination_list(context):
         if not context.get("at_working_cap"):
             return []
-        if not courtyard.can_add_girl():
+        if not courtyard_villa.can_add_girl():
             return []
         return [{"id": "courtyard", "text": __("Send her to the Courtyard"), "available": True}]
 
@@ -37,7 +37,7 @@ init -1 python:
         girl = context.get("girl")
         if girl is None:
             return
-        if courtyard.add_girl(girl):
+        if courtyard_villa.add_girl(girl):
             notify_list.append((girl.name + __(" has been moved to the Courtyard.")), col="green")
 
     ## EN: Daily recovery for courtyard girls. Wired via the day_ending hook —
@@ -46,7 +46,7 @@ init -1 python:
     ##     这激活了原核心系统中已存在但从未被调用的 process_day() 逻辑。
     def _courtyard_day_ending(context):
         try:
-            courtyard.process_day()
+            courtyard_villa.process_day()
         except Exception as e:
             renpy.notify("Courtyard mod: %s" % e)
 
