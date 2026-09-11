@@ -25,6 +25,7 @@ init -1 python:
         "hooks": {},
         "dependencies": [],
         "home_rightmenu_add_buttons": ["right_menu_auction"],
+        "home_rightmenu_anchor": "before_shop",
     })
 
 

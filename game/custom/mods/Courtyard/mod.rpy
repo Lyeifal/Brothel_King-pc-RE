@@ -21,6 +21,7 @@ init -1 python:
         "hooks": {},
         "dependencies": [],
         "home_rightmenu_add_buttons": ["right_menu_courtyard"],
+        "home_rightmenu_anchor": "after_farm",
     })
 
     ## EN: Register "courtyard" as a destination when acquiring a girl while the

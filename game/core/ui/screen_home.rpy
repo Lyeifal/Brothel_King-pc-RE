@@ -58,23 +58,41 @@ screen right_menu():
                         mod_menu.append(mod)
 
                 # EN: Mod API v2 mods declaring home right-menu buttons (always active).
+                #     Manifest may declare "home_rightmenu_anchor" to place buttons
+                #     directly on the right menu ("after_farm" / "before_shop");
+                #     anchored buttons are excluded from the "Mods" popup.
                 # ZH: 声明了主页右侧菜单按钮的 Mod API v2 Mod（常驻激活）。
+                #     manifest 可声明 "home_rightmenu_anchor" 把按钮直接放到
+                #     右侧菜单（"after_farm" / "before_shop"）；锚定按钮不再
+                #     出现在 "Mods" 弹出菜单里。
                 v2_menu_buttons = []
+                v2_after_farm = []
+                v2_before_shop = []
                 try:
-                    v2_menu_buttons = services.mod_api_v2.get_menu_buttons()
+                    for _mid, _mname, _btns in services.mod_api_v2.get_menu_buttons():
+                        _anchor = "mods"
+                        try:
+                            _info = services.mod_api_v2.get_mod_info(_mid)
+                            if _info:
+                                _anchor = _info.get("home_rightmenu_anchor", "mods")
+                        except Exception:
+                            pass
+                        if _anchor == "after_farm":
+                            v2_after_farm.extend(_btns)
+                        elif _anchor == "before_shop":
+                            v2_before_shop.extend(_btns)
+                        else:
+                            v2_menu_buttons.append((_mid, _mname, _btns))
                 except Exception:
-                    v2_menu_buttons = []
+                    pass
 
             if farm.active:
                 $ rows += 1
             if mod_menu or v2_menu_buttons:
                 $ rows += 1
+            $ rows += len(v2_after_farm) + len(v2_before_shop)
             if game.goals_reached() and (game.chapter != 1 or not game.is_story_mode() or debug_mode):
                 $ rows += 1
-            ## EN: The courtyard button moved to the "Courtyard" mod
-            ##     (game/custom/mods/Courtyard/), shown under "Mods".
-            ## ZH: 别院按钮已移至 "Courtyard" Mod
-            ##     （game/custom/mods/Courtyard/），显示在 "Mods" 下。
 
 
             # Generate a grid of 2 columns and x rows for the right menu
@@ -102,6 +120,12 @@ screen right_menu():
                 if farm.active:
                     use right_menu_farm
 
+                # EN: v2 mod buttons anchored below the farm button.
+                # ZH: 锚定在农场按钮下方的 v2 Mod 按钮。
+
+                for _btn in v2_after_farm:
+                    use expression _btn
+
                 # City Alert and Button
 
                 use right_menu_city
@@ -112,6 +136,12 @@ screen right_menu():
 
                 if slavemarket.active:
                     use right_menu_slavemarket
+
+                # EN: v2 mod buttons anchored above the shop button.
+                # ZH: 锚定在商店按钮上方的 v2 Mod 按钮。
+
+                for _btn in v2_before_shop:
+                    use expression _btn
 
                 # Shop Alert and Button
 

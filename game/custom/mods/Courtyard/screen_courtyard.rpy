@@ -8,8 +8,13 @@
 ## ZH: 别院管理主屏幕。
 screen courtyard():
 
-    tag menu
+    ## EN: No "tag menu" and no Return(): shown on top of the home screen,
+    ##     dismissed with Hide only (see auction_house for rationale).
+    ## ZH: 不用 "tag menu" 也不用 Return()：叠加在主页之上，
+    ##     仅用 Hide 关闭（理由见 auction_house）。
     modal True
+
+    key "mouseup_3" action Hide("courtyard")
 
     default selected_girl = None
     default selected_facility = None
@@ -241,4 +246,4 @@ screen courtyard():
         textbutton __("关闭"):
             xalign 0.5
             yalign 0.95
-            action [Return(), Hide("courtyard")]
+            action Hide("courtyard")

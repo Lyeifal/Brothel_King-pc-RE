@@ -14,8 +14,14 @@
 ## ZH: 拍卖行主屏幕 — 展示当前拍品。
 screen auction_house():
 
-    tag menu
+    ## EN: No "tag menu" and no Return(): the screen is shown on top of the
+    ##     home screen and dismissed with Hide, so the main interaction loop
+    ##     is never involved (avoids soft-locking the home screen).
+    ## ZH: 不用 "tag menu" 也不用 Return()：屏幕叠加在主页之上，
+    ##     用 Hide 关闭，不介入主交互循环（避免主页丢失软锁）。
     modal True
+
+    key "mouseup_3" action Hide("auction_house")
 
     default current_session = None
     default selected_lot = None
@@ -254,7 +260,7 @@ screen auction_house():
                     action Show("auction_sell_girl", session=current_session)
 
                 textbutton __("关闭"):
-                    action [Return(), Hide("auction_house")]
+                    action Hide("auction_house")
 
 
 ## EN: Screen for selecting a girl from MC's roster to sell.
