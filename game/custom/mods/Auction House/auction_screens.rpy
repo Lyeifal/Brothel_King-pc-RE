@@ -1,338 +1,427 @@
 ################################################################################
-##  Auction Screens — BK Evolution (now part of the "Auction House" mod)
-##  EN: UI for the auction house: lot list, bidding, and results.
-##      Moved from game/core/systems/auction/screen_auction.rpy.
-##      Bug fix during move: auction_sell_girl now receives the active session
-##      (was referencing the undefined global 'auction_house_session').
-##  ZH: 拍卖行 UI：拍品列表、竞拍界面和结果展示。
-##      从 game/core/systems/auction/screen_auction.rpy 移至本 Mod。
-##      迁移时修复 bug：auction_sell_girl 现在接收当前会话
-##      （原先引用了不存在的全局变量 'auction_house_session'）。
+##  Auction Screens — BK Evolution ("Auction House" mod v2.1)
+##  EN: UI for the scenario-driven auction. The main screen is transparent
+##      (no fullscreen black frame) and modal: the slave-market scene with the
+##      auctioneer shows through. Buttons return ("action", ...) tuples to the
+##      auction_scene label, which owns all game-state changes — no Function()
+##      actions are used here, so the main interaction loop is never involved.
+##  ZH: 场景化拍卖会的 UI。主屏幕为透明背景（无全屏黑框）且 modal：
+##      奴隶市场场景与拍卖师从背景透出。按钮向 auction_scene label 返回
+##      ("action", ...) 元组，所有状态变更由 label 处理——此处不使用
+##      Function() action，主交互循环完全不介入。
 ################################################################################
 
-## EN: Main auction house screen — shows current lots.
-## ZH: 拍卖行主屏幕 — 展示当前拍品。
-screen auction_house():
 
-    ## EN: No "tag menu" and no Return(): the screen is shown on top of the
-    ##     home screen and dismissed with Hide, so the main interaction loop
-    ##     is never involved (avoids soft-locking the home screen).
-    ## ZH: 不用 "tag menu" 也不用 Return()：屏幕叠加在主页之上，
-    ##     用 Hide 关闭，不介入主交互循环（避免主页丢失软锁）。
+## EN: Main auction screen — current lot, bidding paddle, lot overview.
+##     Shown with `call screen` from label auction_scene.
+## ZH: 拍卖主屏幕——当前拍品、出价牌、拍品总览。
+##     由 auction_scene label 以 `call screen` 方式显示。
+screen auction_house(session):
+
     modal True
 
-    key "mouseup_3" action Hide("auction_house")
+    key "mouseup_3" action Return(("leave",))
 
-    default current_session = None
-    default selected_lot = None
+    ## EN: The python block re-runs on every screen refresh, so the working
+    ##     bid lives in a screen variable (default) and the displayed amount
+    ##     is derived as max(bid_amount, minimum bid).
+    ## ZH: python 块在每次屏幕刷新时都会重跑，因此工作出价值存放于屏幕
+    ##     变量（default），显示值取 max(出价值, 最低出价)。
     default bid_amount = 0
 
+    python:
+        auction_lot = session.current_lot
+        auction_min_bid = 0
+        auction_display_bid = 0
+        if auction_lot is not None:
+            auction_min_bid = auction_lot.current_bid + auction_lot.min_increment
+            auction_display_bid = max(bid_amount, auction_min_bid)
+        auction_player = auction_player_name()
+
+    ## EN: Title panel — transparent margins let the scene show around it.
+    ## ZH: 标题面板——边缘透明，透出场景。
     frame:
-        xfill True
-        yfill True
-        background c_black
+        xalign 0.5
+        yalign 0.02
+        xpadding 24
+        ypadding 8
+        background c_ui_dark
 
-        vbox:
-            xalign 0.5
-            yalign 0.05
-            spacing 10
+        hbox:
+            spacing 25
+            yalign 0.5
 
-            text __("拍卖行"):
-                size 42
-                xalign 0.5
+            text "[session.session_name] — Day [session.date]":
+                size 22
                 color "#FFD700"
-                outlines [(2, "#000", 0, 0)]
-
-            if current_session:
-                text _("[current_session.session_name] — Day [current_session.date]"):
-                    size 18
-                    xalign 0.5
-                    color "#AAAAAA"
-
-        if not current_session:
-            vbox:
-                xalign 0.5
+                bold True
                 yalign 0.5
-                spacing 20
 
-                text __("没有活跃的拍卖会话。"):
-                    size 24
-                    xalign 0.5
+            if session.grand:
+                text __("GRAND AUCTION"):
+                    size 18
                     color "#FF6B6B"
+                    bold True
+                    yalign 0.5
 
-                textbutton __("开始新拍卖"):
+            text __("Your gold: [MC.gold]"):
+                size 18
+                color "#FFD700"
+                yalign 0.5
+
+    hbox:
+        xalign 0.5
+        yalign 0.45
+        spacing 15
+
+        ## EN: Left panel — today's lots overview.
+        ## ZH: 左侧面板——今日拍品总览。
+        frame:
+            xsize 260
+            ysize 430
+            background c_ui_dark
+
+            vbox:
+                spacing 6
+                xfill True
+
+                text __("Today's lots"):
+                    size 18
+                    color "#FFFFFF"
+                    bold True
                     xalign 0.5
-                    action [SetScreenVariable("current_session",
-                             AuctionSession(auction_house.generate_npc_lots(4))),
-                            SetScreenVariable("selected_lot", None)]
-        else:
-            hbox:
-                xalign 0.5
-                yalign 0.55
-                spacing 20
 
-                ## EN: Left panel — lot list.
-                ## ZH: 左侧面板 — 拍品列表。
-                frame:
-                    xsize 360
-                    ysize 520
-                    background c_ui_dark
+                text __("Lot %d/%d") % (min(session.current_lot_index + 1, len(session.lots)), len(session.lots)):
+                    size 13
+                    color "#888888"
+                    xalign 0.5
 
-                    viewport:
-                        scrollbars "vertical"
-                        mousewheel True
-                        draggable True
+                viewport:
+                    scrollbars "vertical"
+                    mousewheel True
+                    draggable True
+                    xfill True
+                    ysize 360
 
-                        vbox:
-                            spacing 8
-                            xfill True
+                    vbox:
+                        spacing 5
+                        xfill True
 
-                            for i, lot in enumerate(current_session.lots):
-                                button:
-                                    xfill True
-                                    ysize 80
-                                    background "#333333"
-                                    hover_background "#555555"
-                                    selected_background "#444466"
-                                    selected (selected_lot == lot)
-
-                                    action [SetScreenVariable("selected_lot", lot),
-                                            SetScreenVariable("bid_amount", lot.current_bid + lot.min_increment)]
-
-                                    hbox:
-                                        spacing 10
-                                        xfill True
-                                        yalign 0.5
-
-                                        vbox:
-                                            spacing 2
-                                            xsize 220
-
-                                            text lot.girl.name:
-                                                size 18
-                                                color "#FFFFFF"
-                                                bold True
-
-                                            $ _lot_job_label = __(lot.girl.job.capitalize()) if lot.girl.job else __("No job")
-                                            text __("Rank %s — %s") % (lot.girl.rank, _lot_job_label):
-                                                size 14
-                                                color "#BBBBBB"
-
-                                            text _("Seller: [lot.seller]"):
-                                                size 13
-                                                color "#888888"
-
-                                        vbox:
-                                            xalign 1.0
-                                            yalign 0.5
-                                            spacing 2
-
-                                            text _("[lot.current_bid] gold"):
-                                                size 16
-                                                color "#FFD700"
-                                                xalign 1.0
-
-                                            text lot.get_status_text():
-                                                size 13
-                                                color ({AuctionLot.STATUS_ACTIVE: "#4ECDC4",
-                                                        AuctionLot.STATUS_SOLD: "#2ECC71",
-                                                        AuctionLot.STATUS_UNSOLD: "#E74C3C",
-                                                        AuctionLot.STATUS_PENDING: "#AAAAAA"}.get(lot.status, "#AAAAAA"))
-                                                xalign 1.0
-
-                ## EN: Right panel — lot detail & bidding.
-                ## ZH: 右侧面板 — 拍品详情与出价。
-                frame:
-                    xsize 420
-                    ysize 520
-                    background c_ui_dark
-
-                    if selected_lot:
-                        vbox:
-                            spacing 12
-                            xfill True
-                            xalign 0.5
-                            yalign 0.1
-
-                            text selected_lot.girl.name:
-                                size 28
-                                xalign 0.5
-                                color "#FFFFFF"
-                                bold True
-
+                        for i, lot in enumerate(session.lots):
                             hbox:
-                                xalign 0.5
-                                spacing 15
+                                spacing 6
+                                xfill True
 
-                                text _("Rank [selected_lot.girl.rank]"):
-                                    size 16
-                                    color "#BBBBBB"
-
-                                text _("Level [selected_lot.girl.level]"):
-                                    size 16
-                                    color "#BBBBBB"
-
-                            null height 10
-
-                            text __("当前出价: {b}[selected_lot.current_bid]{/b} 金币"):
-                                size 20
-                                xalign 0.5
-                                color "#FFD700"
-
-                            if selected_lot.current_bidder:
-                                text __("最高出价者: [selected_lot.current_bidder]"):
-                                    size 16
-                                    xalign 0.5
-                                    color ({True: "#4ECDC4", False: "#E74C3C"}.get(selected_lot.current_bidder == __("你"), "#AAAAAA"))
-
-                            null height 10
-
-                            text __("保留价: [selected_lot.reserve_price] 金币"):
-                                size 16
-                                xalign 0.5
-                                color "#888888"
-
-                            text __("加价幅度: [selected_lot.min_increment] 金币"):
-                                size 14
-                                xalign 0.5
-                                color "#888888"
-
-                            null height 20
-
-                            if selected_lot.status == AuctionLot.STATUS_ACTIVE:
-                                hbox:
-                                    xalign 0.5
-                                    spacing 10
-
-                                    textbutton __("-"):
-                                        action SetScreenVariable("bid_amount", max(selected_lot.current_bid + selected_lot.min_increment, bid_amount - selected_lot.min_increment))
-
-                                    text _("[bid_amount] gold"):
-                                        size 20
-                                        yalign 0.5
-                                        color "#FFFFFF"
-
-                                    textbutton __("+"):
-                                        action SetScreenVariable("bid_amount", bid_amount + selected_lot.min_increment)
-
-                                null height 10
-
-                                textbutton __("出价"):
-                                    xalign 0.5
-                                    sensitive (bid_amount >= selected_lot.current_bid + selected_lot.min_increment and MC.gold >= bid_amount)
-                                    action [Function(_run, selected_lot.place_bid, __("You"), bid_amount, True),
-                                            SetScreenVariable("bid_amount", bid_amount + selected_lot.min_increment)]
-
-                                if selected_lot.seller != "player":
-                                    textbutton __("立即购买 ([selected_lot.reserve_price] 金币)"):
-                                        xalign 0.5
-                                        sensitive (MC.gold >= selected_lot.reserve_price)
-                                        action Function(_run, current_session.player_buy_lot, current_session.lots.index(selected_lot))
-                            else:
-                                text __("此拍品的竞拍已结束。"):
-                                    size 18
-                                    xalign 0.5
+                                text str(i + 1):
+                                    size 14
                                     color "#888888"
 
-                    else:
-                        text __("选择一个拍品查看详情并出价。"):
-                            size 18
-                            xalign 0.5
+                                vbox:
+                                    xsize 130
+                                    spacing 2
+                                    text lot.get_display_name():
+                                        size 14
+                                        color ({AuctionLot.STATUS_SOLD: "#2ECC71",
+                                                AuctionLot.STATUS_UNSOLD: "#E74C3C",
+                                                AuctionLot.STATUS_CANCELLED: "#888888"}.get(lot.status, "#FFFFFF"))
+                                        bold (i == session.current_lot_index)
+
+                                vbox:
+                                    xalign 1.0
+                                    spacing 2
+                                    text str(lot.current_bid):
+                                        size 13
+                                        color "#FFD700"
+                                        xalign 1.0
+                                    text lot.get_status_text():
+                                        size 11
+                                        xalign 1.0
+                                        color ({AuctionLot.STATUS_ACTIVE: "#4ECDC4",
+                                                AuctionLot.STATUS_SOLD: "#2ECC71",
+                                                AuctionLot.STATUS_UNSOLD: "#E74C3C",
+                                                AuctionLot.STATUS_PENDING: "#AAAAAA"}.get(lot.status, "#AAAAAA"))
+
+        ## EN: Right panel — current lot card and bidding paddle.
+        ## ZH: 右侧面板——当前拍品卡与出价牌。
+        frame:
+            xsize 520
+            ysize 430
+            background c_ui_dark
+
+            if auction_lot is not None:
+
+                vbox:
+                    spacing 10
+                    xfill True
+                    xalign 0.5
+
+                    text auction_lot.get_display_name():
+                        size 28
+                        color "#FFFFFF"
+                        bold True
+                        xalign 0.5
+
+                    hbox:
+                        xalign 0.5
+                        spacing 15
+
+                        if auction_lot.kind == "item" and auction_lot.item is not None:
+                            add auction_lot.item.get_pic(72, 72)
+
+                        vbox:
+                            spacing 4
                             yalign 0.5
+
+                            if auction_lot.get_subtitle():
+                                text auction_lot.get_subtitle():
+                                    size 15
+                                    color "#BBBBBB"
+
+                            text __("Seller: [auction_lot.seller]"):
+                                size 14
+                                color "#888888"
+
+                    null height 5
+
+                    text __("Current bid: {b}[auction_lot.current_bid]{/b} gold"):
+                        size 24
+                        xalign 0.5
+                        color "#FFD700"
+
+                    if auction_lot.current_bidder:
+                        text __("Highest bidder: [auction_lot.current_bidder]"):
+                            size 16
+                            xalign 0.5
+                            color ({True: "#4ECDC4", False: "#E74C3C"}.get(auction_lot.current_bidder == auction_player, "#AAAAAA"))
+
+                    hbox:
+                        xalign 0.5
+                        spacing 20
+
+                        text __("Reserve: [auction_lot.reserve_price]"):
+                            size 13
                             color "#888888"
+
+                        text __("Increment: [auction_lot.min_increment]"):
+                            size 13
+                            color "#888888"
+
+                    null height 10
+
+                    if auction_lot.seller == "player":
+                        text __("This is your own lot — bid to stir interest, but if you buy it back yourself you still pay the auction house commission."):
+                            size 13
+                            color "#FFAAAA"
+                            xalign 0.5
                             text_align 0.5
 
-            ## EN: Bottom action bar.
-            ## ZH: 底部操作栏。
-            hbox:
-                xalign 0.5
-                yalign 0.95
-                spacing 20
+                    if auction_lot.status == AuctionLot.STATUS_ACTIVE:
 
-                textbutton __("下一个拍品"):
-                    sensitive (current_session.current_lot is not None)
-                    action Function(_run, current_session.advance_lot)
+                        hbox:
+                            xalign 0.5
+                            spacing 10
 
-                textbutton __("自动结拍"):
-                    action Function(_run, current_session.auto_resolve)
+                            textbutton __("-"):
+                                action SetScreenVariable("bid_amount", max(0, auction_display_bid - auction_lot.min_increment))
 
-                textbutton __("出售我的一个女孩"):
-                    action Show("auction_sell_girl", session=current_session)
+                            text "[auction_display_bid] gold":
+                                size 22
+                                yalign 0.5
+                                color "#FFFFFF"
 
-                textbutton __("关闭"):
-                    action Hide("auction_house")
+                            textbutton __("+"):
+                                action SetScreenVariable("bid_amount", auction_display_bid + auction_lot.min_increment)
+
+                        textbutton __("Bid"):
+                            xalign 0.5
+                            sensitive (auction_display_bid >= auction_min_bid and MC.gold >= auction_display_bid)
+                            action Return(("bid", auction_display_bid))
+
+                    else:
+                        text auction_lot.get_status_text():
+                            size 20
+                            xalign 0.5
+                            color "#888888"
+
+            else:
+                text __("The auction is over."):
+                    size 22
+                    xalign 0.5
+                    yalign 0.5
+                    color "#888888"
+
+    ## EN: Bottom action bar.
+    ## ZH: 底部操作栏。
+    hbox:
+        xalign 0.5
+        yalign 0.93
+        spacing 20
+
+        textbutton __("Pass / gavel this lot"):
+            sensitive (auction_lot is not None and auction_lot.status == AuctionLot.STATUS_ACTIVE)
+            action Return(("next",))
+
+        textbutton __("List my own goods"):
+            action Return(("submit",))
+
+        textbutton __("Leave the auction"):
+            action Return(("leave",))
 
 
-## EN: Screen for selecting a girl from MC's roster to sell.
-##      Receives the active session so the girl is added to it.
-## ZH: 从 MC 队伍中选择女孩出售的面板。接收当前会话以加入拍品。
-screen auction_sell_girl(session):
+## EN: Submission screen — list a girl or an item from MC's roster/inventory.
+##     A listing fee (int(value x fee_rate)) is charged on selection; goods
+##     are held in escrow until the lot settles (sold / returned).
+## ZH: 提交拍品屏幕——从 MC 的女孩/背包中选择一件上拍。
+##     选中时收取挂牌手续费（int(估值 × 费率)）；商品托管至结拍
+##     （售出/退还）。
+screen auction_submit(session):
 
     modal True
 
+    key "mouseup_3" action Return(("cancel",))
+
+    default tab = "girls"
+
+    ## EN: Precompute (goods, value, fee) entries — properties like
+    ##     `sensitive` may not follow a python block inside a button.
+    ## ZH: 预计算 (商品, 估值, 手续费) 列表——按钮内属性不允许跟在
+    ##     python 块之后。
+    python:
+        auction_girl_entries = []
+        for _auction_g in MC.girls:
+            try:
+                _auction_val = _auction_g.get_price("sell", raw=True) if hasattr(_auction_g, "get_price") else 100
+            except Exception:
+                _auction_val = 100
+            auction_girl_entries.append((_auction_g, int(_auction_val), auction_listing_fee(_auction_val)))
+
+        auction_item_entries = []
+        for _auction_it in MC.items:
+            if getattr(_auction_it, "equipped", False) or not getattr(_auction_it, "sellable", True):
+                continue
+            try:
+                _auction_gp = getattr(_auction_it, "get_price", None)
+                _auction_val = _auction_gp("sell") if callable(_auction_gp) else getattr(_auction_it, "price", 100)
+            except Exception:
+                _auction_val = 100
+            auction_item_entries.append((_auction_it, int(_auction_val), auction_listing_fee(_auction_val)))
+
     frame:
-        xfill True
-        yfill True
-        background c_black
+        xalign 0.5
+        yalign 0.5
+        xsize 760
+        ysize 520
+        background c_ui_dark
 
         vbox:
-            xalign 0.5
-            yalign 0.05
             spacing 10
+            xfill True
 
-            text __("选择要拍卖的女孩"):
-                size 32
+            text __("List your own goods"):
+                size 26
                 xalign 0.5
                 color "#FFD700"
+                bold True
 
-            text __("选择你的一个女孩进行拍卖。"):
-                size 16
-                xalign 0.5
+            text __("A listing fee is charged up front and scales with game difficulty. If the lot sells, the proceeds are yours; if not, the goods come back to you."):
+                size 13
                 color "#AAAAAA"
+                xalign 0.5
+                text_align 0.5
 
-        frame:
-            xalign 0.5
-            yalign 0.5
-            xsize 700
-            ysize 450
-            background c_ui_dark
+            hbox:
+                xalign 0.5
+                spacing 15
+
+                textbutton __("Girls"):
+                    action SetScreenVariable("tab", "girls")
+                    selected (tab == "girls")
+
+                textbutton __("Items"):
+                    action SetScreenVariable("tab", "items")
+                    selected (tab == "items")
 
             viewport:
                 scrollbars "vertical"
                 mousewheel True
                 draggable True
+                xsize 700
+                ysize 320
 
-                grid 3 3:
-                    spacing 10
-                    xalign 0.5
-                    yalign 0.5
+                vbox:
+                    spacing 8
+                    xfill True
 
-                    for girl in MC.girls:
-                        button:
-                            xsize 210
-                            ysize 120
-                            background "#333333"
-                            hover_background "#555555"
+                    if tab == "girls":
 
-                            action [Function(_run, session.player_sell_girl, girl),
-                                    Hide("auction_sell_girl")]
-
-                            vbox:
+                        if not MC.girls:
+                            text __("You have no girls to list."):
+                                size 16
+                                color "#888888"
                                 xalign 0.5
-                                yalign 0.5
-                                spacing 4
 
-                                text girl.name:
-                                    size 18
-                                    color "#FFFFFF"
-                                    xalign 0.5
+                        for girl, auction_val, auction_fee_amt in auction_girl_entries:
+                            button:
+                                xfill True
+                                ysize 56
+                                background "#333333"
+                                hover_background "#555555"
 
-                                text _("出售价格: [girl.get_price('sell')] 金币"):
-                                    size 14
-                                    color "#FFD700"
-                                    xalign 0.5
+                                sensitive (MC.gold >= auction_fee_amt)
+                                action Return(("girl", girl))
 
-        textbutton __("取消"):
-            xalign 0.5
-            yalign 0.95
-            action Hide("auction_sell_girl")
+                                hbox:
+                                    spacing 15
+                                    xfill True
+                                    yalign 0.5
+
+                                    text girl.name:
+                                        size 18
+                                        color "#FFFFFF"
+                                        xsize 300
+                                        yalign 0.5
+
+                                    text __("Value: %d — Fee: %d") % (auction_val, auction_fee_amt):
+                                        size 15
+                                        color "#FFD700"
+                                        xalign 1.0
+                                        yalign 0.5
+
+                    else:
+
+                        if not auction_item_entries:
+                            text __("Nothing in your inventory can be listed."):
+                                size 16
+                                color "#888888"
+                                xalign 0.5
+
+                        for item, auction_val, auction_fee_amt in auction_item_entries:
+                            button:
+                                xfill True
+                                ysize 56
+                                background "#333333"
+                                hover_background "#555555"
+
+                                sensitive (MC.gold >= auction_fee_amt)
+                                action Return(("item", item))
+
+                                hbox:
+                                    spacing 15
+                                    xfill True
+                                    yalign 0.5
+
+                                    text item.name:
+                                        size 18
+                                        color "#FFFFFF"
+                                        xsize 300
+                                        yalign 0.5
+
+                                    text __("Value: %d — Fee: %d") % (auction_val, auction_fee_amt):
+                                        size 15
+                                        color "#FFD700"
+                                        xalign 1.0
+                                        yalign 0.5
+
+            textbutton __("Cancel"):
+                xalign 0.5
+                action Return(("cancel",))

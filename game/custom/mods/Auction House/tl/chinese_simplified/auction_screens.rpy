@@ -108,3 +108,13 @@ translate chinese_simplified strings:
     old "取消"
     new "取消"
 
+
+# TODO: Translation updated at 2026-09-11 (v2.1 手工补录示例；其余条目交由翻译工具链生成)
+
+translate chinese_simplified strings:
+
+    old "Leave the auction"
+    new "离开拍卖行"
+
+    old "List my own goods"
+    new "提交我的商品"
