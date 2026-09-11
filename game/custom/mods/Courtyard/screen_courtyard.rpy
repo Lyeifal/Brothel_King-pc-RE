@@ -159,7 +159,7 @@ screen courtyard():
                         textbutton __("返回青楼"):
                             xalign 0.5
                             sensitive (len(MC.girls) < 24)
-                            action [Function(courtyard_villa.move_to_brothel, selected_girl),
+                            action [Function(_run, courtyard_villa.move_to_brothel, selected_girl),
                                     SetScreenVariable("selected_girl", None)]
 
                         if not (len(MC.girls) < 24):
@@ -171,11 +171,11 @@ screen courtyard():
 
                         textbutton __("训练(缓慢)"):
                             xalign 0.5
-                            action Function(courtyard_villa.train_girl, selected_girl, "obedience", 1)
+                            action Function(_run, courtyard_villa.train_girl, selected_girl, "obedience", 1)
 
                         textbutton __("释放"):
                             xalign 0.5
-                            action [Function(courtyard_villa.remove_girl, selected_girl),
+                            action [Function(_run, courtyard_villa.remove_girl, selected_girl),
                                     SetScreenVariable("selected_girl", None)]
 
                 else:
@@ -233,7 +233,7 @@ screen courtyard():
                                 textbutton __("升级 ([next_cost] 金币)"):
                                     xalign 0.5
                                     sensitive (MC.gold >= next_cost)
-                                    action Function(facility.upgrade, MC)
+                                    action Function(_run, facility.upgrade, MC)
                             else:
                                 text __("最高等级"):
                                     size 13

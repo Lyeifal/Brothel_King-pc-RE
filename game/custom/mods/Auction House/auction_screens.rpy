@@ -220,14 +220,14 @@ screen auction_house():
                                 textbutton __("出价"):
                                     xalign 0.5
                                     sensitive (bid_amount >= selected_lot.current_bid + selected_lot.min_increment and MC.gold >= bid_amount)
-                                    action [Function(selected_lot.place_bid, __("You"), bid_amount, True),
+                                    action [Function(_run, selected_lot.place_bid, __("You"), bid_amount, True),
                                             SetScreenVariable("bid_amount", bid_amount + selected_lot.min_increment)]
 
                                 if selected_lot.seller != "player":
                                     textbutton __("立即购买 ([selected_lot.reserve_price] 金币)"):
                                         xalign 0.5
                                         sensitive (MC.gold >= selected_lot.reserve_price)
-                                        action Function(current_session.player_buy_lot, current_session.lots.index(selected_lot))
+                                        action Function(_run, current_session.player_buy_lot, current_session.lots.index(selected_lot))
                             else:
                                 text __("此拍品的竞拍已结束。"):
                                     size 18
@@ -251,10 +251,10 @@ screen auction_house():
 
                 textbutton __("下一个拍品"):
                     sensitive (current_session.current_lot is not None)
-                    action Function(current_session.advance_lot)
+                    action Function(_run, current_session.advance_lot)
 
                 textbutton __("自动结拍"):
-                    action Function(current_session.auto_resolve)
+                    action Function(_run, current_session.auto_resolve)
 
                 textbutton __("出售我的一个女孩"):
                     action Show("auction_sell_girl", session=current_session)
@@ -314,7 +314,7 @@ screen auction_sell_girl(session):
                             background "#333333"
                             hover_background "#555555"
 
-                            action [Function(session.player_sell_girl, girl),
+                            action [Function(_run, session.player_sell_girl, girl),
                                     Hide("auction_sell_girl")]
 
                             vbox:

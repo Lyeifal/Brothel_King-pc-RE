@@ -275,3 +275,21 @@ init -1 python:
     ## EN: Global auction house instance.
     ## ZH: 全局拍卖行实例。
     auction_house = AuctionHouse()
+
+
+    ## EN: Wrapper for Function() actions whose target returns a value.
+    ##     In Ren'Py 8, a Function action whose callable returns non-None
+    ##     ends the current interaction with that value as the result; the
+    ##     main loop then treats it as a teleport destination and crashes
+    ##     (jump expression <object>). _run discards the return value so the
+    ##     interaction keeps running. Example crash: advance_lot() returns
+    ##     the next AuctionLot -> "jump teleport" -> ScriptError.
+    ## ZH: 用于"被调函数会返回值"的 Function() action 的包装。
+    ##     Ren'Py 8 中，Function action 的 callable 返回非 None 时会
+    ##     立即结束当前交互并以该值为交互结果；主循环随后把它当作
+    ##     teleport 目的地而崩溃（jump expression <对象>）。
+    ##     _run 丢弃返回值，使交互继续进行。
+    ##     崩溃示例：advance_lot() 返回下一个 AuctionLot →
+    ##     "jump teleport" → ScriptError。
+    def _run(f, *a, **k):
+        f(*a, **k)
