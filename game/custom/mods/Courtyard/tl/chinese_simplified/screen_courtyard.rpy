@@ -62,3 +62,21 @@ translate chinese_simplified strings:
     old "最高等级"
     new "最高等级"
 
+
+translate chinese_simplified strings:
+
+    # screen_courtyard.rpy v2.0 (hand-added examples; the rest is toolchain-maintained)
+    old "女孩: [_courtyard_girl_count] / [_courtyard_room_limit]"
+    new "女孩: [_courtyard_girl_count] / [_courtyard_room_limit]"
+
+    old "今日租金: [_courtyard_rent] 金币"
+    new "今日租金: [_courtyard_rent] 金币"
+
+    old "房间租金随地区等级、难度与人数上涨；闲置女孩的技能也会日渐生疏。"
+    new "房间租金随地区等级、难度与人数上涨；闲置女孩的技能也会日渐生疏。"
+
+    old "购买别院扩建地契 ([courtyard_villa.EXPANSION_PRICE] 金币)"
+    new "购买别院扩建地契 ([courtyard_villa.EXPANSION_PRICE] 金币)"
+
+    old "扩建已完成 — 房间上限 [courtyard_villa.MAX_CAPACITY]"
+    new "扩建已完成 — 房间上限 [courtyard_villa.MAX_CAPACITY]"
