@@ -92,6 +92,16 @@ d6e76d6  ── Mod翻译自管理: game/tl/custom/mods → 各Mod目录tl/chine
            custom/mods/Game Modes, 框架(GameMode基类+注册表)留本体, 模式卡片改注册表驱动,
            start.rpy 按 renpy.has_screen 检测+Mod缺席兜底默认剧情模式,
            is_story_mode() None安全修复(旧存档默认剧情), 翻译随迁Mod目录
+
+── Mod API v2 持久化启用 (2026-09-11) ──
+待提交  ── v2 Mod 持久化启用机制: 开关存 persistent._bk_v2_mod_states(未记录默认启用),
+           激活=已注册∧(always_on∨持久化启用)∧dependencies全激活(拓扑重建, 依赖缺失/未安装即失活),
+           register_mod init期即读persistent(Ren'Py 在init前绑定), apply_startup_states 在
+           before_main_menu 幂等兜底; execute_hook/cancel_hook 跳过未激活Mod回调;
+           新增主菜单 Mod 管理界面 screen_mod_manager.rpy (名称/版本/作者/状态/切换/重启提示,
+           主菜单Mods按钮改 Show("mod_manager")), Game Modes manifest 加 always_on:False 并
+           以 is_mod_active 守卫模式注册(被禁用即回退纯剧情模式) + README.txt 前置依赖范例;
+           verify_mod_api 增补持久化开关/依赖/always_on 断言
 ```
 
 **基线验证 (2026-09-10 会话)**: lint 通过（仅历史警告），游戏可正常启动至主菜单。

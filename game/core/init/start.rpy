@@ -85,10 +85,14 @@ label select_game_mode():
     """
     scene black with fade
 
-    ## EN: The selection screen is provided by the "Game Modes" mod.
-    ##     Without it, silently default to story mode (fallback below).
-    ## ZH: 选择屏幕由 "Game Modes" Mod 提供。缺席时静默默认为剧情模式（见下方兜底）。
-    if renpy.has_screen("game_mode_select"):
+    ## EN: The selection screen is provided by the "Game Modes" mod. The
+    ##     registry check covers the mod being installed but DISABLED: its
+    ##     modes stay unregistered, so the game falls through to the story
+    ##     fallback exactly as if the mod were absent.
+    ## ZH: 选择屏幕由 "Game Modes" Mod 提供。注册表检查覆盖
+    ##     "Mod 已安装但被禁用"的情况：模式未注册，与 Mod 缺席一样
+    ##     走剧情模式兜底。
+    if renpy.has_screen("game_mode_select") and gamemode_registry.list_mode_instances():
 
         call screen game_mode_select
 

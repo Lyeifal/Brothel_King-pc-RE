@@ -8,14 +8,21 @@
 ##
 ##  EN: The core framework (GameMode base class + GameModeRegistry singleton)
 ##      stays in game/core/systems/gamemodes/gamemode.rpy. With this mod
-##      absent, the core start flow falls back to plain story mode (no
-##      selection screen).
+##      absent OR disabled, the core start flow falls back to plain story
+##      mode (no selection screen).
 ##  ZH: 核心框架（GameMode 基类 + GameModeRegistry 单例）保留在
-##      game/core/systems/gamemodes/gamemode.rpy。本 Mod 缺席时，本体
-##      开局流程回退为纯剧情模式（无选择界面）。
+##      game/core/systems/gamemodes/gamemode.rpy。本 Mod 缺席或被禁用
+##      时，本体开局流程回退为纯剧情模式（无选择界面）。
 ##
-##  EN: Install = always active (Mod API v2). Uninstall = remove this folder.
-##  ZH: 安装即常驻激活（Mod API v2）。卸载 = 删除本目录。
+##  EN: Registered through Mod API v2 with "always_on": False — it can be
+##      toggled off in the main-menu Mod Manager screen
+##      (persistent._bk_v2_mod_states). Uninstall = remove this folder.
+##      Other mods can declare "dependencies": ["game_modes"] to build on
+##      the mode/origin/scenario registries (see README.txt).
+##  ZH: 通过 Mod API v2 注册，"always_on": False——可在主菜单 Mod 管理
+##      界面禁用（persistent._bk_v2_mod_states）。卸载 = 删除本目录。
+##      其他 Mod 可声明 "dependencies": ["game_modes"] 以前置依赖本 Mod
+##      的模式/出身/剧本注册表（见 README.txt）。
 ################################################################################
 
 init -1 python:
@@ -30,14 +37,21 @@ init -1 python:
         "requires": ["game_modes", "origin", "scenario"],
         "hooks": {},
         "dependencies": [],
+        ## EN: Explicitly declared: this mod CAN be disabled by the player.
+        ## ZH: 显式声明：本 Mod 可被玩家禁用。
+        "always_on": False,
     })
 
-    ## EN: Register the three game modes into the core registry.
-    ##     The classes are defined at init -9 in this mod's mode files,
-    ##     the registry singleton itself lives in the core (init -10).
-    ## ZH: 将三种游戏模式注册进核心注册表。
-    ##     类定义在本 Mod 的模式文件中（init -9），
-    ##     注册表单例位于本体（init -10）。
-    gamemode_registry.register(StoryMode())
-    gamemode_registry.register(SandboxMode())
-    gamemode_registry.register(ScenarioMode())
+    ## EN: Register the three game modes into the core registry — only while
+    ##     this mod is active. When the mod is disabled in the Mod Manager,
+    ##     register_mod leaves it inactive (persistent._bk_v2_mod_states), so
+    ##     the registry stays empty and the core start flow falls back to
+    ##     plain story mode (start.rpy select_game_mode).
+    ## ZH: 将三种游戏模式注册进核心注册表——仅在本 Mod 激活时进行。
+    ##     Mod 管理界面禁用本 Mod 后，register_mod 不会激活它
+    ##     （persistent._bk_v2_mod_states），注册表保持为空，
+    ##     本体开局流程回退为纯剧情模式（start.rpy select_game_mode）。
+    if services.mod_api_v2.is_mod_active("game_modes"):
+        gamemode_registry.register(StoryMode())
+        gamemode_registry.register(SandboxMode())
+        gamemode_registry.register(ScenarioMode())

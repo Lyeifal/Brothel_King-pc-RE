@@ -93,6 +93,12 @@ label before_main_menu(): # Will show before main menu (standard Ren'py label)
 
     $ update_mods()
 
+    ## EN: Re-sync v2 mod activation with the persistent enable flags
+    ##     (idempotent — init-time registration already honored them).
+    ## ZH: 按持久化开关重建 v2 Mod 激活状态
+    ##     （幂等——init 注册时已经遵循开关）。
+    $ mod_api_v2.apply_startup_states()
+
     ## GIRL PACKS ##
 
     python:

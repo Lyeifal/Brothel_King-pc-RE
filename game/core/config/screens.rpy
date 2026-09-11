@@ -994,11 +994,7 @@ screen main_menu():
 
                     textbutton _("CG Gallery") action (Function(init_galleries), ShowMenu("galleries"), Function(renpy.music.stop, fadeout=3.0))
 
-                    textbutton _("Mods"):
-
-                        if detected_mods:
-
-                            action ShowMenu("mods")
+                    textbutton _("Mods") action Show("mod_manager")
 
             frame yalign 0.5:
 

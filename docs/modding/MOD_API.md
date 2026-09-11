@@ -1,6 +1,6 @@
 # BK Evolution — Mod API 参考（v1 + v2）
 
-> 最后更新: 2026-09-11（与代码核对）
+> 最后更新: 2026-09-11（持久化启用机制 + 主菜单 Mod 管理界面，与代码核对）
 >
 > 本文档是 Brothel King Evolution Mod 机制的权威参考，涵盖旧版 v1 `Mod()` 类与新版 `ModAPIV2` 两套机制。
 > 所有行号、参数、行为均以当前代码为准（分支 `bk-evolution`）。
@@ -13,12 +13,13 @@
 |---|---|---|
 | 入口 | 实例化 `Mod(...)` 类 | `services.mod_api_v2.register_mod(mod_id, manifest)` |
 | 注册方式 | 构造时自动加入 `detected_mods` | 显式 manifest 注册，带校验 |
-| 激活语义 | **逐存档开关**：主菜单 Mods 界面可激活/停用，状态存 `persistent.mods` | **常驻激活**：文件放进 `game/custom/mods/` 即生效，无开关 |
-| 停用方式 | Mods 界面 Deactivate | 删除 `game/custom/mods/<Mod>/` 整个文件夹 |
+| 激活语义 | **逐存档开关**：主菜单 Mods 界面可激活/停用，状态存 `persistent.mods` | **默认启用，可持久化禁用**：开关存 `persistent._bk_v2_mod_states`，主菜单 Mod 管理界面切换 |
+| 停用方式 | Mods 界面 Deactivate | 主菜单 "Mods"（Mod 管理界面）切换；或删除 `game/custom/mods/<Mod>/` 文件夹 |
 | 生命周期标签 | `early/init/night/update/load/remove_label` + `chapter_labels` | 无标签机制，用 hooks（`game_saved`/`game_loaded` 等） |
 | 主页右侧菜单按钮 | `home_rightmenu_add_buttons` | manifest 的 `home_rightmenu_add_buttons`（v2 新增支持） |
 | 事件注册 | `events={...}` + `add_event()` | 继承 `ModAPI.register_event()` 等 Registry 包装 |
 | 钩子系统 | `mod.hooks` dict → `HookManager`（Phase 6 兼容层） | manifest `hooks` 或 `register_hook()` → 标准化钩子 |
+| 前置依赖 | 无 | manifest `dependencies`（强制：前置未激活则本 Mod 不激活） |
 | 模板 | `game/custom/mods/Goldo's cool mod/`（教程范例） | `game/core/templates/mod_template/mod_template.rpy` |
 | 完整范例 | 同上（v1） | `game/custom/mods/Auction House/`（权威范例，见 §6） |
 
@@ -100,7 +101,7 @@ Mod(
 5. **Mods 界面开关**（`screen mods`，`game/core/ui/screens/screen_quest.rpy:564` 起）：
    - `mod.activate()`（`challenges.rpy:480`）：yes_no 确认 → `active=True` + 写 `persistent.mods` → `game.activate_mod(self)`；
    - `mod.deactivate()`（`challenges.rpy:495`）：yes_no 确认 → `active=False` + 写 persistent → `game.deactivate_mod(self)`（调用 `remove_label` 做清理，`core_entities.rpy:291-292`）。
-   - 注意：主菜单 "Mods" 按钮只在 `detected_mods` 非空时显示（`game/core/config/screens.rpy:999`），v1 的开关都在这个界面完成。
+   - 注意：游戏菜单（`screen navigation`，`game/core/config/screens.rpy:815`）的 "Mods" 按钮进同一个界面；主菜单 `screen main_menu()` 的 "Mods" 按钮（`screens.rpy:997`）则打开 v2 的 Mod 管理界面（§2.5）。
 6. **读档时**（`label after_load`，`events_dispatcher.rpy:186` 起）：刷新 `game.active_mods` 中的 Mod 实例引用、收集并 `call` 每个 active Mod 的 `load_label`；随后（`game/core/ui/main.rpy:907`）`game.update_mods()` 处理"Mod 被删/版本变化/新激活"三种情况，可能返回 `update_label` 列表待调用。
 7. **每章开始**（`events_dispatcher.rpy:974-978`）：对每个 active Mod 检查 `mod.chapter_labels[game.chapter]`，非空且 label 存在则排入章节标签调用队列（不存在则抛 `AssertionError`）。
 
@@ -141,11 +142,11 @@ Mod(
 ## 2. v2 Mod 机制（ModAPIV2）
 
 实现：`game/core/systems/mods/mod_api_v2.rpy`（`init -3 python`），类 `ModAPIV2(ModAPI)`。
-单例：`mod_api_v2 = ModAPIV2()`（`:205`），注册进服务容器 `services.register("mod_api_v2", mod_api_v2)`（`:206`），可用 `services.mod_api_v2` 访问（属性定义 `game/core/systems/services/service_container.rpy:109-111`）。因为继承 `ModAPI`，v1 的 `register_trait` / `register_event` 等 Registry 包装方法在 v2 上同样可用（`game/core/systems/mods/mod_api.rpy`）。
+单例：`mod_api_v2 = ModAPIV2()`（`:385`），注册进服务容器 `services.register("mod_api_v2", mod_api_v2)`（`:386`），可用 `services.mod_api_v2` 访问（属性定义 `game/core/systems/services/service_container.rpy:109-111`）。因为继承 `ModAPI`，v1 的 `register_trait` / `register_event` 等 Registry 包装方法在 v2 上同样可用（`game/core/systems/mods/mod_api.rpy`）。
 
 ### 2.1 `register_mod(mod_id, manifest)` 与 manifest 全字段
 
-签名：`game/core/systems/mods/mod_api_v2.rpy:50`。
+签名：`game/core/systems/mods/mod_api_v2.rpy:80`。
 
 ```python
 services.mod_api_v2.register_mod("my_mod", {
@@ -157,7 +158,8 @@ services.mod_api_v2.register_mod("my_mod", {
     "description": __("..."),        # 描述（Mods 界面展示）
     "requires": ["girl_traits"],     # 能力标志列表，见 §2.2
     "hooks": {"girl_generated": my_callback},  # {钩子名: 回调}，见 §3
-    "dependencies": ["other_mod"],   # 依赖的 mod_id 列表（声明用；当前不做强制校验）
+    "dependencies": ["game_modes"],  # 前置 mod_id 列表（强制语义，见 §2.2）
+    "always_on": False,              # True = 不可禁用（默认 False），见 §2.2
     "home_rightmenu_add_buttons": ["my_screen"],  # 主页右侧菜单按钮 screen 列表，见 §2.3
 })
 ```
@@ -168,33 +170,39 @@ services.mod_api_v2.register_mod("my_mod", {
 |------|------|------|-----------|
 | `name` | str | 建议 | `get_menu_buttons()` / `get_mod_info()` 的显示名；缺省时回落到 `mod_id` |
 | `version` | str | 建议 | 仅展示。代码不解析、不比较 |
-| `api_version` | int | **是** | 必须 `== 2`，否则 `ValueError`（`mod_api_v2.rpy:74-76`） |
+| `api_version` | int | **是** | 必须 `== 2`，否则 `ValueError`（`mod_api_v2.rpy:115-117`） |
 | `min_game_version` | str | 否 | 仅记录。**当前代码不强制** |
 | `author` | str | 建议 | 仅展示 |
 | `description` | str | 建议 | 仅展示（Mods 界面） |
-| `requires` | [str] | 否 | 每项必须在 `CAPABILITIES` 集合内，否则 `ValueError`（`:78-80`），见 §2.2 |
-| `hooks` | {str: callable} | 否 | 每个回调以 `(mod_id, callback, 0)` 注册进 `_mod_hooks`（`:88-89`） |
-| `dependencies` | [str] | 否 | 仅记录。**当前代码不检查**依赖是否已注册 |
+| `requires` | [str] | 否 | 每项必须在 `CAPABILITIES` 集合内，否则 `ValueError`（`:118-120`），见 §2.2 |
+| `hooks` | {str: callable} | 否 | 每个回调以 `(mod_id, callback, 0)` 注册进 `_mod_hooks`（`:131-132`）；Mod 被禁用时回调被跳过（§2.2） |
+| `dependencies` | [str] | 否 | **强制语义**（`:219-242`）：本 Mod 激活当且仅当每个依赖都已激活；依赖未安装（未注册）或被禁用同样视为缺失，此时本 Mod 不激活，Mod 管理界面显示"缺少前置" |
+| `always_on` | bool | 否 | 默认 `False`。`True` 时忽略持久化开关，始终激活（主菜单管理界面显示"常驻"，无切换按钮） |
 | `home_rightmenu_add_buttons` | [str] | 否 | 无参 screen 名列表，见 §2.3 |
 
-注册期校验汇总（`:73-83`）：
+注册期校验汇总（`:113-123`）：
 
 1. `api_version != 2` → `ValueError`；
 2. `requires` 含未知能力标志 → `ValueError`；
-3. **重复注册同一 `mod_id` → `ValueError`**（`:82-83`）——init 重跑场景下需避免二次注册。
+3. **重复注册同一 `mod_id` → `ValueError`**（`:122-123`，查 `_registered_mods`）——init 重跑场景下需避免二次注册。
 
-`renpy.config.developer` 为真时，注册成功会 `renpy.log` 输出（`:91-93`）。
+注册成功后立即按持久化开关 + 依赖关系重算激活集（`_rebuild_active_mods()`，`:138`）；`renpy.config.developer` 为真时，`renpy.log` 输出注册信息（`:140-145`）。
 
-### 2.2 常驻激活语义与能力标志
+### 2.2 持久化启用机制、always_on 与能力标志
 
-**常驻激活**（`mod_api_v2.rpy:67-71` 明确注释）：
+**启用语义**（BK Evolution 持久化开关，取代旧的"安装即常驻"）：
 
-- v2 Mod **安装即激活**——把文件夹放进 `game/custom/mods/` 即被 Ren'Py 加载并执行注册块，没有任何逐存档开关；
-- **停用 = 删除文件**：从 `game/custom/mods/` 移除该 Mod 文件夹即可；
-- 状态不写入 `persistent.mods`（那是 v1 的机制），v2 的 `_active_mods` 是 init 期内存注册表；
-- `unregister_mod(mod_id)`（`:95-99`）存在但主要用于测试/热重载场景，正常 Mod 不需要调用。
+- 每个 v2 Mod 的启用标志存于 `persistent._bk_v2_mod_states`（`mod_id -> bool`；**未记录的 id 默认启用**）。字段名常量：`ModAPIV2.PERSISTENT_STATES_ATTR`（`:49`）。
+- Mod **激活当且仅当**：已注册 ∧（`always_on` ∨ 持久化启用）∧ manifest `dependencies` 全部激活。激活集由 `_rebuild_active_mods()`（`:219-242`）全局重算：被依赖者优先解析（拓扑遍历），依赖未安装（未注册）、被禁用或成环时该 Mod 保持未激活。
+- Ren'Py 在 init 代码运行**之前**就已绑定 `persistent`（`renpy/main.py` 先 `renpy.persistent.init()` 再跑 init），所以 `register_mod`（init -1）注册时立即读取开关，**本次启动就不会激活被禁用的 Mod**；`apply_startup_states()`（`:203-217`）在 `before_main_menu`（`events_dispatcher.rpy:100`）幂等重建兜底。
+- 禁用的 Mod 钩子仍留在 `_mod_hooks` 中，但 `execute_hook`/`cancel_hook` 按归属跳过未激活 Mod 的回调（`:321-322`、`:352-353`）；`register_hook()` 直注册的 `"_direct"` 回调无法归属，始终执行。
+- **Mod 作者的防护约定**：init 期有副作用的注册（如向核心注册表注册模式/出身）应包在 `if services.mod_api_v2.is_mod_active("your_mod_id"):` 里，参考 `game/custom/mods/Game Modes/mod.rpy:50-57`。
 
-**能力标志**（`CAPABILITIES`，`mod_api_v2.rpy:30-41`）——声明 Mod 需要的能力面，当前用于注册期校验与文档语义：
+**`always_on`**：manifest 可选布尔字段，默认 `False`。`True` 时 Mod 始终激活、`set_mod_enabled` 对其无效（开关值仍会被记录）；主菜单管理界面显示"常驻"且无切换按钮。适合核心玩法类 Mod 声明"可被前置依赖但玩家不可关"。
+
+**`dependencies`**：manifest 可选 mod_id 列表，强制语义——前置未激活则本 Mod 不激活（见上）。范例：`"dependencies": ["game_modes"]` 声明依赖 "Game Modes" Mod（见 §6.5）。
+
+**能力标志**（`CAPABILITIES`，`mod_api_v2.rpy:52-63`）——声明 Mod 需要的能力面，当前用于注册期校验与文档语义：
 
 ```python
 "girl_stats"    # 修改女孩属性
@@ -209,24 +217,34 @@ services.mod_api_v2.register_mod("my_mod", {
 "ngp_settings"  # NG+ 设置
 ```
 
-### 2.3 home_rightmenu_add_buttons（v2）
+### 2.3 主菜单 Mod 管理界面（screen mod_manager）
 
-manifest 字段，值为**无参 screen 名列表**。`get_menu_buttons()`（`:109-119`）返回 `[(mod_id, 显示名, [按钮 screen 名])]`——只包含声明了按钮的激活 Mod。主页右侧菜单在 `screen_home.rpy:65-69` 通过 `services.mod_api_v2.get_menu_buttons()` 取列表，交由 `screen mod_menu_display` 的 `v2_buttons` 参数渲染（`screen_home.rpy:395-401`），与 v1 Mod 的按钮并列展示、按 Mod 分组。
+`game/core/ui/screens/screen_mod_manager.rpy`，由主菜单 `screen main_menu()` 的 "Mods" 按钮打开（`game/core/config/screens.rpy:997`，`action Show("mod_manager")`）。
 
-### 2.4 生命周期钩子
+- 列出 `list_registered_mods()` 返回的**全部已注册** Mod：名称、版本、作者、状态（已启用 / 已禁用 / 缺少前置+缺失 id / 常驻）。
+- 每个非 `always_on` 的 Mod 一个切换按钮，动作为 `[Function(set_mod_enabled, ...), Function(renpy.save_persistent), SetScreenVariable("show_restart_hint", True)]`——写持久化 + 内存同步 + 提示"更改将在重启游戏后完全生效"（不做热重载）。
+- 底部"返回"按钮（`Return()`，`tag menu` 使其替换主菜单屏幕，返回后主菜单交互循环重新显示）。
+- 游戏内（`screen navigation`，`screens.rpy:815`）的 "Mods" 按钮仍进旧的 `screen mods()`（v1 逐存档开关 + v2 只读列表）。
+
+### 2.4 home_rightmenu_add_buttons（v2）
+
+manifest 字段，值为**无参 screen 名列表**。`get_menu_buttons()`（`:271-281`）返回 `[(mod_id, 显示名, [按钮 screen 名])]`——只包含声明了按钮的**激活** Mod（被禁用的 Mod 不返回）。主页右侧菜单在 `screen_home.rpy:65-69` 通过 `services.mod_api_v2.get_menu_buttons()` 取列表，交由 `screen mod_menu_display` 的 `v2_buttons` 参数渲染（`screen_home.rpy:395-401`），与 v1 Mod 的按钮并列展示、按 Mod 分组。
+
+### 2.5 生命周期钩子
 
 v2 没有 v1 的 label 机制，生命周期事件通过钩子覆盖：
 
-- `game_saved`：经 `renpy.config.save_json_callbacks` 在每次保存时触发（`mod_api_v2.rpy:214-218`，防重复注册）；
+- `game_saved`：经 `renpy.config.save_json_callbacks` 在每次保存时触发（`mod_api_v2.rpy:389-399`，防重复注册）；
 - `game_loaded`：在 `label after_load` 触发（`events_dispatcher.rpy:189-191`，带 `hasattr` 保护兼容旧存档）。
+- 启动时激活状态兜底：`apply_startup_states()` 在 `before_main_menu`（`events_dispatcher.rpy:100`）调用，幂等。
 
 ---
 
 ## 3. 钩子点完整参考（18 个）
 
-常量定义：`game/core/systems/mods/mod_api_v2.rpy:187-204`。命名惯例 `<domain>_<action>_<tense>`（`girl_runaway`、`girl_sold`、`security_event` 三个名字不含 `_<tense>`，`tools/verify_mod_api.py` 会对此发出命名惯例警告，属已知事项）。
+常量定义：`game/core/systems/mods/mod_api_v2.rpy:365-382`。命名惯例 `<domain>_<action>_<tense>`（`girl_runaway`、`girl_sold`、`security_event` 三个名字不含 `_<tense>`，`tools/verify_mod_api.py` 会对此发出命名惯例警告，属已知事项）。
 
-回调签名统一为 `callback(context: dict)`；`execute_hook` 把关键字参数打包成 context dict 传入（`mod_api_v2.rpy:143-159`）。
+回调签名统一为 `callback(context: dict)`；`execute_hook` 把关键字参数打包成 context dict 传入（`mod_api_v2.rpy:308-331`），并跳过未激活 Mod 的回调。
 
 | # | 常量 | 字符串值 | 调用点（文件:行号） | context 键 |
 |---|------|----------|---------------------|-----------|
@@ -267,25 +285,30 @@ v2 没有 v1 的 label 机制，生命周期事件通过钩子覆盖：
 
 | 方法 | 行号 | 说明 |
 |------|------|------|
-| `register_mod(mod_id, manifest)` | `:50` | 注册 v2 Mod，见 §2.1 |
-| `unregister_mod(mod_id)` | `:95` | 移除 Mod 并清理其全部钩子 |
-| `is_mod_active(mod_id)` | `:101` | `mod_id in _active_mods` |
-| `list_active_mods()` | `:104` | 返回激活 mod_id 列表 |
+| `register_mod(mod_id, manifest)` | `:80` | 注册 v2 Mod 并立即按持久化开关+依赖重算激活集，见 §2.1 |
+| `unregister_mod(mod_id)` | `:147` | 移除 Mod（注册表+激活集）并清理其全部钩子 |
+| `is_mod_active(mod_id)` | `:263` | `mod_id in _active_mods` |
+| `list_active_mods()` | `:266` | 返回激活 mod_id 列表 |
+| `list_registered_mods()` | `:244` | 返回**全部已注册** mod_id（含未激活），Mod 管理界面用 |
+| `is_mod_enabled(mod_id)` | `:178` | 读持久化启用开关；未记录默认 `True` |
+| `set_mod_enabled(mod_id, enabled)` | `:190` | 写持久化开关并内存同步重建激活集（未知 id 抛 `ValueError`） |
+| `apply_startup_states()` | `:203` | 幂等重建激活集；`before_main_menu` 兜底调用 |
+| `missing_dependencies(mod_id)` | `:251` | 返回未激活的依赖 id 列表（"缺少前置"展示用） |
 
 ### UI 集成
 
 | 方法 | 行号 | 说明 |
 |------|------|------|
-| `get_menu_buttons()` | `:109` | `[(mod_id, 显示名, [按钮 screen 名])]`，仅含声明了主页菜单按钮的 Mod |
-| `get_mod_info(mod_id)` | `:121` | manifest 副本（Mods 界面展示用）；未知 id 返回 `None` |
+| `get_menu_buttons()` | `:271` | `[(mod_id, 显示名, [按钮 screen 名])]`，仅含声明了主页菜单按钮的**激活** Mod |
+| `get_mod_info(mod_id)` | `:283` | 已注册 Mod（含未激活）的 manifest 副本；未知 id 返回 `None` |
 
 ### 钩子
 
 | 方法 | 行号 | 说明 |
 |------|------|------|
-| `register_hook(hook_name, callback, priority=0)` | `:132` | 注册回调 `callback(context)`；priority 越大越先执行，注册时立即按优先级排序 |
-| `execute_hook(hook_name, **context)` | `:143` | 执行该钩子的全部回调；返回 `{mod_id: result}`（返回 `None` 的回调被过滤，mod_id 为 `"_direct"` 表示 `register_hook` 直注册）；回调异常被吞掉并 `renpy.notify`（developer 模式），**永不崩溃游戏** |
-| `cancel_hook(hook_name)` | `:161` | 创建 `{"cancel": False}` context 逐个调用回调；任一回调置 `context["cancel"] = True` 则返回 `True`。**不能经由 `execute_hook` 中转**（注释 `:167-173`：`execute_hook` 用 `**kwargs` 重建 context，会丢取消信号——历史 bug 已修复） |
+| `register_hook(hook_name, callback, priority=0)` | `:297` | 注册回调 `callback(context)`（归属 `"_direct"`，不受禁用过滤）；priority 越大越先执行，注册时立即按优先级排序 |
+| `execute_hook(hook_name, **context)` | `:308` | 执行该钩子的全部回调（**跳过未激活 Mod 的回调**，`:321-322`）；返回 `{mod_id: result}`（返回 `None` 的回调被过滤，mod_id 为 `"_direct"` 表示 `register_hook` 直注册）；回调异常被吞掉并 `renpy.notify`（developer 模式），**永不崩溃游戏** |
+| `cancel_hook(hook_name)` | `:333` | 创建 `{"cancel": False}` context 逐个调用回调（同样跳过未激活 Mod，`:352-353`）；任一回调置 `context["cancel"] = True` 则返回 `True`。**不能经由 `execute_hook` 中转**（注释 `:339-345`：`execute_hook` 用 `**kwargs` 重建 context，会丢取消信号——历史 bug 已修复） |
 
 ### 其他（继承自 `ModAPI`，`mod_api.rpy`）
 
@@ -295,11 +318,11 @@ v2 没有 v1 的 label 机制，生命周期事件通过钩子覆盖：
 
 `python tools/verify_mod_api.py` —— 纯 Python 静态断言 + 模拟执行（不依赖 Ren'Py 运行时）：
 
-- 断言 16 个 `HOOK_*` 常量存在且取值唯一（`EXPECTED_HOOK_COUNT = 16`）；
-- 断言 `register_mod`/`unregister_mod`/`register_hook`/`execute_hook`/`cancel_hook` 存在；
+- 断言 18 个 `HOOK_*` 常量存在且取值唯一（`EXPECTED_HOOK_COUNT = 18`）；
+- 断言 `register_mod`/`unregister_mod`/`register_hook`/`execute_hook`/`cancel_hook`/`set_mod_enabled`/`is_mod_enabled`/`apply_startup_states`/`list_registered_mods`/`missing_dependencies` 存在；
 - 断言 `mod_template.rpy` 引用的每个 `api.HOOK_*` 真实存在；
-- 模拟执行注册、重复注册拒绝、未知能力拒绝、优先级排序、异常吞掉、取消流程、`get_menu_buttons`/`get_mod_info` 行为；
-- 当前结果：**全部通过**，3 条命名惯例警告（`girl_sold`/`girl_runaway`/`security_event` 无 `_<tense>` 后缀）。
+- 模拟执行注册、重复注册拒绝、未知能力拒绝、优先级排序、异常吞掉、取消流程、`get_menu_buttons`/`get_mod_info` 行为、持久化启用/禁用（桩 `persistent`）、禁用 Mod 钩子跳过、`always_on`、`dependencies` 前置解析与 `apply_startup_states` 幂等；
+- 当前结果：**全部通过**，5 条命名惯例警告（`girl_sold`/`girl_runaway`/`security_event`/`girl_destination_list`/`girl_destination_accept` 无 `_<tense>` 后缀）。
 
 ---
 
@@ -390,6 +413,34 @@ screen right_menu_auction():
 3. 展示了与核心全局对象（`MC`、`calendar`、`get_girls`）的安全交互；
 4. 展示了 v2 与 i18n 规范（`__()`/`_()`）的组合。
 
+### 6.5 前置依赖范例：Game Modes
+
+`game/custom/mods/Game Modes/`（mod_id `"game_modes"`）演示了持久化启用语义与前置依赖：
+
+```renpy
+init -1 python:
+    services.mod_api_v2.register_mod("game_modes", {
+        ...
+        "dependencies": [],
+        "always_on": False,   # 可被玩家禁用，也可被其他 Mod 前置依赖
+    })
+
+    ## EN: 激活时才向核心注册表注册模式（禁用时开局回退纯剧情模式）。
+    ## ZH: 仅激活时注册模式；被禁用时注册表为空，开局回退剧情模式。
+    if services.mod_api_v2.is_mod_active("game_modes"):
+        gamemode_registry.register(StoryMode())
+        gamemode_registry.register(SandboxMode())
+        gamemode_registry.register(ScenarioMode())
+```
+
+其他 Mod 声明前置的方式：
+
+```python
+"dependencies": ["game_modes"]   # 本 Mod 仅在 game_modes 激活时激活
+```
+
+本 Mod 目录下的 `README.txt` 记录了该约定（Ren'Py 启动器会忽略非 `.rpy` 文件）。
+
 对照 v1 教程范例：`game/custom/mods/Goldo's cool mod/goldo's cool mod.rpy`（209 行）演示 v1 全流程——`Mod(...)` 构造、`help_prompts` 选项菜单、`early_label`/`init_label` 标签、`events` + `add_event()` 调度（alarm/morning/city 三种 type）、`set_condition` 条件事件、自定义 `register_trait`、`home_rightmenu_add_buttons` 按钮 screen。
 
 ---
@@ -398,11 +449,13 @@ screen right_menu_auction():
 
 | 项 | 状态 | 说明 |
 |----|------|------|
-| v2 `min_game_version` / `dependencies` 校验 | 📝 已知限制 | 仅记录不强制（`mod_api_v2.rpy:50` 注释声明语义） |
+| v2 `min_game_version` 校验 | 📝 已知限制 | 仅记录不强制（声明语义） |
+| v2 `dependencies` 校验 | ✅ 已实现 | 强制语义：前置未激活则本 Mod 不激活（`_rebuild_active_mods`，`mod_api_v2.rpy:219-242`） |
 | manifest `hooks` 注册优先级恒为 0 | 📝 设计如此 | 需优先级时用 `register_hook(..., priority=N)` 单独注册 |
+| `register_hook()` 直注册的回调不受禁用过滤 | 📝 设计如此 | `"_direct"` 回调无法归属 Mod；要随禁用生效请走 manifest `hooks` |
 | `cancel_hook` 无游戏内调用点 | 📝 已知 | 仅测试覆盖；供 Mod/脚本自行调用 |
 | 3 个钩子名不符合 `<domain>_<action>_<tense>` | 📝 已知 | `girl_sold` / `girl_runaway` / `security_event`，verify_mod_api 输出警告；改名会破坏已注册回调，保持现状 |
-| v2 状态持久化 | 🚧 待规划 | v1 的 `mod_settings` 自动随存档保存；v2 Mod 需自行借助 `game_saved`/`game_loaded` 钩子实现 |
+| v2 启用状态持久化 | ✅ 已实现 | 启用/禁用开关存 `persistent._bk_v2_mod_states`（主菜单 Mod 管理界面切换）；Mod 自定义内容数据仍需自行借助 `game_saved`/`game_loaded` 钩子保存 |
 | Mod 内容翻译 | ⏳ 待规划 | `game/custom/` 内容默认保持原文；未来可通过统一字符串表支持 |
 
 ---

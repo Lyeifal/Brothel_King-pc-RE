@@ -1,6 +1,6 @@
 # BK Evolution — Mod API Reference (v1 + v2)
 
-> Last updated: 2026-09-11 (verified against code)
+> Last updated: 2026-09-11 (persistent enable mechanism + main-menu Mod Manager screen, verified against code)
 >
 > This document is the authoritative reference for Brothel King Evolution's Mod mechanisms, covering both the legacy v1 `Mod()` class and the new `ModAPIV2`.
 > All line numbers, parameters, and behavior reflect the current code (branch `bk-evolution`).
@@ -13,12 +13,13 @@
 |---|---|---|
 | Entry point | Instantiate the `Mod(...)` class | `services.mod_api_v2.register_mod(mod_id, manifest)` |
 | Registration | Automatically added to `detected_mods` at construction | Explicit manifest registration, with validation |
-| Activation semantics | **Per-save toggle**: can be activated/deactivated in the main-menu Mods screen; state stored in `persistent.mods` | **Always active**: dropping the folder into `game/custom/mods/` is enough; no toggle |
-| How to deactivate | Deactivate in the Mods screen | Delete the entire `game/custom/mods/<Mod>/` folder |
+| Activation semantics | **Per-save toggle**: can be activated/deactivated in the main-menu Mods screen; state stored in `persistent.mods` | **Enabled by default, persistently disableable**: flag stored in `persistent._bk_v2_mod_states`, toggled in the main-menu Mod Manager screen |
+| How to deactivate | Deactivate in the Mods screen | Toggle off in the main-menu "Mods" (Mod Manager screen); or delete the entire `game/custom/mods/<Mod>/` folder |
 | Lifecycle labels | `early/init/night/update/load/remove_label` + `chapter_labels` | No label mechanism; use hooks (`game_saved`/`game_loaded`, etc.) |
 | Home right-menu buttons | `home_rightmenu_add_buttons` | Manifest `home_rightmenu_add_buttons` (new support in v2) |
 | Event registration | `events={...}` + `add_event()` | Inherited `ModAPI.register_event()` and other Registry wrappers |
 | Hook system | `mod.hooks` dict → `HookManager` (Phase 6 compatibility layer) | Manifest `hooks` or `register_hook()` → standardized hooks |
+| Dependencies | None | Manifest `dependencies` (enforced: mod stays inactive until every dependency is active) |
 | Template | `game/custom/mods/Goldo's cool mod/` (tutorial example) | `game/core/templates/mod_template/mod_template.rpy` |
 | Full example | Same as above (v1) | `game/custom/mods/Auction House/` (authoritative example, see §6) |
 
@@ -100,7 +101,7 @@ Flow (in call order):
 5. **Mods screen toggle** (`screen mods`, starting at `game/core/ui/screens/screen_quest.rpy:564`):
    - `mod.activate()` (`challenges.rpy:480`): yes_no confirmation → `active=True` + write `persistent.mods` → `game.activate_mod(self)`;
    - `mod.deactivate()` (`challenges.rpy:495`): yes_no confirmation → `active=False` + write persistent → `game.deactivate_mod(self)` (calls `remove_label` for cleanup, `core_entities.rpy:291-292`).
-   - Note: the main-menu "Mods" button is only shown when `detected_mods` is non-empty (`game/core/config/screens.rpy:999`); all v1 toggling happens in this screen.
+   - Note: the in-game "Mods" button (`screen navigation`, `game/core/config/screens.rpy:815`) opens this same screen; the main-menu `screen main_menu()` "Mods" button (`screens.rpy:997`) instead opens the v2 Mod Manager screen (§2.5).
 6. **On loading a save** (`label after_load`, starting at `events_dispatcher.rpy:186`): refreshes the mod instance references in `game.active_mods`, collects and `call`s each active mod's `load_label`; then (`game/core/ui/main.rpy:907`) `game.update_mods()` handles three cases — "mod removed / version changed / newly activated" — and may return a list of `update_label`s to call.
 7. **Chapter start** (`events_dispatcher.rpy:974-978`): for each active mod, checks `mod.chapter_labels[game.chapter]`; if non-empty and the label exists, it is queued for a chapter-label call (if it doesn't exist, an `AssertionError` is raised).
 
@@ -141,11 +142,11 @@ Inside the button screen there is usually a `textbutton` whose `action` navigate
 ## 2. v2 Mod mechanism (ModAPIV2)
 
 Implementation: `game/core/systems/mods/mod_api_v2.rpy` (`init -3 python`), class `ModAPIV2(ModAPI)`.
-Singleton: `mod_api_v2 = ModAPIV2()` (`:205`), registered into the service container `services.register("mod_api_v2", mod_api_v2)` (`:206`), accessible as `services.mod_api_v2` (attribute defined at `game/core/systems/services/service_container.rpy:109-111`). Because it inherits `ModAPI`, v1's `register_trait` / `register_event` and other Registry wrapper methods are also available on v2 (`game/core/systems/mods/mod_api.rpy`).
+Singleton: `mod_api_v2 = ModAPIV2()` (`:385`), registered into the service container `services.register("mod_api_v2", mod_api_v2)` (`:386`), accessible as `services.mod_api_v2` (attribute defined at `game/core/systems/services/service_container.rpy:109-111`). Because it inherits `ModAPI`, v1's `register_trait` / `register_event` and other Registry wrapper methods are also available on v2 (`game/core/systems/mods/mod_api.rpy`).
 
 ### 2.1 `register_mod(mod_id, manifest)` and full manifest fields
 
-Signature: `game/core/systems/mods/mod_api_v2.rpy:50`.
+Signature: `game/core/systems/mods/mod_api_v2.rpy:80`.
 
 ```python
 services.mod_api_v2.register_mod("my_mod", {
@@ -157,7 +158,8 @@ services.mod_api_v2.register_mod("my_mod", {
     "description": __("..."),        # Description (shown in Mods screen)
     "requires": ["girl_traits"],     # Capability flag list, see §2.2
     "hooks": {"girl_generated": my_callback},  # {hook name: callback}, see §3
-    "dependencies": ["other_mod"],   # List of mod_ids this mod depends on (declarative; not enforced currently)
+    "dependencies": ["game_modes"],  # Prerequisite mod_id list (enforced semantics, see §2.2)
+    "always_on": False,              # True = cannot be disabled (default False), see §2.2
     "home_rightmenu_add_buttons": ["my_screen"],  # Home right-menu button screen list, see §2.3
 })
 ```
@@ -168,33 +170,39 @@ Field-by-field explanation:
 |------|------|------|-----------|
 | `name` | str | Recommended | Display name for `get_menu_buttons()` / `get_mod_info()`; falls back to `mod_id` when missing |
 | `version` | str | Recommended | Display only. The code does not parse or compare it |
-| `api_version` | int | **Yes** | Must `== 2`, otherwise `ValueError` (`mod_api_v2.rpy:74-76`) |
+| `api_version` | int | **Yes** | Must `== 2`, otherwise `ValueError` (`mod_api_v2.rpy:115-117`) |
 | `min_game_version` | str | No | Recorded only. **Not enforced in current code** |
 | `author` | str | Recommended | Display only |
 | `description` | str | Recommended | Display only (Mods screen) |
-| `requires` | [str] | No | Each item must be in the `CAPABILITIES` set, otherwise `ValueError` (`:78-80`), see §2.2 |
-| `hooks` | {str: callable} | No | Each callback is registered into `_mod_hooks` as `(mod_id, callback, 0)` (`:88-89`) |
-| `dependencies` | [str] | No | Recorded only. **Current code does not check** whether dependencies are registered |
+| `requires` | [str] | No | Each item must be in the `CAPABILITIES` set, otherwise `ValueError` (`:118-120`), see §2.2 |
+| `hooks` | {str: callable} | No | Each callback is registered into `_mod_hooks` as `(mod_id, callback, 0)` (`:131-132`); callbacks of a disabled mod are skipped at fire time (§2.2) |
+| `dependencies` | [str] | No | **Enforced** (`:219-242`): the mod activates only when every dependency is active; an uninstalled (unregistered) or disabled dependency counts as missing, the mod stays inactive and the Mod Manager shows 缺少前置 (missing prerequisite) |
+| `always_on` | bool | No | Defaults to `False`. When `True` the persistent flag is ignored and the mod is always active (the Mod Manager shows 常驻 (pinned) with no toggle button) |
 | `home_rightmenu_add_buttons` | [str] | No | List of no-argument screen names, see §2.3 |
 
-Registration-time validation summary (`:73-83`):
+Registration-time validation summary (`:113-123`):
 
 1. `api_version != 2` → `ValueError`;
 2. `requires` contains an unknown capability flag → `ValueError`;
-3. **Registering the same `mod_id` twice → `ValueError`** (`:82-83`) — avoid double registration when init reruns.
+3. **Registering the same `mod_id` twice → `ValueError`** (`:122-123`, checked against `_registered_mods`) — avoid double registration when init reruns.
 
-When `renpy.config.developer` is true, successful registration logs output via `renpy.log` (`:91-93`).
+Right after registration the active set is recomputed from the persistent flags + dependencies (`_rebuild_active_mods()`, `:138`); when `renpy.config.developer` is true, successful registration logs output via `renpy.log` (`:140-145`).
 
-### 2.2 Always-active semantics and capability flags
+### 2.2 Persistent enable mechanism, always_on and capability flags
 
-**Always active** (explicitly commented at `mod_api_v2.rpy:67-71`):
+**Enable semantics** (BK Evolution persistent toggle, replacing the old "active once installed"):
 
-- v2 mods are **active as soon as installed** — dropping the folder into `game/custom/mods/` gets it loaded by Ren'Py and executes the registration block; there is no per-save toggle;
-- **Deactivation = deleting the files**: just remove the mod folder from `game/custom/mods/`;
-- State is not written to `persistent.mods` (that's the v1 mechanism); v2's `_active_mods` is an in-memory registration table built at init time;
-- `unregister_mod(mod_id)` (`:95-99`) exists but is mainly for testing/hot-reload scenarios; normal mods don't need to call it.
+- Each v2 mod's enable flag lives in `persistent._bk_v2_mod_states` (`mod_id -> bool`; **unrecorded ids default to enabled**). Field-name constant: `ModAPIV2.PERSISTENT_STATES_ATTR` (`:49`).
+- A mod is **active iff**: registered AND (`always_on` OR persistently enabled) AND every manifest `dependencies` entry is active. The active set is recomputed globally by `_rebuild_active_mods()` (`:219-242`): dependencies resolve before their dependents (topological pass); a mod whose dependency is uninstalled (unregistered), disabled or part of a cycle stays inactive.
+- Ren'Py binds `persistent` **before** init code runs (`renpy/main.py` calls `renpy.persistent.init()` before executing init), so `register_mod` (init -1) reads the flag immediately and **a disabled mod is not activated in the current boot**; `apply_startup_states()` (`:203-217`) re-syncs idempotently from `before_main_menu` (`events_dispatcher.rpy:100`) as a safety net.
+- A disabled mod's hooks stay in `_mod_hooks`, but `execute_hook`/`cancel_hook` skip callbacks attributed to inactive mods (`:321-322`, `:352-353`); `"_direct"` callbacks (registered via `register_hook()`) are not attributable and always run.
+- **Convention for mod authors**: init-time registrations with side effects (e.g. registering modes/origins into core registries) should be guarded by `if services.mod_api_v2.is_mod_active("your_mod_id"):` — see `game/custom/mods/Game Modes/mod.rpy:50-57`.
 
-**Capability flags** (`CAPABILITIES`, `mod_api_v2.rpy:30-41`) — declare which capability surfaces a mod needs; currently used for registration-time validation and documentation semantics:
+**`always_on`**: optional manifest boolean, defaults to `False`. When `True` the mod is always active and `set_mod_enabled` has no effect on it (the flag value is still recorded); the Mod Manager shows 常驻 (pinned) with no toggle. Suitable for core-gameplay mods that other mods can depend on while players cannot switch them off.
+
+**`dependencies`**: optional list of mod_ids, enforced — the mod stays inactive until every dependency is active (see above). Example: `"dependencies": ["game_modes"]` declares a dependency on the "Game Modes" mod (§6.5).
+
+**Capability flags** (`CAPABILITIES`, `mod_api_v2.rpy:52-63`) — declare which capability surfaces a mod needs; currently used for registration-time validation and documentation semantics:
 
 ```python
 "girl_stats"    # Modify girl stats
@@ -209,24 +217,34 @@ When `renpy.config.developer` is true, successful registration logs output via `
 "ngp_settings"  # NG+ settings
 ```
 
-### 2.3 home_rightmenu_add_buttons (v2)
+### 2.3 Main-menu Mod Manager screen (screen mod_manager)
 
-Manifest field; the value is a **list of no-argument screen names**. `get_menu_buttons()` (`:109-119`) returns `[(mod_id, display name, [button screen names])]` — containing only active mods that declare buttons. The home right-side menu fetches the list at `screen_home.rpy:65-69` via `services.mod_api_v2.get_menu_buttons()` and renders it through the `v2_buttons` parameter of `screen mod_menu_display` (`screen_home.rpy:395-401`), displayed alongside v1 mod buttons and grouped by mod.
+`game/core/ui/screens/screen_mod_manager.rpy`, opened by the "Mods" button of the main-menu `screen main_menu()` (`game/core/config/screens.rpy:997`, `action Show("mod_manager")`).
 
-### 2.4 Lifecycle hooks
+- Lists **every registered** mod returned by `list_registered_mods()`: name, version, author and state (已启用/enabled, 已禁用/disabled, 缺少前置/missing prerequisite + ids, 常驻/pinned).
+- Each non-`always_on` mod gets a toggle button whose action is `[Function(set_mod_enabled, ...), Function(renpy.save_persistent), SetScreenVariable("show_restart_hint", True)]` — writes persistent + re-syncs memory + shows "changes take full effect after a restart" (no hot reload).
+- A "返回" (Back) button at the bottom (`Return()`; `tag menu` makes the screen replace the main-menu screen, and the main-menu interaction loop re-shows it afterwards).
+- In-game, the "Mods" button (`screen navigation`, `screens.rpy:815`) still opens the legacy `screen mods()` (v1 per-save toggles + read-only v2 list).
+
+### 2.4 home_rightmenu_add_buttons (v2)
+
+Manifest field; the value is a **list of no-argument screen names**. `get_menu_buttons()` (`:271-281`) returns `[(mod_id, display name, [button screen names])]` — containing only **active** mods that declare buttons (disabled mods are excluded). The home right-side menu fetches the list at `screen_home.rpy:65-69` via `services.mod_api_v2.get_menu_buttons()` and renders it through the `v2_buttons` parameter of `screen mod_menu_display` (`screen_home.rpy:395-401`), displayed alongside v1 mod buttons and grouped by mod.
+
+### 2.5 Lifecycle hooks
 
 v2 has no v1 label mechanism; lifecycle events are covered via hooks:
 
-- `game_saved`: triggered on every save via `renpy.config.save_json_callbacks` (`mod_api_v2.rpy:214-218`, with duplicate-registration protection);
+- `game_saved`: triggered on every save via `renpy.config.save_json_callbacks` (`mod_api_v2.rpy:389-399`, with duplicate-registration protection);
 - `game_loaded`: triggered in `label after_load` (`events_dispatcher.rpy:189-191`, guarded by `hasattr` for compatibility with old saves).
+- Startup activation safety net: `apply_startup_states()` is called in `before_main_menu` (`events_dispatcher.rpy:100`); it is idempotent.
 
 ---
 
 ## 3. Complete hook point reference (18)
 
-Constant definitions: `game/core/systems/mods/mod_api_v2.rpy:187-204`. Naming convention: `<domain>_<action>_<tense>` (three names — `girl_runaway`, `girl_sold`, `security_event` — lack `_<tense>`; `tools/verify_mod_api.py` emits a naming-convention warning for these, which is a known item).
+Constant definitions: `game/core/systems/mods/mod_api_v2.rpy:365-382`. Naming convention: `<domain>_<action>_<tense>` (three names — `girl_runaway`, `girl_sold`, `security_event` — lack `_<tense>`; `tools/verify_mod_api.py` emits a naming-convention warning for these, which is a known item).
 
-All callback signatures are uniformly `callback(context: dict)`; `execute_hook` packs the keyword arguments into a context dict and passes it in (`mod_api_v2.rpy:143-159`).
+All callback signatures are uniformly `callback(context: dict)`; `execute_hook` packs the keyword arguments into a context dict and passes it in (`mod_api_v2.rpy:308-331`), skipping callbacks of inactive mods.
 
 | # | Constant | String value | Call site (file:line) | context keys |
 |---|------|----------|---------------------|-----------|
@@ -267,25 +285,30 @@ All defined in `game/core/systems/mods/mod_api_v2.rpy`; there is also a service 
 
 | Method | Line | Description |
 |------|------|------|
-| `register_mod(mod_id, manifest)` | `:50` | Register a v2 mod, see §2.1 |
-| `unregister_mod(mod_id)` | `:95` | Remove the mod and clean up all its hooks |
-| `is_mod_active(mod_id)` | `:101` | `mod_id in _active_mods` |
-| `list_active_mods()` | `:104` | Returns the list of active mod_ids |
+| `register_mod(mod_id, manifest)` | `:80` | Register a v2 mod and immediately recompute the active set from persistent flags + dependencies, see §2.1 |
+| `unregister_mod(mod_id)` | `:147` | Remove the mod (registry + active set) and clean up all its hooks |
+| `is_mod_active(mod_id)` | `:263` | `mod_id in _active_mods` |
+| `list_active_mods()` | `:266` | Returns the list of active mod_ids |
+| `list_registered_mods()` | `:244` | Returns **all registered** mod_ids (including inactive) — used by the Mod Manager screen |
+| `is_mod_enabled(mod_id)` | `:178` | Read the persistent enable flag; unrecorded ids default to `True` |
+| `set_mod_enabled(mod_id, enabled)` | `:190` | Write the persistent flag and re-sync the in-memory active set (`ValueError` for unknown ids) |
+| `apply_startup_states()` | `:203` | Idempotent rebuild of the active set; called from `before_main_menu` as a safety net |
+| `missing_dependencies(mod_id)` | `:251` | Returns the dependency ids that are not currently active (for the 缺少前置 display) |
 
 ### UI integration
 
 | Method | Line | Description |
 |------|------|------|
-| `get_menu_buttons()` | `:109` | `[(mod_id, display name, [button screen names])]`, only mods declaring home menu buttons |
-| `get_mod_info(mod_id)` | `:121` | Copy of the manifest (for display in the Mods screen); returns `None` for unknown ids |
+| `get_menu_buttons()` | `:271` | `[(mod_id, display name, [button screen names])]`, only **active** mods declaring home menu buttons |
+| `get_mod_info(mod_id)` | `:283` | Copy of the manifest for a registered mod (including inactive); returns `None` for unknown ids |
 
 ### Hooks
 
 | Method | Line | Description |
 |------|------|------|
-| `register_hook(hook_name, callback, priority=0)` | `:132` | Register callback `callback(context)`; higher priority runs first, sorted immediately at registration |
-| `execute_hook(hook_name, **context)` | `:143` | Execute all callbacks of the hook; returns `{mod_id: result}` (callbacks returning `None` are filtered; mod_id `"_direct"` means registered directly via `register_hook`); callback exceptions are swallowed with `renpy.notify` (developer mode), **never crashing the game** |
-| `cancel_hook(hook_name)` | `:161` | Creates a `{"cancel": False}` context and invokes callbacks one by one; returns `True` if any callback sets `context["cancel"] = True`. **Cannot be routed through `execute_hook`** (comment `:167-173`: `execute_hook` rebuilds the context with `**kwargs`, losing the cancel signal — a historical bug, now fixed) |
+| `register_hook(hook_name, callback, priority=0)` | `:297` | Register callback `callback(context)` (attributed `"_direct"`, not filtered by disable); higher priority runs first, sorted immediately at registration |
+| `execute_hook(hook_name, **context)` | `:308` | Execute all callbacks of the hook (**skipping callbacks of inactive mods**, `:321-322`); returns `{mod_id: result}` (callbacks returning `None` are filtered; mod_id `"_direct"` means registered directly via `register_hook`); callback exceptions are swallowed with `renpy.notify` (developer mode), **never crashing the game** |
+| `cancel_hook(hook_name)` | `:333` | Creates a `{"cancel": False}` context and invokes callbacks one by one (same inactive-mod skip at `:352-353`); returns `True` if any callback sets `context["cancel"] = True`. **Cannot be routed through `execute_hook`** (comment `:339-345`: `execute_hook` rebuilds the context with `**kwargs`, losing the cancel signal — a historical bug, now fixed) |
 
 ### Others (inherited from `ModAPI`, `mod_api.rpy`)
 
@@ -295,11 +318,11 @@ All defined in `game/core/systems/mods/mod_api_v2.rpy`; there is also a service 
 
 `python tools/verify_mod_api.py` — pure-Python static assertions + simulated execution (no Ren'Py runtime required):
 
-- Asserts the 16 `HOOK_*` constants exist with unique values (`EXPECTED_HOOK_COUNT = 16`);
-- Asserts `register_mod`/`unregister_mod`/`register_hook`/`execute_hook`/`cancel_hook` exist;
+- Asserts the 18 `HOOK_*` constants exist with unique values (`EXPECTED_HOOK_COUNT = 18`);
+- Asserts `register_mod`/`unregister_mod`/`register_hook`/`execute_hook`/`cancel_hook`/`set_mod_enabled`/`is_mod_enabled`/`apply_startup_states`/`list_registered_mods`/`missing_dependencies` exist;
 - Asserts every `api.HOOK_*` referenced by `mod_template.rpy` really exists;
-- Simulates registration, duplicate-registration rejection, unknown-capability rejection, priority ordering, exception swallowing, the cancel flow, and `get_menu_buttons`/`get_mod_info` behavior;
-- Current result: **all passing**, with 3 naming-convention warnings (`girl_sold`/`girl_runaway`/`security_event` lack the `_<tense>` suffix).
+- Simulates registration, duplicate-registration rejection, unknown-capability rejection, priority ordering, exception swallowing, the cancel flow, `get_menu_buttons`/`get_mod_info` behavior, persistent enable/disable (with a stubbed `persistent`), hook skipping for disabled mods, `always_on`, dependency resolution and `apply_startup_states` idempotence;
+- Current result: **all passing**, with 5 naming-convention warnings (`girl_sold`/`girl_runaway`/`security_event`/`girl_destination_list`/`girl_destination_accept` lack the `_<tense>` suffix).
 
 ---
 
@@ -390,6 +413,35 @@ Key points:
 3. It demonstrates safe interaction with core global objects (`MC`, `calendar`, `get_girls`);
 4. It demonstrates combining v2 with the i18n conventions (`__()`/`_()`).
 
+### 6.5 Dependency example: Game Modes
+
+`game/custom/mods/Game Modes/` (mod_id `"game_modes"`) demonstrates the persistent enable semantics and prerequisite dependencies:
+
+```renpy
+init -1 python:
+    services.mod_api_v2.register_mod("game_modes", {
+        ...
+        "dependencies": [],
+        "always_on": False,   # player-disableable; other mods can depend on it
+    })
+
+    ## EN: register modes only while active (disabled → empty registry →
+    ##     the start flow falls back to plain story mode).
+    ## ZH: 仅激活时注册模式；被禁用时注册表为空，开局回退剧情模式。
+    if services.mod_api_v2.is_mod_active("game_modes"):
+        gamemode_registry.register(StoryMode())
+        gamemode_registry.register(SandboxMode())
+        gamemode_registry.register(ScenarioMode())
+```
+
+How another mod declares the dependency:
+
+```python
+"dependencies": ["game_modes"]   # this mod activates only while game_modes is active
+```
+
+The mod folder's `README.txt` documents this convention (the Ren'Py launcher ignores non-`.rpy` files).
+
 For comparison, the v1 tutorial example: `game/custom/mods/Goldo's cool mod/goldo's cool mod.rpy` (209 lines) demonstrates the full v1 flow — `Mod(...)` construction, `help_prompts` option menu, `early_label`/`init_label` labels, `events` + `add_event()` scheduling (alarm/morning/city types), `set_condition` conditional events, custom `register_trait`, and a `home_rightmenu_add_buttons` button screen.
 
 ---
@@ -398,11 +450,13 @@ For comparison, the v1 tutorial example: `game/custom/mods/Goldo's cool mod/gold
 
 | Item | Status | Description |
 |----|------|------|
-| v2 `min_game_version` / `dependencies` validation | 📝 Known limitation | Recorded but not enforced (comment at `mod_api_v2.rpy:50` declares the semantics) |
+| v2 `min_game_version` validation | 📝 Known limitation | Recorded but not enforced (declarative semantics) |
+| v2 `dependencies` validation | ✅ Implemented | Enforced: the mod stays inactive until every dependency is active (`_rebuild_active_mods`, `mod_api_v2.rpy:219-242`) |
 | manifest `hooks` registration priority always 0 | 📝 By design | When priority is needed, register separately via `register_hook(..., priority=N)` |
+| `register_hook()` callbacks are not filtered by disable | 📝 By design | `"_direct"` callbacks cannot be attributed to a mod; use manifest `hooks` if the callback must stop with a disabled mod |
 | `cancel_hook` has no in-game call site | 📝 Known | Covered only by tests; meant for mods/scripts to call themselves |
 | 3 hook names don't follow `<domain>_<action>_<tense>` | 📝 Known | `girl_sold` / `girl_runaway` / `security_event`; verify_mod_api emits warnings; renaming would break registered callbacks, so left as-is |
-| v2 state persistence | 🚧 To be planned | v1's `mod_settings` auto-saves with the save file; v2 mods must implement it themselves via the `game_saved`/`game_loaded` hooks |
+| v2 enable-state persistence | ✅ Implemented | Enable/disable flags stored in `persistent._bk_v2_mod_states` (toggled in the main-menu Mod Manager screen); custom mod content data still needs manual persistence via the `game_saved`/`game_loaded` hooks |
 | Mod content translation | ⏳ To be planned | `game/custom/` content stays in its original language by default; may be supported in the future via a unified string table |
 
 ---

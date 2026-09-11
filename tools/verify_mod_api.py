@@ -6,19 +6,23 @@ Mod API v2 验证脚本 | Mod API v2 verification script.
 纯 Python 实现，不依赖 Ren'Py 运行时 | Pure Python, no Ren'Py runtime needed.
 两种验证方式 | Two verification strategies:
   1. 静态断言 | Static assertions:
-     - mod_api_v2.rpy 定义了全部 15 个 HOOK_* 常量且取值唯一
-       (All 15 HOOK_* constants are defined with unique values)
+     - mod_api_v2.rpy 定义了全部 18 个 HOOK_* 常量且取值唯一
+       (All 18 HOOK_* constants are defined with unique values)
      - register_mod / unregister_mod / register_hook / execute_hook /
-       cancel_hook 五个关键方法存在 (key methods exist)
+       cancel_hook / set_mod_enabled / is_mod_enabled / apply_startup_states /
+       list_registered_mods / missing_dependencies 关键方法存在
+       (key methods exist)
      - mod_template.rpy 引用的每个 api.HOOK_* 都真实存在
        (every api.HOOK_* referenced by the template exists)
      - 模板 Ren'Py 语法由项目 lint 保证（模板位于 game/ 目录内）
        (template syntax is covered by project lint; it lives under game/)
   2. 动态模拟 | Simulated execution:
      - 在桩 (stub) 环境下 exec ModAPIV2 类定义，真实执行
-       注册 -> 触发 -> 取消 全流程
+       注册 -> 触发 -> 取消 全流程，以及持久化启用/禁用、
+       always_on、dependencies 前置解析、禁用 Mod 钩子跳过
        (exec the ModAPIV2 class with stubbed globals and run the full
-       register -> fire -> cancel flow, incl. cancel_hook regression guard)
+       register -> fire -> cancel flow, plus persistent enable/disable,
+       always_on, dependency resolution and inactive-mod hook skipping)
 
 用法 | Usage: python tools/verify_mod_api.py
 退出码 | Exit code: 0 = 全部通过 (all checks passed), 1 = 存在失败 (failures)
@@ -106,7 +110,9 @@ def static_checks():
 
     # 1b. 关键方法 | Key methods
     for method in ("register_mod", "unregister_mod", "register_hook",
-                   "execute_hook", "cancel_hook"):
+                   "execute_hook", "cancel_hook", "set_mod_enabled",
+                   "is_mod_enabled", "apply_startup_states",
+                   "list_registered_mods", "missing_dependencies"):
         check(re.search(r"def %s\(self" % method, src) is not None,
               "ModAPIV2.%s exists" % method)
 
@@ -168,6 +174,10 @@ class _StubServices(object):
         cls.registered[key] = value
 
 
+class _StubPersistent(object):
+    """persistent 桩：普通对象，支持 getattr/setattr | Plain stub object."""
+
+
 class ModAPI(object):
     """ModAPI v1 基类桩 | ModAPI v1 base class stub."""
 
@@ -185,6 +195,7 @@ def load_api_class():
         "defaultdict": collections.defaultdict,
         "renpy": _StubRenpy,
         "services": _StubServices,
+        "persistent": _StubPersistent(),
     }
     exec(block, env)
     return env["ModAPIV2"]
@@ -292,6 +303,77 @@ def simulated_checks():
     api.unregister_mod("verify_ui_mod")
     check(api.get_menu_buttons() == [],
           "get_menu_buttons empty after unregister | 注销后按钮清单清空")
+
+    # 2j. 持久化启用/禁用 | persistent enable/disable
+    toggle_manifest = dict(manifest)
+    toggle_manifest["hooks"] = {"verify_toggle_hook": lambda ctx: "toggle-ok"}
+    api.register_mod("verify_toggle", toggle_manifest)
+    check(api.is_mod_enabled("verify_toggle"),
+          "unrecorded mod defaults to enabled | 未记录的 mod 默认启用")
+    api.set_mod_enabled("verify_toggle", False)
+    check(not api.is_mod_active("verify_toggle"),
+          "set_mod_enabled(False) deactivates in memory | 禁用后立即失活")
+    check(not api.is_mod_enabled("verify_toggle"),
+          "is_mod_enabled reflects the persistent flag | 开关反映持久化标志")
+    check(api.execute_hook("verify_toggle_hook") == {},
+          "execute_hook skips callbacks of a disabled mod | 禁用 Mod 的钩子被跳过")
+    api.set_mod_enabled("verify_toggle", True)
+    check(api.is_mod_active("verify_toggle"),
+          "set_mod_enabled(True) re-activates in memory | 启用后立即复活")
+    check(api.execute_hook("verify_toggle_hook") == {"verify_toggle": "toggle-ok"},
+          "execute_hook fires again once re-enabled | 复活后钩子恢复触发")
+    try:
+        api.set_mod_enabled("no_such_mod", False)
+        check(False, "set_mod_enabled rejects unknown mod_id")
+    except ValueError:
+        check(True, "set_mod_enabled rejects unknown mod_id")
+
+    # 2k. dependencies 前置解析 | dependency resolution
+    dep_manifest = dict(manifest)
+    dep_manifest["always_on"] = True
+    api.register_mod("verify_dep", dep_manifest)
+    child_manifest = dict(manifest)
+    child_manifest["dependencies"] = ["verify_dep", "verify_missing"]
+    api.register_mod("verify_child", child_manifest)
+    check(not api.is_mod_active("verify_child"),
+          "mod with an uninstalled dependency stays inactive | 依赖未安装则不激活")
+    check(api.missing_dependencies("verify_child") == ["verify_missing"],
+          "missing_dependencies reports only inactive deps | 仅报告未激活的依赖")
+    check(api.missing_dependencies("no_such_mod") == [],
+          "missing_dependencies empty for unknown mod | 未知 mod 无缺失")
+
+    api.set_mod_enabled("verify_dep", False)
+    check(api.is_mod_active("verify_dep"),
+          "always_on mod stays active when disabled | always_on 禁用无效")
+    check(api.is_mod_enabled("verify_dep") is False,
+          "set_mod_enabled still records the flag for always_on mods | 开关仍被记录")
+
+    child2_manifest = dict(manifest)
+    child2_manifest["dependencies"] = ["verify_dep"]
+    api.register_mod("verify_child2", child2_manifest)
+    check(api.is_mod_active("verify_child2"),
+          "mod activates when its dependency is active | 依赖激活则随之激活")
+    check(api.list_registered_mods() == ["verify_toggle", "verify_dep",
+                                         "verify_child", "verify_child2"],
+          "list_registered_mods returns every registered mod | 返回全部已注册")
+    api.set_mod_enabled("verify_dep", True)
+
+    # 2l. apply_startup_states 幂等 | idempotent startup re-sync
+    api.set_mod_enabled("verify_child2", False)
+    check(not api.is_mod_active("verify_child2"),
+          "child2 disabled before startup sync | 同步前 child2 已禁用")
+    api.apply_startup_states()
+    check(not api.is_mod_active("verify_child2"),
+          "apply_startup_states keeps persistent state | 幂等重建保持持久化状态")
+    api.apply_startup_states()
+    check(not api.is_mod_active("verify_child2"),
+          "apply_startup_states is idempotent | 重复调用结果一致")
+
+    # 2m. 清理 | cleanup
+    for _mid in ("verify_toggle", "verify_dep", "verify_child", "verify_child2"):
+        api.unregister_mod(_mid)
+    check(api.list_registered_mods() == [],
+          "unregister removes from the registry as well | 注销同时移出注册表")
 
     print("  [INFO] simulated flow register -> fire -> cancel all exercised | "
           "注册->触发->取消 全流程已 exercised")
