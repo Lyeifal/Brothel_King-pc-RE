@@ -86,6 +86,12 @@ d6e76d6  ── Mod翻译自管理: game/tl/custom/mods → 各Mod目录tl/chine
 待提交  ── 庭院系统提取为"Courtyard" Mod: systems/courtyard → custom/mods/Courtyard,
            新增2个v2钩子(girl_destination_list/accept, 18个总数), 收购流程菜单动态化,
            day_ending接线激活process_day()(原死代码), 翻译随迁Mod目录
+
+── 游戏模式提取为Mod (2026-09-11) ──
+待提交  ── 游戏模式提取为"Game Modes" Mod: systems/gamemodes 三模式实现+选择屏幕 →
+           custom/mods/Game Modes, 框架(GameMode基类+注册表)留本体, 模式卡片改注册表驱动,
+           start.rpy 按 renpy.has_screen 检测+Mod缺席兜底默认剧情模式,
+           is_story_mode() None安全修复(旧存档默认剧情), 翻译随迁Mod目录
 ```
 
 **基线验证 (2026-09-10 会话)**: lint 通过（仅历史警告），游戏可正常启动至主菜单。

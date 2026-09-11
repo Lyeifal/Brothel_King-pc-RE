@@ -105,9 +105,9 @@ game/core/
 | `personalities/personalities.json` | 人格原型 | `framework/character.rpy` |
 | `ranks/ranks.json` | 等级/声望定义 | `data/settings.rpy` |
 | `resources/resources.json` | 资源定义 | `start.rpy` 中 `_fallback_resource_dict` |
-| `sandbox/events.json` | 沙盒事件 | `systems/gamemodes/sandbox_mode.rpy` |
-| `sandbox/origins.json` | 出身定义 | `systems/gamemodes/sandbox_mode.rpy` |
-| `scenarios/scenarios.json` | 剧本定义 | `systems/gamemodes/scenario_mode.rpy` |
+| `sandbox/events.json` | 沙盒事件 | `custom/mods/Game Modes/sandbox_mode.rpy` |
+| `sandbox/origins.json` | 出身定义 | `custom/mods/Game Modes/sandbox_mode.rpy` |
+| `scenarios/scenarios.json` | 剧本定义 | `custom/mods/Game Modes/scenario_mode.rpy` |
 | `settings/cleanliness_penalties.json` | 清洁度惩罚 | `start.rpy` 中 `_fallback_cleanliness` |
 | `settings/treasure_thresholds.json` | 宝藏阈值 | `start.rpy` 中 `_fallback_treasure` |
 | `stats/stats.json` | 属性定义 | `data/settings.rpy` |
@@ -246,13 +246,11 @@ game/core/
 
 #### 2.6.6 游戏模式 (`systems/gamemodes/`)
 
+> 模式实现与选择界面已提取为 "Game Modes" Mod（`custom/mods/Game Modes/`：三个模式类、出身/剧本注册表、开局选择屏幕及其中文翻译）。本目录只保留框架与无关系统；**Mod 缺席时开局回退为纯剧情模式**（`start.rpy` 按 `renpy.has_screen` 检测，无选择界面）。
+
 | 文件 | 说明 |
 |------|------|
-| `gamemode.rpy` | `GameMode` 抽象基类 |
-| `story_mode.rpy` | 剧情模式实现 |
-| `sandbox_mode.rpy` | 沙盒模式实现 |
-| `scenario_mode.rpy` | 剧本模式实现 |
-| `screen_gamemode.rpy` | 模式选择屏幕 |
+| `gamemode.rpy` | `GameMode` 抽象基类 + `GameModeRegistry` 注册表单例（框架，本体保留） |
 | `kidnap_system.rpy` | 掳走系统 |
 | `special_girl_npc.rpy` | 特殊女孩 NPC 注册与管理 |
 

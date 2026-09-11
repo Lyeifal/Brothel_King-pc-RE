@@ -1,9 +1,13 @@
 ################################################################################
-##  Scenario Mode — BK Evolution
+##  Scenario Mode — BK Evolution (Game Modes Mod)
 ##  EN: Community-driven scenario framework. Not a built-in play mode,
 ##      but a platform for Mod authors to create custom campaigns.
+##      Moved from game/core/systems/gamemodes/scenario_mode.rpy — the GameMode
+##      base class and gamemode_registry stay in the core.
 ##  ZH: 社区驱动的剧本框架。不是内置玩法，而是供 Mod 作者创作
 ##      自定义战役的平台。
+##      原位于 game/core/systems/gamemodes/scenario_mode.rpy —— GameMode 基类
+##      与 gamemode_registry 注册表保留在本体。
 ################################################################################
 
 init -9 python:
@@ -179,6 +183,12 @@ init -9 python:
                 name_i18n_key="剧本模式",
                 description_i18n_key="游玩社区创作的剧本，包含自定义规则和胜利条件。"
             )
+
+            ## EN: UI card metadata for the mode selection screen.
+            ## ZH: 模式选择界面的卡片元数据。
+            self.ui_color = "#9B59B6"
+            self.ui_icon = "mode_scenario"
+
             self.selected_scenario = None
 
         def on_game_start(self, game):
@@ -239,8 +249,3 @@ init -9 python:
             if sc_data:
                 mode.selected_scenario = Scenario.from_dict(sc_data)
             return mode
-
-
-    ## EN: Register scenario mode in the global registry.
-    ## ZH: 在全局注册表中注册剧本模式。
-    gamemode_registry.register(ScenarioMode())

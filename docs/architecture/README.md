@@ -20,7 +20,7 @@
 | Registry 注册表 | ✅ 完成 | `systems/registry/`（10 文件） | 基类 + 8 个子类 + UnlockRegistry；覆盖语义支持 Mod 替换 |
 | Trait / Perk | ✅ 完成 | `framework/character.rpy`、`data/traits/`（131 个）、`data/perks/`（53 个） | JSON 驱动 + GirlTraits 组件消费 |
 | 事件系统 | 🚧 进行中 | `framework/interactions.rpy`（StoryEvent）、`systems/events_dispatcher.rpy`（8,611 行）、`systems/events/` | EventEngine/EventRegistry 就位；**EventBridge 旧→新同步因调用不存在的方法而静默失效**（详见 event.md 2.4） |
-| Game / GameMode | ✅ 完成 | `framework/core_entities.rpy`（Game :19）、`systems/gamemodes/` | story/sandbox/scenario 三模式注册完毕；modes 过滤贯穿事件入队 |
+| Game / GameMode | ✅ 完成 | `framework/core_entities.rpy`（Game :19）、`systems/gamemodes/gamemode.rpy`（框架） | 模式实现已提取为 `custom/mods/Game Modes/`；story/sandbox/scenario 三模式由 Mod 注册；modes 过滤贯穿事件入队；Mod 缺席时回退剧情模式 |
 | Goal | ✅ 完成 | `framework/goal.rpy`、`data/goals/chapter_goals.json`（7 章） | settings.rpy 独立加载（含 fallback）；5 种类型门控章节推进 |
 | CustomerAffix | ✅ 完成 | `systems/customer/customer_affixes.rpy`、`data/customers/customer_affixes.json` | 三维词缀 + 8 级颜色；自载 JSON + 硬编码 fallback |
 | Girl Pack | ✅ 完成 | `framework/girl_files_dict.rpy`、`framework/girl_factory.rpy`、`custom/girls/`（102 包） | GirlFilesDict 服务化；三层包验证 |
@@ -46,7 +46,7 @@
 | [registry.md](registry.md) | Registry 注册表体系 | `systems/registry/` |
 | [trait_perk.md](trait_perk.md) | Trait / Perk | `framework/character.rpy`、`data/traits/`、`data/perks/` |
 | [event.md](event.md) | StoryEvent / EventEngine / EventBridge | `framework/interactions.rpy`、`systems/events/`、`events_dispatcher.rpy` |
-| [gamemode.md](gamemode.md) | Game / GameMode | `framework/core_entities.rpy`、`systems/gamemodes/` |
+| [gamemode.md](gamemode.md) | Game / GameMode | `framework/core_entities.rpy`、`systems/gamemodes/gamemode.rpy`、`custom/mods/Game Modes/` |
 | [goal.md](goal.md) | Goal 章节目标 | `framework/goal.rpy`、`data/goals/` |
 | [customer_affix.md](customer_affix.md) | CustomerAffix 词缀 | `systems/customer/`、`data/customers/` |
 | [girl_pack.md](girl_pack.md) | 女孩包系统 | `framework/girl_files_dict.rpy`、`girl_factory.rpy`、`custom/girls/` |

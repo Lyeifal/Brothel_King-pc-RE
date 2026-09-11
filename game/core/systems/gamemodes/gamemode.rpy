@@ -1,7 +1,16 @@
 ################################################################################
 ##  GameMode System — BK Evolution
 ##  EN: Base framework for all game modes (story, sandbox, scenario).
+##      This file only holds the framework: the GameMode base class and the
+##      gamemode_registry singleton. The built-in mode implementations and
+##      the selection screens live in the "Game Modes" mod
+##      (game/custom/mods/Game Modes/); without it the start flow falls
+##      back to plain story mode.
 ##  ZH: 所有游戏模式的基础框架（剧情、沙盒、剧本）。
+##      本文件只保留框架：GameMode 基类与 gamemode_registry 单例。
+##      内置模式实现与选择界面已迁至 "Game Modes" Mod
+##      （game/custom/mods/Game Modes/）；无该 Mod 时开局流程
+##      回退为纯剧情模式。
 ################################################################################
 
 init -10 python:
@@ -34,6 +43,13 @@ init -10 python:
             ## EN: Mode-specific settings dictionary.
             ## ZH: 模式专属设置字典。
             self.settings = {}
+
+            ## EN: Optional UI metadata used by mode-selection cards
+            ##     (provided by mods, e.g. the "Game Modes" mod).
+            ## ZH: 模式选择卡片使用的可选 UI 元数据（由 Mod 提供，
+            ##     例如 "Game Modes" Mod）。
+            self.ui_color = None
+            self.ui_icon = None
 
         def get_name(self):
             """EN: Return translated display name.

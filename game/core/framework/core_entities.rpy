@@ -68,7 +68,15 @@ init -2 python:
         def is_story_mode(self):
             """EN: Return True if current game mode is story mode.
                ZH: 返回当前是否为剧情模式。"""
-            return self.game_mode is not None and hasattr(self.game_mode, 'mode_id') and self.game_mode.mode_id == GameMode.MODE_STORY
+            ## EN: getattr: saves created before game_mode existed lack the
+            ##     attribute entirely. None (old saves / mod absent) defaults
+            ##     to story mode for backward compatibility.
+            ## ZH: getattr：game_mode 字段出现之前的旧存档完全没有该属性。
+            ##     None（旧存档 / Mod 缺席）时默认为剧情模式，向后兼容。
+            _mode = getattr(self, "game_mode", None)
+            if _mode is None:
+                return True
+            return hasattr(_mode, 'mode_id') and _mode.mode_id == GameMode.MODE_STORY
 
         def save_schedule(self, girl, slot):
             self.saved_schedules[slot] = girl.get_schedule()

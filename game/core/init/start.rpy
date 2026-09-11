@@ -85,21 +85,33 @@ label select_game_mode():
     """
     scene black with fade
 
-    call screen game_mode_select
+    ## EN: The selection screen is provided by the "Game Modes" mod.
+    ##     Without it, silently default to story mode (fallback below).
+    ## ZH: 选择屏幕由 "Game Modes" Mod 提供。缺席时静默默认为剧情模式（见下方兜底）。
+    if renpy.has_screen("game_mode_select"):
 
-    ## EN: game_mode is set by the screen's Return() action.
-    ## ZH: game_mode 由屏幕的 Return() 动作设置。
-    $ story_mode = (game_mode == GameMode.MODE_STORY)
+        call screen game_mode_select
 
-    ## EN: If sandbox mode, prompt for origin selection.
-    ## ZH: 如果是沙盒模式，提示选择出身。
-    if game_mode == GameMode.MODE_SANDBOX:
-        call select_origin() from _call_select_origin
+        ## EN: game_mode is set by the screen's Return() action.
+        ## ZH: game_mode 由屏幕的 Return() 动作设置。
+        $ story_mode = (game_mode == GameMode.MODE_STORY)
 
-    ## EN: If scenario mode, prompt for scenario selection.
-    ## ZH: 如果是剧本模式，提示选择剧本。
-    if game_mode == GameMode.MODE_SCENARIO:
-        call select_scenario() from _call_select_scenario
+        ## EN: If sandbox mode, prompt for origin selection.
+        ## ZH: 如果是沙盒模式，提示选择出身。
+        if game_mode == GameMode.MODE_SANDBOX:
+            call select_origin() from _call_select_origin
+
+        ## EN: If scenario mode, prompt for scenario selection.
+        ## ZH: 如果是剧本模式，提示选择剧本。
+        if game_mode == GameMode.MODE_SCENARIO:
+            call select_scenario() from _call_select_scenario
+
+    else:
+
+        ## EN: Mod absent fallback: plain story mode, no selection.
+        ## ZH: Mod 缺席兜底：纯剧情模式，无选择界面。
+        $ game_mode = GameMode.MODE_STORY
+        $ story_mode = True
 
     return
 
@@ -110,6 +122,11 @@ label select_origin():
     ZH: 为沙盒模式展示出身选择。
     """
     scene black with fade
+
+    ## EN: The origin screen lives in the "Game Modes" mod; skip if absent.
+    ## ZH: 出身屏幕位于 "Game Modes" Mod；缺席则跳过。
+    if not renpy.has_screen("origin_select"):
+        return
 
     $ _selected_origin_id = None
     call screen origin_select
@@ -132,6 +149,16 @@ label select_scenario():
         如果没有安装剧本则回退到沙盒模式。
     """
     scene black with fade
+
+    ## EN: The scenario screen lives in the "Game Modes" mod; without it the
+    ##     scenario pipeline is unavailable, so behave like the screen's
+    ##     empty-state and fall back to sandbox mode.
+    ## ZH: 剧本屏幕位于 "Game Modes" Mod；缺席时剧本流程不可用，
+    ##     按屏幕空状态处理，回退到沙盒模式。
+    if not renpy.has_screen("scenario_select"):
+        $ game_mode = GameMode.MODE_SANDBOX
+        $ story_mode = False
+        return
 
     $ _selected_scenario_id = None
     call screen scenario_select

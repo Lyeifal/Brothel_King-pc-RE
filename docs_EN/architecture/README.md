@@ -20,7 +20,7 @@ This directory contains the architecture documentation for the core systems of t
 | Registry | ✅ Done | `systems/registry/` (10 files) | Base class + 8 subclasses + UnlockRegistry; override semantics support Mod replacement |
 | Trait / Perk | ✅ Done | `framework/character.rpy`, `data/traits/` (131), `data/perks/` (53) | JSON-driven + GirlTraits component consumption |
 | Event system | 🚧 In progress | `framework/interactions.rpy` (StoryEvent), `systems/events_dispatcher.rpy` (8,611 lines), `systems/events/` | EventEngine/EventRegistry in place; **EventBridge old→new sync silently broken because it calls a nonexistent method** (see event.md §2.4) |
-| Game / GameMode | ✅ Done | `framework/core_entities.rpy` (Game :19), `systems/gamemodes/` | story/sandbox/scenario modes all registered; modes filtering applied throughout event enqueueing |
+| Game / GameMode | ✅ Done | `framework/core_entities.rpy` (Game :19), `systems/gamemodes/gamemode.rpy` (framework) | Mode implementations extracted to `custom/mods/Game Modes/`; story/sandbox/scenario registered by the mod; modes filtering applied throughout event enqueueing; falls back to story mode when the mod is absent |
 | Goal | ✅ Done | `framework/goal.rpy`, `data/goals/chapter_goals.json` (7 chapters) | Loaded independently by settings.rpy (with fallback); 5 goal types gate chapter progression |
 | CustomerAffix | ✅ Done | `systems/customer/customer_affixes.rpy`, `data/customers/customer_affixes.json` | Three-dimension affixes + 8 color tiers; self-loaded JSON + hardcoded fallback |
 | Girl Pack | ✅ Done | `framework/girl_files_dict.rpy`, `framework/girl_factory.rpy`, `custom/girls/` (102 packs) | GirlFilesDict service-ified; three-layer pack validation |
@@ -46,7 +46,7 @@ This directory contains the architecture documentation for the core systems of t
 | [registry.md](registry.md) | Registry system | `systems/registry/` |
 | [trait_perk.md](trait_perk.md) | Trait / Perk | `framework/character.rpy`, `data/traits/`, `data/perks/` |
 | [event.md](event.md) | StoryEvent / EventEngine / EventBridge | `framework/interactions.rpy`, `systems/events/`, `events_dispatcher.rpy` |
-| [gamemode.md](gamemode.md) | Game / GameMode | `framework/core_entities.rpy`, `systems/gamemodes/` |
+| [gamemode.md](gamemode.md) | Game / GameMode | `framework/core_entities.rpy`, `systems/gamemodes/gamemode.rpy`, `custom/mods/Game Modes/` |
 | [goal.md](goal.md) | Goal chapter objectives | `framework/goal.rpy`, `data/goals/` |
 | [customer_affix.md](customer_affix.md) | CustomerAffix affixes | `systems/customer/`, `data/customers/` |
 | [girl_pack.md](girl_pack.md) | Girl pack system | `framework/girl_files_dict.rpy`, `girl_factory.rpy`, `custom/girls/` |

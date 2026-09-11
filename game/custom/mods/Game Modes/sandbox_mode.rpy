@@ -1,7 +1,11 @@
 ################################################################################
-##  Sandbox Mode + Origin System — BK Evolution
+##  Sandbox Mode + Origin System — BK Evolution (Game Modes Mod)
 ##  EN: Free-form gameplay with player origin selection and unique talents.
+##      Moved from game/core/systems/gamemodes/sandbox_mode.rpy — the GameMode
+##      base class and gamemode_registry stay in the core.
 ##  ZH: 自由玩法，支持玩家出身选择和独特天赋。
+##      原位于 game/core/systems/gamemodes/sandbox_mode.rpy —— GameMode 基类
+##      与 gamemode_registry 注册表保留在本体。
 ################################################################################
 
 init -9 python:
@@ -165,6 +169,11 @@ init -9 python:
                 description_i18n_key="自由玩法。选择你的出身，在没有剧情锁定的情况下打造自己的道路。"
             )
 
+            ## EN: UI card metadata for the mode selection screen.
+            ## ZH: 模式选择界面的卡片元数据。
+            self.ui_color = "#4ECDC4"
+            self.ui_icon = "mode_sandbox"
+
             ## EN: Currently selected player origin.
             ## ZH: 当前选中的玩家出身。
             self.selected_origin = None
@@ -222,12 +231,6 @@ init -9 python:
             return mode
 
 
-    ## EN: Register sandbox mode in the global registry.
-    ## ZH: 在全局注册表中注册沙盒模式。
-    gamemode_registry.register(SandboxMode())
-
-
 ## EN: Built-in origins are now loaded from game/core/data/sandbox/origins.json via DataLoader.
 ## ZH: 内置出身现在通过 DataLoader 从 game/core/data/sandbox/origins.json 加载。
 ##     See DataLoader.load_origins() in game/core/systems/data_loader.rpy
-

@@ -1,15 +1,29 @@
 ################################################################################
-##  Game Mode & Origin Selection Screens — BK Evolution
+##  Game Mode & Origin Selection Screens — BK Evolution (Game Modes Mod)
 ##  EN: Visual screens for choosing game mode and player origin.
+##      Moved from game/core/systems/gamemodes/screen_gamemode.rpy.
+##      The mode cards are generated from gamemode_registry (registry-driven):
+##      each GameMode instance supplies its display name, description and
+##      optional ui_color / ui_icon metadata.
 ##  ZH: 选择游戏模式和玩家出身的视觉界面。
+##      原位于 game/core/systems/gamemodes/screen_gamemode.rpy。
+##      模式卡片由 gamemode_registry 驱动生成：每个 GameMode 实例提供
+##      显示名称、描述以及可选的 ui_color / ui_icon 元数据。
 ################################################################################
 
-## EN: Mode selection screen — card-based layout.
-## ZH: 模式选择屏幕 — 卡片式布局。
+## EN: Mode selection screen — card-based layout, registry-driven.
+## ZH: 模式选择屏幕 — 卡片式布局，由注册表驱动。
 screen game_mode_select():
 
     tag menu
     modal True
+
+    ## EN: All registered modes (story/sandbox/scenario live in this mod,
+    ##     other mods may add their own GameMode subclasses).
+    ## ZH: 所有已注册模式（story/sandbox/scenario 在本 Mod 中，
+    ##     其他 Mod 也可以注册自己的 GameMode 子类）。
+    python:
+        _modes = gamemode_registry.list_mode_instances()
 
     frame:
         xfill True
@@ -32,41 +46,42 @@ screen game_mode_select():
                 xalign 0.5
                 color "#CCCCCC"
 
-        ## EN: Mode cards in a horizontal row.
-        ## ZH: 模式卡片横向排列。
-        hbox:
-            xalign 0.5
-            yalign 0.5
-            spacing 30
+        if not _modes:
 
-            use mode_card(
-                mode_id=GameMode.MODE_STORY,
-                title=__("剧情模式"),
-                desc=__("跟随史诗般的主线剧情，包含章节推进、叙事目标和戏剧性事件。推荐给首次游玩的玩家。"),
-                color="#FF6B6B",
-                icon="mode_story"
-            )
+            ## EN: Defensive fallback — normally unreachable while this mod
+            ##     is installed, since the three modes are registered at init.
+            ## ZH: 防御性回退 —— 只要本 Mod 已安装就不会走到这里，
+            ##     因为三个模式在初始化时已注册。
+            vbox:
+                xalign 0.5
+                yalign 0.5
+                spacing 20
 
-            use mode_card(
-                mode_id=GameMode.MODE_SANDBOX,
-                title=__("沙盒模式"),
-                desc=__("在没有剧情锁定的情况下打造你自己的道路。选择你的出身和独特天赋。适合想要自由的资深玩家。"),
-                color="#4ECDC4",
-                icon="mode_sandbox"
-            )
+                text __("当前没有安装任何游戏模式。"):
+                    size 28
+                    xalign 0.5
+                    color "#FF6B6B"
 
-            use mode_card(
-                mode_id=GameMode.MODE_SCENARIO,
-                title=__("剧本模式"),
-                desc=__("游玩社区创作的剧本，包含自定义规则和胜利条件。新剧本可通过 Mod 添加。"),
-                color="#9B59B6",
-                icon="mode_scenario"
-            )
+                textbutton __("以剧情模式继续"):
+                    xalign 0.5
+                    action [SetVariable("game_mode", GameMode.MODE_STORY), Return()]
+
+        else:
+
+            ## EN: Mode cards in a horizontal row, one per registered mode.
+            ## ZH: 模式卡片横向排列，每个已注册模式一张。
+            hbox:
+                xalign 0.5
+                yalign 0.5
+                spacing 30
+
+                for _mode in _modes:
+                    use mode_card(mode=_mode)
 
 
-## EN: Individual mode card.
-## ZH: 单个模式卡片。
-screen mode_card(mode_id, title, desc, color, icon):
+## EN: Individual mode card — populated from the GameMode instance.
+## ZH: 单个模式卡片 —— 内容由 GameMode 实例提供。
+screen mode_card(mode):
 
     button:
         xsize 320
@@ -74,7 +89,7 @@ screen mode_card(mode_id, title, desc, color, icon):
         background c_ui_dark
         hover_background c_ui_darker
 
-        action [SetVariable("game_mode", mode_id), Return()]
+        action [SetVariable("game_mode", mode.mode_id), Return()]
 
         vbox:
             xalign 0.5
@@ -82,22 +97,22 @@ screen mode_card(mode_id, title, desc, color, icon):
             spacing 15
             xfill True
 
-            ## EN: Color strip at top.
-            ## ZH: 顶部彩色条。
+            ## EN: Color strip at top (mod-provided, defaults to grey).
+            ## ZH: 顶部彩色条（由 Mod 提供，默认为灰色）。
             frame:
                 xsize 280
                 ysize 6
-                background color
+                background (mode.ui_color or "#888888")
                 xalign 0.5
 
-            text title:
+            text mode.get_name():
                 size 28
                 xalign 0.5
-                color color
+                color (mode.ui_color or "#FFFFFF")
                 bold True
                 text_align 0.5
 
-            text desc:
+            text mode.get_description():
                 size 18
                 xalign 0.5
                 xsize 280

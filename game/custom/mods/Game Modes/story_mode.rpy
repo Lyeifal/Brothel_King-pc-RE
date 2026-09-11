@@ -1,7 +1,11 @@
 ################################################################################
-##  Story Mode — BK Evolution
+##  Story Mode — BK Evolution (Game Modes Mod)
 ##  EN: Traditional story-driven gameplay with chapter progression.
+##      Moved from game/core/systems/gamemodes/story_mode.rpy — the GameMode
+##      base class and gamemode_registry stay in the core.
 ##  ZH: 传统的剧情驱动玩法，带有章节推进机制。
+##      原位于 game/core/systems/gamemodes/story_mode.rpy —— GameMode 基类
+##      与 gamemode_registry 注册表保留在本体。
 ################################################################################
 
 init -9 python:
@@ -20,6 +24,11 @@ init -9 python:
                 name_i18n_key="剧情模式",
                 description_i18n_key="跟随主线剧情，包含章节推进和叙事目标。"
             )
+
+            ## EN: UI card metadata for the mode selection screen.
+            ## ZH: 模式选择界面的卡片元数据。
+            self.ui_color = "#FF6B6B"
+            self.ui_icon = "mode_story"
 
         def on_game_start(self, game):
             """
@@ -56,8 +65,3 @@ init -9 python:
             """
             if new_chapter in chapter_goals:
                 game.set_goals(chapter_goals[new_chapter])
-
-
-    ## EN: Register story mode in the global registry.
-    ## ZH: 在全局注册表中注册剧情模式。
-    gamemode_registry.register(StoryMode())
