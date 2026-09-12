@@ -168,11 +168,6 @@ init -2 python:
             """No-op: picture loading moved to GirlFilesDict."""
             pass
 
-        @staticmethod
-        def update_files():
-            """No-op: file management moved to GirlFilesDict."""
-            pass
-
         # ── Picture lookup (delegated from Girl) ──
 
         def get_pic_by_name(self, filename):

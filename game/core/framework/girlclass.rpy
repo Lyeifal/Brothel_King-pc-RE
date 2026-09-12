@@ -199,72 +199,17 @@ init -2 python:
             return self._mood.sanity_warning()
 
 
+## Phase 2.1: Delegated to GirlBase component ##
         def set_name(self): ## This creates the full name with or without lastname
+            return self._base.set_name()
 
-            first, last = get_name(self.path)
-
-            if self.original:
-                if self.ini:
-                    self.name = self.init_dict["identity/first_name"]
-                    self.lastname = self.init_dict["identity/last_name"]
-                    if not self.name and not self.lastname:
-                        self.name, self.lastname = first, last
-                else:
-                    self.name, self.lastname = first, last
-
-            else: # Clones will either receive _BK.ini settings as priority or option settings depending on option choice
-                new_name = generate_name("girl")
-
-                if not persistent.gp_name_customization and self.init_dict["identity/first_name"] != "?rand" and self.init_dict["identity/first_name"]: # If _BK.ini has priority
-                    self.name = self.init_dict["identity/first_name"] # Automatically set to "?rand" if unspecified in _BK.ini
-                elif persistent.keep_firstname:
-                    self.name = first
-                elif self.init_dict["identity/first_name"] != "?rand" and self.init_dict["identity/first_name"]:
-                    self.name = self.init_dict["identity/first_name"] # Automatically set to "?rand" if unspecified in _BK.ini
-                else:
-                    self.name = new_name[0]
-
-                if not persistent.gp_name_customization and self.init_dict["identity/last_name"] != "?rand": # If _BK.ini has priority
-                    self.lastname = self.init_dict["identity/last_name"] # Automatically set to "?rand" if unspecified in _BK.ini
-                elif persistent.keep_lastname:
-                    self.lastname = last
-                elif self.init_dict["identity/last_name"] != "?rand":
-                    self.lastname = self.init_dict["identity/last_name"] # Automatically set to "?rand" if unspecified in _BK.ini
-                else:
-                    self.lastname = new_name[1]
-
-            if self.name == "?rand" or not self.name:
-                self.name = generate_name("girl")[0]
-
-            if self.lastname == "?rand":
-                self.lastname = generate_name("girl")[1]
-
-            elif not self.lastname:
-                self.lastname = ""
-
-            self.set_fullname()
-
+## Phase 2.1: Delegated to GirlBase component ##
         def set_fullname(self):
+            return self._base.set_fullname()
 
-            if self.init_dict["identity/inverted_name"]:
-                self.fullname = self.lastname
-                if self.name:
-                    if self.fullname:
-                        self.fullname += " "
-                    self.fullname += self.name
-            else:
-                self.fullname = self.name
-                if self.lastname:
-                    if self.fullname:
-                        self.fullname += " "
-                    self.fullname += self.lastname
-
+## Phase 2.1: Delegated to GirlBase component ##
         def random_rename(self):
-            self.name, self.lastname = generate_name("girl")
-            self.set_fullname()
-
-#             if self.lastname != "":
-#                 self.fullname += " " + self.lastname
+            return self._base.random_rename()
 
         def get_badge(self): # Returns the picture file name or None
             if not hasattr(self, 'badge') or self.badge not in badge_pics: # Sanity check
@@ -281,58 +226,18 @@ init -2 python:
             return self._schedule.cycle_workday(day, reverse)
 
 
+## Phase 2.1: Delegated to GirlBase component ##
         def update_files(self):
-            #<Chris12 PackState>
-            #Moved to GirlFilesDict - Should no longer be necessary
-            return len(GirlFilesDict.get_pics(self.path)) > 0
-            #</Chris12 PackState>
+            return self._base.update_files()
 
 
+## Phase 2.1: Delegated to GirlBase component ##
         def load_ini(self, search_for=None, skip_checks=False):
+            return self._base.load_ini(search_for, skip_checks)
 
-            self.init_dict = defaultdict(list)
-
-            self.ini = GirlFilesDict.get_ini(self.path)
-
-            if self.ini is not None:
-                self.init_dict = read_init_file(self.ini, search_for=search_for, skip_checks=skip_checks)
-
-                # Extract custom tags from init_dict
-                self.custom_tags = {}
-                for key, value in self.init_dict.items():
-                    if key.startswith("custom tags/"):
-                        tag_name = key[len("custom tags/"):]
-                        if value:
-                            self.custom_tags[tag_name] = make_list(value)
-
-                # Apply custom tags to the global tag system and re-tag pictures
-                if self.custom_tags:
-                    register_custom_tags_for_pack(self.path, self.custom_tags)
-
-                # Extract custom dialogue from init_dict
-                self.custom_dialogue = {}
-                for key, value in self.init_dict.items():
-                    if key.startswith("custom dialogue/"):
-                        topic = key[len("custom dialogue/"):]
-                        if value:
-                            self.custom_dialogue[topic] = make_list(value)
-
-                # Register custom dialogue lines globally
-                if self.custom_dialogue:
-                    register_custom_dialogue_for_pack(self.path, self.custom_dialogue)
-
+## Phase 2.1: Delegated to GirlBase component ##
         def read_ini(self, section=None, key=None): # Debug function
-
-            if section and key:
-                return self.init_dict[section + "/" + key]
-            elif section:
-                return [[k, v] for k, v in self.init_dict.items() if k.startswith(section)]
-            elif key:
-                return [[k, v] for k, v in self.init_dict.items() if k.endswith(key)]
-            elif self.ini:
-                return self.init_dict
-            else:
-                return "No init file"
+            return self._base.read_ini(section, key)
 
         def load_pics(self):
             #<Chris12 PackState>Moved to GirlFilesDict</Chris12 PackState>
@@ -1419,14 +1324,9 @@ init -2 python:
         # ── Phase 2.1: Logging delegation aliases ──
 
         # ── Phase 2.1: Base/Identity delegation aliases (10/10 complete) ──
-        _set_name_impl = set_name
-        _set_fullname_impl = set_fullname
-        _random_rename_impl = random_rename
         _get_name_impl = get_name
         _get_badge_impl = get_badge
         _is_unique_impl = is_unique
-        _load_ini_impl = load_ini
-        _read_ini_impl = read_ini
 
         # ── Phase 2.1: Sex delegation aliases ──
         _will_do_sex_act_impl = will_do_sex_act
