@@ -1,0 +1,97 @@
+{
+  "_comment": "Item Quality mod data. Migrated verbatim from the former game/core/data/settings/quality.json. Core keeps an identical hardcoded fallback (game/core/data/quality.rpy).",
+  "tiers": [
+    {
+      "rank": 0,
+      "price_modifier": 0.25,
+      "prefixes": {
+        "dress": "Ragged",
+        "necklace": "Rusty",
+        "ring": "Rusty",
+        "food": "Rotten",
+        "scroll": "Tattered",
+        "misc": "Worthless"
+      }
+    },
+    {
+      "rank": 1,
+      "price_modifier": 1.0,
+      "prefixes": {
+        "dress": "Worn",
+        "necklace": "Broken",
+        "ring": "Fake",
+        "gift": "Cheap ",
+        "food": "Bland",
+        "accessory": "Worn ",
+        "scroll": "Minor",
+        "misc": "Cheap"
+      }
+    },
+    {
+      "rank": 2,
+      "price_modifier": 2.5,
+      "prefixes": {
+        "dress": "Simple",
+        "necklace": "Small",
+        "ring": "Small",
+        "gift": "Common ",
+        "food": "Tasty",
+        "accessory": "Simple ",
+        "scroll": "Lesser",
+        "misc": "Common"
+      }
+    },
+    {
+      "rank": 3,
+      "price_modifier": 5.0,
+      "prefixes": {
+        "dress": "Fine",
+        "necklace": "Medium",
+        "ring": "Medium",
+        "gift": "Fine ",
+        "food": "Juicy",
+        "accessory": "Fine ",
+        "scroll": "Medium",
+        "misc": "Fine"
+      }
+    },
+    {
+      "rank": 4,
+      "price_modifier": 12.5,
+      "prefixes": {
+        "dress": "Fancy",
+        "necklace": "Heavy",
+        "ring": "Large",
+        "gift": "Rare ",
+        "food": "Organic",
+        "accessory": "Fancy ",
+        "scroll": "Greater",
+        "misc": "Rare"
+      }
+    },
+    {
+      "rank": 5,
+      "price_modifier": 25.0,
+      "prefixes": {
+        "dress": "Enchanted",
+        "necklace": "Magical",
+        "ring": "Magical",
+        "food": "Enchanted",
+        "accessory": "Enchanted ",
+        "scroll": "Ultimate",
+        "misc": "Magical"
+      }
+    },
+    {
+      "rank": 6,
+      "price_modifier": 50.0,
+      "prefixes": {
+        "dress": "Legendary",
+        "necklace": "Legendary",
+        "ring": "Legendary",
+        "food": "Legendary",
+        "misc": "Legendary"
+      }
+    }
+  ]
+}
