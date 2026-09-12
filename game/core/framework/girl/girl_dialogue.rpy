@@ -2,8 +2,10 @@
 # Phase 2.1: Dialogue selection, say(), personality generation, background.
 # 对话选择、说话、个性生成、背景故事
 # ★ pick_dialogue / say / rand_say — 已从 girlclass.rpy 移入
-# Methods: generate_personality, generate_background, unlock_info,
-#          talk_tastes, will_remember, remembers, forgets, test_say.
+# 注: will_remember/remembers/forgets 已改属 GirlLogging (Phase 7 批次2)
+# Methods: generate_personality, adjust_personality, generate_background,
+#          unlock_NGP_personality_settings, get_personality_description, is_,
+#          talk_tastes, test_say, unlock_info.
 
 init -2 python:
 
@@ -207,11 +209,5 @@ init -2 python:
             return rand_choice(sentences) if sentences else ""
         def test_say(self):
             return self.girl._test_say_impl()
-        def will_remember(self, context, type, score):
-            return self.girl._will_remember_impl(context, type, score)
-        def remembers(self, context, type):
-            return self.girl._remembers_impl(context, type)
-        def forgets(self):
-            return self.girl._forgets_impl()
         def unlock_info(self, topic):
             return self.girl._unlock_info_impl(topic)

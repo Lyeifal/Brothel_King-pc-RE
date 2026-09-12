@@ -2609,130 +2609,30 @@ init -2 python:
 
 ## Commit girl to external job or class
 
+## Phase 2.1: Delegated to GirlLogging component ##
         def commit(self, quest):
-            self.away = True
-            self.return_date = calendar.time + quest.duration
-            self.assignment = quest
-            quest.enrolled.append(self)
-            add_event("return_from_quest", call_args = [self, quest], date = self.return_date)
-            self.class_friend_bonus = 0
-            for g in self.friends:
-                if g in quest.enrolled:
-                    self.class_friend_bonus = 2
-                    break
-            for g in self.rivals:
-                if g in quest.enrolled:
-                    self.class_friend_bonus = -1
-                    break
+            return self._logging.commit(quest)
 
-            #             calendar.set_alarm(calendar.time + quest.duration, Event(label = "return_from_quest", object = (self, quest)))
-            norollback()
-
+## Phase 2.1: Delegated to GirlLogging component ##
         def return_from(self, quest):
-            if self in quest.enrolled:
-                quest.enrolled.remove(self)
-            self.away = False
-            self.assignment = None
-            self.return_date = -1
-
-            if quest.type == "quest":
-                self.add_log("completed quest")
-            elif quest.type == "class":
-                self.add_log("completed class")
+            return self._logging.return_from(quest)
 
 
 ## LOG ACTIONS - Note: The various logs and stats are really messy and should be reworked from the grounds up
 
+## Phase 2.1: Delegated to GirlLogging component ##
         def add_log(self, root, v = 1, _delay = 0):
-            global temp_log
-
-            k = root + str(calendar.time + _delay)
-
-            ## Creates or increment daily log
-
-            if k in self.log:
-                self.log[k] += v
-            else:
-                self.log[k] = v
-
-            ## Girl log garbage collection (attempt to improve performance)
-
-            _old = root + str(calendar.time - 30)
-            if _old in self.log:
-                # Deletes entries 30 days prior
-                del self.log[_old]
-
-            ## Adds value to all time total
-
-            if root in self.log:
-                self.log[root] += v
-            else:
-                self.log[root] = v
-
-            ## Tracking total game stats
-            game.track(root, v)
-
-            ## Tracking day stats
-            if logs[calendar.time + _delay]:
-                logs[calendar.time + _delay].track(root, v)
-            else:
-                logs[calendar.time + _delay] = Log(calendar.time + _delay)
+            return self._logging.add_log(root, v, _delay)
 
 
+## Phase 2.1: Delegated to GirlLogging component ##
         def get_log(self, root, days = 0): # If days = 0, get all time stats
-
-            if days == 0:
-                if root in self.log:
-                    return self.log[root]
-                else:
-                    return 0
-
-            elif days == "today":
-                if (root + str(calendar.time)) in self.log:
-                    return self.log[root + str(calendar.time)]
-                else:
-                    return 0
-
-            else:
-
-                total = 0
-
-                for i in range(days):
-
-                    if calendar.time - 1 - i > 0:
-                        k = root + str(calendar.time - 1 - i)
-
-                        if k in self.log:
-                            total += self.log[k]
-                        else:
-                            total += 0
-
-                    else:
-                        break
-
-                return total
+            return self._logging.get_log(root, days)
 
 
+## Phase 2.1: Delegated to GirlLogging component ##
         def get_average_performance(self, root, days):
-
-            if self.get_log(root + "_score_base", days) != 0:
-
-                perf = float(self.get_log(root + "_score", days)) / float(self.get_log(root + "_score_base", days))
-
-                details = {}
-
-
-                for r in ("perfect", "very good", "good", "average", "bad", "very bad",):
-
-                    details[r] = str(round_int((100.0 * self.get_log(root + "_" + r, days) / self.get_log(root + "_score_base", days))))
-
-                ttip = "Perfect: " + details["perfect"] + "%" + "           Average: " + details["average"] + "%" + "\nVery good: " + details["very good"] + "%" + "      Bad: " + details["bad"] + "%" + "\nGood: " + details["good"] + "%" + "              Very bad: " + details["very bad"] + "%"
-
-                return round(perf, 1), ttip
-
-            else:
-
-                return "-", "This girl hasn't performed this action over the selected period."
+            return self._logging.get_average_performance(root, days)
 
         # Personality traits
 
@@ -3003,96 +2903,31 @@ init -2 python:
 
 
 
+## Phase 2.1: Delegated to GirlLogging component ##
         def track_event(self, type, arg=None, silent=False):
-
-            # Only the latest occurance of an event type is kept in the list
-
-            if not self.recent_events[type]: # copies the template event once if it doesn't exist
-                self.recent_events[type] = copy.copy(recent_event_templates[type])
-
-            # Updates time and description
-
-            self.recent_events[type].time = calendar.time
-
-            if arg:
-                self.recent_events[type].description = self.recent_events[type].base_description % arg
-            else:
-                self.recent_events[type].description = self.recent_events[type].base_description
-
-            if not silent:
-                debug_notify("Tracking " + type + "...", pic=self.portrait)
-
-            return
+            return self._logging.track_event(type, arg, silent)
 
 
+## Phase 2.1: Delegated to GirlLogging component ##
         def get_recent_events(self, day_number = 7, filter = None): # Events are returned with a tuple: Type, description, date
-
-            event_list = []
-
-            if self.recent_events:
-
-                for type in self.recent_events.keys():
-                    if self.recent_events[type]:
-                        if self.recent_events[type].time in range(calendar.time - day_number, calendar.time+1):
-                            if not filter or type == filter:
-                                event_list.append(self.recent_events[type])
-
-            event_list.sort(key = lambda x: x.time, reverse = True)
-
-            return event_list # Returns a list sorted by date
+            return self._logging.get_recent_events(day_number, filter)
 
 
+## Phase 2.1: Delegated to GirlLogging component ##
         def get_recent_events_description(self, day_number = 7):
+            return self._logging.get_recent_events_description(day_number)
 
-            description = ""
-            events = self.get_recent_events(day_number)
-
-#            renpy.notify(str(len(events)))
-
-            if events:
-                for ev in events:
-                    description += calendar.get_date(ev.time) + ": " + ev.description
-                    if self.remembers("reward", ev.type):
-                        description += "{color=[c_emerald]} *rewarded* [emo_heart]{/color}"
-
-                    if self.remembers("punish", ev.type):
-                        description += "{color=[c_crimson]} *punished* [emo_broken_heart]{/color}"
-
-                    description += "\n"
-
-
-                if len(events) > 5:
-                    description = __("{size=-1}") + description + "{/size}"
-            else:
-                description = calendar.get_date(calendar.time) + ": No recent events to report"
-
-            return description
-
+## Phase 2.1: Delegated to GirlLogging component ##
         def will_remember(self, context, type, score):
+            return self._logging.will_remember(context, type, score)
 
-            if self.recent_events[type]:
-
-                if context == "reward":
-                    self.recent_events[type].reward(score)
-
-                elif context == "punish":
-                    self.recent_events[type].punish(score)
-
+## Phase 2.1: Delegated to GirlLogging component ##
         def remembers(self, context, type): # Remembering is more effective when the memory is fresh
-            if self.recent_events[type]:
-                if context == "reward":
-                    if self.recent_events[type].rewarded > 0:
-                        return self.recent_events[type].rewarded * self.get_effect("boost", "reward efficiency")
-                elif context == "punish":
-                    if self.recent_events[type].punished > 0:
-                        return self.recent_events[type].punished * self.get_effect("boost", "punishment efficiency")
+            return self._logging.remembers(context, type)
 
-            return 0
-
+## Phase 2.1: Delegated to GirlLogging component ##
         def forgets(self):
-            for type in self.recent_events.keys():
-                if self.recent_events[type]:
-                    self.recent_events[type].refresh()
+            return self._logging.forgets()
 
         def test_weakness(self, act, unlock=False, feedback=False):
 
@@ -3231,30 +3066,9 @@ init -2 python:
 
             self.add_trait(virgin_trait, _pos=1)
 
+## Phase 2.1: Delegated to GirlLogging component ##
         def count_occurences(self, context="all", original=False, add_list=None):
-
-            if not add_list:
-                add_list = []
-
-            i = 0
-
-            if context == "all":
-                mylist = MC.girls + farm.girls + game.free_girls + slavemarket.girls + MC.escaped_girls + add_list
-                if isinstance(enemy_general, Girl):
-                    mylist += [enemy_general]
-
-            elif context == "player":
-                mylist = MC.girls + farm.girls + MC.escaped_girls + add_list
-
-            for g in mylist:
-                if g != self:
-                    if original:
-                        if g.original and g.pack_name == self.pack_name:
-                            i += 1
-                    elif g.pack_name == self.pack_name:
-                        i += 1
-
-            return i
+            return self._logging.count_occurences(context, original, add_list)
 
         def talk_tastes(self, type):
 
@@ -3550,9 +3364,6 @@ init -2 python:
         _say_impl = say
         _rand_say_impl = rand_say
         _test_say_impl = test_say
-        _will_remember_impl = will_remember
-        _remembers_impl = remembers
-        _forgets_impl = forgets
         _unlock_info_impl = unlock_info
 
         # ── Phase 2.1: Traits delegation aliases ──
@@ -3571,15 +3382,6 @@ init -2 python:
         _get_perk_level_impl = get_perk_level
 
         # ── Phase 2.1: Logging delegation aliases ──
-        _commit_impl = commit
-        _return_from_impl = return_from
-        _add_log_impl = add_log
-        _get_log_impl = get_log
-        _get_average_performance_impl = get_average_performance
-        _track_event_impl = track_event
-        _get_recent_events_impl = get_recent_events
-        _get_recent_events_description_impl = get_recent_events_description
-        _count_occurences_impl = count_occurences
 
         # ── Phase 2.1: Base/Identity delegation aliases (10/10 complete) ──
         _set_name_impl = set_name
