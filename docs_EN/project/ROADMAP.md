@@ -93,7 +93,7 @@ This document merges two older roadmaps (`docs/archive/pre-reorg-2026-09/ROADMAP
 
 | # | Item | Current status (verified) | Value / rationale |
 |---|------|----------------|-----------|
-| 1 | ⏳ Mod v2 `cancel_hook` consumers | All 16 hook points are wired but **purely notification-style**; there is no `cancel_hook` call site anywhere in game flow (only `test_runner.rpy:352` for testing) | Let mods actually intercept/cancel events, closing the loop on v2 hook semantics |
+| 1 | ⏳ Mod v2 `cancel_hook` consumers | All 19 hook points are wired but **purely notification-style**; there is no `cancel_hook` call site anywhere in game flow (only `test_runner.rpy:352` for testing) | Let mods actually intercept/cancel events, closing the loop on v2 hook semantics |
 | 2 | ⏳ Fallback dictionary cleanup | `_fallback_*` hardcoded fallbacks still remain in `start.rpy`, `settings.rpy`, and various registries | Remove them once the JSON migration passes 100% regression-free verification, eliminating duplicate data sources |
 | 3 | ⏳ `Girl.__init__` split | ~120 lines, attribute initialization + component instantiation, deliberately left as-is | Splitting into per-component `init_*` carries save compatibility risk; low cost-benefit, deferred |
 | 4 | ✅ Grouping ~800 lines of small methods — done (Phase 7, 2026-09-11): batches 1-14 migrated all of them by group; girlclass left with only __init__ + delegation shells + 24 live aliases | — |

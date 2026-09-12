@@ -48,7 +48,7 @@ translate --empty → export_empty_to_xlsx → (manual/MT Excel)
 
 | Script | One-line description |
 |------|-----------|
-| `verify_mod_api.py` | Mod API v2 verification: statically asserts the 16 `HOOK_*` constants are unique, key methods exist, template references are valid; then simulates registration/duplicate rejection/priority/cancel flow. Pure Python, no Ren'Py runtime required (currently all passing, 3 naming-convention warnings). See [`../modding/MOD_API.md`](../modding/MOD_API.md) §4 |
+| `verify_mod_api.py` | Mod API v2 verification: statically asserts the 19 `HOOK_*` constants are unique, key methods exist, the v1 base wrappers (incl. `register_quality`) exist, `CAPABILITIES` includes `"items"`, and template references are valid; then simulates registration/duplicate rejection/priority/cancel flow. Pure Python, no Ren'Py runtime required (currently all passing, 5 naming-convention warnings). See [`../modding/MOD_API.md`](../modding/MOD_API.md) §4 |
 
 ## 3. Data audit and export
 

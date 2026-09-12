@@ -26,7 +26,7 @@ Game instructions and FAQs are not in `docs/`; they live in the project root:
 | [project/PROJECT_GUIDE.md](project/PROJECT_GUIDE.md) | Data-driven architecture and JSON data conventions (must-read for mod data extensions) |
 | [`../tools/bk_editor/README.md`](../tools/bk_editor/README.md) | Editor suite usage (girl pack / scenario / data editing) |
 
-Status of the mod interfaces: v1 `Mod()` (`game/core/framework/challenges.rpy`) and v2 `ModAPIV2` (`game/core/systems/mods/mod_api_v2.rpy`, 16 hook points wired) coexist; the v2 template is in `game/core/templates/mod_template/`, and a sample mod is `game/custom/mods/Auction House/`.
+Status of the mod interfaces: v1 `Mod()` (`game/core/framework/challenges.rpy`) and v2 `ModAPIV2` (`game/core/systems/mods/mod_api_v2.rpy`, 19 hook points wired) coexist; the v2 template is in `game/core/templates/mod_template/`, and sample mods are `game/custom/mods/Auction House/` (UI-style) and `game/custom/mods/Item Quality/` (data-style, with its own `tl/` translations).
 
 ### 🌐 Translators
 

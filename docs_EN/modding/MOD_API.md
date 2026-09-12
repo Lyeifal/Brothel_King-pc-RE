@@ -202,12 +202,13 @@ Right after registration the active set is recomputed from the persistent flags 
 
 **`dependencies`**: optional list of mod_ids, enforced — the mod stays inactive until every dependency is active (see above). Example: `"dependencies": ["game_modes"]` declares a dependency on the "Game Modes" mod (§6.5).
 
-**Capability flags** (`CAPABILITIES`, `mod_api_v2.rpy:52-63`) — declare which capability surfaces a mod needs; currently used for registration-time validation and documentation semantics:
+**Capability flags** (`CAPABILITIES`, `mod_api_v2.rpy:52-64`) — declare which capability surfaces a mod needs; currently used for registration-time validation and documentation semantics:
 
 ```python
 "girl_stats"    # Modify girl stats
 "girl_traits"   # Register custom traits/perks
 "economy"       # Modify economy calculations
+"items"         # Register custom item quality tiers / affect item generation
 "events"        # Register/dispatch events
 "dialogue"      # Custom dialogue lines
 "pictures"      # Custom picture tags
@@ -240,9 +241,9 @@ v2 has no v1 label mechanism; lifecycle events are covered via hooks:
 
 ---
 
-## 3. Complete hook point reference (18)
+## 3. Complete hook point reference (19)
 
-Constant definitions: `game/core/systems/mods/mod_api_v2.rpy:365-382`. Naming convention: `<domain>_<action>_<tense>` (three names — `girl_runaway`, `girl_sold`, `security_event` — lack `_<tense>`; `tools/verify_mod_api.py` emits a naming-convention warning for these, which is a known item).
+Constant definitions: `game/core/systems/mods/mod_api_v2.rpy:365-383`. Naming convention: `<domain>_<action>_<tense>` (five names — `girl_sold`, `girl_runaway`, `security_event`, `girl_destination_list`, `girl_destination_accept` — lack `_<tense>`; `tools/verify_mod_api.py` emits a naming-convention warning for these, which is a known item).
 
 All callback signatures are uniformly `callback(context: dict)`; `execute_hook` packs the keyword arguments into a context dict and passes it in (`mod_api_v2.rpy:308-331`), skipping callbacks of inactive mods.
 
@@ -266,6 +267,7 @@ All callback signatures are uniformly `callback(context: dict)`; `execute_hook` 
 | 16 | `HOOK_GAME_LOADED` | `game_loaded` | `game/core/systems/events_dispatcher.rpy:191` (after_load) | none |
 | 17 | `HOOK_GIRL_DESTINATION_LIST` | `girl_destination_list` | `game/core/systems/events_dispatcher.rpy:8403` | `girl`, `at_working_cap` |
 | 18 | `HOOK_GIRL_DESTINATION_ACCEPT` | `girl_destination_accept` | `game/core/systems/events_dispatcher.rpy:8497` | `girl`, `destination` |
+| 19 | `HOOK_ITEM_GENERATED` | `item_generated` | `game/core/systems/items.rpy:239` (`Item.generate_new_item`) | `item`, `template`, `tier` |
 
 Notes:
 
@@ -274,6 +276,7 @@ Notes:
 - `game_saved`/`game_loaded` have no context keys (invoked without arguments);
 - **No point in the current game code calls `cancel_hook()`** (§4); it is covered by tests (`game/core/tools/test_runner.rpy:352-353`) and is meant for mod authors to `call` themselves.
 - `girl_destination_list` fires when acquiring a girl while the brothel is full: mod callbacks return a list of destinations `[{"id", "text", "available"}]`, which the core adds to the placement menu; if the player picks one, `girl_destination_accept` fires (`destination` = the destination id). Reference implementation: `game/custom/mods/Courtyard/mod.rpy` (the "Courtyard" mod).
+- `item_generated` (**notification-only**, no return-value contract) fires **every time a template item is cooked into a concrete item** — roughly 400 times per new game during `init_items` (90 templates × their 4-5 applicable tiers). Context: `item` is the finished new item (`name`/`name_i18n`/`price`/`rarity`/`rank`/`base_effects` are already written; callbacks may mutate it in place and the change lands in that new game's item pool), `template` is the source template item, `tier` is the `QualityTier` used. Reference implementation: `game/custom/mods/Item Quality/` (the "Item Quality" mod).
 
 ---
 
@@ -312,14 +315,17 @@ All defined in `game/core/systems/mods/mod_api_v2.rpy`; there is also a service 
 
 ### Others (inherited from `ModAPI`, `mod_api.rpy`)
 
-`register_trait` / `register_perk` / `register_tag` / `register_dialogue` / `register_event` / `register_ngp_setting` / `register_scenario` / `register_origin` / `register_game_mode`, plus the v1-compatible `get_mod_path` / `is_mod_active` / `get_active_mods` (note the latter two operate on v1 `detected_mods`).
+`register_trait` / `register_perk` / `register_tag` / `register_dialogue` / `register_event` / `register_ngp_setting` / `register_scenario` / `register_origin` / `register_game_mode` / `register_quality`, plus the v1-compatible `get_mod_path` / `is_mod_active` / `get_active_mods` (note the latter two operate on v1 `detected_mods`).
+
+`register_quality(tier)` (`mod_api.rpy`) registers a `QualityTier` into `quality_registry` keyed by its `rank`; **same rank overwrites** (last registration wins), so a mod can both retune the default 0-6 tiers and extend beyond 7 (`Item.generate_new_item` caps `rank` at `quality_registry.get_max_rank()`, and `init_items` iterates `get_tiers()`). See §6.6.
 
 ### Verification tool
 
 `python tools/verify_mod_api.py` — pure-Python static assertions + simulated execution (no Ren'Py runtime required):
 
-- Asserts the 18 `HOOK_*` constants exist with unique values (`EXPECTED_HOOK_COUNT = 18`);
+- Asserts the 19 `HOOK_*` constants exist with unique values (`EXPECTED_HOOK_COUNT = 19`);
 - Asserts `register_mod`/`unregister_mod`/`register_hook`/`execute_hook`/`cancel_hook`/`set_mod_enabled`/`is_mod_enabled`/`apply_startup_states`/`list_registered_mods`/`missing_dependencies` exist;
+- Asserts the v1 base wrappers `register_trait`/`register_perk`/`register_event`/`register_quality`/`register_game_mode` exist and that `CAPABILITIES` includes `"items"`;
 - Asserts every `api.HOOK_*` referenced by `mod_template.rpy` really exists;
 - Simulates registration, duplicate-registration rejection, unknown-capability rejection, priority ordering, exception swallowing, the cancel flow, `get_menu_buttons`/`get_mod_info` behavior, persistent enable/disable (with a stubbed `persistent`), hook skipping for disabled mods, `always_on`, dependency resolution and `apply_startup_states` idempotence;
 - Current result: **all passing**, with 5 naming-convention warnings (`girl_sold`/`girl_runaway`/`security_event`/`girl_destination_list`/`girl_destination_accept` lack the `_<tense>` suffix).
@@ -442,6 +448,70 @@ How another mod declares the dependency:
 
 The mod folder's `README.txt` documents this convention (the Ren'Py launcher ignores non-`.rpy` files).
 
+### 6.6 Data-driven extension example: Item Quality
+
+`game/custom/mods/Item Quality/` (mod_id `"item_quality"`) is the reference for a **data-driven mod**: the core keeps the registry framework plus a hardcoded fallback, and the mod supplies hot-swappable data. It demonstrates `register_quality`, the `"items"` capability flag, the `item_generated` hook and a mod-owned translation directory all at once.
+
+**Core-side framework** (`game/core/systems/registry/quality_registry.rpy`, `init -5`):
+
+- `QualityTier(rank, price_modifier, prefixes, rarity_keep)` — `prefixes` maps adjective category → English prefix (missing keys fall back to `"misc"`); `rarity_keep` defaults to `("S","U","M")` (those rarities do not scale with the tier);
+- `QualityRegistry` (extends `Registry`) — `register_quality(tier)` keyed by `str(rank)`, `get_tier(rank)`, `get_tiers()`, `get_max_rank()`;
+- Hardcoded fallback `game/core/data/quality.rpy` (`init -4`, **do not delete**, identical to the mod's data so disabling the mod is invisible to players).
+
+**Mod side** (three-way split: registration / logic / data):
+
+```renpy
+## mod.rpy — registration entry (init -1)
+init -1 python:
+    services.mod_api_v2.register_mod("item_quality", {
+        "name": __("Item Quality"),
+        "api_version": 2,
+        "requires": ["items"],
+        "always_on": False,
+    })
+    ## EN: Register tiers only while active; disabled -> core fallback stays.
+    ## ZH: 仅激活时注册档位；禁用时保留核心兜底（数据一致）。
+    if services.mod_api_v2.is_mod_active("item_quality"):
+        load_quality_tiers()
+```
+
+```renpy
+## quality.rpy — data loading (init -9, called by the init -1 block above)
+init -9 python:
+    import json
+    QUALITY_JSON_PATH = "custom/mods/Item Quality/quality.json"
+
+    def load_quality_tiers():
+        ## EN: mod-local JSON via renpy.loader (Ren'Py archives included).
+        ## ZH: 经 renpy.loader 读取 Mod 自带 JSON（兼容打包进归档）。
+        try:
+            with renpy.loader.load(QUALITY_JSON_PATH) as _f:
+                _data = json.load(_f)
+        except Exception as _e:
+            renpy.notify(__("Item Quality mod: could not load quality.json (%s)") % _e)
+            return   ## core fallback tiers stay in place; the game keeps running
+        for _tier_data in _data.get("tiers", []):
+            quality_registry.register_quality(QualityTier.from_dict(_tier_data))
+```
+
+How another mod overrides quality (same rank overwrites; new ranks extend the range):
+
+```python
+init -1 python:
+    if services.mod_api_v2.is_mod_active("my_mod"):
+        quality_registry.register_quality(QualityTier(
+            rank=3, price_modifier=12.0,
+            prefixes={"dress": "Gilded", "misc": "Gilded"},
+        ))
+```
+
+Key takeaways:
+
+1. **Framework in core, data in the mod**: `QualityRegistry` and `QualityTier` are core registries (`init -5`); the mod only feeds data — the game still starts with the mod disabled or deleted;
+2. **init layering**: mod classes/functions must be defined before the registration entry point (`init -9` defines, `init -1` registers), same shape as Game Modes' `story_mode.rpy`;
+3. **Mod-owned translation**: prefix entries live in `tl/chinese_simplified/quality.rpy`, and each `old` string must be **byte-identical** to the source (including trailing spaces such as `"Cheap "`); Ren'Py loads `tl/` unconditionally, so Chinese prefixes still apply while the mod is disabled;
+4. **Uninstall degradation**: after deleting the folder, `__()` misses the entries and falls back to the English source text (acceptable degradation; see the mod's `README.txt`).
+
 For comparison, the v1 tutorial example: `game/custom/mods/Goldo's cool mod/goldo's cool mod.rpy` (209 lines) demonstrates the full v1 flow — `Mod(...)` construction, `help_prompts` option menu, `early_label`/`init_label` labels, `events` + `add_event()` scheduling (alarm/morning/city types), `set_condition` conditional events, custom `register_trait`, and a `home_rightmenu_add_buttons` button screen.
 
 ---
@@ -455,9 +525,9 @@ For comparison, the v1 tutorial example: `game/custom/mods/Goldo's cool mod/gold
 | manifest `hooks` registration priority always 0 | 📝 By design | When priority is needed, register separately via `register_hook(..., priority=N)` |
 | `register_hook()` callbacks are not filtered by disable | 📝 By design | `"_direct"` callbacks cannot be attributed to a mod; use manifest `hooks` if the callback must stop with a disabled mod |
 | `cancel_hook` has no in-game call site | 📝 Known | Covered only by tests; meant for mods/scripts to call themselves |
-| 3 hook names don't follow `<domain>_<action>_<tense>` | 📝 Known | `girl_sold` / `girl_runaway` / `security_event`; verify_mod_api emits warnings; renaming would break registered callbacks, so left as-is |
+| 5 hook names don't follow `<domain>_<action>_<tense>` | 📝 Known | `girl_sold` / `girl_runaway` / `security_event` / `girl_destination_list` / `girl_destination_accept`; verify_mod_api emits warnings; renaming would break registered callbacks, so left as-is |
 | v2 enable-state persistence | ✅ Implemented | Enable/disable flags stored in `persistent._bk_v2_mod_states` (toggled in the main-menu Mod Manager screen); custom mod content data still needs manual persistence via the `game_saved`/`game_loaded` hooks |
-| Mod content translation | ⏳ To be planned | `game/custom/` content stays in its original language by default; may be supported in the future via a unified string table |
+| Mod content translation | ✅ Available (mod-owned) | Each mod ships its own translations in `<mod>/tl/chinese_simplified/*.rpy` (the `old` string must be byte-identical to the source, trailing spaces included); Ren'Py loads `tl/` unconditionally, so entries still apply while the mod is disabled, and deleting the mod falls back to the English source. Example: `game/custom/mods/Item Quality/tl/chinese_simplified/` |
 
 ---
 
@@ -467,4 +537,5 @@ For comparison, the v1 tutorial example: `game/custom/mods/Goldo's cool mod/gold
 - [`../tools/TOOLS.md`](../tools/TOOLS.md) — tool inventory including `tools/verify_mod_api.py`
 - [`../../game/core/templates/mod_template/mod_template.rpy`](../../game/core/templates/mod_template/mod_template.rpy) — blank v2 mod template
 - [`../../game/custom/mods/Auction House/mod.rpy`](../../game/custom/mods/Auction%20House/mod.rpy) — v2 example entry
+- [`../../game/custom/mods/Item Quality/README.txt`](../../game/custom/mods/Item%20Quality/README.txt) — data-driven mod example (`register_quality` + mod-owned translations)
 - [`../../game/custom/mods/Goldo's cool mod/goldo's cool mod.rpy`](../../game/custom/mods/Goldo's%20cool%20mod/goldo's%20cool%20mod.rpy) — v1 tutorial example

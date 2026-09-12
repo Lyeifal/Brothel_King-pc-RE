@@ -15,8 +15,8 @@
 > | Authoritative data | `game/core/data/<domain>/*.json` | 36 subdirectories total (including `_schemas/`); load points see `DataLoader` (`game/core/systems/data_loader.rpy`) |
 > | Schema validation | `game/core/data/_schemas/*.schema.json` | One JSON Schema per domain |
 > | Loader | `game/core/systems/data_loader.rpy` | All `load_*()` class methods, JSON preferred |
-> | Registries | `game/core/systems/registry/` | `registry.rpy` base class + nine Registries: trait/perk/tag/dialogue/event/meta/ngp/unlock |
-> | Hardcoded fallback | `game/core/data/*.rpy` (`items.rpy`, `jobs.rpy`, `perks.rpy`, `powers.rpy`, `settings.rpy`, `spells.rpy`) and `_fallback_*` inside various .rpy files | Ensures the game can start when JSON is missing; **do not delete** |
+> | Registries | `game/core/systems/registry/` | `registry.rpy` base class + ten Registries: trait/perk/tag/dialogue/event/meta/ngp/unlock/quality |
+> | Hardcoded fallback | `game/core/data/*.rpy` (`items.rpy`, `jobs.rpy`, `perks.rpy`, `powers.rpy`, `settings.rpy`, `spells.rpy`, `quality.rpy`) and `_fallback_*` inside various .rpy files | Ensures the game can start when JSON is missing; **do not delete**. `quality.rpy`'s authoritative data has moved out of core — see #12 below and the appendix |
 > | Data export | `game/core/systems/data_exporter.rpy` | `export_*()` symmetric with DataLoader |
 > | Visual editing | `tools/bk_editor/` | Editor suite; mapping see `tools/bk_editor/README.md` |
 >
@@ -207,7 +207,7 @@
 | # | File | Variable name | Type | Entries | Description |
 |---|------|--------|------|--------|------|
 | 11 | `variables.rpy` | `brothel_ranking_reputations` | dict | 40 | Brothel reputation rank names (40 ranking titles) ✅ migrated to `settings/rankings.json` |
-| 12 | `variables.rpy` | `quality_prefix` + `quality_modifier` | dict | 57 | Item quality prefixes + price multiplier system ✅ migrated to `settings/quality.json` |
+| 12 | `variables.rpy` | `quality_prefix` + `quality_modifier` | dict | 57 | Item quality prefixes + price multiplier system ✅ migrated to `settings/quality.json`, then **moved out of core on 2026-09-13 into the `custom/mods/Item Quality/` mod** (core keeps only the `data/quality.rpy` hardcoded fallback + the `QualityRegistry` framework) |
 | 13 | `variables.rpy` | `encounters` + `encounter_pics` + `pop_name_dict` | tuple/dict | ~60 | City encounter types + pictures + population random names ✅ migrated to `settings/encounters.json` |
 | 14 | `variables.rpy` | `jokes` + `compliments` | dict | ~20 | Social interaction text library (jokes + compliments) ✅ migrated to `settings/dialogue_texts.json` |
 | 15 | `variables.rpy` | `help_dict` + `help_pic_dict` + `help_center_pic_dict` | dict | 120+ | Brokipedia help text system (100+ entries) ✅ migrated to `settings/help_texts.json` |
@@ -298,7 +298,7 @@
 **Medium term (3-5 sessions):**
 - ✅ Contract task system — migrated to `settings/contracts.json`
 - ✅ XP/rank/promotion system — migrated to `settings/xp_rank_params.json`
-- ✅ Quality system — migrated to `settings/quality.json`
+- ✅ Quality system — migrated to `settings/quality.json`, then moved out to the `custom/mods/Item Quality/` mod (2026-09-13; core keeps the `data/quality.rpy` fallback)
 - ✅ Training/preference system — migrated to `settings/sex_training_params.json`
 - ✅ Background generation pools — migrated to `settings/girl_background_pools.json`
 - ✅ Result resolution system — migrated to `settings/roll_results.json` / `settings/threat_params.json`
@@ -331,6 +331,7 @@ The following data has been completely removed from `.rpy` (only JSON + fallback
 | Powers | `data/powers.rpy` | Fully removed, only `_fallback_*` retained |
 | Spells | `data/spells.rpy` | Fully removed, only `_fallback_*` + `moons` fallback retained |
 | MC Classes | `data/spells.rpy` | `spellbook` migrated to `mc_classes.json`; original hardcoded data turned into fallback |
+| Item Quality | `data/settings/quality.json` (originally `init/variables.rpy`) | JSON deleted; data moved out of core into `custom/mods/Item Quality/quality.json`, with `data/quality.rpy` kept in core as the hardcoded fallback (**do not delete**) plus the `QualityRegistry` framework |
 
 ---
 

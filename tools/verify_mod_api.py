@@ -6,12 +6,17 @@ Mod API v2 验证脚本 | Mod API v2 verification script.
 纯 Python 实现，不依赖 Ren'Py 运行时 | Pure Python, no Ren'Py runtime needed.
 两种验证方式 | Two verification strategies:
   1. 静态断言 | Static assertions:
-     - mod_api_v2.rpy 定义了全部 18 个 HOOK_* 常量且取值唯一
-       (All 18 HOOK_* constants are defined with unique values)
+     - mod_api_v2.rpy 定义了全部 19 个 HOOK_* 常量且取值唯一
+       (All 19 HOOK_* constants are defined with unique values)
      - register_mod / unregister_mod / register_hook / execute_hook /
        cancel_hook / set_mod_enabled / is_mod_enabled / apply_startup_states /
        list_registered_mods / missing_dependencies 关键方法存在
        (key methods exist)
+     - mod_api.rpy（v1 基类，被 ModAPIV2 继承）定义了 register_trait /
+       register_perk / register_event / register_quality / register_game_mode
+       (v1 base wrappers the v2 class inherits exist)
+     - CAPABILITIES 集合包含 "items"（物品品质档位注册）
+       (CAPABILITIES includes "items")
      - mod_template.rpy 引用的每个 api.HOOK_* 都真实存在
        (every api.HOOK_* referenced by the template exists)
      - 模板 Ren'Py 语法由项目 lint 保证（模板位于 game/ 目录内）
@@ -36,16 +41,18 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 API_FILE = ROOT / "game" / "core" / "systems" / "mods" / "mod_api_v2.rpy"
+BASE_API_FILE = ROOT / "game" / "core" / "systems" / "mods" / "mod_api.rpy"
 TEMPLATE_FILE = ROOT / "game" / "core" / "templates" / "mod_template" / "mod_template.rpy"
 GAME_DIR = ROOT / "game"
 
-# EN: The progress doc says 15 hook points; the code now defines 18
+# EN: The progress doc says 15 hook points; the code now defines 19
 #     HOOK_* constants (16 original + 2 girl-destination hooks added with
-#     the Courtyard mod extraction) — the code is the source of truth here.
-# ZH: 进度文档写 15 个钩子点；代码现定义 18 个 HOOK_* 常量
-#     （原有 16 个 + 庭院 Mod 剥离时新增的 2 个目的地钩子），
-#     此处以代码为准。
-EXPECTED_HOOK_COUNT = 18
+#     the Courtyard mod extraction + item_generated added with the
+#     Item Quality mod extraction) — the code is the source of truth here.
+# ZH: 进度文档写 15 个钩子点；代码现定义 19 个 HOOK_* 常量
+#     （原有 16 个 + 庭院 Mod 剥离时新增的 2 个目的地钩子 + 物品品质 Mod
+#     剥离时新增的 item_generated），此处以代码为准。
+EXPECTED_HOOK_COUNT = 19
 
 PASS = "PASS"
 FAIL = "FAIL"
@@ -127,6 +134,19 @@ def static_checks():
           "template uses register_mod + ModAPIV2.instance()")
     check(re.search(r'"api_version":\s*2', tpl) is not None,
           'template manifest declares "api_version": 2')
+
+    # 1e. v1 基类的注册包装（v2 继承）| v1 base registration wrappers
+    #     register_quality 等定义在 mod_api.rpy，ModAPIV2 继承它们。
+    base_src = BASE_API_FILE.read_text(encoding="utf-8")
+    for method in ("register_trait", "register_perk", "register_event",
+                   "register_quality", "register_game_mode"):
+        check(re.search(r"def %s\(self" % method, base_src) is not None,
+              "ModAPI.%s exists" % method)
+
+    # 1f. 能力标志 | capability flags
+    caps = re.search(r"CAPABILITIES\s*=\s*\{(.*?)\}", src, re.S)
+    check(caps is not None and '"items"' in caps.group(1),
+          'CAPABILITIES includes "items" (item quality tiers)')
 
     # 1d. 游戏内触发点接线情况 | In-game hook wiring (informational)
     wired = []

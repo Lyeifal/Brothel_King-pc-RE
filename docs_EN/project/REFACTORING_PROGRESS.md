@@ -1,6 +1,6 @@
 # Brothel King — game/core Refactoring Progress Document
 
-> Last updated: 2026-09-11 (after Phase 7 Girl component migration completion)
+> Last updated: 2026-09-13 (after the Item Quality system was moved into a mod)
 > Current branch: `bk-evolution`
 
 ---
@@ -249,20 +249,33 @@ Details live in [../architecture/girl_components.md](../architecture/girl_compon
 
 ### Features
 - Versioned API: `api_version = 2`
-- Capability flags: `requires = ["girl_traits", "events"]`
-- 16 standardized hook points (HOOK_GIRL_GENERATED, HOOK_DAY_STARTING, etc.)
+- Capability flags: `requires = ["girl_traits", "events", "items", ...]`
+- 19 standardized hook points (HOOK_GIRL_GENERATED, HOOK_DAY_STARTING, HOOK_ITEM_GENERATED, etc.)
 - Hook cancel support (`cancel_hook`)
 - This version is incompatible with old mods (by requirement)
-- ✅ **Hooks wired** (2026-09-11, c6b3fa2): all 16 hook points connected to the game flow
+- ✅ **Hooks wired** (2026-09-11, c6b3fa2): all hook points connected to the game flow
   (day/night cycle, girl generated/acquired/sold/runaway, events, chapters, security, save/load), notification-only
 - ✅ **UI integration** (2026-09-11, 1788c04): manifest supports `home_rightmenu_add_buttons`
   (home right-menu buttons); `get_menu_buttons()` / `get_mod_info()` for UI queries;
-  Mods screen displays v2 mods (always active, read-only); duplicate registration rejected
-- ⚠️ **v2 mod semantics**: active as soon as installed, no per-save toggle (unlike v1); deactivation requires removing the files
+  Mods screen displays v2 mods (read-only list); duplicate registration rejected
+- ⚠️ **v2 mod semantics**: active as soon as installed; enable/disable is toggled in the main-menu Mod Manager screen and stored in `persistent._bk_v2_mod_states` (takes full effect after a restart); `always_on: True` mods cannot be disabled
 
 ### Template update
 **File**: `game/core/templates/mod_template/mod_template.rpy`
 - Demonstrates the v2 pattern (register_mod + hook registration)
+
+### Item Quality system moved into a mod (2026-09-13)
+
+First task of the item-system refactor: extract the 0-6 quality tiers of template items into a standalone v2 mod, following the "framework stays in core, data moves into the mod, core keeps a fallback" precedent set by Game Modes.
+
+- **Core framework** (new): `systems/registry/quality_registry.rpy` (init -5) — `QualityTier` (prefixes / price modifier / rarity bump / effect scaling) + `QualityRegistry` (`register_quality`/`get_tier`/`get_tiers`/`get_max_rank`);
+- **Core fallback** (new): `data/quality.rpy` (init -4) — the 7 tiers of the former `settings/quality.json`, hardcoded verbatim; **do not delete**;
+- **New mod**: `custom/mods/Item Quality/` (mod_id `item_quality`) — `mod.rpy` (registration + `is_mod_active` gating) + `quality.rpy` (definitions at init -9, reads its own `quality.json`) + `tl/chinese_simplified/` (mod-owned translations) + `README.txt`;
+- **API extensions**: CAPABILITIES gained `"items"`; new `HOOK_ITEM_GENERATED = "item_generated"` (the 19th hook, notification-only, context `{item, template, tier}`); v1 base class gained `register_quality`;
+- **items.rpy refactor**: `generate_new_item` / `transform_template` / `init_items` now go through the registry, bit-for-bit behaviour-preserving (522 cases compared, all equal);
+- **Old paths deleted**: `DataLoader.load_quality()`, the globals block in `variables.rpy`, `data/settings/quality.json`;
+- **Translation migration**: 31 prefix entries moved from `tl/chinese_simplified/strings.rpy` into the mod's own `tl/` (core kept the shared entries Fine/Broken/Medium/Cheap);
+- **Verification**: `tools/verify_mod_api.py` passes 19/19 hooks; three-way data comparison all equal; 522-case generation parity all equal; the empty-registry edge case returns None without crashing.
 
 ---
 
@@ -374,7 +387,7 @@ tools/
 2. **Remaining method migration** — ✅ fully complete (Phase 7, 2026-09-11): batches 1-14 migrated ~120 methods, created the new GirlProgression component, fixed the generate_preferences double execution and the change_stat cap regression, cleaned up 6 stale component copies and 3 dead shells. **girlclass.rpy 5,900→1,148 lines**. Only leftovers: `__init__` split (deferred, save-compatibility risk) and the `get_schedule`/`is_unique` micro-methods (intentionally retained)
 3. **Screen extraction** — ✅ fully complete (Phase 2, 2026-09-10): screens.rpy 8,886 → 620 lines, 108 screens → 16 files, verified identical by character-by-character comparison
 4. **Translation tools** — ✅ decided not to implement `translate_sync.py` (Phase 3): the sync need is covered by the existing toolchain — missing detection `verify_i18n.py`(`translate --count`), placeholder integrity `audit_placeholders.py`, empty-translation round trip `export_empty_to_xlsx.py`/`import_translated_empty.py`, stale entries cleaned when Ren'Py `translate` rewrites. See `docs/i18n/I18N_ROADMAP.md` Section 6. Also fixed hardcoded stale paths in `i18n_lint.py`/`verify_i18n.py` (now derived from the script location).
-5. **Mod API v2 testing** — ✅ complete (Phase 3): `tools/verify_mod_api.py` static assertions + stub-environment full-flow simulation (register→trigger→cancel), `python tools/verify_mod_api.py` all passing; the in-game `test_mod_api_v2` smoke label added to the Test Runner. **Found and fixed**: `cancel_hook` routed through `execute_hook` meant the context never reached callbacks and it always returned False. Also note: 16 HOOK_* constants (this document previously said 15), and the game code currently has no `execute_hook`/`cancel_hook` call sites — the hook framework was ready but not yet wired.
+5. **Mod API v2 testing** — ✅ complete (Phase 3): `tools/verify_mod_api.py` static assertions + stub-environment full-flow simulation (register→trigger→cancel), `python tools/verify_mod_api.py` all passing; the in-game `test_mod_api_v2` smoke label added to the Test Runner. **Found and fixed**: `cancel_hook` routed through `execute_hook` meant the context never reached callbacks and it always returned False. Current state (2026-09-13): all 19 HOOK_* constants are wired, and the game code has several `execute_hook` call sites (`item_generated` in `items.rpy`, among others); `cancel_hook` still has no in-game call site.
 6. **Dev Console hotkey** — ✅ fixed (Phase 3, c47440e): two root causes — ① the keymap bound the unmodified key `K_o` (should be `shift_K_o`); ② the console screen is `modal True`; modal blocks lower-layer events, so the underlay Keymap receives no keys while the console is open and cannot close it. Fix: the underlay handles global opening, an in-screen `key "shift_K_o"` handles closing, and toggling is ignored while the input box is focused (to avoid closing on a capital O being typed).
 
 ---
@@ -392,11 +405,13 @@ tools/
 init -12   service_container  ── GameServices
 init -11   game_config       ── GameConfig
 init -10   settings/translations
-init -5    registry           ── 各种 Registry
-init -4    variables          ── 全局变量
-init -3    utils/effects      ── 工具函数
-init -2    class definitions  ── 所有类定义 + 组件
-init       start label        ── 游戏实例创建
+init -9    mod definitions    ── mod-owned classes/functions (e.g. Item Quality's load_quality_tiers)
+init -5    registry           ── the various Registries (incl. QualityRegistry)
+init -4    variables          ── globals + hardcoded fallbacks (incl. data/quality.rpy)
+init -3    utils/effects      ── utility functions (incl. the ModAPIV2 class)
+init -2    class definitions  ── all class definitions + components
+init -1    mods               ── v2 mod registration entry points (register_mod + is_mod_active gating)
+init       start label        ── game instance creation
 ```
 
 ### Service access

@@ -1,6 +1,6 @@
 # Registry 系统架构
 
-> 最后更新: 2026-09-11（与代码核对）
+> 最后更新: 2026-09-13（与代码核对）
 > **基类**: `game/core/systems/registry/registry.rpy`（init -10）
 > **Phase**: Phase 6（系统解耦与 Mod 支持）
 
@@ -30,8 +30,9 @@ Registry 是 Phase 6 引入的统一注册中心，替代分散的全局字典�
 | `EventRegistry` | `event_registry.rpy` | -5 | :7 | 事件定义 + 运行时队列（见 [event.md](event.md)） |
 | `NGPRegistry` | `ngp_registry.rpy` | -5 | :7 | NG+ 设置 |
 | `MetaRegistry` | `meta_registry.rpy` | -5 | :7 | Meta-progression / 解锁 |
+| `QualityRegistry` | `quality_registry.rpy` | -5 | :78（`QualityTier` 值类型 :13） | 物品品质档位（`register_quality`；数据见 `data/quality.rpy` fallback + "Item Quality" Mod） |
 
-基类 init -10，UnlockRegistry -9，其余子类统一 init -5。
+基类 init -10，UnlockRegistry -9，其余子类统一 init -5。`QualityRegistry` 是唯一自带值类型（`QualityTier`）的注册表；它也是"框架留 core、数据进 Mod"的范例（见 [../modding/MOD_API.md](../modding/MOD_API.md) §6.6）。
 
 ## 3. 解耦方式
 
@@ -51,6 +52,7 @@ Registry (基类, init -10)
     ├─→ DialogueRegistry ─→ GirlPack 自定义对话 / ModAPI.register_dialogue
     ├─→ NGPRegistry ──────→ dev_console (ngp_editor.py)
     ├─→ MetaRegistry ─────→ dev_console (meta_editor.py)
+    ├─→ QualityRegistry ──→ systems/items.rpy（generate_new_item / init_items）/ "Item Quality" Mod
     └─→ UnlockRegistry ───→ 成就/目标/解锁条件评估
 ```
 

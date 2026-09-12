@@ -15,9 +15,9 @@ This directory contains the architecture documentation for the core systems of t
 | GameServices service container | 🚧 In progress | `systems/services/`, `config/game_config.rpy` | 11 services registered (init -12 container); `mod_api`/`data_loader` properties not wired; interface abstraction (interfaces/) pending |
 | Girl componentization | 🚧 In progress | `framework/girlclass.rpy` (3,910 lines, formerly ~5,900), `framework/girl/` (15 components) | 15/15 component classes in place, 156 `_impl` aliases; some method bodies still in the host class (transitional state) |
 | UI screen extraction | ✅ Done | `ui/screens.rpy` (620 lines, formerly 8,886), `ui/screens/` (16 files) | screens.rpy has no screen left, only image/style/label; 16 files split by domain |
-| Mod system | 🚧 In progress | `framework/challenges.rpy` (v1 Mod), `systems/mods/` | v1/v2 coexist; all 16 v2 hooks wired (pure notification); `cancel_hook` interception semantics have no call site; the two hook stores are not unified |
+| Mod system | 🚧 In progress | `framework/challenges.rpy` (v1 Mod), `systems/mods/` | v1/v2 coexist; all 19 v2 hooks wired (pure notification); `cancel_hook` interception semantics have no call site; the two hook stores are not unified; mods can own their `tl/` translations |
 | DataLoader / JSON-ification | 🚧 In progress | `systems/data_loader.rpy` (1,319 lines) | ~45 load_* methods; fallback mode deliberately kept (two data sources coexist) |
-| Registry | ✅ Done | `systems/registry/` (10 files) | Base class + 8 subclasses + UnlockRegistry; override semantics support Mod replacement |
+| Registry | ✅ Done | `systems/registry/` (10 files) | Base class + 9 subclasses (incl. UnlockRegistry, QualityRegistry); override semantics support Mod replacement |
 | Trait / Perk | ✅ Done | `framework/character.rpy`, `data/traits/` (131), `data/perks/` (53) | JSON-driven + GirlTraits component consumption |
 | Event system | 🚧 In progress | `framework/interactions.rpy` (StoryEvent), `systems/events_dispatcher.rpy` (8,611 lines), `systems/events/` | EventEngine/EventRegistry in place; **EventBridge old→new sync silently broken because it calls a nonexistent method** (see event.md §2.4) |
 | Game / GameMode | ✅ Done | `framework/core_entities.rpy` (Game :19), `systems/gamemodes/gamemode.rpy` (framework) | Mode implementations extracted to `custom/mods/Game Modes/`; story/sandbox/scenario registered by the mod; modes filtering applied throughout event enqueueing; falls back to story mode when the mod is absent |
@@ -36,7 +36,7 @@ This directory contains the architecture documentation for the core systems of t
 | [services.md](services.md) | GameServices container, table of 11 registered services, GameConfig, init priority chain |
 | [girl_components.md](girl_components.md) | Girl component system: list of 15 components, delegation pattern, `_impl` aliases, lessons from the get_stat double-counting bug |
 | [ui_screens.md](ui_screens.md) | UI screen architecture: what remains in screens.rpy + per-file screen inventory of the 16 files in ui/screens/ |
-| [mod_system.md](mod_system.md) | v1 Mod class and v2 ModAPIV2 coexistence architecture, registration flow, full table of 18 hook points (call sites verified one by one), HookManager relationship |
+| [mod_system.md](mod_system.md) | v1 Mod class and v2 ModAPIV2 coexistence architecture, registration flow, full table of 19 hook points (call sites verified one by one), HookManager relationship |
 
 ### Subsystems (refreshed in this batch)
 

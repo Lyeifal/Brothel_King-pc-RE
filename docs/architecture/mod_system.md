@@ -65,11 +65,11 @@ Mod 管理界面：`screen mods`（ui/screens/screen_quest.rpy:564 起）列出 
 - **`register_mod(mod_id, manifest)`**（:50）: manifest 含 `name/version/api_version(必须=2)/min_game_version/author/description/requires/hooks/dependencies/home_rightmenu_add_buttons`。重复注册报错。
 - **常驻激活**: 无 per-save 开关；停用 = 从 `game/custom/mods/` 移除文件。
 - **UI 集成**: `get_menu_buttons()` 供主页右侧菜单渲染；`get_mod_info()` 供 mods 界面展示。
-- **v1 继承**: v2 继承 `ModAPI`，因此 `register_trait/perk/tag/dialogue/event/ngp_setting/scenario/origin/game_mode` 等注册包装 v2 Mod 同样可用。
+- **v1 继承**: v2 继承 `ModAPI`，因此 `register_trait/perk/tag/dialogue/event/ngp_setting/scenario/origin/game_mode/quality` 等注册包装 v2 Mod 同样可用。
 
-## 4. 18 个 v2 钩子点（全部接线，逐一 grep 核实）
+## 4. 19 个 v2 钩子点（全部接线，逐一 grep 核实）
 
-命名约定 `<domain>_<action>_<tense>`。钩子常量在 mod_api_v2.rpy:187-204 定义。除最后 2 个目的地钩子外**全部为纯通知型**——调用点以 `$ mod_api_v2.execute_hook(...)` 形式丢弃返回值，Mod 只能观察不能拦截游戏逻辑（`cancel_hook` 机制存在但目前没有任何游戏内调用点使用它）。`girl_destination_list`/`girl_destination_accept` 例外：返回值/参数用于把 Mod 注册的女孩安置目的地接入收购流程（见第 17/18 行及 "Courtyard" Mod 参考实现）。
+命名约定 `<domain>_<action>_<tense>`。钩子常量在 mod_api_v2.rpy:365-383 定义。除最后 2 个目的地钩子外**全部为纯通知型**——调用点以 `$ mod_api_v2.execute_hook(...)` 形式丢弃返回值，Mod 只能观察不能拦截游戏逻辑（`cancel_hook` 机制存在但目前没有任何游戏内调用点使用它）。`girl_destination_list`/`girl_destination_accept` 例外：返回值/参数用于把 Mod 注册的女孩安置目的地接入收购流程（见第 17/18 行及 "Courtyard" Mod 参考实现）。
 
 | # | 常量 | 钩子名 | 调用点（文件:行号） | Context 键 |
 |---|------|--------|--------------------|-----------|
@@ -91,6 +91,7 @@ Mod 管理界面：`screen mods`（ui/screens/screen_quest.rpy:564 起）列出 
 | 16 | `HOOK_GAME_LOADED` | `game_loaded` | `systems/events_dispatcher.rpy:191` | — |
 | 17 | `HOOK_GIRL_DESTINATION_LIST` | `girl_destination_list` | `systems/events_dispatcher.rpy:8403` | `girl`, `at_working_cap`；回调返回 `[{"id", "text", "available"}]` |
 | 18 | `HOOK_GIRL_DESTINATION_ACCEPT` | `girl_destination_accept` | `systems/events_dispatcher.rpy:8497` | `girl`, `destination` |
+| 19 | `HOOK_ITEM_GENERATED` | `item_generated` | `systems/items.rpy:239` | `item`（已烤好的新成品，可原地改写）, `template`（源模板物品）, `tier`（本次使用的 `QualityTier`） |
 
 Mod 侧用法见模板 `game/core/templates/mod_template/mod_template.rpy:47-53`：`api.register_hook(api.HOOK_GIRL_GENERATED, on_girl_generated)`，回调签名 `callback(context: dict)`。
 
@@ -121,7 +122,7 @@ Mod 侧用法见模板 `game/core/templates/mod_template/mod_template.rpy:47-53`
 v1 Mod (challenges.rpy)
   └─ mod.hooks ──→ HookManager (mod_hooks.rpy) ──→ on_day_end / on_settlement_* / on_event_trigger
 v2 Mod (manifest hooks + register_hook)
-  └─ _mod_hooks (mod_api_v2.rpy:46, 独立存储!) ──→ girl_generated 等 18 个钩子（其中 girl_destination_list/accept 为交互型）
+  └─ _mod_hooks (mod_api_v2.rpy:46, 独立存储!) ──→ girl_generated 等 19 个钩子（其中 girl_destination_list/accept 为交互型）
 ```
 
 注意两点：

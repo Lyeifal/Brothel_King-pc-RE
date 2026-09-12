@@ -15,9 +15,9 @@
 | 服务容器 GameServices | 🚧 进行中 | `systems/services/`、`config/game_config.rpy` | 11 个服务已注册（init -12 容器）；`mod_api`/`data_loader` 属性未接线；接口抽象（interfaces/）待完成 |
 | Girl 组件化 | 🚧 进行中 | `framework/girlclass.rpy`（3,910 行，原 ~5,900）、`framework/girl/`（15 组件） | 15/15 组件类就位、156 个 `_impl` 别名；部分方法体仍在宿主类（过渡形态） |
 | UI 屏幕提取 | ✅ 完成 | `ui/screens.rpy`（620 行，原 8,886）、`ui/screens/`（16 文件） | screens.rpy 已无 screen，仅剩 image/style/label；16 文件按域拆分 |
-| Mod 系统 | 🚧 进行中 | `framework/challenges.rpy`（v1 Mod）、`systems/mods/` | v1/v2 并存；16 个 v2 钩子全部接线（纯通知型）；`cancel_hook` 拦截语义尚无调用点；两套钩子存储未统一 |
+| Mod 系统 | 🚧 进行中 | `framework/challenges.rpy`（v1 Mod）、`systems/mods/` | v1/v2 并存；19 个 v2 钩子全部接线（纯通知型）；`cancel_hook` 拦截语义尚无调用点；两套钩子存储未统一；Mod 可自管 `tl/` 翻译 |
 | DataLoader / JSON 化 | 🚧 进行中 | `systems/data_loader.rpy`（1,319 行） | ~45 个 load_* 方法；fallback 模式刻意保留未清理（双数据源共存） |
-| Registry 注册表 | ✅ 完成 | `systems/registry/`（10 文件） | 基类 + 8 个子类 + UnlockRegistry；覆盖语义支持 Mod 替换 |
+| Registry 注册表 | ✅ 完成 | `systems/registry/`（10 文件） | 基类 + 9 个子类（含 UnlockRegistry、QualityRegistry）；覆盖语义支持 Mod 替换 |
 | Trait / Perk | ✅ 完成 | `framework/character.rpy`、`data/traits/`（131 个）、`data/perks/`（53 个） | JSON 驱动 + GirlTraits 组件消费 |
 | 事件系统 | 🚧 进行中 | `framework/interactions.rpy`（StoryEvent）、`systems/events_dispatcher.rpy`（8,611 行）、`systems/events/` | EventEngine/EventRegistry 就位；**EventBridge 旧→新同步因调用不存在的方法而静默失效**（详见 event.md 2.4） |
 | Game / GameMode | ✅ 完成 | `framework/core_entities.rpy`（Game :19）、`systems/gamemodes/gamemode.rpy`（框架） | 模式实现已提取为 `custom/mods/Game Modes/`；story/sandbox/scenario 三模式由 Mod 注册；modes 过滤贯穿事件入队；Mod 缺席时回退剧情模式 |
@@ -36,7 +36,7 @@
 | [services.md](services.md) | GameServices 容器、11 个已注册服务表、GameConfig、init 优先级链 |
 | [girl_components.md](girl_components.md) | Girl 组件系统：15 组件清单、委托模式、`_impl` 别名、get_stat 双倍计入 bug 教训 |
 | [ui_screens.md](ui_screens.md) | UI 屏幕架构：screens.rpy 剩余内容 + ui/screens/ 16 文件逐文件 screen 清单 |
-| [mod_system.md](mod_system.md) | v1 Mod 类与 v2 ModAPIV2 并存架构、注册流程、18 个钩子点全表（调用点已逐一核实）、HookManager 关系 |
+| [mod_system.md](mod_system.md) | v1 Mod 类与 v2 ModAPIV2 并存架构、注册流程、19 个钩子点全表（调用点已逐一核实）、HookManager 关系 |
 
 ### 子系统（本次刷新）
 

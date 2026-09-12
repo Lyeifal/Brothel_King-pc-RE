@@ -72,7 +72,7 @@
 | 50 | security events | `init/variables.rpy` | `data/settings/security_events.json` | 安全事件 |
 | 51 | security scaling | `init/variables.rpy` | `data/settings/security_scaling.json` | 安全缩放 |
 | 52 | threat params | `init/variables.rpy` | `data/settings/threat_params.json` | 威胁参数 |
-| 53 | quality | `init/variables.rpy` | `data/settings/quality.json` | 品质定义 |
+| 53 | quality | `init/variables.rpy` | ~~`data/settings/quality.json`~~ → **Mod 化** | 品质定义。2026-09-13：JSON 已删除，数据迁出 core 至 `custom/mods/Item Quality/quality.json`；core 保留 `data/quality.rpy` 硬编码 fallback（**勿删**）+ `systems/registry/quality_registry.rpy` 框架 |
 | 54 | girl background pools | `init/variables.rpy` | `data/settings/girl_background_pools.json` | 女孩背景池 |
 | 55 | sex descriptions | `init/variables.rpy` | `data/settings/sex_descriptions.json` | 性行为描述 |
 | 56 | sex training params | `init/variables.rpy` | `data/settings/sex_training_params.json` | 性训练参数 |

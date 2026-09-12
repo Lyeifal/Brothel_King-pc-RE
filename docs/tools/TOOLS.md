@@ -48,7 +48,7 @@ translate --empty → export_empty_to_xlsx → （人工/机翻 Excel）
 
 | 脚本 | 一句话说明 |
 |------|-----------|
-| `verify_mod_api.py` | Mod API v2 验证：静态断言 16 个 `HOOK_*` 常量唯一、关键方法存在、模板引用有效；再模拟执行注册/重复拒绝/优先级/取消流程。纯 Python 不依赖 Ren'Py 运行时（当前全部通过，3 条命名惯例警告）。详见 [`../modding/MOD_API.md`](../modding/MOD_API.md) §4 |
+| `verify_mod_api.py` | Mod API v2 验证：静态断言 19 个 `HOOK_*` 常量唯一、关键方法存在、v1 基类包装（含 `register_quality`）与 `CAPABILITIES` 含 `"items"`、模板引用有效；再模拟执行注册/重复拒绝/优先级/取消流程。纯 Python 不依赖 Ren'Py 运行时（当前全部通过，5 条命名惯例警告）。详见 [`../modding/MOD_API.md`](../modding/MOD_API.md) §4 |
 
 ## 3. 数据审计与导出
 

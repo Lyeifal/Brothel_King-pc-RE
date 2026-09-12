@@ -86,7 +86,7 @@ game/
 | `traits/` | 特质 | `girl_pack_editor` |
 | `worlds/` | 世界/街区配置 | `dev_console` |
 
-> **注意**: 部分 `.rpy` 文件（`data/items.rpy`、`data/jobs.rpy`、`data/perks.rpy`、`data/powers.rpy`、`data/settings.rpy`、`data/spells.rpy`）仍作为 fallback 硬编码保留——JSON 缺失时游戏仍可启动。权威数据始终是同名子目录下的 JSON。详见 [`../migration/DATA_MIGRATION.md`](../migration/DATA_MIGRATION.md)。
+> **注意**: 部分 `.rpy` 文件（`data/items.rpy`、`data/jobs.rpy`、`data/perks.rpy`、`data/powers.rpy`、`data/settings.rpy`、`data/spells.rpy`、`data/quality.rpy`）仍作为 fallback 硬编码保留——JSON 缺失时游戏仍可启动。权威数据始终是同名子目录下的 JSON。`data/quality.rpy` 是特例：其权威数据已**迁出 core**，现由 `custom/mods/Item Quality/` Mod 提供（该 Mod 被禁用或卸载时回退此文件）。详见 [`../migration/DATA_MIGRATION.md`](../migration/DATA_MIGRATION.md)。
 
 ### `core/content/events/` — 自定义事件脚本入口
 
@@ -104,7 +104,7 @@ game/
 | 文件 | 说明 |
 |------|------|
 | `mod_api.rpy` | v1 `ModAPI`（Registry 包装 + HookManager 包装） |
-| `mod_api_v2.rpy` | v2 `ModAPIV2`（register_mod / manifest / 18 个标准化钩子） |
+| `mod_api_v2.rpy` | v2 `ModAPIV2`（register_mod / manifest / 19 个标准化钩子） |
 | `mod_hooks.rpy` | Phase 6 `HookManager`（v1 兼容层钩子分发器） |
 
 详见 [`MOD_API.md`](MOD_API.md)。
@@ -156,6 +156,12 @@ custom/mods/
 │   ├── mod.rpy               # register_mod 入口 + 主页菜单按钮 screen
 │   ├── auction.rpy           # 拍卖核心类（AuctionLot/AuctionSession/AuctionHouse）
 │   └── auction_screens.rpy   # UI screen
+├── Item Quality/             ← v2 数据型 Mod 范例（物品品质档位，原 core settings/quality.json）
+│   ├── mod.rpy               # register_mod 入口（requires: ["items"]）
+│   ├── quality.rpy           # load_quality_tiers()（init -9，读 JSON 注册档位）
+│   ├── quality.json          # 7 档数据（前缀/价格乘数）
+│   ├── tl/chinese_simplified/  # Mod 自带翻译（前缀词条 + manifest 串）
+│   └── README.txt            # 禁用/卸载语义与扩展方式
 └── Goldo's cool mod/         ← v1 Mod 教程范例（含 title.png）
     └── goldo's cool mod.rpy  # Mod(...) 构造 + events + help_prompts + labels
 ```
@@ -164,7 +170,8 @@ Mod 可以：
 
 - 通过 v1 `Mod()` 或 v2 `services.mod_api_v2.register_mod()` 注册（两套机制共存，见 [`MOD_API.md`](MOD_API.md)）；
 - 注册钩子（v2 标准化钩子或 v1 HookManager）；
-- 添加自定义 Trait、Perk、事件、游戏模式、出身、剧本；
+- 添加自定义 Trait、Perk、事件、游戏模式、出身、剧本、物品品质档位（`register_quality`）；
+- 在 `<mod>/tl/chinese_simplified/` 自带翻译（见 [`MOD_API.md`](MOD_API.md) §7）；
 - 声明主页右侧菜单按钮（`home_rightmenu_add_buttons`）。
 
 > **注意**: 剧本 Mod 也是一种 Mod，统一放在 `custom/mods/` 下，不要单独设 `custom/scenarios/` 目录。

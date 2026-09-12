@@ -1,6 +1,6 @@
 # Brothel King — game/core 重构进度文档
 
-> 最后更新: 2026-09-11（Phase 7 Girl 组件化收官后）
+> 最后更新: 2026-09-13（物品品质系统 Mod 化后）
 > 当前分支: `bk-evolution`
 
 ---
@@ -274,11 +274,11 @@ f027957  ── 批次14a: 修复批次8双重执行bug(generate_preferences 纯
 
 ### 特性
 - 版本化 API: `api_version = 2`
-- 能力标记: `requires = ["girl_traits", "events"]`
-- 16 个标准化钩子点 (HOOK_GIRL_GENERATED, HOOK_DAY_STARTING 等)
+- 能力标记: `requires = ["girl_traits", "events", "items", ...]`
+- 19 个标准化钩子点 (HOOK_GIRL_GENERATED, HOOK_DAY_STARTING, HOOK_ITEM_GENERATED 等)
 - 钩子取消支持 (`cancel_hook`)
 - 本版不兼容旧 Mod (需求要求)
-- ✅ **钩子已接线** (2026-09-11, c6b3fa2): 全部 16 个钩子点已接入游戏流程
+- ✅ **钩子已接线** (2026-09-11, c6b3fa2): 全部钩子点已接入游戏流程
   （日/夜循环、女孩生成/获得/出售/逃跑、事件、章节、安保、存档/读档），纯通知型
 - ✅ **UI 集成** (2026-09-11, 1788c04): manifest 支持 `home_rightmenu_add_buttons`
   （主页右侧菜单按钮）；`get_menu_buttons()` / `get_mod_info()` 供 UI 查询；
@@ -288,6 +288,19 @@ f027957  ── 批次14a: 修复批次8双重执行bug(generate_preferences 纯
 ### 模板更新
 **文件**: `game/core/templates/mod_template/mod_template.rpy`
 - 展示 v2 模式 (register_mod + 钩子注册)
+
+### 物品品质系统 Mod 化 (2026-09-13)
+
+物品系统重构第一任务：把模板物品的 0-6 档品质系统提取为独立 v2 Mod，遵循 "框架留 core、数据进 Mod、core 留兜底" 的 Game Modes 先例。
+
+- **core 框架**（新）: `systems/registry/quality_registry.rpy`（init -5）——`QualityTier`（前缀/价格乘数/稀有度提升/效果缩放）+ `QualityRegistry`（`register_quality`/`get_tier`/`get_tiers`/`get_max_rank`）；
+- **core 兜底**（新）: `data/quality.rpy`（init -4）——原 `settings/quality.json` 的 7 档数据逐字硬编码，**勿删**；
+- **新 Mod**: `custom/mods/Item Quality/`（mod_id `item_quality`）——`mod.rpy`（注册 + `is_mod_active` 门控）+ `quality.rpy`（init -9 定义、读自带 `quality.json`）+ `tl/chinese_simplified/`（Mod 自管翻译）+ `README.txt`；
+- **API 扩展**: CAPABILITIES 加 `"items"`；新增 `HOOK_ITEM_GENERATED = "item_generated"`（第 19 个钩子，纯通知型，context `{item, template, tier}`）；v1 基类加 `register_quality`；
+- **items.rpy 重构**: `generate_new_item` / `transform_template` / `init_items` 改走注册表，行为逐位等价（522 例对拍全等）；
+- **删除旧路径**: `DataLoader.load_quality()`、`variables.rpy` 全局加载块、`data/settings/quality.json`；
+- **翻译迁移**: 31 条前缀词条从 `tl/chinese_simplified/strings.rpy` 移入 Mod 自有 `tl/`（core 保留 Fine/Broken/Medium/Cheap 等共用词条）；
+- **验证**: `tools/verify_mod_api.py` 19/19 钩子通过；三方数据对拍全等；522 例生成结果对拍全等；空注册表边界返回 None 不崩溃。
 
 ---
 
@@ -399,7 +412,7 @@ tools/
 2. **剩余方法迁移** — ✅ 全部完成 (Phase 7, 2026-09-11): 批次1-14 迁移 ~120 方法、新建 GirlProgression、修复 generate_preferences 双重执行与 change_stat 上限回归、清 6 处过时副本与 3 处死壳。**girlclass.rpy 5,900→1,148 行**。唯一遗留: `__init__` 拆分（暂缓，存档兼容风险）、`get_schedule`/`is_unique` 微方法（有意保留）
 3. **屏幕提取** — ✅ 全部完成 (Phase 2, 2026-09-10): screens.rpy 8,886 → 620 行，108 screen → 16 个文件，逐字比对验证一致
 4. **翻译工具** — ✅ 已决策不实现 `translate_sync.py` (Phase 3): 同步需求由现有工具链覆盖——缺失检测 `verify_i18n.py`(`translate --count`)、占位符完整性 `audit_placeholders.py`、空翻译往返 `export_empty_to_xlsx.py`/`import_translated_empty.py`、陈旧条目由 Ren'Py `translate` 重写时清理。详见 `docs/i18n/I18N_ROADMAP.md` 第 6 节。另修复 `i18n_lint.py`/`verify_i18n.py` 硬编码旧路径（改为按脚本位置推导项目根）。
-5. **Mod API v2 测试** — ✅ 已完成 (Phase 3): `tools/verify_mod_api.py` 静态断言 + 桩环境全流程模拟（注册→触发→取消），`python tools/verify_mod_api.py` 全过；游戏内 `test_mod_api_v2` 冒烟 label 同步加入 Test Runner。**发现并修复**: `cancel_hook` 经 `execute_hook` 中转导致 context 永不达回调、永远返回 False。另注意：16 个 HOOK_* 常量（本文档此前写 15），且游戏代码目前没有任何 `execute_hook`/`cancel_hook` 调用点——钩子框架就绪但尚未接线。
+5. **Mod API v2 测试** — ✅ 已完成 (Phase 3): `tools/verify_mod_api.py` 静态断言 + 桩环境全流程模拟（注册→触发→取消），`python tools/verify_mod_api.py` 全过；游戏内 `test_mod_api_v2` 冒烟 label 同步加入 Test Runner。**发现并修复**: `cancel_hook` 经 `execute_hook` 中转导致 context 永不达回调、永远返回 False。现状（2026-09-13）: 19 个 HOOK_* 常量全部接线，游戏代码有多处 `execute_hook` 调用点（`items.rpy` 的 `item_generated` 等）；`cancel_hook` 仍无游戏内调用点。
 6. **Dev Console 快捷键** — ✅ 已修复 (Phase 3, c47440e): 根因有二——①keymap 绑定的是无修饰键 `K_o`（应为 `shift_K_o`）；②console screen 为 `modal True`，modal 阻断下层事件，underlay Keymap 在控制台显示期间收不到按键，无法关闭。修复：underlay 负责全局打开，屏幕内 `key "shift_K_o"` 负责关闭，输入框聚焦时忽略切换（避免输入大写 O 误关）。
 
 ---
@@ -417,10 +430,12 @@ tools/
 init -12   service_container  ── GameServices
 init -11   game_config       ── GameConfig
 init -10   settings/translations
-init -5    registry           ── 各种 Registry
-init -4    variables          ── 全局变量
-init -3    utils/effects      ── 工具函数
+init -9    mod definitions    ── Mod 自有类/函数定义（如 Item Quality 的 load_quality_tiers）
+init -5    registry           ── 各种 Registry（含 QualityRegistry）
+init -4    variables          ── 全局变量 + 硬编码 fallback（含 data/quality.rpy）
+init -3    utils/effects      ── 工具函数（含 ModAPIV2 定义）
 init -2    class definitions  ── 所有类定义 + 组件
+init -1    mods               ── v2 Mod 注册入口（register_mod + is_mod_active 门控）
 init       start label        ── 游戏实例创建
 ```
 

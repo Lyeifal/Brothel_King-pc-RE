@@ -65,11 +65,11 @@ Defined at `game/core/systems/mods/mod_api_v2.rpy:17` (`class ModAPIV2(ModAPI)`,
 - **`register_mod(mod_id, manifest)`** (:50): the manifest contains `name/version/api_version(must=2)/min_game_version/author/description/requires/hooks/dependencies/home_rightmenu_add_buttons`. Duplicate registration raises an error.
 - **Permanently active**: no per-save toggle; disabling = removing the files from `game/custom/mods/`.
 - **UI integration**: `get_menu_buttons()` feeds the home right-side menu rendering; `get_mod_info()` feeds the mods screen display.
-- **v1 inheritance**: v2 inherits `ModAPI`, so registration wrappers such as `register_trait/perk/tag/dialogue/event/ngp_setting/scenario/origin/game_mode` are likewise available to v2 Mods.
+- **v1 inheritance**: v2 inherits `ModAPI`, so registration wrappers such as `register_trait/perk/tag/dialogue/event/ngp_setting/scenario/origin/game_mode/quality` are likewise available to v2 Mods.
 
-## 4. The 18 v2 Hook Points (all wired, each verified via grep)
+## 4. The 19 v2 Hook Points (all wired, each verified via grep)
 
-Naming convention `<domain>_<action>_<tense>`. Hook constants are defined at mod_api_v2.rpy:187-204. Except for the last two destination hooks, **all are pure notification hooks** — call sites discard the return value via `$ mod_api_v2.execute_hook(...)`, so Mods can only observe, not intercept, game logic (the `cancel_hook` mechanism exists but no in-game call site currently uses it). `girl_destination_list`/`girl_destination_accept` are the exception: return values/arguments wire mod-registered girl destinations into the acquisition flow (see rows 17/18 and the "Courtyard" mod reference implementation).
+Naming convention `<domain>_<action>_<tense>`. Hook constants are defined at mod_api_v2.rpy:365-383. Except for the last two destination hooks, **all are pure notification hooks** — call sites discard the return value via `$ mod_api_v2.execute_hook(...)`, so Mods can only observe, not intercept, game logic (the `cancel_hook` mechanism exists but no in-game call site currently uses it). `girl_destination_list`/`girl_destination_accept` are the exception: return values/arguments wire mod-registered girl destinations into the acquisition flow (see rows 17/18 and the "Courtyard" mod reference implementation).
 
 | # | Constant | Hook name | Call site (file:line) | Context keys |
 |---|----------|-----------|-----------------------|--------------|
@@ -91,6 +91,7 @@ Naming convention `<domain>_<action>_<tense>`. Hook constants are defined at mod
 | 16 | `HOOK_GAME_LOADED` | `game_loaded` | `systems/events_dispatcher.rpy:191` | — |
 | 17 | `HOOK_GIRL_DESTINATION_LIST` | `girl_destination_list` | `systems/events_dispatcher.rpy:8403` | `girl`, `at_working_cap`; callbacks return `[{"id", "text", "available"}]` |
 | 18 | `HOOK_GIRL_DESTINATION_ACCEPT` | `girl_destination_accept` | `systems/events_dispatcher.rpy:8497` | `girl`, `destination` |
+| 19 | `HOOK_ITEM_GENERATED` | `item_generated` | `systems/items.rpy:239` | `item` (the finished new item, mutable in place), `template` (the source template item), `tier` (the `QualityTier` used) |
 
 For Mod-side usage see the template `game/core/templates/mod_template/mod_template.rpy:47-53`: `api.register_hook(api.HOOK_GIRL_GENERATED, on_girl_generated)`, with callback signature `callback(context: dict)`.
 
@@ -121,7 +122,7 @@ How the two coexisting systems relate:
 v1 Mod (challenges.rpy)
   └─ mod.hooks ──→ HookManager (mod_hooks.rpy) ──→ on_day_end / on_settlement_* / on_event_trigger
 v2 Mod (manifest hooks + register_hook)
-  └─ _mod_hooks (mod_api_v2.rpy:46, independent storage!) ──→ the 18 hooks such as girl_generated (girl_destination_list/accept are interactive)
+  └─ _mod_hooks (mod_api_v2.rpy:46, independent storage!) ──→ the 19 hooks such as girl_generated (girl_destination_list/accept are interactive)
 ```
 
 Two things to note:

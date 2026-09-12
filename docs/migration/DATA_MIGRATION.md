@@ -15,8 +15,8 @@
 > | 权威数据 | `game/core/data/<域>/*.json` | 共 36 个子目录（含 `_schemas/`），加载点见 `DataLoader`（`game/core/systems/data_loader.rpy`） |
 > | Schema 校验 | `game/core/data/_schemas/*.schema.json` | 每域一份 JSON Schema |
 > | 加载器 | `game/core/systems/data_loader.rpy` | 全部 `load_*()` 类方法，JSON 优先 |
-> | 注册表 | `game/core/systems/registry/` | `registry.rpy` 基类 + trait/perk/tag/dialogue/event/meta/ngp/unlock 九个 Registry |
-> | 硬编码 fallback | `game/core/data/*.rpy`（`items.rpy`、`jobs.rpy`、`perks.rpy`、`powers.rpy`、`settings.rpy`、`spells.rpy`）及各 .rpy 内 `_fallback_*` | JSON 缺失时保证游戏可启动；**勿删** |
+> | 注册表 | `game/core/systems/registry/` | `registry.rpy` 基类 + trait/perk/tag/dialogue/event/meta/ngp/unlock/quality 十个 Registry |
+> | 硬编码 fallback | `game/core/data/*.rpy`（`items.rpy`、`jobs.rpy`、`perks.rpy`、`powers.rpy`、`settings.rpy`、`spells.rpy`、`quality.rpy`）及各 .rpy 内 `_fallback_*` | JSON 缺失时保证游戏可启动；**勿删**。`quality.rpy` 的权威数据已迁出 core，见下方 #12 与附录 |
 > | 数据导出 | `game/core/systems/data_exporter.rpy` | 与 DataLoader 对称的 `export_*()` |
 > | 可视化编辑 | `tools/bk_editor/` | 编辑器套件，映射见 `tools/bk_editor/README.md` |
 >
@@ -207,7 +207,7 @@
 | # | 文件 | 变量名 | 类型 | 条目数 | 描述 |
 |---|------|--------|------|--------|------|
 | 11 | `variables.rpy` | `brothel_ranking_reputations` | dict | 40 | 青楼声望等级名称（40 个排名头衔） ✅ 已迁移至 `settings/rankings.json` |
-| 12 | `variables.rpy` | `quality_prefix` + `quality_modifier` | dict | 57 | 物品品质前缀 + 价格乘数系统 ✅ 已迁移至 `settings/quality.json` |
+| 12 | `variables.rpy` | `quality_prefix` + `quality_modifier` | dict | 57 | 物品品质前缀 + 价格乘数系统 ✅ 已迁移至 `settings/quality.json`，**再于 2026-09-13 从 core 迁出至 `custom/mods/Item Quality/` Mod**（core 只保留 `data/quality.rpy` 硬编码 fallback + `QualityRegistry` 框架） |
 | 13 | `variables.rpy` | `encounters` + `encounter_pics` + `pop_name_dict` | tuple/dict | ~60 | 城市遭遇类型 + 图片 + 人口随机名字 ✅ 已迁移至 `settings/encounters.json` |
 | 14 | `variables.rpy` | `jokes` + `compliments` | dict | ~20 | 社交交互文本库（笑话 + 赞美） ✅ 已迁移至 `settings/dialogue_texts.json` |
 | 15 | `variables.rpy` | `help_dict` + `help_pic_dict` + `help_center_pic_dict` | dict | 120+ | Brokipedia 帮助文本系统（100+ 条目） ✅ 已迁移至 `settings/help_texts.json` |
@@ -298,7 +298,7 @@
 **中期（3-5 个会话）：**
 - ✅ 契约任务系统 — 已迁移至 `settings/contracts.json`
 - ✅ 经验/等级/晋升系统 — 已迁移至 `settings/xp_rank_params.json`
-- ✅ 品质系统 — 已迁移至 `settings/quality.json`
+- ✅ 品质系统 — 已迁移至 `settings/quality.json`，再迁出至 `custom/mods/Item Quality/` Mod（2026-09-13；core 保留 `data/quality.rpy` fallback）
 - ✅ 训练/偏好系统 — 已迁移至 `settings/sex_training_params.json`
 - ✅ 背景生成随机池 — 已迁移至 `settings/girl_background_pools.json`
 - ✅ 结果判定系统 — 已迁移至 `settings/roll_results.json` / `settings/threat_params.json`
@@ -331,6 +331,7 @@
 | Powers | `data/powers.rpy` | 全量移除，仅保留 `_fallback_*` |
 | Spells | `data/spells.rpy` | 全量移除，仅保留 `_fallback_*` + `moons` fallback |
 | MC Classes | `data/spells.rpy` | `spellbook` 迁移至 `mc_classes.json`，原硬编码改为 fallback |
+| Item Quality | `data/settings/quality.json`（原 `init/variables.rpy`） | JSON 已删除；数据迁出 core 至 `custom/mods/Item Quality/quality.json`，core 保留 `data/quality.rpy` 硬编码 fallback（**勿删**）+ `QualityRegistry` 框架 |
 
 ---
 

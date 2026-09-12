@@ -28,7 +28,7 @@
 | [project/PROJECT_GUIDE.md](project/PROJECT_GUIDE.md) | 数据驱动架构与 JSON 数据规范（Mod 数据扩展必读） |
 | [`../tools/bk_editor/README.md`](../tools/bk_editor/README.md) | 编辑器套件使用说明（女孩包 / 剧本 / 数据编辑） |
 
-Mod 接口现状：v1 `Mod()`（`game/core/framework/challenges.rpy`）与 v2 `ModAPIV2`（`game/core/systems/mods/mod_api_v2.rpy`，16 个钩子点已接线）并存，v2 模板见 `game/core/templates/mod_template/`，范例 Mod 见 `game/custom/mods/Auction House/`。
+Mod 接口现状：v1 `Mod()`（`game/core/framework/challenges.rpy`）与 v2 `ModAPIV2`（`game/core/systems/mods/mod_api_v2.rpy`，19 个钩子点已接线）并存，v2 模板见 `game/core/templates/mod_template/`，范例 Mod 见 `game/custom/mods/Auction House/`（UI 型）与 `game/custom/mods/Item Quality/`（数据型，自带 `tl/` 翻译）。
 
 ### 🌐 译者
 

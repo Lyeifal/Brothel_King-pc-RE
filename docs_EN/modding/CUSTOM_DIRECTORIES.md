@@ -86,7 +86,7 @@ This is the core directory of BK Evolution's data-driven architecture. All JSON 
 | `traits/` | Traits | `girl_pack_editor` |
 | `worlds/` | World/district configuration | `dev_console` |
 
-> **Note**: Some `.rpy` files (`data/items.rpy`, `data/jobs.rpy`, `data/perks.rpy`, `data/powers.rpy`, `data/settings.rpy`, `data/spells.rpy`) are still kept as hardcoded fallbacks — the game can still start when JSON is missing. The authoritative data is always the JSON in the subdirectory of the same name. See [`../migration/DATA_MIGRATION.md`](../migration/DATA_MIGRATION.md) for details.
+> **Note**: Some `.rpy` files (`data/items.rpy`, `data/jobs.rpy`, `data/perks.rpy`, `data/powers.rpy`, `data/settings.rpy`, `data/spells.rpy`, `data/quality.rpy`) are still kept as hardcoded fallbacks — the game can still start when JSON is missing. The authoritative data is always the JSON in the subdirectory of the same name. `data/quality.rpy` is a special case: its authoritative data has **moved out of core** and is now provided by the `custom/mods/Item Quality/` mod (this file is the fallback when that mod is disabled or uninstalled). See [`../migration/DATA_MIGRATION.md`](../migration/DATA_MIGRATION.md) for details.
 
 ### `core/content/events/` — Custom event script entry point
 
@@ -104,7 +104,7 @@ Put event scripts in `.rpy` format here, suitable for complex logic (multiple br
 | File | Description |
 |------|------|
 | `mod_api.rpy` | v1 `ModAPI` (Registry wrapper + HookManager wrapper) |
-| `mod_api_v2.rpy` | v2 `ModAPIV2` (register_mod / manifest / 16 standardized hooks) |
+| `mod_api_v2.rpy` | v2 `ModAPIV2` (register_mod / manifest / 19 standardized hooks) |
 | `mod_hooks.rpy` | Phase 6 `HookManager` (v1 compatibility-layer hook dispatcher) |
 
 See [`MOD_API.md`](MOD_API.md) for details.
@@ -156,6 +156,12 @@ custom/mods/
 │   ├── mod.rpy               # register_mod entry + home menu button screen
 │   ├── auction.rpy           # Auction core classes (AuctionLot/AuctionSession/AuctionHouse)
 │   └── auction_screens.rpy   # UI screens
+├── Item Quality/             ← v2 data-driven mod example (item quality tiers, ex core settings/quality.json)
+│   ├── mod.rpy               # register_mod entry (requires: ["items"])
+│   ├── quality.rpy           # load_quality_tiers() (init -9, reads JSON and registers tiers)
+│   ├── quality.json          # 7 tiers of data (prefixes / price multipliers)
+│   ├── tl/chinese_simplified/  # mod-owned translations (prefix entries + manifest strings)
+│   └── README.txt            # disable/uninstall semantics and extension how-to
 └── Goldo's cool mod/         ← v1 mod tutorial example (includes title.png)
     └── goldo's cool mod.rpy  # Mod(...) construction + events + help_prompts + labels
 ```
@@ -164,7 +170,8 @@ Mods can:
 
 - Register via v1 `Mod()` or v2 `services.mod_api_v2.register_mod()` (both mechanisms coexist, see [`MOD_API.md`](MOD_API.md));
 - Register hooks (v2 standardized hooks or the v1 HookManager);
-- Add custom traits, perks, events, game modes, origins, scenarios;
+- Add custom traits, perks, events, game modes, origins, scenarios, item quality tiers (`register_quality`);
+- Ship their own translations under `<mod>/tl/chinese_simplified/` (see [`MOD_API.md`](MOD_API.md) §7);
 - Declare home right-side menu buttons (`home_rightmenu_add_buttons`).
 
 > **Note**: A scenario mod is also a mod; keep it under `custom/mods/` uniformly. Do not create a separate `custom/scenarios/` directory.

@@ -202,12 +202,13 @@ services.mod_api_v2.register_mod("my_mod", {
 
 **`dependencies`**：manifest 可选 mod_id 列表，强制语义——前置未激活则本 Mod 不激活（见上）。范例：`"dependencies": ["game_modes"]` 声明依赖 "Game Modes" Mod（见 §6.5）。
 
-**能力标志**（`CAPABILITIES`，`mod_api_v2.rpy:52-63`）——声明 Mod 需要的能力面，当前用于注册期校验与文档语义：
+**能力标志**（`CAPABILITIES`，`mod_api_v2.rpy:52-64`）——声明 Mod 需要的能力面，当前用于注册期校验与文档语义：
 
 ```python
 "girl_stats"    # 修改女孩属性
 "girl_traits"   # 注册自定义特质/天赋
 "economy"       # 修改经济计算
+"items"         # 注册自定义物品品质档位 / 影响物品生成
 "events"        # 注册/分发事件
 "dialogue"      # 自定义对话行
 "pictures"      # 自定义图片标签
@@ -240,9 +241,9 @@ v2 没有 v1 的 label 机制，生命周期事件通过钩子覆盖：
 
 ---
 
-## 3. 钩子点完整参考（18 个）
+## 3. 钩子点完整参考（19 个）
 
-常量定义：`game/core/systems/mods/mod_api_v2.rpy:365-382`。命名惯例 `<domain>_<action>_<tense>`（`girl_runaway`、`girl_sold`、`security_event` 三个名字不含 `_<tense>`，`tools/verify_mod_api.py` 会对此发出命名惯例警告，属已知事项）。
+常量定义：`game/core/systems/mods/mod_api_v2.rpy:365-383`。命名惯例 `<domain>_<action>_<tense>`（`girl_sold`、`girl_runaway`、`security_event`、`girl_destination_list`、`girl_destination_accept` 五个名字不含 `_<tense>`，`tools/verify_mod_api.py` 会对此发出命名惯例警告，属已知事项）。
 
 回调签名统一为 `callback(context: dict)`；`execute_hook` 把关键字参数打包成 context dict 传入（`mod_api_v2.rpy:308-331`），并跳过未激活 Mod 的回调。
 
@@ -266,6 +267,7 @@ v2 没有 v1 的 label 机制，生命周期事件通过钩子覆盖：
 | 16 | `HOOK_GAME_LOADED` | `game_loaded` | `game/core/systems/events_dispatcher.rpy:191`（after_load） | 无 |
 | 17 | `HOOK_GIRL_DESTINATION_LIST` | `girl_destination_list` | `game/core/systems/events_dispatcher.rpy:8403` | `girl`, `at_working_cap` |
 | 18 | `HOOK_GIRL_DESTINATION_ACCEPT` | `girl_destination_accept` | `game/core/systems/events_dispatcher.rpy:8497` | `girl`, `destination` |
+| 19 | `HOOK_ITEM_GENERATED` | `item_generated` | `game/core/systems/items.rpy:239`（`Item.generate_new_item`） | `item`, `template`, `tier` |
 
 说明：
 
@@ -274,6 +276,7 @@ v2 没有 v1 的 label 机制，生命周期事件通过钩子覆盖：
 - `game_saved`/`game_loaded` 无 context 键（调用时不带参数）；
 - **当前游戏代码没有调用 `cancel_hook()` 的点**（§4），它由测试覆盖（`game/core/tools/test_runner.rpy:352-353`），供 Mod 作者自行 `call` 使用。
 - `girl_destination_list` 在青楼满员收购女孩时触发：Mod 回调返回目的地列表 `[{"id", "text", "available"}]`，本体将其加入安置菜单；玩家选择后触发 `girl_destination_accept`（`destination` 为目的地 id）。参考实现：`game/custom/mods/Courtyard/mod.rpy`（"Courtyard" Mod）。
+- `item_generated`（**纯通知型**，无返回值契约）在**每次由模板物品烤出成品**时触发，每个新游戏 `init_items` 阶段约 400 次（90 个模板 × 各自 4-5 档）。context：`item` 为已烤好的新成品（`name`/`name_i18n`/`price`/`rarity`/`rank`/`base_effects` 均已写好，回调可原地改写，改动会进入该新游戏的物品池），`template` 为源模板物品，`tier` 为本次使用的 `QualityTier`。参考实现：`game/custom/mods/Item Quality/`（"Item Quality" Mod）。
 
 ---
 
@@ -312,14 +315,17 @@ v2 没有 v1 的 label 机制，生命周期事件通过钩子覆盖：
 
 ### 其他（继承自 `ModAPI`，`mod_api.rpy`）
 
-`register_trait` / `register_perk` / `register_tag` / `register_dialogue` / `register_event` / `register_ngp_setting` / `register_scenario` / `register_origin` / `register_game_mode`，以及 v1 兼容的 `get_mod_path` / `is_mod_active` / `get_active_mods`（注意后两个操作的是 v1 `detected_mods`）。
+`register_trait` / `register_perk` / `register_tag` / `register_dialogue` / `register_event` / `register_ngp_setting` / `register_scenario` / `register_origin` / `register_game_mode` / `register_quality`，以及 v1 兼容的 `get_mod_path` / `is_mod_active` / `get_active_mods`（注意后两个操作的是 v1 `detected_mods`）。
+
+`register_quality(tier)`（`mod_api.rpy`）把 `QualityTier` 按其 `rank` 注册进 `quality_registry`；**同 rank 覆盖**（后注册者胜），因此 Mod 既可调整默认 0-6 档的数值，也可扩展出 7 档以上（`Item.generate_new_item` 的 `rank` 上限取 `quality_registry.get_max_rank()`，`init_items` 遍历 `get_tiers()`）。见 §6.6。
 
 ### 验证工具
 
 `python tools/verify_mod_api.py` —— 纯 Python 静态断言 + 模拟执行（不依赖 Ren'Py 运行时）：
 
-- 断言 18 个 `HOOK_*` 常量存在且取值唯一（`EXPECTED_HOOK_COUNT = 18`）；
+- 断言 19 个 `HOOK_*` 常量存在且取值唯一（`EXPECTED_HOOK_COUNT = 19`）；
 - 断言 `register_mod`/`unregister_mod`/`register_hook`/`execute_hook`/`cancel_hook`/`set_mod_enabled`/`is_mod_enabled`/`apply_startup_states`/`list_registered_mods`/`missing_dependencies` 存在；
+- 断言 v1 基类包装 `register_trait`/`register_perk`/`register_event`/`register_quality`/`register_game_mode` 存在，且 `CAPABILITIES` 含 `"items"`；
 - 断言 `mod_template.rpy` 引用的每个 `api.HOOK_*` 真实存在；
 - 模拟执行注册、重复注册拒绝、未知能力拒绝、优先级排序、异常吞掉、取消流程、`get_menu_buttons`/`get_mod_info` 行为、持久化启用/禁用（桩 `persistent`）、禁用 Mod 钩子跳过、`always_on`、`dependencies` 前置解析与 `apply_startup_states` 幂等；
 - 当前结果：**全部通过**，5 条命名惯例警告（`girl_sold`/`girl_runaway`/`security_event`/`girl_destination_list`/`girl_destination_accept` 无 `_<tense>` 后缀）。
@@ -441,6 +447,70 @@ init -1 python:
 
 本 Mod 目录下的 `README.txt` 记录了该约定（Ren'Py 启动器会忽略非 `.rpy` 文件）。
 
+### 6.6 数据型扩展范例：Item Quality（物品品质）
+
+`game/custom/mods/Item Quality/`（mod_id `"item_quality"`）是**数据型 Mod** 的参考：核心保留注册框架 + 硬编码兜底，Mod 提供可热插拔的数据。它同时示范了 `register_quality`、`"items"` 能力标志、`item_generated` 钩子与 Mod 自带翻译目录。
+
+**核心侧框架**（`game/core/systems/registry/quality_registry.rpy`，`init -5`）：
+
+- `QualityTier(rank, price_modifier, prefixes, rarity_keep)`——`prefixes` 是「形容词类别 → 英文前缀」（缺键回落 `"misc"`），`rarity_keep` 默认 `("S","U","M")`（这些稀有度不随档位缩放）；
+- `QualityRegistry`（继承 `Registry`）——`register_quality(tier)` 按 `str(rank)` 键控、`get_tier(rank)`、`get_tiers()`、`get_max_rank()`；
+- 硬编码兜底 `game/core/data/quality.rpy`（`init -4`，**勿删**，与 Mod 数据完全一致，禁用 Mod 时玩家无感）。
+
+**Mod 侧**（三分法：注册 / 逻辑 / 数据）：
+
+```renpy
+## mod.rpy —— 注册入口（init -1）
+init -1 python:
+    services.mod_api_v2.register_mod("item_quality", {
+        "name": __("Item Quality"),
+        "api_version": 2,
+        "requires": ["items"],
+        "always_on": False,
+    })
+    ## EN: Register tiers only while active; disabled -> core fallback stays.
+    ## ZH: 仅激活时注册档位；禁用时保留核心兜底（数据一致）。
+    if services.mod_api_v2.is_mod_active("item_quality"):
+        load_quality_tiers()
+```
+
+```renpy
+## quality.rpy —— 数据加载（init -9，供上面的 init -1 调用）
+init -9 python:
+    import json
+    QUALITY_JSON_PATH = "custom/mods/Item Quality/quality.json"
+
+    def load_quality_tiers():
+        ## EN: mod-local JSON via renpy.loader (Ren'Py archives included).
+        ## ZH: 经 renpy.loader 读取 Mod 自带 JSON（兼容打包进归档）。
+        try:
+            with renpy.loader.load(QUALITY_JSON_PATH) as _f:
+                _data = json.load(_f)
+        except Exception as _e:
+            renpy.notify(__("Item Quality mod: could not load quality.json (%s)") % _e)
+            return   ## 保留核心回退档位，游戏不崩
+        for _tier_data in _data.get("tiers", []):
+            quality_registry.register_quality(QualityTier.from_dict(_tier_data))
+```
+
+其他 Mod 覆盖品质的方式（同 rank 覆盖、可加新档）：
+
+```python
+init -1 python:
+    if services.mod_api_v2.is_mod_active("my_mod"):
+        quality_registry.register_quality(QualityTier(
+            rank=3, price_modifier=12.0,
+            prefixes={"dress": "Gilded", "misc": "Gilded"},
+        ))
+```
+
+学习要点：
+
+1. **框架在 core、数据在 Mod**：`QualityRegistry` 与 `QualityTier` 属核心注册表（`init -5`），Mod 只喂数据——Mod 被禁用/删除后游戏仍能启动；
+2. **init 层级**：Mod 的类/函数定义必须早于注册入口（`init -9` 定义、`init -1` 注册），与 Game Modes 的 `story_mode.rpy` 同构；
+3. **Mod 自带翻译**：前缀词条放 `tl/chinese_simplified/quality.rpy`，`old` 串必须与源码**逐字节一致**（含尾随空格，如 `"Cheap "`）；Ren'Py 无条件加载 `tl/`，所以禁用 Mod 后中文前缀仍然生效；
+4. **卸载降级**：删目录后 `__()` 找不到词条会回退英文原文（可接受降级，见该 Mod 的 `README.txt`）。
+
 对照 v1 教程范例：`game/custom/mods/Goldo's cool mod/goldo's cool mod.rpy`（209 行）演示 v1 全流程——`Mod(...)` 构造、`help_prompts` 选项菜单、`early_label`/`init_label` 标签、`events` + `add_event()` 调度（alarm/morning/city 三种 type）、`set_condition` 条件事件、自定义 `register_trait`、`home_rightmenu_add_buttons` 按钮 screen。
 
 ---
@@ -454,9 +524,9 @@ init -1 python:
 | manifest `hooks` 注册优先级恒为 0 | 📝 设计如此 | 需优先级时用 `register_hook(..., priority=N)` 单独注册 |
 | `register_hook()` 直注册的回调不受禁用过滤 | 📝 设计如此 | `"_direct"` 回调无法归属 Mod；要随禁用生效请走 manifest `hooks` |
 | `cancel_hook` 无游戏内调用点 | 📝 已知 | 仅测试覆盖；供 Mod/脚本自行调用 |
-| 3 个钩子名不符合 `<domain>_<action>_<tense>` | 📝 已知 | `girl_sold` / `girl_runaway` / `security_event`，verify_mod_api 输出警告；改名会破坏已注册回调，保持现状 |
+| 5 个钩子名不符合 `<domain>_<action>_<tense>` | 📝 已知 | `girl_sold` / `girl_runaway` / `security_event` / `girl_destination_list` / `girl_destination_accept`，verify_mod_api 输出警告；改名会破坏已注册回调，保持现状 |
 | v2 启用状态持久化 | ✅ 已实现 | 启用/禁用开关存 `persistent._bk_v2_mod_states`（主菜单 Mod 管理界面切换）；Mod 自定义内容数据仍需自行借助 `game_saved`/`game_loaded` 钩子保存 |
-| Mod 内容翻译 | ⏳ 待规划 | `game/custom/` 内容默认保持原文；未来可通过统一字符串表支持 |
+| Mod 内容翻译 | ✅ 可用（Mod 自管） | 每个 Mod 在 `<mod>/tl/chinese_simplified/*.rpy` 自带翻译（`old` 必须与源码逐字节一致，含尾随空格）；Ren'Py 无条件加载 `tl/`，故禁用 Mod 后其词条仍生效，删除 Mod 后孤儿词回退英文原文。范例：`game/custom/mods/Item Quality/tl/chinese_simplified/` |
 
 ---
 
@@ -466,4 +536,5 @@ init -1 python:
 - [`../tools/TOOLS.md`](../tools/TOOLS.md) — `tools/verify_mod_api.py` 等工具清单
 - [`../../game/core/templates/mod_template/mod_template.rpy`](../../game/core/templates/mod_template/mod_template.rpy) — v2 Mod 空白模板
 - [`../../game/custom/mods/Auction House/mod.rpy`](../../game/custom/mods/Auction%20House/mod.rpy) — v2 范例入口
+- [`../../game/custom/mods/Item Quality/README.txt`](../../game/custom/mods/Item%20Quality/README.txt) — 数据型 Mod 范例（`register_quality` + 自带翻译）
 - [`../../game/custom/mods/Goldo's cool mod/goldo's cool mod.rpy`](../../game/custom/mods/Goldo's%20cool%20mod/goldo's%20cool%20mod.rpy) — v1 教程范例

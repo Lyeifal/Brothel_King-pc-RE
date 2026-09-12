@@ -1,6 +1,6 @@
 # Registry System Architecture
 
-> Last updated: 2026-09-11 (verified against code)
+> Last updated: 2026-09-13 (verified against code)
 > **Base class**: `game/core/systems/registry/registry.rpy` (init -10)
 > **Phase**: Phase 6 (system decoupling and Mod support)
 
@@ -30,8 +30,9 @@ Registry is the unified registration center introduced in Phase 6, replacing sca
 | `EventRegistry` | `event_registry.rpy` | -5 | :7 | Event definitions + runtime queue (see [event.md](event.md)) |
 | `NGPRegistry` | `ngp_registry.rpy` | -5 | :7 | NG+ settings |
 | `MetaRegistry` | `meta_registry.rpy` | -5 | :7 | Meta-progression / unlocks |
+| `QualityRegistry` | `quality_registry.rpy` | -5 | :78 (`QualityTier` value type at :13) | Item quality tiers (`register_quality`; data lives in the `data/quality.rpy` fallback + the "Item Quality" mod) |
 
-Base class at init -10, UnlockRegistry at -9, all other subclasses at init -5.
+Base class at init -10, UnlockRegistry at -9, all other subclasses at init -5. `QualityRegistry` is the only registry shipping its own value type (`QualityTier`); it is also the "framework in core, data in a mod" reference (see [../modding/MOD_API.md](../modding/MOD_API.md) §6.6).
 
 ## 3. Decoupling Approach
 
@@ -51,6 +52,7 @@ Registry (base class, init -10)
     ├─→ DialogueRegistry ─→ GirlPack custom dialogue / ModAPI.register_dialogue
     ├─→ NGPRegistry ──────→ dev_console (ngp_editor.py)
     ├─→ MetaRegistry ─────→ dev_console (meta_editor.py)
+    ├─→ QualityRegistry ──→ systems/items.rpy (generate_new_item / init_items) / "Item Quality" mod
     └─→ UnlockRegistry ───→ achievement/goal/unlock condition evaluation
 ```
 
