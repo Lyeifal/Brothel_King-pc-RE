@@ -477,5 +477,13 @@ init -2 python:
         def change_rep(self, chg, silent=False):
             return self.girl.change_rep(chg, silent)
 
-        def customer_populations_safety_check(self, current_pop):
-            return self.girl._customer_populations_safety_check_impl(current_pop)
+        def customer_populations_safety_check(self, current_pop): # Where current_pop is a population name
+            g = self.girl
+            for pop, refused in g.refused_populations.items():
+                if brothel.get_effect("allow", pop) and not refused:
+                    break
+            else:
+                g.refused_populations[current_pop] = False
+                notify("You must activate at least one customer population for this girl.", pic=g.portrait)
+
+            return

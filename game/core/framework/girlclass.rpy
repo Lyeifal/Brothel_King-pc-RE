@@ -581,18 +581,9 @@ init -2 python:
             return self._traits.has_trait(name)
 
 
+## Phase 2.1: Delegated to GirlTraits component ##
         def has_perk(self, name): # Where name is a string, not the perk object
-
-            if name == None:
-                return True
-
-            for p in self.perks:
-
-                if p.name.lower() == name.lower():
-                    return True
-
-            else:
-                return False
+            return self._traits.has_perk(name)
 
 
 ## Phase 2.1: Delegated to GirlTraits component ##
@@ -820,66 +811,15 @@ init -2 python:
         def get_friendship(self, other_girl):
             return self._relationships.get_friendship(other_girl)
 
+## Phase 2.1: Delegated to GirlBase component ##
         def init_after_acquire(self, refresh_pics=True):
-
-            self.location = None
-            self.set_job(None)
-            self.set_workdays()
-
-            if refresh_pics:
-                self.refresh_pictures()
-
-            self.log["acquired"] = calendar.time
-            self.track_event("acquired", arg=self.name, silent=True)
-            girl_status_dict = load_girl_status(MC.girls + farm.girls)
-
-            autorest_limit[self] = autorest_limit["default"]
-
-            # Restores relationships if there were any
-            for other_girl in MC.girls + farm.girls:
-                self.change_relationship(other_girl, 0)
+            self._base.init_after_acquire(refresh_pics)
 
 
         # Phase 2.1: Delegated to GirlSex component
+## Phase 2.1: Delegated to GirlSex component ##
         def generate_preferences(self):
             self._sex.generate_preferences()
-
-            # Generate x skills according to preferences
-
-            self.generate_stats(sex=True)
-
-            ## Regulations (sanity check)
-
-            # Naturist girls are at least comfortable about being naked
-            if self.get_effect("special", "naked"):
-                if self.preferences["naked"] < 0:
-                    self.preferences["naked"] = 0
-
-            # Virgin girls cannot be experienced with sx or group
-            if self.has_trait("Virgin"):
-                self.preferences["sex"]=base_reluctance["sex"]
-                self.preferences["group"]=base_reluctance["group"]
-                self.change_stat("sex", -250, silent=True)
-
-            # Add limits to group and boosts to nkd?
-
-            # NewGame+ settings
-
-            if NGP_settings_dict["preferences1"].get():
-                for act in ("naked", "service"):
-                    self.change_preference(act, NGP_settings_dict["preferences1"].get(), fast=True, silent=True)
-
-            if NGP_settings_dict["preferences2"].get():
-                for act in ("sex", "anal"):
-                    self.change_preference(act, NGP_settings_dict["preferences2"].get(), fast=True, silent=True)
-
-            if NGP_settings_dict["preferences3"].get():
-                for act in ("fetish", "bisexual", "group"):
-                    self.change_preference(act, NGP_settings_dict["preferences3"].get(), fast=True, silent=True)
-
-            # /NewGame+ settings
-
-            return
 
 
 ## Phase 2.1: Delegated to GirlSex component ##
@@ -963,144 +903,8 @@ init -2 python:
         def get_mood_modifier(self, love_text="", fear_text="", description=False, resting=False):
             return self._mood.get_mood_modifier(love_text, fear_text, description, resting)
 
-        def get_mood_description(self, filter=None): # This returns text for the mood help screen
-
-            l = self.get_love()
-
-            if l > 90:
-                love_text = "{color=" + color_dict["love +++"] + "}" + love_description["++++++"] + "{/color}"
-            elif l > 70:
-                love_text = "{color=" + color_dict["love +++"] + "}" + love_description["+++++"] + "{/color}"
-            elif l > 50:
-                love_text = "{color=" + color_dict["love ++"] + "}" + love_description["++++"] + "{/color}"
-            elif l > 30:
-                love_text = "{color=" + color_dict["love ++"] + "}" + love_description["+++"] + "{/color}"
-            elif l > 15:
-                love_text = "{color=" + color_dict["love +"] + "}" + love_description["++"] + "{/color}"
-            elif l >= 5:
-                love_text = "{color=" + color_dict["love +"] + "}" + love_description["+"] + "{/color}"
-            elif l > -5:
-                love_text = "{color=" + color_dict["normal"] + "}" + love_description["0"] + "{/color}"
-            elif l >= -15:
-                love_text = "{color=" + color_dict["love -"] + "}" + love_description["-"] + "{/color}"
-            elif l >= -30:
-                love_text = "{color=" + color_dict["love -"] + "}" + love_description["--"] + "{/color}"
-            elif l >= -50:
-                love_text = "{color=" + color_dict["love -"] + "}" + love_description["---"] + "{/color}"
-            elif l >= -70:
-                love_text = "{color=" + color_dict["love -"] + "}" + love_description["----"] + "{/color}"
-            elif l >= -90:
-                love_text = "{color=" + color_dict["love -"] + "}" + love_description["-----"] + "{/color}"
-            else:
-                love_text = "{color=" + color_dict["love -"] + "}" + love_description["------"] + "{/color}"
-
-            f = self.get_fear()
-
-            if self.personality.name != "masochist":
-                if f > 90:
-                    fear_text = "{color=" + color_dict["fear +++"] + "}" + fear_description["++++++"] + "{/color}"
-                elif f > 70:
-                    fear_text = "{color=" + color_dict["fear +++"] + "}" + fear_description["+++++"] + "{/color}"
-                elif f > 50:
-                    fear_text = "{color=" + color_dict["fear ++"] + "}" + fear_description["++++"] + "{/color}"
-                elif f > 30:
-                    fear_text = "{color=" + color_dict["fear ++"] + "}" + fear_description["+++"] + "{/color}"
-                elif f > 15:
-                    fear_text = "{color=" + color_dict["fear +"] + "}" + fear_description["++"] + "{/color}"
-                elif f > 5:
-                    fear_text = "{color=" + color_dict["fear +"] + "}" + fear_description["+"] + "{/color}"
-                elif f >= -5:
-                    fear_text = "{color=" + color_dict["normal"] + "}" + fear_description["0"] + "{/color}"
-                elif f >= -15:
-                    fear_text = "{color=" + color_dict["fear -"] + "}" + fear_description["-"] + "{/color}"
-                elif f >= -30:
-                    fear_text = "{color=" + color_dict["fear -"] + "}" + fear_description["--"] + "{/color}"
-                elif f >= -50:
-                    fear_text = "{color=" + color_dict["fear -"] + "}" + fear_description["---"] + "{/color}"
-                elif f >= -70:
-                    fear_text = "{color=" + color_dict["fear -"] + "}" + fear_description["----"] + "{/color}"
-                elif f >= -90:
-                    fear_text = "{color=" + color_dict["fear -"] + "}" + fear_description["-----"] + "{/color}"
-                else:
-                    fear_text = "{color=" + color_dict["fear -"] + "}" + fear_description["------"] + "{/color}"
-
-            else:
-                if f > 90:
-                    fear_text = "{color=" + color_dict["fear +++"] + "}" + fear_description["M++++++"] + "{/color}"
-                elif f > 70:
-                    fear_text = "{color=" + color_dict["fear +++"] + "}" + fear_description["M+++++"] + "{/color}"
-                elif f > 50:
-                    fear_text = "{color=" + color_dict["fear ++"] + "}" + fear_description["M++++"] + "{/color}"
-                elif f > 30:
-                    fear_text = "{color=" + color_dict["fear ++"] + "}" + fear_description["M+++"] + "{/color}"
-                elif f > 15:
-                    fear_text = "{color=" + color_dict["fear +"] + "}" + fear_description["++"] + "{/color}"
-                elif f > 5:
-                    fear_text = "{color=" + color_dict["fear +"] + "}" + fear_description["+"] + "{/color}"
-                elif f >= -5:
-                    fear_text = "{color=" + color_dict["normal"] + "}" + fear_description["0"] + "{/color}"
-                elif f >= -15:
-                    fear_text = "{color=" + color_dict["fear -"] + "}" + fear_description["-"] + "{/color}"
-                elif f >= -30:
-                    fear_text = "{color=" + color_dict["fear -"] + "}" + fear_description["--"] + "{/color}"
-                elif f >= -50:
-                    fear_text = "{color=" + color_dict["fear -"] + "}" + fear_description["M---"] + "{/color}"
-                elif f >= -70:
-                    fear_text = "{color=" + color_dict["fear -"] + "}" + fear_description["M----"] + "{/color}"
-                elif f >= -90:
-                    fear_text = "{color=" + color_dict["fear -"] + "}" + fear_description["M-----"] + "{/color}"
-                else:
-                    fear_text = "{color=" + color_dict["fear -"] + "}" + fear_description["M------"] + "{/color}"
-
-            m = self.mood
-
-            if m > 90:
-                mood_text = "{color=" + color_dict["+++"] + "}" + mood_description["++++++"] + "{/color}"
-            elif m > 70:
-                mood_text = "{color=" + color_dict["+++"] + "}" + mood_description["+++++"] + "{/color}"
-            elif m > 50:
-                mood_text = "{color=" + color_dict["++"] + "}" + mood_description["++++"] + "{/color}"
-            elif m > 30:
-                mood_text = "{color=" + color_dict["++"] + "}" + mood_description["+++"] + "{/color}"
-            elif m > 15:
-                mood_text = "{color=" + color_dict["+"] + "}" + mood_description["++"] + "{/color}"
-            elif m >= 5:
-                mood_text = "{color=" + color_dict["+"] + "}" + mood_description["+"] + "{/color}"
-            elif m >= -5:
-                mood_text = "{color=" + color_dict["normal"] + "}" + mood_description["0"] + "{/color}"
-            elif m >= -15:
-                mood_text = "{color=" + color_dict["-"] + "}" + mood_description["-"] + "{/color}"
-            elif m >= -30:
-                mood_text = "{color=" + color_dict["-"] + "}" + mood_description["--"] + "{/color}"
-            elif m >= -50:
-                mood_text = "{color=" + color_dict["--"] + "}" + mood_description["---"] + "{/color}"
-            elif m >= -70:
-                mood_text = "{color=" + color_dict["--"] + "}" + mood_description["----"] + "{/color}"
-            elif m >= -90:
-                mood_text = "{color=" + color_dict["---"] + "}" + mood_description["-----"] + "{/color}"
-            else:
-                mood_text = "{color=" + color_dict["---"] + "}" + mood_description["------"] + "{/color}"
-
-            chg, mood_factors = self.get_mood_modifier(love_text, fear_text, description=True)
-
-            if chg > 3:
-                mood_change_text = mood_description["change +++"] + " {color=" + color_dict["+++"] + "}(+"
-            elif chg > 1:
-                mood_change_text = mood_description["change ++"] + " {color=" + color_dict["++"] + "}(+"
-            elif chg > 0:
-                mood_change_text = mood_description["change +"] + " {color=" + color_dict["+"] + "}(+"
-            elif chg == 0:
-                mood_change_text = mood_description["no change"] + " {color=" + color_dict["normal"] + "}("
-            elif chg >= -1:
-                mood_change_text = mood_description["change -"] + " {color=" + color_dict["-"] + "}("
-            elif chg >= -3:
-                mood_change_text = mood_description["change --"] + " {color=" + color_dict["--"] + "}("
-            else:
-                mood_change_text =  mood_description["change ---"] + " {color=" + color_dict["---"] + "}("
-
-            mood_change_text += str(round_best(chg)) + "){/color}."
-
 ## Phase 2.1: Delegated to GirlMood component ##
+        def get_mood_description(self, filter=None): # This returns text for the mood help screen
             return self._mood.get_mood_description(filter)
 
 
@@ -1264,15 +1068,9 @@ init -2 python:
             return self._dialogue.rand_say(*dialogue_options)
 
 
+## Phase 2.1: Delegated to GirlEconomy component ##
         def customer_populations_safety_check(self, current_pop): # Where current_pop is a population name
-            for pop, refused in self.refused_populations.items():
-                if brothel.get_effect("allow", pop) and not refused:
-                    break
-            else:
-                self.refused_populations[current_pop] = False
-                notify("You must activate at least one customer population for this girl.", pic=self.portrait)
-
-            return
+            self._economy.customer_populations_safety_check(current_pop)
 
 ## Phase 2.1: Delegated to GirlTraining component ##
         def build_up(self, v): # FARM EVENTS - Builds-up her farm show jauge
@@ -1287,15 +1085,9 @@ init -2 python:
             return self._training.reset_build_up()
 
         # ── Phase 2.1: Economy delegation aliases ──
-        _customer_populations_safety_check_impl = customer_populations_safety_check
 
         # ── Phase 2.1: Mood delegation aliases ──
         # (Sanity methods now delegate directly to GirlMood — aliases removed)
-        _change_energy_impl = change_energy
-        _heal_impl = heal
-        _full_rest_impl = full_rest
-        _rest_impl = rest
-        _can_heal_from_item_impl = can_heal_from_item
 
         # ── Phase 2.1: Schedule delegation aliases ──
         _get_schedule_impl = get_schedule
@@ -1319,7 +1111,6 @@ init -2 python:
 
         # ── Phase 2.1: Traits delegation aliases ──
         _generate_traits_impl = generate_traits
-        _has_perk_impl = has_perk
 
         # ── Phase 2.1: Logging delegation aliases ──
 

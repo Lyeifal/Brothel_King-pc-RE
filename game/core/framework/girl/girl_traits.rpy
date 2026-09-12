@@ -140,8 +140,19 @@ init -2 python:
             else:
                 return False
 
-        def has_perk(self, name):
-            return self.girl._has_perk_impl(name)
+        def has_perk(self, name): # Where name is a string, not the perk object
+            g = self.girl
+
+            if name == None:
+                return True
+
+            for p in g.perks:
+
+                if p.name.lower() == name.lower():
+                    return True
+
+            else:
+                return False
         def add_trait(self, trait, _pos=None, forced=False, no_perks=False): # Where 'trait' is an object (important)
             g = self.girl
 #            renpy.say("", "Adding " + trait.name)

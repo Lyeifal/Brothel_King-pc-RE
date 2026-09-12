@@ -143,3 +143,24 @@ init -2 python:
             #Moved to GirlFilesDict - Should no longer be necessary
             return len(GirlFilesDict.get_pics(g.path)) > 0
             #</Chris12 PackState>
+
+        def init_after_acquire(self, refresh_pics=True):
+            '''获得女孩后的初始化 | Initialize after acquiring a girl'''
+            g = self.girl
+
+            g.location = None
+            g.set_job(None)
+            g.set_workdays()
+
+            if refresh_pics:
+                g.refresh_pictures()
+
+            g.log["acquired"] = calendar.time
+            g.track_event("acquired", arg=g.name, silent=True)
+            girl_status_dict = load_girl_status(MC.girls + farm.girls)
+
+            autorest_limit[g] = autorest_limit["default"]
+
+            # Restores relationships if there were any
+            for other_girl in MC.girls + farm.girls:
+                g.change_relationship(other_girl, 0)

@@ -248,7 +248,7 @@ init -2 python:
             return resting_text, resting_changes
 
         def can_heal_from_item(self):
-            return self.girl._can_heal_from_item_impl()
+            return self.girl.can_heal_from_item()
 
         def get_energy_color(self):
             g = self.girl
