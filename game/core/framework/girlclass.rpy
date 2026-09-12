@@ -446,64 +446,28 @@ init -2 python:
             return self._sex.toggle_sex_act(sex_act)
 
 
+## Phase 2.1: Delegated to GirlSex component ##
         def does_anything(self): ## Tests if the girl has any activated sex act. She will be excluded from whoring if she isn't.
+            return self._sex.does_anything()
 
-            for act in all_sex_acts:
-                if self.does[act]:
-                    return True
-
-            return False
-
+## Phase 2.1: Delegated to GirlSex component ##
         def will_do_anything(self): ## Tests if the girl is open to a sex act. She will be excluded from the whore job if she isn't.
+            return self._sex.will_do_anything()
 
-            for act in all_sex_acts:
-                if self.will_do_sex_act(act):
-                    return True
-
-            return False
-
+## Phase 2.1: Delegated to GirlSex component ##
         def count_available_sex_acts(self, discovered=True, extended=True): # unused
-            if extended:
-                acts = extended_sex_acts
-            else:
-                acts = all_sex_acts
+            return self._sex.count_available_sex_acts(discovered, extended)
 
-            if discovered:
-                return sum(1 for act in acts if (self.will_do_sex_act(act) and self.personality_unlock[act]))
-            return sum(1 for act in acts if self.will_do_sex_act(act))
-
+## Phase 2.1: Delegated to GirlSex component ##
         def get_trainable_sex_acts(self):
-            available_acts = []
-            _debug = ""
-
-            for act in extended_sex_acts:
-                if training_test_dict[act]:
-                    for cond, pref in training_test_dict[act]:
-                        if compare_preference(self, cond, pref) and self.personality_unlock[act] != 0:
-                            _debug += act + ": No cond "
-                            available_acts.append(act)
-                            break
-                        elif not compare_preference(self, cond, pref):
-                            _debug += act + ": %s is not %s " % (cond, pref)
-                        elif not self.personality_unlock[act]:
-                            _debug += act + ": No unlock "
-                        else:
-                            _debug += act + ": ???"
-                else:
-                    _debug += act + ": No cond "
-                    available_acts.append(act)
-
-            return available_acts
+            return self._sex.get_trainable_sex_acts()
 
         def count_activated_sex_acts(self):
             return sum(1 for act in all_sex_acts if self.does[act])
 
+## Phase 2.1: Delegated to GirlSex component ##
         def has_activated_sex_acts(self): # Checks if the girl has any sex acts activated
-            for act in all_sex_acts:
-                if self.does[act]:
-                    return True
-
-            return False
+            return self._sex.has_activated_sex_acts()
 
         # Phase 2.1: Delegated to GirlSex component
         def refresh_sex_acts(self):
@@ -516,14 +480,9 @@ init -2 python:
             return self._sex.deactivate_sex_act(sex_act)
 
 
+## Phase 2.1: Delegated to GirlSex component ##
         def get_sex_act_modifier(self, sex_act = "all"):
-
-            modifier = self.get_effect("change", "all sex acts requirements")
-
-            if sex_act in extended_sex_acts:
-                modifier += self.get_effect("change", sex_act + " requirements") # Unused for now
-
-            return modifier
+            return self._sex.get_sex_act_modifier(sex_act)
 
 
         # Phase 2.1: Delegated to GirlTraits component
@@ -1417,63 +1376,13 @@ init -2 python:
             return
 
 
+## Phase 2.1: Delegated to GirlSex component ##
         def add_random_fixation(self, act=None, fixation=None, type="pos", nb=1): # When provided, fixation is the name (string), not the object
+            return self._sex.add_random_fixation(act, fixation, type, nb)
 
-            # Returns False or a list of fixation names (may be only one)
-
-            fixations = []
-
-            if fixation:
-                if fix_dict[fixation].available(self):
-                    fixations.append(fixation)
-                else:
-                    return False
-            
-            else:
-                if act:
-                    available_fix = [(fix.name, fix.get_weight(self, type)) for fix in fix_dict.values() if fix.available(self, act, type)]
-                else:
-                    available_fix = [(fix.name, fix.get_weight(self, type)) for fix in fix_dict.values() if fix.available(self, type=type)]
-
-                if available_fix:
-                    fixations = weighted_choice(available_fix, nb) # always returns a list
-                else:
-                    debug_notify("No " + type + " fixations found for " + self.fullname)
-                    return False
-
-                if not fixations and debug_mode:
-                    raise AssertionError("Couldn't find %s %s fixations among available list: %s" % (nb, type, available_fix))
-
-                if len(fixations) < nb and debug_mode:
-                    raise AssertionError("Couldn't find %s %s fixations among available list: %s" % (nb, type, available_fix))
-
-            if type == "pos":
-                self.pos_fixations += [fix_dict[f] for f in fixations]
-            elif type == "neg":
-                self.neg_fixations += [fix_dict[f] for f in fixations]
-
-            return fixations # Returns a list of fixation names
-
+## Phase 2.1: Delegated to GirlSex component ##
         def reset_sex_acts(self, first=True):
-            self.pos_acts = []
-            self.neg_acts = []
-
-            for fix in self.pos_fixations:
-                self.pos_acts += [a for a in fix.acts if a not in self.pos_acts]
-
-            for fix in self.neg_fixations:
-                self.neg_acts += [a for a in fix.acts if a not in self.neg_acts]
-
-            if first:
-                for act in self.pos_acts:
-                    eff = Effect("change", act + " preferences changes", 25)
-                    self.effects.append(eff) # Removed add_effects to improve performance
-                    self.effect_dict[(eff.type, eff.target)].append(eff)
-
-                for act in self.neg_acts:
-                    eff = Effect("change", act + " preferences changes", -50)
-                    self.effects.append(eff) # Removed add_effects to improve performance
-                    self.effect_dict[(eff.type, eff.target)].append(eff)
+            return self._sex.reset_sex_acts(first)
 
         def raise_preference(self, act, type = None, bonus = 1, status_change=False, silent=False, use_effects=True, context="MC"): # Type is fear, love, or None. Bonus depends on the training act (MC, farm or normal play)
             return self._sex.raise_preference(act, type, bonus, status_change, silent, use_effects, context)
@@ -1482,39 +1391,16 @@ init -2 python:
             return self._sex.change_preference(act, nb, fast, silent)
 
 
+## Phase 2.1: Delegated to GirlSex component ##
         def get_preference(self, act, bonus=0):
-
-            act = act.lower()
-            pref = self.preferences[act] + bonus
-
-            # Reminder: Base reluctance is negative
-
-            for res in ("fascinated", "very interested", "interested", "a little interested", "indifferent", "a little reluctant", "reluctant", "very reluctant", "refuses"):
-                if self.preferences[act] + bonus > get_preference_limit(act, res):
-                    return res
+            return self._sex.get_preference(act, bonus)
 
         def compare_preference(self, sex_act, min_pref): # Returns True if a girl's preference is better or equal to min_pref (e.g. 'indifferent')
             return compare_preference(self, sex_act, min_pref)
 
+## Phase 2.1: Delegated to GirlSex component ##
         def get_preference_bonus(self, act, minion_type=None): # Used for farm shows. Returns a modifier between 35% and 185%, and a list of applied effects
-            
-            pref = self.get_preference(act)
-            pref_effects = [pref]
-
-            pref_bonus = 1.0 + farm_perform_dict["pref_bonus"][pref]
-
-            if act in self.pos_acts:
-                pref_bonus += farm_perform_dict["pref_bonus"]["positive act"]
-                pref_effects.append("pos_act")
-            if act in self.neg_acts:
-                pref_bonus += farm_perform_dict["pref_bonus"]["negative act"]
-                pref_effects.append("neg_act")
-
-            if minion_type and minion_type == self.weakness:
-                pref_bonus += farm_perform_dict["pref_bonus"]["farm weakness"]
-                pref_effects.append("weakness")
-
-            return pref_bonus, pref_effects
+            return self._sex.get_preference_bonus(act, minion_type)
 
 
 
@@ -1857,46 +1743,13 @@ init -2 python:
         def forgets(self):
             return self._logging.forgets()
 
+## Phase 2.1: Delegated to GirlSex component ##
         def test_weakness(self, act, unlock=False, feedback=False):
+            return self._sex.test_weakness(act, unlock, feedback)
 
-            _pos = False
-            _neg = False
-
-            if act in self.pos_acts:
-                _pos=True
-
-            if act in self.neg_acts:
-                _neg=True
-
-            if unlock:
-                if not self.personality_unlock[act]:
-                    self.personality_unlock[act] = True # Testing weakness unlocks the act for the personality screen
-
-                    if feedback:
-                        if _pos and _neg:
-                            renpy.play(s_ahaa, "sound")
-                            renpy.say("", __("You notice that %s is feeling a mix of pleasure and discomfort during %s. It seems she has ambivalent feelings about it.") % (self.name, __(long_act_description[act])))
-                        elif _pos:
-                            renpy.play(s_mmh, "sound")
-                            renpy.say("", __("You notice that %s seems to enjoy %s.") % (self.name, __(long_act_description[act])))
-                        elif _neg:
-                            renpy.play(s_scream, "sound")
-                            renpy.say("", __("You notice that %s seems disgusted by %s.") % (self.name, __(long_act_description[act])))
-
-            return _pos, _neg
-
+## Phase 2.1: Delegated to GirlSex component ##
         def get_reaction_to_act(self, act):
-
-            pos_reaction, neg_reaction = self.test_weakness(act)
-
-            if pos_reaction and neg_reaction:
-                return "ambivalent feelings"
-            elif pos_reaction:
-                return "a weakness"
-            elif neg_reaction:
-                return "a disgust"
-            else:
-                return "no particular reaction"
+            return self._sex.get_reaction_to_act(act)
 
 ## Phase 2.1: Delegated to GirlSchedule component ##
         def get_day_off(self, day_nb):
@@ -1926,177 +1779,34 @@ init -2 python:
         def terrify(self, nb):
             return self._relationships.terrify(nb)
 
+## Phase 2.1: Delegated to GirlSex component ##
         def pop_virginity(self, origin="brothel"):
+            return self._sex.pop_virginity(origin)
 
-            for trait in self.traits: # Update trait list in restore_virginity if adding new special traits
-                if trait.name == "Virgin":
-                    self.remove_trait(trait)
-
-                    if origin == "brothel":
-                        self.add_trait(housebroken_trait, _pos=1, no_perks=True)
-                    elif origin == "farm":
-                        self.add_trait(farmgirl_trait, _pos=1, no_perks=True)
-                    elif origin == "MC" and self.get_love() > self.get_fear():
-                        self.add_trait(t_pet_trait, _pos=1, no_perks=True)
-                    elif origin == "MC" and self.get_love() <= self.get_fear():
-                        self.add_trait(trauma_trait, _pos=1, no_perks=True)
-                    elif origin == "rape":
-                        self.add_trait(trauma_trait, _pos=1, no_perks=True)
-                    elif origin == "chaos":
-                        self.add_trait(chaos_trait, _pos=1)
-                    else: # Catch all for other origins
-                        self.add_trait(trait_dict["Kinky"], _pos=1)
-
-                    return True
-
-            else:
-                return False
-
+## Phase 2.1: Delegated to GirlSex component ##
         def restore_virginity(self):
-
-            for t in (housebroken_trait, farmgirl_trait, trauma_trait, chaos_trait):
-                if t in self.traits:
-                    self.remove_trait(t)
-
-            self.add_trait(virgin_trait, _pos=1)
+            return self._sex.restore_virginity()
 
 ## Phase 2.1: Delegated to GirlLogging component ##
         def count_occurences(self, context="all", original=False, add_list=None):
             return self._logging.count_occurences(context, original, add_list)
 
+## Phase 2.1: Delegated to GirlSex component ##
         def talk_tastes(self, type):
-
-            if type == "likes":
-                mylist = ["color", "food", "drink"]
-                renpy.random.shuffle(mylist)
-
-                for thing in mylist:
-                    if not self.personality_unlock["fav_" + thing]:
-                        break
-                else:
-                    thing = rand_choice(mylist)
-                return thing, self.likes[thing]
-
-            elif type == "dislikes":
-                mylist = ["color", "food", "drink"]
-                renpy.random.shuffle(mylist)
-
-                for thing in mylist:
-                    if not self.personality_unlock["dis_" + thing]:
-                        break
-                else:
-                    thing = rand_choice(mylist)
-                return thing, self.dislikes[thing]
-
-            elif type == "loves":
-                best_replies = []
-                all_replies = []
-
-                for k in [k for k, v in self.personality.gift_likes.items() if v >= 3]:
-                    if not k in self.personality_unlock["loves"]:
-                        best_replies.append(("loves", k))
-                    all_replies.append(("loves", k))
-
-                for k in [k for k, v in self.personality.gift_likes.items() if 3 > v >= 0]:
-                    if not k in self.personality_unlock["likes"]:
-                        best_replies.append(("likes", k))
-                    all_replies.append(("likes", k))
-
-                if best_replies:
-                    return rand_choice(best_replies)
-                elif all_replies:
-                    return rand_choice(all_replies)
-                else:
-                    return "indifferent", False
-
-            elif type == "hates":
-                best_replies = []
-                all_replies = []
-
-                for k in [k for k, v in self.personality.gift_likes.items() if v <= -2]:
-                    if not k in self.personality_unlock["hates"]:
-                        best_replies.append(("hates", k))
-                    all_replies.append(("hates", k))
-
-                if best_replies:
-                    return rand_choice(best_replies)
-                elif all_replies:
-                    return rand_choice(all_replies)
-                else:
-                    return "indifferent", False
+            return self._sex.talk_tastes(type)
 
 
+## Phase 2.1: Delegated to GirlSex component ##
         def try_to_remove_fix(self, fix_name, type=None):
+            return self._sex.try_to_remove_fix(fix_name, type)
 
-            if type == "love":
-                chance = 40 + (self.mood + self.get_love() - self.get_fear()) // 3
-                lock_chance = 0
-            elif type == "neutral":
-                chance = 40
-                lock_chance = 0
-            elif type == "fear": # Fear gives a higher bonus and ignores mood but may lock a girl's negative fixation
-                chance = 50 + self.get_fear()
-                lock_chance = 3
-
-            if dice(100) < lock_chance:
-                self.locked_fix.append(fix_name)
-                return "locked"
-
-            elif dice(100) < chance:
-                self.fix_level[fix_name] += 1
-
-                if self.fix_level[fix_name] < 4:
-                    return self.fix_level[fix_name]
-
-                else:
-                    self.remove_fixation(fix_name)
-                    return "success"
-
-            else:
-                return "fail"
-
+## Phase 2.1: Delegated to GirlSex component ##
         def remove_fixation(self, fix_name):
+            return self._sex.remove_fixation(fix_name)
 
-            for fix in self.pos_fixations:
-                _type = "pos"
-                if fix.name == fix_name:
-                    self.pos_fixations.remove(fix)
-                    # Resets farm
-                    if fix in farm.knows["pos_fix"][self]:
-                        farm.knows["pos_fix"][self].remove(fix)
-
-            for fix in self.neg_fixations:
-                _type = "neg"
-                if fix.name == fix_name:
-                    self.neg_fixations.remove(fix)
-                    # Tracks removed fixations for the 'Phobia' achievement
-                    try:
-                        self.flags["removed neg fixations"] += 1
-                    except:
-                        self.flags["removed neg fixations"] = 1
-                    # Resets farm
-                    if fix in farm.knows["neg_fix"][self]:
-                        farm.knows["neg_fix"][self].remove(fix)
-
-            self.reset_sex_acts(first=False)
-
-            # Removes fixation preference bonuses/penalties
-            for act in fix.acts:
-                if type == "pos" and act not in self.pos_acts:
-                    self.remove_effects([Effect("change", act + " preferences changes", 25)])
-                if type == "neg" and act not in self.neg_acts:
-                    self.remove_effects([Effect("change", act + " preferences changes", -50)])
-
+## Phase 2.1: Delegated to GirlSex component ##
         def has_fixation(self, type="pos", fix_name=None):
-            if type == "pos":
-                for fix in self.pos_fixations:
-                    if fix.name == fix_name:
-                        return True
-
-            if type == "neg":
-                for fix in self.neg_fixations:
-                    if fix.name == fix_name:
-                        return True
+            return self._sex.has_fixation(type, fix_name)
 
 ## Phase 2.1: Delegated to GirlRelationships component ##
         def meet_MC(self):
@@ -2197,7 +1907,6 @@ init -2 python:
         _generate_personality_impl = generate_personality
         _adjust_personality_impl = adjust_personality
         _generate_background_impl = generate_background
-        _talk_tastes_impl = talk_tastes
         _pick_dialogue_impl = pick_dialogue
         _say_impl = say
         _rand_say_impl = rand_say
@@ -2224,27 +1933,11 @@ init -2 python:
         # ── Phase 2.1: Sex delegation aliases ──
         _will_do_sex_act_impl = will_do_sex_act
         _toggle_sex_act_impl = toggle_sex_act
-        _does_anything_impl = does_anything
-        _will_do_anything_impl = will_do_anything
-        _count_available_sex_acts_impl = count_available_sex_acts
-        _get_trainable_sex_acts_impl = get_trainable_sex_acts
         _count_activated_sex_acts_impl = count_activated_sex_acts
-        _has_activated_sex_acts_impl = has_activated_sex_acts
         _refresh_sex_acts_impl = refresh_sex_acts
         _activate_sex_act_impl = activate_sex_act
         _deactivate_sex_act_impl = deactivate_sex_act
-        _get_sex_act_modifier_impl = get_sex_act_modifier
-        _get_preference_bonus_impl = get_preference_bonus
-        _add_random_fixation_impl = add_random_fixation
-        _reset_sex_acts_impl = reset_sex_acts
-        _get_preference_impl = get_preference
         _compare_preference_impl = compare_preference
-        _pop_virginity_impl = pop_virginity
-        _restore_virginity_impl = restore_virginity
-        _test_weakness_impl = test_weakness
-        _has_fixation_impl = has_fixation
-        _remove_fixation_impl = remove_fixation
-        _try_to_remove_fix_impl = try_to_remove_fix
 
         # ── Phase 2.1: Items delegation aliases | 物品方法别名 ──
         _get_equipped_impl = get_equipped

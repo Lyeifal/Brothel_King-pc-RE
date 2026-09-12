@@ -300,7 +300,7 @@ init -2 python:
                 return False
 
         def talk_tastes(self, type):
-            return self.girl._talk_tastes_impl(type)
+            return self.girl.talk_tastes(type)
         # ── 个性生成 | Personality generation ──
 
         def generate_personality(self, personality=None, change=False):

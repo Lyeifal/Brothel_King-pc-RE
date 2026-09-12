@@ -1,14 +1,10 @@
 #### GirlSex — Sex acts, fixations, preferences component ####
 # Phase 2.1: 性行为、固恋、偏好管理 | Sex act, fixation, and preference management
-# Methods to migrate: 需迁移的方法:
-# will_do_sex_act, toggle_sex_act, does_anything, will_do_anything,
-# count_available_sex_acts, get_trainable_sex_acts, refresh_sex_acts,
-# activate_sex_act, deactivate_sex_act, get_sex_act_modifier,
-# pop_virginity, restore_virginity, test_fix, check_fix,
-# get_sex_attitude, add_random_fixation, reset_sex_acts,
-# raise_preference, change_preference, get_preference,
-# compare_preference, get_preference_bonus, test_weakness,
-# has_fixation, remove_fixation, try_to_remove_fix
+# ★ does_anything/will_do_anything/count_available_sex_acts/get_trainable_sex_acts/has_activated_sex_acts — 已从 girlclass.rpy 移入 (Phase 7 批次8)
+# ★ generate_preferences（合并 girlclass 外层校验）/add_random_fixation/reset_sex_acts — 已从 girlclass.rpy 移入 (Phase 7 批次8)
+# ★ get_preference/get_preference_bonus/get_sex_act_modifier/test_weakness/get_reaction_to_act/pop_virginity/restore_virginity (Phase 7 批次8)
+# ★ talk_tastes/has_fixation/remove_fixation/try_to_remove_fix (Phase 7 批次8)
+# 待迁移: count_activated_sex_acts, compare_preference
 
 init -2 python:
 
@@ -64,29 +60,78 @@ init -2 python:
                 elif use_desc:
                     return result[1]
 
-        def does_anything(self):
+        def does_anything(self): ## Tests if the girl has any activated sex act. She will be excluded from whoring if she isn't.
             '''检查是否有任何已激活的性行为 | Check if any sex act is activated'''
-            return self.girl._does_anything_impl()
+            g = self.girl
+            for act in all_sex_acts:
+                if g.does[act]:
+                    return True
 
-        def will_do_anything(self):
+            return False
+
+
+        def will_do_anything(self): ## Tests if the girl is open to a sex act. She will be excluded from the whore job if she isn't.
             # 检查是否对任何性行为开放 | Check if open to any sex act
-            return self.girl._will_do_anything_impl()
+            g = self.girl
+            for act in all_sex_acts:
+                if g.will_do_sex_act(act):
+                    return True
 
-        def count_available_sex_acts(self, discovered=True, extended=True):
+            return False
+
+
+        def count_available_sex_acts(self, discovered=True, extended=True): # unused
             # 统计可用的性行为数量 | Count available sex acts
-            return self.girl._count_available_sex_acts_impl(discovered, extended)
+            g = self.girl
+            if extended:
+                acts = extended_sex_acts
+            else:
+                acts = all_sex_acts
+
+            if discovered:
+                return sum(1 for act in acts if (g.will_do_sex_act(act) and g.personality_unlock[act]))
+            return sum(1 for act in acts if g.will_do_sex_act(act))
+
 
         def get_trainable_sex_acts(self):
             # 获取可训练的性行为列表 | Get trainable sex acts
-            return self.girl._get_trainable_sex_acts_impl()
+            g = self.girl
+            available_acts = []
+            _debug = ""
+
+            for act in extended_sex_acts:
+                if training_test_dict[act]:
+                    for cond, pref in training_test_dict[act]:
+                        if compare_preference(g, cond, pref) and g.personality_unlock[act] != 0:
+                            _debug += act + ": No cond "
+                            available_acts.append(act)
+                            break
+                        elif not compare_preference(g, cond, pref):
+                            _debug += act + ": %s is not %s " % (cond, pref)
+                        elif not g.personality_unlock[act]:
+                            _debug += act + ": No unlock "
+                        else:
+                            _debug += act + ": ???"
+                else:
+                    _debug += act + ": No cond "
+                    available_acts.append(act)
+
+            return available_acts
+
 
         def count_activated_sex_acts(self):
             # 统计已激活的性行为数 | Count activated sex acts
             return self.girl._count_activated_sex_acts_impl()
 
-        def has_activated_sex_acts(self):
+        def has_activated_sex_acts(self): # Checks if the girl has any sex acts activated
             # 是否有已激活的性行为 | Whether any sex acts are activated
-            return self.girl._has_activated_sex_acts_impl()
+            g = self.girl
+            for act in all_sex_acts:
+                if g.does[act]:
+                    return True
+
+            return False
+
 
         # ── 性行为激活/停用 | Sex act activation/deactivation ──
 
@@ -115,9 +160,16 @@ init -2 python:
             if not g.has_activated_sex_acts() and g.job == "whore":
                 renpy.say("", __("%s cannot remain a whore if you deactivate all sex acts. She has been set to rest.") % g.fullname)
 
-        def get_sex_act_modifier(self, sex_act="all"):
+        def get_sex_act_modifier(self, sex_act = "all"):
             # 获取性行为修正系数 | Get sex act modifier
-            return self.girl._get_sex_act_modifier_impl(sex_act)
+            g = self.girl
+            modifier = g.get_effect("change", "all sex acts requirements")
+
+            if sex_act in extended_sex_acts:
+                modifier += g.get_effect("change", sex_act + " requirements") # Unused for now
+
+            return modifier
+
 
         # ── 固恋管理 | Fixation management ──
 
@@ -185,17 +237,90 @@ init -2 python:
                             score += g.get_stat("sensitivity") // 4
             return score
 
-        def get_preference_bonus(self, act, minion_type=None):
+        def get_preference_bonus(self, act, minion_type=None): # Used for farm shows. Returns a modifier between 35% and 185%, and a list of applied effects
             # 获取偏好加成（农场用）| Get preference bonus (for farm use)
-            return self.girl._get_preference_bonus_impl(act, minion_type)
+            g = self.girl
+            pref = g.get_preference(act)
+            pref_effects = [pref]
 
-        def add_random_fixation(self, act=None, fixation=None, type="pos", nb=1):
+            pref_bonus = 1.0 + farm_perform_dict["pref_bonus"][pref]
+
+            if act in g.pos_acts:
+                pref_bonus += farm_perform_dict["pref_bonus"]["positive act"]
+                pref_effects.append("pos_act")
+            if act in g.neg_acts:
+                pref_bonus += farm_perform_dict["pref_bonus"]["negative act"]
+                pref_effects.append("neg_act")
+
+            if minion_type and minion_type == g.weakness:
+                pref_bonus += farm_perform_dict["pref_bonus"]["farm weakness"]
+                pref_effects.append("weakness")
+
+            return pref_bonus, pref_effects
+
+
+        def add_random_fixation(self, act=None, fixation=None, type="pos", nb=1): # When provided, fixation is the name (string), not the object
             # 添加随机固恋 | Add a random fixation
-            return self.girl._add_random_fixation_impl(act, fixation, type, nb)
+            g = self.girl
+            # Returns False or a list of fixation names (may be only one)
+
+            fixations = []
+
+            if fixation:
+                if fix_dict[fixation].available(g):
+                    fixations.append(fixation)
+                else:
+                    return False
+            
+            else:
+                if act:
+                    available_fix = [(fix.name, fix.get_weight(g, type)) for fix in fix_dict.values() if fix.available(g, act, type)]
+                else:
+                    available_fix = [(fix.name, fix.get_weight(g, type)) for fix in fix_dict.values() if fix.available(g, type=type)]
+
+                if available_fix:
+                    fixations = weighted_choice(available_fix, nb) # always returns a list
+                else:
+                    debug_notify("No " + type + " fixations found for " + g.fullname)
+                    return False
+
+                if not fixations and debug_mode:
+                    raise AssertionError("Couldn't find %s %s fixations among available list: %s" % (nb, type, available_fix))
+
+                if len(fixations) < nb and debug_mode:
+                    raise AssertionError("Couldn't find %s %s fixations among available list: %s" % (nb, type, available_fix))
+
+            if type == "pos":
+                g.pos_fixations += [fix_dict[f] for f in fixations]
+            elif type == "neg":
+                g.neg_fixations += [fix_dict[f] for f in fixations]
+
+            return fixations # Returns a list of fixation names
+
 
         def reset_sex_acts(self, first=True):
             # 重置所有性行为 | Reset all sex acts
-            return self.girl._reset_sex_acts_impl(first)
+            g = self.girl
+            g.pos_acts = []
+            g.neg_acts = []
+
+            for fix in g.pos_fixations:
+                g.pos_acts += [a for a in fix.acts if a not in g.pos_acts]
+
+            for fix in g.neg_fixations:
+                g.neg_acts += [a for a in fix.acts if a not in g.neg_acts]
+
+            if first:
+                for act in g.pos_acts:
+                    eff = Effect("change", act + " preferences changes", 25)
+                    g.effects.append(eff) # Removed add_effects to improve performance
+                    g.effect_dict[(eff.type, eff.target)].append(eff)
+
+                for act in g.neg_acts:
+                    eff = Effect("change", act + " preferences changes", -50)
+                    g.effects.append(eff) # Removed add_effects to improve performance
+                    g.effect_dict[(eff.type, eff.target)].append(eff)
+
 
         # ── 偏好管理 | Preference management ──
 
@@ -288,7 +413,16 @@ init -2 python:
 
         def get_preference(self, act, bonus=0):
             # 获取偏好值 | Get preference value for an act
-            return self.girl._get_preference_impl(act, bonus)
+            g = self.girl
+            act = act.lower()
+            pref = g.preferences[act] + bonus
+
+            # Reminder: Base reluctance is negative
+
+            for res in ("fascinated", "very interested", "interested", "a little interested", "indifferent", "a little reluctant", "reluctant", "very reluctant", "refuses"):
+                if g.preferences[act] + bonus > get_preference_limit(act, res):
+                    return res
+
 
         def compare_preference(self, sex_act, min_pref):
             # 比较偏好与最低要求 | Compare preference against a minimum threshold
@@ -298,17 +432,73 @@ init -2 python:
 
         def pop_virginity(self, origin="brothel"):
             # 破处 | Pop virginity
-            return self.girl._pop_virginity_impl(origin)
+            g = self.girl
+            for trait in g.traits: # Update trait list in restore_virginity if adding new special traits
+                if trait.name == "Virgin":
+                    g.remove_trait(trait)
+
+                    if origin == "brothel":
+                        g.add_trait(housebroken_trait, _pos=1, no_perks=True)
+                    elif origin == "farm":
+                        g.add_trait(farmgirl_trait, _pos=1, no_perks=True)
+                    elif origin == "MC" and g.get_love() > g.get_fear():
+                        g.add_trait(t_pet_trait, _pos=1, no_perks=True)
+                    elif origin == "MC" and g.get_love() <= g.get_fear():
+                        g.add_trait(trauma_trait, _pos=1, no_perks=True)
+                    elif origin == "rape":
+                        g.add_trait(trauma_trait, _pos=1, no_perks=True)
+                    elif origin == "chaos":
+                        g.add_trait(chaos_trait, _pos=1)
+                    else: # Catch all for other origins
+                        g.add_trait(trait_dict["Kinky"], _pos=1)
+
+                    return True
+
+            else:
+                return False
+
 
         def restore_virginity(self):
             # 恢复处女 | Restore virginity
-            return self.girl._restore_virginity_impl()
+            g = self.girl
+            for t in (housebroken_trait, farmgirl_trait, trauma_trait, chaos_trait):
+                if t in g.traits:
+                    g.remove_trait(t)
+
+            g.add_trait(virgin_trait, _pos=1)
+
 
         # ── 弱点测试 | Weakness testing ──
 
         def test_weakness(self, act, unlock=False, feedback=False):
             # 测试弱点 | Test a weakness
-            return self.girl._test_weakness_impl(act, unlock, feedback)
+            g = self.girl
+            _pos = False
+            _neg = False
+
+            if act in g.pos_acts:
+                _pos=True
+
+            if act in g.neg_acts:
+                _neg=True
+
+            if unlock:
+                if not g.personality_unlock[act]:
+                    g.personality_unlock[act] = True # Testing weakness unlocks the act for the personality screen
+
+                    if feedback:
+                        if _pos and _neg:
+                            renpy.play(s_ahaa, "sound")
+                            renpy.say("", __("You notice that %s is feeling a mix of pleasure and discomfort during %s. It seems she has ambivalent feelings about it.") % (g.name, __(long_act_description[act])))
+                        elif _pos:
+                            renpy.play(s_mmh, "sound")
+                            renpy.say("", __("You notice that %s seems to enjoy %s.") % (g.name, __(long_act_description[act])))
+                        elif _neg:
+                            renpy.play(s_scream, "sound")
+                            renpy.say("", __("You notice that %s seems disgusted by %s.") % (g.name, __(long_act_description[act])))
+
+            return _pos, _neg
+
 
         # ── 偏好生成 | Preference generation ──
 
@@ -400,16 +590,195 @@ init -2 python:
                     else:
                         if av_bonus: g.change_preference(act, av_bonus * district.rank + dice(av_bonus, district.rank), fast=True, silent=True)
 
+
+            # Generate x skills according to preferences
+
+            g.generate_stats(sex=True)
+
+            ## Regulations (sanity check)
+
+            # Naturist girls are at least comfortable about being naked
+            if g.get_effect("special", "naked"):
+                if g.preferences["naked"] < 0:
+                    g.preferences["naked"] = 0
+
+            # Virgin girls cannot be experienced with sx or group
+            if g.has_trait("Virgin"):
+                g.preferences["sex"]=base_reluctance["sex"]
+                g.preferences["group"]=base_reluctance["group"]
+                g.change_stat("sex", -250, silent=True)
+
+            # Add limits to group and boosts to nkd?
+
+            # NewGame+ settings
+
+            if NGP_settings_dict["preferences1"].get():
+                for act in ("naked", "service"):
+                    g.change_preference(act, NGP_settings_dict["preferences1"].get(), fast=True, silent=True)
+
+            if NGP_settings_dict["preferences2"].get():
+                for act in ("sex", "anal"):
+                    g.change_preference(act, NGP_settings_dict["preferences2"].get(), fast=True, silent=True)
+
+            if NGP_settings_dict["preferences3"].get():
+                for act in ("fetish", "bisexual", "group"):
+                    g.change_preference(act, NGP_settings_dict["preferences3"].get(), fast=True, silent=True)
+
+            # /NewGame+ settings
+
+            return
+
         # ── 固恋移除 | Fixation removal ──
 
         def has_fixation(self, type="pos", fix_name=None):
             # 检查是否有特定固恋 | Check if has a specific fixation
-            return self.girl._has_fixation_impl(type, fix_name)
+            g = self.girl
+            if type == "pos":
+                for fix in g.pos_fixations:
+                    if fix.name == fix_name:
+                        return True
+
+            if type == "neg":
+                for fix in g.neg_fixations:
+                    if fix.name == fix_name:
+                        return True
+
 
         def remove_fixation(self, fix_name):
             # 移除固恋 | Remove a fixation
-            return self.girl._remove_fixation_impl(fix_name)
+            g = self.girl
+            for fix in g.pos_fixations:
+                _type = "pos"
+                if fix.name == fix_name:
+                    g.pos_fixations.remove(fix)
+                    # Resets farm
+                    if fix in farm.knows["pos_fix"][g]:
+                        farm.knows["pos_fix"][g].remove(fix)
+
+            for fix in g.neg_fixations:
+                _type = "neg"
+                if fix.name == fix_name:
+                    g.neg_fixations.remove(fix)
+                    # Tracks removed fixations for the 'Phobia' achievement
+                    try:
+                        g.flags["removed neg fixations"] += 1
+                    except:
+                        g.flags["removed neg fixations"] = 1
+                    # Resets farm
+                    if fix in farm.knows["neg_fix"][g]:
+                        farm.knows["neg_fix"][g].remove(fix)
+
+            g.reset_sex_acts(first=False)
+
+            # Removes fixation preference bonuses/penalties
+            for act in fix.acts:
+                if type == "pos" and act not in g.pos_acts:
+                    g.remove_effects([Effect("change", act + " preferences changes", 25)])
+                if type == "neg" and act not in g.neg_acts:
+                    g.remove_effects([Effect("change", act + " preferences changes", -50)])
+
 
         def try_to_remove_fix(self, fix_name, type=None):
             # 尝试移除固恋 | Try to remove a fixation
-            return self.girl._try_to_remove_fix_impl(fix_name, type)
+            g = self.girl
+            if type == "love":
+                chance = 40 + (g.mood + g.get_love() - g.get_fear()) // 3
+                lock_chance = 0
+            elif type == "neutral":
+                chance = 40
+                lock_chance = 0
+            elif type == "fear": # Fear gives a higher bonus and ignores mood but may lock a girl's negative fixation
+                chance = 50 + g.get_fear()
+                lock_chance = 3
+
+            if dice(100) < lock_chance:
+                g.locked_fix.append(fix_name)
+                return "locked"
+
+            elif dice(100) < chance:
+                g.fix_level[fix_name] += 1
+
+                if g.fix_level[fix_name] < 4:
+                    return g.fix_level[fix_name]
+
+                else:
+                    g.remove_fixation(fix_name)
+                    return "success"
+
+            else:
+                return "fail"
+
+
+        def get_reaction_to_act(self, act):
+            g = self.girl
+            pos_reaction, neg_reaction = g.test_weakness(act)
+
+            if pos_reaction and neg_reaction:
+                return "ambivalent feelings"
+            elif pos_reaction:
+                return "a weakness"
+            elif neg_reaction:
+                return "a disgust"
+            else:
+                return "no particular reaction"
+
+        def talk_tastes(self, type):
+            g = self.girl
+            if type == "likes":
+                mylist = ["color", "food", "drink"]
+                renpy.random.shuffle(mylist)
+
+                for thing in mylist:
+                    if not g.personality_unlock["fav_" + thing]:
+                        break
+                else:
+                    thing = rand_choice(mylist)
+                return thing, g.likes[thing]
+
+            elif type == "dislikes":
+                mylist = ["color", "food", "drink"]
+                renpy.random.shuffle(mylist)
+
+                for thing in mylist:
+                    if not g.personality_unlock["dis_" + thing]:
+                        break
+                else:
+                    thing = rand_choice(mylist)
+                return thing, g.dislikes[thing]
+
+            elif type == "loves":
+                best_replies = []
+                all_replies = []
+
+                for k in [k for k, v in g.personality.gift_likes.items() if v >= 3]:
+                    if not k in g.personality_unlock["loves"]:
+                        best_replies.append(("loves", k))
+                    all_replies.append(("loves", k))
+
+                for k in [k for k, v in g.personality.gift_likes.items() if 3 > v >= 0]:
+                    if not k in g.personality_unlock["likes"]:
+                        best_replies.append(("likes", k))
+                    all_replies.append(("likes", k))
+
+                if best_replies:
+                    return rand_choice(best_replies)
+                elif all_replies:
+                    return rand_choice(all_replies)
+                else:
+                    return "indifferent", False
+
+            elif type == "hates":
+                best_replies = []
+                all_replies = []
+
+                for k in [k for k, v in g.personality.gift_likes.items() if v <= -2]:
+                    if not k in g.personality_unlock["hates"]:
+                        best_replies.append(("hates", k))
+                    all_replies.append(("hates", k))
+
+                if best_replies:
+                    return rand_choice(best_replies)
+                elif all_replies:
+                    return rand_choice(all_replies)
+                else:
+                    return "indifferent", False
