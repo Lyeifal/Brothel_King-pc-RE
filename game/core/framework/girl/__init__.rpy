@@ -6,6 +6,7 @@
 # Components (★ = contains moved method implementations):
 #   girl_base          — Identity: name, rank, level, serialization (身份)
 #   girl_stats         — Stats, stat caps, stat changes, spillover (属性)
+#   girl_progression   — Level/rank/XP-JP-rep/Perk/stat upgrades (进阶)
 #  ★girl_traits        — Trait/perk management (特质) — generate_traits
 #   girl_items         — Equipment, items, inventory (物品)
 #  ★girl_schedule      — Job assignment, workdays, schedule (日程) — get_status

@@ -29,6 +29,6 @@ init -2 python:
         def read_ini(self, section=None, key=None):
             return self.girl._read_ini_impl(section, key)
         def adjust_level(self, level):
-            return self.girl._adjust_level_impl(level)
+            return self.girl.adjust_level(level)
         def randomize(self, free=False, p_traits=None, n_trait=None, perks=None, force_original=False, level=1, personality=None, temp_list=None):
             return self.girl._generation.randomize(free, p_traits, n_trait, perks, force_original, level, personality, temp_list)

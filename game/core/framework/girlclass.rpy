@@ -171,6 +171,7 @@ init -2 python:
             self._training = GirlTraining(self)
             self._effects = GirlEffects(self)
             self._generation = GirlGeneration(self)
+            self._progression = GirlProgression(self)
 
         def randomize(self, free=False, p_traits=None, n_trait=None, perks=None, force_original=False, level=1, personality=None, temp_list=None):
             return self._generation.randomize(free, p_traits, n_trait, perks, force_original, level, personality, temp_list)
@@ -377,26 +378,9 @@ init -2 python:
                 for stat in gstats_sex:
                     self.sex_stats.append(Stat(stat, "sex", self))
 
+## Phase 2.1: Delegated to GirlProgression component ##
         def adjust_level(self, level):
-            self.level = level
-
-            # Adjust rank
-            while self.rank * 5 < self.level:
-                self.rank += 1
-
-            # Adjust XP and REP
-
-            self.xp = xp_to_levelup[self.level-1]
-            self.rep += rep_to_rank[self.rank-1]
-
-            # Get perk points
-
-            self.perk_points += (self.level-1) + self.level // 5
-
-            if self.level == 25:
-                self.perk_points += 1
-
-            #! No skill points are distributed for now, see if it works
+            return self._progression.adjust_level(level)
 
         def will_do_farm_act(self, act, mode=None):
             return self._training.will_do_farm_act(act, mode)
@@ -948,41 +932,19 @@ init -2 python:
             return self._stats.get_stat(stat_name, raw)
 
 
+## Phase 2.1: Delegated to GirlProgression component ##
         def get_xp_cap(self):
-
-            if self.level < self.rank * 5:
-                cap = xp_to_levelup[self.level]
-            else:
-                cap = xp_to_levelup[self.rank * 5 - 1]
-
-            return cap
+            return self._progression.get_xp_cap()
 
 
+## Phase 2.1: Delegated to GirlProgression component ##
         def get_jp_cap(self, job = "all"):
-
-            if job == "all":
-
-                cap = jp_to_level[self.rank - 1]
-
-            elif self.job_level[job] < self.rank:
-
-                cap = jp_to_level[self.job_level[job]]
-
-            else:
-
-                cap = jp_to_level[self.rank - 1]
-
-            return cap
+            return self._progression.get_jp_cap(job)
 
 
+## Phase 2.1: Delegated to GirlProgression component ##
         def get_rep_cap(self): # Adds 0.99 to avoid strange back and forth effects where girls can rank up briefly then are pulled back by rep decay
-
-            if self.rank < district.rank:
-                cap = rep_to_rank[self.rank] + 0.99
-
-            else:
-                cap = rep_to_rank[district.rank] + 0.99
-            return cap
+            return self._progression.get_rep_cap()
 
 
         def has_trait(self, name):
@@ -1176,32 +1138,17 @@ init -2 python:
 
             return changes
 
+## Phase 2.1: Delegated to GirlProgression component ##
         def can_upgrade_stat(self, stat): # Where stat is an object
+            return self._progression.can_upgrade_stat(stat)
 
-            _min, _max = self.get_stat_minmax(stat.name, raw = True)
-
-            if stat.value >= _max:
-                return False
-            return True
-
+## Phase 2.1: Delegated to GirlProgression component ##
         def upgrade_stat(self, stat, chg, silent=True):
-            r = self.change_stat(stat, chg, apply_boost = False, silent=silent)
+            return self._progression.upgrade_stat(stat, chg, silent)
 
-            self.upgrade_points -= r
-
-            if r < chg:
-                return False
-            else:
-                return True
-
+## Phase 2.1: Delegated to GirlProgression component ##
         def get_max_stat_upgrade_points(self, stat):
-            result = self.get_stat_minmax(stat, raw = True)[1] - self.get_stat(stat, raw = True)
-            if result > 0:
-                if result > self.upgrade_points:
-                    result = self.upgrade_points
-                return round_int(result)
-            else:
-                return 0
+            return self._progression.get_max_stat_upgrade_points(stat)
 
         def get_stat_max(self, stat_name, raw = False, custom_cap=None):
             return self.get_stat_minmax(stat_name, raw, custom_cap)[1]
@@ -1338,395 +1285,103 @@ init -2 python:
 
 ## XP, rank and Level up
 
+## Phase 2.1: Delegated to GirlProgression component ##
         def change_xp(self, value, apply_boost = True, spillover=True, silent=False):
-
-            # XP spillover (Bride perk: confession) - Boosts don't apply
-            if spillover:
-                self.stat_spillover("xp", value)
-
-            _min, _max = self.get_stat_minmax("xp")
-
-            if apply_boost:
-
-                boost = self.get_effect("boost", "xp gains")
-
-                boost += 0.05 * self.remembers("reward", "level up") # Boosts XP is she was rewarded before
-
-                boost = reverse_if(boost, value) ## Reverses boost if decreasing stat
-
-            else:
-                boost = 1.0
-
-            change = value * boost
-
-            if _min > self.xp + change:
-
-                change = _min - self.xp
-                self.xp = _min
-
-            elif _max < self.xp + change:
-
-                change = _max - self.xp
-                self.xp = _max
-
-            else:
-                self.xp += change
-
-            if change and not silent: notify(_("XP: %s") % plus_text(change, color_scheme="xp"), pic=self.portrait) # Experimental
-
-            return change
+            return self._progression.change_xp(value, apply_boost, spillover, silent)
 
 
+## Phase 2.1: Delegated to GirlProgression component ##
         def change_jp(self, value, job, apply_boost = True, spillover=True, announcement_delay=1, silent=False):
-
-            # JP spillover (Bride perk: confession) - Boosts don't apply
-            if spillover:
-                self.stat_spillover("jp", value, job=job)
-
-            _min, _max = self.get_stat_minmax("jp")
-
-            if apply_boost:
-
-                boost = self.get_effect("boost", "all jp gains") * self.get_effect("boost", job + " jp gains")
-
-                boost += 0.05 * self.remembers("reward", "job up") # Boosts JP is she was rewarded before
-
-                boost = reverse_if(boost, value)
-
-            else:
-
-                boost = 1.0
-
-            change = value * boost
-
-            if _min > self.jp[job] + change:
-
-                change = _min - self.jp[job]
-                self.jp[job] = _min
-
-            elif _max < self.jp[job] + change:
-
-                change = _max - self.jp[job]
-                self.jp[job] = _max
-
-            else:
-                self.jp[job] += change
-
-            while self.ready_to_job_up(job):
-                self.job_up(job, announcement_delay=announcement_delay)
-
-            if change and not silent: notify(_("%s JP: %s") % (__(job.capitalize()), plus_text(change, color_scheme="jp")), pic=self.portrait) # Experimental
-
-            return change
+            return self._progression.change_jp(value, job, apply_boost, spillover, announcement_delay, silent)
 
 
+## Phase 2.1: Delegated to GirlProgression component ##
         def level_up(self, forced = False, silent=False):
+            return self._progression.level_up(forced, silent)
 
-            if self.ready_to_level() or forced:
-
-                if forced:
-                    self.xp = self.get_xp_cap()
-
-                if self.level < 25: # Hard-coded level cap
-                    self.level += 1
-
-                    self.upgrade_points += 5 + 5 * self.rank
-
-                    if self.level == 25:
-                        self.perk_points += 3
-                        notify("Maximum level reached! +1 Perk Point", pic=self.portrait, col=c_lightgreen)
-                    elif self.level%5 == 0:
-                        self.perk_points += 2
-                    else:
-                        self.perk_points += 1
-
-                    self.update_can_perk() # This is not checked dynamically for performance
-                    # MC earns prestige when a girl levels up
-                    MC.prestige += self.rank
-
-                    if not silent:
-                        self.track_event("level up", arg=self.level)
-
-                    return True
-
-            return False
-
+## Phase 2.1: Delegated to GirlProgression component ##
         def debug_auto_level(self, chapter):
-            if chapter > 6:
-                ranks = 3
-                levels = 20
-            elif chapter > 4:
-                ranks = 2
-                levels = 15
-            elif chapter > 2:
-                ranks = 1
-                levels = 10
-            elif chapter > 1:
-                ranks = 0
-                levels = 5
-            else:
-                ranks = 0
-                levels = 0
-
-            ranks = ranks - self.rank
-            levels = levels - self.level
-
-            if levels > 0:
-                for i in range(levels):
-                    # Simulates gained skills
-                    self.upgrade_points += 10*self.rank
-
-                    # Auto level and rank up
-                    self.auto_level_up(forced=True, silent=True)
-                    if self.level % 5 == 0 and ranks > 0:
-                        self.rank_up(forced=True, silent=True)
-                        ranks -= 1
+            return self._progression.debug_auto_level(chapter)
 
 
+## Phase 2.1: Delegated to GirlProgression component ##
         def auto_level_up(self, forced = False, silent = False):
+            return self._progression.auto_level_up(forced, silent)
 
-            if self.level_up(forced, silent):
-                for stat in self.stats:
-                    self.upgrade_stat(stat.name, self.upgrade_points/8.0)
-
+## Phase 2.1: Delegated to GirlProgression component ##
         def rank_up(self, forced = False, silent=False):
-
-            if self.ready_to_rank() or forced:
-                if forced:
-                    self.rep = rep_to_rank[self.rank]
-
-                if self.rank < 5:
-                    self.rank += 1
-                    self.rank_up_sanity()
-
-                if self.auto_upkeep:
-                    self.adjust_upkeep()
-
-                self.update_can_perk() # This is not checked dynamically for performance
-
-                if not silent:
-                    self.track_event("rank up", arg=rank_name[self.rank])
-
-                #ADD rank up animation
+            return self._progression.rank_up(forced, silent)
 
 
+## Phase 2.1: Delegated to GirlProgression component ##
         def job_up(self, job, forced = False, announcement_delay=0):
-
-            if self.ready_to_job_up(job) or forced:
-
-                if self.job_level[job] < 5:
-                    self.job_level[job] += 1
-
-                    primary, secondary, add1, add2 = job_up_dict[job]
-
-                    self.change_stat(primary, job_up_change[self.job_level[job]][0], apply_boost = False)
-                    self.change_stat(secondary, job_up_change[self.job_level[job]][1], apply_boost = False)
-                    self.change_stat(add1, job_up_change[self.job_level[job]][2], apply_boost = False)
-                    self.change_stat(add2, job_up_change[self.job_level[job]][2], apply_boost = False)
-
-                    self.track_event("job up", arg=job)
-
-                    calendar.set_alarm(calendar.time + announcement_delay, Event(label = "job_up", object = (self, job, self.job_level[job])))
+            return self._progression.job_up(job, forced, announcement_delay)
 
 
+## Phase 2.1: Delegated to GirlProgression component ##
         def ready_to_level(self):
+            return self._progression.ready_to_level()
 
-            if self.level < self.rank * 5:
-
-                if self.xp >= self.get_xp_cap():
-
-                    return True
-
-            return False
-
+## Phase 2.1: Delegated to GirlProgression component ##
         def can_spend_upgrade_points(self):
-            if self.upgrade_points >= 1:
-                for stat in self.stats:
-                    if self.can_upgrade_stat(stat):
-                        return True
-            return False
+            return self._progression.can_spend_upgrade_points()
 
 
+## Phase 2.1: Delegated to GirlProgression component ##
         def ready_to_rank(self):
-
-            if self.rank < district.rank:
-
-                if self.rep >= rep_to_rank[self.rank] * self.get_effect("boost", "new rank reputation requirement") and self.level >= self.rank * 5:
-
-                    return True
-
-            return False
+            return self._progression.ready_to_rank()
 
 
+## Phase 2.1: Delegated to GirlProgression component ##
         def ready_to_job_up(self, job):
-
-            if job in (all_jobs + all_sex_acts):
-
-                mylevel = self.job_level[job]
-
-                if mylevel == 5:
-
-                    return False
-
-                elif self.jp[job] >= jp_to_level[mylevel] and mylevel < self.rank:
-
-                    return True
-
-            return False
+            return self._progression.ready_to_job_up(job)
 
 
+## Phase 2.1: Delegated to GirlProgression component ##
         def unlock_archetype(self, archetype_name):
-            if not self.archetypes[archetype_name].unlocked:
-                self.archetypes[archetype_name].unlocked = True
-                self.update_can_perk() # This is not checked dynamically for performance
-                return True
-            else:
-                return False
+            return self._progression.unlock_archetype(archetype_name)
 
+## Phase 2.1: Delegated to GirlProgression component ##
         def can_acquire_perk(self, perk, context=None): # Where perk is an object
-            if self.has_perk(perk.name):
-                return False, "She already has that perk."
+            return self._progression.can_acquire_perk(perk, context)
 
-            if context == "perk_screen":
-                points = perk_points
-                perks = self.perks + new_perks
-            else:
-                points = self.perk_points
-                perks = self.perks
-
-            val = sum(1 for p in perks if p.archetype == perk.archetype)
-
-            message = ""
-
-            if not self.archetypes[perk.archetype].unlocked:
-                message += perk.archetype + " is locked for now.\n"
-            elif val < perk.value:
-                message += str(perk.value) + " more perk" + plural(perk.value) + " must be unlocked first.\n"
-            elif self.rank < perk.min_rank:
-                message += self.name + " must be rank " + rank_name[perk.min_rank] + " before she can acquire this perk.\n"
-            elif points < 1:
-                message = self.name + " does not have enough points."
-            else:
-                return True, ""
-
-            return False, message
-
+## Phase 2.1: Delegated to GirlProgression component ##
         def update_can_perk(self): # 'can_perk' is used to trigger UI alerts
+            return self._progression.update_can_perk()
 
-            self.can_perk = False
-
-            # Can unlock perk tree
-            if self.perk_points >= 2 and [a for a in self.archetypes.values() if not a.unlocked]:
-                self.can_perk = True
-
-            # Can unlock perk
-            for perk in perk_dict.values():
-                if self.can_acquire_perk(perk)[0]:
-                    self.can_perk = True
-
+## Phase 2.1: Delegated to GirlProgression component ##
         def acquire_perk(self, perk, forced=False): ## Where perk is an object
-            if perk not in self.perks:
-                if not forced:
-                    if self.can_acquire_perk(perk)[0]:
-                        self.perk_points -= 1
-                    else:
-                        return self.can_acquire_perk(perk, self.perk_points)
+            return self._progression.acquire_perk(perk, forced)
 
-                self.perks.append(perk)
-                self.add_effects(perk.effects)
-                self.reset_sex_acts(first=False)
-
-                if perk.level == 3:
-                    unlock_achievement(perk.archetype)
-
-                self.update_can_perk()
-
-            return True, ""
-
+## Phase 2.1: Delegated to GirlProgression component ##
         def refund_perks(self, min_level=0): # all perks above or equal to min_level will be refunded. Use min_level=0 to refund archetypes
-            perk_points = 0
-
-            for perk in list(self.perks):
-                if perk.level >= min_level:
-                    self.perks.remove(perk)
-                    self.remove_effects(perk.effects)
-                    self.reset_sex_acts(first=False)
-
-                    perk_points += 1
-
-            if min_level <= 0:
-                for arch in archetype_dict.keys():
-                    if self.archetypes[arch].unlocked:
-                        self.archetypes[arch].unlocked = False
-                        perk_points += 2
-
-            self.perk_points += perk_points
-
-            self.update_can_perk()
-
-            return perk_points
+            return self._progression.refund_perks(min_level)
 
 
 
+## Phase 2.1: Delegated to GirlProgression component ##
         def check_combo_perks(self):
-
-            for p in combo_perks:
-                if not self.has_perk(p.name) and self.has_prerequisites(p):
-                    self.perks.append(p)
-                    self.add_effects(p.effects)
-
-                    renpy.call_screen("OK_screen", title = p.name, message = self.name + " has learnt a new combo! " + p.description)
+            return self._progression.check_combo_perks()
 
 
 
+## Phase 2.1: Delegated to GirlProgression component ##
         def has_prerequisites(self, perk):
-
-            if perk.prerequisite != None:
-
-                for pre in perk.prerequisite:
-                    if not self.has_perk(pre):
-                        return False
-
-            return True
+            return self._progression.has_prerequisites(perk)
 
 
+## Phase 2.1: Delegated to GirlProgression component ##
         def get_perk(self, perk): ## Where perk is an object (important)
-
-            for p in self.perks:
-                if p.name == perk.name:
-                    return p
-            else:
-                return False
+            return self._progression.get_perk(perk)
 
 
+## Phase 2.1: Delegated to GirlProgression component ##
         def get_perk_level(self, perk): ## Where perk is an object (important)
+            return self._progression.get_perk_level(perk)
 
-            p = self.get_perk(perk)
-
-            if p:
-                return p.level
-
-            else:
-                return 0
-
+## Phase 2.1: Delegated to GirlProgression component ##
         def change_rep(self, chg, silent=False):
-
-            _min, _max = self.get_stat_minmax("rep")
-
-            boost = self.get_effect("boost", "reputation gains") * game.get_diff_setting("rep")
-
-            boost += 0.05 * self.remembers("reward", "rank up") # Boosts REP is she was rewarded before
-
-            boost = reverse_if(boost, chg)
-
-            chg = get_change_min_max(self.rep, chg*boost, _min, _max)
-#            renpy.say("", "Changing rep by " + str(chg))
-
-            self.rep += chg
-
-            if not silent: notify(_("Reputation: %s") % plus_text(int(chg)), col="rep", pic=self.portrait)
-
-            return chg
+            return self._progression.change_rep(chg, silent)
 
 
 
@@ -2582,7 +2237,6 @@ init -2 python:
             self.flags["buildup warning 200"] = False
 
         # ── Phase 2.1: Economy delegation aliases ──
-        _change_rep_impl = change_rep
         _customer_populations_safety_check_impl = customer_populations_safety_check
 
         # ── Phase 2.1: Mood delegation aliases ──
@@ -2612,22 +2266,13 @@ init -2 python:
         # ── Phase 2.1: Stats delegation aliases ──
         _generate_stats_impl = generate_stats
         _find_stat_impl = find_stat
-        _get_stat_impl = get_stat
         _average_stats_impl = average_stats
         _test_stats_impl = test_stats
         _raise_stats_impl = raise_stats
-        _can_upgrade_stat_impl = can_upgrade_stat
-        _upgrade_stat_impl = upgrade_stat
         _get_stat_max_impl = get_stat_max
         _get_stat_minmax_impl = get_stat_minmax
         _stat_spillover_impl = stat_spillover
-        _change_stat_impl = change_stat
-        _set_stat_impl = set_stat
         _average_skills_impl = average_skills
-        _get_xp_cap_impl = get_xp_cap
-        _get_jp_cap_impl = get_jp_cap
-        _get_rep_cap_impl = get_rep_cap
-        _adjust_level_impl = adjust_level
 
         # ── Phase 2.1: Relationships delegation aliases ──
 
@@ -2646,14 +2291,6 @@ init -2 python:
         _has_perk_impl = has_perk
         _add_trait_impl = add_trait
         _remove_trait_impl = remove_trait
-        _can_acquire_perk_impl = can_acquire_perk
-        _update_can_perk_impl = update_can_perk
-        _acquire_perk_impl = acquire_perk
-        _refund_perks_impl = refund_perks
-        _check_combo_perks_impl = check_combo_perks
-        _has_prerequisites_impl = has_prerequisites
-        _get_perk_impl = get_perk
-        _get_perk_level_impl = get_perk_level
 
         # ── Phase 2.1: Logging delegation aliases ──
 
@@ -2666,7 +2303,6 @@ init -2 python:
         _is_unique_impl = is_unique
         _load_ini_impl = load_ini
         _read_ini_impl = read_ini
-        # _adjust_level_impl already defined in Stats section above
 
         # ── Phase 2.1: Sex delegation aliases ──
         _will_do_sex_act_impl = will_do_sex_act

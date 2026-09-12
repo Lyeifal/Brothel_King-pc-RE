@@ -138,18 +138,18 @@ init -2 python:
         def remove_trait(self, trait):
             return self.girl._remove_trait_impl(trait)
         def can_acquire_perk(self, perk, context=None):
-            return self.girl._can_acquire_perk_impl(perk, context)
+            return self.girl.can_acquire_perk(perk, context)
         def update_can_perk(self):
-            return self.girl._update_can_perk_impl()
+            return self.girl.update_can_perk()
         def acquire_perk(self, perk, forced=False):
-            return self.girl._acquire_perk_impl(perk, forced)
+            return self.girl.acquire_perk(perk, forced)
         def refund_perks(self, min_level=0):
-            return self.girl._refund_perks_impl(min_level)
+            return self.girl.refund_perks(min_level)
         def check_combo_perks(self):
-            return self.girl._check_combo_perks_impl()
+            return self.girl.check_combo_perks()
         def has_prerequisites(self, perk):
-            return self.girl._has_prerequisites_impl(perk)
+            return self.girl.has_prerequisites(perk)
         def get_perk(self, perk):
-            return self.girl._get_perk_impl(perk)
+            return self.girl.get_perk(perk)
         def get_perk_level(self, perk):
-            return self.girl._get_perk_level_impl(perk)
+            return self.girl.get_perk_level(perk)

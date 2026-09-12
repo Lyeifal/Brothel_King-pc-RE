@@ -475,7 +475,7 @@ init -2 python:
 
 
         def change_rep(self, chg, silent=False):
-            return self.girl._change_rep_impl(chg, silent)
+            return self.girl.change_rep(chg, silent)
 
         def customer_populations_safety_check(self, current_pop):
             return self.girl._customer_populations_safety_check_impl(current_pop)

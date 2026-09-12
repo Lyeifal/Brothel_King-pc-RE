@@ -159,29 +159,29 @@ init -2 python:
 
         def can_upgrade_stat(self, stat):
             '''检查属性是否可以升级 | Check if stat can be upgraded'''
-            return self.girl._can_upgrade_stat_impl(stat)
+            return self.girl.can_upgrade_stat(stat)
 
         def upgrade_stat(self, stat, chg, silent=True):
             '''升级属性 | Upgrade a stat'''
-            return self.girl._upgrade_stat_impl(stat, chg, silent)
+            return self.girl.upgrade_stat(stat, chg, silent)
 
         # ── 经验/职业经验/声望上限 | XP/JP/REP caps ──
 
         def get_xp_cap(self):
             '''获取经验上限 | Get XP cap for current level'''
-            return self.girl._get_xp_cap_impl()
+            return self.girl.get_xp_cap()
 
         def get_jp_cap(self, job="all"):
             '''获取职业经验上限 | Get JP cap for current level/job'''
-            return self.girl._get_jp_cap_impl(job)
+            return self.girl.get_jp_cap(job)
 
         def get_rep_cap(self):
             '''获取声望上限 | Get reputation cap'''
-            return self.girl._get_rep_cap_impl()
+            return self.girl.get_rep_cap()
 
         def adjust_level(self, level):
             '''调整等级 | Adjust girl level and related values'''
-            return self.girl._adjust_level_impl(level)
+            return self.girl.adjust_level(level)
 
         def average_stats(self, stats):
             '''已被新系统取代 | Deprecated with new system'''
