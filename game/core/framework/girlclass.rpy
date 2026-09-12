@@ -351,22 +351,9 @@ init -2 python:
         def check_pictures(self):
             self._pictures.check_pictures()
 
+## Phase 2.1: Delegated to GirlStats component ##
         def generate_stats(self, sex=False): # regular stats are generated first, sx stats are generated after fixations
-
-            if not sex:
-                self.stats = []
-
-                for stat in gstats_main:
-                    if use_ini_skills:
-                        self.stats.append(Stat(stat, "main", self, weight=self.init_dict["base skills/" + stat]))
-                    else:
-                        self.stats.append(Stat(stat, "main", self))
-            else:
-                self.sex_stats = []
-                self.does = defaultdict(bool)
-
-                for stat in gstats_sex:
-                    self.sex_stats.append(Stat(stat, "sex", self))
+            return self._stats.generate_stats(sex)
 
 ## Phase 2.1: Delegated to GirlProgression component ##
         def adjust_level(self, level):
@@ -898,87 +885,19 @@ init -2 python:
 
 
 
+## Phase 2.1: Delegated to GirlStats component ##
         def average_stats(self, stats): #Unused with the new system
-
-            ## Tests the weighted average of all stats
-
-            score = 0
-            totalw = 0
-
-            for tup in stats:
-
-                stat, weight = tup
-
-                score += self.get_stat(stat) * weight
-                totalw += weight
-
-            score /= float(totalw)
-
-            return score
+            return self._stats.average_stats(stats)
 
 
+## Phase 2.1: Delegated to GirlStats component ##
         def test_stats(self, stats=None, diff=0, advanced_stats=None): # Result will range from total of positive max modifiers in stat_bonus (+9) to negative max modifiers for primary and secondary (-6). Advanced stats will feed a stat_list directly with more flexibility.
-
-            if advanced_stats:
-                stat_list = advanced_stats
-            else:
-                stat_list = [(stats[0][0], "primary"), (stats[1][0], "secondary"), (stats[2][0], "booster"), (stats[3][0], "booster")]
-
-            score = 0
-
-            for stat, _type in stat_list:
-
-                if self.get_stat(stat) - diff >= 40: # Reduced the pos threshold for stats for now
-                    score += stat_bonus[_type][0]
-
-                elif self.get_stat(stat) - diff >= 20: # Reduced the pos threshold for stats for now
-                    score += stat_bonus[_type][1]
-
-                elif self.get_stat(stat) - diff >= 10:
-                    score += stat_bonus[_type][2]
-
-                elif self.get_stat(stat) - diff >= 0:
-                    score += stat_bonus[_type][3]
-
-                elif _type != "booster":
-                    if self.get_stat(stat) - diff <= -40: # Reduced the neg threshold for stats for now
-                        score -= stat_bonus[_type][0]
-
-                    elif self.get_stat(stat) - diff <= -20: # Reduced the neg threshold for stats for now
-                        score -= stat_bonus[_type][1]
-
-                    elif self.get_stat(stat) - diff <= -10:
-                        score -= stat_bonus[_type][2]
-
-                    else:
-                        score -= stat_bonus[_type][3]
-
-            return round_int(score)
+            return self._stats.test_stats(stats, diff, advanced_stats)
 
 
+## Phase 2.1: Delegated to GirlStats component ##
         def raise_stats(self, stats, silent=False):
-
-            changes = []
-
-            # Stat increases are stored as tuples (stat_name, %chance, max increase/decrease)
-
-            for s, chance, value in stats:
-
-                if dice(100) <= chance:
-
-                    stat = rand_choice(s)
-
-                    if value > 0: # A dice is rolled from 1 to value
-                        if dice(250) > self.get_stat(stat, raw=True): # A skill check makes it harder to raise a stat the higher it gets
-                            r = self.change_stat(stat, dice(value) * cheat_modifier["stats"] * game.get_diff_setting("stats"), silent=silent)
-                            changes.append((stat, r))
-
-                    elif value < 0:
-                        if dice(250) < self.get_stat(stat, raw=True): # A skill check makes it harder to lower a stat the lower it gets
-                            r = self.change_stat(stat, value / cheat_modifier["stats"], silent=silent) # Diff setting modifier only applies to stat gains
-                            changes.append((stat, r))
-
-            return changes
+            return self._stats.raise_stats(stats, silent)
 
 ## Phase 2.1: Delegated to GirlProgression component ##
         def can_upgrade_stat(self, stat): # Where stat is an object
@@ -995,97 +914,13 @@ init -2 python:
         def get_stat_max(self, stat_name, raw = False, custom_cap=None):
             return self.get_stat_minmax(stat_name, raw, custom_cap)[1]
 
+## Phase 2.1: Delegated to GirlStats component ##
         def get_stat_minmax(self, stat_name, raw = False, custom_cap=None):
+            return self._stats.get_stat_minmax(stat_name, raw, custom_cap)
 
-            if stat_name in ("love", "fear"):
-                _min = -125
-                _max = 125
-
-            elif stat_name == "mood":
-
-                _min = -125
-                _max = 125
-
-            elif stat_name in ("rep", "rep_neg", "reputation"):
-
-                _min = rep_to_rank[self.rank-1]
-                _max = self.get_rep_cap()
-
-            elif stat_name == "energy":
-
-                _min = 0
-
-                eff = self.get_effect("boost", "max energy")
-
-                base = self.get_stat("constitution")+50
-
-                _max = round(base * eff)
-
-            elif stat_name == "xp":
-
-                _min = 0
-                _max = xp_to_levelup[self.rank * 5 - 1]
-
-            elif stat_name == "jp":
-
-                _min = 0
-                _max = self.get_jp_cap()
-
-            elif stat_name.capitalize() in gstats_main + gstats_sex:
-
-                _min = 0
-
-                max_eff = self.get_effect("change", stat_name.lower() + " max") + self.get_effect("change", "all skill max")
-
-                if custom_cap: # Can set cap to a different value (for classes)
-                    _max = custom_cap
-                else: # Max cannot be be lower than current stat value
-                    _max = max(self.rank * 50 + max_eff, self.get_effect("set", "all skill max"), self.get_stat(stat_name, raw=True))
-
-                    if not raw:
-                        eff = self.get_effect("change", stat_name.lower(), change_cap=True) + self.get_effect("change", "all skills", change_cap=True)
-
-                        if stat_name.capitalize() in gstats_main:
-                            eff += self.get_effect("change", "all main skills")
-                        elif stat_name.capitalize() in gstats_sex:
-                            eff += self.get_effect("change", "all sex skills")
-
-                        _max += eff
-
-
-            else:
-                raise AssertionError(stat_name + " min/max not found.")
-
-            return _min, round_int(_max)
-
+## Phase 2.1: Delegated to GirlStats component ##
         def stat_spillover(self, stat, chg, job=None): # Job must be specified for JP
-            eff = self.get_effect("spillover", stat)
-
-            if eff:
-                # Targetting girls
-
-                target_list = []
-
-                if self in MC.girls:
-                    if stat == "jp":
-                        target_list = [g for g in MC.girls if g.job == job]
-                    else:
-                        target_list = MC.girls
-
-                elif self in farm.girls:
-                    target_list = farm.girls
-
-                # Applying spillover effect
-
-                if len(target_list) > 1:
-                    chg = chg / (len(target_list) - 1)
-
-                    for g in target_list:
-                        if g != self:
-                            if stat == "jp":
-                                g.change_jp(chg*eff, job, apply_boost=False, spillover=False, silent=True) # spillover=False is needed to avoid an infinite feedback loop
-                            else:
-                                g.change_stat(stat, chg*eff, apply_boost=False, spillover=False, silent=True) # spillover=False is needed to avoid an infinite feedback loop
+            return self._stats.stat_spillover(stat, chg, job)
 
 
         def change_stat(self, stat, chg, apply_boost=True, spillover=True, custom_cap=None, silent=False, notify_prefix="", notify_suffix=""):
@@ -1100,30 +935,9 @@ init -2 python:
             for sk in sk_list:
                 self.set_stat(sk, change_dict[sk])
 
+## Phase 2.1: Delegated to GirlStats component ##
         def shuffle_skills(self, sk_list, mod=1.0):
-
-            t = 0
-
-            for sk in sk_list:
-                t += self.get_stat(sk, raw=True)
-
-            # The points are spread out randomly in rounds (producing more pronounced variation)
-            change_dict = {sk: 0 for sk in sk_list}
-
-            while t > len(sk_list)*10:
-                change_dict[rand_choice(sk_list)] += 10
-                t -= 10
-
-            while t > len(sk_list)*5:
-                change_dict[rand_choice(sk_list)] += 5
-                t -= 5
-
-            while t > 0:
-                change_dict[rand_choice(sk_list)] += 1
-                t -= 1
-
-            for sk in sk_list:
-                self.set_stat(sk, change_dict[sk])
+            return self._stats.shuffle_skills(sk_list, mod)
 
 ## XP, rank and Level up
 
@@ -1744,14 +1558,8 @@ init -2 python:
         _get_status_summary_impl = get_status_summary
 
         # ── Phase 2.1: Stats delegation aliases ──
-        _generate_stats_impl = generate_stats
         _find_stat_impl = find_stat
-        _average_stats_impl = average_stats
-        _test_stats_impl = test_stats
-        _raise_stats_impl = raise_stats
         _get_stat_max_impl = get_stat_max
-        _get_stat_minmax_impl = get_stat_minmax
-        _stat_spillover_impl = stat_spillover
         _average_skills_impl = average_skills
 
         # ── Phase 2.1: Relationships delegation aliases ──
