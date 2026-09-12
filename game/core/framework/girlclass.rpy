@@ -952,14 +952,9 @@ init -2 python:
             return score
 
 
+## Phase 2.1: Delegated to GirlDialogue component ##
         def test_say(self):
-            renpy.say(self.char, __("Let's test if say methods break the flow."))
-            self.change_love(200)
-            renpy.say(self.char, __("Did my love go up? Now it's %s") % self.love)
-            self.say("free_ask_out")
-            self.change_love(-200)
-            renpy.say(self.char, __("Did my love go down now? It's %s") % self.love)
-            return
+            return self._dialogue.test_say()
 
 
 ## Jobs
@@ -2037,25 +2032,9 @@ init -2 python:
         # Phase 2.1: Delegated to GirlDialogue component
         def generate_background(self, t2=0):
             return self._dialogue.generate_background(t2)
+## Phase 2.1: Delegated to GirlDialogue component ##
         def unlock_NGP_personality_settings(self):
-
-            # NewGame+ additional info
-
-            if NGP_settings_dict["personality"].get() == 2:
-                self.notebook_unlocks += ["EI", "MI", "LM", "DS"]
-
-            elif NGP_settings_dict["personality"].get() == 1:
-                self.notebook_unlocks += rand_choice(["EI", "MI", "LM", "DS"], 2)
-
-            if NGP_settings_dict["taste"].get() == 2:
-                self.notebook_unlocks += ["fav_color", "fav_food", "fav_drink", "dis_color", "dis_food", "dis_drink", "loves", "likes", "hates"]
-                self.personality_unlock["loves"] = [k for k, v in self.personality.gift_likes.items() if v >= 3]
-                self.personality_unlock["likes"] = [k for k, v in self.personality.gift_likes.items() if 3 > v >= 0]
-                self.personality_unlock["hates"] = [k for k, v in self.personality.gift_likes.items() if v <= -2]
-
-            elif NGP_settings_dict["taste"].get() == 1:
-                self.notebook_unlocks += ["fav_color", "fav_food", "fav_drink", "dis_color", "dis_food", "dis_drink"]
-            # /NewGame+
+            return self._dialogue.unlock_NGP_personality_settings()
 
         def change_relationship(self, other_girl, chg):
 
@@ -2640,266 +2619,17 @@ init -2 python:
         #
         #     return self.has_attributes(attr)
 
+## Phase 2.1: Delegated to GirlDialogue component ##
         def is_(self, attributes, type="and"): # Checks if the girl has one or several attributes. Note: A girl with 'very X' will also be 'X'.
+            return self._dialogue.is_(attributes, type)
 
-            attributes = make_list(attributes)
-
-            if type == "and":
-                for a in attributes:
-                    if not a in self.attributes: # or "very " + a in self.attributes):
-                        return False
-                return True
-
-            elif type == "or":
-                for a in attributes:
-                    if a in self.attributes: # or "very " + a in self.attributes:
-                        return True
-                return False
-
+## Phase 2.1: Delegated to GirlDialogue component ##
         def unlock_info(self, topic):
-            if topic not in self.notebook_unlocks:
-                self.notebook_unlocks.append(topic)
+            return self._dialogue.unlock_info(topic)
 
+## Phase 2.1: Delegated to GirlDialogue component ##
         def get_personality_description(self, show="personality"):
-
-            des = "{b}" + self.fullname + "'s "
-
-            if show == "personality":
-                des += "personality{/b}{size=-1}\n\n"
-
-                # Update notebook
-
-                for att in [a for a in ("EI", "MI", "LM", "DS") if a not in self.notebook_unlocks]:
-                    if self.personality_unlock[att] >= 100 or always_show_personality[self]:
-                        self.unlock_info(att)
-
-                for info in [i for i in ("origin", "fav_color", "fav_food", "fav_drink", "hobby_" + self.hobbies[0], "hobby_" + self.hobbies[1], "dis_color", "dis_food", "dis_drink", "loves", "likes", "hates") if i not in self.notebook_unlocks]:
-                    if self.personality_unlock[info] or always_show_personality[self]:
-                        self.unlock_info(info)
-
-                for act in [a for a in extended_sex_acts if a not in self.notebook_unlocks]:
-                    if self.personality_unlock[act] or always_show_personality[self] or NGP_settings_dict["fixation"].get():
-                        self.unlock_info(act)
-
-                for fix in [f for f in (self.pos_fixations + self.neg_fixations) if f not in self.notebook_unlocks]:
-                    if self.personality_unlock[fix.name] or always_show_personality[self] or NGP_settings_dict["fixation"].get() == 2:
-                        self.unlock_info(fix.name)
-
-
-                # Background
-
-                background_des = self.name + __(" is a ")
-
-                if self.free and self in MC.girls + farm.girls:
-                    background_des += __("former free girl")
-                elif self.free:
-                    background_des += __("free girl")
-                else:
-                    background_des += __("slave")
-
-                if "origin" in self.notebook_unlocks:
-                    background_des += __(" from ") + self.origin
-
-                background_des += ". "
-
-                if self.flags["story"] < 10:
-                    background_des += __("You do not know her story.")
-                elif self.flags["story"] < 20:
-                    background_des += __("You know a few things about her story.")
-                elif self.flags["story"] < 50:
-                    background_des += __("You know some things about her story.")
-                elif self.flags["story"] < 100:
-                    background_des += __("She has told you her story, but you haven't done anything about it yet.")
-                elif self.flags["MC refused story"]:
-                    background_des += __("You know about her story.")
-                else:
-                    background_des += __("You know about her story, and did something about it.")
-
-                background_des += "\n\n"
-
-                des += background_des
-
-                # Personality
-
-                pers_des = ""
-
-                if "EI" in self.notebook_unlocks and "MI" in self.notebook_unlocks and "DS" in self.notebook_unlocks and "LM" in self.notebook_unlocks:
-                    pers_des += self.personality.description + "\n\n"
-
-                if "EI" in self.notebook_unlocks:
-                    if self.is_("very extravert"):
-                        pers_des += "She is very {b}lively and outgoing{/b}.\n"
-                    elif self.is_("extravert"):
-                        pers_des += "She is quite {b}sociable{/b}.\n"
-                    elif self.is_("very introvert"):
-                        pers_des += "She is {b}quiet and very shy{/b}.\n"
-                    elif self.is_("introvert"):
-                        pers_des += "She is {b}a little shy{/b}.\n"
-
-                if "MI" in self.notebook_unlocks:
-                    if self.is_("very materialist"):
-                        pers_des += "She is very {b}selfish and greedy{/b}, ready to crush people if they get in her way.\n"
-                    elif self.is_("materialist"):
-                        pers_des += "She is quite {b}shallow and materialistic{/b}.\n"
-                    elif self.is_("very idealist"):
-                        pers_des += "She is a {b}dreamer{/b}, wanting to make the world a better place.\n"
-                    elif self.is_("idealist"):
-                        pers_des += "She {b}cares about others{/b}.\n"
-
-                if "DS" in self.notebook_unlocks:
-                    if self.is_("very dom"):
-                        pers_des += "She is {b}aggressive, strong-headed{/b} and wants others to see things her way.\n"
-                    elif self.is_("dom"):
-                        pers_des += "She knows what she wants, and she likes to be {b}independent{/b}.\n"
-                    elif self.is_("very sub"):
-                        pers_des += "She is {b}very submissive{/b} and always puts herself last.\n"
-                    elif self.is_("sub"):
-                        pers_des += "She is {b}rather submissive{/b}, avoiding conflict whenever possible.\n"
-
-                if "LM" in self.notebook_unlocks:
-                    if self.is_("very modest"):
-                        pers_des += "She has strong moral views and is {b}repressed{/b} about sex.\n"
-                    elif self.is_("modest"):
-                        pers_des += "She follows her own {b}code of ethics{/b}, frowning upon lewd behavior.\n"
-                    elif self.is_("very lewd"):
-                        pers_des += "She only cares about {b}her own pleasure{/b}, not giving a damn about morality.\n"
-                    elif self.is_("lewd"):
-                        pers_des += "She's {b}open-minded and relaxed{/b} about morals.\n"
-
-                if not pers_des:
-                    pers_des += "You don't know her personality very well."
-
-                des += pers_des
-
-            # Tastes
-
-            elif show == "tastes":
-
-                des += "tastes{/b}{size=-1}\n\n"
-
-                taste_text = ""
-
-                if "fav_color" in self.notebook_unlocks:
-                    taste_text += "Her favourite color is {b}" + self.likes["color"] + "{/b}. "
-
-                if "fav_food" in self.notebook_unlocks:
-                    taste_text += "Her favourite food is {b}" + self.likes["food"] + "{/b}. "
-
-                if "fav_drink" in self.notebook_unlocks:
-                    taste_text += "Her favourite drink is {b}" + self.likes["drink"] + "{/b}. "
-
-                if ("hobby_" + self.hobbies[0]) in self.notebook_unlocks and ("hobby_" + self.hobbies[1]) in self.notebook_unlocks:
-                    taste_text += "She likes {b}" + self.hobbies[0] + " and " + self.hobbies[1] + "{/b}. "
-
-                elif ("hobby_" + self.hobbies[0]) in self.notebook_unlocks:
-                    taste_text += "She likes {b}" + self.hobbies[0] + "{/b}. "
-
-                elif ("hobby_" + self.hobbies[1]) in self.notebook_unlocks:
-                    taste_text += "She likes {b}" + self.hobbies[1] + "{/b}. "
-
-                if taste_text:
-                    taste_text += "\n\n"
-
-                if "dis_color" in self.notebook_unlocks:
-                    taste_text += "Her least favourite color is {b}" + self.dislikes["color"] + "{/b}. "
-
-                if "dis_food" in self.notebook_unlocks:
-                    taste_text += "Her least favourite food is {b}" + self.dislikes["food"] + "{/b}. "
-
-                if "dis_drink" in self.notebook_unlocks:
-                    taste_text += "Her least favourite drink is {b}" + self.dislikes["drink"] + "{/b}. "
-
-
-                if taste_text:
-                    taste_text += "\n\n"
-
-                if "loves" in self.notebook_unlocks and self.personality_unlock["loves"]:
-                    taste_text += "She loves {color=[c_emerald]}" + and_text([gift_description[luv] for luv in self.personality_unlock["loves"]]) + "{/color}. "
-                    prior = "also "
-                    prior2 = "However, she "
-
-                else:
-                    prior = ""
-                    prior2 = "She "
-
-                if "likes" in self.notebook_unlocks and self.personality_unlock["likes"]:
-                    taste_text += "She " + prior + "likes {color=[c_orange]}" + and_text([gift_description[lik] for lik in self.personality_unlock["likes"]]) + "{/color}. "
-                    prior2 = "However, she "
-
-                if "hates" in self.notebook_unlocks and self.personality_unlock["hates"]:
-                    taste_text += prior2 + "hates {color=[c_crimson]}" + and_text([gift_description[hat] for hat in self.personality_unlock["hates"]]) + "{/color}. "
-
-                if taste_text:
-                    des += taste_text
-                else:
-                    des += __("You don't know anything about her tastes.")
-
-            elif show == "sexual":
-
-                des += "sexuality{/b}\n\n"
-
-                sex_text = ""
-
-                pos_unlocked = []
-                amb_unlocked = []
-                neg_unlocked = []
-
-                for act in self.pos_acts:
-                    if act in self.notebook_unlocks:
-                        if act in self.neg_acts: # Ambivalent acts
-                            amb_unlocked.append(act)
-                        else:
-                            pos_unlocked.append(act)
-
-                for act in self.neg_acts:
-                    if act in self.notebook_unlocks and act not in self.pos_acts:
-                        neg_unlocked.append(act)
-
-                if pos_unlocked:
-                    sex_text += "She has a weakness for {color=[c_emerald]}" + and_text(pos_unlocked) + "{/color} acts"
-
-                    if neg_unlocked:
-                        sex_text += ", but she "
-                    else:
-                        sex_text += ". "
-
-                if neg_unlocked:
-                    if not sex_text:
-                        sex_text += "She "
-                    sex_text += "dislikes {color=[c_crimson]}" + and_text(neg_unlocked) + "{/color} acts. "
-
-                if amb_unlocked:
-                    sex_text += "She is ambivalent towards {color=[c_yellow]}" + and_text(amb_unlocked) + "{/color} acts. "
-
-                if sex_text:
-                    sex_text += "\n\n"
-
-                pos_fix = [fix.name for fix in self.pos_fixations if fix.name in self.notebook_unlocks]
-                neg_fix = [fix.name for fix in self.neg_fixations if fix.name in self.notebook_unlocks]
-
-                if pos_fix:
-                    sex_text += "She is especially fascinated by {color=[c_emerald]}" + and_text(pos_fix) + "{/color}. "
-                if neg_fix:
-                    sex_text += "She is disgusted by {color=[c_crimson]}" + and_text(neg_fix) + "{/color}. "
-
-                if sex_text:
-                    des += sex_text
-                else:
-                    des += "You do not know her sexual tastes very well."
-
-                if farm.knows["weakness"][self]:
-                    des+= _("\nShe is vulnerable to farm %ss.") % self.weakness
-
-            elif show == "recent":
-
-                if self.free:
-                    day_number = 84
-                else:
-                    day_number = 7
-
-                des += "recent events{/b}\n\n" + self.get_recent_events_description(day_number) + ""
-
-            return des
+            return self._dialogue.get_personality_description(show)
 
 
 
@@ -3357,14 +3087,10 @@ init -2 python:
         _generate_personality_impl = generate_personality
         _adjust_personality_impl = adjust_personality
         _generate_background_impl = generate_background
-        _unlock_NGP_personality_settings_impl = unlock_NGP_personality_settings
-        _get_personality_description_impl = get_personality_description
         _talk_tastes_impl = talk_tastes
         _pick_dialogue_impl = pick_dialogue
         _say_impl = say
         _rand_say_impl = rand_say
-        _test_say_impl = test_say
-        _unlock_info_impl = unlock_info
 
         # ── Phase 2.1: Traits delegation aliases ──
         _generate_traits_impl = generate_traits
