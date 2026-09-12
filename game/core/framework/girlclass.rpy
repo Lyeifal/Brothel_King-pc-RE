@@ -500,126 +500,21 @@ init -2 python:
             return self._items.equip(item)
 
         # Phase 2.1: Delegated to GirlItems component
+## Phase 2.1: Delegated to GirlItems component ##
         def unequip(self, item):
-            self._items.unequip(item)
+            return self._items.unequip(item)
 
-            # Restores item effects if girl had boost item type effects
-            boost = self.get_effect("boost", item.type.name.lower())
-
-            if boost != 1.0: # Reminder: effects have been previously deep copied on equip
-                for eff in item.effects:
-                    eff.value /= boost
-
-            self.refresh_sex_acts() # Checks if sex_acts can still be done
-
+## Phase 2.1: Delegated to GirlItems component ##
         def get_equipped(self, slot):
+            return self._items.get_equipped(slot)
 
-            for it in self.equipped:
-                if it.slot == slot:
-                    return it
-            return False
-
+## Phase 2.1: Delegated to GirlItems component ##
         def use_item(self, item, night=False):
-            if not isinstance(item, ItemInstance):
-                renpy.say(bk_error, __("Warning: This item is not instantiated (%s).") % item.name)
+            return self._items.use_item(item, night)
 
-            changes = NightChangeLog(title=item.name)
-
-            debug_notify("Using " + item.name + " on " + self.fullname, pic=self.portrait)
-
-            used = False
-            r = ""
-
-            for e in item.effects:
-                if e.type == "gain":
-                    c = self.add_effects(e)
-                    if c:
-                        changes.add(e.target.capitalize() + _(" : %s") % plus_text(c))
-                    used = True
-
-                elif e.type == "change": # In case of direct usage, the change will last only for one turn or the item duration
-                    if item.type.name == "Food": # Prevents stacking food effects for the same stat
-                        if self.current_food_effect[e.target]:
-                            changes.add(_("%s: %s (expired)") % (self.current_food_effect[e.target].target.capitalize(), plus_text(-self.current_food_effect[e.target].value)))
-                            self.remove_effects(self.current_food_effect[e.target])
-
-                        self.current_food_effect[e.target] = e # Stores the object used to remove the effect in case another food is absorbed
-
-                    if e.duration > 0:
-                        c = self.add_effects(e, expires = calendar.time + e.duration)
-                        if c:
-                            changes.add(_("%s: %s (duration: %s days)") % (e.target.capitalize(), plus_text(c), e.duration))
-                    else:
-                        c = self.add_effects(e, expires = calendar.time + 1)
-                        if c:
-                            changes.add(_("%s: %s") % (e.target.capitalize(), plus_text(c)))
-
-                    used = True
-
-                elif e.type in ("special", "instant"):
-                    if e.target == "level":
-                        if self.level < e.value:
-                            self.xp = self.get_xp_cap()
-                            self.level_up()
-                            changes.add(_("Level: +1"), col=c_orange)
-                            used = True
-                        else:
-                            notify(__("This item can only be used up to level %s") % e.value, pic=self.portrait)
-
-                    elif e.target == "heal":
-                        if not self.can_heal_from_item() and not night:
-                            renpy.say("", __("Only one healing item can be used per day."))
-
-                        elif self.hurt > 0:
-                            c, _ = self.heal(e.value, from_item=True)
-                            if c:
-                                changes.add(__("Healing"), "header")
-                                changes.add(__("Healed: %s") % plus_text(c))
-                                if self.hurt <= 0:
-                                    changes.add(__("(fully healed)"), col="good")
-                                    if not night:
-                                        renpy.say("", __("%s has been healed completely.") % self.name)
-                                elif not night:
-                                    renpy.say("", __("%s has been healed but still need some time to rest.") % self.name)
-                                used = True
-                        else:
-                            notify(__("%s is in good health.") % self.name, pic=self.portrait)
-
-                    # Virginity restoration
-                    elif e.target == "virginity":
-                        if not self.has_trait("Virgin"):
-                            self.restore_virginity()
-                            used = True
-
-                    # Sanity restoration
-                    elif e.target == "sanity":
-                        self.init_sanity()
-                        used = True
-
-            if used:
-                r = item.use_me()
-
-                if r == "used_up" and item in self.items:
-                    self.items.remove(item)
-                    changes.add("(used up)", col="bad")
-
-                norollback()
-
-            if night:
-                return r, changes
-            return r
-
+## Phase 2.1: Delegated to GirlItems component ##
         def take(self, giver, obj):
-            if not isinstance(obj, ItemInstance):
-                renpy.say(bk_error, __("Warning: This item is not instantiated (%s).") % obj.name)
-
-            self.items.append(obj)
-            if obj.equipped:
-                giver.unequip(obj)
-            try:
-                giver.items.remove(obj)
-            except:
-                pass
+            return self._items.take(giver, obj)
 
 ## Phase 2.1: Delegated to GirlRelationships component ##
         def get_MC_relation(self):
@@ -1543,7 +1438,6 @@ init -2 python:
         _compare_preference_impl = compare_preference
 
         # ── Phase 2.1: Items delegation aliases | 物品方法别名 ──
-        _get_equipped_impl = get_equipped
 
         # -- Phase 2.1: Training delegation aliases | 训练方法别名 --
         _will_do_farm_act_impl = will_do_farm_act
