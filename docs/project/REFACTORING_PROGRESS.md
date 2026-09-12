@@ -297,10 +297,10 @@ f027957  ── 批次14a: 修复批次8双重执行bug(generate_preferences 纯
 - **core 兜底**（新）: `data/quality.rpy`（init -4）——原 `settings/quality.json` 的 7 档数据逐字硬编码，**勿删**；
 - **新 Mod**: `custom/mods/Item Quality/`（mod_id `item_quality`）——`mod.rpy`（注册 + `is_mod_active` 门控）+ `quality.rpy`（init -9 定义、读自带 `quality.json`）+ `tl/chinese_simplified/`（Mod 自管翻译）+ `README.txt`；
 - **API 扩展**: CAPABILITIES 加 `"items"`；新增 `HOOK_ITEM_GENERATED = "item_generated"`（第 19 个钩子，纯通知型，context `{item, template, tier}`）；v1 基类加 `register_quality`；
-- **items.rpy 重构**: `generate_new_item` / `transform_template` / `init_items` 改走注册表，行为逐位等价（522 例对拍全等）；
+- **items.rpy 重构**: `generate_new_item` / `transform_template` / `init_items` 改走注册表，生成名/变换名统一由新增的 `Item.quality_name()` 组合（保证 `item_dict` 键一致），行为逐位等价（522 例对拍全等，含名称大小写）；
 - **删除旧路径**: `DataLoader.load_quality()`、`variables.rpy` 全局加载块、`data/settings/quality.json`；
 - **翻译迁移**: 31 条前缀词条从 `tl/chinese_simplified/strings.rpy` 移入 Mod 自有 `tl/`（core 保留 Fine/Broken/Medium/Cheap 等共用词条）；
-- **验证**: `tools/verify_mod_api.py` 19/19 钩子通过；三方数据对拍全等；522 例生成结果对拍全等；空注册表边界返回 None 不崩溃。
+- **验证**: `tools/verify_mod_api.py` 19/19 钩子通过；三方数据对拍全等；522 例生成结果对拍全等（含名称大小写）；空注册表边界返回 None 不崩溃。**过程中发现并修复**：重构一度漏掉生成名的 `base_name.lower()`，导致 522 例名称大小写漂移、且 `transform_template` 按小写键查 `item_dict` 会 KeyError；已抽出 `quality_name()` 统一两处组合逻辑并复验全等（0 例差异）。
 
 ---
 

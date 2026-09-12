@@ -272,10 +272,10 @@ First task of the item-system refactor: extract the 0-6 quality tiers of templat
 - **Core fallback** (new): `data/quality.rpy` (init -4) — the 7 tiers of the former `settings/quality.json`, hardcoded verbatim; **do not delete**;
 - **New mod**: `custom/mods/Item Quality/` (mod_id `item_quality`) — `mod.rpy` (registration + `is_mod_active` gating) + `quality.rpy` (definitions at init -9, reads its own `quality.json`) + `tl/chinese_simplified/` (mod-owned translations) + `README.txt`;
 - **API extensions**: CAPABILITIES gained `"items"`; new `HOOK_ITEM_GENERATED = "item_generated"` (the 19th hook, notification-only, context `{item, template, tier}`); v1 base class gained `register_quality`;
-- **items.rpy refactor**: `generate_new_item` / `transform_template` / `init_items` now go through the registry, bit-for-bit behaviour-preserving (522 cases compared, all equal);
+- **items.rpy refactor**: `generate_new_item` / `transform_template` / `init_items` now go through the registry; generated and transformed names are both composed by the new `Item.quality_name()` (so `item_dict` keys can never drift apart), bit-for-bit behaviour-preserving (522 cases compared, all equal, name casing included);
 - **Old paths deleted**: `DataLoader.load_quality()`, the globals block in `variables.rpy`, `data/settings/quality.json`;
 - **Translation migration**: 31 prefix entries moved from `tl/chinese_simplified/strings.rpy` into the mod's own `tl/` (core kept the shared entries Fine/Broken/Medium/Cheap);
-- **Verification**: `tools/verify_mod_api.py` passes 19/19 hooks; three-way data comparison all equal; 522-case generation parity all equal; the empty-registry edge case returns None without crashing.
+- **Verification**: `tools/verify_mod_api.py` passes 19/19 hooks; three-way data comparison all equal; 522-case generation parity all equal (name casing included); the empty-registry edge case returns None without crashing. **Found and fixed during the work**: the refactor briefly dropped `base_name.lower()` from generated names, which shifted the casing of all 522 names and would have made `transform_template`'s lowercased `item_dict` lookup raise KeyError; both call sites now share `quality_name()` and the parity check is back to 0 differences.
 
 ---
 

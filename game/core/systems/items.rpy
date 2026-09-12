@@ -214,12 +214,7 @@ init -2 python:
 
                 new_it = copy.deepcopy(self)
 
-                _prefix = tier.get_prefix(self.adjectives)
-
-                if _prefix is not None:
-                    new_it.name = __("{0} {1}").format(__(_prefix), __(self.base_name))
-                else:
-                    new_it.name = __(self.base_name)
+                new_it.name = self.quality_name(tier.get_prefix(self.adjectives))
                 new_it.name_i18n = new_it.name
                 new_it.price = tier.apply_price(self.base_price)
                 new_it.rarity = tier.apply_rarity(self.rarity, self.min_rank)
@@ -243,16 +238,25 @@ init -2 python:
             else:
                 debug_notify("This item cannot be generated as a template (%s)" % self.name)
 
+        def quality_name(self, prefix): # Compose the quality-prefixed name of a template item (template items only)
+            ## EN: base_name is lowered on purpose (pre-existing behaviour):
+            ##     generated names become item_dict keys, and transform_template
+            ##     looks items up by that same lowered key. Both call sites must
+            ##     go through here so the keys can never drift apart.
+            ## ZH: 基名转小写是既有行为：生成名会成为 item_dict 的键，
+            ##     transform_template 按同一小写键查表。两处调用都必须走本方法，
+            ##     否则键不一致会 KeyError。
+            _base = self.base_name.lower()
+            if prefix is None:
+                return __(_base)
+            return __("{0} {1}").format(__(prefix), __(_base))
+
         def transform_template(self, target_rank): # Instantiate a new ItemInstance corresponding to a different rank (template items only)
             if self.min_rank <= target_rank <= self.max_rank:
                 tier = quality_registry.get_tier(target_rank)
                 if tier is None:
                     raise AssertionError("Transform item failed: no quality tier registered for rank %i (%s)" % (target_rank, self.name))
-                ## EN: base_name.lower() is deliberate: generated names are built
-                ##     from the lowered base name, so item_dict is keyed that way.
-                ## ZH: base_name.lower() 是既有行为：生成名用小写基名组合，
-                ##     item_dict 的键即由此而来。
-                new_name = __("{0} {1}").format(__(tier.get_prefix(self.adjectives)), __(self.base_name.lower()))
+                new_name = self.quality_name(tier.get_prefix(self.adjectives))
                 print("transforming " + self.name + " to " + new_name)
                 return item_dict[new_name].get_instance()
             else:
