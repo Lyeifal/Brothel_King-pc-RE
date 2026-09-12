@@ -272,23 +272,13 @@ init -2 python:
 
             return self.badge
 
+## Phase 2.1: Delegated to GirlSchedule component ##
         def set_workdays(self): #Value is a percentage (0% = resting, 50% = working at half capacity, 100% = full capacity)
+            return self._schedule.set_workdays()
 
-            i = calendar.day % 7
-
-            self.workdays[weekdays[i-2]] = 0
-            self.workdays[weekdays[i-3]] = 0
-
+## Phase 2.1: Delegated to GirlSchedule component ##
         def cycle_workday(self, day, reverse = False):
-
-            if reverse:
-                _wd = workday_map_reverse
-            else:
-                _wd = workday_map_normal
-
-            self.workdays[day] = _wd[self.workdays[day]]
-
-            renpy.restart_interaction()
+            return self._schedule.cycle_workday(day, reverse)
 
 
         def update_files(self):
@@ -754,83 +744,29 @@ init -2 python:
 
 ## Jobs
 
+## Phase 2.1: Delegated to GirlSchedule component ##
         def will_do(self, job, silent=False):
+            return self._schedule.will_do(job, silent)
 
-            if job == "whore":
-
-                modifier = self.get_sex_act_modifier()
-
-                if self.get_stat("obedience") + self.get_stat("libido") >= (whore_test / cheat_modifier["stats"]) + modifier:
-                    if self.will_do_anything():
-                        return True
-                    elif not silent:
-                        notify("No sex acts available for whoring", pic=self.portrait)
-                elif not silent:
-                    notify("Libido/Obedience too low", pic=self.portrait)
-                return False
-
-            else:
-                return True
-
+## Phase 2.1: Delegated to GirlSchedule component ##
         def set_job(self, job, forced=False):
+            return self._schedule.set_job(job, forced)
 
-            if self.will_do(job):
-
-                self.old_job = self.job # Obsolete
-
-                self.job = job
-
-                if job == "whore" or (job in all_jobs and self.work_whore):
-                    if not self.has_activated_sex_acts():
-                        for stat in gstats_sex:
-                            self.activate_sex_act(stat)
-
-                self.job_sort_value = job_sort_value[job]
-
-                if not job or job == "rest":
-                    self.resting = True
-                    self.work_whore = False
-                    if forced:
-                        self.away = False # For the 'force rest' cheat
-                else:
-                    self.resting = False
-
-                return True
-
-            else:
-                return False
-
+## Phase 2.1: Delegated to GirlSchedule component ##
         def set_rest(self):
-
-            if self.resting:
-                return False
-
-            self.resting = True
-
-            self.job_sort_value = job_sort_value[job]
-
-            return True
+            return self._schedule.set_rest()
 
 
+## Phase 2.1: Delegated to GirlSchedule component ##
         def works_today(self, check_autorest=False):
-
-            day = calendar.get_weekday()
-
-            if self.job and not (self.resting or self.away or self.farm or self.exhausted or self.hurt > 0):
-                if self.workdays[day] > 0:
-                    if not check_autorest or self.energy > autorest_limit[self] or self.energy >= self.get_stat_max("energy"):
-                        return self.workdays[day]
-
-            return False
+            return self._schedule.works_today(check_autorest)
 
         def get_schedule(self): # Returns a list of values for the seven days of the week
             return [self.workdays[d] for d in weekdays]
 
+## Phase 2.1: Delegated to GirlSchedule component ##
         def load_schedule(self, schedule):
-            i = 0
-            for day in weekdays:
-                self.workdays[day] = schedule[i]
-                i += 1
+            return self._schedule.load_schedule(schedule)
 
         # Phase 2.1: Delegated to GirlSchedule component (implementations moved)
         def get_status(self):
@@ -1962,20 +1898,9 @@ init -2 python:
             else:
                 return "no particular reaction"
 
+## Phase 2.1: Delegated to GirlSchedule component ##
         def get_day_off(self, day_nb):
-
-            if self.works_today():
-
-                day = calendar.get_weekday()
-                charge = self.workdays[day]
-                self.workdays[day] = 0
-                self.block_schedule = day
-                calendar.set_alarm(calendar.time + day_nb, Event(label =  "reset_workday", object = (self, day, charge)))
-
-                return True
-
-            else:
-                return False
+            return self._schedule.get_day_off(day_nb)
 
 ## Phase 2.1: Delegated to GirlMood component ##
         def tired_check(self):
@@ -2251,17 +2176,9 @@ init -2 python:
         _reset_build_up_impl = reset_build_up
 
         # ── Phase 2.1: Schedule delegation aliases ──
-        _set_workdays_impl = set_workdays
-        _cycle_workday_impl = cycle_workday
-        _set_job_impl = set_job
-        _set_rest_impl = set_rest
-        _works_today_impl = works_today
-        _will_do_impl = will_do
         _get_schedule_impl = get_schedule
-        _load_schedule_impl = load_schedule
         _get_status_impl = get_status
         _get_status_summary_impl = get_status_summary
-        _get_day_off_impl = get_day_off
 
         # ── Phase 2.1: Stats delegation aliases ──
         _generate_stats_impl = generate_stats

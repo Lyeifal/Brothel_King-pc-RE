@@ -2,43 +2,119 @@
 # Phase 2.1: Schedule, job assignment, workdays, status display.
 # 日程、工作分配、工日、状态显示
 # ★ get_status / get_status_summary — 已从 girlclass.rpy 移入
-# Methods: set_workdays, set_job, works_today, get_schedule, etc.
+# ★ set_workdays/cycle_workday/set_job/set_rest/works_today/will_do/load_schedule/get_day_off — 已从 girlclass.rpy 移入 (Phase 7 批次7)
+# 注: get_schedule 暂留 girlclass（本体为 1 行真实现，非壳）
 
 init -2 python:
 
     class GirlSchedule(object):
-        """Schedule and job management for a Girl.
-
-        Each method delegates to the Girl's _impl alias, which points to
-        the original implementation in girlclass.rpy.
-        """
+        """Schedule and job management for a Girl."""
 
         def __init__(self, girl):
             self.girl = girl
 
-        def set_workdays(self):
-            return self.girl._set_workdays_impl()
+        def set_workdays(self): #Value is a percentage (0% = resting, 50% = working at half capacity, 100% = full capacity)
+            g = self.girl
+            i = calendar.day % 7
 
-        def cycle_workday(self, day, reverse=False):
-            return self.girl._cycle_workday_impl(day, reverse)
+            g.workdays[weekdays[i-2]] = 0
+            g.workdays[weekdays[i-3]] = 0
+
+
+        def cycle_workday(self, day, reverse = False):
+            g = self.girl
+            if reverse:
+                _wd = workday_map_reverse
+            else:
+                _wd = workday_map_normal
+
+            g.workdays[day] = _wd[g.workdays[day]]
+
+            renpy.restart_interaction()
+
 
         def set_job(self, job, forced=False):
-            return self.girl._set_job_impl(job, forced)
+            g = self.girl
+            if g.will_do(job):
+
+                g.old_job = g.job # Obsolete
+
+                g.job = job
+
+                if job == "whore" or (job in all_jobs and g.work_whore):
+                    if not g.has_activated_sex_acts():
+                        for stat in gstats_sex:
+                            g.activate_sex_act(stat)
+
+                g.job_sort_value = job_sort_value[job]
+
+                if not job or job == "rest":
+                    g.resting = True
+                    g.work_whore = False
+                    if forced:
+                        g.away = False # For the 'force rest' cheat
+                else:
+                    g.resting = False
+
+                return True
+
+            else:
+                return False
+
 
         def set_rest(self):
-            return self.girl._set_rest_impl()
+            g = self.girl
+            if g.resting:
+                return False
+
+            g.resting = True
+
+            g.job_sort_value = job_sort_value[job]
+
+            return True
+
 
         def works_today(self, check_autorest=False):
-            return self.girl._works_today_impl(check_autorest)
+            g = self.girl
+            day = calendar.get_weekday()
+
+            if g.job and not (g.resting or g.away or g.farm or g.exhausted or g.hurt > 0):
+                if g.workdays[day] > 0:
+                    if not check_autorest or g.energy > autorest_limit[g] or g.energy >= g.get_stat_max("energy"):
+                        return g.workdays[day]
+
+            return False
+
 
         def will_do(self, job, silent=False):
-            return self.girl._will_do_impl(job, silent)
+            g = self.girl
+            if job == "whore":
+
+                modifier = g.get_sex_act_modifier()
+
+                if g.get_stat("obedience") + g.get_stat("libido") >= (whore_test / cheat_modifier["stats"]) + modifier:
+                    if g.will_do_anything():
+                        return True
+                    elif not silent:
+                        notify("No sex acts available for whoring", pic=g.portrait)
+                elif not silent:
+                    notify("Libido/Obedience too low", pic=g.portrait)
+                return False
+
+            else:
+                return True
+
 
         def get_schedule(self):
             return self.girl._get_schedule_impl()
 
         def load_schedule(self, schedule):
-            return self.girl._load_schedule_impl(schedule)
+            g = self.girl
+            i = 0
+            for day in weekdays:
+                g.workdays[day] = schedule[i]
+                i += 1
+
 
         # ── Status display (implementations moved from girlclass.rpy) ──
 
@@ -149,7 +225,20 @@ init -2 python:
             return r
 
         def get_day_off(self, day_nb):
-            return self.girl._get_day_off_impl(day_nb)
+            g = self.girl
+            if g.works_today():
+
+                day = calendar.get_weekday()
+                charge = g.workdays[day]
+                g.workdays[day] = 0
+                g.block_schedule = day
+                calendar.set_alarm(calendar.time + day_nb, Event(label =  "reset_workday", object = (g, day, charge)))
+
+                return True
+
+            else:
+                return False
+
 
         def tired_check(self):
             return self.girl.tired_check()
