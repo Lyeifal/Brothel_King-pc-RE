@@ -152,4 +152,4 @@ init -2 python:
             return self.girl._get_day_off_impl(day_nb)
 
         def tired_check(self):
-            return self.girl._tired_check_impl()
+            return self.girl.tired_check()

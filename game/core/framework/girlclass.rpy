@@ -193,29 +193,9 @@ init -2 python:
         def get_sanity(self):
             return self._mood.get_sanity()
 
+## Phase 2.1: Delegated to GirlMood component ##
         def sanity_warning(self): # Returns a message to display as narrator dialogue
-            if self.broken:
-                calendar.set_alarm(calendar.time+1, StoryEvent("is_broken", arg=self, type = "morning"))
-                renpy.play(s_scream_loud, "sound")
-                return event_color["fear"] % (__("A long, inhumane shriek sends shivers down your spine. It came from %s, who is white with terror and on the verge of collapsing. This can't be good...") % self.name)
-
-            elif self.sanity < 5:
-                return event_color["very bad"] % (__("%s has a look of sheer terror in her eyes, and she shakes uncontrollably. She moans like a wounded animal if you move even slightly towards her. You can tell that a slight push would be all it takes to send her mind over the edge now.") % self.name)
-
-            elif self.sanity < 10:
-                return event_color["bad"] % (__("%s curls and looks around herself in complete panic, her eyes wild with fear. If you insist on using your powers on her, her mind will end up breaking.") % self.name)
-
-            elif self.sanity < 20:
-                return event_color["a little bad"] % (__("%s looks bewildered, not sure what has been happening to her. Little by little her sanity is beginning to slip.") % self.name)
-
-            elif self.sanity < 50:
-                if self.is_("dom"):
-                    return event_color["a little bad"] % (__("%s seems shaken by what just happened, but puts on a brave face. She looks defiant in spite of what she has been through.") % self.name)
-                else:
-                    return event_color["a little bad"] % (__("%s seems shaken by what just happened, but she tries to keep it to herself. She looks away from you, trying to suppress a sob.") % self.name)
-
-            else:
-                return (__("As %s returns to normal, she barely seems to register what just happened to her, although you know it must have had a subconscious effect.") % self.name)
+            return self._mood.sanity_warning()
 
 
         def set_name(self): ## This creates the full name with or without lastname
@@ -1214,103 +1194,23 @@ init -2 python:
             return tip
 
 
+## Phase 2.1: Delegated to GirlMood component ##
         def get_energy_color(self):
-            max_en = self.get_stat_max("energy")
-
-            if self.energy >= 0.8 * max_en:
-                return c_green
-            elif self.energy >= 0.6 * max_en:
-                return c_lightgreen
-            elif self.energy >= 0.4 * max_en:
-                return c_yellow
-            elif self.energy >= 0.2 * max_en:
-                return c_lightred
-            else:
-                return c_red
+            return self._mood.get_energy_color()
 
         def get_energy_ttip(self):
-            max_en = self.get_stat_max("energy")
-
-            if self.energy >= 0.8 * max_en:
-                ttip = "She is well-rested."
-            elif self.energy >= 0.6 * max_en:
-                ttip = "She is rested."
-            elif self.energy >= 0.4 * max_en:
-                ttip = "She is a little tired."
-            elif self.energy >= 0.2 * max_en:
-                ttip = "She is quite tired."
-            else:
-                ttip = event_color["bad"] % "Warning! She is getting very tired."
-
-            return ttip
+            return self._mood.get_energy_ttip()
 
         def tire(self, x): # Where x is a positive number (important)
-
-            # Frenzy effect
-            if self.get_effect("special", "ignore energy"):
-                return "\n{color=[c_purple]}" + self.name + " is working tirelessly.{/color}", 0
-
-            chg = x * self.get_effect("boost", "tiredness") + self.get_effect("change", "tiredness")
-
-            # This is a test: reduce tiredness by 15% per rank
-
-            chg *= self.get_effect("boost", "energy use") # (1 - (self.rank-1)*0.15)
-
-            r, _case = self.change_energy(-chg)
-
-            text1 = ""
-            text2 = plus_text(round_int(r), "standard")
-
-            if _case == "exhausted":
-                text1 += "\n{color=[c_red]}" + self.name + " is too tired to continue working.{/color}"
-
-                if self.hurt:
-                    text1 += "\n{color=[c_red]}" + " She has fallen sick and must rest for " + str(round_int(self.hurt)) + " days.{/color}"
-
-                self.add_log("exhausted")
-                self.track_event("exhausted")
-
-            return text1, r
+            return self._mood.tire(x)
 
 
+## Phase 2.1: Delegated to GirlMood component ##
         def get_hurt(self, x):
-
-            if self.get_effect("special", "immune"):
-                notify(_("%s is immune to getting hurt.") % self.name, pic=self.portrait)
-                return 0
-
-            chg = round(x * self.get_effect("boost", "hurt") + self.get_effect("change", "hurt") - self.get_effect("resist", "hurt"))
-
-            self.hurt += chg
-
-            if self.hurt > 0:
-                self.interactions = 0
-            elif self.hurt < 0:
-                self.hurt = 0
-
-            update_effects()
-
-            if chg >= 1:
-                notify(_("%s is hurt for %i day%s.") % (self.fullname, chg, plural(chg)), pic=self.portrait)
-
-            return chg
+            return self._mood.get_hurt(x)
 
         def health_check(self):
-
-            d = dice(100) + self.get_stat("constitution") - brothel.dirt
-
-            if d < -50:
-                self.get_hurt(dice(5))
-            elif d < -25:
-                self.get_hurt(dice(3))
-            elif d < -5:
-                self.get_hurt(dice(2))
-
-            if d < 0 and self.hurt > 0:
-                self.track_event("sick")
-                return "sick"
-
-            return "healthy"
+            return self._mood.health_check()
 
 
         # Phase 2.1: Delegated to GirlMood component
@@ -2549,139 +2449,16 @@ init -2 python:
 
             return get_change_min_max(0, chance, 0, 100)
 
+## Phase 2.1: Delegated to GirlMood component ##
         def update_mood(self, resting=False):
-            self.change_mood(self.get_mood_modifier(resting=resting))
-
+            return self._mood.update_mood(resting)
 
         def change_mood(self, chg):
+            return self._mood.change_mood(chg)
 
-            _min, _max = self.get_stat_minmax("mood")
-
-            chg = get_change_min_max(self.mood, chg, _min, _max)
-
-            self.mood += chg
-
-            return chg
-
+## Phase 2.1: Delegated to GirlMood component ##
         def get_mood_modifier(self, love_text="", fear_text="", description=False, resting=False):
-
-            ## Lists active mood modifiers
-            mood_factors = ""
-
-            # Love and Fear
-            l = self.get_love()
-            f = self.get_fear()
-
-            if self.personality.name != "masochist":
-                mood_change = (l - f)/10
-                if l >= 1:
-                    mood_factors += "+" + str(round_best(l/10)) + ": " + love_text + "\n"
-                elif l <= -1:
-                    mood_factors += str(round_best(l/10)) + ": " + love_text + "\n"
-                if f >= 1:
-                    mood_factors += str(round_best(-f/10)) + ": " + fear_text + "\n"
-                elif f <= -1:
-                    mood_factors += "+" + str(round_best(-f/10)) + ": " + fear_text + "\n"
-            else:
-                mood_change = (l + f)/20
-                if l >= 2:
-                    mood_factors += "+" + str(round_best(l/20)) + ": " + love_text + "\n"
-                elif l <= -2:
-                    mood_factors += str(round_best(l/20)) + ": " + love_text + "\n"
-                if f >= 2:
-                    mood_factors += "+" + str(round_best(f/20)) + ": " + fear_text + "\n"
-                elif f <= -2:
-                    mood_factors += str(round_best(f/20)) + ": " + fear_text + "\n"
-
-            # Farm girls
-
-            if self in farm.girls:
-                if farm.programs[self].target == "no training" and farm.programs[self].holding == "rest":
-                    mood_change += 1
-                    mood_factors += "+1: She is resting at the farm.\n"
-                else:
-                    mood_change -= 1
-                    mood_factors += "-1: She is being kept at the farm.\n"
-
-            else: # Working girls
-                w = 0
-                if self.works_today(check_autorest=True) and not resting:
-                    if self.job == "whore" and self.get_effect("special", "whore mood modifier"):
-                        w += 1
-                        mood_factors += "+1: She works as a whore and she loves it.\n"
-                    elif self.workdays[calendar.get_weekday()] == 100:
-                        w = -1
-                        mood_factors += "-1: She is working today.\n"
-                    else: # Half shift
-                        w = -0.5
-                        mood_factors += "-0.5: She is working a half-shift today.\n"
-                elif self.assignment:
-                    if self.assignment.type == "quest":
-                        w = -1
-                        mood_factors += "-1: She is working on a quest today.\n"
-                    else: # Classes
-                        w = -0.5
-                        mood_factors += "-0.5: She is attending a class today.\n"
-                else:
-                    w = 2
-                    mood_factors += "+2: She is resting today.\n"
-
-                up = self.get_upkeep_modifier()
-                # fr = (len(self.friends) - len(self.rivals)) * self.get_effect("boost", "mood gains from friendship")
-                fr = len(self.friends) * self.get_effect("boost", "mood gains from friendship")
-                rv = -len(self.rivals) * self.get_effect("boost", "mood gains from friendship")
-                roo = brothel.get_mood_modifier(self.rank) # Uses room type modifier (between -7 and +10)
-                bro = self.get_effect("change", "mood gains")
-
-                mood_change += up + roo + bro + w + fr + rv
-
-                if up > 0:
-                    mood_factors += "+" + str(up) + ": She feels her allowance is generous.\n"
-
-                elif up < 0:
-                    mood_factors += str(up) + ": She isn't happy with her allowance.\n"
-
-                if fr > 0:
-                    mood_factors += "+" + str(round_best(fr)) + _(" : She has friends (%s).\n") % and_text([g.name for g in self.friends])
-                if rv < 0:
-                    mood_factors += str(round_best(rv)) + _(" : She has rivals (%s).\n") % and_text([g.name for g in self.rivals])
-
-                if roo > 4:
-                    mood_factors += "+" + str(round_best(roo)) + ": She loves her accommodations.\n"
-                elif roo > 0:
-                    mood_factors += "+" + str(round_best(roo)) + ": She likes her accommodations.\n"
-                elif roo < -4:
-                    mood_factors += str(round_best(roo)) + ": She hates her accommodations.\n"
-                elif roo < 0:
-                    mood_factors += str(round_best(roo)) + ": She doesn't like her accommodations.\n"
-
-                # Change this later if more mood gain effects are added
-                if bro > 1:
-                    mood_factors += "+" + str(bro) + ": Other girls helped her relax.\n"
-                elif bro > 0:
-                    mood_factors += "+" + str(bro) + ": Another girl helped her relax.\n"
-
-            # Life of Luxury perk
-            mood_eff = self.get_effect("change", "mood")
-            if mood_eff:
-                mood_change += mood_eff
-                if self.has_perk("Life of Luxury"):
-                    mood_factors += plus_minus(mood_eff) + ": She loves her outfit (Life of Luxury).\n"
-                else:
-                    mood_factors += plus_minus(mood_eff) + ": Other effects.\n"
-
-
-            if description:
-                return mood_change, mood_factors
-
-            else: # The following effects are not described in the mood tooltip
-
-                # Business and Pleasure perk
-                mood_change += self.get_effect("change", "mood", custom_scale=("cust nb", self.get_log("total_cust", 1)))
-
-                boost = self.get_effect("boost", "mood gains")
-                # reverses boost if negative change
-                return mood_change * reverse_if(boost, mood_change)
+            return self._mood.get_mood_modifier(love_text, fear_text, description, resting)
 
         def get_mood_description(self, filter=None): # This returns text for the mood help screen
 
@@ -2820,36 +2597,13 @@ init -2 python:
 
             mood_change_text += str(round_best(chg)) + "){/color}."
 
-            if filter == "love":
-                return love_text
-            elif filter == "fear":
-                return fear_text
-            elif filter == "mood":
-                return mood_text + mood_change_text + "\nSanity: " + self.get_sanity()
-            else:
-                return love_text, fear_text, mood_text, mood_change_text, mood_factors
+## Phase 2.1: Delegated to GirlMood component ##
+            return self._mood.get_mood_description(filter)
 
 
 
         def get_mood_picture(self): # returns picture path
-
-            if self.mood >= 25:
-                pic = "resources/ui/mood good"
-            elif self.mood <= -25:
-                pic = "resources/ui/mood bad"
-            else:
-                pic = "resources/ui/mood normal"
-
-            mod = self.get_mood_modifier()
-
-            if mod > 0:
-                pic += " up.webp"
-            elif mod < 0:
-                pic += " down.webp"
-            else:
-                pic += ".webp"
-
-            return pic
+            return self._mood.get_mood_picture()
 
 
 
@@ -3396,18 +3150,9 @@ init -2 python:
             else:
                 return False
 
+## Phase 2.1: Delegated to GirlMood component ##
         def tired_check(self):
-            if self.works_today():
-                # Tiredness = 5/customer (regular jobs), 10/interaction (whoring)
-
-                if self.job in all_jobs:
-                    if self.get_max_cust_served() * 5 >= self.energy:
-                        return True
-                else:
-                    if 10 * self.interactions >= self.energy:
-                        return True
-
-            return False
+            return self._mood.tired_check()
 
         def cut_upkeep(self, day_nb):
 
@@ -3738,20 +3483,10 @@ init -2 python:
         # ── Phase 2.1: Mood delegation aliases ──
         # (Sanity methods now delegate directly to GirlMood — aliases removed)
         _change_energy_impl = change_energy
-        _tire_impl = tire
-        _get_hurt_impl = get_hurt
-        _health_check_impl = health_check
         _heal_impl = heal
         _full_rest_impl = full_rest
         _rest_impl = rest
         _can_heal_from_item_impl = can_heal_from_item
-        _get_energy_color_impl = get_energy_color
-        _get_energy_ttip_impl = get_energy_ttip
-        _update_mood_impl = update_mood
-        _change_mood_impl = change_mood
-        _get_mood_modifier_impl = get_mood_modifier
-        _get_mood_description_impl = get_mood_description
-        _get_mood_picture_impl = get_mood_picture
         _build_up_impl = build_up
         _get_build_up_impl = get_build_up
         _reset_build_up_impl = reset_build_up
@@ -3768,7 +3503,6 @@ init -2 python:
         _get_status_impl = get_status
         _get_status_summary_impl = get_status_summary
         _get_day_off_impl = get_day_off
-        _tired_check_impl = tired_check
 
         # ── Phase 2.1: Stats delegation aliases ──
         _generate_stats_impl = generate_stats
