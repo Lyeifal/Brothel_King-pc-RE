@@ -754,131 +754,13 @@ init -2 python:
             except:
                 pass
 
+## Phase 2.1: Delegated to GirlRelationships component ##
         def get_MC_relation(self):
-            if self in MC.girls + farm.girls:
-                return "slave"
+            return self._relationships.get_MC_relation()
 
-            elif girl in game.free_girls:
-                if self.MC_relationship_level == 0:
-                        return "stranger"
-
-                elif self.MC_relationship_level == 1:
-                        return "friend"
-
-                elif self.MC_relationship_level == 2:
-                        return "love interest"
-
-                elif self.MC_relationship_level == 3:
-                        return "girlfriend"
-
-                elif self.MC_relationship_level == 4:
-                        return "lover"
-
-                elif self.MC_relationship_level == 5:
-                        return "lover"
-
-            return "unknown"
-
+## Phase 2.1: Delegated to GirlRelationships component ##
         def receive_gift(self, item):
-            if not isinstance(item, ItemInstance):
-                renpy.say(bk_error, __("Warning: This item is not instantiated (%s).") % item.name)
-
-            flower = False
-            potion = False
-
-            score = 1
-            mod = 1.0
-
-            for e in item.effects:
-                if e.type == "gift":
-                    score += self.personality.gift_likes[e.target]
-                    mod = e.value
-
-                elif e.type == "flower":
-                    flower = True
-                    break
-
-                elif e.type == "potion":
-                    potion = e.target
-                    break
-
-
-            if flower:
-                if e.target == self.likes["color"]:
-                    score += 4
-                    self.personality_unlock["fav_color"] = True
-                    renpy.say(self.char, __("Oh, you remembered my favorite color! You're so considerate..."))
-
-                elif e.target == self.dislikes["color"]:
-                    score += 0
-                    self.personality_unlock["dis_color"] = True
-                    renpy.say(self.char, __("Ah, em, thanks. You know, I don't like this color, but I appreciate the gesture."))
-
-                else:
-                    score += 2
-                    renpy.say(self.char, __("Flowers! For me! Thank you..."))
-
-                if self.MC_relationship_level == 2:
-                    renpy.say(self.char, __("This is very romantic... Was there something you wanted from me?"))
-
-                    r = menu(items = (("Actually...", None), ("Ask her out", True), ("Never mind", False)))
-
-                    if r:
-                        norollback()
-                        self.MC_relationship_level = 3
-                        self.track_event("MC girlfriend", arg=self.name)
-                        test_achievement("girlfriends")
-                        self.say("free_ask_out")
-
-                    else:
-                        norollback()
-                        renpy.say(you, __("Hmm, no, not really."))
-                        renpy.say(self.char, __("Oh... I see."))
-
-            elif potion:
-                if potion == "seduction":
-                    if self not in game.free_girls:
-                        return False
-
-                    # NG+ - Potion of seduction
-                    if self.MC_relationship_level < 1:
-                        renpy.call("free_girl_friend", self)
-                    elif self.MC_relationship_level < 2:
-                        renpy.call("free_girl_love_interest", self)
-                    elif self.MC_relationship_level < 3:
-                        norollback()
-                        self.MC_relationship_level = 3
-                        self.track_event("MC girlfriend", arg=self.name)
-                        test_achievement("girlfriends")
-                        self.say("free_ask_out")
-                    elif self.MC_relationship_level < 4:
-                        renpy.call("free_girl_girlfriend", self)
-                    elif self.MC_relationship_level < 5:
-                        renpy.call("free_girl_job_request", self)
-                    else:
-                        renpy.say(narrator, __("Already at the maximum relationship level. This potion had no effect."))
-                    # /NG+
-
-            else:
-                if score >= 4:
-                    renpy.say(self.char, __("Oh, I love it so much!!! Thank you, thank you!"))
-
-                elif score >= 2:
-                    renpy.say(self.char, __("It's nice! Thanks for thinking about me."))
-
-                elif score >= 0:
-                    renpy.say(self.char, __("Ah, em, thanks. It's an interesting... whatever it is, I guess."))
-
-                else:
-                    renpy.say(self.char, __("What the? Ew, take this away from me!"))
-
-            if score >= 0:
-                score *= mod
-
-            self.change_love(score)
-            self.change_mood(score)
-
-            return score
+            return self._relationships.receive_gift(item)
 
 
 ## Phase 2.1: Delegated to GirlDialogue component ##
@@ -1865,110 +1747,22 @@ init -2 python:
         def unlock_NGP_personality_settings(self):
             return self._dialogue.unlock_NGP_personality_settings()
 
+## Phase 2.1: Delegated to GirlRelationships component ##
         def change_relationship(self, other_girl, chg):
+            return self._relationships.change_relationship(other_girl, chg)
 
-            self.relations[other_girl] += chg
-
-            if self.relations[other_girl] > 3 and other_girl not in self.friends:
-                self.friends.append(other_girl)
-                if other_girl in self.rivals:
-                    self.rivals.remove(other_girl)
-
-            elif self.relations[other_girl] <= 3 and other_girl in self.friends:
-                self.friends.remove(other_girl)
-
-            elif self.relations[other_girl] >= -3 and other_girl in self.rivals:
-                self.rivals.remove(other_girl)
-
-            elif self.relations[other_girl] < -3 and other_girl not in self.rivals:
-                self.rivals.append(other_girl)
-                if other_girl in self.friends:
-                    self.friends.remove(other_girl)
-
-            return self.get_friendship(other_girl)
-
+## Phase 2.1: Delegated to GirlRelationships component ##
         def get_compatibility(self, other_girl): # Calculates a score to see if the girl is an ally or a rival. Relationship scores are stored in a dictionary for faster processing
-            if self.g_compatibility[other_girl] is False:
-                # Calculates a score if none exists for this pairing
-                self.g_compatibility[other_girl] = 0
+            return self._relationships.get_compatibility(other_girl)
 
-                for attr in self.attributes:
-                    for k, v in attribute_score_dict[attr].items():
-                        if other_girl.is_(k):
-                            self.g_compatibility[other_girl] += v
-
-            if self.g_compatibility[other_girl] >= 4:
-                return "good"
-            elif self.g_compatibility[other_girl] <= -4:
-                return "bad"
-            else:
-                return None
-
+## Phase 2.1: Delegated to GirlRelationships component ##
         def update_relationships(self): # Returns a list of all changed relationships
-
-            # Clears previous relationships if a girl has left
-            for g in self.friends:
-                if g not in MC.girls + farm.girls:
-                    self.friends.remove(g)
-            for g in self.rivals:
-                if g not in MC.girls + farm.girls:
-                    self.rivals.remove(g)
-
-            _girls = [g for g in MC.girls if not (g.away or g == self)]
-
-            if len(_girls) < 1:
-                return None
-
-            other_girl = rand_choice(_girls)
-
-            # while other_girl == self:
-            #     other_girl = rand_choice(_girls)
-
-            old_status = self.get_friendship(other_girl)
-
-            if self.get_compatibility(other_girl) == "good":
-                mod = 1
-            elif self.get_compatibility(other_girl) == "bad":
-                mod = -1
-            else:
-                mod = 0
-
-            if self.get_effect("change", "making friends"):
-                mod += self.get_effect("change", "making friends")
-            if other_girl.get_effect("change", "making friends"):
-                mod += other_girl.get_effect("change", "making friends")
-
-            r = dice(6, 2) + mod
-
-            if r >= 11:
-                new_status = self.change_relationship(other_girl, 1)
-                other_girl.change_relationship(self, 1)
-
-            elif r <= 3:
-                new_status = self.change_relationship(other_girl, -1)
-                other_girl.change_relationship(self, -1)
-
-            else:
-                new_status = old_status
-
-            if new_status != old_status:
-                change = [self, other_girl, old_status, new_status]
-            else:
-                change = None
-
-            return change
+            return self._relationships.update_relationships()
 
 
+## Phase 2.1: Delegated to GirlRelationships component ##
         def get_friendship(self, other_girl):
-
-            if other_girl == self:
-                return "self"
-            elif self.relations[other_girl] > 3:
-                return "friend"
-            elif self.relations[other_girl] < -3:
-                return "rival"
-            else:
-                return "normal"
+            return self._relationships.get_friendship(other_girl)
 
         def init_after_acquire(self, refresh_pics=True):
 
@@ -2135,29 +1929,13 @@ init -2 python:
 
 ## Girl moods
 
+## Phase 2.1: Delegated to GirlRelationships component ##
         def get_love(self):
+            return self._relationships.get_love()
 
-            love = self.love
-
-            love += self.get_effect("change", "love")
-            if love > 0:
-                love *= self.get_effect("boost", "love")
-            elif love < 0:
-                love *= self.get_effect("boost", "hate")
-
-            return love
-
+## Phase 2.1: Delegated to GirlRelationships component ##
         def get_fear(self):
-
-            fear = self.fear
-
-            fear += self.get_effect("change", "fear")
-            if fear > 0:
-                fear *= self.get_effect("boost", "fear")
-            elif fear < 0:
-                fear *= self.get_effect("boost", "trust")
-
-            return fear
+            return self._relationships.get_fear()
 
 
         # Phase 2.1: Delegated to GirlRelationships component
@@ -2556,37 +2334,17 @@ init -2 python:
         def restore_upkeep(self):
             return self._economy.restore_upkeep()
 
+## Phase 2.1: Delegated to GirlRelationships component ##
         def refresh_spoil_terrify_points(self):
+            return self._relationships.refresh_spoil_terrify_points()
 
-            self.spoil_points = max(self.spoil_points-1, 0)
-
-            if self.spoil_points == 0:
-                self.spoiled = False
-
-            self.terrify_points = max(self.terrify_points-1, 0)
-
-            if self.terrify_points == 0:
-                self.terrified = False
-
-            return
-
+## Phase 2.1: Delegated to GirlRelationships component ##
         def spoil(self, nb):
+            return self._relationships.spoil(nb)
 
-            self.spoil_points += nb
-
-            if dice(6) + 2 < self.spoil_points:
-                self.spoiled = True
-
-            return
-
+## Phase 2.1: Delegated to GirlRelationships component ##
         def terrify(self, nb):
-
-            self.terrify_points += nb
-
-            if dice(6) + 2 < self.terrify_points:
-                self.terrified = True
-
-            return
+            return self._relationships.terrify(nb)
 
         def pop_virginity(self, origin="brothel"):
 
@@ -2760,11 +2518,9 @@ init -2 python:
                     if fix.name == fix_name:
                         return True
 
+## Phase 2.1: Delegated to GirlRelationships component ##
         def meet_MC(self):
-            self.MC_interact = True
-            self.track_event("MC met", arg=self.name)
-            self.activation_date = calendar.time
-            self.talked_to_date = calendar.time
+            return self._relationships.meet_MC()
 
 
         # Phase 2.1: Delegated to GirlDialogue component
@@ -2874,19 +2630,6 @@ init -2 python:
         _adjust_level_impl = adjust_level
 
         # ── Phase 2.1: Relationships delegation aliases ──
-        _get_MC_relation_impl = get_MC_relation
-        _change_relationship_impl = change_relationship
-        _get_compatibility_impl = get_compatibility
-        _update_relationships_impl = update_relationships
-        _get_friendship_impl = get_friendship
-        _get_love_impl = get_love
-        _get_fear_impl = get_fear
-        _change_love_impl = change_love
-        _change_fear_impl = change_fear
-        _meet_MC_impl = meet_MC
-        _spoil_impl = spoil
-        _terrify_impl = terrify
-        _refresh_spoil_terrify_points_impl = refresh_spoil_terrify_points
 
         # ── Phase 2.1: Dialogue delegation aliases ──
         _generate_personality_impl = generate_personality
@@ -2952,7 +2695,6 @@ init -2 python:
 
         # ── Phase 2.1: Items delegation aliases | 物品方法别名 ──
         _get_equipped_impl = get_equipped
-        _receive_gift_impl = receive_gift
 
         # -- Phase 2.1: Training delegation aliases | 训练方法别名 --
         _will_do_farm_act_impl = will_do_farm_act

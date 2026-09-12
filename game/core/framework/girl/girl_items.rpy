@@ -107,4 +107,4 @@ init -2 python:
 
         def receive_gift(self, item):
             '''收到礼物（含偏好/性格处理）| Receive a gift with personality handling'''
-            return self.girl._receive_gift_impl(item)
+            return self.girl.receive_gift(item)
