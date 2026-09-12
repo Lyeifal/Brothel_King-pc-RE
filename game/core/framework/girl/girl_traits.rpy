@@ -1,6 +1,8 @@
 #### GirlTraits — Trait and perk management | 特质与天赋管理 ####
 # Phase 2.1: Traits, perks, archetypes, combo checks.
 # 特质、天赋、原型、连携检查
+# ★ add_trait/remove_trait/has_trait — 已从 girlclass.rpy 移入 (Phase 7 批次11)
+# ★ get_defense/add_shield/test_shield — 已从 girlclass.rpy 移入 (Phase 7 批次11)
 # ★ generate_traits — 特质生成（已从 girlclass.rpy 移入）
 # Methods: has_trait, has_perk, add_trait, remove_trait,
 #          acquire_perk, refund_perks, check_combo_perks.
@@ -130,13 +132,51 @@ init -2 python:
 
         # ── Delegation stubs (implementations remain in girlclass.rpy) ──
         def has_trait(self, name):
-            return self.girl._has_trait_impl(name)
+            g = self.girl
+            for t in g.traits:
+                if t.name.lower() == name.lower():
+                    return True
+
+            else:
+                return False
+
         def has_perk(self, name):
             return self.girl._has_perk_impl(name)
-        def add_trait(self, trait, _pos=None, forced=False, no_perks=False):
-            return self.girl._add_trait_impl(trait, _pos, forced, no_perks)
-        def remove_trait(self, trait):
-            return self.girl._remove_trait_impl(trait)
+        def add_trait(self, trait, _pos=None, forced=False, no_perks=False): # Where 'trait' is an object (important)
+            g = self.girl
+#            renpy.say("", "Adding " + trait.name)
+
+            if not forced:
+                for t in g.traits:
+                    if t.name in trait.opposite or t.name == trait.name:
+                        return False
+
+            if _pos != None:
+                g.traits.insert(_pos, trait)
+            else:
+                g.traits.append(trait)
+
+            g.add_effects(trait.effects)
+
+            if trait.archetype and g.perk_points > 0 and not no_perks:
+                if g.archetypes[trait.archetype].unlocked:
+                    g.perk_points -= 1
+                    g.acquire_perk(g.archetypes[trait.archetype].get_perks(0)[0], forced=True)
+                else:
+                    g.perk_points -= 2
+                    g.unlock_archetype(trait.archetype)
+
+                # Sanity check: Perk points cannot go lower than 0 (for mods that add more Traits)
+                g.perk_points = max(0, g.perk_points)
+
+            return True
+
+        def remove_trait(self, trait): # Where trait is a Trait object
+            g = self.girl
+            if trait in g.traits:
+                g.traits.remove(trait)
+                g.remove_effects(trait.effects)
+
         def can_acquire_perk(self, perk, context=None):
             return self.girl.can_acquire_perk(perk, context)
         def update_can_perk(self):
@@ -153,3 +193,41 @@ init -2 python:
             return self.girl.get_perk(perk)
         def get_perk_level(self, perk):
             return self.girl.get_perk_level(perk)
+
+        # ── 防御与护盾 | Defense & shield ──
+
+        def get_defense(self, fight = False, raw=False):
+            g = self.girl
+            defense = g.get_effect("change", "defense", raw=raw) * g.get_effect("boost", "defense", raw=raw)
+
+            return defense
+
+        def add_shield(self):
+            g = self.girl
+            g.add_effects(shield_effect)
+
+        def test_shield(self):
+            g = self.girl
+            # Shield code to be fixed later
+
+            if g.get_effect("special", "shield", raw=True):
+
+                g.remove_effects(shield_effect)
+                notify(g.name + " was protected by a magic shield", pic=g.portrait)
+                renpy.pause(0.5)
+
+                return True
+
+            elif brothel.get_effect("special", "shield"):
+
+                spl = MC.has_spell(bshield_spell)
+
+                notify(g.name + " was protected by a magic shield", pic=g.portrait)
+                renpy.pause(0.5)
+
+                if spl:
+                    MC.deactivate_spell(spl)
+
+                return True
+
+            return False

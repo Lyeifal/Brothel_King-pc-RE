@@ -776,14 +776,9 @@ init -2 python:
             return self._progression.get_rep_cap()
 
 
+## Phase 2.1: Delegated to GirlTraits component ##
         def has_trait(self, name):
-
-            for t in self.traits:
-                if t.name.lower() == name.lower():
-                    return True
-
-            else:
-                return False
+            return self._traits.has_trait(name)
 
 
         def has_perk(self, name): # Where name is a string, not the perk object
@@ -800,41 +795,14 @@ init -2 python:
                 return False
 
 
+## Phase 2.1: Delegated to GirlTraits component ##
         def add_trait(self, trait, _pos=None, forced=False, no_perks=False): # Where 'trait' is an object (important)
-
-#            renpy.say("", "Adding " + trait.name)
-
-            if not forced:
-                for t in self.traits:
-                    if t.name in trait.opposite or t.name == trait.name:
-                        return False
-
-            if _pos != None:
-                self.traits.insert(_pos, trait)
-            else:
-                self.traits.append(trait)
-
-            self.add_effects(trait.effects)
-
-            if trait.archetype and self.perk_points > 0 and not no_perks:
-                if self.archetypes[trait.archetype].unlocked:
-                    self.perk_points -= 1
-                    self.acquire_perk(self.archetypes[trait.archetype].get_perks(0)[0], forced=True)
-                else:
-                    self.perk_points -= 2
-                    self.unlock_archetype(trait.archetype)
-
-                # Sanity check: Perk points cannot go lower than 0 (for mods that add more Traits)
-                self.perk_points = max(0, self.perk_points)
-
-            return True
+            return self._traits.add_trait(trait, _pos, forced, no_perks)
 
 
+## Phase 2.1: Delegated to GirlTraits component ##
         def remove_trait(self, trait): # Where trait is a Trait object
-
-            if trait in self.traits:
-                self.traits.remove(trait)
-                self.remove_effects(trait.effects)
+            return self._traits.remove_trait(trait)
 
 
         def list_effects(self):
@@ -848,40 +816,17 @@ init -2 python:
             return self._effects.remove_effects(effects)
 
 
+## Phase 2.1: Delegated to GirlTraits component ##
         def get_defense(self, fight = False, raw=False):
+            return self._traits.get_defense(fight, raw)
 
-            defense = self.get_effect("change", "defense", raw=raw) * self.get_effect("boost", "defense", raw=raw)
-
-            return defense
-
+## Phase 2.1: Delegated to GirlTraits component ##
         def add_shield(self):
-            self.add_effects(shield_effect)
+            return self._traits.add_shield()
 
+## Phase 2.1: Delegated to GirlTraits component ##
         def test_shield(self):
-
-            # Shield code to be fixed later
-
-            if self.get_effect("special", "shield", raw=True):
-
-                self.remove_effects(shield_effect)
-                notify(self.name + " was protected by a magic shield", pic=self.portrait)
-                renpy.pause(0.5)
-
-                return True
-
-            elif brothel.get_effect("special", "shield"):
-
-                spl = MC.has_spell(bshield_spell)
-
-                notify(self.name + " was protected by a magic shield", pic=self.portrait)
-                renpy.pause(0.5)
-
-                if spl:
-                    MC.deactivate_spell(spl)
-
-                return True
-
-            return False
+            return self._traits.test_shield()
 
 
 
@@ -1574,10 +1519,7 @@ init -2 python:
 
         # ── Phase 2.1: Traits delegation aliases ──
         _generate_traits_impl = generate_traits
-        _has_trait_impl = has_trait
         _has_perk_impl = has_perk
-        _add_trait_impl = add_trait
-        _remove_trait_impl = remove_trait
 
         # ── Phase 2.1: Logging delegation aliases ──
 
