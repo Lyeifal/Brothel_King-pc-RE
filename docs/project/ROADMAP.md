@@ -21,6 +21,7 @@
 | 重构 Phase 0 | 紧急修复（I18N + 性能） | ✅ 已完成 |
 | 重构 Phase 1 | 核心架构：服务容器 + 事件桥 | ✅ 已完成 |
 | 重构 Phase 2 | Girl 组件分解（girlclass 5,900 → 3,910 行） | ✅ 已完成 |
+| 重构 Phase 7 | Girl 组件化收官：方法体全量迁移（3,910 → 1,148 行，16 组件） | ✅ 已完成 |
 | 重构 Phase 3 | UI 架构：屏幕提取（screens.rpy 8,886 → 620 行） | ✅ 已完成 |
 | 重构 Phase 4 | I18N 系统（I18nService） | ✅ 已完成 |
 | 重构 Phase 5–6 | Mod API v2 + 开发工具（Dev Console / Test Runner） | ✅ 已完成 |
@@ -52,6 +53,10 @@
 - ✅ **Phase 2 Girl 组件分解**
   - `girlclass.rpy` 5,900 → **3,910 行**（-34%）；`framework/girl/` 下 15 个 `girl_*.rpy` 组件 + `__init__.rpy`（16 个文件）
   - 33 个大块方法迁移完毕（stats/mood/economy/sex/dialogue/traits/items/schedule/training/effects/generation/pictures/relationships），迁移模式：实现进组件 → Girl 类委托
+- ✅ **Phase 7 Girl 组件化收官** (2026-09-11，批次1-14，15 次提交)
+  - `girlclass.rpy` 3,910 → **1,148 行**（累计 -81%）；16 组件（新建 `girl_progression.rpy` 进阶组件）
+  - 再迁移 ~120 个方法；修复 `generate_preferences` 双重执行、change_stat 技能上限回归；清理 6 处组件过时副本、3 处重复定义死壳
+  - 每批次 lint 通过；委托壳模式全程 2,000+ 旧调用点零改动
 - ✅ **Phase 3 UI 架构**
   - `ui/screens.rpy` 8,886 → **620 行**；108 个 screen 提取至 `ui/screens/` 16 个文件，经 `temp/verify_extract.py` 与基线逐字比对一致；当前 112 个 screen 声明（后续新增 `mods` 等 4 个）
   - ViewModel 层（`ui/view_models/`）
@@ -91,8 +96,8 @@
 | 1 | ⏳ Mod v2 `cancel_hook` 消费方 | 16 个钩子点已接线但**全部为纯通知型**；游戏流程内无任何 `cancel_hook` 调用点（仅 `test_runner.rpy:352` 测试用） | 让 Mod 能真正拦截/取消事件，完成 v2 钩子语义闭环 |
 | 2 | ⏳ fallback 字典清理 | `_fallback_*` 硬编码回退仍保留在 `start.rpy`、`settings.rpy`、各 registry 中 | JSON 迁移 100% 无回归验证后移除，消除双份数据源 |
 | 3 | ⏳ `Girl.__init__` 拆分 | 约 120 行，属性初始化 + 组件实例化，有意保持原样 | 拆到各组件 `init_*` 有存档兼容风险，性价比低，暂缓 |
-| 4 | ⏳ ~800 行小方法归组 | girlclass.rpy 剩余小方法数量多、单个体量小 | 低难度，随主题归组时继续收尾 |
-| 5 | ⏳ `change_mood` 与 GirlMood 归属 | `change_mood`/`update_mood`/`get_mood_modifier` 等约 150 行与 `girl_mood.rpy` 部分重叠 | 清理组件边界，避免双份心情逻辑 |
+| 4 | ✅ ~800 行小方法归组 — 已完成 (Phase 7, 2026-09-11)：批次1-14 全部归组迁移，girlclass 仅剩 __init__+委托壳+24 活别名 | — |
+| 5 | ✅ `change_mood` 与 GirlMood 归属 — 已完成 (Phase 7 批次1)：心情簇 5 方法实现全部迁入 GirlMood，边界清晰 | — |
 | 6 | ⏳ 旧存档兼容观察 | AutoRepair 负责旧档修复，尚无大规模负反馈 | 长期观察项；出问题再补修复规则 |
 
 其他已知小问题（顺带跟进，不单独立项）：

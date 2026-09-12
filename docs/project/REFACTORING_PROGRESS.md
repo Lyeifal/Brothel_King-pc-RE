@@ -1,6 +1,6 @@
 # Brothel King — game/core 重构进度文档
 
-> 最后更新: 2026-09-10
+> 最后更新: 2026-09-11（Phase 7 Girl 组件化收官后）
 > 当前分支: `bk-evolution`
 
 ---
@@ -102,6 +102,51 @@ d6e76d6  ── Mod翻译自管理: game/tl/custom/mods → 各Mod目录tl/chine
            主菜单Mods按钮改 Show("mod_manager")), Game Modes manifest 加 always_on:False 并
            以 is_mod_active 守卫模式注册(被禁用即回退纯剧情模式) + README.txt 前置依赖范例;
            verify_mod_api 增补持久化开关/依赖/always_on 断言
+
+── Phase 7: Girl 组件化收官 (2026-09-11, 批次1-14, girlclass 3,910→1,148 行) ──
+ac412bb  ── 批次1: mood/energy/health 实现迁入 GirlMood (sanity_warning 6分支完整版替换组件
+           过时3分支副本/tire/get_hurt/health_check/get_energy_color/ttip/tired_check/
+           update_mood/change_mood/get_mood_modifier/get_mood_description/get_mood_picture)
+           (ROADMAP 遗留#5 收尾) —— 注: 本批 get_mood_description 只换了尾部, 135行孤儿体
+           遗留至批次14a 清理
+12df2ff  ── 批次2: 日志/追踪/记忆实现迁入 GirlLogging (commit/return_from/add_log/get_log/
+           get_average_performance/track_event/get_recent_events×2/count_occurences/
+           will_remember/remembers/forgets 共12方法)
+d2f2b0b  ── 批次3: 性格描述/NGP解锁/is_/test_say/unlock_info 迁入 GirlDialogue
+           (get_personality_description 240行; is_ 判归 GirlDialogue——只读 personality.attributes)
+4accc78  ── 批次4: upkeep簇9方法+接待互动4方法+whore_on_street/get_street_tip 迁入 GirlEconomy
+           (+顺手清理6个指向已迁移方法的遗留别名)
+52d97f7  ── 批次5: receive_gift/update_relationships/change_relationship/get_compatibility/
+           get_friendship/get_MC_relation/meet_MC/get_love/get_fear/spoil/terrify/
+           refresh_spoil_terrify_points 迁入 GirlRelationships (girl_items 调用点改接)
+7932658  ── 批次6: 新建 girl_progression.rpy (483行, 28方法) — level_up/rank_up/job_up/
+           adjust_level/auto_level_up/debug_auto_level/ready_to_*/can_spend_upgrade_points/
+           change_xp/change_jp/change_rep/get_*_can/perk簇9/属性升级3; __init__注册+
+           Girl.__init__ self._progression
+29eaa27  ── 批次7: set_job/will_do/set_rest/works_today/cycle_workday/set_workdays/load_schedule/
+           get_day_off 迁入 GirlSchedule
+87050c6  ── 批次8: generate_preferences(内外层合并)/add_random_fixation/remove_fixation/
+           try_to_remove_fix/has_fixation/test_weakness/pop_virginity/restore_virginity/
+           talk_tastes/get_preference/get_preference_bonus/reset_sex_acts/get_trainable_sex_acts/
+           get_sex_act_modifier/count_available_sex_acts/does_anything/will_do_anything/
+           has_activated_sex_acts/get_reaction_to_act 共19方法迁入 GirlSex
+           —— 注: 本批引入 generate_preferences 双重执行bug(girlclass 外层包装未缩壳), 批次14a 修复
+80ed767  ── 批次9: will_rebel_in_farm/farm_beg_test/get_obedience_check_target/get_working_chance/
+           get_training_chance/build_up/get_build_up/reset_build_up 迁入 GirlTraining
+           + 删除 will_rebel_in_farm/farm_beg_test 重复定义死壳(组件 farm_beg_test 过时副本
+           阈值相反, 以girlclass为准覆盖)
+49bfca4  ── 批次10: stat_spillover/get_stat_minmax/shuffle_skills/generate_stats/test_stats/
+           raise_stats/average_stats 迁入 GirlStats —— 组件5行简化版 get_stat_minmax 被63行
+           基线版覆盖, 修复 change_stat 技能上限回归(恢复 max(rank*50+...)), stat_spillover 遮蔽5处
+2d0e192  ── 批次11: add_trait/remove_trait/has_trait/get_defense/add_shield/test_shield 迁入 GirlTraits
+08b09d0  ── 批次12: use_item/unequip/take/get_equipped 迁入 GirlItems (use_item 组件旧简易版/
+           take/get_equipped 旧版全部以girlclass为准覆盖)
+85ffd84  ── 批次13: set_name/set_fullname/random_rename/load_ini/read_ini/update_files 迁入 GirlBase
+           (girl_pictures 的 update_files 静态占位删除, help.rpy 调用点路由不变)
+f027957  ── 批次14a: 修复批次8双重执行bug(generate_preferences 纯壳化) + 批次1孤儿体清理
+           (get_mood_description 135行死链) + 补迁 has_perk→GirlTraits/
+           customer_populations_safety_check→GirlEconomy/init_after_acquire→GirlBase
+           + 清7死别名 + __init__.rpy 头部更新(16组件全★表)
 ```
 
 **基线验证 (2026-09-10 会话)**: lint 通过（仅历史警告），游戏可正常启动至主菜单。
@@ -142,40 +187,37 @@ d6e76d6  ── Mod翻译自管理: game/tl/custom/mods → 各Mod目录tl/chine
 
 ---
 
-## 3. 女孩系统重构 (Phase 2) 
+## 3. 女孩系统重构 (Phase 2 + Phase 7)
 
 ### girlclass.rpy 瘦身
 
-| 指标 | 重构前 | 当前 | 变化 |
-|------|--------|------|------|
-| 行数 | 5,900 | 3,910 | **-1,990 (-34%)** |
-| 方法数 | 212 | 211 | -1 (有些变成委托) |
-| 组件目录 | 无 | 17 文件 | +2,682 行 |
+| 指标 | 重构前 | Phase 2 后 | Phase 7 后 | 累计变化 |
+|------|--------|-----------|-----------|---------|
+| 行数 | 5,900 | 3,910 | **1,148** | **-4,752 (-81%)** |
+| 方法数 | 212 | 211 | ~212 (绝大多数为一行委托壳) | — |
+| 组件目录 | 无 | 15 文件 | 16 文件 +2,682→+5,618 行 | |
 
-### Girl 组件 (17 个)
+### 女孩组件 (16 个，14 个含迁移实现)
 
-| 组件文件 | 行数 | 状态 | 关键迁移方法 |
-|----------|------|------|-------------|
-| `girl_pictures.rpy` | 431 | ★完整 | get_fix_pic, get_pic, get_pic_not_tags, get_pic_by_name, refresh_pictures, create_char, check_pictures, evaluate_girlpack |
-| `girl_mood.rpy` | 196 | ★完整 | change_energy, heal, full_rest, rest, init_sanity, rank_up_sanity, lose_sanity, get_sanity, sanity_warning |
-| `girl_economy.rpy` | 274 | ★完整 | get_price, get_xp, get_jp, get_rep, get_tip, estimate_performance |
-| `girl_relationships.rpy` | 98 | ★完整 | change_love, change_fear |
-| `girl_dialogue.rpy` | 217 | ★完整 | generate_personality, adjust_personality, generate_background, pick_dialogue, say, rand_say |
-| `girl_traits.rpy` | 155 | ★完整 | generate_traits (完整180行) |
-| `girl_sex.rpy` | 415 | ★完整 | will_do_sex_act, toggle_sex_act, refresh_sex_acts, activate/deactivate, generate_preferences, test_fix, check_fix, get_sex_attitude, change/raise_preference |
-| `girl_items.rpy` | 110 | ★完整 | equip, unequip, get_equipped, use_item, take |
-| `girl_stats.rpy` | 188 | ★完整 | get_stat, change_stat, set_stat, average_skills, find_stat, get_stat_max/minmax |
-| `girl_schedule.rpy` | 155 | ★完整 | get_status, get_status_summary (全双语注释) |
-| `girl_training.rpy` | 177 | ★完整 | will_do_farm_act, will_rebel_in_farm, farm_beg_test, obedience_check, training_check, run_away_check |
-| `girl_effects.rpy` | 59 | ★完整 | list_effects, get_effect, remove_effects (Phase 1 块4 新建) |
-| `girl_generation.rpy` | 116 | ★完整 | randomize (含 t0-t8 性能计时埋点, Phase 1 块5 新建) |
-| `girl_base.rpy` | 34 | 委托 | set_name, get_name, is_unique, load_ini, randomize 等 |
-| `girl_logging.rpy` | 32 | 委托 | add_log, get_log, track_event 等 |
+明细以 [../architecture/girl_components.md](../architecture/girl_components.md) 为真源（含每组件行数、★状态、Phase 7 批次映射）。Phase 7 新增 `girl_progression.rpy`（等级/XP-JP-rep/Perk/属性升级，28 方法）。
 
-**★ = 含已迁移的实现体 (13/17 个)**
-**委托 = 方法通过 `_impl` 别名指向 girlclass 中的原始实现**
+### 方法体迁移汇总
 
-### 方法体迁移汇总 (33 个)
+- Phase 2：33 个大块方法（stats/mood/economy/sex/dialogue/traits/items/schedule/training/effects/generation/pictures/relationships），明细见上文历史提交链
+- Phase 7 批次1-14：再迁移 ~120 个方法，girlclass 仅剩 `__init__`(142行) + 委托壳 + 24 个活别名；同时修复 generate_preferences 双重执行、change_stat 技能上限回归两个事故，清理组件内 6 处过时副本、删除 3 处重复定义死壳
+
+### 仍在 girlclass 中的内容（Phase 7 后，有意保留）
+
+| 内容 | 行数 | 说明 |
+|------|------|------|
+| `__init__` | 142 | 属性初始化 + 16 组件实例化；**有意保持原样**（拆到各组件 init_* 有存档兼容风险，ROADMAP #3 暂缓） |
+| `get_schedule` / `is_unique` | ~7 | 微方法，连同其活 `_impl` 别名保留 |
+| 委托壳 | ~212 方法各 1-2 行 | Girl 公共 API，2,000+ 旧调用点零改动 |
+| `_impl` 别名 | 24 | 仅指向真实现仍在 girlclass 的方法 |
+
+### Phase 2 方法体迁移明细 (33 个，历史存档)
+
+> Phase 7 已全部收尾，此为 Phase 2 时期的明细记录：
 
 1. `get_fix_pic` (~112行) → girl_pictures
 2. `get_status` + `get_status_summary` (~111行) → girl_schedule
@@ -200,16 +242,6 @@ d6e76d6  ── Mod翻译自管理: game/tl/custom/mods → 各Mod目录tl/chine
 21-25. 理智值方法 (~40行) → girl_mood
 26-30. 物品方法 (equip/unequip/use_item/take) → girl_items
 31-33. 农场方法 (will_do_farm_act/will_rebel/farm_beg_test) → girl_training
-
-### 仍在 girlclass 中的主要方法
-
-大块方法已全部迁移完毕。剩余为：
-
-| 方法 | 行数 | 说明 |
-|------|------|------|
-| `__init__` | ~120 | 属性初始化 + 组件实例化；**有意保持原样**（拆分到各组件 init_* 有存档兼容风险，性价比低，暂缓） |
-| `change_mood` / `update_mood` / `get_mood_modifier` 等心情周边 | ~150 | 与 GirlMood 组件部分重叠，待清理归属 |
-| 其余小方法 | ~800 | 低难度但数量多，按主题归组时可继续收尾 |
 
 ---
 
@@ -364,7 +396,7 @@ tools/
 ## 9. 下一步优先事项
 
 1. **验证测试** — ✅ 部分完成 (2026-09-10): lint 通过 + 启动至主菜单正常；**待人工抽查**: 新游戏开档、一天结算、女孩面板/青楼/农场界面；**Phase 3 增量**: 主菜单 Tests 按钮（developer mode）可运行组件冒烟测试
-2. **剩余方法迁移** — ✅ 大块方法全部完成 (Phase 1, 2026-09-10): obedience/training/run_away checks、change/raise_preference、test_fix/check_fix/get_sex_attitude、list_effects/get_effect/remove_effects (→girl_effects)、randomize (→girl_generation)、get_pic/get_pic_not_tags (→girl_pictures)。**遗留**: __init__ 拆分（暂缓，存档兼容风险）、change_mood 等与 GirlMood 归属重叠的周边方法、~800 行小方法归组
+2. **剩余方法迁移** — ✅ 全部完成 (Phase 7, 2026-09-11): 批次1-14 迁移 ~120 方法、新建 GirlProgression、修复 generate_preferences 双重执行与 change_stat 上限回归、清 6 处过时副本与 3 处死壳。**girlclass.rpy 5,900→1,148 行**。唯一遗留: `__init__` 拆分（暂缓，存档兼容风险）、`get_schedule`/`is_unique` 微方法（有意保留）
 3. **屏幕提取** — ✅ 全部完成 (Phase 2, 2026-09-10): screens.rpy 8,886 → 620 行，108 screen → 16 个文件，逐字比对验证一致
 4. **翻译工具** — ✅ 已决策不实现 `translate_sync.py` (Phase 3): 同步需求由现有工具链覆盖——缺失检测 `verify_i18n.py`(`translate --count`)、占位符完整性 `audit_placeholders.py`、空翻译往返 `export_empty_to_xlsx.py`/`import_translated_empty.py`、陈旧条目由 Ren'Py `translate` 重写时清理。详见 `docs/i18n/I18N_ROADMAP.md` 第 6 节。另修复 `i18n_lint.py`/`verify_i18n.py` 硬编码旧路径（改为按脚本位置推导项目根）。
 5. **Mod API v2 测试** — ✅ 已完成 (Phase 3): `tools/verify_mod_api.py` 静态断言 + 桩环境全流程模拟（注册→触发→取消），`python tools/verify_mod_api.py` 全过；游戏内 `test_mod_api_v2` 冒烟 label 同步加入 Test Runner。**发现并修复**: `cancel_hook` 经 `execute_hook` 中转导致 context 永不达回调、永远返回 False。另注意：16 个 HOOK_* 常量（本文档此前写 15），且游戏代码目前没有任何 `execute_hook`/`cancel_hook` 调用点——钩子框架就绪但尚未接线。

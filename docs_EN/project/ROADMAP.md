@@ -21,6 +21,7 @@ This document merges two older roadmaps (`docs/archive/pre-reorg-2026-09/ROADMAP
 | Refactoring Phase 0 | Emergency fixes (I18N + performance) | ✅ Completed |
 | Refactoring Phase 1 | Core architecture: service container + event bridge | ✅ Completed |
 | Refactoring Phase 2 | Girl component decomposition (girlclass 5,900 → 3,910 lines) | ✅ Completed |
+| Refactoring Phase 7 | Girl component migration completion (3,910 → 1,148 lines, 16 components) | ✅ Done |
 | Refactoring Phase 3 | UI architecture: screen extraction (screens.rpy 8,886 → 620 lines) | ✅ Completed |
 | Refactoring Phase 4 | I18N system (I18nService) | ✅ Completed |
 | Refactoring Phase 5–6 | Mod API v2 + dev tools (Dev Console / Test Runner) | ✅ Completed |
@@ -52,6 +53,10 @@ This document merges two older roadmaps (`docs/archive/pre-reorg-2026-09/ROADMAP
 - ✅ **Phase 2 Girl Component Decomposition**
   - `girlclass.rpy` 5,900 → **3,910 lines** (-34%); 15 `girl_*.rpy` components under `framework/girl/` + `__init__.rpy` (16 files)
   - 33 large block methods migrated (stats/mood/economy/sex/dialogue/traits/items/schedule/training/effects/generation/pictures/relationships); migration pattern: implement in component → delegate from the Girl class
+- ✅ **Phase 7 Girl component migration completion** (2026-09-11, batches 1-14, 15 commits)
+  - `girlclass.rpy` 3,910 → **1,148 lines** (cumulative -81%); 16 components (new `girl_progression.rpy` progression component)
+  - Another ~120 methods migrated; fixed the `generate_preferences` double execution and the change_stat skill cap regression; cleaned up 6 stale component copies and 3 duplicate-definition dead shells
+  - Lint passed on every batch; the delegation-shell pattern kept all 2,000+ existing call sites unchanged throughout
 - ✅ **Phase 3 UI Architecture**
   - `ui/screens.rpy` 8,886 → **620 lines**; 108 screens extracted into 16 files under `ui/screens/`, verified word-for-word identical against the baseline via `temp/verify_extract.py`; currently 112 screen declarations (4 added later, including `mods`)
   - ViewModel layer (`ui/view_models/`)
@@ -91,8 +96,8 @@ This document merges two older roadmaps (`docs/archive/pre-reorg-2026-09/ROADMAP
 | 1 | ⏳ Mod v2 `cancel_hook` consumers | All 16 hook points are wired but **purely notification-style**; there is no `cancel_hook` call site anywhere in game flow (only `test_runner.rpy:352` for testing) | Let mods actually intercept/cancel events, closing the loop on v2 hook semantics |
 | 2 | ⏳ Fallback dictionary cleanup | `_fallback_*` hardcoded fallbacks still remain in `start.rpy`, `settings.rpy`, and various registries | Remove them once the JSON migration passes 100% regression-free verification, eliminating duplicate data sources |
 | 3 | ⏳ `Girl.__init__` split | ~120 lines, attribute initialization + component instantiation, deliberately left as-is | Splitting into per-component `init_*` carries save compatibility risk; low cost-benefit, deferred |
-| 4 | ⏳ Group ~800 lines of small methods | girlclass.rpy still has many small methods, each individually tiny | Low difficulty; keep finishing up while grouping by theme |
-| 5 | ⏳ `change_mood` vs GirlMood ownership | `change_mood`/`update_mood`/`get_mood_modifier`, ~150 lines, partially overlap `girl_mood.rpy` | Clean up component boundaries; avoid duplicate mood logic |
+| 4 | ✅ Grouping ~800 lines of small methods — done (Phase 7, 2026-09-11): batches 1-14 migrated all of them by group; girlclass left with only __init__ + delegation shells + 24 live aliases | — |
+| 5 | ✅ `change_mood` vs GirlMood ownership — done (Phase 7 batch 1): all 5 mood-cluster method implementations moved into GirlMood; boundaries are now clean | — |
 | 6 | ⏳ Legacy save compatibility watch | AutoRepair handles old save fixes; no large-scale negative feedback yet | Long-term watch item; add repair rules if problems surface |
 
 Other known minor issues (track opportunistically, no separate items):

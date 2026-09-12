@@ -1,44 +1,45 @@
 # Girl Component System Architecture
 
-> Last updated: 2026-09-11 (verified against code)
-> **Core files**: `game/core/framework/girlclass.rpy` (3,910 lines, formerly ~5,900 lines), `game/core/framework/girl/` (component package)
-> **Phase**: Phase 2 (Girl system refactor — component-based decoupling)
+> Last updated: 2026-09-11 (after Phase 7 batches 1-14, verified against code)
+> **Core files**: `game/core/framework/girlclass.rpy` (1,148 lines, formerly ~5,900 lines), `game/core/framework/girl/` (component package)
+> **Phase**: Phase 2 (component-based decoupling) + Phase 7 (component migration completion — full method body migration)
 
 ---
 
 ## 1. System Responsibilities
 
-The Girl class was originally a ~5,900-line god class. Phase 2 split it into **15 component classes** by domain; each component holds a reference to the Girl instance and is responsible for one focused domain. The `Girl` class itself (girlclass.rpy:26, `class Girl(EffectBearer)`) keeps the state fields, serialization, and not-yet-migrated methods, and delegates the migrated methods.
+The Girl class was originally a ~5,900-line god class. Phase 2 split it into **16 component classes** by domain; each component holds a reference to the Girl instance and is responsible for one focused domain. The `Girl` class itself (girlclass.rpy, `class Girl(EffectBearer)`) now keeps only `__init__` (state fields + component instantiation), delegation shells for migrated methods, a few intentionally retained micro-methods (such as the one-line `get_schedule`), and 24 live `_impl` aliases.
 
-Key numbers (all verified via grep):
+Key numbers (all verified via grep, after Phase 7):
 
-- Component classes: **15** (`game/core/framework/girl/girl_*.rpy`, one class per file, init -2).
-- `_impl` aliases: **156** (class-body aliases of the form `_<method>_impl = <method>` inside girlclass.rpy).
-- The Girl class retains ~215 methods (counted by `def `), so all 2,000+ existing call sites work unchanged.
+- Component classes: **16** (`game/core/framework/girl/girl_*.rpy`, one class per file, init -2; includes the Phase 7 new file `girl_progression.rpy`).
+- `_impl` aliases: **24** (only for methods whose real implementation still lives in girlclass, such as `get_schedule`/`is_unique`).
+- The Girl class has ~212 methods (counted by `def `), almost all one-line delegation shells; all 2,000+ existing call sites work unchanged.
 
-> Scope note: if the task's figure "17" refers to the total number of girl subsystem files, that is 15 components + `girlclass.rpy` (host class) + `girl_factory.rpy` (factory functions) = 17; the component classes themselves number 15.
+> Scope note: the older "15 components + host + factory = 17" figure has been updated to 16 components (new GirlProgression added).
 
 ## 2. Component Inventory
 
 | Component class | File | Lines | Responsibility | Migrated implementation (★) |
 |-----------------|------|------:|----------------|------------------------------|
-| `GirlBase` | `girl_base.rpy` | 34 | Identity: name, rank, serialization | — (lightweight wrapper) |
-| `GirlStats` | `girl_stats.rpy` | 188 | Stats, caps, changes, spillover | ★ `get_stat` / `change_stat` / `set_stat` / `average_skills` |
-| `GirlTraits` | `girl_traits.rpy` | 155 | Trait/perk management | ★ `generate_traits` |
-| `GirlItems` | `girl_items.rpy` | 110 | Equipment, items, inventory | — |
-| `GirlSchedule` | `girl_schedule.rpy` | 155 | Job assignment, workdays, schedule | ★ `get_status` |
-| `GirlSex` | `girl_sex.rpy` | 415 | Sex acts, kinks, preferences | ★ `will_do_sex_act` / `refresh` / `activate` / `deactivate` etc., 30 total |
-| `GirlMood` | `girl_mood.rpy` | 196 | Mood, sanity, energy, health | ★ `change_energy` / `heal` / `rest` |
-| `GirlRelationships` | `girl_relationships.rpy` | 98 | Love, fear, obedience, MC relationship | ★ `change_love` / `change_fear` |
-| `GirlEconomy` | `girl_economy.rpy` | 274 | Price, upkeep, tips, performance | ★ `get_price` / `get_xp` / `get_jp` / `get_rep` / `estimate_performance` |
-| `GirlDialogue` | `girl_dialogue.rpy` | 217 | Dialogue selection, `say()`, personality | ★ `pick_dialogue` / `say` / `rand_say` |
-| `GirlPictures` | `girl_pictures.rpy` | 431 | Picture selection, refresh, evaluation | ★ `get_fix_pic` |
+| `GirlBase` | `girl_base.rpy` | 166 | Identity: naming, ini loading, post-acquire init | ★ `set_name` / `load_ini` / `init_after_acquire` |
+| `GirlStats` | `girl_stats.rpy` | 389 | Stats, caps, spillover, tests | ★ `get_stat` / `change_stat` / `get_stat_minmax` / `stat_spillover` etc. |
+| `GirlProgression` | `girl_progression.rpy` | 483 | Level/rank/job level, XP-JP-rep, Perks, stat upgrades | ★ all 28 methods (new in Phase 7 batch 6) |
+| `GirlTraits` | `girl_traits.rpy` | 244 | Trait/perk management, shields, defense | ★ `generate_traits` / `add_trait` / `has_perk` / `test_shield` |
+| `GirlItems` | `girl_items.rpy` | 170 | Equipment, item use, taking items | ★ `use_item` / `equip` / `take` |
+| `GirlSchedule` | `girl_schedule.rpy` | 244 | Job assignment, workdays, schedule | ★ `set_job` / `will_do` / `get_status` |
+| `GirlSex` | `girl_sex.rpy` | 784 | Sex acts, kinks, preferences, tastes | ★ 49 methods (inner+outer `generate_preferences` merged) |
+| `GirlMood` | `girl_mood.rpy` | 610 | Mood, sanity, energy, health, fatigue | ★ mood cluster / `change_energy` / `heal` / `rest` / `tired_check` |
+| `GirlRelationships` | `girl_relationships.rpy` | 372 | Love, fear, MC relationship, spoiling/intimidation | ★ `change_love/fear` / `receive_gift` / `update_relationships` |
+| `GirlEconomy` | `girl_economy.rpy` | 489 | Price, upkeep, tips, reception capacity | ★ `get_price` / upkeep cluster / `whore_on_street` / `get_tip` |
+| `GirlDialogue` | `girl_dialogue.rpy` | 497 | Dialogue, `say()`, personality, `is_`, descriptions | ★ `pick_dialogue` / `get_personality_description` / `is_` |
+| `GirlPictures` | `girl_pictures.rpy` | 426 | Picture selection, refresh, evaluation | ★ `get_fix_pic` etc. (migrated earlier) |
 | `GirlEffects` | `girl_effects.rpy` | 59 | Effect wrapper (delegates to EffectBearer) | — (pure delegation) |
-| `GirlGeneration` | `girl_generation.rpy` | 116 | Randomization, personality, background, preferences | — (`randomize` entry point) |
-| `GirlTraining` | `girl_training.rpy` | 177 | Training | Partial method bodies |
-| `GirlLogging` | `girl_logging.rpy` | 32 | Logging, tracking, recent events | — (thin component) |
+| `GirlGeneration` | `girl_generation.rpy` | 116 | Randomization, personality, background orchestration | — (orchestration entry point, depends on other components) |
+| `GirlLogging` | `girl_logging.rpy` | 253 | Logging, tracking, memory, recent events | ★ `add_log` / `track_event` / `remembers` and 9 more, 12 total |
+| `GirlTraining` | `girl_training.rpy` | 316 | Farm training, obedience checks, build-up | ★ `will_do_farm_act` / `get_obedience_check_target` / `reset_build_up` |
 
-The header comment in `girl/__init__.rpy` ("Total: 11 components") is outdated — at that time only 10 components plus 1 stub were complete; there are now 15 component classes, so do not cite it.
+The header of `girl/__init__.rpy` is now a full-★ table for all 16 components (only effects/generation are thin wrappers); the code is the source of truth.
 
 ## 3. Delegation Pattern
 
@@ -136,6 +137,40 @@ return val + extra
 - **When migrating, compare the evaluation order of the original implementation line by line**, especially for "accumulation-style" code like effects/bonuses — it is the easiest place to "helpfully add it once more" while moving code.
 - **Do not replace assertions with silent degradation.** For "robustness" the buggy version turned `AssertionError` into `return 0`, letting errors propagate into downstream numbers instead of surfacing at the source.
 - Effect-bonus code must come with regression tests for the assertion semantics (this fix updated test_runner in the same commit).
+
+## 6. Phase 7 migration lessons (2026-09-11, batches 1-14)
+
+### 6.1 `generate_preferences` double-execution bug
+
+**The most representative Phase 7 incident, fixed in `f027957`.**
+
+The early migration had placed the **inner** body of `generate_preferences` (preference/fixation generation) into GirlSex while leaving the **outer wrapper** on the Girl side (calling the inner + generate_stats + virginity control + NGP settings) — correct at the time. In Phase 7 batch 8 the outer layer was merged into the component, but the outer wrapper in girlclass was **not shrunk to a pure shell in sync**, so `girl.generate_preferences()` executed the outer logic twice: sex stats regenerated (dice re-rolled), NGP preference settings applied twice (`change_preference` is not idempotent), virginity control run twice.
+
+### Fix
+
+The component holds the merged inner+outer implementation, and girlclass became a pure shell `self._sex.generate_preferences()` — matching the pre-migration semantics of "all logic in one method body".
+
+### Lessons
+
+- **When migrating wrapper-style methods, the component-side merge and the host-side shell shrink must be done as a pair**; doing only one side causes double execution. After migrating, grep the host method body to confirm no logic merged into the component remains.
+- **Idempotency self-check**: if the merged logic contains random generation (dice) or non-idempotent changes (preference stacking), double execution shows up immediately; prioritize reviewing such methods.
+
+### 6.2 Stale copies inside components
+
+Phase 7 found several **old copies inside components whose semantics differed from the live girlclass versions**: `sanity_warning` (component's 3 branches vs the real 6 branches), `farm_beg_test` (inverted decision threshold), `use_item` (simplified version), `take`/`get_equipped` (different behavior), `get_stat_minmax` (a 5-line simplification vs the 63-line domain version).
+
+### Lessons
+
+- **A same-named method inside a component is not necessarily a shell**; before migrating, diff the girlclass original against the component copy line by line; the girlclass (live code) wins.
+- The simplified `get_stat_minmax` copy had also degraded the `change_stat` skill cap from the baseline `max(rank*50+...)` to a constant 100 (fixed in batch 10 along with the migration, restoring baseline semantics) — **when two same-named implementations coexist, internal callers may already be using the wrong one**.
+
+### 6.3 List comprehension variable shadowing
+
+Component methods uniformly use `g = self.girl`, while the original code habitually used `g` as a comprehension/loop variable (`[g.name for g in self.friends]`). A mechanical `self→g` replacement would shadow the girl reference. All Phase 7 batches together fixed 20+ such sites, renaming the loop variable every time (`gf`/`gv`, etc.).
+
+### Lessons
+
+- After a mechanical `self→g` replacement, search the method body for `for g in` / `[g for` / `if g !=` and check each one.
 
 ---
 

@@ -1,6 +1,6 @@
 # Brothel King — game/core Refactoring Progress Document
 
-> Last updated: 2026-09-10
+> Last updated: 2026-09-11 (after Phase 7 Girl component migration completion)
 > Current branch: `bk-evolution`
 
 ---
@@ -77,6 +77,51 @@ c47440e  ── 任务1: Dev Console Shift+O 绑定修复 (shift_K_o + modal屏�
 ── Mod API v2 补完 (2026-09-11) ──
 c6b3fa2  ── 16个钩子点接入游戏流程 (girl_*/day_*/night_*/event_*/chapter_*/security/game_saved/game_loaded)
 1788c04  ── V2补完+拍卖Mod转V2: manifest菜单按钮/get_menu_buttons/get_mod_info/主页Mods菜单与Mods界面接入v2
+
+── Phase 7 (2026-09-11, batches 1-14, girlclass 3,910→1,148 lines): Girl component migration completion ──
+ac412bb  ── 批次1: mood/energy/health 实现迁入 GirlMood (sanity_warning 6分支完整版替换组件
+           过时3分支副本/tire/get_hurt/health_check/get_energy_color/ttip/tired_check/
+           update_mood/change_mood/get_mood_modifier/get_mood_description/get_mood_picture)
+           (ROADMAP 遗留#5 收尾) —— 注: 本批 get_mood_description 只换了尾部, 135行孤儿体
+           遗留至批次14a 清理
+12df2ff  ── 批次2: 日志/追踪/记忆实现迁入 GirlLogging (commit/return_from/add_log/get_log/
+           get_average_performance/track_event/get_recent_events×2/count_occurences/
+           will_remember/remembers/forgets 共12方法)
+d2f2b0b  ── 批次3: 性格描述/NGP解锁/is_/test_say/unlock_info 迁入 GirlDialogue
+           (get_personality_description 240行; is_ 判归 GirlDialogue——只读 personality.attributes)
+4accc78  ── 批次4: upkeep簇9方法+接待互动4方法+whore_on_street/get_street_tip 迁入 GirlEconomy
+           (+顺手清理6个指向已迁移方法的遗留别名)
+52d97f7  ── 批次5: receive_gift/update_relationships/change_relationship/get_compatibility/
+           get_friendship/get_MC_relation/meet_MC/get_love/get_fear/spoil/terrify/
+           refresh_spoil_terrify_points 迁入 GirlRelationships (girl_items 调用点改接)
+7932658  ── 批次6: 新建 girl_progression.rpy (483行, 28方法) — level_up/rank_up/job_up/
+           adjust_level/auto_level_up/debug_auto_level/ready_to_*/can_spend_upgrade_points/
+           change_xp/change_jp/change_rep/get_*_can/perk簇9/属性升级3; __init__注册+
+           Girl.__init__ self._progression
+29eaa27  ── 批次7: set_job/will_do/set_rest/works_today/cycle_workday/set_workdays/load_schedule/
+           get_day_off 迁入 GirlSchedule
+87050c6  ── 批次8: generate_preferences(内外层合并)/add_random_fixation/remove_fixation/
+           try_to_remove_fix/has_fixation/test_weakness/pop_virginity/restore_virginity/
+           talk_tastes/get_preference/get_preference_bonus/reset_sex_acts/get_trainable_sex_acts/
+           get_sex_act_modifier/count_available_sex_acts/does_anything/will_do_anything/
+           has_activated_sex_acts/get_reaction_to_act 共19方法迁入 GirlSex
+           —— 注: 本批引入 generate_preferences 双重执行bug(girlclass 外层包装未缩壳), 批次14a 修复
+80ed767  ── 批次9: will_rebel_in_farm/farm_beg_test/get_obedience_check_target/get_working_chance/
+           get_training_chance/build_up/get_build_up/reset_build_up 迁入 GirlTraining
+           + 删除 will_rebel_in_farm/farm_beg_test 重复定义死壳(组件 farm_beg_test 过时副本
+           阈值相反, 以girlclass为准覆盖)
+49bfca4  ── 批次10: stat_spillover/get_stat_minmax/shuffle_skills/generate_stats/test_stats/
+           raise_stats/average_stats 迁入 GirlStats —— 组件5行简化版 get_stat_minmax 被63行
+           基线版覆盖, 修复 change_stat 技能上限回归(恢复 max(rank*50+...)), stat_spillover 遮蔽5处
+2d0e192  ── 批次11: add_trait/remove_trait/has_trait/get_defense/add_shield/test_shield 迁入 GirlTraits
+08b09d0  ── 批次12: use_item/unequip/take/get_equipped 迁入 GirlItems (use_item 组件旧简易版/
+           take/get_equipped 旧版全部以girlclass为准覆盖)
+85ffd84  ── 批次13: set_name/set_fullname/random_rename/load_ini/read_ini/update_files 迁入 GirlBase
+           (girl_pictures 的 update_files 静态占位删除, help.rpy 调用点路由不变)
+f027957  ── 批次14a: 修复批次8双重执行bug(generate_preferences 纯壳化) + 批次1孤儿体清理
+           (get_mood_description 135行死链) + 补迁 has_perk→GirlTraits/
+           customer_populations_safety_check→GirlEconomy/init_after_acquire→GirlBase
+           + 清7死别名 + __init__.rpy 头部更新(16组件全★表)
 ```
 
 **Baseline verification (2026-09-10 session)**: lint passes (historical warnings only), the game launches normally to the main menu.
@@ -117,40 +162,37 @@ Registered services:
 
 ---
 
-## 3. Girl system refactoring (Phase 2) 
+## 3. Girl system refactoring (Phase 2 + Phase 7)
 
 ### girlclass.rpy slimming
 
-| Metric | Before | Current | Change |
-|------|--------|------|------|
-| Lines | 5,900 | 3,910 | **-1,990 (-34%)** |
-| Method count | 212 | 211 | -1 (some became delegates) |
-| Component directory | None | 17 files | +2,682 lines |
+| Metric | Before | After Phase 2 | After Phase 7 | Cumulative change |
+|------|--------|------|------|------|
+| Lines | 5,900 | 3,910 | **1,148** | **-4,752 (-81%)** |
+| Method count | 212 | 211 | ~212 (almost all one-line delegation shells) | — |
+| Component directory | None | 15 files | 16 files, +2,682→+5,618 lines | |
 
-### Girl components (17)
+### Girl components (16, 14 with migrated implementations)
 
-| Component file | Lines | Status | Key migrated methods |
-|----------|------|------|-------------|
-| `girl_pictures.rpy` | 431 | ★complete | get_fix_pic, get_pic, get_pic_not_tags, get_pic_by_name, refresh_pictures, create_char, check_pictures, evaluate_girlpack |
-| `girl_mood.rpy` | 196 | ★complete | change_energy, heal, full_rest, rest, init_sanity, rank_up_sanity, lose_sanity, get_sanity, sanity_warning |
-| `girl_economy.rpy` | 274 | ★complete | get_price, get_xp, get_jp, get_rep, get_tip, estimate_performance |
-| `girl_relationships.rpy` | 98 | ★complete | change_love, change_fear |
-| `girl_dialogue.rpy` | 217 | ★complete | generate_personality, adjust_personality, generate_background, pick_dialogue, say, rand_say |
-| `girl_traits.rpy` | 155 | ★complete | generate_traits (full 180 lines) |
-| `girl_sex.rpy` | 415 | ★complete | will_do_sex_act, toggle_sex_act, refresh_sex_acts, activate/deactivate, generate_preferences, test_fix, check_fix, get_sex_attitude, change/raise_preference |
-| `girl_items.rpy` | 110 | ★complete | equip, unequip, get_equipped, use_item, take |
-| `girl_stats.rpy` | 188 | ★complete | get_stat, change_stat, set_stat, average_skills, find_stat, get_stat_max/minmax |
-| `girl_schedule.rpy` | 155 | ★complete | get_status, get_status_summary (fully bilingual comments) |
-| `girl_training.rpy` | 177 | ★complete | will_do_farm_act, will_rebel_in_farm, farm_beg_test, obedience_check, training_check, run_away_check |
-| `girl_effects.rpy` | 59 | ★complete | list_effects, get_effect, remove_effects (new in Phase 1 block 4) |
-| `girl_generation.rpy` | 116 | ★complete | randomize (includes t0-t8 performance timing instrumentation, new in Phase 1 block 5) |
-| `girl_base.rpy` | 34 | delegate | set_name, get_name, is_unique, load_ini, randomize, etc. |
-| `girl_logging.rpy` | 32 | delegate | add_log, get_log, track_event, etc. |
+Details live in [../architecture/girl_components.md](../architecture/girl_components.md) as the source of truth (per-component lines, ★ status, Phase 7 batch mapping). Phase 7 added `girl_progression.rpy` (level/XP-JP-rep/Perks/stat upgrades, 28 methods).
 
-**★ = contains migrated implementations (13/17)**
-**delegate = methods point to the original implementations in girlclass via `_impl` aliases**
+### Method body migration summary
 
-### Migrated method body summary (33)
+- Phase 2: 33 large block methods (stats/mood/economy/sex/dialogue/traits/items/schedule/training/effects/generation/pictures/relationships); see the historical commit chain above
+- Phase 7 batches 1-14: another ~120 methods migrated; girlclass left with only `__init__` (142 lines) + delegation shells + 24 live aliases; also fixed two incidents (generate_preferences double execution, change_stat skill cap regression), cleaned up 6 stale copies inside components, deleted 3 duplicate-definition dead shells
+
+### Still in girlclass (after Phase 7, intentionally retained)
+
+| Content | Lines | Notes |
+|------|------|------|
+| `__init__` | 142 | Attribute initialization + 16 component instantiations; **intentionally left as-is** (splitting into per-component init_* carries save-compatibility risk, deferred per ROADMAP #3) |
+| `get_schedule` / `is_unique` | ~7 | Micro-methods, kept together with their live `_impl` aliases |
+| Delegation shells | ~212 methods, 1-2 lines each | The Girl public API; 2,000+ existing call sites unchanged |
+| `_impl` aliases | 24 | Only pointing at methods whose real implementation still lives in girlclass |
+
+### Phase 2 method migration detail (33 items, archived)
+
+> Phase 7 completed all remaining items; this is the Phase 2 record:
 
 1. `get_fix_pic` (~112 lines) → girl_pictures
 2. `get_status` + `get_status_summary` (~111 lines) → girl_schedule
@@ -175,16 +217,6 @@ Registered services:
 21-25. sanity methods (~40 lines) → girl_mood
 26-30. item methods (equip/unequip/use_item/take) → girl_items
 31-33. farm methods (will_do_farm_act/will_rebel/farm_beg_test) → girl_training
-
-### Major methods still in girlclass
-
-All large method bodies have been migrated. What remains:
-
-| Method | Lines | Description |
-|------|------|------|
-| `__init__` | ~120 | Attribute initialization + component instantiation; **intentionally left as-is** (splitting into per-component init_* carries save-compatibility risk and poor ROI, deferred) |
-| `change_mood` / `update_mood` / `get_mood_modifier` and other mood-adjacent methods | ~150 | Partially overlaps with the GirlMood component; ownership to be cleaned up |
-| Remaining small methods | ~800 | Low difficulty but numerous; can be finished when grouping by theme |
 
 ---
 
@@ -339,7 +371,7 @@ tools/
 ## 9. Next priorities
 
 1. **Verification testing** — ✅ partially complete (2026-09-10): lint passes + launches to main menu; **pending manual spot checks**: new-game start, one full day settlement, girl panel/brothel/farm screens; **Phase 3 increment**: main-menu Tests button (developer mode) runs component smoke tests
-2. **Remaining method migration** — ✅ large blocks all complete (Phase 1, 2026-09-10): obedience/training/run_away checks, change/raise_preference, test_fix/check_fix/get_sex_attitude, list_effects/get_effect/remove_effects (→girl_effects), randomize (→girl_generation), get_pic/get_pic_not_tags (→girl_pictures). **Remaining**: __init__ split (deferred, save-compatibility risk), mood-adjacent methods such as change_mood whose ownership overlaps GirlMood, grouping ~800 lines of small methods
+2. **Remaining method migration** — ✅ fully complete (Phase 7, 2026-09-11): batches 1-14 migrated ~120 methods, created the new GirlProgression component, fixed the generate_preferences double execution and the change_stat cap regression, cleaned up 6 stale component copies and 3 dead shells. **girlclass.rpy 5,900→1,148 lines**. Only leftovers: `__init__` split (deferred, save-compatibility risk) and the `get_schedule`/`is_unique` micro-methods (intentionally retained)
 3. **Screen extraction** — ✅ fully complete (Phase 2, 2026-09-10): screens.rpy 8,886 → 620 lines, 108 screens → 16 files, verified identical by character-by-character comparison
 4. **Translation tools** — ✅ decided not to implement `translate_sync.py` (Phase 3): the sync need is covered by the existing toolchain — missing detection `verify_i18n.py`(`translate --count`), placeholder integrity `audit_placeholders.py`, empty-translation round trip `export_empty_to_xlsx.py`/`import_translated_empty.py`, stale entries cleaned when Ren'Py `translate` rewrites. See `docs/i18n/I18N_ROADMAP.md` Section 6. Also fixed hardcoded stale paths in `i18n_lint.py`/`verify_i18n.py` (now derived from the script location).
 5. **Mod API v2 testing** — ✅ complete (Phase 3): `tools/verify_mod_api.py` static assertions + stub-environment full-flow simulation (register→trigger→cancel), `python tools/verify_mod_api.py` all passing; the in-game `test_mod_api_v2` smoke label added to the Test Runner. **Found and fixed**: `cancel_hook` routed through `execute_hook` meant the context never reached callbacks and it always returned False. Also note: 16 HOOK_* constants (this document previously said 15), and the game code currently has no `execute_hook`/`cancel_hook` call sites — the hook framework was ready but not yet wired.
