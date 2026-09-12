@@ -2,18 +2,14 @@
 # Phase 2.1: Prices, upkeep, tips, customer capacity, performance estimation.
 # 价格、维护费、小费、客户容量、表现评估
 # ★ get_price/get_xp/get_jp/get_rep/estimate_performance — 已从 girlclass.rpy 移入
-# Methods: get_tip, change_rep, get_max_cust_served, adjust_upkeep, etc.
-#
-# Migration: Delegation wrappers added. Implementation bodies remain in girlclass.rpy
-# and will be moved incrementally.
+# ★ get_med_upkeep/adjust_upkeep/update_upkeep_ratio/get_upkeep_threshold/get_upkeep_modifier — 已从 girlclass.rpy 移入 (Phase 7 批次4)
+# ★ get_next_upkeep_step/get_previous_upkeep_step/cut_upkeep/restore_upkeep (Phase 7 批次4)
+# ★ get_max_cust_served/get_max_interactions/get_interaction_modifier/reset_interactions/whore_on_street/get_street_tip (Phase 7 批次4)
 
 init -2 python:
 
     class GirlEconomy(object):
-        """Economic calculations for a Girl.
-
-        Each method delegates to girlclass.rpy implementation via self.girl.
-        """
+        """Economic calculations for a Girl."""
 
         def __init__(self, girl):
             self.girl = girl
@@ -43,45 +39,214 @@ init -2 python:
             return finalprice
 
         def get_med_upkeep(self):
-            return self.girl._get_med_upkeep_impl()
+            g = self.girl
+            eff = g.get_effect("boost", "upkeep")
+
+            av_stat = (sum(s.value for s in g.stats) + sum(s.value for s in g.sex_stats)) // (len(g.stats) + len(g.sex_stats))
+
+            return round_int(av_stat * eff * (2 ** (g.rank-1))) # Testing upkeep formula suggested by Chris12 (exponential upkeep growth) #! Change from 1.5 to 2
+
 
         def adjust_upkeep(self):
-            return self.girl._adjust_upkeep_impl()
+            g = self.girl
+            if g.upkeep > 0: # 0 upkeep happens when she is punished.
+                g.upkeep = round_int(g.get_med_upkeep() + g.upkeep_ratio*g.rank)
+
+            return
+
 
         def update_upkeep_ratio(self):
-            return self.girl._update_upkeep_ratio_impl()
+            g = self.girl
+            g.upkeep_ratio = (g.upkeep - g.get_med_upkeep())/float(g.rank)
 
-        def get_upkeep_threshold(self, step):
-            return self.girl._get_upkeep_threshold_impl(step)
+
+        def get_upkeep_threshold(self, step): # Only use integers from +5 to -5 as step values, or "min".
+            g = self.girl
+            if step == "min" or step == -6:
+                return g.get_med_upkeep() // 4
+
+            _bv = upkeep_base_value[step]
+
+            r = g.get_med_upkeep() + (_bv * g.rank * 2 ** g.rank)
+
+            if step <= 0: # To emulate the legacy switch from >= to >
+                r += 1
+            
+            return r
+
 
         def get_upkeep_modifier(self):
-            return self.girl._get_upkeep_modifier_impl()
+            g = self.girl
+            m = g.get_med_upkeep()
+
+            if g.upkeep >= g.get_upkeep_threshold(5):
+                modifier = +5
+
+            elif g.upkeep >= g.get_upkeep_threshold(4):
+                modifier = +4
+
+            elif g.upkeep >= g.get_upkeep_threshold(3):
+                modifier = +3
+
+            elif g.upkeep >= g.get_upkeep_threshold(2):
+                modifier = +2
+
+            elif g.upkeep >= g.get_upkeep_threshold(1):
+                modifier = +1
+
+            elif g.upkeep >= g.get_upkeep_threshold(0):
+                modifier = 0
+
+            elif g.upkeep >= g.get_upkeep_threshold(-1):
+                modifier = -1
+
+            elif g.upkeep >= g.get_upkeep_threshold(-2):
+                modifier = -2
+
+            # Higher mood penalties incurred for very negative upkeep
+
+            elif g.upkeep >= g.get_upkeep_threshold(-3):
+                modifier = -4
+
+            elif g.upkeep >= g.get_upkeep_threshold(-4):
+                modifier = -8
+
+            elif g.upkeep >= g.get_upkeep_threshold(-5):
+                modifier = -12
+
+            else:
+                modifier = -20
+
+
+            if modifier > 0:
+                modifier += g.get_effect("change", "positive upkeep mood modifier")
+            elif modifier < 0:
+                modifier += g.get_effect("change", "negative upkeep mood modifier")
+
+            return modifier
+
 
         def get_next_upkeep_step(self):
-            return self.girl._get_next_upkeep_step_impl()
+            g = self.girl
+            m = g.get_upkeep_modifier()
+            _st = upkeep_modifier_step[m]
+            
+            if _st < 5:
+                return g.get_upkeep_threshold(_st + 1)
+            else:
+                return get_upkeep_threshold(5)
+
 
         def get_previous_upkeep_step(self):
-            return self.girl._get_previous_upkeep_step_impl()
+            g = self.girl
+            m = g.get_upkeep_modifier()
+            _st = upkeep_modifier_step[m]
+            
+            if _st > -6:
+                return max(g.get_upkeep_threshold(_st - 1), g.get_upkeep_threshold("min"))
+            else:
+                return g.get_upkeep_threshold("min")
+
 
         def cut_upkeep(self, day_nb):
-            return self.girl._cut_upkeep_impl(day_nb)
+            g = self.girl
+            g.locked_upkeep = g.upkeep
+            g.upkeep = 0
+            calendar.set_alarm(calendar.time + 1, Event(label = "restore_upkeep", object = g))
+
 
         def restore_upkeep(self):
-            return self.girl._restore_upkeep_impl()
+            g = self.girl
+            if g.locked_upkeep:
+                g.upkeep = g.locked_upkeep
+                g.locked_upkeep = None
+
 
         # ── Performance & capacity (implementations moved from girlclass.rpy) ──
 
         def get_max_cust_served(self, job="current"):
-            return self.girl._get_max_cust_served_impl(job)
+            g = self.girl
+            if job == "current":
+                job = g.job
+
+            # Unavailable (returns 0 if she can't have any more interactions)
+            if not job or job == "rest" or g.away or g.hurt > 0:
+#                renpy.say(g.char, "My capacity is zero (" + g.fullname + ")")
+                return 0
+
+            if job == "whore":
+                cust_cap = g.get_max_interactions()
+
+            else:
+                stats = perform_job_dict[job + "_stats"]
+
+                main_stat, weight = stats[0]
+
+                cust_cap = job_base_customer + ((g.get_stat(main_stat) + g.get_stat("constitution")) / float(job_customer_points)) + g.get_effect("change", "job customer capacity")
+
+                #<Chris Job Mod: >
+                if game.has_active_mod("chrisjobmod") and job in all_jobs:
+                    cust_cap *= act_max_customers_modifier[job]
+                    if cust_cap < job_base_customer:
+                        cust_cap = job_base_customer
+                #</Chris Job Mod>
+
+            # Reduce capacity if the girl is working half shift
+
+            cust_cap = round_int(cust_cap * g.workdays[calendar.get_weekday()] / 100.0)
+
+            # Halves capacity if girl is working and whoring
+
+            if g.work_whore:
+                cust_cap = round_int(cust_cap / 2)
+
+            if cust_cap < 1:
+                cust_cap = 1
+
+#            renpy.say(g.char, "My capacity is " + str(cust_cap) + " for " + job + " (" + g.fullname + "")
+
+            return cust_cap
+
 
         def get_max_interactions(self):
-            return self.girl._get_max_interactions_impl()
+            g = self.girl
+            inter = whore_base_customer + round_int((g.get_stat("libido") + g.get_stat("constitution")) / float(whore_customer_points) + g.get_effect("change", "whore customer capacity"))
 
-        def get_interaction_modifier(self):
-            return self.girl._get_interaction_modifier_impl()
+            # At least 1 interaction is guaranteed
+            return max(inter, 1)
+
+
+        def get_interaction_modifier(self): # Spent interactions are multiplied by this number (higher modifier=less interactions)
+            g = self.girl
+            mod = 100 // g.workdays[calendar.get_weekday()]
+
+            if g.work_whore and g.job in all_jobs:
+                mod = mod * 2
+
+            return mod
+
 
         def reset_interactions(self):
-            return self.girl._reset_interactions_impl()
+            g = self.girl
+            g.old_interactions = g.interactions # Used for triggering the libido event
+
+            g.interactions = g.get_max_interactions()
+
+            g.MC_interact_counters = defaultdict(int)
+
+            # Updates memories of rewards and punishments
+
+            g.forgets()
+
+            # Resets naked status to False, except if girl has the naturist perk
+
+            if not g.get_effect("special", "naked"):
+                g.naked = False
+
+            # Resets farm promise
+
+            g.farm_lock = False
+
 
         def estimate_performance(self, sex_act):
             g = self.girl
@@ -261,11 +426,53 @@ init -2 python:
             gold_ttip += _("\n\n= {image=img_gold}%i") % tip
             return tip, gold_ttip
 
-        def get_street_tip(self):
-            return self.girl._get_street_tip_impl()
+        def get_street_tip(self): # Returns average tip value for street whores
+            g = self.girl
+            return max(g.get_price("sell") // 100, tip_base) * cheat_modifier["gold"] * game.get_diff_setting("gold")
 
-        def whore_on_street(self):
-            return self.girl._whore_on_street_impl()
+
+        def whore_on_street(self): # Runs every night a broken girl is on the street. Returns tip value.
+            g = self.girl
+            # 1. Get tip
+            min_tip = g.get_street_tip() // 2
+
+            tip = renpy.random.randrange(min_tip, min_tip*3) * g.get_effect("boost", "street whore tip")
+
+            # 2. Degrade stats (Street whores erode their stats over time)
+            for s in g.stats + g.sex_stats:
+
+                eff = g.get_effect("change", "street whore skill erosion") # May be -1 or -2
+
+                if g.get_stat(s.name) > 150:
+                    chg = 1-dice(6+eff) # 0 to -5
+                elif g.get_stat(s.name) > 75:
+                    chg = 1-dice(5+eff) # 0 to -4
+                elif g.get_stat(s.name) > 25:
+                    chg = 1-dice(4+eff) # 0 to -3
+                else:
+                    chg = 1-dice(3+eff) # 0 to -2
+
+                if chg:
+                    g.change_stat(s.name, chg, silent=True)
+
+            # 3. Chance of disappearance
+
+            grace_period = 14 # Girls will not disappear during the grace period
+
+            if g.streetdays < grace_period:
+                pass
+            elif g.street_roll <= 1 + (g.streetdays - grace_period)/10: # After the grace period, increasing chance of disappearance
+                calendar.set_alarm(calendar.time + 1, StoryEvent("girl_disappeared", arg=g, type = "morning"))
+
+            # Roll is generated the day prior to discourage save scumming. Boost values can be 3.0, 9.0, 27.0
+            g.street_roll = dice(100 * g.get_effect("boost", "street whore security"))
+
+            # 4. Counter and log
+            g.street_days += 1
+            g.today_street_tip = tip
+
+            return tip
+
 
         def change_rep(self, chg, silent=False):
             return self.girl._change_rep_impl(chg, silent)

@@ -592,105 +592,34 @@ init -2 python:
             return self._economy.get_price(operation, raw)
 
 
+## Phase 2.1: Delegated to GirlEconomy component ##
         def get_med_upkeep(self):
-
-            eff = self.get_effect("boost", "upkeep")
-
-            av_stat = (sum(s.value for s in self.stats) + sum(s.value for s in self.sex_stats)) // (len(self.stats) + len(self.sex_stats))
-
-            return round_int(av_stat * eff * (2 ** (self.rank-1))) # Testing upkeep formula suggested by Chris12 (exponential upkeep growth) #! Change from 1.5 to 2
+            return self._economy.get_med_upkeep()
 
 
+## Phase 2.1: Delegated to GirlEconomy component ##
         def adjust_upkeep(self):
+            return self._economy.adjust_upkeep()
 
-            if self.upkeep > 0: # 0 upkeep happens when she is punished.
-                self.upkeep = round_int(self.get_med_upkeep() + self.upkeep_ratio*self.rank)
-
-            return
-
+## Phase 2.1: Delegated to GirlEconomy component ##
         def update_upkeep_ratio(self):
-            self.upkeep_ratio = (self.upkeep - self.get_med_upkeep())/float(self.rank)
+            return self._economy.update_upkeep_ratio()
 
+## Phase 2.1: Delegated to GirlEconomy component ##
         def get_upkeep_threshold(self, step): # Only use integers from +5 to -5 as step values, or "min".
-            if step == "min" or step == -6:
-                return self.get_med_upkeep() // 4
+            return self._economy.get_upkeep_threshold(step)
 
-            _bv = upkeep_base_value[step]
-
-            r = self.get_med_upkeep() + (_bv * self.rank * 2 ** self.rank)
-
-            if step <= 0: # To emulate the legacy switch from >= to >
-                r += 1
-            
-            return r
-
+## Phase 2.1: Delegated to GirlEconomy component ##
         def get_upkeep_modifier(self):
+            return self._economy.get_upkeep_modifier()
 
-            m = self.get_med_upkeep()
-
-            if self.upkeep >= self.get_upkeep_threshold(5):
-                modifier = +5
-
-            elif self.upkeep >= self.get_upkeep_threshold(4):
-                modifier = +4
-
-            elif self.upkeep >= self.get_upkeep_threshold(3):
-                modifier = +3
-
-            elif self.upkeep >= self.get_upkeep_threshold(2):
-                modifier = +2
-
-            elif self.upkeep >= self.get_upkeep_threshold(1):
-                modifier = +1
-
-            elif self.upkeep >= self.get_upkeep_threshold(0):
-                modifier = 0
-
-            elif self.upkeep >= self.get_upkeep_threshold(-1):
-                modifier = -1
-
-            elif self.upkeep >= self.get_upkeep_threshold(-2):
-                modifier = -2
-
-            # Higher mood penalties incurred for very negative upkeep
-
-            elif self.upkeep >= self.get_upkeep_threshold(-3):
-                modifier = -4
-
-            elif self.upkeep >= self.get_upkeep_threshold(-4):
-                modifier = -8
-
-            elif self.upkeep >= self.get_upkeep_threshold(-5):
-                modifier = -12
-
-            else:
-                modifier = -20
-
-
-            if modifier > 0:
-                modifier += self.get_effect("change", "positive upkeep mood modifier")
-            elif modifier < 0:
-                modifier += self.get_effect("change", "negative upkeep mood modifier")
-
-            return modifier
-
+## Phase 2.1: Delegated to GirlEconomy component ##
         def get_next_upkeep_step(self):
-            m = self.get_upkeep_modifier()
-            _st = upkeep_modifier_step[m]
-            
-            if _st < 5:
-                return self.get_upkeep_threshold(_st + 1)
-            else:
-                return get_upkeep_threshold(5)
+            return self._economy.get_next_upkeep_step()
 
+## Phase 2.1: Delegated to GirlEconomy component ##
         def get_previous_upkeep_step(self):
-            m = self.get_upkeep_modifier()
-            _st = upkeep_modifier_step[m]
-            
-            if _st > -6:
-                return max(self.get_upkeep_threshold(_st - 1), self.get_upkeep_threshold("min"))
-            else:
-                return self.get_upkeep_threshold("min")
+            return self._economy.get_previous_upkeep_step()
 
 
 
@@ -1045,84 +974,21 @@ init -2 python:
             return self._schedule.get_status_summary()
 
 
+## Phase 2.1: Delegated to GirlEconomy component ##
         def get_max_cust_served(self, job="current"):
+            return self._economy.get_max_cust_served(job)
 
-            if job == "current":
-                job = self.job
-
-            # Unavailable (returns 0 if she can't have any more interactions)
-            if not job or job == "rest" or self.away or self.hurt > 0:
-#                renpy.say(self.char, "My capacity is zero (" + self.fullname + ")")
-                return 0
-
-            if job == "whore":
-                cust_cap = self.get_max_interactions()
-
-            else:
-                stats = perform_job_dict[job + "_stats"]
-
-                main_stat, weight = stats[0]
-
-                cust_cap = job_base_customer + ((self.get_stat(main_stat) + self.get_stat("constitution")) / float(job_customer_points)) + self.get_effect("change", "job customer capacity")
-
-                #<Chris Job Mod: >
-                if game.has_active_mod("chrisjobmod") and job in all_jobs:
-                    cust_cap *= act_max_customers_modifier[job]
-                    if cust_cap < job_base_customer:
-                        cust_cap = job_base_customer
-                #</Chris Job Mod>
-
-            # Reduce capacity if the girl is working half shift
-
-            cust_cap = round_int(cust_cap * self.workdays[calendar.get_weekday()] / 100.0)
-
-            # Halves capacity if girl is working and whoring
-
-            if self.work_whore:
-                cust_cap = round_int(cust_cap / 2)
-
-            if cust_cap < 1:
-                cust_cap = 1
-
-#            renpy.say(self.char, "My capacity is " + str(cust_cap) + " for " + job + " (" + self.fullname + "")
-
-            return cust_cap
-
+## Phase 2.1: Delegated to GirlEconomy component ##
         def get_max_interactions(self):
-            inter = whore_base_customer + round_int((self.get_stat("libido") + self.get_stat("constitution")) / float(whore_customer_points) + self.get_effect("change", "whore customer capacity"))
+            return self._economy.get_max_interactions()
 
-            # At least 1 interaction is guaranteed
-            return max(inter, 1)
-
+## Phase 2.1: Delegated to GirlEconomy component ##
         def get_interaction_modifer(self): # Spent interactions are multiplied by this number (higher modifier=less interactions)
+            return self._economy.get_interaction_modifier()
 
-            mod = 100 // self.workdays[calendar.get_weekday()]
-
-            if self.work_whore and self.job in all_jobs:
-                mod = mod * 2
-
-            return mod
-
+## Phase 2.1: Delegated to GirlEconomy component ##
         def reset_interactions(self):
-
-            self.old_interactions = self.interactions # Used for triggering the libido event
-
-            self.interactions = self.get_max_interactions()
-
-            self.MC_interact_counters = defaultdict(int)
-
-            # Updates memories of rewards and punishments
-
-            self.forgets()
-
-            # Resets naked status to False, except if girl has the naturist perk
-
-            if not self.get_effect("special", "naked"):
-                self.naked = False
-
-            # Resets farm promise
-
-            self.farm_lock = False
+            return self._economy.reset_interactions()
 
 
         # Phase 2.1: Delegated to GirlEconomy component
@@ -1143,50 +1009,13 @@ init -2 python:
         def get_tip(self, act, result, customers, final_tip_change=0, first_customer=False, specials=[]):
             return self._economy.get_tip(act, result, customers, final_tip_change, first_customer, specials)
 
+## Phase 2.1: Delegated to GirlEconomy component ##
         def get_street_tip(self): # Returns average tip value for street whores
-            return max(self.get_price("sell") // 100, tip_base) * cheat_modifier["gold"] * game.get_diff_setting("gold")
+            return self._economy.get_street_tip()
 
+## Phase 2.1: Delegated to GirlEconomy component ##
         def whore_on_street(self): # Runs every night a broken girl is on the street. Returns tip value.
-
-            # 1. Get tip
-            min_tip = self.get_street_tip() // 2
-
-            tip = renpy.random.randrange(min_tip, min_tip*3) * self.get_effect("boost", "street whore tip")
-
-            # 2. Degrade stats (Street whores erode their stats over time)
-            for s in self.stats + self.sex_stats:
-
-                eff = self.get_effect("change", "street whore skill erosion") # May be -1 or -2
-
-                if self.get_stat(s.name) > 150:
-                    chg = 1-dice(6+eff) # 0 to -5
-                elif self.get_stat(s.name) > 75:
-                    chg = 1-dice(5+eff) # 0 to -4
-                elif self.get_stat(s.name) > 25:
-                    chg = 1-dice(4+eff) # 0 to -3
-                else:
-                    chg = 1-dice(3+eff) # 0 to -2
-
-                if chg:
-                    self.change_stat(s.name, chg, silent=True)
-
-            # 3. Chance of disappearance
-
-            grace_period = 14 # Girls will not disappear during the grace period
-
-            if self.streetdays < grace_period:
-                pass
-            elif self.street_roll <= 1 + (self.streetdays - grace_period)/10: # After the grace period, increasing chance of disappearance
-                calendar.set_alarm(calendar.time + 1, StoryEvent("girl_disappeared", arg=self, type = "morning"))
-
-            # Roll is generated the day prior to discourage save scumming. Boost values can be 3.0, 9.0, 27.0
-            self.street_roll = dice(100 * self.get_effect("boost", "street whore security"))
-
-            # 4. Counter and log
-            self.street_days += 1
-            self.today_street_tip = tip
-
-            return tip
+            return self._economy.whore_on_street()
 
 
 ## Phase 2.1: Delegated to GirlMood component ##
@@ -2719,16 +2548,13 @@ init -2 python:
         def tired_check(self):
             return self._mood.tired_check()
 
+## Phase 2.1: Delegated to GirlEconomy component ##
         def cut_upkeep(self, day_nb):
+            return self._economy.cut_upkeep(day_nb)
 
-            self.locked_upkeep = self.upkeep
-            self.upkeep = 0
-            calendar.set_alarm(calendar.time + 1, Event(label = "restore_upkeep", object = self))
-
+## Phase 2.1: Delegated to GirlEconomy component ##
         def restore_upkeep(self):
-            if self.locked_upkeep:
-                self.upkeep = self.locked_upkeep
-                self.locked_upkeep = None
+            return self._economy.restore_upkeep()
 
         def refresh_spoil_terrify_points(self):
 
@@ -3000,27 +2826,6 @@ init -2 python:
             self.flags["buildup warning 200"] = False
 
         # ── Phase 2.1: Economy delegation aliases ──
-        _get_price_impl = get_price
-        _get_med_upkeep_impl = get_med_upkeep
-        _adjust_upkeep_impl = adjust_upkeep
-        _update_upkeep_ratio_impl = update_upkeep_ratio
-        _get_upkeep_threshold_impl = get_upkeep_threshold
-        _get_upkeep_modifier_impl = get_upkeep_modifier
-        _get_next_upkeep_step_impl = get_next_upkeep_step
-        _get_previous_upkeep_step_impl = get_previous_upkeep_step
-        _cut_upkeep_impl = cut_upkeep
-        _restore_upkeep_impl = restore_upkeep
-        _get_max_cust_served_impl = get_max_cust_served
-        _get_max_interactions_impl = get_max_interactions
-        _get_interaction_modifier_impl = get_interaction_modifer
-        _reset_interactions_impl = reset_interactions
-        _estimate_performance_impl = estimate_performance
-        _get_xp_impl = get_xp
-        _get_jp_impl = get_jp
-        _get_rep_impl = get_rep
-        _get_tip_impl = get_tip
-        _get_street_tip_impl = get_street_tip
-        _whore_on_street_impl = whore_on_street
         _change_rep_impl = change_rep
         _customer_populations_safety_check_impl = customer_populations_safety_check
 
