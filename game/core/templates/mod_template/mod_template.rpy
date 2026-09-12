@@ -80,6 +80,26 @@ init 1 python:
     #     category="resources",
     # )
 
+    # 5. REGISTER CUSTOM ITEM QUALITY TIERS (requires: ["items"])
+    # EN: Same rank overwrites (last registration wins), so a mod can retune the
+    #     default 0-6 tiers or extend beyond 7. Data-driven reference: the
+    #     "Item Quality" mod (custom/mods/Item Quality/), which also shows how to
+    #     gate registration behind is_mod_active() and ship its own tl/ strings.
+    # ZH: 同 rank 覆盖（后注册者胜），可调整默认 0-6 档或扩展更多档位。
+    #     数据型范例见 custom/mods/Item Quality/（含 is_mod_active 门控与自带 tl/ 翻译）。
+    # mod_api.register_quality(QualityTier(
+    #     rank=3, price_modifier=12.0,
+    #     prefixes={"dress": "Gilded", "misc": "Gilded"},
+    # ))
+
+    # The item_generated hook fires for every item cooked from a template
+    # (context: item / template / tier) — see api.HOOK_ITEM_GENERATED.
+    def on_item_generated(context):
+        # context = {"item": new Item, "template": template Item, "tier": QualityTier}
+        pass
+
+    api.register_hook(api.HOOK_ITEM_GENERATED, on_item_generated)
+
 
 # --- LABELS ---
 

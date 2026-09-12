@@ -61,6 +61,14 @@ init -3 python:
                ZH: 注册一个自定义游戏模式。"""
             return gamemode_registry.register(mode)
 
+        def register_quality(self, tier):
+            """EN: Register a custom item quality tier (QualityTier), keyed by
+                   its rank. Overwrites any tier of the same rank, so a Mod can
+                   retune or extend the default 0-6 range.
+               ZH: 注册一个自定义物品品质档位（QualityTier），按其 rank 键控。
+                   同 rank 覆盖，因此 Mod 可调整或扩展默认的 0-6 档范围。"""
+            return quality_registry.register_quality(tier)
+
         # --- Hook Wrappers ---
 
         def hook(self, hook_name, callback, mod=None):

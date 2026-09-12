@@ -2640,17 +2640,11 @@ init 1 python:
         reversed_result_dict = {}
         result_reference = ""
 
-    # EN: Load quality prefix and modifier tables from JSON (BK Evolution).
-    # ZH: 从 JSON 加载品质前缀和修正值表（BK Evolution）。
-    _quality_json = DataLoader.load_quality()
-    if _quality_json:
-        if "quality_prefix" in _quality_json:
-            quality_prefix = _quality_json["quality_prefix"]
-        if "quality_modifier" in _quality_json:
-            quality_modifier = {int(k): v for k, v in _quality_json["quality_modifier"].items()}
-    else:
-        quality_prefix = {}
-        quality_modifier = {}
+    # EN: Item quality tiers moved to the QualityRegistry (BK Phase 8). Core
+    #     fallback tiers are registered in data/quality.rpy (init -4); the
+    #     "Item Quality" mod overrides them at init -1.
+    # ZH: 物品品质档位已迁至 QualityRegistry（BK Phase 8）。核心回退档位在
+    #     data/quality.rpy 注册（init -4）；"Item Quality" Mod 在 init -1 覆盖。
 
     # EN: Load mood/love/fear description dictionaries from JSON (BK Evolution).
     # ZH: 从 JSON 加载心情/爱意/恐惧描述字典（BK Evolution）。

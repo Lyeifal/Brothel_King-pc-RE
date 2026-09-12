@@ -53,6 +53,7 @@ init -3 python:
             "girl_stats",       # Access girl stat modification
             "girl_traits",      # Register custom traits/perks
             "economy",          # Modify economy calculations
+            "items",            # Register custom item quality tiers / item generation
             "events",           # Register/dispatch events
             "dialogue",         # Custom dialogue lines
             "pictures",         # Custom picture tags
@@ -380,6 +381,7 @@ init -3 python:
         HOOK_GAME_LOADED = "game_loaded"
         HOOK_GIRL_DESTINATION_LIST = "girl_destination_list"
         HOOK_GIRL_DESTINATION_ACCEPT = "girl_destination_accept"
+        HOOK_ITEM_GENERATED = "item_generated"
 
     # ── Singleton ──
     mod_api_v2 = ModAPIV2()

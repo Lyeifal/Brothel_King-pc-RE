@@ -203,31 +203,40 @@ init -2 python:
 
             if self.template == True:
 
+                ## EN: Quality tiers live in the QualityRegistry (core fallback +
+                ##     "Item Quality" mod, see systems/registry/quality_registry.rpy).
+                ## ZH: 品质档位存于 QualityRegistry（核心回退 + "Item Quality" Mod）。
+                tier = quality_registry.get_tier(target_rank)
+
+                if tier is None:
+                    debug_notify("No quality tier registered for rank %s (%s)" % (target_rank, self.name))
+                    return None
+
                 new_it = copy.deepcopy(self)
 
-                new_it.name = __("{0} {1}").format(__(quality_prefix[self.adjectives + "_" + str(target_rank)]), __(self.base_name.lower()))
-                new_it.name_i18n = new_it.name
-                new_it.price = round_int(quality_modifier[target_rank] * self.base_price)
+                _prefix = tier.get_prefix(self.adjectives)
 
-                if self.rarity in ("S", "U", "M"):
-                    new_it.rarity = self.rarity
+                if _prefix is not None:
+                    new_it.name = __("{0} {1}").format(__(_prefix), __(self.base_name))
                 else:
-                    new_it.rarity = self.rarity + target_rank - self.min_rank
+                    new_it.name = __(self.base_name)
+                new_it.name_i18n = new_it.name
+                new_it.price = tier.apply_price(self.base_price)
+                new_it.rarity = tier.apply_rarity(self.rarity, self.min_rank)
 
                 new_it.base_effects = []
 
                 for eff in self.base_effects:
                     eff = copy.deepcopy(eff)
-
-                    if target_rank > 0:
-                        eff.value = target_rank * eff.value
-                    else:
-                        eff.value = eff.value / 2
-
+                    eff.value = tier.apply_effect_value(eff.value)
                     new_it.base_effects.append(eff)
 
                 # new_it.min_rank = max(target_rank - 2, 0)
-                new_it.rank = min(target_rank, 6)
+                new_it.rank = min(target_rank, quality_registry.get_max_rank())
+
+                ## EN: Pure-notification hook, lets Mods observe item generation.
+                ## ZH: 纯通知钩子，供 Mod 观察物品生成。
+                mod_api_v2.execute_hook(mod_api_v2.HOOK_ITEM_GENERATED, item=new_it, template=self, tier=tier)
 
                 return new_it
 
@@ -236,7 +245,14 @@ init -2 python:
 
         def transform_template(self, target_rank): # Instantiate a new ItemInstance corresponding to a different rank (template items only)
             if self.min_rank <= target_rank <= self.max_rank:
-                new_name = __("{0} {1}").format(__(quality_prefix[self.adjectives + "_" + str(target_rank)]), __(self.base_name.lower()))
+                tier = quality_registry.get_tier(target_rank)
+                if tier is None:
+                    raise AssertionError("Transform item failed: no quality tier registered for rank %i (%s)" % (target_rank, self.name))
+                ## EN: base_name.lower() is deliberate: generated names are built
+                ##     from the lowered base name, so item_dict is keyed that way.
+                ## ZH: base_name.lower() 是既有行为：生成名用小写基名组合，
+                ##     item_dict 的键即由此而来。
+                new_name = __("{0} {1}").format(__(tier.get_prefix(self.adjectives)), __(self.base_name.lower()))
                 print("transforming " + self.name + " to " + new_name)
                 return item_dict[new_name].get_instance()
             else:
@@ -466,9 +482,11 @@ label init_items():
 #        all_items += generate_template_items(template_items)
 
         for it in template_items:
-            for i in range(0,7):
-                if it.min_rank <= i <= it.max_rank:
-                    all_items.append(it.generate_new_item(i))
+            for tier in quality_registry.get_tiers():   # EN: tiers come from QualityRegistry (core fallback + mods) | ZH: 档位来自 QualityRegistry（核心回退 + Mod）
+                if it.min_rank <= tier.rank <= it.max_rank:
+                    new_item = it.generate_new_item(tier.rank)
+                    if new_item is not None:
+                        all_items.append(new_item)
 
         item_dict = {it.name : it for it in all_items}
 

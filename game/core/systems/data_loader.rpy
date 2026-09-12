@@ -727,16 +727,6 @@ init -11 python:
             return data
 
         @classmethod
-        def load_quality(cls):
-            """EN: Load quality prefix and modifier tables from JSON.
-               ZH: 从 JSON 加载品质前缀和修正值表。"""
-            path = "settings/quality.json"
-            data = cls._load_json_file(path)
-            if not data:
-                return None
-            return data
-
-        @classmethod
         def load_girl_descriptions(cls):
             """EN: Load mood/love/fear description dictionaries from JSON.
                ZH: 从 JSON 加载心情/爱意/恐惧描述字典。"""
