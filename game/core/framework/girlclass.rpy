@@ -375,67 +375,14 @@ init -2 python:
         def will_do_farm_act(self, act, mode=None):
             return self._training.will_do_farm_act(act, mode)
 
+
+## Phase 2.1: Delegated to GirlTraining component ##
         def will_rebel_in_farm(self, train_mode, reaction):
             return self._training.will_rebel_in_farm(train_mode, reaction)
 
-        def farm_beg_test(self):
-            return self._training.farm_beg_test()
-
-
-        def will_rebel_in_farm(self, train_mode, reaction):
-
-            if train_mode == "gentle":
-                return False
-
-            if self.is_("very dom"):
-                diff = 200
-            elif self.is_("dom"):
-                diff = 100
-            elif self.is_("very sub"):
-                diff = 0
-            elif self.is_("sub"):
-                diff = 50
-
-            if train_mode == "tough":
-                diff -= 25
-            elif train_mode == "hardcore":
-                diff += 25
-
-            if reaction == "accepted":
-                diff -= 25
-            elif reaction == "refused":
-                diff += 25
-
-            if dice(100) < (diff - self.get_love()//2 - self.get_fear() - self.get_stat("obedience")): # Fear impacts rebel chances more than love
-                return True
-            return False
-
+## Phase 2.1: Delegated to GirlTraining component ##
         def farm_beg_test(self): # Determines if the girl will beg not to go to the farm
-            r = dice(10)
-
-            r -= self.get_stat("obedience") // 50
-
-            if self.is_("very sub"):
-                r += 2
-            elif self.is_("sub"):
-                r += 1
-            elif self.is_("very dom"):
-                r -= 1
-
-            if self.is_("very modest"):
-                r += 2
-            elif self.is_("modest"):
-                r += 1
-            elif self.is_("very lewd"):
-                r -= 1
-
-            if farm.knows["weakness"][self]:
-                r += 1
-
-            if r >= 10:
-                return True
-            else:
-                return False
+            return self._training.farm_beg_test()
 
 
         # Phase 2.1: Delegated to GirlSex component
@@ -1423,72 +1370,9 @@ init -2 python:
             return self._relationships.change_fear(amount, min_cap, max_cap, mojo_color, silent)
 
 
+## Phase 2.1: Delegated to GirlTraining component ##
         def get_obedience_check_target(self, act=None, train=False): # This is the target (in %) UNDER which a girl must roll to obey.
-
-            if self.job == "whore" or act == "whore":
-                coeff = 70
-                if self.has_activated_sex_acts():
-                    # Only the average modifier is kept
-                    coeff += sum(preference_modifier[self.get_preference(act)] for act in self.does if (self.does[act] and act in all_sex_acts)) / sum(1 for act in self.does if (self.does[act] and act in all_sex_acts))
-
-                    # Cannot completely offset mod (mood, obedience...)
-                    if coeff < 30:
-                        coeff = 30
-                else: # Can no longer work as a whore
-                    if self.job == "whore":
-                        self.job = None
-                        notify(_("%s cannot work as a whore anymore.") % self.fullname, pic=self.portrait)
-
-                    # raise AssertionError("No sex act activated")
-
-            elif act and act != "whore":
-                coeff = 70
-
-                # Checks modifier according to girl's preference/reluctance
-                coeff += preference_modifier[self.get_preference(act)]
-
-            else: # Regular job
-                coeff = 35
-
-            coeff += self.get_effect("change", "obedience target")
-
-            if train:
-                if self.get_love() > self.get_fear(): # Dominant emotion is used if training.
-                    mod = self.get_stat("obedience") + self.get_love() + self.mood//4
-                else:
-                    mod = self.get_stat("obedience") + self.get_fear() + self.mood//4
-            else:
-                mod = self.get_stat("obedience") + self.mood//4 - (self.get_stat_minmax("energy")[1] - self.energy)//10
-
-                if self.get_fear() > 0:
-                    mod += self.get_fear()
-                elif self.get_fear() < 0: # lower impact of trust on disobedience to compensate the rank penalty
-                    mod += self.get_fear()//2
-
-            # New: Target is affected by rank and total girl number in the Brothel, giving more importance to Obedience in late-game
-            coeff += (len(MC.girls)-1 + len(self.rivals) - len(self.friends))*15 # Friends do not count towards the overcrowding penalty, rivals count double
-            mod -= (self.rank-1) * 20
-
-            target = (0.96 ** mod) * coeff # Make 0.96 higher to increase difficulty
-
-            if train:
-                target += self.get_effect("change", "train obedience target")
-            elif self.job == "whore" or act == "whore":
-                target += self.get_effect("change", "whore obedience target")
-            else:
-                target += self.get_effect("change", "job obedience target")
-
-            ## Obedience link effect ##
-
-            if self.get_effect("special", "link obedience", raw=True):
-                girl2, is_super = self.get_effect("special", "link obedience", raw=True)
-
-                if is_super:
-                    target = min(target, girl2.get_obedience_check_target(act=act, train=train))
-                else:
-                    target = min(target, (target + girl2.get_obedience_check_target(act=act, train=train))/2)
-
-            return target
+            return self._training.get_obedience_check_target(act, train)
 
 
         def obedience_check(self, act=None): # Will check if the girl will accept to work tonight
@@ -1501,16 +1385,13 @@ init -2 python:
             return self._training.run_away_check()
 
 
+## Phase 2.1: Delegated to GirlTraining component ##
         def get_working_chance(self, act):
+            return self._training.get_working_chance(act)
 
-            chance = 100 - self.get_obedience_check_target(act)
-
-            return get_change_min_max(0, chance, 0, 100)
-
+## Phase 2.1: Delegated to GirlTraining component ##
         def get_training_chance(self, act): # Chance to accept training
-            chance = 100 - self.get_obedience_check_target(act, train=True)
-
-            return get_change_min_max(0, chance, 0, 100)
+            return self._training.get_training_chance(act)
 
 ## Phase 2.1: Delegated to GirlMood component ##
         def update_mood(self, resting=False):
@@ -1834,42 +1715,17 @@ init -2 python:
 
             return
 
+## Phase 2.1: Delegated to GirlTraining component ##
         def build_up(self, v): # FARM EVENTS - Builds-up her farm show jauge
+            return self._training.build_up(v)
 
-            try:
-                self.buildup += v
-            except:
-                self.buildup = v
-
-            self.buildup = clamp(self.buildup, 0, 200)
-
-            if self.buildup >= 100:
-                if not story_flags["farm shows"]:
-                    calendar.set_alarm(calendar.time+1, StoryEvent("farm_shows_intro", arg=self, type = "morning"))
-                    self.flags["buildup warning 100"] = True
-                elif not self.flags["buildup warning 100"]:
-                    notify(__("%s is now ready to attend a farm show (100%).") % self.fullname)
-                    self.flags["buildup warning 100"] = True
-                elif self.buildup >= 150 and not self.flags["buildup warning 150"]:
-                    notify(__("%s is now ready to attend a farm show (150%).") % self.fullname)
-                    self.flags["buildup warning 150"] = True
-                elif self.buildup >= 200 and not self.flags["buildup warning 200"]:
-                    notify(__("%s is now ready to attend a farm show (200%).") % self.fullname)
-                    self.flags["buildup warning 200"] = True
-
+## Phase 2.1: Delegated to GirlTraining component ##
         def get_build_up(self): # FARM EVENTS - Recovers her farm show jauge
+            return self._training.get_build_up()
 
-            try:
-                return self.buildup
-            except:
-                self.buildup = 0
-                return self.buildup
-
+## Phase 2.1: Delegated to GirlTraining component ##
         def reset_build_up(self):
-            self.buildup = 0
-            self.flags["buildup warning 100"] = False
-            self.flags["buildup warning 150"] = False
-            self.flags["buildup warning 200"] = False
+            return self._training.reset_build_up()
 
         # ── Phase 2.1: Economy delegation aliases ──
         _customer_populations_safety_check_impl = customer_populations_safety_check
@@ -1881,9 +1737,6 @@ init -2 python:
         _full_rest_impl = full_rest
         _rest_impl = rest
         _can_heal_from_item_impl = can_heal_from_item
-        _build_up_impl = build_up
-        _get_build_up_impl = get_build_up
-        _reset_build_up_impl = reset_build_up
 
         # ── Phase 2.1: Schedule delegation aliases ──
         _get_schedule_impl = get_schedule
@@ -1944,11 +1797,6 @@ init -2 python:
 
         # -- Phase 2.1: Training delegation aliases | 训练方法别名 --
         _will_do_farm_act_impl = will_do_farm_act
-        _will_rebel_in_farm_impl = will_rebel_in_farm
-        _farm_beg_test_impl = farm_beg_test
-        _get_obedience_check_target_impl = get_obedience_check_target
-        _get_working_chance_impl = get_working_chance
-        _get_training_chance_impl = get_training_chance
 
 
 

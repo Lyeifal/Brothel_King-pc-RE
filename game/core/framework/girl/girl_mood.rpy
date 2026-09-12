@@ -603,8 +603,8 @@ init -2 python:
 
         # ── Farm build-up ──
         def build_up(self, v):
-            return self.girl._build_up_impl(v)
+            return self.girl.build_up(v)
         def get_build_up(self):
-            return self.girl._get_build_up_impl()
+            return self.girl.get_build_up()
         def reset_build_up(self):
-            return self.girl._reset_build_up_impl()
+            return self.girl.reset_build_up()
