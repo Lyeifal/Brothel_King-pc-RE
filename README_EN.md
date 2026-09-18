@@ -39,7 +39,8 @@
 ├── docs/                # Chinese documentation
 ├── docs_EN/             # English documentation (mirror of docs/)
 ├── tools/               # Translation/audit/verification scripts + bk_editor suite
-└── renpy/ lib/          # Ren'Py engine & runtime (untracked)
+├── renpy/               # Ren'Py engine (untracked— provide your own) 
+└── lib/                 # runtime (untracked— provide your own)
 ```
 
 ## 🚀 Running
