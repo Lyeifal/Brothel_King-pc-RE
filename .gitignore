@@ -36,6 +36,14 @@ game/girls/*
 !game/girls/YOUR GIRL FOLDERS GO HERE.txt
 game/custom/girls/
 
+# Game resource files (images, audio, fonts, etc.)
+game/resources/
+
+# Ren'Py SDK / engine binaries (not project code)
+renpy/
+lib/
+Brothel_King.exe
+
 # Translation work-in-progress exports
 *.xlsx
 *.docx
