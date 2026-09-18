@@ -28,7 +28,7 @@ translate chinese_simplified free_girl_interact_cb168c77:
 translate chinese_simplified free_girl_talk_e589ac84:
 
     # "[text1]"
-    ""
+    "[text1]"
 
 # game/core/content/interactions_free.rpy:75
 translate chinese_simplified free_girl_talk_11fdb519:
@@ -40,85 +40,85 @@ translate chinese_simplified free_girl_talk_11fdb519:
 translate chinese_simplified free_girl_talk_78546b2e:
 
     # you "Greetings, my lady. They call me [MC.name], your humble servant. Is there anything I can do to help?"
-    you ""
+    you "向您问好，小姐。人们叫我[MC.name]，您谦卑的仆人。有什么我能效劳的吗？"
 
 # game/core/content/interactions_free.rpy:90
 translate chinese_simplified free_girl_talk_6030b19a:
 
     # you "Oh, hi there! I'm [MC.name]. Who are you?"
-    you ""
+    you "哦，你好！我是[MC.name]。你是谁？"
 
 # game/core/content/interactions_free.rpy:100
 translate chinese_simplified free_girl_talk_37f1d822:
 
     # you "Well, what do we have here... Damn, you're hot! I'm [MC.name]. What's your name baby?"
-    you ""
+    you "嗯，看看这是谁……该死，你真火辣！我是[MC.name]。宝贝，你叫什么名字？"
 
 # game/core/content/interactions_free.rpy:204
 translate chinese_simplified free_chat_small_talk_4e6ead66:
 
     # you "[text1]"
-    you ""
+    you "[text1]"
 
 # game/core/content/interactions_free.rpy:225
 translate chinese_simplified free_chat_life_d4054e47:
 
     # you "What do you think about life, the universe, and everything?"
-    you ""
+    you "你对生命、宇宙以及万事万物怎么看？"
 
 # game/core/content/interactions_free.rpy:235
 translate chinese_simplified free_chat_love_460d2a5f:
 
     # you "Love. What do you think about it?"
-    you ""
+    you "爱。你怎么看爱？"
 
 # game/core/content/interactions_free.rpy:243
 translate chinese_simplified free_chat_origins_c0fe7221:
 
     # you "Where are you from?"
-    you ""
+    you "你是哪里人？"
 
 # game/core/content/interactions_free.rpy:253
 translate chinese_simplified free_chat_hobbies_b2220c8f:
 
     # you "What do you like to do with your free time?"
-    you ""
+    you "你空闲的时候喜欢做什么？"
 
 # game/core/content/interactions_free.rpy:267
 translate chinese_simplified free_chat_likes_741f0d80:
 
     # you "What are your favorite things?"
-    you ""
+    you "你最喜欢什么？"
 
 # game/core/content/interactions_free.rpy:279
 translate chinese_simplified free_chat_dislikes_7cc4a8c3:
 
     # you "Is there anything you dislike?"
-    you ""
+    you "有什么你讨厌的东西吗？"
 
 # game/core/content/interactions_free.rpy:293
 translate chinese_simplified free_joke_harmless_9f482d04:
 
     # you "[joke]"
-    you ""
+    you "[joke]"
 
 # game/core/content/interactions_free.rpy:305
 translate chinese_simplified free_joke_adult_9f482d04:
 
     # you "[joke]"
-    you ""
+    you "[joke]"
 
 # game/core/content/interactions_free.rpy:317
 translate chinese_simplified free_joke_dark_9f482d04:
 
     # you "[joke]"
-    you ""
+    you "[joke]"
 
 # game/core/content/interactions_free.rpy:329
 translate chinese_simplified free_joke_mean_9f482d04:
 
     # you "[joke]"
-    you ""
+    you "[joke]"
 
 # game/core/content/interactions_free.rpy:340
 translate chinese_simplified free_touch_hand_4ba8cd0a:
@@ -160,7 +160,7 @@ translate chinese_simplified free_play_8ef1b8f4:
 translate chinese_simplified free_play_a784fb2c:
 
     # you "Come here... [text1]"
-    you ""
+    you "过来……[text1]"
 
 # game/core/content/interactions_free.rpy:502
 translate chinese_simplified free_play_1bf1c011:
@@ -172,7 +172,7 @@ translate chinese_simplified free_play_1bf1c011:
 translate chinese_simplified free_play_030686f5:
 
     # you "Ooooh..."
-    you ""
+    you "哦哦哦……"
 
 # game/core/content/interactions_free.rpy:515
 translate chinese_simplified free_play_a5a00ee0:
@@ -184,25 +184,25 @@ translate chinese_simplified free_play_a5a00ee0:
 translate chinese_simplified free_flirt_beauty_f0a506af:
 
     # you "[compliment]"
-    you ""
+    you "[compliment]"
 
 # game/core/content/interactions_free.rpy:554
 translate chinese_simplified free_flirt_body_f0a506af:
 
     # you "[compliment]"
-    you ""
+    you "[compliment]"
 
 # game/core/content/interactions_free.rpy:566
 translate chinese_simplified free_flirt_mind_f0a506af:
 
     # you "[compliment]"
-    you ""
+    you "[compliment]"
 
 # game/core/content/interactions_free.rpy:578
 translate chinese_simplified free_flirt_spirit_f0a506af:
 
     # you "[compliment]"
-    you ""
+    you "[compliment]"
 
 # game/core/content/interactions_free.rpy:596
 translate chinese_simplified free_flirt_sex_experience_69427b10:
@@ -214,31 +214,31 @@ translate chinese_simplified free_flirt_sex_experience_69427b10:
 translate chinese_simplified free_flirt_sex_experience_7debaa95:
 
     # you "It might sound silly, but I am waiting for the right person..."
-    you ""
+    you "说出来可能有点傻，但我在等对的人……"
 
 # game/core/content/interactions_free.rpy:624
 translate chinese_simplified free_flirt_sex_experience_b5aaa294:
 
     # you "Uh, well, no, not many..."
-    you ""
+    you "呃，那个，不，没多少……"
 
 # game/core/content/interactions_free.rpy:644
 translate chinese_simplified free_flirt_sex_experience_7505d596:
 
     # you "Well, I've been around... You know."
-    you ""
+    you "这个嘛，我经历过的……你懂的。"
 
 # game/core/content/interactions_free.rpy:650
 translate chinese_simplified free_flirt_sex_experience_a5a7a1fe:
 
     # you "Babe, I'm the best lay in town, believe me."
-    you ""
+    you "宝贝，我是全城最棒的床伴，相信我。"
 
 # game/core/content/interactions_free.rpy:669
 translate chinese_simplified free_flirt_sex_experience_47894835:
 
     # you "Well, I'm a brothel owner, so what do you expect... It's my job!"
-    you ""
+    you "哎，我是开青楼的，你还指望什么……这是我的工作！"
 
 # game/core/content/interactions_free.rpy:691
 translate chinese_simplified free_flirt_sex_tastes_be9561ba:
@@ -316,7 +316,7 @@ translate chinese_simplified free_give_gold_a74bdb77:
 translate chinese_simplified free_offer_job_f1898032:
 
     # you "[girl.name], I think I have found a solution to your problem."
-    you ""
+    you "[girl.name]，我想我找到了解决你难题的办法。"
 
 # game/core/content/interactions_free.rpy:934
 translate chinese_simplified free_offer_job_fbd5a008:
@@ -328,7 +328,7 @@ translate chinese_simplified free_offer_job_fbd5a008:
 translate chinese_simplified free_offer_job_34d59088:
 
     # you "Come and work for me."
-    you ""
+    you "来为我做事吧。"
 
 # game/core/content/interactions_free.rpy:940
 translate chinese_simplified free_offer_job_1f1f7406:
@@ -346,7 +346,7 @@ translate chinese_simplified free_offer_job_0f648f47:
 translate chinese_simplified free_offer_job_fadbfad2:
 
     # you "Well, this isn't the whole truth... You see, I also have a business on the side."
-    you ""
+    you "好吧，这还不是全部实情……其实，我私底下还有一门生意。"
 
 # game/core/content/interactions_free.rpy:952
 translate chinese_simplified free_offer_job_0aa8868a:
@@ -358,7 +358,7 @@ translate chinese_simplified free_offer_job_0aa8868a:
 translate chinese_simplified free_offer_job_34d3075e:
 
     # you "Well I, uh, own a cathouse..."
-    you ""
+    you "那个，我……我开了一家青楼……"
 
 # game/core/content/interactions_free.rpy:956
 translate chinese_simplified free_offer_job_22fca1c1:
@@ -376,7 +376,7 @@ translate chinese_simplified free_offer_job_454bf4d6:
 translate chinese_simplified free_offer_job_99f64913:
 
     # you "I..."
-    you ""
+    you "我……"
 
 # game/core/content/interactions_free.rpy:966
 translate chinese_simplified free_offer_job_62838043:
@@ -388,7 +388,7 @@ translate chinese_simplified free_offer_job_62838043:
 translate chinese_simplified free_offer_job_3919bea6:
 
     # you "I'm afraid that it isn't so simple..."
-    you ""
+    you "恐怕事情没那么简单……"
 
 # game/core/content/interactions_free.rpy:970
 translate chinese_simplified free_offer_job_bf3b5fe9:
@@ -400,19 +400,19 @@ translate chinese_simplified free_offer_job_bf3b5fe9:
 translate chinese_simplified free_offer_job_7a9bc975:
 
     # you "I'm afraid I didn't tell you the truth. I'm not [girl.MC_lied], I'm a pimp. I own a brothel in town."
-    you ""
+    you "恐怕我之前没跟你说实话。我不是[girl.MC_lied]，我是个皮条客，在城里开了一家青楼。"
 
 # game/core/content/interactions_free.rpy:976
 translate chinese_simplified free_offer_job_22570b4f:
 
     # you "Of course. The sex trade is hard work, but it has its perks, you know... Flexible schedule, good money, round-the-clock protection..."
-    you ""
+    you "当然。皮肉生意很辛苦，但好处也不少，你懂的……时间自由、来钱快，还有全天候的保护……"
 
 # game/core/content/interactions_free.rpy:978
 translate chinese_simplified free_offer_job_d6f8dcb1:
 
     # you "You could also just be a waitress, or a dancer... It's not so bad."
-    you ""
+    you "你也可以只当侍女，或者舞娘……没那么糟的。"
 
 # game/core/content/interactions_free.rpy:980
 translate chinese_simplified free_offer_job_7470d1cd:
@@ -424,7 +424,7 @@ translate chinese_simplified free_offer_job_7470d1cd:
 translate chinese_simplified free_offer_job_2dd0a37f:
 
     # you "There's one more thing."
-    you ""
+    you "还有一件事。"
 
 # game/core/content/interactions_free.rpy:984
 translate chinese_simplified free_offer_job_3deaa338:
@@ -436,13 +436,13 @@ translate chinese_simplified free_offer_job_3deaa338:
 translate chinese_simplified free_offer_job_6cbe5a47:
 
     # you "You would have to sign a temporary contract to allow me to be your Master. As you know, only sex servants are allowed in the city's brothels. [text1]"
-    you ""
+    you "你得签一份临时契约，准许我做你的主人。你也知道，城里的青楼只允许有性奴。[text1]"
 
 # game/core/content/interactions_free.rpy:1003
 translate chinese_simplified free_offer_job_e6dd36fa:
 
     # you "So, what do you think?"
-    you ""
+    you "那么，你觉得如何？"
 
 # game/core/content/interactions_free.rpy:1005
 translate chinese_simplified free_offer_job_c1da3d17:
@@ -454,7 +454,7 @@ translate chinese_simplified free_offer_job_c1da3d17:
 translate chinese_simplified free_offer_job_b564aa9d:
 
     # you "It is decided then. Take your things and come with me."
-    you ""
+    you "那就这么定了。收拾东西，跟我走吧。"
 
 # game/core/content/interactions_free.rpy:1019
 translate chinese_simplified free_offer_job_d9a1f9ff:
@@ -472,7 +472,7 @@ translate chinese_simplified free_girl_friend_4932d6c2:
 translate chinese_simplified free_girl_friend_2b79fa34:
 
     # you "Okay, sure!"
-    you ""
+    you "好啊，没问题！"
 
 # game/core/content/interactions_free.rpy:1049
 translate chinese_simplified free_girl_friend_5b08bc1c:
@@ -484,25 +484,25 @@ translate chinese_simplified free_girl_friend_5b08bc1c:
 translate chinese_simplified free_girl_friend_4ae3b4ce:
 
     # you "I own a brothel in town. I'm a pimp."
-    you ""
+    you "我在城里开了家青楼，是个皮条客。"
 
 # game/core/content/interactions_free.rpy:1070
 translate chinese_simplified free_girl_friend_6b44ee2f:
 
     # you "Well, er, I'm a [MC.playerclass] freshly arrived in Zan. I'm considering a career change though..."
-    you ""
+    you "呃，那个，我是刚到赞恩的[MC.playerclass]。不过我正在考虑换个职业……"
 
 # game/core/content/interactions_free.rpy:1083
 translate chinese_simplified free_girl_friend_6bb62131:
 
     # you "Me? Uh, I'm..."
-    you ""
+    you "我？呃，我是……"
 
 # game/core/content/interactions_free.rpy:1085
 translate chinese_simplified free_girl_friend_d163c101:
 
     # you "I'm {b}[lie]{/b}!"
-    you ""
+    you "我是{b}[lie]{/b}！"
 
 # game/core/content/interactions_free.rpy:1095
 translate chinese_simplified free_girl_friend_18df221b:
@@ -544,7 +544,7 @@ translate chinese_simplified free_girl_girlfriend_f7432d7f:
 translate chinese_simplified free_girl_girlfriend_d9a9b5f7:
 
     # you "I just don't know. Sorry."
-    you ""
+    you "我真的不知道。抱歉。"
 
 # game/core/content/interactions_free.rpy:1191
 translate chinese_simplified free_girl_girlfriend_ace96f2d:
@@ -556,7 +556,7 @@ translate chinese_simplified free_girl_girlfriend_ace96f2d:
 translate chinese_simplified free_girl_girlfriend_d9a9b5f7_1:
 
     # you "I just don't know. Sorry."
-    you ""
+    you "我真的不知道。抱歉。"
 
 # game/core/content/interactions_free.rpy:1248
 translate chinese_simplified free_girl_girlfriend_0ee8c7a2:
@@ -568,7 +568,7 @@ translate chinese_simplified free_girl_girlfriend_0ee8c7a2:
 translate chinese_simplified free_girl_girlfriend_d9a9b5f7_2:
 
     # you "I just don't know. Sorry."
-    you ""
+    you "我真的不知道。抱歉。"
 
 # game/core/content/interactions_free.rpy:1316
 translate chinese_simplified free_girl_girlfriend_a7e1a2bd:
@@ -592,7 +592,7 @@ translate chinese_simplified free_girl_girlfriend_bd20dafe:
 translate chinese_simplified free_girl_girlfriend_7901316a:
 
     # you "Anyway... What was it you wanted to show me?"
-    you ""
+    you "话说回来……你刚才想给我看什么东西来着？"
 
 # game/core/content/interactions_free.rpy:1350
 translate chinese_simplified free_girl_girlfriend_7a9a86f9:

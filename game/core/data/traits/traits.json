@@ -14,6 +14,7 @@
       }
     ],
     "archetype": "The Slut",
+    "base_description_i18n": "She has a naughty streak that customers can't get enough of. Increases tips.",
     "name_i18n": "Naughty"
   },
   {
@@ -27,6 +28,7 @@
       }
     ],
     "archetype": "The Courtesan",
+    "base_description_i18n": "Customers are fascinated by her and keep coming back for more. She can serve more customers at her job.",
     "name_i18n": "Fascinating"
   },
   {
@@ -39,6 +41,7 @@
       }
     ],
     "archetype": "The Slut",
+    "base_description_i18n": "She's insatiable. Can serve one extra customer when whoring.",
     "name_i18n": "Lust"
   },
   {
@@ -56,6 +59,7 @@
       }
     ],
     "archetype": "The Bride",
+    "base_description_i18n": "She can hold her own in a fight. Increases defense.",
     "name_i18n": "Warrior"
   },
   {
@@ -72,6 +76,7 @@
       }
     ],
     "archetype": "The Fox",
+    "base_description_i18n": "Her skilled tongue works wonders. Increases satisfaction for service and bisexual acts.",
     "name_i18n": "Skilled tongue"
   },
   {
@@ -88,6 +93,7 @@
       }
     ],
     "archetype": "The Escort",
+    "base_description_i18n": "She's always ready for action. Increases satisfaction for sex and group acts.",
     "name_i18n": "Always wet"
   },
   {
@@ -104,6 +110,7 @@
       }
     ],
     "archetype": "The Maid",
+    "base_description_i18n": "Her tight ass keeps customers coming back. Increases satisfaction for anal and fetish acts.",
     "name_i18n": "Tight ass"
   },
   {
@@ -128,6 +135,7 @@
       }
     ],
     "archetype": "The Player",
+    "base_description_i18n": "She's playful in all the right ways. Increases service and bisexual preference gains and her service skill maximum.",
     "name_i18n": "Playful"
   },
   {
@@ -152,6 +160,7 @@
       }
     ],
     "archetype": "The Slut",
+    "base_description_i18n": "She's wild between the sheets. Increases sex and group preference gains and her sex skill maximum.",
     "name_i18n": "Wild"
   },
   {
@@ -171,6 +180,7 @@
       }
     ],
     "archetype": "The Model",
+    "base_description_i18n": "Her firm buttocks are a sight to behold. Increases anal preference gains and her anal skill maximum.",
     "name_i18n": "Firm buttocks"
   },
   {
@@ -190,6 +200,7 @@
       }
     ],
     "archetype": "The Slut",
+    "base_description_i18n": "Her mind is always in the gutter. Increases fetish preference gains and her fetish skill maximum.",
     "name_i18n": "Dirty mind"
   },
   {
@@ -203,6 +214,7 @@
       }
     ],
     "archetype": "The Model",
+    "base_description_i18n": "There's something magnetic about her. Increases brothel income.",
     "name_i18n": "Magnetic"
   },
   {
@@ -221,6 +233,7 @@
       }
     ],
     "archetype": "The Player",
+    "base_description_i18n": "She's easy to train and eager to please. Lowers obedience training targets and increases all sex act preference gains.",
     "name_i18n": "Loose"
   },
   {
@@ -239,6 +252,7 @@
       }
     ],
     "archetype": "The Maid",
+    "base_description_i18n": "She's dedicated to her work. Lowers job obedience targets and boosts all JP gains.",
     "name_i18n": "Dedicated"
   },
   {
@@ -257,6 +271,7 @@
       }
     ],
     "archetype": "The Model",
+    "base_description_i18n": "She dresses to provoke. Boosts the dress stat and gives her a fixation for cosplay.",
     "name_i18n": "Provocative"
   },
   {
@@ -280,6 +295,7 @@
       }
     ],
     "archetype": "The Fox",
+    "base_description_i18n": "She knows how to wear accessories. Boosts the effect of accessories, necklaces and rings.",
     "name_i18n": "Fashionista"
   },
   {
@@ -292,6 +308,7 @@
       }
     ],
     "archetype": "The Courtesan",
+    "base_description_i18n": "She's a perfectionist. Increases customer satisfaction for all jobs.",
     "name_i18n": "Perfectionist"
   },
   {
@@ -304,6 +321,7 @@
       }
     ],
     "archetype": "The Courtesan",
+    "base_description_i18n": "She only caters to the best. Ignores customer budget limits.",
     "name_i18n": "Elite"
   },
   {
@@ -316,6 +334,7 @@
       }
     ],
     "archetype": "The Bride",
+    "base_description_i18n": "She's gifted in the art of pleasure. Increases customer satisfaction for all sex acts.",
     "name_i18n": "Gifted"
   },
   {
@@ -334,6 +353,7 @@
       }
     ],
     "archetype": "The Escort",
+    "base_description_i18n": "She learns quickly. Boosts XP and JP gains.",
     "name_i18n": "Fast learner"
   },
   {
@@ -346,6 +366,7 @@
       }
     ],
     "archetype": "The Bride",
+    "base_description_i18n": "She casts a protective shield on her friends while resting.",
     "name_i18n": "Caster"
   },
   {
@@ -364,6 +385,7 @@
       }
     ],
     "archetype": "The Player",
+    "base_description_i18n": "She's driven to always go further. Boosts her maximum energy and energy recovery.",
     "name_i18n": "Driven"
   },
   {
@@ -381,6 +403,7 @@
       }
     ],
     "archetype": "The Maid",
+    "base_description_i18n": "She's a country girl at heart. She's used to the farm and learns to love farm work faster.",
     "name_i18n": "Country girl"
   },
   {
@@ -394,6 +417,7 @@
       }
     ],
     "archetype": "The Courtesan",
+    "base_description_i18n": "She has the bearing of a true noble. Boosts prestige.",
     "name_i18n": "Noble"
   },
   {
@@ -435,6 +459,7 @@
       }
     ],
     "archetype": "The Escort",
+    "base_description_i18n": "She's absolutely vicious in bed. Increases all her sex skills.",
     "name_i18n": "Vicious"
   },
   {
@@ -447,6 +472,7 @@
       }
     ],
     "archetype": "The Fox",
+    "base_description_i18n": "She channels magic with ease. Reduces mojo costs.",
     "name_i18n": "Conduit"
   },
   {
@@ -532,6 +558,7 @@
       }
     ],
     "archetype": "The Model",
+    "base_description_i18n": "She's cute as a button. Increases beauty and reputation.",
     "name_i18n": "Cute"
   },
   {
@@ -551,6 +578,7 @@
       }
     ],
     "archetype": "The Player",
+    "base_description_i18n": "Her long legs are mesmerizing. Increases beauty and reputation.",
     "name_i18n": "Long legs"
   },
   {
@@ -570,6 +598,7 @@
       }
     ],
     "archetype": "The Escort",
+    "base_description_i18n": "She has a nice pair. Increases body and reputation.",
     "name_i18n": "Nice boobs"
   },
   {
@@ -589,6 +618,7 @@
       }
     ],
     "archetype": "The Slut",
+    "base_description_i18n": "Her ass is juicy and inviting. Increases body and reputation.",
     "name_i18n": "Juicy ass"
   },
   {
@@ -607,6 +637,7 @@
       }
     ],
     "archetype": "The Bride",
+    "base_description_i18n": "She's as sweet as honey. Increases charm and gives her a sweet personality.",
     "name_i18n": "Sweet"
   },
   {
@@ -626,6 +657,7 @@
       }
     ],
     "archetype": "The Fox",
+    "base_description_i18n": "There's something exotic about her. Increases charm and reputation.",
     "name_i18n": "Exotic"
   },
   {
@@ -645,6 +677,7 @@
       }
     ],
     "archetype": "The Courtesan",
+    "base_description_i18n": "She's unfailingly polite. Increases refinement and reputation.",
     "name_i18n": "Polite"
   },
   {
@@ -664,6 +697,7 @@
       }
     ],
     "archetype": "The Model",
+    "base_description_i18n": "She's the very picture of femininity. Increases refinement and reputation.",
     "name_i18n": "Feminine"
   },
   {
@@ -683,6 +717,7 @@
       }
     ],
     "archetype": "The Slut",
+    "base_description_i18n": "She's always in the mood. Increases libido and reputation.",
     "name_i18n": "Horny"
   },
   {
@@ -702,6 +737,7 @@
       }
     ],
     "archetype": "The Maid",
+    "base_description_i18n": "She can take a lot of punishment. Increases constitution and reputation.",
     "name_i18n": "Resilient"
   },
   {
@@ -721,6 +757,7 @@
       }
     ],
     "archetype": "The Bride",
+    "base_description_i18n": "Her delicate body feels everything. Increases sensitivity and reputation.",
     "name_i18n": "Delicate"
   },
   {
@@ -739,6 +776,7 @@
       }
     ],
     "archetype": "The Maid",
+    "base_description_i18n": "She's meek and submissive. Increases obedience and gives her a meek personality.",
     "name_i18n": "Meek"
   },
   {
@@ -757,6 +795,7 @@
       }
     ],
     "archetype": "The Model",
+    "base_description_i18n": "Her pretty eyes are hard to resist. Increases beauty and reputation.",
     "name_i18n": "Pretty eyes"
   },
   {
@@ -775,6 +814,7 @@
       }
     ],
     "archetype": "The Slut",
+    "base_description_i18n": "Her tits are nice and firm. Increases body and reputation.",
     "name_i18n": "Firm tits"
   },
   {
@@ -797,6 +837,7 @@
       }
     ],
     "archetype": "The Model",
+    "base_description_i18n": "She's positively seductive. Increases charm and reputation, and gives her a superficial streak.",
     "name_i18n": "Seductive"
   },
   {
@@ -815,6 +856,7 @@
       }
     ],
     "archetype": "The Courtesan",
+    "base_description_i18n": "She moves with natural grace. Increases refinement and reputation.",
     "name_i18n": "Graceful"
   },
   {
@@ -828,6 +870,7 @@
       }
     ],
     "archetype": "The Model",
+    "base_description_i18n": "She's naturally beautiful. Improves her beauty gains.",
     "name_i18n": "Beautiful"
   },
   {
@@ -841,6 +884,7 @@
       }
     ],
     "archetype": "The Escort",
+    "base_description_i18n": "She keeps fit. Improves her body gains.",
     "name_i18n": "Fit"
   },
   {
@@ -854,6 +898,7 @@
       }
     ],
     "archetype": "The Fox",
+    "base_description_i18n": "She has an easy charm. Improves her charm gains.",
     "name_i18n": "Charming"
   },
   {
@@ -867,6 +912,7 @@
       }
     ],
     "archetype": "The Courtesan",
+    "base_description_i18n": "She has a natural elegance. Improves her refinement gains.",
     "name_i18n": "Elegant"
   },
   {
@@ -880,6 +926,7 @@
       }
     ],
     "archetype": "The Slut",
+    "base_description_i18n": "She's a natural slut. Improves her libido gains.",
     "name_i18n": "Slutty"
   },
   {
@@ -893,6 +940,7 @@
       }
     ],
     "archetype": "The Player",
+    "base_description_i18n": "She's athletic. Improves her constitution gains.",
     "name_i18n": "Athletic"
   },
   {
@@ -906,6 +954,7 @@
       }
     ],
     "archetype": "The Bride",
+    "base_description_i18n": "She's very sensitive. Improves her sensitivity gains.",
     "name_i18n": "Sensitive"
   },
   {
@@ -919,6 +968,7 @@
       }
     ],
     "archetype": "The Maid",
+    "base_description_i18n": "She obeys without question. Improves her obedience gains.",
     "name_i18n": "Obedient"
   },
   {
@@ -932,6 +982,7 @@
       }
     ],
     "archetype": "The Player",
+    "base_description_i18n": "She's full of energy. Increases her maximum energy.",
     "name_i18n": "Energetic"
   },
   {
@@ -945,6 +996,7 @@
       }
     ],
     "archetype": "The Maid",
+    "base_description_i18n": "She's tough. Reduces the hurt she suffers.",
     "name_i18n": "Tough"
   },
   {
@@ -958,6 +1010,7 @@
       }
     ],
     "archetype": "The Escort",
+    "base_description_i18n": "She's dead sexy. Improves her reputation gains.",
     "name_i18n": "Sexy"
   },
   {
@@ -971,6 +1024,7 @@
       }
     ],
     "archetype": "The Maid",
+    "base_description_i18n": "She's humble and undemanding. Reduces her upkeep.",
     "name_i18n": "Humble"
   },
   {
@@ -986,6 +1040,7 @@
     "opposite": [
       "Insomniac"
     ],
+    "base_description_i18n": "She sleeps like a log. Recovers extra energy when resting.",
     "name_i18n": "Heavy-sleeper"
   },
   {
@@ -1021,6 +1076,7 @@
       }
     ],
     "archetype": "The Fox",
+    "base_description_i18n": "She's sharp. Improves her XP gains and gives her a nerdy streak.",
     "name_i18n": "Sharp"
   },
   {
@@ -1034,6 +1090,7 @@
       }
     ],
     "archetype": "The Bride",
+    "base_description_i18n": "She's loyal to the core. Improves her love gains.",
     "name_i18n": "Loyal"
   },
   {
@@ -1047,6 +1104,7 @@
       }
     ],
     "archetype": "The Escort",
+    "base_description_i18n": "She knows no fear. Reduces the fear she suffers.",
     "name_i18n": "Brave"
   },
   {
@@ -1060,6 +1118,7 @@
       }
     ],
     "archetype": "The Player",
+    "base_description_i18n": "She's stronger than she looks. Increases defense.",
     "name_i18n": "Strong"
   },
   {
@@ -1091,6 +1150,7 @@
       }
     ],
     "archetype": "The Maid",
+    "base_description_i18n": "She's deft. Improves waitress and masseuse JP gains.",
     "name_i18n": "Deft"
   },
   {
@@ -1109,6 +1169,7 @@
       }
     ],
     "archetype": "The Player",
+    "base_description_i18n": "She's nimble. Improves dancer and geisha JP gains.",
     "name_i18n": "Nimble"
   },
   {
@@ -1127,6 +1188,7 @@
       }
     ],
     "archetype": "The Courtesan",
+    "base_description_i18n": "Her skin is soft to the touch. Improves geisha and masseuse JP gains.",
     "name_i18n": "Soft skin"
   },
   {
@@ -1145,6 +1207,7 @@
       }
     ],
     "archetype": "The Courtesan",
+    "base_description_i18n": "She's bright and quick-witted. Improves waitress and geisha JP gains.",
     "name_i18n": "Bright"
   },
   {
@@ -1163,6 +1226,7 @@
       }
     ],
     "archetype": "The Fox",
+    "base_description_i18n": "She's agile. Improves dancer and masseuse JP gains.",
     "name_i18n": "Agile"
   },
   {
@@ -1181,6 +1245,7 @@
       }
     ],
     "archetype": "The Model",
+    "base_description_i18n": "She's brisk and efficient. Improves waitress and dancer JP gains.",
     "name_i18n": "Brisk"
   },
   {
@@ -1207,6 +1272,7 @@
       "Unhurried"
     ],
     "archetype": "The Slut",
+    "base_description_i18n": "She's rowdy, which the tavern crowd loves. Improves waitress JP gains and waitress satisfaction, but hurts geisha satisfaction.",
     "name_i18n": "Rowdy"
   },
   {
@@ -1233,6 +1299,7 @@
       "Unhurried"
     ],
     "archetype": "The Bride",
+    "base_description_i18n": "She's powerful. Improves dancer JP gains and dancer satisfaction, but hurts masseuse satisfaction.",
     "name_i18n": "Powerful"
   },
   {
@@ -1259,6 +1326,7 @@
       "Rowdy"
     ],
     "archetype": "The Escort",
+    "base_description_i18n": "She takes her time. Improves masseuse JP gains and masseuse satisfaction, but hurts waitress satisfaction.",
     "name_i18n": "Unhurried"
   },
   {
@@ -1289,6 +1357,7 @@
       "Powerful"
     ],
     "archetype": "The Fox",
+    "base_description_i18n": "She's modest. Improves geisha JP gains and geisha satisfaction, but hurts dancer satisfaction. She has a meek personality.",
     "name_i18n": "Modest"
   },
   {
@@ -1311,6 +1380,7 @@
       }
     ],
     "archetype": "The Escort",
+    "base_description_i18n": "She's sensual. Improves service and sex JP gains, and she has a perverted streak.",
     "name_i18n": "Sensual"
   },
   {
@@ -1333,6 +1403,7 @@
       }
     ],
     "archetype": "The Player",
+    "base_description_i18n": "She's kinky. Improves anal and fetish JP gains, and she has a masochistic streak.",
     "name_i18n": "Kinky"
   },
   {
@@ -1350,6 +1421,7 @@
       }
     ],
     "archetype": "The Slut",
+    "base_description_i18n": "She's a pervert. Reduces the requirements for all sex acts.",
     "name_i18n": "Pervert"
   },
   {
@@ -1375,6 +1447,7 @@
       }
     ],
     "archetype": "The Courtesan",
+    "base_description_i18n": "She keeps her sanity. Reduces sanity loss.",
     "name_i18n": "Sane"
   },
   {
@@ -1388,6 +1461,7 @@
       }
     ],
     "archetype": "The Maid",
+    "base_description_i18n": "She trusts people easily. Reduces the fear she gains each day.",
     "name_i18n": "Trusting"
   },
   {
@@ -1401,6 +1475,7 @@
       }
     ],
     "archetype": "The Bride",
+    "base_description_i18n": "She's full of love. Increases the love she gains each day.",
     "name_i18n": "Loving"
   },
   {
@@ -1415,6 +1490,7 @@
       }
     ],
     "opposite": "Cute",
+    "base_description_i18n": "She's rather plain. Reduces beauty.",
     "name_i18n": "Plain"
   },
   {
@@ -1429,6 +1505,7 @@
       }
     ],
     "opposite": "Nice boobs",
+    "base_description_i18n": "Her body is covered in scars. Reduces body.",
     "name_i18n": "Scars"
   },
   {
@@ -1443,6 +1520,7 @@
       }
     ],
     "opposite": "Sweet",
+    "base_description_i18n": "She can be mean. Reduces charm.",
     "name_i18n": "Mean"
   },
   {
@@ -1457,6 +1535,7 @@
       }
     ],
     "opposite": "Polite",
+    "base_description_i18n": "She's rude more often than not. Reduces refinement.",
     "name_i18n": "Rude"
   },
   {
@@ -1475,6 +1554,7 @@
       }
     ],
     "opposite": "Horny",
+    "base_description_i18n": "She's cold as ice. Reduces libido and gives her a cold personality.",
     "name_i18n": "Cold"
   },
   {
@@ -1489,6 +1569,7 @@
       }
     ],
     "opposite": "Resilient",
+    "base_description_i18n": "She's weak. Reduces constitution.",
     "name_i18n": "Weak"
   },
   {
@@ -1503,6 +1584,7 @@
       }
     ],
     "opposite": "Delicate",
+    "base_description_i18n": "Her body is rough to the touch. Reduces sensitivity.",
     "name_i18n": "Rough"
   },
   {
@@ -1517,6 +1599,7 @@
       }
     ],
     "opposite": "Meek",
+    "base_description_i18n": "She's defiant. Reduces obedience.",
     "name_i18n": "Defiant"
   },
   {
@@ -1530,6 +1613,7 @@
       }
     ],
     "opposite": "Beautiful",
+    "base_description_i18n": "She's scruffy. Slows her beauty gains.",
     "name_i18n": "Scruffy"
   },
   {
@@ -1543,6 +1627,7 @@
       }
     ],
     "opposite": "Fit",
+    "base_description_i18n": "She's a bit plump. Slows her body gains.",
     "name_i18n": "Plump"
   },
   {
@@ -1556,6 +1641,7 @@
       }
     ],
     "opposite": "Charming",
+    "base_description_i18n": "She's timid. Slows her charm gains.",
     "name_i18n": "Timid"
   },
   {
@@ -1569,6 +1655,7 @@
       }
     ],
     "opposite": "Elegant",
+    "base_description_i18n": "She's vulgar. Slows her refinement gains.",
     "name_i18n": "Vulgar"
   },
   {
@@ -1582,6 +1669,7 @@
       }
     ],
     "opposite": "Slutty",
+    "base_description_i18n": "She's tame. Slows her libido gains.",
     "name_i18n": "Tame"
   },
   {
@@ -1595,6 +1683,7 @@
       }
     ],
     "opposite": "Athletic",
+    "base_description_i18n": "She's frail. Slows her constitution gains.",
     "name_i18n": "Frail"
   },
   {
@@ -1608,6 +1697,7 @@
       }
     ],
     "opposite": "Sensitive",
+    "base_description_i18n": "She's jaded. Slows her sensitivity gains.",
     "name_i18n": "Jaded"
   },
   {
@@ -1625,6 +1715,7 @@
       }
     ],
     "opposite": "Obedient",
+    "base_description_i18n": "She's rebellious. Slows her obedience gains and gives her a rebellious streak.",
     "name_i18n": "Rebellious"
   },
   {
@@ -1641,6 +1732,7 @@
       "Energetic",
       "Driven"
     ],
+    "base_description_i18n": "She's lazy. Reduces her maximum energy.",
     "name_i18n": "Lazy"
   },
   {
@@ -1656,6 +1748,7 @@
     "opposite": [
       "Heavy-sleeper"
     ],
+    "base_description_i18n": "She can't sleep. Reduces the energy she recovers when resting.",
     "name_i18n": "Insomniac"
   },
   {
@@ -1669,6 +1762,7 @@
       }
     ],
     "opposite": "Tough",
+    "base_description_i18n": "She's sickly. Increases the hurt she suffers.",
     "name_i18n": "Sickly"
   },
   {
@@ -1682,6 +1776,7 @@
       }
     ],
     "opposite": "Sexy",
+    "base_description_i18n": "She's homely. Slows her reputation gains.",
     "name_i18n": "Homely"
   },
   {
@@ -1695,6 +1790,7 @@
       }
     ],
     "opposite": "Humble",
+    "base_description_i18n": "She has expensive tastes. Increases her upkeep.",
     "name_i18n": "Expensive"
   },
   {
@@ -1711,6 +1807,7 @@
       "Fast learner",
       "Sharp"
     ],
+    "base_description_i18n": "She's slow to learn. Reduces her XP gains.",
     "name_i18n": "Slow"
   },
   {
@@ -1724,6 +1821,7 @@
       }
     ],
     "opposite": "Loyal",
+    "base_description_i18n": "She's disloyal. Reduces her love gains.",
     "name_i18n": "Disloyal"
   },
   {
@@ -1737,6 +1835,7 @@
       }
     ],
     "opposite": "Brave",
+    "base_description_i18n": "She's fearful. Increases the fear she suffers.",
     "name_i18n": "Fearful"
   },
   {
@@ -1753,6 +1852,7 @@
       "Strong",
       "Warrior"
     ],
+    "base_description_i18n": "She's vulnerable. Reduces defense.",
     "name_i18n": "Vulnerable"
   },
   {
@@ -1788,6 +1888,7 @@
       "Brisk",
       "Rowdy"
     ],
+    "base_description_i18n": "She's all thumbs. Reduces waitress JP gains and waitress satisfaction.",
     "name_i18n": "All thumbs"
   },
   {
@@ -1810,6 +1911,7 @@
       "Brisk",
       "Powerful"
     ],
+    "base_description_i18n": "She's awkward. Reduces dancer JP gains and dancer satisfaction.",
     "name_i18n": "Awkward"
   },
   {
@@ -1832,6 +1934,7 @@
       "Agile",
       "Unhurried"
     ],
+    "base_description_i18n": "She's brutal. Reduces masseuse JP gains and masseuse satisfaction.",
     "name_i18n": "Brutal"
   },
   {
@@ -1854,6 +1957,7 @@
       "Bright",
       "Modest"
     ],
+    "base_description_i18n": "She's not very bright. Reduces geisha JP gains and geisha satisfaction.",
     "name_i18n": "Dumb"
   },
   {
@@ -1878,6 +1982,7 @@
       "Soft skin",
       "Bright"
     ],
+    "base_description_i18n": "She's oafish. Reduces dancer and geisha JP gains.",
     "name_i18n": "Oafish"
   },
   {
@@ -1903,6 +2008,7 @@
       "Soft skin",
       "Agile"
     ],
+    "base_description_i18n": "She's clumsy. Reduces waitress and masseuse JP gains.",
     "name_i18n": "Clumsy"
   },
   {
@@ -1921,6 +2027,7 @@
       }
     ],
     "opposite": "Naughty",
+    "base_description_i18n": "She's a prude. Reduces service and sex JP gains.",
     "name_i18n": "Prude"
   },
   {
@@ -1939,6 +2046,7 @@
       }
     ],
     "opposite": "Kinky",
+    "base_description_i18n": "She's naive. Reduces anal and fetish JP gains.",
     "name_i18n": "Naive"
   },
   {
@@ -1952,6 +2060,7 @@
       }
     ],
     "opposite": "Pervert",
+    "base_description_i18n": "She's a square. Increases the requirements for all sex acts.",
     "name_i18n": "Square"
   },
   {
@@ -1964,6 +2073,7 @@
       }
     ],
     "opposite": "Sane",
+    "base_description_i18n": "She's insane. Increases her sanity loss.",
     "name_i18n": "Insane"
   },
   {
@@ -1977,6 +2087,7 @@
       }
     ],
     "opposite": "Trusting",
+    "base_description_i18n": "She's distrustful. Increases the fear she gains each day.",
     "name_i18n": "Distrustful"
   },
   {
@@ -1990,6 +2101,7 @@
       }
     ],
     "opposite": "Loving",
+    "base_description_i18n": "She's spiteful. Reduces the love she gains each day.",
     "name_i18n": "Spiteful"
   },
   {
@@ -2074,6 +2186,7 @@
         "value": -0.2
       }
     ],
+    "base_description_i18n": "She's godless. Slows her reputation gains.",
     "name_i18n": "Godless"
   },
   {

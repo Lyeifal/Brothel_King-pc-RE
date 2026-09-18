@@ -183,6 +183,18 @@ init python:
             return cls(name=d["name"], description=d.get("description"))
 ```
 
+### 2.4 Syncing JSON strings into the translation files (required)
+
+JSON `_i18n` strings are registered **dynamically at init** (`game/core/i18n/json_i18n.rpy`), so Ren'Py's `translate --empty` **cannot see them** — they will never appear in the extracted empty entries on their own.
+
+**After adding or modifying any `_i18n` field in JSON, you MUST run:**
+
+```powershell
+python tools/import_json_i18n.py
+```
+
+This appends any missing `_i18n` texts to `game/tl/chinese_simplified/strings.rpy` as empty `old`/`new` pairs (deduplicated against existing `old` texts), after which the normal export → translate → import workflow applies. Verify coverage at any time with `python tools/audit_json_i18n.py` (must report "All JSON _i18n strings are translated!").
+
 ---
 
 ## 3. Randomly generated text conventions
@@ -261,13 +273,19 @@ Do not force all strings back into `strings.rpy`.
 The following must be run before every commit:
 
 ```powershell
+# 0. If JSON _i18n fields changed: sync them first (see §2.4)
+python tools/import_json_i18n.py
+
 # 1. i18n audit
 python tools/i18n_lint.py
 
-# 2. Regression test
+# 2. JSON _i18n coverage (must print "All JSON _i18n strings are translated!")
+python tools/audit_json_i18n.py
+
+# 3. Regression test
 python tools/verify_i18n.py
 
-# 3. Ren'Py lint
+# 4. Ren'Py lint
 & "lib\py3-windows-x86_64\python.exe" "Brothel_King.py" . lint
 ```
 

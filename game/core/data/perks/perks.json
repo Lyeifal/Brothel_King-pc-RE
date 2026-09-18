@@ -15,7 +15,9 @@
       }
     ],
     "archetype": "The Maid",
-    "pic": "maid0.webp"
+    "pic": "maid0.webp",
+    "name_i18n": "Maid Training",
+    "base_description_i18n": "'{i}I am here to serve.{/i}'"
   },
   {
     "name": "Loyalty",
@@ -34,7 +36,9 @@
     ],
     "archetype": "The Maid",
     "pic": "maid1_1.webp",
-    "perk_level": 1
+    "perk_level": 1,
+    "name_i18n": "Loyalty",
+    "base_description_i18n": "The bond between a master and servant is a sacred thing."
   },
   {
     "name": "Hardworking",
@@ -53,7 +57,9 @@
     ],
     "archetype": "The Maid",
     "pic": "maid1_2.webp",
-    "perk_level": 1
+    "perk_level": 1,
+    "name_i18n": "Hardworking",
+    "base_description_i18n": "'{i}Anything is possible if you put your heart into it.{/i}'"
   },
   {
     "name": "Try Again",
@@ -71,7 +77,9 @@
     ],
     "archetype": "The Maid",
     "pic": "maid2_1.webp",
-    "perk_level": 2
+    "perk_level": 2,
+    "name_i18n": "Try Again",
+    "base_description_i18n": "'{i}I am so sorry. Let me make this up to you.{/i}'"
   },
   {
     "name": "Survivor",
@@ -90,7 +98,9 @@
     ],
     "archetype": "The Maid",
     "pic": "maid2_2.webp",
-    "perk_level": 2
+    "perk_level": 2,
+    "name_i18n": "Survivor",
+    "base_description_i18n": "She's been through hell and back, and she is willing to do what it takes to survive."
   },
   {
     "name": "Strive for Perfection",
@@ -111,7 +121,9 @@
     ],
     "archetype": "The Maid",
     "pic": "maid3.webp",
-    "perk_level": 3
+    "perk_level": 3,
+    "name_i18n": "Strive for Perfection",
+    "base_description_i18n": "'{i}Never leave a job halfway done.{/i}'"
   },
   {
     "name": "Bunny Girl",
@@ -129,7 +141,9 @@
       }
     ],
     "archetype": "The Player",
-    "pic": "player0.webp"
+    "pic": "player0.webp",
+    "name_i18n": "Bunny Girl",
+    "base_description_i18n": "'{i}Mister! Have you got any carrots for me?{/i}'"
   },
   {
     "name": "Party Girl",
@@ -148,7 +162,9 @@
     ],
     "archetype": "The Player",
     "pic": "player1_1.webp",
-    "perk_level": 1
+    "perk_level": 1,
+    "name_i18n": "Party Girl",
+    "base_description_i18n": "'{i}Where do you think you're going? The party's only started...{/i}'"
   },
   {
     "name": "Bimbo",
@@ -167,7 +183,9 @@
     ],
     "archetype": "The Player",
     "pic": "player1_2.webp",
-    "perk_level": 1
+    "perk_level": 1,
+    "name_i18n": "Bimbo",
+    "base_description_i18n": "Success comes easy to someone with such 'assets'."
   },
   {
     "name": "Autograph",
@@ -185,7 +203,9 @@
     ],
     "archetype": "The Player",
     "pic": "player2_1.webp",
-    "perk_level": 2
+    "perk_level": 2,
+    "name_i18n": "Autograph",
+    "base_description_i18n": "Star-struck fans are the best tippers."
   },
   {
     "name": "Exhibitionist",
@@ -199,7 +219,9 @@
     ],
     "archetype": "The Player",
     "pic": "player2_2.webp",
-    "perk_level": 2
+    "perk_level": 2,
+    "name_i18n": "Exhibitionist",
+    "base_description_i18n": "All eyes on her, that's what she loves."
   },
   {
     "name": "Star Power",
@@ -216,7 +238,9 @@
     ],
     "archetype": "The Player",
     "pic": "player3.webp",
-    "perk_level": 3
+    "perk_level": 3,
+    "name_i18n": "Star Power",
+    "base_description_i18n": "A star is born. People come from far and wide just to meet her."
   },
   {
     "name": "Modeling 101",
@@ -234,7 +258,9 @@
       }
     ],
     "archetype": "The Model",
-    "pic": "model0.webp"
+    "pic": "model0.webp",
+    "name_i18n": "Modeling 101",
+    "base_description_i18n": "'{i}Do I really have to wear this?{/i}'"
   },
   {
     "name": "Rules of Attraction",
@@ -249,7 +275,9 @@
     ],
     "archetype": "The Model",
     "pic": "model1_1.webp",
-    "perk_level": 1
+    "perk_level": 1,
+    "name_i18n": "Rules of Attraction",
+    "base_description_i18n": "Her innocent looks make her the darling of the customers."
   },
   {
     "name": "Overachiever",
@@ -268,7 +296,9 @@
     ],
     "archetype": "The Model",
     "pic": "model1_2.webp",
-    "perk_level": 1
+    "perk_level": 1,
+    "name_i18n": "Overachiever",
+    "base_description_i18n": "Nothing shall stop her from becoming the best in Zan."
   },
   {
     "name": "Eye Contact",
@@ -288,7 +318,9 @@
     ],
     "archetype": "The Model",
     "pic": "model2_1.webp",
-    "perk_level": 2
+    "perk_level": 2,
+    "name_i18n": "Eye Contact",
+    "base_description_i18n": "Lose yourself in those eyes, and forget all your troubles."
   },
   {
     "name": "Life of Luxury",
@@ -307,7 +339,9 @@
     ],
     "archetype": "The Model",
     "pic": "model2_2.webp",
-    "perk_level": 2
+    "perk_level": 2,
+    "name_i18n": "Life of Luxury",
+    "base_description_i18n": "'{i}Sex is always better within Hokoman silk sheets...{/i}'"
   },
   {
     "name": "Beauty Queen",
@@ -325,7 +359,9 @@
     ],
     "archetype": "The Model",
     "pic": "model3.webp",
-    "perk_level": 3
+    "perk_level": 3,
+    "name_i18n": "Beauty Queen",
+    "base_description_i18n": "No one can compare."
   },
   {
     "name": "Court relations",
@@ -342,7 +378,9 @@
       }
     ],
     "archetype": "The Courtesan",
-    "pic": "courtesan0.webp"
+    "pic": "courtesan0.webp",
+    "name_i18n": "Court relations",
+    "base_description_i18n": "'{i}The Earl of Kalderan was just here...{/i}'"
   },
   {
     "name": "Warm welcome",
@@ -360,7 +398,9 @@
     ],
     "archetype": "The Courtesan",
     "pic": "courtesan1_1.webp",
-    "perk_level": 1
+    "perk_level": 1,
+    "name_i18n": "Warm welcome",
+    "base_description_i18n": "'{i}Would you like to slip into something... more comfortable?{/i}'"
   },
   {
     "name": "Refined taste",
@@ -379,7 +419,9 @@
     ],
     "archetype": "The Courtesan",
     "pic": "courtesan1_2.webp",
-    "perk_level": 1
+    "perk_level": 1,
+    "name_i18n": "Refined taste",
+    "base_description_i18n": "'{i}Can you give me a little more? I know how to be grateful...{/i}'"
   },
   {
     "name": "Five Stars",
@@ -394,7 +436,9 @@
     ],
     "archetype": "The Courtesan",
     "pic": "courtesan2_1.webp",
-    "perk_level": 2
+    "perk_level": 2,
+    "name_i18n": "Five Stars",
+    "base_description_i18n": "Quality comes at a price."
   },
   {
     "name": "Heavenly Pleasures",
@@ -418,7 +462,9 @@
     ],
     "archetype": "The Courtesan",
     "pic": "courtesan2_2.webp",
-    "perk_level": 2
+    "perk_level": 2,
+    "name_i18n": "Heavenly Pleasures",
+    "base_description_i18n": "'{i}I will give you pleasures you have never experienced...{/i}'"
   },
   {
     "name": "Royal Treatment",
@@ -441,7 +487,9 @@
     ],
     "archetype": "The Courtesan",
     "pic": "courtesan3.webp",
-    "perk_level": 3
+    "perk_level": 3,
+    "name_i18n": "Royal Treatment",
+    "base_description_i18n": "'{i}Tonight, you will be my King...{/i}'"
   },
   {
     "name": "Available",
@@ -458,7 +506,9 @@
       }
     ],
     "archetype": "The Escort",
-    "pic": "escort0.webp"
+    "pic": "escort0.webp",
+    "name_i18n": "Available",
+    "base_description_i18n": "{i}Do you have what it takes? I'm waiting.{/i}"
   },
   {
     "name": "Convincing",
@@ -472,7 +522,9 @@
     ],
     "archetype": "The Escort",
     "pic": "slut2_2.webp",
-    "perk_level": 1
+    "perk_level": 1,
+    "name_i18n": "Convincing",
+    "base_description_i18n": "'{i}Let me show you something really special...{/i}'"
   },
   {
     "name": "On Call",
@@ -491,7 +543,9 @@
     ],
     "archetype": "The Escort",
     "pic": "escort2_1.webp",
-    "perk_level": 1
+    "perk_level": 1,
+    "name_i18n": "On Call",
+    "base_description_i18n": "She's got a job to do, and she does it well."
   },
   {
     "name": "Focus",
@@ -504,7 +558,9 @@
     ],
     "archetype": "The Escort",
     "pic": "escort1_1.webp",
-    "perk_level": 2
+    "perk_level": 2,
+    "name_i18n": "Focus",
+    "base_description_i18n": "{i}Who called me a one-trick pony?{/i}"
   },
   {
     "name": "Loves Sex",
@@ -518,7 +574,9 @@
     ],
     "archetype": "The Escort",
     "pic": "slut2_1.webp",
-    "perk_level": 2
+    "perk_level": 2,
+    "name_i18n": "Loves Sex",
+    "base_description_i18n": "'{i}I love what I do... Being fucked all day is hardly work at all!{/i}'"
   },
   {
     "name": "Business and Pleasure",
@@ -545,7 +603,9 @@
     ],
     "archetype": "The Escort",
     "pic": "escort3.webp",
-    "perk_level": 3
+    "perk_level": 3,
+    "name_i18n": "Business and Pleasure",
+    "base_description_i18n": "It's all a job to her. But boy, does she love her job."
   },
   {
     "name": "Foxy Lady",
@@ -563,7 +623,9 @@
       }
     ],
     "archetype": "The Fox",
-    "pic": "fox0.webp"
+    "pic": "fox0.webp",
+    "name_i18n": "Foxy Lady",
+    "base_description_i18n": "'{i}Are you experienced?{/i}'"
   },
   {
     "name": "Something New",
@@ -582,7 +644,9 @@
     ],
     "archetype": "The Fox",
     "pic": "fox1_1.webp",
-    "perk_level": 1
+    "perk_level": 1,
+    "name_i18n": "Something New",
+    "base_description_i18n": "'{i}I heard about this at the spice market...{/i}'"
   },
   {
     "name": "Lost and Found",
@@ -597,6 +661,7 @@
     "archetype": "The Fox",
     "pic": "fox1_2.webp",
     "perk_level": 1,
+    "name_i18n": "Lost and Found",
     "base_description_i18n": "'I'm sure he won't miss it.'"
   },
   {
@@ -611,7 +676,9 @@
     ],
     "archetype": "The Fox",
     "pic": "fox2_1.webp",
-    "perk_level": 2
+    "perk_level": 2,
+    "name_i18n": "Secret Admirers",
+    "base_description_i18n": "She has her ways... Her regulars appreciate that."
   },
   {
     "name": "Tempting Fate",
@@ -624,7 +691,9 @@
     ],
     "archetype": "The Fox",
     "pic": "fox2_2.webp",
-    "perk_level": 2
+    "perk_level": 2,
+    "name_i18n": "Tempting Fate",
+    "base_description_i18n": "Born under a lucky star..."
   },
   {
     "name": "Stars Are Aligned",
@@ -639,7 +708,9 @@
     ],
     "archetype": "The Fox",
     "pic": "fox3.webp",
-    "perk_level": 3
+    "perk_level": 3,
+    "name_i18n": "Stars Are Aligned",
+    "base_description_i18n": "Her presence is so magnetic, she can bring luck to the whole brothel. Hang on to her!"
   },
   {
     "name": "Teaser",
@@ -656,7 +727,9 @@
       }
     ],
     "archetype": "The Slut",
-    "pic": "slut0.webp"
+    "pic": "slut0.webp",
+    "name_i18n": "Teaser",
+    "base_description_i18n": "{i}Mister, would you like to see more of me?{/i}"
   },
   {
     "name": "Open mind",
@@ -670,7 +743,9 @@
     ],
     "archetype": "The Slut",
     "pic": "slut1_1.webp",
-    "perk_level": 1
+    "perk_level": 1,
+    "name_i18n": "Open mind",
+    "base_description_i18n": "'{i}How can you say you don't like it if you never try?{/i}'"
   },
   {
     "name": "Bedroom Eyes",
@@ -699,7 +774,9 @@
     ],
     "archetype": "The Slut",
     "pic": "slut1_2.webp",
-    "perk_level": 1
+    "perk_level": 1,
+    "name_i18n": "Bedroom Eyes",
+    "base_description_i18n": "'{i}Will you teach me something new?{/i}'"
   },
   {
     "name": "Next",
@@ -712,7 +789,9 @@
     ],
     "archetype": "The Slut",
     "pic": "escort1_2.webp",
-    "perk_level": 2
+    "perk_level": 2,
+    "name_i18n": "Next",
+    "base_description_i18n": "{i}Aw, finished already? I can take more...{/i}"
   },
   {
     "name": "Work and Whore",
@@ -725,7 +804,9 @@
     ],
     "archetype": "The Slut",
     "pic": "slut3.webp",
-    "perk_level": 2
+    "perk_level": 2,
+    "name_i18n": "Work and Whore",
+    "base_description_i18n": "{i}One thing leads to another... Let's have fun!{/i}"
   },
   {
     "name": "Me So Horny",
@@ -739,7 +820,9 @@
     ],
     "archetype": "The Slut",
     "pic": "escort2_2.webp",
-    "perk_level": 3
+    "perk_level": 3,
+    "name_i18n": "Me So Horny",
+    "base_description_i18n": "'{i}Me love you long time...{/i}'"
   },
   {
     "name": "Enter The Bride",
@@ -757,7 +840,9 @@
       }
     ],
     "archetype": "The Bride",
-    "pic": "bride0.webp"
+    "pic": "bride0.webp",
+    "name_i18n": "Enter The Bride",
+    "base_description_i18n": "Codename: pink mamba."
   },
   {
     "name": "Helping Hand",
@@ -775,7 +860,9 @@
     ],
     "archetype": "The Bride",
     "pic": "bride1_1.webp",
-    "perk_level": 1
+    "perk_level": 1,
+    "name_i18n": "Helping Hand",
+    "base_description_i18n": "'{i}You can always count on me. We're all sisters.{/i}'"
   },
   {
     "name": "Confession",
@@ -794,7 +881,9 @@
     ],
     "archetype": "The Bride",
     "pic": "bride1_2.webp",
-    "perk_level": 1
+    "perk_level": 1,
+    "name_i18n": "Confession",
+    "base_description_i18n": "'{i}We shouldn't have any secrets for each other.{/i}'"
   },
   {
     "name": "Leading by Example",
@@ -807,7 +896,9 @@
     ],
     "archetype": "The Bride",
     "pic": "bride2_1.webp",
-    "perk_level": 2
+    "perk_level": 2,
+    "name_i18n": "Leading by Example",
+    "base_description_i18n": "She can teach the other girls a thing or two."
   },
   {
     "name": "The Healer",
@@ -827,7 +918,9 @@
     ],
     "archetype": "The Bride",
     "pic": "bride2_2.webp",
-    "perk_level": 2
+    "perk_level": 2,
+    "name_i18n": "The Healer",
+    "base_description_i18n": "She cares a lot about others, and will do everything she can to protect those she loves"
   },
   {
     "name": "The Virgin Whore",
@@ -844,7 +937,9 @@
     ],
     "archetype": "The Bride",
     "pic": "bride3.webp",
-    "perk_level": 3
+    "perk_level": 3,
+    "name_i18n": "The Virgin Whore",
+    "base_description_i18n": "'{i}You can do anything to me, but this hole is off-limits... Mister, are you okay? You're all sweaty...{/i}'"
   },
   {
     "name": "Naturist",
@@ -854,7 +949,9 @@
         "type": "special",
         "target": "naked"
       }
-    ]
+    ],
+    "name_i18n": "Naturist",
+    "base_description_i18n": "She feels most comfortable wearing nothing at all. May work and serve customers naked."
   },
   {
     "name": "Ponygirl",
@@ -865,7 +962,9 @@
         "target": "ponygirl",
         "chance": 0.5
       }
-    ]
+    ],
+    "name_i18n": "Ponygirl",
+    "base_description_i18n": "She now only wears a revealing harness, and a tail. Guess where it's inserted... Free advertising."
   },
   {
     "name": "Bisexual",
@@ -876,7 +975,9 @@
         "target": "bisexual",
         "chance": 0.5
       }
-    ]
+    ],
+    "name_i18n": "Bisexual",
+    "base_description_i18n": "Will sometimes serve a customer with another bisexual girl. Greatly increases tip and customer satisfaction, and reduce fatigue."
   },
   {
     "name": "Group",
@@ -887,7 +988,9 @@
         "target": "group",
         "chance": 0.5
       }
-    ]
+    ],
+    "name_i18n": "Group",
+    "base_description_i18n": "A threesome with the customers is nothing she can't handle. May have sex with up to two customers at the cost of extra fatigue."
   },
   {
     "name": "Orgy",
@@ -898,6 +1001,8 @@
         "target": "orgy",
         "chance": 0.5
       }
-    ]
+    ],
+    "name_i18n": "Orgy",
+    "base_description_i18n": "What a slut! Looks like she wants every hole filled. May have sex with up to three customers, at the cost of extra fatigue."
   }
 ]

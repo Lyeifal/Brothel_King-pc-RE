@@ -565,3 +565,9 @@ translate chinese_simplified strings:
     old "%s has lost %s."
     new "%s 失去了 %s。"
 
+# TODO: Translation updated at 2026-09-11 06:39
+
+translate chinese_simplified strings:
+    old "%s minion%s are hurt. What do you want to do?"
+    new "%s 名手下%s受伤了。你想怎么办？"
+

@@ -683,7 +683,7 @@ screen receive_item(it, msg, col=c_emerald):
         ypadding 20
 
         action Return()
-        tooltip "{i}" + it.base_description + "{/i}\n\n" + it.description
+        tooltip "{i}" + __(it.base_description) + "{/i}\n\n" + __(it.description)
 
         has vbox
         xalign 0.5

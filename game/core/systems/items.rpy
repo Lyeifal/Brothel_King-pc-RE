@@ -310,13 +310,13 @@ init -2 python:
 
                 if self.usage in ("use", "auto"):
                     if self.charges > 1:
-                        self.description += " (" + str(self.charges) + " uses left)"
+                        self.description += " (" + str(self.charges) + __(" uses left)")
 
             if self.usage == "gift":
                 if self.description:
-                    self.description += ", Gift"
+                    self.description += __(", Gift")
                 else:
-                    self.description += "Gift"
+                    self.description += __("Gift")
 
         def has_effect(self, type="any", target="any"): # Item instance property (because effects can be changed by girl perks)
             for eff in self.effects:
@@ -881,8 +881,8 @@ screen item_list(items, owner, counterpart, sc_prefix, search=False): # May also
                             xfill True
                             action (Show("item_profile", it=it, transition = dissolve), SetVariable("selected_item", it), SetVariable("owner", owner), SetVariable("counterpart", counterpart), SelectedIf(selected_item==it))
                             if isinstance(it, ItemInstance):
-                                tooltip it.base_description
-                            tooltip it.description
+                                tooltip __(it.base_description)
+                            tooltip __(it.description)
 
                             hbox spacing 3:
 

@@ -106,15 +106,20 @@ def unquote(raw):
 def export_xlsx(mismatches, language):
     try:
         import openpyxl
+        from openpyxl.cell.cell import ILLEGAL_CHARACTERS_RE
     except ImportError:
         print("openpyxl not installed; skipping xlsx export.")
         return
+
+    def clean(v):
+        return ILLEGAL_CHARACTERS_RE.sub("", v) if isinstance(v, str) else v
+
     wb = openpyxl.Workbook()
     ws = wb.active
     ws.title = "placeholder_mismatches"
     ws.append(["", "File", "Line", "English (DO NOT MODIFY)", f"{language} Translation (fix placeholders)", "Expected Placeholders", "Actual Placeholders"])
     for m in mismatches:
-        ws.append(["", str(m['file']), m['line'], m['old'], m['new'], ", ".join(m['old_ph']), ", ".join(m['new_ph'])])
+        ws.append(["", str(m['file']), m['line'], clean(m['old']), clean(m['new']), ", ".join(m['old_ph']), ", ".join(m['new_ph'])])
     output = ROOT / f"placeholder_mismatches_{language}.xlsx"
     wb.save(output)
     print(f"Exported to: {output}")

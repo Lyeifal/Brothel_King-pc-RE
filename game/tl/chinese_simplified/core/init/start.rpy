@@ -40,7 +40,7 @@ translate chinese_simplified strings:
 translate chinese_simplified init_game_38728340:
 
     # centered "Loading...{nw}"
-    centered ""
+    centered "加载中……{nw}"
 
 translate chinese_simplified strings:
 

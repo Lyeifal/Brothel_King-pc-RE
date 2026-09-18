@@ -39,3 +39,9 @@ translate chinese_simplified strings:
     old "访问拍卖行买卖女孩。"
     new "访问拍卖行买卖女孩。"
 
+# TODO: Translation updated at 2026-09-11 06:39
+
+translate chinese_simplified strings:
+    old "Access options from your active mods (%s)."
+    new "从已启用的模组（%s）中进入各模组的选项。"
+

@@ -1071,7 +1071,7 @@ screen trait_details(girl):
                 for perk in girl.perks:
                     hbox:
                         frame background None ypadding 0 xsize xres(150) xfill True xalign 0.0 yalign 0.0:
-                            text perk.name xmaximum xres(150) yalign 0.0 size res_font(13) bold True
+                            text __(perk.name) xmaximum xres(150) yalign 0.0 size res_font(13) bold True
                         text perk.get_description(short=True) xfill True size res_font(13) xalign 0.0 yalign 0.0
 
 screen perk_details(girl):
@@ -1095,5 +1095,5 @@ screen perk_details(girl):
             for perk in girl.perks:
                 hbox:
                     frame background None ypadding 0 xsize xres(150) xfill True xalign 0.0 yalign 0.0:
-                        text perk.name xmaximum xres(150) yalign 0.0 size res_font(13) bold True
+                        text __(perk.name) xmaximum xres(150) yalign 0.0 size res_font(13) bold True
                     text perk.get_description(short=True) xmaximum xres(250) size res_font(13)

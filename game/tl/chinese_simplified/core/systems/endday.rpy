@@ -185,11 +185,17 @@ translate chinese_simplified end_day_ea7f72a4:
 translate chinese_simplified end_day_38728340:
 
     # centered "Loading...{nw}"
-    centered ""
+    centered "加载中……{nw}"
 
 translate chinese_simplified strings:
 
     # game/core/systems/endday.rpy:265
     old "Attempt: %s"
     new "尝试：%s"
+
+# TODO: Translation updated at 2026-09-11 06:39
+
+translate chinese_simplified strings:
+    old "A level %s %s has been retired because of wounds or damage it sustained."
+    new "一头等级为 %s 的%s因伤过重而退役了。"
 

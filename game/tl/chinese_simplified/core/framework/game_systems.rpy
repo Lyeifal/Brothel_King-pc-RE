@@ -39,3 +39,75 @@ translate chinese_simplified strings:
     old "%s has been added."
     new "%s 已添加。"
 
+# TODO: Translation updated at 2026-09-11 06:39
+
+translate chinese_simplified strings:
+    old "You made %s last night.\n"
+    new """你昨晚赚了 %s。
+"""
+    old "You lost %s last night.\n"
+    new """你昨晚亏损了 %s。
+"""
+    old "- Gold made: + %s\n"
+    new """- 赚取金币：+ %s
+"""
+    old "- Girls upkeep: - %s\n"
+    new """- 女孩的供养费：- %s
+"""
+    old "- Brothel costs: - %s\n{/size}\n"
+    new """- 青楼开销：- %s
+{/size}
+"""
+    old "%s customer%s came to the brothel.\n"
+    new """%s 位客人%s来到了青楼。
+"""
+    old "- Customer%s served (job): %s/%s\n"
+    new """- 接待的客人%s（工作）：%s/%s
+"""
+    old "- Customer%s entertained (job): %s/%s\n"
+    new """- 招待的客人%s（工作）：%s/%s
+"""
+    old "- Customer%s served (sex): %s/%s\n"
+    new """- 接待的客人%s（性服务）：%s/%s
+"""
+    old "- Customer%s satisfied (sex): %s/%s\n{/size}\n"
+    new """- 满意的客人%s（性服务）：%s/%s
+{/size}
+"""
+    old "%s girl%s worked in the brothel. "
+    new "%s 位姑娘%s在青楼工作。 "
+    old "%s girl%s went on strike. "
+    new "%s 位姑娘%s罢工了。 "
+    old "%s girl%s ran away from the brothel."
+    new "%s 位姑娘%s从青楼逃跑了。"
+    old "%s girls were resting at the brothel. "
+    new "%s 位姑娘在青楼休息。 "
+    old "%s girl was resting at the brothel. "
+    new "%s 位姑娘在青楼休息。 "
+    old "%s girls were hurt while working. "
+    new "%s 位姑娘在工作中受伤了。 "
+    old "%s girl was hurt while working. "
+    new "%s 位姑娘在工作中受伤了。 "
+    old "%s girl%s became exhausted while working. "
+    new "%s 位姑娘%s在工作中精疲力竭了。 "
+    old "%s girls were at the farm last night. "
+    new "%s 位姑娘昨晚在农场。 "
+    old "%s girl%s resisted training. "
+    new "%s 位姑娘%s抗拒训练。 "
+    old "%s girl%s ran away from the farm."
+    new "%s 位姑娘%s从农场逃跑了。"
+    old "%s girl%s got hurt while resisting."
+    new "%s 位姑娘%s在抗拒时受伤了。"
+    old "%s minion%s got hurt in the fighting."
+    new "%s 名手下%s在战斗中受伤了。"
+    old "- In training: %s\n"
+    new """- 训练中：%s
+"""
+    old "- In holding: %s{/size}\n"
+    new """- 关押中：%s{/size}
+"""
+    old "%s girls were resting at the farm. "
+    new "%s 位姑娘在农场休息。 "
+    old "%s girl was resting at the farm. "
+    new "%s 位姑娘在农场休息。 "
+

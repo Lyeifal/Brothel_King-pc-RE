@@ -1,25 +1,27 @@
 # BK Evolution — 中文翻译补完记录
 
-> 最后更新: 2026-09-11（与代码核对）
+> 最后更新：2026-09-11（第二轮：全部补完，与代码核对）
 >
 > **状态：翻译补完已收官 ✅。本文档为历史记录 + 当前基线**，不再追踪新任务。
+>
+> 第二轮（2026-09-11）补完了剩余存量，并修复了提取盲区（天赋树/特质/物品）。当前基线：**0 缺失 dialogue / 0 缺失 strings**。
 >
 > 制定日期：2026-06-11  
 > 更新日期：2026-06-12  
 > 目标：补完 `_cn` 旧版本无法覆盖的所有缺失翻译
 >
-> ## 当前基线（2026-09-11 实测）
+> ## 当前基线（2026-09-11 第二轮后实测）
 >
 > 运行 `& "lib/py3-windows-x86_64/python.exe" "Brothel_King.py" . translate --count chinese_simplified`：
 >
 > | 指标 | 数值 |
 > |------|------|
-> | 缺失 dialogue 翻译 | 1,433 条（内容存量：主要为示例 Mod 与未翻译剧情，非代码缺陷） |
-> | 缺失 string 翻译 | 124 条（内容存量） |
-> | JSON `_i18n` 注册 | 105 个 JSON 文件 / 1,540 条可翻译字符串 |
-> | i18n_lint 基线 | 17 处 issue，全部位于开发者面向文本（dev console、test runner、hook 失败通知等），非玩家可见字符串 |
+> | 缺失 dialogue 翻译 | **0** |
+> | 缺失 string 翻译 | **0**（剩余 10 个空槽位均为空源字符串，无需翻译） |
+> | JSON `_i18n` 字符串（`tools/audit_json_i18n.py`） | 104 个 JSON 文件 / **3,533 条，全部已翻译** |
+> | i18n_lint 基线 | 18 处 issue，全部位于开发者面向文本（dev console、test runner、hook 失败通知等），非玩家可见字符串 |
 >
-> 上述缺失数即为回归基线：新增代码不应使缺失数上升。详见 [`I18N_ROADMAP.md`](I18N_ROADMAP.md)。
+> 上述零缺失即为回归基线：新增代码必须保持缺失数为零。详见 [`I18N_ROADMAP.md`](I18N_ROADMAP.md)。
 
 ---
 
@@ -204,3 +206,42 @@
 - 运行游戏进行实际中文显示抽查（开场、物品栏、成就、法术/力量界面）
 - 关注 `to_translate_remaining_v2.xlsx` 中剩余的剧情对话补完
 - 处理预存的 `npc` / `girl.char` Lint 警告（与翻译无关，可选）
+
+---
+
+## 七、第二轮——全部补完（2026-09-11）
+
+### 7.1 空翻译存量清零
+
+- 运行 `translate --empty` + 导出：**2,130 条空条目**（125 strings + 2,005 dialogue，主要在 `events_dispatcher.rpy`、`intro.rpy`、`interactions.rpy`）
+- 全部翻译并导入 → `translate --count`：**0 缺失 dialogue / 0 缺失 strings**
+- 修复 7 条被英文原样回填的成就描述（`new == old`，`--count` 无法识别），以及 `Leech jp` → 吸血职业点、`Constitution Mastery` 误译（宪法精通 → 体质精通），均在 `strings.rpy`
+
+### 7.2 提取盲区修复（天赋树/特质/物品）
+
+`translate --count` 全绿但这些 UI 仍显示英文，因为它们从未进入翻译系统：
+
+| 根因 | 修复 |
+|---|---|
+| `perks.json` 天赋名无 `name_i18n` | +53 `name_i18n`、+52 `base_description_i18n` |
+| `traits.json` 描述大面积缺失 | +113 `base_description_i18n` |
+| `items.json` 描述大面积缺失 | +95 `description_i18n` |
+| `Effect.get_description()` 硬编码英文片段 | ~30 处片段包裹 `__()`；复合串改为按片段翻译后拼接 |
+| `perk.name` / `it.name` / tooltip / notify 裸用 | 在 `screen_girl_stats.rpy`、`screen_progress.rpy`、`items.rpy`、`main.rpy`、`screen_common.rpy` 包裹 `__()` |
+| `generate_new_item` 先转小写再查表 | `__(self.base_name.lower())` → `__(self.base_name)` |
+| `Perk.from_dict` 名称裸取 | `get_i18n(d, "name")` |
+
+208 条新字符串（天赋/特质/物品名称与描述 + UI 片段）经 `tools/import_json_i18n.py` + `translate --empty` 提取、翻译、导入。`tools/audit_json_i18n.py`：3,533/3,533 已翻译。
+
+### 7.3 工具链修复
+
+- 修复 `tools/export_empty_to_xlsx.py`、`tools/import_translated_empty.py`、`tools/import_json_i18n.py` 中写死的旧项目路径（改为按脚本位置自动推导）
+- 修复 `tools/export_empty_to_xlsx.py` 与 `tools/audit_placeholders.py` 写 Excel 遇控制字符崩溃的问题（IllegalCharacterError）
+- **关键工作流事实**：`translate --empty` 不会提取 JSON `_i18n` 字符串（它们于 init 期动态注册）。JSON 新增 `_i18n` 字段后，必须先运行 `python tools/import_json_i18n.py` 同步进 `strings.rpy`，再走导出/翻译/导入流程。见 `I18N_ROADMAP.md` 第 4 节。
+
+### 7.4 已知遗留（内容层面，非代码）
+
+- ~209 条天赋/特质/物品描述为英文新撰（源数据原本没有），已翻译，建议游戏内核对语气
+- 29 件武器/法杖类物品本身无描述（源数据为空），属正常
+- `[plu]` 类英文复数占位符可能显示「3 天s」残留，如影响体验需代码侧处理
+- i18n_lint 报 18 处，全部为开发者面向文本（见 `I18N_ROADMAP.md` 第 6 节）

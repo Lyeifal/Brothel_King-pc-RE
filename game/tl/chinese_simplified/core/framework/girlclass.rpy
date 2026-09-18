@@ -219,3 +219,13 @@ translate chinese_simplified strings:
     old " is a "
     new " 是一个 "
 
+# TODO: Translation updated at 2026-09-11 06:39
+
+translate chinese_simplified strings:
+    old "%s is now ready to attend a farm show (100%)."
+    new "%s 现在已准备好参加农场表演（100%）。"
+    old "%s is now ready to attend a farm show (150%)."
+    new "%s 现在已准备好参加农场表演（150%）。"
+    old "%s is now ready to attend a farm show (200%)."
+    new "%s 现在已准备好参加农场表演（200%）。"
+

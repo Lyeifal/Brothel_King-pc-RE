@@ -1,25 +1,27 @@
 # BK Evolution — Chinese Translation Completion Log
 
-> Last updated: 2026-09-11 (verified against code)
+> Last updated: 2026-09-11 (round 2: full completion, verified against code)
 >
 > **Status: translation completion concluded ✅. This document is a historical record + current baseline** and no longer tracks new tasks.
+>
+> Round 2 (2026-09-11) completed the remaining backlog and fixed extraction-blind spots (perk tree / traits / items). Current baseline: **0 missing dialogue / 0 missing strings**.
 >
 > Drafted on: 2026-06-11  
 > Updated on: 2026-06-12  
 > Goal: complete all missing translations that the old `_cn` version could not cover
 >
-> ## Current baseline (measured 2026-09-11)
+> ## Current baseline (measured 2026-09-11, after round 2)
 >
 > Running `& "lib/py3-windows-x86_64/python.exe" "Brothel_King.py" . translate --count chinese_simplified`:
 >
 > | Metric | Value |
 > |------|------|
-> | Missing dialogue translations | 1,433 entries (content backlog: mainly example mod and untranslated story content, not code defects) |
-> | Missing string translations | 124 entries (content backlog) |
-> | JSON `_i18n` registrations | 105 JSON files / 1,540 translatable strings |
-> | i18n_lint baseline | 17 issues, all in developer-facing text (dev console, test runner, hook failure notifications, etc.), not player-visible strings |
+> | Missing dialogue translations | **0** |
+> | Missing string translations | **0** (10 remaining empty slots all have empty/whitespace sources — nothing to translate) |
+> | JSON `_i18n` strings (`tools/audit_json_i18n.py`) | 104 JSON files / **3,533 strings, all translated** |
+> | i18n_lint baseline | 18 issues, all in developer-facing text (dev console, test runner, hook failure notifications, etc.), not player-visible strings |
 >
-> The missing counts above are the regression baseline: new code must not increase the missing counts. See [`I18N_ROADMAP.md`](I18N_ROADMAP.md) for details.
+> The zero-missing counts above are the regression baseline: new code must not increase the missing counts. See [`I18N_ROADMAP.md`](I18N_ROADMAP.md) for details.
 
 ---
 
@@ -204,3 +206,42 @@ Focus on Chinese display in the following scenarios:
 - Play the game to spot-check actual Chinese display (opening, inventory, achievements, spell/power screens)
 - Watch for completion of remaining story dialogue in `to_translate_remaining_v2.xlsx`
 - Address pre-existing `npc` / `girl.char` Lint warnings (unrelated to translation, optional)
+
+---
+
+## 7. Round 2 — full completion (2026-09-11)
+
+### 7.1 Empty-translation backlog cleared
+
+- Ran `translate --empty` + export: **2,130 empty entries** (125 strings + 2,005 dialogue, mainly `events_dispatcher.rpy`, `intro.rpy`, `interactions.rpy`)
+- All entries translated and imported → `translate --count`: **0 missing dialogue / 0 missing strings**
+- Fixed 7 achievement descriptions that had been silently back-filled with English copies (`new == old`, invisible to `--count`), plus `Leech jp` → 吸血职业点 and the `Constitution Mastery` mistranslation (宪法精通 → 体质精通) in `strings.rpy`
+
+### 7.2 Extraction-blind spots fixed (perk tree / traits / items)
+
+`translate --count` was green while these UI texts still displayed English, because they never entered the translation system:
+
+| Root cause | Fix |
+|---|---|
+| `perks.json` perk names had no `name_i18n` | +53 `name_i18n`, +52 `base_description_i18n` |
+| `traits.json` descriptions mostly missing | +113 `base_description_i18n` |
+| `items.json` descriptions mostly missing | +95 `description_i18n` |
+| `Effect.get_description()` hardcoded English fragments | ~30 fragments wrapped with `__()`; composite strings now translated per-fragment |
+| Bare `perk.name` / `it.name` / tooltip / notify usages | Wrapped with `__()` in `screen_girl_stats.rpy`, `screen_progress.rpy`, `items.rpy`, `main.rpy`, `screen_common.rpy` |
+| `generate_new_item` lowercased before lookup | `__(self.base_name.lower())` → `__(self.base_name)` |
+| `Perk.from_dict` bare name | `get_i18n(d, "name")` |
+
+208 new strings (perk/trait/item names & descriptions + UI fragments) extracted via `tools/import_json_i18n.py` + `translate --empty`, translated, imported. `tools/audit_json_i18n.py`: 3,533/3,533 translated.
+
+### 7.3 Toolchain fixes
+
+- Fixed hardcoded project paths in `tools/export_empty_to_xlsx.py`, `tools/import_translated_empty.py`, `tools/import_json_i18n.py` (now derived from script location)
+- Fixed `IllegalCharacterError` crashes (control chars in strings) in `tools/export_empty_to_xlsx.py` and `tools/audit_placeholders.py`
+- **Key workflow fact**: `translate --empty` does NOT extract JSON `_i18n` strings (they are registered dynamically at init). After adding `_i18n` fields to JSON, always run `python tools/import_json_i18n.py` to sync them into `strings.rpy` before export/translate/import. See `I18N_ROADMAP.md` §4.
+
+### 7.4 Known remaining items (content, not code)
+
+- ~209 perk/trait/item descriptions were newly authored in English (source data had none); review in-game for tone
+- 29 weapon/staff items intentionally have no description (empty in source data)
+- `[plu]`-style English plural placeholders may render artifacts like 「3 天s」 — requires code-side handling if it bothers players
+- i18n_lint reports 18 issues, all developer-facing text (see `I18N_ROADMAP.md` §6)

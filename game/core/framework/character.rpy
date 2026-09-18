@@ -236,7 +236,7 @@ init -2 python:
                 self.opposite = make_list(opposite)
             self.archetype = archetype
 
-            self.base_description = base_description
+            self.base_description = __(base_description)
             self.public = public
 
         ## Phase 6: Data serialization
@@ -319,7 +319,7 @@ init -2 python:
             if base_description:
                 self.base_description = base_description
             else:
-                self.base_description = perk_description.get(self.name, "")
+                self.base_description = __(perk_description.get(self.name, ""))
 
         ## Phase 6: Data serialization
         @classmethod
@@ -331,7 +331,7 @@ init -2 python:
                 _builtin_dict = __import__('builtins').dict
             effects = [Effect.from_dict(e) if isinstance(e, _builtin_dict) else e for e in effects]
             return cls(
-                name=d.get("name"),
+                name=get_i18n(d, "name"),
                 type=d.get("type"),
                 effects=effects,
                 archetype=d.get("archetype"),
@@ -369,7 +369,7 @@ init -2 python:
             if short:
                 return get_description("", self.effects)
             else:
-                return get_description("\n{i}" + self.base_description + "\n\n{/i}", self.effects)
+                return get_description("\n{i}" + __(self.base_description) + "\n\n{/i}", self.effects)
 
     class PerkArchetype(object):
 
@@ -602,76 +602,76 @@ init -2 python:
             if self.type in ("special", "personality"):
 
                 if target == "naked":
-                    text1 = "Accepts nudity"
+                    text1 = __("Accepts nudity")
 
                 elif target == "level":
-                    text1 = "+1 level (max level: " + str(val) + ")"
+                    text1 = __("+1 level (max level: %s)") % str(val)
 
                 elif target == "advertising power":
-                    text1 = "Increases the power of your advertising girls (higher bonuses to brothel reputation, customer attraction and customer budget)."
+                    text1 = __("Increases the power of your advertising girls (higher bonuses to brothel reputation, customer attraction and customer budget).")
 
                 elif target == "heal minion":
-                    text1 = "Heals a wounded minion."
+                    text1 = __("Heals a wounded minion.")
 
                 elif target == "workwhore":
-                    text1 = "she may work a half-shift, then whore a half-shift."
+                    text1 = __("she may work a half-shift, then whore a half-shift.")
 
                 elif target == "lucky":
-                    text1 = "higher chance of critical success when working or whoring (does not stack)"
+                    text1 = __("higher chance of critical success when working or whoring (does not stack)")
 
                 elif target == "unlucky":
-                    text1 = "higher chance of critical failure when working or whoring"
+                    text1 = __("higher chance of critical failure when working or whoring")
 
                 elif target == "temptress":
-                    text1 = "may talk an unwilling customer into accepting a different sex act"
+                    text1 = __("may talk an unwilling customer into accepting a different sex act")
 
                 elif target == "pickpocket":
-                    text1 = "chance of stealing an extra 10% tip from a customer, lowers reputation if caught"
+                    text1 = __("chance of stealing an extra 10% tip from a customer, lowers reputation if caught")
 
                 elif target == "random item":
-                    text1 = "Customers have a small chance to 'forget' a random item in her care."
+                    text1 = __("Customers have a small chance to 'forget' a random item in her care.")
 
                 elif target == "BBCR bonus":
-                    text1 = "may get a customer satisfaction boost if her beauty, body, charm or refinement skill is high enough"
+                    text1 = __("may get a customer satisfaction boost if her beauty, body, charm or refinement skill is high enough")
 
                 elif target == "LOCS bonus":
-                    text1 = "may get a customer satisfaction boost if her libido, obedience, constitution or sensitivity skill is high enough"
+                    text1 = __("may get a customer satisfaction boost if her libido, obedience, constitution or sensitivity skill is high enough")
 
                 elif target == "whore mood modifier":
-                    text1 = "mood increase when whoring"
+                    text1 = __("mood increase when whoring")
 
                 elif target == "job prestige":
-                    text1 = "may earn prestige when working"
+                    text1 = __("may earn prestige when working")
 
                 elif target == "skill catch up":
-                    text1 += "every night, she will help other girls with lower skills receive a permanent skill increase (one girl per rank)"
+                    text1 += __("every night, she will help other girls with lower skills receive a permanent skill increase (one girl per rank)")
 
                 elif target == "effect chance":
-                    text1 += "doubles the base chance of perks activating (up to a maximum of 50%)"
+                    text1 += __("doubles the base chance of perks activating (up to a maximum of 50%)")
 
                 elif target == "defender":
                     if val == 1:
-                        text1 += "you can defend the brothel once, even when you are out of AP"
+                        text1 += __("you can defend the brothel once, even when you are out of AP")
                     elif val == 2:
-                        text1 += "you can defend the brothel an unlimited amount of times even when you are out of AP"
+                        text1 += __("you can defend the brothel an unlimited amount of times even when you are out of AP")
 
                 elif target == "snake eyes":
-                    text1 += "hypnosis never fails"
+                    text1 += __("hypnosis never fails")
 
                 elif target == "safe":
-                    text1 += "excludes up to " + '{:,}'.format(round_int(val)).replace(',', ' ') + " gold from the brothel threat level"
+                    text1 += __("excludes up to %s gold from the brothel threat level") % '{:,}'.format(round_int(val)).replace(',', ' ')
 
                 elif target == "focus":
-                    text1 += "+25% to tip and reputation gains if she has only one activated sex act (not including bisexual and group)"
+                    text1 += __("+25% to tip and reputation gains if she has only one activated sex act (not including bisexual and group)")
 
                 elif target == "rest shield":
-                    text1 += "when resting, may cast a magic shield on herself or a friend to protect from attacks"
+                    text1 += __("when resting, may cast a magic shield on herself or a friend to protect from attacks")
 
                 elif target == "ignore budgets":
-                    text1 += "ignores customer budget limitations"
+                    text1 += __("ignores customer budget limitations")
 
                 elif target == "ignore energy":
-                    text1 += "Chance of ignoring energy loss during each interaction"
+                    text1 += __("Chance of ignoring energy loss during each interaction")
 
                 elif target == "immune":
                     if self.chance < 1:
@@ -680,24 +680,24 @@ init -2 python:
                         text1 += __("Cannot be hurt")
 
                 elif target == "hypnosis spillover":
-                    text1 += "Successful hypnosis attempts have a chance to affect more girls in the brothel"
+                    text1 += __("Successful hypnosis attempts have a chance to affect more girls in the brothel")
 
                 elif target == "bisexual":
-                    text1 += "She is available for bisexual acts."
+                    text1 += __("She is available for bisexual acts.")
 
                 elif target == "group":
-                    text1 += "She is available for group sex acts."
+                    text1 += __("She is available for group sex acts.")
 
                 elif target == "orgy":
-                    text1 += "She is available for bisexual group sex acts."
+                    text1 += __("She is available for bisexual group sex acts.")
 
                 elif target == "ponygirl":
-                    text1 += "Adds 2 points of advertising per Rank."
+                    text1 += __("Adds 2 points of advertising per Rank.")
 
                 return __(text1)
 
             elif self.type == "instant" and target == "heal":
-                return "accelerates a girl's healing by " + str(val) + " day(s)."
+                return __("accelerates a girl's healing by %s day(s).") % str(val)
 
             if self.type == "set":
                 text1 += __("set %s%s") % (target, __(" to %s") % str(val))
@@ -707,9 +707,9 @@ init -2 python:
 
             if self.type == "allow":
                 if target.endswith("preference"):
-                    text1 += "Allows you to increase customers' " + target + " by up to +" + str(50*val) + "%."
+                    text1 += __("Allows you to increase customers' %s by up to +%s%%.") % (target, str(50*val))
                 else:
-                    text1 += "Allows " + target + " to visit your brothel."
+                    text1 += __("Allows %s to visit your brothel.") % target
 
                 return text1
 
@@ -845,280 +845,6 @@ init -2 python:
                 self.dir = self.name
             self.sellable = sellable
             self.giveable = giveable
-
-
-    # class Item(object):
-    #
-    #     """This class is for inanimate objects that the MC or girls can own."""
-    #
-    #     def __init__(self, name, target, type, pic = None, template = False, rank = 1, max_rank = 5, rarity = 1, charges = None, price = 10000, effects = None, description = "", adjectives = None, sound = None, hidden_effect = False, pic_dir = None, sellable="type", giveable="type", usage="type"):
-    #
-    #         self.base_name = name
-    #         self.name = name
-    #         self.target = target
-    #         self.type = type
-    #         if pic_dir:
-    #             self.pic_dir = pic_dir
-    #         else:
-    #             self.pic_dir = self.type.dir
-    #
-    #         if pic:
-    #             self.pic = Picture(pic, "resources/items/" + self.pic_dir + "/" + pic)
-    #         else:
-    #             self.pic = Picture("misc.webp", "resources/items/misc/misc.webp")
-    #
-    #         self.template = template
-    #         self.min_rank = rank
-    #         self.rank = rank
-    #         self.max_rank = max_rank
-    #         self.rarity = rarity
-    #         self.charges = charges
-    #         self.base_price = price
-    #         self.price = price
-    #         if effects == None: effects = []
-    #         self.base_effects = effects
-    #         self.effects = effects
-    #         self.equipped = False
-    #         self.hidden_effect = hidden_effect
-    #
-    #         ## Inherits properties from item type
-    #
-    #         if usage == "type":
-    #             self.usage = self.type.usage
-    #         else:
-    #             self.usage = usage
-    #
-    #         if self.usage in ("use", "auto") and not self.charges:
-    #             self.charges = 1
-    #
-    #         self.slot = self.type.slot
-    #         self.filter = self.type.filter
-    #
-    #         if sellable == "type":
-    #             self.sellable = self.type.sellable
-    #         else:
-    #             self.sellable = sellable
-    #         if giveable == "type":
-    #             self.giveable = self.type.giveable
-    #         else:
-    #             self.giveable = giveable
-    #
-    #         ## An individual item can override type adjectives and sound if necessary
-    #
-    #         if adjectives:
-    #             self.adjectives = adjectives
-    #
-    #         else:
-    #             self.adjectives = self.type.adjectives
-    #
-    #         if sound:
-    #             self.sound = sound
-    #         else:
-    #             self.sound = self.type.sound
-    #
-    #         self.base_description = description
-    #         self.update_description()
-    #
-    #     def update_description(self): # self.description stores the effect description only (to split the tooltips)
-    #
-    #         if self.hidden_effect:
-    #             self.description = ""
-    #
-    #         else:
-    #             self.description = get_description("", self.effects, final_dot=False)
-    #
-    #             if self.usage in ("use", "auto"):
-    #                 if self.charges > 1:
-    #                     self.description += " (" + str(self.charges) + " uses left)"
-    #
-    #         if self.usage == "gift":
-    #             if self.description:
-    #                 self.description += ", Gift"
-    #             else:
-    #                 self.description += "Gift"
-    #
-    #     def get_pic(self, x = int(config.screen_height*0.0694), y = int(config.screen_height*0.0694)):
-    #         return self.pic.get(x = x, y = y)
-    #
-    #     def get_key(self):
-    #         return (self.type.name, self.rank, self.base_name, self.price)
-    #
-    #     def has_effect(self, type="any", target="any"):
-    #         for eff in self.effects:
-    #             if (type in (eff.type, "any")) and (target in (eff.target, "any")):
-    #                 return True
-    #         return False
-    #
-    #     def get_effect(self, type, target):
-    #         return get_effect(self, type, target, iterate=True)
-    #
-    #     def can_wear(self, type):
-    #
-    #         if self.usage != "wear":
-    #
-    #             return False
-    #
-    #         elif self.target == type:
-    #             return True
-    #
-    #         else:
-    #             return False
-    #
-    #
-    #     def can_use(self, type):
-    #
-    #         if self.usage not in ("use", "auto"):
-    #
-    #             return False
-    #
-    #         elif self.target == type:
-    #             return True
-    #
-    #         else:
-    #             return False
-    #
-    #
-    #     def use_me(self, nb = 1):
-    #
-    #
-    #         if self.charges >= nb:
-    #
-    #             self.charges -= nb
-    #
-    #             if self.charges <= 0:
-    #                 return "used_up"
-    #
-    #             else:
-    #                 return self.charges
-    #
-    #         else:
-    #
-    #             renpy.say("", "Not enough charges (" + str(self.charges) + ")")
-    #
-    #             return "no charges"
-    #
-    #         self.update_description()
-    #
-    #     def get_acts(self, owner, counterpart):
-    #         possible_acts = []
-    #
-    #         if owner.type == "NPC":
-    #             if owner in (NPC_renza, NPC_captain):
-    #                 possible_acts.append("bargain")
-    #             else:
-    #                 possible_acts.append("buy")
-    #                 if counterpart:
-    #                     if self.can_wear(counterpart.type):
-    #                         possible_acts.append("buy and equip")
-    #
-    #         if counterpart and counterpart.type == "NPC":
-    #             if self.sellable:
-    #                 possible_acts.append("sell")
-    #
-    #         if owner.type in ("MC", "girl"):
-    #             if self.can_use(owner.type):
-    #                 possible_acts.append("use")
-    #             if self.can_wear(owner.type):
-    #                 if not self.equipped:
-    #                     possible_acts.append("equip")
-    #                 else:
-    #                     possible_acts.append("unequip")
-    #             if counterpart and counterpart.type == "girl":
-    #                 if self.usage == "gift":
-    #                     possible_acts.append("gift")
-    #                 else:
-    #                     possible_acts.append("give")
-    #                     if self.can_wear("girl"):
-    #                         possible_acts.append("give and equip")
-    #                     if self.can_use("girl"):
-    #                         possible_acts.append("use on her")
-    #
-    #         if owner.type == "girl":
-    #             if counterpart and counterpart.type == "MC":
-    #                 possible_acts.append("take")
-    #
-    #
-    #
-    #         return possible_acts
-    #
-    #
-    #     def get_price(self, operation):
-    #
-    #         modifier = MC.get_modifier(operation)
-    #
-    #         baseprice = self.price
-    #
-    #         finalprice = round_int(baseprice * modifier)
-    #
-    #         return finalprice
-    #
-    #
-    #     def available_at_rank(self, rank): # Useless?
-    #
-    #         if rank >= self.min_rank and rank <= self.max_rank:
-    #             return True
-    #         else:
-    #             return False
-    #
-    #
-    #     def transform(self, target_rank): # Transforms an item in a better or worse version of itself
-    #
-    #         if self.template == True:
-    #             self.name = __("{0} {1}").format(__(quality_prefix[self.adjectives + "_" + str(target_rank)]), __(self.base_name.lower()))
-    #
-    #             self.price = round_int(quality_modifier[target_rank] * self.base_price)
-    #
-    #             self.effects = []
-    #
-    #             for eff in self.base_effects:
-    #                 if target_rank > 0:
-    #                     value = target_rank * eff.value
-    #                 else:
-    #                     value = eff.value / 2
-    #
-    #                 self.effects.append(Effect(eff.type, eff.target, value))
-    #
-    #             self.update_description()
-    #
-    #             return self
-    #
-    #         else:
-    #             return None
-    #
-    #     def generate_new_item(self, target_rank): # Creates new Item from this template item
-    #
-    #         if self.template == True:
-    #
-    #             new_it = copy.deepcopy(self)
-    #
-    #             new_it.name = __("{0} {1}").format(__(quality_prefix[self.adjectives + "_" + str(target_rank)]), __(self.base_name.lower()))
-    #             new_it.price = round_int(quality_modifier[target_rank] * self.base_price)
-    #
-    #             if self.rarity in ("S", "U", "M"):
-    #                 new_it.rarity = self.rarity
-    #             else:
-    #                 new_it.rarity = self.rarity + target_rank - self.min_rank
-    #
-    #             new_it.effects = []
-    #
-    #             for eff in self.effects:
-    #                 eff = copy.deepcopy(eff)
-    #
-    #                 if target_rank > 0:
-    #                     eff.value = target_rank * eff.value
-    #                 else:
-    #                     eff.value = eff.value / 2
-    #
-    #                 new_it.effects.append(eff)
-    #
-    #             new_it.min_rank = max(target_rank - 2, 0)
-    #             new_it.rank = min(target_rank, 6)
-    #
-    #             new_it.update_description()
-    #
-    #
-    #             return new_it
-
 
 
     class Personality(object): # Personality archetype used to semi-randomize girl personality attributes and specific dialogue

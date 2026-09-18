@@ -31,3 +31,9 @@ translate chinese_simplified strings:
     old "This is a sample mod demonstrating the Phase 6 API."
     new "这是一个演示 Phase 6 API 的示例模组。"
 
+# TODO: Translation updated at 2026-09-11 06:39
+
+translate chinese_simplified strings:
+    old "This is a sample mod demonstrating the v2 API."
+    new "这是一个演示 v2 API 的示例模组。"
+

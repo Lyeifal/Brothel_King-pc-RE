@@ -137,19 +137,19 @@ translate chinese_simplified slave_first_meet_0c98ab5a:
 translate chinese_simplified slave_first_meet_27e50de3:
 
     # you "You have nothing to fear from me. I promise you will be treated kindly."
-    you ""
+    you "你不用怕我。我保证会善待你。"
 
 # game/core/content/interactions.rpy:37
 translate chinese_simplified slave_first_meet_511ce690:
 
     # you "I am your new owner. I expect you to do my bidding, but I will treat you fairly."
-    you ""
+    you "我是你的新主人。你要听从我的命令，不过我会公平待你。"
 
 # game/core/content/interactions.rpy:47
 translate chinese_simplified slave_first_meet_f8240970:
 
     # you "I'm your owner, don't you forget that. I can do anything I want with you."
-    you ""
+    you "我是你的主人，别给我忘了。我可以对你为所欲为。"
 
 # game/core/content/interactions.rpy:58
 translate chinese_simplified slave_first_meet_71ebebd2:
@@ -161,13 +161,13 @@ translate chinese_simplified slave_first_meet_71ebebd2:
 translate chinese_simplified slave_first_meet_afc035e4:
 
     # you "You do not address your betters without being spoken to, and you will refer to me as 'Master', or I will have your tongue!"
-    you ""
+    you "主子没问话，轮不到你开口；你要称我为'主人'，否则我就割了你的舌头！"
 
 # game/core/content/interactions.rpy:62
 translate chinese_simplified slave_first_meet_d3cc8296:
 
     # you "Learn your place, or I will discipline you personally."
-    you ""
+    you "搞清楚自己的身份，否则我会亲自教训你。"
 
 # game/core/content/interactions.rpy:101
 translate chinese_simplified fight_attempt_4ad79042:
@@ -179,7 +179,7 @@ translate chinese_simplified fight_attempt_4ad79042:
 translate chinese_simplified fight_attempt_c6b9d571:
 
     # you "Ouch!"
-    you ""
+    you "哎哟！"
 
 # game/core/content/interactions.rpy:115
 translate chinese_simplified fight_attempt_2f8a4273:
@@ -191,7 +191,7 @@ translate chinese_simplified fight_attempt_2f8a4273:
 translate chinese_simplified fight_attempt_3149cc65:
 
     # you "How dare you resist me!"
-    you ""
+    you "你竟敢反抗我！"
 
 # game/core/content/interactions.rpy:131
 translate chinese_simplified fight_attempt_5e68fac8:
@@ -215,19 +215,19 @@ translate chinese_simplified slave_fear_test_307644d3:
 translate chinese_simplified slave_fear_test_3e476c8f:
 
     # you "I see it's useless trying to talk to you. So, here's a language you will understand!"
-    you ""
+    you "看来跟你讲道理是没用的。那就让你领教一下你听得懂的语言！"
 
 # game/core/content/interactions.rpy:191
 translate chinese_simplified slave_naked_menu_e6324b9f:
 
     # you "Mmh, maybe we should take this further..."
-    you ""
+    you "嗯，也许我们该更进一步……"
 
 # game/core/content/interactions.rpy:196
 translate chinese_simplified slave_naked_menu_11804a71:
 
     # you "This is better, it's your natural state. From now on, you will remain naked at all times."
-    you ""
+    you "这样才对，这才是你本来的样子。从今以后，你要一直保持裸体。"
 
 # game/core/content/interactions.rpy:198
 translate chinese_simplified slave_naked_menu_b9b8cd39:
@@ -239,7 +239,7 @@ translate chinese_simplified slave_naked_menu_b9b8cd39:
 translate chinese_simplified slave_naked_menu_078935c2:
 
     # you "Yes, of course. Let the whole world see who you really are."
-    you ""
+    you "没错，当然。让全世界都看看你真正的样子。"
 
 # game/core/content/interactions.rpy:204
 translate chinese_simplified slave_naked_menu_ee284995:
@@ -251,7 +251,7 @@ translate chinese_simplified slave_naked_menu_ee284995:
 translate chinese_simplified slave_naked_menu_0e5140be:
 
     # you "You seem to be just fine showing me your body... So why don't we make it interesting: you will spend the rest of the day naked!"
-    you ""
+    you "你好像挺乐意把身体给我看嘛……那不如玩点刺激的：今天剩下的时间你都给我光着！"
 
 # game/core/content/interactions.rpy:217
 translate chinese_simplified slave_naked_menu_92e652c5:
@@ -263,7 +263,7 @@ translate chinese_simplified slave_naked_menu_92e652c5:
 translate chinese_simplified slave_naked_menu_00a3cc5c:
 
     # you "Good."
-    you ""
+    you "很好。"
 
 # game/core/content/interactions.rpy:231
 translate chinese_simplified slave_naked_menu_fbf00f5d:
@@ -287,7 +287,7 @@ translate chinese_simplified slave_beg_9bb09cb7:
 translate chinese_simplified slave_beg_a03b0f83:
 
     # you "Giving me orders, are you? I don't think you understand your situation, slave. Now, get ready."
-    you ""
+    you "你在命令我吗？我看你还没认清自己的处境，奴隶。好了，准备吧。"
 
 # game/core/content/interactions.rpy:287
 translate chinese_simplified slave_beg_e46101d0:
@@ -299,7 +299,7 @@ translate chinese_simplified slave_beg_e46101d0:
 translate chinese_simplified slave_beg_84a9d791:
 
     # you "Hmm, maybe this can be your lesson for today... But don't test my patience, or I {i}will{/i} go back to you."
-    you ""
+    you "嗯，这就算今天给你的教训吧……但别挑战我的耐心，否则我{i}还会{/i}回来收拾你的。"
 
 # game/core/content/interactions.rpy:296
 translate chinese_simplified slave_beg_46582dbe:
@@ -311,7 +311,7 @@ translate chinese_simplified slave_beg_46582dbe:
 translate chinese_simplified slave_beg_7b33a8a4:
 
     # you "Come on, don't be scared. I'm not going to make you do something against your will."
-    you ""
+    you "来吧，别怕。我不会逼你做你不愿意的事。"
 
 # game/core/content/interactions.rpy:323
 translate chinese_simplified slave_interact_f4fb5b2b:
@@ -335,55 +335,55 @@ translate chinese_simplified slave_chat_init_821bd6e2:
 translate chinese_simplified slave_chat_slave_life_b0ecb5e5:
 
     # you "I see."
-    you ""
+    you "我明白了。"
 
 # game/core/content/interactions.rpy:492
 translate chinese_simplified slave_chat_slave_life_a77d3aa3:
 
     # you "Keep your spirits up. Life as a slave isn't as bad as people think."
-    you ""
+    you "振作点。做奴隶的日子并没有人们想象的那么糟。"
 
 # game/core/content/interactions.rpy:496
 translate chinese_simplified slave_chat_slave_life_0fe44a64:
 
     # you "I'm sick of your complaining. You're just a slave! Deal with it."
-    you ""
+    you "我听腻了你的抱怨。你就是个奴隶！认命吧。"
 
 # game/core/content/interactions.rpy:538
 translate chinese_simplified slave_chat_brothel_b0ecb5e5:
 
     # you "I see."
-    you ""
+    you "我明白了。"
 
 # game/core/content/interactions.rpy:541
 translate chinese_simplified slave_chat_brothel_0152e15c:
 
     # you "Look, I want you to know your efforts here are appreciated."
-    you ""
+    you "听着，我想让你知道，你在这里的付出是有人看在眼里的。"
 
 # game/core/content/interactions.rpy:546
 translate chinese_simplified slave_chat_brothel_3b6cd73f:
 
     # you "You're a whore, this is a whorehouse. It's your home, now. You better love it, because you're not leaving!"
-    you ""
+    you "你是个妓女，这里是妓院，现在它就是你的家。你最好爱上这里，因为你哪儿也别想去！"
 
 # game/core/content/interactions.rpy:584
 translate chinese_simplified slave_chat_customers_b0ecb5e5:
 
     # you "I see."
-    you ""
+    you "我明白了。"
 
 # game/core/content/interactions.rpy:587
 translate chinese_simplified slave_chat_customers_38a5e6b9:
 
     # you "I'm glad you're getting along with the customers. I'm sure they value your presence."
-    you ""
+    you "很高兴你和客人们相处融洽。我相信他们都很欣赏你。"
 
 # game/core/content/interactions.rpy:591
 translate chinese_simplified slave_chat_customers_9027a814:
 
     # you "The customers are always right, you moron! Keep your stupid comments to yourself!"
-    you ""
+    you "客人永远是对的，你这蠢货！把你那些屁话给我咽回去！"
 
 # game/core/content/interactions.rpy:640
 translate chinese_simplified slave_chat_other_girls_20cc9eac:
@@ -413,49 +413,49 @@ translate chinese_simplified slave_chat_other_girls_4d4ddf03:
 translate chinese_simplified slave_chat_other_girls_b0ecb5e5:
 
     # you "I see."
-    you ""
+    you "我明白了。"
 
 # game/core/content/interactions.rpy:669
 translate chinese_simplified slave_chat_other_girls_46ce6db7:
 
     # you "Keep being nice to the other girls, and you will make more friends in no time."
-    you ""
+    you "继续善待其他姑娘，你很快就能交到更多朋友。"
 
 # game/core/content/interactions.rpy:673
 translate chinese_simplified slave_chat_other_girls_8622338d:
 
     # you "Stop complaining already! Get along with the other girls, or I'll make you!"
-    you ""
+    you "别抱怨了！给我和其他姑娘好好相处，不然我来教你怎么相处！"
 
 # game/core/content/interactions.rpy:677
 translate chinese_simplified slave_chat_other_girls_32afbd42:
 
     # you "I think [inter.other_girl.name] is a great girl. I'm happy you two are getting along."
-    you ""
+    you "我觉得[inter.other_girl.name]是个好姑娘。你们俩合得来，我很高兴。"
 
 # game/core/content/interactions.rpy:682
 translate chinese_simplified slave_chat_other_girls_95bc21dc:
 
     # you "[inter.other_girl.name] is a stupid bitch, I'll give you that."
-    you ""
+    you "算你有眼光，[inter.other_girl.name]就是个蠢婊子。"
 
 # game/core/content/interactions.rpy:687
 translate chinese_simplified slave_chat_other_girls_773039ec:
 
     # you "I don't like you wasting time fooling around with [inter.other_girl.name]. Stop seeing her."
-    you ""
+    you "我不喜欢你把时间浪费在和[inter.other_girl.name]鬼混上。别再去找她了。"
 
 # game/core/content/interactions.rpy:689
 translate chinese_simplified slave_chat_other_girls_563423bd:
 
     # you "End of discussion. Now go back to work."
-    you ""
+    you "没什么好说的了。回去干活。"
 
 # game/core/content/interactions.rpy:693
 translate chinese_simplified slave_chat_other_girls_973b006d:
 
     # you "Stop your bickering with [inter.other_girl.name]. I want you to be friends."
-    you ""
+    you "别再和[inter.other_girl.name]吵了。我要你们俩好好做朋友。"
 
 # game/core/content/interactions.rpy:730
 translate chinese_simplified slave_chat_well_being_10fbcf2f:
@@ -467,37 +467,37 @@ translate chinese_simplified slave_chat_well_being_10fbcf2f:
 translate chinese_simplified slave_chat_well_being_b0ecb5e5:
 
     # you "I see."
-    you ""
+    you "我明白了。"
 
 # game/core/content/interactions.rpy:779
 translate chinese_simplified slave_chat_well_being_c8c06b0b:
 
     # you "I'm happy that things are to your liking here. Keep up the good work."
-    you ""
+    you "很高兴你在这里过得顺心。继续保持。"
 
 # game/core/content/interactions.rpy:785
 translate chinese_simplified slave_chat_well_being_4c79f897:
 
     # you "I'm sorry the conditions here have been less than ideal. Please hang in there."
-    you ""
+    you "很抱歉这里的条件不尽如人意。请再撑一撑。"
 
 # game/core/content/interactions.rpy:792
 translate chinese_simplified slave_chat_well_being_8563eaa3:
 
     # you "Don't get too comfortable. Remember, what your master gives, he can take away."
-    you ""
+    you "别过得太安逸了。记住，主人能给你的，也能收回去。"
 
 # game/core/content/interactions.rpy:799
 translate chinese_simplified slave_chat_well_being_1de7c70a:
 
     # you "Do you think you can tell me what I should or shouldn't do? Do You?"
-    you ""
+    you "你觉得你有资格教我该做什么、不该做什么吗？嗯？"
 
 # game/core/content/interactions.rpy:801
 translate chinese_simplified slave_chat_well_being_cd87df78:
 
     # you "Shut up, and get ready to work."
-    you ""
+    you "闭嘴，准备去干活。"
 
 # game/core/content/interactions.rpy:818
 translate chinese_simplified slave_chat_feelings_6b4a2459:
@@ -509,25 +509,25 @@ translate chinese_simplified slave_chat_feelings_6b4a2459:
 translate chinese_simplified slave_chat_feelings_b0ecb5e5:
 
     # you "I see."
-    you ""
+    you "我明白了。"
 
 # game/core/content/interactions.rpy:873
 translate chinese_simplified slave_chat_feelings_290d7571:
 
     # you "Thank you, I appreciate your honesty."
-    you ""
+    you "谢谢你，我很欣赏你的坦诚。"
 
 # game/core/content/interactions.rpy:877
 translate chinese_simplified slave_chat_feelings_84d4dd26:
 
     # you "What the... Who asked for your opinion, you stupid bitch?"
-    you ""
+    you "搞什么……谁问你的意见了，你个蠢婊子？"
 
 # game/core/content/interactions.rpy:879
 translate chinese_simplified slave_chat_feelings_f1ded324:
 
     # you "Shut the fuck up!"
-    you ""
+    you "他妈的给我闭嘴！"
 
 # game/core/content/interactions.rpy:898
 translate chinese_simplified slave_chat_tastes_2d9c6347:
@@ -617,7 +617,7 @@ translate chinese_simplified slave_chat_tastes_2c0cf15f:
 translate chinese_simplified slave_chat_tastes_743d9504:
 
     # you "Fine, we'll discuss this later."
-    you ""
+    you "好吧，这事以后再说。"
 
 # game/core/content/interactions.rpy:1060
 translate chinese_simplified slave_chat_tastes_5998fc4a:
@@ -629,7 +629,7 @@ translate chinese_simplified slave_chat_tastes_5998fc4a:
 translate chinese_simplified slave_chat_tastes_f27b665a:
 
     # you "I've asked you a fucking question! Don't you dare ignore me, slave!"
-    you ""
+    you "我他妈在问你话！你这奴隶竟敢不理我！"
 
 # game/core/content/interactions.rpy:1083
 translate chinese_simplified slave_chat_origins_0d8fa5c8:
@@ -683,7 +683,7 @@ translate chinese_simplified slave_chat_origins_1b02f428:
 translate chinese_simplified slave_chat_origins_743d9504:
 
     # you "Fine, we'll discuss this later."
-    you ""
+    you "好吧，这事以后再说。"
 
 # game/core/content/interactions.rpy:1132
 translate chinese_simplified slave_chat_origins_5998fc4a:
@@ -695,7 +695,7 @@ translate chinese_simplified slave_chat_origins_5998fc4a:
 translate chinese_simplified slave_chat_origins_f27b665a:
 
     # you "I've asked you a fucking question! Don't you dare ignore me, slave!"
-    you ""
+    you "我他妈在问你话！你这奴隶竟敢不理我！"
 
 # game/core/content/interactions.rpy:1207
 translate chinese_simplified slave_train_free_form_0ae9bcd0:
@@ -707,31 +707,31 @@ translate chinese_simplified slave_train_free_form_0ae9bcd0:
 translate chinese_simplified slave_train_sex_acts_f7a1c704:
 
     # you "Remove your clothes. I want you to expose your body to me."
-    you ""
+    you "把衣服脱了。把你的身体露给我看。"
 
 # game/core/content/interactions.rpy:1232
 translate chinese_simplified slave_train_sex_acts_fc875c62:
 
     # you "I want you to service me with your mouth and hands."
-    you ""
+    you "我要你用嘴和手服侍我。"
 
 # game/core/content/interactions.rpy:1234
 translate chinese_simplified slave_train_sex_acts_47132472:
 
     # you "Lay down. I am going to fuck you."
-    you ""
+    you "躺下。我要操你。"
 
 # game/core/content/interactions.rpy:1236
 translate chinese_simplified slave_train_sex_acts_76e7b752:
 
     # you "Turn around and bend over. I am going to fuck your ass."
-    you ""
+    you "转过身去，弯下腰。我要操你的屁眼。"
 
 # game/core/content/interactions.rpy:1238
 translate chinese_simplified slave_train_sex_acts_4f7088ff:
 
     # you "Today, I'll introduce you to some of my new toys..."
-    you ""
+    you "今天，我要让你见识一下我的新玩具……"
 
 # game/core/content/interactions.rpy:1240
 translate chinese_simplified slave_train_sex_acts_f697fa38:
@@ -749,7 +749,7 @@ translate chinese_simplified slave_train_sex_acts_1ea015b7:
 translate chinese_simplified slave_train_sex_acts_661101f1:
 
     # you "Get naked. You and [girl.name] will pleasure each other."
-    you ""
+    you "脱光。你和[girl.name]要互相取悦对方。"
 
 # game/core/content/interactions.rpy:1245
 translate chinese_simplified slave_train_sex_acts_538868c1:
@@ -773,7 +773,7 @@ translate chinese_simplified slave_train_sex_acts_d2c91b4c:
 translate chinese_simplified slave_train_sex_acts_7c69242a:
 
     # you "The lucky sod and I are going to fuck this girl silly. [girl.name], get yourself ready!"
-    you ""
+    you "这走运的小子和我要把这姑娘操个半死。[girl.name]，做好准备！"
 
 # game/core/content/interactions.rpy:1262
 translate chinese_simplified slave_train_sex_acts_3faa2ddc:
@@ -845,19 +845,19 @@ translate chinese_simplified slave_remove_fixation_11fdb519:
 translate chinese_simplified slave_remove_fixation_c1dc810d:
 
     # you "You're going to do as you're told."
-    you ""
+    you "你必须照我说的做。"
 
 # game/core/content/interactions.rpy:1408
 translate chinese_simplified slave_remove_fixation_798ef7c1:
 
     # you "I don't care if you like [fix.short_name] or not, slave. When you work for me, you have to do anything I tell you."
-    you ""
+    you "我不管你喜不喜欢[fix.short_name]，奴隶。既然为我做事，我让你做什么你就得做什么。"
 
 # game/core/content/interactions.rpy:1413
 translate chinese_simplified slave_remove_fixation_3d88aec3:
 
     # you "This is not your call, slave! Get ready! *angry*"
-    you ""
+    you "这事轮不到你做主，奴隶！做好准备！*angry*"
 
 # game/core/content/interactions.rpy:1456
 translate chinese_simplified slave_remove_fixation_71a7172f:
@@ -899,7 +899,7 @@ translate chinese_simplified slave_remove_fixation_87870cd5:
 translate chinese_simplified slave_train_lecture_96a226f4:
 
     # you "Today, I wanna talk to you about [act_desc]."
-    you ""
+    you "今天，我想和你谈谈[act_desc]。"
 
 # game/core/content/interactions.rpy:1531
 translate chinese_simplified slave_train_lecture_c9082620:
@@ -977,13 +977,13 @@ translate chinese_simplified slave_train_obedience_f1397a6f:
 translate chinese_simplified slave_train_obedience_80a8e70b:
 
     # you "I'm happy that you are giving it your best."
-    you ""
+    you "我很高兴你尽了全力。"
 
 # game/core/content/interactions.rpy:1631
 translate chinese_simplified slave_train_obedience_5f4a6c8f:
 
     # you "You call that working? Do it all over again, and do it right this time!"
-    you ""
+    you "这也叫干活？全部重做，这次给我做对！"
 
 # game/core/content/interactions.rpy:1636
 translate chinese_simplified slave_train_obedience_764b847f:
@@ -995,7 +995,7 @@ translate chinese_simplified slave_train_obedience_764b847f:
 translate chinese_simplified slave_train_obedience_af9de7d2:
 
     # you "Mmmh. I'll give her a break this time."
-    you ""
+    you "嗯……这次就饶了她吧。"
 
 # game/core/content/interactions.rpy:1649
 translate chinese_simplified slave_train_constitution_424ba973:
@@ -1025,13 +1025,13 @@ translate chinese_simplified slave_train_constitution_5bca5e8f:
 translate chinese_simplified slave_train_constitution_80a8e70b:
 
     # you "I'm happy that you are giving it your best."
-    you ""
+    you "我很高兴你尽了全力。"
 
 # game/core/content/interactions.rpy:1713
 translate chinese_simplified slave_train_constitution_9b679244:
 
     # you "You're a maggot, you're puke, you're the last thing on earth!!! Do that again!"
-    you ""
+    you "你是蛆虫，你是呕吐物，你是这世上最下贱的东西！！！再来一遍！"
 
 # game/core/content/interactions.rpy:1720
 translate chinese_simplified slave_train_constitution_764b847f:
@@ -1043,7 +1043,7 @@ translate chinese_simplified slave_train_constitution_764b847f:
 translate chinese_simplified slave_train_constitution_af9de7d2:
 
     # you "Mmmh. I'll give her a break this time."
-    you ""
+    you "嗯……这次就饶了她吧。"
 
 # game/core/content/interactions.rpy:1764
 translate chinese_simplified slave_train_05a1f5a9:
@@ -1091,13 +1091,13 @@ translate chinese_simplified slave_train_d526b941:
 translate chinese_simplified slave_advanced_training_e589ac84:
 
     # "[text1]"
-    ""
+    "[text1]"
 
 # game/core/content/interactions.rpy:1905
 translate chinese_simplified slave_advanced_training_e589ac84_1:
 
     # "[text1]"
-    ""
+    "[text1]"
 
 # game/core/content/interactions.rpy:1918
 translate chinese_simplified slave_advanced_training_cfcd6460:
@@ -1115,7 +1115,7 @@ translate chinese_simplified slave_advanced_training_cdeeb7c3:
 translate chinese_simplified slave_advanced_training_e589ac84_2:
 
     # "[text1]"
-    ""
+    "[text1]"
 
 # game/core/content/interactions.rpy:1941
 translate chinese_simplified slave_advanced_training_47722ac0:
@@ -1151,7 +1151,7 @@ translate chinese_simplified slave_do_3a772807:
 translate chinese_simplified slave_do_7f1cfead:
 
     # you "This is pointless."
-    you ""
+    you "这毫无意义。"
 
 # game/core/content/interactions.rpy:1979
 translate chinese_simplified slave_do_05ee79e1:
@@ -1235,7 +1235,7 @@ translate chinese_simplified slave_do_8f81de5c:
 translate chinese_simplified slave_do_7f1cfead_1:
 
     # you "This is pointless."
-    you ""
+    you "这毫无意义。"
 
 # game/core/content/interactions.rpy:2039
 translate chinese_simplified slave_do_fc70367c:
@@ -1301,7 +1301,7 @@ translate chinese_simplified slave_do_f0255cff:
 translate chinese_simplified slave_do_bb2b10dc:
 
     # you "This is useless."
-    you ""
+    you "这没什么用。"
 
 # game/core/content/interactions.rpy:2081
 translate chinese_simplified slave_do_47e9cdcc:
@@ -1361,7 +1361,7 @@ translate chinese_simplified slave_do_3f07bf8c:
 translate chinese_simplified slave_do_3daf2855:
 
     # you "Such a waste of time..."
-    you ""
+    you "真是浪费时间……"
 
 # game/core/content/interactions.rpy:2121
 translate chinese_simplified slave_do_dfd268de:
@@ -1481,13 +1481,13 @@ translate chinese_simplified slave_do_e3be463b:
 translate chinese_simplified slave_do_8b900358:
 
     # extend "I'm a dirty, dirty slut..."
-    extend ""
+    extend "我是个肮脏、肮脏的荡妇……"
 
 # game/core/content/interactions.rpy:2187
 translate chinese_simplified slave_do_49333d8a:
 
     # extend "It's giving me so much pleasure... Ah!"
-    extend ""
+    extend "太舒服了……啊！"
 
 # game/core/content/interactions.rpy:2197
 translate chinese_simplified slave_do_2cef280f:
@@ -1679,7 +1679,7 @@ translate chinese_simplified slave_magic_782b6cc4:
 translate chinese_simplified slave_magic_3244c8a5:
 
     # you "Only the Master holds the key to your soul. You must obey the Master."
-    you ""
+    you "只有主人掌握着开启你灵魂的钥匙。你必须服从主人。"
 
 # game/core/content/interactions.rpy:2438
 translate chinese_simplified slave_magic_57332bfb:
@@ -1691,7 +1691,7 @@ translate chinese_simplified slave_magic_57332bfb:
 translate chinese_simplified slave_magic_5c073ccd:
 
     # you "Your craving for sin and debauchery is like a thorn that tears at your soul..."
-    you ""
+    you "你对罪恶与放荡的渴望，就像一根撕扯着你灵魂的荆棘……"
 
 # game/core/content/interactions.rpy:2442
 translate chinese_simplified slave_magic_fd90911f:
@@ -1703,7 +1703,7 @@ translate chinese_simplified slave_magic_fd90911f:
 translate chinese_simplified slave_magic_5d515b4b:
 
     # you "In the realm of angels, if anything is pleasurable to us, it is pleasurable to gods..."
-    you ""
+    you "在天使的国度里，凡能使我们愉悦的事物，也必能使诸神愉悦……"
 
 # game/core/content/interactions.rpy:2446
 translate chinese_simplified slave_magic_944a4458:
@@ -1715,7 +1715,7 @@ translate chinese_simplified slave_magic_944a4458:
 translate chinese_simplified slave_magic_6fdd9ea9:
 
     # you "Show me your true nature..."
-    you ""
+    you "让我看看你真实的本性……"
 
 # game/core/content/interactions.rpy:2450
 translate chinese_simplified slave_magic_d85f3a0c:
@@ -1727,7 +1727,7 @@ translate chinese_simplified slave_magic_d85f3a0c:
 translate chinese_simplified slave_magic_7d1e9983:
 
     # you "I am your lord and master. Service me now with your body."
-    you ""
+    you "我是你的领主与主人。现在用你的身体侍奉我。"
 
 # game/core/content/interactions.rpy:2454
 translate chinese_simplified slave_magic_6cae0f51:
@@ -1739,7 +1739,7 @@ translate chinese_simplified slave_magic_6cae0f51:
 translate chinese_simplified slave_magic_5c13e2cd:
 
     # you "I am your lord and master. Prepare to receive my gift."
-    you ""
+    you "我是你的领主与主人。准备好接受我的恩赐吧。"
 
 # game/core/content/interactions.rpy:2458
 translate chinese_simplified slave_magic_c30eb226:
@@ -1751,7 +1751,7 @@ translate chinese_simplified slave_magic_c30eb226:
 translate chinese_simplified slave_magic_894885cd:
 
     # you "I am your lord and master... You must be ready to serve with your every hole..."
-    you ""
+    you "我是你的领主与主人……你必须随时准备好用身上的每一个洞来侍奉……"
 
 # game/core/content/interactions.rpy:2462
 translate chinese_simplified slave_magic_c2c8e35a:
@@ -1763,7 +1763,7 @@ translate chinese_simplified slave_magic_c2c8e35a:
 translate chinese_simplified slave_magic_83ed41b9:
 
     # you "I am your lord and master, so I can do as I please... Beg me to continue."
-    you ""
+    you "我是你的领主与主人，可以为所欲为……求我继续。"
 
 # game/core/content/interactions.rpy:2466
 translate chinese_simplified slave_magic_8bff543d:
@@ -1775,7 +1775,7 @@ translate chinese_simplified slave_magic_8bff543d:
 translate chinese_simplified slave_magic_8d582310:
 
     # you "Become one with your lover..."
-    you ""
+    you "与你的爱人融为一体……"
 
 # game/core/content/interactions.rpy:2470
 translate chinese_simplified slave_magic_18c47f1a:
@@ -1793,7 +1793,7 @@ translate chinese_simplified slave_magic_cd907445:
 translate chinese_simplified slave_magic_5f1c6466:
 
     # you "Welcome the eager spirit of lust into your fold..."
-    you ""
+    you "敞开怀抱，迎接那急切的爱欲之灵……"
 
 # game/core/content/interactions.rpy:2475
 translate chinese_simplified slave_magic_71948c45:
@@ -1823,13 +1823,13 @@ translate chinese_simplified slave_magic_b7eb0d00:
 translate chinese_simplified slave_magic_358f9a9f:
 
     # extend "Completely entranced, [girl.name] doesn't seem to realize what you are doing, and blindly follows your orders."
-    extend ""
+    extend "[girl.name]完全陷入了恍惚，似乎没有意识到你在做什么，只是盲目地服从你的命令。"
 
 # game/core/content/interactions.rpy:2516
 translate chinese_simplified slave_magic_a3f21331:
 
     # extend "[girl.name] gives you a dazed look and blushes. She fails to follow your orders, but you can feel her resistance waning."
-    extend ""
+    extend "[girl.name]茫然地看着你，脸上泛起红晕。她没能服从你的命令，但你能感觉到她的抵抗正在减弱。"
 
 # game/core/content/interactions.rpy:2518
 translate chinese_simplified slave_magic_80cb4d41:
@@ -1841,61 +1841,61 @@ translate chinese_simplified slave_magic_80cb4d41:
 translate chinese_simplified slave_reward_praise_489c0633:
 
     # you "You are getting more and more beautiful every day. The customers love you."
-    you ""
+    you "你一天比一天漂亮了。客人们都很喜欢你。"
 
 # game/core/content/interactions.rpy:2549
 translate chinese_simplified slave_reward_praise_dde3aeba:
 
     # you "You look really nice and sexy today. You're stunning."
-    you ""
+    you "你今天真是又美又性感，让人惊艳。"
 
 # game/core/content/interactions.rpy:2551
 translate chinese_simplified slave_reward_praise_779eb326:
 
     # you "You are very charming. People are attracted to you."
-    you ""
+    you "你非常有魅力，大家都被你吸引。"
 
 # game/core/content/interactions.rpy:2553
 translate chinese_simplified slave_reward_praise_369f6a49:
 
     # you "You are classy and stylish. People envy you."
-    you ""
+    you "你优雅又有品位，人人都羡慕你。"
 
 # game/core/content/interactions.rpy:2588
 translate chinese_simplified slave_reward_gold_60b8af0d:
 
     # you "Here's a little something for your trouble."
-    you ""
+    you "这是你辛苦的报酬，一点小意思。"
 
 # game/core/content/interactions.rpy:2630
 translate chinese_simplified slave_reward_day_ccceab74:
 
     # you "You've been working hard. Why don't you take tonight off?"
-    you ""
+    you "你最近辛苦了。今晚就休息一下吧？"
 
 # game/core/content/interactions.rpy:2645
 translate chinese_simplified slave_reward_sex_977e64d7:
 
     # you "As your reward, I will let you service me."
-    you ""
+    you "作为奖励，我允许你侍奉我。"
 
 # game/core/content/interactions.rpy:2647
 translate chinese_simplified slave_reward_sex_a0724ae6:
 
     # you "As your reward, I will grant you the honor of a good fucking."
-    you ""
+    you "作为奖励，我将赐予你被好好操一场的荣耀。"
 
 # game/core/content/interactions.rpy:2649
 translate chinese_simplified slave_reward_sex_cbb8eaf6:
 
     # you "Come here and bend over, I will give you your 'prize'."
-    you ""
+    you "过来趴下，我会给你那份“奖赏”的。"
 
 # game/core/content/interactions.rpy:2651
 translate chinese_simplified slave_reward_sex_04ac1ae7:
 
     # you "You deserve a little play session... Hand me the tool bag."
-    you ""
+    you "你该来一场小小的游戏了……把工具包递给我。"
 
 # game/core/content/interactions.rpy:2686
 translate chinese_simplified slave_reward_sex_cbaff687:
@@ -1925,7 +1925,7 @@ translate chinese_simplified slave_reward_fec99e97:
 translate chinese_simplified slave_reward_d157ab7a:
 
     # you "I feel like rewarding you today... For no particular reason."
-    you ""
+    you "我今天想奖励你……没什么特别的理由。"
 
 # game/core/content/interactions.rpy:2856
 translate chinese_simplified slave_reward_805a0c6d:
@@ -1937,7 +1937,7 @@ translate chinese_simplified slave_reward_805a0c6d:
 translate chinese_simplified slave_punish_naked_3a762321:
 
     # you "Take all your clothes off. You will have to remain naked all day. Even when you're serving customers."
-    you ""
+    you "把衣服全部脱掉。今天你一整天都得赤身裸体，接待客人时也不例外。"
 
 # game/core/content/interactions.rpy:2925
 translate chinese_simplified slave_punish_beat_c98290fe:
@@ -1949,7 +1949,7 @@ translate chinese_simplified slave_punish_beat_c98290fe:
 translate chinese_simplified slave_punish_rape_1193c111:
 
     # you "You need a good lesson! I will make sure that you learn it this time."
-    you ""
+    you "你得好好受个教训！这次我一定要让你记住。"
 
 # game/core/content/interactions.rpy:2941
 translate chinese_simplified slave_punish_rape_4ee33438:
@@ -1961,7 +1961,7 @@ translate chinese_simplified slave_punish_rape_4ee33438:
 translate chinese_simplified slave_punish_rape_50d2f58d:
 
     # you "Now bitch, you will service me with your slave hands and mouth."
-    you ""
+    you "现在，贱人，用你的奴隶的手和嘴来侍奉我。"
 
 # game/core/content/interactions.rpy:2944
 translate chinese_simplified slave_punish_rape_271db28f:
@@ -1973,7 +1973,7 @@ translate chinese_simplified slave_punish_rape_271db28f:
 translate chinese_simplified slave_punish_rape_9b768928:
 
     # you "Since your head doesn't understand orders, I'm just going to use your pussy instead."
-    you ""
+    you "既然你这颗脑袋听不懂命令，那我就改用你的下面。"
 
 # game/core/content/interactions.rpy:2947
 translate chinese_simplified slave_punish_rape_27570f18:
@@ -1985,7 +1985,7 @@ translate chinese_simplified slave_punish_rape_27570f18:
 translate chinese_simplified slave_punish_rape_4aebb5dc:
 
     # you "Let's see how eager you are to disobey me after I rape your ass."
-    you ""
+    you "等我操完你的屁股，看看你还敢不敢不听话。"
 
 # game/core/content/interactions.rpy:2950
 translate chinese_simplified slave_punish_rape_e6908bf3:
@@ -1997,7 +1997,7 @@ translate chinese_simplified slave_punish_rape_e6908bf3:
 translate chinese_simplified slave_punish_rape_db41efa1:
 
     # you "I'm going to make you feel the true meaning of 'punishment'."
-    you ""
+    you "我会让你体会到“惩罚”一词的真正含义。"
 
 # game/core/content/interactions.rpy:2973
 translate chinese_simplified slave_punish_8186df2a:
@@ -2009,7 +2009,7 @@ translate chinese_simplified slave_punish_8186df2a:
 translate chinese_simplified slave_punish_c910e5f3:
 
     # you "I don't need a reason to discipline you, bitch!"
-    you ""
+    you "贱人，我教训你不需要理由！"
 
 # game/core/content/interactions.rpy:3038
 translate chinese_simplified slave_punish_698fb4d9:
@@ -2063,7 +2063,7 @@ translate chinese_simplified slave_rape_7a90c4d6:
 translate chinese_simplified slave_rape_5ae8f1a9:
 
     # you "Let's see how you like spending the rest of the day naked then."
-    you ""
+    you "那就看看你今天剩下的时间里光着身子是什么滋味。"
 
 # game/core/content/interactions.rpy:3262
 translate chinese_simplified slave_rape_a315b40c:
@@ -2207,7 +2207,7 @@ translate chinese_simplified slave_rape_195304f8:
 translate chinese_simplified slave_rape_e589ac84:
 
     # "[text1]"
-    ""
+    "[text1]"
 
 # game/core/content/interactions.rpy:3353
 translate chinese_simplified slave_rape_403590ba:
@@ -2255,7 +2255,7 @@ translate chinese_simplified slave_rape_26680ee5:
 translate chinese_simplified slave_master_bedroom_add_13d98316:
 
     # you "Go to my room. You shall sleep there from now on."
-    you ""
+    you "到我的房间去。从今以后你就睡在那里。"
 
 # game/core/content/interactions.rpy:3414
 translate chinese_simplified slave_master_bedroom_add_b7144507:
@@ -2267,7 +2267,7 @@ translate chinese_simplified slave_master_bedroom_add_b7144507:
 translate chinese_simplified slave_master_bedroom_remove_d58255d5:
 
     # you "Go back to your bedroom now. I am done with you."
-    you ""
+    you "现在滚回你的卧室去。我用不着你了。"
 
 # game/core/content/interactions.rpy:3441
 translate chinese_simplified slave_master_bedroom_remove_2f0ec43a:
@@ -2279,25 +2279,25 @@ translate chinese_simplified slave_master_bedroom_remove_2f0ec43a:
 translate chinese_simplified slave_clothing_naked_f23d992b:
 
     # you "From now on, I want you to be naked at all times."
-    you ""
+    you "从今以后，我要你随时保持赤裸。"
 
 # game/core/content/interactions.rpy:3464
 translate chinese_simplified slave_clothing_dressed_5986bed3:
 
     # you "Put your clothes on. You've exposed your body for long enough."
-    you ""
+    you "把衣服穿上。你的身体裸露得够久了。"
 
 # game/core/content/interactions.rpy:3476
 translate chinese_simplified slave_forbid_cust_events_51553d53:
 
     # you "Listen, I don't want you to fool around with customers unless I say so. Got it?"
-    you ""
+    you "听着，没有我的允许，不许你和客人乱来。明白吗？"
 
 # game/core/content/interactions.rpy:3486
 translate chinese_simplified slave_allow_cust_events_41500a43:
 
     # you "Alright, forget what I said earlier about the customers. Just do your best to please them, okay?"
-    you ""
+    you "好吧，我之前说的关于客人的话就当没提过。只要尽力服侍好他们就行，好吗？"
 
 # game/core/content/interactions.rpy:3512
 translate chinese_simplified slave_custom_option_0375ee28:
@@ -2315,7 +2315,7 @@ translate chinese_simplified slave_story1_ee86aea0:
 translate chinese_simplified slave_story1_e00bebee:
 
     # you "[girl.name]... What's wrong?"
-    you ""
+    you "[girl.name]……怎么了？"
 
 # game/core/content/interactions.rpy:3595
 translate chinese_simplified slave_story1_2732f726:
@@ -2327,7 +2327,7 @@ translate chinese_simplified slave_story1_2732f726:
 translate chinese_simplified slave_story1_1526f033:
 
     # you "Well... Sure."
-    you ""
+    you "嗯……当然可以。"
 
 # game/core/content/interactions.rpy:3599
 translate chinese_simplified slave_story1_468be923:
@@ -2417,7 +2417,7 @@ translate chinese_simplified slave_story1_440ade1c:
 translate chinese_simplified slave_story1_73184fe9:
 
     # you "Last time, you told me about this boyfriend of yours, the [girl.story_profession]... What happened?"
-    you ""
+    you "上次你跟我说过你的那个男朋友，那个[girl.story_profession]……后来怎么样了？"
 
 # game/core/content/interactions.rpy:3647
 translate chinese_simplified slave_story1_b969cea1:
@@ -2501,7 +2501,7 @@ translate chinese_simplified slave_story1_55e679af:
 translate chinese_simplified slave_story1_266b6b46:
 
     # you "Hi, [girl.name], are you okay?"
-    you ""
+    you "嗨，[girl.name]，你还好吗？"
 
 # game/core/content/interactions.rpy:3684
 translate chinese_simplified slave_story1_c1da3d17:
@@ -2603,7 +2603,7 @@ translate chinese_simplified slave_story1_07c4b439:
 translate chinese_simplified slave_story1_9404d408:
 
     # you "This is a terrible story... I'm very sorry. You must have been so hurt."
-    you ""
+    you "这真是个悲惨的故事……我很抱歉。你一定受了很深的伤害。"
 
 # game/core/content/interactions.rpy:3723
 translate chinese_simplified slave_story1_2ebb7e41:
@@ -2699,7 +2699,7 @@ translate chinese_simplified slave_story2_a625f97b:
 translate chinese_simplified slave_story2_d665dd91:
 
     # you "What are you doing?"
-    you ""
+    you "你在干什么？"
 
 # game/core/content/interactions.rpy:3794
 translate chinese_simplified slave_story2_802ae114:
@@ -2723,7 +2723,7 @@ translate chinese_simplified slave_story2_75238450:
 translate chinese_simplified slave_story2_0a8a0ca0:
 
     # you "Don't worry, dear, it's your hard-earned money. I'm not going to take it away from you."
-    you ""
+    you "别担心，亲爱的，那是你辛苦挣来的钱，我不会拿走的。"
 
 # game/core/content/interactions.rpy:3808
 translate chinese_simplified slave_story2_7c70dfbd:
@@ -2741,13 +2741,13 @@ translate chinese_simplified slave_story2_04b281fb:
 translate chinese_simplified slave_story2_f5f1091c:
 
     # you "What the hell do you think you're doing, stealing from me?"
-    you ""
+    you "你偷我的东西，当自己是在干什么？"
 
 # game/core/content/interactions.rpy:3818
 translate chinese_simplified slave_story2_bcd8046f:
 
     # you "Give it back, right now, or I will tell the security guards they can do whatever they want to you!"
-    you ""
+    you "马上还给我，不然我就告诉卫兵，让他们想怎么处置你就怎么处置你！"
 
 # game/core/content/interactions.rpy:3821
 translate chinese_simplified slave_story2_ba376f3b:
@@ -2777,7 +2777,7 @@ translate chinese_simplified slave_story2_9b30127b:
 translate chinese_simplified slave_story2_f3b5e4e5:
 
     # you "Anyway, what do you need to save money for?"
-    you ""
+    you "话说回来，你攒钱要做什么？"
 
 # game/core/content/interactions.rpy:3840
 translate chinese_simplified slave_story2_c1da3d17:
@@ -2795,7 +2795,7 @@ translate chinese_simplified slave_story2_4996b303:
 translate chinese_simplified slave_story2_748a5542:
 
     # you "Is it what this is all about?"
-    you ""
+    you "就是为了这个吗？"
 
 # game/core/content/interactions.rpy:3846
 translate chinese_simplified slave_story2_602b4aa4:
@@ -2807,7 +2807,7 @@ translate chinese_simplified slave_story2_602b4aa4:
 translate chinese_simplified slave_story2_4e3e3d2a:
 
     # you "Well, let's hear it."
-    you ""
+    you "好吧，说来听听。"
 
 # game/core/content/interactions.rpy:3850
 translate chinese_simplified slave_story2_c2a355ad:
@@ -2825,7 +2825,7 @@ translate chinese_simplified slave_story2_7e0b1b13:
 translate chinese_simplified slave_story2_9e3213b9:
 
     # you "I get the picture."
-    you ""
+    you "我明白了。"
 
 # game/core/content/interactions.rpy:3861
 translate chinese_simplified slave_story2_857834e9:
@@ -2837,7 +2837,7 @@ translate chinese_simplified slave_story2_857834e9:
 translate chinese_simplified slave_story2_dae0ec55:
 
     # you "..."
-    you ""
+    you "..."
 
 # game/core/content/interactions.rpy:3865
 translate chinese_simplified slave_story2_2a3609ce:
@@ -2855,7 +2855,7 @@ translate chinese_simplified slave_story2_062d4094:
 translate chinese_simplified slave_story2_f57f7c1a:
 
     # you "All right..."
-    you ""
+    you "好吧……"
 
 # game/core/content/interactions.rpy:3880
 translate chinese_simplified slave_story2_21ad0740:
@@ -2867,7 +2867,7 @@ translate chinese_simplified slave_story2_21ad0740:
 translate chinese_simplified slave_story2_2a580215:
 
     # you "Last time, you told me about how you and your [girl.story_guardian] had to pay off a big gambling debt. Care to tell me the rest of the story?"
-    you ""
+    you "上次你跟我说过，你和你的[girl.story_guardian]不得不还清一大笔赌债。愿意把剩下的故事讲给我听吗？"
 
 # game/core/content/interactions.rpy:3884
 translate chinese_simplified slave_story2_47ba4cf4:
@@ -3005,7 +3005,7 @@ translate chinese_simplified slave_story2_389a5e46:
 translate chinese_simplified slave_story2_42d2a35a:
 
     # you "Wow... I had no idea this happened to you."
-    you ""
+    you "哇……我真不知道你经历过这种事。"
 
 # game/core/content/interactions.rpy:3946
 translate chinese_simplified slave_story2_78978e4a:
@@ -3023,7 +3023,7 @@ translate chinese_simplified slave_story2_582e8a36:
 translate chinese_simplified slave_story2_fac602f1:
 
     # you "You told me how you were indebted to a vicious [girl.story_profession]... But you never told me how you got out of it?"
-    you ""
+    you "你跟我说过你欠了一个狠毒的[girl.story_profession]的债……但你从没告诉过我你是怎么脱身的？"
 
 # game/core/content/interactions.rpy:3964
 translate chinese_simplified slave_story2_87eff826:
@@ -3035,7 +3035,7 @@ translate chinese_simplified slave_story2_87eff826:
 translate chinese_simplified slave_story2_8d6b1f8b:
 
     # you "Whaaat?"
-    you ""
+    you "什——么？"
 
 # game/core/content/interactions.rpy:3968
 translate chinese_simplified slave_story2_a5ea57e9:
@@ -3053,7 +3053,7 @@ translate chinese_simplified slave_story2_85aa34c4:
 translate chinese_simplified slave_story2_448ddd35:
 
     # you "How ruthless."
-    you ""
+    you "真是狠心。"
 
 # game/core/content/interactions.rpy:3974
 translate chinese_simplified slave_story2_cf745fde:
@@ -3071,7 +3071,7 @@ translate chinese_simplified slave_story2_a889bc02:
 translate chinese_simplified slave_story2_d19f415a:
 
     # you "Remind me not to let you anywhere near the kitchen..."
-    you ""
+    you "提醒我，千万别让你踏进厨房半步……"
 
 # game/core/content/interactions.rpy:3982
 translate chinese_simplified slave_story2_0bc7db9d:
@@ -3095,7 +3095,7 @@ translate chinese_simplified slave_story2_3f7141cf:
 translate chinese_simplified slave_story2_9b460774:
 
     # you "He died? How?"
-    you ""
+    you "他死了？怎么死的？"
 
 # game/core/content/interactions.rpy:3992
 translate chinese_simplified slave_story2_9dc671c5:
@@ -3137,7 +3137,7 @@ translate chinese_simplified slave_story2_16339ebb:
 translate chinese_simplified slave_story2_31fe1d97:
 
     # you "Wow."
-    you ""
+    you "哇。"
 
 # game/core/content/interactions.rpy:4006
 translate chinese_simplified slave_story2_3c5c2b7b:
@@ -3167,7 +3167,7 @@ translate chinese_simplified slave_story2_a64b741c:
 translate chinese_simplified slave_story2_eb266b4d:
 
     # you "And here you are."
-    you ""
+    you "然后你就到了这里。"
 
 # game/core/content/interactions.rpy:4018
 translate chinese_simplified slave_story2_ef805378:
@@ -3251,7 +3251,7 @@ translate chinese_simplified slave_story3_72d77ea0:
 translate chinese_simplified slave_story3_fc3acfb4:
 
     # you "[girl.name], what's going on?"
-    you ""
+    you "[girl.name]，出什么事了？"
 
 # game/core/content/interactions.rpy:4085
 translate chinese_simplified slave_story3_2d49bef9:
@@ -3305,7 +3305,7 @@ translate chinese_simplified slave_story3_e26de5a5:
 translate chinese_simplified slave_story3_4829b716:
 
     # you "Take your time. I'm here to listen."
-    you ""
+    you "慢慢来，我在听。"
 
 # game/core/content/interactions.rpy:4112
 translate chinese_simplified slave_story3_04b281fb:
@@ -3317,7 +3317,7 @@ translate chinese_simplified slave_story3_04b281fb:
 translate chinese_simplified slave_story3_0b9b92c1:
 
     # you "Hurry up! I ain't got all day."
-    you ""
+    you "快点！我可没时间陪你耗一整天。"
 
 # game/core/content/interactions.rpy:4117
 translate chinese_simplified slave_story3_f8b3e170:
@@ -3341,19 +3341,19 @@ translate chinese_simplified slave_story3_60424f2d:
 translate chinese_simplified slave_story3_42d1ebcf:
 
     # you "It's the truth."
-    you ""
+    you "这是真的。"
 
 # game/core/content/interactions.rpy:4129
 translate chinese_simplified slave_story3_54b55f7d:
 
     # you "You shouldn't need to go on a trip to feel close to your god..."
-    you ""
+    you "你不需要靠出远门才能亲近你的神……"
 
 # game/core/content/interactions.rpy:4132
 translate chinese_simplified slave_story3_bbcf0a23:
 
     # you "Baseless superstitions..."
-    you ""
+    you "毫无根据的迷信……"
 
 # game/core/content/interactions.rpy:4134
 translate chinese_simplified slave_story3_a416d356:
@@ -3395,7 +3395,7 @@ translate chinese_simplified slave_story3_2f6861d3:
 translate chinese_simplified slave_story3_a0bf7ee4:
 
     # you "What happened after the bandits took you?"
-    you ""
+    you "强盗把你抓走之后发生了什么？"
 
 # game/core/content/interactions.rpy:4155
 translate chinese_simplified slave_story3_7c8d0260:
@@ -3449,7 +3449,7 @@ translate chinese_simplified slave_story3_1fa3221c:
 translate chinese_simplified slave_story3_07842537:
 
     # you "W... What happened? Did he rape you?"
-    you ""
+    you "后……后来呢？他强奸你了吗？"
 
 # game/core/content/interactions.rpy:4174
 translate chinese_simplified slave_story3_6122b49a:
@@ -3485,7 +3485,7 @@ translate chinese_simplified slave_story3_745f9add:
 translate chinese_simplified slave_story3_96a70992:
 
     # you "Oh."
-    you ""
+    you "哦。"
 
 # game/core/content/interactions.rpy:4185
 translate chinese_simplified slave_story3_7b693942:
@@ -3509,7 +3509,7 @@ translate chinese_simplified slave_story3_b4ed34b8:
 translate chinese_simplified slave_story3_8bb00932:
 
     # you "I see..."
-    you ""
+    you "原来如此……"
 
 # game/core/content/interactions.rpy:4193
 translate chinese_simplified slave_story3_98ddf7e1:
@@ -3539,7 +3539,7 @@ translate chinese_simplified slave_story3_5cb74dbd:
 translate chinese_simplified slave_story3_40bb0b24:
 
     # you "But you escaped, eventually. How did you do it?"
-    you ""
+    you "但你最终还是逃了出来。你是怎么做到的？"
 
 # game/core/content/interactions.rpy:4210
 translate chinese_simplified slave_story3_8235cf51:
@@ -3569,7 +3569,7 @@ translate chinese_simplified slave_story3_38bcd874:
 translate chinese_simplified slave_story3_3e26844e:
 
     # you "Oh..."
-    you ""
+    you "哦……"
 
 # game/core/content/interactions.rpy:4220
 translate chinese_simplified slave_story3_f63a794e:
@@ -3605,7 +3605,7 @@ translate chinese_simplified slave_story3_08516455:
 translate chinese_simplified slave_story3_79ea25ff:
 
     # you "Then... What happened?"
-    you ""
+    you "那……后来呢？"
 
 # game/core/content/interactions.rpy:4235
 translate chinese_simplified slave_story3_9fa446ca:
@@ -3623,7 +3623,7 @@ translate chinese_simplified slave_story3_69244085:
 translate chinese_simplified slave_story3_b0ecb5e5:
 
     # you "I see."
-    you ""
+    you "原来如此。"
 
 # game/core/content/interactions.rpy:4243
 translate chinese_simplified slave_story3_ecfca602:
@@ -3635,7 +3635,7 @@ translate chinese_simplified slave_story3_ecfca602:
 translate chinese_simplified slave_story3_ecc9aa85:
 
     # you "Is there something I can do to help?"
-    you ""
+    you "有什么我能帮上忙的吗？"
 
 # game/core/content/interactions.rpy:4247
 translate chinese_simplified slave_story3_1bf4dbfc:
@@ -3647,7 +3647,7 @@ translate chinese_simplified slave_story3_1bf4dbfc:
 translate chinese_simplified slave_story3_74d26893:
 
     # you "Try me."
-    you ""
+    you "说说看。"
 
 # game/core/content/interactions.rpy:4251
 translate chinese_simplified slave_story3_63f8834f:
@@ -3713,7 +3713,7 @@ translate chinese_simplified slave_story3_403c6623:
 translate chinese_simplified slave_story3_d94adbdc:
 
     # you "Whaat?"
-    you ""
+    you "什么？"
 
 # game/core/content/interactions.rpy:4271
 translate chinese_simplified slave_story3_17c69e27:
@@ -3725,7 +3725,7 @@ translate chinese_simplified slave_story3_17c69e27:
 translate chinese_simplified slave_story3_b29f429e:
 
     # you "Well... That's an odd request..."
-    you ""
+    you "嗯……这要求可真奇怪……"
 
 # game/core/content/interactions.rpy:4276
 translate chinese_simplified slave_story3_bf3073f1:
@@ -3761,7 +3761,7 @@ translate chinese_simplified slave_story3_6f5fc28f:
 translate chinese_simplified slave_story3_d94adbdc_1:
 
     # you "Whaat?"
-    you ""
+    you "什么？"
 
 # game/core/content/interactions.rpy:4304
 translate chinese_simplified slave_story3_17c69e27_1:
@@ -3803,7 +3803,7 @@ translate chinese_simplified slave_story4_076984e2:
 translate chinese_simplified slave_story4_44bab695:
 
     # you "Hi, [girl.name]... Am I interrupting something?"
-    you ""
+    you "嗨，[girl.name]……我是不是打扰到你了？"
 
 # game/core/content/interactions.rpy:4336
 translate chinese_simplified slave_story4_32c32369:
@@ -3821,13 +3821,13 @@ translate chinese_simplified slave_story4_e9692be3:
 translate chinese_simplified slave_story4_3ef61008:
 
     # you "That's a nice little dress you have there."
-    you ""
+    you "你那条小裙子挺漂亮的。"
 
 # game/core/content/interactions.rpy:4343
 translate chinese_simplified slave_story4_2cf53156:
 
     # you "I'm sure it looks good on you."
-    you ""
+    you "穿在你身上一定很好看。"
 
 # game/core/content/interactions.rpy:4345
 translate chinese_simplified slave_story4_4c9271d9:
@@ -3839,13 +3839,13 @@ translate chinese_simplified slave_story4_4c9271d9:
 translate chinese_simplified slave_story4_6ca15cd6:
 
     # you "It must have been costly. Living the good life, aren't you?"
-    you ""
+    you "肯定不便宜吧。小日子过得挺滋润啊？"
 
 # game/core/content/interactions.rpy:4348
 translate chinese_simplified slave_story4_b6d367bd:
 
     # you "Well, as long as it's your money..."
-    you ""
+    you "好吧，只要花的是你自己的钱……"
 
 # game/core/content/interactions.rpy:4350
 translate chinese_simplified slave_story4_d34f0608:
@@ -3863,7 +3863,7 @@ translate chinese_simplified slave_story4_c028f9e0:
 translate chinese_simplified slave_story4_1b43fbf6:
 
     # you "Is that so?"
-    you ""
+    you "是吗？"
 
 # game/core/content/interactions.rpy:4357
 translate chinese_simplified slave_story4_b6fe2914:
@@ -3899,7 +3899,7 @@ translate chinese_simplified slave_story4_33148a27:
 translate chinese_simplified slave_story4_b0ecb5e5:
 
     # you "I see."
-    you ""
+    you "原来如此。"
 
 # game/core/content/interactions.rpy:4375
 translate chinese_simplified slave_story4_22dc23eb:
@@ -3929,7 +3929,7 @@ translate chinese_simplified slave_story4_513f7cc8:
 translate chinese_simplified slave_story4_397e68e9:
 
     # you "Well, work hard, and you just might get your own, one day..."
-    you ""
+    you "嗯，好好干，说不定哪天你也能拥有一条自己的……"
 
 # game/core/content/interactions.rpy:4385
 translate chinese_simplified slave_story4_4e8eeb14:
@@ -3953,7 +3953,7 @@ translate chinese_simplified slave_story4_6533823a:
 translate chinese_simplified slave_story4_4ad489aa:
 
     # you "Hi, [girl.name]."
-    you ""
+    you "嗨，[girl.name]。"
 
 # game/core/content/interactions.rpy:4402
 translate chinese_simplified slave_story4_8e38057d:
@@ -3965,7 +3965,7 @@ translate chinese_simplified slave_story4_8e38057d:
 translate chinese_simplified slave_story4_209aaa6c:
 
     # you "Go ahead."
-    you ""
+    you "说吧。"
 
 # game/core/content/interactions.rpy:4406
 translate chinese_simplified slave_story4_c62cf67a:
@@ -3989,7 +3989,7 @@ translate chinese_simplified slave_story4_ac89493c:
 translate chinese_simplified slave_story4_58a3dd56:
 
     # you "Of course. Slaves are human beings, we are all the same. It's just a social institution..."
-    you ""
+    you "当然。奴隶也是人，我们都一样。这不过是一种社会制度……"
 
 # game/core/content/interactions.rpy:4415
 translate chinese_simplified slave_story4_c7b8d007:
@@ -4001,7 +4001,7 @@ translate chinese_simplified slave_story4_c7b8d007:
 translate chinese_simplified slave_story4_26ecab87:
 
     # you "Well, slaves aren't equal with free persons, of course, but they are definitely people. I mean, they have thoughts and feelings, you know... More than a vulgar animal, anyway."
-    you ""
+    you "嗯，奴隶当然和自由人不平等，但他们毫无疑问是人。他们有思想、有感情，你明白吧……总比那些粗俗的牲畜强。"
 
 # game/core/content/interactions.rpy:4420
 translate chinese_simplified slave_story4_53bc58d0:
@@ -4019,13 +4019,13 @@ translate chinese_simplified slave_story4_6d09d2c3:
 translate chinese_simplified slave_story4_40d09470:
 
     # you "Slaves! Persons? Hahahaha! That's rich!"
-    you ""
+    you "奴隶！是人？哈哈哈！太好笑了！"
 
 # game/core/content/interactions.rpy:4426
 translate chinese_simplified slave_story4_7e61c075:
 
     # you "Is my horse a person? Is this table a person? Come on!"
-    you ""
+    you "我的马是人吗？这张桌子是人吗？拜托！"
 
 # game/core/content/interactions.rpy:4427
 translate chinese_simplified slave_story4_e7c72d25:
@@ -4049,7 +4049,7 @@ translate chinese_simplified slave_story4_346f7e24:
 translate chinese_simplified slave_story4_9183ebbc:
 
     # you "Is this what you think?"
-    you ""
+    you "你是这么想的吗？"
 
 # game/core/content/interactions.rpy:4441
 translate chinese_simplified slave_story4_cb07da27:
@@ -4067,7 +4067,7 @@ translate chinese_simplified slave_story4_7e098665:
 translate chinese_simplified slave_story4_fec1fe3c:
 
     # you "What do you mean?"
-    you ""
+    you "你什么意思？"
 
 # game/core/content/interactions.rpy:4447
 translate chinese_simplified slave_story4_e3814ad2:
@@ -4127,7 +4127,7 @@ translate chinese_simplified slave_story4_1a978e01:
 translate chinese_simplified slave_story4_a577ad0e:
 
     # you "What?"
-    you ""
+    you "什么？"
 
 # game/core/content/interactions.rpy:4469
 translate chinese_simplified slave_story4_3bbf5dbe:
@@ -4145,7 +4145,7 @@ translate chinese_simplified slave_story4_4e2e024e:
 translate chinese_simplified slave_story4_039efb21:
 
     # you "Well... Perhaps you can tell me later?"
-    you ""
+    you "嗯……要不以后再讲给我听？"
 
 # game/core/content/interactions.rpy:4475
 translate chinese_simplified slave_story4_81bf8848:
@@ -4181,7 +4181,7 @@ translate chinese_simplified slave_story4_5cea3d47:
 translate chinese_simplified slave_story4_2bde40cf:
 
     # you "What's up, [girl.name]? Still dreaming about dresses?"
-    you ""
+    you "怎么了，[girl.name]？还做梦都想着裙子呢？"
 
 # game/core/content/interactions.rpy:4495
 translate chinese_simplified slave_story4_e40f7bf8:
@@ -4193,7 +4193,7 @@ translate chinese_simplified slave_story4_e40f7bf8:
 translate chinese_simplified slave_story4_33f80bf7:
 
     # you "Anyway. Tell me, you didn't finish your story the other day? What happened with the [girl.story_profession] you told me about?"
-    you ""
+    you "对了。跟我说说，你前几天那个故事还没讲完吧？你提过的那个[girl.story_profession]后来怎么了？"
 
 # game/core/content/interactions.rpy:4499
 translate chinese_simplified slave_story4_20d9d73d:
@@ -4307,7 +4307,7 @@ translate chinese_simplified slave_story4_2fc792a1:
 translate chinese_simplified slave_story4_3900c296:
 
     # you "What happened?"
-    you ""
+    you "后来怎么了？"
 
 # game/core/content/interactions.rpy:4538
 translate chinese_simplified slave_story4_e3b475a0:
@@ -4337,7 +4337,7 @@ translate chinese_simplified slave_story4_794737ee:
 translate chinese_simplified slave_story4_8bb00932:
 
     # you "I see..."
-    you ""
+    you "原来如此……"
 
 # game/core/content/interactions.rpy:4548
 translate chinese_simplified slave_story4_7b867ccc:
@@ -4349,7 +4349,7 @@ translate chinese_simplified slave_story4_7b867ccc:
 translate chinese_simplified slave_story4_33c6fd3a:
 
     # you "Tell me."
-    you ""
+    you "告诉我。"
 
 # game/core/content/interactions.rpy:4553
 translate chinese_simplified slave_story4_5be4095b:
@@ -4367,7 +4367,7 @@ translate chinese_simplified slave_story4_9f24ee31:
 translate chinese_simplified slave_story4_cca2820d:
 
     # you "Scary..."
-    you ""
+    you "真可怕……"
 
 # game/core/content/interactions.rpy:4559
 translate chinese_simplified slave_story4_57eef8f2:
@@ -4481,7 +4481,7 @@ translate chinese_simplified slave_story5_6c513c51:
 translate chinese_simplified slave_story5_1f8d7728:
 
     # you "Ahem-hem."
-    you ""
+    you "咳咳。"
 
 # game/core/content/interactions.rpy:4631
 translate chinese_simplified slave_story5_363ccb90:
@@ -4499,13 +4499,13 @@ translate chinese_simplified slave_story5_d6194184:
 translate chinese_simplified slave_story5_2119dbe3:
 
     # you "Is that so... Why do I feel like there's more to it?"
-    you ""
+    you "是吗……可我怎么觉得事情没那么简单？"
 
 # game/core/content/interactions.rpy:4646
 translate chinese_simplified slave_story5_af3c345d:
 
     # you "Are you fucking kidding me! You are forbidden to leave this room without permission, understand?"
-    you ""
+    you "你他妈的在逗我吗！没有我的允许不许离开这个房间，明白吗？"
 
 # game/core/content/interactions.rpy:4648
 translate chinese_simplified slave_story5_1c7a94aa:
@@ -4529,7 +4529,7 @@ translate chinese_simplified slave_story5_2325727f:
 translate chinese_simplified slave_story5_7af00b8e:
 
     # you "Who gives a fuck about what you can or cannot cope with, slave? Will ten lashes help you 'cope'?"
-    you ""
+    you "你他妈受得了受不了，关我什么事，奴隶？抽你十鞭子能不能帮你“受得了”？"
 
 # game/core/content/interactions.rpy:4656
 translate chinese_simplified slave_story5_397b0de4:
@@ -4541,7 +4541,7 @@ translate chinese_simplified slave_story5_397b0de4:
 translate chinese_simplified slave_story5_96773a44:
 
     # you "Since what?"
-    you ""
+    you "从什么时候开始的？"
 
 # game/core/content/interactions.rpy:4660
 translate chinese_simplified slave_story5_f5103810:
@@ -4553,7 +4553,7 @@ translate chinese_simplified slave_story5_f5103810:
 translate chinese_simplified slave_story5_fef91995:
 
     # you "Have you, now? For what?"
-    you ""
+    you "哦？是吗？做什么用？"
 
 # game/core/content/interactions.rpy:4664
 translate chinese_simplified slave_story5_7ce7c857:
@@ -4595,7 +4595,7 @@ translate chinese_simplified slave_story5_b7e720e7:
 translate chinese_simplified slave_story5_96a70992:
 
     # you "Oh."
-    you ""
+    you "哦。"
 
 # game/core/content/interactions.rpy:4683
 translate chinese_simplified slave_story5_25e23f39:
@@ -4613,7 +4613,7 @@ translate chinese_simplified slave_story5_fc99e269:
 translate chinese_simplified slave_story5_3c7ec6d4:
 
     # you "Hmm."
-    you ""
+    you "嗯。"
 
 # game/core/content/interactions.rpy:4696
 translate chinese_simplified slave_story5_baec7f36:
@@ -4625,7 +4625,7 @@ translate chinese_simplified slave_story5_baec7f36:
 translate chinese_simplified slave_story5_fc93ed0c:
 
     # you "What's eating you, [girl.name]?"
-    you ""
+    you "[girl.name]，你好像有心事？"
 
 # game/core/content/interactions.rpy:4700
 translate chinese_simplified slave_story5_2c0dc8b2:
@@ -4655,7 +4655,7 @@ translate chinese_simplified slave_story5_3b74b67c:
 translate chinese_simplified slave_story5_5329c274:
 
     # you "Right. You haven't told me the rest of that story."
-    you ""
+    you "对了。那个故事你还没给我讲完。"
 
 # game/core/content/interactions.rpy:4711
 translate chinese_simplified slave_story5_c6fd2935:
@@ -4709,7 +4709,7 @@ translate chinese_simplified slave_story5_e9cb16c3:
 translate chinese_simplified slave_story5_3900c296:
 
     # you "What happened?"
-    you ""
+    you "后来呢？"
 
 # game/core/content/interactions.rpy:4732
 translate chinese_simplified slave_story5_3d87271d:
@@ -4781,7 +4781,7 @@ translate chinese_simplified slave_story5_4d84418d:
 translate chinese_simplified slave_story5_8756e0fa:
 
     # you "Wow..."
-    you ""
+    you "哇……"
 
 # game/core/content/interactions.rpy:4759
 translate chinese_simplified slave_story5_52654763:
@@ -4799,7 +4799,7 @@ translate chinese_simplified slave_story5_84f9b249:
 translate chinese_simplified slave_story5_40bc22d8:
 
     # you "Really?"
-    you ""
+    you "真的吗？"
 
 # game/core/content/interactions.rpy:4765
 translate chinese_simplified slave_story5_87763c13:
@@ -4817,7 +4817,7 @@ translate chinese_simplified slave_story5_e4722677:
 translate chinese_simplified slave_story5_3e26844e:
 
     # you "Oh..."
-    you ""
+    you "哦……"
 
 # game/core/content/interactions.rpy:4771
 translate chinese_simplified slave_story5_a8888bbd:
@@ -4835,7 +4835,7 @@ translate chinese_simplified slave_story5_95549195:
 translate chinese_simplified slave_story5_b0ecb5e5:
 
     # you "I see."
-    you ""
+    you "原来如此。"
 
 # game/core/content/interactions.rpy:4784
 translate chinese_simplified slave_story5_d6ad4b86:
@@ -4853,7 +4853,7 @@ translate chinese_simplified slave_story5_aa46bdbd:
 translate chinese_simplified slave_story5_5a777dc3:
 
     # you "Hi, [girl.name]... You're not thinking of sneaking out on me again, are you?"
-    you ""
+    you "嗨，[girl.name]……你不是又想偷偷溜走吧？"
 
 # game/core/content/interactions.rpy:4790
 translate chinese_simplified slave_story5_23ef2a8a:
@@ -4871,7 +4871,7 @@ translate chinese_simplified slave_story5_40f3547c:
 translate chinese_simplified slave_story5_b22b7c6a:
 
     # you "For killing the [girl.story_profession] you told me about?"
-    you ""
+    you "是为了你跟我提过的那个[girl.story_profession]被杀的事？"
 
 # game/core/content/interactions.rpy:4796
 translate chinese_simplified slave_story5_44036fd9:
@@ -4883,7 +4883,7 @@ translate chinese_simplified slave_story5_44036fd9:
 translate chinese_simplified slave_story5_8855dd4c:
 
     # you "The guard patrol arrested you and your [girl.story_guardian]?"
-    you ""
+    you "巡逻卫兵逮捕了你和你的[girl.story_guardian]？"
 
 # game/core/content/interactions.rpy:4800
 translate chinese_simplified slave_story5_152df13e:
@@ -4901,7 +4901,7 @@ translate chinese_simplified slave_story5_297da782:
 translate chinese_simplified slave_story5_e2973082:
 
     # you "It must have been hard to explain..."
-    you ""
+    you "那一定很难解释清楚……"
 
 # game/core/content/interactions.rpy:4806
 translate chinese_simplified slave_story5_7023e094:
@@ -4973,7 +4973,7 @@ translate chinese_simplified slave_story5_fbca49cf:
 translate chinese_simplified slave_story5_574fbcf2:
 
     # you "Things?"
-    you ""
+    you "东西？"
 
 # game/core/content/interactions.rpy:4831
 translate chinese_simplified slave_story5_537f26f9:
@@ -5015,7 +5015,7 @@ translate chinese_simplified slave_story5_5321087d:
 translate chinese_simplified slave_story5_bad055b8:
 
     # you "That's terrible... How did you finally escape?"
-    you ""
+    you "太可怕了……你最后是怎么逃出来的？"
 
 # game/core/content/interactions.rpy:4847
 translate chinese_simplified slave_story5_7a352f77:
@@ -5027,7 +5027,7 @@ translate chinese_simplified slave_story5_7a352f77:
 translate chinese_simplified slave_story5_3140f824:
 
     # you "Was it?"
-    you ""
+    you "是吗？"
 
 # game/core/content/interactions.rpy:4851
 translate chinese_simplified slave_story5_cb7664ee:
@@ -5057,7 +5057,7 @@ translate chinese_simplified slave_story5_9add1070:
 translate chinese_simplified slave_story5_13367c35:
 
     # you "Did you... Kill him?"
-    you ""
+    you "你……杀了他？"
 
 # game/core/content/interactions.rpy:4862
 translate chinese_simplified slave_story5_e9b8d127:
@@ -5093,7 +5093,7 @@ translate chinese_simplified slave_story5_fcfa59f5:
 translate chinese_simplified slave_story5_6e9a44fb:
 
     # you "Yes..."
-    you ""
+    you "是的……"
 
 # game/core/content/interactions.rpy:4874
 translate chinese_simplified slave_story5_2b180728:
@@ -5147,7 +5147,7 @@ translate chinese_simplified slave_story5_ef1c0073:
 translate chinese_simplified slave_story5_b0ecb5e5_1:
 
     # you "I see."
-    you ""
+    you "原来如此。"
 
 # game/core/content/interactions.rpy:4895
 translate chinese_simplified slave_story5_074d421a:
@@ -5165,7 +5165,7 @@ translate chinese_simplified slave_story5_8f0aed18:
 translate chinese_simplified slave_story5_a577ad0e:
 
     # you "What?"
-    you ""
+    you "什么？"
 
 # game/core/content/interactions.rpy:4902
 translate chinese_simplified slave_story5_ee58330a:
@@ -5201,7 +5201,7 @@ translate chinese_simplified slave_story5_e5196964:
 translate chinese_simplified slave_story5_96a70992_1:
 
     # you "Oh."
-    you ""
+    you "哦。"
 
 # game/core/content/interactions.rpy:4920
 translate chinese_simplified slave_story5_ac707e5e:
@@ -5225,7 +5225,7 @@ translate chinese_simplified slave_story5_5040fe38:
 translate chinese_simplified slave_story5_e26816df:
 
     # you "But what can you do about it?"
-    you ""
+    you "可你又能做什么呢？"
 
 # game/core/content/interactions.rpy:4925
 translate chinese_simplified slave_story5_43358bbd:
@@ -5291,7 +5291,7 @@ translate chinese_simplified slave_story6_b5da9f96:
 translate chinese_simplified slave_story6_7c165600:
 
     # you "What is it, [girl.name]?"
-    you ""
+    you "怎么了，[girl.name]？"
 
 # game/core/content/interactions.rpy:4979
 translate chinese_simplified slave_story6_3ea1180e:
@@ -5315,7 +5315,7 @@ translate chinese_simplified slave_story6_95d5e5df:
 translate chinese_simplified slave_story6_6bb21ad6:
 
     # you "Come on, Sill is doing her best. I don't see you helping out much in the kitchen."
-    you ""
+    you "得了吧，希露已经尽力了。我可没看你在厨房帮过什么忙。"
 
 # game/core/content/interactions.rpy:4992
 translate chinese_simplified slave_story6_b2d2b1da:
@@ -5333,7 +5333,7 @@ translate chinese_simplified slave_story6_e3960693:
 translate chinese_simplified slave_story6_e2f943f7:
 
     # you "Sill has many things to take care of, you should cut her a little slack. This is not a 5-star inn, all right?"
-    you ""
+    you "希露要操心的事很多，你应该多体谅她一点。这里可不是五星客栈，明白吗？"
 
 # game/core/content/interactions.rpy:4995
 translate chinese_simplified slave_story6_fbf00f5d:
@@ -5345,7 +5345,7 @@ translate chinese_simplified slave_story6_fbf00f5d:
 translate chinese_simplified slave_story6_dae0ec55:
 
     # you "..."
-    you ""
+    you "..."
 
 # game/core/content/interactions.rpy:5001
 translate chinese_simplified slave_story6_fb7f620b:
@@ -5357,7 +5357,7 @@ translate chinese_simplified slave_story6_fb7f620b:
 translate chinese_simplified slave_story6_dae0ec55_1:
 
     # you "..."
-    you ""
+    you "..."
 
 # game/core/content/interactions.rpy:5003
 translate chinese_simplified slave_story6_a1a171c6:
@@ -5369,7 +5369,7 @@ translate chinese_simplified slave_story6_a1a171c6:
 translate chinese_simplified slave_story6_e632895c:
 
     # you "Are you quite finished?"
-    you ""
+    you "你说完了吗？"
 
 # game/core/content/interactions.rpy:5005
 translate chinese_simplified slave_story6_3ddb8966:
@@ -5381,7 +5381,7 @@ translate chinese_simplified slave_story6_3ddb8966:
 translate chinese_simplified slave_story6_fa287a7f:
 
     # you "[girl.name], listen carefully."
-    you ""
+    you "[girl.name]，给我仔细听好。"
 
 # game/core/content/interactions.rpy:5012
 translate chinese_simplified slave_story6_0243f0da:
@@ -5393,7 +5393,7 @@ translate chinese_simplified slave_story6_0243f0da:
 translate chinese_simplified slave_story6_f72633f8:
 
     # you "I DON'T GIVE A DAMN ABOUT YOUR PETTY PROBLEMS!"
-    you ""
+    you "你那点破事关我屁事！"
 
 # game/core/content/interactions.rpy:5014
 translate chinese_simplified slave_story6_fd853dfe:
@@ -5405,7 +5405,7 @@ translate chinese_simplified slave_story6_fd853dfe:
 translate chinese_simplified slave_story6_8feb2789:
 
     # you "YOU'RE A SLAVE, STOP ACTING OUT LIKE A SPOILED BRAT! OR I'LL WHIP YOUR ASS!!!"
-    you ""
+    you "你是奴隶，别像被惯坏的丫头一样撒泼！再敢这样我就抽烂你的屁股！！！"
 
 # game/core/content/interactions.rpy:5016
 translate chinese_simplified slave_story6_1bae9787:
@@ -5417,7 +5417,7 @@ translate chinese_simplified slave_story6_1bae9787:
 translate chinese_simplified slave_story6_623eb864:
 
     # you "UNDERSTOOD???"
-    you ""
+    you "听明白了吗？？？"
 
 # game/core/content/interactions.rpy:5018
 translate chinese_simplified slave_story6_885d8063:
@@ -5447,7 +5447,7 @@ translate chinese_simplified slave_story6_9bb09cb7:
 translate chinese_simplified slave_story6_e232fb8d:
 
     # you "Oh, really? Perhaps you are used to having a fleet of white-gloved servants looking after your every need?"
-    you ""
+    you "哦，是吗？也许你习惯了有一大群戴白手套的仆人伺候你的每一个需求？"
 
 # game/core/content/interactions.rpy:5027
 translate chinese_simplified slave_story6_9c697c16:
@@ -5459,7 +5459,7 @@ translate chinese_simplified slave_story6_9c697c16:
 translate chinese_simplified slave_story6_ac52c92a:
 
     # you "Seriously? When did sex slaves become so fancy?"
-    you ""
+    you "开什么玩笑？性奴什么时候开始这么讲究了？"
 
 # game/core/content/interactions.rpy:5029
 translate chinese_simplified slave_story6_abef361c:
@@ -5471,7 +5471,7 @@ translate chinese_simplified slave_story6_abef361c:
 translate chinese_simplified slave_story6_adb6bbb8:
 
     # you "You do?"
-    you ""
+    you "哦？"
 
 # game/core/content/interactions.rpy:5031
 translate chinese_simplified slave_story6_948a280f:
@@ -5483,7 +5483,7 @@ translate chinese_simplified slave_story6_948a280f:
 translate chinese_simplified slave_story6_9464a26a:
 
     # you "Really... You didn't look that well-off when I met you..."
-    you ""
+    you "真的吗……我刚见到你的时候，你看起来可没这么风光……"
 
 # game/core/content/interactions.rpy:5033
 translate chinese_simplified slave_story6_41464af2:
@@ -5525,7 +5525,7 @@ translate chinese_simplified slave_story6_e62cef3c:
 translate chinese_simplified slave_story6_4e0c7b8f:
 
     # you "You were spoiled all right... What happened?"
-    you ""
+    you "看来你以前确实被惯坏了……后来发生了什么？"
 
 # game/core/content/interactions.rpy:5050
 translate chinese_simplified slave_story6_f06a1200:
@@ -5537,7 +5537,7 @@ translate chinese_simplified slave_story6_f06a1200:
 translate chinese_simplified slave_story6_7f8939be:
 
     # you "Scheming?"
-    you ""
+    you "图谋不轨？"
 
 # game/core/content/interactions.rpy:5052
 translate chinese_simplified slave_story6_37e39fae:
@@ -5585,7 +5585,7 @@ translate chinese_simplified slave_story6_f64140bc:
 translate chinese_simplified slave_story6_e29b3f0b:
 
     # you "Uh oh..."
-    you ""
+    you "糟了……"
 
 # game/core/content/interactions.rpy:5061
 translate chinese_simplified slave_story6_b0694956:
@@ -5615,7 +5615,7 @@ translate chinese_simplified slave_story6_de4e2907:
 translate chinese_simplified slave_story6_6c2bf18c:
 
     # you "There appears to be a small tear in the dress..."
-    you ""
+    you "裙子上好像破了个小口子……"
 
 # game/core/content/interactions.rpy:5076
 translate chinese_simplified slave_story6_a578afac:
@@ -5627,7 +5627,7 @@ translate chinese_simplified slave_story6_a578afac:
 translate chinese_simplified slave_story6_b0895277:
 
     # you "Well... You could always sew it..."
-    you ""
+    you "嗯……你大可以自己动手缝一缝……"
 
 # game/core/content/interactions.rpy:5078
 translate chinese_simplified slave_story6_3a86d6ec:
@@ -5663,7 +5663,7 @@ translate chinese_simplified slave_story6_6bf025b7:
 translate chinese_simplified slave_story6_30d555dd:
 
     # you "Wow, calm down..."
-    you ""
+    you "哇，冷静点……"
 
 # game/core/content/interactions.rpy:5084
 translate chinese_simplified slave_story6_5a252c03:
@@ -5675,7 +5675,7 @@ translate chinese_simplified slave_story6_5a252c03:
 translate chinese_simplified slave_story6_790ab214:
 
     # you "Ah, yes, in the golden days of your noble youth..."
-    you ""
+    you "啊，是了，在你高贵的青春岁月里……"
 
 # game/core/content/interactions.rpy:5086
 translate chinese_simplified slave_story6_9facbb8e:
@@ -5687,7 +5687,7 @@ translate chinese_simplified slave_story6_9facbb8e:
 translate chinese_simplified slave_story6_3900c296:
 
     # you "What happened?"
-    you ""
+    you "后来呢？"
 
 # game/core/content/interactions.rpy:5088
 translate chinese_simplified slave_story6_8c41578f:
@@ -5717,7 +5717,7 @@ translate chinese_simplified slave_story6_d9d6e8dd:
 translate chinese_simplified slave_story6_2618600f:
 
     # you "You just went along with it?"
-    you ""
+    you "你就这么顺从了他们？"
 
 # game/core/content/interactions.rpy:5093
 translate chinese_simplified slave_story6_ef3e9e22:
@@ -5729,7 +5729,7 @@ translate chinese_simplified slave_story6_ef3e9e22:
 translate chinese_simplified slave_story6_b0ecb5e5:
 
     # you "I see."
-    you ""
+    you "原来如此。"
 
 # game/core/content/interactions.rpy:5096
 translate chinese_simplified slave_story6_cf985093:
@@ -5879,7 +5879,7 @@ translate chinese_simplified slave_story6_a1384532:
 translate chinese_simplified slave_story6_8b90d45f:
 
     # you "How so?"
-    you ""
+    you "怎么说？"
 
 # game/core/content/interactions.rpy:5136
 translate chinese_simplified slave_story6_1b6acf96:
@@ -5915,7 +5915,7 @@ translate chinese_simplified slave_story6_ae1e9f70:
 translate chinese_simplified slave_story6_30b378af:
 
     # you "It looks nice..."
-    you ""
+    you "看起来不错……"
 
 # game/core/content/interactions.rpy:5151
 translate chinese_simplified slave_story6_85121ee0:
@@ -5927,7 +5927,7 @@ translate chinese_simplified slave_story6_85121ee0:
 translate chinese_simplified slave_story6_8d9e1a4c:
 
     # you "You didn't tell me the end of your story... About that handsome [girl.story_profession]?"
-    you ""
+    you "你还没给我讲完你的故事呢……关于那个英俊的[girl.story_profession]？"
 
 # game/core/content/interactions.rpy:5153
 translate chinese_simplified slave_story6_6b4a2459:
@@ -5951,7 +5951,7 @@ translate chinese_simplified slave_story6_43c051d0:
 translate chinese_simplified slave_story6_c406d906:
 
     # you "Why do I sense it didn't go well..."
-    you ""
+    you "我怎么觉得事情进展得不顺利……"
 
 # game/core/content/interactions.rpy:5157
 translate chinese_simplified slave_story6_3df3c6be:
@@ -6119,7 +6119,7 @@ translate chinese_simplified slave_story6_a2710be7:
 translate chinese_simplified slave_story6_ef98d041:
 
     # you "Wow... That's a pretty sad story."
-    you ""
+    you "哇……真是个悲伤的故事。"
 
 # game/core/content/interactions.rpy:5194
 translate chinese_simplified slave_story6_d8057221:
@@ -6143,7 +6143,7 @@ translate chinese_simplified slave_story6_6e6ecc98:
 translate chinese_simplified slave_story6_a577ad0e:
 
     # you "What?"
-    you ""
+    you "什么？"
 
 # game/core/content/interactions.rpy:5203
 translate chinese_simplified slave_story6_d7db4f41:
@@ -6185,7 +6185,7 @@ translate chinese_simplified slave_story6_fa75cb1a:
 translate chinese_simplified slave_story6_acfdbc30:
 
     # you "What? Really?"
-    you ""
+    you "什么？真的？"
 
 # game/core/content/interactions.rpy:5213
 translate chinese_simplified slave_story6_09509477:
@@ -6209,7 +6209,7 @@ translate chinese_simplified slave_story6_e7716d7f:
 translate chinese_simplified slave_story6_685847ec:
 
     # you "Well..."
-    you ""
+    you "这个嘛……"
 
 # game/core/content/interactions.rpy:5220
 translate chinese_simplified slave_story6_e035fc55:
@@ -6311,7 +6311,7 @@ translate chinese_simplified slave_story7_7fa8be44:
 translate chinese_simplified slave_story7_ff78afa7:
 
     # you "What kind of blasphemy is that??? Did you throw away your Arios sign?"
-    you ""
+    you "这是什么亵渎之言？？？你把你的阿里奥斯圣徽扔了吗？"
 
 # game/core/content/interactions.rpy:5282
 translate chinese_simplified slave_story7_97f5b071:
@@ -6323,7 +6323,7 @@ translate chinese_simplified slave_story7_97f5b071:
 translate chinese_simplified slave_story7_0d6696c0:
 
     # you "Not a big fan of Arios, are you?"
-    you ""
+    you "看来你不太喜欢阿里奥斯，是吗？"
 
 # game/core/content/interactions.rpy:5286
 translate chinese_simplified slave_story7_c3a0ed14:
@@ -6341,7 +6341,7 @@ translate chinese_simplified slave_story7_9cb7793b:
 translate chinese_simplified slave_story7_6cffe240:
 
     # you "Oh, really? That's quite rare in this city... Who do you worship then?"
-    you ""
+    you "哦，真的吗？在这座城市里这可真少见……那你信仰谁呢？"
 
 # game/core/content/interactions.rpy:5292
 translate chinese_simplified slave_story7_ed522ba3:
@@ -6353,7 +6353,7 @@ translate chinese_simplified slave_story7_ed522ba3:
 translate chinese_simplified slave_story7_dec94a21:
 
     # you "The Dweller? This sounds familiar..."
-    you ""
+    you "那个'居者'？这名字听着有点耳熟……"
 
 # game/core/content/interactions.rpy:5296
 translate chinese_simplified slave_story7_89cc7bdc:
@@ -6371,7 +6371,7 @@ translate chinese_simplified slave_story7_3ce3d0c0:
 translate chinese_simplified slave_story7_d62a412e:
 
     # you "That sounds familiar... Wait a minute, isn't that the god of the elves?"
-    you ""
+    you "这名字好耳熟……等等，那不就是精灵族的神吗？"
 
 # game/core/content/interactions.rpy:5302
 translate chinese_simplified slave_story7_6bf13f1f:
@@ -6383,7 +6383,7 @@ translate chinese_simplified slave_story7_6bf13f1f:
 translate chinese_simplified slave_story7_78f547c1:
 
     # you "I can see why it isn't a very popular god in those parts anymore."
-    you ""
+    you "我明白为什么那家伙在那一带不再受欢迎了。"
 
 # game/core/content/interactions.rpy:5307
 translate chinese_simplified slave_story7_5b5bef6d:
@@ -6407,7 +6407,7 @@ translate chinese_simplified slave_story7_fee7499e:
 translate chinese_simplified slave_story7_fec1fe3c:
 
     # you "What do you mean?"
-    you ""
+    you "什么意思？"
 
 # game/core/content/interactions.rpy:5320
 translate chinese_simplified slave_story7_4d66c72e:
@@ -6431,7 +6431,7 @@ translate chinese_simplified slave_story7_ac89493c:
 translate chinese_simplified slave_story7_33fa438a:
 
     # you "I'm sorry it's come to this. I wish things could have turned out differently..."
-    you ""
+    you "很遗憾事情会变成这样。我多希望一切能有所不同……"
 
 # game/core/content/interactions.rpy:5329
 translate chinese_simplified slave_story7_402651a5:
@@ -6443,7 +6443,7 @@ translate chinese_simplified slave_story7_402651a5:
 translate chinese_simplified slave_story7_685847ec:
 
     # you "Well..."
-    you ""
+    you "这个嘛……"
 
 # game/core/content/interactions.rpy:5331
 translate chinese_simplified slave_story7_4f8ce63e:
@@ -6455,13 +6455,13 @@ translate chinese_simplified slave_story7_4f8ce63e:
 translate chinese_simplified slave_story7_f4085840:
 
     # you "Well, life is hard. We don't get to decide everything that happens to us."
-    you ""
+    you "唉，生活就是这样艰难。我们无法决定自己身上发生的一切。"
 
 # game/core/content/interactions.rpy:5336
 translate chinese_simplified slave_story7_35f4fe92:
 
     # you "What's left is for us to make the best of the hand we're dealt."
-    you ""
+    you "我们所能做的，就是把手里的牌打到最好。"
 
 # game/core/content/interactions.rpy:5337
 translate chinese_simplified slave_story7_05e96c00:
@@ -6473,19 +6473,19 @@ translate chinese_simplified slave_story7_05e96c00:
 translate chinese_simplified slave_story7_f1cf0c2d:
 
     # you "Oh, boo-fucking-hoo..."
-    you ""
+    you "哦，真是哭你妈的惨啊……"
 
 # game/core/content/interactions.rpy:5342
 translate chinese_simplified slave_story7_82d410a3:
 
     # you "If you were good enough for anything other than being a cum dump, then you wouldn't have ended up in this joint!"
-    you ""
+    you "要是你除了当肉便器之外还有点别的用处，也不至于落到这种地方来！"
 
 # game/core/content/interactions.rpy:5343
 translate chinese_simplified slave_story7_05f4f1aa:
 
     # you "Stop wallowing in your self-pity. It disgusts me."
-    you ""
+    you "别整天顾影自怜了。这让我恶心。"
 
 # game/core/content/interactions.rpy:5344
 translate chinese_simplified slave_story7_c1da3d17:
@@ -6503,7 +6503,7 @@ translate chinese_simplified slave_story7_afa51be2:
 translate chinese_simplified slave_story7_611f0de1:
 
     # you "Oh, really?"
-    you ""
+    you "哦，是吗？"
 
 # game/core/content/interactions.rpy:5347
 translate chinese_simplified slave_story7_194869d8:
@@ -6515,7 +6515,7 @@ translate chinese_simplified slave_story7_194869d8:
 translate chinese_simplified slave_story7_036d78fa:
 
     # you "You chose to become a sex slave?"
-    you ""
+    you "你是自己选择当性奴的？"
 
 # game/core/content/interactions.rpy:5351
 translate chinese_simplified slave_story7_ef25d77d:
@@ -6527,7 +6527,7 @@ translate chinese_simplified slave_story7_ef25d77d:
 translate chinese_simplified slave_story7_b3824ffe:
 
     # you "You mean... When I offered you a job in town?"
-    you ""
+    you "你是说……我当初在城里给你提供工作的时候？"
 
 # game/core/content/interactions.rpy:5355
 translate chinese_simplified slave_story7_68a61b70:
@@ -6539,7 +6539,7 @@ translate chinese_simplified slave_story7_68a61b70:
 translate chinese_simplified slave_story7_8b90d45f:
 
     # you "How so?"
-    you ""
+    you "怎么会？"
 
 # game/core/content/interactions.rpy:5359
 translate chinese_simplified slave_story7_108c08d8:
@@ -6563,7 +6563,7 @@ translate chinese_simplified slave_story7_7c5c86cb:
 translate chinese_simplified slave_story7_ece4bd18:
 
     # you "Is this a bad time?"
-    you ""
+    you "现在方便说话吗？"
 
 # game/core/content/interactions.rpy:5374
 translate chinese_simplified slave_story7_3cdbb641:
@@ -6575,7 +6575,7 @@ translate chinese_simplified slave_story7_3cdbb641:
 translate chinese_simplified slave_story7_a09881b2:
 
     # you "Like what?"
-    you ""
+    you "比如什么？"
 
 # game/core/content/interactions.rpy:5378
 translate chinese_simplified slave_story7_d8a048e0:
@@ -6647,7 +6647,7 @@ translate chinese_simplified slave_story7_0c3b3d8d:
 translate chinese_simplified slave_story7_3900c296:
 
     # you "What happened?"
-    you ""
+    you "发生什么事了？"
 
 # game/core/content/interactions.rpy:5403
 translate chinese_simplified slave_story7_41d196e3:
@@ -6713,7 +6713,7 @@ translate chinese_simplified slave_story7_8d6973c2:
 translate chinese_simplified slave_story7_6959b3d7:
 
     # you "Uh-oh..."
-    you ""
+    you "糟了……"
 
 # game/core/content/interactions.rpy:5425
 translate chinese_simplified slave_story7_51fdd291:
@@ -6725,7 +6725,7 @@ translate chinese_simplified slave_story7_51fdd291:
 translate chinese_simplified slave_story7_16b626ca:
 
     # you "Take some rest. We'll finish our discussion later."
-    you ""
+    you "去休息吧。我们改天再继续谈。"
 
 # game/core/content/interactions.rpy:5429
 translate chinese_simplified slave_story7_eb944994:
@@ -6749,7 +6749,7 @@ translate chinese_simplified slave_story7_4bd884b0:
 translate chinese_simplified slave_story7_5999b59f:
 
     # you "Wow, with such flexibility, no wonder you're popular with customers..."
-    you ""
+    you "哇，这么软的身体，难怪客人们都喜欢你……"
 
 # game/core/content/interactions.rpy:5446
 translate chinese_simplified slave_story7_0bc7db9d:
@@ -6767,7 +6767,7 @@ translate chinese_simplified slave_story7_42b3ed1b:
 translate chinese_simplified slave_story7_1002acf4:
 
     # you "Yes... By the way, you didn't finish your story the other day... About how you got mixed up with the Arios church and their Templars?"
-    you ""
+    you "好……对了，你那天的故事还没讲完呢……你是怎么跟阿里奥斯教会还有他们的圣殿骑士扯上关系的？"
 
 # game/core/content/interactions.rpy:5452
 translate chinese_simplified slave_story7_a0560252:
@@ -6839,7 +6839,7 @@ translate chinese_simplified slave_story7_da72f095:
 translate chinese_simplified slave_story7_906a2155:
 
     # you "Of course."
-    you ""
+    you "当然可以。"
 
 # game/core/content/interactions.rpy:5478
 translate chinese_simplified slave_story7_dc76d7ce:
@@ -6863,7 +6863,7 @@ translate chinese_simplified slave_story7_f5016a75:
 translate chinese_simplified slave_story7_a577ad0e:
 
     # you "What?"
-    you ""
+    you "什么？"
 
 # game/core/content/interactions.rpy:5486
 translate chinese_simplified slave_story7_b06416d9:
@@ -6911,7 +6911,7 @@ translate chinese_simplified slave_story7_4aa6b02e:
 translate chinese_simplified slave_story7_3e26844e:
 
     # you "Oh..."
-    you ""
+    you "哦……"
 
 # game/core/content/interactions.rpy:5502
 translate chinese_simplified slave_story7_3ddc8cdf:
@@ -6959,7 +6959,7 @@ translate chinese_simplified slave_story7_bf2882b5:
 translate chinese_simplified slave_story7_dae0ec55:
 
     # you "..."
-    you ""
+    you "……"
 
 # game/core/content/interactions.rpy:5518
 translate chinese_simplified slave_story7_7c4fc8eb:
@@ -7001,7 +7001,7 @@ translate chinese_simplified slave_story7_c2bdfceb:
 translate chinese_simplified slave_story7_d09b0fb8:
 
     # you "You're too harsh."
-    you ""
+    you "你说得太重了。"
 
 # game/core/content/interactions.rpy:5534
 translate chinese_simplified slave_story7_e2cd36b2:
@@ -7025,13 +7025,13 @@ translate chinese_simplified slave_story7_4c9ba0d1:
 translate chinese_simplified slave_story7_b4578c57:
 
     # you "Whoah."
-    you ""
+    you "哇哦。"
 
 # game/core/content/interactions.rpy:5544
 translate chinese_simplified slave_story7_7f56e9cc:
 
     # you "I am so appalled that you suffered so much at the hands of Arios worshippers... Please know that we are not all like that."
-    you ""
+    you "得知你在阿里奥斯信徒手中受了那么多苦，我深感痛心……请相信，我们并非都是那样的人。"
 
 # game/core/content/interactions.rpy:5546
 translate chinese_simplified slave_story7_27d6dab1:
@@ -7055,7 +7055,7 @@ translate chinese_simplified slave_story7_5d63e99d:
 translate chinese_simplified slave_story7_ccdb8237:
 
     # you "No, what?"
-    you ""
+    you "不是，没什么？"
 
 # game/core/content/interactions.rpy:5558
 translate chinese_simplified slave_story7_725f7aa8:
@@ -7151,7 +7151,7 @@ translate chinese_simplified slave_story7_2bc42089:
 translate chinese_simplified slave_story7_85fae05b:
 
     # you "I'm with you, sister."
-    you ""
+    you "姐妹，我支持你。"
 
 # game/core/content/interactions.rpy:5584
 translate chinese_simplified slave_story7_01f82067:
@@ -7235,7 +7235,7 @@ translate chinese_simplified slave_story8_52108b9e:
 translate chinese_simplified slave_story8_6fca62d1:
 
     # you "Ahem, what exactly do you think you're doing?"
-    you ""
+    you "咳，你觉得自己在干什么？"
 
 # game/core/content/interactions.rpy:5637
 translate chinese_simplified slave_story8_793655f1:
@@ -7265,7 +7265,7 @@ translate chinese_simplified slave_story8_2a185bec:
 translate chinese_simplified slave_story8_b6355368:
 
     # you "What are you trying to protect yourself against, anyway? I don't think there are many ghosts in brothels, anyway. They usually prefer quieter places."
-    you ""
+    you "你到底在防备什么？再说了，青楼里能有多少鬼魂。它们通常更喜欢安静的地方。"
 
 # game/core/content/interactions.rpy:5647
 translate chinese_simplified slave_story8_02cb965e:
@@ -7277,7 +7277,7 @@ translate chinese_simplified slave_story8_02cb965e:
 translate chinese_simplified slave_story8_e17aa81f:
 
     # you "Oh, really? So you think a chalk drawing will affect them?"
-    you ""
+    you "哦，是吗？你以为一幅粉笔画就能对它们起作用？"
 
 # game/core/content/interactions.rpy:5651
 translate chinese_simplified slave_story8_cda0c023:
@@ -7301,7 +7301,7 @@ translate chinese_simplified slave_story8_e4d42c59:
 translate chinese_simplified slave_story8_ad5d108f:
 
     # you "Who is '{i}she{/i}'?"
-    you ""
+    you "'{i}她{/i}'是谁？"
 
 # game/core/content/interactions.rpy:5659
 translate chinese_simplified slave_story8_5471e1b4:
@@ -7319,13 +7319,13 @@ translate chinese_simplified slave_story8_da2430f9:
 translate chinese_simplified slave_story8_cce87d6d:
 
     # you "Well, I studied alongside a few in Karkyr... They're usually pretty haughty and ill-tempered."
-    you ""
+    you "嗯，我曾在卡尔基尔和几位女巫一起求学……她们通常都非常傲慢，脾气又坏。"
 
 # game/core/content/interactions.rpy:5666
 translate chinese_simplified slave_story8_d6c61e34:
 
     # you "But they're wild in bed, so there's that."
-    you ""
+    you "不过她们在床上很狂野，这也算是个优点吧。"
 
 # game/core/content/interactions.rpy:5668
 translate chinese_simplified slave_story8_fcb27314:
@@ -7337,7 +7337,7 @@ translate chinese_simplified slave_story8_fcb27314:
 translate chinese_simplified slave_story8_54072934:
 
     # you "Well, they live alone in the forest, and they eat little children..."
-    you ""
+    you "她们独自住在森林里，还吃小孩子……"
 
 # game/core/content/interactions.rpy:5673
 translate chinese_simplified slave_story8_0bc7db9d:
@@ -7385,7 +7385,7 @@ translate chinese_simplified slave_story8_dec2d846:
 translate chinese_simplified slave_story8_3196df6b:
 
     # you "And what is it that you are talking about, exactly?"
-    you ""
+    you "所以你们到底在说什么？"
 
 # game/core/content/interactions.rpy:5689
 translate chinese_simplified slave_story8_e33ce46e:
@@ -7403,7 +7403,7 @@ translate chinese_simplified slave_story8_53973358:
 translate chinese_simplified slave_story8_0a2b6701:
 
     # you "Wait. Can you do that again?"
-    you ""
+    you "等等。你能再来一次吗？"
 
 # game/core/content/interactions.rpy:5698
 translate chinese_simplified slave_story8_554781da:
@@ -7427,13 +7427,13 @@ translate chinese_simplified slave_story8_f0a26a5f:
 translate chinese_simplified slave_story8_c7c8832f:
 
     # you "Spooky...."
-    you ""
+    you "好吓人……"
 
 # game/core/content/interactions.rpy:5711
 translate chinese_simplified slave_story8_143dee9f:
 
     # you "Are you saying someone cursed you?"
-    you ""
+    you "你是说有人诅咒了你？"
 
 # game/core/content/interactions.rpy:5713
 translate chinese_simplified slave_story8_01b3726f:
@@ -7445,7 +7445,7 @@ translate chinese_simplified slave_story8_01b3726f:
 translate chinese_simplified slave_story8_a55df97f:
 
     # you "As a matter of fact, I do. It sounds like a fun story!"
-    you ""
+    you "说实话，我想听。听起来是个有趣的故事！"
 
 # game/core/content/interactions.rpy:5717
 translate chinese_simplified slave_story8_7c345123:
@@ -7493,7 +7493,7 @@ translate chinese_simplified slave_story8_ac89493c:
 translate chinese_simplified slave_story8_d42ed008:
 
     # you "People can get hurt by change. You must be careful what you wish for."
-    you ""
+    you "人们可能会因改变而受伤。必须小心自己的愿望。"
 
 # game/core/content/interactions.rpy:5740
 translate chinese_simplified slave_story8_c1da3d17:
@@ -7511,7 +7511,7 @@ translate chinese_simplified slave_story8_7c04db40:
 translate chinese_simplified slave_story8_fe193a85:
 
     # you "Some change is simply inevitable. Adaptable people can come out on top..."
-    you ""
+    you "有些改变是不可避免的。善于适应的人才能笑到最后……"
 
 # game/core/content/interactions.rpy:5746
 translate chinese_simplified slave_story8_d2e14eb3:
@@ -7523,7 +7523,7 @@ translate chinese_simplified slave_story8_d2e14eb3:
 translate chinese_simplified slave_story8_f16cb665:
 
     # you "Creative destruction... I like that."
-    you ""
+    you "创造性破坏……我喜欢这个说法。"
 
 # game/core/content/interactions.rpy:5751
 translate chinese_simplified slave_story8_0395c0a2:
@@ -7547,7 +7547,7 @@ translate chinese_simplified slave_story8_4dee1272:
 translate chinese_simplified slave_story8_e31aa406:
 
     # you "A teacher, uh?"
-    you ""
+    you "老师，嗯？"
 
 # game/core/content/interactions.rpy:5759
 translate chinese_simplified slave_story8_77786689:
@@ -7559,7 +7559,7 @@ translate chinese_simplified slave_story8_77786689:
 translate chinese_simplified slave_story8_b64d38e3:
 
     # you "What? Seriously?"
-    you ""
+    you "什么？真的假的？"
 
 # game/core/content/interactions.rpy:5763
 translate chinese_simplified slave_story8_76660229:
@@ -7577,7 +7577,7 @@ translate chinese_simplified slave_story8_3ae8a663:
 translate chinese_simplified slave_story8_9afd1bdd:
 
     # you "What the..."
-    you ""
+    you "搞什么……"
 
 # game/core/content/interactions.rpy:5782
 translate chinese_simplified slave_story8_bbafc366:
@@ -7589,7 +7589,7 @@ translate chinese_simplified slave_story8_bbafc366:
 translate chinese_simplified slave_story8_30f2425f:
 
     # you "[girl.name]???"
-    you ""
+    you "[girl.name]？？？"
 
 # game/core/content/interactions.rpy:5786
 translate chinese_simplified slave_story8_943414f1:
@@ -7607,19 +7607,19 @@ translate chinese_simplified slave_story8_74e8f224:
 translate chinese_simplified slave_story8_5fd00221:
 
     # you "[girl.name]! Poor darling! Are you all right?"
-    you ""
+    you "[girl.name]！可怜的宝贝！你没事吧？"
 
 # game/core/content/interactions.rpy:5793
 translate chinese_simplified slave_story8_57e8b959:
 
     # you "What the hell happened here..."
-    you ""
+    you "这他妈的到底是怎么回事……"
 
 # game/core/content/interactions.rpy:5795
 translate chinese_simplified slave_story8_a8b038fa:
 
     # you "What the... You're gonna pay for the damage from your allowance, you hear me!"
-    you ""
+    you "什么……赔偿损失的钱要从你的零用钱里扣，听见没有！"
 
 # game/core/content/interactions.rpy:5797
 translate chinese_simplified slave_story8_25fad722:
@@ -7643,13 +7643,13 @@ translate chinese_simplified slave_story8_085c3078:
 translate chinese_simplified slave_story8_6181a540:
 
     # you "What in the name of [MC.god] were you trying to do?"
-    you ""
+    you "以[MC.god]之名，你到底想干什么？"
 
 # game/core/content/interactions.rpy:5806
 translate chinese_simplified slave_story8_38f4e60b:
 
     # you "What in the bloody world were you trying to do?"
-    you ""
+    you "你到底他妈的想干什么？"
 
 # game/core/content/interactions.rpy:5808
 translate chinese_simplified slave_story8_eb869c56:
@@ -7673,7 +7673,7 @@ translate chinese_simplified slave_story8_b38e882d:
 translate chinese_simplified slave_story8_7a2f08c2:
 
     # you "Hey, [girl.name]. I don't want you endangering yourself and everyone here with your crazy experiments, you hear?"
-    you ""
+    you "嘿，[girl.name]。我可不许你用那些疯疯癫癫的实验把你自己和这里的所有人都置于危险之中，听见了吗？"
 
 # game/core/content/interactions.rpy:5816
 translate chinese_simplified slave_story8_4a3f9188:
@@ -7691,7 +7691,7 @@ translate chinese_simplified slave_story8_1eb0e7fe:
 translate chinese_simplified slave_story8_9d46dba6:
 
     # you "What is that curse all about, anyway?"
-    you ""
+    you "话说回来，那个诅咒到底是怎么回事？"
 
 # game/core/content/interactions.rpy:5822
 translate chinese_simplified slave_story8_ce9564f7:
@@ -7703,7 +7703,7 @@ translate chinese_simplified slave_story8_ce9564f7:
 translate chinese_simplified slave_story8_8b044c9c:
 
     # you "Yes. Did you find one?"
-    you ""
+    you "找到了吗？"
 
 # game/core/content/interactions.rpy:5826
 translate chinese_simplified slave_story8_cd1403d4:
@@ -7775,7 +7775,7 @@ translate chinese_simplified slave_story8_d0a02cff:
 translate chinese_simplified slave_story8_e37bb862:
 
     # you "Hmm... Who was she?"
-    you ""
+    you "嗯……她是谁？"
 
 # game/core/content/interactions.rpy:5850
 translate chinese_simplified slave_story8_3221c4ea:
@@ -7805,7 +7805,7 @@ translate chinese_simplified slave_story8_ac6ec176:
 translate chinese_simplified slave_story8_6a22c1a5:
 
     # you "Appetites?"
-    you ""
+    you "欲望？"
 
 # game/core/content/interactions.rpy:5861
 translate chinese_simplified slave_story8_6d81eff0:
@@ -7823,7 +7823,7 @@ translate chinese_simplified slave_story8_6f0867e1:
 translate chinese_simplified slave_story8_597a5975:
 
     # you "As her apprentice?"
-    you ""
+    you "给她当学徒？"
 
 # game/core/content/interactions.rpy:5867
 translate chinese_simplified slave_story8_1d041614:
@@ -7907,7 +7907,7 @@ translate chinese_simplified slave_story8_5444b512:
 translate chinese_simplified slave_story8_bedc264a:
 
     # you "Uh-oh."
-    you ""
+    you "糟了。"
 
 # game/core/content/interactions.rpy:5895
 translate chinese_simplified slave_story8_a99f12ab:
@@ -7919,7 +7919,7 @@ translate chinese_simplified slave_story8_a99f12ab:
 translate chinese_simplified slave_story8_a1992cf2:
 
     # you "Oh dear."
-    you ""
+    you "哦，天哪。"
 
 # game/core/content/interactions.rpy:5899
 translate chinese_simplified slave_story8_b71f2ff6:
@@ -7961,7 +7961,7 @@ translate chinese_simplified slave_story8_c974b9ae:
 translate chinese_simplified slave_story8_fa53c2e6:
 
     # you "Who... Who did this to you? Is it some kind of sick customer???"
-    you ""
+    you "谁……是谁对你做的？是不是哪个变态的客人？？？"
 
 # game/core/content/interactions.rpy:5922
 translate chinese_simplified slave_story8_66ac5273:
@@ -7973,13 +7973,13 @@ translate chinese_simplified slave_story8_66ac5273:
 translate chinese_simplified slave_story8_a1615fc8:
 
     # you "You??? But... When... How..."
-    you ""
+    you "你？？？可是……什么时候……怎么……"
 
 # game/core/content/interactions.rpy:5926
 translate chinese_simplified slave_story8_06b2b022:
 
     # you "WHY???"
-    you ""
+    you "为什么？？？"
 
 # game/core/content/interactions.rpy:5928
 translate chinese_simplified slave_story8_aea95514:
@@ -7991,7 +7991,7 @@ translate chinese_simplified slave_story8_aea95514:
 translate chinese_simplified slave_story8_267012dd:
 
     # you "What the... Are you crazy? How did you even manage to tie yourself up???"
-    you ""
+    you "搞什么……你疯了吗？你到底是怎么把自己绑起来的？？？"
 
 # game/core/content/interactions.rpy:5932
 translate chinese_simplified slave_story8_17750a8b:
@@ -8003,7 +8003,7 @@ translate chinese_simplified slave_story8_17750a8b:
 translate chinese_simplified slave_story8_72b70164:
 
     # you "Well... I don't know... How can I tell?"
-    you ""
+    you "这个嘛……我不知道……我怎么看得出来？"
 
 # game/core/content/interactions.rpy:5936
 translate chinese_simplified slave_story8_52630fe4:
@@ -8015,7 +8015,7 @@ translate chinese_simplified slave_story8_52630fe4:
 translate chinese_simplified slave_story8_eef45149:
 
     # you "What is this curse, anyway?"
-    you ""
+    you "所以说，这个诅咒到底是怎么回事？"
 
 # game/core/content/interactions.rpy:5940
 translate chinese_simplified slave_story8_f0c7f23f:
@@ -8027,7 +8027,7 @@ translate chinese_simplified slave_story8_f0c7f23f:
 translate chinese_simplified slave_story8_33c6fd3a:
 
     # you "Tell me."
-    you ""
+    you "说吧。"
 
 # game/core/content/interactions.rpy:5944
 translate chinese_simplified slave_story8_2ddc3804:
@@ -8039,7 +8039,7 @@ translate chinese_simplified slave_story8_2ddc3804:
 translate chinese_simplified slave_story8_15d6b866:
 
     # you "Yes."
-    you ""
+    you "是的。"
 
 # game/core/content/interactions.rpy:5948
 translate chinese_simplified slave_story8_42b818f9:
@@ -8051,7 +8051,7 @@ translate chinese_simplified slave_story8_42b818f9:
 translate chinese_simplified slave_story8_6e9a44fb:
 
     # you "Yes..."
-    you ""
+    you "是的……"
 
 # game/core/content/interactions.rpy:5952
 translate chinese_simplified slave_story8_4dbe83c9:
@@ -8069,7 +8069,7 @@ translate chinese_simplified slave_story8_c6602880:
 translate chinese_simplified slave_story8_ba7576bf:
 
     # you "Tell me you didn't read it aloud..."
-    you ""
+    you "告诉我你没有把它大声念出来……"
 
 # game/core/content/interactions.rpy:5958
 translate chinese_simplified slave_story8_e9a7159d:
@@ -8081,7 +8081,7 @@ translate chinese_simplified slave_story8_e9a7159d:
 translate chinese_simplified slave_story8_48a2c215:
 
     # you "Damn..."
-    you ""
+    you "该死……"
 
 # game/core/content/interactions.rpy:5962
 translate chinese_simplified slave_story8_ec9bfb43:
@@ -8093,7 +8093,7 @@ translate chinese_simplified slave_story8_ec9bfb43:
 translate chinese_simplified slave_story8_a0372974:
 
     # you "Damn."
-    you ""
+    you "该死。"
 
 # game/core/content/interactions.rpy:5966
 translate chinese_simplified slave_story8_07dae3c2:
@@ -8105,7 +8105,7 @@ translate chinese_simplified slave_story8_07dae3c2:
 translate chinese_simplified slave_story8_51492967:
 
     # you "Just like that?"
-    you ""
+    you "就这样？"
 
 # game/core/content/interactions.rpy:5970
 translate chinese_simplified slave_story8_847c21f3:
@@ -8117,7 +8117,7 @@ translate chinese_simplified slave_story8_847c21f3:
 translate chinese_simplified slave_story8_737150bd:
 
     # you "Duh."
-    you ""
+    you "废话。"
 
 # game/core/content/interactions.rpy:5974
 translate chinese_simplified slave_story8_6887a4d6:
@@ -8147,7 +8147,7 @@ translate chinese_simplified slave_story8_794189fc:
 translate chinese_simplified slave_story8_8cd26f33:
 
     # you "How... Unexpected..."
-    you ""
+    you "真是……出人意料……"
 
 # game/core/content/interactions.rpy:5984
 translate chinese_simplified slave_story8_127dc844:
@@ -8267,7 +8267,7 @@ translate chinese_simplified slave_story8_c050c231:
 translate chinese_simplified slave_story8_dae0ec55:
 
     # you "..."
-    you ""
+    you "……"
 
 # game/core/content/interactions.rpy:6027
 translate chinese_simplified slave_story8_c1da3d17_1:
@@ -8279,7 +8279,7 @@ translate chinese_simplified slave_story8_c1da3d17_1:
 translate chinese_simplified slave_story8_ec3a7cef:
 
     # you "And...?"
-    you ""
+    you "然后呢……？"
 
 # game/core/content/interactions.rpy:6031
 translate chinese_simplified slave_story8_6f0c100a:
@@ -8291,7 +8291,7 @@ translate chinese_simplified slave_story8_6f0c100a:
 translate chinese_simplified slave_story8_73a2a5b1:
 
     # you "I mean... What happened?"
-    you ""
+    you "我的意思是……后来怎么样了？"
 
 # game/core/content/interactions.rpy:6035
 translate chinese_simplified slave_story8_cdee7464:
@@ -8303,7 +8303,7 @@ translate chinese_simplified slave_story8_cdee7464:
 translate chinese_simplified slave_story8_fd653af1:
 
     # you "Cursed?"
-    you ""
+    you "被诅咒了？"
 
 # game/core/content/interactions.rpy:6039
 translate chinese_simplified slave_story8_7fbe8dad:
@@ -8321,13 +8321,13 @@ translate chinese_simplified slave_story8_c4b04709:
 translate chinese_simplified slave_story8_dae0ec55_1:
 
     # you "..."
-    you ""
+    you "……"
 
 # game/core/content/interactions.rpy:6045
 translate chinese_simplified slave_story8_4f1672dd:
 
     # you "You really believe that is a curse?"
-    you ""
+    you "你真觉得那是诅咒？"
 
 # game/core/content/interactions.rpy:6047
 translate chinese_simplified slave_story8_b6903b3b:
@@ -8339,7 +8339,7 @@ translate chinese_simplified slave_story8_b6903b3b:
 translate chinese_simplified slave_story8_685847ec:
 
     # you "Well..."
-    you ""
+    you "这个嘛……"
 
 # game/core/content/interactions.rpy:6051
 translate chinese_simplified slave_story8_90069e2b:
@@ -8351,7 +8351,7 @@ translate chinese_simplified slave_story8_90069e2b:
 translate chinese_simplified slave_story8_799f2556:
 
     # you "Help you how?"
-    you ""
+    you "怎么帮你？"
 
 # game/core/content/interactions.rpy:6058
 translate chinese_simplified slave_story8_59f98aeb:
@@ -8435,7 +8435,7 @@ translate chinese_simplified slave_story_help_f155281d:
 translate chinese_simplified slave_story_help_425f99bd:
 
     # you "Listen, if it'll put your mind at ease, I can perform a ritual on you to drive the curse away."
-    you ""
+    you "听着，如果这能让你安心，我可以为你举行一个仪式，把诅咒驱散。"
 
 # game/core/content/interactions.rpy:6123
 translate chinese_simplified slave_story_help_20593d59:
@@ -8447,7 +8447,7 @@ translate chinese_simplified slave_story_help_20593d59:
 translate chinese_simplified slave_story_help_eb374de6:
 
     # you "I will... Don't worry."
-    you ""
+    you "我会的……别担心。"
 
 # game/core/content/interactions.rpy:6127
 translate chinese_simplified slave_story_help_4146f7b9:
@@ -8459,7 +8459,7 @@ translate chinese_simplified slave_story_help_4146f7b9:
 translate chinese_simplified slave_story_help_5e3020af:
 
     # you "There you go! Now just take a couple of days rest, and you'll be good as new."
-    you ""
+    you "好了！现在只要休息几天，你就会完好如初了。"
 
 # game/core/content/interactions.rpy:6135
 translate chinese_simplified slave_story_help_1e206d68:
@@ -8471,7 +8471,7 @@ translate chinese_simplified slave_story_help_1e206d68:
 translate chinese_simplified slave_story_help_376a805b:
 
     # you "It's nothing..."
-    you ""
+    you "没什么大不了的……"
 
 # game/core/content/interactions.rpy:6144
 translate chinese_simplified slave_story_help_1283a873:
@@ -8483,13 +8483,13 @@ translate chinese_simplified slave_story_help_1283a873:
 translate chinese_simplified slave_story_help_5b1fb2fe:
 
     # you "Look. It isn't that bad. Being clumsy isn't the end of the world..."
-    you ""
+    you "你看。也没那么糟。笨手笨脚又不是世界末日……"
 
 # game/core/content/interactions.rpy:6153
 translate chinese_simplified slave_story_help_35e07b0d:
 
     # you "She could have turned you into a toad."
-    you ""
+    you "她本可以把你变成一只癞蛤蟆的。"
 
 # game/core/content/interactions.rpy:6155
 translate chinese_simplified slave_story_help_4e5f92c3:
@@ -8501,7 +8501,7 @@ translate chinese_simplified slave_story_help_4e5f92c3:
 translate chinese_simplified slave_story_help_31f99779:
 
     # you "Oh, yes... You'd be living in a swamp, eating flies..."
-    you ""
+    you "哦，对了……那样你就会住在沼泽里，吃着苍蝇……"
 
 # game/core/content/interactions.rpy:6159
 translate chinese_simplified slave_story_help_a2859c41:
@@ -8513,7 +8513,7 @@ translate chinese_simplified slave_story_help_a2859c41:
 translate chinese_simplified slave_story_help_a1fafc4b:
 
     # you "So you see, you got off easy."
-    you ""
+    you "所以你看，你已经算走运了。"
 
 # game/core/content/interactions.rpy:6163
 translate chinese_simplified slave_story_help_c81af5d5:
@@ -8531,7 +8531,7 @@ translate chinese_simplified slave_story_help_3ee1eed2:
 translate chinese_simplified slave_story_help_77a3c3d9:
 
     # you "Yes. You do that."
-    you ""
+    you "行啊。就这么办。"
 
 # game/core/content/interactions.rpy:6175
 translate chinese_simplified slave_story_help_e6965d4a:
@@ -8549,7 +8549,7 @@ translate chinese_simplified slave_story_help_1283a873_1:
 translate chinese_simplified slave_story_help_8c997c00:
 
     # you "I know the kind of creature that you speak of... I might be able to 'arrange' a private meeting with one of them."
-    you ""
+    you "我知道你说的那种生物……我或许可以'安排'你私下和其中一只见上一面。"
 
 # game/core/content/interactions.rpy:6187
 translate chinese_simplified slave_story_help_0c2ae388:
@@ -8561,7 +8561,7 @@ translate chinese_simplified slave_story_help_0c2ae388:
 translate chinese_simplified slave_story_help_5b9a661c:
 
     # you "All right, all right. Take tonight off, and wait in your room. I'll send you a little surprise..."
-    you ""
+    you "好好好。今晚给你放假，在房间里等着。我会给你送上一份小小的惊喜……"
 
 # game/core/content/interactions.rpy:6191
 translate chinese_simplified slave_story_help_d0dcbaad:
@@ -8591,7 +8591,7 @@ translate chinese_simplified slave_story_help_88d4be98:
 translate chinese_simplified slave_story_help_8c997c00_1:
 
     # you "I know the kind of creature that you speak of... I might be able to 'arrange' a private meeting with one of them."
-    you ""
+    you "我知道你说的那种生物……我或许可以'安排'你私下和其中一只见上一面。"
 
 # game/core/content/interactions.rpy:6230
 translate chinese_simplified slave_story_help_0c2ae388_1:
@@ -8603,7 +8603,7 @@ translate chinese_simplified slave_story_help_0c2ae388_1:
 translate chinese_simplified slave_story_help_5b9a661c_1:
 
     # you "All right, all right. Take tonight off, and wait in your room. I'll send you a little surprise..."
-    you ""
+    you "好好好。今晚给你放假，在房间里等着。我会给你送上一份小小的惊喜……"
 
 # game/core/content/interactions.rpy:6234
 translate chinese_simplified slave_story_help_d0dcbaad_1:
@@ -8633,7 +8633,7 @@ translate chinese_simplified slave_story_help_28b4fcc6:
 translate chinese_simplified slave_story_help_d1e5a3c0:
 
     # you "I'll give you a few days off. This way, you can visit the forest and get what you need."
-    you ""
+    you "我会给你放几天假。这样你就可以去森林里弄到你需要的东西了。"
 
 # game/core/content/interactions.rpy:6277
 translate chinese_simplified slave_story_help_9b132424:
@@ -8645,13 +8645,13 @@ translate chinese_simplified slave_story_help_9b132424:
 translate chinese_simplified slave_story_help_b60a0a71:
 
     # you "Go for it. It's your god. And who knows, perhaps some good luck will rub off on us?"
-    you ""
+    you "去吧。那是你的神。而且谁知道呢，说不定我们也能沾点好运？"
 
 # game/core/content/interactions.rpy:6281
 translate chinese_simplified slave_story_help_a24749a6:
 
     # you "Keep the customers away from it though. We don't want the Templars coming here, do we?"
-    you ""
+    you "不过别让它招引来客人。我们可不希望圣殿骑士找上门来，对吧？"
 
 # game/core/content/interactions.rpy:6283
 translate chinese_simplified slave_story_help_ad8aad95:
@@ -8669,7 +8669,7 @@ translate chinese_simplified slave_story_help_1283a873_2:
 translate chinese_simplified slave_story_help_f2d3280a:
 
     # you "Here is some money to get the ingredients you need from the market. You can get started right away."
-    you ""
+    you "这里有些钱，你拿去市场上买需要的材料吧。现在就可以开始准备了。"
 
 # game/core/content/interactions.rpy:6301
 translate chinese_simplified slave_story_help_9b132424_1:
@@ -8681,13 +8681,13 @@ translate chinese_simplified slave_story_help_9b132424_1:
 translate chinese_simplified slave_story_help_b60a0a71_1:
 
     # you "Go for it. It's your god. And who knows, perhaps some good luck will rub off on us?"
-    you ""
+    you "去吧。那是你的神。而且谁知道呢，说不定我们也能沾点好运？"
 
 # game/core/content/interactions.rpy:6305
 translate chinese_simplified slave_story_help_a24749a6_1:
 
     # you "Keep the customers away from it though. We don't want the Templars coming here, do we?"
-    you ""
+    you "不过别让它招引来客人。我们可不希望圣殿骑士找上门来，对吧？"
 
 # game/core/content/interactions.rpy:6307
 translate chinese_simplified slave_story_help_ad8aad95_1:
@@ -8705,7 +8705,7 @@ translate chinese_simplified slave_story_help_1283a873_3:
 translate chinese_simplified slave_story_help_5eab26d0:
 
     # you "Well, you don't have to. Feel free to tell everyone how you really feel."
-    you ""
+    you "好吧，你不用勉强自己。尽管告诉大家你的真实感受吧。"
 
 # game/core/content/interactions.rpy:6321
 translate chinese_simplified slave_story_help_dc655b71:
@@ -8717,7 +8717,7 @@ translate chinese_simplified slave_story_help_dc655b71:
 translate chinese_simplified slave_story_help_037da70b:
 
     # you "Come on, this is a brothel, not a church. If they want a sermon, let them go to the Cathedra."
-    you ""
+    you "拜托，这里是青楼，不是教堂。他们要是想听布道，就让他们去大教堂好了。"
 
 # game/core/content/interactions.rpy:6325
 translate chinese_simplified slave_story_help_ceeafcb9:
@@ -8747,7 +8747,7 @@ translate chinese_simplified slave_story_help_1283a873_4:
 translate chinese_simplified slave_story_help_c5587d71:
 
     # you "You look like you are feeling lonely... What if I got you a new pet?"
-    you ""
+    you "你看起来很寂寞的样子……要是我给你弄只新宠物怎么样？"
 
 # game/core/content/interactions.rpy:6387
 translate chinese_simplified slave_story_help_6e57656b:
@@ -8759,7 +8759,7 @@ translate chinese_simplified slave_story_help_6e57656b:
 translate chinese_simplified slave_story_help_482a16c7:
 
     # you "Sure."
-    you ""
+    you "当然好。"
 
 # game/core/content/interactions.rpy:6389
 translate chinese_simplified slave_story_help_9345695f:
@@ -8783,13 +8783,13 @@ translate chinese_simplified slave_story_help_1283a873_5:
 translate chinese_simplified slave_story_help_362d9711:
 
     # you "It's a long shot, but why not try it? There could be good money to be made if it works."
-    you ""
+    you "虽然希望渺茫，但为什么不试试呢？要是成功了，说不定能大赚一笔。"
 
 # game/core/content/interactions.rpy:6407
 translate chinese_simplified slave_story_help_e6493b51:
 
     # you "We'd have to share the money, of course..."
-    you ""
+    you "当然，赚了钱我们得平分……"
 
 # game/core/content/interactions.rpy:6408
 translate chinese_simplified slave_story_help_b80036c3:
@@ -8825,7 +8825,7 @@ translate chinese_simplified slave_story_help_1283a873_6:
 translate chinese_simplified slave_story_help_19ec7475:
 
     # you "Let me talk to some people I know. We could arrange a little fire..."
-    you ""
+    you "我去跟我认识的几个朋友谈谈。我们可以安排一场小小的火灾……"
 
 # game/core/content/interactions.rpy:6435
 translate chinese_simplified slave_story_help_3f34b634:
@@ -8843,7 +8843,7 @@ translate chinese_simplified slave_story_help_8a970120:
 translate chinese_simplified slave_story_help_527b9d74:
 
     # you "Why not..."
-    you ""
+    you "有何不可……"
 
 # game/core/content/interactions.rpy:6438
 translate chinese_simplified slave_story_help_c595fa4c:
@@ -8879,7 +8879,7 @@ translate chinese_simplified slave_story_help_1283a873_7:
 translate chinese_simplified slave_story_help_46d90622:
 
     # you "Well, this could be a good time to dust off some of my old fire spells..."
-    you ""
+    you "嗯，这倒是个翻出我那些老掉牙火系法术来用用的好机会……"
 
 # game/core/content/interactions.rpy:6457
 translate chinese_simplified slave_story_help_8a970120_1:
@@ -8891,7 +8891,7 @@ translate chinese_simplified slave_story_help_8a970120_1:
 translate chinese_simplified slave_story_help_9f6343b6:
 
     # you "Why not!"
-    you ""
+    you "有何不可！"
 
 # game/core/content/interactions.rpy:6459
 translate chinese_simplified slave_story_help_c595fa4c_1:
@@ -8927,25 +8927,25 @@ translate chinese_simplified slave_story_help_1283a873_8:
 translate chinese_simplified slave_story_help_b37382f0:
 
     # you "I understand how you feel."
-    you ""
+    you "我理解你的感受。"
 
 # game/core/content/interactions.rpy:6480
 translate chinese_simplified slave_story_help_2db5b2a4:
 
     # you "Arios will have mercy on this poor soul. Go to the Cathedra, pray for him, and present the priestesses with this modest gift."
-    you ""
+    you "阿里奥斯会怜悯这个可怜的灵魂。去大教堂吧，为他祈祷，并把这份微薄的礼物献给女祭司们。"
 
 # game/core/content/interactions.rpy:6482
 translate chinese_simplified slave_story_help_4c01fcef:
 
     # you "I don't worship Arios, but if it can give you closure, you have my blessing. Why don't you go tomorrow?"
-    you ""
+    you "我不信仰阿里奥斯，但如果这能让你放下心结，我祝福你。何不明天就去呢？"
 
 # game/core/content/interactions.rpy:6483
 translate chinese_simplified slave_story_help_4ad6ee99:
 
     # you "I'm sure those priestesses will want money... Here, take this."
-    you ""
+    you "我敢肯定那些女祭司肯定要收钱……来，拿着这个。"
 
 # game/core/content/interactions.rpy:6488
 translate chinese_simplified slave_story_help_a38221ab:
@@ -8963,7 +8963,7 @@ translate chinese_simplified slave_story_help_1283a873_9:
 translate chinese_simplified slave_story_help_480b3fe3:
 
     # you "I could allow you a larger allowance..."
-    you ""
+    you "我可以给你多涨点零用钱……"
 
 # game/core/content/interactions.rpy:6501
 translate chinese_simplified slave_story_help_275bc168:
@@ -8975,7 +8975,7 @@ translate chinese_simplified slave_story_help_275bc168:
 translate chinese_simplified slave_story_help_41b2c798:
 
     # you "...but you'd have to promise to behave, and keep it to yourself. I don't want the other girls to complain that I am having favorites."
-    you ""
+    you "……但你必须保证听话，而且别声张。我可不想听到别的姑娘抱怨我偏心。"
 
 # game/core/content/interactions.rpy:6505
 translate chinese_simplified slave_story_help_1ea8568d:
@@ -8999,7 +8999,7 @@ translate chinese_simplified slave_story_help_1283a873_10:
 translate chinese_simplified slave_story_help_f5eef4da:
 
     # you "Those drawing of yours are quite detailed... I'm sure a good tailor could do wonders with these for inspiration."
-    you ""
+    you "你画的那些图真够细致的……我想手艺好的裁缝以它们为灵感，一定能做出惊艳的衣服。"
 
 # game/core/content/interactions.rpy:6526
 translate chinese_simplified slave_story_help_43985a59:
@@ -9011,7 +9011,7 @@ translate chinese_simplified slave_story_help_43985a59:
 translate chinese_simplified slave_story_help_67a70741:
 
     # you "Well, that is not a problem... It can be my gift to you."
-    you ""
+    you "嗯，这不是问题……就当是我送给你的礼物。"
 
 # game/core/content/interactions.rpy:6530
 translate chinese_simplified slave_story_help_cbf94272:
@@ -9023,7 +9023,7 @@ translate chinese_simplified slave_story_help_cbf94272:
 translate chinese_simplified slave_story_help_e2a02c1b:
 
     # you "Why not. It looks like you really want that dress, and it could be useful for your work, you know..."
-    you ""
+    you "有何不可。看来你是真的很想要那条裙子，而且它对你的工作也有好处，你懂的……"
 
 # game/core/content/interactions.rpy:6534
 translate chinese_simplified slave_story_help_b36d9240:
@@ -9053,7 +9053,7 @@ translate chinese_simplified slave_story_help_1283a873_11:
 translate chinese_simplified slave_story_help_7ee64702:
 
     # you "Take a couple of security guards with you, and go bury your [girl.story_guardian]."
-    you ""
+    you "带几个护卫跟你一起去，把你的[girl.story_guardian]埋了吧。"
 
 # game/core/content/interactions.rpy:6560
 translate chinese_simplified slave_story_help_987df59e:
@@ -9065,7 +9065,7 @@ translate chinese_simplified slave_story_help_987df59e:
 translate chinese_simplified slave_story_help_6cd8799b:
 
     # you "Well, I have to look after the needs of my slaves..."
-    you ""
+    you "唉，我总得照顾好我的奴隶们的需求……"
 
 # game/core/content/interactions.rpy:6564
 translate chinese_simplified slave_story_help_7782de0d:
@@ -9083,7 +9083,7 @@ translate chinese_simplified slave_story_help_1283a873_12:
 translate chinese_simplified slave_story_help_f28d2e65:
 
     # you "If you really insist, I suppose I should let you have your fun... I could even turn out a profit..."
-    you ""
+    you "如果你真这么坚持，我想我该让你尽兴一回……说不定还能赚上一笔……"
 
 # game/core/content/interactions.rpy:6583
 translate chinese_simplified slave_story_help_68d14a35:
@@ -9125,7 +9125,7 @@ translate chinese_simplified slave_story_help_e2439411:
 translate chinese_simplified slave_story_help_59c4268a:
 
     # you "You know what, I always felt like stealing horses! There was that game, GTH..."
-    you ""
+    you "你知道吗，我一直很想偷马！有个游戏叫什么来着，GTA……"
 
 # game/core/content/interactions.rpy:6626
 translate chinese_simplified slave_story_help_f168e26a:
@@ -9137,7 +9137,7 @@ translate chinese_simplified slave_story_help_f168e26a:
 translate chinese_simplified slave_story_help_e3e40e45:
 
     # you "I will have to pull a few strings with the [text1], but... It shouldn't be a problem."
-    you ""
+    you "我得在[text1]那边托点关系，不过……应该不成问题。"
 
 # game/core/content/interactions.rpy:6640
 translate chinese_simplified slave_story_help_b76dfec2:
@@ -9149,7 +9149,7 @@ translate chinese_simplified slave_story_help_b76dfec2:
 translate chinese_simplified slave_story_help_51ad11b9:
 
     # you "Voila! One horsesteak with ginger and turnips for Lady [girl.name]..."
-    you ""
+    you "瞧！一份姜香芜菁炖马肉排，献给[girl.name]小姐……"
 
 # game/core/content/interactions.rpy:6646
 translate chinese_simplified slave_story_help_7450aaf2:
@@ -9179,7 +9179,7 @@ translate chinese_simplified slave_story_help_d0fae6c4:
 translate chinese_simplified slave_story_help_5d4f74d8:
 
     # you "Say what?"
-    you ""
+    you "你说什么？"
 
 # game/core/content/interactions.rpy:6660
 translate chinese_simplified slave_story_help_2edf2123:
@@ -9191,7 +9191,7 @@ translate chinese_simplified slave_story_help_2edf2123:
 translate chinese_simplified slave_story_help_893b71a7:
 
     # you "I was moved by your story. If helping you repay your debt can make you feel better, I will give you some money."
-    you ""
+    you "你的故事打动了我。如果帮你还清债务能让你好受些，我会给你一些钱。"
 
 # game/core/content/interactions.rpy:6668
 translate chinese_simplified slave_story_help_6d7948f1:
@@ -9203,13 +9203,13 @@ translate chinese_simplified slave_story_help_6d7948f1:
 translate chinese_simplified slave_story_help_4039b54b:
 
     # you "Hush, take this and go to the bank..."
-    you ""
+    you "嘘，拿着这个，去银行……"
 
 # game/core/content/interactions.rpy:6673
 translate chinese_simplified slave_story_help_c002f451:
 
     # you "...before I change my mind."
-    you ""
+    you "……趁我还没改变主意。"
 
 # game/core/content/interactions.rpy:6682
 translate chinese_simplified slave_story_help_71a7172f:
@@ -9227,7 +9227,7 @@ translate chinese_simplified slave_story_help_1283a873_14:
 translate chinese_simplified slave_story_help_28b9b70b:
 
     # you "It's sad that you haven't seen your family for so long. Tell you what, I'll give you 3 days off so that you can look for them. How does it sound?"
-    you ""
+    you "这么久没见到家人，真让人难过。这样吧，我给你放三天假，好让你去找找他们。怎么样？"
 
 # game/core/content/interactions.rpy:6691
 translate chinese_simplified slave_story_help_37eec77e:
@@ -9251,7 +9251,7 @@ translate chinese_simplified slave_story_help_1283a873_15:
 translate chinese_simplified slave_story_help_4de6b5e8:
 
     # you "About that [girl.story_profession]..."
-    you ""
+    you "说到那个[girl.story_profession]……"
 
 # game/core/content/interactions.rpy:6712
 translate chinese_simplified slave_story_help_47c11875:
@@ -9263,7 +9263,7 @@ translate chinese_simplified slave_story_help_47c11875:
 translate chinese_simplified slave_story_help_f36c7d37:
 
     # you "We're on the same page."
-    you ""
+    you "我们想到一块去了。"
 
 # game/core/content/interactions.rpy:6716
 translate chinese_simplified slave_story_help_13d4b932:
@@ -9281,13 +9281,13 @@ translate chinese_simplified slave_story_help_1283a873_16:
 translate chinese_simplified slave_story_help_4de6b5e8_1:
 
     # you "About that [girl.story_profession]..."
-    you ""
+    you "说到那个[girl.story_profession]……"
 
 # game/core/content/interactions.rpy:6731
 translate chinese_simplified slave_story_help_c080eaa4:
 
     # you "I'll ask my contact at the thieves guild what can be done. We'll rob that sucker for all he's worth, and I'll get you your money back."
-    you ""
+    you "我会问问我在盗贼公会的熟人有什么办法。我们会把那混蛋抢个精光，然后把你应得的钱拿回来。"
 
 # game/core/content/interactions.rpy:6733
 translate chinese_simplified slave_story_help_be9afa97:
@@ -9299,7 +9299,7 @@ translate chinese_simplified slave_story_help_be9afa97:
 translate chinese_simplified slave_story_help_0d1c8b3d:
 
     # you "Don't mention it."
-    you ""
+    you "别客气。"
 
 # game/core/content/interactions.rpy:6737
 translate chinese_simplified slave_story_help_e704fcc2:
@@ -9329,13 +9329,13 @@ translate chinese_simplified slave_story_help_df5f8af9:
 translate chinese_simplified slave_story_help_4de6b5e8_2:
 
     # you "About that [girl.story_profession]..."
-    you ""
+    you "说到那个[girl.story_profession]……"
 
 # game/core/content/interactions.rpy:6764
 translate chinese_simplified slave_story_help_981d5f8b:
 
     # you "I know a few guards that can be accommodating. They'll arrest the motherfucker on phoney charges, and I'll get you your money back."
-    you ""
+    you "我认识几个肯通融的卫兵。他们会以莫须有的罪名把那王八蛋抓起来，然后把你应得的钱拿回来。"
 
 # game/core/content/interactions.rpy:6766
 translate chinese_simplified slave_story_help_be9afa97_1:
@@ -9347,7 +9347,7 @@ translate chinese_simplified slave_story_help_be9afa97_1:
 translate chinese_simplified slave_story_help_0d1c8b3d_1:
 
     # you "Don't mention it."
-    you ""
+    you "别客气。"
 
 # game/core/content/interactions.rpy:6770
 translate chinese_simplified slave_story_help_e704fcc2_1:
@@ -9377,7 +9377,7 @@ translate chinese_simplified slave_story_help_4bfcb164:
 translate chinese_simplified slave_story_help_a8cea093:
 
     # you "You sure are a perverted bitch..."
-    you ""
+    you "你可真是个变态的婊子……"
 
 # game/core/content/interactions.rpy:6795
 translate chinese_simplified slave_story_help_c1da3d17:
@@ -9395,7 +9395,7 @@ translate chinese_simplified slave_story_help_1fe5495d:
 translate chinese_simplified slave_story_help_03134378:
 
     # you "Since you seem to love being abused so much, I suppose you won't mind if I rape you right here and now."
-    you ""
+    you "既然你这么喜欢被虐待，我想你不会介意我现在就在这里强奸你吧。"
 
 # game/core/content/interactions.rpy:6801
 translate chinese_simplified slave_story_help_e2ca386a:
@@ -9407,7 +9407,7 @@ translate chinese_simplified slave_story_help_e2ca386a:
 translate chinese_simplified slave_story_help_705d3f47:
 
     # you "That's right..."
-    you ""
+    you "没错……"
 
 # game/core/content/interactions.rpy:6805
 translate chinese_simplified slave_story_help_ce6a9fc7:
@@ -9425,7 +9425,7 @@ translate chinese_simplified slave_story_help_2b5cd699:
 translate chinese_simplified slave_story_help_6e73c6fb:
 
     # you "Shut up, bitch. [text1]"
-    you ""
+    you "闭嘴，婊子。[text1]"
 
 # game/core/content/interactions.rpy:6843
 translate chinese_simplified slave_story_help_3c947b71:
@@ -9437,7 +9437,7 @@ translate chinese_simplified slave_story_help_3c947b71:
 translate chinese_simplified slave_story_help_bd54eb9c:
 
     # you "How do you like it, you fucking whore? You love being my pet, don't you."
-    you ""
+    you "喜欢吗，你这臭婊子？你很喜欢当我的宠物，不是吗。"
 
 # game/core/content/interactions.rpy:6857
 translate chinese_simplified slave_story_help_bf43061a:
@@ -9455,7 +9455,7 @@ translate chinese_simplified slave_story_help_c9ba68a6:
 translate chinese_simplified slave_story_help_d8279df3:
 
     # you "Don't you dare come already!!! Wait for my order!"
-    you ""
+    you "你敢现在就高潮试试！！！没我的命令不许射！"
 
 # game/core/content/interactions.rpy:6865
 translate chinese_simplified slave_story_help_6f650fbd:
@@ -9467,7 +9467,7 @@ translate chinese_simplified slave_story_help_6f650fbd:
 translate chinese_simplified slave_story_help_f4d578ee:
 
     # you "Beg for it, bitch. Beg..."
-    you ""
+    you "求我啊，婊子。求我……"
 
 # game/core/content/interactions.rpy:6869
 translate chinese_simplified slave_story_help_d5ba17b7:
@@ -9479,13 +9479,13 @@ translate chinese_simplified slave_story_help_d5ba17b7:
 translate chinese_simplified slave_story_help_60aaa955:
 
     # you "Fine, I'll let you come. But only after I release my cum all over your face. You must taste your master's cum if you want to come, understood?"
-    you ""
+    you "好，我允许你高潮。但要等我把精液射得你满脸都是之后。想高潮，就得先尝尝主人的精液，明白吗？"
 
 # game/core/content/interactions.rpy:6874
 translate chinese_simplified slave_story_help_9e8fe105:
 
     # you "Fine, I'll let you come. But only after I fill your dirty hole with my seed. You must be full of your master's cum if you want to come, understood?"
-    you ""
+    you "好，我允许你高潮。但要等我把你那个下流的骚穴灌满我的种子之后。想高潮，就得先被主人的精液填满，明白吗？"
 
 # game/core/content/interactions.rpy:6876
 translate chinese_simplified slave_story_help_faee0bc3:
@@ -9515,7 +9515,7 @@ translate chinese_simplified slave_story_help_2cbacd5f:
 translate chinese_simplified slave_story_help_4ae0708d:
 
     # you "Ooooh!!!"
-    you ""
+    you "哦哦哦！！！"
 
 # game/core/content/interactions.rpy:6892
 translate chinese_simplified slave_story_help_98de817e:
@@ -9533,7 +9533,7 @@ translate chinese_simplified slave_story_help_1c195ea3:
 translate chinese_simplified slave_story_help_dc7aec1e:
 
     # you "I hope you know your place, now, slave."
-    you ""
+    you "我希望你现在认清自己的位置了，奴隶。"
 
 # game/core/content/interactions.rpy:6903
 translate chinese_simplified slave_story_help_c5083d48:
@@ -9551,7 +9551,7 @@ translate chinese_simplified slave_story_help_cb32b29c:
 translate chinese_simplified slave_story_help_4a487bd2:
 
     # you "Yes, well, that was a cool story, but I don't want to hear you whine about this anymore. I. don't. care. Understand me?"
-    you ""
+    you "是的，好吧，故事是挺精彩，但我可不想再听你为这件事发牢骚了。我。不。在。乎。明白吗？"
 
 # game/core/content/interactions.rpy:6919
 translate chinese_simplified slave_story_help_255789cd:
@@ -9569,7 +9569,7 @@ translate chinese_simplified slave_story_help_f7afcfa2:
 translate chinese_simplified slave_story_help_c129bc56:
 
     # you "All right. Now shut up."
-    you ""
+    you "行了。现在闭嘴。"
 
 translate chinese_simplified strings:
 

@@ -11,7 +11,7 @@ import json
 import re
 from pathlib import Path
 
-NEW_PROJECT = Path(r"C:\Users\akxls\Documents\Code\BK\Brothel_King-pc")
+NEW_PROJECT = Path(__file__).resolve().parent.parent
 NEW_TL_DIR = NEW_PROJECT / "game" / "tl" / "chinese_simplified"
 NEW_STRINGS_RPY = NEW_TL_DIR / "strings.rpy"
 

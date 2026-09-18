@@ -1,6 +1,6 @@
 # BK Evolution — 国际化（i18n）路线图
 
-> 最后更新: 2026-09-11（与代码核对）
+> 最后更新：2026-09-11（第二轮：全部补完）
 >
 > 本文档是 i18n 工作的**唯一活跃参考**，整合原 `I18N_PLAN.md` 与 `I18N_REFACTOR_PLAN.md` 的内容，并反映当前代码实际状态。
 >
@@ -12,12 +12,12 @@
 
 | 指标 | 状态 |
 |------|------|
-| JSON `_i18n` 迁移 | ✅ 全部完成（启动日志实测：105 个 JSON 文件，注册 1,540 条可翻译字符串） |
+| JSON `_i18n` 迁移 | ✅ 全部完成（`tools/audit_json_i18n.py` 实测：104 个 JSON 文件，3,533 条字符串全部已翻译） |
 | `json_i18n.rpy` 白名单模式 | ✅ 已移除，仅保留 `_i18n` 后缀识别 |
-| 代码裸字符串包裹 | ✅ 主要 UI/菜单/旁白/互动选项已包裹 `__()` / `_()` |
-| 中文翻译覆盖率 | ✅ 对话与 strings/UI 接近 100%；剩余缺失为内容存量（见下） |
-| 当前缺失基线（2026-09-11 实测 `translate --count chinese_simplified`） | 📝 1,433 条 dialogue + 124 条 string 缺失，均为内容存量非代码缺陷 |
-| i18n 审计工具 | ✅ `tools/i18n_lint.py`、`tools/verify_i18n.py` 已存在；i18n_lint 基线 17 处开发者面向文本误报 |
+| 代码裸字符串包裹 | ✅ 主要 UI/菜单/旁白/互动选项已包裹；天赋树/特质/物品显示链路已于 2026-09-11 修复（见 `TRANSLATION_STATUS.md` 第 7 节） |
+| 中文翻译覆盖率 | ✅ **零缺失**（`translate --count chinese_simplified` 实测）：0 dialogue + 0 string 缺失 |
+| 当前缺失基线（2026-09-11） | ✅ 0 dialogue + 0 string —— 回归基线归零，新增代码必须保持为零 |
+| i18n 审计工具 | ✅ `tools/i18n_lint.py`、`tools/verify_i18n.py` 已存在；i18n_lint 基线 18 处开发者面向文本误报（原 17，2026-09-11 新增 1 条 `character.rpy` 异常消息） |
 
 ---
 
@@ -99,14 +99,20 @@ class MyEntity:
 | `i18n_lint.py` | `tools/i18n_lint.py` | 扫描裸字符串、拼接文本、未包裹格式化等 i18n 问题 |
 | `verify_i18n.py` | `tools/verify_i18n.py` | 运行 `translate --count` + `lint` + `i18n_lint.py`，断言无缺失翻译（当前基线：1,433 dialogue + 124 string 缺失，为内容存量非代码缺陷） |
 | `audit_placeholders.py` | `tools/audit_placeholders.py` | 检查中文翻译与原文占位符是否一致 |
-| `export_empty_to_xlsx.py` | `tools/export_empty_to_xlsx.py` | 导出空翻译到 `temp/translations/to_translate_empty.xlsx` |
-| `import_translated_empty.py` | `tools/import_translated_empty.py` | 从 Excel 导回翻译 |
+| `export_empty_to_xlsx.py` | `tools/export_empty_to_xlsx.py` | 导出空翻译到 `temp/translations/to_translate_empty.xlsx`（2026-09-11 起项目路径自动推导） |
+| `import_translated_empty.py` | `tools/import_translated_empty.py` | 从 Excel 导回翻译（2026-09-11 起项目路径自动推导） |
+| `import_json_i18n.py` | `tools/import_json_i18n.py` | **必需**：JSON 新增 `_i18n` 字段后，将其同步进 `strings.rpy` 空槽位（见第 4 节步骤 0） |
+| `audit_json_i18n.py` | `tools/audit_json_i18n.py` | 审计所有 JSON `_i18n` 字符串在 `strings.rpy` 中均有翻译 |
 
 ---
 
 ## 4. 标准翻译工作流
 
 ```powershell
+# 0. 若新增/修改了 JSON `_i18n` 字段：必须先同步进 strings.rpy！
+#    （translate --empty 无法提取 JSON 字符串——它们在 init 期动态注册，提取器不可见）
+python tools/import_json_i18n.py
+
 # 1. 提取空翻译
 & "lib\py3-windows-x86_64\python.exe" "Brothel_King.py" . translate --empty chinese_simplified
 
@@ -118,15 +124,18 @@ python tools/export_empty_to_xlsx.py
 # 4. 导回
 python tools/import_translated_empty.py
 
-# 5. 占位符与标签审计
+# 5. JSON _i18n 覆盖审计（必须输出 "All JSON _i18n strings are translated!"）
+python tools/audit_json_i18n.py
+
+# 6. 占位符与标签审计
 python tools/audit_placeholders.py
 
-# 6. 运行 i18n 审计与验证
+# 7. 运行 i18n 审计与验证
 python tools/i18n_lint.py
 python tools/verify_i18n.py
 
-# 7. 最终 lint
-game\Brothel_King.py . lint
+# 8. 最终 lint
+& "lib\py3-windows-x86_64\python.exe" "Brothel_King.py" . lint
 ```
 
 详细统计与历史记录见 [`TRANSLATION_STATUS.md`](TRANSLATION_STATUS.md)。
@@ -150,11 +159,12 @@ game\Brothel_King.py . lint
 
 | 项 | 状态 | 说明 |
 |----|------|------|
-| 机器翻译质量审核 | 🚧 持续 | 早期迁移的 ~3,500 对话块和 ~9,000 字符串为机翻，需运行时抽查 |
+| 机器翻译质量审核 | 🚧 持续 | 早期迁移的 ~3,500 对话块和 ~9,000 字符串为机翻，需运行时抽查。2026-09-11 一轮（2,130 条存量 + 208 条天赋/特质/物品字符串）由 AI 译者翻译，非旧机翻管线，质量更高但仍建议抽查 |
 | 剧情核心文本重点审核 | 🚧 持续 | chapter1-3、story_events 建议人工润色 |
 | Mod 内容翻译 | ⏳ 待规划 | `game/custom/` 内容默认保持原文；未来可通过统一字符串表支持 |
 | `tools/translate_sync.py` | ✅ 不实现（2026-06-25 决策） | "同步 strings.rpy 与 tl 文件 old/new"的需求已由现有工具链覆盖：缺失检测 = `verify_i18n.py`（`translate --count`）；占位符完整性 = `audit_placeholders.py`；空翻译导出/导回往返 = `export_empty_to_xlsx.py` / `import_translated_empty.py`；源字符串变更后由 Ren'Py `translate` 命令重写 tl 文件时清理陈旧条目。不重复造轮子。 |
-| i18n_lint 开发者面向误报 | 📝 记录 | `i18n_lint.py` 当前报 17 处 issue，全部位于开发者面向文本（dev console 输出、test runner 断言消息、异常消息），非玩家可见字符串，暂不包裹 `__()`；如后续需要可为工具增加路径白名单。 |
+| i18n_lint 开发者面向误报 | 📝 记录 | `i18n_lint.py` 当前报 18 处 issue（基线 17 + 2026-09-11 新增 1 条），全部位于开发者面向文本（dev console 输出、test runner 断言消息、异常消息），非玩家可见字符串，暂不包裹 `__()`；如后续需要可为工具增加路径白名单。 |
+| 新撰写描述 | 📝 记录（2026-09-11） | ~209 条天赋/特质/物品描述原本无源文本，为英文新撰后翻译；建议游戏内核对语气。29 件武器/法杖类物品原本即无描述，属正常。 |
 
 ---
 

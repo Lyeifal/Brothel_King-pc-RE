@@ -183,6 +183,18 @@ init python:
             return cls(name=d["name"], description=d.get("description"))
 ```
 
+### 2.4 JSON 字符串同步进翻译文件（必需）
+
+JSON `_i18n` 字符串在 init 期**动态注册**（`game/core/i18n/json_i18n.rpy`），Ren'Py 的 `translate --empty` **看不到它们**——不手动同步，它们永远不会出现在提取结果里。
+
+**在 JSON 中新增或修改任何 `_i18n` 字段后，必须运行：**
+
+```powershell
+python tools/import_json_i18n.py
+```
+
+该脚本会把缺失的 `_i18n` 文本以空 `old`/`new` 对追加到 `game/tl/chinese_simplified/strings.rpy`（按 `old` 文本去重），之后走常规导出 → 翻译 → 导入流程。随时可用 `python tools/audit_json_i18n.py` 核对覆盖（必须输出 "All JSON _i18n strings are translated!"）。
+
 ---
 
 ## 3. 随机生成文本规范
@@ -261,13 +273,19 @@ game/tl/chinese_simplified/
 每次提交前必须运行：
 
 ```powershell
+# 0. 若 JSON `_i18n` 字段有变更：先同步（见 §2.4）
+python tools/import_json_i18n.py
+
 # 1. i18n 审计
 python tools/i18n_lint.py
 
-# 2. 回归测试
+# 2. JSON _i18n 覆盖审计（必须输出 "All JSON _i18n strings are translated!"）
+python tools/audit_json_i18n.py
+
+# 3. 回归测试
 python tools/verify_i18n.py
 
-# 3. Ren'Py lint
+# 4. Ren'Py lint
 & "lib\py3-windows-x86_64\python.exe" "Brothel_King.py" . lint
 ```
 

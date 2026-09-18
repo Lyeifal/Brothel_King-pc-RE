@@ -1287,3 +1287,9 @@ translate chinese_simplified strings:
     old "Shrapnel bursts among your troops, wounding [damage] of them."
     new "弹片在你的部队中炸开，伤及 [damage] 人。"
 
+# TODO: Translation updated at 2026-09-11 06:39
+
+translate chinese_simplified strings:
+    old "%s, Level %s, Defense %s"
+    new "%s，等级 %s，防御 %s"
+

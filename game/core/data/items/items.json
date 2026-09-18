@@ -308,7 +308,8 @@
           "value": 5
         }
       ],
-      "name_i18n": "Pretty ring"
+      "name_i18n": "Pretty ring",
+      "description_i18n": "A pretty little ring. Increases beauty."
     },
     {
       "name": "Bronze ring",
@@ -327,7 +328,8 @@
           "value": 5
         }
       ],
-      "name_i18n": "Bronze ring"
+      "name_i18n": "Bronze ring",
+      "description_i18n": "A sturdy bronze ring. Increases body."
     },
     {
       "name": "Zanic ring",
@@ -346,7 +348,8 @@
           "value": 5
         }
       ],
-      "name_i18n": "Zanic ring"
+      "name_i18n": "Zanic ring",
+      "description_i18n": "A charming ring, made in Zan. Increases charm."
     },
     {
       "name": "Silver ring",
@@ -365,7 +368,8 @@
           "value": 5
         }
       ],
-      "name_i18n": "Silver ring"
+      "name_i18n": "Silver ring",
+      "description_i18n": "An elegant silver ring. Increases refinement."
     },
     {
       "name": "Gold ring",
@@ -384,7 +388,8 @@
           "value": 5
         }
       ],
-      "name_i18n": "Gold ring"
+      "name_i18n": "Gold ring",
+      "description_i18n": "A fine gold ring that warms her blood. Increases libido."
     },
     {
       "name": "Marine ring",
@@ -403,7 +408,8 @@
           "value": 5
         }
       ],
-      "name_i18n": "Marine ring"
+      "name_i18n": "Marine ring",
+      "description_i18n": "A ring set with a pearl from the sea. Increases sensitivity."
     },
     {
       "name": "Iron ring",
@@ -422,7 +428,8 @@
           "value": 5
         }
       ],
-      "name_i18n": "Iron ring"
+      "name_i18n": "Iron ring",
+      "description_i18n": "A plain iron ring. Increases obedience."
     },
     {
       "name": "Wooden ring",
@@ -441,7 +448,8 @@
           "value": 5
         }
       ],
-      "name_i18n": "Wooden ring"
+      "name_i18n": "Wooden ring",
+      "description_i18n": "A simple wooden ring. Increases constitution."
     },
     {
       "name": "Blue ribbon",
@@ -460,7 +468,8 @@
           "value": 0.1
         }
       ],
-      "name_i18n": "Blue ribbon"
+      "name_i18n": "Blue ribbon",
+      "description_i18n": "A cute blue ribbon that accentuates her beauty. Improves beauty gains."
     },
     {
       "name": "Pearl necklace",
@@ -479,7 +488,8 @@
           "value": 0.1
         }
       ],
-      "name_i18n": "Pearl necklace"
+      "name_i18n": "Pearl necklace",
+      "description_i18n": "A classy pearl necklace. Improves body gains."
     },
     {
       "name": "Moon necklace",
@@ -498,7 +508,8 @@
           "value": 0.1
         }
       ],
-      "name_i18n": "Moon necklace"
+      "name_i18n": "Moon necklace",
+      "description_i18n": "A necklace shaped like the moon. Improves charm gains."
     },
     {
       "name": "Ivory necklace",
@@ -517,7 +528,8 @@
           "value": 0.1
         }
       ],
-      "name_i18n": "Ivory necklace"
+      "name_i18n": "Ivory necklace",
+      "description_i18n": "An elegant ivory necklace. Improves refinement gains."
     },
     {
       "name": "Choker necklace",
@@ -536,7 +548,8 @@
           "value": 0.1
         }
       ],
-      "name_i18n": "Choker necklace"
+      "name_i18n": "Choker necklace",
+      "description_i18n": "A tight choker that gets her hot under the collar. Improves libido gains."
     },
     {
       "name": "Dog collar",
@@ -555,7 +568,8 @@
           "value": 0.1
         }
       ],
-      "name_i18n": "Dog collar"
+      "name_i18n": "Dog collar",
+      "description_i18n": "A collar for a naughty bitch. Improves obedience gains."
     },
     {
       "name": "Silver chain",
@@ -574,7 +588,8 @@
           "value": 0.1
         }
       ],
-      "name_i18n": "Silver chain"
+      "name_i18n": "Silver chain",
+      "description_i18n": "A delicate silver chain, cool against her skin. Improves sensitivity gains."
     },
     {
       "name": "Dagger necklace",
@@ -593,7 +608,8 @@
           "value": 0.1
         }
       ],
-      "name_i18n": "Dagger necklace"
+      "name_i18n": "Dagger necklace",
+      "description_i18n": "A tiny dagger on a chain. Improves constitution gains."
     },
     {
       "name": "Gold bag",
@@ -776,7 +792,8 @@
           "chance": 0.5
         }
       ],
-      "name_i18n": "Pear"
+      "name_i18n": "Pear",
+      "description_i18n": "A juicy pear. Increases body for a while and helps her recover."
     },
     {
       "name": "Peach",
@@ -803,7 +820,8 @@
           "chance": 0.5
         }
       ],
-      "name_i18n": "Peach"
+      "name_i18n": "Peach",
+      "description_i18n": "A soft, sweet peach. Increases charm for a while and helps her recover."
     },
     {
       "name": "Grapes",
@@ -830,7 +848,8 @@
           "chance": 0.5
         }
       ],
-      "name_i18n": "Grapes"
+      "name_i18n": "Grapes",
+      "description_i18n": "A bunch of fresh grapes. Increases refinement for a while and helps her recover."
     },
     {
       "name": "Sausage",
@@ -857,7 +876,8 @@
           "chance": 0.5
         }
       ],
-      "name_i18n": "Sausage"
+      "name_i18n": "Sausage",
+      "description_i18n": "A big, juicy sausage. Increases libido for a while and helps her recover."
     },
     {
       "name": "Cheese",
@@ -884,7 +904,8 @@
           "chance": 0.5
         }
       ],
-      "name_i18n": "Cheese"
+      "name_i18n": "Cheese",
+      "description_i18n": "A fragrant piece of cheese. Increases sensitivity for a while and helps her recover."
     },
     {
       "name": "Chicken",
@@ -911,7 +932,8 @@
           "chance": 0.5
         }
       ],
-      "name_i18n": "Chicken"
+      "name_i18n": "Chicken",
+      "description_i18n": "A roasted chicken leg. Increases obedience for a while and helps her recover."
     },
     {
       "name": "Roastbeef",
@@ -938,7 +960,8 @@
           "chance": 0.5
         }
       ],
-      "name_i18n": "Roastbeef"
+      "name_i18n": "Roastbeef",
+      "description_i18n": "A hearty slice of roast beef. Increases constitution for a while and helps her recover."
     },
     {
       "name": "Love potion",
@@ -999,7 +1022,8 @@
           "value": 5
         }
       ],
-      "name_i18n": "Pink panties"
+      "name_i18n": "Pink panties",
+      "description_i18n": "Cute pink panties. Increases beauty."
     },
     {
       "name": "Hot pants",
@@ -1018,7 +1042,8 @@
           "value": 5
         }
       ],
-      "name_i18n": "Hot pants"
+      "name_i18n": "Hot pants",
+      "description_i18n": "Skimpy hot pants. Increases body."
     },
     {
       "name": "Lowcut panties",
@@ -1037,7 +1062,8 @@
           "value": 5
         }
       ],
-      "name_i18n": "Lowcut panties"
+      "name_i18n": "Lowcut panties",
+      "description_i18n": "Revealing low-cut panties. Increases charm."
     },
     {
       "name": "Lace panties",
@@ -1056,7 +1082,8 @@
           "value": 5
         }
       ],
-      "name_i18n": "Lace panties"
+      "name_i18n": "Lace panties",
+      "description_i18n": "Fine lace panties. Increases refinement."
     },
     {
       "name": "Sexy panties",
@@ -1075,7 +1102,8 @@
           "value": 5
         }
       ],
-      "name_i18n": "Sexy panties"
+      "name_i18n": "Sexy panties",
+      "description_i18n": "Sexy panties that put her in the mood. Increases libido."
     },
     {
       "name": "Seethrough panties",
@@ -1094,7 +1122,8 @@
           "value": 5
         }
       ],
-      "name_i18n": "Seethrough panties"
+      "name_i18n": "Seethrough panties",
+      "description_i18n": "Panties that hide nothing at all. Increases sensitivity."
     },
     {
       "name": "Chastity belt",
@@ -1113,7 +1142,8 @@
           "value": 5
         }
       ],
-      "name_i18n": "Chastity belt"
+      "name_i18n": "Chastity belt",
+      "description_i18n": "Keeps her chaste, whether she wants it or not. Increases obedience."
     },
     {
       "name": "Thong",
@@ -1132,7 +1162,8 @@
           "value": 5
         }
       ],
-      "name_i18n": "Thong"
+      "name_i18n": "Thong",
+      "description_i18n": "A tiny thong. Increases constitution."
     },
     {
       "name": "Bunny suit",
@@ -1156,7 +1187,8 @@
           "value": 5
         }
       ],
-      "name_i18n": "Bunny suit"
+      "name_i18n": "Bunny suit",
+      "description_i18n": "A playmate bunny suit. Increases body and libido."
     },
     {
       "name": "Guard uniform",
@@ -1180,7 +1212,8 @@
           "value": 5
         }
       ],
-      "name_i18n": "Guard uniform"
+      "name_i18n": "Guard uniform",
+      "description_i18n": "A fitted guard uniform. Increases charm and constitution."
     },
     {
       "name": "School uniform",
@@ -1204,7 +1237,8 @@
           "value": 5
         }
       ],
-      "name_i18n": "School uniform"
+      "name_i18n": "School uniform",
+      "description_i18n": "A naughty school uniform. Increases beauty and libido."
     },
     {
       "name": "Bikini",
@@ -1228,7 +1262,8 @@
           "value": 5
         }
       ],
-      "name_i18n": "Bikini"
+      "name_i18n": "Bikini",
+      "description_i18n": "A skimpy bikini. Increases body and constitution."
     },
     {
       "name": "Kimono",
@@ -1252,7 +1287,8 @@
           "value": 5
         }
       ],
-      "name_i18n": "Kimono"
+      "name_i18n": "Kimono",
+      "description_i18n": "A traditional kimono. Increases refinement and obedience."
     },
     {
       "name": "Swimsuit",
@@ -1276,7 +1312,8 @@
           "value": 5
         }
       ],
-      "name_i18n": "Swimsuit"
+      "name_i18n": "Swimsuit",
+      "description_i18n": "A tight swimsuit. Increases beauty and sensitivity."
     },
     {
       "name": "Frilly dress",
@@ -1300,7 +1337,8 @@
           "value": 5
         }
       ],
-      "name_i18n": "Frilly dress"
+      "name_i18n": "Frilly dress",
+      "description_i18n": "A cute frilly dress. Increases charm and sensitivity."
     },
     {
       "name": "Leather dress",
@@ -1324,7 +1362,8 @@
           "value": 5
         }
       ],
-      "name_i18n": "Leather dress"
+      "name_i18n": "Leather dress",
+      "description_i18n": "A tight leather dress. Increases constitution and obedience."
     },
     {
       "name": "Evening gown",
@@ -1358,7 +1397,8 @@
           "value": -5
         }
       ],
-      "name_i18n": "Evening gown"
+      "name_i18n": "Evening gown",
+      "description_i18n": "A stunning evening gown. Increases beauty, charm and refinement, but reduces body."
     },
     {
       "name": "Silk dress",
@@ -1392,7 +1432,8 @@
           "value": -5
         }
       ],
-      "name_i18n": "Silk dress"
+      "name_i18n": "Silk dress",
+      "description_i18n": "A luxurious silk dress that caresses her skin. Increases libido, sensitivity and obedience, but reduces constitution."
     },
     {
       "name": "Pompom uniform",
@@ -1426,7 +1467,8 @@
           "value": -5
         }
       ],
-      "name_i18n": "Pompom uniform"
+      "name_i18n": "Pompom uniform",
+      "description_i18n": "A cheerleader uniform, pompoms included. Increases beauty, charm and body, but reduces refinement."
     },
     {
       "name": "Knight uniform",
@@ -1460,7 +1502,8 @@
           "value": -5
         }
       ],
-      "name_i18n": "Knight uniform"
+      "name_i18n": "Knight uniform",
+      "description_i18n": "An armor-like knight uniform. Increases body, constitution and obedience, but reduces libido."
     },
     {
       "name": "Black slavekini",
@@ -1494,7 +1537,8 @@
           "value": 5
         }
       ],
-      "name_i18n": "Black slavekini"
+      "name_i18n": "Black slavekini",
+      "description_i18n": "A revealing black slavekini. Increases all her main stats."
     },
     {
       "name": "Blue slavekini",
@@ -1528,7 +1572,8 @@
           "value": 5
         }
       ],
-      "name_i18n": "Blue slavekini"
+      "name_i18n": "Blue slavekini",
+      "description_i18n": "A revealing blue slavekini. Increases libido, sensitivity, obedience and constitution."
     },
     {
       "name": "Red slavekini",
@@ -1562,7 +1607,8 @@
           "value": 5
         }
       ],
-      "name_i18n": "Red slavekini"
+      "name_i18n": "Red slavekini",
+      "description_i18n": "A revealing red slavekini. Increases all her sex skills."
     },
     {
       "name": "Sunny dress",
@@ -1581,7 +1627,8 @@
           "value": 10
         }
       ],
-      "name_i18n": "Sunny dress"
+      "name_i18n": "Sunny dress",
+      "description_i18n": "A bright, sunny dress. Increases beauty."
     },
     {
       "name": "Revealing dress",
@@ -1600,7 +1647,8 @@
           "value": 10
         }
       ],
-      "name_i18n": "Revealing dress"
+      "name_i18n": "Revealing dress",
+      "description_i18n": "A dress that reveals more than it hides. Increases body."
     },
     {
       "name": "Exotic dress",
@@ -1619,7 +1667,8 @@
           "value": 10
         }
       ],
-      "name_i18n": "Exotic dress"
+      "name_i18n": "Exotic dress",
+      "description_i18n": "An exotic, alluring dress. Increases charm."
     },
     {
       "name": "Priestess robe",
@@ -1638,7 +1687,8 @@
           "value": 10
         }
       ],
-      "name_i18n": "Priestess robe"
+      "name_i18n": "Priestess robe",
+      "description_i18n": "A pure priestess robe. Increases refinement."
     },
     {
       "name": "Slutty dress",
@@ -1657,7 +1707,8 @@
           "value": 10
         }
       ],
-      "name_i18n": "Slutty dress"
+      "name_i18n": "Slutty dress",
+      "description_i18n": "An outrageously slutty dress. Increases libido."
     },
     {
       "name": "Seethrough dress",
@@ -1676,7 +1727,8 @@
           "value": 10
         }
       ],
-      "name_i18n": "Seethrough dress"
+      "name_i18n": "Seethrough dress",
+      "description_i18n": "A see-through dress that leaves nothing to the imagination. Increases sensitivity."
     },
     {
       "name": "Maid uniform",
@@ -1695,7 +1747,8 @@
           "value": 10
         }
       ],
-      "name_i18n": "Maid uniform"
+      "name_i18n": "Maid uniform",
+      "description_i18n": "A classic maid uniform. Increases obedience."
     },
     {
       "name": "Gym uniform",
@@ -1714,7 +1767,8 @@
           "value": 10
         }
       ],
-      "name_i18n": "Gym uniform"
+      "name_i18n": "Gym uniform",
+      "description_i18n": "A sporty gym uniform. Increases constitution."
     },
     {
       "name": "Emerald ring",
@@ -1733,7 +1787,8 @@
           "value": 5
         }
       ],
-      "name_i18n": "Emerald ring"
+      "name_i18n": "Emerald ring",
+      "description_i18n": "A ring set with a fine emerald. Increases service."
     },
     {
       "name": "Ruby ring",
@@ -1752,7 +1807,8 @@
           "value": 5
         }
       ],
-      "name_i18n": "Ruby ring"
+      "name_i18n": "Ruby ring",
+      "description_i18n": "A ring set with a fiery ruby. Increases sex."
     },
     {
       "name": "Amber ring",
@@ -1771,7 +1827,8 @@
           "value": 5
         }
       ],
-      "name_i18n": "Amber ring"
+      "name_i18n": "Amber ring",
+      "description_i18n": "A ring set with warm amber. Increases anal."
     },
     {
       "name": "Sapphire ring",
@@ -1790,7 +1847,8 @@
           "value": 5
         }
       ],
-      "name_i18n": "Sapphire ring"
+      "name_i18n": "Sapphire ring",
+      "description_i18n": "A ring set with a deep sapphire. Increases fetish."
     },
     {
       "name": "Scroll of bartending",
@@ -1811,7 +1869,8 @@
         }
       ],
       "adjectives": "scroll",
-      "name_i18n": "Scroll of bartending"
+      "name_i18n": "Scroll of bartending",
+      "description_i18n": "Teaches her the art of bartending. Grants free waitress JP."
     },
     {
       "name": "Scroll of whirling",
@@ -1832,7 +1891,8 @@
         }
       ],
       "adjectives": "scroll",
-      "name_i18n": "Scroll of whirling"
+      "name_i18n": "Scroll of whirling",
+      "description_i18n": "Teaches her dazzling dance moves. Grants free dancer JP."
     },
     {
       "name": "Scroll of rubbing",
@@ -1853,7 +1913,8 @@
         }
       ],
       "adjectives": "scroll",
-      "name_i18n": "Scroll of rubbing"
+      "name_i18n": "Scroll of rubbing",
+      "description_i18n": "Teaches her the secrets of massage. Grants free masseuse JP."
     },
     {
       "name": "Scroll of etiquette",
@@ -1874,7 +1935,8 @@
         }
       ],
       "adjectives": "scroll",
-      "name_i18n": "Scroll of etiquette"
+      "name_i18n": "Scroll of etiquette",
+      "description_i18n": "Teaches her proper etiquette. Grants free geisha JP."
     },
     {
       "name": "Scroll of Onan",
@@ -1895,7 +1957,8 @@
         }
       ],
       "adjectives": "scroll",
-      "name_i18n": "Scroll of Onan"
+      "name_i18n": "Scroll of Onan",
+      "description_i18n": "Teaches her how to please with her hands and mouth. Grants free service JP."
     },
     {
       "name": "Scroll of Eros",
@@ -1916,7 +1979,8 @@
         }
       ],
       "adjectives": "scroll",
-      "name_i18n": "Scroll of Eros"
+      "name_i18n": "Scroll of Eros",
+      "description_i18n": "Teaches her the art of love. Grants free sex JP."
     },
     {
       "name": "Scroll of Sodom",
@@ -1937,7 +2001,8 @@
         }
       ],
       "adjectives": "scroll",
-      "name_i18n": "Scroll of Sodom"
+      "name_i18n": "Scroll of Sodom",
+      "description_i18n": "Teaches her forbidden pleasures. Grants free anal JP."
     },
     {
       "name": "Scroll of Gomorrah",
@@ -1958,7 +2023,8 @@
         }
       ],
       "adjectives": "scroll",
-      "name_i18n": "Scroll of Gomorrah"
+      "name_i18n": "Scroll of Gomorrah",
+      "description_i18n": "Teaches her the kinkiest of secrets. Grants free fetish JP."
     },
     {
       "name": "Elvish-made penis enlarger",
@@ -2793,7 +2859,8 @@
           "value": 1
         }
       ],
-      "name_i18n": "Fur boots"
+      "name_i18n": "Fur boots",
+      "description_i18n": "Warm fur boots. Increases speed."
     },
     {
       "name": "Leather boots",
@@ -2810,7 +2877,8 @@
           "value": 2
         }
       ],
-      "name_i18n": "Leather boots"
+      "name_i18n": "Leather boots",
+      "description_i18n": "Sturdy leather boots. Increases speed."
     },
     {
       "name": "Elven boots",
@@ -2827,7 +2895,8 @@
           "value": 3
         }
       ],
-      "name_i18n": "Elven boots"
+      "name_i18n": "Elven boots",
+      "description_i18n": "Light elven boots. Increases speed."
     },
     {
       "name": "Horse",
@@ -2844,7 +2913,8 @@
           "value": 4
         }
       ],
-      "name_i18n": "Horse"
+      "name_i18n": "Horse",
+      "description_i18n": "A trusty steed. Increases speed."
     },
     {
       "name": "Dark horse",
@@ -2861,7 +2931,8 @@
           "value": 5
         }
       ],
-      "name_i18n": "Dark horse"
+      "name_i18n": "Dark horse",
+      "description_i18n": "A dark, swift stallion. It looks like it rode straight out of a nightmare. Increases speed."
     },
     {
       "name": "Dragon egg",
@@ -2899,7 +2970,8 @@
           "value": 1
         }
       ],
-      "name_i18n": "Knuckle duster"
+      "name_i18n": "Knuckle duster",
+      "description_i18n": "A crude knuckle duster. Increases defense."
     },
     {
       "name": "Hook",
@@ -2916,7 +2988,8 @@
           "value": 2
         }
       ],
-      "name_i18n": "Hook"
+      "name_i18n": "Hook",
+      "description_i18n": "A wickedly curved hook. Increases defense."
     },
     {
       "name": "Shiv",
@@ -2933,7 +3006,8 @@
           "value": 3
         }
       ],
-      "name_i18n": "Shiv"
+      "name_i18n": "Shiv",
+      "description_i18n": "A sharpened shiv. Increases defense."
     },
     {
       "name": "Knife",
@@ -2950,7 +3024,8 @@
           "value": 4
         }
       ],
-      "name_i18n": "Knife"
+      "name_i18n": "Knife",
+      "description_i18n": "A well-balanced knife. Increases defense."
     },
     {
       "name": "Dagger",
@@ -2967,7 +3042,8 @@
           "value": 5
         }
       ],
-      "name_i18n": "Dagger"
+      "name_i18n": "Dagger",
+      "description_i18n": "A sharp dagger. Increases defense."
     },
     {
       "name": "Sacrificial knife",
@@ -2984,7 +3060,8 @@
           "value": 6
         }
       ],
-      "name_i18n": "Sacrificial knife"
+      "name_i18n": "Sacrificial knife",
+      "description_i18n": "A sinister sacrificial knife. Increases defense."
     },
     {
       "name": "Mace",
@@ -3001,7 +3078,8 @@
           "value": 7
         }
       ],
-      "name_i18n": "Mace"
+      "name_i18n": "Mace",
+      "description_i18n": "A heavy mace. Increases defense."
     },
     {
       "name": "Whip",
@@ -3018,7 +3096,8 @@
           "value": 8
         }
       ],
-      "name_i18n": "Whip"
+      "name_i18n": "Whip",
+      "description_i18n": "A cracking whip. Increases defense."
     },
     {
       "name": "Steel whip",
@@ -3035,7 +3114,8 @@
           "value": 9
         }
       ],
-      "name_i18n": "Steel whip"
+      "name_i18n": "Steel whip",
+      "description_i18n": "A brutal steel whip. Increases defense."
     },
     {
       "name": "Magic blade",
@@ -3052,7 +3132,8 @@
           "value": 10
         }
       ],
-      "name_i18n": "Magic blade"
+      "name_i18n": "Magic blade",
+      "description_i18n": "A blade humming with magic. Increases defense."
     },
     {
       "name": "Dildo",
@@ -3407,7 +3488,8 @@
           "value": 0.2
         }
       ],
-      "name_i18n": "Leather choker"
+      "name_i18n": "Leather choker",
+      "description_i18n": "A leather choker that makes her more compliant. Improves her obedience tests."
     },
     {
       "name": "Bronze amulet",
@@ -3424,7 +3506,8 @@
           "value": 0.05
         }
       ],
-      "name_i18n": "Bronze amulet"
+      "name_i18n": "Bronze amulet",
+      "description_i18n": "A bronze amulet. Slightly improves her regular skill gains."
     },
     {
       "name": "Silver amulet",
@@ -3441,7 +3524,8 @@
           "value": 0.1
         }
       ],
-      "name_i18n": "Silver amulet"
+      "name_i18n": "Silver amulet",
+      "description_i18n": "A silver amulet. Improves her regular skill gains."
     },
     {
       "name": "Gold amulet",
@@ -3458,7 +3542,8 @@
           "value": 0.15
         }
       ],
-      "name_i18n": "Gold amulet"
+      "name_i18n": "Gold amulet",
+      "description_i18n": "A gold amulet. Greatly improves her regular skill gains."
     },
     {
       "name": "Monster pearl necklace",
@@ -3645,7 +3730,8 @@
           "value": 0.1
         }
       ],
-      "name_i18n": "Glasses"
+      "name_i18n": "Glasses",
+      "description_i18n": "A pair of glasses that makes her look smarter. Improves her XP gains."
     },
     {
       "name": "Tail",
@@ -3662,7 +3748,8 @@
           "value": 0.2
         }
       ],
-      "name_i18n": "Tail"
+      "name_i18n": "Tail",
+      "description_i18n": "A fluffy tail accessory. Improves her reputation gains."
     },
     {
       "name": "Bunny ears",
@@ -3679,7 +3766,8 @@
           "value": 1
         }
       ],
-      "name_i18n": "Bunny ears"
+      "name_i18n": "Bunny ears",
+      "description_i18n": "Cute bunny ears. Improves her waitress results."
     },
     {
       "name": "Hairpin",
@@ -3696,7 +3784,8 @@
           "value": 1
         }
       ],
-      "name_i18n": "Hairpin"
+      "name_i18n": "Hairpin",
+      "description_i18n": "A delicate hairpin. Improves her masseuse results."
     },
     {
       "name": "Nun veil",
@@ -3713,7 +3802,8 @@
           "value": 1
         }
       ],
-      "name_i18n": "Nun veil"
+      "name_i18n": "Nun veil",
+      "description_i18n": "A provocative nun's veil. Improves her dancer results."
     },
     {
       "name": "Noh mask",
@@ -3730,7 +3820,8 @@
           "value": 1
         }
       ],
-      "name_i18n": "Noh mask"
+      "name_i18n": "Noh mask",
+      "description_i18n": "A traditional Noh mask. Improves her geisha results."
     },
     {
       "name": "Cat ears",
@@ -3747,7 +3838,8 @@
           "value": 1
         }
       ],
-      "name_i18n": "Cat ears"
+      "name_i18n": "Cat ears",
+      "description_i18n": "Adorable cat ears. Improves her service results."
     },
     {
       "name": "Nurse hat",
@@ -3764,7 +3856,8 @@
           "value": 1
         }
       ],
-      "name_i18n": "Nurse hat"
+      "name_i18n": "Nurse hat",
+      "description_i18n": "A naughty nurse's hat. Improves her sex results."
     },
     {
       "name": "Leather cap",
@@ -3781,7 +3874,8 @@
           "value": 1
         }
       ],
-      "name_i18n": "Leather cap"
+      "name_i18n": "Leather cap",
+      "description_i18n": "A tight leather cap. Improves her anal results."
     },
     {
       "name": "Maid hat",
@@ -3798,7 +3892,8 @@
           "value": 1
         }
       ],
-      "name_i18n": "Maid hat"
+      "name_i18n": "Maid hat",
+      "description_i18n": "A frilly maid's hat. Improves her fetish results."
     },
     {
       "name": "Magic notebook",

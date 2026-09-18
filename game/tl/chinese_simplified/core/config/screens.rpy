@@ -46,3 +46,9 @@ translate chinese_simplified strings:
     old "简体中文"
     new "简体中文"
 
+# TODO: Translation updated at 2026-09-11 06:39
+
+translate chinese_simplified strings:
+    old "Tests"
+    new "测试"
+

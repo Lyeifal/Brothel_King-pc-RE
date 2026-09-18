@@ -269,15 +269,15 @@ label init_traits():
 
         godless_trait = trait_dict["Godless"] = Trait("Godless", verb = "be", eff1 = Effect("boost", "reputation gains", -0.2))
 
-        housebroken_trait = trait_dict["Housebroken"] = Trait("Housebroken", verb="be", effects = [Effect("change", "job obedience target", -10), Effect("change", "whore obedience target", -10)], base_description = "She lost her virginity in a brothel. This is all she knows.")
+        housebroken_trait = trait_dict["Housebroken"] = Trait("Housebroken", verb="be", effects = [Effect("change", "job obedience target", -10), Effect("change", "whore obedience target", -10)], base_description = __("She lost her virginity in a brothel. This is all she knows."))
 
-        t_pet_trait = trait_dict["Teacher's pet"] = Trait("Teacher's pet", verb="be a", effects = [Effect("change", "train obedience target", -20), Effect("boost", "love", 0.2)], base_description = "Her first time was with you. You're special to her.")
+        t_pet_trait = trait_dict["Teacher's pet"] = Trait("Teacher's pet", verb="be a", effects = [Effect("change", "train obedience target", -20), Effect("boost", "love", 0.2)], base_description = __("Her first time was with you. You're special to her."))
 
-        trauma_trait = trait_dict["Trauma"] = Trait("Trauma", verb="have a", effects = [Effect("change", "obedience", 15), Effect("change", "libido", -15), Effect("boost", "fear", 0.2)], base_description = "She lost her virginity against her will, and has to live with the trauma.")
+        trauma_trait = trait_dict["Trauma"] = Trait("Trauma", verb="have a", effects = [Effect("change", "obedience", 15), Effect("change", "libido", -15), Effect("boost", "fear", 0.2)], base_description = __("She lost her virginity against her will, and has to live with the trauma."))
 
-        farmgirl_trait = trait_dict["Farmgirl"] = Trait("Farmgirl", verb="be a", effects = [Effect("change", "obedience", 10), Effect("boost", "farm preference increase", 0.25)], base_description = "She has lost her virginity in the farm like a filthy animal.")
+        farmgirl_trait = trait_dict["Farmgirl"] = Trait("Farmgirl", verb="be a", effects = [Effect("change", "obedience", 10), Effect("boost", "farm preference increase", 0.25)], base_description = __("She has lost her virginity in the farm like a filthy animal."))
 
-        chaos_trait = trait_dict["Mark of Chaos"] = Trait("Mark of Chaos", verb="have a", effects = [Effect("boost", "sanity loss", -0.33)], base_description = "She lost her virginity in a strange feverish dream, yet emerged with reinforced sanity.")
+        chaos_trait = trait_dict["Mark of Chaos"] = Trait("Mark of Chaos", verb="have a", effects = [Effect("boost", "sanity loss", -0.33)], base_description = __("She lost her virginity in a strange feverish dream, yet emerged with reinforced sanity."))
 
 
     return

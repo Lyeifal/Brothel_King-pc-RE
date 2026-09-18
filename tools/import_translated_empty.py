@@ -18,7 +18,7 @@ except ImportError:
     print("openpyxl not installed. Install with: pip install openpyxl")
     exit(1)
 
-NEW_PROJECT = Path(r"C:\Users\akxls\Documents\Code\BK\Brothel_King-pc")
+NEW_PROJECT = Path(__file__).resolve().parent.parent
 NEW_TL_DIR = NEW_PROJECT / "game" / "tl" / "chinese_simplified"
 DEFAULT_EXCEL = NEW_PROJECT / "temp" / "translations" / "to_translate_empty.xlsx"
 

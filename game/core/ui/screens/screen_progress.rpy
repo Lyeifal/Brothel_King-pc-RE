@@ -199,7 +199,7 @@ screen perks(girl):
                                     hover_background c_ui_sensitive
                                     add perk.get_pic().get(*res_tb(100)) xalign 0.5 yalign 0.5 # alpha 0.6 hover_alpha 1.0
                                     action Return(("add", perk))
-                                    hovered (tt.Action("Acquire " + perk.name + " for 1 perk point."), SetScreenVariable("selected_perk", perk))
+                                    hovered (tt.Action(__("Acquire %s for 1 perk point.") % perk.name), SetScreenVariable("selected_perk", perk))
                                     unhovered SetScreenVariable("selected_perk", None)
                                 else:
                                     background c_ui_insensitive + "AA"

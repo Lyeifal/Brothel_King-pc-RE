@@ -640,25 +640,25 @@ label farm_loop():
                         minions = farm.get_minions("stallion")
                         for it in MC.get_items(target="minion", effect_type="gain", effect_target="stallion xp"):
                             xp_bonus = it.get_effect("gain", "stallion xp") // len(minions)
-                            menu_list.append(["Use " + it.name.lower() + " (+" + str(xp_bonus) + " XP per stallion", ("gain xp", minions, it, xp_bonus)])
+                            menu_list.append(["Use " + __(it.name) + " (+" + str(xp_bonus) + " XP per stallion", ("gain xp", minions, it, xp_bonus)])
 
                     if MC.get_items(target="minion", effect_type="gain", effect_target="beast xp") and farm.get_minions("beast"):
                         minions = farm.get_minions("beast")
                         for it in MC.get_items(target="minion", effect_type="gain", effect_target="beast xp"):
                             xp_bonus = it.get_effect("gain", "beast xp") // len(minions)
-                            menu_list.append(["Use " + it.name.lower() + " (+" + str(xp_bonus) + " XP per beast", ("gain xp", minions, it, xp_bonus)])
+                            menu_list.append(["Use " + __(it.name) + " (+" + str(xp_bonus) + " XP per beast", ("gain xp", minions, it, xp_bonus)])
 
                     if MC.get_items(target="minion", effect_type="gain", effect_target="monster xp") and farm.get_minions("monster"):
                         minions = farm.get_minions("monster")
                         for it in MC.get_items(target="minion", effect_type="gain", effect_target="monster xp"):
                             xp_bonus = it.get_effect("gain", "monster xp") // len(minions)
-                            menu_list.append(["Use " + it.name.lower() + " (+" + str(xp_bonus) + " XP per monster", ("gain xp", minions, it, xp_bonus)])
+                            menu_list.append(["Use " + __(it.name) + " (+" + str(xp_bonus) + " XP per monster", ("gain xp", minions, it, xp_bonus)])
 
                     if MC.get_items(target="minion", effect_type="gain", effect_target="machine xp") and farm.get_minions("machine"):
                         minions = farm.get_minions("machine")
                         for it in MC.get_items(target="minion", effect_type="gain", effect_target="machine xp"):
                             xp_bonus = it.get_effect("gain", "machine xp") // len(minions)
-                            menu_list.append(["Use " + it.name.lower() + " (+" + str(xp_bonus) + " XP per machine", ("gain xp", minions, it, xp_bonus)])
+                            menu_list.append(["Use " + __(it.name) + " (+" + str(xp_bonus) + " XP per machine", ("gain xp", minions, it, xp_bonus)])
 
                     menu_list.append(["Forget it", ("back")])
 
@@ -860,7 +860,7 @@ label farm_loop():
                             if it.equipped:
                                 girl.unequip(it)
                             MC.take(girl, it)
-                            renpy.notify(_("%s has lost %s.") % (girl.name, it.name))
+                            renpy.notify(_("%s has lost %s.") % (girl.name, __(it.name)))
                             renpy.pause(0.5)
 
                     farm.girls.remove(girl)
@@ -1473,7 +1473,7 @@ label girls_loop():
                             if it.equipped:
                                 girl.unequip(it)
                             MC.take(girl, it)
-                            renpy.notify(_("%s has lost %s.") % (girl.name, it.name))
+                            renpy.notify(_("%s has lost %s.") % (girl.name, __(it.name)))
                             renpy.pause(0.5)
 
                     MC.girls.remove(girl)
@@ -1970,9 +1970,9 @@ label visit_merchant_loop():
                         if act == "buy and equip":
                             play sound it.sound
                             if counterpart == MC:
-                                $ notify(__("You have equipped the %s.") % it.name)
+                                $ notify(__("You have equipped the %s.") % __(it.name))
                             else:
-                                $ notify(__("%s has equipped the %s.") % (counterpart.name, it.name), pic=counterpart.portrait, col=c_white)
+                                $ notify(__("%s has equipped the %s.") % (counterpart.name, __(it.name)), pic=counterpart.portrait, col=c_white)
 
                 else:
                     $ right_focus.char(merchant_greetings[right_focus.id + " no money"])

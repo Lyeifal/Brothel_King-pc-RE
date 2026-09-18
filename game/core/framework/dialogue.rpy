@@ -22,7 +22,7 @@ init -3 python:
 
     def get_description(basetext, effects, separator="\n", final_dot=True):
 
-        text1 = "{i}" + basetext + "{/i}"
+        text1 = "{i}" + __(basetext) + "{/i}"
         begin = True
 
         for effect in effects:
@@ -45,7 +45,7 @@ init -3 python:
             if len(text1) > 0 and text1[-1] not in (".", "!", "?"): # Makes sure punctuation is added last.
                 text1 += "."
 
-        return __(text1)
+        return text1
 
 
     def get_log_changes(girl, change_log, changes, act): ## Where 'change_log' is a NightChangeLog object and 'changes' lists tuples with (stat_name, nb) - Used for perform()
