@@ -108,3 +108,11 @@ translate chinese_simplified strings:
     old "Mage Girl"
     new "法师女孩"
 
+# TODO: Translation updated at 2026-09-25 07:32
+
+# game/core/init/start.rpy:122
+translate chinese_simplified select_origin_017639ac:
+
+    # "EN: Present origin selection (Origins mod). The chosen origin is stored in the global _selected_origin and consumed by the intro (unique player class + talents). Skipped if the mod is absent. ZH: 展示出身选择（Origins Mod）。选中的出身存入全局 _selected_origin，由开场流程消费（独特主角职业 + 天赋）。 Mod 缺席时跳过。"
+    "EN: 展示出身选择（Origins Mod）。选中的出身存入全局 _selected_origin，由开场流程消费（独特主角职业 + 天赋）。ZH: 展示出身选择（Origins Mod）。选中的出身存入全局 _selected_origin，由开场流程消费（独特主角职业 + 天赋）。 Mod 缺席时跳过。"
+

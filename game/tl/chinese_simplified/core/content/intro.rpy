@@ -3424,3 +3424,17 @@ translate chinese_simplified strings:
     old "Fuck yeah"
     new "操，当然"
 
+# TODO: Translation updated at 2026-09-25 07:32
+
+# game/core/content/intro.rpy:313
+translate chinese_simplified resume_intro_2fb3b701:
+
+    # you "I am of [_origin_name] stock. The past is the past — I am here to start anew."
+    you "我是[_origin_name]出身。过去的事就让它过去——我来这里重新开始。"
+
+# game/core/content/intro.rpy:315
+translate chinese_simplified resume_intro_2dbead50:
+
+    # "[_selected_origin.get_description()]"
+    "[_selected_origin.get_description()]"
+

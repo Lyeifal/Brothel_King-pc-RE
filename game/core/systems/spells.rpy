@@ -7,6 +7,12 @@ init python:
     def get_available_player_classes():
         """EN: Return list of available player class IDs based on game mode and origin.
            ZH: 根据游戏模式和出身返回可用的主角职业 ID 列表。"""
+        ## EN: Origins mod — a selected origin locks the MC to its unique class.
+        ## ZH: Origins Mod——选了出身后，主角锁定为该出身的独特职业。
+        _origin = globals().get("_selected_origin")
+        if _origin is not None and getattr(_origin, "class_id", None):
+            return [_origin.class_id]
+
         if story_mode:
             # Story mode: only classes marked for story
             return [cid for cid, data in all_player_classes.items() if "story" in data.get("modes", [])]

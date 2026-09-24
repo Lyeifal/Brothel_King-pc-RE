@@ -17,7 +17,8 @@ label start:
 
     $ debug_mode = False
     $ story_mode = True
-    $ game_mode = None  ## EN: Will be set to "story", "sandbox", or "scenario". ZH: 将设置为 "story"、"sandbox" 或 "scenario"。
+    $ game_mode = None  ## EN: Will be set to "story" or "sandbox". ZH: 将设置为 "story" 或 "sandbox"。
+    $ _selected_origin = None  ## EN: Player origin chosen at start (Origins mod). ZH: 开局选择的玩家出身（Origins Mod）。
     $ starting_chapter = 1
     $ enemy_general = None
     $ unlocked_shops = []
@@ -100,15 +101,12 @@ label select_game_mode():
         ## ZH: game_mode 由屏幕的 Return() 动作设置。
         $ story_mode = (game_mode == GameMode.MODE_STORY)
 
-        ## EN: If sandbox mode, prompt for origin selection.
-        ## ZH: 如果是沙盒模式，提示选择出身。
-        if game_mode == GameMode.MODE_SANDBOX:
+        ## EN: Prompt for origin selection (Origins mod) for story AND
+        ##     sandbox mode. Skipped silently when the mod is absent.
+        ## ZH: 剧情与沙盒两种模式都提示选择出身（Origins Mod）。
+        ##     Mod 缺席时静默跳过。
+        if game_mode in (GameMode.MODE_STORY, GameMode.MODE_SANDBOX):
             call select_origin() from _call_select_origin
-
-        ## EN: If scenario mode, prompt for scenario selection.
-        ## ZH: 如果是剧本模式，提示选择剧本。
-        if game_mode == GameMode.MODE_SCENARIO:
-            call select_scenario() from _call_select_scenario
 
     else:
 
@@ -122,62 +120,33 @@ label select_game_mode():
 
 label select_origin():
     """
-    EN: Present origin selection for Sandbox mode.
-    ZH: 为沙盒模式展示出身选择。
+    EN: Present origin selection (Origins mod). The chosen origin is stored
+        in the global _selected_origin and consumed by the intro (unique
+        player class + talents). Skipped if the mod is absent.
+    ZH: 展示出身选择（Origins Mod）。选中的出身存入全局
+        _selected_origin，由开场流程消费（独特主角职业 + 天赋）。
+        Mod 缺席时跳过。
     """
     scene black with fade
 
-    ## EN: The origin screen lives in the "Game Modes" mod; skip if absent.
-    ## ZH: 出身屏幕位于 "Game Modes" Mod；缺席则跳过。
+    ## EN: The origin screen lives in the "Origins" mod; skip if absent.
+    ## ZH: 出身屏幕位于 "Origins" Mod；缺席则跳过。
     if not renpy.has_screen("origin_select"):
         return
 
     $ _selected_origin_id = None
     call screen origin_select
 
-    ## EN: Set the selected origin on the sandbox mode instance.
-    ## ZH: 在沙盒模式实例上设置选中的出身。
+    ## EN: Resolve the origin instance into the store global. The registry
+    ##     lives in the mod, so look it up defensively.
+    ## ZH: 将出身实例解析进 store 全局变量。注册表位于 Mod 内，
+    ##     因此做防御式查找。
     python:
-        _sandbox = gamemode_registry.get(GameMode.MODE_SANDBOX)
-        if _sandbox and _selected_origin_id:
-            _sandbox.set_origin(origin_registry.get(_selected_origin_id))
-
-    return
-
-
-label select_scenario():
-    """
-    EN: Present scenario selection for Scenario mode.
-        Falls back to sandbox if no scenarios are installed.
-    ZH: 为剧本模式展示剧本选择。
-        如果没有安装剧本则回退到沙盒模式。
-    """
-    scene black with fade
-
-    ## EN: The scenario screen lives in the "Game Modes" mod; without it the
-    ##     scenario pipeline is unavailable, so behave like the screen's
-    ##     empty-state and fall back to sandbox mode.
-    ## ZH: 剧本屏幕位于 "Game Modes" Mod；缺席时剧本流程不可用，
-    ##     按屏幕空状态处理，回退到沙盒模式。
-    if not renpy.has_screen("scenario_select"):
-        $ game_mode = GameMode.MODE_SANDBOX
-        $ story_mode = False
-        return
-
-    $ _selected_scenario_id = None
-    call screen scenario_select
-
-    ## EN: If the screen fell back to sandbox, _selected_scenario_id is None.
-    ## ZH: 如果屏幕回退到沙盒模式，_selected_scenario_id 为 None。
-    if _selected_scenario_id:
-        python:
-            _sc = scenario_registry.get(_selected_scenario_id)
-            _scenario_mode = gamemode_registry.get(GameMode.MODE_SCENARIO)
-            if _sc and _scenario_mode:
-                _scenario_mode.set_scenario(_sc)
-    else:
-        $ game_mode = GameMode.MODE_SANDBOX
-        $ story_mode = False
+        _selected_origin = None
+        if _selected_origin_id:
+            _orig_reg = globals().get("origin_registry")
+            if _orig_reg is not None:
+                _selected_origin = _orig_reg.get(_selected_origin_id)
 
     return
 
@@ -185,6 +154,14 @@ label select_scenario():
 label start_no_intro:
 
     call init_game(quick=True) from _call_init_game
+
+    ## EN: Origins mod — the no-intro path never passes the intro class
+    ##     menu, so apply the origin's unique class and talents here.
+    ## ZH: Origins Mod——跳过开场的路线不会经过职业菜单，
+    ##     在此套用出身的独特职业与天赋。
+    if _selected_origin is not None:
+        $ MC.set_playerclass(_selected_origin.class_id)
+        $ _selected_origin.apply_to_mc(MC)
 
     if debug_mode != "quick":
         call choose_difficulty() from _call_choose_difficulty

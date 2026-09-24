@@ -590,26 +590,22 @@ init -2 python:
             return rand_choice({"Arios": ["Arios", __("By Arios"), __("By the Lightbringer"), __("By the Lord of Light")], "Shalia": ["Shalia", __("By Shalia"), __("Goddess"), __("By the Night Lady")], None: [__("Demons"), __("Damnation"), __("Priests be damned"), __("By the Seven Hells")]}[self.god])
 
         def reset_stats(self):
-            if self.playerclass == "Warrior":
+            ## EN: Class stat spreads come from the MC_CLASS_STAT_DEFS store
+            ##     registry (core defines the three base classes; mods may
+            ##     register more, e.g. the Origins mod's unique classes).
+            ##     Unknown classes fall back to a balanced spread.
+            ## ZH: 职业属性分配来自 store 注册表 MC_CLASS_STAT_DEFS
+            ##     （核心定义三个基础职业；Mod 可注册更多，如 Origins
+            ##     Mod 的独特职业）。未知职业回退为均衡分配。
+            _stats = MC_CLASS_STAT_DEFS.get(self.playerclass)
 
-                self.strength = 2
-                self.spirit = 1
-                self.charisma = 0
-                self.speed = 3
+            if _stats is None:
+                _stats = {"strength": 1, "spirit": 1, "charisma": 1, "speed": 2}
 
-            elif self.playerclass == "Wizard":
-
-                self.strength = 0
-                self.spirit = 2
-                self.charisma = 1
-                self.speed = 3
-
-            elif self.playerclass == "Trader":
-
-                self.strength = 1
-                self.spirit = 0
-                self.charisma = 2
-                self.speed = 3
+            self.strength = _stats["strength"]
+            self.spirit = _stats["spirit"]
+            self.charisma = _stats["charisma"]
+            self.speed = _stats["speed"]
 
             if self.god == "Arios":
                 self.strength += 1

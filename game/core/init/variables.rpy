@@ -1703,6 +1703,18 @@ init -4 python:
         jp_customer_rank_modifier = {}
         jp_job_level_modifier = {}
 
+    ## MC CLASS STAT DEFS
+    # EN: Base stat spreads for MC player classes (used by Main.reset_stats).
+    #     Mods may add their own classes to this dict at runtime (see the
+    #     Origins mod's unique-origin classes).
+    # ZH: 主角各职业的基础属性分配（Main.reset_stats 使用）。Mod 可在
+    #     运行时向本字典注册自己的职业（见 Origins Mod 的出身职业）。
+    MC_CLASS_STAT_DEFS = {
+        "Warrior": {"strength": 2, "spirit": 1, "charisma": 0, "speed": 3},
+        "Wizard": {"strength": 0, "spirit": 2, "charisma": 1, "speed": 3},
+        "Trader": {"strength": 1, "spirit": 0, "charisma": 2, "speed": 3},
+    }
+
     ## RANKS / JOB POINTS — JSON-driven (BK Evolution) ##
     _ranks_path = _os.path.join(renpy.config.gamedir, "core", "data", "ranks", "ranks.json")
     _ranks_data = {}
