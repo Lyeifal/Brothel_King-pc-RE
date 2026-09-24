@@ -41,7 +41,7 @@ init -1 python:
         if girl is None:
             return
         if courtyard_villa.add_girl(girl):
-            notify(girl.name + __(" has been moved to the Courtyard."), col="green")
+            notify(girl.name + __(" has been moved to the Courtyard."), col=c_green)
 
     ## EN: Daily processing for courtyard girls. Wired via the day_ending hook:
     ##     mood/energy recovery -> stat decay -> rent collection.
@@ -95,7 +95,7 @@ init -1 python:
         if girl is None:
             return
         if courtyard_villa.add_girl(girl):
-            notify(girl.name + __(" has been moved to the Courtyard."), col="green")
+            notify(girl.name + __(" has been moved to the Courtyard."), col=c_green)
 
     mod_api_v2.register_hook(mod_api_v2.HOOK_GIRL_ASSIGN_LIST, _courtyard_assign_list, priority=0)
     mod_api_v2.register_hook(mod_api_v2.HOOK_GIRL_ASSIGN_ACCEPT, _courtyard_assign_accept, priority=0)
