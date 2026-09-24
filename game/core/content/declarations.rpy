@@ -1718,7 +1718,7 @@ screen gallery_left_menu(gal_type, gal):
         vbox:
             if gal_type == "ev":
                 for g in ev_gallery_list:
-                    textbutton g action (SetScreenVariable("name", g), SetScreenVariable("gal", ev_gallery[g]), SetScreenVariable("page", 0), SelectedIf(gal==ev_gallery[g])) xsize int(config.screen_width*0.1851) text_size int(config.screen_height*0.025)
+                    textbutton __(g) action (SetScreenVariable("name", g), SetScreenVariable("gal", ev_gallery[g]), SetScreenVariable("page", 0), SelectedIf(gal==ev_gallery[g])) xsize int(config.screen_width*0.1851) text_size int(config.screen_height*0.025)
 
             elif gal_type == "gp":
                 for pack in GirlFilesDict.get_paths():
@@ -1759,7 +1759,7 @@ screen gallery(gal_type="ev"): # The Gallery object must have a pics variable (a
 
         vbox spacing 10:
 
-            text name + " (" + str_int(get_gallery_unlock_rate(gal_type, gal, name)) + "%)"
+            text __(name) + " (" + str_int(get_gallery_unlock_rate(gal_type, gal, name)) + "%)"
 
             frame background None:
 

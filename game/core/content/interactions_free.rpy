@@ -100,7 +100,7 @@ label free_girl_talk(girl):
                     you "Well, what do we have here... Damn, you're hot! I'm [MC.name]. What's your name baby?"
 
                 else:
-                    $ you(rand_choice(("Is your dad a baker? 'Cause you've got some nice buns!", "I'm not staring at your boobs. I'm staring at your heart.", "Did we take a class together? I could've sworn we had chemistry.")))
+                    $ you(rand_choice((__("Is your dad a baker? 'Cause you've got some nice buns!"), __("I'm not staring at your boobs. I'm staring at your heart."), __("Did we take a class together? I could've sworn we had chemistry."))))
 
                 call dialogue(girl, "free_greetings_rude") from _call_dialogue_23
 
@@ -199,7 +199,7 @@ label free_chat_small_talk(girl):
     $ girl.personality_unlock["EI"] += 10 + MC.get_charisma() + dice(6) # Temp, see how it behaves
 
 
-    $ text1 = rand_choice(("The weather's nice today, don't you think?", "I've heard it might rain later today...", "Last time I came here it was a lot more crowded.", "How have you been? Haven't seen you in a while.", "I saw you standing there, so well, uh... Thought I'd just talk to you.", "Don't you think this place is strange?", "This dog looks strange, doesn't it?"))
+    $ text1 = rand_choice((__("The weather's nice today, don't you think?"), __("I've heard it might rain later today..."), __("Last time I came here it was a lot more crowded."), __("How have you been? Haven't seen you in a while."), __("I saw you standing there, so well, uh... Thought I'd just talk to you."), __("Don't you think this place is strange?"), __("This dog looks strange, doesn't it?")))
 
     you "[text1]"
 
@@ -409,17 +409,17 @@ label free_play(girl):
         $ pic = girl.get_pic("service", "naked", "profile", and_tags=use_locations, not_tags= ["group", "bisexual"] + all_jobs, hide_farm=True)
 
         if pic.has_tag("mast"):
-            $ text1 = "I want you to masturbate for me."
+            $ text1 = __("I want you to masturbate for me.")
         elif pic.has_tag("titjob"):
-            $ text1 = "I want to fuck those nice tits of yours."
+            $ text1 = __("I want to fuck those nice tits of yours.")
         elif pic.has_tag("footjob"):
-            $ text1 = "Why don't you jerk me off with your feet?"
+            $ text1 = __("Why don't you jerk me off with your feet?")
         elif pic.has_tag("oral"):
-            $ text1 = "I want you to suck my dick."
+            $ text1 = __("I want you to suck my dick.")
         elif pic.has_tag("handjob"):
-            $ text1 = "I want you to jerk me off."
+            $ text1 = __("I want you to jerk me off.")
         else:
-            $ text1 = "I want you to pleasure me."
+            $ text1 = __("I want you to pleasure me.")
 
 #         $ dislikes = ("rebel", "nerd")
 
@@ -430,7 +430,7 @@ label free_play(girl):
 
         $ diff = 78
 
-        $ text1 = "Let me have you..."
+        $ text1 = __("Let me have you...")
 
         $ snd = s_orgasm
 
@@ -447,7 +447,7 @@ label free_play(girl):
 
         $ diff = 80
 
-        $ text1 = "I want to fuck your ass."
+        $ text1 = __("I want to fuck your ass.")
 
         $ snd = s_orgasm_fast
 
@@ -464,7 +464,7 @@ label free_play(girl):
 
         $ diff = 82
 
-        $ text1 = "Bend over and get ready for a good whack."
+        $ text1 = __("Bend over and get ready for a good whack.")
 
         $ snd = s_screams
 
@@ -826,7 +826,7 @@ label free_give_gift(girl): # Interactions are deducted here for giving gold
 
         gift_list.append(("Go back", "back"))
 
-        result = long_menu("Choose a present", gift_list)
+        result = long_menu(__("Choose a present"), gift_list)
 
     if result == "back":
         return
@@ -985,17 +985,17 @@ label free_offer_job(girl):
 
     if MC.get_alignment() == "good":
 
-        $ text1 = "I will treat you well of course, taking good care of you."
+        $ text1 = __("I will treat you well of course, taking good care of you.")
         $ modifier = 2
 
     elif MC.get_alignment() == "neutral":
 
-        $ text1 = "I will treat you fairly, and you have nothing to fear if you play by the rules."
+        $ text1 = __("I will treat you fairly, and you have nothing to fear if you play by the rules.")
         $ modifier = 0
 
     elif MC.get_alignment() == "evil":
 
-        $ text1 = "I must also warn you that I'm a harsh master. You have to be ready for anything."
+        $ text1 = __("I must also warn you that I'm a harsh master. You have to be ready for anything.")
         $ modifier = -4
 
     you "You would have to sign a temporary contract to allow me to be your Master. As you know, only sex servants are allowed in the city's brothels. [text1]"
@@ -1076,7 +1076,7 @@ label free_girl_friend(girl):
 
             $ norollback()
 
-            $ lie = rand_choice(("a secret guild master", "an expert weaponsmith", "a professional circus athlete", "an Arios knight", "a famous Noh actor", "an international man of mystery"))
+            $ lie = rand_choice((__("a secret guild master"), __("an expert weaponsmith"), __("a professional circus athlete"), __("an Arios knight"), __("a famous Noh actor"), __("an international man of mystery")))
 
             $ girl.MC_lied = lie
 
@@ -1159,13 +1159,13 @@ label free_girl_girlfriend(girl):
 
             m = []
 
-            m.append(("[girl.name]'s hobby is...", None))
+            m.append((__("[girl.name]'s hobby is..."), None))
 
             for h in hobby_list:
 
-                m.append((h, h))
+                m.append((__(h), h))
 
-            m.append(("I don't know", "give up"))
+            m.append((__("I don't know"), "give up"))
 
             r = menu(items = m)
 
@@ -1210,13 +1210,13 @@ label free_girl_girlfriend(girl):
 
             m = []
 
-            m.append(("[girl.name] comes from...", None))
+            m.append((__("[girl.name] comes from..."), None))
 
             for h in origin_list:
 
-                m.append((h, h))
+                m.append((__(h), h))
 
-            m.append(("I don't know", "give up"))
+            m.append((__("I don't know"), "give up"))
 
             r = menu(items = m)
 
@@ -1245,7 +1245,10 @@ label free_girl_girlfriend(girl):
         else:
             $ _type = "least favorite"
 
-        girl.char "Do you remember what is my [_type] [thing]?"
+        $ type_text = __(_type)
+        $ thing_text = __(thing)
+
+        girl.char "Do you remember what is my [type_text] [thing_text]?"
 
         python:
 
@@ -1282,13 +1285,13 @@ label free_girl_girlfriend(girl):
 
             m = []
 
-            m.append(("[girl.name]'s [_type] [thing] is...", None))
+            m.append((__("[girl.name]'s [type_text] [thing_text] is..."), None))
 
             for h in fav_list:
 
-                m.append((h, h))
+                m.append((__(h), h))
 
-            m.append(("I don't know", "give up"))
+            m.append((__("I don't know"), "give up"))
 
             r = menu(items = m)
 

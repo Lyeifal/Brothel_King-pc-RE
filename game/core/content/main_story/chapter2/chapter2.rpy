@@ -84,6 +84,7 @@ label sewer_girl_returns(): # Morning event
     sewer_woman "What will it be?"
 
     $ diff = MC.challenges["rally"].estimate_diff(8)
+    $ diff_text = __(diff)
     $ can_roll = True
 
 label sewer_girl_returns_menu():
@@ -113,7 +114,7 @@ label sewer_girl_returns_menu():
 
             "You have earned a lot of prestige."
 
-        "I want both (Charisma test: [diff])" if can_roll:
+        "I want both (Charisma test: [diff_text])" if can_roll:
 
             $ norollback()
 
@@ -302,7 +303,7 @@ label c2_intro():
     # SHOPS #
 
     $ calendar.set_alarm(calendar.time+2, Event(label = "c2_princess_letter"))
-    $ game.set_task("Get started with your new brothel.", "story")
+    $ game.set_task(__("Get started with your new brothel."), "story")
 
     scene black with fade
     show bg brothel1 at top with dissolve
@@ -868,11 +869,11 @@ label c2_princess_letter:
     with dissolve
 
     if MC.playerclass == "Warrior":
-        $ activity = "your early weapon training"
+        $ activity = __("your early weapon training")
     elif MC.playerclass == "Wizard":
-        $ activity = "your usual meditation session"
+        $ activity = __("your usual meditation session")
     elif MC.playerclass == "Trader":
-        $ activity = "the daily farmer's market"
+        $ activity = __("the daily farmer's market")
 
     "Late in the morning, you come back to [brothel.name] from [activity] when you hear a sudden scream."
 
@@ -1041,7 +1042,7 @@ label c2_princess_letter:
 
             "Gio grumbles, but he's too horny to pass on a free hooker."
 
-            $ girl = long_menu("Choose which girl will entertain Gio", [(g.name, g) for g in MC.girls])
+            $ girl = long_menu(__("Choose which girl will entertain Gio"), [(g.name, g) for g in MC.girls])
             $ girl2 = None
 
             you "[girl.name]! Come over here."
@@ -1076,8 +1077,8 @@ label c2_princess_letter:
 
             "He seems to have forgotten all about Sill."
 
-            $ girl = long_menu("Choose which girl will entertain Gio (first girl)", [(g.name, g) for g in MC.girls])
-            $ girl2 = long_menu("Choose which girl will entertain Gio (second girl)", [(g.name, g) for g in MC.girls if g != girl])
+            $ girl = long_menu(__("Choose which girl will entertain Gio (first girl)"), [(g.name, g) for g in MC.girls])
+            $ girl2 = long_menu(__("Choose which girl will entertain Gio (second girl)"), [(g.name, g) for g in MC.girls if g != girl])
 
             you "[girl.name]! [girl2.name]! Come here, darlings."
 
@@ -1106,7 +1107,7 @@ label c2_princess_letter:
 
             gio "You're... MEAN!!!" with vpunch
 
-            $ MC.rand_say(["gd: I don't think you're any of the girls' type, anyway. Sorry.", "ne: Boohoo. Cry me a river.", "ev: Damn right I'm mean! Now give me this letter before I show you just how bad I am."])
+            $ MC.rand_say([__("gd: I don't think you're any of the girls' type, anyway. Sorry."), __("ne: Boohoo. Cry me a river."), __("ev: Damn right I'm mean! Now give me this letter before I show you just how bad I am.")])
 
             $ NPC_gio.love -= 2
             $ girl = None
@@ -1132,7 +1133,7 @@ label c2_princess_letter:
 
     call screen letter(header = _("A Royal Invitation"),
                         message = __("Dear %s,\n\nI have heard from our common acquaintance that you have recently settled in Zan. It warms my heart to know that another upstanding citizen is taking root in our city.\nI am forever in your debt for the aid you provided in my hour of need. If you please, I should like to meet you again to discuss an urgent matter. My messenger can give you the details.") % MC.name,
-                        signature = "Princess Kurohime")
+                        signature = __("Princess Kurohime"))
 
     "You are awestruck for a moment."
 
@@ -1292,8 +1293,8 @@ label c2_princess_letter:
     you "A meeting with the Princess of Zan, uh? When did I become so fancy..."
 
     $ story_add_event("c2_princess_visit1")
-    $ game.set_task("Meet Gio at the stables on Saturday.")
-    $ game.set_task("Advance through the story to unlock the next chapter.", "advance2")
+    $ game.set_task(__("Meet Gio at the stables on Saturday."))
+    $ game.set_task(__("Advance through the story to unlock the next chapter."), "advance2")
 
     return
 
@@ -1349,7 +1350,7 @@ label c2_princess_visit1:
 
     gio "Arios worshippers are so insecure about their faith, they need to constantly rub it into everyone's face..."
 
-    $ MC.rand_say(["sh: Yeah, sounds like them all right... Tsk.", "ar: Watch it! I won't suffer insults to the name of Arios!", "ng: No separation of church and state, uh... How primitive."])
+    $ MC.rand_say([__("sh: Yeah, sounds like them all right... Tsk."), __("ar: Watch it! I won't suffer insults to the name of Arios!"), __("ng: No separation of church and state, uh... How primitive.")])
 
     gio "Anyway. That's why this road is known as Pilgrim's Road. It's still the fastest way to get to the Palace, if you don't mind bumping into the tourists."
 
@@ -1436,7 +1437,7 @@ label c2_princess_visit1:
 
     "This last piece of information sounded a little like a threat. You're not sure, but you feel like the knight is looking at you disapprovingly from under his helmet."
 
-    $ MC.rand_say(["gd: (Well, that is to be expected, he's got his orders... I'm sure me being here is not making his job any easier.)", "ne: (What a welcome. I wonder if everyone at court is so stuck up?)", "ev: (Fuck that jerk...)"])
+    $ MC.rand_say([__("gd: (Well, that is to be expected, he's got his orders... I'm sure me being here is not making his job any easier.)"), __("ne: (What a welcome. I wonder if everyone at court is so stuck up?)"), __("ev: (Fuck that jerk...)")])
 
     knight "The Palace will now close to the visiting public for today. Let me show you the way out..."
 
@@ -1461,7 +1462,7 @@ label c2_princess_visit1:
     "The Palace will send someone to pick you up {b}next Monday{/b}."
 
     $ story_add_event("c2_princess_visit2", "daily")
-    $ game.set_task("Wait for someone to pick you up on Monday.")
+    $ game.set_task(__("Wait for someone to pick you up on Monday."))
 
     return
 
@@ -2350,7 +2351,7 @@ label c2_palace_intrusion:
 
     "Her eyes brim with tears."
 
-    $ MC.rand_say(("gd: Fear not, Your Highness. I will protect you!", "ne: All right, all right, Your Highness. I'll help...", "ev: Worry not, Your Highness, We have a deal, remember?"))
+    $ MC.rand_say((__("gd: Fear not, Your Highness. I will protect you!"), __("ne: All right, all right, Your Highness. I'll help..."), __("ev: Worry not, Your Highness, We have a deal, remember?")))
 
     kuro "..."
 
@@ -2384,7 +2385,7 @@ label c2_palace_intrusion:
 
     "You must investigate the murders in town."
 
-    $ game.set_task("Find out more about the murders of high-ranking officials.")
+    $ game.set_task(__("Find out more about the murders of high-ranking officials."))
     $ calendar.set_alarm(calendar.time+1, Event(label = "c2_gio_message"))
 
     return
@@ -2488,7 +2489,7 @@ label c2_gio_message():
 
     "Meet Gio by the {b}Plaza{/b} in the warehouse district."
 
-    $ game.set_task("Meet Gio at the plaza.")
+    $ game.set_task(__("Meet Gio at the plaza."))
     $ story_add_event("c2_gio_meeting")
 
     return
@@ -2727,7 +2728,7 @@ label c2_gio_meeting():
 
     you "Well, let's not worry too much about it. Gio is usually full of crap, so his intel is probably garbage... *nervous*"
 
-    $ game.set_task("Wait for the Kunoichi to show up, and... Murder you?")
+    $ game.set_task(__("Wait for the Kunoichi to show up, and... Murder you?"))
     $ temp_gossip += chapter_gossip["c2_kunoichi"]
 
     $ calendar.set_alarm(calendar.time + 2, StoryEvent("c2_suzume_invitation"))
@@ -2832,7 +2833,7 @@ label c2_suzume_invitation():
 
     "Visit the farm to return the panties to their rightful wearer."
 
-    $ game.set_task("Visit the {b}farm{/b} to return the missing panties.")
+    $ game.set_task(__("Visit the {b}farm{/b} to return the missing panties."))
     $ story_add_event("c2_suzume_forest1")
 
     return
@@ -3308,7 +3309,7 @@ label c2_suzume_arena(): # Arena
     "Go to the {b}farm{/b} again to meet with Suzume."
 
     $ story_add_event("c2_suzume_forest2")
-    $ game.set_task("Meet the strange girl again at the {b}farm{/b}.")
+    $ game.set_task(__("Meet the strange girl again at the {b}farm{/b}."))
 
     return
 
@@ -3547,7 +3548,7 @@ label c2_suzume_forest2():
     $ MC.interactions = 0
     "You have lost your remaining actions for the day."
 
-    $ game.set_task("Wait for events to unfold.")
+    $ game.set_task(__("Wait for events to unfold."))
     $ MC.change_prestige(2)
     $ calendar.set_alarm(calendar.time+1, StoryEvent("c2_suzume_report2", type = "morning"))
 
@@ -3658,7 +3659,7 @@ label c2_suzume_invitation2():
 
     "Visit the {b}Seafront{/b} to enjoy your free night at the Dark Serpent."
 
-    $ game.set_task("Visit the upscale hostess club by the {b}Seafront{/b}.")
+    $ game.set_task(__("Visit the upscale hostess club by the {b}Seafront{/b}."))
     $ story_add_event("c2_suzume_brothel")
 
     return
@@ -4030,7 +4031,7 @@ label c2_suzume_brothel():
     "You have spent all of your actions for the night."
 
     $ calendar.set_alarm(calendar.time+1, StoryEvent("c2_suzume_morning_visit", type = "morning"))
-    $ game.set_task("Wait for Suzume to come back.")
+    $ game.set_task(__("Wait for Suzume to come back."))
 
     return
 
@@ -4249,11 +4250,11 @@ label c2_homura_okiya1():
     you "Nevertheless, the city can be dangerous at night. I'm not sure you should act so carefree..."
 
     if MC.playerclass == "Warrior":
-        $ text1 = "mighty warrior"
+        $ text1 = __("mighty warrior")
     elif MC.playerclass == "Wizard":
-        $ text1 = "grand wizard"
+        $ text1 = __("grand wizard")
     elif MC.playerclass == "Trader":
-        $ text1 = "charming rogue"
+        $ text1 = __("charming rogue")
 
     homura normal "Oh, but surely I will be safe here! Escorted by [MC.name], [text1], and good friend of the Princess!"
 
@@ -4954,7 +4955,7 @@ label c2_suzume_morning_visit_menu():
 
     "Suzume is gone, like the wind..."
 
-    $ game.set_task("Get the onsen, and wait for Suzume.")
+    $ game.set_task(__("Get the onsen, and wait for Suzume."))
     $ daily_events.append(StoryEvent(label = "c2_suzume_onsen", chapter=2, room="onsen", date=calendar.time + 3))
 
     return
@@ -5315,7 +5316,7 @@ label c2_suzume_onsen(): # Happens at night when the player has an onsen and at 
     scene black with fade
 
     $ MC.change_prestige(2)
-    $ game.set_task("Go hunt ninjas in the city.")
+    $ game.set_task(__("Go hunt ninjas in the city."))
 
     # Init ninja hunt
     $ init_ninja_game()
@@ -5420,9 +5421,9 @@ label ninja_hunt_intro(): # Runs only once
     "Hit the Kunoichi {b}three times{/b} within the time limit to stop her."
 
     $ story_flags["ninja hunt seen intro"] = True
-    $ game.set_task("Meet the Earth Kunoichi.", "story")
-    $ game.set_task("Meet the Water Kunoichi.", "story2")
-    $ game.set_task("Meet the Void Kunoichi.", "story3")
+    $ game.set_task(__("Meet the Earth Kunoichi."), "story")
+    $ game.set_task(__("Meet the Water Kunoichi."), "story2")
+    $ game.set_task(__("Meet the Void Kunoichi."), "story3")
 
     return
 
@@ -5517,26 +5518,26 @@ label ninja_intercept(ninja, special): # Used when hunt successful (3 hits) or d
         $ lock_ninja_locations(ninja)
 
         if special == "fast":
-            $ text1 = "Damn! She's just too fast... She dodges even perfect hits!"
+            $ text1 = __("Damn! She's just too fast... She dodges even perfect hits!")
             if game.chapter == 2:
                 $ game.set_task(None, "story3")
             else:
-                $ game.set_task("The Void Kunoichi: Gather hints from your contacts", "story3", 3)
+                $ game.set_task(__("The Void Kunoichi: Gather hints from your contacts"), "story3", 3)
 
         elif special == "rain":
-            $ text1 = "It's a damn storm out here! I can't see a thing!"
+            $ text1 = __("It's a damn storm out here! I can't see a thing!")
             if game.chapter == 2:
                 $ game.set_task(None, "story2")
             else:
-                $ game.set_task("The Water Kunoichi: Gather hints from your contacts", "story2", blocking=False)
+                $ game.set_task(__("The Water Kunoichi: Gather hints from your contacts"), "story2", blocking=False)
             # $ game.set_task("Find a way to overcome the Water Kunoichi's storm protection.", "story2", 3)
 
         elif special == "quake":
-            $ text1 = "My legs are giving out, and the district is about to crumble..."
+            $ text1 = __("My legs are giving out, and the district is about to crumble...")
             if game.chapter == 2:
                 $ game.set_task(None, "story")
             else:
-                $ game.set_task("The Earth Kunoichi: Gather hints from your contacts", "story", 3)
+                $ game.set_task(__("The Earth Kunoichi: Gather hints from your contacts"), "story", 3)
 
         # Happens in the Rank 2 district that doesn't hold the brothel
         if story_flags["all ninjas met twice"] and not story_flags["c3 brothel unlocked"]:
@@ -5777,7 +5778,7 @@ label intercept_narika():
 
         suzume doubt "She got the drop on us this time... But we'll run into her again. She's too bold to go into hiding."
 
-        $ game.set_task("Meet the Void Kunoichi again.", "story3", 3)
+        $ game.set_task(__("Meet the Void Kunoichi again."), "story3", 3)
 
         scene black with fade
 
@@ -6191,7 +6192,7 @@ label intercept_narika():
 
         $ story_add_event("c2_narika_H1", "daily")
 
-        $ game.set_task("The Void Kunoichi: Meet at the brothel with Suzume tonight.", "story3")
+        $ game.set_task(__("The Void Kunoichi: Meet at the brothel with Suzume tonight."), "story3")
 
     elif ninja.flags["hunt stage"] >= 4: # Stage 3 is unlocked through the story
         scene black with fade
@@ -6270,7 +6271,7 @@ label intercept_narika():
 
                             "Wait for Suzume to come back from the castle with news."
 
-                            $ game.set_task("The Void Kunoichi: Wait for Suzume to report on Narika's arrest.", "story3", 3)
+                            $ game.set_task(__("The Void Kunoichi: Wait for Suzume to report on Narika's arrest."), "story3", 3)
                             $ NPC_narika.location = None
                             $ calendar.set_alarm(calendar.time+1, StoryEvent(label = "c3_narika_arrested", type="morning"))
 
@@ -6313,7 +6314,7 @@ label intercept_narika():
 
                             "Wait until tonight to deal with Narika at your brothel."
 
-                            $ game.set_task("The Void Kunoichi: Break Narika's will at the brothel.", "story3", blocking=False)
+                            $ game.set_task(__("The Void Kunoichi: Break Narika's will at the brothel."), "story3", blocking=False)
                             $ NPC_narika.location = None
 
                             $ calendar.set_alarm(calendar.time, StoryEvent(label = "c3_narika_captured", type="night"))
@@ -6397,7 +6398,7 @@ label c2_narika_H1():
 
     you "...so I should put my hands and feet in the circles of color... Got it."
 
-    $ chal = renpy.call_screen("challenge_menu", challenges=[("Cast a tracking spell", "cast", 3)], cancel=("Forget it", False))
+    $ chal = renpy.call_screen("challenge_menu", challenges=[(__("Cast a tracking spell"), "cast", 3)], cancel=(__("Forget it"), False))
     $ norollback()
 
     if chal == "cast":
@@ -6702,7 +6703,7 @@ label c2_narika_H1():
 
         suzume "Aw..."
 
-    $ game.set_task("Meet the Void Kunoichi, yet again.", "story3", 3)
+    $ game.set_task(__("Meet the Void Kunoichi, yet again."), "story3", 3)
 
     return
 
@@ -6851,7 +6852,7 @@ label intercept_mizuki():
 
         suzume "Well... We should keep patrolling around the district. She has a strong affinity with water... I'm sure we'll see her again, eventually."
 
-        $ game.set_task("Meet the Water Kunoichi again.", "story2", 3)
+        $ game.set_task(__("Meet the Water Kunoichi again."), "story2", 3)
 
     elif ninja.flags["hunt stage"] == 2:
         scene black with fade
@@ -7067,7 +7068,7 @@ label intercept_mizuki():
 
         you "If I'm fast enough, maybe I could still reach it..."
 
-        $ chal = renpy.call_screen("challenge_menu", challenges=[("Swim after it", "stamina", 3)], cancel=("Leave it", False))
+        $ chal = renpy.call_screen("challenge_menu", challenges=[(__("Swim after it"), "stamina", 3)], cancel=(__("Leave it"), False))
 
         if chal == "stamina":
             $ norollback()
@@ -7163,7 +7164,7 @@ label intercept_mizuki():
         else:
             you "It's already out of reach. Damn, how can we catch someone that disappears at will?"
 
-        $ game.set_task("Meet the Water Kunoichi, yet again.", "story2", 3)
+        $ game.set_task(__("Meet the Water Kunoichi, yet again."), "story2", 3)
 
     elif ninja.flags["hunt stage"] >= 4: # Stage 3 is unlocked through the story
         scene black with fade
@@ -7238,7 +7239,7 @@ label intercept_mizuki():
 
                             "Wait for Suzume to report on how it went."
 
-                            $ game.set_task("The Water Kunoichi: Wait for Suzume to report on Mizuki's arrest.", "story2", 3)
+                            $ game.set_task(__("The Water Kunoichi: Wait for Suzume to report on Mizuki's arrest."), "story2", 3)
                             $ NPC_mizuki.location = None
                             $ calendar.set_alarm(calendar.time+1, StoryEvent(label = "c3_mizuki_arrested", type="morning"))
 
@@ -7282,7 +7283,7 @@ label intercept_mizuki():
 
                             "Wait until tonight to 'interrogate' Mizuki at your brothel."
 
-                            $ game.set_task("The Water Kunoichi: Break Mizuki's will at the brothel.", "story2", blocking=False)
+                            $ game.set_task(__("The Water Kunoichi: Break Mizuki's will at the brothel."), "story2", blocking=False)
                             $ NPC_mizuki.location = None
 
                             $ calendar.set_alarm(calendar.time, StoryEvent(label = "c3_mizuki_captured", type="night"))
@@ -7773,7 +7774,7 @@ label intercept_haruka():
 
         suzume doubt "Well, we lost for today... But she'll be back to the district eventually, the prison seems to be her target. Let's come back on another day."
 
-        $ game.set_task("Meet the Earth Kunoichi again.", "story", 3)
+        $ game.set_task(__("Meet the Earth Kunoichi again."), "story", 3)
 
     elif NPC_haruka.flags["hunt stage"] == 2:
         scene black with fade
@@ -7972,7 +7973,7 @@ label intercept_haruka():
 
         "Her eyes well up. She seems distraught."
 
-        $ chal = renpy.call_screen("challenge_menu", challenges=[("Convince her", "charm", 3)], cancel=("Leave it", False))
+        $ chal = renpy.call_screen("challenge_menu", challenges=[(__("Convince her"), "charm", 3)], cancel=(__("Leave it"), False))
 
         if chal == "charm":
             $ norollback()
@@ -8281,7 +8282,7 @@ label intercept_haruka():
 
         you "She might be the link to our masked murderer! We must catch her!"
 
-        $ game.set_task("Meet the Earth Kunoichi, yet again.", "story", 3)
+        $ game.set_task(__("Meet the Earth Kunoichi, yet again."), "story", 3)
 
     elif NPC_haruka.flags["hunt stage"] >= 4: # Stage 3 is unlocked through the story
         scene black with fade
@@ -8348,7 +8349,7 @@ label intercept_haruka():
 
                             "Wait for Suzume to report on how it went."
 
-                            $ game.set_task("The Earth Kunoichi: Wait for Suzume to report on Haruka's arrest.", "story", 3)
+                            $ game.set_task(__("The Earth Kunoichi: Wait for Suzume to report on Haruka's arrest."), "story", 3)
                             $ NPC_haruka.location = None
                             $ calendar.set_alarm(calendar.time+1, StoryEvent(label = "c3_haruka_arrested", type="morning"))
 
@@ -8396,7 +8397,7 @@ label intercept_haruka():
 
                             "Wait until tonight to deal with Haruka at your brothel."
 
-                            $ game.set_task("The Earth Kunoichi: Break Haruka's will at the brothel.", "story", blocking=False)
+                            $ game.set_task(__("The Earth Kunoichi: Break Haruka's will at the brothel."), "story", blocking=False)
                             $ NPC_haruka.location = None
 
                             $ calendar.set_alarm(calendar.time, StoryEvent(label = "c3_haruka_captured", type="night"))
@@ -8431,7 +8432,7 @@ label c2_palace_visit1(): # Happens after all Kunoichi have been met once
 
     call screen letter(header = _("Meeting request"),
                     message = __("Dear ") + MC.name + ",\n\nI hope this letter finds you well, and that you have made some progress on our mutual subject of interest. Please meet me at the Palace for debriefing at your earliest convenience.",
-                    signature = "Princess Kurohime")
+                    signature = __("Princess Kurohime"))
 
     you "Another invitation from the Princess... She must be wondering how my investigation is going."
 
@@ -8696,7 +8697,7 @@ label c2_palace_visit1(): # Happens after all Kunoichi have been met once
 
                 "You quickly realize that they are a diverse bunch, with foreign merchants mingling with petty nobles, country officials and professional intriguants. It makes you feel less of an outsider."
 
-                $ MC.rand_say(["wr: I've worked as a hired blade for many such arrogant pricks... They're all the same.", "wz: Just like the courts of the Westmarch swamp lords... With thankfully less mosquitoes.", "tr: It's a den of snakes, but knowing these people just might be advantageous for business..."])
+                $ MC.rand_say([__("wr: I've worked as a hired blade for many such arrogant pricks... They're all the same."), __("wz: Just like the courts of the Westmarch swamp lords... With thankfully less mosquitoes."), __("tr: It's a den of snakes, but knowing these people just might be advantageous for business...")])
 
                 "Leaning in, you try to overhear some conversations."
 
@@ -10331,7 +10332,7 @@ label c2_meet_papa_freak():
 
     "When you are ready, visit the {b}[NPC_freak.location.name]{/b} to bring Papa Freak the girl of his dreams."
 
-    $ game.set_task("Bring a whore with {b}at least 50 in Beauty, Body, Refinement and Charm{/b} to Papa Freak, by the %s." % NPC_freak.location.name, "advance2")
+    $ game.set_task(__("Bring a whore with {b}at least 50 in Beauty, Body, Refinement and Charm{/b} to Papa Freak, by the %s.") % NPC_freak.location.name, "advance2")
 
     return
 
@@ -10343,7 +10344,7 @@ label visit_papa():
 
         if MC.girls:
             "Choose a girl from your brothel to bring with you (reminder: she must have at least 50 in Beauty, Body, Refinement and Charm, and be open to whoring)"
-            $ girl = long_menu("Choose a girl", [(g.name, g) for g in MC.girls])
+            $ girl = long_menu(__("Choose a girl"), [(g.name, g) for g in MC.girls])
         else:
             "You cannot satisfy Papa Freak's requests, as you have no girls in your brothel."
             return
@@ -10490,7 +10491,7 @@ label visit_papa():
                 $ NPC_freak.location.action = False
                 # $ plaza.action = False
                 $ story_flags["c3_advance"] = True
-                $ game.set_task("Gather " + str(cost) + " gold to advance to the next chapter.", "advance2", 3)
+                $ game.set_task(__("Gather %s gold to advance to the next chapter.") % str(cost), "advance2", 3)
 
             else:
                 girl.char "Wait, what? Spend the night with this old man? No way!"
@@ -10692,9 +10693,9 @@ label c3_homura_okiya3(): # Happens the night after moving to chapter 3.
             scene black with fade
             $ plaza.action = True
             $ game.set_task(None, "advance2") # Clears advance2 goals
-            $ game.set_task("The Earth Kunoichi: Gather hints from your contacts", "story", 3)
-            $ game.set_task("The Water Kunoichi: Gather hints from your contacts", "story2", blocking=False)
-            $ game.set_task("The Void Kunoichi: Gather hints from your contacts", "story3", 3)
+            $ game.set_task(__("The Earth Kunoichi: Gather hints from your contacts"), "story", 3)
+            $ game.set_task(__("The Water Kunoichi: Gather hints from your contacts"), "story2", blocking=False)
+            $ game.set_task(__("The Void Kunoichi: Gather hints from your contacts"), "story3", 3)
             $ NPC_homura.flags["H level"] = 1
             return
 
@@ -11024,9 +11025,9 @@ label homura_sex(first=True):
 
     $ plaza.action = True
     $ game.set_task(None, "advance2") # Clears advance2 goals
-    $ game.set_task("The Earth Kunoichi: Gather hints from your contacts", "story", 3)
-    $ game.set_task("The Water Kunoichi: Gather hints from your contacts", "story2", blocking=False)
-    $ game.set_task("The Void Kunoichi: Gather hints from your contacts", "story3", 3)
+    $ game.set_task(__("The Earth Kunoichi: Gather hints from your contacts"), "story", 3)
+    $ game.set_task(__("The Water Kunoichi: Gather hints from your contacts"), "story2", blocking=False)
+    $ game.set_task(__("The Void Kunoichi: Gather hints from your contacts"), "story3", 3)
     $ NPC_homura.flags["H level"] = 1
 
     return

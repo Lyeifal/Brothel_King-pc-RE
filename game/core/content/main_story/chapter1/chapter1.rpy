@@ -935,13 +935,13 @@ label c1_guards_visit:
     guard "Well, this is all the proof we need. Serious violations of city edicts all over the place."
 
     if MC.playerclass == "Warrior":
-            $ text1 = "illegal weapon possession"
+            $ text1 = __("illegal weapon possession")
 
     elif MC.playerclass == "Wizard":
-            $ text1 = "possession of hazardous magical drugs"
+            $ text1 = __("possession of hazardous magical drugs")
 
     elif MC.playerclass == "Trader":
-            $ text1 = "illegally importing an exotic pet"
+            $ text1 = __("illegally importing an exotic pet")
 
     show black as black2 with fade
 
@@ -1556,7 +1556,7 @@ label c1_sewers:
 
             # Pick challenge
             $ tt = show_tt("top_right")
-            $ chal = renpy.call_screen("challenge_menu", challenges=[("Fight them", "fight", 4), ("Cast sleeping spell", "control", 4)], cancel=("Leave", False))
+            $ chal = renpy.call_screen("challenge_menu", challenges=[(__("Fight them"), "fight", 4), (__("Cast sleeping spell"), "control", 4)], cancel=(__("Leave"), False))
             hide screen tool
 
             if chal:

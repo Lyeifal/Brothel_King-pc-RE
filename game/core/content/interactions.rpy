@@ -94,9 +94,9 @@ label fight_attempt(girl, act=None, intensity=1, outside=False): # Returns True 
             play sound s_thunder
 
             if outside:
-                $ text1 = "ground"
+                $ text1 = __("ground")
             else:
-                $ text1 = "floor"
+                $ text1 = __("floor")
 
             "[girl.name] throws herself at you, but the magical bind holding her is just too strong. She is jolted by a surge of magical energy, and crumbles to the [text1], winded."
 
@@ -108,9 +108,9 @@ label fight_attempt(girl, act=None, intensity=1, outside=False): # Returns True 
             you "Ouch!"
 
             if outside:
-                $ text1 = "running"
+                $ text1 = __("running")
             else:
-                $ text1 = "through the door"
+                $ text1 = __("through the door")
 
             "She struggles and pushes you away. You try to force her but she kicks you in the groin and escapes [text1]."
 
@@ -632,7 +632,7 @@ label slave_chat_other_girls(girl):
             $ inter.other_girl = rand_choice(girl.friends)
 
             if inter.result < 0:
-                $ text1 = ", however"
+                $ text1 = __(", however")
             else:
                 $ text1 = ""
 
@@ -648,7 +648,7 @@ label slave_chat_other_girls(girl):
             $ inter.other_girl = rand_choice(girl.rivals)
 
             if inter.result > 0:
-                $ text1 = "Although "
+                $ text1 = __("Although ")
             else:
                 $ text1 = ""
 
@@ -735,9 +735,9 @@ label slave_chat_well_being(girl):
         $ nb = len(girl.get_recent_events(28, filter="hurt"))
 
         if nb == 1:
-            $ nb_times = "once"
+            $ nb_times = __("once")
         else:
-            $ nb_times = str(nb) + " times"
+            $ nb_times = __("%s times") % str(nb)
 
         call dialogue(girl, "slave chat well_being attacked") from _call_dialogue_135
 
@@ -748,9 +748,9 @@ label slave_chat_well_being(girl):
         $ nb = len(girl.get_recent_events(28, filter="sick"))
 
         if nb == 1:
-            $ nb_times = "once"
+            $ nb_times = __("once")
         else:
-            $ nb_times = str(nb) + " times"
+            $ nb_times = __("%s times") % str(nb)
 
         call dialogue(girl, "slave chat well_being sick") from _call_dialogue_136
 
@@ -761,9 +761,9 @@ label slave_chat_well_being(girl):
         $ nb = len(girl.get_recent_events(28, filter="exhausted"))
 
         if nb == 1:
-            $ nb_times = "once"
+            $ nb_times = __("once")
         else:
-            $ nb_times = str(nb) + " times"
+            $ nb_times = __("%s times") % str(nb)
 
         call dialogue(girl, "slave chat well_being exhausted") from _call_dialogue_137
 
@@ -1178,10 +1178,10 @@ label slave_train_free_form(girl): #!
             $ and_tags.append("virgin")
 
         python:
-            _menu_items = [(a.capitalize() + get_act_weakness_symbol(girl, a), a) for a in available_acts if a != act]
+            _menu_items = [(__(a.capitalize()) + get_act_weakness_symbol(girl, a), a) for a in available_acts if a != act]
             if act != "naked":
-                _menu_items += [("Cum inside", "inside"), ("Cum outside", "outside")]
-            _menu_items.append(("Quit", "quit"))
+                _menu_items += [(__("Cum inside"), "inside"), (__("Cum outside"), "outside")]
+            _menu_items.append((__("Quit"), "quit"))
 
         $ girl.char("What should we do, Master?", interact=False)
         $ r = renpy.display_menu(_menu_items)
@@ -1749,13 +1749,13 @@ label slave_train(girl, act, response, mode="train"): # Used if girl accepted of
     ## Action starts
 
     if response == "accepted":
-        $ text1 = "Giving you a sheepish look, "
+        $ text1 = __("Giving you a sheepish look, ")
 
     elif response == "resisted":
-        $ text1 = "Looking at you with mournful eyes, "
+        $ text1 = __("Looking at you with mournful eyes, ")
 
     elif response == "magic":
-        $ text1 = "With a dazed stare, "
+        $ text1 = __("With a dazed stare, ")
 
     else:
         $ raise AssertionError("No context found for interaction")
@@ -1886,13 +1886,13 @@ label slave_advanced_training(girl, act, step):
             if step == 1:
                 if pic.has_tag("town"):
                     $ use_location = ["town"]
-                    $ text1 = "You decide to take her out in the street, to spice things up.\n"
+                    $ text1 = __("You decide to take her out in the street, to spice things up.\n")
                 elif pic.has_tag("beach"):
                     $ use_location = ["beach"]
-                    $ text1 = "Today is a good day to go to the beach, so you tell [girl.name] to follow you there.\n"
+                    $ text1 = __("Today is a good day to go to the beach, so you tell [girl.name] to follow you there.\n")
                 elif pic.has_tag("nature"):
                     $ use_location = ["nature"]
-                    $ text1 = "You decide to take it to the park today, for a change.\n"
+                    $ text1 = __("You decide to take it to the park today, for a change.\n")
 
         $ text1 += __(fix_description[fix.name + " intro"]) % girl.name
 
@@ -1963,8 +1963,8 @@ label slave_do(girl, act, context="generic"): # Receives 'pic' and 'reluctance' 
     if act == "naked":
 
         $ inter.score = girl.get_stat("libido") - reluctance
-        $ text1 = rand_choice(("pinch her nipples", "fondle her breasts", "inspect her juicy body", "pat her butt", "caress her soft skin", "inspect every inch of her body",
-                  "check out her generous curves", "give her a thorough physical exam", "just stand there, looking at her naked body"))
+        $ text1 = rand_choice((__("pinch her nipples"), __("fondle her breasts"), __("inspect her juicy body"), __("pat her butt"), __("caress her soft skin"), __("inspect every inch of her body"),
+                  __("check out her generous curves"), __("give her a thorough physical exam"), __("just stand there, looking at her naked body")))
 
         "Taking off her clothes, she stands completely nude for your attention."
 
@@ -2009,23 +2009,23 @@ label slave_do(girl, act, context="generic"): # Receives 'pic' and 'reluctance' 
         play sound s_sucking loop
 
         if pic.has_tag("oral"):
-            $ text1 = rand_choice(("sucks your dick", "licks your shaft and balls"))
+            $ text1 = rand_choice((__("sucks your dick"), __("licks your shaft and balls")))
             "You push your dick into her mouth, making her service you with her mouth and tongue."
 
         elif pic.has_tag("handjob"):
-            $ text1 = rand_choice(("plays with your dick", "jerks your cock with her soft hands"))
+            $ text1 = rand_choice((__("plays with your dick"), __("jerks your cock with her soft hands")))
             "You ask her to use her hands to massage and service your dick."
 
         elif pic.has_tag("titjob"):
-            $ text1 = rand_choice(("plays with your dick", "rubs your cock with her oiled tits"))
+            $ text1 = rand_choice((__("plays with your dick"), __("rubs your cock with her oiled tits")))
             "You ask her to use her naughty tits to service your dick."
 
         elif pic.has_tag("mast"):
-            $ text1 = rand_choice(("fingers her wet pussy", "plays with her clit"))
+            $ text1 = rand_choice((__("fingers her wet pussy"), __("plays with her clit")))
             "You ask her to masturbate and give you a good show while you do the same."
 
         else:
-            $ text1 = "gives you service"
+            $ text1 = __("gives you service")
             "You ask her to service you with her body."
 
         if inter.score < -50:
@@ -2062,7 +2062,7 @@ label slave_do(girl, act, context="generic"): # Receives 'pic' and 'reluctance' 
     elif act == "sex":
 
         $ inter.score = girl.get_stat(act) - reluctance
-        $ text1 = rand_choice(("rides your dick", "gets fucked in all positions", "gets fucked hard and deep", "gets a good pounding from your hard cock"))
+        $ text1 = rand_choice((__("rides your dick"), __("gets fucked in all positions"), __("gets fucked hard and deep"), __("gets a good pounding from your hard cock")))
 
         play sound s_moans loop
 
@@ -2104,7 +2104,7 @@ label slave_do(girl, act, context="generic"): # Receives 'pic' and 'reluctance' 
     elif act == "anal":
 
         $ inter.score = girl.get_stat(act) - reluctance
-        $ text1 = rand_choice(("fuck her tight asshole", "lift her legs in the air and fuck her butt", "slap her ass as you give it a good fucking", "violate her ass"))
+        $ text1 = rand_choice((__("fuck her tight asshole"), __("lift her legs in the air and fuck her butt"), __("slap her ass as you give it a good fucking"), __("violate her ass")))
 
         play sound s_moans loop
 
@@ -2144,7 +2144,7 @@ label slave_do(girl, act, context="generic"): # Receives 'pic' and 'reluctance' 
     elif act == "fetish":
 
         $ inter.score = girl.get_stat(act) - reluctance
-        $ text1 = rand_choice(("use your favorite toys on her", "rape her with some of your new toys", "violate her holes with cruel and unusual tools", "tie her to a bizarre contraption and fuck her brains out"))
+        $ text1 = rand_choice((__("use your favorite toys on her"), __("rape her with some of your new toys"), __("violate her holes with cruel and unusual tools"), __("tie her to a bizarre contraption and fuck her brains out")))
 
         "You open your toolbox."
 
@@ -2190,7 +2190,7 @@ label slave_do(girl, act, context="generic"): # Receives 'pic' and 'reluctance' 
     elif act == "bisexual":
 
         $ inter.score = (girl.get_stat("service") + girl.get_stat("sex"))/2  - reluctance
-        $ text1 = rand_choice(("licking the love juice from Sill's cunt", "fucking Sill with a black rubber strap-on", "rubbing her clit hard against Sill's pussy", "kissing Sill passionately while she plays with herself"))
+        $ text1 = rand_choice((__("licking the love juice from Sill's cunt"), __("fucking Sill with a black rubber strap-on"), __("rubbing her clit hard against Sill's pussy"), __("kissing Sill passionately while she plays with herself")))
 
         play sound s_moans loop
 
@@ -2233,7 +2233,7 @@ label slave_do(girl, act, context="generic"): # Receives 'pic' and 'reluctance' 
     elif act == "group":
 
         $ inter.score = (girl.get_stat("service") + girl.get_stat("sex") + girl.get_stat("anal"))/3  - reluctance
-        $ text1 = rand_choice(("fuck her hard while she sucks the other guy off", "fuck her while the other guy does her ass", "use her holes to satisfy yourself and the random guy", "make her deepthroat your dick while the other guy rams her"))
+        $ text1 = rand_choice((__("fuck her hard while she sucks the other guy off"), __("fuck her while the other guy does her ass"), __("use her holes to satisfy yourself and the random guy"), __("make her deepthroat your dick while the other guy rams her")))
 
         play sound s_moans loop
         play sound2 s_moans_short loop
@@ -2367,14 +2367,14 @@ label slave_magic(girl, mode="train"):
     if not hasattr(MC, "hypnotize_driver"):
         call slave_hypnotize_driver(girl) from _call_slave_hypnotize_driver
 
-    $ text1 = rand_choice(MC.filter_say(("ar: By the light of Arios{nw}", "sh: In the shadows of Shalia{nw}", "By the strength of the 5 elements{nw}", "ev: By the darkness of the 7 hells{nw}", "gd: By the purity of my soul", "ne: By the voice of dragons{nw}",
-                   "ng: By the swift sands of time{nw}", "By the beat of the magic groove{nw}", "By the radiant power of the dead stars{nw}", "By the dark side of the red moon{nw}", "By the depth of the endless sea{nw}")))
+    $ text1 = rand_choice(MC.filter_say((__("ar: By the light of Arios{nw}"), __("sh: In the shadows of Shalia{nw}"), __("By the strength of the 5 elements{nw}"), __("ev: By the darkness of the 7 hells{nw}"), __("gd: By the purity of my soul"), __("ne: By the voice of dragons{nw}"),
+                   __("ng: By the swift sands of time{nw}"), __("By the beat of the magic groove{nw}"), __("By the radiant power of the dead stars{nw}"), __("By the dark side of the red moon{nw}"), __("By the depth of the endless sea{nw}"))))
 
-    $ text1 += ", I command thee, "
+    $ text1 += __(", I command thee, ")
 
-    $ text1 += rand_choice(("follow my voice into the labyrinth...", "bid farewell to the limits of the physical world...",
-                           "fall into a deep, deep slumber...", "do not fight the power of the ethereal dream...", "embark on the seas of oblivion...",
-                           "forget who you are and where you lay...", "hear my stories and forget yourself..."))
+    $ text1 += rand_choice((__("follow my voice into the labyrinth..."), __("bid farewell to the limits of the physical world..."),
+                           __("fall into a deep, deep slumber..."), __("do not fight the power of the ethereal dream..."), __("embark on the seas of oblivion..."),
+                           __("forget who you are and where you lay..."), __("hear my stories and forget yourself...")))
 
     play sound s_spell
 
@@ -2609,7 +2609,7 @@ label slave_reward_gift(girl):
 
         gift_list.append(("Go back", "back"))
 
-        inter.result = long_menu("Choose a present", gift_list)
+        inter.result = long_menu(__("Choose a present"), gift_list)
 
     if inter.result == "back":
         $ inter.canceled = True
@@ -3170,9 +3170,9 @@ label slave_rape(girl, act): # If girl refused and was forced
         $ advanced = False
 
         if pos_reaction and neg_reaction:
-            $ reaction = "ambivalent feelings"
+            $ reaction = __("ambivalent feelings")
         elif neg_reaction:
-            $ reaction = "a disgust"
+            $ reaction = __("a disgust")
         else:
             $ reaction = ""
 
@@ -3341,13 +3341,13 @@ label slave_rape(girl, act): # If girl refused and was forced
 
     if act == "service":
         if pic.has_tag("oral"):
-            $ text1 = rand_choice(("Eventually, you blow a load of cum into her throat, sending her into a fit of coughing.",
-                "You suddenly withdraw your dick from her mouth, shooting a load of cum onto her face and hair."))
+            $ text1 = rand_choice((__("Eventually, you blow a load of cum into her throat, sending her into a fit of coughing.",
+                __("You suddenly withdraw your dick from her mouth, shooting a load of cum onto her face and hair.")))
             "[text1]"
 
         elif pic.has_tags(("handjob", "titjob")):
-            $ text1 = rand_choice(("You decide to use her sexy, soft tits to finish yourself off. You blow your load all over her tits and face.",
-                                   "You make her jerk you off until you blow your load. Her hands are covered with your thick cum."))
+            $ text1 = rand_choice((__("You decide to use her sexy, soft tits to finish yourself off. You blow your load all over her tits and face.",
+                                   __("You make her jerk you off until you blow your load. Her hands are covered with your thick cum.")))
 
         elif pic.has_tag("mast"):
             "She has to keep masturbating while you watch and jerk off. Eventually, you bring your cock up to her and blow your load right in her face."
@@ -3607,7 +3607,7 @@ label slave_story1(girl):
 
         girl.char "I was barely a teenager when I met him."
 
-        $ activity = rand_choice(("fetching water", "running an errand", "going to school", "cleaning outside", "playing outside with my sister"))
+        $ activity = rand_choice((__("fetching water"), __("running an errand"), __("going to school"), __("cleaning outside"), __("playing outside with my sister")))
 
         girl.char "I ran into him one day while I was [activity]."
 
@@ -4074,9 +4074,9 @@ label slave_story3(girl):
     if girl.flags["story"] == 4:
 
         if girl.is_("dom"):
-            $ text1 = "It isn't like her."
+            $ text1 = __("It isn't like her.")
         else:
-            $ text1 = "You wonder what it is this time."
+            $ text1 = __("You wonder what it is this time.")
 
         "You find [girl.name] crying in her room. [text1]"
 
@@ -4428,9 +4428,9 @@ label slave_story4(girl):
                 $ MC.evil += 1
 
         if girl.free:
-            $ text1 = "poor"
+            $ text1 = __("poor")
         else:
-            $ text1 = "a slave"
+            $ text1 = __("a slave")
 
         girl.char "Being born [text1], I don't believe that a slave can be equal with free persons..."
 
@@ -6626,9 +6626,9 @@ label slave_story_help(girl, act):
             girl.char "You would? Oh, thank you Master! It's perfect!"
 
             if story_flags["c1_path"] == "evil":
-                $ text1 = "city guard"
+                $ text1 = __("city guard")
             else:
-                $ text1 = "thieves guild"
+                $ text1 = __("thieves guild")
 
             you "I will have to pull a few strings with the [text1], but... It shouldn't be a problem."
 
@@ -6815,26 +6815,26 @@ label slave_story_help(girl, act):
             if act == "service":
 
                 if pic.has_tag("oral"):
-                    $ text1 = "You will suck my cock patiently, until I decide to blow my load down your throat."
+                    $ text1 = __("You will suck my cock patiently, until I decide to blow my load down your throat.")
 
                 elif pic.has_tags(("handjob", "titjob")):
-                    $ text1 = "You will service me with your tits and hands. Get ready!"
+                    $ text1 = __("You will service me with your tits and hands. Get ready!")
 
                 elif pic.has_tag("mast"):
-                    $ text1 = "You will masturbate for me, until I bring myself off over your slutty body."
+                    $ text1 = __("You will masturbate for me, until I bring myself off over your slutty body.")
 
                 else:
-                    $ text1 = "You will use your body to pleasure me."
+                    $ text1 = __("You will use your body to pleasure me.")
 
             elif act == "sex":
-                $ text1 = "I will fuck your dirty pussy now. Prepare to receive your Master's dick."
+                $ text1 = __("I will fuck your dirty pussy now. Prepare to receive your Master's dick.")
                 $ vir = girl.pop_virginity(origin="MC")
 
             elif act == "anal":
-                $ text1 = "I will fuck your ass like the filthy slut you are. And then I'll fill it up with cum."
+                $ text1 = __("I will fuck your ass like the filthy slut you are. And then I'll fill it up with cum.")
 
             elif act == "fetish":
-                $ text1 = "Since you like kinky stuff, let's see how well you handle a little pleasure mixed with a lot of pain."
+                $ text1 = __("Since you like kinky stuff, let's see how well you handle a little pleasure mixed with a lot of pain.")
 
             you "Shut up, bitch. [text1]"
 

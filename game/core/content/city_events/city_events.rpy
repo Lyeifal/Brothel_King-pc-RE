@@ -3102,21 +3102,21 @@ label city_gypsy:
 
     if MC.playerclass == "Warrior":
 
-        $ nickname = "Big man"
+        $ nickname = __("Big man")
 
-        $ nickname_l = "big man"
+        $ nickname_l = __("big man")
 
     elif MC.playerclass == "Wizard":
 
-        $ nickname = "Weird man"
+        $ nickname = __("Weird man")
 
-        $ nickname_l = "weird man"
+        $ nickname_l = __("weird man")
 
     elif MC.playerclass == "Trader":
 
-        $ nickname = "Funny man"
+        $ nickname = __("Funny man")
 
-        $ nickname_l = "funny man"
+        $ nickname_l = __("funny man")
 
     play sound s_surprise
 
@@ -4383,7 +4383,7 @@ label city_mob:
 
         else:
 
-            $ cover = rand_choice(brothel.get_common_rooms()).name
+            $ cover = __(rand_choice(brothel.get_common_rooms()).name)
 
             you "He lies!"
 
@@ -4555,34 +4555,34 @@ label city_none:
 
     $ loc = selected_location.name.lower()
 
-    $ choices = ["You take a stroll through the %s. Nothing meaningful happens.", "After a pleasant walk around the %s, you decide it's time to head home.",
-                 "The %s is peaceful today. You have a pleasant walk.", "You spend time browsing the wares of some passing merchants near the %s. In the end, you don't find anything you like.",
-                 "You have a nice time sitting on a bench near the %s, watching people come and go and whistling at pretty girls. None pay you any attention, however.",
-                 "Walking around the %s, you see nothing special. A waste of time."]
+    $ choices = [__("You take a stroll through the %s. Nothing meaningful happens."), __("After a pleasant walk around the %s, you decide it's time to head home."),
+                 __("The %s is peaceful today. You have a pleasant walk."), __("You spend time browsing the wares of some passing merchants near the %s. In the end, you don't find anything you like."),
+                 __("You have a nice time sitting on a bench near the %s, watching people come and go and whistling at pretty girls. None pay you any attention, however."),
+                 __("Walking around the %s, you see nothing special. A waste of time.")]
 
     if MC.get_alignment() == "good":
 
-        $ choices.append("You walk among the good people of the %s. Everyone looks friendly on such a beautiful day.")
+        $ choices.append(__("You walk among the good people of the %s. Everyone looks friendly on such a beautiful day."))
 
     elif MC.get_alignment() == "neutral":
 
-        $ choices.append("Watching people come and go through the %s, you wonder how you could profit from their endeavors.")
+        $ choices.append(__("Watching people come and go through the %s, you wonder how you could profit from their endeavors."))
 
     elif MC.get_alignment() == "evil":
 
-        $ choices.append("The people of the %s are a wretched and vicious bunch, just like anywhere else. Elbowing your way through this crowd of losers, you despise them all.")
+        $ choices.append(__("The people of the %s are a wretched and vicious bunch, just like anywhere else. Elbowing your way through this crowd of losers, you despise them all."))
 
     if MC.god == "Shalia":
 
-        $ choices.append("In the nooks and shadows of the %s, you see discreet but unmistakable signs of Shalia worship. You nod approvingly.")
+        $ choices.append(__("In the nooks and shadows of the %s, you see discreet but unmistakable signs of Shalia worship. You nod approvingly."))
 
     elif MC.god == "Arios":
 
-        $ choices.append("Looking at a group of pilgrims crossing the %s, you see some flamboyant, outspoken worshippers of Arios, wearing their faith on their sleeves. Others are more humble, and follow the idols in silent prayer. You wonder which ones are the true faithful.")
+        $ choices.append(__("Looking at a group of pilgrims crossing the %s, you see some flamboyant, outspoken worshippers of Arios, wearing their faith on their sleeves. Others are more humble, and follow the idols in silent prayer. You wonder which ones are the true faithful."))
 
     else:
 
-        $ choices.append("All sorts of religious nuts are travelling through the %s with feverish eyes, claiming to do the bidding of one god or another. 'Spice of the people', you tell yourself, shaking your head in disbelief.")
+        $ choices.append(__("All sorts of religious nuts are travelling through the %s with feverish eyes, claiming to do the bidding of one god or another. 'Spice of the people', you tell yourself, shaking your head in disbelief."))
 
     $ text1 = rand_choice(choices) % loc
 
@@ -4597,7 +4597,7 @@ label city_gossip(gossip=None):
 
     $ loc = selected_location.name.lower()
 
-    $ text1 = rand_choice(("some juicy gossip", "a disturbing rumor", "a curious story", "an interesting tale", "a word of warning"),)
+    $ text1 = rand_choice((__("some juicy gossip"), __("a disturbing rumor"), __("a curious story"), __("an interesting tale"), __("a word of warning")),)
 
     $ actor = article(__(selected_district.get_rand_pop().get_rand_name()))
 
@@ -4625,7 +4625,7 @@ label city_luck():
     "You have received %(gain)d gold."
 
     if dice(6) == 6:
-        $ npc = rand_choice(["Man", "Woman", "Young man", "Young woman", "Old man", "Old woman"])
+        $ npc = rand_choice([__("Man"), __("Woman"), __("Young man"), __("Young woman"), __("Old man"), __("Old woman")])
         npc "Oh no... Where is it? It must be around here..."
 
         "Someone seems to be looking for their lost belongings."
@@ -4929,7 +4929,10 @@ label slave_beach_event(): # Happens in Seafront, Beach, lakefront, waterfalls d
                         $ girl.change_stat(stat1, dice(3)+3)
                         $ girl.change_stat(stat2, dice(3))
 
-                        "[girl.fullname]'s {b}[stat1]{/b} and {b}[stat2]{/b} have increased."
+                        $ stat1_text = stat_name_dict[stat1.capitalize()]
+                        $ stat2_text = stat_name_dict[stat2.capitalize()]
+
+                        "[girl.fullname]'s {b}[stat1_text]{/b} and {b}[stat2_text]{/b} have increased."
 
                     else:
                         play sound s_surprise

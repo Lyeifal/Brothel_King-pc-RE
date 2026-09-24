@@ -1158,15 +1158,15 @@ label shortcut:
         "Well..."
 
         "Of course!":
-            $ text1 = "Of course"
+            $ text1 = __("Of course")
             jump resume_intro4
 
         "Sure!":
-            $ text1 = "Well, sure"
+            $ text1 = __("Well, sure")
             jump resume_intro4
 
         "Fuck yeah!":
-            $ text1 = "Fuck yeah"
+            $ text1 = __("Fuck yeah")
             jump resume_intro4
 
 label resume_intro4:

@@ -107,7 +107,7 @@ label c3_suzume_hint(): # Happens after all three kunoichi hunts have been locke
 
 label c3_update_hint_goals():
     python:
-        for nin, channel, desc in [(NPC_haruka, "story", "The Earth Kunoichi"), (NPC_mizuki, "story2", "The Water Kunoichi"), (NPC_narika, "story3", "The Void Kunoichi")]:
+        for nin, channel, desc in [(NPC_haruka, "story", __("The Earth Kunoichi")), (NPC_mizuki, "story2", __("The Water Kunoichi")), (NPC_narika, "story3", __("The Void Kunoichi"))]:
             # Unlocks hint recap with Suzume
             if nin.flags["hints"] >= 3:
                 if nin.flags["locked"]: # First call
@@ -118,7 +118,7 @@ label c3_update_hint_goals():
             else:
                 if nin.flags["hints"] is False:
                     nin.flags["hints"] = 0
-                game.set_task(desc + ": Collect 3 hints on " + nin.name + " (%s/3)." % str(nin.flags["hints"]), channel, blocking=True)
+                game.set_task(__("%s: Collect 3 hints on %s (%s/3).") % (desc, nin.name, str(nin.flags["hints"])), channel, blocking=True)
 
     return
 
@@ -263,27 +263,27 @@ label c3_interrogate_contacts():
     else:
         python:
             no_hint = {
-                    NPC_jobgirl : "Err, sorry, I don't know anything about such a person.",
-                    NPC_bast : "Look, I'm busy, and this doesn't ring a bell, sorry.",
-                    NPC_gurigura : "Teeheehee! I didn't understand a single thing you said, but you're funny, Mister.",
-                    NPC_gina : "Sorry, but I don't know anything about such a person. Now, I have an important paper to write, so...",
-                    NPC_roz : "Err, never heard about that chick, sorry.",
-                    NPC_renza : "Hmm... I don't know this person. She probably operates outside of my turf.",
-                    NPC_captain : "Never heard of her. Now, if you'll excuse me, I have a legal {i}and{/i} a criminal empire to run, so kindly fuck off.",
-                    NPC_sill : "Oh, I'm sorry, Master... I really don't know anything about such a person.",
-                    NPC_satella : "Why, it's funny you should mention it, I had a pet raccoon called just like that... But I just realized I forgot to feed it. Poor thing, it's been six months! It must be hungry.",
-                    NPC_freak : "Thank you for visiting me, my boy.... But I have no idea who you're babbling on about.",
-                    NPC_gizel : "Don't know, don't care. Look, human females are fun to run experiments on, but I haven't got much interest in their indiviual characteristics otherwise.",
-                    NPC_stella : "Look, I don't give information for free. But I don't have any information about this person anyway.",
-                    NPC_kenshin : "Is this a person of interest in your investigation? I haven't heard anything worth mentioning about such a person.",
-                    NPC_knight : "We don't know anything about this individual. Now move along, citizen.",
-                    NPC_carpenter : "Boss, I'm just a carpenter. I build things. This cloak and dagger stuff doesn't concern me.",
-                    NPC_ramias : "I'm sorry, I'm sure it was all terribly interesting, but ever since an orc banged his mace on my helmet, I blank out sometimes. I'm afraid I can't help you.",
-                    NPC_goldie : "Oh, " + MC.name + ", I would love nothing more than to help you... But I really don't know anything.",
-                    NPC_maya : "Sorry, I haven't heard of such a criminal. Maybe ask Roz, he's the one who still patrols the streets. I mostly handle paperwork now... *sigh*",
-                    NPC_lieutenant : "No, I must say I haven't heard of her. Maybe Renza knows, I handle the more 'official' business these days.",
-                    NPC_willow : "Is she a monster? Because that's what I deal with, monsters. I give most humans a wide berth.",
-                    NPC_sergeant : "I have nothing to say to you. Leave.",
+                    NPC_jobgirl : __("Err, sorry, I don't know anything about such a person."),
+                    NPC_bast : __("Look, I'm busy, and this doesn't ring a bell, sorry."),
+                    NPC_gurigura : __("Teeheehee! I didn't understand a single thing you said, but you're funny, Mister."),
+                    NPC_gina : __("Sorry, but I don't know anything about such a person. Now, I have an important paper to write, so..."),
+                    NPC_roz : __("Err, never heard about that chick, sorry."),
+                    NPC_renza : __("Hmm... I don't know this person. She probably operates outside of my turf."),
+                    NPC_captain : __("Never heard of her. Now, if you'll excuse me, I have a legal {i}and{/i} a criminal empire to run, so kindly fuck off."),
+                    NPC_sill : __("Oh, I'm sorry, Master... I really don't know anything about such a person."),
+                    NPC_satella : __("Why, it's funny you should mention it, I had a pet raccoon called just like that... But I just realized I forgot to feed it. Poor thing, it's been six months! It must be hungry."),
+                    NPC_freak : __("Thank you for visiting me, my boy.... But I have no idea who you're babbling on about."),
+                    NPC_gizel : __("Don't know, don't care. Look, human females are fun to run experiments on, but I haven't got much interest in their indiviual characteristics otherwise."),
+                    NPC_stella : __("Look, I don't give information for free. But I don't have any information about this person anyway."),
+                    NPC_kenshin : __("Is this a person of interest in your investigation? I haven't heard anything worth mentioning about such a person."),
+                    NPC_knight : __("We don't know anything about this individual. Now move along, citizen."),
+                    NPC_carpenter : __("Boss, I'm just a carpenter. I build things. This cloak and dagger stuff doesn't concern me."),
+                    NPC_ramias : __("I'm sorry, I'm sure it was all terribly interesting, but ever since an orc banged his mace on my helmet, I blank out sometimes. I'm afraid I can't help you."),
+                    NPC_goldie : __("Oh, %s, I would love nothing more than to help you... But I really don't know anything about this.") % MC.name,
+                    NPC_maya : __("Sorry, I haven't heard of such a criminal. Maybe ask Roz, he's the one who still patrols the streets. I mostly handle paperwork now... *sigh*"),
+                    NPC_lieutenant : __("No, I must say I haven't heard of her. Maybe Renza knows, I handle the more 'official' business these days."),
+                    NPC_willow : __("Is she a monster? Because that's what I deal with, monsters. I give most humans a wide berth."),
+                    NPC_sergeant : __("I have nothing to say to you. Leave."),
                     }
 
         $ renpy.say(npc.char, no_hint[npc])
@@ -1920,7 +1920,7 @@ label c3_papa_cells():
 
             "Bring a whore to Papa with at least {b}75 in Service, Beauty and Libido{/b}."
 
-            $ game.set_task("Bring a whore to Papa with at least 75 in Service, Beauty and Libido.", "papa", blocking=False)
+            $ game.set_task(__("Bring a whore to Papa with at least 75 in Service, Beauty and Libido."), "papa", blocking=False)
             $ NPC_freak.flags["requirements"] = [("service", 75), ("beauty", 75), ("libido", 75)]
 
         elif NPC_freak.flags["cells built"] == 1:
@@ -1939,7 +1939,7 @@ label c3_papa_cells():
 
             "Bring a whore to Papa with at least {b}75 in Sex, Charm and Sensitivity{/b}."
 
-            $ game.set_task("Bring a whore to Papa with at least 75 in Sex, Charm and Sensitivity.", "papa", blocking=False)
+            $ game.set_task(__("Bring a whore to Papa with at least 75 in Sex, Charm and Sensitivity."), "papa", blocking=False)
             $ NPC_freak.flags["requirements"] = [("sex", 75), ("charm", 75), ("sensitivity", 75)]
 
         elif NPC_freak.flags["cells built"] == 2:
@@ -1958,7 +1958,7 @@ label c3_papa_cells():
 
             "Bring a whore to Papa with at least {b}75 in Anal, Body and Obedience{/b}."
 
-            $ game.set_task("Bring a whore to Papa with at least 75 in Anal, Body and Obedience.", "papa", blocking=False)
+            $ game.set_task(__("Bring a whore to Papa with at least 75 in Anal, Body and Obedience."), "papa", blocking=False)
             $ NPC_freak.flags["requirements"] = [("anal", 75), ("body", 75), ("obedience", 75)]
 
         elif NPC_freak.flags["cells built"] == 3:
@@ -1977,7 +1977,7 @@ label c3_papa_cells():
 
             "Bring a whore to Papa with at least {b}75 in Fetish, Refinement and Constitution{/b}."
 
-            $ game.set_task("Bring a whore to Papa with at least 75 in Fetish, Refinement and Constitution.", "papa", blocking=False)
+            $ game.set_task(__("Bring a whore to Papa with at least 75 in Fetish, Refinement and Constitution."), "papa", blocking=False)
             $ NPC_freak.flags["requirements"] = [("fetish", 75), ("refinement", 75), ("constitution", 75)]
 
         scene black with fade
@@ -2135,6 +2135,7 @@ label c3_papa_cells():
                     papa "Two elements of swift movement and destruction... Earth blocks most of their effects, so we'll take the cell that's deeper underground. And those runic stabilizers should do the rest."
 
             $ story_flags[target + " ward"] = True
+            $ target_text = __(target)
 
             scene black with fade
 
@@ -2152,7 +2153,7 @@ label c3_papa_cells():
 
             papa_apprentice "Everything is in place, Papa, just like you instructed."
 
-            papa "Perfect! Here you go, young man, just as we agreed. You now have a nice holding cell that will ward against [target] powers."
+            papa "Perfect! Here you go, young man, just as we agreed. You now have a nice holding cell that will ward against [target_text] powers."
 
             $ NPC_freak.flags["cells built"] += 1
             $ NPC_freak.flags["requirements"] = None
@@ -4225,7 +4226,7 @@ label c3_narika_MU_pay_fee():
 
                 $ story_flags["MU class days"] = 0
                 $ story_add_event("c3_narika_MU_class", "daily")
-                $ game.set_task("The Void Kunoichi: Attend class for a week at MagicU", "story3", 3)
+                $ game.set_task(__("The Void Kunoichi: Attend class for a week at MagicU"), "story3", 3)
                 return
 
             "No":
@@ -4680,7 +4681,7 @@ label c3_narika_MU_class():
 
         sill "(He's actually quite dashing!)"
 
-        $ MC.rand_say(["wa: My old one got his head blown off by a trebuchet. Nasty business.", "tr: My old one got hurt playing with my pet dragon. Turns out horse hair is surprisingly flammable.", "wi: I lost my old one. Turns out you can't dry a horse using a microwave spell. Who would have thought?"])
+        $ MC.rand_say([__("wa: My old one got his head blown off by a trebuchet. Nasty business."), __("tr: My old one got hurt playing with my pet dragon. Turns out horse hair is surprisingly flammable."), __("wi: I lost my old one. Turns out you can't dry a horse using a microwave spell. Who would have thought?")])
 
         sill "(In fact... He's really handsome... Just looking at him gives me strange tingling sensations all over...)"
 
@@ -4710,7 +4711,7 @@ label c3_narika_MU_class():
 
         sill "(I can't believe it! He bought me! The enchantment worked!)"
 
-        $ MC.rand_say(["gd: Hi there, cutie. Don't be afraid. I'm [MC.name].", "ne: Hello. I'm your new master. My name is [MC.name].", "ev: Get up, slave. You're mine now, and don't you forget it. The name's [MC.name]."])
+        $ MC.rand_say([__("gd: Hi there, cutie. Don't be afraid. I'm [MC.name]."), __("ne: Hello. I'm your new master. My name is [MC.name]."), __("ev: Get up, slave. You're mine now, and don't you forget it. The name's [MC.name].")])
 
         sill "H-Hello Master..."
 
@@ -5231,7 +5232,7 @@ label c3_narika_MU_class():
                 $ MC.good += 1
 
                 # Challenge
-                $ chal = renpy.call_screen("challenge_menu", challenges=[("Attack", "fight", selected_district.rank), ("Dispell", "control", selected_district.rank)])
+                $ chal = renpy.call_screen("challenge_menu", challenges=[(__("Attack"), "fight", selected_district.rank), (__("Dispell"), "control", selected_district.rank)])
 
                 if chal == "fight":
                     $ norollback()
@@ -5352,7 +5353,7 @@ label c3_narika_MU_class():
 
         sill "Ow!" with vpunch
 
-        $ MC.rand_say("wi: Nonsense, do you doubt the extent of my magical abilities?", "Stop whining! If you did your job correctly, I'll have nothing to worry about.")
+        $ MC.rand_say(__("wi: Nonsense, do you doubt the extent of my magical abilities?"), __("Stop whining! If you did your job correctly, I'll have nothing to worry about."))
 
         you "Now, let's see what that sexy old lady has to hide..."
 
@@ -5421,7 +5422,7 @@ label c3_narika_MU_class():
                 $ NPC_narika.flags["c3 path"] = None
                 $ story_flags["ninja hunt locked %s" % get_ninja_district(NPC_narika)] = False
                 $ NPC_narika.flags["magicu failed"] = True
-                $ game.set_task("Find another way to stop the Void Kunoichi.", "story3")
+                $ game.set_task(__("Find another way to stop the Void Kunoichi."), "story3")
 
                 you "(Obviously, she's joking. She looks lonely all by herself. She clearly needs a man.)"
 
@@ -6425,7 +6426,7 @@ label c3_narika_MU_class():
             $ NPC_narika.flags["c3 path"] = None
             $ story_flags["ninja hunt locked %s" % get_ninja_district(NPC_narika)] = False
             $ NPC_narika.flags["magicu failed"] = True
-            $ game.set_task("Find another way to stop the Void Kunoichi.", "story3")
+            $ game.set_task(__("Find another way to stop the Void Kunoichi."), "story3")
 
             play sound s_sheathe
             "*HISS*"
@@ -6500,7 +6501,7 @@ label c3_narika_debriefing():
 
     narika normal "So he took the next logical step: he decided to {i}steal{/i} it."
 
-    $ MC.rand_say("ar: That's not very honorable...", "wa: That's not very honorable...", "gd: That's not very honorable...", "tr: Yup, that makes sense.", "sh: Yup, that makes sense.", "ne: Yup, that makes sense.", "Steal it?")
+    $ MC.rand_say(__("ar: That's not very honorable..."), __("wa: That's not very honorable..."), __("gd: That's not very honorable..."), __("tr: Yup, that makes sense."), __("sh: Yup, that makes sense."), __("ne: Yup, that makes sense."), __("Steal it?"))
 
     narika "Naturally. And so he hired the best Kunoichi money can get!"
 
@@ -7289,7 +7290,7 @@ label c3_narika_captured():
     $ _min = rand_choice(farm.get_minions("machine"))
 
     if not _min:
-        $ _min = "R2D2"
+        $ _min = __("R2D2")
     else:
         $ _min = _min.name
 
@@ -9953,7 +9954,7 @@ label mizuki_k_back(girl):
         play sound s_dress
 
         call screen letter(header = _("A Most Auspicious Occasion (3/3)"), message= _("Though the Mitsuhide family may not boast the lengthy pedigree of the Kouchi (some ill-mannered souls may even label them as upstarts - but you shall not read such baseless slander from your humble Almanac), the dashing young Lord is rumored to be well-positioned in the ongoing struggle for supremacy over the Western Marches.\n\nEven as the newlyweds retired to their chambers, the festivities continued late into the night, a sumptuous feast laid before the guests featuring chilled monkey brains and snake surprise..."),
-                        signature = "The Karkyr Almanac")
+                        signature = __("The Karkyr Almanac"))
 
         girl.char "All right, that's enough. Could this Sui Kouchi be our mysterious blue Lady? Let's dig deeper about that Kouchi family..."
 
@@ -10180,7 +10181,7 @@ label mizuki_k_back(girl):
 
     you "Fine, let's finish this story tomorrow then. Get some sleep."
 
-    $ MC.rand_say("gd: You deserve a good rest.", "ne: You will need to recover before you can go back to your duties.", "ev: Because I expect you to be back on the job shortly!")
+    $ MC.rand_say(__("gd: You deserve a good rest."), __("ne: You will need to recover before you can go back to your duties."), __("ev: Because I expect you to be back on the job shortly!"))
 
     $ calendar.set_alarm(calendar.time+1, StoryEvent(label="mizuki_k_back2", type="morning", call_args = (girl, )))
 
@@ -10842,7 +10843,7 @@ label mizuki_k_back2(girl):
 
     if NPC_mizuki.flags["quest W"] == "resolved" and NPC_mizuki.flags["quest K"] == "resolved" and not NPC_mizuki.flags["failed quest"]:
         $ NPC_mizuki.flags["quest success"] = True
-        $ game.set_task("The Water Kunoichi: Talk to Suzume to confront Mizuki about her past.", "story2", 3)
+        $ game.set_task(__("The Water Kunoichi: Talk to Suzume to confront Mizuki about her past."), "story2", 3)
         suzume "I believe we now know enough to expose Mizuki's secret."
 
         "You can call on Suzume from the {b}Visit city{/b} screen to progress Mizuki's story."
@@ -11531,7 +11532,7 @@ label mizuki_w_back(girl):
 
     girl.char "But it is a long story, and I need to catch a bit of sleep first."
 
-    $ MC.rand_say("gd: Of course, silly me, you must be exhausted...", "ne: Oh, right, you'll be in better shape to tell the story tomorrow.", "ev: What! No! I want the rest of that story... Well, fine, but report to me as soon as you are done resting.")
+    $ MC.rand_say(__("gd: Of course, silly me, you must be exhausted..."), __("ne: Oh, right, you'll be in better shape to tell the story tomorrow."), __("ev: What! No! I want the rest of that story... Well, fine, but report to me as soon as you are done resting."))
 
     girl.char "Thank you Master. I will finish my story tomorrow."
 
@@ -12236,7 +12237,7 @@ label mizuki_w_back2(girl):
 
     if NPC_mizuki.flags["quest W"] == "resolved" and NPC_mizuki.flags["quest K"] == "resolved" and not NPC_mizuki.flags["failed quest"]:
         $ NPC_mizuki.flags["quest success"] = True
-        $ game.set_task("The Water Kunoichi: Talk to Suzume to confront Mizuki about her past.", "story2", 3)
+        $ game.set_task(__("The Water Kunoichi: Talk to Suzume to confront Mizuki about her past."), "story2", 3)
 
         suzume "I believe we now know enough to expose Mizuki's secret."
 
@@ -12994,7 +12995,7 @@ label c3_mizuki_investigation_menu():
 
             suzume "Yes... Seems like the water ghost wants to ice your knight girlfriend, smack in the middle of the royal quarters."
 
-            $ MC.rand_say("gd: We can't allow that to happen! I must warn her!", "ne: If we rescue Kenshin, she could be in our debt...", "ev: Kenshin has been nothing but a thorn in our side... Maybe if she had an 'accident', we could take advantage of the situation.")
+            $ MC.rand_say(__("gd: We can't allow that to happen! I must warn her!"), __("ne: If we rescue Kenshin, she could be in our debt..."), __("ev: Kenshin has been nothing but a thorn in our side... Maybe if she had an 'accident', we could take advantage of the situation."))
 
             you "Let us speak to Kenshin. Also, she's not my girlfriend."
 
@@ -13011,7 +13012,7 @@ label c3_mizuki_investigation_menu():
             $ NPC_mizuki.location = None
             $ NPC_mizuki.flags["c3 path"] = "waiting"
 
-            $ game.set_task("The Water Kunoichi: Wait for Suzume to get back from the castle.", "story2", 3)
+            $ game.set_task(__("The Water Kunoichi: Wait for Suzume to get back from the castle."), "story2", 3)
 
             scene black with fade
             return
@@ -13030,7 +13031,7 @@ label c3_mizuki_kenshin_warning():
 
     you "Dry and to the point, as usual. Well, let's meet her at the Watchtower then."
 
-    $ game.set_task("The Water Kunoichi: Go to the Watchtower to meet with Kenshin.", "story2", 3)
+    $ game.set_task(__("The Water Kunoichi: Go to the Watchtower to meet with Kenshin."), "story2", 3)
 
     "Go to the {b}Watchtower{/b} to meet with Kenshin."
 
@@ -13205,7 +13206,7 @@ label c3_mizuki_kenshin_confrontation_menu:
                 "You see the resolve on her face, and know she's the better fighter. You hand her your blade."
 
             else:
-                $ MC.rand_say("wi: It's a Wizard's staff. It won't be of any use to you...", "tr: Ahem, I only have a dagger on me... But my pet dragon will show up any second now! Hopefully.")
+                $ MC.rand_say(__("wi: It's a Wizard's staff. It won't be of any use to you..."), __("tr: Ahem, I only have a dagger on me... But my pet dragon will show up any second now! Hopefully."))
 
                 kenshin "I can still use it to parry, so give it to me! If I die, it will be with a weapon in hand."
 
@@ -13540,7 +13541,7 @@ label c3_mizuki_kenshin_confrontation_menu:
 
             $ NPC_mizuki.flags["c3 path"] = "revenge"
 
-    $ game.set_task("The Water Kunoichi: Wait for events to unfold.", "story2", 3)
+    $ game.set_task(__("The Water Kunoichi: Wait for events to unfold."), "story2", 3)
 
     $ calendar.set_alarm(calendar.time+1, StoryEvent(label="c3_mizuki_princess_debrief", type="morning"))
 
@@ -14604,7 +14605,7 @@ label c3_mizuki_captured():
 
                         "You probably need to work on Mizuki some more to truly break her spirit."
 
-                        $ game.set_task("Wait and try to break Mizuki's spirit later.", "story2", 3)
+                        $ game.set_task(__("Wait and try to break Mizuki's spirit later."), "story2", 3)
 
     $ unlock_achievement("mizuki captured")
 
@@ -15893,7 +15894,7 @@ label c3_haruka_checkpoint():
 
                 you "All right, we'll meet you later by {b}the Sewers{/b}."
 
-                $ game.set_task("The Earth Kunoichi: Meet Haruka by the Sewers.", "story")
+                $ game.set_task(__("The Earth Kunoichi: Meet Haruka by the Sewers."), "story")
                 $ add_event("c3_haruka_sewers", type="city", location = "sewers")
 
 
@@ -15915,7 +15916,7 @@ label c3_haruka_checkpoint():
 
                 you "All right, we'll meet you at {b}the Prison{/b}."
 
-                $ game.set_task("The Earth Kunoichi: Meet Haruka at the Prison.", "story")
+                $ game.set_task(__("The Earth Kunoichi: Meet Haruka at the Prison."), "story")
                 $ add_event("c3_haruka_trap", type="city", location = "prison")
 
     else:
@@ -15937,7 +15938,7 @@ label c3_haruka_checkpoint():
 
         you "All right, we'll meet you later by {b}the Sewers{/b}."
 
-        $ game.set_task("The Earth Kunoichi: Meet Haruka by the Sewers.", "story")
+        $ game.set_task(__("The Earth Kunoichi: Meet Haruka by the Sewers."), "story")
         $ add_event("c3_haruka_sewers", type="city", location = "sewers")
 
     haruka "Wait, [MC.name]..."
@@ -17807,7 +17808,7 @@ label haruka_farm(min_type): #! Add fixations and skill changes
     $ _min = rand_choice(farm.get_healthy_minions(min_type))
 
     if not _min:
-        $ _min = "Bob"
+        $ _min = __("Bob")
     else:
         $ _min = _min.name
 
@@ -19257,7 +19258,7 @@ label c3_end_story(ninja):
 
     # Checks if all ninja storylines are complete
     if NPC_haruka.flags["c3 path"] and NPC_mizuki.flags["c3 path"] and NPC_mizuki.flags["c3 path"] != "waiting" and NPC_narika.flags["c3 path"] and NPC_narika.flags["c3 path"] != "MagicU":
-        $ game.set_task("Wait for the Princess to hear about your progress.", "story")
+        $ game.set_task(__("Wait for the Princess to hear about your progress."), "story")
         if not story_flags["c3 all kunoichi resolved"]:
             $ story_flags["c3 all kunoichi resolved"] = True
             $ suzume_hints_active = False
@@ -19516,7 +19517,7 @@ label c3_palace_visit_menu(): #! Hide used-up questions later
     kuro "It is almost noon. Please attend the luncheon with me."
 
     $ calendar.set_alarm(calendar.day + 3, StoryEvent(label="c3_homura_invitation"))
-    $ game.set_task("Wait events to unfold.", "story")
+    $ game.set_task(__("Wait events to unfold."), "story")
 
     menu:
         you "Well..."
@@ -19749,7 +19750,7 @@ label c3_luncheon: # Follows previous event
                 if NPC_mizuki.flags["c3 path"] == "redeemed":
                     kenshin "...and for saving me, as well."
 
-                    $ MC.rand_say("gd: Oh, don't mention it.", "ne: We're both glad it didn't come to that.", "ev: And don't you forget it!")
+                    $ MC.rand_say(__("gd: Oh, don't mention it."), __("ne: We're both glad it didn't come to that."), __("ev: And don't you forget it!"))
 
                     you "How are you holding up?"
 
@@ -20084,7 +20085,7 @@ label c3_homura_invitation(): # Happens the morning after the palace visit
     you "Okay..."
 
     $ calendar.set_alarm(calendar.find_next("Saturday"), StoryEvent(label="c3_confrontation", type = "night"))
-    $ game.set_task("Attend Princess Kurohime's birthday party on Saturday night.", "story")
+    $ game.set_task(__("Attend Princess Kurohime's birthday party on Saturday night."), "story")
 
     scene black with fade
 
@@ -20194,7 +20195,7 @@ label c3_confrontation(): # Happens on the next Saturday night after Homura's vi
 
     "You feel a strange chill down your spine as you push the door to the mansion open."
 
-    $ game.set_task("Wait for news from the Palace.", "story")
+    $ game.set_task(__("Wait for news from the Palace."), "story")
 
     ## PHASE 0 - The Setup ##
 
@@ -21237,13 +21238,13 @@ label c3_confrontation_fight: # Follows previous label
 
     play music m_chemical_factory fadein 3.0
 
-    call c3_ninja_showdown(["homura showdown", "mask showdown"], [(homura, "With fire!"), (mask, "And steel!")]) from _call_c3_ninja_showdown
+    call c3_ninja_showdown(["homura showdown", "mask showdown"], [(homura, __("With fire!")), (mask, __("And steel!"))]) from _call_c3_ninja_showdown
 
     if not NPC_kenshin.flags["dead"]:
         scene black with fade
         kuro "To arms, Uesugi! Don't let that madman near me!"
 
-        call c3_ninja_showdown(["kenshin showdown"], [(kenshin, "I will protect you with my life, Your Majesty!")]) from _call_c3_ninja_showdown_1
+        call c3_ninja_showdown(["kenshin showdown"], [(kenshin, __("I will protect you with my life, Your Majesty!"))]) from _call_c3_ninja_showdown_1
 
 
     else:
@@ -21260,17 +21261,17 @@ label c3_confrontation_fight: # Follows previous label
     if NPC_narika.flags["c3 path"] == "ally":
         $ nin_list.append(NPC_narika)
         $ pics.append("narika showdown")
-        $ nin_intro.append((narika, "Leave my bo- My good friend alone!"))
+        $ nin_intro.append((narika, __("Leave my bo- My good friend alone!")))
 
     if NPC_mizuki.flags['c3 path'] == "revenge" or debug_mode:
         $ nin_list.append(NPC_mizuki)
         $ pics.append("mizuki showdown")
-        $ nin_intro.append((mizuki, "Let me put some cold water on your pathetic fire!"))
+        $ nin_intro.append((mizuki, __("Let me put some cold water on your pathetic fire!")))
 
     if NPC_haruka.flags["c3 path"] == "ally" or debug_mode:
         $ nin_list.append(NPC_haruka)
         $ pics.append("haruka showdown")
-        $ nin_intro.append((haruka, "If you want to harm [MC.name], you'll have to go through me first!"))
+        $ nin_intro.append((haruka, __("If you want to harm [MC.name], you'll have to go through me first!")))
 
     if nin_list:
         if len(nin_list) >1:
@@ -21609,7 +21610,7 @@ label c3_confrontation_fight: # Follows previous label
             $ bonus_ttip += "Ally: +3\n"
 
         # Challenge
-        $ chal = renpy.call_screen("challenge_menu", challenges=[("Fight Homura", "fight", 8-bonus), ("Use a spell", "control", 8-bonus)])
+        $ chal = renpy.call_screen("challenge_menu", challenges=[(__("Fight Homura"), "fight", 8-bonus), (__("Use a spell"), "control", 8-bonus)])
 
         $ bonus_ttip += __("Character bonus: %i\n") % (MC.get_stat("strength") - MC.get_stat("strength", raw=True))
         if MC.get_effect("change", chal + " challenges"):
@@ -22228,7 +22229,7 @@ label c3_confrontation_shiro(): # Follows previous label
 
         if not NPC_kenshin.flags["dead"]:
             $ allies = 1
-            $ text1 = "Counting Kenshin, "
+            $ text1 = __("Counting Kenshin, ")
 
         $ allies += len(nin_list)
 
@@ -22357,7 +22358,7 @@ label c3_confrontation_shiro(): # Follows previous label
                 mask "Perhaps you'll meet one in the next..."
 
             # Challenge
-            $ chal = renpy.call_screen("challenge_menu", challenges=[("Fight the prince", "fight", 10-bonus), ("Distract him", "bluff", 10-bonus)])
+            $ chal = renpy.call_screen("challenge_menu", challenges=[(__("Fight the prince"), "fight", 10-bonus), (__("Distract him"), "bluff", 10-bonus)])
 
             # Run challenge
 
@@ -22403,10 +22404,10 @@ label c3_confrontation_shiro(): # Follows previous label
                 with doubleflash
 
                 if allies:
-                    $ text1 = "Your side"
+                    $ text1 = __("Your side")
 
                 else:
-                    $ text1 = "You"
+                    $ text1 = __("You")
 
                 call challenge(chal, 10, bonus=bonus, bonus_text=bonus_ttip) from _call_challenge_71 # result is stored in the _return variable
                 $ r = _return
@@ -22437,10 +22438,10 @@ label c3_confrontation_shiro(): # Follows previous label
                     "You're not dead yet, but you're out of combat. Dizzy, you can barely stand."
 
                     if allies > 1:
-                        $ text1 = "your allies"
+                        $ text1 = __("your allies")
 
                     elif allies:
-                        $ text1 = "your ally"
+                        $ text1 = __("your ally")
 
                     "You are horrified to find [text1] in similar shape, if not worse off."
 
@@ -22566,10 +22567,10 @@ label c3_confrontation_shiro(): # Follows previous label
                         play sound s_sheathe
 
                         if allies > 1:
-                            $ text1 = "Your allies try"
+                            $ text1 = __("Your allies try")
 
                         elif allies:
-                            $ text1 = "Your ally tries"
+                            $ text1 = __("Your ally tries")
 
                         with flash
 
@@ -22672,11 +22673,11 @@ label c3_confrontation_shiro(): # Follows previous label
             hide kuro with dissolve
 
             if not NPC_kenshin.flags["dead"] and allies > 1:
-                $ text1 = "Kenshin and the Kunoichi"
+                $ text1 = __("Kenshin and the Kunoichi")
             elif not NPC_kenshin.flags["dead"]:
-                $ text1 = "Kenshin"
+                $ text1 = __("Kenshin")
             elif allies:
-                $ text1 = "the Kunoichi"
+                $ text1 = __("the Kunoichi")
 
             "You let [text1] cover your rear as you rush behind Kurohime."
 
@@ -22701,9 +22702,9 @@ label c3_confrontation_shiro(): # Follows previous label
             "You are surprised to see Kosmo clinging to the balcony for dear life, a burning pit yawning beneath him."
 
             if allies:
-                $ text1 = "the princess and your companions"
+                $ text1 = __("the princess and your companions")
             else:
-                $ text1 = "the princess"
+                $ text1 = __("the princess")
 
             "You let [text1] move ahead, and approach your wretched competitor."
 

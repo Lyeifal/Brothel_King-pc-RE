@@ -996,7 +996,7 @@ label renza_onsen2:
 
     sill "Ah, Master! Aaaaah!!!"
 
-    $ MC.rand_say(("gd: I'm not stopping until you come! This is your punishment!", "ne: This is for your Master's good! You better please me!", "ev: You stupid bitch slave! I'll teach you some manners!"))
+    $ MC.rand_say((__("gd: I'm not stopping until you come! This is your punishment!"), __("ne: This is for your Master's good! You better please me!"), __("ev: You stupid bitch slave! I'll teach you some manners!")))
 
     play sound s_orgasm_young
 
@@ -1559,11 +1559,11 @@ label farm_meet_gizel(): # Location: spice market
     with fade
 
     if MC.playerclass == "Warrior":
-        $ text1 = "anti-rust lotion"
+        $ text1 = __("anti-rust lotion")
     elif MC.playerclass == "Wizard":
-        $ text1 = "magic herbs"
+        $ text1 = __("magic herbs")
     elif MC.playerclass == "Trader":
-        $ text1 = "dragon feed"
+        $ text1 = __("dragon feed")
 
     "Walking around the market, looking for [text1], you notice an exotic figure looking at the wares of a nearby spice merchant."
 
@@ -1607,15 +1607,15 @@ label farm_meet_gizel(): # Location: spice market
         "How do you feel about elves?"
 
         "I bear them no grudge":
-            $ MC.rand_say(("I don't hate them. Wars come and go, and it wasn't they who started this one...", "ar: Although the Arios church denounces the elves, I do not think they are bad. They can be brought back to the light.", "wr: I have fought enough elves on the battlefield to respect their grit and abilities. They are worthy opponents.", "wz: I do enjoy a good conversation with an elf from time to time. They know a great deal of secrets, though they don't share them very willingly."))
+            $ MC.rand_say((__("I don't hate them. Wars come and go, and it wasn't they who started this one..."), __("ar: Although the Arios church denounces the elves, I do not think they are bad. They can be brought back to the light."), __("wr: I have fought enough elves on the battlefield to respect their grit and abilities. They are worthy opponents."), __("wz: I do enjoy a good conversation with an elf from time to time. They know a great deal of secrets, though they don't share them very willingly.")))
             $ story_flags["elves"] = "like"
 
         "I hate them":
-            $ MC.rand_say(("I despise these pointy-eared rats. The only good elf is a dead elf, I always say.", "ar: Those spawns of hell show no respect to the true Light, and occupy the Holy Lands against the will of men and Gods. I hate them.", "wr: The damn elves took the lives of many of my comrades on the battlefield. I shan't forgive them."))
+            $ MC.rand_say((__("I despise these pointy-eared rats. The only good elf is a dead elf, I always say."), __("ar: Those spawns of hell show no respect to the true Light, and occupy the Holy Lands against the will of men and Gods. I hate them."), __("wr: The damn elves took the lives of many of my comrades on the battlefield. I shan't forgive them.")))
             $ story_flags["elves"] = "dislike"
 
         "I don't really know":
-            $ MC.rand_say(("I can't say I have met many elves, much less talked to them. So I reserve my judgement.", "ng: I don't really know. The Arios Church hates them I guess, but I have no time for phony gods and their minions.", "wz: Elves know many things, and I'm sure one could learn a lot from them... If they weren't like to pelt you with poison arrows whenever you come near them.", "tr: I've traded with elves quite a bit in the past. They are good on their word, I guess, although they won't win any popularity contest."))
+            $ MC.rand_say((__("I can't say I have met many elves, much less talked to them. So I reserve my judgement."), __("ng: I don't really know. The Arios Church hates them I guess, but I have no time for phony gods and their minions."), __("wz: Elves know many things, and I'm sure one could learn a lot from them... If they weren't like to pelt you with poison arrows whenever you come near them."), __("tr: I've traded with elves quite a bit in the past. They are good on their word, I guess, although they won't win any popularity contest.")))
             $ story_flags["elves"] = "neutral"
 
     man "Make way!"
@@ -2817,9 +2817,9 @@ label gizel_attack():
 
             you "My name is [MC.name]. I'm a lot tougher than those clowns out there. You don't want to start a fight you can't win."
 
-            $ MC.rand_say(("wr: Before I was a brothel owner, I was a soldier in the war. I killed more elven mages than I can count.",
-                            "wz: I'm not just a brothel owner, I'm also a powerful mage, top of my class in Karkyr. You won't have the upper hand in this fight.",
-                            "tr: I'm not just a lowlife pimp, okay? I've got a pet dragon. That's right. And he's like, twenty feet tall."))
+            $ MC.rand_say((__("wr: Before I was a brothel owner, I was a soldier in the war. I killed more elven mages than I can count.",
+                            __("wz: I'm not just a brothel owner, I'm also a powerful mage, top of my class in Karkyr. You won't have the upper hand in this fight."),
+                            __("tr: I'm not just a lowlife pimp, okay? I've got a pet dragon. That's right. And he's like, twenty feet tall.")))
 
             if NPC_gizel.raped:
                 if reaction == "fight":
@@ -3404,9 +3404,9 @@ label farm_meet_goldie_menu():
 
             goldie "Anyway, how do you expect to solve the mystery of this place?"
 
-            $ MC.rand_say(("wr: There's nothing that can't be solved with a few inches of steel in the gut, I always say. Let me take care of it.",
-                            "wz: I took a class in 'curse and debuff management' at Karkyr University, back in the day... I know my way around these things.",
-                            "tr: I talk my way around tricky situations all day... If there's something in that farm, perhaps I can cut a deal with it?"))
+            $ MC.rand_say((__("wr: There's nothing that can't be solved with a few inches of steel in the gut, I always say. Let me take care of it.",
+                            __("wz: I took a class in 'curse and debuff management' at Karkyr University, back in the day... I know my way around these things."),
+                            __("tr: I talk my way around tricky situations all day... If there's something in that farm, perhaps I can cut a deal with it?")))
 
             goldie "I hope you're right..."
 
@@ -3521,7 +3521,7 @@ label farm_exorcism_attempt():
 
             spirit "Fool! I exist in an ethereal plane that you cannot hope to reach with your amateurish powers..."
 
-    $ MC.rand_say(("sh: Shalia guard me...", "ar: Arios, guide me into the light...", "ng: Fuck."))
+    $ MC.rand_say((__("sh: Shalia guard me..."), __("ar: Arios, guide me into the light..."), __("ng: Fuck.")))
 
     play sound s_maniacal_laugh
 
@@ -3573,7 +3573,7 @@ label farm_exorcism_attempt():
 
     you "I promise, ok?"
 
-    $ MC.rand_say(("gd: I'll come back to save you.", "ev: I {i}{b}want{/b}{/i} that farm even more, now.", "ne: A deal is a deal. I'll help."))
+    $ MC.rand_say((__("gd: I'll come back to save you."), __("ev: I {i}{b}want{/b}{/i} that farm even more, now."), __("ne: A deal is a deal. I'll help.")))
 
     goldie "Really?"
 
@@ -4268,9 +4268,9 @@ label farm_meet_gina():
     it produces enough waste every day to create a landscape of garbage mounds, spreading as far as the eye can see."
 
     if MC.god:
-        $ text1 = MC.god + " forsaken"
+        $ text1 = __("%s forsaken") % MC.god
     else:
-        $ text1 = "disgusting"
+        $ text1 = __("disgusting")
 
     you "Remind me again, why the hell did I come to that [text1] place? I have trouble understanding my own decisions, sometimes..."
 
@@ -5440,7 +5440,7 @@ label stella_invitation():
 
     "Strange glyphs are written on the envelope. There is no recognizable name or address."
 
-    $ MC.rand_say(("gd: I really shouldn't pry, but if I don't open it, I won't be able to bring it to its rightful recipient.", "ev: Great! Hopefully, I can use this to blackmail somebody.", "ne: Well, if someone is going to open this and make away with the content, it might as well be me..."))
+    $ MC.rand_say((__("gd: I really shouldn't pry, but if I don't open it, I won't be able to bring it to its rightful recipient."), __("ev: Great! Hopefully, I can use this to blackmail somebody."), __("ne: Well, if someone is going to open this and make away with the content, it might as well be me...")))
 
     "Slicing the envelope open with your dagger, you are somewhat disappointed to find only a small piece of paper tucked inside, alongside a small charm amulet. It's the cheap kind you can find for a denar a dozen on Pilgrim Road."
 
@@ -6673,7 +6673,7 @@ label farm_meet_willow():
 
     show bg inner_sewers at top with Pixellate(2.0, 5)
 
-    $ MC.rand_say(("ev: It's all Sill's damn fault!", "ne: Serves me right for trying to help.", "gd: Sill can be so clumsy sometimes..."))
+    $ MC.rand_say((__("ev: It's all Sill's damn fault!"), __("ne: Serves me right for trying to help."), __("gd: Sill can be so clumsy sometimes...")))
 
     "After you came down into the sewers, you couldn't find the armlet close by after all."
 
@@ -7175,7 +7175,7 @@ label willow_fight(): # This event will happen somewhere in the city after a mon
         play sound s_dodge
         hide willow with easeoutleft
 
-        $ MC.rand_say(["Again? Really?", "Oh no, not again...", "Again! What kind of monster hunter {i}are{/i} you?!?"])
+        $ MC.rand_say([__("Again? Really?"), __("Oh no, not again..."), __("Again! What kind of monster hunter {i}are{/i} you?!?")])
 
     "Effortlessly, the monster lifts Willow in the air, with her head upside down and her skirt overturned. You catch a good view of her panties."
 
@@ -7209,7 +7209,7 @@ label willow_fight(): # This event will happen somewhere in the city after a mon
 
             # Pick challenge
             $ tt = show_tt("top_right")
-            $ chal = renpy.call_screen("challenge_menu", challenges=[("Fight the monster", "fight", 5), ("Blast it with a spell", "cast", 7)])
+            $ chal = renpy.call_screen("challenge_menu", challenges=[(__("Fight the monster"), "fight", 5), (__("Blast it with a spell"), "cast", 7)])
             hide screen tool
 
             if chal == "fight":
@@ -11566,7 +11566,7 @@ label satella_game(game_type="the guessing game"):
 
             if r == her_choice:
                 $ you(r.capitalize() + "!")
-                $ satella(her_choice.capitalize() + "!")
+                $ satella(__(her_choice.capitalize()) + "!")
 
                 satella "Hey! That was my play..."
 
@@ -11618,7 +11618,7 @@ label satella_game(game_type="the guessing game"):
 
                 else:
                     $ you(r.capitalize() + "!")
-                    $ satella(her_choice.capitalize() + "!")
+                    $ satella(__(her_choice.capitalize()) + "!")
 
                     satella "I WON!!! WOOHOO!!!"
 
@@ -11642,7 +11642,7 @@ label satella_game(game_type="the guessing game"):
 
             else:
                 $ you(r.capitalize() + "!")
-                $ satella(her_choice.capitalize() + "!")
+                $ satella(__(her_choice.capitalize()) + "!")
 
                 satella "I WON!!! WOOHOO!!!"
 
@@ -13545,7 +13545,7 @@ label kosmo_returns2(): # Happens every 7-9 days (yes, Kosmo IS annoying)
 
             kosmo "This one tried to take my life, can you believe it? But my security is top notch. I have 20 guards in my bedroom alone."
 
-            $ MC.rand_say(("Yes, I'm sure you love to jerk off in front of 20 dudes...", "Cool. That should give you the audience you need when you're bouncing on your boy's dick."))
+            $ MC.rand_say((__("Yes, I'm sure you love to jerk off in front of 20 dudes..."), __("Cool. That should give you the audience you need when you're bouncing on your boy's dick.")))
 
             kosmo angry "WHAT? Shut up! One day, I'll be the one to send ninjas after you! GRRRR..." with vpunch
 
@@ -15931,11 +15931,11 @@ label iulia2(): # Happens after completing 10 furniture (20-30-40)
     guard "Just you wait! I'll get back-up any moment now, and I'll haul both your asses in jail!" with vpunch
 
     if new_captain.name == maya.name:
-        $ text1 = "my good friends, Maya and Roz? Or should I say, Captain Maya?"
+        $ text1 = __("my good friends, Maya and Roz? Or should I say, Captain Maya?")
     elif new_captain.name == lieutenant.name:
-        $ text1 = " Captain Lydie then? She and I go way back..."
+        $ text1 = __(" Captain Lydie then? She and I go way back...")
     elif new_captain.name == captain.name:
-        $ text1 = " Captain Farah, then? We are {i}very{/i} close, if you catch my meaning..."
+        $ text1 = __(" Captain Farah, then? We are {i}very{/i} close, if you catch my meaning...")
 
     you "Oh yeah? Shall I take it with [text1]"
 
@@ -15952,7 +15952,7 @@ label iulia2(): # Happens after completing 10 furniture (20-30-40)
 
     carpenter "Boss! Am I glad to see ya. You really saved me bacon out here."
 
-    $ MC.rand_say("wa: That was a nice solid hit. You showed 'em.", "tr: You should have tried to smooth-talk your way out of this.", "gd: I'm just glad that you're okay.", "ne: That was reckless, Iulia.", "ev: And a good thing too, because you were making a mess of things. What the fuck, Iulia?")
+    $ MC.rand_say(__("wa: That was a nice solid hit. You showed 'em."), __("tr: You should have tried to smooth-talk your way out of this."), __("gd: I'm just glad that you're okay."), __("ne: That was reckless, Iulia."), __("ev: And a good thing too, because you were making a mess of things. What the fuck, Iulia?"))
 
     carpenter "Look, Boss, I'm sorry. I don't wanna end up in jail. I understand that I got lucky."
 
@@ -16678,7 +16678,7 @@ label iulia_H: # Happens after iulia7 + building 40 furniture.
 
         you "Play cards? Drink tea?"
 
-        $ text1 = "You take Iulia up to the master bedroom."
+        $ text1 = __("You take Iulia up to the master bedroom.")
 
     elif d == 2:
         scene black with fade
@@ -16711,7 +16711,7 @@ label iulia_H: # Happens after iulia7 + building 40 furniture.
 
         you "We?"
 
-        $ text1 = "She grabs your collar, and drags you towards her bed."
+        $ text1 = __("She grabs your collar, and drags you towards her bed.")
 
     else:
         scene black with fade
@@ -16736,7 +16736,7 @@ label iulia_H: # Happens after iulia7 + building 40 furniture.
 
         you "I appreciate the early fashion show..."
 
-        $ text1 = "Smiling shyly, she steps towards your bed."
+        $ text1 = __("Smiling shyly, she steps towards your bed.")
 
     carpenter "Oh, c'm'on, Boss. Don't tease me."
 
@@ -20326,22 +20326,22 @@ label chaos_update_menu():
         "Choose which girls to share with Chaos. This will cost them some energy and sanity (and possibly their virginity)."
 
         "Give him a virgin (full charge)" if virgins:
-            $ prompt = "Choose a girl for Chaos (she will lose her virginity)"
+            $ prompt = __("Choose a girl for Chaos (she will lose her virginity)")
             $ girl_list = virgins
             $ girl_nb = 1
 
         "Give him 4 girls (full charge)" if len(MC.girls + farm.girls) >= 4:
-            $ prompt = "Choose girls for Chaos (costs energy and sanity)"
+            $ prompt = __("Choose girls for Chaos (costs energy and sanity)")
             $ girl_list = MC.girls + farm.girls
             $ girl_nb = 4
 
         "Give him 3 girls (high charge)" if len(MC.girls + farm.girls) >= 3:
-            $ prompt = "Choose girls for Chaos (costs energy and sanity)"
+            $ prompt = __("Choose girls for Chaos (costs energy and sanity)")
             $ girl_list = MC.girls + farm.girls
             $ girl_nb = 3
 
         "Give him 2 girls (low charge)" if len(MC.girls + farm.girls) >= 2:
-            $ prompt = "Choose girls for Chaos (costs energy and sanity)"
+            $ prompt = __("Choose girls for Chaos (costs energy and sanity)")
             $ girl_list = MC.girls + farm.girls
             $ girl_nb = 2
 
@@ -20367,7 +20367,7 @@ label chaos_update_menu():
 
             return
 
-    $ girls = multiple_choice_menu("Choose girls", [(g.fullname, g) for g in girl_list] + [("Back", "back")], nb = girl_nb)
+    $ girls = multiple_choice_menu(__("Choose girls"), [(g.fullname, g) for g in girl_list] + [(__("Back"), "back")], nb = girl_nb)
 
     if girls == "back":
         jump chaos_update_menu
@@ -20595,7 +20595,7 @@ label chaos(girl): # Called upon unlocking the 'Chaos' evil power (girl is the c
 
     chaos "{i}If{/i} I were to enter into a... {i}partnership{/i}, with you, what would it entail?"
 
-    $ MC.rand_say(["wa: Well, a magic sword's always nice to have in a fight. I assume you have powers?", "wz: It's always interesting to study supernatural beings, I guess. I assume you are a master in dark magic?", "tr: Well I'm sure I could sell you for a pretty penny, unless of course you have something better to offer me?"])
+    $ MC.rand_say([__("wa: Well, a magic sword's always nice to have in a fight. I assume you have powers?"), __("wz: It's always interesting to study supernatural beings, I guess. I assume you are a master in dark magic?"), __("tr: Well I'm sure I could sell you for a pretty penny, unless of course you have something better to offer me?")])
 
     chaos "Of course! I am very capable, believe me. But there is one thing... To replenish my power, I need to feast. And you shall help me with that."
 

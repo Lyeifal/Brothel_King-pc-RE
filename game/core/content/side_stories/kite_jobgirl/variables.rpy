@@ -21,7 +21,7 @@ init -3 python:
 
 ## characters
 
-init 1 define anika = Character("Anika", image="anika", window_left_padding=int(wl_padding))
+init 1 define anika = Character(_("Anika"), image="anika", window_left_padding=int(wl_padding))
 image anika = ProportionalScale("resources/characters/npc/Jobgirl/beach/anika body.webp")
 image side anika = ProportionalScale("resources/characters/npc/Jobgirl/beach/anika portrait.webp", res_portrait_size, res_portrait_size)
 

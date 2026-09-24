@@ -216,7 +216,7 @@ label jobgirl_1():
 
     you "Ok, let's see then..."
 
-    $ answer = renpy.display_menu([("Give the answer for free", 1),("Ask for gold", 2),("Make fun of her... just a bit", 3)])
+    $ answer = renpy.display_menu([(__("Give the answer for free"), 1),(__("Ask for gold"), 2),(__("Make fun of her... just a bit"), 3)])
 
     $ norollback()
 
@@ -294,7 +294,7 @@ label jobgirl_1():
 
     while riddle_loop == 1:
 
-        $ solution = renpy.display_menu([("A Protoceratops", 1),("Molise", 2),("Man", 3)])
+        $ solution = renpy.display_menu([(__("A Protoceratops"), 1),(__("Molise"), 2),(__("Man"), 3)])
 
         if solution == 1:
 
@@ -372,7 +372,7 @@ label jobgirl_1():
 
     "You look at her beautiful blue eyes, down to her pink lips and white skinned neck, until you stare at her cleavage. Can't avoid to look at her breasts since the feeling of them pushing on your chest is raising your heartbeat."
 
-    $ hug_action = renpy.display_menu([("What do you want to do now?", None), ("Be romantic", 1),("Comment on her cleavage", 2),("Wait for her reaction", 3)])
+    $ hug_action = renpy.display_menu([(__("What do you want to do now?"), None), (__("Be romantic"), 1),(__("Comment on her cleavage"), 2),(__("Wait for her reaction"), 3)])
 
     if hug_action == 1:
 
