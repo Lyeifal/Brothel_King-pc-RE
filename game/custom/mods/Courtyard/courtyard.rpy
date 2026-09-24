@@ -10,7 +10,6 @@ init -1 python:
     ## ZH: 从 Mod 自带的 JSON 加载升级成本，失败则使用硬编码值。
     _garden_uc = {2: 500, 3: 1500}
     _hotspring_uc = {2: 800, 3: 2000}
-    _training_uc = {2: 1000, 3: 2500}
     try:
         import json as _cuc_json
         with renpy.loader.load("custom/mods/Courtyard/courtyard_upgrade_costs.json") as _cuc_file:
@@ -19,8 +18,6 @@ init -1 python:
             _garden_uc = {int(k): v for k, v in _cuc["garden"].items()}
         if _cuc.get("hotspring"):
             _hotspring_uc = {int(k): v for k, v in _cuc["hotspring"].items()}
-        if _cuc.get("training_ground"):
-            _training_uc = {int(k): v for k, v in _cuc["training_ground"].items()}
     except Exception:
         pass
 
@@ -136,16 +133,17 @@ init -1 python:
 
     class Courtyard(object):
         """
-        EN: A secondary location for housing girls who are not actively working
-            in the brothel. Girls here recover mood/energy slowly and can train
-            at reduced efficiency.
+        EN: A secondary location for housing excess girls who are not actively
+            working in the brothel and whom you don't want to sell — a sealed
+            storage of sorts (training belongs on the farm). Girls here
+            recover mood/energy slowly.
             v2.0: Housing costs rent (scales with district rank, difficulty and
             headcount), girls left idle slowly lose skills (faster on higher
             difficulty), each district only offers a limited number of rooms,
             and a very expensive deed bought in the final district lifts the
             room cap entirely.
-        ZH: 用于安置不在青楼工作的女孩的次要区域。
-            这里的女孩缓慢恢复心情/能量，并可进行低效训练。
+        ZH: 用于安置不在青楼工作、又不想出售的超编女孩的次要区域，
+            类似封存（训练请使用农场）。这里的女孩缓慢恢复心情/能量。
             v2.0：安置女孩需按日缴纳租金（随地区等级、难度与人数上涨）；
             闲置女孩的技能每日缓慢衰减（难度越高越快）；每个地区可租用的
             房间数量有限；在最终区域可购买天价地契解除房间上限。
@@ -173,7 +171,6 @@ init -1 python:
         ##     __init__）缺少 v2.0 新增字段，由 __getattr__ 兜底。
         FIELD_DEFAULTS = {
             "expansion_unlocked": False,  ## EN: True once the deed is bought. ZH: 购得扩建地契后为 True。
-            "trained_today": [],          ## EN: Girls already trained today (cleared daily). ZH: 今日已训练过的女孩（每日清空）。
         }
 
         ## EN: Default upkeep multiplier (50% of brothel upkeep).
@@ -185,7 +182,6 @@ init -1 python:
             self.girls = []           ## EN: Girls housed here. ZH: 安置在此的女孩。
             self.facilities = {}      ## EN: Facility ID -> CourtyardFacility. ZH: 设施 ID -> CourtyardFacility。
             self.expansion_unlocked = False  ## EN: Villa expansion deed bought. ZH: 是否已购得别院扩建地契。
-            self.trained_today = []  ## EN: Girls already trained today (one training per girl per day). ZH: 今日已训练过的女孩（每人每天限一次）。
             self._init_default_facilities()
 
         def __getattr__(self, name):
@@ -215,13 +211,6 @@ init -1 python:
                     description_i18n_key="A soothing hot spring that boosts energy recovery.",
                     effects=[Effect("boost", "energy recovery", 0.15, scope="courtyard")],
                     upgrade_cost=_hotspring_uc,
-                ),
-                "training_ground": CourtyardFacility(
-                    facility_id="training_ground",
-                    name_i18n_key="Training Ground",
-                    description_i18n_key="A quiet training area. Girls can train skills at 30%% base efficiency, +10%% per upgrade level.",
-                    effects=[Effect("boost", "courtyard training", 0.1, scope="courtyard")],
-                    upgrade_cost=_training_uc,
                 ),
             }
 
@@ -340,7 +329,6 @@ init -1 python:
             ZH: 每个游戏日调用一次（经 HOOK_DAY_ENDING 钩子）。顺序：
                 心情/能量恢复（原有行为）→ 属性衰减 → 收租。
             """
-            self.trained_today = []  ## EN: Daily training limit resets. ZH: 每日训练次数限制重置。
             for girl in list(self.girls):
                 try:
                     self._recover_girl(girl)
@@ -433,77 +421,6 @@ init -1 python:
                         gain(stat, -amount)
                     except Exception:
                         pass
-
-        ## ============================================================
-        ##  Training
-        ## ============================================================
-
-        def train_girl(self, girl, skill, duration=1):
-            """
-            EN: Train a girl in the courtyard_villa — one training per girl
-                per day. Each session grants +1 to the trained stat (slow, by
-                design — this is the idle-girl option, not a replacement for
-                brothel training) plus a small XP reward. Base efficiency is
-                30% of normal work training; the training ground facility
-                adds +10% per upgrade level via get_active_effects().
-                Uses change_stat()/change_xp() (falling back to gain() and a
-                raw xp bump); a failing girl is skipped.
-            ZH: 在别院训练女孩——每人每天限一次。每次训练使指定属性 +1
-                （刻意缓慢——这是闲置女孩的补充手段，不能替代青楼训练），
-                并附带少量经验奖励。基础效率为正常工作训练的 30%；
-                训练场设施每升一级经 get_active_effects() 追加 +10%。
-                优先用 change_stat()/change_xp()（若只有 gain() 则兜底，
-                经验直接累加）；训练失败则跳过该女孩。
-            """
-            if girl not in self.girls:
-                return False
-
-            ## EN: Daily limit: one training session per girl per day.
-            ## ZH: 每日限制：每名女孩每天只能训练一次。
-            if girl in self.trained_today:
-                return False
-
-            base_efficiency = 0.30
-            efficiency = base_efficiency + self._facility_boost("courtyard training")
-
-            xp_gain = max(1, int(10 * duration * efficiency))
-
-            stat_ok = False
-            change_stat = getattr(girl, "change_stat", None)
-            if callable(change_stat):
-                try:
-                    change_stat(skill, 1, apply_boost=False, spillover=False, silent=True)
-                    stat_ok = True
-                except Exception:
-                    pass
-
-            if not stat_ok:
-                gain = getattr(girl, "gain", None)
-                if callable(gain):
-                    try:
-                        gain(skill, 1)
-                        stat_ok = True
-                    except Exception:
-                        pass
-
-            ## EN: XP is experience, not a stat — never feed it to change_stat().
-            ## ZH: 经验是经验，不是属性——绝不能再把经验值当属性增量传入 change_stat()。
-            change_xp = getattr(girl, "change_xp", None)
-            if callable(change_xp):
-                try:
-                    change_xp(xp_gain, apply_boost=False, spillover=False, silent=True)
-                except Exception:
-                    pass
-            else:
-                try:
-                    girl.xp = getattr(girl, "xp", 0) + xp_gain
-                except Exception:
-                    pass
-
-            if stat_ok:
-                self.trained_today.append(girl)
-
-            return stat_ok
 
         ## ============================================================
         ##  Upkeep & Economy

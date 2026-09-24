@@ -56,7 +56,7 @@ label courtyard_scene():
             _cy_flavors = [
                 __("The garden smells of fresh rain. One of the girls is humming somewhere in the corridors."),
                 __("A faint splash drifts over from the hot spring. Someone is enjoying her afternoon."),
-                __("Soft laughter echoes from the training ground — practice, or gossip, hard to tell."),
+                __("Soft laughter echoes from the common room — a card game, or gossip, hard to tell."),
                 __("The villa is quiet today. Books, needlework, and the occasional nap."),
             ]
             _cy_flavor = renpy.random.choice(_cy_flavors)
@@ -97,21 +97,6 @@ label courtyard_loop:
             _cy_ok, _cy_msg = courtyard_villa.move_to_brothel(_cy_action[1])
 
         $ renpy.say("", _cy_msg)
-
-    ## ────────────────────────────────────────────────────────────
-    ##  Train the selected girl (reduced efficiency)
-    ## ────────────────────────────────────────────────────────────
-    elif _cy_action[0] == "train":
-
-        python:
-            _cy_girl = _cy_action[1]
-            _cy_name = getattr(_cy_girl, "name", __("the girl"))
-            _cy_ok = courtyard_villa.train_girl(_cy_girl, "obedience", 1)
-
-        if _cy_ok:
-            sill "[_cy_name] put in a quiet hour of practice at the training ground. Slow and steady, Master — one small step a day."
-        else:
-            sill "I'm afraid [_cy_name] has already trained today. The body needs rest as much as drill."
 
     ## ────────────────────────────────────────────────────────────
     ##  Release the selected girl (frees her from your service)

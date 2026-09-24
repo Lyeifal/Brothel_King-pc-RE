@@ -1,4 +1,4 @@
-﻿# TODO: Translation updated at 2026-09-11 20:16
+# TODO: Translation updated at 2026-09-11 20:16
 
 translate chinese_simplified strings:
     old "女孩: [_courtyard_girl_count] / [courtyard_villa.MAX_CAPACITY]"
@@ -23,10 +23,6 @@ translate chinese_simplified strings:
     new "返回青楼"
     old "The brothel is at maximum working capacity (24)."
     new "青楼已达最大工作容量（24）。"
-    old "Train (slow)"
-    new "训练（缓慢）"
-    old "Already trained today."
-    new "今日已训练。"
     old "Release"
     new "释放"
     old "Select a girl to manage."

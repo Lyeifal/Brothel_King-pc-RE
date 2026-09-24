@@ -62,6 +62,12 @@ README 声称"训练效率加成 30%"，与代码 `efficiency = 0.30 + 0.1×lv` 
 
 - [x] C2 完成
 
+> **2026-09-25 设计变更（用户裁定）**：庭院的定位是"封存式安置区"——存放超编、
+> 不想出售的女孩，本身不带训练属性（训练归农场）。C2 的修正方案随之废止，
+> 训练功能**整体移除**：训练按钮、"Already trained today" 提示、`train_girl()`、
+> `trained_today` 每日限次机制、training_ground 设施及其升级成本一并删除；
+> mod 描述、README 设计定位段落已同步更新。
+
 ### C3. 设施效果死代码接线
 
 现状：`facility.get_active_effects()` 生成 Effect 列表，但**全项目无任何调用方**；

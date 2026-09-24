@@ -16,7 +16,7 @@ init -1 python:
         "api_version": 2,
         "min_game_version": "0.3",
         "author": "BK Evolution",
-        "description": __("House excess girls in a villa outside the brothel. Housing costs daily rent that scales with district rank, difficulty and headcount; idle girls slowly lose skills; each district offers a limited number of rooms, and a very expensive deed bought in the final district lifts the cap. Girls recover mood and energy slowly, and can train at reduced efficiency."),
+        "description": __("House excess girls you don't want to sell in a villa outside the brothel — a sealed storage of sorts. Housing costs daily rent that scales with district rank, difficulty and headcount; idle girls slowly lose skills; each district offers a limited number of rooms, and a very expensive deed bought in the final district lifts the cap. Girls recover mood and energy slowly. Training is the farm's job."),
         "requires": [],
         "hooks": {},
         "dependencies": [],

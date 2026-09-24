@@ -1,7 +1,6 @@
 {
     "courtyard_upgrade_costs": {
         "garden": {"2": 500, "3": 1500},
-        "hotspring": {"2": 800, "3": 2000},
-        "training_ground": {"2": 1000, "3": 2500}
+        "hotspring": {"2": 800, "3": 2000}
     }
 }

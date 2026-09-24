@@ -187,18 +187,6 @@ screen courtyard():
                             color "#E74C3C"
                             italic True
 
-                    textbutton __("Train (slow)"):
-                        xalign 0.5
-                        sensitive (selected_girl not in courtyard_villa.trained_today)
-                        action Return(("train", selected_girl))
-
-                    if selected_girl in courtyard_villa.trained_today:
-                        text __("Already trained today."):
-                            size 13
-                            xalign 0.5
-                            color "#888888"
-                            italic True
-
                     textbutton __("Release"):
                         xalign 0.5
                         action Return(("release", selected_girl))
