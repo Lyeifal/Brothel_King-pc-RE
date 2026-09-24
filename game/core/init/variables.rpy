@@ -2435,13 +2435,13 @@ init python:
 
 init -10 python:
     HH_market_jump_label = "headhunter_main"
-    HH_market_caption = "{u}H{/u}eadhunter" #
-    HH_market_text = "Order slaves with specific characteristics for increased cost."
+    HH_market_caption = __("{u}H{/u}eadhunter") #
+    HH_market_text = __("Order slaves with specific characteristics for increased cost.")
     HH_main_jump_label = "headhunter_delivers"
-    HH_back_caption = "Headhunter"
-    HH_back_text = "The headhunter is back with your prize!"
-    HH_wait_caption = "Headhunter: [game.headhunter_time] days"
-    HH_wait_text = "The headhunter will be back in [game.headhunter_time] days."
+    HH_back_caption = __("Headhunter")
+    HH_back_text = __("The headhunter is back with your prize!")
+    HH_wait_caption = __("Headhunter: [game.headhunter_time] days")
+    HH_wait_text = __("The headhunter will be back in [game.headhunter_time] days.")
     HH_button_align = {"main x" : 0.7, "main y" : 0.0825, "market x" : 0.5, "market y" : 0.99}
     HH_button_text_size = 36
     HH_button_text_font = "CHOWFUN_0.TTF"
