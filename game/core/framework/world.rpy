@@ -113,7 +113,7 @@ init -2 python:
             for effect in self.effects:
                 self.effect_dict[effect.type, effect.target].append(effect)
             self.weight = weight
-            self.description = __("{b}%s{/b} (difficulty: %s): %s") % (self.name.capitalize(), self.get_difficulty(), get_description(base_description, effects))
+            self.description = __("{b}%s{/b} (difficulty: %s): %s") % (__(self.name.capitalize()), self.get_difficulty(), get_description(base_description, effects))
 
         def is_allowed(self):
             return brothel.get_effect("allow", self.name) and self.weight > 0
@@ -435,7 +435,7 @@ init -2 python:
 
         def get_description(self, act="idle"):
 
-            pronoun = {"M": "He", "F": "She"}[self.gender]
+            pronoun = {"M": __("He"), "F": __("She")}[self.gender]
 
             desc = ""
 
@@ -445,10 +445,10 @@ init -2 python:
                 crz_text = ""
 
             if act == "idle job" or act in all_jobs:
-                return __("%s came in.%s %s wanted to be entertained by a {b}%s{/b}. %s prefers %s girls.") % (self.name, crz_text, pronoun, self.wants_entertainment, pronoun, self.fetish.lower())
+                return __("%s came in.%s %s wanted to be entertained by a {b}%s{/b}. %s prefers %s girls.") % (self.name, crz_text, pronoun, __(self.wants_entertainment), pronoun, __(self.fetish.lower()))
 
             elif act == "idle whore":
-                return __("%s %s likes {b}%s{/b}. %s prefers %s girls.") % (self.name, crz_text, pronoun, self.wants_sex_act, pronoun, self.fetish.lower())
+                return __("%s %s likes {b}%s{/b}. %s prefers %s girls.") % (self.name, crz_text, pronoun, __(self.wants_sex_act), pronoun, __(self.fetish.lower()))
 
             # elif act in all_jobs:
             #     desc += self.name + __(" came in.%s\n%s wanted to be entertained by a {b}%s{/b}") % (crz_text, __(pronoun), __(self.wants_entertainment))
@@ -465,17 +465,17 @@ init -2 python:
                 return desc + "." + crz_text
 
             elif act == "end":
-                desc += self.name + " wanted to be entertained by a {b}%s{/b}, " % self.wants_entertainment
+                desc += self.name + __(" wanted to be entertained by a {b}%s{/b}, ") % __(self.wants_entertainment)
                 if self.got_entertainment:
-                    desc += "and got {b}%s{/b}. " % self.got_entertainment
+                    desc += __("and got {b}%s{/b}. ") % __(self.got_entertainment)
                 else:
-                    desc += "but was left unattended. "
+                    desc += __("but was left unattended. ")
 
-                desc += "%s wanted {b}%s{/b}, " % (pronoun, self.wants_sex_act)
+                desc += __("%s wanted {b}%s{/b}, ") % (pronoun, __(self.wants_sex_act))
                 if self.got_sex_act:
-                    desc += "and got {b}%s{/b}. " % self.got_sex_act
+                    desc += __("and got {b}%s{/b}. ") % __(self.got_sex_act)
                 else:
-                    desc += "but no whore was available. "
+                    desc += __("but no whore was available. ")
 
                 return desc
 
@@ -1058,26 +1058,26 @@ init -2 python:
             risk = self.get_risk()
 
             if risk >= 10:
-                level =  "very high"
+                level =  __("very high")
                 col = "bad"
 
             elif risk >= 5:
-                level =  "high"
+                level =  __("high")
                 if contrast:
                     col = "a little bad contrast"
                 else:
                     col = "a little bad"
 
             elif risk <= -10:
-                level =  "very low"
+                level =  __("very low")
                 col = "good"
 
             elif risk <= -5:
-                level = "low"
+                level = __("low")
                 col = "a little good"
 
             else:
-                level = "normal"
+                level = __("normal")
                 if contrast:
                     col = "normal contrast"
                 else:

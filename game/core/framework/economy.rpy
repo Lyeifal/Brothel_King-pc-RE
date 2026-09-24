@@ -108,7 +108,7 @@ init -3 python:
 
     def perform(act, girls, customers, customer_reason = "", job_filter=False): # job_filter forces the use of the current job's tag as 'and_tag'
 
-        change_log = NightChangeLog("Results", col=c_lightorange)
+        change_log = NightChangeLog(__("Results"), col=c_lightorange)
 
         xp_gains = defaultdict(int)
         rep_gains = defaultdict(int)
@@ -216,7 +216,7 @@ init -3 python:
                         if girl.get_effect("special", "temptress"):
                             cust.wants_sex_act = cust.got_sex_act
                             specials.append(__("temptress"))
-                            ttip += " (changed by " + event_color["good"] % "temptress" + ")"
+                            ttip += __(" (changed by %s)") % (event_color["good"] % __("temptress"))
                             break
                     else:
                         # Rape attempts
@@ -440,7 +440,7 @@ init -3 python:
         # re-rolls (traits/perks)
 
         if d == 1:
-            ttip += " (" + event_color["bad"] % "critical failure" + ")"
+            ttip += " (" + event_color["bad"] % __("critical failure") + ")"
 
             #Reroll chance
             if girls[0].get_effect("reroll", "critical failure") > 0 or (girls[0].get_effect("reroll", "job critical failure") > 0 and act in all_jobs) or (girls[0].get_effect("reroll", "whore critical failure") > 0 and act in all_sex_acts):
@@ -461,7 +461,7 @@ init -3 python:
                 d = 6
                 specials.append("lucky")
 
-                ttip += ", but it turned to a 6 because she is lucky"
+                ttip += __(", but it turned to a 6 because she is lucky")
 
         ttip += "."
 
@@ -478,7 +478,7 @@ init -3 python:
             roll_changes += __(" (Reroll)")
             ev_sound = s_dice
 
-        change_log.add(roll_changes, "header", ttip = ttip, ttip_title="Dice roll")
+        change_log.add(roll_changes, "header", ttip = ttip, ttip_title=__("Dice roll"))
 
         ## STEP 6: Misc. bonuses
 
@@ -525,10 +525,10 @@ init -3 python:
         for girl in girls:
             if girl.remembers("reward", "good result"):
                 misc_bonus += 1
-                ttip += "\nRewarded bonus: +1"
+                ttip += __("\nRewarded bonus: +1")
             if girl.remembers("punish", "bad result"):
                 misc_bonus += 1
-                ttip += "\nPunished bonus: +1"
+                ttip += __("\nPunished bonus: +1")
 
         if misc_bonus:
             change_log.add(__("Misc. effects: %s") % plus_text(misc_bonus, "normal"), ttip = ttip, ttip_title = __("Miscellaneous"))
@@ -558,17 +558,17 @@ init -3 python:
                     cust.entertainment_score = score
         #</Chris Job Mod>
 
-        change_log.add(__("{b}Final result{/b}: %i\n%s") % (score, result_star_dict[result]), "header", ttip_title="{color=%s}%s result (%i){/color}" % (result_colors[result], result.capitalize(), score), ttip=result_reference)
+        change_log.add(__("{b}Final result{/b}: %i\n%s") % (score, result_star_dict[result]), "header", ttip_title=__("{color=%s}%s result (%i){/color}") % (result_colors[result], __(result.capitalize()), score), ttip=result_reference)
 
         if act in all_jobs:
-            change_log.add("Customers entertained: %i/%i" % (sum(1 for cust in customers if cust.service_dict["entertained"] > 0), len(customers)))
+            change_log.add(__("Customers entertained: %i/%i") % (sum(1 for cust in customers if cust.service_dict["entertained"] > 0), len(customers)))
 
         elif act in all_sex_acts:
-            change_log.add("Customers served: %i/%i" % (sum(1 for cust in customers if cust.service_dict["laid"] > 0), len(customers)))
+            change_log.add(__("Customers served: %i/%i") % (sum(1 for cust in customers if cust.service_dict["laid"] > 0), len(customers)))
 
         # Get tip, xp, jp and rep
 
-        budget_ttip = "Customer budget is the cumulated amount they are willing to spend on this interaction.\n"
+        budget_ttip = __("Customer budget is the cumulated amount they are willing to spend on this interaction.\n")
         if act in all_jobs:
             total_budget = sum(c.ent_budget for c in customers)
             if not ignore_budget:
@@ -863,7 +863,7 @@ init -3 python:
             customers[0].set_gender("M") # Rapists are always males to avoid complications
 
         if item_used:
-            text_descript += "\nShe used " + item_used.name.lower() + " to improve the mood."
+            text_descript += __("\nShe used %s to improve the mood.") % item_used.name.lower()
 
         for spe in specials:
             try:
@@ -932,9 +932,9 @@ init -3 python:
                 # if len(girls) > 1:
                 #     text_changes += " {size=14}(" + girl.name + "){/size}" # Adds girl name for disambiguation if there are several
 
-                change_log.add("JOB SKILL UP", "header", col=c_orange)
+                change_log.add(__("JOB SKILL UP"), "header", col=c_orange)
 
-            change_log.add("{color=[c_orange]}JP{/color}: %i/%i (%s)" % (girl.jp[act], girl.get_jp_cap(act), plus_text(int(jp_gains[girl]), color_scheme = "jp")), ttip=jp_ttip[girl], ttip_title = "Job points")
+            change_log.add(__("{color=[c_orange]}JP{/color}: %i/%i (%s)") % (girl.jp[act], girl.get_jp_cap(act), plus_text(int(jp_gains[girl]), color_scheme = "jp")), ttip=jp_ttip[girl], ttip_title = __("Job points"))
 
             if girl.ready_to_rank():
                 ev_type = "Level/Job/Rank up"
@@ -944,20 +944,20 @@ init -3 python:
                 # if len(girls) > 1:
                 #     text_changes += " {size=14}(" + girl.name + "){/size}" # Adds girl name for disambiguation if there are several
 
-                change_log.add("RANK UP", "header", col=c_softpurple)
+                change_log.add(__("RANK UP"), "header", col=c_softpurple)
 
         # text_changes += stat_increase_dict["xp"] % str(round_int(xp_gains[girls[0]]))
         # text_changes += stat_increase_dict["jp"] % str(round_int(jp_gains[girls[0]]))
 
             if rep_gains[girl] > 0:
-                change_log.add("{color=[c_softpurple]}Reputation{/color}: %i/%i (%s)" % (girl.rep, girl.get_rep_cap(), plus_text(rep_gains[girl], color_scheme = "rep", decimals=1)), ttip=rep_ttip[girl], ttip_title = "Girl reputation")
+                change_log.add(__("{color=[c_softpurple]}Reputation{/color}: %i/%i (%s)") % (girl.rep, girl.get_rep_cap(), plus_text(rep_gains[girl], color_scheme = "rep", decimals=1)), ttip=rep_ttip[girl], ttip_title = __("Girl reputation"))
 
             change_log = get_log_changes(girl, change_log, stat_gains[girl], act)
 
-            change_log.add("Energy: {color=%s}%i{/color}/%i (%s)" % (girl.get_energy_color(), girl.energy, girl.get_stat_max("energy"), event_color["bad"] % str_dec(tired_changes[girl], 1)), ttip=girl.get_energy_ttip(), ttip_title = "Energy", before_separator="\n")
+            change_log.add(__("Energy: {color=%s}%i{/color}/%i (%s)") % (girl.get_energy_color(), girl.energy, girl.get_stat_max("energy"), event_color["bad"] % str_dec(tired_changes[girl], 1)), ttip=girl.get_energy_ttip(), ttip_title = __("Energy"), before_separator="\n")
 
         if dirt_change:
-            change_log.add("Dirt: {color=%s}%s{/color}" % (c_lightred, plus_text(dirt_change)), ttip=maintenance_desc[brothel.get_cleanliness()], ttip_title = "Dirt", before_separator="\n")
+            change_log.add(__("Dirt: {color=%s}%s{/color}") % (c_lightred, plus_text(dirt_change)), ttip=maintenance_desc[brothel.get_cleanliness()], ttip_title = __("Dirt"), before_separator="\n")
             log.dirt += dirt_change
             # debug_dirt_log.append([girls, dirt_change])
 
@@ -1908,7 +1908,7 @@ init -3 python:
 
     def crazy_customer(girls, customers):
 
-        crazy_changes = NightChangeLog("Security alert", col=c_lightred)
+        crazy_changes = NightChangeLog(__("Security alert"), col=c_lightred)
 
     ## Tests for violence and arson attempts (returns event if True)
 
@@ -1918,7 +1918,7 @@ init -3 python:
             if cust.crazy == "violent":
 
                 notify(_("%s: Assault attempt") % girl.fullname, pic=girl.portrait)
-                crazy_changes.add("Assault attempt", "header")
+                crazy_changes.add(__("Assault attempt"), "header")
 
                 violent_text = __("%s went berserk and attacked %s all of a sudden!") % (cust.name, girl.name)
                 violent_report = __("Security alert! Violent customer.")
@@ -2046,7 +2046,7 @@ init -3 python:
                             if not pic:
                                 pic = Picture(path="resources/events/" + rand_choice(violent_pics))
 
-                        crazy_changes.add("Security failure", col="bad", ttip = event_color["bad"] % "Mood --, Fear ++")
+                        crazy_changes.add(__("Security failure"), col="bad", ttip = event_color["bad"] % __("Mood --, Fear ++"))
 
                 log.add_report(violent_report)
 
@@ -2057,7 +2057,7 @@ init -3 python:
             elif cust.crazy == "arsonist":
 
                 notify(_("%s: Arson attempt") % brothel.name)
-                crazy_changes.add("Arson attempt", "header", col="bad")
+                crazy_changes.add(__("Arson attempt"), "header", col="bad")
 
                 arson_text = ""
                 arson_report = __("Security alert! Fire started.")
@@ -2122,37 +2122,37 @@ init -3 python:
             girl.change_mood(1)
             girl.change_fear(-1)
 
-            change_log.add("Averted by security", col="good", ttip = event_color["good"] % "Mood +, Fear -")
+            change_log.add(__("Averted by security"), col="good", ttip = event_color["good"] % __("Mood +, Fear -"))
 
         elif MC.can_defend() and MC.get_defense() > girl.get_defense(): #You don't have enough guards but the Player is available and tougher than your girl
 
             if MC.get_defense() >= cust.get_defense():
 
-                text_descript += "{color=[c_green]}You heard %s crying for help and threatened to throw him out. He decided to play nice.{/color}" % girl.name
+                text_descript += __("{color=[c_green]}You heard %s crying for help and threatened to throw him out. He decided to play nice.{/color}") % girl.name
 
                 girl.change_mood(1)
                 girl.change_love(1)
                 girl.change_fear(-2)
 
-                change_log.add("Averted by you", col="good", ttip = event_color["good"] % "Mood +, Love +, Fear -")
+                change_log.add(__("Averted by you"), col="good", ttip = event_color["good"] % __("Mood +, Love +, Fear -"))
 
             elif girl.test_shield():
 
-                text_descript += "Fortunately, her magic shield protected her. The customer was awed and sheepishly agreed to back off."
+                text_descript += __("Fortunately, her magic shield protected her. The customer was awed and sheepishly agreed to back off.")
 
                 girl.change_mood(1)
 
-                change_log.add("Averted by Magic Shield", col="good", ttip = event_color["good"] % "Mood +")
+                change_log.add(__("Averted by Magic Shield"), col="good", ttip = event_color["good"] % __("Mood +"))
 
             else:
-                text_descript += "{color=[c_red]}You tried to help, but the customer knocked you out and locked the door shut.{/color}"
+                text_descript += __("{color=[c_red]}You tried to help, but the customer knocked you out and locked the door shut.{/color}")
                 raped = True
 
                 girl.change_mood(-3)
                 girl.change_love(-1)
                 girl.change_fear(3)
 
-                change_log.add("Security failure", col="very bad", ttip = event_color["bad"] % "Mood --, Love -, Fear ++")
+                change_log.add(__("Security failure"), col="very bad", ttip = event_color["bad"] % __("Mood --, Love -, Fear ++"))
 
             MC.interactions -= 1
 
@@ -2169,29 +2169,29 @@ init -3 python:
 
             if girl.get_defense() + mod >= cust.get_defense():
 
-                text_descript += "{color=[c_green]}%s told him he could play nice or lose an important body part. He changed his mind.{/color}" % girl.name
+                text_descript += __("{color=[c_green]}%s told him he could play nice or lose an important body part. He changed his mind.{/color}") % girl.name
 
                 girl.track_event("defended")
                 girl.change_mood(1)
 
-                change_log.add("Averted by herself", col="good", ttip = event_color["good"] % "Mood +")
+                change_log.add(__("Averted by herself"), col="good", ttip = event_color["good"] % __("Mood +"))
 
             elif girl.test_shield():
 
-                text_descript += "Fortunately, her magic shield protected her. The customer was awed and sheepishly agreed to back off."
+                text_descript += __("Fortunately, her magic shield protected her. The customer was awed and sheepishly agreed to back off.")
                 girl.change_mood(1)
 
-                change_log.add("Averted by Magic Shield", col="good", ttip = event_color["good"] % "Mood +")
+                change_log.add(__("Averted by Magic Shield"), col="good", ttip = event_color["good"] % __("Mood +"))
 
             else:
 
-                text_descript += "{color=[c_red]}%s tried to fight him to no avail, and he had his way with her.{/color}" % girl.name
+                text_descript += __("{color=[c_red]}%s tried to fight him to no avail, and he had his way with her.{/color}") % girl.name
                 raped = True
 
                 girl.change_mood(-3)
                 girl.change_fear(3)
 
-                change_log.add("Security failure", col="very bad", ttip = event_color["bad"] % "Mood --, Fear ++")
+                change_log.add(__("Security failure"), col="very bad", ttip = event_color["bad"] % __("Mood --, Fear ++"))
 
         return raped, text_descript
 

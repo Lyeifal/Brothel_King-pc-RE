@@ -312,7 +312,7 @@ init -2 python:
                 if g.MC_relationship_level == 2:
                     renpy.say(g.char, __("This is very romantic... Was there something you wanted from me?"))
 
-                    r = menu(items = (("Actually...", None), ("Ask her out", True), ("Never mind", False)))
+                    r = menu(items = ((__("Actually..."), None), (__("Ask her out"), True), (__("Never mind"), False)))
 
                     if r:
                         norollback()

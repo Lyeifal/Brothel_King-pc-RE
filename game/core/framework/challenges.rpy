@@ -28,10 +28,10 @@ init -2 python:
 
         def get_cost_description(self):
             if self.duration == "turn":
-                return str_int(self.get_cost()) + " mana/turn"
+                return str_int(self.get_cost()) + __(" mana/turn")
 
             else:
-                return str_int(self.get_cost()) + " mana"
+                return str_int(self.get_cost()) + __(" mana")
 
     ## EN: Load opposed challenge chance table from JSON (BK Evolution), fallback to hardcoded.
     ## ZH: 从 JSON 加载对抗挑战概率表（BK Evolution），否则使用硬编码。
@@ -192,7 +192,7 @@ init -2 python:
             auto_extractors[self.name + " ON"] = True
             if first:
                 auto_extractors[self.name + " durability"] = 150
-            self.location.menu = (self.base_description + " [[Extractor ON]", self.location.menu[1])
+            self.location.menu = (self.base_description + __(" [[Extractor ON]"), self.location.menu[1])
 
         def deactivate_extractor(self, final=True):
             auto_extractors[self.name + " ON"] = False
@@ -200,7 +200,7 @@ init -2 python:
                 auto_extractors[self.name] = False
                 self.location.menu = (self.base_description, self.location.menu[1])
             else:
-                self.location.menu = (self.base_description + " [[Extractor OFF]", self.location.menu[1])
+                self.location.menu = (self.base_description + __(" [[Extractor OFF]"), self.location.menu[1])
 
 
     class Furniture(PicHolder):

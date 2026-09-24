@@ -5,7 +5,7 @@ init -3 python:
         if it:
             return it.name
         else:
-            return "None"
+            return __("None")
 
 
 #    def list_items(rank = 1):
@@ -57,13 +57,13 @@ init -3 python:
             stat, nb = c
 
             if stat in ("rep", "reputation"):
-                change_log.add("Reputation: %i/%i (%s)" % (girl.rep, girl.get_stat_max("rep"), plus_text(int(nb), "rep")))
+                change_log.add(__("Reputation: %i/%i (%s)") % (girl.rep, girl.get_stat_max("rep"), plus_text(int(nb), "rep")))
 
             elif stat == "gold":
                 change_log.add(__("Gold: {image=img_gold} %s") % plus_text(int(nb), "gold"))
 
             else:
-                change_log.add("%s: %i/%i (%s)" % ((__(stat.capitalize()), girl.get_stat(stat), girl.get_stat_max(stat), plus_text(nb, "stat", decimals=2))), ttip = describe_leveled_stats(act), ttip_title = "%s skill changes" % act.capitalize())
+                change_log.add("%s: %i/%i (%s)" % ((__(stat.capitalize()), girl.get_stat(stat), girl.get_stat_max(stat), plus_text(nb, "stat", decimals=2))), ttip = describe_leveled_stats(act), ttip_title = __("%s skill changes") % __(act.capitalize()))
 
         return change_log
 
@@ -156,7 +156,7 @@ init -3 python:
                 if it.equipped:
                     girl.unequip(it)
                 MC.take(girl, it)
-                notify((girl.fullname + " has lost " + it.name), pic=girl.portrait)
+                notify((girl.fullname + __(" has lost ") + it.name), pic=girl.portrait)
                 renpy.pause(0.5)
 
     def have_fight(attacker, defender, att_bonus=0, def_bonus=0, advantage = "defender"): # Returns True if attacker won, False otherwise
@@ -409,7 +409,7 @@ init -3 python:
         with open((config.gamedir + "\\ignored_pictures.txt"), "wt") as ignore_file: #? Check that it works if file doesn't exist
             ignore_file.write(ignore_text)
 
-        notify("List printed to: " + config.gamedir + "\\ignored_pictures.txt")
+        notify(__("List printed to: ") + config.gamedir + "\\ignored_pictures.txt")
 
     def toggle_ignore_pic(pic): # path overrides pic if provided
 

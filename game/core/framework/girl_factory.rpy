@@ -727,13 +727,13 @@ init -3 python:
         elif d["main diversity average"] < 3:
             rating += "-"
 
-        ttip = "Girlpack rating: %s, " % rating
+        ttip = __("Girlpack rating: %s, ") % rating
         #<Chris12 PackState>
         #ttip += "\nPictures: " + str(len(girl.pics))
-        ttip += "Pictures: " + str(len(GirlFilesDict.get_pics(girl.path)))
+        ttip += __("Pictures: ") + str(len(GirlFilesDict.get_pics(girl.path)))
         #</Chris12 PackState>
-        ttip += "\nMain tags score: " + str(round_int(d["main cover score"]*100)) + "% (" + str(round(d["main diversity average"], 1)) + " picture/existing tag)"
-        ttip += "\nOptional tags score: " + str(round_int(d["optional cover score"]*100)) + "% (" + str(round(d["optional diversity average"], 1)) + " picture/existing tag)"
+        ttip += __("\nMain tags score: %s%% (%s picture/existing tag)") % (str(round_int(d["main cover score"]*100)), str(round(d["main diversity average"], 1)))
+        ttip += __("\nOptional tags score: %s%% (%s picture/existing tag)") % (str(round_int(d["optional cover score"]*100)), str(round(d["optional diversity average"], 1)))
 
         return event_color[col] % rating, ttip
 

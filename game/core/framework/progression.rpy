@@ -42,7 +42,7 @@ init -2 python:
                 custom_titles = {int(k) if k.isdigit() else k: v for k, v in custom_titles.items()}
             return cls(
                 title=get_i18n(d, "title", ""),
-                description=get_i18n(d, "description", "No description"),
+                description=get_i18n(d, "description", __("No description")),
                 pic=d.get("pic", "misc.webp"),
                 pic_path=d.get("pic_path", "resources/ui/achievements/"),
                 level_nb=d.get("level_nb", 1),
@@ -241,15 +241,15 @@ init -2 python:
                 level = self.level
 
             if self.level_nb == 1:
-                return self.title
+                return __(self.title)
             elif _button:
-                return self.title + " " + str(level) + "/" + str(self.level_nb)
+                return __(self.title) + " " + str(level) + "/" + str(self.level_nb)
             elif _next:
-                return self.title + " " + roman_numbers[level+1]
+                return __(self.title) + " " + roman_numbers[level+1]
             elif self.custom_titles:
-                return self.custom_titles[level]
+                return __(self.custom_titles[level])
             else:
-                return self.title + " " + roman_numbers[level]
+                return __(self.title) + " " + roman_numbers[level]
 
         def get_description(self, _next=False, force_level=None):
             if force_level:
@@ -258,19 +258,19 @@ init -2 python:
                 level = self.level
 
             if self.level_nb == 1:
-                return self.description
+                return __(self.description)
 
             else:
                 if _next:
                     level += 1
 
                 if self.requirements2:
-                    return self.description % (str(self.requirements[level]), str(self.requirements2[level]))
+                    return __(self.description) % (str(self.requirements[level]), str(self.requirements2[level]))
                 elif self.requirements:
                     if isinstance(self.requirements[level], int):
-                        return self.description % '{:,}'.format(self.requirements[level])
+                        return __(self.description) % '{:,}'.format(self.requirements[level])
                     else:
-                        return self.description % str(self.requirements[level])
+                        return __(self.description) % str(self.requirements[level])
 
     class Contract(object):
 
@@ -382,8 +382,8 @@ init -2 python:
         def get_description(self, base_text): # can be called from outside the Contract object to convert any string (may not be necessary)
             desc = base_text.replace(":ORG:", capitalize(self.organizer))
             desc = desc.replace(":org:", self.organizer)
-            desc = desc.replace(":DIS:", self.district)
-            desc = desc.replace(":dis:", self.district.lower())
+            desc = desc.replace(":DIS:", capitalize(__(self.district)))
+            desc = desc.replace(":dis:", __(self.district).lower())
             desc = desc.replace(":LOC:", self.location.name)
             desc = desc.replace(":loc:", self.location.name.lower())
             desc = desc.replace(":VEN:", capitalize(self.venue))
@@ -396,22 +396,22 @@ init -2 python:
             spe, target = self.special
 
             if spe == "trait":
-                return "{b}Traits{/b}: " + and_text([t.display_name for t in target], " or ")
+                return __("{b}Traits{/b}: ") + and_text([t.display_name for t in target], __(" or "))
 
             elif spe == "perk":
-                return "{b}Perks{/b}: " + target.name
+                return __("{b}Perks{/b}: ") + target.name
 
             elif spe == "fix":
-                return "{b}Positive fixations{/b}: " + and_text([f.name.capitalize() for f in target], " or ")
+                return __("{b}Positive fixations{/b}: ") + and_text([__(f.name.capitalize()) for f in target], __(" or "))
 
             elif spe == "farm":
-                return "{b}Weakness{/b}: " + target.capitalize()
+                return __("{b}Weakness{/b}: ") + __(target.capitalize())
 
             elif spe == "item":
-                return "{b}Must wear{/b}: " + target.name
+                return __("{b}Must wear{/b}: ") + target.name
 
             elif spe == "girls":
-                return "{b}Send two girls{/b} (extra pay)"
+                return __("{b}Send two girls{/b} (extra pay)")
 
         def get_value(self, raw=False, no_special=False):
             r = self.base_value + sum(tsk.value for tsk in self.tasks)
@@ -599,11 +599,11 @@ init -2 python:
 
             for req in self.requirements:
                 if req.startswith("job"):
-                    r.append(__("{b}%s{/b} %s or better") % (req[4:].capitalize(), "{image=img_star}" * self.limits[req]))
+                    r.append(__("{b}%s{/b} %s or better") % (__(req[4:].capitalize()), "{image=img_star}" * self.limits[req]))
                 elif req.startswith("skill"):
                     r.append(__("{b}%s %s{/b} or better") % (stat_name_dict[req[6:].capitalize()], str(self.limits[req])))
                 elif req.startswith("pref"):
-                    r.append(__("{b}%s preference: %s{/b} or better") % (req[5:].capitalize(), self.limits[req].capitalize()))
+                    r.append(__("{b}%s preference: %s{/b} or better") % (__(req[5:].capitalize()), __(self.limits[req].capitalize())))
 
             return r
 

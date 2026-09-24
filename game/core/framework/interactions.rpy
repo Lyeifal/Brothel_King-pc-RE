@@ -422,7 +422,7 @@ init -2 python:
 
             if not ignore_status:
                 if girl.hurt > 0 or girl.away or girl.exhausted:
-                    return (False, "Your girl is unable to work or study at the moment.")
+                    return (False, _("Your girl is unable to work or study at the moment."))
 
             if self.type == "class":
 
@@ -445,7 +445,7 @@ init -2 python:
 
                 for stat, value in self.requirements:
                     if girl.get_stat(stat) < value:
-                        return (False, "Your girl doesn't meet the requirements for this assignment.")
+                        return (False, _("Your girl doesn't meet the requirements for this assignment."))
                 return (True, __("Send %s on this assignment.") % girl.fullname)
 
             raise AssertionError("Something is weird with " + self.type)
@@ -1963,7 +1963,7 @@ init -10 python:
                     shown = str(round_int(c))
 
                 if v != 0 and c != 0:
-                    text1 += __("\n%s: %s") % (s.capitalize(), shown)
+                    text1 += __("\n%s: %s") % (__(s.capitalize()), shown)
 
             text1 += "\n"
 
@@ -1974,16 +1974,16 @@ init -10 python:
                     else:
                         shown = get_plus_rating(brk[a], "pref")
 
-                    text1 += __("\n%s preference: %s") % (a.capitalize(), shown)
+                    text1 += __("\n%s preference: %s") % (__(a.capitalize()), shown)
                 else:
                     raise AssertionError("Unexpected breaking value for " + a + ". Please report this bug.")
 
             if inter:
-                text1 += "\nGirl interactions: " + str(inter)
+                text1 += __("\nGirl interactions: %s") % str(inter)
                 girl.interactions += inter
 
             if virgin:
-                text1 += "\n" + girl.fullname + " has lost her virginity with you."
+                text1 += __("\n%s has lost her virginity with you.") % girl.fullname
 
             text1 += "\n"
 
@@ -1996,30 +1996,30 @@ init -10 python:
 
             if debug_mode:
                 if gd:
-                    text1 += "\nGood: " + str(gd)
+                    text1 += __("\nGood: %s") % str(gd)
                 if ne:
-                    text1 += "\nNeutral: " + str(ne)
+                    text1 += __("\nNeutral: %s") % str(ne)
                 if ev:
-                    text1 += "\nEvil: " + str(ev)
+                    text1 += __("\nEvil: %s") % str(ev)
             if p:
                 MC.change_prestige(p)
-                text1 += "\nPrestige: " + str(p)
+                text1 += __("\nPrestige: %s") % str(p)
 
             if not text2:
-                text1 = "No changes"
+                text1 = __("No changes")
 
             if spillover: # Mass Hysteria spell
                 for k in spillover.keys():
                     if k in ("obedience", "libido", "sensitivity"):
                         for g in MC.girls:
                             if g != girl and dice(6) >= 6:
-                                g.change_stat(k, spillover[k], spillover=False, notify_suffix=" (Mass hysteria)")
+                                g.change_stat(k, spillover[k], spillover=False, notify_suffix=__(" (Mass hysteria)"))
                     
                     elif k in extended_sex_acts:
                         for g in MC.girls:
                             if g != girl and dice(6) >= 6:
                                 _, r = g.raise_preference(k, spillover[k], 1, use_effects=False, status_change=True)
-                                notify(act.capitalize() + " preference + (Mass hysteria)", pic=g.portrait)
+                                notify(__(act.capitalize()) + __(" preference + (Mass hysteria)"), pic=g.portrait)
 
             norollback()
 

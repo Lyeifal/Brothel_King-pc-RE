@@ -96,9 +96,9 @@ init -2 python:
                     if g.will_do_anything():
                         return True
                     elif not silent:
-                        notify("No sex acts available for whoring", pic=g.portrait)
+                        notify(__("No sex acts available for whoring"), pic=g.portrait)
                 elif not silent:
-                    notify("Libido/Obedience too low", pic=g.portrait)
+                    notify(__("Libido/Obedience too low"), pic=g.portrait)
                 return False
 
             else:

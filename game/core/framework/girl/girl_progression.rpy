@@ -29,7 +29,7 @@ init -2 python:
 
                     if g.level == 25:
                         g.perk_points += 3
-                        notify("Maximum level reached! +1 Perk Point", pic=g.portrait, col=c_lightgreen)
+                        notify(__("Maximum level reached! +1 Perk Point"), pic=g.portrait, col=c_lightgreen)
                     elif g.level%5 == 0:
                         g.perk_points += 2
                     else:
@@ -324,7 +324,7 @@ init -2 python:
         def can_acquire_perk(self, perk, context=None): # Where perk is an object
             g = self.girl
             if g.has_perk(perk.name):
-                return False, "She already has that perk."
+                return False, __("She already has that perk.")
 
             if context == "perk_screen":
                 points = perk_points
@@ -401,7 +401,7 @@ init -2 python:
                     g.perks.append(p)
                     g.add_effects(p.effects)
 
-                    renpy.call_screen("OK_screen", title = p.name, message = g.name + " has learnt a new combo! " + p.description)
+                    renpy.call_screen("OK_screen", title = p.name, message = g.name + __(" has learnt a new combo! ") + p.description)
 
         def has_prerequisites(self, perk):
             g = self.girl

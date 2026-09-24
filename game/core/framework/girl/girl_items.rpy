@@ -143,7 +143,7 @@ init -2 python:
 
                 if r == "used_up" and item in g.items:
                     g.items.remove(item)
-                    changes.add("(used up)", col="bad")
+                    changes.add(__("(used up)"), col="bad")
 
                 norollback()
 

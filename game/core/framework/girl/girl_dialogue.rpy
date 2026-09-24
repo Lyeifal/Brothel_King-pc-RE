@@ -44,10 +44,10 @@ init -2 python:
 
         def get_personality_description(self, show="personality"):
             g = self.girl
-            des = "{b}" + g.fullname + "'s "
+            des = "{b}" + g.fullname + __("'s ")
 
             if show == "personality":
-                des += "personality{/b}{size=-1}\n\n"
+                des += __("personality{/b}{size=-1}\n\n")
 
                 # Update notebook
 
@@ -80,7 +80,7 @@ init -2 python:
                     background_des += __("slave")
 
                 if "origin" in g.notebook_unlocks:
-                    background_des += __(" from ") + g.origin
+                    background_des += __(" from ") + __(g.origin)
 
                 background_des += ". "
 
@@ -110,46 +110,46 @@ init -2 python:
 
                 if "EI" in g.notebook_unlocks:
                     if g.is_("very extravert"):
-                        pers_des += "She is very {b}lively and outgoing{/b}.\n"
+                        pers_des += __("She is very {b}lively and outgoing{/b}.\n")
                     elif g.is_("extravert"):
-                        pers_des += "She is quite {b}sociable{/b}.\n"
+                        pers_des += __("She is quite {b}sociable{/b}.\n")
                     elif g.is_("very introvert"):
-                        pers_des += "She is {b}quiet and very shy{/b}.\n"
+                        pers_des += __("She is {b}quiet and very shy{/b}.\n")
                     elif g.is_("introvert"):
-                        pers_des += "She is {b}a little shy{/b}.\n"
+                        pers_des += __("She is {b}a little shy{/b}.\n")
 
                 if "MI" in g.notebook_unlocks:
                     if g.is_("very materialist"):
-                        pers_des += "She is very {b}selfish and greedy{/b}, ready to crush people if they get in her way.\n"
+                        pers_des += __("She is very {b}selfish and greedy{/b}, ready to crush people if they get in her way.\n")
                     elif g.is_("materialist"):
-                        pers_des += "She is quite {b}shallow and materialistic{/b}.\n"
+                        pers_des += __("She is quite {b}shallow and materialistic{/b}.\n")
                     elif g.is_("very idealist"):
-                        pers_des += "She is a {b}dreamer{/b}, wanting to make the world a better place.\n"
+                        pers_des += __("She is a {b}dreamer{/b}, wanting to make the world a better place.\n")
                     elif g.is_("idealist"):
-                        pers_des += "She {b}cares about others{/b}.\n"
+                        pers_des += __("She {b}cares about others{/b}.\n")
 
                 if "DS" in g.notebook_unlocks:
                     if g.is_("very dom"):
-                        pers_des += "She is {b}aggressive, strong-headed{/b} and wants others to see things her way.\n"
+                        pers_des += __("She is {b}aggressive, strong-headed{/b} and wants others to see things her way.\n")
                     elif g.is_("dom"):
-                        pers_des += "She knows what she wants, and she likes to be {b}independent{/b}.\n"
+                        pers_des += __("She knows what she wants, and she likes to be {b}independent{/b}.\n")
                     elif g.is_("very sub"):
-                        pers_des += "She is {b}very submissive{/b} and always puts herself last.\n"
+                        pers_des += __("She is {b}very submissive{/b} and always puts herself last.\n")
                     elif g.is_("sub"):
-                        pers_des += "She is {b}rather submissive{/b}, avoiding conflict whenever possible.\n"
+                        pers_des += __("She is {b}rather submissive{/b}, avoiding conflict whenever possible.\n")
 
                 if "LM" in g.notebook_unlocks:
                     if g.is_("very modest"):
-                        pers_des += "She has strong moral views and is {b}repressed{/b} about sex.\n"
+                        pers_des += __("She has strong moral views and is {b}repressed{/b} about sex.\n")
                     elif g.is_("modest"):
-                        pers_des += "She follows her own {b}code of ethics{/b}, frowning upon lewd behavior.\n"
+                        pers_des += __("She follows her own {b}code of ethics{/b}, frowning upon lewd behavior.\n")
                     elif g.is_("very lewd"):
-                        pers_des += "She only cares about {b}her own pleasure{/b}, not giving a damn about morality.\n"
+                        pers_des += __("She only cares about {b}her own pleasure{/b}, not giving a damn about morality.\n")
                     elif g.is_("lewd"):
-                        pers_des += "She's {b}open-minded and relaxed{/b} about morals.\n"
+                        pers_des += __("She's {b}open-minded and relaxed{/b} about morals.\n")
 
                 if not pers_des:
-                    pers_des += "You don't know her personality very well."
+                    pers_des += __("You don't know her personality very well.")
 
                 des += pers_des
 
@@ -157,59 +157,59 @@ init -2 python:
 
             elif show == "tastes":
 
-                des += "tastes{/b}{size=-1}\n\n"
+                des += __("tastes{/b}{size=-1}\n\n")
 
                 taste_text = ""
 
                 if "fav_color" in g.notebook_unlocks:
-                    taste_text += "Her favourite color is {b}" + g.likes["color"] + "{/b}. "
+                    taste_text += __("Her favourite color is {b}%s{/b}. ") % __(g.likes["color"])
 
                 if "fav_food" in g.notebook_unlocks:
-                    taste_text += "Her favourite food is {b}" + g.likes["food"] + "{/b}. "
+                    taste_text += __("Her favourite food is {b}%s{/b}. ") % __(g.likes["food"])
 
                 if "fav_drink" in g.notebook_unlocks:
-                    taste_text += "Her favourite drink is {b}" + g.likes["drink"] + "{/b}. "
+                    taste_text += __("Her favourite drink is {b}%s{/b}. ") % __(g.likes["drink"])
 
                 if ("hobby_" + g.hobbies[0]) in g.notebook_unlocks and ("hobby_" + g.hobbies[1]) in g.notebook_unlocks:
-                    taste_text += "She likes {b}" + g.hobbies[0] + " and " + g.hobbies[1] + "{/b}. "
+                    taste_text += __("She likes {b}%s and %s{/b}. ") % (__(g.hobbies[0]), __(g.hobbies[1]))
 
                 elif ("hobby_" + g.hobbies[0]) in g.notebook_unlocks:
-                    taste_text += "She likes {b}" + g.hobbies[0] + "{/b}. "
+                    taste_text += __("She likes {b}%s{/b}. ") % __(g.hobbies[0])
 
                 elif ("hobby_" + g.hobbies[1]) in g.notebook_unlocks:
-                    taste_text += "She likes {b}" + g.hobbies[1] + "{/b}. "
+                    taste_text += __("She likes {b}%s{/b}. ") % __(g.hobbies[1])
 
                 if taste_text:
                     taste_text += "\n\n"
 
                 if "dis_color" in g.notebook_unlocks:
-                    taste_text += "Her least favourite color is {b}" + g.dislikes["color"] + "{/b}. "
+                    taste_text += __("Her least favourite color is {b}%s{/b}. ") % __(g.dislikes["color"])
 
                 if "dis_food" in g.notebook_unlocks:
-                    taste_text += "Her least favourite food is {b}" + g.dislikes["food"] + "{/b}. "
+                    taste_text += __("Her least favourite food is {b}%s{/b}. ") % __(g.dislikes["food"])
 
                 if "dis_drink" in g.notebook_unlocks:
-                    taste_text += "Her least favourite drink is {b}" + g.dislikes["drink"] + "{/b}. "
+                    taste_text += __("Her least favourite drink is {b}%s{/b}. ") % __(g.dislikes["drink"])
 
 
                 if taste_text:
                     taste_text += "\n\n"
 
                 if "loves" in g.notebook_unlocks and g.personality_unlock["loves"]:
-                    taste_text += "She loves {color=[c_emerald]}" + and_text([gift_description[luv] for luv in g.personality_unlock["loves"]]) + "{/color}. "
-                    prior = "also "
-                    prior2 = "However, she "
+                    taste_text += __("She loves {color=[c_emerald]}%s{/color}. ") % and_text([gift_description[luv] for luv in g.personality_unlock["loves"]])
+                    prior = __("also ")
+                    prior2 = __("However, she ")
 
                 else:
                     prior = ""
-                    prior2 = "She "
+                    prior2 = __("She ")
 
                 if "likes" in g.notebook_unlocks and g.personality_unlock["likes"]:
-                    taste_text += "She " + prior + "likes {color=[c_orange]}" + and_text([gift_description[lik] for lik in g.personality_unlock["likes"]]) + "{/color}. "
-                    prior2 = "However, she "
+                    taste_text += __("She %slikes {color=[c_orange]}%s{/color}. ") % (prior, and_text([gift_description[lik] for lik in g.personality_unlock["likes"]]))
+                    prior2 = __("However, she ")
 
                 if "hates" in g.notebook_unlocks and g.personality_unlock["hates"]:
-                    taste_text += prior2 + "hates {color=[c_crimson]}" + and_text([gift_description[hat] for hat in g.personality_unlock["hates"]]) + "{/color}. "
+                    taste_text += __("%shates {color=[c_crimson]}%s{/color}. ") % (prior2, and_text([gift_description[hat] for hat in g.personality_unlock["hates"]]))
 
                 if taste_text:
                     des += taste_text
@@ -218,7 +218,7 @@ init -2 python:
 
             elif show == "sexual":
 
-                des += "sexuality{/b}\n\n"
+                des += __("sexuality{/b}\n\n")
 
                 sex_text = ""
 
@@ -238,20 +238,20 @@ init -2 python:
                         neg_unlocked.append(act)
 
                 if pos_unlocked:
-                    sex_text += "She has a weakness for {color=[c_emerald]}" + and_text(pos_unlocked) + "{/color} acts"
+                    sex_text += __("She has a weakness for {color=[c_emerald]}%s{/color} acts") % and_text([__(a) for a in pos_unlocked])
 
                     if neg_unlocked:
-                        sex_text += ", but she "
+                        sex_text += __(", but she ")
                     else:
                         sex_text += ". "
 
                 if neg_unlocked:
                     if not sex_text:
-                        sex_text += "She "
-                    sex_text += "dislikes {color=[c_crimson]}" + and_text(neg_unlocked) + "{/color} acts. "
+                        sex_text += __("She ")
+                    sex_text += __("dislikes {color=[c_crimson]}%s{/color} acts. ") % and_text([__(a) for a in neg_unlocked])
 
                 if amb_unlocked:
-                    sex_text += "She is ambivalent towards {color=[c_yellow]}" + and_text(amb_unlocked) + "{/color} acts. "
+                    sex_text += __("She is ambivalent towards {color=[c_yellow]}%s{/color} acts. ") % and_text([__(a) for a in amb_unlocked])
 
                 if sex_text:
                     sex_text += "\n\n"
@@ -260,17 +260,17 @@ init -2 python:
                 neg_fix = [fix.name for fix in g.neg_fixations if fix.name in g.notebook_unlocks]
 
                 if pos_fix:
-                    sex_text += "She is especially fascinated by {color=[c_emerald]}" + and_text(pos_fix) + "{/color}. "
+                    sex_text += __("She is especially fascinated by {color=[c_emerald]}%s{/color}. ") % and_text([__(f) for f in pos_fix])
                 if neg_fix:
-                    sex_text += "She is disgusted by {color=[c_crimson]}" + and_text(neg_fix) + "{/color}. "
+                    sex_text += __("She is disgusted by {color=[c_crimson]}%s{/color}. ") % and_text([__(f) for f in neg_fix])
 
                 if sex_text:
                     des += sex_text
                 else:
-                    des += "You do not know her sexual tastes very well."
+                    des += __("You do not know her sexual tastes very well.")
 
                 if farm.knows["weakness"][g]:
-                    des+= _("\nShe is vulnerable to farm %ss.") % g.weakness
+                    des+= _("\nShe is vulnerable to farm %ss.") % __(g.weakness)
 
             elif show == "recent":
 

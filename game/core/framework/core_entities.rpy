@@ -313,7 +313,7 @@ init -2 python:
             for g in self.free_girls:
                 l.append(g.name)
 
-            return "Free girls: " + and_text(l)
+            return __("Free girls: ") + and_text(l)
 
         def get_available_locations(self):
             loc_list = []
@@ -587,7 +587,7 @@ init -2 python:
             self.load_pics()
 
         def swear(self):
-            return rand_choice({"Arios": ["Arios", "By Arios", "By the Lightbringer", "By the Lord of Light"], "Shalia": ["Shalia", "By Shalia", "Goddess", "By the Night Lady"], None: ["Demons", "Damnation", "Priests be damned", "By the Seven Hells"]}[self.god])
+            return rand_choice({"Arios": ["Arios", __("By Arios"), __("By the Lightbringer"), __("By the Lord of Light")], "Shalia": ["Shalia", __("By Shalia"), __("Goddess"), __("By the Night Lady")], None: [__("Demons"), __("Damnation"), __("Priests be damned"), __("By the Seven Hells")]}[self.god])
 
         def reset_stats(self):
             if self.playerclass == "Warrior":
@@ -773,7 +773,7 @@ init -2 python:
                 self.gold += amount
                 if not silent:
                     renpy.play(s_gold, "sound")
-                    notify("Gold: " + plus_text(amount, color_scheme="gold", decimals=0), pic="img_gold_24", col=c_gold)
+                    notify(__("Gold: ") + plus_text(amount, color_scheme="gold", decimals=0), pic="img_gold_24", col=c_gold)
 
         def gain_resource(self, resource="", number=1, message=True, _random=False): # Where resource is the resource name
 
@@ -1040,7 +1040,7 @@ init -2 python:
             p = round_up(chg/2)
 
             if not silent:
-                notify("Prestige " + "+"*p, pic=self.current_pic, debug_txt="(%s)" % str_int(chg))
+                notify(__("Prestige ") + "+"*p, pic=self.current_pic, debug_txt="(%s)" % str_int(chg))
 
             return chg
 
@@ -1194,7 +1194,7 @@ init -2 python:
             desc = MC_stat_description[stat]
 
             if self.get_effect("special", "wound"):
-                desc += "\n{color=[c_red]}You are wounded for %i day%s.{/color}" % ((self.heal_day - calendar.time), plural(self.heal_day - calendar.time))
+                desc += __("\n{color=[c_red]}You are wounded for %i day%s.{/color}") % ((self.heal_day - calendar.time), plural(self.heal_day - calendar.time))
 
             return desc
 
@@ -2089,7 +2089,7 @@ init -2 python:
             self.upkeep = 0
             self.costs = 0
             self.net = 0
-            self.date = calendar.get_weekday() + ", Y" + str(calendar.year) + " M" + str(calendar.month) + " D" + str(calendar.day)
+            self.date = __(calendar.get_weekday()) + __(", Y%s M%s D%s") % (str(calendar.year), str(calendar.month), str(calendar.day))
             self.report = ""
             self.events = []
             self.changes = ""

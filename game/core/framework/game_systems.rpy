@@ -66,7 +66,7 @@ init -3 python:
             if girl.job in all_jobs:
                 if not brothel.can_have(girl.job):
                     girl.set_job(None)
-                    notify(girl.fullname + " was set to rest.", pic=girl.portrait, col="a little bad")
+                    notify(girl.fullname + __(" was set to rest."), pic=girl.portrait, col="a little bad")
 
         return
 
@@ -151,7 +151,7 @@ init -3 python:
 
         global mod_traceback
 
-        mod_traceback += "Updating mods... "
+        mod_traceback += __("Updating mods... ")
 
         # Checks if existing/active mods have been disabled
 
@@ -177,7 +177,7 @@ init -3 python:
                 register_mod(mod)
                 renpy.notify(_("%s has been added.") % mod.full_name)
 
-                mod_traceback += "\n" + "Mod: " + name + " has been added."
+                mod_traceback += "\n" + __("Mod: %s has been added.") % name
 
             # Finding new version (basic checks: version number and events lenght)
 
@@ -186,7 +186,7 @@ init -3 python:
                 register_mod(mod)
                 renpy.notify(_("%s has been updated.") % mod.full_name)
                 mod.active = True
-                mod_traceback += "\n" + "Mod: " + name + " has been updated."
+                mod_traceback += "\n" + __("Mod: %s has been updated.") % name
 
             # Activating mod if it exists
 
@@ -194,7 +194,7 @@ init -3 python:
                 mod.active = True
 #                if debug_mode:
 #                    renpy.notify(mod.full_name + " has been activated.")
-                mod_traceback += "\n" + "Mod: " + name + " has been activated."
+                mod_traceback += "\n" + __("Mod: %s has been activated.") % name
 
         # persistent.mods should now be updated to reflect all currently available mods
 
@@ -662,7 +662,7 @@ init -3 python:
         menu_list = list(menu_list) # Copying to avoid issues
 
         for _ in range(nb):
-            _selected.append(long_menu(prompt + " (%i/%i)" % (len(_selected), nb), menu_list, limit))
+            _selected.append(long_menu(prompt + __(" (%i/%i)") % (len(_selected), nb), menu_list, limit))
 
             if _selected[-1] == "back":
                 return "back"
@@ -695,14 +695,14 @@ init -3 python:
                 part_menu = menu_list[idx:end]
 
             if idx > 0:
-                part_menu += [("{i}Previous{/i}", "previous")]
+                part_menu += [(__("{i}Previous{/i}"), "previous")]
             else:
-                part_menu += [("{color=#AAA}{i}Previous{/i}", "previous")]
+                part_menu += [(__("{color=#AAA}{i}Previous{/i}"), "previous")]
 
             if end < len(menu_list):
-                part_menu += [("{i}Next{/i}", "next")]
+                part_menu += [(__("{i}Next{/i}"), "next")]
             else:
-                part_menu += [("{color=#AAA}{i}Next{/i}", "next")]
+                part_menu += [(__("{color=#AAA}{i}Next{/i}"), "next")]
 
             r = menu(part_menu)
 
@@ -813,7 +813,7 @@ init -3 python:
                 Furniture(NGP_settings_dict["perks"].label, type='NewGame+', pic='wine cases.webp', rank=0, chapter=0, cost=[], duration=0, effects=[Effect("event", "dispense_item", "perks")], hidden_effect=True, base_description=__("Receive a %s Wyvern egg.") % NGP_settings_dict["perks"].get()).build()
 
         if NGP_settings_dict["autorest"].get():
-            vitals_scanner.description += " Allows autorest to be set up from the Schedule screen."
+            vitals_scanner.description += __(" Allows autorest to be set up from the Schedule screen.")
             vitals_scanner.build()
 
         if NGP_settings_dict["girl"].get():
@@ -1297,7 +1297,7 @@ init -3 python:
         for s, v in stat_dict.items():
             if v:
                 if s.endswith("preference"):
-                    text1 += "\n" + s.capitalize() + ": " + get_plus_rating(v, "pref")
+                    text1 += "\n" + __(s.capitalize()) + ": " + get_plus_rating(v, "pref")
                 elif s in stat_increase_dict.keys():
                     text1 += stat_increase_dict[s] % v
                 elif v > 0:
@@ -1316,10 +1316,10 @@ init -3 python:
         if act in ("bisexual", "group"): # Can only choose bis / group if some of sexual acts are accepted
             base_acts_number = sum(1 for a in all_sex_acts if girl.will_do_farm_act(a, mode="tough"))
             if act == "bisexual" and base_acts_number < 1:
-                return False, "She must be open to at least one sex act before choosing 'Bisexual'."
+                return False, __("She must be open to at least one sex act before choosing 'Bisexual'.")
             if act == "group" and base_acts_number < 2:
-                return False, "She must be open to at least two sex acts before choosing 'Group'."
+                return False, __("She must be open to at least two sex acts before choosing 'Group'.")
         if act == "group" and farm.count_minions() < 2: # checks if farm has 2+ healthy minions
-            return False, "Requires 2 or 3 free minions in the farm."
+            return False, __("Requires 2 or 3 free minions in the farm.")
         return True, ''
 

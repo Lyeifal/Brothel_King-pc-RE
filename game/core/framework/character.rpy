@@ -273,9 +273,9 @@ init -2 python:
         def get_past_tense(self):
 
             if self.verb.startswith("be"):
-                text1 = "was"
+                text1 = __("was")
             elif self.verb.startswith("have"):
-                text1 = "had"
+                text1 = __("had")
 
             return self.add_article(text1) + " {b}" + self.name.lower() + "{/b}"
 
@@ -702,14 +702,14 @@ init -2 python:
             if self.type == "set":
                 text1 += __("set %s%s") % (target, __(" to %s") % str(val))
                 if self.scope:
-                    text1 += " (%s)" % self.scope
+                    text1 += " (%s)" % __(self.scope)
                 return text1
 
             if self.type == "allow":
                 if target.endswith("preference"):
-                    text1 += __("Allows you to increase customers' %s by up to +%s%%.") % (target, str(50*val))
+                    text1 += __("Allows you to increase customers' %s by up to +%s%%.") % (__(target), str(50*val))
                 else:
-                    text1 += __("Allows %s to visit your brothel.") % target
+                    text1 += __("Allows %s to visit your brothel.") % __(target)
 
                 return text1
 
@@ -724,7 +724,7 @@ init -2 python:
 
             if self.type == "reroll":
                 if text1:
-                    text1 += "rerolling "
+                    text1 += __("rerolling ")
                 else:
                     text1 += __("reroll")
 
@@ -760,7 +760,7 @@ init -2 python:
             elif self.type == "spillover":
                 percentage = round_int(val * 100)
 
-                text1 += __("%s%% %s spread out between other girls when earning ") % (str(percentage), self.target)
+                text1 += __("%s%% %s spread out between other girls when earning ") % (str(percentage), __(self.target))
 
             elif self.type == "boost": # Temporary % effect (can be removed)
 
@@ -785,7 +785,7 @@ init -2 python:
             elif target in extended_sex_acts:
                 text1 += __(" acts{#1}")
             elif target == "random item":
-                text1 += " when working"
+                text1 += __(" when working")
 
             if self.scales_with:
 
@@ -804,13 +804,13 @@ init -2 python:
 
 
             if self.duration > 0:
-                text1 += " (for "
+                text1 += __(" (for ")
 
                 if self.duration > 1:
-                    text1 += str(self.duration) + " turns - does not stack)"
+                    text1 += str(self.duration) + __(" turns - does not stack)")
 
                 elif self.duration == 1:
-                    text1 += "1 turn - does not stack)"
+                    text1 += __("1 turn - does not stack)")
 
             return __(text1)
 

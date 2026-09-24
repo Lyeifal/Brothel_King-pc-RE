@@ -210,9 +210,9 @@ init -2 python:
 
             if g.hurt > 0:
                 r, case = g.heal(1)
-                resting_changes.add("\n{color=[c_green]}Health{/color}: %s" % plus_text(r, color_scheme="standard"))
+                resting_changes.add(__("\n{color=[c_green]}Health{/color}: %s") % plus_text(r, color_scheme="standard"))
                 if case == "healthy":
-                    resting_changes.add("(full recovery)", "header", col="good", separator="\n")
+                    resting_changes.add(__("(full recovery)"), "header", col="good", separator="\n")
                     if context == "farm":
                         resting_text += __("\n{color=[c_emerald]}She is now fully recovered and can go back to work or training.{/color}")
                     elif g.job:
@@ -234,10 +234,10 @@ init -2 python:
             elif g.energy >= 0.2 * max_en: col = c_lightred
             else:                          col = c_red
 
-            resting_changes.add("Energy: %s/%i (%s)" % ("{color=%s}%i{/color}" % (col, g.energy), max_en, plus_text(r)), "header")
+            resting_changes.add(__("Energy: %s/%i (%s)") % ("{color=%s}%i{/color}" % (col, g.energy), max_en, plus_text(r)), "header")
 
             if case == "recovered":
-                resting_changes.add("(fully rested)", "header", col="good", separator="\n")
+                resting_changes.add(__("(fully rested)"), "header", col="good", separator="\n")
                 if context == "farm":
                     resting_text += __("\n{color=[c_emerald]}She is now fully rested and can go back to her training.{/color}")
                 elif g.job:
@@ -270,15 +270,15 @@ init -2 python:
             max_en = g.get_stat_max("energy")
 
             if g.energy >= 0.8 * max_en:
-                ttip = "She is well-rested."
+                ttip = __("She is well-rested.")
             elif g.energy >= 0.6 * max_en:
-                ttip = "She is rested."
+                ttip = __("She is rested.")
             elif g.energy >= 0.4 * max_en:
-                ttip = "She is a little tired."
+                ttip = __("She is a little tired.")
             elif g.energy >= 0.2 * max_en:
-                ttip = "She is quite tired."
+                ttip = __("She is quite tired.")
             else:
-                ttip = event_color["bad"] % "Warning! She is getting very tired."
+                ttip = event_color["bad"] % __("Warning! She is getting very tired.")
 
             return ttip
 
@@ -334,33 +334,33 @@ init -2 python:
             if g in farm.girls:
                 if farm.programs[g].target == "no training" and farm.programs[g].holding == "rest":
                     mood_change += 1
-                    mood_factors += "+1: She is resting at the farm.\n"
+                    mood_factors += __("+1: She is resting at the farm.\n")
                 else:
                     mood_change -= 1
-                    mood_factors += "-1: She is being kept at the farm.\n"
+                    mood_factors += __("-1: She is being kept at the farm.\n")
 
             else: # Working girls
                 w = 0
                 if g.works_today(check_autorest=True) and not resting:
                     if g.job == "whore" and g.get_effect("special", "whore mood modifier"):
                         w += 1
-                        mood_factors += "+1: She works as a whore and she loves it.\n"
+                        mood_factors += __("+1: She works as a whore and she loves it.\n")
                     elif g.workdays[calendar.get_weekday()] == 100:
                         w = -1
-                        mood_factors += "-1: She is working today.\n"
+                        mood_factors += __("-1: She is working today.\n")
                     else: # Half shift
                         w = -0.5
-                        mood_factors += "-0.5: She is working a half-shift today.\n"
+                        mood_factors += __("-0.5: She is working a half-shift today.\n")
                 elif g.assignment:
                     if g.assignment.type == "quest":
                         w = -1
-                        mood_factors += "-1: She is working on a quest today.\n"
+                        mood_factors += __("-1: She is working on a quest today.\n")
                     else: # Classes
                         w = -0.5
-                        mood_factors += "-0.5: She is attending a class today.\n"
+                        mood_factors += __("-0.5: She is attending a class today.\n")
                 else:
                     w = 2
-                    mood_factors += "+2: She is resting today.\n"
+                    mood_factors += __("+2: She is resting today.\n")
 
                 up = g.get_upkeep_modifier()
                 # fr = (len(g.friends) - len(g.rivals)) * g.get_effect("boost", "mood gains from friendship")
@@ -372,10 +372,10 @@ init -2 python:
                 mood_change += up + roo + bro + w + fr + rv
 
                 if up > 0:
-                    mood_factors += "+" + str(up) + ": She feels her allowance is generous.\n"
+                    mood_factors += "+" + str(up) + __(": She feels her allowance is generous.\n")
 
                 elif up < 0:
-                    mood_factors += str(up) + ": She isn't happy with her allowance.\n"
+                    mood_factors += str(up) + __(": She isn't happy with her allowance.\n")
 
                 if fr > 0:
                     mood_factors += "+" + str(round_best(fr)) + _(" : She has friends (%s).\n") % and_text([gf.name for gf in g.friends])
@@ -383,28 +383,28 @@ init -2 python:
                     mood_factors += str(round_best(rv)) + _(" : She has rivals (%s).\n") % and_text([gv.name for gv in g.rivals])
 
                 if roo > 4:
-                    mood_factors += "+" + str(round_best(roo)) + ": She loves her accommodations.\n"
+                    mood_factors += "+" + str(round_best(roo)) + __(": She loves her accommodations.\n")
                 elif roo > 0:
-                    mood_factors += "+" + str(round_best(roo)) + ": She likes her accommodations.\n"
+                    mood_factors += "+" + str(round_best(roo)) + __(": She likes her accommodations.\n")
                 elif roo < -4:
-                    mood_factors += str(round_best(roo)) + ": She hates her accommodations.\n"
+                    mood_factors += str(round_best(roo)) + __(": She hates her accommodations.\n")
                 elif roo < 0:
-                    mood_factors += str(round_best(roo)) + ": She doesn't like her accommodations.\n"
+                    mood_factors += str(round_best(roo)) + __(": She doesn't like her accommodations.\n")
 
                 # Change this later if more mood gain effects are added
                 if bro > 1:
-                    mood_factors += "+" + str(bro) + ": Other girls helped her relax.\n"
+                    mood_factors += "+" + str(bro) + __(": Other girls helped her relax.\n")
                 elif bro > 0:
-                    mood_factors += "+" + str(bro) + ": Another girl helped her relax.\n"
+                    mood_factors += "+" + str(bro) + __(": Another girl helped her relax.\n")
 
             # Life of Luxury perk
             mood_eff = g.get_effect("change", "mood")
             if mood_eff:
                 mood_change += mood_eff
                 if g.has_perk("Life of Luxury"):
-                    mood_factors += plus_minus(mood_eff) + ": She loves her outfit (Life of Luxury).\n"
+                    mood_factors += plus_minus(mood_eff) + __(": She loves her outfit (Life of Luxury).\n")
                 else:
-                    mood_factors += plus_minus(mood_eff) + ": Other effects.\n"
+                    mood_factors += plus_minus(mood_eff) + __(": Other effects.\n")
 
 
             if description:

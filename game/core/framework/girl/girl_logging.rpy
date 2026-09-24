@@ -128,13 +128,13 @@ init -2 python:
 
                     details[r] = str(round_int((100.0 * g.get_log(root + "_" + r, days) / g.get_log(root + "_score_base", days))))
 
-                ttip = "Perfect: " + details["perfect"] + "%" + "           Average: " + details["average"] + "%" + "\nVery good: " + details["very good"] + "%" + "      Bad: " + details["bad"] + "%" + "\nGood: " + details["good"] + "%" + "              Very bad: " + details["very bad"] + "%"
+                ttip = __("Perfect: %s%%           Average: %s%%\nVery good: %s%%      Bad: %s%%\nGood: %s%%              Very bad: %s%%") % (details["perfect"], details["average"], details["very good"], details["bad"], details["good"], details["very bad"])
 
                 return round(perf, 1), ttip
 
             else:
 
-                return "-", "This girl hasn't performed this action over the selected period."
+                return "-", __("This girl hasn't performed this action over the selected period.")
 
         def track_event(self, type, arg=None, silent=False):
             g = self.girl
@@ -184,10 +184,10 @@ init -2 python:
                 for ev in events:
                     description += calendar.get_date(ev.time) + ": " + ev.description
                     if g.remembers("reward", ev.type):
-                        description += "{color=[c_emerald]} *rewarded* [emo_heart]{/color}"
+                        description += __("{color=[c_emerald]} *rewarded* [emo_heart]{/color}")
 
                     if g.remembers("punish", ev.type):
-                        description += "{color=[c_crimson]} *punished* [emo_broken_heart]{/color}"
+                        description += __("{color=[c_crimson]} *punished* [emo_broken_heart]{/color}")
 
                     description += "\n"
 

@@ -273,7 +273,10 @@ init -3 python:
     def gold_text(nb, pos_marker=""):
         return plus_text(nb, "gold", pos_marker=pos_marker, decimals=False)
 
-    def and_text(li, txt=" and ", prune_empty=True, if_none=event_color["bad"] % "#ERROR# No list", separator=", "): # prune_empty removes empty entries from the list
+    def and_text(li, txt=None, prune_empty=True, if_none=event_color["bad"] % "#ERROR# No list", separator=", "): # prune_empty removes empty entries from the list
+
+        if txt is None:
+            txt = __(" and ")
 
         if prune_empty:
             li = [x for x in li if x]
@@ -497,19 +500,19 @@ init -3 python:
         r = dice(100)
 
         if r <= crit_fail:
-            return "critical failure"
+            return __("critical failure")
 
         elif r <= 25:
-            return "failure"
+            return __("failure")
 
         elif r <= 75:
-            return "neutral"
+            return __("neutral")
 
         elif r <= crit_success:
-            return "success"
+            return __("success")
 
         elif r <= 100:
-            return "critical success"
+            return __("critical success")
 
 
 
