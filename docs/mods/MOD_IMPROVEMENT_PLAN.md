@@ -157,6 +157,12 @@ README 声称"训练效率加成 30%"，与代码 `efficiency = 0.30 + 0.1×lv` 
 
 ---
 
+> **2026-09-25 运行时报错修复（用户实测反馈）**：
+> - `start_bidding()` 从未被调用 → 拍品永远停在 PENDING，出价牌不出现、落锤灰色。
+>   已在构建会话后补调用。
+> - 提交商品点 Cancel 返回 `("cancel",)` 落入成功分支 → `auction_lot` 未定义 NameError。
+>   已重置 `auction_err/auction_lot` 并仅在成功托管后播报名词。
+
 ## 三、收尾（两 Mod 共用）
 
 - [x] T1. 全部改动跑 Ren'Py 解析验证：`translate --empty chinese_simplified` 可执行

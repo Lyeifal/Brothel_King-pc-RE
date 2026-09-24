@@ -37,6 +37,12 @@ label auction_scene():
         "The auction house has nothing on the block today. Come back next week."
         return
 
+    ## EN: Open bidding on all lots — without this the lots stay PENDING and
+    ##     the paddle never appears (the gavel stays grey too).
+    ## ZH: 开启所有拍品的竞拍——缺少这一步拍品会一直停在 PENDING，
+    ##     出价牌不出现（落锤按钮也保持灰色）。
+    $ auction_session.start_bidding()
+
     play sound s_chimes
 
     scene black
@@ -124,6 +130,14 @@ label auction_bidding_loop:
         call screen auction_submit(auction_session)
         $ auction_sub = _return
 
+        ## EN: Reset before branching — a "cancel" (or any other tuple)
+        ##     must not fall through to the success narration with a stale
+        ##     or undefined auction_lot (previously crashed with NameError).
+        ## ZH: 分支前先重置——"cancel"（或其他元组）不得带着陈旧或
+        ##     未定义的 auction_lot 掉进成功叙述（此前因此 NameError 崩溃）。
+        $ auction_err = None
+        $ auction_lot = None
+
         if auction_sub:
             if auction_sub[0] == "girl":
                 python:
@@ -131,15 +145,13 @@ label auction_bidding_loop:
             elif auction_sub[0] == "item":
                 python:
                     auction_lot, auction_fee, auction_err = auction_house.submit_item(auction_sub[1], auction_session)
-            else:
-                $ auction_err = None
 
-            if auction_err:
-                $ renpy.say("", auction_err)
-            else:
-                $ auction_tmp_name = auction_lot.get_display_name()
-                gio "[auction_tmp_name], listed! The fee's non-refundable, but the proceeds are all yours if it sells."
-                $ renpy.say("", __("If the lot goes unsold, your goods come straight back to you."))
+        if auction_err:
+            $ renpy.say("", auction_err)
+        elif auction_lot is not None:
+            $ auction_tmp_name = auction_lot.get_display_name()
+            gio "[auction_tmp_name], listed! The fee's non-refundable, but the proceeds are all yours if it sells."
+            $ renpy.say("", __("If the lot goes unsold, your goods come straight back to you."))
 
     ## ────────────────────────────────────────────────────────────
     ##  Leave early — remaining lots are settled without the player
