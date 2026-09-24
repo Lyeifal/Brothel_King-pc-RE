@@ -24,9 +24,9 @@ screen suzume_hints(contact_list):
                         action Return(npc)
                     add img xalign 0.5 yalign 0.5 fit "contain"
                     if npc == NPC_suzume:
-                        tooltip "Talk to {b}Suzume{/b} for general tips, or once you have unlocked all 3 tips for a given Kunoichi."
+                        tooltip __("Talk to {b}Suzume{/b} for general tips, or once you have unlocked all 3 tips for a given Kunoichi.")
                     else:
-                        tooltip "Ask Suzume to track {b}%s{/b}, for information on the Kunoichi. {b}Costs 1 {/b}{image=img_AP}." % ttip
+                        tooltip __("Ask Suzume to track {b}%s{/b}, for information on the Kunoichi. {b}Costs 1 {/b}{image=img_AP}.") % ttip
 
             textbutton _("Go back") text_bold True xalign 0.5 yalign 0.5 xsize xres(120) ysize yres(120) xpadding 6 ypadding 6 action Return(False) # Note that 'None' is not a valid return value
 
@@ -36,13 +36,13 @@ screen suzume_hints(contact_list):
 
             for ninja in (NPC_narika, NPC_mizuki, NPC_haruka):
                 if ninja.flags["hints"] >=3:
-                    $ ttip = "You may now {b}talk to Suzume{/b} to devise a cunning action plan and finally catch her."
+                    $ ttip = __("You may now {b}talk to Suzume{/b} to devise a cunning action plan and finally catch her.")
                 else:
-                    $ ttip = "You need to {b}gather 3 hints{/b} before you can attempt to catch her again."
+                    $ ttip = __("You need to {b}gather 3 hints{/b} before you can attempt to catch her again.")
 
                 button background None xsize xres(160) ysize yres(80) xpadding 6 ypadding 6:
                     action NullAction()
-                    tooltip "You have received %s tips on {b}%s{/b}. %s" % (str(ninja.flags["hints"]), ninja.name, ttip)
+                    tooltip __("You have received %s tips on {b}%s{/b}. %s") % (str(ninja.flags["hints"]), ninja.name, ttip)
                     has hbox
                     add ninja.name.lower() yalign 0.5 fit "contain"
                     text "%s/3" % str(ninja.flags["hints"]) bold True xalign 0.5 yalign 0.5
@@ -243,7 +243,7 @@ screen main_character():
                     text "{color=[col2]}" + str(int(MC.get_stat(stat))) + "{/color}" size res_font(18) xanchor 1.0 xpos 0.8
 
                     if MC.skill_points > 0 and MC.get_stat(stat, raw=True) < MC.get_stat_cap(stat):
-                        textbutton "+" text_size res_font(14) xpos 0.85 xfill False xpadding xres(4) ypadding yres(2) action Return("raise_" + stat) tooltip "Use a skill point to raise this attribute (max %i)" % MC.get_stat_cap(stat)
+                        textbutton "+" text_size res_font(14) xpos 0.85 xfill False xpadding xres(4) ypadding yres(2) action Return("raise_" + stat) tooltip __("Use a skill point to raise this attribute (max %i)") % MC.get_stat_cap(stat)
 
             text "" size res_font(8)
 
@@ -260,7 +260,7 @@ screen main_character():
                     action NullAction()
                     tooltip text1
 
-                    text (str(int(MC.prestige)) + " prestige") size res_font(14) color c_brown
+                    text (__("%s prestige") % str(int(MC.prestige))) size res_font(14) color c_brown
 
                 button:
                     background None
@@ -406,7 +406,7 @@ screen farm_show_gold(girl, total_cust_budget=1000, income=1200, bonus = 1.0):
             add "tanuki" fit "contain"
         hbox spacing xres(24) align 0.5, 0.5:
             text (_("Customer tips (%i%%): ") % (bonus*100)) bold True size res_font(24) align 0.5, 0.5
-            use increment_counter(startv = total_cust_budget, stopv = income, duration = 3.0, _caption = "%s gold", _background = None, _size = 24, _color = _col)
+            use increment_counter(startv = total_cust_budget, stopv = income, duration = 3.0, _caption = __("%s gold"), _background = None, _size = 24, _color = _col)
 
 
 screen generic_event_screen(title, pic, desc, but_caption=_("Next")):
@@ -560,7 +560,7 @@ screen sex_details(girl):
             text __("Will work") size res_font(14) bold True xalign 0.5
 
             for act in extended_sex_acts:
-                text act.capitalize() size res_font(14) bold True
+                text __(act.capitalize()) size res_font(14) bold True
 
                 if debug_mode:
                     $ text1 = " (" + str(round_int(girl.preferences[act])) + ")"
@@ -568,7 +568,7 @@ screen sex_details(girl):
                     $ text1 = ""
 
                 if girl.personality_unlock[act]:
-                    text (preference_color[girl.get_preference(act)] % girl.get_preference(act).capitalize()) + text1 size res_font(14)
+                    text (preference_color[girl.get_preference(act)] % __(girl.get_preference(act).capitalize())) + text1 size res_font(14)
                 else:
                     text (_("Unknown") + text1) size res_font(14) italic True
 

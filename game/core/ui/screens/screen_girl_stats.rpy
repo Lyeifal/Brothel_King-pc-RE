@@ -330,22 +330,22 @@ screen girl_stats(girl, context = "girls"): # context can be girls, slavemarket,
                             if girl.job in all_jobs:
                                 $ job = girl.job
                                 $ jp_show = True
-                            $ jp_text = "Away"
+                            $ jp_text = __("Away")
 
                         elif girl.hurt > 0:
                             if girl.job in all_jobs:
                                 $ job = girl.job
                                 $ jp_show = True
-                            $ jp_text = "Hurt (%id)" % int(girl.hurt)
+                            $ jp_text = __("Hurt (%id)") % int(girl.hurt)
 
                         elif girl.workdays[calendar.get_weekday()] == 0:
                             if girl.job in all_jobs:
                                 $ job = girl.job
                                 $ jp_show = True
-                            $ jp_text = "Resting"
+                            $ jp_text = __("Resting")
 
                         elif girl.resting or not girl.job:
-                            $ jp_text = "Resting"
+                            $ jp_text = __("Resting")
 
                         elif girl.job in all_jobs:
                             $ job = girl.job
@@ -354,11 +354,11 @@ screen girl_stats(girl, context = "girls"): # context can be girls, slavemarket,
                         elif girl in farm.girls:
                             if farm.programs[girl].target == "no training":
                                 if farm.programs[girl].holding == "rest":
-                                    $ jp_text = "Resting"
+                                    $ jp_text = __("Resting")
                                 else:
-                                    $ jp_text = "Holding"
+                                    $ jp_text = __("Holding")
                             else:
-                                $ jp_text = "Training"
+                                $ jp_text = __("Training")
 
                         else: # Whore
                             $ job = None
@@ -530,7 +530,7 @@ screen girl_stats(girl, context = "girls"): # context can be girls, slavemarket,
                                         if not girls_firstvisit:
                                             action (SetVariable("selected_girl", girl), SetVariable("selected_sex_act", act), Return("sex_act"))
 
-                                        hovered (tt.Action("This will activate {b}" + act + " acts{/b} for this girl. At least one regular sex act muct be active as well."), Show("sex_details", girl=girl))
+                                        hovered (tt.Action(__("This will activate {b}%s acts{/b} for this girl. At least one regular sex act muct be active as well.") % act), Show("sex_details", girl=girl))
                                         unhovered Hide("sex_details")
                                     text __(act.capitalize()) layout "nobreak": #preference_color[pref] % stat.name:
                                         size res_font(12)
@@ -742,7 +742,7 @@ screen girl_stats(girl, context = "girls"): # context can be girls, slavemarket,
                                 yalign 0.5
                                 if girl.upkeep > minrange:
                                     action (SetField(girl, "upkeep", girl.get_previous_upkeep_step()), Function(girl.update_upkeep_ratio), Play("sound", s_click))
-                                tooltip ("Decrease her upkeep.")
+                                tooltip __("Decrease her upkeep.")
 
                             textbutton "+":
                                 style "small_button"
@@ -750,7 +750,7 @@ screen girl_stats(girl, context = "girls"): # context can be girls, slavemarket,
                                 yalign 0.5
                                 if girl.upkeep < maxrange:
                                     action (SetField(girl, "upkeep", girl.get_next_upkeep_step()), Function(girl.update_upkeep_ratio), Play("sound", s_click))
-                                tooltip ("Increase her upkeep.")
+                                tooltip __("Increase her upkeep.")
 
                             if girl.auto_upkeep:
                                 $ text1 = __("Auto upkeep setting is {b}{color=[c_green]}on{/color}{/b} {i}(shortcut: {u}Shift+a{/u}){/i}")
@@ -777,7 +777,7 @@ screen girl_stats(girl, context = "girls"): # context can be girls, slavemarket,
 
                         text "" size res_font(14)
 
-                        text str(girl.get_med_upkeep() // 4) + " gold (fixed)" size res_font(14)
+                        text __("%s gold (fixed)") % str(girl.get_med_upkeep() // 4) size res_font(14)
 
 
 screen assign_job(girl):
@@ -830,7 +830,7 @@ screen assign_job(girl):
                             text text1 size res_font(12) xalign 0.05 yalign 0.95 drop_shadow (1, 1)
 
                     else:
-                        text __("%s\n(unavailable)") % j.capitalize() selected_bold True xalign 0.5 yalign 0.5 drop_shadow (1, 1) size res_font(14)
+                        text __("%s\n(unavailable)") % __(j.capitalize()) selected_bold True xalign 0.5 yalign 0.5 drop_shadow (1, 1) size res_font(14)
 
 
             if farm.active:
@@ -847,13 +847,13 @@ screen assign_job(girl):
                 null
 
             if brothel.master_bedroom.level >= 1:
-                $ text1 = "Auto-train "
+                $ text1 = __("Auto-train ")
                 if girl in brothel.master_bedroom.girls:
                     $ ttip = __("Remove %s from your bedroom.") % girl.fullname
-                    $ text1 += "(ON)"
+                    $ text1 += __("(ON)")
                 else:
                     $ ttip = __("Add %s to your bedroom.") % girl.fullname
-                    $ text1 += "(OFF)"
+                    $ text1 += __("(OFF)")
 
                 button background None xpadding 2 ypadding 2 xpos 0:
                     action Return("master bedroom")

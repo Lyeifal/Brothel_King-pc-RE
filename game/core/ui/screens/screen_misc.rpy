@@ -39,9 +39,9 @@ screen tax_tab(fade=False):
             add ProportionalScale("resources/characters/npc/taxgirl/portrait.webp", *res_tb(35)) yalign 0.5
 
             if calendar.day in (28, 7):
-                $ due_date = "tomorrow"
+                $ due_date = _("tomorrow")
             elif calendar.day in (1, 8):
-                $ due_date = "tonight"
+                $ due_date = _("tonight")
             elif calendar.day >= 15:
                 $ due_date = _("in %s days") % (29-calendar.day)
             else: # Tax due date has been extended by a week
@@ -431,7 +431,7 @@ screen badge_button(girl, _size, t_size=20, active=True): # Where badge is a fil
 
     else:
         $ badge_name = badge.rsplit(".", 1)[0]
-        button xmargin 0 ymargin 0 xpadding 0 ypadding 0 background None xalign 0.9 yalign 0.1 tooltip "Current badge: {b}%s{/b}.\nClick to change the custom badge for this girl." % badge_name:
+        button xmargin 0 ymargin 0 xpadding 0 ypadding 0 background None xalign 0.9 yalign 0.1 tooltip __("Current badge: {b}%s{/b}.\nClick to change the custom badge for this girl.") % badge_name:
             if active:
                 action Return(("badge", girl))
             add ProportionalScale(badge, *res_tb(_size))
@@ -951,7 +951,7 @@ screen button_overlay(girl, context="girls"):
 
             xfill True
 
-            $ text1 = str(girl.get_price('buy')) + " gold"
+            $ text1 = __("%s gold") % str(girl.get_price('buy'))
 
             text text1 xalign 0.0
 
@@ -991,26 +991,26 @@ screen button_overlay(girl, context="girls"):
 
 
             if girl.away:
-                $ text1 = "Away"
+                $ text1 = __("Away")
                 $ ttip = __("She is away on a class or assignment for %s more day%s.") % (girl.return_date - calendar.time, plural(girl.return_date - calendar.time))
 
             elif girl.hurt > 0:
-                $ text1 = "Hurt"
+                $ text1 = __("Hurt")
                 if girl.hurt <= 1:
                     $ ttip = __("This girl is hurt and will need to rest for 1 more day until she is ready to do anything.")
                 else:
                     $ ttip = __("This girl is hurt and will need to rest for %s more days until she is ready to do anything.") % str(round_int(girl.hurt))
 
             elif girl.exhausted:
-                $ text1 = "Tired"
+                $ text1 = __("Tired")
                 $ ttip = __("This girl needs to be fully rested until she can work again.")
 
             elif girl.resting and girl.job:
-                $ text1 = "Resting"
+                $ text1 = __("Resting")
                 $ ttip = __("This girl has been set to rest today according with her schedule.")
 
             elif not girl.job:
-                $ text1 = "No {u}j{/u}ob"
+                $ text1 = __("No {u}j{/u}ob")
                 $ ttip = __("No job assigned. This girl has been set to rest until further instructions.")
 
             elif girl.work_whore:
@@ -1026,17 +1026,17 @@ screen button_overlay(girl, context="girls"):
             $ sched = girl.workdays[calendar.get_weekday()]
 
             if sched == 0:
-                $ text1 = "Resting"
+                $ text1 = __("Resting")
             elif sched == 50:
-                $ text1 = "Half-Shift"
+                $ text1 = __("Half-Shift")
             elif sched == 100:
-                $ text1 = "Full shift"
+                $ text1 = __("Full shift")
 
             if not girls_firstvisit:
                 key "noshift_K_d" action Return("sched")
 
             textbutton _("Sche{u}d{/u}ule") style "small_button":
-                tooltip "{i}Current schedule: %s{/i}.\nClick to open %s's schedule." % (text1, girl.fullname)
+                tooltip __("{i}Current schedule: %s{/i}.\nClick to open %s's schedule.") % (text1, girl.fullname)
                 if not girls_firstvisit:
                     action Return("sched") selected False
 
@@ -1060,7 +1060,7 @@ screen button_overlay(girl, context="girls"):
                     tooltip _("You cannot take any more actions today.")
 
                 elif girl.away:
-                    tooltip "You cannot interact with %s as she is away." % girl.name
+                    tooltip __("You cannot interact with %s as she is away.") % girl.name
 
             textbutton _("I{u}t{/u}ems"):
                 selected False
@@ -1081,7 +1081,7 @@ screen button_overlay(girl, context="girls"):
                     style "small_button"
                     if not (girls_firstvisit or girl.away):
                         action (SetVariable("selected_girl", girl), Return("dismiss"))
-                    tooltip "Release this free girl from your custody. ({i}shortcut: {u}Backspace{/u}{/i})"
+                    tooltip __("Release this free girl from your custody. ({i}shortcut: {u}Backspace{/u}{/i})")
 
             else:
                 textbutton _("Sell"):
@@ -1149,15 +1149,15 @@ screen button_overlay(girl, context="girls"):
             xfill True
 
             if girl.MC_relationship_level <= 1:
-                $ text1 = event_color["a little bad"] % "Acquaintance"
+                $ text1 = event_color["a little bad"] % __("Acquaintance")
             elif girl.MC_relationship_level == 1:
-                $ text1 = event_color["average"] % "Friend"
+                $ text1 = event_color["average"] % __("Friend")
             elif girl.MC_relationship_level == 2:
-                $ text1 = event_color["a little good"] % "Love interest"
+                $ text1 = event_color["a little good"] % __("Love interest")
             elif girl.MC_relationship_level == 3:
-                $ text1 = event_color["good"] % "Girlfriend"
+                $ text1 = event_color["good"] % __("Girlfriend")
             elif girl.MC_relationship_level >= 4:
-                $ text1 = event_color["special"] % "Lover"
+                $ text1 = event_color["special"] % __("Lover")
 
             text (_("Current relationship: %s") % text1)
 
@@ -1212,7 +1212,7 @@ screen button_overlay(girl, context="girls"):
                 textbutton _("Dismiss"):
                     text_size res_font(14)
                     action Return(("dismiss", girl))
-                    tooltip "Release this girl from your custody. ({i}shortcut: {u}Backspace{/u}{/i})"
+                    tooltip __("Release this girl from your custody. ({i}shortcut: {u}Backspace{/u}{/i})")
             else:
                 textbutton _("Sell"):
                     text_size res_font(14)
@@ -1255,7 +1255,7 @@ screen rank_level_details(girl):
                 $ text1 = rank_name[girl.rank]
 
                 if girl.rank == district.rank:
-                    $ text1 += " {size=12} (max){/size}"
+                    $ text1 += __(" {size=12} (max){/size}")
 
                 text text1 color c_softpurple
 

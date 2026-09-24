@@ -297,9 +297,9 @@ label visit_location():
 
                     if dice(6) >= 5:
                         if game.chapter >= 3 and dice(6) >= 6:
-                            call receive_item(search_items("Cimerian artefact")[0], msg="You have received a rare %s.", use_article=False) from _call_receive_item
+                            call receive_item(search_items("Cimerian artefact")[0], msg=__("You have received a rare %s."), use_article=False) from _call_receive_item
                         else:
-                            call receive_item(search_items("Cimerian scrap")[0], msg="You have received a piece of %s.", use_article=False) from _call_receive_item_1
+                            call receive_item(search_items("Cimerian scrap")[0], msg=__("You have received a piece of %s."), use_article=False) from _call_receive_item_1
 
                     else:
                         $ MC.gain_resource(number=dice(3), _random=True)
@@ -492,12 +492,12 @@ label farm_loop():
 
             if MC.get_items(target="minion", name="Healing powder"):
                 for mn in hurt:
-                    menu_list.append(("Use healing powder on [mn.name] (level " + str(mn.level) + " " + mn.type + ")", ("heal", mn)))
+                    menu_list.append((__("Use healing powder on %s (level %s %s)") % (mn.name, str(mn.level), mn.type), ("heal", mn)))
 
             for mn in hurt:
-                menu_list.append(("Retire [mn.name] (level " + str(mn.level) + " " + mn.type + ")", ("retire", mn)))
+                menu_list.append((__("Retire %s (level %s %s)") % (mn.name, str(mn.level), mn.type), ("retire", mn)))
 
-            menu_list.append(("Ignore it for now", ("ignore", None)))
+            menu_list.append((__("Ignore it for now"), ("ignore", None)))
 
         $ res, mn = menu(menu_list)
 
@@ -539,7 +539,7 @@ label farm_loop():
 
             show magic fire
 
-            $ you("Uh? What's going on here?", interact=False)
+            $ you(__("Uh? What's going on here?"), interact=False)
 
             hide magic fire
 
@@ -626,13 +626,13 @@ label farm_loop():
                 show screen dark_filter
 
                 python:
-                    menu_list = [("Which item do you wish to use?", None)]
+                    menu_list = [(__("Which item do you wish to use?"), None)]
 
                     # Healing powder
 
                     if MC.get_items(target="minion", name="Healing powder") and farm.get_hurt_minions():
                         for mn in farm.get_hurt_minions():
-                            menu_list.append(["Use healing powder on [mn.name] (level " + str(mn.level) + " " + mn.type + ")", ("heal", mn, MC.get_items(target="minion", name="Healing powder")[0])])
+                            menu_list.append([__("Use healing powder on %s (level %s %s)") % (mn.name, str(mn.level), mn.type), ("heal", mn, MC.get_items(target="minion", name="Healing powder")[0])])
 
                     # XP items
 
@@ -640,27 +640,27 @@ label farm_loop():
                         minions = farm.get_minions("stallion")
                         for it in MC.get_items(target="minion", effect_type="gain", effect_target="stallion xp"):
                             xp_bonus = it.get_effect("gain", "stallion xp") // len(minions)
-                            menu_list.append(["Use " + __(it.name) + " (+" + str(xp_bonus) + " XP per stallion", ("gain xp", minions, it, xp_bonus)])
+                            menu_list.append([__("Use %s (+%s XP per stallion)") % (__(it.name), str(xp_bonus)), ("gain xp", minions, it, xp_bonus)])
 
                     if MC.get_items(target="minion", effect_type="gain", effect_target="beast xp") and farm.get_minions("beast"):
                         minions = farm.get_minions("beast")
                         for it in MC.get_items(target="minion", effect_type="gain", effect_target="beast xp"):
                             xp_bonus = it.get_effect("gain", "beast xp") // len(minions)
-                            menu_list.append(["Use " + __(it.name) + " (+" + str(xp_bonus) + " XP per beast", ("gain xp", minions, it, xp_bonus)])
+                            menu_list.append([__("Use %s (+%s XP per beast)") % (__(it.name), str(xp_bonus)), ("gain xp", minions, it, xp_bonus)])
 
                     if MC.get_items(target="minion", effect_type="gain", effect_target="monster xp") and farm.get_minions("monster"):
                         minions = farm.get_minions("monster")
                         for it in MC.get_items(target="minion", effect_type="gain", effect_target="monster xp"):
                             xp_bonus = it.get_effect("gain", "monster xp") // len(minions)
-                            menu_list.append(["Use " + __(it.name) + " (+" + str(xp_bonus) + " XP per monster", ("gain xp", minions, it, xp_bonus)])
+                            menu_list.append([__("Use %s (+%s XP per monster)") % (__(it.name), str(xp_bonus)), ("gain xp", minions, it, xp_bonus)])
 
                     if MC.get_items(target="minion", effect_type="gain", effect_target="machine xp") and farm.get_minions("machine"):
                         minions = farm.get_minions("machine")
                         for it in MC.get_items(target="minion", effect_type="gain", effect_target="machine xp"):
                             xp_bonus = it.get_effect("gain", "machine xp") // len(minions)
-                            menu_list.append(["Use " + __(it.name) + " (+" + str(xp_bonus) + " XP per machine", ("gain xp", minions, it, xp_bonus)])
+                            menu_list.append([__("Use %s (+%s XP per machine)") % (__(it.name), str(xp_bonus)), ("gain xp", minions, it, xp_bonus)])
 
-                    menu_list.append(["Forget it", ("back")])
+                    menu_list.append([__("Forget it"), ("back")])
 
                 $ res = menu(menu_list)
 
@@ -963,7 +963,7 @@ label main_wait_for_input:
 
         if result:
             if result == "advance":
-                if renpy.call_screen("yes_no", __("Do you really want to advance to the next chapter?\n\n{size=-2}This will reset all your room improvements, but you will keep your furniture and decorations.\nIt will cost you {b}") + str(blist[game.chapter+1].cost) + " gold{/b}."):
+                if renpy.call_screen("yes_no", __("Do you really want to advance to the next chapter?\n\n{size=-2}This will reset all your room improvements, but you will keep your furniture and decorations.\nIt will cost you {b}%s gold{/b}.") % str(blist[game.chapter+1].cost)):
                     call advance_to_chapter(game.chapter+1) from _call_advance_to_chapter_1
                     jump brothel
 
@@ -2001,12 +2001,12 @@ label visit_merchant_loop():
 
                         $ right_focus.char(shopgirl_comment[cost[0]])
 
-                        $ right_focus.char("Very good. I will have more items for you after the next inventory restock.")
+                        $ right_focus.char(__("Very good. I will have more items for you after the next inventory restock."))
 
                         if right_focus.can_upgrade():
-                            $ right_focus.char("If you bring me more materials, I may be able to expand my inventory again. Keep it up!")
+                            $ right_focus.char(__("If you bring me more materials, I may be able to expand my inventory again. Keep it up!"))
                 else:
-                    $ right_focus.char("You do not have the necessary resources with you.{w=0.8}{nw}")
+                    $ right_focus.char(__("You do not have the necessary resources with you.{w=0.8}{nw}"))
 
             elif act == "back":
                 # Stella reward events

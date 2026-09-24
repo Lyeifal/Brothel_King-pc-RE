@@ -38,7 +38,7 @@ screen schedule(glist):
             for day in weekdays:
 
                 frame xsize xres(88) ysize yres(20)  yalign 1.0 background None:
-                    text day size res_font(14) xalign 0.5 color c_brown xsize xres(90):
+                    text __(day) size res_font(14) xalign 0.5 color c_brown xsize xres(90):
                         if day == calendar.get_weekday():
                             bold True
 
@@ -93,9 +93,9 @@ screen schedule(glist):
                             text text1 size res_font(12) text_align 1.0 color col xalign 1.0
 
                             if girl.exhausted:
-                                $ text1 = event_color["a little bad"] % "Exhausted"
+                                $ text1 = event_color["a little bad"] % __("Exhausted")
                             elif girl.hurt:
-                                $ text1 = event_color["bad"] % ("Hurt (" + str(round_int(girl.hurt)) + " days)")
+                                $ text1 = event_color["bad"] % (__("Hurt (%s days)") % str(round_int(girl.hurt)))
                             else:
                                 $ en_max = girl.get_stat_minmax("energy")[1]
 
@@ -123,36 +123,36 @@ screen schedule(glist):
                     for day in weekdays:
 
                         if girl.workdays[day] == 100:
-                            $ ttip = "She will work to the maximum of her abilities."
+                            $ ttip = __("She will work to the maximum of her abilities.")
 
                         elif girl.workdays[day] == 50:
-                            $ ttip = "She will receive half the usual number of clients, saving some energy."
+                            $ ttip = __("She will receive half the usual number of clients, saving some energy.")
 
                         elif girl.workdays[day] == 0:
-                            $ ttip = "She will rest and recover some energy."
+                            $ ttip = __("She will rest and recover some energy.")
 
-                        $ ttip += "\n{i}Right-click to reverse cycle order.{/i}"
+                        $ ttip += __("\n{i}Right-click to reverse cycle order.{/i}")
 
                         textbutton workshift_dict[girl.workdays[day]] text_size res_font(14) xsize xres(90) ysize yres(40) yalign 0.5 tooltip ttip idle_background workshift_color[girl.workdays[day]] hover_background c_darkbrown + "CC":
                             if girl.block_schedule != day:
                                 action Function(girl.cycle_workday, day) # renpy.curried_invoke_in_new_context(girl.cycle_workday, day)
                                 alternate Function(girl.cycle_workday, day, True)
                             else:
-                                action Function(notify, "You cannot change her schedule as you gave her a day off.")
-                                alternate Function(notify, "You cannot change her schedule as you gave her a day off.")
+                                action Function(notify, __("You cannot change her schedule as you gave her a day off."))
+                                alternate Function(notify, __("You cannot change her schedule as you gave her a day off."))
 
 
                     hbox yalign 0.5:
-                        textbutton _("S") text_size res_font(14) action ShowTransient("save_schedule", girl=girl, transition=Dissolve(0.15)) tooltip "Click here to save %s's schedule." % girl.fullname
-                        textbutton _("L") text_size res_font(14) action ShowTransient("load_schedule", girl=girl, transition=Dissolve(0.15)) tooltip "Click here to load a schedule for %s." % girl.fullname
+                        textbutton _("S") text_size res_font(14) action ShowTransient("save_schedule", girl=girl, transition=Dissolve(0.15)) tooltip __("Click here to save %s's schedule.") % girl.fullname
+                        textbutton _("L") text_size res_font(14) action ShowTransient("load_schedule", girl=girl, transition=Dissolve(0.15)) tooltip __("Click here to load a schedule for %s.") % girl.fullname
                     
                     if brothel.get_effect("special", "autorest")  or debug_mode:
                         if autorest_limit[girl] > 0:
-                            $ text1 = "at %i en." % autorest_limit[girl]
+                            $ text1 = __("at %i en.") % autorest_limit[girl]
                         else:
-                            $ text1 = "No"
+                            $ text1 = __("No")
 
-                        textbutton text1 text_size res_font(14) action Show("autorest", girl=girl) tooltip "Set up %s's autorest options." % girl.fullname yalign 0.5 xsize xres(70)
+                        textbutton text1 text_size res_font(14) action Show("autorest", girl=girl) tooltip __("Set up %s's autorest options.") % girl.fullname yalign 0.5 xsize xres(70)
 
         text ""
 
@@ -179,7 +179,7 @@ screen save_schedule(girl):
                         if game.saved_schedules[i]:
                             hbox align(0.5, 0.5):
                                 for j in range(7):
-                                    textbutton weekdays[j][0] xalign 0.5 background workshift_color[game.saved_schedules[i][j]]
+                                    textbutton __(weekdays[j][0]) xalign 0.5 background workshift_color[game.saved_schedules[i][j]]
                         else:
                             text _("Empty") italic True size res_font(18)
 
@@ -206,7 +206,7 @@ screen load_schedule(girl):
                         if game.saved_schedules[i]:
                             hbox align(0.5, 0.5):
                                 for j in range(7):
-                                    textbutton weekdays[j][0] xalign 0.5 background workshift_color[game.saved_schedules[i][j]]
+                                    textbutton __(weekdays[j][0]) xalign 0.5 background workshift_color[game.saved_schedules[i][j]]
                         else:
                             text _("Empty") italic True size res_font(18)
 

@@ -57,7 +57,7 @@ screen districts(context = "visit"): # returns a chosen district. Context can be
                         button xsize yres(120) ysize yres(120) xpadding 6 ypadding 6:
                             if MC.interactions >= 1:
                                 action Call("c3_interrogate_contacts")
-                            tooltip "Talk to Suzume to {b}talk to your contacts{/b} and discover {b}hints{/b} about the Kunoichi you are hunting."
+                            tooltip _("Talk to Suzume to {b}talk to your contacts{/b} and discover {b}hints{/b} about the Kunoichi you are hunting.")
                             has vbox
                             xalign 0.5
                             # text "Inquire" size res_font(14) xalign 0.5 yalign 0.5
@@ -155,7 +155,7 @@ screen district_button(dis, context):
                 if district == dis:
                     button xsize yres(45) ysize yres(45) xalign 0.95 yalign 0.05:
                         action NullAction()
-                        tooltip("This is where {b}%s{/b} is currently located." % brothel.name)
+                        tooltip(_("This is where {b}%s{/b} is currently located.") % brothel.name)
                         idle_background Frame("resources/ui/brothelnavbutton_idle.webp")
                         insensitive_background Frame("resources/ui/brothelnavbutton_idle.webp")
                         hover_background Frame("resources/ui/brothelnavbutton_hover.webp")
@@ -434,7 +434,7 @@ screen matchmaking(girls, customers, match_list, context="job"): # Where match l
     default girl_customers = defaultdict(list)
     default job_customers = defaultdict(int)
     default cust_act = defaultdict(str)
-    default load_txt = " (matching...)"
+    default load_txt = __(" (matching...)")
 
     if match_list:
         $ tick = min(1.5 / len(match_list), 0.2) # Takes maximum 1.5 seconds to display all customer matches
@@ -452,9 +452,9 @@ screen matchmaking(girls, customers, match_list, context="job"): # Where match l
         has vbox spacing 10
 
         if context == "job":
-            $ text1 = "Entertainment Phase"
+            $ text1 = __("Entertainment Phase")
         else:
-            $ text1 = "Whoring Phase"
+            $ text1 = __("Whoring Phase")
 
         text "[text1!t]" + load_txt xalign 0.0 bold True drop_shadow (2, 2) #color c_prune
 

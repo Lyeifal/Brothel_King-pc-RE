@@ -80,7 +80,7 @@ screen brothel():
                 $ text1 = __("You must pay {b}%s{/b} gold for your brothel services. You must also pay {b}%s{/b} gold for your girls upkeep") % ('{:,}'.format(bro_costs), '{:,}'.format(bro_upk))
 
                 if farm.active and farm.girls:
-                    $ text1 += " and {b}" + '{:,}'.format(farm_upk) + "{/b} gold for the girls in the farm"
+                    $ text1 += __(" and {b}%s{/b} gold for the girls in the farm") % '{:,}'.format(farm_upk)
                 $ text1 += __(" (not accounting for special effects).")
 
                 textbutton __("Daily cost: %s gold") % '{:,}'.format(bro_costs + bro_upk + farm_upk) text_size res_font(18) text_xalign 0.0 xalign 0.0 background c_ui_dark xsize xres(300) ysize yres(36) action NullAction() tooltip text1
@@ -111,9 +111,9 @@ screen brothel():
                                         add MC.current_trainer.portrait zoom 1.0 xalign 0.5 yalign 0.5
 
                                     if len(MC.trainers) == 1:
-                                        $ text1 = "No other trainer available"
+                                        $ text1 = __("No other trainer available")
                                     else:
-                                        $ text1 = "Trainers help your girls learning new skills. Discover new trainers by meeting the people of Zan!"
+                                        $ text1 = __("Trainers help your girls learning new skills. Discover new trainers by meeting the people of Zan!")
 
                                     button xmargin 0 xpadding 0 xsize xres(156) background None action NullAction() hovered tt.Action(text1):
 
@@ -131,12 +131,12 @@ screen brothel():
 
                                 vbox:
                                     text "{b}" + MC.current_trainer.name + "{/b}" size res_font(18) xalign 0.5
-                                    text (_("\n%s") % MC.current_trainer.trainer_description) size res_font(14) justify True
+                                    text (_("\n%s") % __(MC.current_trainer.trainer_description)) size res_font(14) justify True
 
                             else:
                                 textbutton "?" xsize xres(100) ysize yres(150)
 
-                                text "{i}Recruit a trainer to help your girls.{/i}" size res_font(14)
+                                text _("{i}Recruit a trainer to help your girls.{/i}") size res_font(14)
 
                 vbox spacing 10 xalign 1.0:
                     text _("{b}Helpers{/b}") size res_font(18) yalign 0.0 drop_shadow (2, 2)
@@ -348,7 +348,7 @@ screen brothel():
                                         add brothel.master_bedroom.get_pic(xres(tb_x), yres(tb_x*3/4), proportional=False) # idle_alpha 0.66 hover_alpha 1.0
 
                                         if brothel.master_bedroom.level:
-                                            text "Lv. %i{size=-8}/%i" % (brothel.master_bedroom.level , brothel.rank) xalign 0.9 yalign 0.1
+                                            text _("Lv. %i{size=-8}/%i") % (brothel.master_bedroom.level , brothel.rank) xalign 0.9 yalign 0.1
                                             hbox xalign 0.1 yalign 0.95:
                                                 for girl in brothel.master_bedroom.girls:
                                                     button background c_white yalign 0.5 xmargin 2 ymargin 0 xpadding 1 ypadding 1:
@@ -405,7 +405,7 @@ screen brothel():
                                         fit_first True
                                         add room.pic.get(xres(tb_x), yres(tb_x*3/4)) # idle_alpha 0.66 hover_alpha 1.0
                                         if not brothel_firstvisit:
-                                            text "Lv. %i{size=-8}/%i" % (room.level, district.rank) xalign 1.0
+                                            text _("Lv. %i{size=-8}/%i") % (room.level, district.rank) xalign 1.0
                                         if room.level:
                                             text (_("{image=img_cust} %i") % room.cust_limit) xalign 0.1 yalign 0.9
                                         if room.level < district.rank:
@@ -464,7 +464,7 @@ screen furniture():
                         $ dur = brothel.current_building.get_duration() - (calendar.time - brothel.started_building)
                         button xfill False yfill False xalign 0.5 yalign 0.5 background None:
                             action NullAction()
-                            tooltip (brothel.current_building.description + "\n" + str(dur) + " day(s) to complete.")
+                            tooltip (brothel.current_building.description + "\n" + __("%s day(s) to complete.") % str(dur))
                             add brothel.current_building.pic.get(*res_tb(50)) xalign 0.5 yalign 0.5
                             text str(dur) + "d" xalign 1.0 yalign 0.0 size res_font(18)
                     else:
@@ -602,9 +602,9 @@ screen furniture():
                     text _("Choose how incoming customers will be matched with your girls.") size res_font(14) italic True color c_brown
 
                     if game.matching_priority == "rank":
-                        $ text1 = "When possible, customers will be matched with girls of the same rank."
+                        $ text1 = __("When possible, customers will be matched with girls of the same rank.")
                     elif game.matching_priority == "act":
-                        $ text1 = "When possible, customers will be matched with girls that allow their preferred job or sex act."
+                        $ text1 = __("When possible, customers will be matched with girls that allow their preferred job or sex act.")
 
                     textbutton _("By %s") % game.matching_priority text_size res_font(18) xsize xres(100) action ToggleField(game, "matching_priority", true_value="rank", false_value="act")
 
@@ -623,7 +623,7 @@ screen furniture():
                         hbox box_wrap True:
                             for furn in [f for f in brothel.furniture if f.can_deactivate]:
 
-                                button xsize xres(56) ysize yres(56) action Function(furn.toggle) tooltip "Click here to activate or deactivate %s.\n%s ({b}%s{/b})" % (furn.name, get_description("", furn.effects), {True: "active", False: "inactive"}[furn.active]):
+                                button xsize xres(56) ysize yres(56) action Function(furn.toggle) tooltip __("Click here to activate or deactivate %s.\n%s ({b}%s{/b})") % (furn.name, get_description("", furn.effects), {True: __("active"), False: __("inactive")}[furn.active]):
 
                                     add furn.pic.get(*res_tb(50)) xalign 0.5 yalign 0.5
 
@@ -643,12 +643,12 @@ screen furniture():
                         hbox spacing xres(3):
                             vbox xsize xres(100):
                                 text _("Customers") size res_font(14) bold True color c_brown yalign 1.0
-                                text percent_text(brothel.get_adv_setting("attraction")) + " to customer attraction" size res_font(14) color c_brown
+                                text _("%s to customer attraction") % percent_text(brothel.get_adv_setting("attraction")) size res_font(14) color c_brown
                             bar thumb "tb empty" xsize xres(100) xpos 0 yalign 0.0 value FieldValue(brothel, "advertising_setting", range=4, offset=-2, action=Function(brothel.update_customer_count)) tooltip _("Use this setting to adjust the focus between customer attraction (how many customers will come to the brothel) and customer budget (the maximum amount of gold each customer is able to spend).")
                             vbox xsize xres(100):
                                 text _("Budget") size res_font(14) bold True color c_brown yalign 1.0
                                 #text str(brothel.advertising_setting)
-                                text percent_text(brothel.get_adv_setting("budget") / brothel.max_help) + " to customer budget" size res_font(14) color c_brown
+                                text _("%s to customer budget") % percent_text(brothel.get_adv_setting("budget") / brothel.max_help) size res_font(14) color c_brown
                     text "" size res_font(22)
 
                 text _("{b}Forecast{/b}") size res_font(18) yalign 0.0 drop_shadow (2, 2)

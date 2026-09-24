@@ -24,12 +24,12 @@ screen right_menu():
 
                 vbox spacing 6:
                     # Count of girls in Brothel
-                    text __("In brothel: {b}{size=+4}") + str(len(MC.girls)) + "{/size}{/b} /" + str(brothel.bedrooms) size res_font(12)
+                    text __("In brothel: {b}{size=+4}%s{/size}{/b} /%s") % (len(MC.girls), brothel.bedrooms) size res_font(12)
                     # Count of working girls
-                    text __("Working today: {b}{size=+4}") + str(sum(1 for g in MC.girls if g.works_today(check_autorest=True))) + "{/size}{/b} /" + str(len(MC.girls)) size res_font(12)
+                    text __("Working today: {b}{size=+4}%s{/size}{/b} /%s") % (sum(1 for g in MC.girls if g.works_today(check_autorest=True)), len(MC.girls)) size res_font(12)
                     # Count of girls in farm
                     if farm.active:
-                        text __("In farm: {b}{size=+4}") + str(len(farm.girls)) + "{/size}{/b} /" + str(farm.pens) size res_font(12)
+                        text __("In farm: {b}{size=+4}%s{/size}{/b} /%s") % (len(farm.girls), farm.pens) size res_font(12)
 
         # Right menu frame
 

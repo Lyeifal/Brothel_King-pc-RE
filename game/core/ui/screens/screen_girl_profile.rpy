@@ -62,7 +62,7 @@ screen girl_profile(girl, context = None): # context can be girls, slavemarket, 
                     if farm.programs[girl].target != "no training" or farm.programs[girl].holding != "rest":
                         hbox xalign 0.5 spacing xres(10):
                             textbutton _("Training mode:") xsize xres(100) yalign 0.5 text_xalign 0.0 text_size res_font(14) background None text_color c_white action NullAction() tooltip _("Decide if Gizel will force girls to train against their will.")
-                            textbutton farm.programs[girl].mode.capitalize() style "inv_no_padding" text_size res_font(14) yalign 0.5 text_bold True action NullAction() tooltip farm_ttip[farm.programs[girl].mode]
+                            textbutton __(farm.programs[girl].mode.capitalize()) style "inv_no_padding" text_size res_font(14) yalign 0.5 text_bold True action NullAction() tooltip farm_ttip[farm.programs[girl].mode]
 
                             if farm.programs[girl].mode == "tough":
                                 text _("{image=img_fear}")
@@ -72,7 +72,7 @@ screen girl_profile(girl, context = None): # context can be girls, slavemarket, 
                     if farm.programs[girl].target != "no training":
                         hbox xalign 0.5 spacing xres(10):
                             textbutton _("Training facility:") style "inv_no_padding" xsize xres(100) yalign 0.0 text_xalign 0.0 text_size res_font(14) text_color c_white action NullAction() tooltip _("Define which facility to use for her training (if any).")
-                            textbutton farm.programs[girl].installation_name.capitalize() style "inv_no_padding" yalign 0.0 text_size res_font(14) text_bold True action NullAction():
+                            textbutton __(farm.programs[girl].installation_name.capitalize()) style "inv_no_padding" yalign 0.0 text_size res_font(14) text_bold True action NullAction():
                                 if farm.programs[girl].installation:
                                     tooltip farm.programs[girl].installation.get_tooltip()
                                 else:
@@ -93,12 +93,12 @@ screen girl_profile(girl, context = None): # context can be girls, slavemarket, 
                         if farm.knows["weakness"][girl]:
                             hbox xalign 0.5 spacing xres(10):
                                 textbutton _("Use Weakness:") xsize xres(100) text_xalign 0.0 text_size res_font(14) background None text_color c_white action NullAction() tooltip _("Determines if Gizel will use her known weakness against her.")
-                                text {True: "No", False: "Yes"}[farm.programs[girl].avoid_weakness] size res_font(14) bold True
+                                text {True: __("No"), False: __("Yes")}[farm.programs[girl].avoid_weakness] size res_font(14) bold True
 
                     else:
                         hbox xalign 0.5 spacing 10:
                             textbutton _("Holding mode:") xsize 0.5 xfill True text_xalign 0 text_size res_font(14) background None text_color c_white xpadding 0 xmargin 0.05 ypadding 0 ymargin 0 action NullAction() hovered tt.Action(_("Decide what the girl will do when not in training (work or rest)."))
-                            text farm.programs[girl].holding.capitalize() size res_font(14) bold True
+                            text __(farm.programs[girl].holding.capitalize()) size res_font(14) bold True
 
                     textbutton _("Change program") text_size res_font(16) xalign 0.5 action Return(("change program", girl)) tooltip __("Change %s's current training program.") % girl.name
 

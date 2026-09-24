@@ -281,7 +281,7 @@ screen quick_start(def_panel = "MC"):
                 $ available_mixes = update_available_mixes()
 
                 vbox spacing 20 xalign 0.05:
-                    textbutton __("Active Girl mixes: %s") % and_text(persistent.game_mixes) xpadding 0 xmargin 0 background None text_color c_darkorange action NullAction() tooltip "{b}Warning{/b}: Your choice of active girl mixes cannot be changed after starting a game, although you can still add or remove girl packs from mixes."
+                    textbutton __("Active Girl mixes: %s") % and_text(persistent.game_mixes) xpadding 0 xmargin 0 background None text_color c_darkorange action NullAction() tooltip _("{b}Warning{/b}: Your choice of active girl mixes cannot be changed after starting a game, although you can still add or remove girl packs from mixes.")
 
                     text _("Click on a girl mix to add or remove it from this game (you must choose at least one).") size res_font(14) italic True color c_brown
 
@@ -311,7 +311,7 @@ screen quick_start(def_panel = "MC"):
 
                         vpgrid cols 10 draggable True allow_underfull True mousewheel True scrollbars "vertical" xalign 1.0:
                             for gp in selected_girlpacks:
-                                button background None xalign 0.5 yalign 0.5 xmargin 0 ymargin 0 action NullAction() tooltip get_name(gp, full=True) + "{i} by %s{/i} (%s)" % (gpinfo_dict[gp]["creator"], gpinfo_dict[gp]["version"]):
+                                button background None xalign 0.5 yalign 0.5 xmargin 0 ymargin 0 action NullAction() tooltip get_name(gp, full=True) + (__("{i} by %s{/i} (%s)") % (gpinfo_dict[gp]["creator"], gpinfo_dict[gp]["version"])):
                                     add fast_portrait(gp, *res_tb(30))
 
 
@@ -341,7 +341,7 @@ screen quick_start(def_panel = "MC"):
                                             color c_purple
 
                                 if s.type == "bool":
-                                    textbutton {0: "Activate", 1: "Deactivate"}[s.index] xsize xres(48) ysize yres(24) text_size res_font(12):
+                                    textbutton {0: __("Activate"), 1: __("Deactivate")}[s.index] xsize xres(48) ysize yres(24) text_size res_font(12):
                                         if s.can_lower():
                                             tooltip s.get_ttip("minus") % refund
                                             action Function(s._lower)
@@ -650,7 +650,7 @@ screen shortcuts():
         key "noshift_K_p" action (SetVariable("selected_destination", "farm_powers"), Jump("teleport"))
 
 
-screen close(act, name="back", ttip="Click to go back (or use right-click)."):
+screen close(act, name=_("back"), ttip=_("Click to go back (or use right-click).")):
 
     textbutton name:
 

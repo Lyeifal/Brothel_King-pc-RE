@@ -35,21 +35,21 @@ screen farm_menu(prog, can_cancel=True):
         $ _warning = False
 
         if prog.target == "no training" and prog.holding=="rest":
-            $ text1 = prog.girl.fullname + " will {b}Rest{/b} in her cell."
+            $ text1 = __("%s will {b}Rest{/b} in her cell.") % prog.girl.fullname
 
         else:
             if prog.target == "no training":
-                $ text1 = prog.girl.fullname + " will improve her {b}" + stat_name_dict[prog.holding.capitalize()] + "{/b} from doing chores."
+                $ text1 = __("%s will improve her {b}%s{/b} from doing chores.") % (prog.girl.fullname, stat_name_dict[prog.holding.capitalize()])
             else:
                 if prog.target == "auto":
-                    $ text1 = prog.girl.fullname + " will receive {b}automatic training{/b}"
+                    $ text1 = __("%s will receive {b}automatic training{/b}") % prog.girl.fullname
                 else:
-                    $ text1 = prog.girl.fullname + " will receive {b}" + prog.target.capitalize() + " training{/b}"
+                    $ text1 = __("%s will receive {b}%s training{/b}") % (prog.girl.fullname, __(prog.target.capitalize()))
 
                 if prog.auto_inst:
-                    $ text1 += ".\nI will assign her an {b}automatic facility{/b}, if there is room."
+                    $ text1 += __(".\nI will assign her an {b}automatic facility{/b}, if there is room.")
 
-                    $ _warning = "There might not be enough free minions to take care of her in all your facilities." # Reverse logic, because of the lack of for... else loops in screen language
+                    $ _warning = __("There might not be enough free minions to take care of her in all your facilities.") # Reverse logic, because of the lack of for... else loops in screen language
 
                     for inst in available_installations:
                         # $ other_assigned_girls = [g for g in inst.return_assigned_girls() if g != prog.girl]
@@ -58,20 +58,20 @@ screen farm_menu(prog, can_cancel=True):
                             $ _warning = False
 
                 elif prog.installation:
-                    $ text1 += " at the {b}" + capitalize(prog.installation.name) + "{/b}."
+                    $ text1 += __(" at the {b}%s{/b}.") % capitalize(prog.installation.name)
 
                     # $ other_assigned_girls = [g for g in inst.return_assigned_girls() if g != prog.girl]
                     $ free_m = len(prog.installation.get_healthy_minions()) - prog.installation.count_busy_minions()
 
                     if free_m < 0:
                         if prog.target == "group":
-                            $ _warning = "There may not be enough valid minions for group training. I may assign her to a different facility if other minions are available."
+                            $ _warning = __("There may not be enough valid minions for group training. I may assign her to a different facility if other minions are available.")
                         else:
-                            $ _warning = "There are not enough valid minions in the %s, I may have to rotate this girl in and out of the facility." % prog.installation.name
+                            $ _warning = __("There are not enough valid minions in the %s, I may have to rotate this girl in and out of the facility.") % prog.installation.name
 
         if _warning:
             $ pic = "side gizel upset"
-            $ text1 += event_color["very bad"] % ("\n{b}Warning{/b}: " + _warning)
+            $ text1 += event_color["very bad"] % (__("\n{b}Warning{/b}: ") + _warning)
         else:
             $ pic = "side gizel"
 
@@ -111,10 +111,10 @@ screen farm_menu(prog, can_cancel=True):
 
         hbox:
             for act in extended_sex_acts:
-                $ ttip = "Gizel will train her in %s acts using minions." % act
+                $ ttip = __("Gizel will train her in %s acts using minions.") % __(act.capitalize())
 
                 if act == "group":
-                    $ ttip += "\nRequires 2 or 3 free minions at the same facility."
+                    $ ttip += __("\nRequires 2 or 3 free minions at the same facility.")
 
                 textbutton act.capitalize() style "farm_button" text_size res_font(18) xsize yres(780//7):
                     if prog.target==act:
@@ -173,7 +173,7 @@ screen farm_menu(prog, can_cancel=True):
                     if farm.knows["weakness"][girl] and girl.weakness == inst.minion_type:
                         $ ttip += _("\nShe is weak to %ss. Training will be more efficient, but doing it against her will will increase fear and decrease mood faster.") % girl.weakness
                     if len(inst.get_healthy_minions()) < 1:
-                        $ ttip += event_color["bad"] % "\nThere are no available minions in this facility."
+                        $ ttip += event_color["bad"] % __("\nThere are no available minions in this facility.")
 
                     button style "farm_button":
                         if len(inst.get_healthy_minions()) >= 1:
@@ -219,7 +219,7 @@ screen farm_menu(prog, can_cancel=True):
         else:
             hbox xalign 0.5:
                 for train_mode in ("gentle", "tough", "hardcore"):
-                    textbutton _("Train her (%s)") % train_mode ypadding yres(9) text_color c_white text_size res_font(18) xsize yres(780//3) action (SetField(prog, "mode", train_mode), SelectedIf(prog.mode==train_mode), Return("commit")) tooltip farm_ttip[train_mode]
+                    textbutton _("Train her (%s)") % __(train_mode) ypadding yres(9) text_color c_white text_size res_font(18) xsize yres(780//3) action (SetField(prog, "mode", train_mode), SelectedIf(prog.mode==train_mode), Return("commit")) tooltip farm_ttip[train_mode]
 
 screen farm_tab():
 
@@ -254,19 +254,19 @@ screen farm_tab():
             text _("Gizel's Farm") drop_shadow (2, 2) bold True xalign 0
 
             if farm.girls:
-                $ text1 = "Ah, [MC.name]! Came to check on my pets?"
+                $ text1 = __("Ah, [MC.name]! Came to check on my pets?")
                 $ pic = "side gizel"
             else:
-                $ text1 = "My minions are bored... When are you going to send them some new playmates?"
+                $ text1 = __("My minions are bored... When are you going to send them some new playmates?")
                 $ pic = "side gizel upset"
 
             if MC.street_girls:
-                $ text1 += "\n\n%i street whores are currently housed in the barn." % len(MC.street_girls)
+                $ text1 += __("\n\n%i street whores are currently housed in the barn.") % len(MC.street_girls)
 
             hbox spacing 15:
                 if farm.powers:
                     if farm.powers == "intro":
-                        $ text1 = "[MC.name], come! There is something you must see."
+                        $ text1 = __("[MC.name], come! There is something you must see.")
                     button xmargin 6 ymargin 6 xpadding 6 ypadding 6 xysize res_tb(110):
                         text str_int(MC.mojo["purple"]) size res_font(18) drop_shadow (2, 2) xalign 0.5 yalign 0.0 color c_hotpink
                         text str_int(MC.mojo["green"]) size res_font(18) drop_shadow (2, 2) xalign 0.1 yalign 1.0 color c_lightgreen
@@ -279,10 +279,10 @@ screen farm_tab():
                             tooltip _("Click here to head where Gizel is calling you.")
                         elif evpower_deck.can_draw:
                             background None
-                            tooltip "New cards are available! Click here to access the {b}Power Deck{/b}."
+                            tooltip _("New cards are available! Click here to access the {b}Power Deck{/b}.")
                         else:
                             background Frame("resources/ui/powers/pentagram.webp")
-                            tooltip "Click here to access the {b}Power Deck{/b}."
+                            tooltip _("Click here to access the {b}Power Deck{/b}.")
 
                 button xfill True xmargin 3 ymargin 3 xpadding 6 ypadding 6 tooltip _("Ask Gizel for help about the farm.") background c_ui_dark:
                     if farm.powers == "intro":
@@ -312,16 +312,16 @@ screen farm_tab():
 
                         has vbox spacing 6
 
-                        $ ttip = "The farm can host one girl per pen."
+                        $ ttip = __("The farm can host one girl per pen.")
 
                         if farm.pens < farm.get_pen_limit():
-                            $ ttip += "\nClick here to add a new pen for " + str(farm.get_pen_cost()) + " gold."
+                            $ ttip += __("\nClick here to add a new pen for %s gold.") % str(farm.get_pen_cost())
                         elif brothel.rank == 5:
-                            $ ttip += "You cannot build any more pens."
+                            $ ttip += __("You cannot build any more pens.")
                         else:
-                            $ ttip += "Upgrade your brothel to be able to add more pens."
+                            $ ttip += __("Upgrade your brothel to be able to add more pens.")
 
-                        $ ttip += "\n(Currently available pens: " + str(farm.pens - len(farm.girls)) + ")"
+                        $ ttip += __("\n(Currently available pens: %s)") % str(farm.pens - len(farm.girls))
 
                         button:
                             xpadding 6
@@ -408,7 +408,7 @@ screen farm_tab():
                     vbox xsize xres(130) xfill True:
 
                         if len(farm.get_minions(_type)) > 0:
-                            textbutton str(len(farm.get_minions(_type))) + " " + _type.capitalize() + plural(len(farm.get_minions(_type))) style "inv_no_padding" text_size res_font(14) text_bold True xalign 0.5 action NullAction() tooltip minion_description[_type]
+                            textbutton str(len(farm.get_minions(_type))) + " " + __(_type.capitalize()) + plural(len(farm.get_minions(_type))) style "inv_no_padding" text_size res_font(14) text_bold True xalign 0.5 action NullAction() tooltip minion_description[_type]
 
                         text "" size res_font(6)
 
@@ -419,7 +419,7 @@ screen farm_tab():
                                 has hbox spacing xres(3)
                                 add mn.get_pic(*res_tb(20))
 
-                                text mn.name + ", Lv. " + str(mn.level) size res_font(14) yalign 0.5:
+                                text __("%s, Lv. %s") % (mn.name, mn.level) size res_font(14) yalign 0.5:
                                     if mn.hurt:
                                         color c_red
                                 if mn.hurt:
@@ -438,7 +438,7 @@ screen minion_button(mn, _action=NullAction(), hurt_action=NullAction(), is_acti
 
         has hbox spacing xres(3)
         add mn.get_pic(*res_tb(20))
-        text mn.name + ", Lv. " + str(mn.level) size res_font(14) yalign 0.5:
+        text __("%s, Lv. %s") % (mn.name, mn.level) size res_font(14) yalign 0.5:
             if mn.hurt:
                 color c_red
             elif not is_active:
@@ -469,7 +469,7 @@ screen fshow_init(girl, initial_act):
                 add girl.portrait.get(xres(40), yres(40))
                 text girl.fullname bold True yalign 0.5
             text _("Farm Show Setup") bold True yalign 0.5
-            use close(Return("cancel"), name="Cancel")
+            use close(Return("cancel"), name=_("Cancel"))
 
         text "" size 16
 
@@ -479,29 +479,29 @@ screen fshow_init(girl, initial_act):
             if 3 >= len(min_type) >= 2:
                 # Check if different minion types are mixed
                 if are_different(min_type):
-                    $ min_descript = "minions"
+                    $ min_descript = __("minions")
                 else:
                     $ min_descript = min_type[0] + "s"
             else:
-                $ min_descript = "random minions"
+                $ min_descript = __("random minions")
 
         elif len(min_type) == 1:
             $ min_descript = min_type[0]
 
         else:
-            $ min_descript = "random minion"
+            $ min_descript = __("random minion")
 
-        $ text1 = girl.name + " will %s in front of all customers.\n" % {"naked" : "do a {b}nude show next to a %s{/b}" % min_descript, "service" : "practice her {b}service skills with a %s{/b}" % min_descript, "sex" : "have {b}sex with a %s{/b}" % min_descript, "anal" : "have {b}anal sex with a %s{/b}" % min_descript, "fetish" : "do a {b}fetish show with a %s{/b}" % min_descript, "bisexual" : "fuck {b}another girl with a %s{/b}" % min_descript, "group" : "fuck a {b}group of %s{/b}" % min_descript}[selected_act]
+        $ text1 = __("%s will %s in front of all customers.\n") % (girl.name, {"naked" : __("do a {b}nude show next to a %s{/b}"), "service" : __("practice her {b}service skills with a %s{/b}"), "sex" : __("have {b}sex with a %s{/b}"), "anal" : __("have {b}anal sex with a %s{/b}"), "fetish" : __("do a {b}fetish show with a %s{/b}"), "bisexual" : __("fuck {b}another girl with a %s{/b}"), "group" : __("fuck a {b}group of %s{/b}")}[selected_act] % min_descript)
 
         if girl.will_do_farm_act(selected_act) == "accepted":
             $ pic = "side gizel"
-            $ text1 += "\n%s " % girl.name + event_color["good"] % "{b}accepts{/b}" + " this: She won't suffer negative consequences, but won't learn as much from the experience."
+            $ text1 += __("\n%s ") % girl.name + event_color["good"] % __("{b}accepts{/b}") + __(" this: She won't suffer negative consequences, but won't learn as much from the experience.")
         elif girl.will_do_farm_act(selected_act) == "resisted":
             $ pic = "side gizel upset"
-            $ text1 += "\n%s " % girl.name + event_color["average"] % "{b}resists{/b}" + " this: She will suffer from fear and mood penalties, but will learn from the experience."
+            $ text1 += __("\n%s ") % girl.name + event_color["average"] % __("{b}resists{/b}") + __(" this: She will suffer from fear and mood penalties, but will learn from the experience.")
         elif girl.will_do_farm_act(selected_act) == "refused":
             $ pic = "side gizel smirk"
-            $ text1 += "\n%s " % girl.name + event_color["bad"] % "{b}refuses{/b}" + " this: She will suffer from large fear and mood penalties, and her sanity may fray.\nIt's a gamble: this may cause a large swing in her preference for this act, good or bad."
+            $ text1 += __("\n%s ") % girl.name + event_color["bad"] % __("{b}refuses{/b}") + __(" this: She will suffer from large fear and mood penalties, and her sanity may fray.\nIt's a gamble: this may cause a large swing in her preference for this act, good or bad.")
 
         hbox spacing xres(20):
             frame background Frame (
@@ -527,7 +527,7 @@ screen fshow_init(girl, initial_act):
                 $ can_act, why_not = farm_can_perform_act(girl, act)
 
                 if can_act:
-                    $ ttip = _("She will perform %s acts during the show") % act
+                    $ ttip = _("She will perform %s acts during the show") % __(act.capitalize())
 
                     if girl.will_do_farm_act(act) == "accepted":
                         $ ttip += __(" (%s).") % (event_color["good"] % __("{b}accepts{/b}"))
@@ -593,9 +593,9 @@ screen fshow_init(girl, initial_act):
         hbox xpos 0.025 spacing xres(10) box_wrap True:
             for mn in farm.get_minions():
                 if selected_mn[mn]:
-                    use minion_button(mn, _action=ToggleDict(selected_mn, mn), hurt_action=Function(notify, "%s is hurt and cannot participate." % mn.name), is_active=True)
+                    use minion_button(mn, _action=ToggleDict(selected_mn, mn), hurt_action=Function(notify, __("%s is hurt and cannot participate.") % mn.name), is_active=True)
                 else:
-                    use minion_button(mn, _action=ToggleDict(selected_mn, mn), hurt_action=Function(notify, "%s is hurt and cannot participate." % mn.name), is_active=False)
+                    use minion_button(mn, _action=ToggleDict(selected_mn, mn), hurt_action=Function(notify, __("%s is hurt and cannot participate.") % mn.name), is_active=False)
 
         text "" size 16
 

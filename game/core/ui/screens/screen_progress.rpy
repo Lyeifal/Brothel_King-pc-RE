@@ -9,7 +9,7 @@ screen autorest(girl="default"):
     key "mouseup_3" action Hide("autorest")
 
     if girl == "default":
-        $ girl_name = "Default"
+        $ girl_name = __("Default")
     elif isinstance(girl, Girl):
         $ girl_name = girl.name
 
@@ -26,17 +26,17 @@ screen autorest(girl="default"):
         add "resources/items/furniture/scanner.webp" xalign 0.5
         text ""
         if girl == "default":
-            text "This makes your girls rest automatically if their energy falls too low.\nLeft-click to increase threshold / Right-click to lower it.\nThis will only apply to new girls unless you click 'Apply to all'" italic True size res_font(14) color c_white xsize xres(360)
+            text __("This makes your girls rest automatically if their energy falls too low.\nLeft-click to increase threshold / Right-click to lower it.\nThis will only apply to new girls unless you click 'Apply to all'") italic True size res_font(14) color c_white xsize xres(360)
         else:
-            text "This makes your girl rest automatically if her energy falls too low.\nLeft-click to increase threshold / Right-click to lower it." italic True size res_font(14) color c_white xsize xres(360)
+            text __("This makes your girl rest automatically if her energy falls too low.\nLeft-click to increase threshold / Right-click to lower it.") italic True size res_font(14) color c_white xsize xres(360)
             
         text "" size res_font(18)
         if autorest_limit[girl] == 0:
-            $ text1 = "%s - Autorest OFF"
+            $ text1 = __("%s - Autorest OFF") % girl_name
         else:
-            $ text1 = "%s - Autorest at <=" + str(autorest_limit[girl]) + " energy"
+            $ text1 = __("%s - Autorest at <= %s energy") % (girl_name, str(autorest_limit[girl]))
 
-        textbutton text1 % girl_name action Function(change_autorest, girl, "+") alternate Function(change_autorest, girl, "-") xalign 0.5 xsize xres(360) ysize yres(40) text_size res_font(18)
+        textbutton text1 action Function(change_autorest, girl, "+") alternate Function(change_autorest, girl, "-") xalign 0.5 xsize xres(360) ysize yres(40) text_size res_font(18)
         text "" size res_font(18)
 
         if girl == "default":
@@ -163,7 +163,7 @@ screen perks(girl):
                                 add girl.archetypes[archetype].get_pic(portrait=True).get(*res_tb(75)) alpha alpha_dict[archetype] at desaturate
                                 add "img_lock"  zoom 0.7 xalign 0.5 yalign 0.5 alpha alpha_dict[archetype]
 
-                        text archetype size res_font(12) selected_bold True color c_darkgrey selected_color c_black
+                        text __(archetype) size res_font(12) selected_bold True color c_darkgrey selected_color c_black
 
         frame background c_ui_dark xalign 0.5 yalign 0.5 ypadding 0 xpadding 0 xmargin 0:
             fixed fit_first True:
@@ -218,9 +218,9 @@ screen perks(girl):
                                     $ title = selected_perk.name
                                     $ pic = selected_perk.get_pic()
                                     if selected_perk.min_rank:
-                                        $ text1 = "Rank " + rank_name[selected_perk.min_rank] + " perk"
+                                        $ text1 = __("Rank %s perk") % rank_name[selected_perk.min_rank]
                                     else:
-                                        $ text1 = "Rank C perk"
+                                        $ text1 = __("Rank C perk")
                                     $ text2 = selected_perk.get_description()
 
                                 else:

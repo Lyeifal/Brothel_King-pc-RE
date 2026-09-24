@@ -8,7 +8,7 @@ screen active_spells():
     hbox box_wrap True:
         text _("Active:") size res_font(14) color c_brown yalign 0.5
         for spell in MC.active_spells:
-            button xpadding 0 ypadding 0 xsize xres(40) ysize yres(40) action NullAction() tooltip "{b}" + spell.name + "{/b}: " + spell.description: # get_description("", spell.effects):
+            button xpadding 0 ypadding 0 xsize xres(40) ysize yres(40) action NullAction() tooltip __("{b}%s{/b}: %s") % (spell.name, spell.description): # get_description("", spell.effects):
                 add spell.pic.get(*res_tb(30)) xalign 0.5 yalign 0.5
 
 screen spellbook():
@@ -55,15 +55,15 @@ screen spellbook():
 
                                 if s in MC.active_spells and s.auto:
                                     $ col = c_darkpurple
-                                    $ extra = "(Auto-cast: " + s.auto.capitalize() + ")\n(Active)"
+                                    $ extra = __("(Auto-cast: %s)\n(Active)") % __(s.auto.capitalize())
 
                                 elif s.auto:
                                     $ col = c_firered
-                                    $ extra = "(Auto-cast: " + s.auto.capitalize() + ")"
+                                    $ extra = __("(Auto-cast: %s)") % __(s.auto.capitalize())
 
                                 elif s in MC.active_spells:
                                     $ col = c_main
-                                    $ extra = "(Active)"
+                                    $ extra = __("(Active)")
 
                                 else:
                                     $ col = False
@@ -119,7 +119,7 @@ screen spellbook():
                                 $ i += 1
 
         else:
-            textbutton "{i}You do not know any spells yet. You must increase your level.{/i}" xalign 0.5 yalign 0.5 xsize xres(250) text_size res_font(18)
+            textbutton __("{i}You do not know any spells yet. You must increase your level.{/i}") xalign 0.5 yalign 0.5 xsize xres(250) text_size res_font(18)
 
     if MC.active_spells:
         frame xalign 0.5 yalign 0.95 xmaximum 0.85 xpadding 20:
@@ -173,7 +173,7 @@ screen postings(qlist):
                         xalign 0.0
 
                         if selected_quest.special:
-                            textbutton _("{image=img_star} %s {image=img_star}") % selected_quest.special xalign 0.0 yalign 0.5 ypadding 0 text_color c_orange background None action NullAction() hovered tt.Action(special_quest_description[selected_quest.special])
+                            textbutton _("{image=img_star} %s {image=img_star}") % __(selected_quest.special) xalign 0.0 yalign 0.5 ypadding 0 text_color c_orange background None action NullAction() hovered tt.Action(special_quest_description[selected_quest.special])
 
                         text selected_quest.name xalign 0.0 yalign 0.5 color c_prune
 
@@ -206,7 +206,7 @@ screen postings(qlist):
                                     text _("Cost") size res_font(18) color c_prune
 
                                     if not story_flags["postings free class"]:
-                                        text str(int(selected_quest.get_gold())) + " gold" size res_font(14) color c_brown
+                                        text __("%s gold") % str(int(selected_quest.get_gold())) size res_font(14) color c_brown
                                     else:
                                         text _("FREE") size res_font(14) color c_orange
 
@@ -241,16 +241,16 @@ screen postings(qlist):
 
                                 text "" size res_font(18)
                                 text _("JP bonus") size res_font(18) color c_prune
-                                textbutton selected_quest.jp_target.capitalize() text_size res_font(14) text_color c_brown xalign 0.0 yalign 0.5 xpadding 0 ypadding 0 background None:
+                                textbutton __(selected_quest.jp_target.capitalize()) text_size res_font(14) text_color c_brown xalign 0.0 yalign 0.5 xpadding 0 ypadding 0 background None:
                                     action NullAction()
-                                    tooltip "This class will give a small boost to %s Job Points (JP)." % selected_quest.jp_target
+                                    tooltip __("This class will give a small boost to %s Job Points (JP).") % selected_quest.jp_target
 
 
                             elif selected_quest.type == "quest":
 
                                 text _("Reward") size res_font(18) color c_prune
 
-                                text str(selected_quest.get_gold()) + " gold" size res_font(14) color c_brown
+                                text __("%s gold") % str(selected_quest.get_gold()) size res_font(14) color c_brown
 
                                 text "" size res_font(18)
 
@@ -290,9 +290,9 @@ screen postings(qlist):
                         $ r, ttip = selected_quest.test_eligibility(selected_girl)
 
                         if r: # or debug_mode:
-                            use girl_select(available_girls, action_button = ("Commit", (SetScreenVariable("clicked_quest", None), Return("commit")), ttip))
+                            use girl_select(available_girls, action_button = (__("Commit"), (SetScreenVariable("clicked_quest", None), Return("commit")), ttip))
                         else:
-                            use girl_select(available_girls, action_button = ("Commit", NullAction(), ttip))
+                            use girl_select(available_girls, action_button = (__("Commit"), NullAction(), ttip))
 
 
         vbox:
@@ -343,7 +343,7 @@ screen postings(qlist):
                                 elif quest.type == "class":
 
                                     $ ttip = __("This class may improve {b}%s{/b}.\n") % and_text([stat for stat, _min, _max in quest.bonuses])
-                                    $ ttip += str(len(quest.enrolled)) + "/" + str(quest.capacity) + " are enrolled in this class"
+                                    $ ttip += __("%s/%s are enrolled in this class") % (str(len(quest.enrolled)), str(quest.capacity))
                                     if quest.enrolled:
                                         $ ttip += __(" (%i%% discount).") % (len(quest.enrolled)*-100*class_discount)
                                     else:
@@ -376,7 +376,7 @@ screen postings(qlist):
                                                 $ text1 = ""
                                             text text1 + "[quest.name!t]"  size res_font(13)
                                             if quest.type != "class" or not story_flags["postings free class"]:
-                                                text str(int(quest.get_gold())) + " gold" size res_font(13)
+                                                text __("%s gold") % str(int(quest.get_gold())) size res_font(13)
                                             else:
                                                 text _("FREE") size res_font(13)
 
@@ -412,7 +412,8 @@ screen challenge_menu(header=_("What do you do?"), challenges=[], cancel=False):
             for title, challenge_type, diff in challenges:
                 $ chal = MC.challenges[challenge_type]
                 $ diff = chal.adjust_diff(diff)
-                $ ttip = __("{b}%s challenge{/b}: This challenges your {b}%s{/b} (%s). Estimated difficulty: {b}%s{/b}.") % (__(chal.name_i18n), chal.stat.capitalize(), str_int(MC.get_stat(chal.stat)), chal.estimate_diff(diff=diff))
+                $ ttip = __("{b}%s challenge{/b}: This challenges your {b}%s{/b} (%s). Estimated difficulty: {b}%s{/b}.") % (__(chal.name_i18n), __(chal.stat.capitalize()), str_int(MC.get_stat(chal.stat)), __(chal.estimate_diff(diff=diff)))
+                $ diff_label = __(chal.estimate_diff(diff=diff))
 
                 button background None action(Return(challenge_type)):
                     vbox:
@@ -429,7 +430,7 @@ screen challenge_menu(header=_("What do you do?"), challenges=[], cancel=False):
                             fixed yalign 0.5:
                                 fit_first True
                                 add chal.get_pic(xres(200), yres(120)) # idle_alpha 0.66 hover_alpha 1.0
-                                text chal.estimate_diff(diff=diff) size res_font(12)
+                                text diff_label size res_font(12)
                                 frame background None xpadding 10 xalign 0.5 yalign 0.5:
                                     text title size res_font(18) bold True
 
@@ -460,7 +461,7 @@ screen challenge(name, diff, raw=False, bonus=0, opponent_bonus=0, bonus_text=""
             frame background "#22222288" xfill True xsize xres(250) ysize yres(160) xpadding 10 ypadding 10:
 
                 vbox:
-                    textbutton __("Player %s: %s") % (chal.stat.capitalize(), str_int(MC.get_stat(chal.stat, raw=True))) text_size res_font(18) style "inv_no_padding"
+                    textbutton __("Player %s: %s") % (__(chal.stat.capitalize()), str_int(MC.get_stat(chal.stat, raw=True))) text_size res_font(18) style "inv_no_padding"
                     textbutton __("Active bonus: ") + str_int(bonus + MC.get_stat(chal.stat, raw) - MC.get_stat(chal.stat, raw=True) + MC.get_effect("change", chal.name + " challenges")) text_size int(config.screen_height*0.0222) style "inv_no_padding" action NullAction() tooltip bonus_text
                     text ""
 
@@ -482,7 +483,7 @@ screen challenge(name, diff, raw=False, bonus=0, opponent_bonus=0, bonus_text=""
                 has vbox
 
                 if chal.opposed:
-                    text __("Opponent %s: %s") % (chal.stat.capitalize(), str_int(diff + opponent_bonus)) size res_font(18)
+                    text __("Opponent %s: %s") % (__(chal.stat.capitalize()), str_int(diff + opponent_bonus)) size res_font(18)
                     text "" size res_font(18)
                     text ""
 
@@ -541,8 +542,8 @@ screen invisible_button():
 
     zorder 20
 
-    key "K_UP" action Function(renpy.notify, "Your precious keyboard can't save you now!")
-    key "K_DOWN" action Function(renpy.notify, "Your precious keyboard can't save you now!")
+    key "K_UP" action Function(renpy.notify, __("Your precious keyboard can't save you now!"))
+    key "K_DOWN" action Function(renpy.notify, __("Your precious keyboard can't save you now!"))
 
     vbox:
         style "menu"
@@ -878,12 +879,12 @@ screen girl_interact(girl, free=False):
                                         tooltip topic.is_available(girl, "advanced", free)[1]
                         else:
                             if topic.label == "slave_hypnotize_method":
-                                $ text1 = ": %s" % girl.magic_training.capitalize()
+                                $ text1 = __(": %s") % __(girl.magic_training.capitalize())
                             elif topic.label == "slave_hypnotize_driver":
                                 if MC.hypnotize_driver == "gold":
-                                    $ text1 = " %s {image=img_gold}" % MC.hypnotize_driver
+                                    $ text1 = __(" %s {image=img_gold}") % __(MC.hypnotize_driver)
                                 elif MC.hypnotize_driver == "mana":
-                                    $ text1 = " %s {image=img_MP}" % MC.hypnotize_driver
+                                    $ text1 = __(" %s {image=img_MP}") % __(MC.hypnotize_driver)
                             else:
                                 $ text1 = ""
 
@@ -986,7 +987,7 @@ screen debug_pics(girl):
                 textbutton _("Geisha Naked") text_size res_font(18) action SetScreenVariable("pic", girl.get_pic(perform_job_dict["geisha_tags"], perform_job_dict["geisha_tags2"], and_tags=["naked"], not_tags=["monster", "beast"], soft=True))
 
                 for k, tags in farm_holding_tags.items():
-                    textbutton k.capitalize() text_size res_font(18) action SetScreenVariable("pic", girl.get_pic(farm_holding_tags[k], soft=True))
+                    textbutton __(k.capitalize()) text_size res_font(18) action SetScreenVariable("pic", girl.get_pic(farm_holding_tags[k], soft=True))
 
             elif mode == "hard":
 
@@ -1047,7 +1048,7 @@ screen debug_pics(girl):
                         if act != "bisexual":
                             $ not_tags.append("bisexual")
 
-                        textbutton fix.name.capitalize() + " " + act.capitalize() text_size res_font(14) action SetScreenVariable("pic", girl.get_fix_pic(act, fix, not_tags=not_tags))
+                        textbutton __(fix.name.capitalize()) + " " + __(act.capitalize()) text_size res_font(14) action SetScreenVariable("pic", girl.get_fix_pic(act, fix, not_tags=not_tags))
 
 
 screen girl_mix(show_rating=False):
@@ -1069,7 +1070,7 @@ screen girl_mix(show_rating=False):
 
             hbox box_wrap True:
                 for mix_name in sorted(persistent.girl_mix):
-                    textbutton mix_name.capitalize()[:25] action (SetField(persistent, "active_mix", mix_name), SelectedIf(persistent.active_mix==mix_name)) text_size res_font(18) text_selected_bold True tooltip "Click here to see the %s girl mix." % mix_name.capitalize()
+                    textbutton __(mix_name.capitalize())[:25] action (SetField(persistent, "active_mix", mix_name), SelectedIf(persistent.active_mix==mix_name)) text_size res_font(18) text_selected_bold True tooltip __("Click here to see the %s girl mix.") % mix_name.capitalize()
                 textbutton "+" action renpy.curried_invoke_in_new_context(add_mix) text_size res_font(18) tooltip _("Click here to create a new girl mix.")
 
             text "" size res_font(12)
@@ -1095,7 +1096,7 @@ screen girl_mix(show_rating=False):
 
                 for gp in shown_gp:
                     $ pack_name = get_name(gp, full=True)
-                    $ ttip = "{b}%s{/b} {i}by %s{/i}\n%s\n\nVersion: %s\n\nDescription: %s\n\n" % (pack_name, gpinfo_dict[gp]["creator"], {True: event_color["good"] % "Unique girl", False: "Generic girl"}[gpinfo_dict[gp]["unique"]], gpinfo_dict[gp]["version"], gpinfo_dict[gp]["description"])
+                    $ ttip = __("{b}%s{/b} {i}by %s{/i}\n%s\n\nVersion: %s\n\nDescription: %s\n\n") % (pack_name, gpinfo_dict[gp]["creator"], {True: event_color["good"] % __("Unique girl"), False: __("Generic girl")}[gpinfo_dict[gp]["unique"]], gpinfo_dict[gp]["version"], gpinfo_dict[gp]["description"])
 
                     if filter.lower() in pack_name.lower():
                         if show_rating:
@@ -1106,18 +1107,18 @@ screen girl_mix(show_rating=False):
                             button xfill True ysize yres(82) ymargin 0 ypadding 0:
                                 if gp in persistent.girl_mix[persistent.active_mix]:
                                     action RemoveFromSet(persistent.girl_mix[persistent.active_mix], gp)
-                                    tooltip ttip + "{i}Click to remove this girl pack from the mix.{/i}"
+                                    tooltip ttip + __("{i}Click to remove this girl pack from the mix.{/i}")
                                 else:
                                     idle_background None
                                     action AddToSet(persistent.girl_mix[persistent.active_mix], gp)
-                                    tooltip ttip + "{i}Click to add this girl pack to the mix.{/i}"
+                                    tooltip ttip + __("{i}Click to add this girl pack to the mix.{/i}")
 
                                 hbox spacing 12 yalign 0.5:
                                     frame xalign 0.0 yalign 0.5 xsize xres(80) background None:
                                         add fast_portrait(gp, *res_tb(70)) xalign 0.5 yalign 0.5
 
                                     vbox xsize xres(360) yalign 0.5:
-                                        text pack_name + {True: event_color["good"] % " (unique)", False: ""}[gpinfo_dict[gp]["unique"]] drop_shadow (1, 1) font "resources/fonts/MATURASC.ttf" size res_font(18)
+                                        text pack_name + {True: event_color["good"] % __(" (unique)"), False: ""}[gpinfo_dict[gp]["unique"]] drop_shadow (1, 1) font "resources/fonts/MATURASC.ttf" size res_font(18)
                                         text _("by %s") % gpinfo_dict[gp]["creator"] drop_shadow (1, 1) size res_font(14) italic True
                                         if show_rating:
                                             text _("{size=14}Rating: {/size}%s") % rating size res_font(18) drop_shadow (1, 1) # drop_shadow_color c_white

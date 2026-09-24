@@ -52,7 +52,7 @@ screen resource_gain(resource, number): # Where resource is a string
         spacing 25
 
         add resource_dict[resource].get_pic(*res_tb(100))
-        text "+" + str(round_int(number)) + " " + resource size res_font(28) yalign 0.5
+        text "+" + str(round_int(number)) + " " + __(resource) size res_font(28) yalign 0.5
 
 screen resource_exchange():
 
@@ -85,7 +85,7 @@ screen resource_exchange():
                 for r in calendar.scarce:
                     $ resource = resource_dict[r]
                     if resource.rank <= story_flags["builder license"]:
-                        button background None action NullAction() tooltip __("There is a shortage of %s this week. Value is going up.") % r.capitalize():
+                        button background None action NullAction() tooltip __("There is a shortage of %s this week. Value is going up.") % __(r.capitalize()):
                             has hbox spacing 3
                             add resource.pic.get(*res_tb(20)) yalign 0.5
                             text "▲" size res_font(16) color c_emerald yalign 0.5 font "DejaVuSans.TTF"
@@ -93,7 +93,7 @@ screen resource_exchange():
                 for r in calendar.discounted:
                     $ resource = resource_dict[r]
                     if resource.rank <= story_flags["builder license"]:
-                        button background None action NullAction() tooltip __("%s is plentiful this week. Value is going down.") % r.capitalize():
+                        button background None action NullAction() tooltip __("%s is plentiful this week. Value is going down.") % __(r.capitalize()):
                             has hbox spacing 3
                             add resource.pic.get(*res_tb(20)) yalign 0.5
                             text "▼" size res_font(16) color c_red yalign 0.5 font "DejaVuSans.TTF"
@@ -122,13 +122,13 @@ screen resource_exchange():
 
                 if resource.rank <= story_flags["builder license"]:
 
-                    button xfill True ysize yres(60) action (SetScreenVariable("source", resource), SetScreenVariable("source_name", resource.name), SetScreenVariable("source_nb", 0), SelectedIf(source==resource)) tooltip ("Trade your " + r + " for other resources"):
+                    button xfill True ysize yres(60) action (SetScreenVariable("source", resource), SetScreenVariable("source_name", resource.name), SetScreenVariable("source_nb", 0), SelectedIf(source==resource)) tooltip __("Trade your %s for other resources") % r:
                         selected_background c_emerald
                         has hbox xfill True yfill True spacing 10
                         add resource.pic.get(*res_tb(40)) yalign 0.5
                         vbox xfill True spacing 6 yalign 0.5:
                             hbox spacing 3:
-                                text resource.name.capitalize() size res_font(18)
+                                text __(resource.name.capitalize()) size res_font(18)
                                 if r in calendar.discounted:
                                     text "▼" size res_font(14) yalign 0.5 font "DejaVuSans.TTF"
                                 elif r in calendar.scarce:
@@ -149,7 +149,7 @@ screen resource_exchange():
                 button xfill True ysize yres(60):
                     if "gold" != source:
                         action (SetScreenVariable("target", "gold"), SetScreenVariable("target_name", "gold"), SetScreenVariable("target_nb", 0), SelectedIf("gold"==target))
-                        tooltip "Sell your " + source_name + " for gold"
+                        tooltip __("Sell your %s for gold") % source_name
                         selected_background c_emerald
 
                     hbox xfill True yfill True spacing 10:
@@ -160,9 +160,9 @@ screen resource_exchange():
                                 hbox spacing 6:
                                     $ rate = get_exchange_rate(source, "gold")
                                     if rate < 1:
-                                        $ text2 = "Get 1 for " + str_dec(1/rate, 1)
+                                        $ text2 = __("Get 1 for %s") % str_dec(1/rate, 1)
                                     else:
-                                        $ text2 = "Get " + str_dec(rate, 1) + " for 1"
+                                        $ text2 = __("Get %s for 1") % str_dec(rate, 1)
 
                                     text text2 size res_font(14)
                                     add source.pic.get(*res_tb(16))
@@ -175,13 +175,13 @@ screen resource_exchange():
                         button xfill True ysize yres(60):
                             if resource != source:
                                 action (SetScreenVariable("target", resource), SetScreenVariable("target_name", resource.name), SetScreenVariable("target_nb", 0), SelectedIf(resource==target))
-                                tooltip "Trade " + r +" in exchange for your " + source_name
+                                tooltip __("Trade %s in exchange for your %s") % (r, source_name)
                                 selected_background c_emerald
                             hbox xfill True yfill True spacing 10:
                                 add resource.pic.get(*res_tb(40)) yalign 0.5
                                 vbox xfill True spacing 6 yalign 0.5:
                                     hbox spacing 3:
-                                        text resource.name.capitalize() size res_font(18)
+                                        text __(resource.name.capitalize()) size res_font(18)
                                         if r in calendar.discounted:
                                             text "▼" size res_font(14) yalign 0.5 font "DejaVuSans.TTF"
                                         elif r in calendar.scarce:
@@ -190,9 +190,9 @@ screen resource_exchange():
                                         hbox spacing 6:
                                             $ rate = get_exchange_rate(source, resource)
                                             if rate < 1:
-                                                $ text2 = "Get 1 for " + str(round_up(1/rate))
+                                                $ text2 = __("Get 1 for %s") % str(round_up(1/rate))
                                             else:
-                                                $ text2 = "Get " + str(round_up(rate)) + " for 1"
+                                                $ text2 = __("Get %s for 1") % str(round_up(rate))
 
                                             text text2 size res_font(14)
                                             if source == "gold":
@@ -255,17 +255,17 @@ screen resource_exchange():
                         action (SetScreenVariable("source_nb", source_nb-1), SetScreenVariable("target_nb", round_up((source_nb-1)*rate)))
 
                 if source == "gold":
-                    $ text1 = "Buy"
+                    $ text1 = __("Buy")
                 else:
-                    $ text1 = "Trade"
+                    $ text1 = __("Trade")
 
                 textbutton text1 xalign 0.5 xsize 0.8 ysize yres(65):
                     if source == "gold" and MC.gold >= source_nb:
                         action Return(("gold", target_name, source_nb, target_nb))
-                        tooltip "Buy " + str(target_nb) + " " + target_name + " for " + str(source_nb) + " " + target_name
+                        tooltip __("Buy %s %s for %s %s") % (str(target_nb), target_name, str(source_nb), target_name)
                     elif MC.resources[source_name] >= source_nb:
                         action Return((source_name, target_name, source_nb, target_nb))
-                        tooltip "Trade " + str(source_nb) + " " + source_name + " for " + str(target_nb) + " " + target_name
+                        tooltip __("Trade %s %s for %s %s") % (str(source_nb), source_name, str(target_nb), target_name)
 
                 textbutton "+" xsize xres(65) ysize yres(65) text_size res_font(32) xalign 1.0:
                     if rate < 1:
@@ -499,7 +499,7 @@ screen contract_result(contract, x=450):
                             text req size res_font(13) color c_brown xpos 0.02
                     if t >= contract.tasks.index(tsk) + 1:
                         if tsk.result:
-                            text str_int(tsk.value) + " gold" color c_darkgold yalign 0.5 size res_font(13) at contract_result_transform
+                            text __("%s gold") % str_int(tsk.value) color c_darkgold yalign 0.5 size res_font(13) at contract_result_transform
                         else:
                             text _("{color=[c_red]}{i}Failed{/i}{/color}") yalign 0.5 size res_font(13) at contract_result_transform
 
@@ -509,7 +509,7 @@ screen contract_result(contract, x=450):
                 text contract.get_special_description() size res_font(13) color c_brown
             if t >= len(contract.tasks) + 1:
                 if contract.special_bonus != 1.0:
-                    text str(contract.get_special_value()) + " gold" color c_darkgold yalign 0.5 size res_font(13) at contract_result_transform
+                    text __("%s gold") % str(contract.get_special_value()) color c_darkgold yalign 0.5 size res_font(13) at contract_result_transform
                 else:
                     text _("{i}Missing{/i}") color c_lightred yalign 0.5 size res_font(13) at contract_result_transform
 
@@ -540,7 +540,7 @@ screen contract_result(contract, x=450):
     if displayed_gold < earned_gold:
         timer 0.1 action [SetScreenVariable("displayed_gold", round_up((1 - 0.15) * displayed_gold + 0.15 * earned_gold)), Play("sound2",s_gold)] repeat True
 
-screen increment_counter(startv = 0, stopv = 1000, duration = 3.0, _caption = "%s gold", _background = None, _size = 16, _color = c_white, _sound=s_gold): # Displays an incremental counter counting from startv to stopv
+screen increment_counter(startv = 0, stopv = 1000, duration = 3.0, _caption = __("%s gold"), _background = None, _size = 16, _color = c_white, _sound=s_gold): # Displays an incremental counter counting from startv to stopv
 
     default displayv = startv
 
@@ -558,7 +558,7 @@ screen increment_counter(startv = 0, stopv = 1000, duration = 3.0, _caption = "%
     else:
         null
 
-screen increment_display(title="", _caption="%s gold", pic=None, side_pic=None, startv = 0, stopv = 1000, duration=3.0, _size = 16, _color = c_white, _sound=s_gold):
+screen increment_display(title="", _caption=__("%s gold"), pic=None, side_pic=None, startv = 0, stopv = 1000, duration=3.0, _size = 16, _color = c_white, _sound=s_gold):
 
     modal True
 

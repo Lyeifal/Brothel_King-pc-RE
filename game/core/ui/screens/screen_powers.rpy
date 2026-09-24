@@ -29,7 +29,7 @@ screen power_detail(pow):
 
             add pow.pic.get() xalign 0.5
 
-            text pow.name + {True : " (S)", False : ""}[pow.super] size res_font(24) bold True
+            text pow.name + {True : __(" (S)"), False : ""}[pow.super] size res_font(24) bold True
             text pow.description size res_font(14)
 
             text _("Mojo cost:") size res_font(18) bold True
@@ -53,7 +53,7 @@ screen power_detail(pow):
 
             text _("Target:") size res_font(18) bold True
             $ target = pow.target.capitalize()
-            text target.capitalize() size res_font(14)
+            text __(target) size res_font(14)
 
             if pow.duration:
                 text _("Duration:") size res_font(18) bold True
@@ -253,10 +253,10 @@ screen power_target(pow):
                 if not debug_mode:
                     if girl.last_power == calendar.time:
                         $ blocked.append(girl)
-                        $ block_dict[girl] = "This girl already conducted a power today."
+                        $ block_dict[girl] = __("This girl already conducted a power today.")
                     elif girl.broken:
                         $ blocked.append(girl)
-                        $ block_dict[girl] = "This girl's sanity is broken."
+                        $ block_dict[girl] = __("This girl's sanity is broken.")
 
             vbox xsize xres(200) ysize 0.9:
                 hbox:
@@ -277,14 +277,14 @@ screen power_target(pow):
                     elif pow.target == "MC":
                         text MC.name bold True color c_main
                     else:
-                        text pow.target.capitalize() bold True color c_yellow
+                        text __(pow.target.capitalize()) bold True color c_yellow
 
                 text ""
 
                 if pow.target == "other girl":
                     if selected_conduit:
                         $ blocked.append(selected_conduit)
-                        $ block_dict[selected_conduit] = "You cannot choose the conduit as the target."
+                        $ block_dict[selected_conduit] = __("You cannot choose the conduit as the target.")
                     if pow.power.startswith("leech"):
                         if selected_conduit:
                             $ glist1 = [g for g in MC.girls if g.rank <= selected_conduit.rank]
@@ -327,7 +327,7 @@ screen girl_vp_selector(girl_lists, _selected = None, return_value = "selected_t
         has vbox spacing yres(6)
 
         for title, glist in girl_lists:
-            textbutton title.capitalize() style "inv_no_padding" text_bold True
+            textbutton __(title.capitalize()) style "inv_no_padding" text_bold True
             if glist:
                 for girl in glist:
                     if title == "city":
@@ -378,7 +378,7 @@ screen mojo_payment(pow, conduit, other_girl = None):
                     text _("Payment: ") size res_font(14)
 
                 vbox xalign 0.0 spacing yres(12):
-                    text {True : "ON", False : "OFF"}[pow.super] size res_font(14) bold True
+                    text {True : __("ON"), False : __("OFF")}[pow.super] size res_font(14) bold True
                     text conduit.fullname size res_font(14) bold True
 
                     if pow.target == "conduit":
@@ -388,7 +388,7 @@ screen mojo_payment(pow, conduit, other_girl = None):
                     elif pow.target in ("other girl", "city girl"):
                         text other_girl.fullname size res_font(14) bold True
                     else:
-                        text pow.target.capitalize() size res_font(14) bold True
+                        text __(pow.target.capitalize()) size res_font(14) bold True
 
                     hbox xalign 0.5:
                         spacing xres(20)
@@ -635,4 +635,4 @@ screen brothel_ranking_button(bro, old_rank, new_rank, but_size):
 
 
 screen harem_button():
-    textbutton _("Chat") xsize xres(75) xalign 0.09 yalign 0.25 action Jump("harem_" + MC.current_trainer.name.lower()) hovered tt.Action("Talk to " + MC.current_trainer.name + ".")
+    textbutton _("Chat") xsize xres(75) xalign 0.09 yalign 0.25 action Jump("harem_" + MC.current_trainer.name.lower()) hovered tt.Action(__("Talk to %s.") % MC.current_trainer.name)

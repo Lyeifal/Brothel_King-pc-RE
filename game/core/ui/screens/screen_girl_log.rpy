@@ -214,7 +214,7 @@ screen girl_log(): # Reminder: selected_girl is a Global variable that holds the
 
                         text _("{b}Reputation{/b}") color c_purple size small xalign 0.5
 
-                        text "{b}Av. score{/b}" color c_crimson size small xalign 0.5
+                        text _("{b}Av. score{/b}") color c_crimson size small xalign 0.5
 
                         for job in all_jobs:
 
@@ -302,7 +302,7 @@ screen girl_log(): # Reminder: selected_girl is a Global variable that holds the
 
                         text _("{b}Reputation{/b}") color c_purple size small xalign 0.5
 
-                        text "{b}Av. score{/b}" color c_crimson size small xalign 0.5
+                        text _("{b}Av. score{/b}") color c_crimson size small xalign 0.5
 
                         for act in all_sex_acts:
 
