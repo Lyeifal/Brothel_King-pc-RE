@@ -9,7 +9,7 @@ init -1 python:
     ## EN: Load upgrade costs from the mod's own JSON, fallback to hardcoded values.
     ## ZH: 从 Mod 自带的 JSON 加载升级成本，失败则使用硬编码值。
     _garden_uc = {2: 500, 3: 1500}
-    _hotspring_uc = {2: 800, 3: 2000}
+    _hotspring_uc = {2: 800, 3: 2000, 4: 3200, 5: 4600, 6: 6200, 7: 8000, 8: 10000}
     try:
         import json as _cuc_json
         with renpy.loader.load("custom/mods/Courtyard/courtyard_upgrade_costs.json") as _cuc_file:
@@ -208,8 +208,10 @@ init -1 python:
                 "hotspring": CourtyardFacility(
                     facility_id="hotspring",
                     name_i18n_key="Hot Spring",
-                    description_i18n_key="A soothing hot spring that boosts energy recovery.",
-                    effects=[Effect("boost", "energy recovery", 0.15, scope="courtyard")],
+                    description_i18n_key="A soothing hot spring. Each day, every housed girl has a chance to recover from injuries a day sooner (3% at level 1, +1% per level, up to 10%).",
+                    effects=[Effect("boost", "injury recovery", 0.01, scope="courtyard")],
+                    upgrade_level=1,
+                    max_level=8,
                     upgrade_cost=_hotspring_uc,
                 ),
             }
@@ -335,6 +337,16 @@ init -1 python:
                 except Exception:
                     continue  ## EN: Skip a broken girl, keep processing others. ZH: 跳过出错的女孩，继续处理其他人。
 
+            ## EN: Hot spring: daily chance to shorten injuries by a day
+            ##     (design: storage girls mend faster in the spring).
+            ## ZH: 温泉：每日概率使受伤天数提前一天
+            ##     （设计：封存的女孩在温泉中恢复更快）。
+            for girl in list(self.girls):
+                try:
+                    self._injury_heal_check(girl)
+                except Exception:
+                    continue
+
             diff = courtyard_difficulty_value()
 
             for girl in list(self.girls):
@@ -368,16 +380,18 @@ init -1 python:
         def _recover_girl(self, girl):
             """
             EN: Apply daily recovery effects to a courtyard girl.
-                Facility boosts come from get_active_effects() (garden ->
-                mood recovery, hot spring -> energy recovery).
+                Facility boost comes from get_active_effects() (garden ->
+                mood recovery). The hot spring no longer boosts energy —
+                it now speeds up injury recovery (see _injury_heal_check).
             ZH: 对别院女孩应用每日恢复效果。
-                设施加成来自 get_active_effects()（花园→心情恢复，
-                温泉→能量恢复）。
+                设施加成来自 get_active_effects()（花园→心情恢复）。
+                温泉不再加速能量恢复——改为加速受伤恢复
+                （见 _injury_heal_check）。
             """
             ## EN: Base recovery values.
             ## ZH: 基础恢复值。
             mood_recover = 5 * (1.0 + self._facility_boost("mood recovery"))
-            energy_recover = 10 * (1.0 + self._facility_boost("energy recovery"))
+            energy_recover = 10
 
             ## EN: Apply recovery.
             ## ZH: 应用恢复。
@@ -385,6 +399,35 @@ init -1 python:
                 girl.mood = min(getattr(girl, "mood_max", 100), girl.mood + int(mood_recover))
             if hasattr(girl, "energy"):
                 girl.energy = min(getattr(girl, "energy_max", 100), girl.energy + int(energy_recover))
+
+        def _injury_heal_chance(self):
+            """
+            EN: Daily chance that the hot spring shortens a girl's injury
+                by one day: min(10%, 2% + 1% per spring level) — level 1
+                gives 3%, each further level +1%, capped at 10%.
+            ZH: 温泉使女孩受伤天数提前一天的每日概率：
+                min(10%, 2% + 每级 1%)——1 级为 3%，每升一级 +1%，
+                上限 10%。
+            """
+            return min(0.10, 0.02 + self._facility_boost("injury recovery"))
+
+        def _injury_heal_check(self, girl):
+            """
+            EN: Roll the hot-spring injury heal for one girl. Only girls
+                housed in the courtyard are checked (process_day iterates
+                self.girls). Notifies on success.
+            ZH: 为一名女孩掷温泉受伤恢复判定。仅检查安置在别院的女孩
+                （process_day 遍历 self.girls）。成功时发通知。
+            """
+            hurt = getattr(girl, "hurt", 0)
+            if not hurt:
+                return
+            if renpy.random.random() < self._injury_heal_chance():
+                try:
+                    girl.hurt = max(0, hurt - 1)
+                    renpy.notify(__("%s's injuries are healing faster in the hot spring.") % getattr(girl, "name", __("the girl")))
+                except Exception:
+                    pass
 
         def _decay_girl(self, girl, diff):
             """
