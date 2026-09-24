@@ -121,9 +121,9 @@ label before_main_menu(): # Will show before main menu (standard Ren'py label)
 
     if old_gp:
         if len(old_gp) == 1:
-            $ text1 = "The girl pack {b}{color=[c_red]}" + old_gp[0] + "{/color}{/b} couldn't be found and will be removed from the mix."
+            $ text1 = __("The girl pack {b}{color=[c_red]}%s{/color}{/b} couldn't be found and will be removed from the mix.") % old_gp[0]
         else:
-            $ text1 = "The following girl packs couldn't be found: {b}{color=[c_red]}" + and_text(old_gp) + "{/color}{/b}. They will be removed from the mix."
+            $ text1 = __("The following girl packs couldn't be found: {b}{color=[c_red]}%s{/color}{/b}. They will be removed from the mix.") % and_text(old_gp)
 
         $ renpy.call_screen("OK_screen", message=text1)
 
@@ -455,7 +455,7 @@ label remove_item(it, msg="%s has been removed from your inventory.", use_articl
         $ renpy.say(bk_error, __("Warning: This item cannot be removed, it is not instantiated (%s).") % it.name)
 
     if it not in MC.items:
-        $ notify("%s wasn't found in MC's inventory and couldn't be removed.", col=c_red)
+        $ notify(__("%s wasn't found in MC's inventory and couldn't be removed.") % it.name, col=c_red)
 
     $ MC.remove_item(it, use_sound=use_sound)
 
@@ -1522,11 +1522,11 @@ label found_escaped_girl(girl):
 
                     elif capture_option == "farm":
                         $ farm.send_girl(girl, FarmProgram(girl))
-                        $ notify("{b}[girl.fullname]{/b} has been sent to the farm.", pic=girl.portrait)
+                        $ notify(__("{b}[girl.fullname]{/b} has been sent to the farm."), pic=girl.portrait)
 
                     elif capture_option == "brothel":
                         $ MC.girls.append(girl)
-                        $ notify("{b}[girl.fullname]{/b} is back at the brothel.", pic=girl.portrait)
+                        $ notify(__("{b}[girl.fullname]{/b} is back at the brothel."), pic=girl.portrait)
 
                     if not brothel.can_have(girl.job):
                         $ notify(__("%s couldn't go back to being a %s, so she was set to rest.") % (girl.fullname, girl.job), pic=girl.portrait)
@@ -1575,11 +1575,11 @@ label found_escaped_girl(girl):
 
                     elif capture_option == "farm":
                         $ farm.send_girl(girl, FarmProgram(girl))
-                        $ notify("{b}[girl.fullname]{/b} has been sent to the farm.", pic=girl.portrait)
+                        $ notify(__("{b}[girl.fullname]{/b} has been sent to the farm."), pic=girl.portrait)
 
                     elif capture_option == "brothel":
                         $ MC.girls.append(girl)
-                        $ notify("{b}[girl.fullname]{/b} is back at the brothel.", pic=girl.portrait)
+                        $ notify(__("{b}[girl.fullname]{/b} is back at the brothel."), pic=girl.portrait)
 
                     if not brothel.can_have(girl.job):
                         $ notify(__("%s couldn't go back to being a %s, so she was set to rest.") % (girl.fullname, girl.job), pic=girl.portrait)
@@ -1635,11 +1635,11 @@ label found_escaped_girl(girl):
 
                     elif capture_option == "farm":
                         $ farm.send_girl(girl, FarmProgram(girl))
-                        $ notify("{b}[girl.fullname]{/b} has been sent to the farm.", pic=girl.portrait)
+                        $ notify(__("{b}[girl.fullname]{/b} has been sent to the farm."), pic=girl.portrait)
 
                     elif capture_option == "brothel":
                         $ MC.girls.append(girl)
-                        $ notify("{b}[girl.fullname]{/b} is back at the brothel.", pic=girl.portrait)
+                        $ notify(__("{b}[girl.fullname]{/b} is back at the brothel."), pic=girl.portrait)
 
                     if not brothel.can_have(girl.job):
                         $ notify(__("%s couldn't go back to being a %s, so she was set to rest.") % (girl.fullname, girl.job), pic=girl.portrait)
@@ -1727,13 +1727,13 @@ label job_up(obj): # This event describes the results of job ups
 
         primary, secondary, boost1, boost2 = job_up_dict[job]
 
-        text2 = "\n%s {color=[c_emerald]}+%s{/color}" % (primary.capitalize(), str(job_up_change[mylevel][0]))
-        text2 += "\n%s {color=[c_emerald]}+%s{/color}" % (secondary.capitalize(), str(job_up_change[mylevel][1]))
+        text2 = __("\n%s {color=[c_emerald]}+%s{/color}") % (__(primary.capitalize()), str(job_up_change[mylevel][0]))
+        text2 += __("\n%s {color=[c_emerald]}+%s{/color}") % (__(secondary.capitalize()), str(job_up_change[mylevel][1]))
 
         if job_up_change[mylevel][2] != 0:
 
-            text2 += "\n%s {color=[c_emerald]}+%s{/color}" % (boost1.capitalize(), str(job_up_change[mylevel][2]))
-            text2 += "\n%s {color=[c_emerald]}+%s{/color}" % (boost2.capitalize(), str(job_up_change[mylevel][2]))
+            text2 += __("\n%s {color=[c_emerald]}+%s{/color}") % (__(boost1.capitalize()), str(job_up_change[mylevel][2]))
+            text2 += __("\n%s {color=[c_emerald]}+%s{/color}") % (__(boost2.capitalize()), str(job_up_change[mylevel][2]))
 
         text2 += __("\n\n Skill level +1 {image=img_star}")
 
@@ -1760,7 +1760,7 @@ label too_tired(girl):
         extend ""
         "Give her the day off":
             if MC.get_alignment() == "evil":
-                $ text1 = " You better work extra hard after this."
+                $ text1 = __(" You better work extra hard after this.")
             else:
                 $ text1 = ""
 
@@ -2167,7 +2167,7 @@ label break_extractor(resource):
     "Your [resource] extractor has broken down."
     $ resource_dict[resource].deactivate_extractor(final=True)
 
-    call receive_item(item_dict["Cimerian scrap"], msg="You were able to scavenge a piece of %s from the wreck.", use_article=False) from _call_receive_item_16
+    call receive_item(item_dict["Cimerian scrap"], msg=__("You were able to scavenge a piece of %s from the wreck."), use_article=False) from _call_receive_item_16
 
     return
 
@@ -3248,7 +3248,7 @@ label visit_gina():
                     you "Speaking of 'ground-breaking', any more plans to fly off a cliff and crash down in the mud?"
                     gina "Why you... Grrr... *angry*"
 
-                    call receive_item(blueprint_item, msg="You have acquired %s. Seek a skilled craftsman (or woman) to try and make sense of it.") from _call_receive_item_17
+                    call receive_item(blueprint_item, msg=__("You have acquired %s. Seek a skilled craftsman (or woman) to try and make sense of it.")) from _call_receive_item_17
 
                 elif NPC_gina.flags["research"] >= 15 and not NPC_gina.flags["extractor2 unlock"]:
                     gina "Wait, what do we have here? I think I know where this goes..."
@@ -3634,7 +3634,7 @@ label vital_scanners_built():
 
     "You can now use the {b}autorest{/b} option from the {b}schedule screen{/b}."
 
-    $ vitals_scanner.description += " Allows autorest to be set up from the Schedule screen."
+    $ vitals_scanner.description += __(" Allows autorest to be set up from the Schedule screen.")
 
     return
 
@@ -3893,40 +3893,40 @@ label farm_show(girl=None):
         else: # Terrible score (-3 or less)
             intro_desc += farm_perform_dict["intro very bad"][low_stat] % farm_perform_dict["intro minion"][min_descript]
             if girl.is_("very dom"):
-                intro_desc += " In turn she has some choice words about their mothers, which "
+                intro_desc += __(" In turn she has some choice words about their mothers, which ")
 
                 if rand_choice(customers).rank <= 2:
-                    intro_desc += "makes the lowborns laugh, and appeases them a little."
+                    intro_desc += __("makes the lowborns laugh, and appeases them a little.")
                     cust_score += 1
                 else:
-                    intro_desc += "angers the highborns, earning her more acrimony."
+                    intro_desc += __("angers the highborns, earning her more acrimony.")
                     cust_score -= 1
 
             elif girl.is_("very sub"):
-                intro_desc += " Hearing their harsh words, she starts to cry, which "
+                intro_desc += __(" Hearing their harsh words, she starts to cry, which ")
 
                 if rand_choice(customers).rank <= 2:
-                    intro_desc += "makes the wretches laugh even harder."
+                    intro_desc += __("makes the wretches laugh even harder.")
                     cust_score -= 1
                 else:
-                    intro_desc += "gives remorse to the more charitable souls, mollifying them somehow."
+                    intro_desc += __("gives remorse to the more charitable souls, mollifying them somehow.")
                     cust_score += 1
 
         # Get crowd reaction
         if cust_score > 6: # Top score
-            intro_desc += "\n\nShe gets thunderous applause, her many fans shoving each other aside to catch a glimpse of her."
+            intro_desc += __("\n\nShe gets thunderous applause, her many fans shoving each other aside to catch a glimpse of her.")
             _sound = s_cheer
         elif cust_score > 3: # Good score
-            intro_desc += "\n\nShe gets an encouraging round of applause, as the customers wait for what was coming next."
+            intro_desc += __("\n\nShe gets an encouraging round of applause, as the customers wait for what was coming next.")
             _sound = s_chant
         elif cust_score > 0: # Average score
-            intro_desc += "\n\nThe crowd grows impatient, waiting to see if the show will deliver."
+            intro_desc += __("\n\nThe crowd grows impatient, waiting to see if the show will deliver.")
             _sound = s_chant
         elif cust_score > -3: # Bad score
-            intro_desc += "\n\nThe crowd loudly asks for what's coming next, on the verge of turning hostile."
+            intro_desc += __("\n\nThe crowd loudly asks for what's coming next, on the verge of turning hostile.")
             _sound = s_chant
         else: # Terrible score
-            intro_desc += "\n\nThe crowd boos once more and starts to throw various unpleasant projectiles, waiting for the show to move on."
+            intro_desc += __("\n\nThe crowd boos once more and starts to throw various unpleasant projectiles, waiting for the show to move on.")
             _sound = s_boos
 
         if debug_mode:
@@ -3954,10 +3954,10 @@ label farm_show(girl=None):
         # 4.2 Add girl reaction
         if girl.will_do_farm_act(chosen_act) == "resisted":
             cust_score -= 1
-            perf_desc += "\n\nShe is frowning and obviously ill at ease, as she resisted this."
+            perf_desc += __("\n\nShe is frowning and obviously ill at ease, as she resisted this.")
         elif girl.will_do_farm_act(chosen_act) == "refused":
             cust_score -= 2
-            perf_desc += "\n\nHer horror at the whole situation is manifest, as she was forced to perform against her will."
+            perf_desc += __("\n\nHer horror at the whole situation is manifest, as she was forced to perform against her will.")
 
         # 4.3 Perform
         cum_desc = ""
@@ -3972,31 +3972,31 @@ label farm_show(girl=None):
 
             if cust_score > -3:
                 if cust_score > 3:
-                    cum_desc += "\n\nWhile disappointed that nothing else happens, the customers linger, taking a good look at her."
+                    cum_desc += __("\n\nWhile disappointed that nothing else happens, the customers linger, taking a good look at her.")
                 elif cust_score > -3:
-                    cum_desc += "\n\nThe customers disperse, rather dissatisfied. Many complain her show was a letdown."
+                    cum_desc += __("\n\nThe customers disperse, rather dissatisfied. Many complain her show was a letdown.")
 
                 cum_desc += __("\n\nSome try to touch %s, ") % g_name
 
                 ob_score = girl.get_stat("obedience") - preference_modifier[girl.get_preference("naked")]
 
                 if ob_score >= 150:
-                    cum_desc += "and she more than happily obliges, asking the customers to not hesitate and fondle her more. They leave with a smile on their face."
+                    cum_desc += __("and she more than happily obliges, asking the customers to not hesitate and fondle her more. They leave with a smile on their face.")
                     cust_score += 2
                     perf_pic = girl.get_pic("fondle", "rest", and_tags=["naked"], soft=True)
                     change_dict["rep"] = district.rank
                 elif ob_score >= 75:
-                    cum_desc += "and she lets them, only a little bit nervous. They leave happier."
+                    cum_desc += __("and she lets them, only a little bit nervous. They leave happier.")
                     cust_score += 1
                     perf_pic = girl.get_pic("fondle", "rest", and_tags=["naked"], soft=True)
                 elif ob_score >= 25:
-                    cum_desc += "but she politely declines. They leave grumbling."
+                    cum_desc += __("but she politely declines. They leave grumbling.")
                 else:
-                    cum_desc += "but she refuses sharply. They leave outraged, complaining about wasting their time."
+                    cum_desc += __("but she refuses sharply. They leave outraged, complaining about wasting their time.")
                     change_dict["rep_neg"] = -district.rank
             else:
                 change_dict["rep_neg"] = -district.rank
-                cum_desc += "\n\nThe customers are angry, and Gizel almost has a riot on her hands. She has to use some spells and have her minions bang some heads together to restore order. This won't do your reputation any good."
+                cum_desc += __("\n\nThe customers are angry, and Gizel almost has a riot on her hands. She has to use some spells and have her minions bang some heads together to restore order. This won't do your reputation any good.")
 
         else: # Other sex acts
             if chosen_act != "group":
@@ -4475,7 +4475,7 @@ label send_to_farm_menu():
 label farm_max_skill(girl, skill):
 
     ## Replacing event with a less invasive notification
-    $ notify(girl.fullname + "'s {b}%s{/b} skill maxed out, visit the Farm to change training" % str(skill), "side gizel", c_lightmagenta)
+    $ notify(girl.fullname + __("'s {b}%s{/b} skill maxed out, visit the Farm to change training") % str(skill), "side gizel", c_lightmagenta)
 
     # scene black with fade
 
@@ -4502,7 +4502,7 @@ label farm_max_skill(girl, skill):
 label farm_max_pref(girl, act):
 
     ## Replacing event with a less invasive notification
-    $ notify(girl.fullname + "'s {b}%s{/b} preference maxed out, visit Farm to change training" % act, "side gizel", c_lightmagenta)
+    $ notify(girl.fullname + __("'s {b}%s{/b} preference maxed out, visit Farm to change training") % __(act), "side gizel", c_lightmagenta)
 
     # scene black with fade
 
@@ -4592,11 +4592,11 @@ label farm_resisted(girl, context):
             text1 = ""
             if context.startswith("rebel"):
                 if context.endswith("runaway"):
-                    text1 = "{b}%s ran away from the Farm!{/b}" % girl.fullname
+                    text1 = __("{b}%s ran away from the Farm!{/b}") % girl.fullname
                     _col = "very bad"
 
                 elif context.endswith("minion hurt"):
-                    text1 = "{b}%s ran away from the Farm!{/b}" % girl.fullname
+                    text1 = __("{b}%s ran away from the Farm!{/b}") % girl.fullname
                     _col = "very bad"
 
                 elif context.endswith("girl hurt"):
@@ -4942,7 +4942,7 @@ label advertising_intro():
             "Nah, I'm fine":
                 sill "Okay then. Ask me later if you need a refresher."
 
-        call screen OK_screen("Basic Outfits", "You have received {b}basic outfits{/b} for your advertising girls from Sill. It is a simple uniform with '%s' sewn on the front." % brothel.name, pic=Picture(path="resources/items/furniture/Basic outfit.webp"))
+        call screen OK_screen(__("Basic Outfits"), __("You have received {b}basic outfits{/b} for your advertising girls from Sill. It is a simple uniform with '%s' sewn on the front.") % brothel.name, pic=Picture(path="resources/items/furniture/Basic outfit.webp"))
 
         "You have received an outfit for your advertising girls, increasing your {b}advertising power{/b}. There may be a way to unlock more powerful outfits in the future."
 
@@ -5404,9 +5404,9 @@ label run_contract_continue:
     scene black with fade
 
     if len(temp_tasks) == 1:
-        $ tsk_text = "Your job"
+        $ tsk_text = __("Your job")
     else:
-        $ tsk_text = "Your first task"
+        $ tsk_text = __("Your first task")
 
     while temp_tasks: # Loop will be existed once a task fails
         $ tsk = temp_tasks.pop(0)
@@ -5449,9 +5449,9 @@ label run_contract_continue:
             jump run_contract_end
 
         if len(temp_tasks) > 1:
-            $ tsk_text = "Your next task"
+            $ tsk_text = __("Your next task")
         else:
-            $ tsk_text = "Your final task"
+            $ tsk_text = __("Your final task")
 
 label run_contract_end():
 
@@ -6177,7 +6177,7 @@ label contract_MC_event(): # The MC challenge part is hardcoded for each contrac
 
             con.char "More importantly, you caught the thief and we got back [con.organizer]'s family heirloom. You deserve a reward."
 
-            call receive_item(get_rand_item("exceptional"), msg="The maid hands you a very expensive item for your trouble: %s.") from _call_receive_item_18
+            call receive_item(get_rand_item("exceptional"), msg=__("The maid hands you a very expensive item for your trouble: %s.")) from _call_receive_item_18
 
         else:
             scene black with fade
@@ -6628,14 +6628,14 @@ label contract_MC_event(): # The MC challenge part is hardcoded for each contrac
 
 label contract_warning_1week():
 
-    $ notify("Reminder: You have an upcoming contract ([calendar.active_contract.title]) in 7 days.", "side jobgirl", col=c_firered)
+    $ notify(__("Reminder: You have an upcoming contract ([calendar.active_contract.title]) in 7 days."), "side jobgirl", col=c_firered)
     # jobgirl "Reminder: You have an upcoming contract ([calendar.active_contract.title]) in 7 days."
 
     return
 
 label contract_warning_1day():
 
-    $ notify("Reminder: You have an upcoming contract ([calendar.active_contract.title]) tomorrow!", "side jobgirl", col=c_firered)
+    $ notify(__("Reminder: You have an upcoming contract ([calendar.active_contract.title]) tomorrow!"), "side jobgirl", col=c_firered)
     # jobgirl "Reminder: You have an upcoming contract ([calendar.active_contract.title]) tomorrow!"
 
     return
@@ -7003,24 +7003,24 @@ label tax_check(): # Happens on the morning of the 15th of every month starting 
 
         else:
             if tx < 1000:
-                $ text1 = "A trifle."
+                $ text1 = __("A trifle.")
             elif tx < 5000:
-                $ text1 = "A token contribution, as a show of goodwill."
+                $ text1 = __("A token contribution, as a show of goodwill.")
             elif tx < 25000:
-                $ text1 = "A modest show of support for our collective welfare."
+                $ text1 = __("A modest show of support for our collective welfare.")
             elif tx < 50000:
-                $ text1 = "A decent effort, I hope you keep this going."
+                $ text1 = __("A decent effort, I hope you keep this going.")
             elif tx < 100000:
-                $ text1 = "A sizeable donation, for which the guild will be grateful."
+                $ text1 = __("A sizeable donation, for which the guild will be grateful.")
                 $ NPC_taxgirl.love += 1
             elif tx < 250000:
-                $ text1 = "A valuable contribution to the greater good, for which I will be personally thankful."
+                $ text1 = __("A valuable contribution to the greater good, for which I will be personally thankful.")
                 $ NPC_taxgirl.love += 3
             elif tx < 500000:
-                $ text1 = "A great effort for our cause, which will place you among our top contributors."
+                $ text1 = __("A great effort for our cause, which will place you among our top contributors.")
                 $ NPC_taxgirl.love += 6
             else:
-                $ text1 = "A King's ransom! No one is a bigger benefactor of the Guild than you."
+                $ text1 = __("A King's ransom! No one is a bigger benefactor of the Guild than you.")
                 $ NPC_taxgirl.love += 12
 
             $ renpy.block_rollback()
@@ -8363,7 +8363,7 @@ label asylum_return2(girl):
 label girl_disappeared(girl):
 
     $ MC.street_girls.remove(girl)
-    $ excuse = rand_choice(["she was abducted by an ogre party, or so I'm told", "she was a spice addict and couldn't keep her habit in check", "she was arrested by the guard and thrown into a dank cell to rot", "she bought passage onto on a ship, never to return again", "she dove into the sea, screaming. Her body was never found", "she fell into a rip in spacetime", "a horny demon abducted her into another dimension", "she was last seen boarding the carriage of an excentric noble, never to be seen again", "she was kidnapped by a foreign diplomat who took her home with him", "she joined a mysterious cult and vanished", "she had monstrous debt, and got kidnapped by the mob", "she was taken by a group of thugs, who dragged her into the sewers", "she bought a weapon and left on a quest", "she won the royal lottery", "she ran naked into the woods, never to be seen again", "she roughed up a priest, and was taken away by Arios Knights", "she stabbed a rich guy, and was thrown in jail for life", "she became a nun and joined the crusade", "she married a poor fool", "a jealous sorceress turned her into a toad", "she was abducted by imps, courtesy of some mage", "she got in league with the wrong people", "she was accused of seddition and conspiring against the crown", "she was taken in by relatives", "she got jumped by rogue slavers who rebranded her", "she left Zan for good to bring her trade to a different city", "she became a brothel owner of her own"])
+    $ excuse = rand_choice([__("she was abducted by an ogre party, or so I'm told"), __("she was a spice addict and couldn't keep her habit in check"), __("she was arrested by the guard and thrown into a dank cell to rot"), __("she bought passage onto on a ship, never to return again"), __("she dove into the sea, screaming. Her body was never found"), __("she fell into a rip in spacetime"), __("a horny demon abducted her into another dimension"), __("she was last seen boarding the carriage of an excentric noble, never to be seen again"), __("she was kidnapped by a foreign diplomat who took her home with him"), __("she joined a mysterious cult and vanished"), __("she had monstrous debt, and got kidnapped by the mob"), __("she was taken by a group of thugs, who dragged her into the sewers"), __("she bought a weapon and left on a quest"), __("she won the royal lottery"), __("she ran naked into the woods, never to be seen again"), __("she roughed up a priest, and was taken away by Arios Knights"), __("she stabbed a rich guy, and was thrown in jail for life"), __("she became a nun and joined the crusade"), __("she married a poor fool"), __("a jealous sorceress turned her into a toad"), __("she was abducted by imps, courtesy of some mage"), __("she got in league with the wrong people"), __("she was accused of seddition and conspiring against the crown"), __("she was taken in by relatives"), __("she got jumped by rogue slavers who rebranded her"), __("she left Zan for good to bring her trade to a different city"), __("she became a brothel owner of her own")])
 
     gizel normal "The street whore [girl.fullname] has disappeared tonight. It seems [excuse]. I guess we won't see her ever again."
 
@@ -8388,7 +8388,7 @@ label acquire_girl(girl, price=0, context="generic", can_follow=True):
         if context == "intro":
             if len(MC.girls) >= 1:
                 $ brothel.add_room(forced=True)
-                $ notify("You paid to unlock an additional bedroom.")
+                $ notify(__("You paid to unlock an additional bedroom."))
             $ result = True
 
         elif price == 0 or renpy.call_screen("yes_no", __("Do you really want to buy [girl.fullname] for [price] gold?")):
@@ -8586,7 +8586,7 @@ label free_girl_challenge():
             call acquire_girl(girl) from _call_acquire_girl_8
 
             if _return:
-                $ notify("{b}[girl.fullname]{/b} has joined your brothel.", pic=girl.portrait)
+                $ notify(__("{b}[girl.fullname]{/b} has joined your brothel."), pic=girl.portrait)
 
                 return
 

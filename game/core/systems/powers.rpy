@@ -116,10 +116,10 @@
 
         def can_activate(self):
             if self.activation_limit == "once" and self.power in MC.active_powers:
-                notify(event_color["a little good"] % (__("%s is already active") % self.power.capitalize()))
+                notify(event_color["a little good"] % (__("%s is already active") % __(self.power.capitalize())))
                 return False
             elif not MC.has_mojo(self.get_mojo_cost()):
-                notify(event_color["a little bad"] % ("You do not have enough mojo to cast this power"))
+                notify(event_color["a little bad"] % (__("You do not have enough mojo to cast this power")))
                 return False
             return True
 
@@ -140,7 +140,7 @@
                 debug_notify("Power deactivation failure: %s is not in the list of active powers" % self.power)
             MC.active_powers.remove(self.power)
             self.active = False
-            notify(self.name + " is now inactive.")
+            notify(self.name + __(" is now inactive."))
 
         def get_mojo_cost(self, conduit=None):
             mod = 0
@@ -603,21 +603,21 @@ label power_use(_pow, girl, girl2):
                 for i in range(int(1 + chg//50)): text_changes += "+"
                 text_changes += "{/color}"
             else:
-                text_changes = "{i}No change.{/i}"
+                text_changes = __("{i}No change.{/i}")
 
             if new_pref and new_pref != "refuses":
                 if girl.is_("lewd"):
-                    text1 = pref_response["lewd " + new_pref] % long_act_description[_pow.power]
+                    text1 = pref_response["lewd " + new_pref] % __(long_act_description[_pow.power])
                 else:
-                    text1 = pref_response["modest " + new_pref] % long_act_description[_pow.power]
+                    text1 = pref_response["modest " + new_pref] % __(long_act_description[_pow.power])
             else:
-                text1 = __("Her %s preference has moderately increased.") % _pow.power
+                text1 = __("Her %s preference has moderately increased.") % __(_pow.power)
 
         $ pic = girl.get_pic("rest", and_tags = ["libido"])
 
         if new_pref and new_pref != "refuses":
             call show_night_event(Event(pic, char = girl.char, text = text1, changes = text_changes, sound = s_ahaa, type = "special")) from _call_show_night_event_9
-            $ text1 = girl.fullname + " is now " + preference_color[new_pref] % new_pref + " with " + _pow.power + " acts."
+            $ text1 = __("%s is now %s with %s acts.") % (girl.fullname, preference_color[new_pref] % __(new_pref), __(_pow.power))
 
         call show_night_event(Event(pic, char = narrator, text = text1, changes = text_changes, type = "special")) from _call_show_night_event_10
 
@@ -631,7 +631,7 @@ label power_use(_pow, girl, girl2):
         $ neg_fix = [fix for fix in girl.neg_fixations if (girl.personality_unlock[fix.name] or NGP_settings_dict["fixation"].get())]
 
         if neg_fix:
-            $ fix = menu([("Choose negative fixation to remove", None)] + [(f.name.capitalize(), f) for f in neg_fix] + [("Cancel", "back")])
+            $ fix = menu([(__("Choose negative fixation to remove"), None)] + [(__(f.name.capitalize()), f) for f in neg_fix] + [(__("Cancel"), "back")])
 
             if fix == "back":
                 $ MC.refund_mojo(spent_mojo)
@@ -643,11 +643,13 @@ label power_use(_pow, girl, girl2):
                     $ new_fix = girl.add_random_fixation(type="neg")[0] # Adding the new fixation first ensures the old one will not be randomly chosen
                     if new_fix:
                         $ girl.personality_unlock[new_fix] = False
-                        $ text1 = " She has received a new negative fixation."
+                        $ text1 = __(" She has received a new negative fixation.")
 
                 $ girl.remove_fixation(fix.name)
 
-                "[girl.fullname] is no longer uncomfortable with [fix.name].[text1]"
+                $ fix_text = __(fix.name)
+
+                "[girl.fullname] is no longer uncomfortable with [fix_text].[text1]"
 
                 if _pow.super:
                     call exhaust_girl(girl, _pow.super) from _call_exhaust_girl_1
@@ -873,7 +875,7 @@ label power_use(_pow, girl, girl2):
                             for g in receiving_girls:
                                 g.change_jp(indiv_jp, job, False, False)
 
-                            changes += "%i girl%s have received {b}%i %s jp{/b} each from %s (%s). " % (len(receiving_girls), plural(len(receiving_girls)), indiv_jp, job, girl.fullname, and_text([g.fullname for g in receiving_girls]))
+                            changes += __("%i girl%s have received {b}%i %s jp{/b} each from %s (%s). ") % (len(receiving_girls), plural(len(receiving_girls)), indiv_jp, __(job), girl.fullname, and_text([g.fullname for g in receiving_girls]))
 
                 if not changes:
                     "No girls of a lesser job level could be found in the brothel or farm, so you decide not to cast the power."
@@ -895,7 +897,9 @@ label power_use(_pow, girl, girl2):
                 $ chg = int(girl2.change_stat(target, chg, False, False))
 
                 if chg > 0:
-                    "[girl.fullname] has transferred {b}[chg] [target]{/b} to [girl2.fullname]."
+                    $ stat_text = __(target)
+
+                    "[girl.fullname] has transferred {b}[chg] [stat_text]{/b} to [girl2.fullname]."
 
         if target == "other girl":
             scene black with fade
@@ -931,7 +935,7 @@ label power_use(_pow, girl, girl2):
 
         "[girl.fullname] lies on the cold floor in a state of daze. Focusing your mind on the farm, you choose the target of your next power."
 
-        $ mn_type = menu([("Choose minion type", None)] + [(mt.capitalize() + "s", mt) for mt in all_minion_types if farm.get_minions(mt)] + [("Cancel", "back")])
+        $ mn_type = menu([(__("Choose minion type"), None)] + [(__(mt.capitalize() + "s"), mt) for mt in all_minion_types if farm.get_minions(mt)] + [(__("Cancel"), "back")])
 
         if mn_type == "back":
             $ MC.refund_mojo(spent_mojo)
@@ -950,7 +954,7 @@ label power_use(_pow, girl, girl2):
                         renpy.notify(text1)
 
         else:
-            $ mn = menu([("Choose minion", None)] + [(m.name.capitalize(), m) for m in farm.get_minions(mn_type)] + [("Cancel", "back")])
+            $ mn = menu([(__("Choose minion"), None)] + [(m.name.capitalize(), m) for m in farm.get_minions(mn_type)] + [(__("Cancel"), "back")])
 
             if mn == "back":
                 $ MC.refund_mojo(spent_mojo)
@@ -972,7 +976,7 @@ label power_use(_pow, girl, girl2):
         $ eff = Effect("boost", "room capacity", 0.5, scope="brothel") # Effect is generated dynamically for this power
 
         if not _pow.super: # Choose one room
-            $ room = menu([("Choose a common room", None)] + [(r.name.capitalize(), r) for r in brothel.rooms.values()] + [("Cancel", "back")])
+            $ room = menu([(__("Choose a common room"), None)] + [(r.name.capitalize(), r) for r in brothel.rooms.values()] + [(__("Cancel"), "back")])
 
             if room == "back":
                 $ MC.refund_mojo(spent_mojo)
@@ -1013,13 +1017,13 @@ label power_use(_pow, girl, girl2):
         $ girl.love = 0
 
         if _pow.target == "location":
-            $ dis = menu([("Choose target district", None)] + [(d.name, d) for d in all_districts if d.chapter <= game.chapter] + [("Cancel", "back")])
+            $ dis = menu([(__("Choose target district"), None)] + [(d.name, d) for d in all_districts if d.chapter <= game.chapter] + [(__("Cancel"), "back")])
 
             if dis == "back":
                 $ MC.refund_mojo(spent_mojo)
                 return
 
-            $ loc = menu([("Choose target location", None)] + [(l.name, l) for l in location_dict[dis.name]] + [("Cancel", "back")])
+            $ loc = menu([(__("Choose target location"), None)] + [(l.name, l) for l in location_dict[dis.name]] + [(__("Cancel"), "back")])
 
             if loc == "back":
                 $ MC.refund_mojo(spent_mojo)
@@ -1031,7 +1035,7 @@ label power_use(_pow, girl, girl2):
                         g.change_love(renpy.random.randint(round_down(0.15*love), round_up(0.3*love)))
 
         elif _pow.target == "district":
-            $ dis = menu([("Choose target district", None)] + [(d.name, d) for d in all_districts if d.chapter <= game.chapter] + [("Cancel", "back")])
+            $ dis = menu([(__("Choose target district"), None)] + [(d.name, d) for d in all_districts if d.chapter <= game.chapter] + [(__("Cancel"), "back")])
 
             if dis == "back":
                 $ MC.refund_mojo(spent_mojo)
@@ -1052,7 +1056,9 @@ label power_use(_pow, girl, girl2):
 
         play sound s_spell
 
-        "The girls in the [_pow.target] now love you more."
+        $ pow_target_text = __(_pow.target)
+
+        "The girls in the [pow_target_text] now love you more."
 
     elif _pow.power == "kidnap":
         "Using your powers, you place [girl.fullname] into a trance, until she is ready to obey your commands."
@@ -1128,7 +1134,7 @@ label power_use(_pow, girl, girl2):
 
         call dialogue(girl, "slave confused") from _call_dialogue_259
 
-        $ narrator(__("[girl.fullname] has become more %s and %s.") % (changes[0], changes[1]))
+        $ narrator(__("[girl.fullname] has become more %s and %s.") % (__(changes[0]), __(changes[1])))
 
 
     elif _pow.power == "negative trait":
@@ -1157,7 +1163,7 @@ label power_use(_pow, girl, girl2):
             trait_list.sort(key=lambda tup: tup[1], reverse=True) # Sorts list of tuples by their second element (weight)
 
         if _pow.super:
-            $ menu_list = [(t.name + ": " + t.get_description(), t) for t, w in trait_list[:3]] # Lists the first three traits
+            $ menu_list = [(t.display_name + ": " + t.get_description(), t) for t, w in trait_list[:3]] # Lists the first three traits
             $ new_neg = menu([(__("Choose a new trait to replace %s:") % old_neg.name, None)] + menu_list)
         else:
             $ new_neg = weighted_choice(trait_list)
@@ -1165,7 +1171,7 @@ label power_use(_pow, girl, girl2):
         $ girl.remove_trait(old_neg)
         $ girl.add_trait(new_neg, no_perks=True)
 
-        "[girl.fullname] has received a new negative trait, replacing [old_neg.name]."
+        "[girl.fullname] has received a new negative trait, replacing [old_neg.display_name]."
 
     elif _pow.power == "perks":
         if _pow.super:
@@ -1207,7 +1213,7 @@ label sanity_backlash(girl, _pow):
 
 label incubus_scene(girl, large_demon=False):
 
-    $ text1 = {False: "lesser", True: "large"}[large_demon]
+    $ text1 = __({False: "lesser", True: "large"}[large_demon])
 
     if girl.has_trait("Virgin"):
         $ pic = rand_choice(game_image_dict["Misc"]["demon service"])

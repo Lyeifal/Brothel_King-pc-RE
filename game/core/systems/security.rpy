@@ -54,7 +54,7 @@ label security(working_girls, ev_type=None): # Happens when the threat level ove
         $ ev_type = weighted_choice(ev_type_list)
 
     if ev_type != "quiet" and brothel.get_effect("special", "security block"): # Applies trainer effect
-        $ notify("Suzume prevented a security breach.", pic="resources/characters/npc/Suzume/roof.webp")
+        $ notify(__("Suzume prevented a security breach."), pic="resources/characters/npc/Suzume/roof.webp")
         return
 
     if ev_type != "quiet":
@@ -88,7 +88,9 @@ label security(working_girls, ev_type=None): # Happens when the threat level ove
 
         play sound s_crowd_riot
 
-        security "{color=[c_red]}[brothel.name] is being raided by [attackers]!{/color}\nYou rush outside with the defenders."
+        $ attackers_text = __(attackers)
+
+        security "{color=[c_red]}[brothel.name] is being raided by [attackers_text]!{/color}\nYou rush outside with the defenders."
 
         play sound s_clash
         pause 0.2
@@ -106,7 +108,7 @@ label security(working_girls, ev_type=None): # Happens when the threat level ove
         security "Some of the attackers have sneaked out the back of [brothel.name] while the security guards were distracted! You rush back to the brothel to help.\n{color=[c_red]}[girl_nb] of your girls are under attack, but you can only help one!{/color}"
 
         python:
-            menu_list = [["Choose a girl to defend", None]]
+            menu_list = [[__("Choose a girl to defend"), None]]
 
             for girl in target_girls:
                 menu_list.append([__("%s, Level %s, Defense %s") % (girl.fullname.capitalize(), str(girl.level), str_int(girl.get_defense())), girl])
@@ -131,19 +133,19 @@ label security(working_girls, ev_type=None): # Happens when the threat level ove
         if attackers == "marauding ogres":
             $ strength = 8
             $ magic = 5
-            $ hit = "the handle of his giant axe"
+            $ hit = __("the handle of his giant axe")
             show ogre at totheleft as enemy with dissolve
 
         elif attackers == "gooey monsters":
             $ strength = 4
             $ magic = 7
-            $ hit = "a whipping tentacle"
+            $ hit = __("a whipping tentacle")
             show sewer_monster as enemy at truecenter with dissolve
 
         elif attackers == "rogue mercenaries":
             $ strength = 6
             $ magic = 6
-            $ hit = "the flat of his sword"
+            $ hit = __("the flat of his sword")
             show masked_thug at totheleft as enemy with dissolve
 
         "You reach [girl.fullname] just in time to confront her attacker."
@@ -159,7 +161,7 @@ label security(working_girls, ev_type=None): # Happens when the threat level ove
 
         # Pick challenge
         $ tt = show_tt("top_right")
-        $ chal = renpy.call_screen("challenge_menu", challenges=[("Fight", "fight", strength), ("Fire a spell", "cast", magic)])
+        $ chal = renpy.call_screen("challenge_menu", challenges=[(__("Fight"), "fight", strength), (__("Fire a spell"), "cast", magic)])
         hide screen tool
 
         if chal == "fight":
@@ -223,7 +225,7 @@ label security(working_girls, ev_type=None): # Happens when the threat level ove
             $ target_girls.remove(girl)
             $ defended_girls.append(girl)
 
-            $ text1 = "While you were fighting, the other attackers rampaged through your brothel. "
+            $ text1 = __("While you were fighting, the other attackers rampaged through your brothel. ")
 
         else:
             if girl.test_shield():
@@ -280,7 +282,7 @@ label security(working_girls, ev_type=None): # Happens when the threat level ove
 
             $ lost_gold = int(MC.gold * 0.15)
             $ MC.gold -= lost_gold
-            $ text1 = "While you were passed out, the [attackers] ransacked your brothel, {color=[c_red]}taking off with [lost_gold] gold.{/color} "
+            $ text1 = __("While you were passed out, the %s ransacked your brothel, {color=[c_red]}taking off with [lost_gold] gold.{/color} ") % __(attackers)
 
         python:
 
@@ -367,6 +369,8 @@ label security(working_girls, ev_type=None): # Happens when the threat level ove
             elif enemy_general.has_trait("Caster"):
                 enemy_g = "freelance sorceress"
 
+            enemy_g_text = __(enemy_g)
+
             general_defeats = 0
             fatigue = -1
 
@@ -374,7 +378,7 @@ label security(working_girls, ev_type=None): # Happens when the threat level ove
             enemy_factor = 1.0
 
 
-        $ log.add_report("{color=[c_red]}Security alert! " + str(enemies) +  " mercenaries led by a " + enemy_g + " besieged the brothel.{/color}")
+        $ log.add_report(__("{color=[c_red]}Security alert! %s mercenaries led by a %s besieged the brothel.{/color}") % (str(enemies), __(enemy_g)))
 
         show expression bg_bro at top
 
@@ -394,7 +398,7 @@ label security(working_girls, ev_type=None): # Happens when the threat level ove
 
         "A security guard comes running towards you as if firehounds from the seven hells were on his heels."
 
-        guard "Boss! I counted [enemies] of them. And they also have [war_machines] war machines! They are led by [enemy_general.fullname], a renowned [enemy_g]."
+        guard "Boss! I counted [enemies] of them. And they also have [war_machines] war machines! They are led by [enemy_general.fullname], a renowned [enemy_g_text]."
 
         you "Damn it, mercenaries! They're besieging us! Quick, get the girls inside, gather everyone, and get in battle formation!"
 
@@ -1770,7 +1774,9 @@ label kidnap_tip(girl): # Happens at the taverns location if a girl has been kid
     if tip:
         man "Thank you, kind sir!"
 
-        man "Right then. [girl.name] was captured by [girl.kidnapper]. I know where their lair is..."
+        $ kidnapper_text = __(girl.kidnapper)
+
+        man "Right then. [girl.name] was captured by [kidnapper_text]. I know where their lair is..."
 
         scene black with fade
 

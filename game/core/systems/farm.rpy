@@ -146,17 +146,17 @@ init -2 python:
 
         def upgrade(self):
             if MC.gold < self.get_price():
-                return False, "You don't have enough gold to expand the " + self.name + "! Stop wasting my time."
+                return False, __("You don't have enough gold to expand the %s! Stop wasting my time.") % self.name
             elif self.rank >= 5:
-                return False, "The " + self.name + " cannot be extended any further."
+                return False, __("The %s cannot be extended any further.") % self.name
             elif self.rank >= district.rank:
-                return False, "Extending the " + self.name + " further would draw too much attention to us. Perhaps once you get a higher brothel license, we can grease a few palms and extend our operation?"
+                return False, __("Extending the %s further would draw too much attention to us. Perhaps once you get a higher brothel license, we can grease a few palms and extend our operation?") % self.name
             elif renpy.call_screen("yes_no", __("Do you really want to upgrade the %s for %s gold?") % (self.name, self.get_price())):
                 MC.gold -= self.get_price()
                 self.rank += 1
                 renpy.play(s_gold, "sound")
                 unlock_pic(self.pic.path)
-                return True, "The " + self.name + " has been extended and can now host " + str(self.rank) + " " + self.minion_type + "."
+                return True, __("The %s has been extended and can now host %s %s.") % (self.name, str(self.rank), self.minion_type)
             else:
                 return False, ""
 
@@ -246,16 +246,16 @@ init -2 python:
             des = __("Level %i %s") % (self.level, self.type)
 
             if self.level >= 5:
-                des += " (max level)"
+                des += __(" (max level)")
             else:
-                des += " (XP: %i/%i)" % (self.xp, minion_xp_to_level[self.level+1])
+                des += __(" (XP: %i/%i)") % (self.xp, minion_xp_to_level[self.level+1])
 
 
             if self.hurt:
                 if self.type == "machine":
-                    des += event_color["bad"] % ("\n" + self.name + " is broken and will be retired in " + str(self.hp) + " days. ")
+                    des += event_color["bad"] % (__("\n%s is broken and will be retired in %s days. ") % (self.name, str(self.hp)))
                 else:
-                    des += event_color["bad"] % ("\n" + self.name + " is injured and will be retired in " + str(self.hp) + " days. ")
+                    des += event_color["bad"] % (__("\n%s is injured and will be retired in %s days. ") % (self.name, str(self.hp)))
 
             return des
 
@@ -381,7 +381,7 @@ init -2 python:
                 if reaction == "accepted":
                     if self.mode == "gentle": # Using gentle mode is not evil
                         MC.evil -= 0.3
-                    log.add_report(girl.fullname + " accepted training at the farm.")
+                    log.add_report(girl.fullname + __(" accepted training at the farm."))
                     girl.build_up(3)
 
                 elif reaction == "resisted":
@@ -441,14 +441,14 @@ init -2 python:
                         if fight_res == "tie":
                             pic = Picture(path="resources/characters/npc/gizel/whip1.webp")
                             # pic_bg = inst.get_pic()
-                            descript += event_color["a little bad"] % (girl.name + " " + reaction + " and attacked Gizel! She was forced to use her magic.\n")
+                            descript += event_color["a little bad"] % (__("%s %s and attacked Gizel! She was forced to use her magic.\n") % (girl.name, __(reaction)))
                             ev_sound = s_fire
 
                             if dice(6) >= 4:
                                 girl.get_hurt(dice(5))
                                 changes["obedience"] -= dice(3)
                                 changes["fear"] += girl.hurt
-                                descript += event_color["bad"] % (girl.name + " has been injured and will be out of it for " + str(round_int(girl.hurt)) + " days.")
+                                descript += event_color["bad"] % (__("%s has been injured and will be out of it for %s days.") % (girl.name, str(round_int(girl.hurt))))
                                 girl.add_log("farm_hurt")
 
                                 calendar.set_alarm(calendar.time+1, StoryEvent(label="farm_resisted", type="morning", call_args=[girl, "rebel girl hurt"]))
@@ -456,9 +456,9 @@ init -2 python:
                                 mn = rand_choice(self.minions)
                                 mn.hurt = True
                                 if mn.type == "machine":
-                                    descript += event_color["bad"] % (mn.name + " (level " + str(mn.level) + mn.type + ") was broken in the fighting. It will be retired unless you can repair it.")
+                                    descript += event_color["bad"] % (__("%s (level %s%s) was broken in the fighting. It will be retired unless you can repair it.") % (mn.name, str(mn.level), mn.type))
                                 else:
-                                    descript += event_color["bad"] % (mn.name + " (level " + str(mn.level) + mn.type + ") was injured in the fighting. It will be retired unless you can heal it.")
+                                    descript += event_color["bad"] % (__("%s (level %s%s) was injured in the fighting. It will be retired unless you can heal it.") % (mn.name, str(mn.level), mn.type))
                                 changes["obedience"] -= dice(3)
                                 changes["fear"] -= dice(3)
                                 girl.add_log("minion_hurt")
@@ -468,11 +468,11 @@ init -2 python:
                         elif fight_res: # Girl wins
                             pic = "gizel whip struggling" # Picture(path="resources/characters/npc/gizel/whip3.webp")
                             # pic_bg = inst.get_pic()
-                            descript += event_color["bad"] % (girl.name + " " + reaction + "and attacked Gizel, kicking her to the ground before she could use her magic!\n")
+                            descript += event_color["bad"] % (__("%s %sand attacked Gizel, kicking her to the ground before she could use her magic!\n") % (girl.name, __(reaction)))
                             ev_sound = s_crash
 
                             if dice(6) >= 4:
-                                descript += event_color["bad"] % (girl.name + " ran away into the night.")
+                                descript += event_color["bad"] % (__("%s ran away into the night.") % girl.name)
                                 run_away = True
                                 changes["obedience"] -= dice(3) + 2
                                 changes["fear"] -= dice(3) + 2
@@ -485,9 +485,9 @@ init -2 python:
                                 mn = rand_choice(self.minions)
                                 mn.hurt = True
                                 if mn.type == "machine":
-                                    descript += event_color["bad"] % (mn.name + " (level " + str(mn.level) + mn.type + ") was broken in the fighting. It will be retired unless you can repair it.")
+                                    descript += event_color["bad"] % (__("%s (level %s%s) was broken in the fighting. It will be retired unless you can repair it.") % (mn.name, str(mn.level), mn.type))
                                 else:
-                                    descript += event_color["bad"] % (mn.name + " (level " + str(mn.level) + mn.type + ") was injured in the fighting. It will be retired unless you can heal it.")
+                                    descript += event_color["bad"] % (__("%s (level %s%s) was injured in the fighting. It will be retired unless you can heal it.") % (mn.name, str(mn.level), mn.type))
                                 changes["obedience"] -= dice(3) + 2
                                 changes["fear"] -= dice(3) + 1
                                 girl.add_log("minion_hurt")
@@ -498,29 +498,29 @@ init -2 python:
                             girl.build_up(3)
                             pic = "gizel whip happy" # Picture(path="resources/characters/npc/gizel/whip2.webp")
                             # pic_bg = inst.get_pic()
-                            descript += event_color["good"] % (girl.name + " " + reaction + " and tried to fight back, but Gizel easily subdued her with a binding spell.\n")
+                            descript += event_color["good"] % (__("%s %s and tried to fight back, but Gizel easily subdued her with a binding spell.\n") % (girl.name, __(reaction)))
                             ev_sound = s_punch
 
                             if dice(6) >= 4:
-                                descript += event_color["fear"] % ("She lashed out at " + girl.name + "'s sanity, sending her into a fit of terror.")
+                                descript += event_color["fear"] % (__("She lashed out at %s's sanity, sending her into a fit of terror.") % girl.name)
                                 changes["fear"] += dice(3) + 2
                                 changes["obedience"] += dice(3)
 
                             else:
-                                descript += event_color["fear"] % ("She used her powers to force " + girl.name + " into a humiliating pose.")
+                                descript += event_color["fear"] % (__("She used her powers to force %s into a humiliating pose.") % girl.name)
                                 changes["fear"] += dice(3)
                                 changes["obedience"] += dice(3) + 2
 
                             calendar.set_alarm(calendar.time+1, StoryEvent(label="farm_resisted", type="morning", call_args=[girl, "rebel subdued"]))
 
                     else:
-                        descript += event_color["a little bad"] % (girl.name + " " + reaction + " training and rebelled against Gizel.\n")
+                        descript += event_color["a little bad"] % (__("%s %s training and rebelled against Gizel.\n") % (girl.name, __(reaction)))
 
                         if dice(6) >= 3:
                             pic = "gizel whip angry"# Picture(path="resources/characters/npc/gizel/whip1.webp")
                             # pic_bg = inst.get_pic()
                             ev_sound = s_punch
-                            descript += event_color["fear"] %  ("Incensed by her insolence, Gizel gave her a vicious whipping.")
+                            descript += event_color["fear"] %  (__("Incensed by her insolence, Gizel gave her a vicious whipping."))
                             changes["fear"] += dice(3)
                             changes["obedience"] += dice(3)
                             changes["energy"] -= 10
@@ -528,7 +528,7 @@ init -2 python:
 
                         else:
                             pic = farm.pen_pic
-                            descript += event_color["a little bad"] % ("Annoyed, Gizel lost interest and left her to rot in her pen instead.")
+                            descript += event_color["a little bad"] % (__("Annoyed, Gizel lost interest and left her to rot in her pen instead."))
                             changes["obedience"] -= 1
                             changes["energy"] += 10
                             farm.locked_girls.append(girl)
@@ -540,12 +540,12 @@ init -2 python:
 
                 elif self.installation: # sanity check
                     if reaction == "accepted":
-                        descript += girl.name + " didn't complain as she went into the " + self.installation.name + " for her training."
+                        descript += __("%s didn't complain as she went into the %s for her training.") % (girl.name, self.installation.name)
                     elif reaction == "resisted":
-                        descript += girl.name + " whined and resisted, but Gizel laughed at her and shoved her into the " + self.installation.name + " anyway."
+                        descript += __("%s whined and resisted, but Gizel laughed at her and shoved her into the %s anyway.") % (girl.name, self.installation.name)
                         calendar.set_alarm(calendar.time+1, StoryEvent(label="farm_resisted", type="morning", call_args=[girl, "resisted"]))
                     elif reaction == "refused":
-                        descript += girl.name + " yelled and cried and pleaded, but Gizel dragged her kicking and screaming into the " + self.installation.name + "."
+                        descript += __("%s yelled and cried and pleaded, but Gizel dragged her kicking and screaming into the %s.") % (girl.name, self.installation.name)
                         calendar.set_alarm(calendar.time+1, StoryEvent(label="farm_resisted", type="morning", call_args=[girl, "refused"]))
 
                 # Learn from interaction
@@ -593,7 +593,7 @@ init -2 python:
                     girl.build_up(3)
 
                     if not farm.knows["weakness"][girl]:
-                        descript += " Gizel notices " + girl.name + " reacts strongly in the presence of " + self.minions[0].type + "s (" + event_color["fear"] % "weakness discovered" + ")."
+                        descript += __(" Gizel notices %s reacts strongly in the presence of %ss (%s).") % (girl.name, __(self.minions[0].type), event_color["fear"] % __("weakness discovered"))
                         farm.knows["weakness"][girl] = farm_installations_dict[girl.weakness]
 
                         calendar.set_alarm(calendar.time+1, StoryEvent(label="farm_discovered_weakness", call_args=[girl]))
@@ -603,9 +603,9 @@ init -2 python:
                         changes["fear"] += 1
 
                         if girl.get_effect("special", "all farm weaknesses"):
-                            descript += " Gizel knows " + girl.name + " is " + event_color["fear"] % "weak against all farm minions" + ", and uses that against her."
+                            descript += __(" Gizel knows %s is %s, and uses that against her.") % (girl.name, event_color["fear"] % __("weak against all farm minions"))
                         else:
-                            descript += " Gizel knows " + girl.name + " is especially " + event_color["fear"] % ("weak against " + girl.weakness + "s") + ", and uses that against her."
+                            descript += __(" Gizel knows %s is especially %s, and uses that against her.") % (girl.name, event_color["fear"] % (__("weak against %ss") % __(girl.weakness)))
                 else:
                     weak = False
 
@@ -619,11 +619,11 @@ init -2 python:
 
                     if not self.act in farm.knows["amb_acts"][girl]:
                         ev_sound = s_spell
-                        descript += " " + girl.name + " was especially tense and confused. " + event_color["average"] % ("Gizel has discovered she is ambivalent about " + long_act_description[self.act] + ".")
+                        descript += __(" %s was especially tense and confused. ") % girl.name + event_color["average"] % (__("Gizel has discovered she is ambivalent about %s.") % __(long_act_description[self.act]))
                         girl.personality_unlock[self.act] = True
                         farm.knows["amb_acts"][girl].append(self.act)
                     else:
-                        descript += " " + girl.name + " struggled, because she has ambivalent feelings about " + long_act_description[self.act] + "."
+                        descript += __(" %s struggled, because she has ambivalent feelings about %s.") % (girl.name, __(long_act_description[self.act]))
 
                 elif self.act in girl.pos_acts: # Positive act
                     girl.build_up(3)
@@ -633,11 +633,11 @@ init -2 python:
 
                     if not self.act in farm.knows["pos_acts"][girl]:
                         ev_sound = s_spell
-                        descript += " " + girl.name + " was blushing and breathing heavily, her nipples visibly erect. " + event_color["good"] % ("Gizel has discovered she likes " + long_act_description[self.act] + ".")
+                        descript += __(" %s was blushing and breathing heavily, her nipples visibly erect. ") % girl.name + event_color["good"] % (__("Gizel has discovered she likes %s.") % __(long_act_description[self.act]))
                         girl.personality_unlock[self.act] = True
                         farm.knows["pos_acts"][girl].append(self.act)
                     else:
-                        descript += " " + girl.name + " is turned on by " + self.act + " acts, so she enjoyed it despite herself."
+                        descript += __(" %s is turned on by %s acts, so she enjoyed it despite herself.") % (girl.name, __(self.act))
                     training_modifier += 1
 
                 elif self.act in girl.neg_acts: # Negative act
@@ -647,11 +647,11 @@ init -2 python:
                         changes["mood"] -= 1
                     if not self.act in farm.knows["neg_acts"][girl]:
                         ev_sound = s_spell
-                        descript += " " + girl.name + " was tense and uncooperative, and remained fearful for the whole encounter. " + event_color["a little bad"] % ("Gizel has discovered she dislikes " + long_act_description[self.act] + ".")
+                        descript += __(" %s was tense and uncooperative, and remained fearful for the whole encounter. ") % girl.name + event_color["a little bad"] % (__("Gizel has discovered she dislikes %s.") % __(long_act_description[self.act]))
                         girl.personality_unlock[self.act] = True
                         farm.knows["neg_acts"][girl].append(self.act)
                     else:
-                        descript += " " + girl.name + " doesn't enjoy " + self.act + " acts, so she remained tense and unwilling."
+                        descript += __(" %s doesn't enjoy %s acts, so she remained tense and unwilling.") % (girl.name, __(self.act))
 
                     training_modifier -= 1
 
@@ -665,12 +665,12 @@ init -2 python:
                         changes["mood"] += 1
                     changes["libido"] += 1
                     if not fix in farm.knows["pos_fix"][girl]:
-                        descript += " During training, Gizel discovered one of " + girl.name + "'s fixations (" + event_color["good"] % fix.name + ")!"
+                        descript += __(" During training, Gizel discovered one of %s's fixations (%s)!") % (girl.name, event_color["good"] % __(fix.name))
                         girl.personality_unlock[fix.name] = True
                         farm.knows["pos_fix"][girl].append(fix)
                         test_achievement("pos fixations")
                     else:
-                        descript += " Training was more effective, because Gizel used " + girl.name + "'s obsession with " + event_color["good"] % fix.name + " against her."
+                        descript += __(" Training was more effective, because Gizel used %s's obsession with %s against her.") % (girl.name, event_color["good"] % __(fix.name))
 
                 elif fix.name in [f.name for f in girl.neg_fixations]:
                     girl.build_up(1)
@@ -680,12 +680,12 @@ init -2 python:
                         changes["mood"] -= 1
                         changes["fear"] += 1
                     if not fix in farm.knows["neg_fix"][girl]:
-                        descript += " During training, Gizel discovered something " + girl.name + " really hates (" + event_color["fear"] % fix.name + ")."
+                        descript += __(" During training, Gizel discovered something %s really hates (%s).") % (girl.name, event_color["fear"] % __(fix.name))
                         girl.personality_unlock[fix.name] = True
                         farm.knows["neg_fix"][girl].append(fix)
                         test_achievement("neg fixations")
                     else:
-                        descript += " Training was more effective, because Gizel used " + girl.name + "'s disgust for " + event_color["fear"] % fix.name + " against her."
+                        descript += __(" Training was more effective, because Gizel used %s's disgust for %s against her.") % (girl.name, event_color["fear"] % __(fix.name))
 
                 # Determines result (= boost to preference unlocking)
 
@@ -722,8 +722,8 @@ init -2 python:
                     if girl.pop_virginity(origin="farm"):
                         girl.build_up(50)
                         changes["obedience"] += 2 + dice(6)
-                        descript += "\n{color=[c_lightred]}" + girl.name + " has lost her virginity to " + article(rand_choice(minion_adjectives[self.minions[0].type])) + " " + self.minions[0].type + "!{/color}"
-                        log.add_report("{color=[c_lightred]}" + girl.fullname + " has lost her virginity to " + article(rand_choice(minion_adjectives[self.minions[0].type])) + " " + self.minions[0].type + "!{/color}")
+                        descript += __("\n{color=[c_lightred]}%s has lost her virginity to %s %s!{/color}") % (girl.name, article(__(rand_choice(minion_adjectives[self.minions[0].type]))), __(self.minions[0].type))
+                        log.add_report(__("\n{color=[c_lightred]}%s has lost her virginity to %s %s!{/color}") % (girl.fullname, article(__(rand_choice(minion_adjectives[self.minions[0].type]))), __(self.minions[0].type)))
 
 
                 ## Stat changes
@@ -1079,7 +1079,7 @@ init -2 python:
         def activate(self):
             self.active = True
             renpy.play(s_moo, "sound")
-            notify("Farm unlocked!", pic="tb farm", col=c_softpurple)
+            notify(__("Farm unlocked!"), pic="tb farm", col=c_softpurple)
 
         # Effects (farm effects apply to farm girls only)
 

@@ -1080,9 +1080,9 @@ screen item_profile(it):
             text "" size res_font(8)
 
             if isinstance(type, ItemType):
-                text "{color=[col]}%s{/color}" % it.type.name xalign 0.5 size res_font(18)
+                text "{color=[col]}%s{/color}" % __(it.type.name) xalign 0.5 size res_font(18)
             else:
-                text "{color=[col]}%s{/color}" % it.target.capitalize() xalign 0.5 size res_font(18)
+                text "{color=[col]}%s{/color}" % __(it.target.capitalize()) xalign 0.5 size res_font(18)
 
             if isinstance(it, ItemInstance):
                 text __(it.base_description) size res_font(14) xalign 0.5 italic True

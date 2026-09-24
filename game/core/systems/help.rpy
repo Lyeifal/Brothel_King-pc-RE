@@ -375,7 +375,7 @@ label help(scr):
                         menu_list += mod.help_prompts
 
             if menu_list:
-                $ menu_list.append(("Cancel", "back"))
+                $ menu_list.append((__("Cancel"), "back"))
 
                 $ target_label = menu(menu_list)
 
@@ -412,8 +412,8 @@ label help(scr):
                         $ fil = "" # renpy.input("Picture path contains\n(leave empty to see all):")
 
                         label edit_ignored:
-                            $ menu_options = [(path, path) for path in persistent.pic_ignore_list if fil in path] + [("Cancel", "back")]
-                            $ r = long_menu("Select picture to remove from set", menu_options, limit=9)
+                            $ menu_options = [(path, path) for path in persistent.pic_ignore_list if fil in path] + [(__("Cancel"), "back")]
+                            $ r = long_menu(__("Select picture to remove from set"), menu_options, limit=9)
 
                             if r != "back":
                                 if renpy.call_screen("yes_no", __("Do you want to remove this picture from the 'IGNORE' list?")):
@@ -1930,7 +1930,7 @@ label cheat_menu():
 
         "Test event" if debug_mode:
 
-            $ test_event_name = renpy.input("Event name", default=test_event_name)
+            $ test_event_name = renpy.input(__("Event name"), default=test_event_name)
 
             if not renpy.has_label(test_event_name):
                 bk_error "Not a valid label."
@@ -1984,19 +1984,19 @@ label cheat_menu():
                 "The cheat modifier is a float number affecting stat gains, xp, jp, reputation and gold earned by your girls. Use it to adjust the difficulty level (e.g.: a modifier of 1.5 gives your girl a 50\% increase); a modifier of 0.75 decreases gains by 25\%)"
 
                 "Set global cheat modifier":
-                    $ global_cheat_modifier = float(renpy.input("Cheat modifier", default = 1.0))
+                    $ global_cheat_modifier = float(renpy.input(__("Cheat modifier"), default = 1.0))
 
                     python:
                         for cheat in cheat_modifier.keys():
                             cheat_modifier[cheat] = global_cheat_modifier
 
                 "Set modifiers separately":
-                    $ cheat_modifier["gold"] = float(renpy.input("Gold cheat modifier", default = cheat_modifier["gold"]))
-                    $ cheat_modifier["xp"] = float(renpy.input("XP cheat modifier", default = cheat_modifier["xp"]))
-                    $ cheat_modifier["jp"] = float(renpy.input("JP cheat modifier", default = cheat_modifier["jp"]))
-                    $ cheat_modifier["rep"] = float(renpy.input("Girl reputation cheat modifier", default = cheat_modifier["rep"]))
-                    $ cheat_modifier["stats"] = float(renpy.input("Girl stats cheat modifier", default = cheat_modifier["stats"]))
-                    $ cheat_modifier["prestige"] = float(renpy.input("Prestige cheat modifier", default = cheat_modifier["prestige"]))
+                    $ cheat_modifier["gold"] = float(renpy.input(__("Gold cheat modifier"), default = cheat_modifier["gold"]))
+                    $ cheat_modifier["xp"] = float(renpy.input(__("XP cheat modifier"), default = cheat_modifier["xp"]))
+                    $ cheat_modifier["jp"] = float(renpy.input(__("JP cheat modifier"), default = cheat_modifier["jp"]))
+                    $ cheat_modifier["rep"] = float(renpy.input(__("Girl reputation cheat modifier"), default = cheat_modifier["rep"]))
+                    $ cheat_modifier["stats"] = float(renpy.input(__("Girl stats cheat modifier"), default = cheat_modifier["stats"]))
+                    $ cheat_modifier["prestige"] = float(renpy.input(__("Prestige cheat modifier"), default = cheat_modifier["prestige"]))
 
 
         "Gold":
@@ -2013,7 +2013,7 @@ label cheat_menu():
                     $ MC.gold += 100000
 
                 "Custom amount":
-                    $ MC.gold += int(renpy.input("How much?"))
+                    $ MC.gold += int(renpy.input(__("How much?")))
 
                 "Back":
                     jump cheat_menu
@@ -2024,7 +2024,7 @@ label cheat_menu():
             menu:
                 "Level MC":
                     python:
-                        nb = int(renpy.input("How many levels?", default = "1"))
+                        nb = int(renpy.input(__("How many levels?"), default = "1"))
 
                         for i in range(nb):
                             MC.level_up(forced = True)
@@ -2057,7 +2057,7 @@ label cheat_menu():
 
                 "Give girls perk points":
 
-                    $ nb = int(renpy.input("Perk points", default = "1"))
+                    $ nb = int(renpy.input(__("Perk points"), default = "1"))
 
                     python:
                         for girl in MC.girls:
@@ -2066,14 +2066,14 @@ label cheat_menu():
 
                 "Give girls upgrade points":
 
-                    $ nb = int(renpy.input("Upgrade points", default = "10"))
+                    $ nb = int(renpy.input(__("Upgrade points"), default = "10"))
 
                     python:
                         for girl in MC.girls:
                             girl.upgrade_points += nb
 
                 "Rank girls up":
-                    $ nb = int(renpy.input("How many ranks", default = "1"))
+                    $ nb = int(renpy.input(__("How many ranks"), default = "1"))
                     python:
                         for girl in MC.girls:
                             for i in range(nb):
@@ -2085,21 +2085,21 @@ label cheat_menu():
                             girl.level_up(forced = True)
 
                 "Job skill up":
-                    $ job = renpy.input("Choose skill to improve", default = "waitress").lower()
+                    $ job = renpy.input(__("Choose skill to improve"), default = "waitress").lower()
 
                     python:
                         for girl in MC.girls:
                             girl.job_up(job, forced = True)
 
                 "Raise libido and obedience" if debug:
-                    $ val = int(renpy.input("Raise libido/obedience", default = 50))
+                    $ val = int(renpy.input(__("Raise libido/obedience"), default = 50))
                     python:
                         for girl in MC.girls:
                             girl.change_stat("obedience", val)
                             girl.change_stat("libido", val)
 
                 "Raise sexual preferences" if debug:
-                    $ val = int(renpy.input("Raise all sexual preferences", default = 1000))
+                    $ val = int(renpy.input(__("Raise all sexual preferences"), default = 1000))
                     python:
                         for girl in MC.girls:
                             for s in extended_sex_acts:
@@ -2138,7 +2138,7 @@ label cheat_menu():
 
                 "Change love":
 
-                    $ nb = int(renpy.input("Change", default = "10"))
+                    $ nb = int(renpy.input(__("Change"), default = "10"))
 
                     python:
                         for girl in MC.girls:
@@ -2146,7 +2146,7 @@ label cheat_menu():
 
                 "Change fear":
 
-                    $ nb = int(renpy.input("Change", default = "10"))
+                    $ nb = int(renpy.input(__("Change"), default = "10"))
 
                     python:
                         for girl in MC.girls:
@@ -2211,7 +2211,7 @@ label cheat_menu():
 
                 "Get item":
 
-                    $ name = renpy.input("Item name contains")
+                    $ name = renpy.input(__("Item name contains"))
 
                     python:
 
@@ -2306,7 +2306,7 @@ label cheat_menu():
                         call show_night_event(ev) from _call_show_night_event_4
 
                 "Change brothel reputation":
-                    $ brothel.rep = int(renpy.input("Brothel reputation", default = brothel.rep))
+                    $ brothel.rep = int(renpy.input(__("Brothel reputation"), default = brothel.rep))
 
                 "Refresh slave market":
                     $ update_slaves()
@@ -2322,13 +2322,13 @@ label cheat_menu():
 
                 "Skip time":
 
-                    $ t = int(renpy.input("How many days do you want to skip", default = 1))
+                    $ t = int(renpy.input(__("How many days do you want to skip"), default = 1))
 
                     $ calendar.newday(t)
 
                 "Advance to chapter":
 
-                    $ c = int(renpy.input("Advance to chapter", default = game.chapter + 1))
+                    $ c = int(renpy.input(__("Advance to chapter"), default = game.chapter + 1))
 
                     $ renpy.call("advance_to_chapter", c, silent=True, free=True, start=True)
 
@@ -2342,22 +2342,22 @@ label cheat_menu():
 
                         "Raise gold":
                             $ _type = "gold"
-                            $ val = int(renpy.input("How much gold will you need?", default = 2500))
+                            $ val = int(renpy.input(__("How much gold will you need?"), default = 2500))
                             $ target = 0
 
                         "Rank up your girls":
                             $ _type = "ranked"
-                            $ val = int(renpy.input("Which rank will they need to reach?", default = 2))
-                            $ target = renpy.input("How many girls will need to reach that rank?", default = 4)
+                            $ val = int(renpy.input(__("Which rank will they need to reach?"), default = 2))
+                            $ target = renpy.input(__("How many girls will need to reach that rank?"), default = 4)
 
                         "Raise brothel reputation":
                             $ _type = "reputation"
-                            $ val = int(renpy.input("How much reputation will you need to get?", default = 250))
+                            $ val = int(renpy.input(__("How much reputation will you need to get?"), default = 250))
                             $ target = 0
 
                         "Raise player prestige":
                             $ _type = "prestige"
-                            $ val = int(renpy.input("How much prestige will you need to collect?", default = 1000))
+                            $ val = int(renpy.input(__("How much prestige will you need to collect?"), default = 1000))
                             $ target = 0
 
                     $ game.goals = (Goal(_type, val, target, channel="advance"),)
@@ -2371,9 +2371,9 @@ label cheat_menu():
                         for g in game.goals:
 
                             if g.reached():
-                                text1 += "TRUE "
+                                text1 += __("TRUE ")
                             else:
-                                text1 += "FALSE "
+                                text1 += __("FALSE ")
                     $ renpy.say("", text1)
 
 #                 "Reset girlpack ratings":
@@ -2397,7 +2397,7 @@ label cheat_menu():
 
                 "Get resources":
                     python:
-                        nb = int(renpy.input("How many?", 50))
+                        nb = int(renpy.input(__("How many?"), 50))
                         for resource in build_resources:
                             MC.gain_resource(resource, nb, message=False)
 
@@ -2430,7 +2430,7 @@ label check_missing_pictures(type):
             pass
 
         "Check a specific girl pack":
-            $ girl = long_menu("Select a girl pack", [(" ".join(get_name(girl.path)), girl) for girl in template_girls])
+            $ girl = long_menu(__("Select a girl pack"), [(" ".join(get_name(girl.path)), girl) for girl in template_girls])
             $ template_girls = [girl]
 
     if type == "main":
@@ -2612,7 +2612,7 @@ label test_perks:
 
             menu_list.append(("COMMIT", "commit"))
 
-            result = long_menu("Choose perks to test", menu_list)
+            result = long_menu(__("Choose perks to test"), menu_list)
 
 #            renpy.say("", "Choice is " + str(result))
 
@@ -2633,10 +2633,10 @@ label test_perks_menu:
         "Testing perks: [perk_text]"
 
         "Girls: [girl_nb]":
-            $ girl_nb = int(renpy.input("Girl nb", default=girl_nb))
+            $ girl_nb = int(renpy.input(__("Girl nb"), default=girl_nb))
 
         "Duration: [duration] months":
-            $ duration = int(renpy.input("Duration", default=duration))
+            $ duration = int(renpy.input(__("Duration"), default=duration))
 
         "Job: [jobs]":
             $ jobs = menu([(__("Whore"), "whore"), (__("Waitress"), "waitress"), (__("Dancer"), "dancer"), (__("Masseuse"), "masseuse"), (__("Geisha"), "geisha"), (__("Cycle jobs"), "cycle jobs"), (__("Cycle all"), "cycle all")])

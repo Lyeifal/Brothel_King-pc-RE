@@ -180,10 +180,10 @@ screen night(event_pic = None, event_bg = None, changes = "", has_log = True): #
                     if has_log:
 
                         if show_log:
-                            $ text1 = "Hide log"
+                            $ text1 = __("Hide log")
 
                         else:
-                            $ text1 = "Show log"
+                            $ text1 = __("Show log")
 
                         textbutton text1 ymargin 10:
                             xalign 0.5
@@ -290,10 +290,10 @@ screen night_old(event_pic = None, event_bg = None, changes = "", has_log = True
                 if has_log:
 
                     if show_log:
-                        $ text1 = "Hide log"
+                        $ text1 = __("Hide log")
 
                     else:
-                        $ text1 = "Show log"
+                        $ text1 = __("Show log")
 
                     textbutton text1 ymargin 10:
                         xalign 0.5
@@ -404,7 +404,7 @@ label end_day:
 
     ## Prepare
 
-    $ night_early = NightChangeLog(title="Dusk", col=c_lightorange)
+    $ night_early = NightChangeLog(title=__("Dusk"), col=c_lightorange)
 
     python:
         if not logs[calendar.time]:
@@ -442,14 +442,14 @@ label end_day:
                 log.add_report(cast_text)
 
         if spell_success or spell_fail:
-            night_early.add("Autocast spells", "header")
+            night_early.add(__("Autocast spells"), "header")
 
             if spell_success:
                 for spell in spell_success:
-                    night_early.add("Success: ")
+                    night_early.add(__("Success: "))
                     night_early.add(spell.name, "list", col="good", ttip=spell.description)
             if spell_fail:
-                night_early.add("Failed: ")
+                night_early.add(__("Failed: "))
                 night_early.add(spell.name, "list", col="bad", ttip=spell.description)
 
         update_effects()
@@ -537,9 +537,9 @@ label end_day:
 
         if sick_girls != []:
             if len(sick_girls) == 1:
-                sick_text += "\n{color=[c_red]}%s has fallen sick.{/color}" % sick_girls[0].name
+                sick_text += __("\n{color=[c_red]}%s has fallen sick.{/color}") % sick_girls[0].name
             else:
-                sick_text += "\n{color=[c_red]}%s have fallen sick.{/color}" % and_text([g.name for g in sick_girls])
+                sick_text += __("\n{color=[c_red]}%s have fallen sick.{/color}") % and_text([g.name for g in sick_girls])
 
         t4 = time.perf_counter()
         print("Girls obedience and health checks took %.2f seconds" % (t4-t3)) # Debugging to spot possible 'infinite' loop
@@ -597,11 +597,11 @@ label end_day:
 
             if dice(6) >= 6 and pony:
                 ad_pic = "resources/events/" + rand_choice(pony_pics)
-                night_text += "{color=[c_pink]}It's time for the ponygirl parade!{/color}\n"
+                night_text += __("{color=[c_pink]}It's time for the ponygirl parade!{/color}\n")
 
             elif brothel.get_effect("special", "demon advertising"):
                 ad_pic = rand_choice(game_image_dict["Misc"]["succubi"])
-                night_text += "{color=[c_softpurple]}Your demonette ally helps draw more customers to your brothel using their supernatural charms.{/color}\n"
+                night_text += __("{color=[c_softpurple]}Your demonette ally helps draw more customers to your brothel using their supernatural charms.{/color}\n")
 
             elif adv_girls:
                 adv_girl = rand_choice(adv_girls)
@@ -635,7 +635,7 @@ label end_day:
             night_early.add(line, ttip=ttip, ttip_title = event_color["a little good"] % _("Working today"))
 
             for girl in working_girls:
-                log.add_report(__("%s is working today as a %s.") % (girl.fullname, girl.job))
+                log.add_report(__("%s is working today as a %s.") % (girl.fullname, __(girl.job)))
 
         if sick_girls:
             line = event_color["bad"] % (_("Sick girls: %s") % len(sick_girls))
@@ -720,7 +720,7 @@ label end_day:
                 maint_text += "\n" + text1
                 log.add_report(event_color["bad"] % text1)
 
-                night_early.add("Dirtiness", "header")
+                night_early.add(__("Dirtiness"), "header")
                 night_early.add(_("Customers turned away: -%s") % len(lost_customers), col="bad", ttip = get_customer_population_count(lost_customers))
                 cust_text += __("\nTurned away: %s") % plus_text(-len(lost_customers))
                 if rep_loss:
@@ -730,7 +730,7 @@ label end_day:
 
             for pop in all_populations:
                 if cust_nb_dict[pop.name]:
-                    night_early.add(capitalize(pop.name) + ": " + str_int(cust_nb_dict[pop.name]), ttip = __("%i %s came to %s") % (cust_nb_dict[pop.name], pop.name, brothel.name))
+                    night_early.add(capitalize(__(pop.name)) + ": " + str_int(cust_nb_dict[pop.name]), ttip = __("%i %s came to %s") % (cust_nb_dict[pop.name], __(pop.name), brothel.name))
 
         night_text += maint_text
 
@@ -750,10 +750,10 @@ label end_day:
         $ MC.interactions += 1
 
     if brothel.get_effect("special", "demon maintenance"):
-        call show_night_event(Event(pic=rand_choice(game_image_dict["Misc"]["hannies"]), char = "", text = "Although dumber than a door knob, hannies are pretty good at polishing door knobs. Your impish allies help clean up the mess your customers have left behind, and they work for free: what's not to like?", type="UI")) from _call_show_night_event_7
+        call show_night_event(Event(pic=rand_choice(game_image_dict["Misc"]["hannies"]), char = "", text = __("Although dumber than a door knob, hannies are pretty good at polishing door knobs. Your impish allies help clean up the mess your customers have left behind, and they work for free: what's not to like?"), type="UI")) from _call_show_night_event_7
 
     if brothel.get_effect("special", "demon security"):
-        call show_night_event(Event(pic=rand_choice(game_image_dict["Misc"]["oni"]), char = "", text = "Your security is bolstered by the massive presence of your demonic ally. Keeping the peace tonight should be a breeze.", type="UI")) from _call_show_night_event_8
+        call show_night_event(Event(pic=rand_choice(game_image_dict["Misc"]["oni"]), char = "", text = __("Your security is bolstered by the massive presence of your demonic ally. Keeping the peace tonight should be a breeze."), type="UI")) from _call_show_night_event_8
 
     if brothel.threat_build_up(): # Returns True if security event may proc
         call security(working_girls) from _call_security
@@ -935,7 +935,7 @@ label end_day:
             log.add_report(event_color["good"] % (_("All %s customers were able to sleep with a whore.") % str_int(len(customers))))
 
         else:
-            night_no_girls = NightChangeLog(title="Late night", col=c_lightorange)
+            night_no_girls = NightChangeLog(title=__("Late night"), col=c_lightorange)
             night_no_girls.add(_("Unattended customers"), "header", col="bad")
             night_no_girls.add(get_customer_population_count(leftover_customers))
 
@@ -1023,19 +1023,19 @@ label end_day:
             extra_sound = None
 
             if girl.get_effect("special", "rest shield"):
-                resting_changes.add("Spells", "header")
+                resting_changes.add(__("Spells"), "header")
                 if girl.get_effect("special", "shield"):
                     for g in girl.friends:
                         if not g.get_effect("special", "shield"):
                             g.add_effects(shield_effect)
-                            extra_text = "\n" + girl.name + " cast a protective shield on her friend " + g.fullname + "."
-                            resting_changes.add("Shield cast on " + g.fullname, col=c_lightblue)
+                            extra_text = __("\n%s cast a protective shield on her friend %s.") % (girl.name, g.fullname)
+                            resting_changes.add(__("Shield cast on ") + g.fullname, col=c_lightblue)
                             extra_sound = s_spell
                             break
                 else:
                     girl.add_effects(shield_effect)
-                    extra_text =  "\n" + girl.name + " cast a protective shield on herself."
-                    resting_changes.add("Shield cast on herself", col=c_lightblue)
+                    extra_text =  __("\n%s cast a protective shield on herself.") % girl.name
+                    resting_changes.add(__("Shield cast on herself"), col=c_lightblue)
                     extra_sound = s_spell
 
             # Use her toys
@@ -1280,14 +1280,14 @@ label end_day:
 
 
         if leveled or MC.ready_to_level():
-            night_late.add("Level up", "header")
+            night_late.add(__("Level up"), "header")
             if MC.ready_to_level():
                 night_late.add("* " + MC.name, col=c_main)
 
             for girl in leveled:
                 night_late.add("* " + girl.fullname, col="good")
         if jobbed:
-            night_late.add("Job up", "header")
+            night_late.add(__("Job up"), "header")
             for girl in jobbed:
                 night_late.add("* " + girl.fullname, col=c_orange)
 
@@ -1434,11 +1434,11 @@ label end_day:
     while catch_up_changes:
         $ girl, changes = catch_up_changes.pop(0)
 
-        $ text1 = girl.fullname + " helped "
+        $ text1 = girl.fullname + __(" helped ")
         if len(changes) > 1:
-            $ text1 += "other girls develop their skills.\n{size=-6}("
+            $ text1 += __("other girls develop their skills.\n{size=-6}(")
         else:
-            $ text1 += "another girl develop her skills.\n{size=-6}("
+            $ text1 += __("another girl develop her skills.\n{size=-6}(")
 
         python:
             for girl2, stats in changes:

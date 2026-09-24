@@ -25,7 +25,7 @@ init -2 python:
                 # Autorest check
                 if girl.energy <= autorest_limit[girl] and girl.energy < girl.get_stat_max("energy"):
                     if context.log:
-                        context.log.add_report("{color=[c_red]}" + girl.fullname + " was under the energy threshold and was set to rest automatically.{/color}")
+                        context.log.add_report(__("{color=[c_red]}%s was under the energy threshold and was set to rest automatically.{/color}") % girl.fullname)
                     context.resting_girls.append(girl)
                     girl.add_log("rest_days")
 
@@ -101,13 +101,13 @@ init -2 python:
 
             if cleanliness == "dusty":
                 context.turned_away = (dice(2, district.rank) - 1)
-                context.maint_text = "\nYour brothel is getting dusty. There are cobwebs in the rooms."
+                context.maint_text = __("\nYour brothel is getting dusty. There are cobwebs in the rooms.")
             elif cleanliness == "dirty":
                 context.turned_away = dice(3, district.rank)
-                context.maint_text = "\nYour brothel is getting dirty. Sill thinks she saw a rat."
+                context.maint_text = __("\nYour brothel is getting dirty. Sill thinks she saw a rat.")
             elif cleanliness == "disgusting":
                 context.turned_away = dice(6, district.rank)
-                context.maint_text = "\nThis place is a disgusting mess. Customers are turning away and girls are getting sick!"
+                context.maint_text = __("\nThis place is a disgusting mess. Customers are turning away and girls are getting sick!")
 
             if context.turned_away > 0:
                 if context.turned_away < len(context.customers):

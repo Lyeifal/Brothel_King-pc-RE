@@ -290,9 +290,9 @@ label run_ninja_game(njgame): # Returns "ninja" if ninja caught, "guest" if gues
     $ stage_name = str(ninja.flags["hunt stage"] + 1)
 
     if njgame.special:
-        $ stage_name += "*LOCKED*"
+        $ stage_name += __("*LOCKED*")
 
-    $ centered(event_color["special"] % "\n\n{b}Ninja hunt started\nROUND " + stage_name + "{/b}")
+    $ centered(event_color["special"] % (__("\n\n{b}Ninja hunt started\nROUND %s{/b}") % stage_name))
 
     if MC.has_item("makibishi"):
         if not njgame.special:
@@ -324,10 +324,10 @@ label run_ninja_game(njgame): # Returns "ninja" if ninja caught, "guest" if gues
         $ norollback()
         $ njgame.reset_positions()
 
-        $ full_but_list = [(njgame.sprite, "Hit!!!", njgame.rand_house_move()), ("passerby1", "Miss...", njgame.rand_house_move()), ("passerby2", "Miss...", njgame.rand_house_move()), ("passerby3", "Miss...", njgame.rand_house_move()), ("passerby4", "Miss...", njgame.rand_house_move()), ("passerby5", "Miss...", njgame.rand_house_move()), ("passerby6", "Miss...", njgame.rand_house_move()), ("passerby7", "Miss...", njgame.rand_house_move()), ("passerby8", "Miss...", njgame.rand_house_move()), ("passerby9", "Miss...", njgame.rand_house_move())]
+        $ full_but_list = [(njgame.sprite, __("Hit!!!"), njgame.rand_house_move()), ("passerby1", __("Miss..."), njgame.rand_house_move()), ("passerby2", __("Miss..."), njgame.rand_house_move()), ("passerby3", __("Miss..."), njgame.rand_house_move()), ("passerby4", __("Miss..."), njgame.rand_house_move()), ("passerby5", __("Miss..."), njgame.rand_house_move()), ("passerby6", __("Miss..."), njgame.rand_house_move()), ("passerby7", __("Miss..."), njgame.rand_house_move()), ("passerby8", __("Miss..."), njgame.rand_house_move()), ("passerby9", __("Miss..."), njgame.rand_house_move())]
 
         if njgame.guest:
-            $ full_but_list.append((njgame.guest, "Uh?!?", njgame.rand_house_move()))
+            $ full_but_list.append((njgame.guest, __("Uh?!?"), njgame.rand_house_move()))
 
         # Randomizes buttons
         $ but_list = rand_choice(full_but_list, 5)

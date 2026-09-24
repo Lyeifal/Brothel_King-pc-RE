@@ -328,7 +328,7 @@ init -3 python:
                 except Exception as e:
                     # Hook failure should never crash the game
                     if renpy.config.developer:
-                        renpy.notify("Hook '%s' (mod '%s') failed: %s" % (hook_name, mod_id, str(e)))
+                        renpy.notify(__("Hook '%s' (mod '%s') failed: %s") % (hook_name, mod_id, str(e)))
             return results
 
         def cancel_hook(self, hook_name):
@@ -358,7 +358,7 @@ init -3 python:
                     # EN: Hook failure should never crash the game
                     # ZH: 钩子失败不应导致游戏崩溃
                     if renpy.config.developer:
-                        renpy.notify("Hook '%s' (mod '%s') failed: %s" % (hook_name, mod_id, str(e)))
+                        renpy.notify(__("Hook '%s' (mod '%s') failed: %s") % (hook_name, mod_id, str(e)))
             return context.get("cancel", False)
 
         # ── Hook point constants (for documentation and auto-complete) ──
