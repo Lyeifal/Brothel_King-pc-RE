@@ -201,6 +201,24 @@ init -3 python:
                 states[mod_id] = bool(enabled)
             self._rebuild_active_mods()
 
+        def apply_pending_changes(self, pending):
+            """Apply a {mod_id: bool} dict of pending toggle states in one go.
+
+            EN: Used by the Mod Manager screen: the player tweaks toggles,
+                then confirms with OK. Unregistered ids are skipped; the
+                active set is rebuilt once at the end.
+            ZH: 供 Mod 管理界面使用：玩家先切换开关，点「确定」后批量
+                生效。未注册的 id 跳过；最后统一重建激活集。"""
+            if not pending:
+                return
+            states = self._get_persistent_states(create=True)
+            if states is None:
+                return
+            for mod_id, enabled in pending.items():
+                if mod_id in self._registered_mods:
+                    states[mod_id] = bool(enabled)
+            self._rebuild_active_mods()
+
         def apply_startup_states(self):
             """Idempotent rebuild of _active_mods from persistent + deps.
 

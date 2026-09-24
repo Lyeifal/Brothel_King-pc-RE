@@ -28,3 +28,13 @@ translate chinese_simplified strings:
     old "返回"
     new "返回"
 
+# TODO: Translation updated at 2026-09-25 07:26
+
+translate chinese_simplified strings:
+    old "(未应用)"
+    new "(未应用)"
+    old "有未应用的更改——点击「确定」生效，「返回」放弃。"
+    new "有未应用的更改——点击「确定」生效，「返回」放弃。"
+    old "确定"
+    new "确定"
+
