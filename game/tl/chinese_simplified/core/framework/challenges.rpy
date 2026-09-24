@@ -21,3 +21,15 @@ translate chinese_simplified strings:
     old "Warning: Event set to a past date. Change the event time or delay."
     new "警告：事件被设定为过去日期。请更改事件时间或推迟。"
 
+# TODO: Translation updated at 2026-09-25 05:26
+
+translate chinese_simplified strings:
+    old " mana/turn"
+    new " 法力/回合"
+    old " mana"
+    new " 法力"
+    old " [[Extractor ON]"
+    new " [[提取器 开]"
+    old " [[Extractor OFF]"
+    new " [[提取器 关]"
+

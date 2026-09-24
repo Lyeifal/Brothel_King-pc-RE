@@ -737,3 +737,55 @@ translate chinese_simplified strings:
     old "All girls: Libido and Obedience increased"
     new "所有女孩：性欲和服从提升"
 
+# TODO: Translation updated at 2026-09-25 05:26
+
+# game/core/systems/powers.rpy:652
+translate chinese_simplified power_use_295a6042:
+
+    # "[girl.fullname] is no longer uncomfortable with [fix_text].[text1]"
+    "[girl.fullname] 不再对 [fix_text] 感到不适。[text1]"
+
+# game/core/systems/powers.rpy:902
+translate chinese_simplified power_use_8402c62e:
+
+    # "[girl.fullname] has transferred {b}[chg] [stat_text]{/b} to [girl2.fullname]."
+    "[girl.fullname] 已将 {b}[chg] [stat_text]{/b} 转移给了 [girl2.fullname]。"
+
+# game/core/systems/powers.rpy:1061
+translate chinese_simplified power_use_8744f5b2:
+
+    # "The girls in the [pow_target_text] now love you more."
+    "[pow_target_text] 的女孩们现在更爱你了。"
+
+# game/core/systems/powers.rpy:1174
+translate chinese_simplified power_use_e953ae17:
+
+    # "[girl.fullname] has received a new negative trait, replacing [old_neg.display_name]."
+    "[girl.fullname] 获得了一个新的负面特质，替换了 [old_neg.display_name]。"
+
+translate chinese_simplified strings:
+    old "You do not have enough mojo to cast this power"
+    new "你的魔力不足，无法施放这个能力"
+    old " is now inactive."
+    new " 现已停用。"
+    old "{i}No change.{/i}"
+    new "{i}无变化。{/i}"
+    old "%s is now %s with %s acts."
+    new "%s 现在对 %s 行为%s。"
+    old "Choose negative fixation to remove"
+    new "选择要移除的负面癖好"
+    old " She has received a new negative fixation."
+    new " 她获得了一个新的负面癖好。"
+    old "%i girl%s have received {b}%i %s jp{/b} each from %s (%s). "
+    new "%i 个女孩%s 各获得了 {b}%i %s 职业点数{/b}，来自 %s（%s）。 "
+    old "Choose minion type"
+    new "选择仆从类型"
+    old "Choose minion"
+    new "选择仆从"
+    old "Choose a common room"
+    new "选择一个公共房间"
+    old "Choose target district"
+    new "选择目标街区"
+    old "Choose target location"
+    new "选择目标地点"
+

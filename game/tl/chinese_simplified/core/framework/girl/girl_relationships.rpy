@@ -10,3 +10,11 @@ translate chinese_simplified strings:
     old "Fear decreased"
     new "恐惧下降"
 
+# TODO: Translation updated at 2026-09-25 05:26
+
+translate chinese_simplified strings:
+    old "Actually..."
+    new "其实……"
+    old "Ask her out"
+    new "约她出去"
+

@@ -27,3 +27,20 @@ translate chinese_simplified strings:
     old "Do you want to use your makibishi to automatically catch your target?"
     new "你想使用撒菱自动抓住目标吗？"
 
+# TODO: Translation updated at 2026-09-25 05:26
+
+translate chinese_simplified strings:
+    old "*LOCKED*"
+    new "*已锁定*"
+    old "\n\n{b}Ninja hunt started\nROUND %s{/b}"
+    new """
+
+{b}忍者狩猎开始
+第 %s 回合{/b}"""
+    old "Hit!!!"
+    new "命中！！！"
+    old "Miss..."
+    new "落空……"
+    old "Uh?!?"
+    new "呃？！？"
+

@@ -67,3 +67,31 @@ translate chinese_simplified strings:
     old "%s%s"
     new "%s%s"
 
+# TODO: Translation updated at 2026-09-25 05:26
+
+translate chinese_simplified strings:
+    old "He"
+    new "他"
+    old "She"
+    new "她"
+    old " wanted to be entertained by a {b}%s{/b}, "
+    new " 想找个{b}%s{/b}作陪，"
+    old "and got {b}%s{/b}. "
+    new "找来了{b}%s{/b}。 "
+    old "but was left unattended. "
+    new "但无人接待。 "
+    old "%s wanted {b}%s{/b}, "
+    new "%s 想要{b}%s{/b}，"
+    old "but no whore was available. "
+    new "但没有可用的妓女。 "
+    old "very high"
+    new "非常高"
+    old "high"
+    new "高"
+    old "very low"
+    new "非常低"
+    old "low"
+    new "低"
+    old "normal"
+    new "正常"
+

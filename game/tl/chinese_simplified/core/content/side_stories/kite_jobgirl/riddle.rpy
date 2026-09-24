@@ -870,3 +870,25 @@ translate chinese_simplified jobgirl_1_b8a24d3f:
     # you "Bye!"
     you "再见！"
 
+# TODO: Translation updated at 2026-09-25 05:26
+
+translate chinese_simplified strings:
+    old "Give the answer for free"
+    new "免费告诉她答案"
+    old "Ask for gold"
+    new "要些金币"
+    old "Make fun of her... just a bit"
+    new "稍微取笑她一下"
+    old "A Protoceratops"
+    new "一只原角龙"
+    old "Molise"
+    new "Molise"
+    old "What do you want to do now?"
+    new "你现在想做什么？"
+    old "Be romantic"
+    new "浪漫一点"
+    old "Comment on her cleavage"
+    new "点评她的乳沟"
+    old "Wait for her reaction"
+    new "等她的反应"
+

@@ -37,3 +37,17 @@ translate chinese_simplified strings:
     old "{color=[c_red]}%s{/color} is not a valid farm weakness.\nAccepted values are \"stallion\", \"beast\", \"monster\", \"machine\", \"random\"."
     new """{color=[c_red]}%s{/color} 不是有效的农场弱点。
 可接受的值为 "stallion"、"beast"、"monster"、"machine"、"random"。"""
+# TODO: Translation updated at 2026-09-25 05:26
+
+translate chinese_simplified strings:
+    old "Girlpack rating: %s, "
+    new "女孩包评分：%s，"
+    old "Pictures: "
+    new "图片： "
+    old "\nMain tags score: %s%% (%s picture/existing tag)"
+    new """
+主要标签得分：%s%%（%s 张图片/已有标签）"""
+    old "\nOptional tags score: %s%% (%s picture/existing tag)"
+    new """
+可选标签得分：%s%%（%s 张图片/已有标签）"""
+

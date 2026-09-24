@@ -62,3 +62,11 @@ translate chinese_simplified strings:
     old "Has a {b}negative fixation{/b}"
     new "有{b}负面执念{/b}"
 
+# TODO: Translation updated at 2026-09-25 05:26
+
+translate chinese_simplified strings:
+    old "No sex acts available for whoring"
+    new "没有可用于接客的性行为"
+    old "Libido/Obedience too low"
+    new "性欲/服从太低"
+

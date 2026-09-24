@@ -12,3 +12,9 @@ translate chinese_simplified strings:
     old "%s is uncomfortable with such an expensive gift."
     new "%s 对这么昂贵的礼物感到不安。"
 
+# TODO: Translation updated at 2026-09-25 05:26
+
+translate chinese_simplified strings:
+    old "(used up)"
+    new "（已用完）"
+

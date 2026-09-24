@@ -13709,3 +13709,17 @@ translate chinese_simplified strings:
     old "Kosmo"
     new "科斯莫"
 
+# TODO: Translation updated at 2026-09-25 05:26
+
+translate chinese_simplified strings:
+    old "illegal weapon possession"
+    new "非法持有武器"
+    old "possession of hazardous magical drugs"
+    new "持有危险魔法药物"
+    old "illegally importing an exotic pet"
+    new "非法进口外来宠物"
+    old "Fight them"
+    new "战斗"
+    old "Cast sleeping spell"
+    new "施放催眠法术"
+

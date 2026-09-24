@@ -1293,3 +1293,44 @@ translate chinese_simplified strings:
     old "%s, Level %s, Defense %s"
     new "%s，等级 %s，防御 %s"
 
+# TODO: Translation updated at 2026-09-25 05:26
+
+# game/core/systems/security.rpy:93
+translate chinese_simplified security_dfcee05e:
+
+    # security "{color=[c_red]}[brothel.name] is being raided by [attackers_text]!{/color}\nYou rush outside with the defenders."
+    security """{color=[c_red]}[brothel.name] 正遭到 [attackers_text] 的袭击！{/color}
+你和守卫们冲了出去。"""
+
+# game/core/systems/security.rpy:401
+translate chinese_simplified security_95845543:
+
+    # guard "Boss! I counted [enemies] of them. And they also have [war_machines] war machines! They are led by [enemy_general.fullname], a renowned [enemy_g_text]."
+    guard "老板！我数过了，他们一共 [enemies] 人，还带着 [war_machines] 台战争机器！领头的是大名鼎鼎的 [enemy_general.fullname]，一位 [enemy_g_text]。"
+
+# game/core/systems/security.rpy:1779
+translate chinese_simplified kidnap_tip_7ce46ae8:
+
+    # man "Right then. [girl.name] was captured by [kidnapper_text]. I know where their lair is..."
+    man "事情是这样的。[girl.name] 被 [kidnapper_text] 抓走了。我知道他们的巢穴在哪……"
+
+translate chinese_simplified strings:
+    old "Suzume prevented a security breach."
+    new "Suzume 阻止了一次安全漏洞。"
+    old "Choose a girl to defend"
+    new "选择要保护的女孩"
+    old "the handle of his giant axe"
+    new "他那把巨斧的斧柄"
+    old "a whipping tentacle"
+    new "一条鞭打触手"
+    old "the flat of his sword"
+    new "他的剑背"
+    old "Fire a spell"
+    new "施放法术"
+    old "While you were fighting, the other attackers rampaged through your brothel. "
+    new "你战斗时，其他袭击者在青楼里大肆破坏。 "
+    old "While you were passed out, the %s ransacked your brothel, {color=[c_red]}taking off with [lost_gold] gold.{/color} "
+    new "你昏迷时，%s 洗劫了你的青楼，{color=[c_red]}抢走了 [lost_gold] 金币。{/color} "
+    old "{color=[c_red]}Security alert! %s mercenaries led by a %s besieged the brothel.{/color}"
+    new "{color=[c_red]}安全警报！%s 雇佣兵在一名 %s 的率领下围攻了青楼。{/color}"
+

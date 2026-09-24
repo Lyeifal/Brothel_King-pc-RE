@@ -81,3 +81,19 @@ translate chinese_simplified strings:
     old "Allows %s to visit your brothel."
     new "允许%s光顾你的青楼。"
 
+# TODO: Translation updated at 2026-09-25 05:26
+
+translate chinese_simplified strings:
+    old "had"
+    new "曾经"
+    old "rerolling "
+    new "重新掷骰 "
+    old " when working"
+    new " 工作时"
+    old " (for "
+    new "（持续 "
+    old " turns - does not stack)"
+    new " 回合 - 不叠加）"
+    old "1 turn - does not stack)"
+    new "1 回合 - 不叠加）"
+

@@ -571,3 +571,40 @@ translate chinese_simplified strings:
     old "%s minion%s are hurt. What do you want to do?"
     new "%s 名手下%s受伤了。你想怎么办？"
 
+# TODO: Translation updated at 2026-09-25 05:26
+
+translate chinese_simplified strings:
+    old "You have received a rare %s."
+    new "你获得了一件稀有的 %s。"
+    old "You have received a piece of %s."
+    new "你获得了一块 %s。"
+    old "Use healing powder on %s (level %s %s)"
+    new "对 %s（%s 级 %s）使用治疗粉"
+    old "Retire %s (level %s %s)"
+    new "退役 %s（%s 级 %s）"
+    old "Ignore it for now"
+    new "暂时不管它"
+    old "Uh? What's going on here?"
+    new "嗯？这是怎么回事？"
+    old "Which item do you wish to use?"
+    new "你想使用哪件物品？"
+    old "Use %s (+%s XP per stallion)"
+    new "使用 %s（每匹种马 +%s 经验）"
+    old "Use %s (+%s XP per beast)"
+    new "使用 %s（每头野兽 +%s 经验）"
+    old "Use %s (+%s XP per monster)"
+    new "使用 %s（每只怪物 +%s 经验）"
+    old "Use %s (+%s XP per machine)"
+    new "使用 %s（每台机械 +%s 经验）"
+    old "Do you really want to advance to the next chapter?\n\n{size=-2}This will reset all your room improvements, but you will keep your furniture and decorations.\nIt will cost you {b}%s gold{/b}."
+    new """你真的要进入下一章吗？
+
+{size=-2}这将重置你所有的房间改造，但家具和装饰会保留。
+需要花费 {b}%s 金币{/b}。"""
+    old "Very good. I will have more items for you after the next inventory restock."
+    new "很好。下次进货后我会有更多物品给你。"
+    old "If you bring me more materials, I may be able to expand my inventory again. Keep it up!"
+    new "如果你给我带来更多材料，我或许能再次扩充库存。继续加油！"
+    old "You do not have the necessary resources with you.{w=0.8}{nw}"
+    new "你身上没有带必需的物资。{w=0.8}{nw}"
+

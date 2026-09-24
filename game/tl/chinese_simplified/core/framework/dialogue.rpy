@@ -34,3 +34,15 @@ translate chinese_simplified strings:
     old "Are you sure you want to delete this girl mix?"
     new "你确定要删除这个女孩混合包吗？"
 
+# TODO: Translation updated at 2026-09-25 05:26
+
+translate chinese_simplified strings:
+    old "Reputation: %i/%i (%s)"
+    new "声望：%i/%i（%s）"
+    old "%s skill changes"
+    new "%s 项技能变化"
+    old " has lost "
+    new " 失去了 "
+    old "List printed to: "
+    new "列表已打印到： "
+

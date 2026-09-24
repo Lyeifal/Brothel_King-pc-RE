@@ -3416,3 +3416,11 @@ translate chinese_simplified strings:
     old "How do you want to call your brothel?"
     new "你想给你的妓院取什么名字？"
 
+# TODO: Translation updated at 2026-09-25 05:26
+
+translate chinese_simplified strings:
+    old "Well, sure"
+    new "嗯，当然可以"
+    old "Fuck yeah"
+    new "操，当然"
+

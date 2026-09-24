@@ -11989,3 +11989,171 @@ translate chinese_simplified strings:
     old "Admire her"
     new "欣赏她"
 
+# TODO: Translation updated at 2026-09-25 05:26
+
+# game/core/content/day_events/day_events.rpy:98
+translate chinese_simplified random_morning_events_65ada9ed:
+
+    # "As you cross the [room_text] in the morning, you run into [girl.fullname]."
+    "清晨，当你穿过 [room_text] 时，迎面遇到了 [girl.fullname]。"
+
+# game/core/content/day_events/day_events.rpy:147
+translate chinese_simplified random_morning_events_8ebbfd3c:
+
+    # you "Well, sure. The [room_text] is a bit dusty. Why don't you grab a broom and bucket, and clean this place up?"
+    you "嗯，当然。[room_text] 有点落灰了。你为什么不拿上扫帚和水桶，把这地方打扫干净呢？"
+
+# game/core/content/day_events/day_events.rpy:157
+translate chinese_simplified random_morning_events_e672ad53:
+
+    # "[girl.name] spent all morning cleaning up the [room_text]. [brothel.name] cleanliness has improved."
+    "[girl.name] 花了一整个早上打扫 [room_text]。[brothel.name] 的清洁度提升了。"
+
+# game/core/content/day_events/day_events.rpy:442
+translate chinese_simplified random_morning_events_46f34c08:
+
+    # "[girl.name]'s [boost_stat_text] skill has improved a little."
+    "[girl.name] 的 [boost_stat_text] 技能提升了一点。"
+
+# game/core/content/day_events/day_events.rpy:1564
+translate chinese_simplified random_night_girl_event_ec65ac78:
+
+    # "One [cust_text] in particular stands out among the crowd."
+    "人群中有一位 [cust_text] 格外引人注目。"
+
+# game/core/content/day_events/day_events.rpy:1576
+translate chinese_simplified random_night_girl_event_56d0dc3b:
+
+    # "As [girl.name] blushes and tries to excuse herself away from the stage, the [cust_text] finally notices you. {nw}"
+    "当 [girl.name] 红着脸试图从舞台上告退时，那位 [cust_text] 终于注意到了你。{nw}"
+
+# game/core/content/day_events/day_events.rpy:1652
+translate chinese_simplified random_night_girl_event_99279534:
+
+    # "She looks tense and defensive as you and the horny [cust_text] join her on stage."
+    "当你和色眯眯的 [cust_text] 一起登上舞台时，她显得紧张而戒备。"
+
+translate chinese_simplified strings:
+    old "ev: What are you doing, you dumb bitch? Your body is for fucking, not games! Save your energy for tonight."
+    new "ev：你在干什么，你这蠢婊子？你的身体是用来挨操的，不是用来玩的！把力气留到今晚！"
+    old "Humph. I hope you will put the same energy into serving customers."
+    new "哼，希望你伺候顾客时也能用上这股劲儿。"
+    old "Hey! If you get up early, you should fix my breakfast, instead of doing some useless exercise!"
+    new "喂！起这么早，就该给我做早饭，而不是做什么没用的锻炼！"
+    old "ev: Humph. Muscles on a whore are like tits on a man: useless."
+    new "ev：哼，妓女长肌肉，就像男人长乳房一样：没用。"
+    old "Enjoying yourself, are you? Shouldn't you be doing something useful with your time?"
+    new "很享受是吧？你就不该拿你的时间干点有用的事吗？"
+    old "Tell her to clean up the [room_text]"
+    new "叫她打扫[room_text]"
+    old "ev: Out of my way, you dirty slave! I have no time to waste with a cum dump like you."
+    new "ev：滚开，你这肮脏的奴隶！我没时间浪费在你这种精液容器身上。"
+    old "If I needed you, I would give you a straight order. I don't want you to ask idle questions!"
+    new "如果我需要你，我会直接下令。我不需要你问这些无聊的问题！"
+    old "Don't you know a slave is not supposed to address her betters? I'll send for you when, and if, I need your service."
+    new "你不知道奴隶不该跟主人搭话吗？我需要你的服务时自会传唤你。"
+    old "ev: How DARE you barge into my room!!! Get the fuck out, or I'll rip your fucking head off!!!"
+    new "ev：你竟敢闯进我的房间！！！滚出去，不然我撕烂你的脑袋！！！"
+    old "Are you out of your mind? Get out of my room, right now!"
+    new "你疯了吗？立刻滚出我的房间！"
+    old "Do you think this place is a fucking hotel? Get lost."
+    new "你以为这里是酒店吗？滚蛋。"
+    old "I ain't got time for this. Go masturbate, or something."
+    new "我没空搭理你。自己去自慰吧，或者干点别的。"
+    old "gd: What's going on, [girl.name]? Are you all right?"
+    new "gd：怎么了，[girl.name]？你还好吗？"
+    old "ne: Ah, [girl.name]. It's about time you came back."
+    new "ne：啊，[girl.name]。你总算回来了。"
+    old "ev: Hey, [girl.name], you stupid bitch! What the fuck do you think you're doing?"
+    new "ev：嘿，[girl.name]，你这蠢婊子！你他妈以为自己在上演哪一出？"
+    old "gd: Come on, [girl.name], you know everyone is busy preparing for the opening. You should do your part."
+    new "gd：拜托，[girl.name]，大家都在为开业做准备，你也该出一份力。"
+    old "ne: Look, I don't care what you do, but you must be ready to work on time. From now on, you will come back on time."
+    new "ne：听着，我不在乎你做什么，但你必须准时开工。从现在起，你必须准时回来。"
+    old "ev: Excuses, always excuses! Do I look like I give a fuck? Get your ass to work right now, or it'll cost you!"
+    new "ev：借口，总是借口！我看起来像在乎的样子吗？立刻去干活，不然有你好受的！"
+    old "gd: I don't like to do this, but you must be punished. We have rules that you must follow."
+    new "gd：我也不想这样，但你必须受罚。规矩就是规矩。"
+    old "ne: All right, you know the drill. You broke the rules, now get ready to be punished."
+    new "ne：行了，你懂规矩的。你犯了错，准备受罚吧。"
+    old "ev: What a stuck-up little  bitch. You dare talk back to me? Let us discuss your punishment."
+    new "ev：好一只高傲的小婊子，你敢顶嘴？那我们就来讨论讨论你的惩罚。"
+    old "mouth and hands"
+    new "嘴和手"
+    old "blabberring mouth"
+    new "喋喋不休的嘴"
+    old "tits and mouth"
+    new "乳房和嘴"
+    old "Let the [cust_text] fuck [girl.name] on stage"
+    new "让[cust_text]在舞台上操[girl.name]"
+    old "him"
+    new "他"
+    old "an adoring"
+    new "崇拜的"
+    old "a loving"
+    new "爱慕的"
+    old "a curious"
+    new "好奇的"
+    old "an inquisitive"
+    new "好追问的"
+    old "a terrified"
+    new "惊恐的"
+    old "a frightened"
+    new "害怕的"
+    old "a worried"
+    new "担忧的"
+    old "a puzzled"
+    new "困惑的"
+    old "naked as the day she was born"
+    new "像她出生那天一样一丝不挂"
+    old "in her plain slave clothes"
+    new "穿着朴素的奴隶装"
+    old "gd: That's it. You look great now. I'm sure the customers will love you."
+    new "gd：好了，你现在看起来很棒。顾客们一定会喜欢你的。"
+    old "ne: Well, you look good enough. Now, go and make the customers happy."
+    new "ne：嗯，看起来还不错。去吧，让顾客们满意。"
+    old "ev: Hmmpf. Not bad, you look almost like the real thing. Now, go and make an impression on those gullible fools."
+    new "ev：哼，还不赖，你看起来几乎像那么回事了。去吧，让那些好骗的傻子开开眼。"
+    old "%s skill"
+    new "%s 技能"
+    old "[girl.name]'s %s has improved a lot."
+    new "[girl.name]的%s大幅提升了。"
+    old "[girl.name]'s %s has improved."
+    new "[girl.name]的%s提升了。"
+    old "[girl.name]'s %s has improved a little."
+    new "[girl.name]的%s提升了一点。"
+    old "[girl.name]'s %s has decreased a lot."
+    new "[girl.name]的%s大幅下降。"
+    old "[girl.name]'s %s has decreased."
+    new "[girl.name]的%s下降了。"
+    old "[girl.name]'s %s has decreased a little."
+    new "[girl.name]的%s下降了一点。"
+    old "with delight"
+    new "开心地"
+    old "lapping it all up"
+    new "一滴不剩地舔干净"
+    old "absentmindedly"
+    new "心不在焉地"
+    old "wiping her hands on her chest"
+    new "在她胸口擦手"
+    old "with disgust"
+    new "厌恶地"
+    old "wiping her hands on a piece of cloth"
+    new "用一块布擦手"
+    old "She makes sure to gulp it all down"
+    new "她确保全部咽了下去"
+    old "Cum drips out of her mouth as she lies there panting, trying to catch her breath"
+    new "精液从她嘴角流出，她躺在那儿喘着气，试图缓过气来"
+    old "She spits it all out, nearly puking as the smell and taste makes her nauseous"
+    new "她全部吐了出来，那股气味和味道让她恶心，差点吐出来"
+    old "from underneath her"
+    new "从她身下"
+    old "from atop her"
+    new "从她身上"
+    old "from behind"
+    new "从身后"
+    old "vagina"
+    new "阴道"
+    old "asshole"
+    new "屁眼"
+

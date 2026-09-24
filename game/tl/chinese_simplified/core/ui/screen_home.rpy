@@ -45,3 +45,13 @@ translate chinese_simplified strings:
     old "Access options from your active mods (%s)."
     new "从已启用的模组（%s）中进入各模组的选项。"
 
+# TODO: Translation updated at 2026-09-25 05:26
+
+translate chinese_simplified strings:
+    old "In brothel: {b}{size=+4}%s{/size}{/b} /%s"
+    new "青楼中：{b}{size=+4}%s{/size}{/b} /%s"
+    old "Working today: {b}{size=+4}%s{/size}{/b} /%s"
+    new "今日工作：{b}{size=+4}%s{/size}{/b} /%s"
+    old "In farm: {b}{size=+4}%s{/size}{/b} /%s"
+    new "农场中：{b}{size=+4}%s{/size}{/b} /%s"
+

@@ -2037,3 +2037,15 @@ translate chinese_simplified strings:
     old "Don't indulge her"
     new "不要纵容她"
 
+# TODO: Translation updated at 2026-09-25 05:26
+
+translate chinese_simplified strings:
+    old "What do you want to get for yourself?"
+    new "你想给自己点什么？"
+    old "A strong ale"
+    new "一杯烈性麦酒"
+    old "Same as the girls"
+    new "和女孩们一样"
+    old "A fruit juice"
+    new "一杯果汁"
+

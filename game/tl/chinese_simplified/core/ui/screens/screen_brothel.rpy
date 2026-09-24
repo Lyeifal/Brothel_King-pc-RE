@@ -22,3 +22,34 @@ translate chinese_simplified strings:
     old "%s is currently assigned to the master bedroom."
     new "%s 目前被分配到主卧。"
 
+# TODO: Translation updated at 2026-09-25 05:26
+
+translate chinese_simplified strings:
+    old " and {b}%s{/b} gold for the girls in the farm"
+    new " 以及给农场女孩们的 {b}%s{/b} 金币"
+    old "No other trainer available"
+    new "没有其他训练师可用"
+    old "Trainers help your girls learning new skills. Discover new trainers by meeting the people of Zan!"
+    new "训练师帮助你的女孩学习新技能。去认识瓒城的居民，发现新的训练师吧！"
+    old "{i}Recruit a trainer to help your girls.{/i}"
+    new "{i}招募一名训练师来帮助你的女孩。{/i}"
+    old "Lv. %i{size=-8}/%i"
+    new "Lv. %i{size=-8}/%i"
+    old "%s day(s) to complete."
+    new "还需 %s 天完成。"
+    old "When possible, customers will be matched with girls of the same rank."
+    new "在可能的情况下，顾客会与同等级别的女孩配对。"
+    old "When possible, customers will be matched with girls that allow their preferred job or sex act."
+    new "在可能的情况下，顾客会与允许其偏好工作或性行为的女孩配对。"
+    old "Click here to activate or deactivate %s.\n%s ({b}%s{/b})"
+    new """点击此处激活或停用 %s。
+%s（{b}%s{/b}）"""
+    old "active"
+    new "active"
+    old "inactive"
+    new "inactive"
+    old "%s to customer attraction"
+    new "%s 对顾客吸引力"
+    old "%s to customer budget"
+    new "%s 对顾客预算"
+
