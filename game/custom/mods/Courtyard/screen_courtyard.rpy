@@ -51,23 +51,23 @@ screen courtyard():
             spacing 25
             yalign 0.5
 
-            text __("别院"):
+            text __("Courtyard"):
                 size 24
                 color "#4ECDC4"
                 bold True
                 yalign 0.5
 
-            text __("女孩: [_courtyard_girl_count] / [_courtyard_room_limit]"):
+            text __("Girls: [_courtyard_girl_count] / [_courtyard_room_limit]"):
                 size 18
                 color "#FFFFFF"
                 yalign 0.5
 
-            text __("今日租金: [_courtyard_rent] 金币"):
+            text __("Rent today: [_courtyard_rent] gold"):
                 size 18
                 color "#FFD700"
                 yalign 0.5
 
-            text __("每日维护: [_courtyard_upkeep] 金币"):
+            text __("Upkeep: [_courtyard_upkeep] gold"):
                 size 18
                 color "#BBBBBB"
                 yalign 0.5
@@ -152,7 +152,7 @@ screen courtyard():
                         bold True
 
                     if getattr(selected_girl, "job", None):
-                        text __(selected_girl.job.capitalize()):
+                        text selected_girl.job.capitalize():
                             size 16
                             xalign 0.5
                             color "#BBBBBB"
@@ -175,28 +175,36 @@ screen courtyard():
 
                     null height 20
 
-                    textbutton __("返回青楼"):
+                    textbutton __("Return to Brothel"):
                         xalign 0.5
                         sensitive (not _courtyard_brothel_full)
                         action Return(("move_brothel", selected_girl))
 
                     if _courtyard_brothel_full:
-                        text __("青楼已达最大工作容量(24)"):
+                        text __("The brothel is at maximum working capacity (24)."):
                             size 14
                             xalign 0.5
                             color "#E74C3C"
                             italic True
 
-                    textbutton __("训练(缓慢)"):
+                    textbutton __("Train (slow)"):
                         xalign 0.5
+                        sensitive (selected_girl not in courtyard_villa.trained_today)
                         action Return(("train", selected_girl))
 
-                    textbutton __("释放"):
+                    if selected_girl in courtyard_villa.trained_today:
+                        text __("Already trained today."):
+                            size 13
+                            xalign 0.5
+                            color "#888888"
+                            italic True
+
+                    textbutton __("Release"):
                         xalign 0.5
                         action Return(("release", selected_girl))
 
             else:
-                text __("选择一个女孩进行管理。"):
+                text __("Select a girl to manage."):
                     size 18
                     xalign 0.5
                     yalign 0.5
@@ -221,7 +229,7 @@ screen courtyard():
                     xalign 0.5
                     yalign 0.1
 
-                    text __("设施"):
+                    text __("Facilities"):
                         size 24
                         xalign 0.5
                         color "#FFD700"
@@ -240,7 +248,7 @@ screen courtyard():
                                     color "#FFFFFF"
                                     bold True
 
-                                text __("Lv.[facility.upgrade_level]/[facility.max_level]"):
+                                text __("Lv. [facility.upgrade_level]/[facility.max_level]"):
                                     size 14
                                     color "#AAAAAA"
                                     xalign 1.0
@@ -252,12 +260,12 @@ screen courtyard():
 
                             if facility.upgrade_level < facility.max_level:
                                 $ next_cost = facility.upgrade_cost.get(facility.upgrade_level + 1, 0)
-                                textbutton __("升级 ([next_cost] 金币)"):
+                                textbutton __("Upgrade ([next_cost] gold)"):
                                     xalign 0.5
                                     sensitive (MC.gold >= next_cost)
                                     action Return(("upgrade", fid))
                             else:
-                                text __("最高等级"):
+                                text __("Max level"):
                                     size 13
                                     xalign 0.5
                                     color "#2ECC71"
@@ -267,7 +275,7 @@ screen courtyard():
 
                     ## EN: Rent reminder — same formula as process_day().
                     ## ZH: 租金提示——与 process_day() 同一公式。
-                    text __("房间租金随地区等级、难度与人数上涨；闲置女孩的技能也会日渐生疏。"):
+                    text __("Rent scales with district rank, difficulty and the number of housed girls; idle girls' skills decay over time."):
                         size 13
                         xalign 0.5
                         color "#888888"
@@ -278,7 +286,7 @@ screen courtyard():
                     if _courtyard_expansion_offer:
                         null height 6
 
-                        textbutton __("购买别院扩建地契 ([courtyard_villa.EXPANSION_PRICE] 金币)"):
+                        textbutton __("Buy Courtyard Expansion Deed ([courtyard_villa.EXPANSION_PRICE] gold)"):
                             xalign 0.5
                             sensitive (MC.gold >= courtyard_villa.EXPANSION_PRICE)
                             action Return(("buy_expansion",))
@@ -286,7 +294,7 @@ screen courtyard():
                             text_size 14
 
                     elif courtyard_villa.expansion_unlocked:
-                        text __("扩建已完成 — 房间上限 [courtyard_villa.MAX_CAPACITY]"):
+                        text __("Expansion complete — capacity [courtyard_villa.MAX_CAPACITY]"):
                             size 13
                             xalign 0.5
                             color "#2ECC71"
@@ -294,7 +302,7 @@ screen courtyard():
 
     ## EN: Bottom close button.
     ## ZH: 底部关闭按钮。
-    textbutton __("关闭"):
+    textbutton __("Close"):
         xalign 0.5
         yalign 0.97
         action Return(("close",))

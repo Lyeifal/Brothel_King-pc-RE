@@ -247,3 +247,7 @@
 - 29 件武器/法杖类物品本身无描述（源数据为空），属正常
 - `[plu]` 类英文复数占位符可能显示「3 天s」残留，如影响体验需代码侧处理
 - i18n_lint 报 18 处，全部为开发者面向文本（见 `I18N_ROADMAP.md` 第 6 节）
+
+### 7.5 Mod 完善新增翻译（2026-09-25）
+
+- 庭院/拍卖行 Mod 完善（见 `docs/mods/MOD_IMPROVEMENT_PLAN.md`）新增 33 条字符串，模型直译并导入：`translate --count` 缺失 0，`audit_json_i18n.py` 3,533/3,533，`audit_placeholders` 仅 i18n_service 文档串 1 处历史遗留（基线已有），i18n_lint 14（基线持平）

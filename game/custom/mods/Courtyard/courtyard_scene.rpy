@@ -49,6 +49,20 @@ label courtyard_scene():
     if _cy_count > 0:
         sill "The rent comes to [_cy_rent] gold tonight, on top of their upkeep. [_cy_diff_name] times, Master — every district charges more for its rooms, and the landlord raises his rates as your household grows."
         sill "And do visit them once in a while. Idling day after day dulls a girl's skills, especially in... challenging times."
+
+        ## EN: Rotating ambient flavor so repeat visits don't feel identical.
+        ## ZH: 轮播环境 flavor，使重复到访不至于完全一样。
+        python:
+            _cy_flavors = [
+                __("The garden smells of fresh rain. One of the girls is humming somewhere in the corridors."),
+                __("A faint splash drifts over from the hot spring. Someone is enjoying her afternoon."),
+                __("Soft laughter echoes from the training ground — practice, or gossip, hard to tell."),
+                __("The villa is quiet today. Books, needlework, and the occasional nap."),
+            ]
+            _cy_flavor = renpy.random.choice(_cy_flavors)
+
+        sill "[_cy_flavor]"
+
     else:
         sill "The villa is empty right now, so there is no rent to pay. Should you ever need the extra rooms, you know where to find us."
 
@@ -95,9 +109,9 @@ label courtyard_loop:
             _cy_ok = courtyard_villa.train_girl(_cy_girl, "obedience", 1)
 
         if _cy_ok:
-            sill "[_cy_name] put in a quiet hour of practice at the training ground. Slow and steady, Master."
+            sill "[_cy_name] put in a quiet hour of practice at the training ground. Slow and steady, Master — one small step a day."
         else:
-            sill "I'm afraid [_cy_name] is in no state to train right now."
+            sill "I'm afraid [_cy_name] has already trained today. The body needs rest as much as drill."
 
     ## ────────────────────────────────────────────────────────────
     ##  Release the selected girl (frees her from your service)
