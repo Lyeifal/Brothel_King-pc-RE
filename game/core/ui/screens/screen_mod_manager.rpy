@@ -15,10 +15,14 @@ screen mod_manager():
 
     modal True
 
-    ## EN: tag menu — replaces the main menu screen while shown; Return()
-    ##     drops back into the main-menu interaction loop.
-    ## ZH: tag menu —— 显示时替换主菜单屏幕；Return() 回到主菜单交互循环。
-    tag menu
+    ## EN: zorder overlay — the main menu screen (and its background image)
+    ##     stays underneath, dimmed by the Solid below. Using `tag menu`
+    ##     here replaced screen main_menu entirely, which hid the menu
+    ##     background and left a black void.
+    ## ZH: zorder 浮层——主菜单屏幕（及其背景图）保留在下，
+    ##     由下方 Solid 压暗。此前用 `tag menu` 会整个替换
+    ##     screen main_menu，把主菜单背景隐藏，只剩黑色。
+    zorder 10
 
     ## EN: Dim the main menu behind the popup.
     ## ZH: 压暗弹窗背后的主菜单。
@@ -102,14 +106,30 @@ screen mod_manager():
                                         spacing yres(4)
                                         xsize xres(150)
 
-                                        if _always_on:
-                                            text _("常驻") size res_font(16) color c_darkorange xalign 1.0
-                                        elif _missing:
-                                            text _("未激活") size res_font(16) color c_red xalign 1.0
-                                        elif _enabled:
-                                            text _("已启用") size res_font(16) color c_emerald xalign 1.0
-                                        else:
-                                            text _("已禁用") size res_font(16) color c_grey xalign 1.0
+                                        ## EN: High-contrast status badge — solid
+                                        ##     background, state visible at a glance.
+                                        ## ZH: 高对比状态徽章——纯色底色，一眼可辨。
+                                        frame:
+                                            xalign 1.0
+                                            xpadding xres(10)
+                                            ypadding yres(3)
+                                            if _always_on:
+                                                background Solid("#B9770E")
+                                            elif _missing:
+                                                background Solid("#7B241C")
+                                            elif _enabled:
+                                                background Solid("#1E8449")
+                                            else:
+                                                background Solid("#5D6D7E")
+
+                                            if _always_on:
+                                                text _("常驻") size res_font(15) bold True color "#FFFFFF"
+                                            elif _missing:
+                                                text _("未激活") size res_font(15) bold True color "#FFFFFF"
+                                            elif _enabled:
+                                                text _("已启用") size res_font(15) bold True color "#FFFFFF"
+                                            else:
+                                                text _("已禁用") size res_font(15) bold True color "#FFFFFF"
 
                                         ## EN: always_on mods cannot be toggled.
                                         ## ZH: always_on 的 Mod 不可切换。

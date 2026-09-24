@@ -1261,6 +1261,16 @@ label girls_loop():
                     # with Dissolve(0.15)
                     $ exit = "silent"
 
+                elif isinstance(r, tuple) and len(r) == 2 and r[0] == "mod_dest":
+                    ## EN: A mod destination was chosen (e.g. the Courtyard
+                    ##     villa) — let the owning mod perform the move.
+                    ## ZH: 选择了 Mod 目的地（如别院）——由对应 Mod 执行移送。
+                    hide screen assign_job
+                    with Dissolve(0.15)
+                    python:
+                        mod_api_v2.execute_hook(mod_api_v2.HOOK_GIRL_ASSIGN_ACCEPT, girl=girl, dest_id=r[1])
+                    $ exit = "silent"
+
                 elif r == "master bedroom":
                     hide screen assign_job
                     with Dissolve(0.15)

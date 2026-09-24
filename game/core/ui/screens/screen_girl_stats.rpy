@@ -798,9 +798,26 @@ screen assign_job(girl):
     if brothel.master_bedroom.level >= 1:
         key "K_8" action (Return("master bedroom"))
 
+    ## EN: Query mod-registered extra assign destinations (e.g. the
+    ##     "Courtyard" mod). Rendered as extra grid cells below.
+    ## ZH: 查询 Mod 注册的额外指派去向（如 "Courtyard" Mod），
+    ##     渲染为网格下方的额外格子。
+    python:
+        _assign_mod_dests = []
+        try:
+            _assign_results = mod_api_v2.execute_hook(mod_api_v2.HOOK_GIRL_ASSIGN_LIST, girl=girl)
+            for _results in _assign_results.values():
+                if _results:
+                    _assign_mod_dests.extend(_results)
+        except Exception:
+            _assign_mod_dests = []
+
+    if _assign_mod_dests and _assign_mod_dests[0].get("available"):
+        key "K_9" action (Return(("mod_dest", _assign_mod_dests[0]["id"])))
+
     frame ypos 0.25 xfill False:
 
-        grid 4 2:
+        grid 4 3:
             # xsize xres(450)
             xspacing xres(3)
             yspacing yres(3)
@@ -864,6 +881,31 @@ screen assign_job(girl):
                         text text1 selected_color c_green hover_bold True xalign 0.5 yalign 0.5 drop_shadow (1, 1) size res_font(14) text_align 0.5
                         text "8" size res_font(12) xalign 0.05 yalign 0.95 drop_shadow (1, 1)
             else:
+                null
+
+            ## EN: Mod-provided destinations (grid cells 9+). Only
+            ##     "available" entries are rendered as buttons.
+            ## ZH: Mod 提供的去向（第 9 格起）。仅渲染 available 的项。
+            for _dest in _assign_mod_dests:
+                if _dest.get("available"):
+                    button background None xpadding 2 ypadding 2 xpos 0:
+                        action Return(("mod_dest", _dest["id"]))
+                        tooltip _dest.get("tooltip") or _dest.get("text")
+                        at alpha_transform
+                        fixed fit_first True:
+                            add Solid("#2E4053") xsize xres(100) ysize yres(60) xalign 0.5 yalign 0.5
+                            text _dest.get("text") selected_color c_green hover_bold True xalign 0.5 yalign 0.5 drop_shadow (1, 1) size res_font(14) text_align 0.5
+                else:
+                    null
+
+            ## EN: Fill the 4x3 grid (8 fixed cells + mod cells).
+            ## ZH: 补足 4x3 网格（8 个固定格 + Mod 格）。
+            python:
+                _assign_fill = 12 - 8 - len(_assign_mod_dests)
+                if _assign_fill < 0:
+                    _assign_fill = 0
+
+            for _i in range(_assign_fill):
                 null
 
 screen girl_stats_light(girl, x=0.5, y=0.85, panel="left"): # Used to display a condensed summary of a girl's stat and show the impact of item changes

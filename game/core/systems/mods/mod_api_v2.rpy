@@ -381,6 +381,14 @@ init -3 python:
         HOOK_GAME_LOADED = "game_loaded"
         HOOK_GIRL_DESTINATION_LIST = "girl_destination_list"
         HOOK_GIRL_DESTINATION_ACCEPT = "girl_destination_accept"
+        ## EN: Extra destinations on the assign_job screen (e.g. a mod villa):
+        ##     LIST returns [{id, text, tooltip, available}], ACCEPT performs
+        ##     the move (context: girl, dest_id).
+        ## ZH: assign_job 屏幕上的额外去向（如 Mod 别院）：LIST 返回
+        ##     [{id, text, tooltip, available}]，ACCEPT 执行移送
+        ##     （context 含 girl、dest_id）。
+        HOOK_GIRL_ASSIGN_LIST = "girl_assign_list"
+        HOOK_GIRL_ASSIGN_ACCEPT = "girl_assign_accept"
         HOOK_ITEM_GENERATED = "item_generated"
 
     # ── Singleton ──

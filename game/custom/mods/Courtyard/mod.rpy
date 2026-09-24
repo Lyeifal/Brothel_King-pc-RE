@@ -75,6 +75,31 @@ init -1 python:
     mod_api_v2.register_hook(mod_api_v2.HOOK_GIRL_DESTINATION_ACCEPT, _courtyard_destination_accept, priority=0)
     mod_api_v2.register_hook(mod_api_v2.HOOK_DAY_ENDING, _courtyard_day_ending, priority=0)
 
+    ## EN: Offer the villa as an assign destination from the girl job
+    ##     screen (the farm/master-bedroom pattern), so girls already in
+    ##     the brothel can be moved into storage at any time.
+    ## ZH: 在女孩工作指派屏幕上提供别院作为去向（与农场/主卧同款
+    ##     入口），青楼中的女孩可随时移入封存。
+    def _courtyard_assign_list(context):
+        if not courtyard_villa.can_add_girl():
+            return []
+        return [{"id": "courtyard",
+                 "text": __("Courtyard"),
+                 "tooltip": __("Send %s to the Courtyard villa.") % context.get("girl").name,
+                 "available": True}]
+
+    def _courtyard_assign_accept(context):
+        if context.get("dest_id") != "courtyard":
+            return
+        girl = context.get("girl")
+        if girl is None:
+            return
+        if courtyard_villa.add_girl(girl):
+            notify(girl.name + __(" has been moved to the Courtyard."), col="green")
+
+    mod_api_v2.register_hook(mod_api_v2.HOOK_GIRL_ASSIGN_LIST, _courtyard_assign_list, priority=0)
+    mod_api_v2.register_hook(mod_api_v2.HOOK_GIRL_ASSIGN_ACCEPT, _courtyard_assign_accept, priority=0)
+
 ################
 ## Home - Right menu - Courtyard button
 ## EN: Entry point into the scenario-driven label. The button is always
