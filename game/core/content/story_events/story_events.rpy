@@ -2817,7 +2817,7 @@ label gizel_attack():
 
             you "My name is [MC.name]. I'm a lot tougher than those clowns out there. You don't want to start a fight you can't win."
 
-            $ MC.rand_say((__("wr: Before I was a brothel owner, I was a soldier in the war. I killed more elven mages than I can count.",
+            $ MC.rand_say((__("wr: Before I was a brothel owner, I was a soldier in the war. I killed more elven mages than I can count."),
                             __("wz: I'm not just a brothel owner, I'm also a powerful mage, top of my class in Karkyr. You won't have the upper hand in this fight."),
                             __("tr: I'm not just a lowlife pimp, okay? I've got a pet dragon. That's right. And he's like, twenty feet tall.")))
 
@@ -3404,7 +3404,7 @@ label farm_meet_goldie_menu():
 
             goldie "Anyway, how do you expect to solve the mystery of this place?"
 
-            $ MC.rand_say((__("wr: There's nothing that can't be solved with a few inches of steel in the gut, I always say. Let me take care of it.",
+            $ MC.rand_say((__("wr: There's nothing that can't be solved with a few inches of steel in the gut, I always say. Let me take care of it."),
                             __("wz: I took a class in 'curse and debuff management' at Karkyr University, back in the day... I know my way around these things."),
                             __("tr: I talk my way around tricky situations all day... If there's something in that farm, perhaps I can cut a deal with it?")))
 

@@ -3341,12 +3341,12 @@ label slave_rape(girl, act): # If girl refused and was forced
 
     if act == "service":
         if pic.has_tag("oral"):
-            $ text1 = rand_choice((__("Eventually, you blow a load of cum into her throat, sending her into a fit of coughing.",
+            $ text1 = rand_choice((__("Eventually, you blow a load of cum into her throat, sending her into a fit of coughing."),
                 __("You suddenly withdraw your dick from her mouth, shooting a load of cum onto her face and hair.")))
             "[text1]"
 
         elif pic.has_tags(("handjob", "titjob")):
-            $ text1 = rand_choice((__("You decide to use her sexy, soft tits to finish yourself off. You blow your load all over her tits and face.",
+            $ text1 = rand_choice((__("You decide to use her sexy, soft tits to finish yourself off. You blow your load all over her tits and face."),
                                    __("You make her jerk you off until you blow your load. Her hands are covered with your thick cum.")))
 
         elif pic.has_tag("mast"):
