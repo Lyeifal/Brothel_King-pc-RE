@@ -11,11 +11,11 @@ init -11 python:
     class DataLoader(object):
         """
         EN: Unified loader for all JSON-driven content.
-            Loads traits, perks, origins, story events, and scenarios
+            Loads traits, perks, story events, and more
             from game/core/data/ into their respective registries.
             JSON files are parsed only once per session and cached.
         ZH: 所有 JSON 驱动内容的统一加载器。
-            从 game/core/data/ 加载特质、天赋、出身、剧情事件和剧本
+            从 game/core/data/ 加载特质、天赋、剧情事件等内容
             到各自的注册表中。
             JSON 文件每个会话只解析一次并缓存。
         """
@@ -29,10 +29,8 @@ init -11 python:
                ZH: 加载所有 JSON 数据类别。"""
             cls.load_traits()
             cls.load_perks()
-            cls.load_origins()
             cls.load_story_events()
             cls.load_sandbox_events()
-            cls.load_scenarios()
             cls.load_achievements()
             cls.load_challenges()
             cls.load_difficulty()
@@ -98,54 +96,6 @@ init -11 python:
                     perk_registry.register_perk(perk, category=item.get("archetype"))
                 except Exception as e:
                     renpy.notify(__("Perk load error: %s") % str(e))
-
-        @classmethod
-        def load_origins(cls):
-            """EN: Load player origins from JSON and register them.
-               ZH: 从 JSON 加载玩家出身并注册。"""
-            path = "sandbox/origins.json"
-            if path in cls._loaded:
-                return
-            data = cls._load_json_file(path)
-            if not data:
-                return
-            cls._loaded.add(path)
-            for item in data:
-                try:
-                    origin = PlayerOrigin(
-                        origin_id=item["origin_id"],
-                        name_i18n_key=get_i18n_raw(item, "name", item["origin_id"]),
-                        description_i18n_key=get_i18n_raw(item, "description", ""),
-                        icon_tag=item.get("icon_tag", "origin_default"),
-                        talents=cls._parse_talents(item.get("talents", [])),
-                        starting_bonus=item.get("starting_bonus", {}),
-                        available_classes=item.get("available_classes"),
-                    )
-                    origin_registry.register(origin)
-                except Exception as e:
-                    renpy.notify(__("Origin load error: %s") % str(e))
-
-        @classmethod
-        def _parse_talents(cls, talent_list):
-            """EN: Parse a list of talent dicts into OriginTalent objects.
-               ZH: 将天赋字典列表解析为 OriginTalent 对象。"""
-            talents = []
-            for t in talent_list:
-                effects = []
-                for eff in t.get("effects", []):
-                    effects.append(Effect(
-                        type=eff.get("type", "boost"),
-                        target=eff.get("target"),
-                        value=eff.get("value", 0),
-                        scope=eff.get("scope"),
-                    ))
-                talents.append(OriginTalent(
-                    talent_id=t["talent_id"],
-                    name_i18n_key=get_i18n_raw(t, "name", t["talent_id"]),
-                    description_i18n_key=get_i18n_raw(t, "description", ""),
-                    effects=effects,
-                ))
-            return talents
 
         @classmethod
         def load_story_events(cls):
@@ -215,34 +165,6 @@ init -11 python:
                     event_dict[item["label"]] = ev
                 except Exception as e:
                     renpy.notify(__("SandboxEvent load error: %s") % str(e))
-
-        @classmethod
-        def load_scenarios(cls):
-            """EN: Load community scenarios from JSON and register them.
-               ZH: 从 JSON 加载社区剧本并注册。"""
-            path = "scenarios/scenarios.json"
-            if path in cls._loaded:
-                return
-            data = cls._load_json_file(path)
-            if not data:
-                return
-            cls._loaded.add(path)
-            for item in data:
-                try:
-                    sc = Scenario(
-                        scenario_id=item["scenario_id"],
-                        name_i18n_key=item.get("name", item["scenario_id"]),
-                        description_i18n_key=item.get("description", ""),
-                        author=item.get("author", ""),
-                        version=item.get("version", "1.0"),
-                        rules=item.get("rules", {}),
-                        events_script=item.get("events_script", "scenario_default"),
-                        starting_conditions=item.get("starting_conditions", {}),
-                        victory_conditions=item.get("victory_conditions", []),
-                    )
-                    scenario_registry.register(sc)
-                except Exception as e:
-                    renpy.notify(__("Scenario load error: %s") % str(e))
 
         @classmethod
         def load_achievements(cls):

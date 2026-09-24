@@ -25,7 +25,6 @@ init -10 python:
 
         MODE_STORY   = "story"      # EN: Story mode / ZH: 剧情模式
         MODE_SANDBOX = "sandbox"    # EN: Sandbox mode / ZH: 沙盒模式
-        MODE_SCENARIO = "scenario"  # EN: Scenario mode / ZH: 剧本模式
 
         def __init__(self, mode_id, name_i18n_key, description_i18n_key):
             ## EN: Unique identifier for this mode.

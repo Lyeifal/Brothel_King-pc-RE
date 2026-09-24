@@ -33,8 +33,8 @@ init -1 python:
         "api_version": 2,
         "min_game_version": "0.3",
         "author": "BK Evolution",
-        "description": __("Adds the story, sandbox and scenario game modes, including the start-of-game selection screens and the player origin / community scenario systems."),
-        "requires": ["game_modes", "origin", "scenario"],
+        "description": __("Adds the story and sandbox game modes, including the start-of-game mode selection screen and the player origin system."),
+        "requires": ["game_modes", "origin"],
         "hooks": {},
         "dependencies": [],
         ## EN: Explicitly declared: this mod CAN be disabled by the player.
@@ -54,4 +54,3 @@ init -1 python:
     if services.mod_api_v2.is_mod_active("game_modes"):
         gamemode_registry.register(StoryMode())
         gamemode_registry.register(SandboxMode())
-        gamemode_registry.register(ScenarioMode())
