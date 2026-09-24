@@ -66,7 +66,7 @@ screen auction_house(session):
         yalign 0.02
         xpadding 24
         ypadding 8
-        background c_ui_dark
+        background c_ui_light
 
         hbox:
             spacing 25
@@ -74,7 +74,7 @@ screen auction_house(session):
 
             text __("[session.session_name] — Day [session.date]"):
                 size 22
-                color "#FFD700"
+                color "#9A6A00"
                 bold True
                 yalign 0.5
 
@@ -87,12 +87,12 @@ screen auction_house(session):
 
             text __("Your gold: [MC.gold]"):
                 size 18
-                color "#FFD700"
+                color "#9A6A00"
                 yalign 0.5
 
             text __("Committed: [auction_committed]"):
                 size 18
-                color "#FFAAAA"
+                color "#B03A2E"
                 yalign 0.5
 
     hbox:
@@ -105,7 +105,7 @@ screen auction_house(session):
         frame:
             xsize 260
             ysize 430
-            background c_ui_dark
+            background c_ui_light
 
             vbox:
                 spacing 6
@@ -113,13 +113,13 @@ screen auction_house(session):
 
                 text __("Today's lots"):
                     size 18
-                    color "#FFFFFF"
+                    color "#3B2F20"
                     bold True
                     xalign 0.5
 
                 text __("Lot %d/%d") % (min(session.current_lot_index + 1, len(session.lots)), len(session.lots)):
                     size 13
-                    color "#888888"
+                    color "#7A6A52"
                     xalign 0.5
 
                 viewport:
@@ -140,16 +140,16 @@ screen auction_house(session):
 
                                 text str(i + 1):
                                     size 14
-                                    color "#888888"
+                                    color "#7A6A52"
 
                                 vbox:
                                     xsize 130
                                     spacing 2
                                     text lot.get_display_name():
                                         size 14
-                                        color ({AuctionLot.STATUS_SOLD: "#2ECC71",
-                                                AuctionLot.STATUS_UNSOLD: "#E74C3C",
-                                                AuctionLot.STATUS_CANCELLED: "#888888"}.get(lot.status, "#FFFFFF"))
+                                        color ({AuctionLot.STATUS_SOLD: "#1E8449",
+                                                AuctionLot.STATUS_UNSOLD: "#B03A2E",
+                                                AuctionLot.STATUS_CANCELLED: "#7A6A52"}.get(lot.status, "#3B2F20"))
                                         bold (i == session.current_lot_index)
 
                                 vbox:
@@ -157,15 +157,15 @@ screen auction_house(session):
                                     spacing 2
                                     text str(lot.current_bid):
                                         size 13
-                                        color "#FFD700"
+                                        color "#9A6A00"
                                         xalign 1.0
                                     text lot.get_status_text():
                                         size 11
                                         xalign 1.0
-                                        color ({AuctionLot.STATUS_ACTIVE: "#4ECDC4",
-                                                AuctionLot.STATUS_SOLD: "#2ECC71",
-                                                AuctionLot.STATUS_UNSOLD: "#E74C3C",
-                                                AuctionLot.STATUS_PENDING: "#AAAAAA"}.get(lot.status, "#AAAAAA"))
+                                        color ({AuctionLot.STATUS_ACTIVE: "#1F7A72",
+                                                AuctionLot.STATUS_SOLD: "#1E8449",
+                                                AuctionLot.STATUS_UNSOLD: "#B03A2E",
+                                                AuctionLot.STATUS_PENDING: "#8A7A62"}.get(lot.status, "#8A7A62"))
 
         ## EN: Center panel — the bidders: avatars, standing bids, gold spent,
         ##     lots won, and (with the Insider's Ledger) their hidden limits.
@@ -174,7 +174,7 @@ screen auction_house(session):
         frame:
             xsize 400
             ysize 430
-            background c_ui_dark
+            background c_ui_light
 
             vbox:
                 spacing 6
@@ -182,7 +182,7 @@ screen auction_house(session):
 
                 text __("Bidders"):
                     size 18
-                    color "#FFFFFF"
+                    color "#3B2F20"
                     bold True
                     xalign 0.5
 
@@ -200,7 +200,7 @@ screen auction_house(session):
                         if not auction_bidders:
                             text __("No bidders have taken a seat yet."):
                                 size 14
-                                color "#888888"
+                                color "#7A6A52"
                                 xalign 0.5
 
                         for i, bidder in enumerate(auction_bidders):
@@ -216,7 +216,7 @@ screen auction_house(session):
 
                                     text bidder.name[:1]:
                                         size 20
-                                        color "#FFFFFF"
+                                        color "#3B2F20"
                                         bold True
                                         xalign 0.5
                                         yalign 0.5
@@ -231,13 +231,13 @@ screen auction_house(session):
 
                                         text bidder.name:
                                             size 14
-                                            color "#FFFFFF"
+                                            color "#3B2F20"
                                             bold True
 
                                         if auction_lot is not None and auction_lot.current_bidder == bidder.name:
                                             text __("%d gold") % auction_lot.current_bid:
                                                 size 13
-                                                color "#4ECDC4"
+                                                color "#1F7A72"
                                                 xalign 1.0
 
                                     hbox:
@@ -246,27 +246,27 @@ screen auction_house(session):
 
                                         text __("Spent: %d") % bidder.spent:
                                             size 12
-                                            color "#FFD700"
+                                            color "#9A6A00"
 
                                         text __("Holding: %d") % bidder.committed:
                                             size 12
-                                            color "#FFAAAA"
+                                            color "#B03A2E"
 
                                     if bidder.won:
                                         text __("Won: %s") % ", ".join(bidder.won):
                                             size 12
-                                            color "#2ECC71"
+                                            color "#1E8449"
 
                                     ## EN: Hidden thresholds — only with the Ledger.
                                     ## ZH: 隐藏阈值——仅持有《内行账本》时可见。
                                     if auction_insight:
                                         text __("Budget: %d — Max premium: x%.2f — Base chance: %d%%") % (int(bidder.budget_total), bidder.premium_max, int(bidder.base_chance * 100)):
                                             size 12
-                                            color "#4ECDC4"
+                                            color "#1F7A72"
 
                                         text bidder.strategy_name():
                                             size 11
-                                            color "#888888"
+                                            color "#7A6A52"
 
                 null height 4
 
@@ -286,7 +286,7 @@ screen auction_house(session):
         frame:
             xsize 520
             ysize 430
-            background c_ui_dark
+            background c_ui_light
 
             if auction_lot is not None:
 
@@ -297,7 +297,7 @@ screen auction_house(session):
 
                     text auction_lot.get_display_name():
                         size 28
-                        color "#FFFFFF"
+                        color "#3B2F20"
                         bold True
                         xalign 0.5
 
@@ -315,11 +315,11 @@ screen auction_house(session):
                             if auction_lot.get_subtitle():
                                 text auction_lot.get_subtitle():
                                     size 15
-                                    color "#BBBBBB"
+                                    color "#6B5B45"
 
                             text __("Seller: [auction_lot.seller]"):
                                 size 14
-                                color "#888888"
+                                color "#7A6A52"
 
                     null height 5
 
@@ -340,13 +340,13 @@ screen auction_house(session):
                     text __("Current bid: {b}[auction_lot.current_bid]{/b} gold"):
                         size 24
                         xalign 0.5
-                        color "#FFD700"
+                        color "#9A6A00"
 
                     if auction_lot.current_bidder:
                         text __("Highest bidder: [auction_lot.current_bidder]"):
                             size 16
                             xalign 0.5
-                            color ({True: "#4ECDC4", False: "#E74C3C"}.get(auction_lot.current_bidder == auction_player, "#AAAAAA"))
+                            color ({True: "#1F7A72", False: "#B03A2E"}.get(auction_lot.current_bidder == auction_player, "#8A7A62"))
 
                     hbox:
                         xalign 0.5
@@ -354,18 +354,18 @@ screen auction_house(session):
 
                         text __("Reserve: [auction_lot.reserve_price]"):
                             size 13
-                            color "#888888"
+                            color "#7A6A52"
 
                         text __("Increment: [auction_lot.min_increment]"):
                             size 13
-                            color "#888888"
+                            color "#7A6A52"
 
                     null height 10
 
                     if auction_lot.seller == "player":
                         text __("This is your own lot — you cannot bid on it. If it sells, the proceeds are yours; if not, it comes back to you."):
                             size 13
-                            color "#FFAAAA"
+                            color "#B03A2E"
                             xalign 0.5
                             text_align 0.5
 
@@ -381,7 +381,7 @@ screen auction_house(session):
                             text __("[auction_display_bid] gold"):
                                 size 22
                                 yalign 0.5
-                                color "#FFFFFF"
+                                color "#3B2F20"
 
                             textbutton __("+"):
                                 action SetScreenVariable("bid_amount", auction_display_bid + auction_lot.min_increment)
@@ -401,20 +401,20 @@ screen auction_house(session):
                             text __("Not enough gold — you have [auction_committed] gold committed on other lots."):
                                 size 13
                                 xalign 0.5
-                                color "#E74C3C"
+                                color "#B03A2E"
 
                     else:
                         text auction_lot.get_status_text():
                             size 20
                             xalign 0.5
-                            color "#888888"
+                            color "#7A6A52"
 
             else:
                 text __("The auction is over."):
                     size 22
                     xalign 0.5
                     yalign 0.5
-                    color "#888888"
+                    color "#7A6A52"
 
     ## EN: Bottom action bar.
     ## ZH: 底部操作栏。
