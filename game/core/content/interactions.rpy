@@ -256,10 +256,10 @@ label slave_justify(girl, context):
 
 
         if ev_list:
-            menu_list += [(ev.action, ev.type) for ev in ev_list if (ev.encourage and context == "reward") or (ev.discipline and context == "punish")]
+            menu_list += [(__(ev.action), ev.type) for ev in ev_list if (ev.encourage and context == "reward") or (ev.discipline and context == "punish")]
 
-        menu_list.append(("No particular reason", ""))
-        menu_list.append(("Go back", "back"))
+        menu_list.append((__("No particular reason"), ""))
+        menu_list.append((__("Go back"), "back"))
 
     $ inter.reason = menu(menu_list)
 
@@ -1336,11 +1336,11 @@ label slave_remove_fixation(girl):
             menu_list = [] #[("Choose a fixation to work on", None)]
             for fix in neg_fix:
                 if fix.name in girl.locked_fix:
-                    menu_list.append(("{color=[c_lightgrey]}%s (locked){/color}" % fix.name.capitalize(), fix))
+                    menu_list.append((__("{color=[c_lightgrey]}%s (locked){/color}") % __(fix.name.capitalize()), fix))
                 else:
                     menu_list.append((__(fix.name.capitalize()), fix))
 
-            menu_list.append(("Go back", "back"))
+            menu_list.append((__("Go back"), "back"))
             renpy.say(you, __("Today, I want you to overcome your disgust for..."), interact=False)
             fix = menu(menu_list) # renpy.display_menu(menu_list)
 

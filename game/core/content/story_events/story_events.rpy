@@ -11405,7 +11405,7 @@ label satella_game(game_type="the guessing game"):
                                 $ answers += "\nThe total is above " + str(r-1) + ". "
 
                         "Did you roll a...":
-                            $ r = menu([("Did you roll a...", None), ("One", 1), ("Two", 2), ("Three", 3), ("Four", 4), ("Five", 5), ("Six", 6)])
+                            $ r = menu([(__("Did you roll a..."), None), (__("One"), 1), (__("Two"), 2), (__("Three"), 3), (__("Four"), 4), (__("Five"), 5), (__("Six"), 6)])
 
                             if d1 == r or d2 == r:
                                 satella "Yes!"
@@ -14509,20 +14509,20 @@ label visit_bank():
 
     else:
         python:
-            menu_options = [("Do you want to take a personal loan?", None),]
+            menu_options = [(__("Do you want to take a personal loan?"), None),]
             loans = [Loan(250, 0.4, 10), Loan(500, 0.4, 10), Loan(1000, 0.4, 14), Loan(2500, 0.4, 14), Loan(5000, 0.4, 20), Loan(10000, 0.4, 20), Loan(25000, 0.4, 25),]
 
             for l in loans:
                 if game.chapter - 4 <= loans.index(l) <= game.chapter - 1:
-                    menu_options.append(("Borrow " + str(l.amount) + " gold for " + str(l.duration) + " days (total cost: " + str(l.total_cost) + ")", l))
+                    menu_options.append((__("Borrow %s gold for %s days (total cost: %s)") % (str(l.amount), str(l.duration), str(l.total_cost)), l))
 
             if NPC_banker.love >= 25:
                 menu_options.append(("TJB Special", "special"))
 
             if NPC_banker.flags["sex"]:
-                menu_options.append(("I want sex", "sex"))
+                menu_options.append((__("I want sex"), "sex"))
 
-            menu_options.append(("No thanks", "back"))
+            menu_options.append((__("No thanks"), "back"))
 
         $ r = menu(menu_options)
 

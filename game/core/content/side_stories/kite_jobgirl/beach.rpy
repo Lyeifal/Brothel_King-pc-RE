@@ -291,7 +291,7 @@ label jobgirl_beach_3():
     "You take your coin purse and head towards the direction Anika indicated."
     "The kiosk for cool drinks is not so far; you order two cocktails for the girls."
 
-    $ chosen_drink = menu([("What do you want to get for yourself?", None), ("A strong ale", 1),("Same as the girls", 2),("A fruit juice", 3)])
+    $ chosen_drink = menu([(__("What do you want to get for yourself?"), None), (__("A strong ale"), 1),(__("Same as the girls"), 2),(__("A fruit juice"), 3)])
 
     you "It's nice and fresh! Man, ice magic is really awesome..."
 
