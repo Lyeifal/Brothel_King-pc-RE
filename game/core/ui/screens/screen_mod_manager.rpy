@@ -65,6 +65,15 @@ screen mod_manager():
         ## ZH: 任一待应用值与持久化值不同即为真。
         _dirty = any(_disp != _enabled for _mid, _info, _always_on, _enabled, _disp, _missing in _mod_rows)
 
+        ## EN: Build the next pending dict with one mod flipped. Defined as a
+        ##     plain helper (no ** unpacking) so the toggle action is robust.
+        ## ZH: 构造翻转某一个 Mod 后的待应用字典。用普通辅助函数
+        ##     （不用 ** 解包）保证切换动作稳定。
+        def _flip_pending(_fid, _cur):
+            _d = dict(pending)
+            _d[_fid] = not _cur
+            return _d
+
     key "mouseup_3" action Hide("mod_manager")
 
     frame:
@@ -115,23 +124,34 @@ screen mod_manager():
                                         xfill True
                                         spacing yres(2)
 
-                                        hbox:
-                                            spacing xres(6)
-
-                                            text (_info.get("name") or _mid) size res_font(20) bold True color "#3B2F20"
-
-                                            ## EN: Green checkmark on enabled
-                                            ##     (or always-on) mods.
-                                            ## ZH: 已启用（或常驻）Mod 名字后
-                                            ##     显示绿色对勾。
-                                            if _always_on or _disp:
+                                        ## EN: The whole name row is the toggle —
+                                        ##     clicking the mod name (or the green
+                                        ##     check) flips its pending state.
+                                        ##     always_on mods render as plain text.
+                                        ## ZH: 整行名字都是开关——点击 Mod 名
+                                        ##     （或绿色对勾）即切换待应用状态。
+                                        ##     常驻 Mod 显示为纯文本。
+                                        if _always_on:
+                                            hbox:
+                                                spacing xres(6)
+                                                text (_info.get("name") or _mid) size res_font(20) bold True color "#3B2F20" yalign 0.5
                                                 text "✓" size res_font(20) bold True color "#1E8449" yalign 0.5
+                                        else:
+                                            button:
+                                                xalign 0.0
+                                                background None
+                                                action SetScreenVariable("pending", _flip_pending(_mid, _disp))
 
-                                            ## EN: Pending marker — toggled but
-                                            ##     not yet applied.
-                                            ## ZH: 待应用标记——已切换但尚未生效。
-                                            if _disp != _enabled:
-                                                text _("(未应用)") size res_font(13) color "#B03A2E" yalign 0.5
+                                                hbox:
+                                                    spacing xres(6)
+
+                                                    text ((_info.get("name") or _mid) + (" ✓" if _disp else "")) size res_font(20) bold True color "#3B2F20" yalign 0.5
+
+                                                    ## EN: Pending marker — toggled but
+                                                    ##     not yet applied.
+                                                    ## ZH: 待应用标记——已切换但尚未生效。
+                                                    if _disp != _enabled:
+                                                        text _("(未应用)") size res_font(13) color "#B03A2E" yalign 0.5
 
                                         text __("v%s · %s") % (_info.get("version") or "?", _info.get("author") or __("未知")) size res_font(14) color "#7A6A52"
 
@@ -174,7 +194,7 @@ screen mod_manager():
                                             textbutton (_("禁用") if _disp else _("启用")):
                                                 xalign 1.0
                                                 text_size res_font(16)
-                                                action SetScreenVariable("pending", dict(pending, **{_mid: (not _disp)}))
+                                                action SetScreenVariable("pending", _flip_pending(_mid, _disp))
 
             if _dirty:
                 text _("有未应用的更改——点击「确定」生效，「返回」放弃。") size res_font(15) color "#B03A2E" xalign 0.5
