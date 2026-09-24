@@ -38,6 +38,26 @@ screen auction_house(session):
             auction_display_bid = max(bid_amount, auction_min_bid)
         auction_player = auction_player_name()
         auction_committed = getattr(session, "player_committed", 0)
+        ## EN: Bidder roster (persists for the whole session) + insight flag.
+        ## ZH: 竞买人名单（整场有效）+ 洞察解锁标记。
+        if auction_lot is not None and auction_lot.status == AuctionLot.STATUS_ACTIVE:
+            session.ensure_bidders(auction_lot)
+        auction_bidders = list(getattr(session, "bidders", None) or [])
+        auction_insight = False
+        try:
+            auction_insight = auction_house.has_insight()
+        except Exception:
+            auction_insight = False
+        ## EN: Avatar palette (by roster index). ZH: 头像配色（按名单序号取色）。
+        auction_palette = ("#8E44AD", "#2E86C1", "#138D75", "#B9770E", "#A93226")
+        ## EN: Girl portrait for the current lot (None if unavailable).
+        ## ZH: 当前拍品女孩的立绘（不可用时为 None）。
+        auction_girl_pic = None
+        if auction_lot is not None and auction_lot.kind == "girl" and auction_lot.girl is not None:
+            try:
+                auction_girl_pic = auction_lot.girl.get_pic(200, 280)
+            except Exception:
+                auction_girl_pic = None
 
     ## EN: Title panel — transparent margins let the scene show around it.
     ## ZH: 标题面板——边缘透明，透出场景。
@@ -147,6 +167,120 @@ screen auction_house(session):
                                                 AuctionLot.STATUS_UNSOLD: "#E74C3C",
                                                 AuctionLot.STATUS_PENDING: "#AAAAAA"}.get(lot.status, "#AAAAAA"))
 
+        ## EN: Center panel — the bidders: avatars, standing bids, gold spent,
+        ##     lots won, and (with the Insider's Ledger) their hidden limits.
+        ## ZH: 中间面板——竞买人：头像、在场出价、已消耗金币、
+        ##     已获得拍品，以及（持有《内行账本》时）隐藏阈值。
+        frame:
+            xsize 400
+            ysize 430
+            background c_ui_dark
+
+            vbox:
+                spacing 6
+                xfill True
+
+                text __("Bidders"):
+                    size 18
+                    color "#FFFFFF"
+                    bold True
+                    xalign 0.5
+
+                viewport:
+                    scrollbars "vertical"
+                    mousewheel True
+                    draggable True
+                    xfill True
+                    ysize 300
+
+                    vbox:
+                        spacing 8
+                        xfill True
+
+                        if not auction_bidders:
+                            text __("No bidders have taken a seat yet."):
+                                size 14
+                                color "#888888"
+                                xalign 0.5
+
+                        for i, bidder in enumerate(auction_bidders):
+                            hbox:
+                                spacing 8
+                                xfill True
+
+                                ## EN: Avatar — a solid tile with the initial.
+                                ## ZH: 头像——纯色块 + 首字母。
+                                frame:
+                                    xysize (36, 36)
+                                    background auction_palette[i % len(auction_palette)]
+
+                                    text bidder.name[:1]:
+                                        size 20
+                                        color "#FFFFFF"
+                                        bold True
+                                        xalign 0.5
+                                        yalign 0.5
+
+                                vbox:
+                                    spacing 1
+                                    xfill True
+
+                                    hbox:
+                                        spacing 8
+                                        xfill True
+
+                                        text bidder.name:
+                                            size 14
+                                            color "#FFFFFF"
+                                            bold True
+
+                                        if auction_lot is not None and auction_lot.current_bidder == bidder.name:
+                                            text __("%d gold") % auction_lot.current_bid:
+                                                size 13
+                                                color "#4ECDC4"
+                                                xalign 1.0
+
+                                    hbox:
+                                        spacing 10
+                                        xfill True
+
+                                        text __("Spent: %d") % bidder.spent:
+                                            size 12
+                                            color "#FFD700"
+
+                                        text __("Holding: %d") % bidder.committed:
+                                            size 12
+                                            color "#FFAAAA"
+
+                                    if bidder.won:
+                                        text __("Won: %s") % ", ".join(bidder.won):
+                                            size 12
+                                            color "#2ECC71"
+
+                                    ## EN: Hidden thresholds — only with the Ledger.
+                                    ## ZH: 隐藏阈值——仅持有《内行账本》时可见。
+                                    if auction_insight:
+                                        text __("Budget: %d — Max premium: x%.2f — Base chance: %d%%") % (int(bidder.budget_total), bidder.premium_max, int(bidder.base_chance * 100)):
+                                            size 12
+                                            color "#4ECDC4"
+
+                                        text bidder.strategy_name():
+                                            size 11
+                                            color "#888888"
+
+                null height 4
+
+                textbutton __("Wait for other bids"):
+                    xfill True
+                    sensitive (auction_lot is not None and auction_lot.status == AuctionLot.STATUS_ACTIVE)
+                    action Return(("wait",))
+
+                if not auction_insight:
+                    textbutton __("Buy Insider's Ledger (%d gold)") % auction_house.INSIGHT_PRICE:
+                        xfill True
+                        sensitive (MC.gold >= auction_house.INSIGHT_PRICE)
+                        action Return(("buy_insight",))
+
         ## EN: Right panel — current lot card and bidding paddle.
         ## ZH: 右侧面板——当前拍品卡与出价牌。
         frame:
@@ -186,6 +320,20 @@ screen auction_house(session):
                             text __("Seller: [auction_lot.seller]"):
                                 size 14
                                 color "#888888"
+
+                    null height 5
+
+                    ## EN: Girl portrait — hover to peek at her stats.
+                    ## ZH: 女孩立绘——鼠标悬浮查看属性。
+                    if auction_girl_pic is not None:
+                        button:
+                            xalign 0.5
+                            ysize 280
+                            background None
+                            padding (0, 0)
+                            add auction_girl_pic
+                            hovered Show("auction_girl_tip", girl=auction_lot.girl)
+                            unhovered Hide("auction_girl_tip")
 
                     null height 5
 
@@ -275,7 +423,7 @@ screen auction_house(session):
         yalign 0.93
         spacing 20
 
-        textbutton __("Pass / gavel this lot"):
+        textbutton (_("Gavel (finalize)") if (auction_lot is not None and auction_lot.warned) else _("Pass (going once)")):
             sensitive (auction_lot is not None and auction_lot.status == AuctionLot.STATUS_ACTIVE)
             action Return(("next",))
 
@@ -443,3 +591,64 @@ screen auction_submit(session):
             textbutton __("Cancel"):
                 xalign 0.5
                 action Return(("cancel",))
+
+
+## EN: Hover tooltip for a lot girl's portrait in the auction screen —
+##     name, rank and key stats. Shown/hidden by the portrait button.
+## ZH: 拍卖屏拍品女孩立绘的悬浮提示——名字、阶级与关键属性。
+##     由立绘按钮的 hovered/unhovered 控制显示。
+screen auction_girl_tip(girl):
+
+    zorder 20
+
+    frame:
+        pos (920, 120)
+        xpadding 14
+        ypadding 10
+        background "#000000CC"
+
+        vbox:
+            spacing 3
+
+            text "[girl.name]":
+                size 18
+                color "#FFD700"
+                bold True
+
+            text __("Rank [girl.rank] — Level [girl.level]"):
+                size 14
+                color "#FFFFFF"
+
+            null height 4
+
+            text __("Charm: [girl.char]"):
+                size 13
+                color "#BBBBBB"
+
+            text __("Beauty: [girl.beauty]"):
+                size 13
+                color "#BBBBBB"
+
+            text __("Body: [girl.body]"):
+                size 13
+                color "#BBBBBB"
+
+            text __("Refinement: [girl.refinement]"):
+                size 13
+                color "#BBBBBB"
+
+            text __("Sensitivity: [girl.sensitivity]"):
+                size 13
+                color "#BBBBBB"
+
+            text __("Libido: [girl.libido]"):
+                size 13
+                color "#BBBBBB"
+
+            text __("Constitution: [girl.constitution]"):
+                size 13
+                color "#BBBBBB"
+
+            text __("Obedience: [girl.obedience]"):
+                size 13
+                color "#BBBBBB"

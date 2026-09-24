@@ -123,6 +123,31 @@ label auction_bidding_loop:
                 renpy.say("", _auction_ev)
 
     ## ────────────────────────────────────────────────────────────
+    ##  Wait — one NPC round plays out without the player bidding
+    ## ────────────────────────────────────────────────────────────
+    elif auction_action[0] == "wait":
+
+        python:
+            auction_events = auction_session.wait_round()
+
+        python:
+            for _auction_ev in auction_events:
+                renpy.say("", _auction_ev)
+
+    ## ────────────────────────────────────────────────────────────
+    ##  Buy the Insider's Ledger — reveals bidders' hidden thresholds
+    ## ────────────────────────────────────────────────────────────
+    elif auction_action[0] == "buy_insight":
+
+        python:
+            auction_insight_ok = auction_house.buy_insight()
+
+        if auction_insight_ok:
+            gio "The Insider's Ledger, an excellent choice! Now you can read every bidder in the room — their budgets, their limits, their tells. Use it well."
+        else:
+            $ renpy.say("", __("You can't afford the Insider's Ledger (it costs %d gold).") % auction_house.INSIGHT_PRICE)
+
+    ## ────────────────────────────────────────────────────────────
     ##  Submit own goods (girls / items) with a listing fee
     ## ────────────────────────────────────────────────────────────
     elif auction_action[0] == "submit":
@@ -163,13 +188,24 @@ label auction_bidding_loop:
         call screen yes_no(__("Leave the auction? Your standing bids will be withdrawn and the remaining lots settled without you."))
 
         if _return:
-            $ renpy.say("", __("You slip out before the gavel falls. The remaining lots are settled without you."))
+            ## EN: Silent wrap-up: the full play-by-play is dropped (the player
+            ##     walked out, they shouldn't sit through it); only the gold
+            ##     balance change is summarized.
+            ## ZH: 静默结算：不再逐条播报剩余拍品流程（玩家已离场）；
+            ##     只按金币变化播一行汇总。
+            $ auction_gold_before = MC.gold
 
             python:
                 auction_events = []
                 auction_session.wrap_up(auction_events)
-                for _auction_ev in auction_events:
-                    renpy.say("", _auction_ev)
+
+            $ auction_gold_delta = MC.gold - auction_gold_before
+            if auction_gold_delta > 0:
+                $ renpy.say("", __("You slip out before the gavel falls. The remaining lots are settled without you — you are %d gold richer when you count your purse.") % auction_gold_delta)
+            elif auction_gold_delta < 0:
+                $ renpy.say("", __("You slip out before the gavel falls. The remaining lots are settled without you — your purse is %d gold lighter.") % (-auction_gold_delta))
+            else:
+                $ renpy.say("", __("You slip out before the gavel falls. The remaining lots are settled without you."))
 
             jump auction_scene_end
 

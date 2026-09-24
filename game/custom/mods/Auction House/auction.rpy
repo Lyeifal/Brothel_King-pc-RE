@@ -110,6 +110,7 @@ init -1 python:
             "kind": "girl",             ## EN: "girl" or "item". ZH: "girl" 或 "item"。
             "item": None,               ## EN: ItemInstance for item lots. ZH: 道具拍品的 ItemInstance。
             "estimated_value": None,    ## EN: Appraisal in gold. ZH: 估值（金币）。
+            "warned": False,            ## EN: "Going once" has been called. ZH: 已喊过"第一次"。
         }
 
         def __init__(self, girl=None, seller="player", starting_price=None,
@@ -128,19 +129,22 @@ init -1 python:
             else:
                 self.estimated_value = self.get_base_value("sell")
 
-            ## EN: Compute starting price from appraisal if not provided.
-            ## ZH: 若未提供，根据估值计算起拍价。
+            ## EN: Starting price = 90% of the shop price (design rule).
+            ## ZH: 起拍价 = 商店价的 90%（设计规则）。
             if starting_price is None:
-                self.starting_price = max(int(self.estimated_value * 0.8), 50)
+                self.starting_price = max(int(self.estimated_value * 0.9), 1)
             else:
                 self.starting_price = starting_price
 
             self.reserve_price = reserve_price or self.starting_price
 
-            ## EN: Minimum bid increment — scales with the appraisal.
-            ## ZH: 最小加价幅度——随估值缩放。
+            ## EN: Minimum increment = 5% of the base value, rounded up
+            ##     (design rule; previously a flat 5% with a floor of 10).
+            ## ZH: 最低加价 = 原价的 5% 向上取整
+            ##     （设计规则；原为固定 5%、下限 10）。
             if min_increment is None:
-                self.min_increment = max(10, int(self.estimated_value * 0.05))
+                import math as _math
+                self.min_increment = max(1, int(_math.ceil(self.estimated_value * 0.05)))
             else:
                 self.min_increment = min_increment
 
@@ -148,6 +152,7 @@ init -1 python:
             self.current_bidder = None      ## EN: Name of highest bidder. ZH: 最高出价者名字。
             self.bids = []                  ## EN: List of AuctionBid. ZH: AuctionBid 列表。
             self.player_bid = 0             ## EN: Highest player bid on this lot. ZH: 玩家对此拍品的最高出价。
+            self.warned = False             ## EN: "Going once" called — the next pass gavels. ZH: 已喊"第一次"——再次 pass 即落锤。
 
         def __getattr__(self, name):
             ## EN: Old-save fallback (see FIELD_DEFAULTS). object.__getattribute__
@@ -294,20 +299,51 @@ init -1 python:
 
     class AuctionBidder(object):
         """
-        EN: A virtual NPC bidder at the auction. Each one has a budget and an
-            agitation score; during counter-bid rounds they roll d100 against
-            their agitation to decide whether to raise.
-        ZH: 拍卖会上的虚拟 NPC 竞买人。每人有预算与热切值；
-            反价轮中掷 d100，点数 ≤ 热切值即抬价。
+        EN: A virtual NPC bidder with a personality strategy, a total-auction
+            spending cap, a per-lot premium threshold, and a participation
+            probability that decays as the price climbs above the goods'
+            base (shop) value.
+        ZH: 虚拟 NPC 竞买人：带有性格策略、全场总花费阈值、单件溢价
+            阈值，以及随价格超出原价而衰减的参与概率。
         """
 
-        def __init__(self, name, budget, agitation):
+        STRAT_PERSISTENT = "persistent"  ## EN: Raises once on every lot. ZH: 每个拍品固定抬一次价。
+        STRAT_FINALE = "finale"          ## EN: Only joins the closing lots. ZH: 只参与压轴拍品。
+        STRAT_COLLECTOR = "collector"    ## EN: Buys at most N lots per auction. ZH: 每场最多拍下 N 件。
+        STRAT_STUBBORN = "stubborn"      ## EN: Ignores the premium cap once committed to a lot. ZH: 认定某件后无视溢价阈值。
+
+        STRATEGY_NAMES = None  ## EN: Filled below (needs __()). ZH: 在下方填充（需要 __()）。
+
+        def __init__(self, name, budget_total, premium_max, base_chance,
+                     decay_per_step, strategy, strategy_param=None):
             self.name = name
-            self.budget = int(budget)
-            self.agitation = max(1, min(100, int(agitation)))
+            self.budget_total = int(budget_total)       ## EN: Max total gold this auction (both thresholds hidden without the ledger). ZH: 本场总花费阈值（无手册时不可见）。
+            self.premium_max = float(premium_max)       ## EN: Max price as a multiple of base value. ZH: 单件溢价阈值（原价倍数）。
+            self.base_chance = float(base_chance)       ## EN: Base participation probability (0-1). ZH: 基础参与概率。
+            self.decay_per_step = float(decay_per_step) ## EN: Willingness lost per +5% over base value. ZH: 每超原价 5% 降低的意愿。
+            self.strategy = strategy
+            self.strategy_param = strategy_param        ## EN: e.g. collector's lot cap. ZH: 如收藏派的件数上限。
+
+            self.committed = 0    ## EN: Gold tied in standing top bids. ZH: 在场最高出价占用的金币。
+            self.spent = 0        ## EN: Gold actually paid for won lots. ZH: 已实际支付的中拍金额。
+            self.won = []         ## EN: Display names of lots won. ZH: 已拍得的拍品名。
+            self._bid_lot_ids = []    ## EN: Session lot indexes bid on (stubborn trigger). ZH: 出过价的拍品序号（执拗派触发）。
+            self._raised_lot_ids = [] ## EN: Lots already raised once (persistent strategy). ZH: 已抬过价的拍品（稳健派）。
+
+        def strategy_name(self):
+            """EN: Translated strategy label for tooltips. ZH: 策略译名（悬浮提示用）。"""
+            names = AuctionBidder.STRATEGY_NAMES or {}
+            return names.get(self.strategy, __(self.strategy.capitalize()))
 
         def __repr__(self):
-            return __("<AuctionBidder %s: budget %s, agitation %s>") % (self.name, self.budget, self.agitation)
+            return __("<AuctionBidder %s: budget %s, premium x%s>") % (self.name, self.budget_total, self.premium_max)
+
+    AuctionBidder.STRATEGY_NAMES = {
+        AuctionBidder.STRAT_PERSISTENT: __("Steady hand"),
+        AuctionBidder.STRAT_FINALE: __("Latecomer"),
+        AuctionBidder.STRAT_COLLECTOR: __("Collector"),
+        AuctionBidder.STRAT_STUBBORN: __("Obsessive"),
+    }
 
 
     class AuctionSession(object):
@@ -366,65 +402,225 @@ init -1 python:
                 lot.status = AuctionLot.STATUS_ACTIVE
 
         ## ============================================================
-        ##  NPC bidders (dice-driven counter-bidding)
+        ##  NPC bidders (strategy-driven counter-bidding)
         ## ============================================================
 
         def ensure_bidders(self, lot):
             """
-            EN: Roll up 3-5 virtual bidders for the current lot. Budget is a
-                random 0.8-1.6x of the lot's buy value; agitation is random
-                between (d60+10) and 100. Grand auctions raise both.
-            ZH: 为当前拍品随机生成 3-5 名虚拟竞买人。预算为拍品买价的
-                0.8~1.6 倍；热切值在 (d60+10) 到 100 之间随机。
-                大拍卖会提高预算与热切值。
+            EN: Roll up 3-5 virtual bidders with distinct personalities.
+                Each gets: a total-session budget (2.5-5x the lot's base
+                value, +30% at grand auctions), a per-lot premium threshold
+                (1.2-2.0x base value), a base participation chance (20-70%),
+                a per-step willingness decay (3-10 points per +5% over base),
+                and a strategy — the four strategies are dealt round-robin
+                so every session shows a mix.
+            ZH: 随机生成 3-5 名性格各异的虚拟竞买人。每人获得：
+                全场总预算（拍品原价 2.5~5 倍，大拍卖 +30%）、
+                单件溢价阈值（原价 1.2~2.0 倍）、基础参与概率（20%~70%）、
+                每超原价 5% 的意愿衰减（3~10 个百分点），以及一种策略——
+                四种策略轮转发放，保证每场都有搭配。
             """
             if self.bidders:
                 return
-            value = lot.get_base_value("buy")
+            value = max(1, lot.get_base_value("buy"))
             names = list(auction_bidder_name_pool())
             renpy.random.shuffle(names)
             count = renpy.random.randint(3, 5)
             grand = bool(self.grand)
+            strategies = [AuctionBidder.STRAT_PERSISTENT, AuctionBidder.STRAT_FINALE,
+                          AuctionBidder.STRAT_COLLECTOR, AuctionBidder.STRAT_STUBBORN]
             self.bidders = []
-            for name in names[:count]:
-                ## EN: Budget: 0.8-1.6x appraisal; grand auctions +30%.
-                ## ZH: 预算：估值 0.8~1.6 倍；大拍卖 +30%。
-                budget = value * renpy.random.uniform(0.8, 1.6)
+            for i, name in enumerate(names[:count]):
+                budget_total = value * renpy.random.uniform(2.5, 5.0)
                 if grand:
-                    budget *= 1.3
-                ## EN: Agitation: d60+10 up to d100; grand auctions +10 (cap 100).
-                ## ZH: 热切值：(d60+10) 至 d100；大拍卖 +10（上限 100）。
-                agitation = renpy.random.randint(dice(60) + 10, 100)
-                if grand:
-                    agitation = min(100, agitation + 10)
-                self.bidders.append(AuctionBidder(name, budget, agitation))
+                    budget_total *= 1.3
+                strategy = strategies[i % len(strategies)]
+                param = 2 if strategy == AuctionBidder.STRAT_COLLECTOR else None
+                self.bidders.append(AuctionBidder(
+                    name,
+                    budget_total=budget_total,
+                    premium_max=renpy.random.uniform(1.2, 2.0),
+                    base_chance=renpy.random.uniform(0.2, 0.7),
+                    decay_per_step=renpy.random.uniform(0.03, 0.10),
+                    strategy=strategy,
+                    strategy_param=param,
+                ))
 
-        def _npc_counter_round(self, lot, events):
+        def _lot_id(self, lot):
+            """EN: Stable per-session index of a lot (bid tracking). ZH: 拍品在本场中的稳定序号（出价记录用）。"""
+            try:
+                return self.lots.index(lot)
+            except ValueError:
+                return -1
+
+        def _willingness(self, bidder, lot):
             """
-            EN: One dice round: every present bidder rolls d100; on a roll
-                less than or equal to their agitation they raise the price by
-                the minimum increment (never above their budget). To keep the
-                pacing sane, at most 2 raises succeed per round. Returns True
-                if the player was outbid.
-            ZH: 一轮骰子判定：在场竞买人各掷 d100，点数 ≤ 热切值即按最小
-                加价幅度抬价（不超过其预算）。为控制节奏，每轮最多成功
-                抬价 2 次。返回玩家是否被反价。
+            EN: Participation probability: base_chance minus decay_per_step
+                for every +5% of base value the current price exceeds, minus
+                a flat 10 points if this round saw a jump raise (more than
+                min increment + 3% of base value). Clamped to 0-95%.
+            ZH: 参与概率 = 基础概率 - 每超原价 5% 的衰减 -
+                （本轮出现跳价时）10 个百分点。钳制在 0~95%。
+            """
+            base = max(1, lot.get_base_value("buy"))
+            over = max(0, lot.current_bid - base)
+            steps = int(over / (base * 0.05))
+            p = bidder.base_chance - bidder.decay_per_step * steps
+            if getattr(self, "_round_big_raise", False):
+                p -= 0.10
+            return max(0.0, min(0.95, p))
+
+        def _npc_may_bid(self, bidder, lot):
+            """
+            EN: Hard gates (no probability involved): total budget with the
+                standing commitment, premium threshold (ignored by a stubborn
+                bidder committed to this lot), strategy-specific rules.
+            ZH: 硬性门槛（与概率无关）：含在场占用的总预算、溢价阈值
+                （执拗派认定后忽略）、策略特定规则。
+            """
+            if bidder.committed + lot.current_bid + lot.min_increment > bidder.budget_total:
+                return False
+
+            base = max(1, lot.get_base_value("buy"))
+            lot_id = self._lot_id(lot)
+            stubborn_committed = (bidder.strategy == AuctionBidder.STRAT_STUBBORN
+                                  and lot_id in bidder._bid_lot_ids)
+            if not stubborn_committed and lot.current_bid + lot.min_increment > base * bidder.premium_max:
+                return False
+
+            if bidder.strategy == AuctionBidder.STRAT_FINALE:
+                ## EN: Only the last two lots draw their interest.
+                ## ZH: 只对最后两件拍品感兴趣。
+                if self.current_lot_index < len(self.lots) - 2:
+                    return False
+
+            if bidder.strategy == AuctionBidder.STRAT_COLLECTOR:
+                max_lots = bidder.strategy_param or 2
+                if len(bidder.won) >= max_lots:
+                    return False
+
+            return True
+
+        def _apply_npc_raise(self, bidder, lot, events):
+            """
+            EN: Place one raise for a bidder: usually the minimum increment,
+                sometimes a jump raise (min + 3%-9% of base value) that
+                cools the whole room. Updates commitments and strategy
+                trackers. Returns the raise amount or None.
+            ZH: 为一名竞买人执行一次抬价：通常按最低加价，偶尔跳价
+                （最低加价 + 原价的 3%~9%）使全场降温。同步更新占用与
+                策略记录。返回抬价金额或 None。
+            """
+            base = max(1, lot.get_base_value("buy"))
+            previous_top = lot.current_bidder
+            previous_amount = lot.current_bid
+            amount = lot.current_bid + lot.min_increment
+
+            ## EN: ~25% of raises are jump bids that chill the room.
+            ## ZH: 约 25% 的抬价为跳价，使全场降温。
+            if renpy.random.random() < 0.25:
+                amount = lot.current_bid + lot.min_increment + int(base * 0.03) * renpy.random.randint(1, 3)
+                self._round_big_raise = True
+
+            ## EN: Premium cap (stubborn bidders committed to this lot skip it).
+            ## ZH: 溢价阈值（执拗派已认定此拍品则跳过）。
+            lot_id = self._lot_id(lot)
+            if not (bidder.strategy == AuctionBidder.STRAT_STUBBORN and lot_id in bidder._bid_lot_ids):
+                amount = min(amount, int(base * bidder.premium_max))
+
+            ## EN: Hard budget cap on the raise itself.
+            ## ZH: 抬价金额本身的预算硬上限。
+            amount = min(amount, bidder.budget_total - bidder.committed)
+            if amount < lot.current_bid + lot.min_increment:
+                return None
+
+            if not lot.place_bid(bidder.name, amount):
+                return None
+
+            ## EN: Transfer the standing commitment from the outbid NPC
+            ##     (previous_amount = the bid they are being relieved of).
+            ## ZH: 将被反价 NPC 的在场占用转移：previous_amount 是其被
+            ##     顶掉的旧出价，从占用中扣除。
+            if previous_top and previous_top != bidder.name:
+                prev = self._bidder_by_name(previous_top)
+                if prev is not None:
+                    prev.committed = max(0, prev.committed - previous_amount)
+            if previous_top == bidder.name:
+                bidder.committed += amount - previous_amount  ## EN: raising own bid: only the delta. ZH: 抬自己的价：只计差额。
+            else:
+                bidder.committed += amount
+
+            bidder._bid_lot_ids.append(lot_id)
+            if bidder.strategy == AuctionBidder.STRAT_PERSISTENT and lot_id not in bidder._raised_lot_ids:
+                bidder._raised_lot_ids.append(lot_id)
+
+            events.append(__("%s raises to %d gold.") % (bidder.name, amount))
+            return amount
+
+        def _bidder_by_name(self, name):
+            """EN: Find a live bidder by display name. ZH: 按显示名查找在场竞买人。"""
+            if not self.bidders:
+                return None
+            for b in self.bidders:
+                if b.name == name:
+                    return b
+            return None
+
+        def _npc_counter_round(self, lot, events, big_raise=False):
+            """
+            EN: One bidding round: each willing bidder rolls against their
+                (decaying) participation chance; the "steady hand" strategy
+                forces exactly one raise per lot. At most 2 raises per round
+                to keep pacing brisk. Quiet rounds say so in one line.
+                big_raise=True marks the round as opened by a jump raise
+                (player bid well above the minimum), chilling the room.
+            ZH: 一轮竞价：每名有意愿的竞买人按（衰减后的）参与概率掷点；
+                "稳健派"策略强制每个拍品抬一次价。每轮最多成功抬价 2 次
+                以保持节奏。全场冷场时只播报一行。
+                big_raise=True 表示本轮由跳价开场（玩家大幅加价），
+                全场意愿额外降低。
             """
             self.ensure_bidders(lot)
             bidders = list(self.bidders)
             renpy.random.shuffle(bidders)
             player = auction_player_name()
+            lot_id = self._lot_id(lot)
             raises_left = 2  ## EN: Max successful raises per round. ZH: 每轮最多成功抬价次数。
+            self._round_big_raise = bool(big_raise)
+            any_raise = False
+
             for bidder in bidders:
-                roll = dice(100)
-                if raises_left > 0 and roll <= bidder.agitation and bidder.budget >= lot.current_bid + lot.min_increment:
+                if raises_left <= 0:
+                    break
+                if not self._npc_may_bid(bidder, lot):
+                    continue
+
+                force_raise = (bidder.strategy == AuctionBidder.STRAT_PERSISTENT
+                               and lot_id not in bidder._raised_lot_ids)
+                if not force_raise and dice(100) > self._willingness(bidder, lot) * 100:
+                    continue
+
+                if self._apply_npc_raise(bidder, lot, events) is not None:
                     raises_left -= 1
-                    new_amount = min(lot.current_bid + lot.min_increment, bidder.budget)
-                    lot.place_bid(bidder.name, new_amount)
-                    events.append(__("%s rolls %d (agitation %d) and raises to %d gold!") % (bidder.name, roll, bidder.agitation, new_amount))
-                else:
-                    events.append(__("%s rolls %d and stays quiet.") % (bidder.name, roll))
+                    any_raise = True
+
+            if not any_raise:
+                events.append(__("The room stays quiet."))
             return lot.current_bidder != player
+
+        def wait_round(self):
+            """
+            EN: The player waits without bidding — one NPC round plays out.
+                Returns the event list (may be a single "room stays quiet").
+            ZH: 玩家不出价等待——进行一轮 NPC 竞价。返回事件列表
+                （可能只有一行"全场冷场"）。
+            """
+            events = []
+            lot = self.current_lot
+            if lot is None or lot.status != AuctionLot.STATUS_ACTIVE:
+                return [__("There is no active lot right now.")]
+            self._npc_counter_round(lot, events)
+            return events
 
         def _release_player_bid(self, lot):
             """
@@ -470,6 +666,7 @@ init -1 python:
             if lot is None or lot.status != AuctionLot.STATUS_ACTIVE:
                 return False, [__("There is no active lot right now.")]
             previous_bid = lot.player_bid
+            previous_top = lot.current_bid
             if not lot.place_bid(auction_player_name(), amount, is_player=True):
                 return False, [__("Your bid is too low.")]
 
@@ -488,7 +685,12 @@ init -1 python:
 
             self.player_committed = exposure
             events.append(__("You raise your paddle: %d gold for %s!") % (amount, lot.get_display_name()))
-            self._npc_counter_round(lot, events)
+            ## EN: A raise well above the minimum (more than min + 3% of base
+            ##     value) counts as a jump bid and chills this NPC round.
+            ## ZH: 明显高于最低加价的出价（超出 最低加价+原价3% 的部分）
+            ##     视为跳价，使本轮 NPC 意愿额外降低。
+            big_raise = amount > previous_top + lot.min_increment + int(max(1, lot.get_base_value("buy")) * 0.03)
+            self._npc_counter_round(lot, events, big_raise=big_raise)
             if lot.current_bidder != auction_player_name():
                 self._release_player_bid(lot)
                 events.append(__("You have been outbid."))
@@ -564,6 +766,11 @@ init -1 python:
                             lot.status = AuctionLot.STATUS_UNSOLD
                             events.append(__("You won %s for %d gold but cannot cover it — the lot is passed in.") % (lot.get_display_name(), price))
                     else:
+                        bidder = self._bidder_by_name(winner)
+                        if bidder is not None:
+                            bidder.spent += price
+                            bidder.committed = max(0, bidder.committed - price)
+                            bidder.won.append(lot.get_display_name())
                         events.append(__("%s buys %s for %d gold.") % (winner, lot.get_display_name(), price))
             else:
                 events.append(__("No one meets the reserve. %s is passed in.") % lot.get_display_name())
@@ -613,30 +820,45 @@ init -1 python:
 
         def settle_current_lot(self):
             """EN: Settle the current lot (gavel) and advance. Returns events.
-                   ZH: 结拍当前拍品（落锤）并前进，返回事件。"""
+                   Bidders persist across the whole session (their budgets,
+                   strategy memory and win counts are session-scoped).
+               ZH: 结拍当前拍品（落锤）并前进，返回事件。
+                   竞买人整场有效（预算、策略记忆、拍得计数均为
+                   会话级，不随拍品重置）。"""
             events = []
             if self.current_lot:
                 events = self.settle_lot(self.current_lot)
                 self.current_lot_index += 1
-                self.bidders = None
             return events
 
         def advance_lot(self):
             """
-            EN: Gavel the current lot and move to the next.
-                A lot the player passes on still gets one NPC dice round before
-                the gavel (so NPC goods may sell and NPCs may buy player goods).
+            EN: Two-step gavel. First call warns ("going once...") and gives
+                NPCs one final round if the player is not on top — the lot is
+                NOT settled yet, so the player gets a last chance to answer.
+                Second call finalizes the lot and moves to the next.
                 Returns (next_lot, events).
-            ZH: 结拍当前拍品并移至下一个。玩家跳过的拍品在落锤前仍进行
-                一轮 NPC 骰子竞价（NPC 商品可能售出，也可能购得玩家商品）。
+            ZH: 两步落锤。第一次调用只喊"第一次……"并在玩家不是最高价时
+                给 NPC 最后一轮出价机会——此时拍品还不结拍，玩家仍可加价
+                应答；第二次调用才真正结拍并移至下一件。
                 返回 (下一个拍品, 事件)。
             """
             events = []
             lot = self.current_lot
             if lot is not None and lot.status == AuctionLot.STATUS_ACTIVE:
                 self.ensure_bidders(lot)
-                ## EN: No live player bid standing -> NPCs get one dice round.
-                ## ZH: 玩家没有在场的最高出价 → NPC 获得一轮骰子竞价。
+                if not lot.warned:
+                    ## EN: First pass — warn only, no gavel yet.
+                    ## ZH: 第一次 pass——只喊提醒，不落锤。
+                    lot.warned = True
+                    if lot.current_bidder != auction_player_name():
+                        self._npc_counter_round(lot, events)
+                    events.append(__("Going once... %s at %d gold.") % (lot.get_display_name(), lot.current_bid))
+                    return self.current_lot, events
+                ## EN: Second pass — one last NPC round if the player is not
+                ##     on top, then settle.
+                ## ZH: 第二次 pass——玩家不是最高价时先给 NPC 最后一轮，
+                ##     然后结拍。
                 if lot.current_bidder != auction_player_name():
                     self._npc_counter_round(lot, events)
             events = events + self.settle_current_lot()
@@ -662,7 +884,7 @@ init -1 python:
                     self._npc_counter_round(lot, events)
                 self.settle_lot(lot)
                 self.current_lot_index += 1
-                self.bidders = None
+            self.bidders = None  ## EN: Session over — release the bidder roster. ZH: 会话结束——释放竞买人名单。
             self.phase = self.PHASE_RESOLVED
 
         def auto_resolve(self):
@@ -746,19 +968,68 @@ init -1 python:
             "next_auction_day": 1,
             "frequency": 7,
             "last_auction_month": None,
+            "insight_unlocked": False,
         }
+
+        ## EN: Price of the Insider's Ledger — the item that reveals bidders'
+        ##     hidden thresholds (total budget, premium tolerance, base chance).
+        ## ZH: 《内行账本》售价——购买后可见竞买人的隐藏阈值
+        ##     （总预算、溢价容忍度、基础概率）。
+        INSIGHT_PRICE = 2500
 
         def __init__(self):
             self.history = []           ## EN: Past auction results. ZH: 过去的拍卖结果。
             self.next_auction_day = 1   ## EN: Next day-of-month an auction may be held. ZH: 下次可举行拍卖的当月日。
             self.frequency = 7          ## EN: Retired (was days between auctions). ZH: 已弃用（原为拍卖间隔天数）。
             self.last_auction_month = None  ## EN: Month of the last held auction. ZH: 上次举行拍卖的月份。
+            self.insight_unlocked = False   ## EN: Bidder thresholds revealed. ZH: 已解锁竞买人阈值显示。
 
         def __getattr__(self, name):
             defaults = object.__getattribute__(self, "__class__").FIELD_DEFAULTS
             if name in defaults:
                 return defaults[name]
             raise AttributeError(name)
+
+        ## ============================================================
+        ##  Insight (hidden thresholds revealed)
+        ## ============================================================
+
+        def has_insight(self):
+            """
+            EN: True when the player can see bidders' hidden thresholds
+                (total budget, premium tolerance, base chance). Unlocked by
+                buying the Insider's Ledger from Gio, or by owning any item
+                whose name hints at inside information.
+            ZH: 玩家是否可见竞买人的隐藏阈值（总预算、溢价容忍度、基础
+                概率）。向 Gio 购买《内行账本》后解锁；或持有名称暗示
+                内部消息的物品时也视为解锁。
+            """
+            try:
+                if self.insight_unlocked:
+                    return True
+                for it in getattr(MC, "items", []) or []:
+                    name = str(getattr(it, "name", it)).lower()
+                    if any(k in name for k in ("insider", "ledger", "spyglass", "洞察", "内行", "账本")):
+                        return True
+            except Exception:
+                pass
+            return False
+
+        def buy_insight(self):
+            """
+            EN: Buy the Insider's Ledger from Gio. Returns True on success.
+            ZH: 向 Gio 购买《内行账本》。成功返回 True。
+            """
+            try:
+                if self.insight_unlocked:
+                    return True
+                if MC.gold < self.INSIGHT_PRICE:
+                    return False
+                MC.gold -= self.INSIGHT_PRICE
+                self.insight_unlocked = True
+                return True
+            except Exception:
+                return False
 
         ## ============================================================
         ##  Scheduling
