@@ -36,9 +36,13 @@ screen mod_manager():
     ## ZH: 待应用的开关状态 {mod_id: 布尔}；为空表示没有待应用更改。
     default pending = {}
 
-    ## EN: Set to True after OK is clicked, to surface the restart notice.
-    ## ZH: 点击「确定」后置真，用于显示重启提示。
-    default show_restart_hint = False
+    ## EN: This screen is opened from the main menu via Show("mod_manager"),
+    ##     so it must be closed with Hide (Return would end the main menu's
+    ##     interaction without removing this overlay). OK applies the pending
+    ##     changes, closes the screen and surfaces a transient restart notice.
+    ## ZH: 本屏幕由主菜单 Show("mod_manager") 打开，因此必须用 Hide
+    ##     关闭（Return 会结束主菜单的交互但不移除此浮层）。「确定」应用
+    ##     待更改、关闭界面，并以临时通知提示重启后完全生效。
 
     python:
         _mod_rows = []
@@ -61,7 +65,7 @@ screen mod_manager():
         ## ZH: 任一待应用值与持久化值不同即为真。
         _dirty = any(_disp != _enabled for _mid, _info, _always_on, _enabled, _disp, _missing in _mod_rows)
 
-    key "mouseup_3" action Return()
+    key "mouseup_3" action Hide("mod_manager")
 
     frame:
         xalign 0.5
@@ -175,11 +179,10 @@ screen mod_manager():
             if _dirty:
                 text _("有未应用的更改——点击「确定」生效，「返回」放弃。") size res_font(15) color "#B03A2E" xalign 0.5
 
-            if show_restart_hint:
-                text _("更改将在重启游戏后完全生效。") size res_font(15) color "#9A6A00" xalign 0.5
-
-            ## EN: Bottom bar — OK applies all pending changes, Back discards.
-            ## ZH: 底部栏——「确定」应用全部待更改，「返回」丢弃。
+            ## EN: Bottom bar — OK applies all pending changes and closes the
+            ##     screen with a transient restart notice; Back discards.
+            ## ZH: 底部栏——「确定」应用全部待更改、以临时通知提示重启后
+            ##     生效并关闭界面；「返回」丢弃。
             hbox:
                 xalign 0.5
                 spacing xres(30)
@@ -187,8 +190,8 @@ screen mod_manager():
                 textbutton _("确定"):
                     sensitive _dirty
                     text_size res_font(18)
-                    action [Function(mod_api_v2.apply_pending_changes, pending), Function(renpy.save_persistent), SetScreenVariable("pending", {}), SetScreenVariable("show_restart_hint", True)]
+                    action [Function(mod_api_v2.apply_pending_changes, pending), Function(renpy.save_persistent), Function(notify, __("更改将在重启游戏后完全生效。"), col=c_gold), Hide("mod_manager")]
 
                 textbutton _("返回"):
                     text_size res_font(18)
-                    action Return()
+                    action Hide("mod_manager")
