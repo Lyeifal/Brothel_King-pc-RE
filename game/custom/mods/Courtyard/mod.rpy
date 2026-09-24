@@ -51,7 +51,7 @@ init -1 python:
         try:
             courtyard_villa.process_day()
         except Exception as e:
-            renpy.notify("Courtyard mod: %s" % e)
+            renpy.notify(__("Courtyard mod: %s") % e)
 
     ## EN: Right-menu tooltip: room usage, tonight's rent and expansion status.
     ##     Uses % formatting — the returned string is displayed outside this

@@ -514,7 +514,7 @@ init -1 python:
                         lot.girl.init_after_acquire()
                     events.append(__("%s now belongs to you.") % lot.get_display_name())
             except Exception as e:
-                renpy.notify("Auction mod: %s" % e)
+                renpy.notify(__("Auction mod: %s") % e)
 
         def _return_escrow(self, lot, events):
             """EN: Return an unsold/self-bought player lot to MC.
@@ -529,7 +529,7 @@ init -1 python:
                         MC.girls.append(lot.girl)
                     events.append(__("%s returns to your brothel.") % lot.get_display_name())
             except Exception as e:
-                renpy.notify("Auction mod: %s" % e)
+                renpy.notify(__("Auction mod: %s") % e)
 
         def _release_escrow(self, lot, events):
             """EN: Player goods finally sold to an NPC — clean up like a sale.
@@ -538,7 +538,7 @@ init -1 python:
                 if lot.kind == "girl" and lot.girl is not None:
                     relinquish_girl(lot.girl)
             except Exception as e:
-                renpy.notify("Auction mod: %s" % e)
+                renpy.notify(__("Auction mod: %s") % e)
 
         def settle_current_lot(self):
             """EN: Settle the current lot (gavel) and advance. Returns events.

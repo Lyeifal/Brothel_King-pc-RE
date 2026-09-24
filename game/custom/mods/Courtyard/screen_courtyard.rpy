@@ -240,7 +240,7 @@ screen courtyard():
                                     color "#FFFFFF"
                                     bold True
 
-                                text "Lv.[facility.upgrade_level]/[facility.max_level]":
+                                text __("Lv.[facility.upgrade_level]/[facility.max_level]"):
                                     size 14
                                     color "#AAAAAA"
                                     xalign 1.0

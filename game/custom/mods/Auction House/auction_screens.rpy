@@ -51,7 +51,7 @@ screen auction_house(session):
             spacing 25
             yalign 0.5
 
-            text "[session.session_name] — Day [session.date]":
+            text __("[session.session_name] — Day [session.date]"):
                 size 22
                 color "#FFD700"
                 bold True
@@ -224,7 +224,7 @@ screen auction_house(session):
                             textbutton __("-"):
                                 action SetScreenVariable("bid_amount", max(0, auction_display_bid - auction_lot.min_increment))
 
-                            text "[auction_display_bid] gold":
+                            text __("[auction_display_bid] gold"):
                                 size 22
                                 yalign 0.5
                                 color "#FFFFFF"

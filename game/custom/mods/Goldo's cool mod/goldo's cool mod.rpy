@@ -47,7 +47,7 @@ label my_mod_init():
 
     "For instance, please tell me the name of your nemesis."
 
-    $ mymod.nemesis = renpy.input("Your nemesis:", default="Evil Bitch")
+    $ mymod.nemesis = renpy.input(__("Your nemesis:"), default="Evil Bitch")
 
     mymod.nemesis "Hey, that's not very nice!"
 
