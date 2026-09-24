@@ -323,8 +323,9 @@ init -1 python:
         ## EN: Save-compatibility defaults (see AuctionLot.FIELD_DEFAULTS).
         ## ZH: 存档兼容默认值（见 AuctionLot.FIELD_DEFAULTS）。
         FIELD_DEFAULTS = {
-            "bidders": None,    ## EN: Active AuctionBidder list. ZH: 当前竞买人列表。
-            "grand": False,     ## EN: True for a grand auction. ZH: 大拍卖为 True。
+            "bidders": None,           ## EN: Active AuctionBidder list. ZH: 当前竞买人列表。
+            "grand": False,            ## EN: True for a grand auction. ZH: 大拍卖为 True。
+            "player_committed": 0,     ## EN: Gold reserved by the player's standing bids across lots. ZH: 玩家所有在场最高出价占用的金币。
         }
 
         def __init__(self, lots, session_name="Monthly Auction", grand=False):
@@ -336,6 +337,7 @@ init -1 python:
             self.date = calendar.day if calendar else 0
             self.bidders = None
             self.grand = grand
+            self.player_committed = 0   ## EN: Reserved gold so bids on several lots can't overdraw MC. ZH: 预留金币，防止多拍品出价透支。
 
         def __getattr__(self, name):
             defaults = object.__getattribute__(self, "__class__").FIELD_DEFAULTS
@@ -401,18 +403,22 @@ init -1 python:
             """
             EN: One dice round: every present bidder rolls d100; on a roll
                 less than or equal to their agitation they raise the price by
-                the minimum increment (never above their budget). Returns True
+                the minimum increment (never above their budget). To keep the
+                pacing sane, at most 2 raises succeed per round. Returns True
                 if the player was outbid.
             ZH: 一轮骰子判定：在场竞买人各掷 d100，点数 ≤ 热切值即按最小
-                加价幅度抬价（不超过其预算）。返回玩家是否被反价。
+                加价幅度抬价（不超过其预算）。为控制节奏，每轮最多成功
+                抬价 2 次。返回玩家是否被反价。
             """
             self.ensure_bidders(lot)
             bidders = list(self.bidders)
             renpy.random.shuffle(bidders)
             player = auction_player_name()
+            raises_left = 2  ## EN: Max successful raises per round. ZH: 每轮最多成功抬价次数。
             for bidder in bidders:
                 roll = dice(100)
-                if roll <= bidder.agitation and bidder.budget >= lot.current_bid + lot.min_increment:
+                if raises_left > 0 and roll <= bidder.agitation and bidder.budget >= lot.current_bid + lot.min_increment:
+                    raises_left -= 1
                     new_amount = min(lot.current_bid + lot.min_increment, bidder.budget)
                     lot.place_bid(bidder.name, new_amount)
                     events.append(__("%s rolls %d (agitation %d) and raises to %d gold!") % (bidder.name, roll, bidder.agitation, new_amount))
@@ -420,24 +426,72 @@ init -1 python:
                     events.append(__("%s rolls %d and stays quiet.") % (bidder.name, roll))
             return lot.current_bidder != player
 
+        def _release_player_bid(self, lot):
+            """
+            EN: Free the gold reserved by the player's standing bid on a lot
+                (outbid or settled). Safe to call repeatedly.
+            ZH: 释放玩家在此拍品上的在场出价所占用的金币（被反价或已结拍）。
+                可重复调用。
+            """
+            if lot.player_bid:
+                self.player_committed = max(0, self.player_committed - lot.player_bid)
+                lot.player_bid = 0
+
+        def _cancel_player_bids(self, lot):
+            """
+            EN: Withdraw every player bid on a lot, restoring the bid history
+                to the last NPC bid (or the starting price). Used when the
+                player leaves early — the session wraps up without them.
+            ZH: 撤回玩家在此拍品上的所有出价，将出价记录恢复到上一个
+                NPC 出价（或起拍价）。玩家提前离场时使用——后续结拍与其无关。
+            """
+            self._release_player_bid(lot)
+            lot.bids = [b for b in lot.bids if not b.is_player]
+            if lot.bids:
+                top = lot.bids[-1]
+                lot.current_bid = top.amount
+                lot.current_bidder = top.bidder_name
+            else:
+                lot.current_bid = lot.starting_price
+                lot.current_bidder = None
+
         def player_bid_current(self, amount):
             """
             EN: Place the player's bid on the current lot, then run one NPC
-                dice counter-round. Returns (ok, events).
-            ZH: 玩家对当前拍品出价，并触发一轮 NPC 骰子反价。
+                dice counter-round. The bid reserves gold (player_committed)
+                so bidding on several lots cannot overdraw MC. Returns
+                (ok, events).
+            ZH: 玩家对当前拍品出价，并触发一轮 NPC 骰子反价。出价会占用
+                金币（player_committed），防止对多个拍品出价导致 MC 透支。
                 返回 (是否接受, 事件文本列表)。
             """
             events = []
             lot = self.current_lot
             if lot is None or lot.status != AuctionLot.STATUS_ACTIVE:
                 return False, [__("There is no active lot right now.")]
-            if MC.gold < amount:
-                return False, [__("You don't have enough gold.")]
+            previous_bid = lot.player_bid
             if not lot.place_bid(auction_player_name(), amount, is_player=True):
                 return False, [__("Your bid is too low.")]
 
+            ## EN: Total exposure = commitments on OTHER lots + this lot's new
+            ##     bid. player_committed still holds this lot's previous bid,
+            ##     so subtract it before adding the new amount back.
+            ## ZH: 总占用 = 其他拍品的承诺 + 本拍品新出价。
+            ##     player_committed 仍含本拍品旧出价，先减去再加回新出价。
+            exposure = (self.player_committed - previous_bid) + lot.player_bid
+            if MC.gold < exposure:
+                lot.bids.pop()
+                lot.current_bid = lot.bids[-1].amount if lot.bids else lot.starting_price
+                lot.current_bidder = lot.bids[-1].bidder_name if lot.bids else None
+                lot.player_bid = previous_bid
+                return False, [__("You don't have enough gold (you have %d gold committed on other lots).") % self.player_committed]
+
+            self.player_committed = exposure
             events.append(__("You raise your paddle: %d gold for %s!") % (amount, lot.get_display_name()))
             self._npc_counter_round(lot, events)
+            if lot.current_bidder != auction_player_name():
+                self._release_player_bid(lot)
+                events.append(__("You have been outbid."))
             return True, events
 
         ## ============================================================
@@ -466,6 +520,12 @@ init -1 python:
             """
             events = []
 
+            ## EN: The lot settles — any reserved player gold is released
+            ##     (converted to payment below, or freed when outbid/unsold).
+            ## ZH: 拍品结拍——释放玩家在本拍品上预留的金币
+            ##     （下方转为货款，或被反价/流拍而释放）。
+            self._release_player_bid(lot)
+
             if lot.status == AuctionLot.STATUS_ACTIVE:
                 status, winner, price = lot.finalize()
             else:
@@ -477,9 +537,10 @@ init -1 python:
             if status == AuctionLot.STATUS_SOLD:
                 if lot.seller == "player":
                     if winner_is_player:
-                        ## EN: Self-purchase: no proceeds, commission still due.
-                        ## ZH: 自买自卖：无销售款，仍需支付佣金。
-                        fee = auction_listing_fee(price)
+                        ## EN: Self-purchase: no proceeds, commission still due
+                        ##     (capped at what MC can actually pay).
+                        ## ZH: 自买自卖：无销售款，仍需支付佣金（以 MC 实际付得起为上限）。
+                        fee = min(auction_listing_fee(price), max(0, MC.gold))
                         MC.gold -= fee
                         events.append(__("You wind up buying your own %s for %d gold. The auction house charges its %d gold commission (fee rate %s%%) anyway.") % (lot.get_display_name(), price, fee, "%.1f" % (auction_fee_rate() * 100)))
                         self._return_escrow(lot, events)
@@ -489,9 +550,19 @@ init -1 python:
                         self._release_escrow(lot, events)
                 else:
                     if winner_is_player:
-                        MC.gold -= price
-                        events.append(__("Sold! You win %s for %d gold.") % (lot.get_display_name(), price))
-                        self._deliver_to_player(lot, events)
+                        ## EN: Defensive: with commitment tracking this should
+                        ##     never trigger, but never let a gavel drive MC
+                        ##     below zero.
+                        ## ZH: 防御式：有承诺机制理论上不会触发，但绝不让
+                        ##     落锤把 MC 扣成负数。
+                        if MC.gold >= price:
+                            MC.gold -= price
+                            events.append(__("Sold! You win %s for %d gold.") % (lot.get_display_name(), price))
+                            self._deliver_to_player(lot, events)
+                        else:
+                            status = AuctionLot.STATUS_UNSOLD
+                            lot.status = AuctionLot.STATUS_UNSOLD
+                            events.append(__("You won %s for %d gold but cannot cover it — the lot is passed in.") % (lot.get_display_name(), price))
                     else:
                         events.append(__("%s buys %s for %d gold.") % (winner, lot.get_display_name(), price))
             else:
@@ -582,6 +653,10 @@ init -1 python:
             """
             while self.current_lot is not None:
                 lot = self.current_lot
+                ## EN: The player walked out — withdraw their standing bids
+                ##     instead of forcing a purchase they can't attend.
+                ## ZH: 玩家已离场——撤回其在场出价，而非强迫成交。
+                self._cancel_player_bids(lot)
                 self.ensure_bidders(lot)
                 for _i in range(renpy.random.randint(1, 2)):
                     self._npc_counter_round(lot, events)
@@ -625,11 +700,12 @@ init -1 python:
             lot = self.lots[lot_index]
             if lot.status != AuctionLot.STATUS_ACTIVE:
                 return False
-            if MC.gold < lot.reserve_price:
+            if MC.gold < lot.reserve_price + self.player_committed:
                 return False
 
             lot.place_bid(auction_player_name(), lot.reserve_price, is_player=True)
             lot.finalize()
+            self.player_committed += lot.reserve_price
             return True
 
         def player_sell_girl(self, girl, starting_price=None, reserve_price=None):

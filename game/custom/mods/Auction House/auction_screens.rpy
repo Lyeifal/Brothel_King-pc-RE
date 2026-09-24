@@ -37,6 +37,7 @@ screen auction_house(session):
             auction_min_bid = auction_lot.current_bid + auction_lot.min_increment
             auction_display_bid = max(bid_amount, auction_min_bid)
         auction_player = auction_player_name()
+        auction_committed = getattr(session, "player_committed", 0)
 
     ## EN: Title panel — transparent margins let the scene show around it.
     ## ZH: 标题面板——边缘透明，透出场景。
@@ -67,6 +68,11 @@ screen auction_house(session):
             text __("Your gold: [MC.gold]"):
                 size 18
                 color "#FFD700"
+                yalign 0.5
+
+            text __("Committed: [auction_committed]"):
+                size 18
+                color "#FFAAAA"
                 yalign 0.5
 
     hbox:
@@ -209,13 +215,13 @@ screen auction_house(session):
                     null height 10
 
                     if auction_lot.seller == "player":
-                        text __("This is your own lot — bid to stir interest, but if you buy it back yourself you still pay the auction house commission."):
+                        text __("This is your own lot — you cannot bid on it. If it sells, the proceeds are yours; if not, it comes back to you."):
                             size 13
                             color "#FFAAAA"
                             xalign 0.5
                             text_align 0.5
 
-                    if auction_lot.status == AuctionLot.STATUS_ACTIVE:
+                    if auction_lot.status == AuctionLot.STATUS_ACTIVE and auction_lot.seller != "player":
 
                         hbox:
                             xalign 0.5
@@ -232,10 +238,22 @@ screen auction_house(session):
                             textbutton __("+"):
                                 action SetScreenVariable("bid_amount", auction_display_bid + auction_lot.min_increment)
 
+                            textbutton __("+10"):
+                                action SetScreenVariable("bid_amount", auction_display_bid + 10 * auction_lot.min_increment)
+
+                            textbutton __("+50"):
+                                action SetScreenVariable("bid_amount", auction_display_bid + 50 * auction_lot.min_increment)
+
                         textbutton __("Bid"):
                             xalign 0.5
-                            sensitive (auction_display_bid >= auction_min_bid and MC.gold >= auction_display_bid)
+                            sensitive (auction_display_bid >= auction_min_bid and (auction_display_bid - auction_lot.player_bid) + auction_committed <= MC.gold)
                             action Return(("bid", auction_display_bid))
+
+                        if (auction_display_bid - auction_lot.player_bid) + auction_committed > MC.gold:
+                            text __("Not enough gold — you have [auction_committed] gold committed on other lots."):
+                                size 13
+                                xalign 0.5
+                                color "#E74C3C"
 
                     else:
                         text auction_lot.get_status_text():

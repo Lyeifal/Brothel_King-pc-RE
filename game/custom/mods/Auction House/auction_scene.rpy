@@ -80,6 +80,14 @@ label auction_bidding_loop:
             for _auction_ev in auction_events:
                 renpy.say("", _auction_ev)
 
+        ## EN: Frenzy flavor when bidding blows past the reserve.
+        ## ZH: 出价远超保留价时的白热化 flavor。
+        if auction_ok and auction_session.current_lot is not None:
+            $ auction_lot = auction_session.current_lot
+            if auction_lot.status == AuctionLot.STATUS_ACTIVE and auction_lot.current_bid >= 2 * auction_lot.reserve_price:
+                $ auction_hot_name = auction_lot.get_display_name()
+                gio "Incredible — [auction_hot_name] has reached double the reserve price! The whole room is on its feet!"
+
         ## EN: No NPC countered the player's bid — the gavel falls at once.
         ## ZH: 没有 NPC 反价——立即落锤。
         if auction_ok and auction_session.current_lot is not None:
@@ -138,15 +146,20 @@ label auction_bidding_loop:
     ## ────────────────────────────────────────────────────────────
     elif auction_action[0] == "leave":
 
-        $ renpy.say("", __("You slip out before the gavel falls. The remaining lots are settled without you."))
+        ## EN: Misclick protection — leaving forfeits attendance, so confirm.
+        ## ZH: 误触保护——离场即放弃在场竞拍，先确认。
+        call screen yes_no(__("Leave the auction? Your standing bids will be withdrawn and the remaining lots settled without you."))
 
-        python:
-            auction_events = []
-            auction_session.wrap_up(auction_events)
-            for _auction_ev in auction_events:
-                renpy.say("", _auction_ev)
+        if _return:
+            $ renpy.say("", __("You slip out before the gavel falls. The remaining lots are settled without you."))
 
-        jump auction_scene_end
+            python:
+                auction_events = []
+                auction_session.wrap_up(auction_events)
+                for _auction_ev in auction_events:
+                    renpy.say("", _auction_ev)
+
+            jump auction_scene_end
 
     jump auction_bidding_loop
 
