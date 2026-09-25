@@ -223,6 +223,43 @@ label after_load: # Happens after a game state is loaded
         if not hasattr(game, 'goal_channels'):
             $ game.goal_channels = goal_channels
 
+        ## EN: Repair chapter-1 story chain events missing from saves created
+        ##     by debug or broken starts. These once-only events persist with
+        ##     the save; if they were never added to city_events, no amount of
+        ##     replaying can bring them back. Re-add them if the flag shows
+        ##     the chain never started. Idempotent: skipped once present.
+        ## ZH: 修复由调试开局或异常开局创建的存档中缺失的第一章剧情链
+        ##     事件。这些一次性事件随存档持久化；若当初未被加入
+        ##     city_events，再玩多少次也无法触发。当标记显示链条未开始
+        ##     时补加。幂等：已存在则跳过。
+        python:
+            try:
+                if (game.is_story_mode() and game.chapter <= 1
+                        and hasattr(store, "event_dict") and hasattr(store, "city_events")):
+                    for _repair_lbl in ("c1_thieves_guild_tip", "farm_meet_gizel", "farm_meet_goldie"):
+                        _repair_ev = event_dict.get(_repair_lbl)
+                        if (_repair_ev is not None and not _repair_ev.happened
+                                and not story_flags.get(_repair_lbl)
+                                and _repair_ev not in city_events):
+                            story_add_event(_repair_lbl)
+
+                    ## EN: Saves that got the farm via NG+ farm key / debug
+                    ##     never received the rancher shop unlock and merchant
+                    ##     meetings (the story chain adds them). Backfill them
+                    ##     for an already-active farm.
+                    ## ZH: 通过 NG+ 农场钥匙/调试 解锁农场的存档从未获得
+                    ##     牧场商店解锁与商人相遇事件（剧情链才负责添加），
+                    ##     对已激活农场的存档补加。
+                    if getattr(store, "farm", None) is not None and getattr(farm, "active", False):
+                        for _repair_lbl in ("farm_activate_goldie", "farm_meet_stella", "farm_meet_willow", "farm_meet_gina"):
+                            _repair_ev = event_dict.get(_repair_lbl)
+                            if (_repair_ev is not None and not _repair_ev.happened
+                                    and not story_flags.get(_repair_lbl)
+                                    and _repair_ev not in city_events):
+                                story_add_event(_repair_lbl)
+            except Exception:
+                pass
+
         if game.version != config.version:
             menu:
                 "{b}{color=[c_red]}WARNING{/color}{/b}: This saved game was created with another version of the game ([game.version]). You are running version [config.version]. Using older saved games with a new version of BK might cause unexpected crashes or game-breaking bugs. Are you sure you want to continue?"

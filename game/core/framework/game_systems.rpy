@@ -875,6 +875,22 @@ init -3 python:
             farm_firstvisit = False
             gizel_name = "Gizel"
 
+            ## EN: Also queue the rancher shop unlock and merchant meetings
+            ##     that the story chain normally adds (farm_gizel_introduction).
+            ##     Without this, NG+/debug farm unlocks permanently miss
+            ##     Goldie's shop and the Stella/Willow/Gina meetings.
+            ##     Duplicate-safe: unlocking_extras() runs at every chapter
+            ##     change, so only add events that never fired and are absent.
+            ## ZH: 顺带补入剧情链（farm_gizel_introduction）才会添加的牧场
+            ##     商店解锁与商人相遇事件，否则 NG+/调试 解锁农场会永久
+            ##     错过 Goldie 商店及 Stella/Willow/Gina 相遇。去重保护：
+            ##     本函数每次换章都会运行，只补未触发且不在列表中的事件。
+            if globals().get("event_dict") is not None:
+                for _farm_lbl in ("farm_activate_goldie", "farm_meet_stella", "farm_meet_willow", "farm_meet_gina"):
+                    _farm_ev = event_dict.get(_farm_lbl)
+                    if _farm_ev is not None and not _farm_ev.happened and _farm_ev not in city_events:
+                        story_add_event(_farm_lbl)
+
         # Unlock Carpenter's Wagon
         if NGP_settings_dict["carpenter"].get() or debug_mode or (game.chapter >= 2 and not game.is_story_mode()):
             # game.achievements = False

@@ -891,7 +891,7 @@ screen item_list(items, owner, counterpart, sc_prefix, search=False): # May also
 
 
                                 vbox yalign 0.5:
-                                    $ text1 = __(it.name_i18n)
+                                    $ text1 = __(getattr(it, "name_i18n", None) or it.name)
 
                                     if isinstance(it, ItemInstance):
                                         if it.charges and it.charges > 1:
@@ -1060,7 +1060,7 @@ screen item_profile(it):
 
             has vbox xfill True xalign 0.5
 
-            $ text1 = __(it.name_i18n)
+            $ text1 = __(getattr(it, "name_i18n", None) or it.name)
 
             if isinstance(it, ItemInstance):
                 if it.charges and it.charges > 1 and it.usage == "use":
