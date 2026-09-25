@@ -1,4 +1,4 @@
-﻿# TODO: Translation updated at 2026-06-03 23:34
+# TODO: Translation updated at 2026-06-03 23:34
 
 
 translate chinese_simplified hmas_0a7b8ac5:
@@ -25486,7 +25486,7 @@ translate chinese_simplified shalia_visit_75db1aaa:
 translate chinese_simplified shalia_visit_02438a1d:
 
     # "Being careful not to hurt Satella with your extra-large cock, you start pulling her soft butt up and down, sliding your cock back and forth inside her tight pussy."
-    "[actor]小心翼翼地避免伤到萨特拉的超大阴茎,开始上下拉动她柔软的臀部,反复在她紧致的阴道里抽插。"
+    "你小心翼翼地避免伤到她，开始上下拉动她柔软的臀部，让你硕大的阴茎在她紧致的阴道里反复抽插。"
 
 # game/BKstory_events.rpy:13175
 translate chinese_simplified shalia_visit_9daf641d:

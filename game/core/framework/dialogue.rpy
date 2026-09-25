@@ -70,7 +70,7 @@ init -3 python:
     def describe_leveled_stats(act):
         desc = ""
         for stat, _, chg in perform_job_dict[act + "_changes"]:
-            desc += stat_name_dict[stat[0].capitalize()] + ": "
+            desc += __(stat_name_dict[stat[0].capitalize()]) + ": "
             if chg > 1:
                 desc += event_color["good"] % "++"
             elif chg == 1:

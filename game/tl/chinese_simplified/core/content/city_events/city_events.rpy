@@ -1,4 +1,4 @@
-﻿# TODO: Translation updated at 2026-06-03 23:34
+# TODO: Translation updated at 2026-06-03 23:34
 
 
 translate chinese_simplified city_rape_28dc46b8:
@@ -1714,7 +1714,7 @@ translate chinese_simplified city_slave_34169bac:
 translate chinese_simplified city_slave_51a349cb:
 
     # "You have earned prestige. Some of your girls have increased their [act] stat."
-    "你获得了一些声望。你的一些女孩提高了他们的[act_cn]。"
+    "你获得了一些声望。你的一些女孩提高了他们的[act]。"
 
 # game/BKcity_events.rpy:1401
 translate chinese_simplified city_slave_50201891:

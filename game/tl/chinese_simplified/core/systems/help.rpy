@@ -1,4 +1,4 @@
-﻿# TODO: Translation updated at 2026-06-03 23:34
+# TODO: Translation updated at 2026-06-03 23:34
 
 
 translate chinese_simplified help_powers_0ae9bcd0:
@@ -1624,7 +1624,7 @@ translate chinese_simplified help_about_game_2f85ff93:
 translate chinese_simplified help_about_game_fd2461a7:
 
     # "Contact me at [URL] for feedback, criticism, bug reports, etc."
-    "如有反馈、批评、错误报告等,请联系我 [URLcn]。"
+    "如有反馈、批评、错误报告等,请联系我 [URL]。"
 
 # game/BKhelp.rpy:1615
 translate chinese_simplified help_night_events_3d6e67e7:

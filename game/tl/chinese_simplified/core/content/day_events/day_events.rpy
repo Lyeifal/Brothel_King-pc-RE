@@ -1,4 +1,4 @@
-﻿# TODO: Translation updated at 2026-06-03 23:34
+# TODO: Translation updated at 2026-06-03 23:34
 
 
 translate chinese_simplified random_morning_events_e3b92e30:
@@ -934,7 +934,8 @@ translate chinese_simplified random_morning_events_4ee7f03b:
 translate chinese_simplified random_morning_events_10903478:
 
     # "[girl.fullname]'s [ev_type] has increased."
-    "[girl.fullname]的[cntext]已经增加。"
+    $ ev_type_text = __(ev_type.capitalize())
+    "[girl.fullname]的[ev_type_text]增加了。"
 
 # game/BKday_events.rpy:652
 translate chinese_simplified random_night_girl_event_5bb8986a:
@@ -11062,7 +11063,7 @@ translate chinese_simplified night_girl_perform_fefe95c8:
 translate chinese_simplified night_girl_perform_4e0728e2:
 
     # "The customers hold their breath as you push your clenched fist right into [girl.name]'s [_type]."
-    "顾客们屏住呼吸，因为你紧握的拳头正对着[girl.name]的[type]。"
+    "顾客们屏住呼吸，因为你紧握的拳头正对着[girl.name]的[_type]。"
 
 # game/BKday_events.rpy:7068
 translate chinese_simplified night_girl_perform_e1b53fd0_4:
@@ -11074,7 +11075,7 @@ translate chinese_simplified night_girl_perform_e1b53fd0_4:
 translate chinese_simplified night_girl_perform_a06f108d:
 
     # "It seems impossible that your whole fist will fit inside her, yet slowly, her [_type] opens up, aided by the love juice covering your hand."
-    "你的整个拳头似乎不可能塞进她的身体里，但慢慢地，她的[type]打开了，你的手被爱的汁液覆盖着。"
+    "你的整个拳头似乎不可能塞进她的身体里，但慢慢地，她的[_type]打开了，你的手被爱的汁液覆盖着。"
 
 # game/BKday_events.rpy:7074
 translate chinese_simplified night_girl_perform_1b638ad9_7:
@@ -11086,7 +11087,7 @@ translate chinese_simplified night_girl_perform_1b638ad9_7:
 translate chinese_simplified night_girl_perform_05c0e1fe:
 
     # "As her [_type] opens up to accommodate your hand, you are able to slide your fist inside her. Her eyes seem about to pop out and she screams with a mix of pain and pleasure."
-    "当她的[type]打开来容纳你的手时，你可以把拳头伸进她的身体。她的眼睛似乎要突出来，她带着痛苦和快乐的混合尖叫。"
+    "当她的[_type]打开来容纳你的手时，你可以把拳头伸进她的身体。她的眼睛似乎要突出来，她带着痛苦和快乐的混合尖叫。"
 
 # game/BKday_events.rpy:7078
 translate chinese_simplified night_girl_perform_1f1aa64d:
@@ -11122,7 +11123,7 @@ translate chinese_simplified night_girl_perform_a8ba7c47:
 translate chinese_simplified night_girl_perform_a3fc38a7:
 
     # "Her [_type] is completely dilated now, and her belly is grotesquely deformed by your hand inside her. You decide to go even deeper."
-    "她的[type]现在完全膨胀了，她的肚子被你的手在她里面怪异地扭曲了。你决定做得更深。"
+    "她的[_type]现在完全膨胀了，她的肚子被你的手在她里面怪异地扭曲了。你决定做得更深。"
 
 # game/BKday_events.rpy:7099
 translate chinese_simplified night_girl_perform_eb6140d6:
@@ -11140,7 +11141,7 @@ translate chinese_simplified night_girl_perform_f1d7cb16:
 translate chinese_simplified night_girl_perform_0244d926:
 
     # "She howls like a wild animal as you shove your arm very deep inside her [_type], bumping into her inner regions. The customers are amazed by how far you were able to push her."
-    "她像野兽一样嚎叫着，当你把你的手臂深深插进她的[type]里，撞到她的内部区域。顾客们对你能把她推销到什么程度感到惊讶。"
+    "她像野兽一样嚎叫着，当你把你的手臂深深插进她的[_type]里，撞到她的内部区域。顾客们对你能把她推销到什么程度感到惊讶。"
 
 # game/BKday_events.rpy:7109
 translate chinese_simplified night_girl_perform_adbb34e7:
@@ -11158,7 +11159,7 @@ translate chinese_simplified night_girl_perform_4a53dfec_4:
 translate chinese_simplified night_girl_perform_388bfe6e:
 
     # "You know her weaknesses, and before long, you can feel her getting wet. Using her love juice, you start playing with her [_type], sliding one finger first, then two."
-    "你知道她的弱点，但不久你就能感觉到她在变湿。用她的爱汁，你开始玩她的[type]，先滑动一根手指，然后是两根。"
+    "你知道她的弱点，但不久你就能感觉到她在变湿。用她的爱汁，你开始玩她的[_type]，先滑动一根手指，然后是两根。"
 
 # game/BKday_events.rpy:7123
 translate chinese_simplified night_girl_perform_be27fe83:
@@ -11182,7 +11183,7 @@ translate chinese_simplified night_girl_perform_2ca283e2:
 translate chinese_simplified night_girl_perform_30ef8061:
 
     # "As she gets to the chorus of the song, the cry of the howling banshee, you slide even more fingers inside her [_type], until you have four of them well in."
-    "当她进入这首歌的副歌部分，也就是女妖嚎叫的时候，你把更多的手指滑进她的[type]里，直到你把四个手指都放进去。"
+    "当她进入这首歌的副歌部分，也就是女妖嚎叫的时候，你把更多的手指滑进她的[_type]里，直到你把四个手指都放进去。"
 
 # game/BKday_events.rpy:7137
 translate chinese_simplified night_girl_perform_a0161858_4:
@@ -11194,7 +11195,7 @@ translate chinese_simplified night_girl_perform_a0161858_4:
 translate chinese_simplified night_girl_perform_e18c5e89:
 
     # "It's time to make her howl. Adding your thumb to the mix, you struggle to fit your hand inside [girl.name]. She screams in pain and struggles hard to accommodate your whole hand inside her [_type]."
-    "是时候让她嚎叫了。再加上你的拇指，你很难将手放入 [girl.name] 中。她痛苦地尖叫，并努力挣扎着将你的整只手放入她的[type]中。"
+    "是时候让她嚎叫了。再加上你的拇指，你很难将手放入 [girl.name] 中。她痛苦地尖叫，并努力挣扎着将你的整只手放入她的[_type]中。"
 
 # game/BKday_events.rpy:7143
 translate chinese_simplified night_girl_perform_79a603c3:

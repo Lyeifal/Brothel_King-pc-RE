@@ -44,7 +44,9 @@ init -2 python:
                     col = "bad"
                 bonus_text = " (%s)" % plus_text(bonus, color_scheme="standard")
 
-            description = __("%s%s. %s") % (event_color[col] % ("{b}%s/%s{/b}" % (int(total_value), maxrange)), bonus_text, gstats_dict[self.name])
+            ## EN: gstats_dict is built at init -4, before the string table loads (init 0), so its values are raw English. Translate at this display point instead.
+            ## ZH: gstats_dict 构建于 init -4，早于字符串表加载（init 0），值仍为英文原文，故在显示点运行时查表翻译。
+            description = __("%s%s. %s") % (event_color[col] % ("{b}%s/%s{/b}" % (int(total_value), maxrange)), bonus_text, __(gstats_dict[self.name]))
 
             if self.name in gstat_job_skill.keys():
                 return description % (self.parent.get_max_cust_served(gstat_job_skill[self.name]), plural(self.parent.get_max_cust_served(gstat_job_skill[self.name])))
@@ -700,7 +702,7 @@ init -2 python:
                 return __("accelerates a girl's healing by %s day(s).") % str(val)
 
             if self.type == "set":
-                text1 += __("set %s%s") % (target, __(" to %s") % str(val))
+                text1 += __("set %s%s") % (__(target), __(" to %s") % str(val))
                 if self.scope:
                     text1 += " (%s)" % __(self.scope)
                 return text1

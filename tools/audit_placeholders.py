@@ -29,7 +29,12 @@ INTERPOLATION_RE = re.compile(r"\[[A-Za-z_][A-Za-z0-9_]*(?:\![A-Za-z]+|:[^\]]+)?
 
 def extract_placeholders(text):
     """Return a sorted list of placeholders in text."""
-    printf = [m.group(0) for m in PRINTF_RE.finditer(text)]
+    # Strip escaped percent signs (%%) first: they render as a literal '%'
+    # and must NOT count as printf placeholders. Without this, a translator
+    # mistyping "%%s" instead of "%s" still scans as one real %s and the
+    # missing-argument crash (TypeError at "%s" % (a, b)) goes unreported.
+    printf_text = text.replace("%%", "")
+    printf = [m.group(0) for m in PRINTF_RE.finditer(printf_text)]
     interp = INTERPOLATION_RE.findall(text)
     # Normalize: %s and [var]
     return sorted(printf + interp)

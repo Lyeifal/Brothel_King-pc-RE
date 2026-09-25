@@ -1,6 +1,6 @@
 # BK Evolution — i18n 最佳实践
 
-> 最后更新: 2026-09-11（与代码核对）
+> 最后更新: 2026-09-25（新增 §2.5 init 翻译时机边界；§5 加入占位符审计；audit_placeholders 支持 %% 转义）
 >
 > 本文档定义 BK Evolution 项目的国际化（i18n）规范，确保所有玩家可见文本都能被 Ren'Py 翻译系统正确收集。
 >
@@ -14,6 +14,7 @@
 2. **禁止用 Python `+` 拼接玩家可见句子**
 3. **数据驱动的文本必须放在 JSON 中，并使用 `_i18n` 后缀**
 4. **翻译文件按源文件目录结构分布，符合 Ren'Py 标准**
+5. **init 0 之前 `__()` 不产生翻译**：init < 0 构建的数据字典存原文，显示点运行时查表（见 §2.5）
 
 ---
 
@@ -195,6 +196,36 @@ python tools/import_json_i18n.py
 
 该脚本会把缺失的 `_i18n` 文本以空 `old`/`new` 对追加到 `game/tl/chinese_simplified/strings.rpy`（按 `old` 文本去重），之后走常规导出 → 翻译 → 导入流程。随时可用 `python tools/audit_json_i18n.py` 核对覆盖（必须输出 "All JSON _i18n strings are translated!"）。
 
+### 2.5 init 阶段翻译时机（关键边界）
+
+**实测结论（2026-09-25，lint 探针验证）：字符串翻译表在 init 0 才完成加载。init 优先级 < 0 的代码块里调用 `__()` 一律返回英文原文**——不是报错，是静默失效：
+
+```renpy
+# ❌ 静默失效：init -4 时翻译表未加载，gstats_dict 永远存英文原文
+init -4 python:
+    gstats_dict = {k: __(v) for k, v in _stats_data["stat_descriptions"].items()}
+
+# ✅ 正确：字典存原文，显示点运行时查表（tooltip 渲染时翻译表已就绪）
+init -4 python:
+    gstats_dict = {k: v for k, v in _stats_data["stat_descriptions"].items()}
+
+# 显示点（屏幕/tooltip 求值期，init 0 之后）
+def get_description(self, ...):
+    description = __("%s%s. %s") % (..., __(gstats_dict[self.name]))
+```
+
+为什么大部分界面"看起来正常"：screen 的 `text` 显示件在**渲染时会二次查表**，init 期存下的英文值经 `text` 显示仍会被翻译。真正漏译的是**不经过 `text` 显示件的通路**：
+
+- `tooltip` 属性值（tooltip 是字符串属性，不做渲染期查表）
+- Python 侧字符串拼接/组合后的整串
+- 直接参与 `%` 格式化的字典值
+
+配套规则：
+
+1. **init < 0 构建的数据字典一律存原文**，不要指望定义处 `__()`；显示点统一 `__(var)` 运行时查表（对变量查表只要 `old/new` 条目存在即生效，条目可手动维护在 `strings.rpy`）。
+2. **反过来，逻辑 key 禁止翻译**：如 `gstat_job_skill` 的值（`"masseuse"` 等）被用作 `get_max_cust_served()` 等查找 key，必须保持英文原文——init 期"恰好失效"反而保证了这一点，不要"修"它。
+3. **定位经验**：`game/core/init/variables.rpy` 的 `init -4` 统计字典（`gstats_dict` / `gstats_descript` / `gstat_job_skill`）与 `game/core/data/settings.rpy` 的 `init -10`（`stat_name_dict` / `diff_*`）均属此类。`init ≥ 0` 的 JSON 加载（`init 1` 的 `minion_description`、`MC_stat_description` 等）定义处 `__()` 有效。
+
 ---
 
 ## 3. 随机生成文本规范
@@ -285,11 +316,15 @@ python tools/audit_json_i18n.py
 # 3. 回归测试
 python tools/verify_i18n.py
 
-# 4. Ren'Py lint
+# 4. 占位符一致性审计（%% 转义感知；防止 "%s" 误写成 "%%s" 导致
+#    运行时 "%s" % (a, b) 抛 TypeError: not all arguments converted）
+python tools/audit_placeholders.py
+
+# 5. Ren'Py lint
 & "lib\py3-windows-x86_64\python.exe" "Brothel_King.py" . lint
 ```
 
-所有检查必须通过。
+所有检查必须通过。注意：`audit_placeholders.py` 会把**有空占位符的未翻译条目**（空 `new`）也报为 mismatch——这类条目运行时会回退英文原文、不崩溃，但凡是会被 `%`/`[var]` 格式化的字符串，空翻译即隐患，应优先补翻。
 
 ---
 
@@ -303,6 +338,9 @@ python tools/verify_i18n.py
 | `text "Settings"` | UI 英文 | `text _("Settings")` |
 | 硬编码女孩描述 | 无法数据化翻译 | 迁移到 `data/settings/` 下的 JSON 模板池（见 §3.1） |
 | JSON 字段 `name` 同时做显示和 key | 切换语言后持久化/查找失效 | 用 `id` 做 key，`name_i18n` 做显示 |
+| `init -4 python:` 里 `gstats_dict = {k: __(v) ...}` | init 0 前翻译表未加载，静默存下英文原文；tooltip 等非 text 通路漏译 | 字典存原文，显示点 `__(dict[key])` 运行时查表（见 §2.5） |
+| 译文把 `%s` 误写成 `%%s` | 占位符少一个，启用该翻译后运行到 `__("...%s...") % (a, b)` 直接抛 `TypeError: not all arguments converted` 崩溃（2026-09-25 性欲属性说明曾因此崩档） | 译文占位符数量/类型必须与原文一致；提交前跑 `tools/audit_placeholders.py`（已支持 `%%` 转义感知） |
+| 译文引入原文不存在的 `[变量]` | 运行时 `renpy.substitutions` 抛 `NameError: Name 'xxx' is not defined` 崩档（2026-09-25 day_events 的 `[cntext]` 曾因此崩溃） | 译文中的 `[var]` 必须是原文行已有的变量；需要改写句式时用块内 `$` 赋值新变量承载翻译 |
 
 ---
 
@@ -315,6 +353,16 @@ python tools/verify_i18n.py
 3. **代码 key/标识符**：如 `trait_id`、`effect_name`
 4. **Ren'Py 内部标签**：如 `{image=...}`、`{color=...}`
 5. **纯数字、单字符符号**
+
+---
+
+## 8. 剧情事件机制备忘（非 i18n，但影响翻译测试）
+
+测试翻译时若发现"剧情 NPC/地区解锁怎么刷都不触发"，先排查机制而非翻译：
+
+1. **一次性链式事件随存档持久化**。`c1_thieves_guild_tip`（盗贼公会链起点，任意地点 25%/次访问）、`farm_meet_gizel`（香料市场 50%）、`farm_meet_goldie`（农场 50%）等 `once=True` 事件只在 `init_events`（开局/换章）加入 `city_events`。若存档创建时它们没进列表（如调试开局），之后永远缺失。**新开局正常路径已验证可触发**；旧存档靠 `after_load` 的修复钩子自动补加（见 `events_dispatcher.rpy` after_load，幂等）。
+2. **`init_events` 门槛**：`_use_story_mode and not debug_mode` 且 `chapter <= 1`。`debug_mode` 非空（Debug Fast/Custom 开局）会整批跳过第一章剧情事件——与官方原版行为一致；`game.game_mode` 为 `None` 时 `is_story_mode()` 默认 True（向后兼容），模式过滤不会拦截剧情事件。
+3. **链式结构**：盗贼公会 = 小费(任意地点) → 香料市场 → 下水道 → 公会地点解锁（`thieves_guild.secret = False`）；农场 = 香料市场遇 Gizel → 垃圾场 → 农场。用 lint 探针（真实类 + 桩对象跑 `happens()` 数千次）可验证触发率是否符合 `chance` 设定。
 
 ---
 
