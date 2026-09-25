@@ -212,12 +212,20 @@ init -1 python:
         """EN: Write the farm diagnostic report to farm_diag.txt.
            Defined at init level so no store variables leak (an `import os`
            inside an after_load python block would poison the save pickle).
+           Errors are written into the file itself so they are visible.
            ZH: 把农场诊断报告写入 farm_diag.txt。定义在 init 层，
            避免污染 store（在 after_load 的 python 块里 import os
-           会让 store 混入模块对象，导致存档无法序列化）。"""
+           会让 store 混入模块对象，导致存档无法序列化）。
+           错误也写入文件本身，便于排查。"""
+        _path = config.gamedir + "/farm_diag.txt"
         try:
-            with open(config.gamedir + "/farm_diag.txt", "w", encoding="utf-8") as _f:
-                _f.write(renpy.filter_text_tags(farm_diag_text(), allow=[]))
+            _text = renpy.filter_text_tags(farm_diag_text(), allow=[])
+        except Exception:
+            import traceback
+            _text = "DIAG ERROR:\n" + traceback.format_exc()
+        try:
+            with open(_path, "w", encoding="utf-8") as _f:
+                _f.write(_text)
         except Exception:
             pass
 
