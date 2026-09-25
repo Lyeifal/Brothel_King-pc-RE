@@ -31,6 +31,22 @@ init -9 python:
         def unlock(self, unlock_id):
             """EN: Mark an id as unlocked. ZH: 将指定 id 标记为已解锁。"""
             self._unlocked.add(unlock_id)
+            ## EN: If the id matches a city location (exposed as a store
+            ##     global by the world loader), also enable its action
+            ##     button and un-hide it. The registry→Location reverse
+            ##     sync was missing, leaving e.g. Goldie's ranch button
+            ##     permanently disabled after unlock("farmland").
+            ## ZH: 若 id 对应城市地点（world loader 已按 id 暴露为 store
+            ##     全局变量），同时启用其操作按钮并取消隐藏。此前缺少
+            ##     注册表→Location 的反向同步，导致 unlock("farmland")
+            ##     后 Goldie 牧场按钮仍永久禁用。
+            try:
+                _loc = getattr(store, unlock_id, None)
+                if _loc is not None and hasattr(_loc, "action"):
+                    _loc.action = True
+                    _loc.secret = False
+            except Exception:
+                pass
 
         def lock(self, unlock_id):
             """EN: Mark an id as locked (re-lock). ZH: 将指定 id 标记为锁定（重新锁定）。"""

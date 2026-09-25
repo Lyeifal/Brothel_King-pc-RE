@@ -179,6 +179,7 @@ init -1 python:
         # 在牧场地点实测 happens（换入换出 selected_location，不改动其他状态）
         A("")
         A("{b}== 牧场地点实测（happens 100 次抽样）{/b}")
+        A("(已触发过的一次性事件显示 0% 属正常)")
         farm_loc = _find_loc("farm")
         if farm_loc is not None:
             # EN: use store.selected_location explicitly — any bare assignment
@@ -200,12 +201,20 @@ init -1 python:
         A("")
         A("{b}== 结论 =={/b}")
         ev = event_dict.get("farm_activate_goldie")
+        # EN: compare against the NPC object, not a hardcoded English name —
+        #     NPC names are i18n'd (Goldie vs 戈尔迪).
+        # ZH: 与 NPC 对象比对而非硬编码英文名——NPC 名字已 i18n 化
+        #     （Goldie / 戈尔迪）。
+        _goldie_obj = globals().get("NPC_goldie")
+        _goldie_unlocked = _goldie_obj is not None and _goldie_obj in unlocked_shops
         if not getattr(farm, "active", False):
             A("家园农场未激活 → 需先走 Gizel 链（香料市场→垃圾场）或 NG+ 农场钥匙")
-        elif unlocked_shops and any(_s.name == "Goldie" for _s in unlocked_shops):
-            A("牧场商店已解锁 ✓")
+        elif _goldie_unlocked and farm_loc is not None and farm_loc.action:
+            A("牧场商店已解锁 ✓ 地点按钮已启用 ✓")
+        elif _goldie_unlocked:
+            A("商店已解锁但牧场地点按钮未启用 → {color=[c_red]}注册表反向同步缺失，重读档可修复{/color}")
         elif ev is not None and (ev.happened or story_flags.get("farm_activate_goldie")):
-            A("商店事件已触发但未生效 → 异常，请报告")
+            A("商店事件已触发但未进 unlocked_shops → 异常，请报告")
         elif ev is not None and ev in city_events:
             A("商店解锁事件已在池中 → {color=[c_emerald]}去牧场地点访问即可 100%% 触发{/color}")
         else:

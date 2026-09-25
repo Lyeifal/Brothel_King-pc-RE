@@ -257,6 +257,20 @@ label after_load: # Happens after a game state is loaded
                                     and not story_flags.get(_repair_lbl)
                                     and _repair_ev not in city_events):
                                 story_add_event(_repair_lbl)
+
+                    ## EN: Reverse-sync UnlockRegistry to location objects.
+                    ##     Old saves registered ids like 'farmland' but the
+                    ##     location action button was never enabled
+                    ##     (the registry→Location sync only ran one way).
+                    ## ZH: 注册表→地点对象的反向同步。旧存档注册了
+                    ##     'farmland' 等 id，但地点操作按钮从未被启用
+                    ##     （此前只有 地点→注册表 单向同步）。
+                    if globals().get("unlock_registry") is not None:
+                        for _uid in unlock_registry.get_all_unlocked():
+                            _loc = globals().get(_uid)
+                            if _loc is not None and hasattr(_loc, "action") and not _loc.action:
+                                _loc.action = True
+                                _loc.secret = False
             except Exception:
                 pass
 
