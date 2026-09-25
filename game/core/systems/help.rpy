@@ -1277,9 +1277,11 @@ label help_visit_location():
 
     sill happy "{nw}"
 
+    $ text1 = __("You are visiting the {b}%s{/b}. From here, you can meet and chat with people, or take a random tour of the area.") % __(selected_location.name)
+
     menu:
 
-        sill "You are visiting the {b}[selected_location.name]{/b}. From here, you can meet and chat with people, or take a random tour of the area."
+        sill "[text1]"
 
         "Tell me about meeting girls":
 

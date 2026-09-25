@@ -1389,8 +1389,8 @@ translate chinese_simplified help_visit_location_fc6cac84:
 # game/BKhelp.rpy:1419
 translate chinese_simplified help_visit_location_01e0386a:
 
-    # sill "You are visiting the {b}[selected_location.name]{/b}. From here, you can meet and chat with people, or take a random tour of the area." nointeract
-    sill "您正在访问 {b}[selected_location.name]{/b}。从这里，您可以与人见面聊天，或者随意游览该地区。" nointeract
+    # sill "[text1]"
+    sill "[text1]" nointeract
 
 # game/BKhelp.rpy:1423
 translate chinese_simplified help_visit_location_c777e57b:

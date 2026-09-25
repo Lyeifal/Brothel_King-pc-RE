@@ -10330,9 +10330,11 @@ label c2_meet_papa_freak():
 
     $ NPC_freak.location.action = True
 
-    "When you are ready, visit the {b}[NPC_freak.location.name]{/b} to bring Papa Freak the girl of his dreams."
+    $ text1 = __("When you are ready, visit the {b}%s{/b} to bring Papa Freak the girl of his dreams.") % __(NPC_freak.location.name)
 
-    $ game.set_task(__("Bring a whore with {b}at least 50 in Beauty, Body, Refinement and Charm{/b} to Papa Freak, by the %s.") % NPC_freak.location.name, "advance2")
+    "[text1]"
+
+    $ game.set_task(__("Bring a whore with {b}at least 50 in Beauty, Body, Refinement and Charm{/b} to Papa Freak, by the %s.") % __(NPC_freak.location.name), "advance2")
 
     return
 

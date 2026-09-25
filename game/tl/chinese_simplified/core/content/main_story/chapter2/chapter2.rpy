@@ -1,4 +1,4 @@
-﻿# TODO: Translation updated at 2026-06-03 23:34
+# TODO: Translation updated at 2026-06-03 23:34
 
 
 translate chinese_simplified sewer_girl_returns_006c950d:
@@ -20919,8 +20919,8 @@ translate chinese_simplified c2_meet_papa_freak_3f036dab:
 # game/BKchapter2.rpy:10329
 translate chinese_simplified c2_meet_papa_freak_3a022827:
 
-    # "When you are ready, visit the {b}[NPC_freak.location.name]{/b} to bring Papa Freak the girl of his dreams."
-    "当你准备好了,就去{b}[NPC_freak.location.name]{/b}拜访弗里克老爹,给他找一个梦中情人吧。"
+    # "[text1]"
+    "[text1]"
 
 # game/BKchapter2.rpy:10342
 translate chinese_simplified visit_papa_07c43704:

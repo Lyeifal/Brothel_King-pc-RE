@@ -431,7 +431,7 @@ screen contract_tab(contract, x=320, active=False):
             has vbox spacing 12
 
             vbox spacing 3:
-                text (_("The %s") % contract.location.name) drop_shadow (1, 1) font "resources/fonts/MATURASC.ttf" color c_brown
+                text (_("The %s") % __(contract.location.name)) drop_shadow (1, 1) font "resources/fonts/MATURASC.ttf" color c_brown
                 text contract.title drop_shadow (1, 1) font "resources/fonts/MATURASC.ttf" color c_prune
 
             vbox spacing 3:
@@ -478,7 +478,7 @@ screen contract_result(contract, x=450):
         has vbox spacing 12
 
         vbox spacing 3:
-            text (_("The %s") % contract.location.name) drop_shadow (1, 1) font "resources/fonts/MATURASC.ttf" color c_brown
+            text (_("The %s") % __(contract.location.name)) drop_shadow (1, 1) font "resources/fonts/MATURASC.ttf" color c_brown
             text contract.title drop_shadow (1, 1) font "resources/fonts/MATURASC.ttf" color c_prune
 
         vbox spacing 3:

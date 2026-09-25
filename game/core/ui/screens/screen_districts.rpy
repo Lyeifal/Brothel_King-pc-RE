@@ -221,7 +221,7 @@ screen visit_district():
                         if location.secret:
                             tooltip _("You have not discovered this location yet.")
                         else:
-                            tooltip __("{b}%s{/b}. Press %s to visit this location.") % (location.name, str(location_dict[selected_district.name].index(location) + 1))
+                            tooltip __("{b}%s{/b}. Press %s to visit this location.") % (__(location.name), str(location_dict[selected_district.name].index(location) + 1))
 
                         vbox:
 
@@ -234,7 +234,7 @@ screen visit_district():
                                 add im.Scale("resources/districts/locations/secret.webp", xres(150), yres(100)) # insensitive_alpha 0.33 idle_alpha 0.66 hover_alpha 1.0
 
                             else:
-                                text location.name size res_font(14) xalign 0.5
+                                text __(location.name) size res_font(14) xalign 0.5
 
                                 fixed:
                                     fit_first True
@@ -310,7 +310,7 @@ screen visit_location():
         yalign 0.7
 #        yfill True
 
-        text selected_location.name xalign 0.5
+        text __(selected_location.name) xalign 0.5
 
         text ""
         text ""
