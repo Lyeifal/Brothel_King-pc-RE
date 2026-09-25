@@ -65,14 +65,13 @@ screen mod_manager():
         ## ZH: 任一待应用值与持久化值不同即为真。
         _dirty = any(_disp != _enabled for _mid, _info, _always_on, _enabled, _disp, _missing in _mod_rows)
 
-        ## EN: Build the next pending dict with one mod flipped. Defined as a
-        ##     plain helper (no ** unpacking) so the toggle action is robust.
-        ## ZH: 构造翻转某一个 Mod 后的待应用字典。用普通辅助函数
-        ##     （不用 ** 解包）保证切换动作稳定。
-        def _flip_pending(_fid, _cur):
-            _d = dict(pending)
-            _d[_fid] = not _cur
-            return _d
+    ## EN: Toggle actions build the next pending dict inline with
+    ##     dict(list(...) + [(k, v)]) — a nested def inside a screen python
+    ##     block cannot see screen variables (NameError), and ** unpacking
+    ##     in screen actions is best avoided.
+    ## ZH: 切换动作用 dict(list(...) + [(k, v)]) 内联构造新待应用字典——
+    ##     屏幕 python 块内嵌的 def 读不到屏幕变量（NameError），
+    ##     屏幕动作里也最好避免 ** 解包。
 
     key "mouseup_3" action Hide("mod_manager")
 
@@ -140,7 +139,7 @@ screen mod_manager():
                                             button:
                                                 xalign 0.0
                                                 background None
-                                                action SetScreenVariable("pending", _flip_pending(_mid, _disp))
+                                                action SetScreenVariable("pending", dict(list(pending.items()) + [(_mid, (not _disp))]))
 
                                                 hbox:
                                                     spacing xres(6)
@@ -194,7 +193,7 @@ screen mod_manager():
                                             textbutton (_("禁用") if _disp else _("启用")):
                                                 xalign 1.0
                                                 text_size res_font(16)
-                                                action SetScreenVariable("pending", _flip_pending(_mid, _disp))
+                                                action SetScreenVariable("pending", dict(list(pending.items()) + [(_mid, (not _disp))]))
 
             if _dirty:
                 text _("有未应用的更改——点击「确定」生效，「返回」放弃。") size res_font(15) color "#B03A2E" xalign 0.5
