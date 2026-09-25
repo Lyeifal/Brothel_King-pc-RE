@@ -62,7 +62,21 @@ label start:
                 $ renpy.pause(1.0)
 
     else:
-        jump intro
+        ## EN: Repeat players get an explicit choice — the intro can be long.
+        ##     First-time players always watch it once.
+        ## ZH: 重复开局的玩家显式选择是否跳过开场——开场较长；
+        ##     首次开局始终播放一次。
+        if persistent.seen_intro:
+            menu:
+                "你已经看过开场剧情。要再次观看吗？"
+
+                "观看开场剧情":
+                    jump intro
+
+                "跳过开场剧情":
+                    pass
+        else:
+            jump intro
 
     jump start_no_intro
 
