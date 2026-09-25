@@ -262,15 +262,43 @@ label after_load: # Happens after a game state is loaded
                     ##     Old saves registered ids like 'farmland' but the
                     ##     location action button was never enabled
                     ##     (the registry→Location sync only ran one way).
+                    ##     Use explicit store lookups — a bare globals().get
+                    ##     can silently see nothing and skip every id.
                     ## ZH: 注册表→地点对象的反向同步。旧存档注册了
                     ##     'farmland' 等 id，但地点操作按钮从未被启用
                     ##     （此前只有 地点→注册表 单向同步）。
-                    if globals().get("unlock_registry") is not None:
-                        for _uid in unlock_registry.get_all_unlocked():
-                            _loc = globals().get(_uid)
-                            if _loc is not None and hasattr(_loc, "action") and not _loc.action:
-                                _loc.action = True
-                                _loc.secret = False
+                    ##     改用显式 store 查找——裸 globals().get 可能
+                    ##     什么都看不到而静默跳过所有 id。
+                    try:
+                        _reg = getattr(store, "unlock_registry", None)
+                        if _reg is not None:
+                            for _uid in _reg.get_all_unlocked():
+                                _loc = getattr(store, _uid, None)
+                                if _loc is not None and hasattr(_loc, "action") and not _loc.action:
+                                    _loc.action = True
+                                    _loc.secret = False
+                    except Exception:
+                        pass
+
+                    ## EN: Deterministic fix for the Goldie ranch button:
+                    ##     if the shop-unlock event already played (or Goldie
+                    ##     is in unlocked_shops), the Farm location MUST offer
+                    ##     its action — regardless of registry contents.
+                    ## ZH: Goldie 牧场按钮的确定性修复：若商店解锁事件
+                    ##     已触发（或 Goldie 已在 unlocked_shops），牧场
+                    ##     地点必须开放操作——不再依赖注册表内容。
+                    try:
+                        _goldie_npc = getattr(store, "NPC_goldie", None)
+                        _shops = getattr(store, "unlocked_shops", None) or []
+                        _ev = event_dict.get("farm_activate_goldie")
+                        if (_goldie_npc is not None and _goldie_npc in _shops) or (_ev is not None and (_ev.happened or story_flags.get("farm_activate_goldie"))):
+                            for _d in district_dict.values():
+                                for _loc in _d.locations:
+                                    if _loc.name.lower() == "farm" and not _loc.action:
+                                        _loc.action = True
+                                        _loc.secret = False
+                    except Exception:
+                        pass
             except Exception:
                 pass
 

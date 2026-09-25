@@ -133,6 +133,19 @@ init -1 python:
         A("farm.active（家园农场）: %s" % getattr(farm, "active", "?"))
         A("chapter: %s | story_mode: %s | debug_mode: %r" % (game.chapter, game.is_story_mode(), debug_mode))
         A("NGP 农场钥匙: %s" % NGP_settings_dict["farm"].get())
+        try:
+            _reg = globals().get("unlock_registry")
+            if _reg is not None:
+                A("解锁注册表: %s" % sorted(_reg.get_all_unlocked()))
+            else:
+                A("解锁注册表: {color=[c_red]}store 中找不到 unlock_registry!{/color}")
+        except Exception as _e:
+            A("解锁注册表: 读取失败 %r" % _e)
+        try:
+            _fl = globals().get("farmland")
+            A("store.farmland 对象: %s (action=%s)" % ("存在" if _fl is not None else "缺失", getattr(_fl, "action", "?")))
+        except Exception as _e:
+            A("store.farmland 对象: 读取失败 %r" % _e)
 
         def _find_loc(name):
             for d in district_dict.values():
@@ -212,7 +225,7 @@ init -1 python:
         elif _goldie_unlocked and farm_loc is not None and farm_loc.action:
             A("牧场商店已解锁 ✓ 地点按钮已启用 ✓")
         elif _goldie_unlocked:
-            A("商店已解锁但牧场地点按钮未启用 → {color=[c_red]}注册表反向同步缺失，重读档可修复{/color}")
+            A("商店已解锁但牧场地点按钮未启用 → {color=[c_red]}读档修复钩子未生效，请把本文件内容发给我{/color}")
         elif ev is not None and (ev.happened or story_flags.get("farm_activate_goldie")):
             A("商店事件已触发但未进 unlocked_shops → 异常，请报告")
         elif ev is not None and ev in city_events:
