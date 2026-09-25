@@ -518,6 +518,8 @@ screen furniture():
                     text "" size res_font(8)
 
 
+screen brothel_options():
+
     zorder 0
     use overlay("customers")
 
