@@ -1,5 +1,49 @@
 #### LABELS & EVENTS ####
 
+## EN: Init-level helper for the window fit correction in before_main_menu.
+##     Must stay at init level: importing ctypes inside a label python block
+##     would bind the module in the store and break save pickling.
+## ZH: before_main_menu 窗口适配修正的 init 层辅助函数。必须放在 init
+##     层：在 label 的 python 块里 import ctypes 会把模块绑进 store，
+##     导致存档无法序列化。
+init -1 python:
+
+    def _bk_window_fit():
+        """EN: Shrink the windowed-mode physical window so the client area
+             plus window chrome fits the Windows work area (taskbar-aware).
+             No-op on non-Windows, in fullscreen, or when the window already
+             fits. Called once per session from before_main_menu.
+           ZH: 缩小窗口模式的物理窗口，使客户区加窗口装饰能放入 Windows
+             工作区（感知任务栏）。非 Windows、全屏、或窗口已适配时为空
+             操作。由 before_main_menu 每会话调用一次。"""
+        if not renpy.windows:
+            return
+        if preferences.fullscreen:
+            return
+
+        import ctypes
+
+        class _RECT(ctypes.Structure):
+            _fields_ = [("left", ctypes.c_long), ("top", ctypes.c_long),
+                        ("right", ctypes.c_long), ("bottom", ctypes.c_long)]
+
+        _rect = _RECT()
+        # SPI_GETWORKAREA = 0x0030
+        if not ctypes.windll.user32.SystemParametersInfoW(0x0030, 0, ctypes.byref(_rect), 0):
+            return
+
+        _work_w = _rect.right - _rect.left
+        _work_h = _rect.bottom - _rect.top
+        _pw, _ph = renpy.get_physical_size()
+        # EN: reserves for window chrome (title bar + borders) and slack.
+        # ZH: 为窗口装饰（标题栏+边框）和余量预留的像素。
+        _max_w = _work_w - 8
+        _max_h = _work_h - 40
+        if _pw > _max_w or _ph > _max_h:
+            _factor = min(1.0, 1.0 * _max_w / _pw, 1.0 * _max_h / _ph)
+            renpy.set_physical_size((int(_pw * _factor), int(_ph * _factor)))
+
+
 ## Common tricks ##
 
 ## Plan event for later
@@ -69,6 +113,29 @@
 label before_main_menu(): # Will show before main menu (standard Ren'py label)
 
     $ bk_apply_language()
+
+    ## EN: Window fit correction. Ren'Py sizes the windowed window against
+    ##     the full screen height, ignoring the Windows taskbar and title
+    ##     bar; the OS then clamps the real window, leaving the render
+    ##     canvas taller than the client area — the bottom of the screen
+    ##     (e.g. the goal tracker) gets cut off. Shrink the physical window
+    ##     once per session so client + window chrome fits the work area.
+    ##     All ctypes/display work lives in the init-level helper _bk_window_fit
+    ##     — importing modules in a label python block would leak them into
+    ##     the save and break pickling.
+    ## ZH: 窗口适配修正。Ren'Py 按整屏高度计算窗口大小，忽略了任务栏
+    ##     和标题栏；系统随后对真实窗口做钳制，导致渲染画布比客户区
+    ##     高——屏幕底部（如目标追踪器）被裁掉。每会话一次把物理窗口
+    ##     缩小到 客户区+窗口装饰 能放入工作区的程度。ctypes/显示操作
+    ##     全部放在 init 层辅助函数 _bk_window_fit 里——在 label 的
+    ##     python 块中 import 模块会泄漏进存档并破坏序列化。
+    python:
+        try:
+            if not getattr(store, "_winfit_applied", False):
+                store._winfit_applied = True
+                _bk_window_fit()
+        except Exception:
+            pass
 
     window hide
 
