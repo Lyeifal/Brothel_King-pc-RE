@@ -124,8 +124,8 @@ init -1 python:
     def farm_diag_text():
         """EN: Build the farm/ranch-shop/thieves-guild diagnostic report.
            ZH: 生成农场/牧场商店/盗贼公会解锁诊断报告（控制台与读档自诊断共用）。"""
-        if not services.has("farm"):
-            return "farm service unavailable (before init_game)."
+        if globals().get("farm") is None:
+            return "farm unavailable (before init_game or not in this save)."
         L = []
         A = L.append
 
@@ -207,6 +207,19 @@ init -1 python:
         else:
             A("{color=[c_red]}商店解锁事件缺失 → 读档修复钩子未覆盖，请报告{/color}")
         return "\n".join(L)
+
+    def _write_farm_diag():
+        """EN: Write the farm diagnostic report to farm_diag.txt.
+           Defined at init level so no store variables leak (an `import os`
+           inside an after_load python block would poison the save pickle).
+           ZH: 把农场诊断报告写入 farm_diag.txt。定义在 init 层，
+           避免污染 store（在 after_load 的 python 块里 import os
+           会让 store 混入模块对象，导致存档无法序列化）。"""
+        try:
+            with open(config.gamedir + "/farm_diag.txt", "w", encoding="utf-8") as _f:
+                _f.write(renpy.filter_text_tags(farm_diag_text(), allow=[]))
+        except Exception:
+            pass
 
     # ── Singleton ──
     dev_console = DevConsole()

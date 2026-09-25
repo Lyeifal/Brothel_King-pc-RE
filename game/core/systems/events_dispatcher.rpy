@@ -260,6 +260,17 @@ label after_load: # Happens after a game state is loaded
             except Exception:
                 pass
 
+        ## EN: Dump farm/ranch-shop unlock diagnostics to farm_diag.txt on
+        ##     every load — readable with any text editor, no console needed.
+        ## ZH: 每次读档把农场/牧场商店解锁诊断写入 farm_diag.txt——
+        ##     任意文本编辑器可读，无需打开控制台。
+        python:
+            try:
+                if hasattr(store, "farm_diag_text"):
+                    _write_farm_diag()
+            except Exception:
+                pass
+
         if game.version != config.version:
             menu:
                 "{b}{color=[c_red]}WARNING{/color}{/b}: This saved game was created with another version of the game ([game.version]). You are running version [config.version]. Using older saved games with a new version of BK might cause unexpected crashes or game-breaking bugs. Are you sure you want to continue?"
