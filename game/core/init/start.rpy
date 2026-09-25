@@ -17,8 +17,7 @@ label start:
 
     $ debug_mode = False
     $ story_mode = True
-    $ game_mode = None  ## EN: Will be set to "story" or "sandbox". ZH: 将设置为 "story" 或 "sandbox"。
-    $ _selected_origin = None  ## EN: Player origin chosen at start (Origins mod). ZH: 开局选择的玩家出身（Origins Mod）。
+    $ game_mode = None  ## EN: No start-of-game mode selection — always story (Game Modes mod select screen removed). ZH: 开局不再有模式选择——始终剧情模式（Game Modes 选择界面已移除）。
     $ starting_chapter = 1
     $ enemy_general = None
     $ unlocked_shops = []
@@ -29,9 +28,10 @@ label start:
 
     scene black with fade
 
-    ## EN: Select game mode at the very beginning, before any branch.
-    ## ZH: 在最开始就选择游戏模式，在任何分支之前。
-    call select_game_mode() from _call_select_game_mode_start
+    ## EN: No game mode selection — the original flow goes straight to the
+    ##     intro (first run) or the start menu, always in story mode.
+    ## ZH: 不再选择游戏模式——原版流程直接进开场（首次）或开局菜单，
+    ##     始终为剧情模式。
 
     if not persistent.seen_intro:
         jump intro
@@ -77,94 +77,27 @@ label start:
     jump start_no_intro
 
 
-label select_game_mode():
-    """
-    EN: Present game mode selection to the player.
-        Sets global game_mode and configures the active GameMode instance.
-    ZH: 向玩家展示游戏模式选择。
-        设置全局 game_mode 并配置激活的 GameMode 实例。
-    """
-    scene black with fade
-
-    ## EN: The selection screen is provided by the "Game Modes" mod. The
-    ##     registry check covers the mod being installed but DISABLED: its
-    ##     modes stay unregistered, so the game falls through to the story
-    ##     fallback exactly as if the mod were absent.
-    ## ZH: 选择屏幕由 "Game Modes" Mod 提供。注册表检查覆盖
-    ##     "Mod 已安装但被禁用"的情况：模式未注册，与 Mod 缺席一样
-    ##     走剧情模式兜底。
-    if renpy.has_screen("game_mode_select") and gamemode_registry.list_mode_instances():
-
-        call screen game_mode_select
-
-        ## EN: game_mode is set by the screen's Return() action.
-        ## ZH: game_mode 由屏幕的 Return() 动作设置。
-        $ story_mode = (game_mode == GameMode.MODE_STORY)
-
-        ## EN: Prompt for origin selection (Origins mod) for story AND
-        ##     sandbox mode. Skipped silently when the mod is absent.
-        ## ZH: 剧情与沙盒两种模式都提示选择出身（Origins Mod）。
-        ##     Mod 缺席时静默跳过。
-        if game_mode in (GameMode.MODE_STORY, GameMode.MODE_SANDBOX):
-            call select_origin() from _call_select_origin
-
-    else:
-
-        ## EN: Mod absent fallback: plain story mode, no selection.
-        ## ZH: Mod 缺席兜底：纯剧情模式，无选择界面。
-        $ game_mode = GameMode.MODE_STORY
-        $ story_mode = True
-
-    return
-
-
-label select_origin():
-    """
-    EN: Present origin selection (Origins mod). The chosen origin is stored
-        in the global _selected_origin and consumed by the intro (unique
-        player class + talents). Skipped if the mod is absent.
-    ZH: 展示出身选择（Origins Mod）。选中的出身存入全局
-        _selected_origin，由开场流程消费（独特主角职业 + 天赋）。
-        Mod 缺席时跳过。
-    """
-    scene black with fade
-
-    ## EN: The origin screen lives in the "Origins" mod; skip if absent.
-    ## ZH: 出身屏幕位于 "Origins" Mod；缺席则跳过。
-    if not renpy.has_screen("origin_select"):
-        return
-
-    $ _selected_origin_id = None
-    call screen origin_select
-
-    ## EN: Resolve the origin instance into the store global. The registry
-    ##     lives in the mod, so look it up defensively.
-    ## ZH: 将出身实例解析进 store 全局变量。注册表位于 Mod 内，
-    ##     因此做防御式查找。
-    python:
-        _selected_origin = None
-        if _selected_origin_id:
-            _orig_reg = globals().get("origin_registry")
-            if _orig_reg is not None:
-                _selected_origin = _orig_reg.get(_selected_origin_id)
-
-    return
-
-
 label start_no_intro:
 
     call init_game(quick=True) from _call_init_game
 
-    ## EN: Origins mod — the no-intro path never passes the intro class
-    ##     menu, so apply the origin's unique class and talents here.
-    ## ZH: Origins Mod——跳过开场的路线不会经过职业菜单，
-    ##     在此套用出身的独特职业与天赋。
-    if _selected_origin is not None:
-        $ MC.set_playerclass(_selected_origin.class_id)
-        $ _selected_origin.apply_to_mc(MC)
-
     if debug_mode != "quick":
         call choose_difficulty() from _call_choose_difficulty
+
+    ## EN: Origins mod — the class is chosen on the quick_start page; if the
+    ##     final class belongs to an origin, apply its talents and starting
+    ##     bonus once. The registry lives in the mod, so look it up
+    ##     defensively. MC is created by init_game above.
+    ## ZH: Origins Mod——职业在 quick_start 页选择；若最终职业属于某个
+    ##     出身，则套用其天赋与起始奖励（仅一次）。注册表位于 Mod 内，
+    ##     做防御式查找。MC 由上方 init_game 创建。
+    python:
+        _oreg = globals().get("origin_registry")
+        if _oreg is not None and MC:
+            _orig = next((o for o in _oreg.list_origins() if o.class_id == MC.playerclass), None)
+            if _orig is not None and getattr(MC, "_origin_applied", None) != _orig.origin_id:
+                _orig.apply_to_mc(MC)
+                MC._origin_applied = _orig.origin_id
 
     call advance_to_chapter(starting_chapter, start=True) from _call_advance_to_chapter_3
 

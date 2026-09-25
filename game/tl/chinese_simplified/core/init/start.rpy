@@ -1,22 +1,4 @@
-﻿# TODO: Translation updated at 2026-06-12 05:03
-
-# game/core/init/start.rpy:80
-translate chinese_simplified select_game_mode_e48c8c21:
-
-    # "EN: Present game mode selection to the player. Sets global game_mode and configures the active GameMode instance. ZH: 向玩家展示游戏模式选择。 设置全局 game_mode 并配置激活的 GameMode 实例。"
-    "EN: 向玩家展示游戏模式选择。设置全局 game_mode 并配置激活的 GameMode 实例。"
-
-# game/core/init/start.rpy:108
-translate chinese_simplified select_origin_604f4f3c:
-
-    # "EN: Present origin selection for Sandbox mode. ZH: 为沙盒模式展示出身选择。"
-    "EN: 为沙盒模式展示出身选择。"
-
-# game/core/init/start.rpy:128
-translate chinese_simplified select_scenario_8f893736:
-
-    # "EN: Present scenario selection for Scenario mode. Falls back to sandbox if no scenarios are installed. ZH: 为剧本模式展示剧本选择。 如果没有安装剧本则回退到沙盒模式。"
-    "EN: 为剧本模式展示剧本选择。如果没有安装剧本则回退到沙盒模式。"
+# TODO: Translation updated at 2026-06-12 05:03
 
 translate chinese_simplified strings:
     old "Export hardcoded data to JSON (Evolution)"
@@ -107,12 +89,4 @@ translate chinese_simplified strings:
     new "会说话的剑"
     old "Mage Girl"
     new "法师女孩"
-
-# TODO: Translation updated at 2026-09-25 07:32
-
-# game/core/init/start.rpy:122
-translate chinese_simplified select_origin_017639ac:
-
-    # "EN: Present origin selection (Origins mod). The chosen origin is stored in the global _selected_origin and consumed by the intro (unique player class + talents). Skipped if the mod is absent. ZH: 展示出身选择（Origins Mod）。选中的出身存入全局 _selected_origin，由开场流程消费（独特主角职业 + 天赋）。 Mod 缺席时跳过。"
-    "EN: 展示出身选择（Origins Mod）。选中的出身存入全局 _selected_origin，由开场流程消费（独特主角职业 + 天赋）。ZH: 展示出身选择（Origins Mod）。选中的出身存入全局 _selected_origin，由开场流程消费（独特主角职业 + 天赋）。 Mod 缺席时跳过。"
 

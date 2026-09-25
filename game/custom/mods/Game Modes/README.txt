@@ -27,8 +27,8 @@ Game Modes Mod — 说明 | README
 --------------------------
 本 Mod 的 manifest 声明了 "always_on": False，玩家可以在主菜单
 "Mods"（Mod 管理界面）中禁用它；开关存于 persistent._bk_v2_mod_states，
-重启游戏后完全生效。被禁用时，开局流程回退为纯剧情模式
-（无模式选择界面，见 game/core/init/start.rpy 的 select_game_mode）。
+重启游戏后完全生效。开局模式选择界面已移除：新开局始终为剧情模式，game_mode 保持 None，
+由 init_game 回退到已注册的剧情模式（见 game/core/init/start.rpy）。
 
 出身系统已独立为 "Origins" Mod（game/custom/mods/Origins/），
 剧本模式已按需求移除。

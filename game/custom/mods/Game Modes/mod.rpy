@@ -1,28 +1,29 @@
 ################################################################################
 ##  Game Modes Mod — BK Evolution
 ##  EN: Standalone mod housing the former core game mode implementations
-##      (ex game/core/systems/gamemodes/): story, sandbox and scenario modes,
-##      plus the start-of-game mode/origin/scenario selection screens.
+##      (ex game/core/systems/gamemodes/): story and sandbox modes. The
+##      start-of-game mode selection screen has been REMOVED — the start
+##      flow always runs in story mode, with no mode/origin selection.
+##      (The player origin system lives in the standalone Origins mod and
+##      is chosen on the quick_start class page instead.)
 ##  ZH: 游戏模式独立 Mod（原 game/core/systems/gamemodes/ 下的模式实现）：
-##      剧情、沙盒、剧本三种模式及开局模式/出身/剧本选择屏幕。
+##      剧情与沙盒模式。开局模式选择界面已移除——开局流程始终为剧情
+##      模式，无模式/出身选择。（出身系统已迁至独立的 Origins Mod，
+##      改在 quick_start 职业页选择。）
 ##
 ##  EN: The core framework (GameMode base class + GameModeRegistry singleton)
-##      stays in game/core/systems/gamemodes/gamemode.rpy. With this mod
-##      absent OR disabled, the core start flow falls back to plain story
-##      mode (no selection screen).
+##      stays in game/core/systems/gamemodes/gamemode.rpy. The registered
+##      modes are kept only as data/fallback — the story fallback activates
+##      when no mode is selected at start.
 ##  ZH: 核心框架（GameMode 基类 + GameModeRegistry 单例）保留在
-##      game/core/systems/gamemodes/gamemode.rpy。本 Mod 缺席或被禁用
-##      时，本体开局流程回退为纯剧情模式（无选择界面）。
+##      game/core/systems/gamemodes/gamemode.rpy。注册的模式仅作为数据/
+##      兜底保留——开局未选择模式时激活剧情模式兜底。
 ##
 ##  EN: Registered through Mod API v2 with "always_on": False — it can be
 ##      toggled off in the main-menu Mod Manager screen
 ##      (persistent._bk_v2_mod_states). Uninstall = remove this folder.
-##      Other mods can declare "dependencies": ["game_modes"] to build on
-##      the mode/origin/scenario registries (see README.txt).
 ##  ZH: 通过 Mod API v2 注册，"always_on": False——可在主菜单 Mod 管理
 ##      界面禁用（persistent._bk_v2_mod_states）。卸载 = 删除本目录。
-##      其他 Mod 可声明 "dependencies": ["game_modes"] 以前置依赖本 Mod
-##      的模式/出身/剧本注册表（见 README.txt）。
 ################################################################################
 
 init -1 python:
@@ -33,7 +34,7 @@ init -1 python:
         "api_version": 2,
         "min_game_version": "0.3",
         "author": "BK Evolution",
-        "description": __("Adds the story and sandbox game modes, including the start-of-game mode selection screen and the player origin system."),
+        "description": __("Houses the story/sandbox game mode classes (kept for fallback and future use). The start-of-game mode selection screen was removed — new games always start in story mode."),
         "requires": ["game_modes", "origin"],
         "hooks": {},
         "dependencies": [],
@@ -42,15 +43,12 @@ init -1 python:
         "always_on": False,
     })
 
-    ## EN: Register the three game modes into the core registry — only while
-    ##     this mod is active. When the mod is disabled in the Mod Manager,
-    ##     register_mod leaves it inactive (persistent._bk_v2_mod_states), so
-    ##     the registry stays empty and the core start flow falls back to
-    ##     plain story mode (start.rpy select_game_mode).
-    ## ZH: 将三种游戏模式注册进核心注册表——仅在本 Mod 激活时进行。
-    ##     Mod 管理界面禁用本 Mod 后，register_mod 不会激活它
-    ##     （persistent._bk_v2_mod_states），注册表保持为空，
-    ##     本体开局流程回退为纯剧情模式（start.rpy select_game_mode）。
+    ## EN: Register the game modes into the core registry — only while this
+    ##     mod is active. With no start-of-game selection, game_mode stays
+    ##     None and init_game falls back to the registered story mode.
+    ## ZH: 将游戏模式注册进核心注册表——仅在本 Mod 激活时进行。
+    ##     开局不再选择模式，game_mode 保持 None，由 init_game 回退到
+    ##     已注册的剧情模式。
     if services.mod_api_v2.is_mod_active("game_modes"):
         gamemode_registry.register(StoryMode())
         gamemode_registry.register(SandboxMode())

@@ -5,13 +5,27 @@
 init python:
 
     def get_available_player_classes():
-        """EN: Return list of available player class IDs based on game mode and origin.
-           ZH: 根据游戏模式和出身返回可用的主角职业 ID 列表。"""
-        ## EN: Origins mod — a selected origin locks the MC to its unique class.
-        ## ZH: Origins Mod——选了出身后，主角锁定为该出身的独特职业。
-        _origin = globals().get("_selected_origin")
-        if _origin is not None and getattr(_origin, "class_id", None):
-            return [_origin.class_id]
+        """EN: Return list of available player class IDs. With the Origins mod
+           active, the class choice on the quick_start page offers each
+           origin's unique class (picked there alongside religion and
+           difficulty). Otherwise fall back to mode-filtered base classes.
+           ZH: 返回可用的主角职业 ID 列表。Origins Mod 激活时，
+           quick_start 页的职业选择提供各出身的独特职业（与信仰、
+           难度同页选择）。否则回退到按模式过滤的基础职业。"""
+        ## EN: Origins mod — offer every origin's unique class. Re-run the
+        ##     (idempotent) class injection so the icon/description
+        ##     registries are guaranteed populated before the screen reads
+        ##     them.
+        ## ZH: Origins Mod——提供所有出身的独特职业。重跑（幂等的）
+        ##     职业注入，确保界面读取前图标/描述注册表已填充。
+        _oreg = globals().get("origin_registry")
+        if _oreg is not None:
+            _ensure = globals().get("origins_ensure_classes")
+            if _ensure is not None:
+                _ensure()
+            _origin_classes = [o.class_id for o in _oreg.list_origins() if getattr(o, "class_id", None)]
+            if _origin_classes:
+                return _origin_classes
 
         if story_mode:
             # Story mode: only classes marked for story

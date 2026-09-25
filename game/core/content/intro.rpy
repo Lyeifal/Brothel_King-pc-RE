@@ -299,25 +299,6 @@ label resume_intro:
 
     guard "State your business, stranger."
 
-    ## EN: Origins mod — an origin was chosen at start: lock the MC to its
-    ##     unique class, tell the origin's story instead of the class menu,
-    ##     and apply its talents. The god menu below is untouched.
-    ## ZH: Origins Mod——开局已选出身：锁定该出身的独特职业，
-    ##     用出身叙述替代职业菜单，并应用其天赋。下方信仰菜单不变。
-    if _selected_origin is not None:
-
-        $ MC.set_playerclass(_selected_origin.class_id)
-        $ norollback()
-        $ _origin_name = _selected_origin.get_name()
-
-        you "I am of [_origin_name] stock. The past is the past — I am here to start anew."
-
-        "[_selected_origin.get_description()]"
-
-        $ _selected_origin.apply_to_mc(MC)
-
-        jump resume_intro2
-
     menu:
         you "I am..."
 

@@ -282,6 +282,8 @@ init -2 python:
             _apc = all_player_classes
             _spellbook = spellbook
             _stat_defs = MC_CLASS_STAT_DEFS
+            _pics = playerclass_pics
+            _descs = MC_playerclass_description
         except NameError:
             return
 
@@ -297,6 +299,14 @@ init -2 python:
                 "icon": cd.get("icon", ""),
                 "modes": ["story", "sandbox"],
             }
+
+            ## EN: The class icon/description registries are looked up by
+            ##     several screens (quick_start, item tooltips, MC profile)
+            ##     with direct [key] access — missing entries crash.
+            ## ZH: 多个界面（quick_start、物品提示、主角资料页）直接用
+            ##     [键] 查职业图标/描述注册表——缺项会崩溃。
+            _pics[cid] = cd.get("icon", "")
+            _descs[cid] = __(cd.get("description_i18n", ""))
 
             _spells = []
             for s in cd.get("spellbook", []):

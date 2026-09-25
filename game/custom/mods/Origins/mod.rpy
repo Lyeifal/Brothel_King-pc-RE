@@ -1,12 +1,17 @@
 ################################################################################
 ##  Origins Mod — 注册（Mod API v2）
-##  EN: Standalone player-origin mod. At game start the player picks a
-##      background; each origin grants a UNIQUE player class with its own
-##      spell tree, plus talents and a starting bonus. Religion is untouched.
-##      Disabled => the start flow silently skips origin selection.
-##  ZH: 独立玩家出身 Mod。开局选择出身后，主角获得独特职业与专属技能树，
-##      外加天赋与起始奖励；信仰沿用本体机制。禁用本 Mod 时，
-##      开局流程会静默跳过出身选择。
+##  EN: Standalone player-origin mod. The five origins are offered as the
+##      CLASS choice on the quick_start page (character/religion/difficulty),
+##      next to the free religion pick — each origin grants a UNIQUE player
+##      class with its own spell tree, plus talents and a starting bonus
+##      applied once at game start. Religion is untouched (it has its own
+##      story content). Disabled => the class choice falls back to the three
+##      base classes.
+##  ZH: 独立玩家出身 Mod。五个出身作为职业选项出现在 quick_start 页
+##      （人物/信仰/难度），与自由选择的信仰并列——每个出身授予独特
+##      职业与专属技能树，外加天赋与起始奖励（开局时套用一次）。
+##      信仰沿用本体机制（信仰有后续剧情内容），不做改动。禁用本 Mod
+##      时，职业选择回退为三个基础职业。
 ##
 ##  EN: Other mods can depend on "origins" to reuse origin_registry /
 ##      PlayerOrigin. Uninstall = remove this folder.
@@ -22,7 +27,7 @@ init -1 python:
         "api_version": 2,
         "min_game_version": "0.3",
         "author": "BK Evolution",
-        "description": __("Player origins: pick a background at game start to play a unique class with its own spell tree. Religion choice is unchanged."),
+        "description": __("Player origins: the five origins are offered as the class choice on the character setup page (next to religion and difficulty). Each origin grants a unique class with its own spell tree, talents and a starting bonus. Religion choice is unchanged."),
         "requires": [],
         "hooks": {},
         "dependencies": [],
