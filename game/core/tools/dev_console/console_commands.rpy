@@ -181,9 +181,13 @@ init -1 python:
         A("{b}== 牧场地点实测（happens 100 次抽样）{/b}")
         farm_loc = _find_loc("farm")
         if farm_loc is not None:
-            old_sel = selected_location
+            # EN: use store.selected_location explicitly — any bare assignment
+            #     would make the name function-local and break the read above.
+            # ZH: 必须用 store.selected_location 显式访问——函数内一旦出现
+            #     裸赋值，该名字在整个函数内都会被视为局部变量。
+            old_sel = store.selected_location
             try:
-                selected_location = farm_loc
+                store.selected_location = farm_loc
                 for lbl in ("farm_meet_goldie", "farm_activate_goldie", "farm_meet_stella"):
                     ev = event_dict.get(lbl)
                     if ev is None:
@@ -191,7 +195,7 @@ init -1 python:
                     n = sum(1 for _ in range(100) if ev.happens())
                     A("%s @牧场: %s%%" % (lbl, n))
             finally:
-                selected_location = old_sel
+                store.selected_location = old_sel
 
         A("")
         A("{b}== 结论 =={/b}")
