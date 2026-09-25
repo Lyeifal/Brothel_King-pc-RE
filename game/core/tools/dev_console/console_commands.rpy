@@ -25,6 +25,7 @@ init -1 python:
             self.register("repair", self.cmd_repair, "Run AutoRepair now")
             self.register("services", self.cmd_services, "List registered services")
             self.register("profile", self.cmd_profile, "Profile last operation timing")
+            self.register("farmdiag", self.cmd_farmdiag, "Diagnose farm/ranch shop/thieves guild unlock state")
 
         def register(self, name, callback, description=""):
             self._commands[name] = (callback, description)
@@ -114,6 +115,98 @@ init -1 python:
                 return game.func_time_log2 or "No profile data available."
             except:
                 return "Profiling not available."
+
+        def cmd_farmdiag(self, args):
+            """EN: Detailed farm/ranch-shop/thieves-guild unlock diagnostics.
+               ZH: 农场/牧场商店/盗贼公会解锁状态详细诊断。"""
+            return farm_diag_text()
+
+    def farm_diag_text():
+        """EN: Build the farm/ranch-shop/thieves-guild diagnostic report.
+           ZH: 生成农场/牧场商店/盗贼公会解锁诊断报告（控制台与读档自诊断共用）。"""
+        if not services.has("farm"):
+            return "farm service unavailable (before init_game)."
+        L = []
+        A = L.append
+
+        A("{b}== 基本状态 =={/b}")
+        A("farm.active（家园农场）: %s" % getattr(farm, "active", "?"))
+        A("chapter: %s | story_mode: %s | debug_mode: %r" % (game.chapter, game.is_story_mode(), debug_mode))
+        A("NGP 农场钥匙: %s" % NGP_settings_dict["farm"].get())
+
+        def _find_loc(name):
+            for d in district_dict.values():
+                for loc in d.locations:
+                    if loc.name.lower() == name:
+                        return loc
+            return None
+
+        A("")
+        A("{b}== 城市地点 =={/b}")
+        for loc_name, desc in (("farm", "牧场(商店农场)"), ("thieves guild", "盗贼公会"), ("spice market", "香料市场"), ("junkyard", "垃圾场"), ("sewers", "下水道")):
+            loc = _find_loc(loc_name)
+            if loc:
+                A("%s [%s]: secret=%s action=%s menu=%s" % (desc, loc.name, loc.secret, loc.action, loc.menu))
+            else:
+                A("%s: {color=[c_red]}未找到地点对象!{/color}" % desc)
+
+        A("")
+        A("{b}== 已解锁商店 =={/b}")
+        A(", ".join(_s.name for _s in unlocked_shops) if unlocked_shops else "（无）")
+
+        chains = (
+            ("农场链", ("farm_meet_gizel", "farm_meet_gizel2", "farm_go_with_gizel", "farm_found_a_place", "farm_gizel_introduction", "farm_meet_goldie", "farm_activate_goldie", "farm_meet_willow", "farm_meet_gina", "farm_meet_stella", "farm_second_monster")),
+            ("盗贼链", ("c1_thieves_guild_tip", "c1_spice_market", "c1_sewers", "c1_thieves_guild_found")),
+        )
+        for title, labels in chains:
+            A("")
+            A("{b}== %s事件 =={/b}" % title)
+            for lbl in labels:
+                ev = event_dict.get(lbl)
+                if ev is None:
+                    A("%s: {color=[c_red]}event_dict 无此事件!{/color}" % lbl)
+                    continue
+                in_list = ev in city_events
+                flag = story_flags.get(lbl)
+                if in_list:
+                    status = "{color=[c_emerald]}在事件池中{/color}"
+                elif ev.happened or flag:
+                    status = "{color=[c_darkgray]}已触发过{/color}"
+                else:
+                    status = "{color=[c_red]}缺失(永不触发!){/color}"
+                A("%s: %s | chance=%s loc=%s happened=%s flag=%s" % (lbl, status, ev.chance, ev.location, ev.happened, bool(flag)))
+
+        # 在牧场地点实测 happens（换入换出 selected_location，不改动其他状态）
+        A("")
+        A("{b}== 牧场地点实测（happens 100 次抽样）{/b}")
+        farm_loc = _find_loc("farm")
+        if farm_loc is not None:
+            old_sel = selected_location
+            try:
+                selected_location = farm_loc
+                for lbl in ("farm_meet_goldie", "farm_activate_goldie", "farm_meet_stella"):
+                    ev = event_dict.get(lbl)
+                    if ev is None:
+                        continue
+                    n = sum(1 for _ in range(100) if ev.happens())
+                    A("%s @牧场: %s%%" % (lbl, n))
+            finally:
+                selected_location = old_sel
+
+        A("")
+        A("{b}== 结论 =={/b}")
+        ev = event_dict.get("farm_activate_goldie")
+        if not getattr(farm, "active", False):
+            A("家园农场未激活 → 需先走 Gizel 链（香料市场→垃圾场）或 NG+ 农场钥匙")
+        elif unlocked_shops and any(_s.name == "Goldie" for _s in unlocked_shops):
+            A("牧场商店已解锁 ✓")
+        elif ev is not None and (ev.happened or story_flags.get("farm_activate_goldie")):
+            A("商店事件已触发但未生效 → 异常，请报告")
+        elif ev is not None and ev in city_events:
+            A("商店解锁事件已在池中 → {color=[c_emerald]}去牧场地点访问即可 100%% 触发{/color}")
+        else:
+            A("{color=[c_red]}商店解锁事件缺失 → 读档修复钩子未覆盖，请报告{/color}")
+        return "\n".join(L)
 
     # ── Singleton ──
     dev_console = DevConsole()
