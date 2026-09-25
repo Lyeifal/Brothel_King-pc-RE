@@ -187,6 +187,24 @@ init -1 python:
                     status = "{color=[c_darkgray]}已触发过{/color}"
                 else:
                     status = "{color=[c_red]}缺失(永不触发!){/color}"
+                # EN: farm_found_a_place is an ALTERNATE path — added only when
+                #     Gizel was met before the farm was discovered. If
+                #     farm_go_with_gizel fired via the other branch, skipping
+                #     it is by design, not a defect.
+                # ZH: farm_found_a_place 是备用路径——仅在"先认识 Gizel 后
+                #     发现农场"的顺序下添加。若 farm_go_with_gizel 已通过
+                #     另一分支触发，跳过它是设计行为，并非缺陷。
+                if (lbl == "farm_found_a_place" and not (in_list or ev.happened or flag)):
+                    _gw = event_dict.get("farm_go_with_gizel")
+                    if _gw is not None and (_gw.happened or story_flags.get("farm_go_with_gizel")):
+                        status = "{color=[c_darkgray]}备用路径，已由 farm_go_with_gizel 代替(正常跳过){/color}"
+                # EN: farm_second_monster is added dynamically mid-dialogue
+                #     during Gizel's monster-exchange interaction; absence
+                #     just means that interaction hasn't happened yet.
+                # ZH: farm_second_monster 在 Gizel 换怪互动对话中动态加入；
+                #     不在池中只说明该互动尚未进行。
+                if lbl == "farm_second_monster" and not (in_list or ev.happened or flag):
+                    status = "{color=[c_darkgray]}动态事件，换怪互动时才会加入(未触发属正常){/color}"
                 A("%s: %s | chance=%s loc=%s happened=%s flag=%s" % (lbl, status, ev.chance, ev.location, ev.happened, bool(flag)))
 
         # 在牧场地点实测 happens（换入换出 selected_location，不改动其他状态）
