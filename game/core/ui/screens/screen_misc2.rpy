@@ -275,8 +275,9 @@ screen main_character():
 
                 spacing 16
 
-                button yalign 0.5 xpadding 0 action NullAction() tooltip MC_playerclass_description[MC.playerclass]:
-                    add Picture(path=playerclass_pics[MC.playerclass]).get(*res_tb(40)) yalign 0.5
+                button yalign 0.5 xpadding 0 action NullAction() tooltip MC_playerclass_description.get(MC.playerclass, ""):
+                    if playerclass_pics.get(MC.playerclass):
+                        add Picture(path=playerclass_pics[MC.playerclass]).get(*res_tb(40)) yalign 0.5
 
                 button yalign 0.5 xpadding 0 action NullAction() tooltip god_description[MC.god]:
                     add Picture(path=god_pics[MC.god]).get(*res_tb(40)) yalign 0.5

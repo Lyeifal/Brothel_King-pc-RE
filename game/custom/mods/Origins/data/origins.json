@@ -1,496 +1,764 @@
 [
- {
-  "origin_id": "fallen_noble",
-  "name_i18n": "Fallen Noble",
-  "description_i18n": "Once a respected aristocrat, now disgraced and broke. Your name still opens doors, even as your purse runs empty.",
-  "icon_tag": "origin_noble",
-  "class_id": "Aristocrat",
-  "starting_bonus": {
-   "reputation": 30
+  {
+    "origin_id": "fallen_noble",
+    "name_i18n": "Fallen Noble",
+    "description_i18n": "Once a respected aristocrat, now disgraced and broke. Your name still opens doors, even as your purse runs empty.",
+    "icon_tag": "origin_noble",
+    "class_id": "Aristocrat",
+    "starting_bonus": {
+      "reputation": 30
+    },
+    "talents": [
+      {
+        "talent_id": "noble_bearing",
+        "effects": [
+          {
+            "type": "boost",
+            "target": "reputation",
+            "value": 0.5
+          }
+        ],
+        "name_i18n": "Noble Bearing",
+        "description_i18n": "Reputation gains +50%."
+      }
+    ],
+    "class_def": {
+      "name_i18n": "Aristocrat",
+      "description_i18n": "A duelist-courtier who wins with charm and name. Strong charisma, balanced body.",
+      "icon": "resources/spells/Fame.webp",
+      "stats": {
+        "strength": 1,
+        "spirit": 1,
+        "charisma": 2,
+        "speed": 3
+      },
+      "spellbook": [
+        {
+          "name_i18n": "Silver Tongue",
+          "description_i18n": "Charisma +1.",
+          "pic": "charisma.webp",
+          "type": "passive",
+          "level": 2,
+          "cost": 0,
+          "effects": [
+            {
+              "type": "gain",
+              "target": "charisma",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "name_i18n": "Noble Bearing",
+          "description_i18n": "Reputation gains +25%.",
+          "pic": "halo1.webp",
+          "type": "passive",
+          "level": 2,
+          "cost": 0,
+          "effects": [
+            {
+              "type": "boost",
+              "target": "reputation",
+              "value": 0.25
+            }
+          ]
+        },
+        {
+          "name_i18n": "The Defender",
+          "description_i18n": "May protect a girl when a fight breaks out.",
+          "pic": "defender.webp",
+          "type": "passive",
+          "level": 3,
+          "cost": 0,
+          "effects": [
+            {
+              "type": "special",
+              "target": "defender",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "name_i18n": "Sign of Influence",
+          "description_i18n": "Love and fear gains +10% brothel-wide.",
+          "pic": "sign1.webp",
+          "type": "passive",
+          "level": 4,
+          "cost": 0,
+          "effects": [
+            {
+              "scope": "brothel",
+              "type": "boost",
+              "target": "love gains",
+              "value": 0.1
+            },
+            {
+              "scope": "brothel",
+              "type": "boost",
+              "target": "fear gains",
+              "value": 0.1
+            }
+          ]
+        },
+        {
+          "name_i18n": "Inspiring Presence",
+          "description_i18n": "All girls' charm +5.",
+          "pic": "aura2.webp",
+          "type": "passive",
+          "level": 6,
+          "cost": 0,
+          "effects": [
+            {
+              "scope": "brothel",
+              "type": "change",
+              "target": "charm",
+              "value": 5
+            }
+          ]
+        },
+        {
+          "name_i18n": "Champion's Duel",
+          "description_i18n": "Fight challenges +6 (dice).",
+          "pic": "hound.webp",
+          "type": "passive",
+          "level": 8,
+          "cost": 0,
+          "effects": [
+            {
+              "dice": true,
+              "type": "change",
+              "target": "fight challenges",
+              "value": 6
+            }
+          ]
+        },
+        {
+          "name_i18n": "Legacy of the House",
+          "description_i18n": "Charisma +1.",
+          "pic": "charisma.webp",
+          "type": "passive",
+          "level": 10,
+          "cost": 0,
+          "effects": [
+            {
+              "type": "gain",
+              "target": "charisma",
+              "value": 1
+            }
+          ]
+        }
+      ]
+    }
   },
-  "talents": [
-   {
-    "talent_id": "noble_bearing",
-    "effects": [
-     {
-      "type": "boost",
-      "target": "reputation",
-      "value": 0.5
-     }
+  {
+    "origin_id": "street_thug",
+    "name_i18n": "Street Thug",
+    "description_i18n": "Raised in the slums of Zan. Ruthless and resourceful — people mind their manners around you, even if they don't trust you.",
+    "icon_tag": "origin_thug",
+    "class_id": "Enforcer",
+    "starting_bonus": {
+      "evil": 10
+    },
+    "talents": [
+      {
+        "talent_id": "underworld_connections",
+        "effects": [
+          {
+            "type": "boost",
+            "target": "kidnap success",
+            "value": 0.2
+          }
+        ],
+        "name_i18n": "Underworld Connections",
+        "description_i18n": "Kidnap success +20%. Starting evil reputation +10."
+      }
     ],
-    "name_i18n": "Noble Bearing",
-    "description_i18n": "Reputation gains +50%."
-   }
-  ],
-  "class_def": {
-   "name_i18n": "Aristocrat",
-   "description_i18n": "A duelist-courtier who wins with charm and name. Strong charisma, balanced body.",
-   "icon": "",
-   "stats": {"strength": 1, "spirit": 1, "charisma": 2, "speed": 3},
-   "spellbook": [
-    {
-     "name_i18n": "Silver Tongue",
-     "description_i18n": "Charisma +1.",
-     "pic": "charisma.webp",
-     "type": "passive",
-     "level": 2,
-     "cost": 0,
-     "effects": [{"type": "gain", "target": "charisma", "value": 1}]
-    },
-    {
-     "name_i18n": "Noble Bearing",
-     "description_i18n": "Reputation gains +25%.",
-     "pic": "halo1.webp",
-     "type": "passive",
-     "level": 2,
-     "cost": 0,
-     "effects": [{"type": "boost", "target": "reputation", "value": 0.25}]
-    },
-    {
-     "name_i18n": "The Defender",
-     "description_i18n": "May protect a girl when a fight breaks out.",
-     "pic": "defender.webp",
-     "type": "passive",
-     "level": 3,
-     "cost": 0,
-     "effects": [{"type": "special", "target": "defender", "value": 1}]
-    },
-    {
-     "name_i18n": "Sign of Influence",
-     "description_i18n": "Love and fear gains +10% brothel-wide.",
-     "pic": "sign1.webp",
-     "type": "passive",
-     "level": 4,
-     "cost": 0,
-     "effects": [
-      {"scope": "brothel", "type": "boost", "target": "love gains", "value": 0.1},
-      {"scope": "brothel", "type": "boost", "target": "fear gains", "value": 0.1}
-     ]
-    },
-    {
-     "name_i18n": "Inspiring Presence",
-     "description_i18n": "All girls' charm +5.",
-     "pic": "aura2.webp",
-     "type": "passive",
-     "level": 6,
-     "cost": 0,
-     "effects": [{"scope": "brothel", "type": "change", "target": "charm", "value": 5}]
-    },
-    {
-     "name_i18n": "Champion's Duel",
-     "description_i18n": "Fight challenges +6 (dice).",
-     "pic": "hound.webp",
-     "type": "passive",
-     "level": 8,
-     "cost": 0,
-     "effects": [{"dice": true, "type": "change", "target": "fight challenges", "value": 6}]
-    },
-    {
-     "name_i18n": "Legacy of the House",
-     "description_i18n": "Charisma +1.",
-     "pic": "charisma.webp",
-     "type": "passive",
-     "level": 10,
-     "cost": 0,
-     "effects": [{"type": "gain", "target": "charisma", "value": 1}]
+    "class_def": {
+      "name_i18n": "Enforcer",
+      "description_i18n": "A slum brawler who rules the back alleys. Strong body, iron discipline.",
+      "icon": "resources/spells/militia.webp",
+      "stats": {
+        "strength": 2,
+        "spirit": 1,
+        "charisma": 1,
+        "speed": 2
+      },
+      "spellbook": [
+        {
+          "name_i18n": "Street Brawler",
+          "description_i18n": "Strength +1.",
+          "pic": "strength.webp",
+          "type": "passive",
+          "level": 2,
+          "cost": 0,
+          "effects": [
+            {
+              "type": "gain",
+              "target": "strength",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "name_i18n": "Menacing Glare",
+          "description_i18n": "Fear gains +15% brothel-wide.",
+          "pic": "eye.webp",
+          "type": "passive",
+          "level": 2,
+          "cost": 0,
+          "effects": [
+            {
+              "scope": "brothel",
+              "type": "boost",
+              "target": "fear gains",
+              "value": 0.15
+            }
+          ]
+        },
+        {
+          "name_i18n": "The Defender",
+          "description_i18n": "May protect a girl when a fight breaks out.",
+          "pic": "defender.webp",
+          "type": "passive",
+          "level": 3,
+          "cost": 0,
+          "effects": [
+            {
+              "type": "special",
+              "target": "defender",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "name_i18n": "Iron Discipline",
+          "description_i18n": "Obedience targets -10 for training and jobs brothel-wide.",
+          "pic": "discipline.webp",
+          "type": "passive",
+          "level": 4,
+          "cost": 0,
+          "effects": [
+            {
+              "scope": "brothel",
+              "type": "change",
+              "target": "train obedience target",
+              "value": -10
+            },
+            {
+              "scope": "brothel",
+              "type": "change",
+              "target": "job obedience target",
+              "value": -10
+            }
+          ]
+        },
+        {
+          "name_i18n": "Thick Skin",
+          "description_i18n": "Spirit +1.",
+          "pic": "spirit.webp",
+          "type": "passive",
+          "level": 6,
+          "cost": 0,
+          "effects": [
+            {
+              "type": "gain",
+              "target": "spirit",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "name_i18n": "Bloodhound",
+          "description_i18n": "Fight challenges +6 (dice).",
+          "pic": "hound.webp",
+          "type": "passive",
+          "level": 8,
+          "cost": 0,
+          "effects": [
+            {
+              "dice": true,
+              "type": "change",
+              "target": "fight challenges",
+              "value": 6
+            }
+          ]
+        },
+        {
+          "name_i18n": "Kingpin",
+          "description_i18n": "Strength +1.",
+          "pic": "strength.webp",
+          "type": "passive",
+          "level": 10,
+          "cost": 0,
+          "effects": [
+            {
+              "type": "gain",
+              "target": "strength",
+              "value": 1
+            }
+          ]
+        }
+      ]
     }
-   ]
-  }
- },
- {
-  "origin_id": "street_thug",
-  "name_i18n": "Street Thug",
-  "description_i18n": "Raised in the slums of Zan. Ruthless and resourceful — people mind their manners around you, even if they don't trust you.",
-  "icon_tag": "origin_thug",
-  "class_id": "Enforcer",
-  "starting_bonus": {
-   "evil": 10
   },
-  "talents": [
-   {
-    "talent_id": "underworld_connections",
-    "effects": [
-     {
-      "type": "boost",
-      "target": "kidnap success",
-      "value": 0.2
-     }
+  {
+    "origin_id": "merchant_family",
+    "name_i18n": "Merchant Family",
+    "description_i18n": "Born into a trading house. You know how to haggle, spot a good deal, and make gold talk.",
+    "icon_tag": "origin_merchant",
+    "class_id": "Magnate",
+    "starting_bonus": {
+      "gold": 500
+    },
+    "talents": [
+      {
+        "talent_id": "sharp_deal",
+        "effects": [
+          {
+            "type": "boost",
+            "target": "shop prices",
+            "value": -0.15
+          }
+        ],
+        "name_i18n": "Sharp Deal",
+        "description_i18n": "Shop prices -15%. Starting gold +500."
+      }
     ],
-    "name_i18n": "Underworld Connections",
-    "description_i18n": "Kidnap success +20%. Starting evil reputation +10."
-   }
-  ],
-  "class_def": {
-   "name_i18n": "Enforcer",
-   "description_i18n": "A slum brawler who rules the back alleys. Strong body, iron discipline.",
-   "icon": "",
-   "stats": {"strength": 2, "spirit": 1, "charisma": 1, "speed": 2},
-   "spellbook": [
-    {
-     "name_i18n": "Street Brawler",
-     "description_i18n": "Strength +1.",
-     "pic": "strength.webp",
-     "type": "passive",
-     "level": 2,
-     "cost": 0,
-     "effects": [{"type": "gain", "target": "strength", "value": 1}]
-    },
-    {
-     "name_i18n": "Menacing Glare",
-     "description_i18n": "Fear gains +15% brothel-wide.",
-     "pic": "eye.webp",
-     "type": "passive",
-     "level": 2,
-     "cost": 0,
-     "effects": [{"scope": "brothel", "type": "boost", "target": "fear gains", "value": 0.15}]
-    },
-    {
-     "name_i18n": "The Defender",
-     "description_i18n": "May protect a girl when a fight breaks out.",
-     "pic": "defender.webp",
-     "type": "passive",
-     "level": 3,
-     "cost": 0,
-     "effects": [{"type": "special", "target": "defender", "value": 1}]
-    },
-    {
-     "name_i18n": "Iron Discipline",
-     "description_i18n": "Obedience targets -10 for training and jobs brothel-wide.",
-     "pic": "discipline.webp",
-     "type": "passive",
-     "level": 4,
-     "cost": 0,
-     "effects": [
-      {"scope": "brothel", "type": "change", "target": "train obedience target", "value": -10},
-      {"scope": "brothel", "type": "change", "target": "job obedience target", "value": -10}
-     ]
-    },
-    {
-     "name_i18n": "Thick Skin",
-     "description_i18n": "Spirit +1.",
-     "pic": "spirit.webp",
-     "type": "passive",
-     "level": 6,
-     "cost": 0,
-     "effects": [{"type": "gain", "target": "spirit", "value": 1}]
-    },
-    {
-     "name_i18n": "Bloodhound",
-     "description_i18n": "Fight challenges +6 (dice).",
-     "pic": "hound.webp",
-     "type": "passive",
-     "level": 8,
-     "cost": 0,
-     "effects": [{"dice": true, "type": "change", "target": "fight challenges", "value": 6}]
-    },
-    {
-     "name_i18n": "Kingpin",
-     "description_i18n": "Strength +1.",
-     "pic": "strength.webp",
-     "type": "passive",
-     "level": 10,
-     "cost": 0,
-     "effects": [{"type": "gain", "target": "strength", "value": 1}]
+    "class_def": {
+      "name_i18n": "Magnate",
+      "description_i18n": "A guild magnate who turns every coin twice. Sharp charisma, deep pockets.",
+      "icon": "resources/ui/coin.webp",
+      "stats": {
+        "strength": 1,
+        "spirit": 0,
+        "charisma": 2,
+        "speed": 3
+      },
+      "spellbook": [
+        {
+          "name_i18n": "The Haggler",
+          "description_i18n": "Buy prices -2%, sell prices +2% (scales with charisma).",
+          "pic": "haggler.webp",
+          "type": "passive",
+          "level": 2,
+          "cost": 0,
+          "effects": [
+            {
+              "scales_with": "charisma",
+              "type": "boost",
+              "target": "buy",
+              "value": -0.02
+            },
+            {
+              "scales_with": "charisma",
+              "type": "boost",
+              "target": "sell",
+              "value": 0.02
+            }
+          ]
+        },
+        {
+          "name_i18n": "Sharp Deal",
+          "description_i18n": "Shop prices -15%.",
+          "pic": "haggler.webp",
+          "type": "passive",
+          "level": 2,
+          "cost": 0,
+          "effects": [
+            {
+              "type": "boost",
+              "target": "shop prices",
+              "value": -0.15
+            }
+          ]
+        },
+        {
+          "name_i18n": "Sign of Influence",
+          "description_i18n": "Love and fear gains +10% brothel-wide.",
+          "pic": "sign1.webp",
+          "type": "passive",
+          "level": 3,
+          "cost": 0,
+          "effects": [
+            {
+              "scope": "brothel",
+              "type": "boost",
+              "target": "love gains",
+              "value": 0.1
+            },
+            {
+              "scope": "brothel",
+              "type": "boost",
+              "target": "fear gains",
+              "value": 0.1
+            }
+          ]
+        },
+        {
+          "name_i18n": "Rogue",
+          "description_i18n": "Charisma +1.",
+          "pic": "charisma.webp",
+          "type": "passive",
+          "level": 4,
+          "cost": 0,
+          "effects": [
+            {
+              "type": "gain",
+              "target": "charisma",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "name_i18n": "Golden Touch",
+          "description_i18n": "Sell prices +3% (scales with charisma).",
+          "pic": "haggler.webp",
+          "type": "passive",
+          "level": 6,
+          "cost": 0,
+          "effects": [
+            {
+              "scales_with": "charisma",
+              "type": "boost",
+              "target": "sell",
+              "value": 0.03
+            }
+          ]
+        },
+        {
+          "name_i18n": "Fame",
+          "description_i18n": "Reputation gains +25%.",
+          "pic": "Fame.webp",
+          "type": "passive",
+          "level": 8,
+          "cost": 0,
+          "effects": [
+            {
+              "type": "boost",
+              "target": "reputation",
+              "value": 0.25
+            }
+          ]
+        },
+        {
+          "name_i18n": "Trade Empire",
+          "description_i18n": "Charisma +1.",
+          "pic": "charisma.webp",
+          "type": "passive",
+          "level": 10,
+          "cost": 0,
+          "effects": [
+            {
+              "type": "gain",
+              "target": "charisma",
+              "value": 1
+            }
+          ]
+        }
+      ]
     }
-   ]
-  }
- },
- {
-  "origin_id": "merchant_family",
-  "name_i18n": "Merchant Family",
-  "description_i18n": "Born into a trading house. You know how to haggle, spot a good deal, and make gold talk.",
-  "icon_tag": "origin_merchant",
-  "class_id": "Magnate",
-  "starting_bonus": {
-   "gold": 500
   },
-  "talents": [
-   {
-    "talent_id": "sharp_deal",
-    "effects": [
-     {
-      "type": "boost",
-      "target": "shop prices",
-      "value": -0.15
-     }
+  {
+    "origin_id": "wandering_mage",
+    "name_i18n": "Wandering Mage",
+    "description_i18n": "A self-taught spellcaster seeking fortune. Girls are drawn to your mysterious aura.",
+    "icon_tag": "origin_mage",
+    "class_id": "Sorcerer",
+    "starting_bonus": {},
+    "talents": [
+      {
+        "talent_id": "arcane_charm",
+        "effects": [
+          {
+            "type": "boost",
+            "target": "spell learning",
+            "value": 0.3
+          }
+        ],
+        "name_i18n": "Arcane Charm",
+        "description_i18n": "Spell learning +30%."
+      }
     ],
-    "name_i18n": "Sharp Deal",
-    "description_i18n": "Shop prices -15%. Starting gold +500."
-   }
-  ],
-  "class_def": {
-   "name_i18n": "Magnate",
-   "description_i18n": "A guild magnate who turns every coin twice. Sharp charisma, deep pockets.",
-   "icon": "",
-   "stats": {"strength": 1, "spirit": 0, "charisma": 2, "speed": 3},
-   "spellbook": [
-    {
-     "name_i18n": "The Haggler",
-     "description_i18n": "Buy prices -2%, sell prices +2% (scales with charisma).",
-     "pic": "haggler.webp",
-     "type": "passive",
-     "level": 2,
-     "cost": 0,
-     "effects": [
-      {"scales_with": "charisma", "type": "boost", "target": "buy", "value": -0.02},
-      {"scales_with": "charisma", "type": "boost", "target": "sell", "value": 0.02}
-     ]
-    },
-    {
-     "name_i18n": "Sharp Deal",
-     "description_i18n": "Shop prices -15%.",
-     "pic": "haggler.webp",
-     "type": "passive",
-     "level": 2,
-     "cost": 0,
-     "effects": [{"type": "boost", "target": "shop prices", "value": -0.15}]
-    },
-    {
-     "name_i18n": "Sign of Influence",
-     "description_i18n": "Love and fear gains +10% brothel-wide.",
-     "pic": "sign1.webp",
-     "type": "passive",
-     "level": 3,
-     "cost": 0,
-     "effects": [
-      {"scope": "brothel", "type": "boost", "target": "love gains", "value": 0.1},
-      {"scope": "brothel", "type": "boost", "target": "fear gains", "value": 0.1}
-     ]
-    },
-    {
-     "name_i18n": "Rogue",
-     "description_i18n": "Charisma +1.",
-     "pic": "charisma.webp",
-     "type": "passive",
-     "level": 4,
-     "cost": 0,
-     "effects": [{"type": "gain", "target": "charisma", "value": 1}]
-    },
-    {
-     "name_i18n": "Golden Touch",
-     "description_i18n": "Sell prices +3% (scales with charisma).",
-     "pic": "haggler.webp",
-     "type": "passive",
-     "level": 6,
-     "cost": 0,
-     "effects": [{"scales_with": "charisma", "type": "boost", "target": "sell", "value": 0.03}]
-    },
-    {
-     "name_i18n": "Fame",
-     "description_i18n": "Reputation gains +25%.",
-     "pic": "Fame.webp",
-     "type": "passive",
-     "level": 8,
-     "cost": 0,
-     "effects": [{"type": "boost", "target": "reputation", "value": 0.25}]
-    },
-    {
-     "name_i18n": "Trade Empire",
-     "description_i18n": "Charisma +1.",
-     "pic": "charisma.webp",
-     "type": "passive",
-     "level": 10,
-     "cost": 0,
-     "effects": [{"type": "gain", "target": "charisma", "value": 1}]
+    "class_def": {
+      "name_i18n": "Sorcerer",
+      "description_i18n": "A wandering caster weaving auras over the brothel. Deep spirit, fragile body.",
+      "icon": "resources/spells/aura1.webp",
+      "stats": {
+        "strength": 0,
+        "spirit": 3,
+        "charisma": 1,
+        "speed": 2
+      },
+      "spellbook": [
+        {
+          "name_i18n": "Inquisitive",
+          "description_i18n": "Spirit +1.",
+          "pic": "spirit.webp",
+          "type": "passive",
+          "level": 2,
+          "cost": 0,
+          "effects": [
+            {
+              "type": "gain",
+              "target": "spirit",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "name_i18n": "Minor Aura: Purity",
+          "description_i18n": "All girls' beauty +5.",
+          "pic": "aura1.webp",
+          "type": "passive",
+          "level": 2,
+          "cost": 0,
+          "effects": [
+            {
+              "scope": "brothel",
+              "type": "change",
+              "target": "beauty",
+              "value": 5
+            }
+          ]
+        },
+        {
+          "name_i18n": "Minor Aura: Mystery",
+          "description_i18n": "All girls' charm +5.",
+          "pic": "aura2.webp",
+          "type": "passive",
+          "level": 2,
+          "cost": 0,
+          "effects": [
+            {
+              "scope": "brothel",
+              "type": "change",
+              "target": "charm",
+              "value": 5
+            }
+          ]
+        },
+        {
+          "name_i18n": "Minor Aura: Provocation",
+          "description_i18n": "All girls' body +5.",
+          "pic": "aura4.webp",
+          "type": "passive",
+          "level": 3,
+          "cost": 0,
+          "effects": [
+            {
+              "scope": "brothel",
+              "type": "change",
+              "target": "body",
+              "value": 5
+            }
+          ]
+        },
+        {
+          "name_i18n": "Meditation",
+          "description_i18n": "Spirit +1.",
+          "pic": "spirit.webp",
+          "type": "passive",
+          "level": 4,
+          "cost": 0,
+          "effects": [
+            {
+              "type": "gain",
+              "target": "spirit",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "name_i18n": "Minor Aura: Sophistication",
+          "description_i18n": "All girls' refinement +5.",
+          "pic": "aura3.webp",
+          "type": "passive",
+          "level": 6,
+          "cost": 0,
+          "effects": [
+            {
+              "scope": "brothel",
+              "type": "change",
+              "target": "refinement",
+              "value": 5
+            }
+          ]
+        },
+        {
+          "name_i18n": "Arcane Focus",
+          "description_i18n": "Spell learning +30%.",
+          "pic": "mindtrick.webp",
+          "type": "passive",
+          "level": 8,
+          "cost": 0,
+          "effects": [
+            {
+              "type": "boost",
+              "target": "spell learning",
+              "value": 0.3
+            }
+          ]
+        },
+        {
+          "name_i18n": "Archmage",
+          "description_i18n": "Spirit +1.",
+          "pic": "spirit.webp",
+          "type": "passive",
+          "level": 10,
+          "cost": 0,
+          "effects": [
+            {
+              "type": "gain",
+              "target": "spirit",
+              "value": 1
+            }
+          ]
+        }
+      ]
     }
-   ]
-  }
- },
- {
-  "origin_id": "wandering_mage",
-  "name_i18n": "Wandering Mage",
-  "description_i18n": "A self-taught spellcaster seeking fortune. Girls are drawn to your mysterious aura.",
-  "icon_tag": "origin_mage",
-  "class_id": "Sorcerer",
-  "starting_bonus": {},
-  "talents": [
-   {
-    "talent_id": "arcane_charm",
-    "effects": [
-     {
-      "type": "boost",
-      "target": "spell learning",
-      "value": 0.3
-     }
-    ],
-    "name_i18n": "Arcane Charm",
-    "description_i18n": "Spell learning +30%."
-   }
-  ],
-  "class_def": {
-   "name_i18n": "Sorcerer",
-   "description_i18n": "A wandering caster weaving auras over the brothel. Deep spirit, fragile body.",
-   "icon": "",
-   "stats": {"strength": 0, "spirit": 3, "charisma": 1, "speed": 2},
-   "spellbook": [
-    {
-     "name_i18n": "Inquisitive",
-     "description_i18n": "Spirit +1.",
-     "pic": "spirit.webp",
-     "type": "passive",
-     "level": 2,
-     "cost": 0,
-     "effects": [{"type": "gain", "target": "spirit", "value": 1}]
-    },
-    {
-     "name_i18n": "Minor Aura: Purity",
-     "description_i18n": "All girls' beauty +5.",
-     "pic": "aura1.webp",
-     "type": "passive",
-     "level": 2,
-     "cost": 0,
-     "effects": [{"scope": "brothel", "type": "change", "target": "beauty", "value": 5}]
-    },
-    {
-     "name_i18n": "Minor Aura: Mystery",
-     "description_i18n": "All girls' charm +5.",
-     "pic": "aura2.webp",
-     "type": "passive",
-     "level": 2,
-     "cost": 0,
-     "effects": [{"scope": "brothel", "type": "change", "target": "charm", "value": 5}]
-    },
-    {
-     "name_i18n": "Minor Aura: Provocation",
-     "description_i18n": "All girls' body +5.",
-     "pic": "aura4.webp",
-     "type": "passive",
-     "level": 3,
-     "cost": 0,
-     "effects": [{"scope": "brothel", "type": "change", "target": "body", "value": 5}]
-    },
-    {
-     "name_i18n": "Meditation",
-     "description_i18n": "Spirit +1.",
-     "pic": "spirit.webp",
-     "type": "passive",
-     "level": 4,
-     "cost": 0,
-     "effects": [{"type": "gain", "target": "spirit", "value": 1}]
-    },
-    {
-     "name_i18n": "Minor Aura: Sophistication",
-     "description_i18n": "All girls' refinement +5.",
-     "pic": "aura3.webp",
-     "type": "passive",
-     "level": 6,
-     "cost": 0,
-     "effects": [{"scope": "brothel", "type": "change", "target": "refinement", "value": 5}]
-    },
-    {
-     "name_i18n": "Arcane Focus",
-     "description_i18n": "Spell learning +30%.",
-     "pic": "mindtrick.webp",
-     "type": "passive",
-     "level": 8,
-     "cost": 0,
-     "effects": [{"type": "boost", "target": "spell learning", "value": 0.3}]
-    },
-    {
-     "name_i18n": "Archmage",
-     "description_i18n": "Spirit +1.",
-     "pic": "spirit.webp",
-     "type": "passive",
-     "level": 10,
-     "cost": 0,
-     "effects": [{"type": "gain", "target": "spirit", "value": 1}]
-    }
-   ]
-  }
- },
- {
-  "origin_id": "pirate_captain",
-  "name_i18n": "Pirate Captain",
-  "description_i18n": "A feared sea reaver who lost her ship to mutiny. Zan is where you rebuild your legend — by any means necessary.",
-  "icon_tag": "origin_pirate",
-  "class_id": "Reaver",
-  "starting_bonus": {
-   "gold": 200
   },
-  "talents": [
-   {
-    "talent_id": "raiding_party",
-    "effects": [
-     {
-      "type": "boost",
-      "target": "sell",
-      "value": 0.05
-     }
+  {
+    "origin_id": "pirate_captain",
+    "name_i18n": "Pirate Captain",
+    "description_i18n": "A feared sea reaver who lost her ship to mutiny. Zan is where you rebuild your legend — by any means necessary.",
+    "icon_tag": "origin_pirate",
+    "class_id": "Reaver",
+    "starting_bonus": {
+      "gold": 200
+    },
+    "talents": [
+      {
+        "talent_id": "raiding_party",
+        "effects": [
+          {
+            "type": "boost",
+            "target": "sell",
+            "value": 0.05
+          }
+        ],
+        "name_i18n": "Raiding Party",
+        "description_i18n": "Sell prices +5% (plunder sells well). Starting gold +200."
+      }
     ],
-    "name_i18n": "Raiding Party",
-    "description_i18n": "Sell prices +5% (plunder sells well). Starting gold +200."
-   }
-  ],
-  "class_def": {
-   "name_i18n": "Reaver",
-   "description_i18n": "A mutinied sea wolf taking what they want. Hard body, quick hands, no mercy.",
-   "icon": "",
-   "stats": {"strength": 2, "spirit": 1, "charisma": 1, "speed": 2},
-   "spellbook": [
-    {
-     "name_i18n": "Boarding Party",
-     "description_i18n": "Strength +1.",
-     "pic": "strength.webp",
-     "type": "passive",
-     "level": 2,
-     "cost": 0,
-     "effects": [{"type": "gain", "target": "strength", "value": 1}]
-    },
-    {
-     "name_i18n": "Underworld Connections",
-     "description_i18n": "Kidnap success +20%.",
-     "pic": "eye.webp",
-     "type": "passive",
-     "level": 2,
-     "cost": 0,
-     "effects": [{"type": "boost", "target": "kidnap success", "value": 0.2}]
-    },
-    {
-     "name_i18n": "The Defender",
-     "description_i18n": "May protect a girl when a fight breaks out.",
-     "pic": "defender.webp",
-     "type": "passive",
-     "level": 3,
-     "cost": 0,
-     "effects": [{"type": "special", "target": "defender", "value": 1}]
-    },
-    {
-     "name_i18n": "Plunder",
-     "description_i18n": "Sell prices +3% (scales with charisma).",
-     "pic": "haggler.webp",
-     "type": "passive",
-     "level": 4,
-     "cost": 0,
-     "effects": [{"scales_with": "charisma", "type": "boost", "target": "sell", "value": 0.03}]
-    },
-    {
-     "name_i18n": "Sea Legs",
-     "description_i18n": "Spirit +1.",
-     "pic": "spirit.webp",
-     "type": "passive",
-     "level": 6,
-     "cost": 0,
-     "effects": [{"type": "gain", "target": "spirit", "value": 1}]
-    },
-    {
-     "name_i18n": "Bloodhound",
-     "description_i18n": "Fight challenges +6 (dice).",
-     "pic": "hound.webp",
-     "type": "passive",
-     "level": 8,
-     "cost": 0,
-     "effects": [{"dice": true, "type": "change", "target": "fight challenges", "value": 6}]
-    },
-    {
-     "name_i18n": "Dread Captain",
-     "description_i18n": "Charisma +1.",
-     "pic": "charisma.webp",
-     "type": "passive",
-     "level": 10,
-     "cost": 0,
-     "effects": [{"type": "gain", "target": "charisma", "value": 1}]
+    "class_def": {
+      "name_i18n": "Reaver",
+      "description_i18n": "A mutinied sea wolf taking what they want. Hard body, quick hands, no mercy.",
+      "icon": "resources/spells/dragon.webp",
+      "stats": {
+        "strength": 2,
+        "spirit": 1,
+        "charisma": 1,
+        "speed": 2
+      },
+      "spellbook": [
+        {
+          "name_i18n": "Boarding Party",
+          "description_i18n": "Strength +1.",
+          "pic": "strength.webp",
+          "type": "passive",
+          "level": 2,
+          "cost": 0,
+          "effects": [
+            {
+              "type": "gain",
+              "target": "strength",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "name_i18n": "Underworld Connections",
+          "description_i18n": "Kidnap success +20%.",
+          "pic": "eye.webp",
+          "type": "passive",
+          "level": 2,
+          "cost": 0,
+          "effects": [
+            {
+              "type": "boost",
+              "target": "kidnap success",
+              "value": 0.2
+            }
+          ]
+        },
+        {
+          "name_i18n": "The Defender",
+          "description_i18n": "May protect a girl when a fight breaks out.",
+          "pic": "defender.webp",
+          "type": "passive",
+          "level": 3,
+          "cost": 0,
+          "effects": [
+            {
+              "type": "special",
+              "target": "defender",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "name_i18n": "Plunder",
+          "description_i18n": "Sell prices +3% (scales with charisma).",
+          "pic": "haggler.webp",
+          "type": "passive",
+          "level": 4,
+          "cost": 0,
+          "effects": [
+            {
+              "scales_with": "charisma",
+              "type": "boost",
+              "target": "sell",
+              "value": 0.03
+            }
+          ]
+        },
+        {
+          "name_i18n": "Sea Legs",
+          "description_i18n": "Spirit +1.",
+          "pic": "spirit.webp",
+          "type": "passive",
+          "level": 6,
+          "cost": 0,
+          "effects": [
+            {
+              "type": "gain",
+              "target": "spirit",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "name_i18n": "Bloodhound",
+          "description_i18n": "Fight challenges +6 (dice).",
+          "pic": "hound.webp",
+          "type": "passive",
+          "level": 8,
+          "cost": 0,
+          "effects": [
+            {
+              "dice": true,
+              "type": "change",
+              "target": "fight challenges",
+              "value": 6
+            }
+          ]
+        },
+        {
+          "name_i18n": "Dread Captain",
+          "description_i18n": "Charisma +1.",
+          "pic": "charisma.webp",
+          "type": "passive",
+          "level": 10,
+          "cost": 0,
+          "effects": [
+            {
+              "type": "gain",
+              "target": "charisma",
+              "value": 1
+            }
+          ]
+        }
+      ]
     }
-   ]
   }
- }
 ]

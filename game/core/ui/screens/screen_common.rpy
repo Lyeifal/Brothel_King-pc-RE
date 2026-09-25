@@ -368,7 +368,8 @@ screen quick_start(def_panel = "MC"):
 
         frame xfill True xsize int(0.95*config.screen_width) ysize int(0.1*config.screen_height):
             hbox xsize 0.7 xalign 0.95 spacing xres(12):
-                add Picture(path=playerclass_pics[MC.playerclass]).get(*res_tb(50)) xalign 0.0 yalign 0.5
+                if playerclass_pics.get(MC.playerclass):
+                    add Picture(path=playerclass_pics[MC.playerclass]).get(*res_tb(50)) xalign 0.0 yalign 0.5
                 add Picture(path=god_pics[MC.god]).get(*res_tb(50)) xalign 0.0 yalign 0.5
 
                 vbox spacing 10 xalign 0.5 yalign 0.5:

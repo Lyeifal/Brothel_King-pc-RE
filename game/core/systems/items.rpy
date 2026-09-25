@@ -742,7 +742,7 @@ screen universal_selector:
         spacing 12
 
         if current.type == "MC":
-            $ por = Picture(path=playerclass_pics[MC.playerclass]).get()
+            $ por = Picture(path=(playerclass_pics.get(MC.playerclass) or playerclass_pics.get("Warrior", ""))).get()
         elif current.type == "girl":
             $ por = current.portrait.get()
         else: # NPC

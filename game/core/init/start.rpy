@@ -28,15 +28,15 @@ label start:
 
     scene black with fade
 
-    ## EN: No game mode selection — the original flow goes straight to the
-    ##     intro (first run) or the start menu, always in story mode.
-    ## ZH: 不再选择游戏模式——原版流程直接进开场（首次）或开局菜单，
-    ##     始终为剧情模式。
+    ## EN: No game mode selection — new games always play the intro story
+    ##     (the seen_intro shortcut silently dropped the opening on repeat
+    ##     runs, which read as "the story is gone"). Developers keep the
+    ##     debug menu for quick starts.
+    ## ZH: 不再选择游戏模式——新开局始终播放开场剧情（此前按
+    ##     seen_intro 跳过的逻辑让重复开局看不到开场，像是"剧情没了"）。
+    ##     开发者保留调试菜单便于快速开局。
 
-    if not persistent.seen_intro:
-        jump intro
-
-    elif debug:
+    if debug:
         menu:
             "Choose a starting mode"
 
@@ -62,17 +62,7 @@ label start:
                 $ renpy.pause(1.0)
 
     else:
-        menu:
-            "Would you like to see the intro?"
-
-            "Yes":
-                jump intro
-
-            "No":
-                pass
-
-            "No story mode (Test)" if persistent.new_game_plus:
-                $ story_mode = False
+        jump intro
 
     jump start_no_intro
 
