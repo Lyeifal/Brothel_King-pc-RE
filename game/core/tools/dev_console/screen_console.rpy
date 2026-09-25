@@ -151,9 +151,13 @@ init -1 python:
     # EN: See the comment block above for why this is "shift_K_o" and why the
     #     screen also binds the same key. Direct assignment (not setdefault)
     #     so a stale/wrong value can never survive a restart.
+    #     ctrl_K_o and K_F10 are fallback triggers — some IMEs swallow
+    #     Shift+letter combos before Ren'Py receives them.
     # ZH: 为何用 "shift_K_o"、为何屏幕内也绑定同一按键，见上方注释块。
     #     用直接赋值而非 setdefault，保证错误的旧值不会在重启后残留。
-    config.keymap["console_toggle"] = ["shift_K_o"]
+    #     ctrl_K_o 与 K_F10 为备用触发——部分输入法会在 Ren'Py 收到
+    #     按键前吞掉 Shift+字母组合。
+    config.keymap["console_toggle"] = ["shift_K_o", "ctrl_K_o", "K_F10"]
     config.underlay.append(
         renpy.Keymap(console_toggle=_console_toggle)
     )
