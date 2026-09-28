@@ -58,3 +58,6 @@ Brothel_King.exe
 
 # Archive
 tools/archive/
+
+# Item Quality mod — 本地内容，不追踪（用户私有，勿提交）
+game/custom/mods/Item Quality/

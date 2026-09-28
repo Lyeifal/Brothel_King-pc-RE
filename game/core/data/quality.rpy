@@ -1,14 +1,15 @@
 #### ITEM QUALITY TIERS (FALLBACK) ####
-## EN: Hardcoded copy of the default 0-6 item quality tiers. The former
-##     "Item Quality" mod was removed; this file is now the authoritative
-##     source again. Do NOT delete: per the DATA_MIGRATION policy the game
-##     must stay bootable when JSON / mod content is missing.
+## EN: Hardcoded fallback copy of the default 0-6 item quality tiers.
+##     The authoritative data now lives in the "Item Quality" mod
+##     (game/custom/mods/Item Quality/quality.json), which registers over this
+##     fallback at init -1. Do NOT delete: per the DATA_MIGRATION policy the
+##     game must stay bootable when JSON / mod content is missing.
 ##     Values are verbatim from the former core/data/settings/quality.json
 ##     (including the trailing spaces of the "Cheap " / "Worn " prefixes, which
 ##     are deliberate — they replace the "{0} {1}" separator).
-## ZH: 默认 0-6 物品品质档位的硬编码副本。原 "Item Quality" Mod 已移除，
-##     本文件重新成为权威数据源。勿删：按 DATA_MIGRATION 政策，JSON /
-##     Mod 内容缺失时游戏仍须可启动。
+## ZH: 默认 0-6 物品品质档位的硬编码回退副本。权威数据已迁至 "Item Quality" Mod
+##     （game/custom/mods/Item Quality/quality.json），该 Mod 在 init -1 覆盖本
+##     回退。勿删：按 DATA_MIGRATION 政策，JSON / Mod 内容缺失时游戏仍须可启动。
 ##     数值逐字来自原 core/data/settings/quality.json（含 "Cheap " / "Worn " 等
 ##     前缀的尾随空格——那是有意为之，用于替换 "{0} {1}" 的分隔空格）。
 init -4 python:
