@@ -1,12 +1,11 @@
 ## BK Phase 8 — Quality Registry
-## EN: Registry for item quality tiers. Framework stays in core; the default
-##     0-6 tier DATA is provided by the "Item Quality" mod
-##     (game/custom/mods/Item Quality/), with a hardcoded fallback copy
-##     registered from game/core/data/quality.rpy (do NOT delete, see
+## EN: Registry for item quality tiers. The former "Item Quality" mod was
+##     removed; the default 0-6 tier DATA is now registered from the
+##     hardcoded copy in game/core/data/quality.rpy (do NOT delete, see
 ##     docs/migration/DATA_MIGRATION.md).
-## ZH: 物品品质档位注册表。框架留在核心；默认 0-6 档数据由 "Item Quality" Mod
-##     提供（game/custom/mods/Item Quality/），另有硬编码回退副本由
-##     game/core/data/quality.rpy 注册（勿删，见 docs/migration/DATA_MIGRATION.md）。
+## ZH: 物品品质档位注册表。原 "Item Quality" Mod 已移除；默认 0-6 档数据
+##     现由 game/core/data/quality.rpy 的硬编码副本注册（勿删，见
+##     docs/migration/DATA_MIGRATION.md）。
 
 init -5 python:
 

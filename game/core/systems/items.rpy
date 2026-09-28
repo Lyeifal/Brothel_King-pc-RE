@@ -203,9 +203,10 @@ init -2 python:
 
             if self.template == True:
 
-                ## EN: Quality tiers live in the QualityRegistry (core fallback +
-                ##     "Item Quality" mod, see systems/registry/quality_registry.rpy).
-                ## ZH: 品质档位存于 QualityRegistry（核心回退 + "Item Quality" Mod）。
+                ## EN: Quality tiers live in the QualityRegistry (registered
+                ##     from core data, see systems/registry/quality_registry.rpy).
+                ## ZH: 品质档位存于 QualityRegistry（由核心数据注册，见
+                ##     systems/registry/quality_registry.rpy）。
                 tier = quality_registry.get_tier(target_rank)
 
                 if tier is None:

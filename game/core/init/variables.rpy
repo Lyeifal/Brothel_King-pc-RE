@@ -2652,11 +2652,12 @@ init 1 python:
         reversed_result_dict = {}
         result_reference = ""
 
-    # EN: Item quality tiers moved to the QualityRegistry (BK Phase 8). Core
-    #     fallback tiers are registered in data/quality.rpy (init -4); the
-    #     "Item Quality" mod overrides them at init -1.
-    # ZH: 物品品质档位已迁至 QualityRegistry（BK Phase 8）。核心回退档位在
-    #     data/quality.rpy 注册（init -4）；"Item Quality" Mod 在 init -1 覆盖。
+    # EN: Item quality tiers live in the QualityRegistry (BK Phase 8),
+    #     registered from the hardcoded copy in data/quality.rpy (init -4).
+    #     The former "Item Quality" mod was removed.
+    # ZH: 物品品质档位存于 QualityRegistry（BK Phase 8），由
+    #     data/quality.rpy 的硬编码副本注册（init -4）。原
+    #     "Item Quality" Mod 已移除。
 
     # EN: Load mood/love/fear description dictionaries from JSON (BK Evolution).
     # ZH: 从 JSON 加载心情/爱意/恐惧描述字典（BK Evolution）。
