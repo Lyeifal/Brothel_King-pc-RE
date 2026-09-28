@@ -110,6 +110,14 @@ init -1 python:
             if minion_power:
                 chance += (minion_power - 1.0) * 0.2
 
+            ## EN: Origin/mod talent bonus (e.g. the Origins mod's
+            ##     "Underworld Connections" grants boost kidnap success).
+            ##     get_effect returns 1.0 baseline, so subtract it.
+            ## ZH: 出身/Mod 天赋加成（如 Origins Mod 的"黑道人脉"授予
+            ##     boost kidnap success）。get_effect 基线为 1.0，需扣除。
+            _kidnap_boost = getattr(mc, "get_effect", lambda t, tg, **k: 1.0)("boost", "kidnap success", randomize=False)
+            chance += _kidnap_boost - 1.0
+
             ## EN: Location security penalty.
             ## ZH: 地点安保惩罚。
             chance -= location_security * 0.10

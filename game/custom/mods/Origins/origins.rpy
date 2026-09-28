@@ -139,10 +139,17 @@ init -2 python:
                 talent.apply(mc)
 
             ## EN: Starting bonuses (accumulate onto the MC fields).
-            ## ZH: 起始奖励（累加到 MC 对应字段）。
-            for key in ("gold", "reputation", "good", "neutral", "evil"):
+            ##     "prestige" is the MC's own reputation/XP field (MC has no
+            ##     attribute named "reputation" — the base game calls it
+            ##     prestige). getattr defaults to 0 so an unknown bonus key
+            ##     in JSON can never crash game start.
+            ## ZH: 起始奖励（累加到 MC 对应字段）。"prestige" 即 MC 自身
+            ##     的声望/经验字段（MC 没有名为 "reputation" 的属性——
+            ##     本体称之为 prestige）。getattr 默认 0，JSON 里出现
+            ##     未知奖励键也不会在开局时崩溃。
+            for key in ("gold", "prestige", "good", "neutral", "evil"):
                 if key in self.starting_bonus:
-                    setattr(mc, key, getattr(mc, key) + self.starting_bonus[key])
+                    setattr(mc, key, getattr(mc, key, 0) + self.starting_bonus[key])
 
         def to_dict(self):
             return {"origin_id": self.origin_id}

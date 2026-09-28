@@ -374,6 +374,12 @@ label bk_test_runner:
     call test_girl_economy_component
     call test_girl_effects_component
     call test_mod_api_v2
+    ## EN: Origins mod smoke tests — only when the mod ships the test label
+    ##     (renpy.has_label guards against disabled/uninstalled mod).
+    ## ZH: Origins Mod 冒烟测试——仅当 Mod 带有该测试 label 时运行
+    ##     （renpy.has_label 防御禁用/卸载）。
+    if renpy.has_label("test_origins_mod"):
+        call test_origins_mod
     $ _bk_test_report = test_runner.report()
     "[_bk_test_report]"
     return

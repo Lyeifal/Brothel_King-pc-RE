@@ -6,7 +6,7 @@
     "icon_tag": "origin_noble",
     "class_id": "Aristocrat",
     "starting_bonus": {
-      "reputation": 30
+      "prestige": 30
     },
     "talents": [
       {
@@ -14,7 +14,7 @@
         "effects": [
           {
             "type": "boost",
-            "target": "reputation",
+            "target": "prestige",
             "value": 0.5
           }
         ],
@@ -58,7 +58,7 @@
           "effects": [
             {
               "type": "boost",
-              "target": "reputation",
+              "target": "prestige",
               "value": 0.25
             }
           ]
@@ -316,7 +316,7 @@
         "effects": [
           {
             "type": "boost",
-            "target": "shop prices",
+            "target": "buy",
             "value": -0.15
           }
         ],
@@ -367,7 +367,7 @@
           "effects": [
             {
               "type": "boost",
-              "target": "shop prices",
+              "target": "buy",
               "value": -0.15
             }
           ]
@@ -435,7 +435,7 @@
           "effects": [
             {
               "type": "boost",
-              "target": "reputation",
+              "target": "prestige",
               "value": 0.25
             }
           ]
@@ -471,12 +471,12 @@
         "effects": [
           {
             "type": "boost",
-            "target": "spell learning",
+            "target": "mana",
             "value": 0.3
           }
         ],
         "name_i18n": "Arcane Charm",
-        "description_i18n": "Spell learning +30%."
+        "description_i18n": "Mana +30%."
       }
     ],
     "class_def": {
@@ -586,7 +586,7 @@
         },
         {
           "name_i18n": "Arcane Focus",
-          "description_i18n": "Spell learning +30%.",
+          "description_i18n": "Mana +30%.",
           "pic": "mindtrick.webp",
           "type": "passive",
           "level": 8,
@@ -594,7 +594,7 @@
           "effects": [
             {
               "type": "boost",
-              "target": "spell learning",
+              "target": "mana",
               "value": 0.3
             }
           ]
@@ -620,7 +620,7 @@
   {
     "origin_id": "pirate_captain",
     "name_i18n": "Pirate Captain",
-    "description_i18n": "A feared sea reaver who lost her ship to mutiny. Zan is where you rebuild your legend — by any means necessary.",
+    "description_i18n": "A feared sea reaver who lost his ship to mutiny. Zan is where you rebuild your legend — by any means necessary.",
     "icon_tag": "origin_pirate",
     "class_id": "Reaver",
     "starting_bonus": {
@@ -642,7 +642,7 @@
     ],
     "class_def": {
       "name_i18n": "Reaver",
-      "description_i18n": "A mutinied sea wolf taking what they want. Hard body, quick hands, no mercy.",
+      "description_i18n": "A mutinied sea wolf taking what he wants. Hard body, quick hands, no mercy.",
       "icon": "resources/spells/dragon.webp",
       "stats": {
         "strength": 2,

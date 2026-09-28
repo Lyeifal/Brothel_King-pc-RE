@@ -2641,3 +2641,11 @@ translate chinese_simplified strings:
     old "Girl nb"
     new "女孩编号"
 
+# TODO: Translation updated at 2026-09-28 19:52
+
+# game/core/systems/help.rpy:1284
+translate chinese_simplified help_visit_location_90c5b3c1:
+
+    # sill "[text1]" nointeract
+    sill "[text1]" nointeract
+

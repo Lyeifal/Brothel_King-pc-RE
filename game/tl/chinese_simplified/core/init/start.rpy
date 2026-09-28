@@ -90,3 +90,19 @@ translate chinese_simplified strings:
     old "Mage Girl"
     new "法师女孩"
 
+# TODO: Translation updated at 2026-09-28 19:52
+
+translate chinese_simplified strings:
+
+    # game/core/init/start.rpy:70
+    old "你已经看过开场剧情。要再次观看吗？"
+    new "你已经看过开场剧情。要再次观看吗？"
+
+    # game/core/init/start.rpy:70
+    old "观看开场剧情"
+    new "观看开场剧情"
+
+    # game/core/init/start.rpy:70
+    old "跳过开场剧情"
+    new "跳过开场剧情"
+

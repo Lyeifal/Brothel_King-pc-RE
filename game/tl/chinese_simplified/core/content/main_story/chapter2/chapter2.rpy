@@ -22990,3 +22990,11 @@ translate chinese_simplified strings:
     old "Gather %s gold to advance to the next chapter."
     new "筹集 %s 金币以进入下一章。"
 
+# TODO: Translation updated at 2026-09-28 19:52
+
+# game/core/content/main_story/chapter2/chapter2.rpy:10335
+translate chinese_simplified c2_meet_papa_freak_e589ac84:
+
+    # "[text1]"
+    "[text1]"
+
