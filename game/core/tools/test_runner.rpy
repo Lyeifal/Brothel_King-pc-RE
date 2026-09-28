@@ -381,6 +381,48 @@ label bk_test_runner:
     ##     （renpy.has_label 防御禁用/卸载）。
     if renpy.has_label("test_origins_mod"):
         call test_origins_mod
-    $ _bk_test_report = test_runner.report()
-    "[_bk_test_report]"
+    call screen bk_test_report
     return
+
+# ── Report screen | 报告界面 ──
+# EN: Results are rendered as individual text displayables with color
+#     properties — NOT as one big markup string. A Python-built markup string
+#     cannot be shown safely: embedded via [_var] its {color=[...]} tag values
+#     are never interpolated (crash on any color), and shown directly the
+#     [PASS]/[FAIL] markers would be re-interpolated as variables.
+# ZH: 结果逐条渲染为带 color 属性的文本控件，而不是拼成一整串标记文本——
+#     Python 拼出的标记字符串无论嵌套显示（标签值不二次插值，颜色必崩）
+#     还是直接显示（[PASS] 会被当作变量求值）都会出错。
+screen bk_test_report():
+    modal True
+    frame:
+        xfill True
+        yfill True
+        background "#000000cc"
+        vbox:
+            xfill True
+            yfill True
+            spacing 8
+            hbox:
+                spacing 16
+                text "{b}Test Results:{/b}" substitute False
+                text "Passed: %s" % test_runner.passed color c_emerald substitute False
+                text "Failed: %s" % test_runner.failed color c_red substitute False
+                if test_runner.skipped:
+                    text "Skipped: %s" % test_runner.skipped color c_yellow substitute False
+            viewport:
+                yfill True
+                scrollbars "vertical"
+                mousewheel True
+                draggable True
+                vbox:
+                    spacing 2
+                    for _status, _label, _detail in test_runner.results:
+                        if _status == "PASS":
+                            $ _c = c_emerald
+                        elif _status == "SKIP":
+                            $ _c = c_yellow
+                        else:
+                            $ _c = c_red
+                        text "[%s] %s: %s" % (_status, _label, _detail) color _c substitute False size 16
+            textbutton "关闭 | Close" action Return() xalign 1.0
