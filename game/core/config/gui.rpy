@@ -108,6 +108,11 @@ define gui.text_font_cjk = "resources/fonts/NotoSansCJKsc-Regular.otf"
 define gui.name_text_font_cjk = "resources/fonts/NotoSansCJKsc-Regular.otf"
 define gui.interface_text_font_cjk = "resources/fonts/NotoSansCJKsc-Regular.otf"
 
+## Font for engine system screens (error/exception screen). Without this the
+## error screen falls back to DejaVuSans and Chinese text renders as boxes.
+## ZH：引擎系统界面（报错界面）用字体。不设置则回退 DejaVuSans，中文变豆腐块。
+define gui.system_font = "resources/fonts/NotoSansCJKsc-Regular.otf"
+
 ## The size of normal dialogue text.
 define gui.text_size = res_font(22)
 

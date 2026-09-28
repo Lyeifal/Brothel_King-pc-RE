@@ -70,11 +70,11 @@ init -1 python:
         def report(self):
             lines = [
                 "{b}Test Results:{/b}",
-                "  {color=[c_emerald]}Passed: %s{/color}" % self.passed,
-                "  {color=[c_red]}Failed: %s{/color}" % self.failed,
+                "  {color=[%s]}Passed: %s{/color}" % (c_emerald, self.passed),
+                "  {color=[%s]}Failed: %s{/color}" % (c_red, self.failed),
             ]
             if self.skipped:
-                lines.append("  {color=[c_yellow]}Skipped: %s{/color}" % self.skipped)
+                lines.append("  {color=[%s]}Skipped: %s{/color}" % (c_yellow, self.skipped))
             for status, label, detail in self.results:
                 if status == "PASS":
                     color = c_emerald
@@ -189,6 +189,7 @@ label test_girl_stats_component:
     python:
         runner = TestRunner.instance()
         girl = _BKFakeGirl()
+        girl.rank = 2  # 使公式上限 rank*50=100，测试夹断语义 | formula cap 100
         stats = GirlStats(girl)
 
         runner.assert_eq(stats.get_stat("charm", raw=True), 50, "GirlStats.get_stat reads base value")
@@ -240,17 +241,17 @@ label test_girl_mood_component:
         mood = GirlMood(girl)
 
         girl.sanity = 0
-        runner.assert_true("Nearly broken" in mood.get_sanity(), "GirlMood.get_sanity sanity=0 -> Nearly broken")
+        runner.assert_true(__("Nearly broken") in mood.get_sanity(), "GirlMood.get_sanity sanity=0 -> Nearly broken")
         girl.sanity = 7
-        runner.assert_true("Very frail" in mood.get_sanity(), "GirlMood.get_sanity sanity<10 -> Very frail")
+        runner.assert_true(__("Very frail") in mood.get_sanity(), "GirlMood.get_sanity sanity<10 -> Very frail")
         girl.sanity = 15
-        runner.assert_true("Frail" in mood.get_sanity(), "GirlMood.get_sanity sanity<20 -> Frail")
+        runner.assert_true(__("Frail") in mood.get_sanity(), "GirlMood.get_sanity sanity<20 -> Frail")
         girl.sanity = 30
-        runner.assert_true("Shaken" in mood.get_sanity(), "GirlMood.get_sanity sanity<50 -> Shaken")
+        runner.assert_true(__("Shaken") in mood.get_sanity(), "GirlMood.get_sanity sanity<50 -> Shaken")
         girl.sanity = 60
-        runner.assert_true("Normal" in mood.get_sanity(), "GirlMood.get_sanity sanity>=50 -> Normal")
+        runner.assert_true(__("Normal") in mood.get_sanity(), "GirlMood.get_sanity sanity>=50 -> Normal")
         girl.broken = True
-        runner.assert_true("Broken" in mood.get_sanity(), "GirlMood.get_sanity broken -> Broken")
+        runner.assert_true(__("Broken") in mood.get_sanity(), "GirlMood.get_sanity broken -> Broken")
         girl.broken = False
 
         mood.init_sanity()
