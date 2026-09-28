@@ -157,7 +157,23 @@ init -1 python:
     #     用直接赋值而非 setdefault，保证错误的旧值不会在重启后残留。
     #     ctrl_K_o 与 K_F10 为备用触发——部分输入法会在 Ren'Py 收到
     #     按键前吞掉 Shift+字母组合。
+    # EN: The Keymap is appended to BOTH config.underlay and config.overlay.
+    #     Layer order is [master, transient, screens, overlay]: overlay is
+    #     topmost and receives keys FIRST, even while a modal screen is up
+    #     (a modal screen's IgnoreLayers only blocks layers BELOW it, and the
+    #     underlay sits below all layers - which is why the underlay-only
+    #     binding silently failed during gameplay: BK's management UI is a
+    #     stack of modal `call screen`s). The overlay binding makes Shift+O /
+    #     Ctrl+O / F10 work everywhere; the underlay copy is kept as a
+    #     fallback and the in-screen key handles the focused-input case.
+    # ZH: Keymap 同时追加到 config.underlay 与 config.overlay。
+    #     图层顺序为 [master, transient, screens, overlay]：overlay 位于最顶层、
+    #     永远先收到按键——即使当前是 modal 屏幕（modal 的 IgnoreLayers 只阻断
+    #     下层，而 underlay 在所有图层之下；此前只挂 underlay 的绑定在游戏中
+    #     静默失效，正是因为 BK 的经营界面全是 modal 的 call screen）。
+    #     overlay 绑定让 Shift+O / Ctrl+O / F10 全局生效；underlay 副本留作
+    #     兜底，屏幕内的按键负责输入框聚焦时的关闭。
     config.keymap["console_toggle"] = ["shift_K_o", "ctrl_K_o", "K_F10"]
-    config.underlay.append(
-        renpy.Keymap(console_toggle=_console_toggle)
-    )
+    _console_keymap = renpy.Keymap(console_toggle=_console_toggle)
+    config.underlay.append(_console_keymap)
+    config.overlay.append(_console_keymap)
