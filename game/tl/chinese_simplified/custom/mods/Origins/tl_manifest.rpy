@@ -1,4 +1,4 @@
-﻿# TODO: Translation updated at 2026-09-25 07:34
+# TODO: Translation updated at 2026-09-25 07:34
 
 translate chinese_simplified strings:
     old "Fallen Noble"
@@ -105,19 +105,19 @@ translate chinese_simplified strings:
     new "所有女孩气质 +5。"
     old "Arcane Focus"
     new "奥术专注"
-    old "Spell learning +30%."
-    new "法术学习 +30%。"
+    old "Mana +30%."
+    new "法力 +30%。"
     old "Archmage"
     new "大法师"
     old "Arcane Charm"
     new "神秘魅力"
     old "Pirate Captain"
     new "海盗船长"
-    old "A feared sea reaver who lost her ship to mutiny. Zan is where you rebuild your legend — by any means necessary."
+    old "A feared sea reaver who lost his ship to mutiny. Zan is where you rebuild your legend — by any means necessary."
     new "令人闻风丧胆的海上掠夺者，船只因哗变失去。赞恩是你重建传奇之地——不择手段。"
     old "Reaver"
     new "掠夺者"
-    old "A mutinied sea wolf taking what they want. Hard body, quick hands, no mercy."
+    old "A mutinied sea wolf taking what he wants. Hard body, quick hands, no mercy."
     new "被哗变的海上孤狼，予取予求。身体硬朗，手脚麻利，毫不留情。"
     old "Boarding Party"
     new "跳帮强袭"

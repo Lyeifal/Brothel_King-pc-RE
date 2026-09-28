@@ -51,8 +51,8 @@ GAME_DIR = ROOT / "game"
 #     Item Quality mod extraction) — the code is the source of truth here.
 # ZH: 进度文档写 15 个钩子点；代码现定义 19 个 HOOK_* 常量
 #     （原有 16 个 + 庭院 Mod 剥离时新增的 2 个目的地钩子 + 物品品质 Mod
-#     剥离时新增的 item_generated），此处以代码为准。
-EXPECTED_HOOK_COUNT = 19
+#     剥离时新增的 item_generated + 女孩移入庭院新增的 2 个分配钩子），此处以代码为准。
+EXPECTED_HOOK_COUNT = 21
 
 PASS = "PASS"
 FAIL = "FAIL"
@@ -216,6 +216,7 @@ def load_api_class():
         "renpy": _StubRenpy,
         "services": _StubServices,
         "persistent": _StubPersistent(),
+        "__": lambda s: s,  # Ren'Py 翻译函数桩 | translation stub
     }
     exec(block, env)
     return env["ModAPIV2"]

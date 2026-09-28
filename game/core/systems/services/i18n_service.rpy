@@ -53,7 +53,7 @@ init -10 python:
         def tc(text, context):
             """Context-aware translation (pgettext).
 
-            Uses Ren'Py's __("contexttext") syntax.
+            Uses Ren'Py's context-text join syntax (context + U+0004 + text).
             The context disambiguates identical source strings.
             """
             return __("%s%s" % (context, text))
