@@ -65,17 +65,7 @@ translate chinese_simplified courtyard_scene_b29ec914:
     sill happy "记下了，主人。要我在他们收您钱之前还是之后转告呢？"
 
 # game/custom/mods/Courtyard/courtyard_scene.rpy:98
-translate chinese_simplified courtyard_loop_ea1488ad:
-
-    # sill "[_cy_name] put in a quiet hour of practice at the training ground. Slow and steady, Master."
-    sill "[_cy_name] 在训练场静静练了一个时辰。稳扎稳打，主人。"
-
 # game/custom/mods/Courtyard/courtyard_scene.rpy:100
-translate chinese_simplified courtyard_loop_4e7dc007:
-
-    # sill "I'm afraid [_cy_name] is in no state to train right now."
-    sill "恐怕 [_cy_name] 现在的状态没法训练。"
-
 # game/custom/mods/Courtyard/courtyard_scene.rpy:118
 translate chinese_simplified courtyard_loop_9b37a488:
 

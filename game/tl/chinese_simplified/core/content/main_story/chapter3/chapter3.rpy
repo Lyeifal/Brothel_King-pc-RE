@@ -4219,11 +4219,6 @@ translate chinese_simplified c3_papa_cells_e2ea8235:
     papa_apprentice "一切都按照您的指示完成了，老爹。"
 
 # game/BKchapter3.rpy:2155
-translate chinese_simplified c3_papa_cells_726cec26:
-
-    # papa "Perfect! Here you go, young man, just as we agreed. You now have a nice holding cell that will ward against [target] powers."
-    papa "完美！年轻人，正如我们之前约定的，给你。你现在有了一个不错的牢房，可以抵御[target]势力。"
-
 # game/BKchapter3.rpy:2163
 translate chinese_simplified c3_papa_cells_28109dc2:
 

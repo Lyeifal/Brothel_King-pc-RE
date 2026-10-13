@@ -133,11 +133,6 @@ translate chinese_simplified power_use_e2d696b4:
     "在你的命令下，她心不在焉地脱掉了所有的衣服，直到她赤身裸体地站在你面前。她似乎没有完全意识到这种变化。"
 
 # game/BKpowers.rpy:612
-translate chinese_simplified power_use_e097b33f:
-
-    # "[girl.fullname] is no longer uncomfortable with [fix.name].[text1]"
-    "[girl.fullname]不再对[fix.name]感到不适。[text1]"
-
 # game/BKpowers.rpy:618
 translate chinese_simplified power_use_6fe4f691:
 
@@ -253,11 +248,6 @@ translate chinese_simplified power_use_ce711cc5:
     "[changes]"
 
 # game/BKpowers.rpy:860
-translate chinese_simplified power_use_e78594dc:
-
-    # "[girl.fullname] has transferred {b}[chg] [target]{/b} to [girl2.fullname]."
-    "[girl.fullname]已转移{b}[chg][target]{/b}给[girl2.fullname]。"
-
 # game/BKpowers.rpy:864
 translate chinese_simplified power_use_b34872f2:
 
@@ -331,11 +321,6 @@ translate chinese_simplified power_use_a39fbb31:
     "[girl.fullname]还不够爱你，无法使用那种力量。"
 
 # game/BKpowers.rpy:1017
-translate chinese_simplified power_use_6b461982:
-
-    # "The girls in the [_pow.target] now love you more."
-    "她对你的好感度提升了[_pow.target]。"
-
 # game/BKpowers.rpy:1020
 translate chinese_simplified power_use_c14e8f8a:
 
@@ -385,11 +370,6 @@ translate chinese_simplified power_use_3a08d8b2:
     "委托任务和培训课程将给她带来更多的奖励。"
 
 # game/BKpowers.rpy:1130
-translate chinese_simplified power_use_c3687f3e:
-
-    # "[girl.fullname] has received a new negative trait, replacing [old_neg.name]."
-    "[girl.fullname]得到了一个新的负面特质, 取代了[old_neg.name]。"
-
 # game/BKpowers.rpy:1140
 translate chinese_simplified power_use_01f09ba6:
 

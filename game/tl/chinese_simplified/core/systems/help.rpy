@@ -1387,11 +1387,6 @@ translate chinese_simplified help_visit_location_fc6cac84:
     sill happy "{nw}"
 
 # game/BKhelp.rpy:1419
-translate chinese_simplified help_visit_location_01e0386a:
-
-    # sill "[text1]"
-    sill "[text1]" nointeract
-
 # game/BKhelp.rpy:1423
 translate chinese_simplified help_visit_location_c777e57b:
 

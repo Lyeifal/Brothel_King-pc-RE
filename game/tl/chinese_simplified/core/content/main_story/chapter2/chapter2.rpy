@@ -20917,11 +20917,6 @@ translate chinese_simplified c2_meet_papa_freak_3f036dab:
     "弗里克老爹希望你给他找一个{b}美貌、身材、优雅和魅力都至少50分{/b}的女孩,并且愿意和他共度春宵。"
 
 # game/BKchapter2.rpy:10329
-translate chinese_simplified c2_meet_papa_freak_3a022827:
-
-    # "[text1]"
-    "[text1]"
-
 # game/BKchapter2.rpy:10342
 translate chinese_simplified visit_papa_07c43704:
 

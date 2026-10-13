@@ -559,11 +559,6 @@ translate chinese_simplified free_girl_girlfriend_d9a9b5f7_1:
     you "我真的不知道。抱歉。"
 
 # game/core/content/interactions_free.rpy:1248
-translate chinese_simplified free_girl_girlfriend_0ee8c7a2:
-
-    # girl.char "Do you remember what is my [_type] [thing]?"
-    girl.char ""
-
 # game/core/content/interactions_free.rpy:1305
 translate chinese_simplified free_girl_girlfriend_d9a9b5f7_2:
 

@@ -121,11 +121,6 @@ translate chinese_simplified random_morning_events_219d9903:
     "你让她继续训练。"
 
 # game/BKday_events.rpy:97
-translate chinese_simplified random_morning_events_81c352f8:
-
-    # "As you cross the [room] in the morning, you run into [girl.fullname]."
-    "当你早上经过[room]时，你遇到了[girl.fullname]。"
-
 # game/BKday_events.rpy:99
 translate chinese_simplified random_morning_events_81323ad2:
 
@@ -211,11 +206,6 @@ translate chinese_simplified random_morning_events_28768784:
     girl.char "哼……谁让我问的……"
 
 # game/BKday_events.rpy:146
-translate chinese_simplified random_morning_events_59286a98:
-
-    # you "Well, sure. The [room] is a bit dusty. Why don't you grab a broom and bucket, and clean this place up?"
-    you "嗯，当然。[room]的地上都落灰了。你为什么不拿起扫帚和水桶把这地方打扫干净呢？"
-
 # game/BKday_events.rpy:150
 translate chinese_simplified random_morning_events_8e963ac2:
 
@@ -229,11 +219,6 @@ translate chinese_simplified random_morning_events_b8af37cc:
     girl.char "当然，主人。您说了算。"
 
 # game/BKday_events.rpy:156
-translate chinese_simplified random_morning_events_6a66cc7b:
-
-    # "[girl.name] spent all morning cleaning up the [room]. [brothel.name] cleanliness has improved."
-    "[girl.name]整个上午都在打扫[room]。[brothel.name]的清洁度提高了。"
-
 # game/BKday_events.rpy:161
 translate chinese_simplified random_morning_events_28ef0d1a:
 
@@ -763,11 +748,6 @@ translate chinese_simplified random_morning_events_9e7a73e1:
     "[girl.name]看起来很累，很快就在你身边睡着了。你跟进。当你醒来时，她已经走了，但你仍然可以在枕头上闻到她的气味。"
 
 # game/BKday_events.rpy:440
-translate chinese_simplified random_morning_events_84509039:
-
-    # "[girl.name]'s [boost_stat] skill has improved a little."
-    "[girl.name]的[boost_stat]技能提高了一点。"
-
 # game/BKday_events.rpy:454
 translate chinese_simplified random_morning_events_d404bb97:
 
@@ -2162,11 +2142,6 @@ translate chinese_simplified random_night_girl_event_8a5d2b8d:
     "你在第一排找到一个座位，在一群吵闹的顾客旁边。"
 
 # game/BKday_events.rpy:1561
-translate chinese_simplified random_night_girl_event_2ba1bfc0:
-
-    # "One [cust] in particular stands out among the crowd."
-    "其中[cust]特别引人注目。"
-
 # game/BKday_events.rpy:1564
 translate chinese_simplified random_night_girl_event_f51f1a93:
 
@@ -2192,11 +2167,6 @@ translate chinese_simplified random_night_girl_event_41819061:
     "他们似乎是朋友或兄弟，晚上出去喝酒和调情。看来[girl.name]引起了他们的注意。"
 
 # game/BKday_events.rpy:1573
-translate chinese_simplified random_night_girl_event_b7b64d0c:
-
-    # "As [girl.name] blushes and tries to excuse herself away from the stage, the [cust] finally notices you. {nw}"
-    "[girl.name]脸红了，想找个借口离开舞台时，他们终于注意到了你。{nw}"
-
 # game/BKday_events.rpy:1576
 translate chinese_simplified random_night_girl_event_66c39198:
 
@@ -2330,11 +2300,6 @@ translate chinese_simplified random_night_girl_event_2a052473_6:
     "[girl.fullname]跑掉了。"
 
 # game/BKday_events.rpy:1649
-translate chinese_simplified random_night_girl_event_8d845ea3:
-
-    # "She looks tense and defensive as you and the horny [cust] join her on stage."
-    "当你和[cust]拉她一起上台时，她看起来很紧张，很有自制力。"
-
 # game/BKday_events.rpy:1660
 translate chinese_simplified random_night_girl_event_3819351b:
 

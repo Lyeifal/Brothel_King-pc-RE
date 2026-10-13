@@ -1,11 +1,6 @@
 ﻿# TODO: Translation updated at 2026-06-03 23:34
 
 
-translate chinese_simplified security_488f4983:
-
-    # security "{color=[c_red]}[brothel.name] is being raided by [attackers]!{/color}\nYou rush outside with the defenders."
-    security "{color=[c_red]}[brothel.name]被一群[attackers]袭击了!{/color}\n你和手下一起冲出去查看情况。"
-
 # game/BKsecurity.rpy:76
 translate chinese_simplified security_56178303:
 
@@ -109,11 +104,6 @@ translate chinese_simplified security_40d05f1c:
     "一名保安向你跑来，就好像被地狱三头犬追着一样。"
 
 # game/BKsecurity.rpy:384
-translate chinese_simplified security_6a73366b:
-
-    # guard "Boss! I counted [enemies] of them. And they also have [war_machines] war machines! They are led by [enemy_general.fullname], a renowned [enemy_g]."
-    guard "老板! 我估算了一下敌人大概有[enemies]人。他们甚至有[war_machines]台攻城器械! 他们是[enemy_general.fullname]的手下,那个臭名昭著的[enemy_g]。"
-
 # game/BKsecurity.rpy:386
 translate chinese_simplified security_d7897846:
 
@@ -949,11 +939,6 @@ translate chinese_simplified kidnap_tip_cd15ccdf:
     man "太感谢了,您可真大方!"
 
 # game/BKsecurity.rpy:1760
-translate chinese_simplified kidnap_tip_4afd0488:
-
-    # man "Right then. [girl.name] was captured by [girl.kidnapper]. I know where their lair is..."
-    man "说回正题。 [girl.name]被[girl.kidnapper]抓走了。我知道他们的地牢在哪..."
-
 # game/BKsecurity.rpy:1767
 translate chinese_simplified kidnap_tip_7423ebaa:
 

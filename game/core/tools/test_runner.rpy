@@ -370,17 +370,25 @@ label bk_test_runner:
     # ZH: 游戏内测试入口。通过主菜单 "Tests" 按钮进入，
     #     该按钮仅在 config.developer 为 True 时显示。
     $ test_runner.reset()
+
+    # ── 组件测试 | Component Tests ──
     call test_girl_stats_component
     call test_girl_mood_component
     call test_girl_economy_component
     call test_girl_effects_component
     call test_mod_api_v2
+
     ## EN: Origins mod smoke tests — only when the mod ships the test label
     ##     (renpy.has_label guards against disabled/uninstalled mod).
     ## ZH: Origins Mod 冒烟测试——仅当 Mod 带有该测试 label 时运行
     ##     （renpy.has_label 防御禁用/卸载）。
     if renpy.has_label("test_origins_mod"):
         call test_origins_mod
+
+    # ── 集成测试 | Integration Tests ──
+    if renpy.has_label("run_integration_tests"):
+        call run_integration_tests
+
     call screen bk_test_report
     return
 

@@ -5917,11 +5917,6 @@ translate chinese_simplified slave_beach_event_5a190256:
     you "真是有趣的景色...."
 
 # game/BKcity_events.rpy:4932
-translate chinese_simplified slave_beach_event_cc252f77:
-
-    # "[girl.fullname]'s {b}[stat1]{/b} and {b}[stat2]{/b} have increased."
-    "[girl.fullname]的 {b}[stat1]{/b} 和 {b}[stat2]{/b} 提升了"
-
 # game/BKcity_events.rpy:4938
 translate chinese_simplified slave_beach_event_48a2c215:
 

@@ -13289,6 +13289,10 @@ label shalia_visit(): # Happens in the morning a week after Satella's love reach
 
 ## KOSMO EVENTS ##
 
+label stop_debug: # Debug-mode breakpoint stub (called from kosmo_returns); no-op so debug starts don't crash
+    return
+
+
 label kosmo_returns(): # Happens 7-9 days after meeting Kosmo
 
     if story_flags["no kosmo"]:

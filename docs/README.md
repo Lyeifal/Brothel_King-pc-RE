@@ -1,127 +1,260 @@
-# Brothel King — 文档中心
+# BK Evolution 文档中心
 
-> 最后更新: 2026-09-11（与代码核对）
-> 分支: `bk-evolution`（Brothel King Evolution / Ren'Py 8.2.0）
-
-本目录是 BK Evolution 项目的**唯一活跃文档库**。所有文档以当前代码为准；旧文档快照统一存放在 [archive/](archive/)，内容已过时，**请勿引用**。
-
-**English version**: 全套文档的英文版在与本目录同级的 `docs_EN/` 下，结构完全镜像（仅 progress 文档的提交信息保留中文原文）。
+> **最后更新**: 2026-10-14  
+> **文档总数**: 15+  
+> **状态**: ✅ 完整
 
 ---
 
-## 按角色导航
+## 🚀 新手导航（按阅读顺序）
 
-### 🎮 玩家
+### 1. 快速了解项目（5分钟）
+- 📄 [QUICK_START.md](project/QUICK_START.md) - 快速开始指南
+- 📄 [CURRENT_STATUS_SUMMARY.md](project/CURRENT_STATUS_SUMMARY.md) - 项目现状
 
-游戏说明与常见问题不在 `docs/` 内，位于项目根目录：
+### 2. 开始开发（30分钟）
+- 📄 [ROADMAP.md](project/ROADMAP.md) - 开发路线图
+- 📄 [MOD_DEVELOPMENT_GUIDE.md](development/MOD_DEVELOPMENT_GUIDE.md) - Mod开发指南
 
-- [`../README.html`](../README.html) — 项目介绍（HTML）
-- [`../faq.txt`](../faq.txt) — 常见问题
-
-### 🧩 Mod 作者
-
-| 文档 | 说明 |
-|------|------|
-| [modding/CUSTOM_DIRECTORIES.md](modding/CUSTOM_DIRECTORIES.md) | `game/custom/` 与 `game/core/` 的目录边界：女孩包放 `custom/girls/`，社区 Mod 放 `custom/mods/` |
-| [architecture/girl_pack.md](architecture/girl_pack.md) | 女孩包系统架构（`_BK.ini` 格式、加载流程） |
-| [architecture/event.md](architecture/event.md) | StoryEvent / EventEngine 事件系统架构 |
-| [project/PROJECT_GUIDE.md](project/PROJECT_GUIDE.md) | 数据驱动架构与 JSON 数据规范（Mod 数据扩展必读） |
-| [`../tools/bk_editor/README.md`](../tools/bk_editor/README.md) | 编辑器套件使用说明（女孩包 / 剧本 / 数据编辑） |
-
-Mod 接口现状：v1 `Mod()`（`game/core/framework/challenges.rpy`）与 v2 `ModAPIV2`（`game/core/systems/mods/mod_api_v2.rpy`，19 个钩子点已接线）并存，v2 模板见 `game/core/templates/mod_template/`，范例 Mod 见 `game/custom/mods/Auction House/`（UI 型）与 `game/custom/mods/Item Quality/`（数据型，自带 `tl/` 翻译）。
-
-### 🌐 译者
-
-| 文档 | 说明 |
-|------|------|
-| [i18n/I18N_ROADMAP.md](i18n/I18N_ROADMAP.md) | i18n 工作唯一活跃参考：当前状态、`_i18n` 后缀约定、路线图 |
-| [i18n/BEST_PRACTICES.md](i18n/BEST_PRACTICES.md) | i18n 编码规范（`__()` / `_()` 包裹规则、占位符约束） |
-| [i18n/TRANSLATION_STATUS.md](i18n/TRANSLATION_STATUS.md) | 中文翻译补完计划与覆盖率快照（2026-06，部分数字已被后续机翻刷新） |
-| [project/PROJECT_GUIDE.md](project/PROJECT_GUIDE.md) §翻译工作流 | 标准翻译流程（extract → xlsx → 回填 → lint） |
-
-### 🏗️ 核心开发者
-
-| 文档 | 说明 |
-|------|------|
-| [project/PROJECT_GUIDE.md](project/PROJECT_GUIDE.md) | **项目唯一活跃指南**：目录标准、Init 优先级链、服务容器、数据驱动架构 |
-| [project/ROADMAP.md](project/ROADMAP.md) | 总览路线图：已完成 / 进行中 / 遗留待办 / 未来方向 |
-| [project/REFACTORING_PROGRESS.md](project/REFACTORING_PROGRESS.md) | 重构进度真源：逐提交链（基线 `b09f55e` 之后 60+ 次提交）、组件迁移明细 |
-| [architecture/README.md](architecture/README.md) | 子系统架构文档索引（DataLoader、事件、女孩包、注册表等） |
-| [migration/DATA_MIGRATION.md](migration/DATA_MIGRATION.md) | 硬编码 → JSON 数据迁移完整清单 |
-
-### 🛠️ 工具使用者
-
-| 文档 | 说明 |
-|------|------|
-| [architecture/editor_suite.md](architecture/editor_suite.md) | 编辑器套件（三分架构）设计与数据文件映射 |
-| [`../tools/bk_editor/README.md`](../tools/bk_editor/README.md) | 编辑器套件（tkinter GUI）使用说明 |
-| [`../tools/bk_editor/AGENTS.md`](../tools/bk_editor/AGENTS.md) | 编辑器开发约定（给维护编辑器代码的人） |
-
-`tools/` 下还有大量翻译/审计脚本（`audit_placeholders.py`、`export_empty_to_xlsx.py`、`i18n_lint.py`、`verify_mod_api.py` 等），用法见 [i18n/I18N_ROADMAP.md](i18n/I18N_ROADMAP.md) 与 [project/PROJECT_GUIDE.md](project/PROJECT_GUIDE.md)。
+### 3. 深入理解（2小时）
+- 📄 [PROJECT_GUIDE.md](architecture/PROJECT_GUIDE.md) - 架构设计文档
+- 📄 [SAVE_FORMAT.md](architecture/SAVE_FORMAT.md) - 存档格式说明
 
 ---
 
-## 全量文档索引
+## 📚 文档分类
 
-### 项目层（project/）
+### 项目管理 (`docs/project/`)
 
-| 文档 | 说明 |
-|------|------|
-| [project/PROJECT_GUIDE.md](project/PROJECT_GUIDE.md) | 项目指南：目录标准、核心文件速查、Init 链、服务访问、数据驱动架构、编辑器套件、命名规范、缓存卫生 |
-| [project/ROADMAP.md](project/ROADMAP.md) | 总览路线图（合并自两份旧路线图，以当前代码核对刷新） |
-| [project/REFACTORING_PROGRESS.md](project/REFACTORING_PROGRESS.md) | 重构进度真源：Phase 0–6 逐提交链、Girl 组件迁移明细、屏幕提取记录 |
-
-### 架构层（architecture/）
-
-| 文档 | 说明 |
-|------|------|
-| [architecture/README.md](architecture/README.md) | 架构文档索引与核心文件对照表 |
-| [architecture/data_loader.md](architecture/data_loader.md) | DataLoader：JSON 加载、fallback 模式、各 load_* 方法 |
-| [architecture/registry.md](architecture/registry.md) | Registry 层：Trait/Perk/Tag/Dialogue/Event/NGP/Meta/Unlock 注册表 |
-| [architecture/event.md](architecture/event.md) | StoryEvent / EventEngine / EventRegistry 事件系统 |
-| [architecture/gamemode.md](architecture/gamemode.md) | GameMode / GameModeRegistry（story / sandbox / scenario） |
-| [architecture/girl_pack.md](architecture/girl_pack.md) | 女孩包系统：`_BK.ini`、图片标签、加载与验证 |
-| [architecture/goal.md](architecture/goal.md) | Goal / 章节目标系统 |
-| [architecture/trait_perk.md](architecture/trait_perk.md) | Trait / Perk / Effect 体系 |
-| [architecture/customer_affix.md](architecture/customer_affix.md) | Customer / CustomerAffixes / PreferenceMatrix |
-| [architecture/editor_suite.md](architecture/editor_suite.md) | 编辑器套件三分架构（girl_pack / scenario / dev_console） |
-
-### 国际化（i18n/）
-
-| 文档 | 说明 |
-|------|------|
-| [i18n/I18N_ROADMAP.md](i18n/I18N_ROADMAP.md) | i18n 唯一活跃参考：状态、`_i18n` 约定、工具链 |
-| [i18n/BEST_PRACTICES.md](i18n/BEST_PRACTICES.md) | i18n 编码最佳实践 |
-| [i18n/TRANSLATION_STATUS.md](i18n/TRANSLATION_STATUS.md) | 中文翻译补完计划（2026-06 快照） |
-
-### Modding（modding/）
-
-| 文档 | 说明 |
-|------|------|
-| [modding/CUSTOM_DIRECTORIES.md](modding/CUSTOM_DIRECTORIES.md) | `game/custom/` 与 `game/core/` 目录边界说明 |
-
-### 迁移（migration/）
-
-| 文档 | 说明 |
-|------|------|
-| [migration/DATA_MIGRATION.md](migration/DATA_MIGRATION.md) | 硬编码数据 → JSON 迁移清单（源文件、目标路径、状态） |
-
-### 工具（tools/）
-
-> 该目录目前为空，预留用于工具脚本文档。编辑器套件文档见 [`../tools/bk_editor/README.md`](../tools/bk_editor/README.md)。
-
-### 存档（archive/）— ⚠️ 内容过时，勿引用
-
-| 条目 | 说明 |
-|------|------|
-| [archive/pre-reorg-2026-09/](archive/pre-reorg-2026-09/) | 2026-09 文档重整前的旧文档快照（旧 PROJECT_GUIDE / ROADMAP / BK_EVOLUTION_ROADMAP / I18N 系列等），仅作历史参考 |
-| [archive/PROJECT_GUIDE_V3.md](archive/PROJECT_GUIDE_V3.md) | 更早一版项目指南（Phase 6 时期） |
-| [archive/I18N_PLAN.md](archive/I18N_PLAN.md)、[archive/I18N_REFACTOR_PLAN.md](archive/I18N_REFACTOR_PLAN.md)、[archive/i18n_progress.md](archive/i18n_progress.md) | 旧 i18n 计划与进度（内容已整合进 [i18n/I18N_ROADMAP.md](i18n/I18N_ROADMAP.md)） |
+| 文档 | 说明 | 优先级 |
+|------|------|--------|
+| [SUMMARY_2026-10-14.md](project/SUMMARY_2026-10-14.md) | 今日工作总结（完整） | ⭐⭐⭐⭐⭐ |
+| [CURRENT_STATUS_SUMMARY.md](project/CURRENT_STATUS_SUMMARY.md) | 项目现状快速总结 | ⭐⭐⭐⭐⭐ |
+| [QUICK_START.md](project/QUICK_START.md) | 5分钟快速开始 | ⭐⭐⭐⭐⭐ |
+| [ROADMAP.md](project/ROADMAP.md) | 开发路线图 | ⭐⭐⭐⭐ |
+| [REFACTORING_NEXT_STEPS.md](../docs_EN/project/REFACTORING_NEXT_STEPS.md) | 重构详细分析 | ⭐⭐⭐ |
+| [ACTION_PLAN_SUMMARY.md](../docs_EN/project/ACTION_PLAN_SUMMARY.md) | 具体行动计划 | ⭐⭐⭐ |
 
 ---
 
-## 相关文档
+### 架构设计 (`docs/architecture/`)
 
-- [project/PROJECT_GUIDE.md](project/PROJECT_GUIDE.md) — 项目指南（建议先读）
-- [project/ROADMAP.md](project/ROADMAP.md) — 总览路线图
-- [project/REFACTORING_PROGRESS.md](project/REFACTORING_PROGRESS.md) — 重构进度真源
+| 文档 | 说明 | 优先级 |
+|------|------|--------|
+| [PROJECT_GUIDE.md](architecture/PROJECT_GUIDE.md) | 完整架构文档 | ⭐⭐⭐⭐⭐ |
+| [SAVE_FORMAT.md](architecture/SAVE_FORMAT.md) | 存档格式与迁移 | ⭐⭐⭐⭐ |
+| [SERVICES_OVERVIEW.md](architecture/SERVICES_OVERVIEW.md) | 服务容器说明 | ⭐⭐⭐ |
+
+---
+
+### 开发指南 (`docs/development/`)
+
+| 文档 | 说明 | 优先级 |
+|------|------|--------|
+| [MOD_DEVELOPMENT_GUIDE.md](development/MOD_DEVELOPMENT_GUIDE.md) | Mod开发完整指南 | ⭐⭐⭐⭐⭐ |
+| [GIRL_PACK_COMPATIBILITY.md](development/GIRL_PACK_COMPATIBILITY.md) | 女孩包兼容性 | ⭐⭐⭐⭐ |
+| [I18N_GUIDE.md](development/I18N_GUIDE.md) | 国际化指南 | ⭐⭐⭐ |
+
+---
+
+### 测试文档 (`docs/testing/`)
+
+| 文档 | 说明 | 优先级 |
+|------|------|--------|
+| [MANUAL_TEST_REPORT_2026-10-14.md](testing/MANUAL_TEST_REPORT_2026-10-14.md) | 手动测试报告 | ⭐⭐⭐⭐⭐ |
+| [CI_SETUP.md](testing/CI_SETUP.md) | CI/CD配置指南 | ⭐⭐⭐⭐ |
+| [TESTING_GUIDE.md](testing/TESTING_GUIDE.md) | 测试指南 | ⭐⭐⭐ |
+
+---
+
+## 🎯 按场景查找文档
+
+### 场景A: 我是第一次接触这个项目
+
+**推荐阅读顺序**:
+1. [QUICK_START.md](project/QUICK_START.md) - 了解项目
+2. [CURRENT_STATUS_SUMMARY.md](project/CURRENT_STATUS_SUMMARY.md) - 了解现状
+3. [PROJECT_GUIDE.md](architecture/PROJECT_GUIDE.md) - 理解架构
+
+**预计时间**: 30分钟
+
+---
+
+### 场景B: 我想开发一个Mod
+
+**推荐阅读顺序**:
+1. [MOD_DEVELOPMENT_GUIDE.md](development/MOD_DEVELOPMENT_GUIDE.md) - Mod开发指南
+2. 研究示例: `game/custom/mods/Example - Price Override/`
+3. 开始动手！
+
+**预计时间**: 2-4小时（包括实践）
+
+---
+
+### 场景C: 我想贡献核心代码
+
+**推荐阅读顺序**:
+1. [PROJECT_GUIDE.md](architecture/PROJECT_GUIDE.md) - 理解架构
+2. [ROADMAP.md](project/ROADMAP.md) - 了解优先级
+3. [CI_SETUP.md](testing/CI_SETUP.md) - 配置测试环境
+4. [REFACTORING_NEXT_STEPS.md](../docs_EN/project/REFACTORING_NEXT_STEPS.md) - 深入分析
+
+**预计时间**: 1-2天（学习）+ 实际开发时间
+
+---
+
+### 场景D: 我想翻译到其他语言
+
+**推荐阅读顺序**:
+1. [I18N_GUIDE.md](development/I18N_GUIDE.md) - i18n系统说明
+2. 查看示例: `game/tl/chinese_simplified/`
+3. 开始翻译！
+
+**预计时间**: 20-40小时（完整翻译）
+
+---
+
+### 场景E: 我想创建女孩包
+
+**推荐阅读顺序**:
+1. [GIRL_PACK_COMPATIBILITY.md](development/GIRL_PACK_COMPATIBILITY.md) - 格式说明
+2. 查看示例: `game/custom/characters/girls/*/`
+3. 开始创作！
+
+**预计时间**: 因女孩包复杂度而异
+
+---
+
+### 场景F: 我想了解存档系统
+
+**推荐阅读顺序**:
+1. [SAVE_FORMAT.md](architecture/SAVE_FORMAT.md) - 存档格式
+2. 查看代码: `game/core/systems/save_manager.rpy`
+
+**预计时间**: 1-2小时
+
+---
+
+## 🔧 工具与脚本文档
+
+### 测试工具
+- `tools/ci/run_tests.sh` - Linux/macOS/WSL测试脚本
+- `tools/ci/run_tests.ps1` - Windows测试脚本
+- `tools/test_girl_packs.py` - 女孩包验证工具
+
+**使用方法**: 查看 [CI_SETUP.md](testing/CI_SETUP.md)
+
+### 开发工具
+- 开发者控制台: 游戏内按 `Shift+O`
+- 测试运行器: 主菜单 "Tests" 按钮
+- 快速重载: `Shift+R`
+
+**使用方法**: 查看 [PROJECT_GUIDE.md](architecture/PROJECT_GUIDE.md)
+
+---
+
+## 📖 代码示例位置
+
+### Mod示例
+- **完整Mod**: `game/custom/mods/Example - Price Override/`
+  - 主文件: `mod.rpy` (700行)
+  - 文档: `README.md`
+  - 翻译: `tl/chinese_simplified/mod.rpy`
+
+### 测试示例
+- **集成测试**: `game/core/tools/integration_tests.rpy`
+- **测试框架**: `game/core/tools/test_runner.rpy`
+
+### 架构示例
+- **服务容器**: `game/core/framework/game_services.rpy`
+- **数据加载器**: `game/core/framework/data_loader.rpy`
+- **i18n服务**: `game/core/framework/i18n_service.rpy`
+
+---
+
+## 🆕 最新更新（2026-10-14）
+
+### 新增文档
+- ✅ [SUMMARY_2026-10-14.md](project/SUMMARY_2026-10-14.md) - 完整工作总结
+- ✅ [MANUAL_TEST_REPORT_2026-10-14.md](testing/MANUAL_TEST_REPORT_2026-10-14.md) - 测试报告
+- ✅ [ROADMAP.md](project/ROADMAP.md) - 开发路线图
+- ✅ [QUICK_START.md](project/QUICK_START.md) - 快速开始
+- ✅ [SAVE_FORMAT.md](architecture/SAVE_FORMAT.md) - 存档格式
+
+### 更新文档
+- ✅ [MOD_DEVELOPMENT_GUIDE.md](development/MOD_DEVELOPMENT_GUIDE.md) - 添加常见错误
+- ✅ [GIRL_PACK_COMPATIBILITY.md](development/GIRL_PACK_COMPATIBILITY.md) - 完善说明
+- ✅ [CI_SETUP.md](testing/CI_SETUP.md) - 添加完整脚本
+- ✅ [CURRENT_STATUS_SUMMARY.md](project/CURRENT_STATUS_SUMMARY.md) - 更新状态
+- ✅ [README.md](../README.md) - 更新最新信息
+
+### 修复问题
+- ✅ 语法错误（3个）
+- ✅ 翻译冲突（1个）
+- ✅ Mod API错误（1个）
+
+---
+
+## 🔍 快速查询
+
+### 常见问题
+**Q: 游戏无法启动？**  
+A: 查看 [MANUAL_TEST_REPORT_2026-10-14.md](testing/MANUAL_TEST_REPORT_2026-10-14.md) § 常见问题
+
+**Q: Mod无法加载？**  
+A: 查看 [MOD_DEVELOPMENT_GUIDE.md](development/MOD_DEVELOPMENT_GUIDE.md) § 常见错误
+
+**Q: 如何调试代码？**  
+A: 查看 [QUICK_START.md](project/QUICK_START.md) § 常见问题
+
+**Q: 女孩包不兼容？**  
+A: 查看 [GIRL_PACK_COMPATIBILITY.md](development/GIRL_PACK_COMPATIBILITY.md)
+
+**Q: 翻译有冲突？**  
+A: 查看 [MOD_DEVELOPMENT_GUIDE.md](development/MOD_DEVELOPMENT_GUIDE.md) § 翻译最佳实践
+
+---
+
+## 📊 文档统计
+
+- **总文档数**: 15+
+- **总字数**: 50,000+
+- **代码示例**: 30+
+- **覆盖领域**: 架构、开发、测试、管理
+
+---
+
+## 🎯 下一步建议
+
+根据你的角色选择：
+
+### 如果你是项目维护者
+→ 先读 [SUMMARY_2026-10-14.md](project/SUMMARY_2026-10-14.md)  
+→ 再读 [ROADMAP.md](project/ROADMAP.md)
+
+### 如果你是Mod开发者
+→ 先读 [QUICK_START.md](project/QUICK_START.md)  
+→ 再读 [MOD_DEVELOPMENT_GUIDE.md](development/MOD_DEVELOPMENT_GUIDE.md)
+
+### 如果你是核心贡献者
+→ 先读 [PROJECT_GUIDE.md](architecture/PROJECT_GUIDE.md)  
+→ 再读 [REFACTORING_NEXT_STEPS.md](../docs_EN/project/REFACTORING_NEXT_STEPS.md)
+
+### 如果你是翻译者
+→ 先读 [I18N_GUIDE.md](development/I18N_GUIDE.md)  
+→ 再看示例: `game/tl/chinese_simplified/`
+
+---
+
+## 📞 获取帮助
+
+- **文档问题**: 查看对应文档的"常见问题"章节
+- **技术问题**: 查看 [PROJECT_GUIDE.md](architecture/PROJECT_GUIDE.md)
+- **Mod问题**: 查看 [MOD_DEVELOPMENT_GUIDE.md](development/MOD_DEVELOPMENT_GUIDE.md)
+- **其他问题**: 查看 [QUICK_START.md](project/QUICK_START.md)
+
+---
+
+**文档中心最后更新**: 2026-10-14  
+**维护者**: Lyeifal  
+**协助**: Claude Opus 5.5
